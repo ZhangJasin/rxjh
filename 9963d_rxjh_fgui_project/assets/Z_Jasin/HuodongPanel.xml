@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,100">
+  <displayList>
+    <component id="n0_ff7i" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="-451,-278"/>
+    <text id="n1_ff7i" name="n1" xy="-14,-267" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="活动大厅"/>
+    <component id="n2_ff7i" name="n2" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="514,-252"/>
+  </displayList>
+</component>

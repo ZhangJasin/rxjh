@@ -96,7 +96,7 @@ function righttoppanl:Create()
     -- 活动大厅按钮点击事件绑定
     FGUI:setOnClickEvent(self._righttop.btn_hddt, function()
         SL:dump("点击活动大厅按钮")
-        --FGUI:Open("Recharge", "RechargePanel", {}, FGUI_LAYER.NORMAL, { destroyTime = 1 })
+        FGUI:Open("Z_Jasin", "HuodongPanel", {}, FGUI_LAYER.NORMAL, { destroyTime = 1 })
     end)
 
     -- 订阅数据层事件
