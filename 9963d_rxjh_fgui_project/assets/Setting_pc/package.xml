@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="o9dt5fs4" hasFavorites="true">
+  <resources>
+    <component id="f2ul4a" name="panel_setting_component.xml" path="/Components/"/>
+    <component id="f2ul4b" name="quality_component.xml" path="/Components/"/>
+    <image id="f2ul4c" name="quality_bg.png" path="/Images/" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="f2ul4d" name="quality_select.png" path="/Images/" scale="9grid" scale9grid="21,21,22,21"/>
+    <image id="f2ul4e" name="quality_recommend.png" path="/Images/"/>
+    <component id="f2ul4f" name="option_item.xml" path="/Components/"/>
+    <component id="f2ul4g" name="title_item.xml" path="/Components/"/>
+    <image id="f2ul4j" name="progress_bg.png" path="/Images/" scale="9grid" scale9grid="13,13,2,2"/>
+    <component id="f2ul4l" name="slider_grip.xml" path="/Components/"/>
+    <component id="f2ul4n" name="panel_system_setting.xml" path="/Components/" exported="true"/>
+    <component id="f2ul4o" name="pickup_item_btn.xml" path="/Components/"/>
+    <component id="f2ul4p" name="pickup_item_potion.xml" path="/Components/" exported="true"/>
+    <component id="f2ul4q" name="switch_pag.xml" path="/Components/"/>
+    <component id="f2ul4r" name="title_label.xml" path="/Components/" exported="true"/>
+    <component id="f2ul4s" name="panel_fight_setting.xml" path="/Components/" exported="true"/>
+    <component id="f2ul4t" name="hpItemAutoUse.xml" path="/Components/"/>
+    <component id="f2ul4u" name="slider_red.xml" path="/Components/"/>
+    <component id="f2ul4w" name="btn_check.xml" path="/Components/"/>
+    <image id="f2ul4x" name="btn_min.png" path="/Images/" scale="9grid" scale9grid="12,12,6,6"/>
+    <component id="f2ul51" name="help_skill_item.xml" path="/Components/"/>
+    <component id="f2ul52" name="tog_switch_mini.xml" path="/Components/"/>
+    <image id="f2ul53" name="tog_handler.png" path="/Images/"/>
+    <component id="f2ul54" name="skill_item.xml" path="/Components/"/>
+    <image id="f2ul55" name="skill_frame.png" path="/Images/"/>
+    <component id="f2ul57" name="tog_select.xml" path="/Components/" exported="true"/>
+    <component id="f2ul5a" name="ComponentInput.xml" path="/Components/"/>
+    <image id="f2ul5b" name="input_bg.png" path="/Images/" scale="9grid" scale9grid="14,6,28,12"/>
+    <component id="f2ul5c" name="panel_display_setting.xml" path="/Components/" exported="true"/>
+    <component id="f2ul5d" name="panel_auto_fight_setting.xml" path="/Components/" exported="true"/>
+    <image id="f2ul5e" name="scheme_bg.png" path="/Images/"/>
+    <component id="f2ul5f" name="slider_green_min.xml" path="/Components/"/>
+    <component id="f2ul5g" name="ComboBox_item.xml" path="/Components/"/>
+    <component id="f2ul5h" name="ComboBox_popup.xml" path="/Components/"/>
+    <component id="f2ul5i" name="ComboBox_Min.xml" path="/Components/" exported="true"/>
+    <component id="f2ul5j" name="ComboBox_Min_popup.xml" path="/Components/"/>
+    <component id="f2ul5k" name="ComboBox_Min_item.xml" path="/Components/"/>
+    <component id="f2ul5l" name="fight_option1.xml" path="/Components/" exported="true"/>
+    <component id="f2ul5m" name="fight_option2.xml" path="/Components/" exported="true"/>
+    <component id="f2ul5n" name="btn_help.xml" path="/Components/" exported="true"/>
+    <component id="f2ul5p" name="pickup_item_check.xml" path="/Components/"/>
+    <image id="f2ul5q" name="item_bg.png" path="/Images/" scale="9grid" scale9grid="20,20,24,22"/>
+    <component id="f2ul5r" name="pickup_item.xml" path="/Components/" exported="true"/>
+    <component id="f2ul5s" name="changeOrderItem.xml" path="/Components/"/>
+    <image id="f2ul5t" name="dragHandler.png" path="/Images/"/>
+    <image id="f2ul5u" name="item_select.png" path="/Images/" scale="9grid" scale9grid="7,7,2,2"/>
+    <image id="f2ul5v" name="quality_m.png" path="/Images/" exported="true"/>
+    <image id="f2ul5w" name="quality.png" path="/Images/" exported="true"/>
+    <image id="f2ul5x" name="quality_l.png" path="/Images/" exported="true"/>
+    <image id="f2ul5y" name="slider_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="4,4,4,4"/>
+    <image id="f2ul5z" name="line.png" path="/Images/"/>
+    <image id="f2ul60" name="title_bg.png" path="/Images/" scale="9grid" scale9grid="12,12,24,24"/>
+    <image id="f2ul61" name="quality_sign_middle.png" path="/Images/" exported="true"/>
+    <image id="f2ul62" name="quality_sign_high.png" path="/Images/" exported="true"/>
+    <component id="f2ul63" name="PCSettingCheckPickUpPanel.xml" path="/" exported="true"/>
+    <component id="f2ul64" name="PCSettingPanel.xml" path="/" exported="true"/>
+    <component id="f2ul65" name="PCSettingPickUpPanel.xml" path="/" exported="true"/>
+    <component id="f2ul66" name="PCSettingRedeemCodePanel.xml" path="/" exported="true"/>
+    <component id="f2ul67" name="PCSettingSelectSkillPanel.xml" path="/" exported="true"/>
+    <component id="f2ul68" name="PCSettingSetItemOrderPanel.xml" path="/" exported="true"/>
+    <component id="bk1i69" name="mapItemAutoUse.xml" path="/Components/"/>
+    <component id="bk1i6a" name="slider_blue.xml" path="/Components/"/>
+    <component id="bk1i6b" name="slider_green.xml" path="/Components/"/>
+    <image id="vdne6c" name="btn_copy.png" path="/Images/"/>
+    <component id="vdne6d" name="btn_copy.xml" path="/Components/"/>
+    <component id="t0pf6f" name="panel_key_board_setting.xml" path="/Components/" exported="true"/>
+    <component id="t0pf6g" name="item_key.xml" path="/Components/" exported="true"/>
+    <image id="t0pf6h" name="bg_tips_content.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,13,4,7"/>
+    <component id="mxha6i" name="btn_apply.xml" path="/Components/"/>
+    <component id="ll076j" name="ScaleButtonText.xml" path="/Components/" exported="true" favorite="true"/>
+    <component id="k9rf6k" name="SettingCheckPickUpPanel.xml" path="/"/>
+    <component id="k9rf6l" name="SettingPanel.xml" path="/"/>
+    <component id="k9rf6m" name="SettingPickUpPanel.xml" path="/"/>
+    <component id="k9rf6n" name="SettingRedeemCodePanel.xml" path="/"/>
+    <component id="k9rf6o" name="SettingSelectSkillPanel.xml" path="/"/>
+    <component id="k9rf6p" name="SettingSetItemOrderPanel.xml" path="/"/>
+  </resources>
+  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Setting_pc" packageCount="2"/>
+</packageDescription>

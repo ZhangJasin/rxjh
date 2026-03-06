@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n37_hcvo" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="512,384" pivot="0.5,0.5" anchor="true" size="416,302">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n38_hcvo" name="bg2" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="315,302" size="395,225">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n30_mp8v" name="text_title" xy="512,252" pivot="0.5,0.5" anchor="true" size="68,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" text="邀请入队">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n12_leye" name="text_nothing" xy="512,414" pivot="0.5,0.5" anchor="true" size="300,29" font="ui://st7dgeqqje63v37" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n32_mp8v" name="list_page" xy="315,275" size="380,28" layout="row" overflow="hidden" scroll="horizontal" defaultItem="ui://y890q37svjv73" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+    </list>
+    <list id="n3_vjv7" name="list_player" xy="512,414" pivot="0.5,0.5" anchor="true" size="390,220" selectionMode="none" overflow="scroll" lineGap="4" defaultItem="ui://y890q37sf0so1g" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n31_mp8v" name="btn_close" src="vjv72" fileName="Components/btn_close.xml" xy="710,252" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

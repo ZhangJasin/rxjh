@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,200">
+  <displayList>
+    <image id="n0_q8ir" src="oxr7e" name="n0" xy="0,0" size="150,200">
+      <relation target="" sidePair="width,height"/>
+    </image>
+    <list id="n1_q8ir" name="list" xy="0,0" size="150,200" overflow="scroll" defaultItem="ui://1e928y1xoxr7c">
+      <relation target="" sidePair="width"/>
+    </list>
+  </displayList>
+  <relation target="n1_q8ir" sidePair="height"/>
+</component>

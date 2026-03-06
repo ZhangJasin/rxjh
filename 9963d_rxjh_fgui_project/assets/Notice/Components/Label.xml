@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="114,29" opaque="false" extention="Label">
+  <displayList>
+    <text id="n0_ilk5" name="title" xy="0,0" size="125,29" fontSize="20" align="center" vAlign="middle" ubb="true" singleLine="true" autoClearText="true" text="11111111111"/>
+  </displayList>
+  <relation target="n0_ilk5" sidePair="width-width,height-height"/>
+</component>

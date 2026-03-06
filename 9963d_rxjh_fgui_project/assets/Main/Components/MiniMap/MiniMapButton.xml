@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="72,38" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n8_bl99" name="n8" src="k5e7v8r" fileName="Images/Assist/main_assist_select_btn_9.png" xy="0,0" size="72,38">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n6_ke93" name="icon" xy="11,-6" size="50,50" autoSize="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+  </displayList>
+  <Button downEffect="dark" downEffectValue="0.8"/>
+</component>

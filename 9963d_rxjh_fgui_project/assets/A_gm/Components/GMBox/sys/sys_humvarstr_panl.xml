@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="600,450" bgColorEnabled="true">
+  <displayList>
+    <image id="n1_ih0u" name="n1" src="oqrpt" fileName="Images/0tongyong/srbbg.png" xy="163,24" size="273,43"/>
+    <image id="n5_ih0u" name="n2" src="oqrpt" fileName="Images/0tongyong/srbbg.png" xy="163,87" size="273,43"/>
+    <image id="n6_ih0u" name="n3" src="oqrpt" fileName="Images/0tongyong/srbbg.png" xy="163,150" size="273,43"/>
+    <text id="n9_ih0u" name="srk1" xy="166,23" size="268,42" fontSize="20" color="#ffffff" autoSize="none" text="" input="true" prompt="角色名：不填则自己"/>
+    <text id="n7_ih0u" name="srk2" xy="166,89" size="288,42" fontSize="20" color="#ffffff" autoSize="none" text="" input="true" prompt="支持(S0 - S999)(T0 - T999)"/>
+    <text id="n8_ih0u" name="srk3" xy="166,150" size="290,42" fontSize="20" color="#ffffff" autoSize="none" text="" input="true" prompt="str值" keyboardType="4"/>
+    <component id="n13_v0ag" name="btn1" src="oqrpu" fileName="Components/GMBox/Button.xml" xy="114,255"/>
+    <component id="n14_v0ag" name="btn2" src="oqrpu" fileName="Components/GMBox/Button.xml" xy="345,255"/>
+  </displayList>
+</component>

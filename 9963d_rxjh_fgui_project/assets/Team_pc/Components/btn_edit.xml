@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="16,16" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n3_spth" name="bg" src="emvc52" fileName="image/combobox_arrow_bg.png" pkg="qa9a7rit" xy="0,0" size="16,16">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n4_spth" name="arrow" src="emvc51" fileName="image/combobox_arrow.png" pkg="qa9a7rit" xy="2,4">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+  </displayList>
+  <Button downEffect="scale" downEffectValue=".8"/>
+</component>

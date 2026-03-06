@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="346,20" designImageOffsetX="6" designImageOffsetY="-699">
+  <displayList>
+    <image id="n68_lh52" name="n68" src="lh5238" fileName="Images/Chat/main_chat_left_bg.png" xy="0,-151" size="18,171">
+      <relation target="n67_lh52" sidePair="topext-top"/>
+    </image>
+    <image id="n61_lh52" name="n61" src="lh522z" fileName="Images/Chat/main_chat_bg.png" xy="18,-151" size="329,151">
+      <relation target="n67_lh52" sidePair="topext-top"/>
+    </image>
+    <image id="n62_lh52" name="n62" src="lh5237" fileName="Images/Chat/main_chat_input_di.png" xy="18,0" size="329,20"/>
+    <image id="n63_lh52" name="n63" src="lh5236" fileName="Images/Chat/main_chat_input_btn.png" xy="1,1"/>
+    <component id="n65_lh52" name="Btn_rollBottom" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1,-12" size="18,14">
+      <Button icon="ui://xwp5ackolh5230"/>
+    </component>
+    <component id="n66_lh52" name="Btn_rollTop" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1,-129" size="18,14">
+      <relation target="n67_lh52" sidePair="top-bottom"/>
+      <Button icon="ui://xwp5ackolh523d"/>
+    </component>
+    <component id="n71_lh52" name="Btn_sendChannel" src="lh523f" fileName="Components/Chat/ChatChannelButton.xml" xy="39,10" pivot="0.5,0.5" anchor="true"/>
+    <component id="n73_lh52" name="Btn_send" src="lh523g" fileName="Components/Chat/ChatSendButton.xml" xy="310,0"/>
+    <component id="n58_lh52" name="Btn_channel" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="348,-151" size="18,18">
+      <relation target="n67_lh52" sidePair="top-top"/>
+      <Button icon="ui://xwp5ackolh5235"/>
+    </component>
+    <loader id="n67_lh52" name="Loader_drag" xy="1,-151" size="18,22" url="ui://xwp5ackolh523c" autoSize="true"/>
+    <component id="n74_lh52" name="Slider_chat" src="lh523i" fileName="Components/Chat/ChatSlider.xml" xy="2,-115" size="15,103">
+      <relation target="n67_lh52" sidePair="topext-top"/>
+      <Slider value="50" max="100"/>
+    </component>
+    <image id="n59_lh52" name="n59" src="lh5231" fileName="Images/Chat/main_chat_channel_bg.png" xy="366,-151" size="179,50" group="n79_lh52">
+      <relation target="n60_lh52" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <list id="n60_lh52" name="List_channel" xy="374,-144" size="164,37" group="n79_lh52" layout="flow_hz" selectionMode="multipleSingleClick" lineGap="4" colGap="4" lineItemCount="4" defaultItem="ui://xwp5ackolh523e" autoClearItems="true" scrollItemToViewOnClick="false">
+      <item title="频道1"/>
+      <item title="频道2"/>
+      <item title="频道3"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n79_lh52" name="Group_channel" xy="366,-151" size="179,50" advanced="true">
+      <relation target="n67_lh52" sidePair="top-top"/>
+    </group>
+    <text id="n75_lh52" name="Input_chat" xy="61,-1" size="248,19" fontSize="12" color="#ffffff" vAlign="middle" autoSize="height" singleLine="true" autoClearText="true" text="输入文字....." input="true"/>
+    <list id="n80_ucmr" name="List_chat" xy="19,-151" size="327,150" selectionMode="none" overflow="scroll" scrollBarFlags="128" colGap="4" defaultItem="ui://xwp5ackoljrg20" autoClearItems="true" scrollItemToViewOnClick="false">
+      <relation target="n81_ucmr" sidePair="topext-bottom"/>
+      <relation target="" sidePair="bottomext-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n81_ucmr" name="List_notice" xy="19,-151" size="327,0" selectionMode="none" overflow="scroll" scrollBarFlags="128" scrollBar="hidden" defaultItem="ui://xwp5ackoljrg21" autoClearItems="true">
+      <relation target="n67_lh52" sidePair="top-top"/>
+    </list>
+    <image id="n77_lh52" name="n77" src="lh5231" fileName="Images/Chat/main_chat_channel_bg.png" xy="18,-104" size="42,106" group="n78_lh52">
+      <relation target="n76_lh52" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <list id="n76_lh52" name="List_sendChannel" xy="20,-1" pivot="0,1" anchor="true" size="38,100" group="n78_lh52" lineGap="5" defaultItem="ui://xwp5ackolh523m" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n78_lh52" name="Group_sendChannel" xy="18,-104" size="42,106" advanced="true"/>
+    <component id="n82_l8uu" name="Btn_pos" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="292,1" size="18,18">
+      <Button icon="ui://xwp5ackol8uu6f"/>
+    </component>
+    <component id="n83_l8uu" name="Btn_emo" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="274,1" size="18,18">
+      <Button icon="ui://xwp5ackol8uu6d"/>
+    </component>
+    <graph id="n87_l8uu" name="Mask_emo" xy="0,24" size="501,289" group="n86_l8uu" type="rect" lineColor="#00000000" fillColor="#00ffffff">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n84_l8uu" name="Bg_emo" src="l8uuv84" fileName="Images/Chat/main_chat_emo_bg.png" xy="102,-216" size="252,216" group="n86_l8uu"/>
+    <list id="n85_l8uu" name="List_emo" xy="110,-208" size="237,200" group="n86_l8uu" layout="flow_hz" overflow="scroll" lineGap="7" colGap="7" lineItemCount="4" defaultItem="ui://xwp5ackol8uu6h" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n86_l8uu" name="Panel_emo" xy="0,-216" size="501,529" advanced="true"/>
+  </displayList>
+</component>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImage="ui://xwp5ackomjoj1" bgColorEnabled="true">
+  <displayList>
+    <loader id="n143_pzjg" name="n143" xy="0,716" size="1024,52" url="ui://xwp5ackopzjgfve9" fill="scaleFree">
+      <relation target="" sidePair="width-width,bottom-bottom"/>
+    </loader>
+    <image id="n59_ljrg" name="n59" src="ljrg24" fileName="Images/Bottom/main_logo.png" xy="457,722">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </image>
+    <image id="n144_lxvg" name="n144" src="lxvgfvef" fileName="Images/Bottom/main_bottom_exp_bg.png" xy="624,758" size="391,10">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </image>
+    <component id="n29_o3hv" name="ProgressBar_exp" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="627,761" size="385,4">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <ProgressBar value="100" max="100"/>
+      <property target="bar" propertyId="1" value="ui://xwp5ackoljrg23"/>
+    </component>
+    <image id="n38_99g1" name="Image_autoMove" src="ljrg1d" fileName="Images/Bottom/main_state_auto_move.png" xy="511,508" pivot="0.5,0.5" anchor="true" visible="false">
+      <relation target="" sidePair="center-center,top-bottom"/>
+    </image>
+    <component id="n52_10iaf" name="ProgressBar_preLoad" src="ljrg1r" fileName="Components/Bottom/PreLoadProgressBar.xml" xy="929,704" size="95,10">
+      <relation target="" sidePair="left-right,bottom-bottom"/>
+      <ProgressBar value="50" max="100"/>
+    </component>
+    <loader id="n124_bojo" name="n124" xy="10,715" size="392,53" group="n76_jloc" url="ui://xwp5ackobojo6e" fill="scaleFree" autoSize="true"/>
+    <image id="n147_7ug3" name="n147" src="lxvgfveg" fileName="Images/Bottom/main_bottom_img1.png" xy="0,716" size="10,52" group="n76_jloc"/>
+    <component id="n134_m9h9" name="Btn_status" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="34,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackoljrg2g"/>
+    </component>
+    <component id="n135_m9h9" name="Btn_bag" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="71,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackoljrg27"/>
+    </component>
+    <component id="n136_m9h9" name="Btn_skill" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="108,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackoljrg29"/>
+    </component>
+    <component id="n130_m9h9" name="Btn_team" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="146,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackoljrg2b"/>
+    </component>
+    <component id="n133_m9h9" name="Btn_guild" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="183,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackoljrg26"/>
+    </component>
+    <component id="n139_m9h9" name="Btn_friend" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="221,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackoljrg28"/>
+    </component>
+    <component id="n137_m9h9" name="Btn_mail" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="258,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackoucmr3o"/>
+    </component>
+    <component id="n129_m9h9" name="Btn_action" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="295,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackoljrg2i"/>
+    </component>
+    <component id="n138_m9h9" name="Btn_shop" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="332,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackoljrg2f"/>
+    </component>
+    <component id="n140_m9h9" name="Btn_setting" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="370,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackoljrg2a"/>
+    </component>
+    <group id="n76_jloc" name="Group_leftButton" xy="0,715" size="402,53" advanced="true">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </group>
+    <loader id="n123_bojo" name="n123" xy="615,714" size="400,53" group="n94_ljak" url="ui://xwp5ackobojo6f" fill="scaleFree" autoSize="true"/>
+    <image id="n146_7ug3" name="n146" src="lxvgfveg" fileName="Images/Bottom/main_bottom_img1.png" xy="1014,716" size="10,52" group="n94_ljak" flip="hz"/>
+    <loader id="n96_fa9c" name="Button_quickUp" xy="630,720" size="10,8" group="n94_ljak" url="ui://xwp5ackobojo6h" autoSize="true"/>
+    <loader id="n121_km1v" name="Button_quickDown" xy="630,745" size="10,8" group="n94_ljak" url="ui://xwp5ackobojo6g" autoSize="true"/>
+    <component id="n98_fa9c" name="QuickBox1" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="660,737" pivot="0.5,0.5" anchor="true" size="30,30" group="n94_ljak"/>
+    <component id="n110_fa9c" name="QuickBox2" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="697,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
+    <component id="n111_fa9c" name="QuickBox3" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="734,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
+    <component id="n112_fa9c" name="QuickBox4" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="771,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
+    <component id="n113_fa9c" name="QuickBox5" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="808,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
+    <component id="n114_fa9c" name="QuickBox6" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="845,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
+    <component id="n115_fa9c" name="QuickBox7" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="882,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
+    <component id="n116_fa9c" name="QuickBox8" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="919,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
+    <component id="n117_fa9c" name="QuickBox9" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="956,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
+    <component id="n118_fa9c" name="QuickBox10" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="993,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
+    <text id="n148_7ug3" name="Text_quickIndex" xy="629,727" size="13,19" group="n94_ljak" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="center" leading="0" autoSize="none" autoClearText="true" text="1"/>
+    <group id="n94_ljak" name="Group_quick" xy="615,714" size="409,54" advanced="true">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </group>
+    <list id="n34_brvz" name="List_bubbleTip" xy="661,671" size="331,33" layout="row" colGap="4" defaultItem="ui://xwp5ackom9h9v85" align="right" autoClearItems="true">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n95_tj4v" name="List_buff" xy="992,704" pivot="0,1" anchor="true" size="32,324" layout="flow_vt" overflow="scroll" lineGap="3" defaultItem="ui://xwp5ackotj4v48" align="center" vAlign="bottom" autoClearItems="true" scrollItemToViewOnClick="false">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <graph id="n39_99g1" name="Graph_autoFight" xy="511,567" pivot="0.5,0.5" anchor="true" size="57,24" visible="false" touchable="false" type="rect" lineSize="0" fillColor="#00ffffff">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </graph>
+    <component id="n125_bojo" name="QuickTip" src="bojo6i" fileName="Components/Bottom/QuickTip.xml" xy="28,546" pivot="0.5,1" anchor="true" touchable="false"/>
+  </displayList>
+</component>

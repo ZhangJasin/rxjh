@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImage="ui://5i0v372fowd71u" remark="所有阵营&#xA;">
+  <displayList>
+    <graph id="n74_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n73_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,50">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n2_nojs" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n4_nojs" name="text_title" xy="667,78" pivot="0.5,0.5" anchor="true" size="76,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" singleLine="true" text="拍卖行">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n5_nojs" name="btn_right_tab_1" src="r8pb1s" fileName="Components/tab_right.xml" xy="1161,110">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n6_nojs" name="btn_right_tab_2" src="r8pb1s" fileName="Components/tab_right.xml" xy="1161,202">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n7_nojs" name="btn_right_tab_3" src="r8pb1s" fileName="Components/tab_right.xml" xy="1161,294">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n70_tmr6" name="Node_Content" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="668,400" size="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n71_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="173,698" size="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

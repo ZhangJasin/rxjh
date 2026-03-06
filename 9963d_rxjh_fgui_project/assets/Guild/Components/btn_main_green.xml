@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="160,54" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_zah9" name="n0" src="xd9tkvp2" fileName="image/btn_first_green.png" pkg="st7dgeqq" xy="0,0" size="160,54">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_zah9" name="title" xy="53,3" size="98,48" fontSize="24" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="名称">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <loader id="n2_zah9" name="icon" xy="40,27" pivot="0.5,0.5" anchor="true" size="46,46" align="center" vAlign="middle">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <Button downEffect="scale" downEffectValue=".9"/>
+</component>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="h3jungk0">
+  <resources>
+    <component id="oqrp0" name="righttoppanl.xml" path="/" exported="true"/>
+    <component id="oqrp1" name="rightshounabtn.xml" path="/Components/righttop/"/>
+    <image id="oqrp2" name="main_funcDock_arrow.png" path="/Images/0righttop/"/>
+    <component id="oqrp3" name="righttop.xml" path="/Components/righttop/"/>
+    <component id="oqrp4" name="btn_BBG.xml" path="/Components/righttop/"/>
+    <image id="oqrp5" name="main_btn_BBG.png" path="/Images/0righttop/"/>
+    <component id="oqrp6" name="btn_paimai.xml" path="/Components/righttop/"/>
+    <image id="oqrp7" name="icon_pmh.png" path="/Images/0righttop/"/>
+    <component id="oqrp8" name="btn_xuanshang.xml" path="/Components/righttop/"/>
+    <image id="oqrp9" name="_0003_XS.png" path="/Images/0righttop/"/>
+    <component id="oqrpa" name="btn_bill.xml" path="/Components/righttop/"/>
+    <image id="oqrpb" name="icon_cz.png" path="/Images/0righttop/"/>
+    <component id="oqrpc" name="btn_kfslz.xml" path="/Components/righttop/"/>
+    <image id="oqrpd" name="kfslz.png" path="/Images/0righttop/"/>
+    <component id="oqrpe" name="btn_hd.xml" path="/Components/righttop/"/>
+    <image id="oqrpf" name="_0004_HD.png" path="/Images/0righttop/"/>
+    <component id="oqrpg" name="btn_jhl.xml" path="/Components/righttop/"/>
+    <image id="oqrph" name="main_func_jianghulu.png" path="/Images/0righttop/"/>
+    <component id="oqrpi" name="btn_mpz.xml" path="/Components/righttop/"/>
+    <image id="oqrpj" name="icon_mpz.png" path="/Images/0righttop/"/>
+    <component id="oqrpk" name="btn_xlzm.xml" path="/Components/righttop/"/>
+    <image id="oqrpl" name="icon_xlzm.png" path="/Images/0righttop/"/>
+    <component id="oqrpm" name="btn_guaji.xml" path="/Components/righttop/"/>
+    <image id="oqrpn" name="guaji.png" path="/Images/0righttop/"/>
+    <image id="oqrpo" name="dian_hui.png" path="/Images/00item/"/>
+    <image id="oqrpp" name="dian_liang.png" path="/Images/00item/"/>
+    <component id="oqrpq" name="jiantoubtn.xml" path="/Components/tongyong/"/>
+    <component id="oqrpr" name="additempanl.xml" path="/Components/tongyong/"/>
+    <image id="oqrps" name="tipsdi.png" path="/Images/0tongyong/" scale="9grid" scale9grid="13,13,26,26" duplicatePadding="true"/>
+    <component id="oqrpt" name="additembtn.xml" path="/Components/tongyong/"/>
+    <image id="oqrpu" name="xxdi2.png" path="/Images/0tongyong/" scale="9grid" scale9grid="59,22,118,44" duplicatePadding="true"/>
+    <image id="oqrpv" name="xzkuang9.png" path="/Images/0tongyong/" scale="9grid" scale9grid="16,16,32,32" duplicatePadding="true"/>
+    <image id="oqrpw" name="pzkuang_zi.png" path="/Images/0tongyong/"/>
+    <component id="oqrpx" name="itemRoot.xml" path="/Components/tongyong/"/>
+    <image id="oqrpy" name="tip_kuang1.png" path="/Images/0tongyong/"/>
+    <component id="oqrpz" name="btn_move.xml" path="/Components/00item/"/>
+    <image id="oqrp10" name="item_chuansong.png" path="/Images/00item/"/>
+    <component id="oqrp11" name="btn_bosstz.xml" path="/Components/righttop/"/>
+    <image id="oqrp12" name="icon_tzsl.png" path="/Images/0righttop/"/>
+    <component id="oqrp13" name="btn_gm.xml" path="/Components/righttop/"/>
+    <image id="oqrp14" name="btn_hong.png" path="/Images/0tongyong/" scale="9grid" scale9grid="16,13,32,26"/>
+    <component id="oqrp15" name="Bbtnlv.xml" path="/Components/tongyong/"/>
+    <image id="oqrp16" name="btn_lv.png" path="/Images/0tongyong/" scale="9grid" scale9grid="39,13,78,26"/>
+    <component id="oqrp17" name="btn_stronger.xml" path="/Components/righttop/"/>
+    <image id="oqrp18" name="icon_bianqiang.png" path="/Images/0righttop/"/>
+    <component id="rg4i19" name="dian_hui.xml" path="/Components/00Creat/" exported="true"/>
+    <image id="rg4i1a" name="dian_hui.png" path="/Images/00Creat/" exported="true"/>
+    <component id="rg4i1b" name="dian_liang.xml" path="/Components/00Creat/" exported="true"/>
+    <image id="rg4i1c" name="dian_liang.png" path="/Images/00Creat/" exported="true"/>
+    <component id="rg4i1d" name="fashion_itemshow.xml" path="/Components/00Creat/" exported="true"/>
+    <component id="rg4i1e" name="wuxun_jian_ding.xml" path="/Components/00Creat/" exported="true"/>
+    <image id="rg4i1f" name="01(1).png" path="/Images/00Creat/" exported="true"/>
+    <image id="rg4i1g" name="02(1).png" path="/Images/00Creat/" exported="true"/>
+    <component id="rg4i1h" name="wuxun_tips_attr.xml" path="/Components/00Creat/" exported="true"/>
+    <image id="rg4i1i" name="di1.png" path="/Images/00Creat/" exported="true" scale="9grid" scale9grid="28,20,56,40"/>
+    <component id="rg4i1j" name="attritem2.xml" path="/Components/00Creat/" exported="true"/>
+    <component id="rg4i1m" name="btn_wuxun_skill.xml" path="/Components/00Creat/" exported="true"/>
+    <image id="rg4i1n" name="jnd.png" path="/Images/00Creat/" exported="true"/>
+    <image id="rg4i1o" name="YuyiSkillIcon_1001.png" path="/Images/00Creat/" exported="true"/>
+    <component id="rg4i1p" name="btn_wxattr.xml" path="/Components/00Creat/" exported="true"/>
+    <image id="rg4i1q" name="wh2.png" path="/Images/00Creat/" exported="true"/>
+    <image id="rg4i1r" name="WuXun_15022.png" path="/Images/00Creat/" exported="true"/>
+    <image id="rg4i1s" name="WuXun_15023.png" path="/Images/00Creat/" exported="true"/>
+    <image id="rg4i1t" name="WuXun_15024.png" path="/Images/00Creat/" exported="true"/>
+    <image id="rg4i1u" name="WuXun_15025.png" path="/Images/00Creat/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <loader id="n9_fmfy" name="bg_loading" xy="667,375" pivot="0.5,0.5" anchor="true" size="1334,750" url="ui://kk5ws5kwfmfy6" align="center" vAlign="middle" fill="scaleFree" useResize="true" clearOnPublish="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n10_fmfy" name="bar_loading" src="fmfy4" fileName="Components/Bar_loading.xml" xy="667,650" pivot="0.5,0.5" anchor="true" size="1200,35">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <ProgressBar max="100"/>
+    </component>
+    <text id="n2_vjv7" name="text_tips" xy="667,600" pivot="0.5,0.5" anchor="true" size="97,34" fontSize="24" color="#ffffff" text="加载中...">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

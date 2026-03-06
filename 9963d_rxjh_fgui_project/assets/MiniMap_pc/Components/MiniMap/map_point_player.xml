@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="13,13" pivot="0.5,0.5" anchor="true" extention="Label">
+  <displayList>
+    <loader id="n1_gxj9" name="n1" xy="0,0" size="13,13" url="ui://3tndc27qclzt10" align="center" vAlign="middle" autoSize="true"/>
+  </displayList>
+</component>

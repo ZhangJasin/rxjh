@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="170,54" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n9_gpvo" name="bg1" src="kra4vot" fileName="image/btn_green_normal2.png" pkg="st7dgeqq" xy="0,0" size="170,54"/>
+    <image id="n10_gpvo" name="bg2" src="kra4vov" fileName="image/btn_green_selected2.png" pkg="st7dgeqq" xy="0,0" size="170,54">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+    <text id="n5_j47s" name="text_normal" xy="85,27" pivot="0.5,0.5" anchor="true" size="112,32" font="ui://st7dgeqq9kdgkvpj" fontSize="22" color="#c5dccc" align="center" vAlign="middle" autoSize="none" text="名字">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <text id="n6_j47s" name="text_select" xy="85,27" pivot="0.5,0.5" anchor="true" size="112,34" font="ui://st7dgeqq9kdgkvpj" fontSize="22" color="#ffd83c" align="center" vAlign="middle" autoSize="none" text="名字">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <image id="n59_mh2i" name="bg" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="180,165" size="540,520"/>
+    <list id="n7_f0so" name="list_page" xy="180,123" size="540,42" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://qvb3eryhf0so4">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n36_w0rg" name="list_skill" xy="185,170" size="530,510" overflow="scroll" defaultItem="ui://qvb3eryhw0rgc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <richtext id="n60_oy20" name="text_myScore" xy="730,660" pivot="0,0.5" anchor="true" size="250,29" fontSize="20" color="#f1ffeb" vAlign="middle" autoSize="none" text="剩余历练：999999"/>
+    <component id="n46_hb5x" name="skill_pad0" src="eion7" fileName="Components/btn_pad.xml" xy="1032,482" pivot="0.5,0.5" anchor="true" group="n56_hb5x" visible="false" touchable="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n47_hb5x" name="skill_pad1" src="eion7" fileName="Components/btn_pad.xml" xy="868,532" group="n56_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n48_hb5x" name="skill_pad2" src="eion7" fileName="Components/btn_pad.xml" xy="848,402" group="n56_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n49_hb5x" name="skill_pad3" src="eion7" fileName="Components/btn_pad.xml" xy="924,308" group="n56_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n50_hb5x" name="skill_pad4" src="eion7" fileName="Components/btn_pad.xml" xy="1040,272" group="n56_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n51_hb5x" name="skill_pad5" src="eion7" fileName="Components/btn_pad.xml" xy="780,480" group="n56_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n52_hb5x" name="skill_pad6" src="eion7" fileName="Components/btn_pad.xml" xy="808,298" group="n56_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n53_hb5x" name="skill_pad7" src="eion7" fileName="Components/btn_pad.xml" xy="940,200" group="n56_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n54_hb5x" name="btn_reset" src="fbc08" fileName="Components/btn_reset.xml" xy="1060,660" pivot="0.5,0.5" anchor="true" group="n56_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n55_hb5x" name="skill_attack" src="7uson" fileName="Images/skill_icon_attack.png" xy="1032,482" pivot="0.5,0.5" anchor="true" group="n56_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <group id="n56_hb5x" name="panel_pad" xy="780,200" size="350,481"/>
+    <component id="n91_eyqz" name="check_main" src="eyqz1o" fileName="Components/check_set.xml" xy="950,160"/>
+    <graph id="n90_kelz" name="mask" xy="667,375" pivot="0.5,0.5" anchor="true" size="1334,750" alpha="0" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n80_kelz" name="bg_release" src="11iqkvp0" fileName="image/comobox_frame.png" pkg="st7dgeqq" xy="840,135" pivot="0.5,0.5" anchor="true" size="200,36" group="n84_kelz">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n81_kelz" name="text_release" xy="830,135" pivot="0.5,0.5" anchor="true" size="160,32" group="n84_kelz" fontSize="22" color="#7cc3b3" align="center" vAlign="middle" autoSize="none" singleLine="true" text="循环释放">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n82_kelz" name="btn_release" src="kelz1j" fileName="Components/btn_combox.xml" xy="920,135" pivot="0.5,0.5" anchor="true" group="n84_kelz">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n83_kelz" name="list_release" xy="840,155" pivot="0.5,0" anchor="true" size="200,200" group="n84_kelz" visible="false" overflow="scroll" defaultItem="ui://qvb3eryhkelz1h">
+      <relation target="" sidePair="center-center,top-top"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n84_kelz" name="panel_release" xy="740,110" size="205,245"/>
+    <image id="n85_kelz" name="bg_scheme" src="11iqkvp0" fileName="image/comobox_frame.png" pkg="st7dgeqq" xy="1050,135" pivot="0.5,0.5" anchor="true" size="200,36" group="n89_kelz">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n86_kelz" name="text_scheme" xy="1040,135" pivot="0.5,0.5" anchor="true" size="160,32" group="n89_kelz" fontSize="22" color="#7cc3b3" align="center" vAlign="middle" autoSize="none" singleLine="true" text="请输入名字...">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n87_kelz" name="btn_scheme" src="kelz1j" fileName="Components/btn_combox.xml" xy="1130,135" pivot="0.5,0.5" anchor="true" group="n89_kelz">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n88_kelz" name="list_scheme" xy="1050,155" pivot="0.5,0" anchor="true" size="200,200" group="n89_kelz" visible="false" overflow="scroll" defaultItem="ui://qvb3eryhkelz1h">
+      <relation target="" sidePair="center-center,top-top"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n89_kelz" name="panel_scheme" xy="950,110" size="205,245"/>
+    <component id="n57_hhwj" name="skill_tips" src="hhwjv" fileName="SkillTipsPanel.xml" xy="0,0" size="1334,750" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

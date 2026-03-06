@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="q0jqxcw9">
+  <resources>
+    <component id="w092v5z" name="FuncDockTip.xml" path="/" exported="true"/>
+    <component id="w092v66" name="ComponentPlayerInfo.xml" path="/Components/" exported="true"/>
+    <component id="m2wev5x" name="btn_role_info.xml" path="/Components/" exported="true"/>
+    <image id="m2wevkz" name="di_role_info.png" path="/Images/" exported="true" scale="9grid" scale9grid="7,128,362,129" qualityOption="source"/>
+    <image id="us1mvl2" name="black_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="edvovl3" name="bg01.png" path="/Images/"/>
+    <image id="edvovl4" name="kuang.png" path="/Images/" scale="9grid" scale9grid="43,35,12,7"/>
+    <component id="edvovl5" name="FuncDockNewTip.xml" path="/" exported="true"/>
+    <image id="mi87vl6" name="5.png" path="/Images/job/"/>
+    <image id="mi87vl7" name="4.png" path="/Images/job/"/>
+    <image id="mi87vl8" name="1.png" path="/Images/job/"/>
+    <image id="mi87vl9" name="6.png" path="/Images/job/"/>
+    <image id="mi87vla" name="2.png" path="/Images/job/"/>
+    <image id="mi87vlb" name="3.png" path="/Images/job/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

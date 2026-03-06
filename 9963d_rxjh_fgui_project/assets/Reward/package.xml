@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="hnt34a2t">
+  <resources>
+    <component id="hpp30" name="rewardMain.xml" path="/" exported="true"/>
+    <component id="hpp31" name="tastCard.xml" path="/Components/" exported="true"/>
+    <image id="hpp32" name="zero.png" path="/image/" exported="true"/>
+    <image id="hpp34" name="mainBg.png" path="/image/" exported="true"/>
+    <image id="hpp35" name="two.png" path="/image/" exported="true"/>
+    <image id="hpp36" name="nameBg.png" path="/image/" exported="true"/>
+    <image id="hpp37" name="three.png" path="/image/" exported="true"/>
+    <image id="hpp38" name="one.png" path="/image/" exported="true"/>
+    <image id="hpp39" name="cardBg.png" path="/image/" exported="true"/>
+    <component id="hpp3a" name="bottomCard.xml" path="/Components/" exported="true"/>
+    <component id="hpp3b" name="iconItem.xml" path="/Components/" exported="true"/>
+    <component id="hpp3c" name="monName.xml" path="/Components/" exported="true"/>
+    <component id="hpp3d" name="starNum.xml" path="/Components/" exported="true"/>
+    <image id="hpp3f" name="7000005.png" path="/image/" exported="true"/>
+    <image id="hpp3g" name="7000001.png" path="/image/" exported="true"/>
+    <image id="hpp3h" name="7000002.png" path="/image/" exported="true"/>
+    <image id="hpp3i" name="7000003.png" path="/image/" exported="true"/>
+    <image id="hpp3j" name="7000004.png" path="/image/" exported="true"/>
+    <image id="hpp3l" name="7000006.png" path="/image/" exported="true"/>
+    <image id="hpp3m" name="gotoBg.png" path="/image/" exported="true"/>
+    <image id="hpp3n" name="cancelBg.png" path="/image/" exported="true"/>
+    <component id="hpp3o" name="cancel.xml" path="/Components/" exported="true"/>
+    <component id="hpp3p" name="goto.xml" path="/Components/" exported="true"/>
+    <component id="hpp323" name="finishedBtn.xml" path="/Components/" exported="true"/>
+    <component id="hpp3q" name="jlList.xml" path="/Components/" exported="true"/>
+    <component id="hpp3r" name="jlItem.xml" path="/Components/" exported="true"/>
+    <image id="hpp3s" name="close_yuan.png" path="/image/" exported="true"/>
+    <component id="hpp3t" name="closebtn_yuan.xml" path="/Components/" exported="true"/>
+    <component id="hpp3u" name="tybtn1.xml" path="/Components/" exported="true"/>
+    <image id="hpp3v" name="btn_zong.png" path="/image/" exported="true"/>
+    <image id="cbzs24" name="cancelBtnBg.png" path="/image/" exported="true"/>
+    <image id="cbzs25" name="killedBg.png" path="/image/" exported="true"/>
+    <image id="cbzs26" name="finishedBtnBg.png" path="/image/" exported="true"/>
+    <component id="cbzs27" name="getTask.xml" path="/Components/" exported="true"/>
+    <component id="qmgd28" name="taskList.xml" path="/Components/" exported="true"/>
+    <image id="ycsi29" name="gxhd.png" path="/image/" exported="true"/>
+    <image id="ycsi2a" name="gxhdbg.png" path="/image/" exported="true"/>
+    <component id="ycsi2b" name="gxhd.xml" path="/Components/" exported="true"/>
+    <image id="ycsi2c" name="btn_second_red.png" path="/image/" exported="true" scale="9grid" scale9grid="11,12,12,27"/>
+    <component id="qeaz2d" name="dialog.xml" path="/Components/" exported="true"/>
+    <image id="qeaz23" name="dialogbg.png" path="/image/" exported="true"/>
+    <image id="qeaz2e" name="blackBg.png" path="/image/" exported="true"/>
+    <component id="qeaz2f" name="dialogClose.xml" path="/Components/" exported="true"/>
+    <component id="qeaz2g" name="dialogGoto.xml" path="/Components/" exported="true"/>
+    <component id="njtv2h" name="noTimes.xml" path="/Components/" exported="true"/>
+    <component id="njtv2i" name="quxiaoBtn.xml" path="/Components/" exported="true"/>
+    <component id="njtv2j" name="quedingBtn.xml" path="/Components/" exported="true"/>
+  </resources>
+  <publish name="" path="E:\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Reward" packageCount="2"/>
+</packageDescription>

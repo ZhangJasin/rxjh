@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,64">
+  <controller name="isSelect" pages="0,,1," selected="0"/>
+  <controller name="ischuzhan" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n6_v5h4" name="n6" src="v5h436" fileName="image/lingshou/小信息底.png" xy="0,0" size="200,64"/>
+    <loader id="n7_rlb8" name="n7" xy="5,2" size="64,64" fill="scaleFree"/>
+    <text id="n1_v5h4" name="n1" xy="74,0" size="100,64" fontSize="24" color="#81807f" vAlign="middle" autoSize="none" text="灵兽名字"/>
+    <text id="n5_v5h4" name="n5" xy="110,0" size="87,50" visible="false" fontSize="18" color="#f6cd2b" align="right" autoSize="none" text="Lv10000"/>
+    <image id="n8_v58d" name="n8" src="v58d40" fileName="image/lingshou/已上阵.png" xy="130,-2" size="69,64" aspect="true">
+      <gearDisplay controller="ischuzhan" pages="1"/>
+    </image>
+    <image id="n4_v5h4" name="n4" src="o0nq1r" fileName="image/xz.png" xy="0,0" size="200,64">
+      <gearDisplay controller="isSelect" pages="1"/>
+    </image>
+  </displayList>
+</component>

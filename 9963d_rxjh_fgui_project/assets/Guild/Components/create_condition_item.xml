@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="110,30" extention="Label">
+  <displayList>
+    <text id="n0_u67p" name="title" xy="30,0" size="80,29" fontSize="20" color="#f1ffeb" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="30000">
+      <relation target="n3_u0jf" sidePair="middle-middle,left-center"/>
+    </text>
+    <component id="n3_u0jf" name="icon_item" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="0,0" pivot="0.5,0.5" size="30,30"/>
+  </displayList>
+</component>

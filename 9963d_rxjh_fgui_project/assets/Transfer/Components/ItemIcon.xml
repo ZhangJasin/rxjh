@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64">
+  <displayList>
+    <image id="n0_p51l" name="img_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="0,0" size="64,64" aspect="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n2_ls99" name="commonItem" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="0,0" size="64,64" aspect="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>

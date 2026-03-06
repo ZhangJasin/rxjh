@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" bgColor="#ff0000">
+  <controller name="addlistshow" exported="true" pages="0,幸运符,1,提升道具,7,属性道具" selected="1"/>
+  <displayList>
+    <component id="n16_egru" name="bg" src="oqrp13" fileName="Components/tongyong/kongbg.xml" xy="0,0"/>
+    <image id="n3_o4l6" name="n3" src="oqrp14" fileName="Images/0tongyong/tipsdi.png" xy="504,133" size="300,396"/>
+    <list id="n5_o4l6" name="additemlist1" xy="504,133" size="300,396" overflow="scroll" margin="5,5,10,10" lineGap="5" defaultItem="ui://h4h4flrtoqrp15" autoClearItems="true">
+      <gearDisplay controller="addlistshow" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </list>
+    <list id="n6_o4l6" name="additemlist2" xy="504,133" size="300,396" overflow="scroll" margin="5,5,10,10" lineGap="5" defaultItem="ui://h4h4flrtoqrp15" autoClearItems="true">
+      <gearDisplay controller="addlistshow" pages="1,7"/>
+      <relation target="" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

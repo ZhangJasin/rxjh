@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="120,100" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <component id="n24_qwah" name="avator" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="35,10" size="56,57" touchable="false"/>
+    <loader id="n17_npv4" name="icon_job" xy="47,49" pivot="0,0.5" anchor="true" size="0,17" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n5_qpwo" name="text_name" xy="0,74" size="120,25" fontSize="16" color="#fffadc" align="center" autoSize="none" text="名字"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,60">
+  <displayList>
+    <loader id="n0_olk0" name="img_emoj" xy="30,30" pivot="0.5,0.5" anchor="true" size="60,60" url="ui://seywlb2rwqgf2q" align="center" vAlign="middle"/>
+  </displayList>
+</component>

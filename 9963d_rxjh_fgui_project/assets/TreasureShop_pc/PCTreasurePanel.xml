@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImage="ui://qy7g0oycemvc1b" designImageAlpha="97">
+  <displayList>
+    <component id="n324_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n307_qhgz" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n326_kra4" name="bg_left" src="djgs5h" fileName="Images/di_panel.png" xy="186,212" size="120,382">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n327_kra4" name="bg_right" src="djgs5h" fileName="Images/di_panel.png" xy="311,243" size="526,350">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n309_gqfi" name="costFilterList" xy="310,214" size="529,23" layout="row" overflow="scroll" scrollBarFlags="128" margin="0,0,1,0" defaultItem="ui://qy7g0oycemvc1t" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n310_gqfi" name="pageList" xy="189,215" size="117,379" overflow="scroll" scrollBarFlags="128" lineGap="4" defaultItem="ui://qy7g0oycemvc1e" autoItemSize="false" align="center" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n311_seb1" name="storeList" xy="309,243" size="532,348" layout="flow_hz" overflow="scroll" margin="4,4,5,2" lineGap="4" colGap="4" lineItemCount="4" defaultItem="ui://qy7g0oycemvc1h" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n313_seb1" name="title" xy="516,187" pivot="0.5,0.5" anchor="true" size="52,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" singleLine="true" text="百宝阁">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n320_ojv2" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="177,596" size="0,0"/>
+  </displayList>
+</component>

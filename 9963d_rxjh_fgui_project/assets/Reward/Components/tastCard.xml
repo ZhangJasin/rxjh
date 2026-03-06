@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="276,537">
+  <controller name="taskCardStatus" pages="1,未接取,2,已接取,3,已领取奖励,4,已完成击杀,5,取消悬赏任务" selected="3"/>
+  <displayList>
+    <image id="n0_hpp3" name="n0" src="hpp39" fileName="image/cardBg.png" xy="0,0"/>
+    <graph id="n14_hpp3" name="mon" xy="141,251" pivot="0.5,0.75" anchor="true" size="254,298" touchable="false" type="rect" fillColor="#00ffffff"/>
+    <component id="n3_hpp3" name="monName" src="hpp3c" fileName="Components/monName.xml" xy="209,31"/>
+    <component id="n4_hpp3" name="starNum" src="hpp3d" fileName="Components/starNum.xml" xy="70,272"/>
+    <component id="n6_hpp3" name="goto" src="hpp3p" fileName="Components/goto.xml" xy="140,471">
+      <gearDisplay controller="taskCardStatus" pages="2"/>
+    </component>
+    <component id="n7_hpp3" name="cancel" src="hpp3o" fileName="Components/cancel.xml" xy="9,470">
+      <gearDisplay controller="taskCardStatus" pages="2"/>
+    </component>
+    <component id="n9_hpp3" name="jlyl" src="hpp3q" fileName="Components/jlList.xml" xy="1,399" size="276,64"/>
+    <text id="n10_hpp3" name="n10" xy="15,339" size="51,26" fontSize="18" color="#512718" autoSize="none" text="地图:"/>
+    <text id="n11_hpp3" name="n11" xy="62,339" size="76,26" fontSize="18" color="#0104ff" text="地图名字"/>
+    <text id="n12_hpp3" name="n12" xy="15,369" size="52,26" fontSize="18" color="#512718" autoSize="none" text="目标:&#xA;&#xA;"/>
+    <text id="n13_hpp3" name="n13" xy="62,370" size="202,26" fontSize="18" color="#fe0000" autoSize="none" text="怪物名字怪物名字0/2"/>
+    <image id="n15_cbzs" name="n15" src="cbzs25" fileName="image/killedBg.png" xy="15,27">
+      <gearDisplay controller="taskCardStatus" pages="3"/>
+    </image>
+    <component id="n19_cbzs" name="finishedBtn" src="hpp323" fileName="Components/finishedBtn.xml" xy="59,470">
+      <gearDisplay controller="taskCardStatus" pages="4"/>
+    </component>
+    <component id="n20_cbzs" name="getTaskBtn" src="cbzs27" fileName="Components/getTask.xml" xy="59,470">
+      <gearDisplay controller="taskCardStatus" pages="1"/>
+    </component>
+    <image id="n21_cbzs" name="n21" src="cbzs26" fileName="image/finishedBtnBg.png" xy="74,472">
+      <gearDisplay controller="taskCardStatus" pages="3"/>
+    </image>
+    <image id="n22_cbzs" name="n22" src="cbzs24" fileName="image/cancelBtnBg.png" xy="74,473">
+      <gearDisplay controller="taskCardStatus" pages="5"/>
+    </image>
+    <image id="n23_njtv" name="n23" src="qeaz2e" fileName="image/blackBg.png" xy="0,0" size="276,537">
+      <gearDisplay controller="taskCardStatus" pages="5"/>
+    </image>
+  </displayList>
+</component>

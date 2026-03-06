@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,21" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <displayList>
+    <image id="n3_q9ls" name="n3" src="emvc4x" fileName="image/btn_green_normal.png" pkg="qa9a7rit" xy="0,0" size="64,21">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n4_q9ls" name="n4" src="emvc4z" fileName="image/btn_green_selected.png" pkg="qa9a7rit" xy="0,0" size="64,21">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n5_q9ls" name="title" xy="23,0" pivot="0.5,0.5" size="16,19" aspect="true" fontSize="12" color="#fced00" align="center" vAlign="middle" strokeColor="#28422f" singleLine="true" autoClearText="true" text="哈">
+      <gearColor controller="button" pages="0,1" values="#c5dccc,#28422f|#fced00,#28422f"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,60">
+  <displayList>
+    <loader id="n1_fhb3" name="loader_di" xy="0,0" size="60,60" url="ui://p8mjxubrlz03l" fill="scaleMatchHeight">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n0_fhb3" name="node_root" src="ilk5vnm" fileName="Node.xml" pkg="fms68umt" xy="0,0" size="60,60">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>

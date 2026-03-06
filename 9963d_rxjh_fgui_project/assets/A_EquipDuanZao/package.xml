@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="h4h4flrt">
+  <resources>
+    <component id="oqrpd" name="EquipDuanZao.xml" path="/" exported="true"/>
+    <component id="oqrpe" name="closebtn_yuan.xml" path="/Components/tongyong/"/>
+    <image id="oqrpf" name="close_yuan.png" path="/Images/0tongyong/"/>
+    <image id="oqrpg" name="icon_hei_bg.png" path="/Images/0tongyong/" scale="9grid" scale9grid="8,6,16,12"/>
+    <component id="oqrph" name="page_btn_toplv.xml" path="/Components/tongyong/"/>
+    <image id="oqrpi" name="page_lv1.png" path="/Images/0tongyong/" scale="9grid" scale9grid="19,10,38,20"/>
+    <image id="oqrpj" name="page_lv2.png" path="/Images/0tongyong/" scale="9grid" scale9grid="19,10,38,20"/>
+    <component id="oqrpk" name="bag_item2.xml" path="/Components/tongyong/"/>
+    <image id="oqrpl" name="kuangdi2.png" path="/Images/04duanzao/" scale="9grid" scale9grid="8,8,16,16" duplicatePadding="true"/>
+    <component id="oqrpm" name="itemRoot.xml" path="/Components/tongyong/"/>
+    <component id="oqrpn" name="page_rightlv.xml" path="/Components/tongyong/"/>
+    <image id="oqrpo" name="pagerilv1.png" path="/Images/0tongyong/"/>
+    <image id="oqrpp" name="pagerilv2.png" path="/Images/0tongyong/"/>
+    <component id="oqrpq" name="qianghua.xml" path="/Components/duanzao/"/>
+    <image id="oqrpr" name="rightbg.png" path="/Images/04duanzao/"/>
+    <component id="oqrps" name="item_select.xml" path="/Components/tongyong/"/>
+    <image id="oqrpt" name="kuangdi1.png" path="/Images/04duanzao/"/>
+    <image id="oqrpu" name="cost1.png" path="/Images/04duanzao/"/>
+    <image id="oqrpv" name="cost2.png" path="/Images/04duanzao/"/>
+    <image id="oqrpw" name="jia2.png" path="/Images/04duanzao/"/>
+    <image id="oqrpx" name="jia1.png" path="/Images/04duanzao/"/>
+    <component id="oqrpy" name="tybtn1.xml" path="/Components/tongyong/"/>
+    <image id="oqrpz" name="btn_zong.png" path="/Images/0tongyong/"/>
+    <component id="oqrp10" name="checkBox.xml" path="/Components/tongyong/"/>
+    <image id="oqrp11" name="gou.png" path="/Images/04duanzao/"/>
+    <component id="oqrp12" name="additempanl.xml" path="/Components/duanzao/"/>
+    <component id="oqrp13" name="kongbg.xml" path="/Components/tongyong/"/>
+    <image id="oqrp14" name="tipsdi.png" path="/Images/0tongyong/" scale="9grid" scale9grid="13,13,26,26" duplicatePadding="true"/>
+    <component id="oqrp15" name="additembtn.xml" path="/Components/duanzao/"/>
+    <image id="oqrp16" name="xxdi2.png" path="/Images/0tongyong/" scale="9grid" scale9grid="59,22,118,44" duplicatePadding="true"/>
+    <image id="oqrp17" name="xzkuang9.png" path="/Images/0tongyong/" scale="9grid" scale9grid="16,16,32,32" duplicatePadding="true"/>
+    <image id="oqrp18" name="pzkuang_zi.png" path="/Images/0tongyong/"/>
+    <component id="oqrp19" name="ScrollText.xml" path="/Components/zhizhao/"/>
+    <component id="oqrp1a" name="jiagong.xml" path="/Components/duanzao/"/>
+    <component id="oqrp1b" name="fuyu.xml" path="/Components/duanzao/"/>
+    <component id="oqrp1c" name="hecheng.xml" path="/Components/duanzao/"/>
+    <component id="oqrp1d" name="juexing.xml" path="/Components/duanzao/"/>
+    <component id="oqrp1e" name="fuhun.xml" path="/Components/duanzao/"/>
+    <component id="oqrp1f" name="btn_wenhao.xml" path="/Components/tongyong/"/>
+    <image id="oqrp1g" name="wenhao.png" path="/Images/0tongyong/"/>
+    <component id="oqrp1h" name="tips.xml" path="/Components/duanzao/"/>
+    <component id="oqrp1i" name="infoScro.xml" path="/Components/duanzao/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

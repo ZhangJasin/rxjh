@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1050,666">
+  <displayList>
+    <component id="n1_la2y" name="n1" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="47,138" size="890,475"/>
+    <text id="n0_la2y" name="n0" xy="187,319" size="595,199" fontSize="24" color="#ffffff" align="center" letterSpacing="3" autoSize="none" text="还没有缘戒功能"/>
+  </displayList>
+</component>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="260,19" overflow="hidden" opaque="false" extention="Label">
+  <displayList>
+    <text id="n9_rbeg" name="title" xy="0,9" pivot="0,0.5" anchor="true" size="284,19" fontSize="12" vAlign="middle" ubb="true" singleLine="true" autoClearText="true" text="1234567890111111111111111111111111111111"/>
+  </displayList>
+</component>

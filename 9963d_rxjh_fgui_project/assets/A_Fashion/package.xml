@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="k09jn1qd">
+  <resources>
+    <component id="rg4i0" name="FashionSystemPanl.xml" path="/" exported="true"/>
+    <image id="rg4i1" name="fash_szbjd.png" path="/Images/02fashion/"/>
+    <component id="rg4i2" name="fashionitem.xml" path="/Components/02fashion/"/>
+    <image id="rg4i3" name="tipsdi.png" path="/Images/0tongyong/" scale="9grid" scale9grid="13,13,26,26" duplicatePadding="true"/>
+    <component id="rg4i4" name="fashion_listbtn.xml" path="/Components/02fashion/"/>
+    <image id="rg4i5" name="fash_szd.png" path="/Images/02fashion/"/>
+    <image id="rg4i6" name="fash_szdxz.png" path="/Images/02fashion/"/>
+    <component id="rg4i7" name="itemRoot.xml" path="/Components/tongyong/"/>
+    <component id="rg4i8" name="page_rightlv.xml" path="/Components/tongyong/"/>
+    <image id="rg4i9" name="pagerilv1.png" path="/Images/0tongyong/"/>
+    <image id="rg4ia" name="pagerilv2.png" path="/Images/0tongyong/"/>
+    <component id="rg4ib" name="fash_btnml.xml" path="/Components/02fashion/"/>
+    <image id="rg4ic" name="fash_mlzd.png" path="/Images/02fashion/"/>
+    <component id="rg4id" name="fashion_pifengQHBtn.xml" path="/Components/02fashion/"/>
+    <image id="rg4ie" name="fash_pfqh.png" path="/Images/02fashion/"/>
+    <component id="rg4if" name="attr1.xml" path="/Components/02fashion/"/>
+    <image id="rg4ig" name="fash_rightxxd.png" path="/Images/02fashion/" scale="9grid" scale9grid="17,16,34,32"/>
+    <image id="rg4ih" name="huawen1.png" path="/Images/0tongyong/"/>
+    <image id="rg4ii" name="huawen2.png" path="/Images/0tongyong/"/>
+    <component id="rg4ij" name="attrfont.xml" path="/Components/02fashion/"/>
+    <image id="rg4ik" name="fash_zwsx.png" path="/Images/02fashion/"/>
+    <component id="rg4il" name="attr2.xml" path="/Components/02fashion/"/>
+    <component id="rg4im" name="attr3.xml" path="/Components/02fashion/"/>
+    <image id="rg4in" name="di1.png" path="/Images/0tongyong/" scale="9grid" scale9grid="28,20,56,40"/>
+    <component id="rg4io" name="fashion_gxzbBtn.xml" path="/Components/02fashion/"/>
+    <image id="rg4ip" name="fash_gxzb.png" path="/Images/02fashion/"/>
+    <component id="rg4iq" name="fashion_huanhuaBtn.xml" path="/Components/02fashion/"/>
+    <image id="rg4ir" name="fash_hh.png" path="/Images/02fashion/"/>
+    <image id="rg4is" name="fash_hhz.png" path="/Images/02fashion/"/>
+    <component id="rg4it" name="fashion_useBtn.xml" path="/Components/02fashion/"/>
+    <image id="rg4iu" name="fash_sy.png" path="/Images/02fashion/"/>
+    <image id="rg4iv" name="fash_syz.png" path="/Images/02fashion/"/>
+    <component id="rg4iw" name="fashion_meilizhi.xml" path="/Components/02fashion/"/>
+    <component id="rg4ix" name="kongbg.xml" path="/Components/tongyong/"/>
+    <image id="rg4iy" name="fash_mltc.png" path="/Images/02fashion/"/>
+    <image id="rg4iz" name="fash_meili.png" path="/Images/02fashion/"/>
+    <component id="rg4i10" name="fashion_attritem.xml" path="/Components/02fashion/"/>
+    <image id="rg4i11" name="fash_mlxxd.png" path="/Images/02fashion/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

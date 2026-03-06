@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false" designImage="ui://zj419n3ddpxov3f">
+  <displayList>
+    <component id="n75_kvft" name="Target" src="kvftfvdm" fileName="Components/Target/Target.xml" xy="427,0">
+      <relation target="" sidePair="center-center,top-top"/>
+    </component>
+  </displayList>
+</component>

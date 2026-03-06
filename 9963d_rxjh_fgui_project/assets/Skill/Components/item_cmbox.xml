@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,40" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n5_c4df" name="bg1" src="c4dfkvpf" fileName="image/dropdown_normal.png" pkg="st7dgeqq" xy="0,0" size="200,40">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n6_c4df" name="bg2" src="c4dfkvpg" fileName="image/dropdown_selected.png" pkg="st7dgeqq" xy="0,0" size="200,40">
+      <gearDisplay controller="button" pages="1,2,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n11_kelz" name="input_title" xy="90,20" pivot="0.5,0.5" anchor="true" size="160,32" fontSize="22" color="#bdf5e8" align="center" vAlign="middle" autoSize="none" text="我我我我我我我" input="true" prompt="请输入名字..." maxLength="7"/>
+    <loader id="n10_kelz" name="select" xy="0,0" size="200,40">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n12_kelz" name="btn_edit" src="kelz1f" fileName="Components/btn_edit.xml" xy="180,20" pivot="0.5,0.5" anchor="true"/>
+    <image id="n15_kelz" name="img_add" src="kelz1n" fileName="Images/skill_add.png" xy="90,20" pivot="0.5,0.5" anchor="true" size="32,32"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

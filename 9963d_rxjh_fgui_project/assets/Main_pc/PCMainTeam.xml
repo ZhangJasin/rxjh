@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600" opaque="false">
+  <displayList>
+    <component id="n9_tp62" name="team" src="rqwtfve6" fileName="Components/Assist/Team.xml" xy="168,104"/>
+  </displayList>
+  <transition name="hide">
+    <item time="0" type="Alpha" target="n9_tp62" tween="true" startValue="1" endValue="0" duration="6"/>
+    <item time="0" type="Scale" target="n9_tp62" tween="true" startValue="1,1" endValue="0,0" duration="6"/>
+    <item time="0" type="XY" target="n9_tp62" label="move" tween="true" startValue="-,-" endValue="197,30" duration="6"/>
+  </transition>
+</component>

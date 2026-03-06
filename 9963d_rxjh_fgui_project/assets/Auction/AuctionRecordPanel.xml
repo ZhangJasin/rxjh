@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1000,600" pivot="0.5,0.5" anchor="true">
+  <displayList>
+    <image id="n69_q8ir" name="bg_right_list" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="12,14" size="976,516">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n70_q8ir" name="di_top" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="15,19" size="970,50" group="n81_q8ir">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n71_q8ir" name="fengexian1" src="nojsd" fileName="Images/split.png" xy="303,22" size="2,42" group="n81_q8ir">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n73_q8ir" name="fengexian3" src="nojsd" fileName="Images/split.png" xy="470,22" size="2,42" group="n81_q8ir">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n74_q8ir" name="fengexian4" src="nojsd" fileName="Images/split.png" xy="808,22" size="2,42" group="n81_q8ir">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n75_q8ir" name="fengexian5" src="nojsd" fileName="Images/split.png" xy="626,22" size="2,42" group="n81_q8ir">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n76_q8ir" name="label_time" xy="168,29" size="44,29" group="n81_q8ir" fontSize="20" color="#d9f9d5" text="时间">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n77_q8ir" name="label_goods" xy="378,29" size="44,29" group="n81_q8ir" fontSize="20" color="#d9f9d5" text="商品">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n78_q8ir" name="label_count" xy="536,29" size="44,29" group="n81_q8ir" fontSize="20" color="#d9f9d5" text="数量">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n79_q8ir" name="label_kind" xy="700,29" size="44,29" group="n81_q8ir" fontSize="20" color="#d9f9d5" text="类型">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n80_q8ir" name="label_price" xy="873,29" size="44,29" group="n81_q8ir" fontSize="20" color="#d9f9d5" text="价格">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n81_q8ir" name="panel_top" xy="15,19" size="970,50"/>
+    <list id="n82_q8ir" name="list_record" xy="15,74" size="970,449" overflow="scroll" lineGap="1" defaultItem="ui://5i0v372fq8irp" align="center" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n83_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="500,597" size="0,0">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <text id="n84_ewso" name="n84" xy="280,552" size="440,26" fontSize="18" color="#ffffff" singleLine="true" text="保留50条购买/出售/上架/下架记录,记录更新可能有延迟">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

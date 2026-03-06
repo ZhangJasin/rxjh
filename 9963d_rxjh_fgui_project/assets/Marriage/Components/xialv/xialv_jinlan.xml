@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1007,646">
+  <controller name="tips" exported="true" pages="0,关闭tips,1,打开tips" selected="0"/>
+  <controller name="打开离婚界面" pages="0,关闭,1,打开" selected="0"/>
+  <displayList>
+    <image id="n12_la2y" name="n10" src="la2yr" fileName="images/jinlan.png" xy="10,105"/>
+    <component id="n7_la2y" name="btn_tips" src="la2y3" fileName="Components/common/btn_wenhao.xml" xy="684,108">
+      <gearDisplay controller="tips" pages="0,1"/>
+    </component>
+    <component id="n5_la2y" name="btn_upgrade" src="la2yf" fileName="Components/common/btn_green.xml" xy="780,590" group="n13_eoqr"/>
+    <text id="n6_la2y" name="n6" xy="780,590" size="159,53" group="n13_eoqr" fontSize="24" color="#ffff00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="升级"/>
+    <group id="n13_eoqr" name="n12" xy="780,590" size="159,53"/>
+    <image id="n33_eoqr" name="n33" src="eoqr2v" fileName="images/marriage/jinlan.png" xy="168,133" size="417,73"/>
+    <image id="n34_eoqr" name="n34" src="eoqr2w" fileName="images/marriage/jinlandi.png" xy="13,535"/>
+    <text id="n16_eoqr" name="n16" xy="252,533" size="109,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="我的情缘:"/>
+    <text id="n17_eoqr" name="n17" xy="252,568" size="109,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="结缘日期:"/>
+    <text id="n18_eoqr" name="n41" xy="364,568" size="120,35" fontSize="22" color="#00ff00" vAlign="middle" autoSize="none" text="2025-08-19&#xA;"/>
+    <text id="n19_eoqr" name="n42" xy="364,534" size="109,32" fontSize="20" color="#ffffff" vAlign="middle" autoSize="none" text="牛爷爷"/>
+    <component id="n20_eoqr" name="btn_transmission" src="eoqr2y" fileName="Components/common/btn_transmission.xml" xy="26,557"/>
+    <component id="n21_eoqr" name="btn_intimacy" src="eoqr30" fileName="Components/common/btn_intimacy.xml" xy="26,471"/>
+    <component id="n22_eoqr" name="btn_releaseYuan" src="eoqr31" fileName="Components/common/btn_releaseYuan.xml" xy="632,555"/>
+    <component id="n23_eoqr" name="n46" src="eoqr34" fileName="Components/common/show_itemUnlock.xml" xy="594,277"/>
+    <component id="n24_eoqr" name="n47" src="eoqr34" fileName="Components/common/show_itemUnlock.xml" xy="594,377"/>
+    <component id="n25_eoqr" name="n48" src="eoqr35" fileName="Components/common/item_select.xml" xy="76,277" visible="false"/>
+    <component id="n26_eoqr" name="n49" src="eoqr35" fileName="Components/common/item_select.xml" xy="76,377" visible="false"/>
+    <text id="n29_eoqr" name="textLabel_level" xy="345,148" size="66,34" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="0级"/>
+    <text id="n30_eoqr" name="n30" xy="310,180" size="135,27" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="情缘等级"/>
+    <component id="n31_eoqr" name="star" src="eoqr39" fileName="Components/common/star.xml" xy="290,220"/>
+    <component id="n36_eoqr" name="n57" src="eoqr3c" fileName="Components/xialv/model_attribute.xml" xy="720,100"/>
+    <component id="n37_eoqr" name="n58" src="eoqr3e" fileName="Components/xialv/model_costItem.xml" xy="778,550"/>
+    <component id="n14_eoqr" name="page_divorce" src="eoqr37" fileName="Components/xialv/page_divorce.xml" xy="279,190">
+      <gearDisplay controller="打开离婚界面" pages="1"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64" extention="Button">
+  <controller name="checked" pages="0,up,1,down" selected="0"/>
+  <controller name="isActivation" pages="0,未激活,1,已激活" selected="0"/>
+  <displayList>
+    <image id="n0_o0nq" name="n0" src="o0nq1f" fileName="image/7000002.png" xy="0,0"/>
+    <loader id="n5_vorr" name="avatar" xy="0,0" size="64,64" fill="scale"/>
+    <image id="n1_o0nq" name="n1" src="o0nq1g" fileName="image/suo.png" xy="15,21">
+      <gearDisplay controller="isActivation" pages="0"/>
+    </image>
+    <image id="n2_o0nq" name="n2" src="o0nq1r" fileName="image/xz.png" xy="0,0">
+      <gearDisplay controller="checked" pages="1"/>
+    </image>
+  </displayList>
+  <Button mode="Check"/>
+</component>

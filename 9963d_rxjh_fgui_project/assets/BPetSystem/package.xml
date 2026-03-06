@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="bphbjao2">
+  <resources>
+    <image id="swkl1" name="r.png" path="/Images/jinhua/" exported="true"/>
+    <image id="swkl2" name="sr.png" path="/Images/jinhua/" exported="true"/>
+    <image id="swkl3" name="ssr.png" path="/Images/jinhua/" exported="true"/>
+    <image id="swkl4" name="di.png" path="/Images/jinhua/" exported="true" scale="9grid" scale9grid="65,108,130,216"/>
+    <image id="swkl5" name="heidi.png" path="/Images/jinhua/" exported="true"/>
+    <image id="swkl6" name="sr.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkl7" name="ssr.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkl8" name="常态.png" path="/Images/lingshou/" exported="true" scale="9grid" scale9grid="15,15,66,60"/>
+    <image id="swkl9" name="底.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkla" name="底2.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swklb" name="技能底.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swklc" name="进度条.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkld" name="进度条2.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkle" name="进化预览.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swklh" name="选中.png" path="/Images/lingshou/" exported="true" scale="9grid" scale9grid="24,22,48,44"/>
+    <image id="swkli" name="r.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swklj" name="名字底.png" path="/Images/shengxing/" exported="true"/>
+    <image id="swklk" name="星.png" path="/Images/shengxing/" exported="true"/>
+    <image id="swkll" name="星2.png" path="/Images/shengxing/" exported="true"/>
+    <image id="swklm" name="星3.png" path="/Images/shengxing/" exported="true"/>
+    <image id="swkln" name="背景.png" path="/Images/shengxing/" exported="true"/>
+    <image id="swklo" name="点击空白处继续.png" path="/Images/shengxing/" exported="true"/>
+    <image id="swklp" name="箭头.png" path="/Images/shengxing/" exported="true"/>
+    <image id="swkl17" name="限时角标.png" path="/Images/touxiang/" exported="true"/>
+    <image id="swkl18" name="图层 14.png" path="/Images/touxiang/" exported="true"/>
+    <image id="swkl19" name="头像框底.png" path="/Images/touxiang/" exported="true"/>
+    <image id="swkl1a" name="头像框.png" path="/Images/touxiang/" exported="true"/>
+    <image id="swkl1d" name="兔子.png" path="/Images/jinhua/" exported="true"/>
+    <image id="swkl1e" name="兔子2.png" path="/Images/jinhua/" exported="true"/>
+    <image id="swkl1f" name="坐骑升星石.png" path="/Images/jinhua/" exported="true"/>
+    <image id="swkl1g" name="宠物升星石.png" path="/Images/jinhua/" exported="true"/>
+    <image id="swkl1h" name="龙.png" path="/Images/jinhua/" exported="true"/>
+    <image id="swkl1i" name="龙2.png" path="/Images/jinhua/" exported="true"/>
+    <component id="swkl1j" name="PetSystemPay.xml" path="/" exported="true"/>
+    <component id="swkl1k" name="attrPanl.xml" path="/" exported="true"/>
+    <image id="swkl1l" name="背景.png" path="/Images/jinhua/" exported="true"/>
+    <image id="swkl1m" name="目录底.png" path="/Images/jinhua/" exported="true"/>
+    <image id="swkl1n" name="图层22894.png" path="/Images/jinhua/" exported="true"/>
+    <image id="swkl1o" name="背景.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkl1p" name="背景图.png" path="/Images/lingshou/" exported="true" scale="9grid" scale9grid="127,125,254,250"/>
+    <image id="swkl1q" name="放置物品框.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkl1r" name="目录底.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkl1s" name="背景图(1).png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkl1t" name="非常开心.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkl1u" name="进度.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkl1v" name="进度条(1).png" path="/Images/lingshou/" exported="true" scale="9grid" scale9grid="57,8,114,16"/>
+    <image id="swkl1w" name="开心.png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkl1x" name="目录底(1).png" path="/Images/lingshou/" exported="true"/>
+    <image id="swkl20" name="pet_hxhtyn.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl21" name="宠物主界面血条底.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl22" name="宠物主界面底.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl23" name="s.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl24" name="c.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl25" name="b.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl26" name="a.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl27" name="已修炼.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl28" name="血条.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl29" name="选择狂.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2a" name="星级亮.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2b" name="星级.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2c" name="心情底.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2d" name="天赋总览.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2e" name="天赋圈.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2f" name="天赋bg.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2g" name="天赋.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2h" name="属性文字底.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2i" name="品阶底.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2j" name="pet_ng.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2k" name="灵兽BG.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2l" name="蓝条.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2m" name="快速获取.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2n" name="pet_kx.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2o" name="pet_fckx.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2p" name="pet_fcng.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2q" name="bg.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2r" name="bg2.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2s" name="bg3.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2t" name="bg4.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2v" name="背景.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2w" name="放入 宝珠.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2x" name="灵宠孵化.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2y" name="灵宠中间道具框.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl2z" name="效果预览.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl30" name="信息底.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl31" name="右侧信息底.png" path="/Images/shuxing/" exported="true"/>
+    <image id="swkl32" name="已上阵.png" path="/Images/shuxing/" exported="true"/>
+    <component id="swkl33" name="btnlist.xml" path="/Components/shuxing/" exported="true"/>
+    <component id="swkl34" name="itemxing.xml" path="/Components/shuxing/" exported="true"/>
+    <image id="onai35" name="sxbg.png" path="/Images/jinhua/" exported="true" scale="9grid" scale9grid="62,48,124,96"/>
+    <component id="kdof36" name="equipItem.xml" path="/Components/shuxing/" exported="true"/>
+    <image id="kdof37" name="jia1.png" path="/Images/jinhua/" exported="true"/>
+    <component id="kdof38" name="attritem.xml" path="/Components/shuxing/" exported="true"/>
+    <component id="kdof3a" name="panl_wyls.xml" path="/Components/shuxing/" exported="true"/>
+    <component id="kdof3b" name="ProgressBar.xml" path="/Components/shuxing/" exported="true"/>
+    <component id="kdof3c" name="panl_attrshow.xml" path="/Components/shuxing/" exported="true"/>
+    <component id="kdof3d" name="panl_petupxing.xml" path="/Components/shuxing/" exported="true"/>
+    <image id="kdof3e" name="箭头-绿.png" path="/Images/lingshou/" exported="true"/>
+    <image id="kdof3f" name="右箭头.png" path="/Images/shengxing/" exported="true"/>
+    <component id="kdof3g" name="attritem2.xml" path="/Components/shuxing/" exported="true"/>
+    <component id="kdof3h" name="panl_lssj.xml" path="/Components/shuxing/" exported="true"/>
+    <component id="kdof3i" name="additembtn.xml" path="/Components/shuxing/" exported="true"/>
+    <component id="kdof3j" name="topBtn.xml" path="/Components/shuxing/" exported="true"/>
+    <image id="s5ms3k" name="pet_sr.png" path="/Images/shuxing/" exported="true"/>
+    <image id="s5ms3l" name="pet_ssr.png" path="/Images/shuxing/" exported="true"/>
+    <component id="s5ms3m" name="wyitem.xml" path="/Components/shuxing/" exported="true"/>
+    <image id="h9r23n" name="pet_000.png" path="/Images/touxiang/" exported="true"/>
+    <image id="h9r23o" name="pet_001.png" path="/Images/touxiang/" exported="true"/>
+    <image id="h9r23p" name="pet_002.png" path="/Images/touxiang/" exported="true"/>
+    <image id="h9r23q" name="pet_003.png" path="/Images/touxiang/" exported="true"/>
+    <image id="h9r23r" name="pet_004.png" path="/Images/touxiang/" exported="true"/>
+    <image id="h9r23s" name="pet_005.png" path="/Images/touxiang/" exported="true"/>
+    <component id="klt83t" name="talentPanl.xml" path="/" exported="true"/>
+    <component id="klt83v" name="tolentItem.xml" path="/Components/talent/" exported="true"/>
+    <component id="klt83w" name="skillPanl.xml" path="/" exported="true"/>
+    <component id="klt83x" name="equipPanl2.xml" path="/" exported="true"/>
+    <component id="s2ey3y" name="talentPanl.xml" path="/Components/talent/"/>
+    <image id="s2ey3z" name="pet_talent_001.png" path="/Images/touxiang/" exported="true"/>
+    <component id="s2ey40" name="skillItem.xml" path="/Components/skill/" exported="true"/>
+    <image id="s45r41" name="01.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r42" name="016.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r43" name="015.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r44" name="014.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r45" name="013.png" path="/Images/newattr/" exported="true" scale="9grid" scale9grid="31,4,62,8"/>
+    <image id="s45r46" name="012.png" path="/Images/newattr/" exported="true" scale="9grid" scale9grid="35,5,70,10"/>
+    <image id="s45r47" name="011.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r48" name="010.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r49" name="09.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r4a" name="08.png" path="/Images/newattr/" exported="true" scale="9grid" scale9grid="46,7,92,14"/>
+    <image id="s45r4b" name="07.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r4c" name="pet_c.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r4d" name="pet_a.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r4e" name="pet_s.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r4f" name="pet_b.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r4g" name="02.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r4h" name="017.png" path="/Images/newattr/" exported="true"/>
+    <image id="s45r4i" name="018.png" path="/Images/newattr/" exported="true"/>
+    <component id="s45r4j" name="btn_upstar.xml" path="/Components/shuxing/" exported="true"/>
+    <component id="s45r4k" name="btn_attrzl.xml" path="/Components/shuxing/" exported="true"/>
+    <image id="s45r4m" name="03.png" path="/Images/newattr/" exported="true" scale="9grid" scale9grid="33,7,66,14"/>
+    <image id="s45r4n" name="01(1).png" path="/Images/newattr/" exported="true"/>
+    <component id="s45r4o" name="attritem3.xml" path="/Components/shuxing/" exported="true"/>
+    <component id="lg984p" name="itemRoot.xml" path="/Components/talent/" exported="true"/>
+    <component id="lg984q" name="additembtn.xml" path="/Components/talent/" exported="true"/>
+    <image id="lg984r" name="pzkuang_zi.png" path="/Images/newattr/" exported="true"/>
+    <image id="lg984s" name="01(2).png" path="/Images/newattr/" exported="true"/>
+    <image id="lg984t" name="zkd.png" path="/Images/newattr/" exported="true" scale="9grid" scale9grid="25,6,50,12"/>
+    <component id="lg984u" name="sldHcPanl.xml" path="/" exported="true"/>
+    <image id="lg984w" name="01.png" path="/Images/newhc/" exported="true"/>
+    <image id="lg984x" name="02.png" path="/Images/newhc/" exported="true"/>
+    <image id="lg984y" name="03.png" path="/Images/newhc/" exported="true"/>
+    <image id="lg984z" name="05.png" path="/Images/newhc/" exported="true"/>
+    <image id="lg9850" name="newsuo.png" path="/Images/newhc/" exported="true"/>
+    <image id="lg9851" name="07.png" path="/Images/newhc/" exported="true"/>
+    <image id="lg9852" name="ct.png" path="/Images/newhc/" exported="true"/>
+    <image id="lg9853" name="xz.png" path="/Images/newhc/" exported="true"/>
+    <component id="lg9854" name="btnlist.xml" path="/Components/hecheng/" exported="true"/>
+    <image id="cm5h55" name="04.png" path="/Images/newhc/" exported="true"/>
+    <component id="cm5h56" name="itemsld.xml" path="/Components/hecheng/" exported="true"/>
+    <component id="cm5h57" name="checkBox.xml" path="/Components/hecheng/" exported="true"/>
+    <image id="cm5h58" name="gouxuan.png" path="/Images/newhc/" exported="true"/>
+    <image id="cm5h59" name="gouxuandi.png" path="/Images/newhc/" exported="true"/>
+    <component id="cm5h5b" name="itemsldlist.xml" path="/Components/hecheng/" exported="true"/>
+    <component id="q1t45c" name="additempanl.xml" path="/Components/hecheng/" exported="true"/>
+    <component id="j82q5d" name="ScrollText.xml" path="/Components/hecheng/" exported="true"/>
+    <image id="gfvl5e" name="tuijian.png" path="/Images/shuxing/" exported="true"/>
+    <component id="mawg5f" name="equipPanl.xml" path="/" exported="true"/>
+    <component id="mawg5g" name="additembtn3.xml" path="/Components/hecheng/" exported="true"/>
+    <image id="mawg5h" name="pzkuang_zi.png" path="/Images/newhc/" exported="true"/>
+    <image id="mawg5i" name="btm.png" path="/Images/newhc/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="fpdq5j" name="01(1).png" path="/Images/newhc/" exported="true"/>
+    <component id="fpdq5k" name="PetEquipSys.xml" path="/" exported="true"/>
+    <component id="fpdq5l" name="tips.xml" path="/" exported="true"/>
+    <image id="fpdq5o" name="01(2).png" path="/Images/newhc/"/>
+    <component id="fpdq5p" name="item_select.xml" path="/Components/hecheng/" exported="true"/>
+    <image id="fpdq5q" name="cost1.png" path="/Images/newhc/" exported="true"/>
+    <image id="fpdq5r" name="cost2.png" path="/Images/newhc/" exported="true"/>
+    <image id="fpdq5s" name="jia1.png" path="/Images/newhc/" exported="true"/>
+    <image id="fpdq5t" name="jia2.png" path="/Images/newhc/" exported="true"/>
+    <image id="fpdq5u" name="kuangdi1.png" path="/Images/newhc/" exported="true"/>
+    <component id="fpdq5v" name="itemRoot.xml" path="/Components/hecheng/" exported="true"/>
+    <component id="fpdq5x" name="tybtn1.xml" path="/Components/talent/" exported="true"/>
+    <image id="fpdq5y" name="btn_zong.png" path="/Images/newhc/" exported="true"/>
+    <component id="fpdq5z" name="btn_zong.xml" path="/Components/shuxing/" exported="true"/>
+    <component id="fpdq60" name="hecheng.xml" path="/" exported="true"/>
+    <component id="fpdq61" name="qianghua.xml" path="/" exported="true"/>
+    <component id="a4au62" name="bag_item2.xml" path="/Components/hecheng/" exported="true"/>
+    <image id="gxww63" name="pet_008.png" path="/Images/touxiang/" exported="true"/>
+    <image id="gxww64" name="pet_006.png" path="/Images/touxiang/" exported="true"/>
+    <image id="gxww65" name="pet_007.png" path="/Images/touxiang/" exported="true"/>
+  </resources>
+  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\BPetSystem" packageCount="2"/>
+</packageDescription>

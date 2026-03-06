@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="160,53" extention="Button">
+  <displayList>
+    <image id="n0_hpp3" name="n0" src="je63v3e" fileName="image/btn_second_red.png" pkg="st7dgeqq" xy="0,0" size="160,53"/>
+    <text id="n1_hpp3" name="n1" xy="0,0" size="160,53" fontSize="22" color="#fdf100" align="center" vAlign="middle" autoSize="none" text="接取任务"/>
+  </displayList>
+  <Button downEffect="dark" downEffectValue="0.8"/>
+</component>

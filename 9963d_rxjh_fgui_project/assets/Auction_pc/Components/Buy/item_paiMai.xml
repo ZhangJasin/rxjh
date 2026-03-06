@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="529,52">
+  <displayList>
+    <image id="n0_nojs" name="n0" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,0" size="529,52">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n1_nojs" name="itemRoot" src="oxr76" fileName="Components/Buy/Item_paiMai_Item_root.xml" xy="8,4" size="43,43">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_nojs" name="text_name" xy="56,16" size="144,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="height" singleLine="true" text="商品名称七个字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n3_nojs" name="text_time" xy="229,27" size="73,18" group="n14_oxr7" fontSize="11" color="#ff0000" align="center" vAlign="middle" singleLine="true" autoClearText="true" text="10时30分55秒">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n4_nojs" name="text_status" xy="241,6" size="48,18" group="n14_oxr7" fontSize="11" color="#f1ffeb" align="center" singleLine="true" text="无人竞拍">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n14_oxr7" name="n14" xy="229,6" size="73,39" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <text id="n5_nojs" name="text_price_jingJia" xy="379,2" size="44,23" group="n15_oxr7" fontSize="15" color="#f1ffeb" singleLine="true" text="99999">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n8_nojs" name="btn_jingjia" src="oxr77" fileName="Components/btn_JingJia.xml" xy="337,21" group="n15_oxr7" controller="buttonKind,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="竞 价" titleColor="#fced00" titleFontSize="11"/>
+    </component>
+    <component id="n9_nojs" name="btn_buy" src="oxr77" fileName="Components/btn_JingJia.xml" xy="423,21" group="n15_oxr7" controller="buttonKind,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="购 买" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <text id="n10_nojs" name="text_price_once" xy="469,2" size="44,23" group="n15_oxr7" fontSize="15" color="#f1ffeb" singleLine="true" text="99999">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n12_8mfo" name="iconMoney1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="356,2" size="23,23" group="n15_oxr7" aspect="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n13_8mfo" name="iconMoney2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="436,2" size="33,23" group="n15_oxr7">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n15_oxr7" name="n15" xy="337,2" size="175,46" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

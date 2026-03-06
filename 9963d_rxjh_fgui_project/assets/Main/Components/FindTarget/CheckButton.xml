@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="32,32" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <displayList>
+    <image id="n3_hpqd" name="n3" src="hpqdfve7" fileName="Images/FindTarget/main_find_target_check_bg.png" xy="0,0"/>
+    <image id="n4_hpqd" name="n4" src="hpqdfve6" fileName="Images/FindTarget/main_find_target_check.png" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="243,87" pivot="1,0" anchor="true" opaque="false">
+  <displayList>
+    <graph id="n0_g11o" name="n0" xy="0,0" size="243,87" touchable="false" type="rect" lineColor="#ff999999" fillColor="#80000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n1_g11o" name="Text_name" xy="121,19" pivot="0.5,0.5" anchor="true" size="28,19" fontSize="12" color="#ffffff" strokeColor="#000000" autoClearText="true" text="名字"/>
+    <text id="n2_g11o" name="Text_time" xy="121,43" pivot="0.5,0.5" anchor="true" size="40,19" fontSize="12" color="#ffffff" strokeColor="#000000" autoClearText="true" text="倒计时"/>
+    <text id="n3_g11o" name="Text_desc" xy="11,58" size="221,19" fontSize="12" color="#ffffff" align="center" autoSize="height" strokeColor="#000000" autoClearText="true" text="描述"/>
+  </displayList>
+  <relation target="n3_g11o" sidePair="bottomext-bottom"/>
+</component>

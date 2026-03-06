@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="596,55" extention="Button" designImage="ui://tsu6gfnozah92" designImageOffsetX="-186" designImageOffsetY="-118" designImageAlpha="70">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n4_zah9" name="n4" src="wi4521" fileName="Images/list_bg_9.png" xy="0,0" size="596,55">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n5_zah9" name="text_name" xy="15,10" size="172,35" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="强生强生集团"/>
+    <text id="n6_zah9" name="text_level" xy="215,10" size="55,35" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="1级"/>
+    <text id="n7_zah9" name="text_member_count" xy="305,10" size="111,35" fontSize="20" color="#f5e700" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="100/100"/>
+    <text id="n8_zah9" name="text_owner_name" xy="469,14" pivot="0.5,0.5" size="64,29" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoClearText="true" text="帮主名"/>
+    <image id="n11_u0jf" name="effect_select" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="-1,0" size="597,55">
+      <gearDisplay controller="button" pages="3,5"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

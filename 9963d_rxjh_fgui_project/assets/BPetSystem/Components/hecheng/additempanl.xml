@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" bgColor="#ff0000">
+  <displayList>
+    <component id="n16_egru" name="bg" src="lg984p" fileName="Components/talent/itemRoot.xml" xy="0,0" size="1334,750">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n3_o4l6" name="n3" src="o4l65e" fileName="Images/0tongyong/tipsdi.png" pkg="fgihxfye" xy="504,133" size="300,396">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n5_o4l6" name="additemlist" xy="504,133" size="300,396" overflow="scroll" margin="5,5,10,10" lineGap="5" defaultItem="ui://bphbjao2kdof3i" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

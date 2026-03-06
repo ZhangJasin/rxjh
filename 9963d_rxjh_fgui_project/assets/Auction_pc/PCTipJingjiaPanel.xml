@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <displayList>
+    <component id="n24_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="357,249" size="310,270">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n3_q8ir" name="title" xy="494,257" size="36,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#fffadc" text="提示">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n23_rg2r" name="bg_di" src="oxr718" fileName="Images/img_dlg_di.png" xy="367,292" size="290,170">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n22_rg2r" name="item_node" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="425,318" size="43,43" aspect="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n5_q8ir" name="text_name" xy="476,315" size="109,23" fontSize="15" color="#ffffff" singleLine="true" autoClearText="true" text="这是名字七个字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n6_q8ir" name="label_price" xy="476,342" size="38,23" fontSize="15" color="#ffffff" singleLine="true" text="竞价:">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n7_q8ir" name="text_price" xy="553,344" size="32,20" fontSize="13" color="#f1ffeb" singleLine="true" text="9999">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n20_rg2r" name="icon_Money1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="531,344" size="20,20" aspect="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n13_q8ir" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="647,268">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n14_q8ir" name="cbx_select_price" src="oxr7f" fileName="Components/Buy/cbx_jingjia.xml" xy="412,387" size="198,25">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <ComboBox title="当前加价5%" titleColor="#f1ffeb" visibleItemCount="6" direction="down">
+        <item title="当前竞价加价5%"/>
+        <item title="当前竞价加价10%"/>
+        <item title="当前竞价加价20%"/>
+        <item title="当前竞价加价30%"/>
+        <item title="当前竞价加价50%"/>
+        <item title="当前竞价加价100%"/>
+      </ComboBox>
+    </component>
+    <text id="n17_q8ir" name="label_cur_price_give" xy="435,432" size="68,23" group="n18_q8ir" fontSize="15" color="#f1ffeb" singleLine="true" text="当前出价:">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n21_rg2r" name="icon_Money2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="505,432" size="23,23" group="n18_q8ir" aspect="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n16_q8ir" name="text_price_player_give" xy="528,433" size="60,20" group="n18_q8ir" fontSize="13" color="#f1ffeb" autoSize="height" singleLine="true" text="9999">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n18_q8ir" name="set" xy="435,432" size="153,23" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n11_q8ir" name="btn_givePrice" src="oxr77" fileName="Components/btn_JingJia.xml" xy="412,482" group="n25_owd7">
+      <Button title="出 价" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <component id="n12_q8ir" name="btn_cancel" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="526,482" group="n25_owd7">
+      <Button title="取 消" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <group id="n25_owd7" name="n25" xy="412,482" size="198,28" advanced="true" layout="hz" colGap="30" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="437,70">
+  <displayList>
+    <text id="n0_kpju" name="text_time" xy="8,3" size="138,29" fontSize="20" color="#ffffff" autoClearText="true" text="10月22日21:43"/>
+    <text id="n1_kpju" name="text_content" xy="9,36" size="349,29" fontSize="20" color="#ffffff" autoClearText="true" text="白虎 · 真灵x3售出成功，收款 元宝 150"/>
+  </displayList>
+</component>

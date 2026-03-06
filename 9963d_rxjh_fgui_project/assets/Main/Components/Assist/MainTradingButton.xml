@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,60" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n4_k5e7" name="unselectImg" src="k5e7v8t" fileName="Images/Assist/main_assist_unselect_btn_9.png" xy="0,0" size="60,60">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_k5e7" name="selectImg" src="k5e7v8r" fileName="Images/Assist/main_assist_select_btn_9.png" xy="0,0" size="60,60">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button mode="Check"/>
+</component>

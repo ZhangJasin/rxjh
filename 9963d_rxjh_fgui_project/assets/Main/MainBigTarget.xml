@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <image id="n13_grq3" name="n13" src="grq3a" fileName="Images/BigTarget/image_bg.png" xy="472,0" size="342,100" group="n26_tlae" scale="1.2,1.2"/>
+    <loader id="n19_grq3" name="Loader_hpBg" xy="576,60" size="220,16" group="n26_tlae" scale="1.2,1.2" url="ui://zj419n3dgrq3k"/>
+    <loader id="n27_gy8o" name="Loader_hp" xy="576,60" size="220,16" group="n26_tlae" scale="1.2,1.2" url="ui://zj419n3dgrq3b" fillMethod="hz" fillAmount="56"/>
+    <loader id="n16_grq3" name="Loader_head" xy="496,37" size="60,60" group="n26_tlae" scale="1.2,1.2" fill="scaleFree"/>
+    <component id="n25_r075" name="Button_close" src="r075o" fileName="Components/BigTarget/ButtonClose.xml" xy="824,15" size="37,38" group="n26_tlae"/>
+    <text id="n14_grq3" name="n14" xy="574,83" size="40,24" group="n26_tlae" fontSize="16" color="#ffffff" text="归属:"/>
+    <text id="n5_grq3" name="Text_hp" xy="600,70" pivot="0.5,0.5" anchor="true" size="45,24" group="n26_tlae" fontSize="16" color="#ffffff" align="center" autoClearText="true" text="100%"/>
+    <text id="n6_grq3" name="Text_level" xy="500,99" size="58,26" group="n26_tlae" fontSize="16" color="#ffffff" align="center" autoSize="shrink" strokeColor="#000000" text="Lv.999"/>
+    <text id="n21_knoh" name="Text_count" xy="837,70" pivot="1,0.5" anchor="true" size="39,24" group="n26_tlae" fontSize="16" color="#ffffff" align="center" autoClearText="true" text="x999"/>
+    <text id="n23_r075" name="Text_belong" xy="617,83" size="134,24" group="n26_tlae" fontSize="16" color="#00ff00" leading="0" letterSpacing="3" autoClearText="true" text="人物名字七个字"/>
+    <component id="n7_grq3" name="Label_name" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="602,34" size="192,22" group="n26_tlae" touchable="false">
+      <Label title="名字名字名字名字名字名字" titleColor="#f2de0f" titleFontSize="16"/>
+    </component>
+    <group id="n26_tlae" name="n26" xy="472,0" size="389,125" advanced="true">
+      <relation target="" sidePair="center-center,top-top"/>
+    </group>
+  </displayList>
+</component>

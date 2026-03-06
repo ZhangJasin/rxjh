@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,300">
+  <displayList>
+    <text id="n0_s949" name="guildName" xy="0,0" size="150,28" fontSize="16" color="#ffff00" align="center" vAlign="middle" autoSize="none" text=""/>
+    <text id="n1_s949" name="userName" xy="0,28" size="150,28" fontSize="18" color="#fcf1bf" align="center" vAlign="middle" autoSize="none" text=""/>
+    <graph id="n2_s949" name="model" xy="75,299" pivot="0.5,1" anchor="true" size="150,242" type="rect" lineSize="0" fillColor="#00ffffff"/>
+    <image id="n4_r1x3" name="isNone" src="r1x31a" fileName="Images/02(1).png" xy="34,76"/>
+  </displayList>
+</component>

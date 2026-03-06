@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n0_d6vj" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n17_mfvx" name="bg_Di" src="y0e41" fileName="Images/bg_di.png" xy="0,163" size="1334,424">
+      <relation target="" sidePair="width-width,middle-middle"/>
+    </image>
+    <list id="n10_d6vj" name="list_CameraMode" xy="0,257" size="1334,231" layout="row" colGap="80" defaultItem="ui://tk3jclwqy0e42" align="center" vAlign="middle">
+      <relation target="" sidePair="width-width,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n18_y0e4" name="btn_sure" src="y0e45" fileName="Components/Button.xml" xy="595,523" size="136,42">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="使 用" titleColor="#fced00" titleFontSize="24"/>
+    </component>
+    <text id="n2_d6vj" name="tip" xy="581,192" size="172,34" fontSize="24" color="#ffe97c" strokeColor="#324617" singleLine="true" text="请选择游戏视角">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

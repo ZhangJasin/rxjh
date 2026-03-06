@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="988,640">
+  <controller name="whichIndex" pages="0,本体,1,幻化" selected="0"/>
+  <displayList>
+    <image id="n2_v5h4" name="n2" src="v5h42v" fileName="image/lingshou/灵兽BG.png" xy="210,0" size="556,640"/>
+    <image id="n7_v5h4" name="n7" src="o0nqc" fileName="image/sxbg.png" xy="0,0" size="210,640" alpha="0.6"/>
+    <component id="n1_v5h4" name="btTitle" src="v5h42t" fileName="Components/title.xml" xy="330,10">
+      <gearDisplay controller="whichIndex" pages="0"/>
+    </component>
+    <image id="n9_v5h4" name="n9" src="o0nqc" fileName="image/sxbg.png" xy="728,0" size="260,640"/>
+    <component id="n10_v5h4" name="btsx" src="v5h438" fileName="Components/lsbtsx.xml" xy="727,0" size="260,640">
+      <gearDisplay controller="whichIndex" pages="0"/>
+    </component>
+    <component id="n11_v5h4" name="lshuanhua" src="o0nq17" fileName="Components/tybtn1.xml" xy="416,572" size="120,40">
+      <gearDisplay controller="whichIndex" pages="0"/>
+      <Button title="召唤"/>
+    </component>
+    <graph id="n12_v5h4" name="n12" xy="482,500" pivot="0.5,1" anchor="true" size="52,30" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff"/>
+    <component id="n16_v5h4" name="n16" src="v5h43c" fileName="Components/hhtitle.xml" xy="330,10">
+      <gearDisplay controller="whichIndex" pages="1"/>
+    </component>
+    <component id="n19_v5h4" name="hhsx" src="v5h43b" fileName="Components/lshhsx.xml" xy="728,0">
+      <gearDisplay controller="whichIndex" pages="1"/>
+    </component>
+    <component id="n22_v5h4" name="toleft" src="v5h43g" fileName="Components/jiantou.xml" xy="265,544" rotation="180"/>
+    <component id="n23_v5h4" name="toright" src="v5h43g" fileName="Components/jiantou.xml" xy="680,510"/>
+    <component id="n25_kv3g" name="hhbtn" src="kv3g3h" fileName="Components/isPetHHBtn.xml" xy="669,14" visible="false">
+      <gearDisplay controller="whichIndex" pages="1"/>
+    </component>
+  </displayList>
+</component>

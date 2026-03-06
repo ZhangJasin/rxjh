@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false" designImage="ui://dak5wnw9xzvri">
+  <displayList>
+    <graph id="n31_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n30_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,50">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n15_hkm9" name="n15" src="sna9vot" fileName="Images/heiDI.png" xy="192,151" size="464,448">
+      <relation target="n19_hkm9" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <text id="n3_xzvr" name="Title" xy="667,78" pivot="0.5,0.5" anchor="true" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" singleLine="true" text="共享仓库">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n20_hkm9" name="BagNode" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="688,111" size="464,572">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n22_hkm9" name="BtnBagSort" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="1080,650" pivot="0.5,0.5" anchor="true" size="136,42">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="整 理" titleColor="#fced00" titleFontSize="22" icon="ui://st7dgeqqje63v3c"/>
+    </component>
+    <component id="n16_hkm9" name="BtnSort" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="580,660" pivot="0.5,0.5" anchor="true" size="136,42">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="整 理" titleColor="#fced00" titleFontSize="22" icon="ui://st7dgeqqje63v3c"/>
+    </component>
+    <component id="n29_svai" name="CheckBox" src="hgppn" fileName="Components/BagRecycleCheckBox.xml" xy="940,650" pivot="0.5,0.5" anchor="true" size="126,28">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="快捷存取" selectedTitle="快捷存取"/>
+    </component>
+    <component id="n27_hkm9" name="BtnClose" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n17_hkm9" name="List_Filter" xy="192,111" pivot="0,0.5" size="464,39" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="2" defaultItem="ui://dak5wnw9q9ls3" autoItemSize="false" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n19_hkm9" name="List_Cell" xy="192,151" size="464,448" layout="flow_hz" overflow="scroll" scrollBarFlags="128" scrollBar="hidden" margin="10,0,2,2" lineGap="12" colGap="12" lineItemCount="6" defaultItem="ui://dak5wnw9q9lsf" align="center" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n28_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="172,698" size="0,0"/>
+  </displayList>
+</component>

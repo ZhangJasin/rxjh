@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="440,100" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n14_wmgr" name="item_bg" src="wmgr5" fileName="Images/friend_item_bg.png" xy="0,0" size="440,100"/>
+    <image id="n11_wmgr" name="icon_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="10,10" size="80,80"/>
+    <loader id="n10_qpwo" name="img_icon" xy="10,10" size="80,80" aspect="true" touchable="false" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n5_qpwo" name="text_name" xy="100,15" size="180,34" fontSize="24" color="#ffecdd" ubb="true" autoSize="none" text="名字"/>
+    <text id="n12_wmgr" name="text_level" xy="100,55" size="150,34" fontSize="24" color="#ffecdd" autoSize="none" text="职业啊啊"/>
+    <component id="n16_fmfy" name="btn_addFriend" src="fmfyr" fileName="Components/btn_addFriend.xml" xy="350,50" pivot="0.5,0.5" anchor="true"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

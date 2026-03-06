@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="43,41" extention="Button">
+  <controller name="HHstatus" pages="0,幻化,1,幻化中" selected="0"/>
+  <displayList>
+    <image id="n0_kv3g" name="n0" src="v5h43e" fileName="image/lingshou/幻化.png" xy="0,0">
+      <gearDisplay controller="HHstatus" pages="0"/>
+    </image>
+    <image id="n1_kv3g" name="n1" src="v5h43f" fileName="image/lingshou/幻化中.png" xy="1,0">
+      <gearDisplay controller="HHstatus" pages="1"/>
+    </image>
+  </displayList>
+  <Button/>
+</component>

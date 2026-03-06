@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="741,62">
+  <controller name="isGreen" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n5_vzpx" name="n5" src="vzpxf" fileName="image/小底框.png" xy="0,0" size="741,62"/>
+    <text id="n0_vzpx" name="monName" xy="3,0" size="170,63" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="怪物名字啊"/>
+    <text id="n1_vzpx" name="MonLv" xy="189,0" size="94,62" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="LV.150"/>
+    <text id="n2_vzpx" name="tjfy" xy="327,0" size="204,62" fontSize="22" color="#ff0000" vAlign="middle" autoSize="none" text="推荐防御:574">
+      <gearColor controller="isGreen" pages="0" values="#ff0000,#000000" default="#30ff00,#000000"/>
+    </text>
+    <component id="n3_vzpx" name="gonow" src="vzpxc" fileName="Components/gonowBtn.xml" xy="532,0"/>
+  </displayList>
+</component>

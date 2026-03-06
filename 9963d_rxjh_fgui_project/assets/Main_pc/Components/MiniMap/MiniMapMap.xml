@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="210,168" overflow="hidden" scroll="both">
+  <displayList>
+    <loader id="n18_gxj9" name="Loader_map" xy="0,0" size="210,168" group="n26_s1pl" fill="scaleFree" autoSize="true" clearOnPublish="true"/>
+    <component id="n31_sjtb" name="Node_line" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0" group="n26_s1pl"/>
+    <component id="n28_rv4n" name="Node_link" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0" group="n26_s1pl"/>
+    <component id="n29_rv4n" name="Node_npc" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0" group="n26_s1pl"/>
+    <component id="n27_rv4n" name="Node_monster" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0" group="n26_s1pl"/>
+    <component id="n37_ftt5" name="Node_actors" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0" group="n26_s1pl"/>
+    <component id="n36_7zuv" name="Node_team" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0" group="n26_s1pl"/>
+    <image id="n34_7zuv" name="Image_player" src="nc8aq" fileName="Images/MiniMap/point_player.png" xy="106,86" pivot="0.5,0.5" anchor="true" group="n26_s1pl"/>
+    <component id="n38_pzjg" name="Node_tracePoint" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="210,168" group="n26_s1pl" touchable="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <group id="n26_s1pl" name="Group_map" xy="0,0" size="210,168" advanced="true"/>
+  </displayList>
+</component>

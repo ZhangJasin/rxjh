@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <displayList>
+    <graph id="n2_q8ir" name="mask" xy="0,0" size="1024,768" alpha="0.7" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n26_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="357,248" size="310,270">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n25_rg2r" name="bg_di" src="oxr718" fileName="Images/img_dlg_di.png" xy="367,291" size="290,170">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n3_q8ir" name="title" xy="494,255" size="36,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#fffadc" text="提示">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n22_rg2r" name="item_node" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="424,329" size="43,43">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n5_q8ir" name="text_name" xy="481,324" size="10,23" fontSize="15" color="#ffffff" singleLine="true" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n6_q8ir" name="label_price" xy="481,358" size="53,23" fontSize="15" color="#ffffff" singleLine="true" text="一口价:">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n13_q8ir" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="648,268">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n24_rg2r" name="label_tip" xy="420,396" size="184,20" fontSize="13" color="#f1ffeb" align="center" vAlign="middle" text="一口价为直接成交价,是否寄售?">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n11_q8ir" name="btn_givePrice" src="oxr77" fileName="Components/btn_JingJia.xml" xy="412,476" group="n27_owd7">
+      <Button title="出 价" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <component id="n12_q8ir" name="btn_cancel" src="jvqd5g" fileName="common/btn_first_green.xml" pkg="qa9a7rit" xy="526,476" group="n27_owd7">
+      <Button title="取 消" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <group id="n27_owd7" name="n27" xy="412,476" size="198,28" advanced="true" layout="hz" colGap="30" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <text id="n7_q8ir" name="text_price" xy="554,359" size="60,20" group="n28_kc3n" fontSize="13" color="#ffffff" autoSize="height" singleLine="true" text="9999">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n20_rg2r" name="icon_Money1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="534,359" size="20,20" group="n28_kc3n" aspect="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n28_kc3n" name="n28" xy="534,359" size="80,20"/>
+  </displayList>
+</component>

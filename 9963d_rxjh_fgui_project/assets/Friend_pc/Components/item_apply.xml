@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="275,60" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n14_wmgr" name="item_bg" src="wmgr5" fileName="Images/friend_item_bg.png" xy="0,0" size="275,60"/>
+    <image id="n11_wmgr" name="icon_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="35,30" pivot="0.5,0.5" anchor="true" size="50,50"/>
+    <component id="n21_r73b" name="avator" src="emvc7" fileName="common/CommonPlayerFrame.xml" pkg="qa9a7rit" xy="35,30" size="50,50"/>
+    <text id="n5_qpwo" name="text_name" xy="70,5" size="100,24" aspect="true" fontSize="12" color="#ffffff" ubb="true" autoSize="none" text="名字"/>
+    <text id="n12_wmgr" name="text_level" xy="70,30" size="100,24" fontSize="12" color="#ffda60" autoSize="none" text="职业啊啊"/>
+    <component id="n17_fmfy" name="btn_agree" src="fmfyv" fileName="Components/btn_agree.xml" xy="235,15" pivot="0.5,0.5" anchor="true" size="82,28"/>
+    <component id="n18_fmfy" name="btn_refuse" src="fmfyw" fileName="Components/btn_refuse.xml" xy="235,45" pivot="0.5,0.5" anchor="true" size="60,24"/>
+    <component id="n19_leye" name="btn_addFriend" src="fmfyr" fileName="Components/btn_addFriend.xml" xy="225,30" pivot="0.5,0.5" anchor="true" size="84,32">
+      <Button title="添加好友" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

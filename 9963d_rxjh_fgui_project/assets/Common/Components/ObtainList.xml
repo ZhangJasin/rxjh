@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="228,279">
+  <displayList>
+    <image id="n0_z28d" name="bg1" src="kcff5vp4" fileName="Images/tips_bg.png" xy="-2,0" size="232,279">
+      <relation target="" sidePair="height-height,bottom-bottom"/>
+    </image>
+    <text id="n1_z28d" name="obtainName" xy="157,3" pivot="1,0" anchor="true" size="92,40" fontSize="20" color="#f2fbff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" autoClearText="true" text="获取途径"/>
+    <list id="n2_z28d" name="list" xy="17,41" size="195,224" selectionMode="none" overflow="scroll" margin="3,0,0,0" lineGap="2" defaultItem="ui://zu7kdgtswodv5vpe" align="center" autoClearItems="true">
+      <relation target="" sidePair="height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

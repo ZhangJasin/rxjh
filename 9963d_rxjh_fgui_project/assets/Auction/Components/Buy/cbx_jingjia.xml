@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="294,36" extention="ComboBox">
+  <controller name="button" exported="true" pages="0,up,1,down,2,over,3,selectedOver" selected="2"/>
+  <displayList>
+    <image id="n0_q8ir" name="n0" src="7c351m" fileName="Images/img_input_di.png" xy="0,0" size="294,36">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_q8ir" name="title" xy="0,0" size="292,36" fontSize="20" color="#ffdab2" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="当前竞价加价5%">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <image id="n2_q8ir" name="arrowUp" src="lxrgv51" fileName="image/arrow.png" pkg="st7dgeqq" xy="238,10">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n3_q8ir" name="arrowDown" src="lxrgv51" fileName="image/arrow.png" pkg="st7dgeqq" xy="238,10" flip="vt">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+  </displayList>
+  <ComboBox dropdown="ui://5i0v372fq8iru"/>
+</component>

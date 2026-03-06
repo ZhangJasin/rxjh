@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="kk5ws5kw">
+  <resources>
+    <component id="fmfy0" name="LoadingPanel.xml" path="/" exported="true"/>
+    <component id="fmfy4" name="Bar_loading.xml" path="/Components/" exported="true"/>
+    <component id="wi45v5x" name="CircleLoadingPanel.xml" path="/" exported="true"/>
+    <image id="m2wevl1" name="img_loading.png" path="/Images/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

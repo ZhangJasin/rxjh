@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="54,54" bgColor="#000000">
+  <displayList>
+    <image id="n0_v58d" name="n0" src="v58d3y" fileName="image/tips底.png" xy="0,0" size="54,54"/>
+    <loader id="n1_v58d" name="icon" xy="3,3" size="48,48" fill="scaleFree"/>
+  </displayList>
+</component>

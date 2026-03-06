@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="585,45">
+  <controller name="who" pages="0,,1," selected="1"/>
+  <displayList>
+    <text id="n0_slen" name="name" xy="19,0" size="100,45" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="名字"/>
+    <component id="n1_slen" name="agree" src="gvalo3y" fileName="Components/btn_second_green.xml" xy="447,1">
+      <Button title="同意" selectedTitle="同意"/>
+    </component>
+    <component id="n2_slen" name="notAgree" src="gvalo3z" fileName="Components/btn_second_red.xml" xy="307,1">
+      <Button title="取消" selectedTitle="取消"/>
+    </component>
+    <text id="n3_slen" name="n3" xy="140,0" size="153,45" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="我的徒弟">
+      <gearText controller="who" pages="1" values="我的徒弟" default="我的师傅"/>
+    </text>
+  </displayList>
+</component>

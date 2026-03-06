@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n6_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n5_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="367,50" size="600,650">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n1_dwcr" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="943,78"/>
+    <loader id="n2_dwcr" name="image_qrcode" xy="517,225" size="300,300" fill="scale"/>
+    <richtext id="n3_dwcr" name="text_qrcode_tips" xy="640,644" size="10,29" restrictSize="0,600,0,0" fontSize="20" color="#ffffff" text=""/>
+    <text id="n4_dwcr" name="text_time" xy="942,644" size="10,29" fontSize="20" color="#fb0000" text=""/>
+  </displayList>
+</component>

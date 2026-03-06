@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="sgmta2jc">
+  <resources>
+    <component id="drck0" name="FactionWarPanel.xml" path="/" exported="true"/>
+    <component id="drck1" name="closebtn_yuan.xml" path="/Components/" exported="true"/>
+    <image id="drck2" name="1.png" path="/Images/" exported="true"/>
+    <image id="drck3" name="2.png" path="/Images/" exported="true"/>
+    <image id="drck4" name="3.png" path="/Images/" exported="true"/>
+    <component id="drck5" name="rightBtn.xml" path="/Components/" exported="true"/>
+    <image id="drck6" name="箭头.png" path="/Images/" exported="true"/>
+    <component id="drck7" name="activeBtn.xml" path="/Components/" exported="true"/>
+    <image id="drck9" name="半透内容底.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <component id="drcka" name="activeFaction.xml" path="/Components/" exported="true"/>
+    <component id="drckb" name="bqbm.xml" path="/Components/" exported="true"/>
+    <image id="drckc" name="繁忙.png" path="/Images/" exported="true" scale="9grid" scale9grid="8,3,16,6"/>
+    <component id="drckd" name="pmtitle.xml" path="/Components/" exported="true"/>
+    <component id="drcke" name="pmItem.xml" path="/Components/" exported="true"/>
+    <component id="drckf" name="iconItem.xml" path="/Components/" exported="true"/>
+    <image id="drckg" name="close_yuan.png" path="/Images/" exported="true"/>
+    <image id="drckh" name="pagerilv1.png" path="/Images/" exported="true" scale="9grid" scale9grid="11,22,22,44"/>
+    <image id="drcki" name="pagerilv2.png" path="/Images/" exported="true" scale="9grid" scale9grid="11,22,22,44"/>
+    <component id="k77dj" name="tybtn1.xml" path="/Components/" exported="true"/>
+    <image id="k77dk" name="btn_zong.png" path="/Images/" exported="true"/>
+    <component id="k77dl" name="TipWarDiePanl.xml" path="/" exported="true"/>
+    <image id="k77dm" name="btn_hong.png" path="/Images/" exported="true" scale="9grid" scale9grid="16,13,32,26"/>
+    <image id="k77dn" name="btn_lv.png" path="/Images/" exported="true" scale="9grid" scale9grid="39,13,78,26"/>
+    <component id="k77do" name="ydfhBtn.xml" path="/Components/" exported="true"/>
+    <component id="k77dp" name="anqfBtn.xml" path="/Components/" exported="true"/>
+    <component id="rg1tq" name="FactionWarLeftPanl.xml" path="/" exported="true"/>
+    <image id="rg1tr" name="main_assist_arrow.png" path="/Images/Assist/" exported="true"/>
+    <component id="rg1ts" name="AssistButton1.xml" path="/Components/" exported="true"/>
+    <image id="rg1tt" name="main_assist_unselect_btn_9.png" path="/Images/Assist/" exported="true" scale="9grid" scale9grid="8,9,4,5" duplicatePadding="true"/>
+    <image id="rg1tu" name="main_assist_select_btn_9.png" path="/Images/Assist/" exported="true" scale="9grid" scale9grid="8,9,4,6" duplicatePadding="true"/>
+    <component id="rg1tw" name="scoreItem.xml" path="/Components/" exported="true"/>
+    <component id="rg1tx" name="myScore.xml" path="/Components/" exported="true"/>
+    <component id="rg1ty" name="exit.xml" path="/Components/" exported="true"/>
+    <image id="rg1tz" name="main_assist_mission_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="3,3,1,0" duplicatePadding="true"/>
+    <component id="s94910" name="model.xml" path="/Components/" exported="true"/>
+    <image id="oipj11" name="剪影1.png" path="/Images/" exported="true"/>
+    <component id="iios12" name="CenterMsgPanel.xml" path="/" exported="true"/>
+    <component id="sx4m13" name="bzBtn.xml" path="/Components/" exported="true"/>
+    <component id="u8r114" name="btn_help.xml" path="/Components/" exported="true"/>
+    <image id="r1x315" name="01.png" path="/Images/" exported="true"/>
+    <image id="r1x316" name="02.png" path="/Images/" exported="true"/>
+    <image id="r1x317" name="01(1).png" path="/Images/" exported="true"/>
+    <image id="r1x318" name="03.png" path="/Images/" exported="true"/>
+    <image id="r1x319" name="04.png" path="/Images/" exported="true"/>
+    <image id="r1x31a" name="02(1).png" path="/Images/" exported="true"/>
+    <image id="r1x31c" name="展开底2.png" path="/Images/" exported="true" scale="9grid" scale9grid="25,6,50,12"/>
+    <image id="r1x31e" name="01(2).png" path="/Images/" exported="true"/>
+    <image id="r1x31f" name="02(2).png" path="/Images/" exported="true"/>
+    <image id="r1x31g" name="03(1).png" path="/Images/" exported="true"/>
+    <image id="r1x31h" name="04(1).png" path="/Images/" exported="true"/>
+    <image id="r1x31i" name="分割线.png" path="/Images/" exported="true"/>
+  </resources>
+  <publish name="" path="E:\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\FactionWar" packageCount="2"/>
+</packageDescription>

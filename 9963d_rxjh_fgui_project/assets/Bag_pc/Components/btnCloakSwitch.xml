@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="26,50" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="3"/>
+  <controller name="clothKind" pages="0,原装,1,披风" selected="1"/>
+  <displayList>
+    <loader id="n3_p8nb" name="n3" xy="0,0" size="26,50" url="ui://brz7yunlp8nb5w" autoSize="true">
+      <gearIcon controller="clothKind" pages="0" values="ui://brz7yunlxisl4n" default="ui://brz7yunlp8nb5w"/>
+    </loader>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>

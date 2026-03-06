@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="45,90" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n3_q9ls" name="n3" src="zah9v4f" fileName="image/toggle_right_unselect.png" pkg="st7dgeqq" xy="0,0" size="45,90">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n4_q9ls" name="n4" src="zah9v4e" fileName="image/toggle_right_select.png" pkg="st7dgeqq" xy="0,0" size="45,90">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n5_q9ls" name="title" xy="22,45" pivot="0.5,0.5" anchor="true" size="10,32" fontSize="22" color="#cccccc" align="center" strokeColor="#000000" autoClearText="true" text="">
+      <gearColor controller="button" pages="0,1" values="#cccccc,#000000|#fac800,#000000"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

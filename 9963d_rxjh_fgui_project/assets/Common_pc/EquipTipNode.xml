@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="454,224">
+  <controller name="grade" pages="0,白,1,绿,2,蓝,3,紫,4,橙,5,红" selected="0"/>
+  <displayList>
+    <component id="n37_w2ob" name="PreviewModel" src="w2ob64" fileName="Components/TipPreviewModel.xml" xy="0,1" group="n38_w2ob"/>
+    <image id="n33_r1aj" name="bg" src="r1aj5x" fileName="Images/tips_bg.png" xy="220,-1" size="234,224" group="n11_l6xy">
+      <relation target="n27_xm9x" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n28_r1aj" name="TopBg" xy="225,4" size="224,66" group="n11_l6xy" url="ui://ja5fet7sr1aj5r" fill="scaleFree">
+      <gearDisplay controller="grade" pages="0,1,2,3,4,5"/>
+      <gearIcon controller="grade" pages="0,2,3,4,5" values="ui://ja5fet7sr1aj5r|ui://ja5fet7sr1aj5t|ui://ja5fet7sr1aj5u|ui://ja5fet7sr1aj5v|ui://ja5fet7sr1aj5w" default="ui://ja5fet7sr1aj5s"/>
+      <relation target="n27_xm9x" sidePair="width-width"/>
+      <relation target="n33_r1aj" sidePair="center-center,top-top"/>
+    </loader>
+    <component id="n31_r1aj" name="CommonEquip" src="emvc2" fileName="Icons/CommonEquip.xml" pkg="qa9a7rit" xy="235,15" size="44,44" group="n11_l6xy">
+      <relation target="n28_r1aj" sidePair="middle-middle,left-left"/>
+    </component>
+    <text id="n5_l6xy" name="Name" xy="444,11" pivot="1,0" anchor="true" size="160,22" group="n11_l6xy" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" strokeColor="#000000" autoClearText="true" text=""/>
+    <list id="n30_r1aj" name="TopContent" xy="284,31" size="162,36" group="n11_l6xy" layout="flow_vt" overflow="hidden" lineGap="-2" colGap="4" lineItemCount="2" scrollItemToViewOnClick="false" foldInvisibleItems="true">
+      <relation target="n28_r1aj" sidePair="rightext-right"/>
+      <item url="ui://ja5fet7sr1aj61" name="Level"/>
+      <item url="ui://ja5fet7sr1aj61" name="Zy"/>
+      <item url="ui://ja5fet7sr1aj61" name="Job"/>
+      <item url="ui://ja5fet7sr1aj61" name="Ms"/>
+      <item url="ui://ja5fet7sr1aj61" name="Sex"/>
+      <item url="ui://ja5fet7sr1aj61" name="EquipType"/>
+    </list>
+    <list id="n27_xm9x" name="Content" xy="228,74" size="218,140" group="n11_l6xy" selectionMode="none" overflow="scroll" scrollBarFlags="32" margin="3,0,0,0" lineGap="2" align="center" scrollItemToViewOnClick="false" foldInvisibleItems="true">
+      <relation target="n33_r1aj" sidePair="center-center"/>
+      <item url="ui://ja5fet7s10e45i" name="Quality"/>
+      <item url="ui://ja5fet7s10e45i" name="QigongLv"/>
+      <item url="ui://ja5fet7s10e45i" name="Condition"/>
+      <item url="ui://ja5fet7sr1aj63" name="BaseAttrTitle"/>
+      <item url="ui://ja5fet7s10e45i" name="BaseAttr"/>
+      <item url="ui://ja5fet7sr1aj63" name="InlaysAttrTitle"/>
+      <item url="ui://ja5fet7s10e45i" name="InlaysAttr"/>
+      <item url="ui://ja5fet7s10e45i" name="Tip"/>
+      <item url="ui://ja5fet7sr1aj63" name="SuitexTitle"/>
+      <item url="ui://ja5fet7s10e45i" name="Suitex"/>
+      <item url="ui://ja5fet7sr1aj63" name="CustomAttrTitle"/>
+      <item url="ui://ja5fet7s10e45i" name="CustomAttr"/>
+      <item url="ui://ja5fet7s10e45i" name="Obtain"/>
+    </list>
+    <image id="n23_fl5s" name="TextEquip" src="10e456" fileName="Images/text_equip_big.png" xy="218,67" size="17,59" group="n11_l6xy" visible="false">
+      <relation target="n33_r1aj" sidePair="left-left,top-top"/>
+    </image>
+    <component id="n34_w2ob" name="checkBox_auto" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="223,223" size="22,22" group="n36_w2ob"/>
+    <text id="n35_w2ob" name="text_tip" xy="248,224" size="88,19" group="n36_w2ob" fontSize="12" color="#e3e3e3" strokeColor="#000000" text="此道具不再提示"/>
+    <group id="n36_w2ob" name="panel_auto_switch" xy="223,223" size="113,22" group="n11_l6xy" visible="false" advanced="true">
+      <relation target="n33_r1aj" sidePair="left-left,bottom-bottom"/>
+    </group>
+    <group id="n11_l6xy" name="Pop" xy="218,-1" size="236,246" group="n38_w2ob" advanced="true"/>
+    <component id="n39_pxu7" name="panel_purchase" src="pxu766" fileName="Components/TipItemPurchasePop.xml" xy="450,93" group="n38_w2ob" visible="false">
+      <relation target="n33_r1aj" sidePair="left-right,bottom-bottom"/>
+    </component>
+    <image id="n40_wodv" name="bg1" src="kcff5vp4" fileName="Images/tips_bg.png" pkg="zu7kdgts" xy="450,-1" size="151,299" group="n43_wodv">
+      <relation target="n42_wodv" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n41_wodv" name="obtainName" xy="564,2" pivot="1,0" anchor="true" size="84,29" group="n43_wodv" fontSize="16" color="#f2fbff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" autoClearText="true" text="获取途径">
+      <relation target="n40_wodv" sidePair="center-center,top-top"/>
+    </text>
+    <list id="n42_wodv" name="list" xy="472,40" size="109,243" group="n43_wodv" selectionMode="none" overflow="scroll" margin="3,0,0,0" lineGap="2" defaultItem="ui://zu7kdgtswodv5vpe" align="center" autoClearItems="true">
+      <relation target="n40_wodv" sidePair="width-width,height-height,center-center"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n43_wodv" name="ObtainList" xy="450,-1" size="151,299" group="n38_w2ob" visible="false" advanced="true"/>
+    <group id="n38_w2ob" name="PopE" xy="0,-1" size="454,292" advanced="true" layout="hz" colGap="-4" excludeInvisibles="true"/>
+  </displayList>
+  <relation target="n33_r1aj" sidePair="height-height"/>
+  <relation target="n38_w2ob" sidePair="width-width"/>
+</component>

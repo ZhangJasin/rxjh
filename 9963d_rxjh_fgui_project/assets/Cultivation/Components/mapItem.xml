@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="390,150">
+  <controller name="isNeedTimeCont" pages="0,不需要修炼时间,1,需要修炼时间" selected="0"/>
+  <controller name="isselect" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n17_nymh" name="n17" src="nymh16" fileName="image/小底框.png" xy="0,0" size="390,150"/>
+    <loader id="n12_i7v9" name="map" xy="4,4" size="382,142" url="ui://afrubrdxi7v9m" fill="scaleFree" clearOnPublish="true"/>
+    <loader id="n8_i7v9" name="mapName" xy="4,4" size="152,86" url="ui://afrubrdxi7v9a" clearOnPublish="true"/>
+    <text id="n4_k9u3" name="n4" xy="20,60" size="115,36" fontSize="22" color="#ffffff" autoSize="none" text="剩余时间：">
+      <gearDisplay controller="isNeedTimeCont" pages="1"/>
+    </text>
+    <text id="n5_k9u3" name="n5" xy="20,100" size="159,36" fontSize="22" color="#ffffff" autoSize="none" text="增加修炼时间：">
+      <gearDisplay controller="isNeedTimeCont" pages="1"/>
+    </text>
+    <text id="n9_i7v9" name="time" xy="143,60" size="149,36" fontSize="22" color="#ffffff" autoSize="none" text="00:00:00">
+      <gearDisplay controller="isNeedTimeCont" pages="1"/>
+    </text>
+    <component id="n10_i7v9" name="addTime" src="i7v9j" fileName="Components/addTime.xml" xy="183,100">
+      <gearDisplay controller="isNeedTimeCont" pages="1"/>
+    </component>
+    <image id="n13_slmo" name="n13" src="slmou" fileName="image/选中框.png" xy="-3,-4" size="395,156">
+      <gearDisplay controller="isselect" pages="1"/>
+    </image>
+  </displayList>
+</component>

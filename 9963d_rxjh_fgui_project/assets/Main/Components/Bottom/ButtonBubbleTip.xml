@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="54,54" extention="Button">
+  <controller name="type" alias="类型" pages="0,,1,,2,,3,,4,,5," selected="0">
+    <remark page="0" value="聊天"/>
+    <remark page="1" value="邮件"/>
+    <remark page="2" value="背包"/>
+    <remark page="3" value="好友"/>
+    <remark page="4" value="行会"/>
+    <remark page="5" value="组队"/>
+  </controller>
+  <displayList>
+    <image id="n17_tj4v" name="Image_effect" src="tj4vfvdk" fileName="Images/Bottom/Bubble/bubble_effect.png" xy="-29,-28"/>
+    <loader id="n3_brvz" name="n0" xy="27,27" pivot="0.5,0.5" anchor="true" size="54,54" url="ui://zj419n3dbrvzv7v" autoSize="true">
+      <gearIcon controller="type" pages="1,2,3,4,5" values="ui://zj419n3dbrvzv7w|ui://zj419n3dbrvzv7u|ui://zj419n3drv4nv9t|ui://zj419n3drv4nv9r|ui://zj419n3drv4nv9k" default="ui://zj419n3dbrvzv7v"/>
+    </loader>
+    <text id="n5_brvz" name="title" xy="14,34" pivot="0.5,0.5" size="26,29" fontSize="20" color="#ff0000" text="30"/>
+  </displayList>
+  <Button/>
+  <transition name="effect" autoPlayRepeat="0" frameRate="30">
+    <item time="0" type="Alpha" target="n17_tj4v" tween="true" startValue="0" endValue="1" duration="60" repeat="-1" yoyo="true"/>
+  </transition>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="365,80" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n20_r73b" name="icon_bg" src="emvc3q" fileName="image/icon_item0.png" pkg="qa9a7rit" xy="30,40" pivot="0.5,0.5" anchor="true" size="50,50"/>
+    <component id="n21_r73b" name="avator" src="emvc7" fileName="common/CommonPlayerFrame.xml" pkg="qa9a7rit" xy="30,40" size="50,50"/>
+    <loader id="n19_akxo" name="Image_chatFrame" xy="60,26" pivot="1,0" anchor="true" size="371,34" scale="-1,1" url="ui://qa9a7ritemvc0" fill="scaleFree" useResize="true" clearOnPublish="true">
+      <relation target="n16_wmgr" sidePair="width-width,height-height"/>
+    </loader>
+    <richtext id="n16_wmgr" name="rich_msg" xy="75,24" size="355,36" restrictSize="0,360,0,84" fontSize="12" color="#993300" letterSpacing="1" autoClearText="true" text="11111111111111111111111111111111111111111111111111111111111"/>
+    <text id="n5_qpwo" name="text_name" xy="75,5" size="280,20" fontSize="13" color="#ffffff" ubb="true" autoSize="none" strokeColor="#000000" text="名字"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

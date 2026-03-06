@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="220,55">
+  <displayList>
+    <image id="n18_zi8s" name="bg" src="as7kvno" fileName="image/btn_first_9.png" pkg="st7dgeqq" xy="0,0" size="220,55"/>
+    <text id="n4_f0so" name="text_title" xy="0,0" size="220,55" fontSize="22" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="我的徒弟"/>
+  </displayList>
+</component>

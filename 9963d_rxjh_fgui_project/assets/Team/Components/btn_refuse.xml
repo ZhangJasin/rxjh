@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,45" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n4_wqgf" name="btn" src="je63v3e" fileName="image/btn_second_red.png" pkg="st7dgeqq" xy="0,0" size="100,45"/>
+    <text id="n1_f0so" name="text" xy="25,8" size="50,29" fontSize="20" color="#ffff00" strokeColor="#000000" text="拒 绝"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue=".8"/>
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="450,250">
+  <displayList>
+    <component id="n1_eoqr" name="n1" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="0,0" size="450,250"/>
+    <component id="n2_eoqr" name="n2" src="la2y4" fileName="Components/common/btn_closeyuan.xml" xy="400,5"/>
+    <text id="n3_eoqr" name="text_tips" xy="168,7" size="112,38" fontSize="24" color="#ffff00" align="center" vAlign="middle" autoSize="none" bold="true" text="提示"/>
+    <text id="n4_eoqr" name="text" xy="113,96" pivot="0.5,0.5" size="220,34" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="height" bold="true" text="是否要解除侠侣契约"/>
+    <component id="n5_eoqr" name="btn_cancel" src="la2y15" fileName="Components/common/btn_red.xml" xy="50,180" size="120,40" group="n8_eoqr"/>
+    <text id="n7_eoqr" name="n7" xy="50,180" size="120,40" group="n8_eoqr" fontSize="20" color="#ff0000" align="center" vAlign="middle" autoSize="none" bold="true" text="取消"/>
+    <group id="n8_eoqr" name="n8" xy="50,180" size="120,40"/>
+    <component id="n6_eoqr" name="btn_ok" src="la2yf" fileName="Components/common/btn_green.xml" xy="280,180" size="120,40" group="n10_eoqr"/>
+    <text id="n9_eoqr" name="n9" xy="280,180" size="120,40" group="n10_eoqr" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="确定"/>
+    <group id="n10_eoqr" name="n10" xy="280,180" size="120,40"/>
+  </displayList>
+</component>

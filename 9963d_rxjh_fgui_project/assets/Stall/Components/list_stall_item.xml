@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="474,111" designImageOffsetX="-192" designImageOffsetY="-250">
+  <displayList>
+    <image id="n0_tgh8" name="n0" src="vi2o1" fileName="Images/stall_item_bg.png" xy="0,0"/>
+    <text id="n1_tgh8" name="title_stall_name" xy="26,18" size="377,29" fontSize="20" color="#ffffff" vAlign="middle" autoSize="none" autoClearText="true" text="摊位名称啊啊啊啊啊"/>
+    <image id="n5_kpju" name="n5" src="kpjuvo4" fileName="Images/stall_item_name_bg.png" xy="26,62" size="382,29"/>
+    <text id="n6_kpju" name="title_owner_name" xy="26,62" size="293,29" fontSize="20" color="#a4d452" vAlign="middle" ubb="true" autoSize="none" autoClearText="true" text="摊主名称:游戏名字七个字"/>
+    <component id="n2_tgh8" name="btn_left" src="tgh8f" fileName="Components/btn_stall_common.xml" xy="320,56" size="136,42">
+      <Button title="浏 览"/>
+    </component>
+    <component id="n7_kpju" name="btn_collect" src="kpjuvo5" fileName="Components/btn_star.xml" xy="422,9" size="34,32"/>
+  </displayList>
+</component>

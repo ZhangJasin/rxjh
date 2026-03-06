@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="74,74">
+  <controller name="c1" autoRadioGroupDepth="true" exported="true" pages="0,,1,,2,,3," selected="0">
+    <remark page="0" value="武勋武器"/>
+    <remark page="1" value="武勋衣服"/>
+    <remark page="2" value="武勋护腕"/>
+    <remark page="3" value="武勋戒指"/>
+  </controller>
+  <displayList>
+    <loader id="n0_l2ui" name="n0" xy="0,0" size="74,74" url="ui://hed3v11ooqrpn" clearOnPublish="true"/>
+    <loader id="n1_l2ui" name="n1" xy="9,6" size="58,62" url="ui://st7dgeqqdxatvob">
+      <gearIcon controller="c1" pages="0,1,2,3" values="ui://st7dgeqqdxatvob|ui://st7dgeqqmzzl1u|ui://st7dgeqqmzzl1p|ui://st7dgeqqmzzl1q"/>
+    </loader>
+  </displayList>
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <displayList>
+    <graph id="n9_j694" name="mask" xy="0,0" size="1024,768" alpha="0.7" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n12_o9e3" name="n12" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="312,167" size="400,433" group="n13_o9e3"/>
+    <component id="n3_qjli" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="697,186" group="n13_o9e3"/>
+    <text id="n4_qjli" name="text_title" xy="512,187" pivot="0.5,0.5" anchor="true" size="68,24" group="n13_o9e3" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" ubb="true" autoClearText="true" text="装备加工"/>
+    <list id="n10_sb5o" name="list" xy="324,212" size="376,378" group="n13_o9e3" overflow="scroll" defaultItem="ui://ja5fet7s10e45l" autoClearItems="true"/>
+    <group id="n13_o9e3" name="n13" xy="312,167" size="400,433" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

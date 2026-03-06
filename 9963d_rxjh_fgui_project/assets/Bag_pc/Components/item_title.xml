@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,80">
+  <controller name="titleState" pages="0,未激活,1,未使用,2,使用中" selected="0"/>
+  <controller name="isSelected" pages="0,选中,1,未选中" selected="0"/>
+  <controller name="isTimer" pages="0,开启,1,关闭" selected="0"/>
+  <controller name="isPin" pages="0,置顶,1,未置顶" selected="0"/>
+  <controller name="isShowPin" pages="0,显示,1,不显示" selected="0"/>
+  <displayList>
+    <image id="n0_9qta" name="bgdi" src="n0552q" fileName="Images/Chenghao/bg_cell.png" xy="0,0" size="150,80" grayed="true">
+      <gearLook controller="titleState" pages="0" values="1,0,1,0" default="1,0,0,0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n6_9qta" name="gloader_title" xy="1,0" size="145,79" touchable="false" grayed="true" url="ui://q18xgg759qta8" fill="scale" clearOnPublish="true">
+      <gearLook controller="titleState" pages="0" values="1,0,1,0" default="1,0,0,1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <image id="n3_9qta" name="n3" src="n0552r" fileName="Images/Chenghao/tag_Get.png" xy="0,0" size="40,37">
+      <gearDisplay controller="titleState" pages="2"/>
+      <relation target="" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n4_9qta" name="n4" src="n0552s" fileName="Images/Chenghao/tag_notGet.png" xy="0,0" size="40,37">
+      <gearDisplay controller="titleState" pages="0"/>
+      <relation target="" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n7_9qta" name="image_selected" src="s9fq4u" fileName="Images/icon_item_select.png" xy="0,0" size="150,80">
+      <gearDisplay controller="isSelected" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <graph id="n9_qrgs" name="mask" xy="0,0" size="150,80" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <image id="n2_9qta" name="bg_time" src="n0552t" fileName="Images/Chenghao/bg_time.png" xy="7,55" size="136,24" group="n8_u8z5">
+      <gearDisplay controller="titleState" pages="1,2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n5_9qta" name="time_left" xy="49,57" size="52,19" group="n8_u8z5" fontSize="12" color="#c5dccc" align="center" strokeColor="#028422" singleLine="true" autoClearText="true" text="11:10:24">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n8_u8z5" name="n8" xy="7,55" size="136,24" advanced="true">
+      <gearDisplay controller="titleState" pages="1,2"/>
+      <gearDisplay2 controller="isTimer" pages="0" condition="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n10_qrgs" name="btn_pin" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="92,0" size="56,26">
+      <gearDisplay controller="isShowPin" pages="0"/>
+      <gearText controller="isPin" pages="1" values="置顶" default="取消置顶"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="取消置顶" titleColor="#fae2e0" titleFontSize="12" icon="ui://brz7yunlqrgs5s"/>
+    </component>
+  </displayList>
+</component>

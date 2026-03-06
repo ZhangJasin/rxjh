@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="un65xjnn">
+  <resources>
+    <image id="akxo1" name="frame_1.png" path="/Images/" exported="true"/>
+    <image id="bvmt2" name="frame_3.png" path="/Images/" exported="true"/>
+    <image id="bvmt3" name="frame_4.png" path="/Images/" exported="true"/>
+    <image id="bvmt4" name="frame_5.png" path="/Images/" exported="true"/>
+    <image id="bvmt5" name="frame_6.png" path="/Images/" exported="true"/>
+    <image id="bvmt6" name="frame_7.png" path="/Images/" exported="true"/>
+    <image id="bvmt7" name="frame_8.png" path="/Images/" exported="true"/>
+    <image id="bvmt8" name="frame_9.png" path="/Images/" exported="true"/>
+    <image id="bvmt9" name="frame_10.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

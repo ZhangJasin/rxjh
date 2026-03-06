@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="zu7kdgts">
+  <resources>
+    <component id="ldq2v4z" name="CommonDialog.xml" path="/" exported="true"/>
+    <component id="qjliv50" name="CommonHelpDialog.xml" path="/" exported="true"/>
+    <component id="l6xyv5p" name="CommonItemTip.xml" path="/" exported="true"/>
+    <component id="fl5sv5q" name="CommonEquipTip.xml" path="/" exported="true"/>
+    <component id="fl5sv5r" name="EquipTipNode.xml" path="/" exported="true"/>
+    <component id="bf0gv5s" name="CommonItemSplitDialog.xml" path="/" exported="true"/>
+    <component id="bf0gv5w" name="ComponentInput.xml" path="/"/>
+    <component id="qvdnv5y" name="CommonNumberInput.xml" path="/" exported="true"/>
+    <component id="u4jhv60" name="CommonVideoWnd.xml" path="/" exported="true"/>
+    <component id="hkm9v62" name="TipListLabel.xml" path="/"/>
+    <component id="xm9xv63" name="EquipTipListLabel.xml" path="/"/>
+    <component id="r1ygv64" name="HelpDialogRickText.xml" path="/" exported="true"/>
+    <component id="sb5ovoh" name="HelpDialogBtn.xml" path="/" exported="true"/>
+    <component id="y56pvok" name="ComponentTouch.xml" path="/"/>
+    <component id="ajo5vol" name="CommonAttrTip.xml" path="/" exported="true"/>
+    <component id="bf0gv5t" name="btn_CancelOrUse.xml" path="/Components/" exported="true"/>
+    <component id="zwd8vnq" name="btn_square_1.xml" path="/Components/" exported="true"/>
+    <component id="zwd8vnr" name="btn_square_2.xml" path="/Components/" exported="true"/>
+    <component id="lxrgv50" name="text_scroll.xml" path="/Components/" exported="true"/>
+    <image id="zwd8vns" name="btn_square_1_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="6,6,2,2"/>
+    <image id="zwd8vnt" name="btn_square_2_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="7,6,2,2"/>
+    <image id="kr0wvom" name="text_equip_big.png" path="/Images/" exported="true"/>
+    <component id="10e45von" name="CommonTitleTips.xml" path="/" exported="true"/>
+    <image id="10e45voo" name="icon_class1.png" path="/Images/" exported="true"/>
+    <image id="10e45vop" name="icon_class2.png" path="/Images/" exported="true"/>
+    <image id="10e45voq" name="icon_class3.png" path="/Images/" exported="true"/>
+    <image id="10e45vor" name="icon_class4.png" path="/Images/" exported="true"/>
+    <image id="10e45vos" name="icon_class5.png" path="/Images/" exported="true"/>
+    <image id="10e45vot" name="icon_class6.png" path="/Images/" exported="true"/>
+    <component id="10e45vou" name="titleAttributeCell.xml" path="/Components/" exported="true"/>
+    <component id="10e45vov" name="componentTitleTip.xml" path="/Components/" exported="true"/>
+    <image id="yp8h5vow" name="02.png" path="/Images/"/>
+    <image id="yp8h5vox" name="bg_title.png" path="/Images/" scale="9grid" scale9grid="3,3,2,23"/>
+    <image id="kcff5voy" name="bg_grade_0.png" path="/Images/" exported="true" scale="9grid" scale9grid="83,24,163,43"/>
+    <image id="kcff5voz" name="bg_grade_1.png" path="/Images/" exported="true" scale="9grid" scale9grid="83,24,166,48"/>
+    <image id="kcff5vp0" name="bg_grade_2.png" path="/Images/" exported="true" scale="9grid" scale9grid="83,24,166,48"/>
+    <image id="kcff5vp1" name="bg_grade_3.png" path="/Images/" exported="true" scale="9grid" scale9grid="83,24,166,48"/>
+    <image id="kcff5vp2" name="bg_grade_4.png" path="/Images/" exported="true" scale="9grid" scale9grid="83,24,166,48"/>
+    <image id="kcff5vp3" name="bg_grade_5.png" path="/Images/" exported="true"/>
+    <image id="kcff5vp4" name="tips_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="50,50,240,314"/>
+    <image id="kcff5vp5" name="title_left.png" path="/Images/" exported="true"/>
+    <image id="kcff5vp6" name="title_right.png" path="/Images/" exported="true"/>
+    <component id="kcff5vp7" name="TipTopListLabel.xml" path="/"/>
+    <component id="kcff5vp9" name="TipImgTitleLabel.xml" path="/Components/" exported="true"/>
+    <component id="ttxf5vpa" name="TipPreviewModel.xml" path="/Components/" exported="true"/>
+    <image id="ttxf5vpb" name="bg01.png" path="/Images/" exported="true"/>
+    <component id="qtq95vpc" name="TipItemPurchasePop.xml" path="/Components/" exported="true"/>
+    <component id="qtq95vpd" name="commonCostCell.xml" path="/Components/" exported="true"/>
+    <component id="wodv5vpe" name="obtainItem.xml" path="/" exported="true"/>
+    <component id="wodv5vpf" name="ScaleButtonText.xml" path="/Components/" exported="true"/>
+    <component id="z28d5vpg" name="suiteInfo.xml" path="/Components/" exported="true"/>
+    <component id="z28d5vph" name="ObtainList.xml" path="/Components/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="88oqthnq">
+  <resources>
+    <component id="vdne0" name="job_select_item.xml" path="/Components/Create/"/>
+    <image id="vdne1" name="img_job_bg.png" path="/Images/Create/"/>
+    <image id="vdne2" name="img_select_job_frame.png" path="/Images/Create/"/>
+    <component id="vdne3" name="btn_single_click.xml" path="/Components/Create/"/>
+    <image id="vdne4" name="icon_random.png" path="/Images/Create/"/>
+    <component id="vdne5" name="btn_sex_man.xml" path="/Components/Create/"/>
+    <image id="vdne6" name="icon_man.png" path="/Images/Create/"/>
+    <image id="vdne7" name="icon_select_state.png" path="/Images/Create/"/>
+    <component id="vdne8" name="btn_sex_woman.xml" path="/Components/Create/"/>
+    <image id="vdne9" name="icon_woman.png" path="/Images/Create/"/>
+    <component id="vdnea" name="btn_back.xml" path="/Components/Select/"/>
+    <image id="vdneb" name="btn_back.png" path="/Images/Select/"/>
+    <component id="vdnec" name="btn_enter_game.xml" path="/Components/Select/"/>
+    <image id="vdned" name="btn_enter_game.png" path="/Images/Select/"/>
+    <component id="vdnee" name="btn_select_role.xml" path="/Components/Select/"/>
+    <image id="vdnef" name="img_role_select_bg.png" path="/Images/Select/"/>
+    <component id="vdneg" name="icon_avatar.xml" path="/Components/Select/"/>
+    <image id="vdneh" name="img_role_select_9.png" path="/Images/Select/" scale="9grid" scale9grid="113,62,9,0"/>
+    <component id="vdnei" name="panel_touch.xml" path="/Components/"/>
+    <image id="vdnej" name="icon_job_select_1.png" path="/Images/Create/" exported="true"/>
+    <image id="vdnek" name="icon_job_unselect_1.png" path="/Images/Create/" exported="true"/>
+    <image id="vdnel" name="text_job_1.png" path="/Images/Create/" exported="true"/>
+    <image id="vdnem" name="icon_attr_empty.png" path="/Images/Create/" exported="true"/>
+    <image id="vdnen" name="icon_job_select_5.png" path="/Images/Create/" exported="true"/>
+    <image id="vdneo" name="icon_job_unselect_5.png" path="/Images/Create/" exported="true"/>
+    <image id="vdnep" name="text_job_5.png" path="/Images/Create/" exported="true"/>
+    <image id="vdneq" name="icon_job_unselect_3.png" path="/Images/Create/" exported="true"/>
+    <image id="vdner" name="icon_job_select_3.png" path="/Images/Create/" exported="true"/>
+    <image id="vdnes" name="text_job_3.png" path="/Images/Create/" exported="true"/>
+    <image id="vdnet" name="icon_job_select_4.png" path="/Images/Create/" exported="true"/>
+    <image id="vdneu" name="icon_job_unselect_4.png" path="/Images/Create/" exported="true"/>
+    <image id="vdnev" name="icon_job_unselect_6.png" path="/Images/Create/" exported="true"/>
+    <image id="vdnew" name="icon_job_select_6.png" path="/Images/Create/" exported="true"/>
+    <image id="vdnex" name="text_job_2.png" path="/Images/Create/" exported="true"/>
+    <image id="vdney" name="img_introduce_frame.png" path="/Images/Create/" scale="9grid" scale9grid="0,17,329,34"/>
+    <image id="vdnez" name="icon_job_select_2.png" path="/Images/Create/" exported="true"/>
+    <image id="vdne10" name="text_job_4.png" path="/Images/Create/" exported="true"/>
+    <image id="vdne11" name="icon_job_unselect_2.png" path="/Images/Create/" exported="true"/>
+    <image id="vdne12" name="text_job_6.png" path="/Images/Create/" exported="true"/>
+    <image id="vdne13" name="img_name_frame_9.png" path="/Images/Create/" scale="9grid" scale9grid="10,10,156,22" duplicatePadding="true"/>
+    <image id="vdne14" name="mask.png" path="/Images/Select/"/>
+    <image id="vdne15" name="icon_add.png" path="/Images/Select/" exported="true"/>
+    <component id="vdne18" name="LoginRoleCreate.xml" path="/" exported="true"/>
+    <component id="vdne19" name="LoginRoleSelect.xml" path="/" exported="true"/>
+    <component id="vdne1a" name="RoleLockText.xml" path="/" exported="true"/>
+    <component id="fsrp1f" name="btn_select_role_fill.xml" path="/Components/Select/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

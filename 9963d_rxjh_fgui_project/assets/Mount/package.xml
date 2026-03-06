@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="vslix2m2">
+  <resources>
+    <component id="o0nq0" name="mountMain.xml" path="/" exported="true"/>
+    <component id="o0nq9" name="topBtn.xml" path="/Components/" exported="true"/>
+    <image id="o0nqb" name="zqbg.png" path="/image/" exported="true"/>
+    <image id="o0nqc" name="sxbg.png" path="/image/" exported="true" scale="9grid" scale9grid="62,48,124,96"/>
+    <image id="o0nqd" name="jsbg.png" path="/image/" exported="true"/>
+    <image id="o0nqe" name="wy.png" path="/image/" exported="true"/>
+    <component id="o0nqg" name="jieshu.xml" path="/Components/" exported="true"/>
+    <component id="o0nqh" name="rightBtn.xml" path="/Components/" exported="true"/>
+    <image id="o0nqj" name="pagerilv1.png" path="/image/" exported="true"/>
+    <image id="o0nqk" name="pagerilv2.png" path="/image/" exported="true"/>
+    <component id="o0nqo" name="nowAttr.xml" path="/Components/" exported="true"/>
+    <component id="o0nqp" name="attr.xml" path="/Components/" exported="true"/>
+    <image id="o0nqq" name="yb.png" path="/image/" exported="true"/>
+    <component id="o0nqr" name="saveBtn.xml" path="/Components/" exported="true"/>
+    <image id="o0nqs" name="an.png" path="/image/" exported="true"/>
+    <image id="o0nqt" name="liang.png" path="/image/" exported="true"/>
+    <image id="o0nq16" name="titleBg.png" path="/image/" exported="true" scale="9grid" scale9grid="22,13,44,26"/>
+    <component id="o0nq17" name="tybtn1.xml" path="/Components/" exported="true"/>
+    <image id="o0nq18" name="btn_zong.png" path="/image/" exported="true"/>
+    <component id="o0nq1c" name="activeBtn.xml" path="/Components/" exported="true"/>
+    <component id="o0nq1d" name="hhAttr.xml" path="/Components/" exported="true"/>
+    <component id="o0nq1e" name="leftItem.xml" path="/Components/" exported="true"/>
+    <image id="o0nq1f" name="7000002.png" path="/image/" exported="true"/>
+    <image id="o0nq1g" name="suo.png" path="/image/" exported="true"/>
+    <image id="o0nq1h" name="zuoji_001.png" path="/image/" exported="true"/>
+    <image id="o0nq1i" name="zuoji_002.png" path="/image/" exported="true"/>
+    <image id="o0nq1j" name="zuoji_003.png" path="/image/" exported="true"/>
+    <image id="o0nq1k" name="zuoji_004.png" path="/image/" exported="true"/>
+    <image id="o0nq1l" name="zuoji_005.png" path="/image/" exported="true"/>
+    <image id="o0nq1m" name="zuoji_006.png" path="/image/" exported="true"/>
+    <image id="o0nq1n" name="zuoji_007.png" path="/image/" exported="true"/>
+    <image id="o0nq1o" name="zuoji_008.png" path="/image/" exported="true"/>
+    <image id="o0nq1p" name="zuoji_009.png" path="/image/" exported="true"/>
+    <image id="o0nq1q" name="zuoji_010.png" path="/image/" exported="true"/>
+    <image id="o0nq1r" name="xz.png" path="/image/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
+    <component id="o0nq1s" name="closebtn_yuan.xml" path="/Components/" exported="true"/>
+    <image id="o0nq1u" name="close_yuan.png" path="/image/" exported="true"/>
+    <component id="o0nq1v" name="star.xml" path="/Components/" exported="true"/>
+    <component id="vorr1x" name="mountModel.xml" path="/Components/" exported="true"/>
+    <component id="vorr1z" name="mountItem.xml" path="/Components/" exported="true"/>
+    <component id="vorr21" name="xhcl.xml" path="/Components/" exported="true"/>
+    <component id="vorr22" name="iconItem.xml" path="/Components/" exported="true"/>
+    <component id="v5h42q" name="lingshou.xml" path="/Components/" exported="true"/>
+    <component id="v5h42t" name="title.xml" path="/Components/" exported="true"/>
+    <image id="v5h42u" name="属性文字底.png" path="/image/lingshou/" exported="true"/>
+    <image id="v5h42v" name="灵兽BG.png" path="/image/lingshou/" exported="true"/>
+    <component id="v5h42w" name="lsItem.xml" path="/Components/" exported="true"/>
+    <image id="v5h436" name="小信息底.png" path="/image/lingshou/" exported="true"/>
+    <component id="v5h438" name="lsbtsx.xml" path="/Components/" exported="true"/>
+    <component id="v5h439" name="activelsBtn.xml" path="/Components/" exported="true"/>
+    <component id="v5h43b" name="lshhsx.xml" path="/Components/" exported="true"/>
+    <component id="v5h43c" name="hhtitle.xml" path="/Components/" exported="true"/>
+    <image id="v5h43d" name="小底框.png" path="/image/lingshou/" exported="true"/>
+    <image id="v5h43e" name="幻化.png" path="/image/lingshou/" exported="true"/>
+    <image id="v5h43f" name="幻化中.png" path="/image/lingshou/" exported="true"/>
+    <component id="v5h43g" name="jiantou.xml" path="/Components/" exported="true"/>
+    <component id="kv3g3h" name="isPetHHBtn.xml" path="/Components/" exported="true"/>
+    <image id="rlb83k" name="pet_000.png" path="/image/" exported="true"/>
+    <image id="rlb83l" name="pet_001.png" path="/image/" exported="true"/>
+    <image id="gwga3m" name="pet_005.png" path="/image/" exported="true"/>
+    <image id="gwga3n" name="pet_002.png" path="/image/" exported="true"/>
+    <image id="gwga3o" name="pet_003.png" path="/image/" exported="true"/>
+    <image id="gwga3p" name="pet_004.png" path="/image/" exported="true"/>
+    <component id="jimm3q" name="activelsBtn2.xml" path="/Components/" exported="true"/>
+    <image id="jimm3r" name="属性文字底.png" path="/image/" exported="true"/>
+    <image id="v58d3s" name="PetSkill_2101.png" path="/image/" exported="true"/>
+    <image id="v58d3t" name="PetSkill_2201.png" path="/image/" exported="true"/>
+    <image id="v58d3u" name="PetSkill_2301.png" path="/image/" exported="true"/>
+    <image id="v58d3v" name="PetSkill_2401.png" path="/image/" exported="true"/>
+    <image id="v58d3w" name="PetSkill_2501.png" path="/image/" exported="true"/>
+    <image id="v58d3x" name="PetSkill_2601.png" path="/image/" exported="true"/>
+    <image id="v58d3y" name="tips底.png" path="/image/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <component id="v58d3z" name="skillIcon.xml" path="/Components/"/>
+    <image id="v58d40" name="已上阵.png" path="/image/lingshou/" exported="true"/>
+    <image id="xkmz41" name="pet_006.png" path="/image/" exported="true"/>
+    <image id="xkmz42" name="pet_007.png" path="/image/" exported="true"/>
+    <image id="xkmz43" name="pet_008.png" path="/image/" exported="true"/>
+  </resources>
+  <publish name="">
+    <atlas name="mount" index="0"/>
+  </publish>
+</packageDescription>

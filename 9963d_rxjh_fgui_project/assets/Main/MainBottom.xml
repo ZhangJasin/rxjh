@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false" designImage="ui://zj419n3ddpxov3f">
+  <controller name="chat" pages="0,,1," selected="0">
+    <remark page="0" value="正常"/>
+    <remark page="1" value="拉长"/>
+  </controller>
+  <displayList>
+    <graph id="n76_elzb" name="Block" xy="0,734" size="1334,16" type="rect" lineSize="0" fillColor="#00ffffff">
+      <relation target="" sidePair="width-width"/>
+    </graph>
+    <graph id="n77_elzb" name="Block" xy="1098,720" size="236,30" type="rect" lineSize="0" fillColor="#00ffffff">
+      <relation target="" sidePair="right-right"/>
+    </graph>
+    <graph id="n78_elzb" name="Block" xy="0,720" size="165,30" type="rect" lineSize="0" fillColor="#00ffffff">
+      <relation target="" sidePair=""/>
+    </graph>
+    <image id="n72_7ug3" name="Image_leftBg" src="7ug3fvec" fileName="Images/Bottom/main_bottom_bg.png" xy="163,720" pivot="1,0" anchor="true" size="163,30">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </image>
+    <image id="n73_7ug3" name="Image_rightBg" src="7ug3fvec" fileName="Images/Bottom/main_bottom_bg.png" xy="1174,720" size="160,30" flip="hz">
+      <relation target="" sidePair="bottom-bottom"/>
+      <relation target="n1_kxj1" sidePair="left-right"/>
+    </image>
+    <image id="n1_kxj1" name="n1" src="kxj1v3q" fileName="Images/Bottom/main_exp_Bg.png" xy="162,733" size="1013,17">
+      <relation target="" sidePair="width-width,left-left,right-right,bottom-bottom"/>
+    </image>
+    <component id="n74_7ug3" name="ComboBox_autoMode1" src="7ug3fvef" fileName="Components/Bottom/AutoModeComboBox.xml" xy="1202,723">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <ComboBox visibleItemCount="10" direction="up"/>
+    </component>
+    <component id="n75_7ug3" name="ComboBox_autoMode2" src="7ug3fvef" fileName="Components/Bottom/AutoModeComboBox.xml" xy="1222,723" visible="false">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <ComboBox visibleItemCount="10" direction="up"/>
+    </component>
+    <component id="n29_o3hv" name="ProgressBar_exp" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="169,737" size="998,10">
+      <relation target="" sidePair="width-width,left-left,right-right,bottom-bottom"/>
+      <ProgressBar value="100" max="100"/>
+      <property target="bar" propertyId="1" value="ui://zj419n3dk5e7v8x"/>
+    </component>
+    <image id="n3_kxj1" name="Img_wifi" src="kxj1v3m" fileName="Images/Bottom/main_img_wifi.png" xy="12,730">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </image>
+    <image id="n4_kxj1" name="Img_battery" src="kxj1v3o" fileName="Images/Bottom/main_img_battery.png" xy="111,730">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </image>
+    <image id="n36_k5e7" name="n36" src="k5e7v8w" fileName="Images/Bottom/main_chat_bg_9.png" xy="475,637" size="382,98">
+      <gearSize controller="chat" pages="1" values="382,200,1,1" default="382,98,1,1"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </image>
+    <image id="n38_99g1" name="Image_autoMove" src="brvzv7s" fileName="Images/Bottom/main_state_auto_move.png" xy="667,607" pivot="0.5,0.5" anchor="true" visible="false">
+      <gearXY controller="chat" pages="0,1" values="667,607|667,445"/>
+      <relation target="" sidePair="center-center,top-bottom"/>
+    </image>
+    <component id="n15_kxj1" name="Btn_friend" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="415,637" size="60,48">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button icon="ui://zj419n3dkxj1v3z"/>
+    </component>
+    <component id="n17_kxj1" name="Btn_mail" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="415,687" size="60,48">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button icon="ui://zj419n3dkxj1v3x"/>
+    </component>
+    <component id="n60_rqm5" name="Btn_stall" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="864,688" size="48,48">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button icon="ui://zj419n3dkxj1v3v"/>
+    </component>
+    <component id="n41_voyp" name="Btn_channel" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="828,708" size="28,28">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button icon="ui://zj419n3dn0difvbe"/>
+    </component>
+    <component id="n57_r075" name="Btn_chatArrow" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="828,634" size="28,28">
+      <gearXY controller="chat" pages="0,1" values="828,634|828,531"/>
+      <gearLook controller="chat" pages="1" values="1,180,0,1" default="1,0,0,1"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button icon="ui://zj419n3dr075fvd3"/>
+    </component>
+    <component id="n55_r075" name="Btn_auto" src="brvzv7o" fileName="Components/Bottom/ButtonAuto.xml" xy="864,637">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <component id="n45_mfvx" name="Btn_cameraMode" src="mfvxvb6" fileName="Components/Bottom/ButtonCameraMode.xml" xy="7,669">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+      <Button icon="ui://zj419n3dcr66fvd9"/>
+    </component>
+    <component id="n48_hybd" name="Btn_updateTip" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="142,703" size="28,28">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+      <Button icon="ui://zj419n3dhybdvb8"/>
+    </component>
+    <component id="n52_10iaf" name="ProgressBar_preLoad" src="10iafvbc" fileName="Components/Bottom/PreLoadProgressBar.xml" xy="48,712" size="95,10">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+      <ProgressBar value="50" max="100"/>
+    </component>
+    <list id="n34_brvz" name="List_bubbleTip" xy="476,578" size="352,58" layout="row" colGap="5" defaultItem="ui://zj419n3dbrvzv7x" autoClearItems="true">
+      <gearXY controller="chat" pages="0,1" values="476,578|475,476"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n64_fyl5" name="Text_autoMode1" xy="1246,735" pivot="0.5,0.5" anchor="true" size="84,24" fontSize="16" color="#7cc3b3" align="center" vAlign="middle" autoSize="shrink" autoClearText="true" text="循环释放0">
+      <relation target="n74_7ug3" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n68_fyl5" name="Text_autoMode2" xy="1266,735" pivot="0.5,0.5" anchor="true" size="84,24" visible="false" fontSize="16" color="#7cc3b3" align="center" vAlign="middle" autoSize="shrink" autoClearText="true" text="技能方案">
+      <relation target="n75_7ug3" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n5_kxj1" name="Text_time" xy="66,736" pivot="0.5,0.5" anchor="true" size="67,26" scale="0.7,0.7" font="ui://zj419n3dik1cfvbg" fontSize="20" color="#ffffff" align="center" leading="0" text="16:37">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </text>
+    <text id="n37_pni0" name="Debug_Text" xy="13,507" size="10,29" fontSize="20" color="#ffffff" text=""/>
+    <list id="n58_ljak" name="List_chat" xy="476,637" size="350,97" selectionMode="none" overflow="scroll" scrollBarFlags="160" scrollBar="hidden" margin="0,0,8,0" colGap="4" defaultItem="ui://zj419n3dmxa7v55" renderOrder="descent" autoClearItems="true" scrollItemToViewOnClick="false">
+      <relation target="n59_ljak" sidePair="topext-bottom"/>
+      <relation target="" sidePair="center-center,bottomext-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n59_ljak" name="List_notice" xy="476,637" size="350,0" selectionMode="none" overflow="scroll" scrollBarFlags="128" scrollBar="hidden" defaultItem="ui://zj419n3duoygvbb" autoClearItems="true">
+      <gearXY controller="chat" pages="0,1" values="476,637|476,535"/>
+      <relation target="" sidePair="center-center,top-bottom"/>
+    </list>
+    <graph id="n39_99g1" name="Graph_autoFight" xy="667,606" pivot="0.5,0.5" anchor="true" size="57,24" visible="false" touchable="false" type="rect" lineSize="0" fillColor="#00ffffff">
+      <gearXY controller="chat" pages="0,1" values="667,606|667,447"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </graph>
+  </displayList>
+</component>

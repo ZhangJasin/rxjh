@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="789,565">
+  <displayList>
+    <image id="n9_10pmd" name="bg" src="q9lsv5j" fileName="image/icon_money_bg.png" pkg="st7dgeqq" xy="-2,0" size="794,571">
+      <relation target="n7_10pmd" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <list id="n7_10pmd" name="list_buy" xy="0,0" size="794,568" layout="flow_hz" overflow="scroll" lineGap="-11" colGap="-11" lineItemCount="3" defaultItem="ui://p8mjxubr10pmdv6q" align="center">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

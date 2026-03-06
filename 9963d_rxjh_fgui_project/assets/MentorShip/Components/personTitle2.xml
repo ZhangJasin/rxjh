@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="772,40">
+  <displayList>
+    <text id="n1_h138" name="name" xy="95,0" size="100,40" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="姓名"/>
+    <text id="n2_h138" name="lv" xy="225,1" size="100,40" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="等级"/>
+    <text id="n3_h138" name="guildName" xy="350,0" size="100,40" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="门派"/>
+    <text id="n8_h138" name="n8" xy="621,0" size="131,40" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="操作"/>
+  </displayList>
+</component>

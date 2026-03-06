@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImage="ui://1e928y1xoxr71p" designImageOffsetX="15" designImageOffsetY="-9" designImageAlpha="0" remark="所有阵营&#xA;">
+  <displayList>
+    <component id="n73_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="173,168" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n2_nojs" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n4_nojs" name="text_title" xy="512,188" pivot="0.5,0.5" anchor="true" size="52,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" singleLine="true" text="拍卖行">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n5_nojs" name="btn_right_tab_1" src="oxr711" fileName="Components/tab_right.xml" xy="846,213">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n6_nojs" name="btn_right_tab_2" src="oxr711" fileName="Components/tab_right.xml" xy="846,274">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n7_nojs" name="btn_right_tab_3" src="oxr711" fileName="Components/tab_right.xml" xy="846,335">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n70_tmr6" name="Node_Content" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="512,404" size="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n71_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="18,707" size="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

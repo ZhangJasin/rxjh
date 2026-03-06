@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="73,73">
+  <controller name="c2" exported="true" pages="0,未选择装备,1,已选择装备" selected="0"/>
+  <controller name="c1" exported="true" pages="0,装备选择器,1,材料选择器,3,幸运符选择器,4,属性石选择器" selected="0"/>
+  <displayList>
+    <image id="n0_o4l6" name="n0" src="oqrpz" fileName="Images/04duanzao/kuangdi1.png" xy="36,36" pivot="0.5,0.5" anchor="true"/>
+    <image id="n3_o4l6" name="n2" src="oqrp10" fileName="Images/04duanzao/cost1.png" xy="36,36" pivot="0.5,0.5" anchor="true">
+      <gearDisplay controller="c1" pages="1"/>
+    </image>
+    <image id="n4_o4l6" name="n3" src="oqrp11" fileName="Images/04duanzao/cost2.png" xy="36,36" pivot="0.5,0.5" anchor="true">
+      <gearDisplay controller="c1" pages="3"/>
+    </image>
+    <image id="n2_o4l6" name="n4" src="oqrp12" fileName="Images/04duanzao/jia2.png" xy="36,36" pivot="0.5,0.5" anchor="true">
+      <gearDisplay controller="c1" pages="4"/>
+      <gearDisplay2 controller="c2" pages="1" condition="0"/>
+    </image>
+    <image id="n1_o4l6" name="n1" src="oqrp13" fileName="Images/04duanzao/jia1.png" xy="36,36" pivot="0.5,0.5" anchor="true">
+      <gearDisplay controller="c2" pages="1"/>
+      <gearDisplay2 controller="c1" pages="1,3" condition="0"/>
+    </image>
+    <component id="n5_o4l6" name="itemRoot" src="oqrp6" fileName="Components/tongyong/itemRoot.xml" xy="36,37" pivot="0.5,0.5" anchor="true" size="64,64"/>
+    <component id="n6_bmxb" name="closeitembtn" src="oqrp14" fileName="Components/tongyong/closebtn_yuan.xml" xy="61,-10" size="22,22" visible="false"/>
+  </displayList>
+</component>

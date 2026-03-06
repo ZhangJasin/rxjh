@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="28,60" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="1"/>
+  <displayList>
+    <image id="n0_zah9" name="n0" src="emvc3j" fileName="image/toggle_right_unselect.png" pkg="qa9a7rit" xy="0,0" size="28,60">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_zah9" name="n1" src="emvc3i" fileName="image/toggle_right_select.png" pkg="qa9a7rit" xy="0,0" size="28,60">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_zah9" name="n2" src="emvc3i" fileName="image/toggle_right_select.png" pkg="qa9a7rit" xy="0,0" size="28,60">
+      <gearDisplay controller="button" pages="3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3_zah9" name="title" xy="0,3" size="23,54" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#ffcc00" align="center" vAlign="middle" ubb="true" autoSize="none" strokeColor="#28422f" text="信息">
+      <gearColor controller="button" pages="0,1,2,3" values="#c5dccc,#28422f|#ffcc00,#28422f|#cccccc,#28422f|#ffcc00,#28422f"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

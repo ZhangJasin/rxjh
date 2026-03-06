@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="220,56">
+  <controller name="isActive" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n0_pkt0" name="n0" src="pkt0c" fileName="Images/页签.png" xy="0,0" size="220,56"/>
+    <text id="n1_pkt0" name="text" xy="0,0" size="220,56" fontSize="22" color="#f2c629" align="center" vAlign="middle" autoSize="none" text="父级标题"/>
+    <component id="n3_pkt0" name="status" src="pkt0o" fileName="Components/status.xml" xy="33,0" size="26,56"/>
+    <image id="n4_c1bl" name="n4" src="c1bl16" fileName="Images/main_funcDock_arrow.png" xy="200,18" rotation="90"/>
+    <image id="n5_c1bl" name="n5" src="c1bl16" fileName="Images/main_funcDock_arrow.png" xy="165,39" rotation="270"/>
+  </displayList>
+</component>

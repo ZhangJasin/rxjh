@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="316,110">
+  <displayList>
+    <image id="n105_fa8p" name="img_di_3" src="n0551w" fileName="Images/img_input_di.png" xy="0,0" size="316,110">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n111_lt7h" name="item_attr_hp" src="n0552b" fileName="Components/item_attr_red.xml" xy="4,3">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n109_lt7h" name="item_attr_mp" src="n0552c" fileName="Components/item_attr_blue.xml" xy="4,29">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n110_lt7h" name="item_attr_exp" src="n0552d" fileName="Components/item_attr_green.xml" xy="4,55">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n112_lt7h" name="item_attr_nuqi" src="n0552e" fileName="Components/item_attr_yellow.xml" xy="4,81">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

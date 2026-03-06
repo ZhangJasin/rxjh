@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="76,88" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n15_jhxg" name="skill_bg" src="emvc3q" fileName="image/icon_item0.png" pkg="qa9a7rit" xy="38,36" pivot="0.5,0.5" anchor="true" size="64,64"/>
+    <loader id="n2_eion" name="skill_icon" xy="38,36" pivot="0.5,0.5" anchor="true" size="60,60" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <graph id="n20_omcq" name="skill_mask" xy="38,56" pivot="0.5,0.5" anchor="true" size="60,20" alpha="0.7" type="rect" fillColor="#ff000000"/>
+    <image id="n19_omcq" name="bg" src="omcq1e" fileName="Images/img_lv_bg.png" xy="48,79" pivot="0.5,0.5" anchor="true" size="44,18"/>
+    <richtext id="n10_awj8" name="text_condition" xy="38,56" pivot="0.5,0.5" anchor="true" size="60,20" fontSize="12" color="#fff7d1" align="center" vAlign="middle" autoSize="none" text=""/>
+    <richtext id="n23_omcq" name="text_level" xy="48,78" pivot="0.5,0.5" anchor="true" size="40,20" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="20+20"/>
+    <component id="n22_omcq" name="btn_add" src="omcq1f" fileName="Components/btn_add.xml" xy="16,79" pivot="0.5,0.5" anchor="true"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

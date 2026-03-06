@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="640,60">
+  <displayList>
+    <image id="n15_gpvo" name="bg" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,0" size="640,60"/>
+    <text id="n4_f0so" name="text_name" xy="90,30" pivot="0.5,0.5" anchor="true" size="160,29" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" ubb="true" autoSize="none" text="名字"/>
+    <text id="n7_f0so" name="text_level" xy="240,30" pivot="0.5,0.5" anchor="true" size="100,29" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="等级"/>
+    <loader id="n12_l7f0" name="img_job" xy="330,30" pivot="0.5,0.5" anchor="true" size="64,64" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <component id="n9_f0so" name="btn_agree" src="f0so1q" fileName="Components/btn_agree.xml" xy="570,30" pivot="0.5,0.5" anchor="true"/>
+    <component id="n11_h9j1" name="btn_refues" src="f0so1r" fileName="Components/btn_refuse.xml" xy="450,30" pivot="0.5,0.5" anchor="true"/>
+  </displayList>
+</component>

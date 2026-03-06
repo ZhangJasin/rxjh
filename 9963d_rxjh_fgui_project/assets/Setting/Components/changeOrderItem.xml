@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="418,62">
+  <displayList>
+    <image id="n33_nznq" name="n33" src="11iqkvpi" fileName="Images/item_bg.png" xy="0,0" size="418,62"/>
+    <text id="n35_nznq" name="order" xy="14,15" size="122,30" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <text id="n36_nznq" name="title" xy="164,15" size="250,30" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="金疮药 （特）"/>
+    <image id="n37_nznq" name="drag_handler" src="ix5tkvqd" fileName="Images/dragHandler.png" xy="371,11"/>
+    <image id="n39_ix5t" name="selectable" src="ix5tkvqc" fileName="Images/item_select.png" xy="0,0" size="418,62"/>
+  </displayList>
+</component>

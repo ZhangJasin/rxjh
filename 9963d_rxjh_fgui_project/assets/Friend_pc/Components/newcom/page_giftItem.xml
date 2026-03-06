@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <controller name="selectItem" exported="true" pages="0,隐藏,1,显示" selected="0"/>
+  <controller name="itemtips" exported="true" pages="0,,1," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="显示"/>
+  </controller>
+  <displayList>
+    <component id="n15_epiq" name="bg" src="egru78" fileName="Components/tongyong/kongbg.xml" pkg="fgihxfye" xy="0,0" size="1027,768"/>
+    <component id="n37_m0m5" name="backGround" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="512,381" pivot="0.5,0.5" anchor="true" size="600,540">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n1_c1p9" name="btn_close" src="boje1k" fileName="Components/newcom/btn_closeyuan.xml" xy="763,115">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n35_m0m5" name="btn_giftItem" src="wgst5q" fileName="Components/tongyong/fangbtn.xml" pkg="fgihxfye" xy="431,583" size="160,53">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="赠礼" titleColor="#ffff00" titleFontSize="24"/>
+    </component>
+    <text id="n3_c1p9" name="title" xy="452,115" size="120,45" fontSize="24" color="#cccccc" align="center" vAlign="middle" letterSpacing="2" autoSize="none" text="亲密度">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n4_c1p9" name="n4" xy="373,169" size="213,42" fontSize="24" color="#ffffcc" align="center" vAlign="middle" letterSpacing="2" ubb="true" autoSize="none" text="当前亲密度等级:">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n6_c1p9" name="textLabel_showIntimate" xy="588,169" size="58,42" fontSize="24" color="#ffff00" align="center" vAlign="middle" letterSpacing="2" ubb="true" autoSize="none" strokeColor="#000000" text="0级">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n8_eoqr" name="n8" src="boje23" fileName="Images/newimg/icon_money_bg.png" xy="232,268" size="560,215">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n10_eoqr" name="progressBar2" src="boje1j" fileName="Components/newcom/ProgressBar.xml" xy="358,221">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <ProgressBar value="5" max="10"/>
+    </component>
+    <component id="n24_lppm" name="progressBar" src="bojeit" fileName="Components/tongyong/ProgressBar2.xml" pkg="fgihxfye" xy="358,222" size="300,30">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <ProgressBar value="50" max="100"/>
+      <property target="bar" propertyId="1" value="ui://hxz346vpboje28"/>
+    </component>
+    <text id="n11_eoqr" name="textLabel_progressNum" xy="504,235" pivot="0.5,0.5" anchor="true" size="54,29" fontSize="20" color="#ffffff" align="center" vAlign="middle" text="0/100">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n36_m0m5" name="itemlist" xy="262,278" size="500,195" layout="flow_hz" overflow="scroll" lineGap="10" colGap="30" lineItemCount="4" defaultItem="ui://fgihxfyem0m5bv" align="center" vAlign="middle" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n25_lppm" name="show_item1" src="eoqr1h" fileName="Components/common/show_item(brown).xml" pkg="s7gyh5sv" xy="432,232" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n26_lppm" name="show_item2" src="eoqr1i" fileName="Components/common/show_item(red).xml" pkg="s7gyh5sv" xy="528,232" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n28_m0m5" name="n28" xy="369,489" size="115,29" fontSize="20" color="#ffffff" vAlign="middle" text="拥有数量：0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n29_m0m5" name="n29" src="boje1z" fileName="Images/newimg/smallBaseFrame.png" xy="451,527" size="120,44"/>
+    <component id="n30_m0m5" name="btn_add" src="boje1l" fileName="Components/newcom/btn_jia.xml" xy="570,526">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n31_m0m5" name="btn_reduce" src="boje1g" fileName="Components/newcom/btn_jian.xml" xy="406,526">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n32_m0m5" name="input_itemNum" xy="450,526" size="120,44" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="" input="true" prompt="1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n34_m0m5" name="btn_num" src="wgst5q" fileName="Components/tongyong/fangbtn.xml" pkg="fgihxfye" xy="648,528" size="100,36" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="999" titleColor="#ffffff"/>
+    </component>
+    <component id="n14_eoqr" name="page_selectItemnum" src="eoqr1j" fileName="Components/xialv/selectItemNum.xml" pkg="s7gyh5sv" xy="361,342">
+      <gearDisplay controller="selectItem" pages="1"/>
+    </component>
+    <component id="n27_hh4i" name="item_tips" src="hh4ibr" fileName="Components/Tip/item_tips.xml" pkg="fgihxfye" xy="0,3" size="1024,768">
+      <gearDisplay controller="itemtips" pages="1"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <component id="n67_r73b" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="512,384" pivot="0.5,0.5" anchor="true" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n68_r73b" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n31_xxk3" name="btn_add" src="xxk3h" fileName="Components/btn_add.xml" xy="800,210">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n69_r73b" name="list_bg" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="185,240" size="270,350">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n64_gpvo" name="count_bg" src="gpvo1b" fileName="Images/friend_bottom.png" xy="185,568" size="270,20">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n24_xxk3" name="list_page" xy="190,212" size="500,28" layout="row" overflow="hidden" scroll="horizontal" defaultItem="ui://hxz346vpwmgr7" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+    </list>
+    <list id="n9_vjv7" name="list_friend" xy="190,245" size="260,340" overflow="scroll" defaultItem="ui://hxz346vpwmgr3" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+    </list>
+    <text id="n48_ygri" name="text_title" xy="512,188" pivot="0.5,0.5" anchor="true" size="36,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" autoSize="none" text="好友">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n39_olk0" name="text_nothing" xy="320,415" pivot="0.5,0.5" anchor="true" size="200,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="暂无好友">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <richtext id="n74_spth" name="text_online" xy="289,568" size="60,19" fontSize="12" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="人数：0/0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <image id="n71_r73b" name="info_bg" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="460,240" size="375,310" group="n49_nrlc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n45_wi45" name="bg_input" src="wi4510" fileName="Images/input_friend_9.png" xy="460,575" pivot="0,0.5" anchor="true" size="140,24" group="n49_nrlc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n35_xxk3" name="input_chat" xy="460,575" pivot="0,0.5" anchor="true" size="140,24" group="n49_nrlc" fontSize="12" vAlign="middle" leading="0" autoSize="none" text="" input="true" prompt="请点击输入" maxLength="54">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n23_wmgr" name="list_chat" xy="465,245" size="365,300" group="n49_nrlc" selectionMode="none" overflow="scroll" defaultItem="ui://seywlb2rwmgr8" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item url="ui://hxz346vpwmgr8"/>
+      <item url="ui://hxz346vpwmgrb"/>
+    </list>
+    <component id="n20_wmgr" name="btn_chat" src="wmgr6" fileName="Components/btn_chat.xml" xy="775,575" pivot="0.5,0.5" anchor="true" group="n49_nrlc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button titleFontSize="12"/>
+    </component>
+    <component id="n41_wqgf" name="btn_emoj" src="xxk3k" fileName="Components/btn_emoj.xml" xy="625,575" pivot="0.5,0.5" anchor="true" size="36,32" group="n49_nrlc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n37_xxk3" name="btn_pos" src="xxk3l" fileName="Components/btn_pos.xml" xy="670,575" pivot="0.5,0.5" anchor="true" size="36,32" group="n49_nrlc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n49_nrlc" name="panel_chat" xy="460,240" size="375,351" advanced="true"/>
+    <image id="n73_r73b" name="bg_history" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="460,240" size="375,350" group="n52_nrlc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n57_lmpz" name="scroll_history" src="lmpz17" fileName="Components/scroll_history.xml" xy="465,245" size="365,340" group="n52_nrlc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n52_nrlc" name="panel_history" xy="460,240" size="375,350" advanced="true"/>
+    <component id="n58_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="172,698" size="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

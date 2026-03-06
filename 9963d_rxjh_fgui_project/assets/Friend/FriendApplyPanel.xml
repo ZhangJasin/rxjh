@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n18_menb" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n20_gpvo" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="462,650">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n8_wmgr" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="875,78">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n16_fmfy" name="btn_search" src="fmfyt" fileName="Components/btn_search.xml" xy="812,144" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n15_fmfy" name="btn_refresh" src="fmfys" fileName="Components/btn_refresh.xml" xy="667,655" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_vjv7" name="text_title" xy="667,78" pivot="0.5,0.5" anchor="true" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="添加好友">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n22_c4df" name="n22" src="c4dfkvpe" fileName="image/input_bg.png" pkg="st7dgeqq" xy="595,144" pivot="0.5,0.5" anchor="true" size="280,48">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n14_fmfy" name="input_name" xy="465,129" size="260,29" fontSize="20" autoSize="none" text="" input="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n21_gpvo" name="bg2" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="665,420" pivot="0.5,0.5" anchor="true" size="420,390">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n3_vjv7" name="list_page" xy="667,202" pivot="0.5,0.5" anchor="true" size="400,44" layout="row" overflow="hidden" scroll="horizontal" defaultItem="ui://seywlb2rfmfyp" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+    </list>
+    <list id="n10_fmfy" name="list_friend" xy="665,420" pivot="0.5,0.5" anchor="true" size="410,380" overflow="scroll" defaultItem="ui://seywlb2rfmfyu" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

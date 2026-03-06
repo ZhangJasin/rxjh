@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n27_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000"/>
+    <component id="n24_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="417,175" size="500,400">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_tmr6" name="title" xy="641,185" size="52,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="提示">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n5_tmr6" name="bg_di" src="nojse" fileName="Images/ditu2.png" xy="430,232" size="472,174">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n9_tmr6" name="label_tip" xy="534,426" size="266,26" fontSize="18" color="#ffffff" singleLine="true" text="一口价为直接成交价，是否寄售?">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n10_tmr6" name="text_name" xy="645,267" size="144,29" fontSize="20" color="#ffffff" singleLine="true" text="这是名字七个字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n11_tmr6" name="label_price_1" xy="645,309" size="74,29" fontSize="20" color="#ffffff" singleLine="true" text="底    价:">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n13_tmr6" name="text_jiShoudiJia" xy="756,307" size="10,29" fontSize="20" color="#f1ffeb" vAlign="middle" singleLine="true" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n14_tmr6" name="label_price_2" xy="646,351" size="70,29" fontSize="20" color="#f1ffeb" singleLine="true" text="一口价:">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n16_tmr6" name="text_price_once" xy="756,351" size="10,29" fontSize="20" color="#f1ffeb" vAlign="middle" singleLine="true" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n19_usy1" name="icon_money_1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="723,307" size="32,32">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n20_usy1" name="icon_money_2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="723,350" size="32,32">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n22_usy1" name="item_node" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="546,288" size="72,72">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n23_usy1" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="895,202">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n6_tmr6" name="btn_cancel" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="516,495" group="n26_owd7">
+      <Button title="取 消"/>
+    </component>
+    <component id="n7_tmr6" name="btn_ok" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="682,496" group="n26_owd7">
+      <Button title="确 定"/>
+    </component>
+    <group id="n26_owd7" name="n26" xy="516,495" size="302,43" advanced="true" layout="hz" colGap="30" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="77,77" extention="Button">
+  <displayList>
+    <image id="n1_tzp9" name="n1" src="bojevoy" fileName="Images/btnbg.png" xy="0,0"/>
+    <text id="n4_tzp9" name="n4" xy="20,15" size="47,52" fontSize="18" color="#ffffff" autoSize="none" text="随身商店"/>
+  </displayList>
+  <Button/>
+</component>

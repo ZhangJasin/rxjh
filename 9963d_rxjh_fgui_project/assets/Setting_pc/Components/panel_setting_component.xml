@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="377,327" overflow="scroll" remark="画质">
+  <displayList>
+    <component id="n49_knkx" name="quality_title" src="f2ul4r" fileName="Components/title_label.xml" xy="115,0" size="146,23" group="n52_knkx">
+      <Label title="画质设置" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <graph id="n50_knkx" name="n50" xy="0,25" size="377,78" group="n52_knkx" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <list id="n51_knkx" name="quality_list" xy="0,28" size="377,72" group="n52_knkx" layout="row" colGap="30" defaultItem="ui://o9dt5fs4f2ul4b" autoItemSize="false" align="center" vAlign="middle" scrollItemToViewOnClick="false">
+      <item/>
+      <item/>
+    </list>
+    <group id="n52_knkx" name="n52" xy="0,0" size="377,103"/>
+    <component id="n53_knkx" name="ctrl_title" src="f2ul4r" fileName="Components/title_label.xml" xy="115,107" size="146,23" group="n69_knkx">
+      <Label title="场景设置" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <graph id="n54_knkx" name="n54" xy="0,131" size="377,190" group="n69_knkx" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <component id="n55_knkx" name="slider_model_limit" src="f2ul4f" fileName="Components/option_item.xml" xy="14,137" size="322,20" group="n69_knkx">
+      <Label title="同屏人数" icon="ui://o9dt5fs4bk1i6b"/>
+    </component>
+    <text id="n56_knkx" name="model_limit_value" xy="337,135" size="30,23" group="n69_knkx" fontSize="12" color="#a4d452" align="right" vAlign="middle" autoSize="none" autoClearText="true" text="100"/>
+    <component id="n57_knkx" name="slider_distance" src="f2ul4f" fileName="Components/option_item.xml" xy="14,159" size="322,20" group="n69_knkx">
+      <Label title="远近调整" icon="ui://o9dt5fs4bk1i6b"/>
+    </component>
+    <text id="n58_knkx" name="distance_value" xy="337,157" size="30,23" group="n69_knkx" fontSize="12" color="#a4d452" align="right" vAlign="middle" autoSize="none" autoClearText="true" text="100"/>
+    <component id="n59_knkx" name="slider_fix_limit" src="f2ul4f" fileName="Components/option_item.xml" xy="14,182" size="322,20" group="n69_knkx">
+      <Label title="同屏特效" icon="ui://o9dt5fs4bk1i6b"/>
+    </component>
+    <text id="n60_knkx" name="fix_limit_value" xy="337,180" size="30,23" group="n69_knkx" fontSize="12" color="#a4d452" align="right" vAlign="middle" autoSize="none" autoClearText="true" text="100"/>
+    <component id="n77_mxha" name="slider_ui_scale" src="f2ul4f" fileName="Components/option_item.xml" xy="14,205" size="322,20" group="n69_knkx">
+      <Label title="界面缩放" icon="ui://o9dt5fs4bk1i6b"/>
+    </component>
+    <text id="n78_mxha" name="ui_scale_value" xy="337,203" size="30,23" group="n69_knkx" fontSize="12" color="#a4d452" align="right" vAlign="middle" autoSize="none" autoClearText="true" text="1.5"/>
+    <component id="n82_mxha" name="ui_scale_btn" src="mxha6i" fileName="Components/btn_apply.xml" xy="337,205" size="30,20" group="n69_knkx">
+      <Button title="应用"/>
+    </component>
+    <component id="n61_knkx" name="switch_high_frame" src="f2ul57" fileName="Components/tog_select.xml" xy="14,236" size="77,22" group="n69_knkx">
+      <Button title="高帧率" titleColor="#ffffff" titleFontSize="12"/>
+    </component>
+    <component id="n62_knkx" name="switch_ECO" src="f2ul57" fileName="Components/tog_select.xml" xy="135,236" size="77,22" group="n69_knkx">
+      <Button title="省电模式" titleColor="#ffffff" titleFontSize="12"/>
+    </component>
+    <component id="n63_knkx" name="btn_help_eco" src="f2ul5n" fileName="Components/btn_help.xml" xy="223,247" group="n69_knkx"/>
+    <component id="n64_knkx" name="switch_vsync_count" src="f2ul57" fileName="Components/tog_select.xml" xy="267,236" size="77,22" group="n69_knkx">
+      <Button title="垂直同步" titleColor="#ffffff" titleFontSize="12"/>
+    </component>
+    <component id="n65_knkx" name="switch_fog" src="f2ul57" fileName="Components/tog_select.xml" xy="14,265" size="77,22" group="n69_knkx">
+      <Button title="烟雾" titleColor="#ffffff" titleFontSize="12"/>
+    </component>
+    <component id="n66_knkx" name="switch_aasetting" src="f2ul57" fileName="Components/tog_select.xml" xy="135,265" size="77,22" group="n69_knkx">
+      <Button title="抗锯齿" titleColor="#ffffff" titleFontSize="12"/>
+    </component>
+    <text id="n67_knkx" name="text_msaaQuality" xy="245,266" size="64,19" group="n69_knkx" fontSize="12" color="#ffffff" text="抗锯齿等级"/>
+    <component id="n68_knkx" name="comboBox_msaaQuality" src="f2ul5i" fileName="Components/ComboBox_Min.xml" xy="308,265" size="53,21" group="n69_knkx">
+      <ComboBox title="关闭" visibleItemCount="10">
+        <item title="关闭"/>
+        <item title="低"/>
+        <item title="中"/>
+        <item title="高"/>
+      </ComboBox>
+    </component>
+    <component id="n79_mxha" name="switch_rotateCameraOfLeftKey" src="f2ul57" fileName="Components/tog_select.xml" xy="14,294" size="120,22" group="n69_knkx">
+      <Button title="左键拖拽旋转镜头" titleColor="#ffffff" titleFontSize="12"/>
+    </component>
+    <group id="n69_knkx" name="n69" xy="0,107" size="377,214"/>
+    <component id="n70_knkx" name="music_title" src="f2ul4r" fileName="Components/title_label.xml" xy="115,322" size="147,23" group="n76_knkx">
+      <Label title="音量设置" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <graph id="n71_knkx" name="n71" xy="0,346" size="377,54" group="n76_knkx" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <component id="n72_knkx" name="slider_bgm" src="f2ul4f" fileName="Components/option_item.xml" xy="14,352" size="322,20" group="n76_knkx">
+      <Label title="背景音乐" icon="ui://o9dt5fs4bk1i6b"/>
+    </component>
+    <text id="n73_knkx" name="bgm_value" xy="337,351" size="25,23" group="n76_knkx" fontSize="12" color="#a4d452" align="right" vAlign="middle" autoSize="none" text="10"/>
+    <component id="n74_knkx" name="slider_sound" src="f2ul4f" fileName="Components/option_item.xml" xy="14,374" size="322,20" group="n76_knkx">
+      <Label title="游戏音效" icon="ui://o9dt5fs4bk1i6b"/>
+    </component>
+    <text id="n75_knkx" name="sound_value" xy="337,373" size="25,23" group="n76_knkx" fontSize="12" color="#a4d452" align="right" vAlign="middle" autoSize="none" text="10"/>
+    <group id="n76_knkx" name="n76" xy="0,322" size="377,78"/>
+  </displayList>
+</component>

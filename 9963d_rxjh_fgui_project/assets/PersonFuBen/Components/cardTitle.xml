@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="263,56">
+  <displayList>
+    <image id="n6_h0oq" name="n6" src="h0oqg" fileName="Images/页签.png" xy="0,0" size="263,56"/>
+    <text id="n1_pkt0" name="text" xy="0,0" size="263,56" fontSize="26" color="#f2c629" align="center" vAlign="middle" autoSize="none" text="父级标题"/>
+  </displayList>
+</component>

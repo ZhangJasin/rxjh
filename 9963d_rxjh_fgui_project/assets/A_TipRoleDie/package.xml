@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="hlljr9bm">
+  <resources>
+    <component id="oqrp0" name="TipRoleDiePanl.xml" path="/" exported="true"/>
+    <image id="oqrp1" name="btn_lv.png" path="/Images/0tongyong/" scale="9grid" scale9grid="39,13,78,26"/>
+    <image id="oqrp2" name="btn_hong.png" path="/Images/0tongyong/" scale="9grid" scale9grid="16,13,32,26"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

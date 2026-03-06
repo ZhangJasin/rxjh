@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1000,650">
+  <displayList>
+    <component id="n1_kra4" name="background" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

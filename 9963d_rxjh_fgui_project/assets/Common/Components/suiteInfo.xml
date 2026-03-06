@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="342,247">
+  <displayList>
+    <image id="n0_z28d" name="bg2" src="kcff5vp4" fileName="Images/tips_bg.png" xy="0,0" size="342,247">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <component id="n1_z28d" name="suitexContent" src="xm9xv63" fileName="EquipTipListLabel.xml" xy="2,17" size="336,0">
+      <Label titleFontSize="18"/>
+    </component>
+  </displayList>
+</component>

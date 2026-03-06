@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" initName="ChatPanel" designImage="ui://8pthu2lwm0wqkvp6">
+  <controller name="ShowChatEx" pages="1,hide,0,showChatEx,3,showShout" selected="0"/>
+  <displayList>
+    <graph id="n48_my96" name="Mask" xy="0,0" size="1334,750" type="rect" lineSize="0" fillColor="#00ffffff">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n54_elzb" name="Block" xy="0,0" size="584,750" group="n8_vgb0" type="rect" lineSize="0" fillColor="#00ffffff">
+      <relation target="" sidePair="height-height"/>
+    </graph>
+    <graph id="n51_my96" name="n51" xy="122,0" size="463,672" group="n8_vgb0" type="rect" lineSize="0" fillColor="#cc20452b">
+      <relation target="" sidePair="height-height"/>
+    </graph>
+    <image id="n42_m0wq" name="n42" src="plaqkvp3" fileName="image/caizhi.png" pkg="st7dgeqq" xy="0,0" size="121,749" group="n8_vgb0">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n44_m0wq" name="n44" src="m0wqv81" fileName="Images/chat_line.png" xy="120,0" size="2,671" group="n8_vgb0">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n52_my96" name="n52" src="m0wqv81" fileName="Images/chat_line.png" xy="584,0" size="2,671" group="n8_vgb0">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n46_m0wq" name="n46" src="m0wqv82" fileName="Images/bg_bottom.png" xy="0,671" size="586,80" group="n8_vgb0">
+      <relation target="" sidePair="bottom-bottom"/>
+    </image>
+    <image id="n19_dssq" name="n19" src="dssq17" fileName="Images/btn_chat_hide.png" xy="584,311" size="53,134" group="n8_vgb0">
+      <relation target="" sidePair="middle-middle"/>
+    </image>
+    <image id="n39_wi45" name="n39" src="wi45v7v" fileName="Images/btn_chat_bg_9.png" xy="446,688" size="136,46" group="n7_vgb0"/>
+    <image id="n40_wi45" name="n40" src="wi45v7w" fileName="Images/chat_input_9.png" xy="90,688" size="161,47" group="n7_vgb0"/>
+    <component id="n17_dssq" name="Button_emoji" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="262,688" size="55,46" group="n7_vgb0">
+      <Button icon="ui://8pthu2lwdssq13"/>
+    </component>
+    <component id="n16_dssq" name="Button_bag" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="322,688" size="55,46" group="n7_vgb0">
+      <Button icon="ui://8pthu2lwdssq15"/>
+    </component>
+    <component id="n18_dssq" name="Button_pos" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="382,688" size="55,46" group="n7_vgb0">
+      <Button icon="ui://8pthu2lwdssq14"/>
+    </component>
+    <component id="n20_dssq" name="Button_send" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="446,688" size="136,42" group="n7_vgb0"/>
+    <text id="n38_q9ls" name="Text_shout" xy="48,712" pivot="0.5,0.5" anchor="true" size="52,34" group="n7_vgb0" fontSize="24" color="#ffffff" align="center" underline="true" text="本服"/>
+    <text id="n21_dssq" name="Button_sendText" xy="488,695" pivot="0.5,0.5" size="54,32" group="n7_vgb0" fontSize="22" color="#fff000" align="center" vAlign="middle" strokeColor="#000000" text="发 送"/>
+    <text id="n29_iaot" name="TextField_input" xy="93,690" pivot="0,0.5" size="155,43" group="n7_vgb0" fontSize="20" color="#5f795d" vAlign="middle" leading="5" autoSize="none" singleLine="true" text="" input="true" prompt="请点击输入" maxLength="50"/>
+    <group id="n7_vgb0" name="Layout_send" xy="22,688" size="560,47" group="n8_vgb0" advanced="true">
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
+    <text id="n4_vgb0" name="Node_forbid" xy="232,698" size="144,29" group="n8_vgb0" fontSize="20" color="#ffffff" strokeColor="#000000" text="本频道无法发言">
+      <relation target="" sidePair="bottom-bottom"/>
+    </text>
+    <list id="n9_vgb0" name="ListView_receive" xy="5,14" size="112,649" group="n8_vgb0" overflow="scroll" scrollBarFlags="134" scrollBar="hidden" margin="4,0,0,0" lineGap="7" defaultItem="ui://8pthu2lwvgb0w" autoItemSize="false" align="center" autoClearItems="true" scrollItemToViewOnClick="false">
+      <relation target="" sidePair="height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n12_dssq" name="ListView_cells" xy="124,0" size="461,670" group="n8_vgb0" selectionMode="none" overflow="scroll" scrollBarFlags="128" scrollBar="hidden" lineGap="12" defaultItem="ui://8pthu2lwrlrvv50" autoItemSize="false" align="center" autoClearItems="true">
+      <relation target="n41_e7eb" sidePair="topext-bottom"/>
+      <relation target="" sidePair="bottomext-bottom"/>
+    </list>
+    <list id="n41_e7eb" name="ListView_notice" xy="124,0" size="460,0" group="n8_vgb0" selectionMode="none" overflow="scroll" scrollBarFlags="128" scrollBar="hidden" defaultItem="ui://8pthu2lwe7ebv80" autoClearItems="true"/>
+    <graph id="n50_my96" name="MaskEx" xy="0,0" size="590,750" group="n34_giai" type="rect" lineSize="0" fillColor="#00ffffff">
+      <relation target="" sidePair="height-height"/>
+    </graph>
+    <image id="n47_m0wq" name="n47" src="m0wqv83" fileName="Images/bg_emoji.png" xy="286,346" pivot="0,1" size="372,318" group="n53_my96"/>
+    <list id="n32_giai" name="ListView_chatEx" xy="293,354" pivot="0,1" size="358,302" group="n53_my96" layout="flow_hz" selectionMode="none" overflow="scroll" scrollBarFlags="2176" scrollBar="hidden" margin="6,0,4,0" lineGap="10" colGap="10" defaultItem="ui://8pthu2lwgiaiv51" autoClearItems="true">
+      <gearDisplay controller="ShowChatEx" pages="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n37_u13q" name="ListView_shout" xy="293,354" pivot="0,1" size="358,302" group="n53_my96" overflow="scroll" scrollBarFlags="128" scrollBar="hidden" margin="8,0,0,0" lineGap="10" colGap="40" defaultItem="ui://8pthu2lwq9lsv7n" align="center" autoClearItems="true">
+      <gearDisplay controller="ShowChatEx" pages="3"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n53_my96" name="n53" xy="286,346" size="372,318" group="n34_giai" advanced="true">
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
+    <group id="n34_giai" name="ChatContentEx" xy="0,0" size="658,750" group="n8_vgb0" advanced="true">
+      <gearDisplay controller="ShowChatEx" pages="0,3"/>
+    </group>
+    <group id="n8_vgb0" name="Panel" xy="0,0" size="658,751" advanced="true">
+      <relation target="" sidePair="height-height"/>
+    </group>
+  </displayList>
+  <transition name="OpenAnimation">
+    <item time="0" type="XY" target="n8_vgb0" tween="true" startValue="-640,0" endValue="0,0" duration="12"/>
+  </transition>
+  <transition name="OpenChatContentEx">
+    <item time="0" type="Scale" target="n32_giai" tween="true" startValue="0,0" endValue="1,1" duration="6"/>
+    <item time="0" type="Scale" target="n37_u13q" tween="true" startValue="0,0" endValue="1,1" duration="6"/>
+    <item time="0" type="Scale" target="n47_m0wq" tween="true" startValue="0,0" endValue="1,1" duration="6"/>
+  </transition>
+</component>

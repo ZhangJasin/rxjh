@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="313,98" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="3"/>
+  <displayList>
+    <loader id="n15_fsrp" name="component" xy="0,0" pivot="1,0.5" size="313,98" url="ui://88oqthnqfsrp1f" autoSize="true">
+      <gearSize controller="button" pages="0,1,2" values="313,98,0.85,0.85|313,98,1,1|313,98,1,1" default="313,98,1,1" tween="true" duration="0.15"/>
+    </loader>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

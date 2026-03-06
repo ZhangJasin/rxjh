@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="44,44">
+  <controller name="isBind" pages="0,绑定,1,未绑定" selected="0"/>
+  <controller name="Subscript" pages="0,左对齐,1,右对齐,2,居中" selected="0"/>
+  <controller name="grade" pages="0,灰色,1,绿色,2,蓝色,3,紫色,4,橙色,5,红色" selected="0"/>
+  <displayList>
+    <component id="n3_rlrv" name="targetClick" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="2,2" size="40,40" aspect="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <loader id="n4_u13q" name="Image_bg" xy="0,0" pivot="0.5,0.5" size="44,44" aspect="true" url="ui://twx3ya3ehvnkwno" align="right" fill="scaleFree" color="#cfcbcb">
+      <gearColor controller="grade" pages="0,1,2,3,4,5" values="#cfcbcb|#4cdc55|#41baf5|#9f4dff|#c2853e|#f86556"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n5_u13q" name="Image_icon" xy="2,2" pivot="0.5,0.5" size="40,40" aspect="true" url="ui://unvjiiodlmdg0" align="right" fill="scale" clearOnPublish="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n9_jo9b" name="Image_bind" xy="2,29" size="13,13" visible="false" url="ui://qa9a7ritemvc45" fill="scale">
+      <gearDisplay controller="isBind" pages="0"/>
+      <relation target="" sidePair="left-left,left-right%,bottom-bottom%,rightext-left%,leftext-left%"/>
+    </loader>
+    <text id="n7_u13q" name="Text_count" xy="16,27" pivot="1,1" size="28,19" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="right" vAlign="bottom" strokeColor="#000000" autoClearText="true" text="1000">
+      <relation target="n4_u13q" sidePair="right-right,bottom-bottom"/>
+    </text>
+    <text id="n13_idb7" name="Text_Subscript" xy="-1,-1" size="46,46" aspect="true" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" leading="0" autoSize="none" strokeColor="#000000" autoClearText="true" text="">
+      <relation target="n5_u13q" sidePair="width-width%,height-height%"/>
+    </text>
+    <text id="n14_tb4y" name="Text_star" xy="17,-2" pivot="1,0" size="28,19" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="right" strokeColor="#000000" autoClearText="true" text="0000">
+      <relation target="" sidePair="right-right,top-top,rightext-left,leftext-left"/>
+    </text>
+  </displayList>
+</component>

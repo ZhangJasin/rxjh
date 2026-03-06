@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="156,36" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_nouy" name="n0" src="clzt3" fileName="Images/MiniMap/item_normal.png" xy="0,0" size="156,36">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_nouy" name="n1" src="clzt4" fileName="Images/MiniMap/item_select.png" xy="0,0" size="156,36">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <richtext id="n4_nouy" name="title" xy="10,17" pivot="0,0.5" anchor="true" size="79,20" fontSize="12" color="#ffffff" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="野猫">
+      <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n5_oot3" name="level" xy="89,9" size="34,19" fontSize="12" color="#ffda60" align="right" vAlign="middle" ubb="true" singleLine="true" text="Lv.56">
+      <relation target="" sidePair="right-right"/>
+    </richtext>
+    <component id="n11_oot3" name="btn_transmit" src="clztf" fileName="Components/MiniMap/btn_transmit.xml" xy="123,5">
+      <relation target="" sidePair="right-right"/>
+    </component>
+  </displayList>
+  <Button mode="Check"/>
+</component>

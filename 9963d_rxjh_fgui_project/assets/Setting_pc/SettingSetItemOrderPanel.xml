@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <displayList>
+    <component id="n6_rmnb" name="n6" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="356,166" size="310,433" group="n45_o9e3"/>
+    <text id="n7_rmnb" name="name" xy="469,174" size="84,24" group="n45_o9e3" fontSize="16" color="#9aafbb" text="优先级调整"/>
+    <graph id="n30_nznq" name="n30" xy="367,209" size="288,321" group="n45_o9e3" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <group id="n45_o9e3" name="n45" xy="356,166" size="310,433" group="n47_o9e3"/>
+    <image id="n12_rmnb" name="n12" src="f2ul60" fileName="Images/title_bg.png" xy="369,209" size="283,34" group="n43_o9e3"/>
+    <image id="n27_nznq" name="n27" src="f2ul5z" fileName="Images/line.png" xy="469,209" size="1,34" group="n43_o9e3"/>
+    <text id="n13_rmnb" name="n13" xy="398,216" size="43,20" group="n43_o9e3" fontSize="13" color="#ddfdd9" align="center" vAlign="middle" text="优先级"/>
+    <text id="n14_rmnb" name="n14" xy="533,216" size="56,20" group="n43_o9e3" fontSize="13" color="#ddfdd9" align="center" vAlign="middle" text="物品名称"/>
+    <group id="n43_o9e3" name="n43" xy="369,209" size="283,34" group="n47_o9e3"/>
+    <list id="n21_obxz" name="skill_list" xy="370,243" size="281,286" group="n47_o9e3" overflow="scroll" lineGap="2" defaultItem="ui://o9dt5fs4f2ul5s" autoItemSize="false" autoClearItems="true" scrollItemToViewOnClick="false">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <graph id="n31_nznq" name="n31" xy="367,532" size="288,59" group="n46_o9e3" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <text id="n23_obxz" name="n23" xy="437,543" size="148,38" group="n46_o9e3" fontSize="12" color="#f1ffeb" align="center" leading="5" text="调整道具使用优先级&#xA;选择道具后向上或向下拖拽"/>
+    <group id="n46_o9e3" name="n46" xy="367,532" size="288,59" group="n47_o9e3"/>
+    <component id="n48_hzjo" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="652,186" group="n47_o9e3"/>
+    <group id="n47_o9e3" name="root" xy="356,166" size="312,433" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

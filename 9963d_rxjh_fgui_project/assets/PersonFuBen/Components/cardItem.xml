@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="263,60">
+  <controller name="isActive" pages="0,,1," selected="0"/>
+  <controller name="status" pages="0,未解锁,1,E,2,D,3,C,4,B,5,A,6,S" selected="0"/>
+  <displayList>
+    <image id="n6_h0oq" name="n6" src="h0oqh" fileName="Images/pull_content_bg.png" xy="5,0" size="253,60"/>
+    <graph id="n3_pkt0" name="n3" xy="5,0" size="253,60" type="rect" lineSize="0" fillColor="#ff402c11">
+      <gearDisplay controller="isActive" pages="1"/>
+    </graph>
+    <text id="n2_pkt0" name="text" xy="5,0" size="253,60" fontSize="24" color="#fcf1bf" align="center" vAlign="middle" autoSize="none" text="默默无闻·二"/>
+    <loader id="n5_h0oq" name="n5" xy="32,15" size="30,30" url="ui://yaixg5r3h0oqd" fill="scaleFree">
+      <gearIcon controller="status" pages="0,1,2,3,4,5,6" values="ui://yaixg5r3h0oqd|ui://yaixg5r3h0oq5|ui://yaixg5r3h0oq4|ui://yaixg5r3h0oq3|ui://yaixg5r3h0oq2|ui://yaixg5r3h0oq1|ui://yaixg5r3h0oq6"/>
+    </loader>
+  </displayList>
+</component>

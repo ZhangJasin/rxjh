@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="260,84" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="state" pages="0,,1,,2," selected="2">
+    <remark page="0" value="已合成"/>
+    <remark page="1" value="解锁未合成"/>
+    <remark page="2" value="未解锁"/>
+  </controller>
+  <displayList>
+    <image id="n0_n22n" name="n0" src="o4l65c" fileName="Images/0tongyong/xxdi2.png" pkg="fgihxfye" xy="0,0" size="260,84">
+      <gearDisplay controller="button" pages="0,1,2,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_n22n" name="name" xy="91,7" size="159,32" fontSize="20" color="#ffff00" autoSize="none" text="寒玉石（闪避）">
+      <gearDisplay controller="state" pages="0"/>
+    </text>
+    <image id="n4_n22n" name="n4" src="o4l65a" fileName="Images/0tongyong/pzkuang_zi.png" pkg="fgihxfye" xy="15,8">
+      <gearDisplay controller="state" pages="0"/>
+    </image>
+    <component id="n5_n22n" name="itemRoot" src="ger553" fileName="Components/tongyong/itemRoot.xml" pkg="fgihxfye" xy="12,6" size="68,68">
+      <gearDisplay controller="state" pages="0"/>
+    </component>
+    <text id="n15_om8r" name="num" xy="64,46" pivot="1,0" size="13,24" fontSize="16" color="#00ff00" align="right" vAlign="bottom" autoClearText="true" text="0">
+      <gearDisplay controller="state" pages="0"/>
+    </text>
+    <component id="n14_j82q" name="att" src="j82q5d" fileName="Components/hecheng/ScrollText.xml" xy="91,44" size="169,29">
+      <gearDisplay controller="state" pages="0"/>
+      <Label titleFontSize="18"/>
+    </component>
+    <text id="n10_kdof" name="whcfont" xy="60,25" pivot="0.5,0.5" size="144,29" fontSize="20" color="#ff0000" text="尚未合成兽灵丹">
+      <gearDisplay controller="state" pages="1"/>
+    </text>
+    <image id="n13_kdof" name="n13" src="tbp6cd" fileName="Images/06yuyi/半透内容底.png" pkg="fgihxfye" xy="2,0" size="257,82">
+      <gearDisplay controller="state" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n11_kdof" name="wjsfont" xy="94,42" pivot="0.5,0.5" size="84,29" fontSize="20" color="#ff0000" text="二阶解锁">
+      <gearDisplay controller="state" pages="2"/>
+    </text>
+    <image id="n12_kdof" name="suo1" src="uz9jic" fileName="Images/09wuxun/zhuanyin/01.png" pkg="fgihxfye" xy="121,7">
+      <gearDisplay controller="state" pages="2"/>
+    </image>
+  </displayList>
+  <Button mode="Check"/>
+</component>

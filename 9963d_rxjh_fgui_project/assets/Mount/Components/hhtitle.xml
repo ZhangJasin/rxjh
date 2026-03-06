@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,50">
+  <displayList>
+    <image id="n3_v5h4" name="n3" src="v5h42u" fileName="image/lingshou/属性文字底.png" xy="0,0" size="300,50"/>
+    <text id="n0_v5h4" name="n0" xy="0,0" size="300,50" fontSize="30" color="#f6cd2b" align="center" vAlign="middle" autoSize="none" text="幻化名字(本体名字)"/>
+  </displayList>
+</component>

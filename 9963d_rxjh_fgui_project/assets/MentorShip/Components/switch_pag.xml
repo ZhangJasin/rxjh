@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="45,90" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_juj0" name="n0" src="zah9v4f" fileName="image/toggle_right_unselect.png" pkg="st7dgeqq" xy="0,-6" size="49,96">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_juj0" name="n1" src="zah9v4e" fileName="image/toggle_right_select.png" pkg="st7dgeqq" xy="0,-6" size="49,96">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_juj0" name="n2" src="zah9v4f" fileName="image/toggle_right_unselect.png" pkg="st7dgeqq" xy="0,-6" size="49,96">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_juj0" name="n3" src="zah9v4e" fileName="image/toggle_right_select.png" pkg="st7dgeqq" xy="0,-6" size="49,96">
+      <gearDisplay controller="button" pages="3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n4_juj0" name="title" xy="-1,-5" size="45,90" fontSize="22" color="#cccccc" align="center" vAlign="middle" leading="0" autoSize="none" strokeColor="#000000" text="设&#xA;置">
+      <gearColor controller="button" pages="0,2" values="#cccccc,#000000|#999999,#000000" default="#ffff00,#000000"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Check"/>
+</component>

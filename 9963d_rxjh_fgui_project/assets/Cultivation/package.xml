@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="afrubrdx">
+  <resources>
+    <component id="k9u30" name="Cultivationpanel.xml" path="/" exported="true"/>
+    <component id="k9u31" name="closebtn_yuan.xml" path="/Components/" exported="true"/>
+    <image id="k9u32" name="close_yuan.png" path="/image/" exported="true"/>
+    <image id="k9u33" name="属性文字底.png" path="/image/" exported="true"/>
+    <component id="k9u34" name="goto.xml" path="/Components/" exported="true"/>
+    <image id="k9u35" name="btn_zong.png" path="/image/" exported="true"/>
+    <component id="k9u36" name="mapItem.xml" path="/Components/" exported="true"/>
+    <image id="k9u37" name="7000004.png" path="/image/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
+    <image id="k9u38" name="+.png" path="/image/" exported="true"/>
+    <component id="k9u39" name="iconItem.xml" path="/Components/" exported="true"/>
+    <image id="i7v9a" name="img_title_1.png" path="/image/map/" exported="true" scale="9grid" scale9grid="46,31,92,62"/>
+    <image id="i7v9b" name="img_title_2.png" path="/image/map/" exported="true"/>
+    <image id="i7v9c" name="img_title_3.png" path="/image/map/" exported="true"/>
+    <image id="i7v9d" name="img_title_4.png" path="/image/map/" exported="true"/>
+    <image id="i7v9e" name="img_title_5.png" path="/image/map/" exported="true"/>
+    <image id="i7v9f" name="img_title_6.png" path="/image/map/" exported="true"/>
+    <image id="i7v9g" name="img_title_7.png" path="/image/map/" exported="true"/>
+    <image id="i7v9h" name="img_title_8.png" path="/image/map/" exported="true"/>
+    <image id="i7v9i" name="img_title_9.png" path="/image/map/" exported="true"/>
+    <component id="i7v9j" name="addTime.xml" path="/Components/" exported="true"/>
+    <component id="i7v9k" name="ScrollText.xml" path="/Components/" exported="true"/>
+    <image id="i7v9l" name="img_small_9.png" path="/image/map/" exported="true"/>
+    <image id="i7v9m" name="img_small_1.png" path="/image/map/" exported="true" scale="9grid" scale9grid="91,32,182,64"/>
+    <image id="i7v9n" name="img_small_2.png" path="/image/map/" exported="true"/>
+    <image id="i7v9o" name="img_small_3.png" path="/image/map/" exported="true"/>
+    <image id="i7v9p" name="img_small_4.png" path="/image/map/" exported="true"/>
+    <image id="i7v9q" name="img_small_5.png" path="/image/map/" exported="true"/>
+    <image id="i7v9r" name="img_small_6.png" path="/image/map/" exported="true"/>
+    <image id="i7v9s" name="img_small_7.png" path="/image/map/" exported="true"/>
+    <image id="i7v9t" name="img_small_8.png" path="/image/map/" exported="true"/>
+    <image id="slmou" name="选中框.png" path="/image/" exported="true" scale="9grid" scale9grid="19,18,38,36"/>
+    <component id="slmov" name="dialog.xml" path="/Components/" exported="true"/>
+    <component id="slmow" name="dialogGoto.xml" path="/Components/" exported="true"/>
+    <component id="slmox" name="dialogClose.xml" path="/Components/" exported="true"/>
+    <image id="slmoy" name="btn_second_red.png" path="/image/" exported="true" scale="9grid" scale9grid="11,12,12,27"/>
+    <image id="slmoz" name="gotoBg.png" path="/image/" exported="true"/>
+    <image id="nymh12" name="img_1.png" path="/image/" exported="true"/>
+    <image id="nymh13" name="img_mapnamebg.png" path="/image/" exported="true"/>
+    <image id="nymh14" name="半透内容底.png" path="/image/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="nymh15" name="team_info_bg_9.png" path="/image/" exported="true" scale="9grid" scale9grid="119,12,1,2"/>
+    <image id="nymh16" name="小底框.png" path="/image/" exported="true" scale="9grid" scale9grid="25,8,50,16"/>
+    <image id="nymh17" name="下拉内容底.png" path="/Components/" exported="true"/>
+    <image id="nymh19" name="blackBg.png" path="/image/" exported="true"/>
+  </resources>
+  <publish name="" path="E:\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Cultivation" packageCount="2"/>
+</packageDescription>

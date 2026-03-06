@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="15,85" extention="Slider">
+  <displayList>
+    <graph id="n4_lh52" name="bar_v" xy="0,16" size="15,69" visible="false" type="rect" lineSize="0">
+      <relation target="" sidePair="height-height"/>
+    </graph>
+    <component id="n3_lh52" name="grip" src="lh523l" fileName="Components/Chat/ChatSliderButton.xml" xy="0,69">
+      <relation target="n4_lh52" sidePair="bottom-bottom"/>
+    </component>
+  </displayList>
+  <Slider/>
+</component>

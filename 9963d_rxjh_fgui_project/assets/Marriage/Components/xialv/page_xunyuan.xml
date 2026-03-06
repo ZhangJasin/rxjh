@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750">
+  <controller name="list_page" exported="true" pages="0,好友列表,1,结缘申请" selected="0"/>
+  <controller name="tips" pages="0,亲密度足了,1,亲密度不足" selected="0"/>
+  <controller name="panl" pages="0,,1," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="亲密度面板"/>
+  </controller>
+  <displayList>
+    <component id="n14_qxgu" name="bg" src="egru78" fileName="Components/tongyong/kongbg.xml" pkg="fgihxfye" xy="0,0"/>
+    <component id="n0_la2y" name="backGround" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="500,700"/>
+    <text id="n1_la2y" name="title" xy="625,33" size="80,38" fontSize="27" color="#cccccc" align="center" letterSpacing="2" autoSize="none" strokeColor="#000000" text="寻缘"/>
+    <component id="n7_la2y" name="btn_close" src="la2y4" fileName="Components/common/btn_closeyuan.xml" xy="868,28"/>
+    <component id="n3_la2y" name="btn_search" src="la2yf" fileName="Components/common/btn_green.xml" xy="740,92" group="n8_la2y"/>
+    <text id="n4_la2y" name="n4" xy="741,93" size="159,53" group="n8_la2y" fontSize="24" color="#ffff00" align="center" vAlign="middle" letterSpacing="3" autoSize="none" strokeColor="#000000" text="搜索"/>
+    <image id="n6_la2y" name="n6" src="la2y10" fileName="images/input_background.png" xy="435,95" size="295,48" group="n8_la2y"/>
+    <text id="n5_la2y" name="input_search" xy="435,95" size="295,48" group="n8_la2y" fontSize="24" color="#999999" vAlign="middle" letterSpacing="3" autoSize="none" text="" input="true" prompt="请输入玩家名字"/>
+    <group id="n8_la2y" name="n8" xy="435,92" size="465,54"/>
+    <list id="n9_la2y" name="list_page" xy="437,153" size="460,51" layout="row" margin="2,2,2,2" colGap="10" defaultItem="ui://s7gyh5svla2yw" selectionController="list_page">
+      <item title="好友列表"/>
+      <item title="结缘申请"/>
+    </list>
+    <list id="n10_la2y" name="list_friendList" xy="437,205" size="460,505" overflow="scroll" margin="5,5,15,15" lineGap="5" defaultItem="ui://s7gyh5svla2y11" align="center">
+      <gearDisplay controller="list_page" pages="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n11_la2y" name="list_jieyuanApply" xy="437,205" size="460,505" overflow="scroll" margin="5,5,15,15" lineGap="5" defaultItem="ui://s7gyh5svla2y16">
+      <gearDisplay controller="list_page" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n12_eoqr" name="show_tips" xy="587,476" size="160,40" fontSize="24" color="#ff0000" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="亲密度不足">
+      <gearDisplay controller="tips" pages="1"/>
+    </text>
+    <component id="n13_l4xx" name="panl_qinmidu" src="c1p917" fileName="Components/xialv/page_giftItem.xml" xy="0,0">
+      <gearDisplay controller="panl" pages="1"/>
+    </component>
+  </displayList>
+</component>

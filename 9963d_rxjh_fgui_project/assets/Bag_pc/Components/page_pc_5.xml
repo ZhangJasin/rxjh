@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="334,60">
+  <displayList>
+    <image id="n52_j9jd" name="bg_di" src="sna94t" fileName="Images/heiDI.png" xy="0,0" size="334,60">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n53_d4a9" name="wuxun" src="j9jdh" fileName="Components/comNameAndValue.xml" xy="5,4" size="323,25">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n54_d4a9" name="shane" src="j9jdh" fileName="Components/comNameAndValue.xml" xy="5,32" size="323,25">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

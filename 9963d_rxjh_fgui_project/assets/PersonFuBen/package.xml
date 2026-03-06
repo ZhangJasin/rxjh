@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="yaixg5r3">
+  <resources>
+    <component id="h0oq0" name="PersonFuBenPanel.xml" path="/" exported="true"/>
+    <image id="h0oq1" name="A.png" path="/Images/" exported="true"/>
+    <image id="h0oq2" name="B.png" path="/Images/" exported="true"/>
+    <image id="h0oq3" name="C.png" path="/Images/" exported="true"/>
+    <image id="h0oq4" name="D.png" path="/Images/" exported="true"/>
+    <image id="h0oq5" name="E.png" path="/Images/" exported="true"/>
+    <image id="h0oq6" name="S.png" path="/Images/" exported="true"/>
+    <image id="h0oq7" name="评分底.png" path="/Images/" exported="true"/>
+    <image id="h0oq8" name="通关评分.png" path="/Images/" exported="true"/>
+    <component id="h0oq9" name="typeItem.xml" path="/Components/" exported="true"/>
+    <component id="h0oqa" name="cardItem.xml" path="/Components/" exported="true"/>
+    <component id="h0oqb" name="cardTitle.xml" path="/Components/" exported="true"/>
+    <component id="h0oqc" name="status.xml" path="/Components/" exported="true"/>
+    <image id="h0oqd" name="lock.png" path="/Images/" exported="true"/>
+    <component id="h0oqe" name="btn.xml" path="/Components/" exported="true"/>
+    <component id="h0oqf" name="saodang.xml" path="/Components/" exported="true"/>
+    <image id="h0oqg" name="页签.png" path="/Images/" exported="true"/>
+    <image id="h0oqh" name="pull_content_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="28,20,56,40"/>
+    <component id="h0oqi" name="closebtn_yuan.xml" path="/Components/" exported="true"/>
+    <image id="h0oqj" name="close_yuan.png" path="/Images/" exported="true"/>
+    <component id="h0oqk" name="iconItem.xml" path="/Components/" exported="true"/>
+    <component id="h0oql" name="page_tanchuang.xml" path="/Components/" exported="true"/>
+    <component id="h0oqm" name="btn_lv.xml" path="/Components/" exported="true"/>
+    <component id="h0oqn" name="btn_red.xml" path="/Components/" exported="true"/>
+    <image id="qa3go" name="08.png" path="/Images/" exported="true" scale="9grid" scale9grid="291,170,582,340"/>
+  </resources>
+  <publish name="" path="E:\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\PersonFuBen" packageCount="2"/>
+</packageDescription>

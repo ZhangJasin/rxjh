@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n6_ldq2" name="Mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n18_fhnd" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="414,175" size="500,400" group="n5_ldq2"/>
+    <image id="n1_ldq2" name="n1" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="430,232" size="463,200" group="n5_ldq2" alpha="0.8"/>
+    <component id="n2_ldq2" name="btn_green" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="698,489" pivot="0.5,0.5" group="n5_ldq2">
+      <Button title="确 认"/>
+    </component>
+    <component id="n3_ldq2" name="btn_red" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="498,489" pivot="0.5,0.5" group="n5_ldq2">
+      <Button title="取 消"/>
+    </component>
+    <component id="n14_r52e" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="892,202" group="n5_ldq2"/>
+    <text id="n4_ldq2" name="title" xy="474,186" size="374,34" group="n5_ldq2" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="温馨提示"/>
+    <component id="n12_ldq2" name="desc" src="lxrgv50" fileName="Components/text_scroll.xml" xy="439,247" size="442,183" group="n5_ldq2"/>
+    <image id="n8_ldq2" name="textInput_bg" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="474,435" size="378,37" group="n13_ldq2" alpha="0.8">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n7_ldq2" name="textInput" xy="476,438" size="376,32" group="n13_ldq2" fontSize="20" color="#93a7b2" align="center" autoSize="none" text="" input="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n13_ldq2" name="input_root" xy="474,435" size="378,37" group="n5_ldq2" advanced="true"/>
+    <group id="n5_ldq2" name="Panel" xy="414,175" size="500,400" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="tdza8egk">
+  <resources>
+    <folder id="/Image/" name="Image" path="/" atlas="alone_npot"/>
+    <image id="mfms0" name="loadingBg.png" path="/Image/" exported="true" atlas="alone_npot"/>
+  </resources>
+  <publish name="" maxAtlasSize="2048" sizeOption="npot" multiPage="false"/>
+</packageDescription>

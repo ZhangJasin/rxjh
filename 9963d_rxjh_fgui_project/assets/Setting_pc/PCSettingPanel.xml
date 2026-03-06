@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n25_ghle" name="background" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_hriw" name="title" xy="512,187" pivot="0.5,0.5" anchor="true" size="36,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="设置">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <loader id="n22_juj0" name="setting_content" xy="179,203" size="666,392" url="ui://o9dt5fs4f2ul4n" align="center" autoSize="true" clearOnPublish="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <component id="n26_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="180,598" size="0,0">
+      <relation target="n25_ghle" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <component id="n1_hriw" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n23_juj0" name="page_switch_list" xy="845,205" size="28,331" lineGap="2" defaultItem="ui://o9dt5fs4f2ul4q">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item title="基础"/>
+      <item title="战斗"/>
+      <item title="显示"/>
+      <item title="挂机"/>
+      <item title="快捷键"/>
+    </list>
+  </displayList>
+</component>

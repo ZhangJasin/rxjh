@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="70,19" overflow="hidden" opaque="false" extention="Label">
+  <displayList>
+    <graph id="n1_ilk5" name="n1" xy="0,0" size="70,19" alpha="0.5" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n0_ilk5" name="title" xy="0,10" pivot="0,0.5" anchor="true" size="74,19" fontSize="12" color="#ffffff" align="center" vAlign="middle" ubb="true" singleLine="true" autoClearText="true" text="1111111111"/>
+  </displayList>
+</component>

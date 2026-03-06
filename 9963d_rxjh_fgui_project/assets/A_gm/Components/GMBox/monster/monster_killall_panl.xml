@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="600,450" bgColorEnabled="true">
+  <displayList>
+    <image id="n1_ih0u" name="n1" src="oqrpt" fileName="Images/0tongyong/srbbg.png" xy="163,24" size="273,43"/>
+    <image id="n5_ih0u" name="n2" src="oqrpt" fileName="Images/0tongyong/srbbg.png" xy="163,87" size="273,43"/>
+    <text id="n9_ih0u" name="srk1" xy="163,23" size="272,42" fontSize="20" color="#ffffff" autoSize="none" text="" input="true" prompt="地图id  不填默认当前地图"/>
+    <text id="n7_ih0u" name="srk2" xy="163,88" size="271,42" fontSize="20" color="#ffffff" autoSize="none" text="" input="true" prompt="怪物名   不填默认所有怪物"/>
+    <image id="n16_ih0u" name="n3" src="oqrpt" fileName="Images/0tongyong/srbbg.png" xy="163,159" size="273,43"/>
+    <text id="n17_ih0u" name="srk3" xy="166,159" size="282,42" fontSize="20" color="#ffffff" autoSize="none" text="" input="true" prompt="是否掉落   0不掉 1掉落   默认0"/>
+    <component id="n18_v0ag" name="btn1" src="oqrpu" fileName="Components/GMBox/Button.xml" xy="218,264"/>
+  </displayList>
+</component>

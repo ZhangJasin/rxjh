@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="fugbtuib">
+  <resources>
+    <component id="pzjg1" name="TracePointItem.xml" path="/component/" exported="true"/>
+    <component id="pzjg2" name="TracePointPanel.xml" path="/" exported="true"/>
+    <image id="pzjg3" name="img_arrow.png" path="/Images/"/>
+    <image id="pzjg4" name="img_point.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

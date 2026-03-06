@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n5_lxxo" name="panel_touch" src="lxxo7" fileName="Components/panel_touch.xml" xy="0,0" size="1334,750" touchable="false"/>
+    <component id="n2_lxxo" name="LoadingBar_1" src="lxxo6" fileName="Components/loading_bar.xml" xy="576,347" pivot="0.5,0.5" size="182,56">
+      <ProgressBar value="50" max="100"/>
+    </component>
+    <text id="n3_lxxo" name="Text_desc" xy="587,352" pivot="0.5,0.5" size="160,26" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="正在随机，进度%s"/>
+  </displayList>
+</component>

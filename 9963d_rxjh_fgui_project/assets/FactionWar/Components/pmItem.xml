@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="950,80">
+  <controller name="index" pages="1,,2,,3,,4,,5,,6," selected="3"/>
+  <controller name="status" pages="0,,1," selected="1"/>
+  <displayList>
+    <image id="n12_r1x3" name="n12" src="r1x31c" fileName="Images/展开底2.png" xy="0,0" size="950,80"/>
+    <image id="n1_drck" name="n1" src="drck2" fileName="Images/1.png" xy="42,25" size="30,32" aspect="true">
+      <gearDisplay controller="index" pages="2"/>
+    </image>
+    <image id="n2_drck" name="n2" src="drck3" fileName="Images/2.png" xy="42,25" size="30,32" aspect="true">
+      <gearDisplay controller="index" pages="3"/>
+    </image>
+    <image id="n3_drck" name="n3" src="drck4" fileName="Images/3.png" xy="42,25" size="30,32" aspect="true">
+      <gearDisplay controller="index" pages="4"/>
+    </image>
+    <text id="n4_drck" name="index" xy="46,0" size="24,80" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="5">
+      <gearDisplay controller="index" pages="5,6"/>
+      <gearText controller="index" pages="5" values="4" default="5"/>
+    </text>
+    <text id="n5_drck" name="n5" xy="87,0" size="544,80" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="虚位以待">
+      <gearDisplay controller="status" pages="0"/>
+    </text>
+    <list id="n6_drck" name="jlLIst" xy="661,2" size="287,80" layout="row" margin="10,10,0,0" colGap="30" defaultItem="ui://sgmta2jcdrckf">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n7_drck" name="name" xy="133,0" size="200,80" group="n11_drck" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text="门派名称"/>
+    <text id="n8_drck" name="lv" xy="355,0" size="40,80" group="n11_drck" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="3"/>
+    <text id="n9_drck" name="zx" xy="430,0" size="40,80" group="n11_drck" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="正"/>
+    <text id="n10_drck" name="zk" xy="500,0" size="150,80" group="n11_drck" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="0"/>
+    <group id="n11_drck" name="n11" xy="133,0" size="517,80" advanced="true">
+      <gearDisplay controller="status" pages="1"/>
+    </group>
+  </displayList>
+</component>

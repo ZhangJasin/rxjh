@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n15_10e45" name="panel" src="yp8h5n" fileName="Components/PCComponentTitleTip.xml" xy="422,174">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

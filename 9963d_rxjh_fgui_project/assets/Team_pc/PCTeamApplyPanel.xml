@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n46_hcvo" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="512,384" pivot="0.5,0.5" anchor="true" size="416,302">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n47_hcvo" name="bg2" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="512,395" pivot="0.5,0.5" anchor="true" size="395,168">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n37_mp8v" name="text_title" xy="512,252" pivot="0.5,0.5" anchor="true" size="68,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" text="入队审批">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n20_leye" name="text_nothing" xy="512,394" pivot="0.5,0.5" anchor="true" size="300,29" font="ui://st7dgeqqje63v37" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n48_hcvo" name="bg3" src="emvc57" fileName="image/img_info_di.png" pkg="qa9a7rit" xy="512,290" pivot="0.5,0.5" anchor="true" size="395,34" group="n31_l7f0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n22_l7f0" name="info_name" xy="380,290" pivot="0.5,0.5" anchor="true" size="44,20" group="n31_l7f0" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="名字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n24_l7f0" name="info_level" xy="480,290" pivot="0.5,0.5" anchor="true" size="30,20" group="n31_l7f0" fontSize="12" color="#f1ffeb" autoSize="none" strokeColor="#000000" text="等级">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n23_l7f0" name="info_job" xy="535,290" pivot="0.5,0.5" anchor="true" size="30,20" group="n31_l7f0" fontSize="12" color="#f1ffeb" autoSize="none" strokeColor="#000000" text="职业">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n26_l7f0" name="info_oprate" xy="635,290" pivot="0.5,0.5" anchor="true" size="28,19" group="n31_l7f0" fontSize="12" color="#f1ffeb" strokeColor="#000000" text="操作">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n49_hcvo" name="line1" src="hcvo5p" fileName="image/line_cut.png" pkg="qa9a7rit" xy="450,290" pivot="0.5,0.5" anchor="true" group="n31_l7f0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n52_hcvo" name="line2" src="hcvo5p" fileName="image/line_cut.png" pkg="qa9a7rit" xy="510,290" pivot="0.5,0.5" anchor="true" group="n31_l7f0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n53_hcvo" name="line3" src="hcvo5p" fileName="image/line_cut.png" pkg="qa9a7rit" xy="565,290" pivot="0.5,0.5" anchor="true" group="n31_l7f0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <group id="n31_l7f0" name="top" xy="314,273" size="395,34"/>
+    <list id="n9_vjv7" name="list_apply" xy="317,313" size="390,160" selectionMode="none" overflow="scroll" lineGap="4" defaultItem="ui://y890q37sf0so1p" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n38_mp8v" name="btn_close" src="vjv72" fileName="Components/btn_close.xml" xy="710,252" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n34_l7f0" name="btn_refuseAll" src="l7f027" fileName="Components/btn_refuseAll.xml" xy="436,505" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n33_l7f0" name="btn_agreeAll" src="l7f028" fileName="Components/btn_agreeAll.xml" xy="586,505" pivot="0.5,0.5" anchor="true" size="84,28">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

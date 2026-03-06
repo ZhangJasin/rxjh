@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600" opaque="false">
+  <displayList>
+    <component id="n38_tp62" name="Btn_mission" src="s977kvpc" fileName="RadioRawButton.xml" pkg="o8ixb2zy" xy="0,104" size="32,79">
+      <Button icon="ui://xwp5ackotp62fve2" selectedIcon="ui://xwp5ackotp62fve0"/>
+    </component>
+    <component id="n39_tp62" name="Btn_team" src="s977kvpc" fileName="RadioRawButton.xml" pkg="o8ixb2zy" xy="0,183" size="32,79">
+      <Button icon="ui://xwp5ackobbev5l" selectedIcon="ui://xwp5ackotp62fve3"/>
+    </component>
+    <component id="n34_p70y" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,104" size="0,0"/>
+  </displayList>
+</component>

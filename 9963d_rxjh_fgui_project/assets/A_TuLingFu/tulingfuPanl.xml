@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImageLayer="1" bgColorEnabled="true" bgColor="#666666">
+  <controller name="tanchaung" autoRadioGroupDepth="true" pages="0,,1,,2," selected="0">
+    <remark page="0" value="默认"/>
+    <remark page="1" value="添加记录面板"/>
+    <remark page="2" value="删除记录面板"/>
+  </controller>
+  <displayList>
+    <component id="n2_o5lt" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="640,358" pivot="0.5,0.5" anchor="true" size="506,540">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n3_o5lt" name="title" xy="601,100" pivot="0.5,0.5" size="76,34" font="SimHei" fontSize="24" color="#ffffff" autoSize="none" text="土灵符">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n16_ler3" name="tips" xy="446,155" pivot="0.5,0.5" size="412,34" visible="false" fontSize="20" color="#b5c9b5" align="center" autoSize="none" text="移动到最后一次使用回城符的地点">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n45_y1ql" name="btnHCF" src="oqrp1" fileName="Components/tongyong/btnselect2.xml" xy="442,151">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="移动到最后一次使用回城符的地点" titleColor="#ffff00"/>
+    </component>
+    <component id="n43_q872" name="btnDie" src="oqrp1" fileName="Components/tongyong/btnselect2.xml" xy="442,210">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="移动到最后一次死亡的地点" titleColor="#ffff00"/>
+    </component>
+    <component id="n33_zdrm" name="btn_del" src="oqrp4" fileName="Components/tongyong/fangbtn.xml" xy="415,554" size="139,47">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="删除"/>
+    </component>
+    <component id="n34_zdrm" name="btn_add" src="oqrp4" fileName="Components/tongyong/fangbtn.xml" xy="572,554" size="139,47">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="记录"/>
+    </component>
+    <component id="n35_zdrm" name="btn_move" src="oqrp4" fileName="Components/tongyong/fangbtn.xml" xy="727,554" size="139,47">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="传送"/>
+    </component>
+    <component id="n37_zdrm" name="btn_close" src="oqrp6" fileName="Components/tongyong/closebtn_yuan.xml" xy="840,92">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n40_zdrm" name="movelist" xy="443,275" size="418,262" overflow="scroll" lineGap="10" defaultItem="ui://h5wbakzpoqrp8" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item title="未记录地图信息"/>
+      <item title="未记录地图信息"/>
+      <item title="未记录地图信息"/>
+      <item title="未记录地图信息"/>
+      <item title="未记录地图信息"/>
+      <item title="未记录地图信息"/>
+    </list>
+    <component id="n38_zdrm" name="panl_add" src="oqrpa" fileName="Components/city/addjld.xml" xy="0,0">
+      <gearDisplay controller="tanchaung" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n39_zdrm" name="panl_del" src="oqrpe" fileName="Components/city/deljld.xml" xy="0,0">
+      <gearDisplay controller="tanchaung" pages="2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n11_dgah" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="512,384" pivot="0.5,0.5" anchor="true" size="404,514">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_vjv7" name="text_title" xy="512,146" pivot="0.5,0.5" anchor="true" size="100,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="武功栏">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n3_vjv7" name="list_page" xy="710,180" size="28,300" overflow="hidden" lineGap="2" defaultItem="ui://0vpx0897f0so0" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n12_dgah" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="700,146">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n9_ha35" name="Node_Content" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="2,-1" size="1024,768">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

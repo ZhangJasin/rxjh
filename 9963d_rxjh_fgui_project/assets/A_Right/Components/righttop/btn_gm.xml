@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="94,88" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_ih0u" name="n0" src="oqrp14" fileName="Images/0tongyong/btn_hong.png" xy="14,18" size="65,53">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_ih0u" name="n1" src="oqrp14" fileName="Images/0tongyong/btn_hong.png" xy="14,18" size="65,53">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_ih0u" name="n2" src="oqrp14" fileName="Images/0tongyong/btn_hong.png" xy="14,18" size="65,53">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_ih0u" name="n3" src="oqrp14" fileName="Images/0tongyong/btn_hong.png" xy="14,18" size="65,53">
+      <gearDisplay controller="button" pages="3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n4_ih0u" name="title" xy="0,0" size="94,88" fontSize="30" align="center" vAlign="middle" autoSize="none" singleLine="true" text="GM">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>

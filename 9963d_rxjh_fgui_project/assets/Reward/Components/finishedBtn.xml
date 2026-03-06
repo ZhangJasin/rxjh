@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="160,53" extention="Button">
+  <displayList>
+    <image id="n2_ycsi" name="n2" src="ycsi2c" fileName="image/btn_second_red.png" xy="0,0" size="160,53"/>
+    <text id="n1_hpp3" name="n1" xy="0,0" size="160,53" fontSize="22" color="#fdf100" align="center" vAlign="middle" autoSize="none" text="领奖"/>
+  </displayList>
+  <Button downEffect="dark" downEffectValue="0.8"/>
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="102,200">
+  <displayList>
+    <image id="n0_80vf" name="n0" src="as7k26" fileName="Images/inputField_bg_9.png" pkg="aakcgg80" xy="0,0" size="102,200">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <list id="n1_80vf" name="list" xy="1,0" size="102,200" overflow="scroll" lineGap="1" defaultItem="ui://dak5wnw980vf2f" align="center" autoClearItems="true">
+      <relation target="" sidePair="width-width"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+  <relation target="n1_80vf" sidePair="height-height"/>
+</component>

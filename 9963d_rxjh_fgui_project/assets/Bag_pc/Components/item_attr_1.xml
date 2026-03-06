@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,24">
+  <displayList>
+    <graph id="n56_lt7h" name="mask" xy="0,0" size="150,24" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <image id="n55_lt7h" name="n55" src="n0551y" fileName="Images/attr_bg.png" xy="0,0" size="150,24">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n53_p34y" name="text_name_attr" xy="1,2" size="58,20" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#a4d452" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="哈哈哈哈哈">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n54_p34y" name="text_value_attr" xy="62,2" size="84,19" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#7cc3b3" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" autoClearText="true" text="111111111">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

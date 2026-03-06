@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,400">
+  <displayList>
+    <component id="n12_vzpx" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="0,0" size="400,400"/>
+    <text id="n3_qeaz" name="n3" xy="0,11" size="400,32" fontSize="22" color="#ffffff" align="center" autoSize="none" text="获取途径" input="true"/>
+    <image id="n4_qeaz" name="n4" src="qeaz2e" fileName="image/blackBg.png" xy="20,70" size="360,60"/>
+    <text id="n5_qeaz" name="fromName" xy="48,70" size="150,60" fontSize="20" color="#ffffff" vAlign="middle" autoSize="none" text="元宝商场"/>
+    <component id="n10_qeaz" name="goto" src="qeaz2g" fileName="Components/dialogGoto.xml" xy="240,80"/>
+    <component id="n11_qeaz" name="dialogClose" src="qeaz2f" fileName="Components/dialogClose.xml" xy="140,335"/>
+  </displayList>
+</component>

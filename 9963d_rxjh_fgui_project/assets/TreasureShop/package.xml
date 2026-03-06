@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="p8mjxubr">
+  <resources>
+    <image id="vye12" name="table_g.png" path="/Images/" exported="true"/>
+    <image id="vye13" name="table_y.png" path="/Images/" exported="true"/>
+    <image id="vye14" name="first_Purchase.png" path="/Images/" exported="true"/>
+    <image id="vye15" name="time.png" path="/Images/" exported="true"/>
+    <image id="vye19" name="btn_yellow.png" path="/Images/" exported="true" scale="9grid" scale9grid="25,3,7,12"/>
+    <image id="vye1a" name="bg_limit.png" path="/Images/" exported="true" scale="9grid" scale9grid="6,8,13,9" qualityOption="source" smoothing="false"/>
+    <image id="vye1b" name="money_bg.png" path="/Images/" exported="true"/>
+    <image id="vye1d" name="decoration.png" path="/Images/" exported="true"/>
+    <image id="vye1e" name="left_bg.png" path="/Images/" exported="true"/>
+    <image id="vye1f" name="Sycee.png" path="/Images/" exported="true"/>
+    <image id="vye1g" name="Gem.png" path="/Images/" exported="true"/>
+    <image id="vye1i" name="Yuanbao3.png" path="/Images/" exported="true"/>
+    <image id="vye1j" name="Yuanbao2.png" path="/Images/" exported="true"/>
+    <image id="vye1q" name="Yuanbao1.png" path="/Images/" exported="true"/>
+    <image id="vye1r" name="money.png" path="/Images/" exported="true"/>
+    <image id="vye1t" name="lock.png" path="/Images/" exported="true"/>
+    <image id="vye1x" name="icon_scroll.png" path="/Images/" exported="true"/>
+    <component id="vye1y" name="TreasurePanel.xml" path="/" exported="true"/>
+    <image id="vye111" name="copper.png" path="/Images/" exported="true"/>
+    <component id="vye117" name="btn_res.xml" path="/Components/" exported="true"/>
+    <image id="bxaz38" name="btn_close.png" path="/Images/" exported="true" scale="9grid" scale9grid="11,11,22,22"/>
+    <component id="bxaz3q" name="btn_shop_green.xml" path="/Components/" exported="true"/>
+    <component id="ce6z47" name="btn_red.xml" path="/Components/" exported="true"/>
+    <component id="cym74q" name="item_shop.xml" path="/Components/" exported="true"/>
+    <component id="nr004u" name="TreasureGeneralPanel.xml" path="/Components/" exported="true"/>
+    <component id="b43453" name="btn_right_tab.xml" path="/Components/" exported="true"/>
+    <component id="bf0g58" name="item_recharge.xml" path="/Components/" exported="true"/>
+    <component id="bf0g59" name="btn_recharge.xml" path="/Components/" exported="true"/>
+    <image id="bf0g5a" name="img_jrth.png" path="/Images/" exported="true"/>
+    <component id="ils05d" name="com_res.xml" path="/Components/" exported="true"/>
+    <component id="g0ii5f" name="TreasureRechargePanel.xml" path="/Components/" exported="true"/>
+    <image id="wpel5g" name="2001.png" path="/Images/" exported="true"/>
+    <image id="wpel5h" name="2002.png" path="/Images/" exported="true"/>
+    <image id="wpel5i" name="2003.png" path="/Images/" exported="true"/>
+    <image id="wpel5j" name="2004.png" path="/Images/" exported="true"/>
+    <image id="wpel5k" name="2005.png" path="/Images/" exported="true"/>
+    <image id="wpel5l" name="2006.png" path="/Images/" exported="true"/>
+    <image id="wpel5m" name="2007.png" path="/Images/" exported="true"/>
+    <image id="wpel5n" name="2008.png" path="/Images/" exported="true"/>
+    <image id="wpel5o" name="lngot9.png" path="/Images/" exported="true"/>
+    <image id="as7k5p" name="Right_tab_9.png" path="/Images/" scale="9grid" scale9grid="0,6,45,2"/>
+    <image id="as7k5q" name="Selected_Tab_9.png" path="/Images/" scale="9grid" scale9grid="0,6,45,2"/>
+    <image id="as7k5r" name="btn_green_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="35,0,2,56"/>
+    <image id="as7k5s" name="btn_green_unload_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="8,6,1,2"/>
+    <image id="as7k5t" name="btn_red_9.png" path="/Images/" scale="9grid" scale9grid="10,0,2,53"/>
+    <component id="lz03j" name="NPCStorePanel.xml" path="/" exported="true"/>
+    <component id="lz03k" name="item_npc_store.xml" path="/Components/" exported="true"/>
+    <image id="lz03l" name="cell_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="3,3,1,1"/>
+    <component id="lz03v5x" name="popup_npcstore.xml" path="/Components/" exported="true"/>
+    <component id="seb1v6o" name="item_cost.xml" path="/Components/" exported="true"/>
+    <component id="10pmdv6p" name="NpcStoreNewPanel.xml" path="/" exported="true"/>
+    <component id="10pmdv6q" name="item_npcBuy.xml" path="/Components/" exported="true"/>
+    <component id="10pmdv6r" name="BuyPanel.xml" path="/" exported="true"/>
+    <component id="10pmdv6s" name="cbx_filter_item.xml" path="/Components/"/>
+    <component id="10pmdv6t" name="cbx_filter_popup.xml" path="/Components/"/>
+    <component id="10pmdv6u" name="cbx_filter.xml" path="/Components/" exported="true"/>
+    <component id="10pmdv6v" name="SellPanel.xml" path="/" exported="true"/>
+    <component id="10pmdv6w" name="item_sell.xml" path="/Components/" exported="true"/>
+    <component id="10pmdv6x" name="RecyclePanel.xml" path="/" exported="true"/>
+    <component id="lfocdv6y" name="checkBox.xml" path="/Components/" exported="true"/>
+    <component id="efnsdv70" name="com_money.xml" path="/Components/" exported="true"/>
+    <image id="yh61dv72" name="di.png" path="/Images/" exported="true" scale="9grid" scale9grid="22,59,3,7"/>
+    <image id="yh61dv73" name="效果.png" path="/Components/"/>
+    <image id="yh61dv74" name="isXianGOu.png" path="/Images/" exported="true"/>
+    <image id="kra4dv76" name="buy_item_di.png" path="/Images/"/>
+    <image id="kra4dv77" name="link.png" path="/Images/"/>
+    <image id="kra4dv78" name="btn_green_clod.png" path="/Images/"/>
+    <image id="kra4dv7a" name="icon_item1.png" path="/Images/" exported="true"/>
+    <image id="kra4dv7b" name="icon_item_select.png" path="/Images/" exported="true"/>
+    <image id="kra4dv7c" name="img_d2_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="4,8,2,16" qualityOption="source" smoothing="false"/>
+    <image id="kra4dv7d" name="btn.png" path="/Images/" exported="true"/>
+    <component id="kra4dv7e" name="btn_once_sell.xml" path="/Components/" exported="true"/>
+    <image id="kra4dv7f" name="arrow.png" path="/Images/" exported="true"/>
+    <image id="kra4dv7g" name="arrowdi.png" path="/Images/" exported="true"/>
+    <component id="r8pbdv7h" name="btn_container_tab.xml" path="/Components/"/>
+    <component id="r8pbdv7i" name="item_resGet.xml" path="/Components/"/>
+    <image id="r8pbdv7j" name="icon_coin.png" path="/Images/"/>
+    <component id="fhb3dv7k" name="list_resGet.xml" path="/Components/"/>
+    <image id="owd7dv7l" name="di_panel.png" path="/Images/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="owd7dv7m" name="P-NPC3.jpg" path="/Images/"/>
+    <image id="owd7dv7n" name="物品框.png" path="/Images/" exported="true"/>
+    <image id="tw0ldv7o" name="comboxDi.png" path="/Images/" scale="9grid" scale9grid="4,8,1,16"/>
+  </resources>
+  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\TreasureShop" packageCount="2"/>
+</packageDescription>

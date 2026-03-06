@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="30,30" extention="Button">
+  <controller name="isSelect" pages="1,unSelect,0,Select" selected="0"/>
+  <displayList>
+    <image id="n3_hgpp" name="icon_select" src="lxrgv57" fileName="image/checkbox_icon.png" pkg="st7dgeqq" xy="2,3" size="27,25" group="n6_hgpp">
+      <gearDisplay controller="isSelect" pages="0"/>
+    </image>
+    <image id="n7_gkld" name="n7" src="gkldo5v" fileName="Images/checkbox_bg2.png" xy="0,0" size="30,30" group="n6_hgpp"/>
+    <group id="n6_hgpp" name="n6" xy="0,0" size="30,30" advanced="true"/>
+  </displayList>
+  <Button mode="Check"/>
+</component>

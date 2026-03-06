@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64">
+  <controller name="isBind" pages="0,绑定,1,未绑定" selected="0"/>
+  <displayList>
+    <image id="n10_ipjg" name="n10" src="fbc0v4t" fileName="image/icon_item1.png" pkg="st7dgeqq" xy="0,0" size="64,64">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n12_yrti" name="node_item" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="32,32" pivot="0.5,0.5" anchor="true" size="64,64">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>

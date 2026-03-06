@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <image id="n59_mh2i" name="bg" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="512,400" pivot="0.5,0.5" anchor="true" size="390,410">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n61_wysv" name="list_page" xy="512,178" pivot="0.5,0.5" anchor="true" size="380,28" layout="row" overflow="hidden" scroll="horizontal" defaultItem="ui://0vpx0897f0so4" align="center" vAlign="middle">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n36_w0rg" name="list_skill" xy="512,400" pivot="0.5,0.5" anchor="true" size="380,400" overflow="scroll" defaultItem="ui://0vpx0897w0rgc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <richtext id="n62_spth" name="text_myScore" xy="512,619" pivot="0.5,0.5" anchor="true" size="150,24" fontSize="12" color="#f1ffeb" align="center" vAlign="bottom" autoSize="none" strokeColor="#000000" text="剩余历练：10000">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <component id="n54_hb5x" name="btn_reset" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="651,618" pivot="0.5,0.5" anchor="true" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="重置键位" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <component id="n63_cki1" name="skill_tips" src="hhwjv" fileName="PCSkillTipsPanel.xml" xy="130,240"/>
+  </displayList>
+</component>

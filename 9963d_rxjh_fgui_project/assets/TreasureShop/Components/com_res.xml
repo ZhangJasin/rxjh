@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="174,40">
+  <controller name="isLocked" exported="true" pages="0,是,1,否" selected="0"/>
+  <displayList>
+    <text id="n4_bf0g" name="text_count" xy="106,20" pivot="0.5,0.5" anchor="true" size="134,32" fontSize="22" color="#ffffff" align="center" autoSize="none" strokeColor="#ffffff" strokeSize="0.1" text="123万456两">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n10_jo9b" name="commonItem" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="0,1" size="35,39"/>
+  </displayList>
+</component>

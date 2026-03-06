@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="xsb4ak00">
+  <resources>
+    <component id="t5gs0" name="ProgressBarPanel.xml" path="/" exported="true"/>
+    <image id="lxxo1" name="00230.png" path="/Images/"/>
+    <image id="lxxo2" name="00231.png" path="/Images/"/>
+    <component id="lxxo6" name="loading_bar.xml" path="/Components/"/>
+    <component id="lxxo7" name="panel_touch.xml" path="/Components/"/>
+  </resources>
+  <publish name="ProgressBar"/>
+</packageDescription>

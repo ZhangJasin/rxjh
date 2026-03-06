@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <loader id="n19_qk2l" name="bg" xy="667,375" pivot="0.5,0.5" anchor="true" size="968,600" url="ui://s7gyh5sveoqr1y" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <component id="n1_eoqr" name="icon_showPlayer1" src="eoqr1f" fileName="Components/common/show_head.xml" xy="490,165">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n2_eoqr" name="icon_showPlayer2" src="eoqr1f" fileName="Components/common/show_head.xml" xy="837,165">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n4_eoqr" name="textLabel_Player1" xy="451,245" size="150,34" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="牛爷爷1号">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n5_eoqr" name="textLabel_Player2" xy="798,245" size="150,34" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="牛爷爷2号">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n6_eoqr" name="icon_" src="eoqr1h" fileName="Components/common/show_item(brown).xml" xy="673,175">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n7_eoqr" name="n7" xy="395,287" size="620,59" fontSize="20" color="#f4e3bc" autoSize="none" text="与她/他结为侠侣，携手傲笑江湖，缘戒品质越高，典礼越豪华！请选择缘戒。">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n8_eoqr" name="btn_marriage" src="la2y15" fileName="Components/common/btn_red.xml" xy="625,538" size="159,53">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n10_eoqr" name="text_marriage" xy="625,539" size="159,53" fontSize="24" color="#ffff00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="签订契约">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n11_eoqr" name="n11" src="eoqr2f" fileName="Components/drop_down box/selectMarriageTime.xml" xy="619,250">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <ComboBox visibleItemCount="10">
+        <item title="08-19 13:00"/>
+        <item title="08-19 14:00"/>
+        <item title="08-19 15:00"/>
+        <item title="08-19 16:00"/>
+        <item title="08-19 17:00"/>
+        <item title="08-19 18:00"/>
+      </ComboBox>
+    </component>
+    <component id="n12_eoqr" name="btn_close" src="eoqr2g" fileName="Components/common/btn_pink.xml" xy="1037,106" size="56,56">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n13_eoqr" name="n13" xy="466,490" size="120,38" fontSize="22" color="#502814" align="center" vAlign="middle" autoSize="none" text="求婚誓言:">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n14_eoqr" name="n14" src="eoqr2j" fileName="Components/drop_down box/selectMarriryWord.xml" xy="598,490">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <ComboBox visibleItemCount="10">
+        <item title="世间万物，满目星辰皆是你！"/>
+        <item title="结缘之契，唯愿此生不离不弃。"/>
+        <item title="兄弟之义，携手共进地老天荒。"/>
+      </ComboBox>
+    </component>
+    <component id="n15_eoqr" name="n15" src="eoqr2k" fileName="Components/common/MarriageRingModel.xml" xy="481,353" group="n18_eoqr">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n16_eoqr" name="n16" src="eoqr2k" fileName="Components/common/MarriageRingModel.xml" xy="646,353" group="n18_eoqr">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n17_eoqr" name="n17" src="eoqr2k" fileName="Components/common/MarriageRingModel.xml" xy="806,353" group="n18_eoqr">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n18_eoqr" name="n18" xy="481,353" size="445,128"/>
+  </displayList>
+</component>

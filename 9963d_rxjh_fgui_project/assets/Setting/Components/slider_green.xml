@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="388,28" extention="Slider">
+  <displayList>
+    <image id="n0_juj0" name="n0" src="11iqkvpo" fileName="Images/progress_bg.png" xy="0,0" size="388,28">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_juj0" name="bar" src="11iqkvpr" fileName="Images/progress_fill_green.png" xy="3,4" size="352,20"/>
+    <component id="n2_juj0" name="grip" src="juj014" fileName="Components/slider_grip.xml" xy="355,-1">
+      <relation target="n1_juj0" sidePair="right-right"/>
+    </component>
+  </displayList>
+  <Slider titleType="value"/>
+</component>

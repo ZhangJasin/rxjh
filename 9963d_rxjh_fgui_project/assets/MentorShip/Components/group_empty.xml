@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,590">
+  <displayList>
+    <image id="n23_gval" name="n1" src="gvalo3x" fileName="Images/content_bg_9.png" xy="15,10" size="720,280"/>
+    <image id="n24_gval" name="n2" src="gvalo3x" fileName="Images/content_bg_9.png" xy="15,300" size="720,280"/>
+    <image id="n3_gval" name="n13" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="318,30" size="40,23" group="n5_gval" scale="-1,1"/>
+    <image id="n2_gval" name="n14" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="391,30" size="40,23" group="n5_gval"/>
+    <text id="n4_gval" name="title_1" xy="331,23" pivot="0.5,0.5" size="47,31" group="n5_gval" fontSize="22" color="#ffff00" align="center" vAlign="middle" text="拜师"/>
+    <component id="n27_gval" name="btn_find_master" src="gvalo3z" fileName="Components/btn_second_red.xml" xy="585,214" group="n5_gval">
+      <Button title="寻找师父"/>
+    </component>
+    <list id="n29_gval" name="list_master_cond" xy="20,71" size="565,125" group="n5_gval" overflow="scroll" defaultItem="ui://pnop7ha6nc451v" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n30_gval" name="list_master_intro" xy="20,200" size="565,86" group="n5_gval" layout="row" overflow="scroll" scroll="horizontal" margin="0,0,50,0" colGap="33" defaultItem="ui://pnop7ha6f0so1g">
+      <item/>
+      <item/>
+    </list>
+    <group id="n5_gval" name="n11" xy="20,23" size="695,262"/>
+    <image id="n15_gval" name="n23" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="318,319" size="40,23" group="n18_gval" scale="-1,1"/>
+    <image id="n16_gval" name="n24" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="391,319" size="40,23" group="n18_gval"/>
+    <text id="n17_gval" name="title_2" xy="331,313" pivot="0.5,0.5" size="47,31" group="n18_gval" fontSize="22" color="#ffff00" align="center" vAlign="middle" text="收徒"/>
+    <list id="n31_gval" name="list_apprentice_cond" xy="20,361" size="565,125" group="n18_gval" overflow="scroll" defaultItem="ui://pnop7ha6nc451v">
+      <item/>
+      <item/>
+    </list>
+    <list id="n32_gval" name="list_apprentice_intro" xy="20,490" size="565,86" group="n18_gval" layout="row" overflow="scroll" scroll="horizontal" margin="0,0,50,0" colGap="33" defaultItem="ui://pnop7ha6f0so1g">
+      <item/>
+      <item/>
+    </list>
+    <component id="n28_gval" name="btn_find_apprentice" src="gvalo3z" fileName="Components/btn_second_red.xml" xy="585,501" group="n18_gval">
+      <Button title="寻找徒弟"/>
+    </component>
+    <group id="n18_gval" name="n21" xy="20,313" size="695,262"/>
+  </displayList>
+</component>

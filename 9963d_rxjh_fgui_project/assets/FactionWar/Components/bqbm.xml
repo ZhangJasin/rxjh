@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="40,160" overflow="hidden" extention="Button">
+  <displayList>
+    <image id="n0_drck" name="n0" src="drck6" fileName="Images/箭头.png" xy="0,134" pivot="0.55,0.5" size="40,21" aspect="true" rotation="-90"/>
+    <image id="n1_drck" name="n1" src="drckc" fileName="Images/繁忙.png" xy="0,-7" size="40,130"/>
+    <text id="n2_drck" name="n2" xy="0,1" size="40,126" fontSize="22" color="#ffffff" align="center" autoSize="none" text="本期报名"/>
+  </displayList>
+  <Button/>
+</component>

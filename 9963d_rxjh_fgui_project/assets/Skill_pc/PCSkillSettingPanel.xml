@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <image id="n34_fbc0" name="bg" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="180,150" size="600,530">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n7_f0so" name="list_page" xy="190,110" size="520,42" layout="row" overflow="hidden" scroll="horizontal" defaultItem="ui://qvb3eryhf0so4">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+    </list>
+    <list id="n10_f0so" name="list_skill" xy="180,162" size="600,500" layout="pagination" overflow="scroll" lineGap="20" lineItemCount="5" defaultItem="ui://qvb3eryhf0so6" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n21_f0so" name="text_info" xy="720,115" size="424,29" aspect="true" fontSize="20" color="#fff7d1" align="right" strokeColor="#000000" text="点击左边技能图标，再点击右边槽位，配置技能">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n22_eion" name="skill_pad0" src="eion7" fileName="Components/btn_pad.xml" xy="1054,460" pivot="0.5,0.5" anchor="true" group="n36_hb5x" visible="false" touchable="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n23_eion" name="skill_pad1" src="eion7" fileName="Components/btn_pad.xml" xy="890,510" group="n36_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n24_eion" name="skill_pad2" src="eion7" fileName="Components/btn_pad.xml" xy="870,380" group="n36_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n25_eion" name="skill_pad3" src="eion7" fileName="Components/btn_pad.xml" xy="946,286" group="n36_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n26_eion" name="skill_pad4" src="eion7" fileName="Components/btn_pad.xml" xy="1062,250" group="n36_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n27_eion" name="skill_pad5" src="eion7" fileName="Components/btn_pad.xml" xy="802,458" group="n36_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n28_eion" name="skill_pad6" src="eion7" fileName="Components/btn_pad.xml" xy="830,278" group="n36_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n29_eion" name="skill_pad7" src="eion7" fileName="Components/btn_pad.xml" xy="962,178" group="n36_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n33_fbc0" name="btn_reset" src="fbc08" fileName="Components/btn_reset.xml" xy="990,640" group="n36_hb5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n35_vhpr" name="skill_attack" src="7uson" fileName="Images/skill_icon_attack.png" xy="1054,460" pivot="0.5,0.5" anchor="true" group="n36_hb5x"/>
+    <group id="n36_hb5x" name="panel_pad" xy="802,178" size="349,502"/>
+  </displayList>
+</component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImage="ui://xwp5ackomjoj1">
+  <displayList>
+    <component id="n68_lh52" name="chat" src="lh523n" fileName="Components/Chat/Chat.xml" xy="0,696">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+  </displayList>
+</component>

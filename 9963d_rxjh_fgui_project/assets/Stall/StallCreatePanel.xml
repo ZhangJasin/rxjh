@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n9_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n8_qzpn" name="n8" src="plaqkvp3" fileName="image/caizhi.png" pkg="st7dgeqq" xy="307,257" size="731,246" group="n7_jse8"/>
+    <loader id="n1_ut8e" name="n1" xy="300,203" size="745,306" group="n7_jse8" url="ui://st7dgeqqas7kvnn" fill="scaleFree"/>
+    <component id="n2_ut8e" name="btn_sure" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="721,409" group="n7_jse8">
+      <Button title="确 定"/>
+    </component>
+    <component id="n3_ut8e" name="btn_cancel" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="455,410" group="n7_jse8">
+      <Button title="取 消"/>
+    </component>
+    <text id="n5_ut8e" name="n5" xy="494,282" size="346,29" group="n7_jse8" fontSize="20" color="#ffffff" singleLine="true" text="请输入摊位名字（最多可输入15个字）"/>
+    <graph id="n4_ut8e" name="n4" xy="436,327" size="466,47" group="n7_jse8" type="rect" lineColor="#ffcabe10" fillColor="#ffb7c1b6"/>
+    <text id="n6_ut8e" name="textInput_name" xy="444,336" size="457,29" group="n7_jse8" fontSize="20" vAlign="middle" autoSize="none" text="" input="true" prompt="[color=#597256]请输入商店名字...[/color]" maxLength="15">
+      <relation target="n4_ut8e" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </text>
+    <group id="n7_jse8" name="n7" xy="300,203" size="745,306" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

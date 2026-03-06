@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n4_eouc" name="bg" src="egru78" fileName="Components/tongyong/kongbg.xml" pkg="fgihxfye" xy="0,0"/>
+    <component id="n0_o4l6" name="tipbg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="500,600"/>
+    <component id="n1_o4l6" name="closetips" src="ler348" fileName="Components/tongyong/closebtn_yuan.xml" pkg="fgihxfye" xy="866,80"/>
+    <text id="n2_o4l6" name="title" xy="676,102" pivot="0.5,0.5" anchor="true" size="124,29" fontSize="20" color="#ffcc33" text="侠侣规则说明"/>
+    <richtext id="n3_o4l6" name="n3" xy="442,135" size="452,529" fontSize="20" color="#ffffff" leading="5" autoSize="none" text="1.侠侣规则说明"/>
+  </displayList>
+</component>

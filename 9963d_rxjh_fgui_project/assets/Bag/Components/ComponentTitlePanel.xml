@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="464,572">
+  <controller name="titleState" pages="0,未激活,1,未使用,2,使用中" selected="0"/>
+  <controller name="ModeWho" pages="0,MainPlayer,1,OtherPlayer" selected="0"/>
+  <displayList>
+    <image id="n10_9qta" name="n10" src="lt7hvnx" fileName="Images/img_input_di.png" xy="0,0" size="464,473">
+      <gearXY controller="ModeWho" pages="0,1" values="0,0|0,49"/>
+      <gearSize controller="ModeWho" pages="0,1" values="464,473,1,1|464,572,1,1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n6_9qta" name="list_title" xy="8,6" size="447,455" layout="flow_hz" overflow="scroll" scrollBarFlags="2048" lineGap="4" colGap="4" lineItemCount="2" defaultItem="ui://dak5wnw99qtavoi" align="center" autoClearItems="true">
+      <gearXY controller="ModeWho" pages="0,1" values="8,6|8,53"/>
+      <gearSize controller="ModeWho" pages="0,1" values="447,455,1,1|464,557,1,1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n7_9qta" name="text_titleGet" xy="9,499" size="169,29" fontSize="20" color="#e3e3e3" strokeColor="#000000" singleLine="true" text="称号获取数量:0/11">
+      <gearDisplay controller="ModeWho" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n9_9qta" name="btn_use" src="9qtavoj" fileName="Components/btn_use.xml" xy="310,492" size="136,42">
+      <gearDisplay controller="ModeWho" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="使  用" titleColor="#fced00" titleFontSize="22"/>
+    </component>
+  </displayList>
+</component>

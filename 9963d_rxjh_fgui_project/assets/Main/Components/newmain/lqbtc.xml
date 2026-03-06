@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,48" extention="Button">
+  <displayList>
+    <component id="n0_h0oq" name="n0" src="vzjdfvel" fileName="Components/newmain/btn_red.xml" xy="0,0" size="150,53"/>
+    <text id="n1_h0oq" name="n1" xy="2,0" size="142,48" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="领取并退出"/>
+  </displayList>
+  <Button/>
+</component>

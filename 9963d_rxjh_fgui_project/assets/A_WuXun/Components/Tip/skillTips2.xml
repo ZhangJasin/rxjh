@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n1_shks" name="bg" src="oqrp1b" fileName="Components/tongyong/kongbg.xml" xy="-1,-1" aspect="true"/>
+    <image id="n0_shks" name="n0" src="oqrp1t" fileName="Images/0tongyong/srbbg.png" xy="349,309" size="439,186" group="n7_hujp"/>
+    <image id="n5_nomo" name="n5" src="oqrp1t" fileName="Images/0tongyong/srbbg.png" xy="349,309" size="439,186" group="n7_hujp"/>
+    <richtext id="n3_shks" name="n3" xy="356,344" size="424,29" group="n7_hujp" font="SimHei" fontSize="20" color="#ffffff" autoSize="height" autoClearText="true" text="下级属性：40星升级"/>
+    <group id="n7_hujp" name="Group_item" xy="349,309" size="439,186" advanced="true"/>
+  </displayList>
+</component>

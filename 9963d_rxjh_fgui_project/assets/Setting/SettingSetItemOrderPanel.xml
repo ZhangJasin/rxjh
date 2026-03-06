@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n41_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n6_rmnb" name="n6" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="436,52" size="462,646" group="n29_nznq"/>
+    <text id="n7_rmnb" name="name" xy="605,62" size="124,34" group="n29_nznq" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="优先级调整"/>
+    <group id="n29_nznq" name="n29" xy="436,52" size="462,646" group="n39_nznq"/>
+    <image id="n12_rmnb" name="n12" src="11iqkvpk" fileName="Images/title_bg.png" xy="456,115" size="422,50" group="n28_nznq"/>
+    <image id="n27_nznq" name="n27" src="11iqkvpj" fileName="Images/line.png" xy="604,119" group="n28_nznq"/>
+    <text id="n13_rmnb" name="n13" xy="462,120" size="139,40" group="n28_nznq" fontSize="22" color="#ddfdd9" align="center" vAlign="middle" autoSize="none" text="优先级"/>
+    <text id="n14_rmnb" name="n14" xy="616,120" size="250,40" group="n28_nznq" fontSize="22" color="#ddfdd9" align="center" vAlign="middle" autoSize="none" text="物品名称"/>
+    <group id="n28_nznq" name="n28" xy="456,115" size="422,50" group="n39_nznq"/>
+    <graph id="n30_nznq" name="n30" xy="453,112" size="428,480" group="n38_nznq" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <list id="n21_obxz" name="skill_list" xy="458,167" size="418,417" group="n38_nznq" overflow="scroll" lineGap="2" defaultItem="ui://xpq1wbq8nznqkvqb" autoItemSize="false" autoClearItems="true" scrollItemToViewOnClick="false">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n38_nznq" name="n38" xy="453,112" size="428,480" group="n39_nznq"/>
+    <graph id="n31_nznq" name="n31" xy="453,596" size="428,88" group="n32_nznq" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <text id="n23_obxz" name="n23" xy="537,614" size="260,50" group="n32_nznq" fontSize="18" color="#f1ffeb" align="center" leading="5" autoSize="none" text="调整道具使用优先级&#xA;选择道具后向上或向下拖拽"/>
+    <group id="n32_nznq" name="n32" xy="453,596" size="428,88" group="n39_nznq"/>
+    <component id="n40_twrw" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="875,78" group="n39_nznq"/>
+    <group id="n39_nznq" name="root" xy="436,52" size="462,646" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="1hyl0b7s">
+  <resources>
+    <component id="vzpx0" name="OfflineGamePanel.xml" path="/" exported="true"/>
+    <component id="vzpx1" name="closebtn_yuan.xml" path="/Components/" exported="true"/>
+    <image id="vzpx2" name="close_yuan.png" path="/image/" exported="true"/>
+    <component id="vzpx3" name="mapItem.xml" path="/Components/" exported="true"/>
+    <component id="vzpx4" name="rightBtn.xml" path="/Components/" exported="true"/>
+    <image id="vzpx5" name="按钮.png" path="/image/" exported="true" scale="9grid" scale9grid="32,14,64,28"/>
+    <image id="vzpx6" name="选中框.png" path="/image/" exported="true" scale="9grid" scale9grid="19,18,38,36"/>
+    <image id="vzpx7" name="左侧页签未选中.png" path="/image/" exported="true"/>
+    <image id="vzpx8" name="左侧页签选中.png" path="/image/" exported="true"/>
+    <image id="vzpx9" name="推荐.png" path="/image/" exported="true"/>
+    <component id="vzpxa" name="setBtn.xml" path="/Components/" exported="true"/>
+    <component id="vzpxb" name="monItem.xml" path="/Components/" exported="true"/>
+    <component id="vzpxc" name="gonowBtn.xml" path="/Components/" exported="true"/>
+    <image id="vzpxd" name="绿二级按钮.png" path="/image/" exported="true" scale="9grid" scale9grid="39,13,78,26"/>
+    <image id="vzpxf" name="小底框.png" path="/image/" exported="true" scale="9grid" scale9grid="25,8,50,16"/>
+    <image id="vzpxg" name="挂机背景.png" path="/image/" exported="true"/>
+    <component id="vzpxi" name="btn_second_red.xml" path="/Components/" exported="true"/>
+    <image id="vzpxj" name="标题花纹.png" path="/image/" exported="true"/>
+    <image id="vzpxk" name="深色底.png" path="/image/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
+    <image id="usngl" name="pagerilv1.png" path="/image/" exported="true"/>
+    <image id="usngm" name="pagerilv2.png" path="/image/" exported="true"/>
+    <image id="rcc1n" name="分割线.png" path="/image/" exported="true" scale="9grid" scale9grid="0,7,0,14"/>
+    <image id="rcc1o" name="信息底.png" path="/image/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
+    <component id="rcc1p" name="enterXY.xml" path="/Components/" exported="true"/>
+    <component id="rcc1q" name="xy.xml" path="/Components/" exported="true"/>
+    <component id="sv3zr" name="zhushou.xml" path="/Components/" exported="true"/>
+  </resources>
+  <publish name="" path="E:\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\OfflineGame" packageCount="2"/>
+</packageDescription>

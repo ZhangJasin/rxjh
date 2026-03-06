@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <loader id="n14_w9m6" name="bg" xy="565,375" pivot="0.5,0.5" anchor="true" size="335,330" group="n16_w9m6" url="ui://pnop7ha6w9m6o4s" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <list id="n10_w9m6" name="list_left" xy="451,232" size="237,233" group="n16_w9m6" overflow="scroll" lineGap="20" defaultItem="ui://pnop7ha6w9m6o4t" align="center">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n18_w9m6" name="btn_publish" src="gvalo3y" fileName="Components/btn_second_green.xml" xy="505,483" size="120,40" group="n16_w9m6">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="发布"/>
+    </component>
+    <group id="n16_w9m6" name="n16" xy="397,210" size="335,330" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <loader id="n13_w9m6" name="bg2" xy="835,350" pivot="0.5,0.5" anchor="true" size="200,280" group="n17_w9m6" url="ui://pnop7ha6w9m6o4s" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <list id="n9_w9m6" name="list_right" xy="742,220" size="185,260" group="n17_w9m6" overflow="scroll" lineGap="5" defaultItem="ui://pnop7ha6w9m6o4w">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n17_w9m6" name="n17" xy="735,210" size="200,280" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

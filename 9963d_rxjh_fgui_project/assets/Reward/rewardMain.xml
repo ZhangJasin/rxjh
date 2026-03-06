@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750">
+  <displayList>
+    <loader id="n1_hpp3" name="bg" xy="667,349" pivot="0.5,0.5" anchor="true" size="1170,647" url="ui://st7dgeqqas7kvnn" fill="scaleFree"/>
+    <image id="n7_hpp3" name="n7" src="hpp34" fileName="image/mainBg.png" xy="89,79" size="1156,590"/>
+    <text id="n2_hpp3" name="n2" xy="664,51" pivot="0.5,0.5" anchor="true" size="139,34" fontSize="24" color="#9aafbb" align="center" autoSize="none" text="悬赏任务">
+      <relation target="n1_hpp3" sidePair=""/>
+    </text>
+    <text id="n11_hpp3" name="mfsx" xy="209,622" size="166,32" fontSize="22" color="#ffffff" text="免费刷新次数3/3"/>
+    <component id="n12_hpp3" name="n12" src="hpp3b" fileName="Components/iconItem.xml" xy="402,618"/>
+    <richtext id="n14_hpp3" name="djxh" xy="449,620" size="34,32" fontSize="22" color="#ffffff" text="0/1"/>
+    <richtext id="n15_hpp3" name="finished" xy="868,622" size="122,32" fontSize="22" color="#ffffff" text="完成次数0/6"/>
+    <component id="n16_hpp3" name="closeBtn" src="hpp3t" fileName="Components/closebtn_yuan.xml" xy="1201,31"/>
+    <component id="n17_hpp3" name="refresh" src="hpp3u" fileName="Components/tybtn1.xml" xy="589,619"/>
+    <component id="n23_qmgd" name="taskList" src="qmgd28" fileName="Components/taskList.xml" xy="89,77" size="1156,535"/>
+    <component id="n24_ycsi" name="gxhd" src="ycsi2b" fileName="Components/gxhd.xml" xy="0,0" visible="false"/>
+    <graph id="n26_qeaz" name="dialogModel" xy="0,0" size="1344,750" visible="false" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff"/>
+    <component id="n25_qeaz" name="dialog" src="qeaz2d" fileName="Components/dialog.xml" xy="503,175" size="400,400" visible="false"/>
+    <component id="n27_njtv" name="notimes" src="njtv2h" fileName="Components/noTimes.xml" xy="503,216" visible="false"/>
+  </displayList>
+</component>

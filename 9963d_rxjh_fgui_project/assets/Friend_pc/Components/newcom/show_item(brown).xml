@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64">
+  <controller name="isBind" exported="true" pages="0,绑定,1,未绑定" selected="0"/>
+  <controller name="选中" exported="true" pages="0,未选中,1,选中" selected="0"/>
+  <displayList>
+    <component id="n3_rlrv" name="targetClick" src="bojeiu" fileName="Components/tongyong/ScaleButton.xml" pkg="fgihxfye" xy="0,0" size="64,64">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <loader id="n4_u13q" name="Image_bg" xy="0,1" pivot="0.5,0.5" size="64,64" url="ui://s7gyh5sveoqr1c" align="right" fill="scaleFree" clearOnPublish="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n5_u13q" name="Image_icon" xy="4,5" pivot="0.5,0.5" size="56,54" url="ui://twx3ya3em2wevl2" align="right" fill="scaleFree" useResize="true" clearOnPublish="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n9_jo9b" name="Image_bind" xy="2,43" size="22,19" visible="false" url="ui://s7gyh5sveoqr1z" fill="scale">
+      <gearDisplay controller="isBind" pages="0"/>
+      <relation target="" sidePair="left-left,bottom-bottom,rightext-left,leftext-left"/>
+    </loader>
+    <component id="n13_lppm" name="ContentItem" src="bojeiv" fileName="Components/tongyong/Node.xml" pkg="fgihxfye" xy="0,0" size="64,64"/>
+    <text id="n7_u13q" name="Text_count" xy="52,42" pivot="1,0" size="12,23" fontSize="15" color="#ffffff" align="right" strokeColor="#000000" autoClearText="true" text="0">
+      <relation target="" sidePair="right-right,bottom-bottom,rightext-left,leftext-left"/>
+    </text>
+    <image id="n12_lppm" name="n12" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="-3,-3" size="70,70">
+      <gearDisplay controller="选中" pages="1"/>
+    </image>
+  </displayList>
+</component>

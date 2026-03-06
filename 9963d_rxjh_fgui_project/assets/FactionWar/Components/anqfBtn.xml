@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="415,52" extention="Button">
+  <displayList>
+    <loader id="n0_k77d" name="n2" xy="0,0" size="415,52" url="ui://sgmta2jck77dn" fill="scaleFree"/>
+    <text id="n1_k77d" name="btnfont1" xy="2,8" pivot="0.5,0.5" size="412,34" fontSize="24" color="#00ff00" align="center" autoSize="none" text="安全复活"/>
+  </displayList>
+  <Button/>
+</component>

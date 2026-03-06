@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImage="ui://p8mjxubrowd7dv7o" designImageOffsetX="-2" designImageAlpha="100">
+  <displayList>
+    <graph id="n328_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n324_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,50">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n307_qhgz" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n326_kra4" name="bg_left" src="owd7dv7l" fileName="Images/di_panel.png" xy="177,118" size="174,565">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n327_kra4" name="bg_right" src="owd7dv7l" fileName="Images/di_panel.png" xy="359,167" size="786,515">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n309_gqfi" name="costFilterList" xy="360,121" size="789,42" layout="row" overflow="scroll" scrollBarFlags="128" margin="0,0,3,0" defaultItem="ui://p8mjxubrseb1v6o" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n310_gqfi" name="pageList" xy="179,122" size="172,558" overflow="scroll" scrollBarFlags="128" lineGap="-1" defaultItem="ui://p8mjxubrbxaz3q" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n311_seb1" name="storeList" xy="360,168" size="784,513" layout="flow_hz" overflow="scroll" margin="4,4,4,4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://p8mjxubrcym74q" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n313_seb1" name="title" xy="667,78" pivot="0.5,0.5" anchor="true" size="76,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" singleLine="true" text="百宝阁">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n320_ojv2" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="174,694" size="0,0"/>
+  </displayList>
+</component>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="5i0v372f">
+  <resources>
+    <component id="nojs0" name="AuctionRootPanel.xml" path="/" exported="true"/>
+    <image id="nojs1" name="arrow_up.png" path="/Images/"/>
+    <image id="nojs2" name="arrow_right.png" path="/Images/"/>
+    <image id="nojs3" name="star.png" path="/Images/"/>
+    <image id="nojs4" name="di.png" path="/Images/" scale="9grid" scale9grid="7,7,13,17" duplicatePadding="true"/>
+    <component id="nojs8" name="cbx_item.xml" path="/Components/Buy/"/>
+    <component id="nojs9" name="cbx_popup.xml" path="/Components/Buy/"/>
+    <component id="nojsa" name="cbx.xml" path="/Components/Buy/" exported="true"/>
+    <image id="nojsb" name="arrow.png" path="/Images/"/>
+    <image id="nojsc" name="neirongDI.png" path="/Images/" scale="9grid" scale9grid="6,6,0,1" duplicatePadding="true"/>
+    <image id="nojsd" name="split.png" path="/Images/"/>
+    <image id="nojse" name="ditu2.png" path="/Images/" scale="9grid" scale9grid="4,4,1,1" duplicatePadding="true"/>
+    <component id="nojsf" name="item_paiMai.xml" path="/Components/Buy/"/>
+    <component id="nojsg" name="Item_paiMai_Item_root.xml" path="/Components/Buy/"/>
+    <component id="mqpjh" name="Item_listlift_child.xml" path="/Components/Buy/" exported="true"/>
+    <component id="mqpji" name="AuctionBuyPanel.xml" path="/" exported="true"/>
+    <component id="rxpmj" name="item_listleft_parent.xml" path="/Components/Buy/" exported="true"/>
+    <component id="q8irn" name="item_list_consignment.xml" path="/Components/Consignment/"/>
+    <component id="q8iro" name="AuctionConsignMentPanel.xml" path="/" exported="true"/>
+    <component id="q8irp" name="item_record.xml" path="/Components/Record/"/>
+    <component id="q8irq" name="AuctionRecordPanel.xml" path="/" exported="true"/>
+    <component id="q8irr" name="TipJingjiaPanel.xml" path="/" exported="true"/>
+    <image id="q8irs" name="寄售界面-标注图.png" path="/Components/Buy/"/>
+    <component id="q8irt" name="cbx_jingjia_item.xml" path="/Components/Buy/"/>
+    <component id="q8iru" name="cbx_jingjia_popup.xml" path="/Components/Buy/"/>
+    <component id="q8irv" name="cbx_jingjia.xml" path="/Components/Buy/" exported="true"/>
+    <component id="q8irw" name="TipConsignmentPanel.xml" path="/" exported="true"/>
+    <image id="q8irx" name="寄售1-标注图.png" path="/Components/Buy/"/>
+    <component id="q8iry" name="list_bag_item.xml" path="/Components/Buy/"/>
+    <component id="tmr612" name="TipJiShouPanel.xml" path="/" exported="true"/>
+    <component id="qa9y14" name="Item_tab.xml" path="/Components/Buy/"/>
+    <component id="qa9y15" name="item_Button.xml" path="/Components/Buy/"/>
+    <image id="o4ex16" name="cell_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="3,3,1,1"/>
+    <component id="o4ex17" name="checkBox.xml" path="/Components/" exported="true"/>
+    <component id="o4ex18" name="btn_prev.xml" path="/Components/" exported="true"/>
+    <component id="o4ex19" name="btn_next.xml" path="/Components/" exported="true"/>
+    <component id="o4ex1a" name="btn_max.xml" path="/Components/" exported="true"/>
+    <component id="usy11b" name="TipLastJiShouPanel.xml" path="/" exported="true"/>
+    <component id="d2d61c" name="btn_prev_fast.xml" path="/Components/" exported="true"/>
+    <component id="d2d61d" name="btn_next_fast.xml" path="/Components/" exported="true"/>
+    <component id="rg2r1f" name="TipOncePricePanel.xml" path="/" exported="true"/>
+    <component id="c1cp1g" name="switchSearch.xml" path="/Components/Buy/" exported="true"/>
+    <image id="7c351j" name="img_btn_normal.png" path="/Images/"/>
+    <image id="7c351k" name="img_item_kuang.png" path="/Images/"/>
+    <image id="7c351l" name="img_btn_selected.png" path="/Images/"/>
+    <image id="7c351m" name="img_input_di.png" path="/Images/" scale="9grid" scale9grid="6,6,12,12"/>
+    <image id="7c351n" name="img_dlg_di.png" path="/Images/" scale="9grid" scale9grid="6,6,12,12"/>
+    <image id="lt7h1p" name="img_di.png" path="/Images/" scale="9grid" scale9grid="6,6,12,12"/>
+    <component id="r8pb1q" name="btn_JingJia.xml" path="/Components/"/>
+    <component id="r8pb1r" name="btn_search.xml" path="/Components/"/>
+    <component id="r8pb1s" name="tab_right.xml" path="/Components/"/>
+    <image id="r8pb1t" name="close.png" path="/Images/"/>
+    <image id="owd71v" name="di_2.png" path="/Images/" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="owd71w" name="di_3.png" path="/Images/" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="owd722" name="bg.png" path="/Images/"/>
+    <image id="owd723" name="kuang.png" path="/Images/"/>
+    <image id="owd724" name="itemSelect.png" path="/Images/" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="iqqn25" name="img_loading.png" path="/Images/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

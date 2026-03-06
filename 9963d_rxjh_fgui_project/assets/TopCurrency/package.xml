@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="rxwfe61p">
+  <resources>
+    <component id="nnix0" name="TopCurrencyPanel.xml" path="/" exported="true"/>
+    <component id="nnix1" name="CurrencyItem.xml" path="/Components/"/>
+    <image id="nnix2" name="Image_currency_bg.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

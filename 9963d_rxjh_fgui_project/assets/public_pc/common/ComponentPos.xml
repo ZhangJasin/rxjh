@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="70,70">
+  <controller name="equipPosDI" exported="true" pages="1,耳环,2,戒指,3,项链,4,鞋子,8,衣服,10,护臂,11,通用,12,武器" selected="0"/>
+  <controller name="diKuangKind" exported="true" pages="0,特殊,1,普通,2,无" selected="1"/>
+  <displayList>
+    <loader id="n55_mzzl" name="bg_di" xy="-4,-4" pivot="0.5,0.5" size="78,78" url="ui://qa9a7ritemvc4h" align="center" vAlign="middle" fill="scaleFree">
+      <gearSize controller="diKuangKind" pages="0" values="78,78,1,1" default="78,78,1,1"/>
+      <gearIcon controller="diKuangKind" pages="0,1,2" values="ui://qa9a7ritplaq5f|ui://qa9a7ritemvc4h|"/>
+      <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </loader>
+    <loader id="n61_mzzl" name="bg_equip_kind" xy="10,4" pivot="0.5,0.5" size="50,61" url="ui://brz7yunlemvc4b" align="center" vAlign="middle" fill="scale">
+      <gearIcon controller="equipPosDI" pages="2,3,4,8,10,11,12" values="ui://brz7yunlemvc4d|ui://brz7yunlemvc4e|ui://brz7yunlemvc4f|ui://brz7yunlemvc4g|ui://brz7yunlemvc4c||ui://brz7yunlemvc4q" default="ui://brz7yunlemvc4b"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+</component>

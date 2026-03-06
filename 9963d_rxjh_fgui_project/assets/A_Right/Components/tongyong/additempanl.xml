@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="240,300" bgColor="#ff0000">
+  <displayList>
+    <image id="n3_o4l6" name="n3" src="oqrps" fileName="Images/0tongyong/tipsdi.png" xy="0,0" size="240,300"/>
+    <list id="n6_zdrm" name="itemlist" xy="0,0" size="240,300" overflow="scroll" defaultItem="ui://h3jungk0oqrpt" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

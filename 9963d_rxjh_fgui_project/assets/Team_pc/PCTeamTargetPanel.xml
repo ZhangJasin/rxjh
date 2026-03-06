@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,786" opaque="false">
+  <displayList>
+    <component id="n34_hcvo" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="512,384" pivot="0.5,0.5" anchor="true" size="412,302">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n42_hcvo" name="bg2" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="512,420" pivot="0.5,0.5" anchor="true" size="395,215">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n36_hcvo" name="bg3" src="emvc57" fileName="image/img_info_di.png" pkg="qa9a7rit" xy="512,290" pivot="0.5,0.5" anchor="true" size="395,34" group="n28_cn6p">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n19_cn6p" name="info_name" xy="366,290" pivot="0.5,0.5" anchor="true" size="44,20" group="n28_cn6p" fontSize="12" color="#ddfdd9" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="目标">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n20_cn6p" name="info_job" xy="461,290" pivot="0.5,0.5" anchor="true" size="44,29" group="n28_cn6p" fontSize="12" color="#ddfdd9" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="等级">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n21_cn6p" name="info_zhenying" xy="551,290" pivot="0.5,0.5" anchor="true" size="44,20" group="n28_cn6p" fontSize="12" color="#ddfdd9" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="人数">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n22_cn6p" name="info_hanghui" xy="655,290" pivot="0.5,0.5" anchor="true" size="44,20" group="n28_cn6p" fontSize="12" color="#ddfdd9" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="操作">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n37_hcvo" name="line1" src="hcvo5p" fileName="image/line_cut.png" pkg="qa9a7rit" xy="415,290" pivot="0.5,0.5" anchor="true" group="n28_cn6p">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n40_hcvo" name="line2" src="hcvo5p" fileName="image/line_cut.png" pkg="qa9a7rit" xy="505,290" pivot="0.5,0.5" anchor="true" group="n28_cn6p">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n41_hcvo" name="line3" src="hcvo5p" fileName="image/line_cut.png" pkg="qa9a7rit" xy="595,290" pivot="0.5,0.5" anchor="true" group="n28_cn6p">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <group id="n28_cn6p" name="top" xy="314,273" size="395,34"/>
+    <component id="n35_hcvo" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="709,252">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_vjv7" name="text_title" xy="512,252" pivot="0.5,0.5" anchor="true" size="36,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" text="目标">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n10_fmfy" name="list_target" xy="512,420" pivot="0.5,0.5" anchor="true" size="390,210" overflow="scroll" defaultItem="ui://y890q37scn6p2m" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+    </list>
+  </displayList>
+</component>

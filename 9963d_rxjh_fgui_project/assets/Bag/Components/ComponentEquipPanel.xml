@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="504,572" designImage="ui://dak5wnw9plaqvor" designImageOffsetX="-176" designImageOffsetY="-110" designImageAlpha="0">
+  <controller name="isShowClothChoseTip" pages="0,显示tip,1,不显示tip" selected="0"/>
+  <controller name="PanelKind" exported="true" pages="0,玩家自己面板,1,其它玩家面板" selected="0"/>
+  <controller name="titleType" pages="1,无,0,特效,2,文本,4,序列帧" selected="0"/>
+  <controller name="isShowTitle" alias="是否显示称号" exported="true" pages="0,显示,1,不显示" selected="0"/>
+  <displayList>
+    <image id="n13_kvla" name="img_scheme" src="qjli19" fileName="image/role_bg_di.png" pkg="st7dgeqq" xy="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n22_p70y" name="Node_attach_b" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="-4,572" size="0,0">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <component id="n0_kvla" name="pos1" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="26,98" size="60,60" group="n6_kvla" controller="equipPosDI,12,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n1_kvla" name="pos2" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="26,176" size="60,60" group="n6_kvla" controller="equipPosDI,8,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n2_kvla" name="pos3" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="26,254" size="60,60" group="n6_kvla" controller="equipPosDI,1,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n3_kvla" name="pos4" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="26,332" size="60,60" group="n6_kvla" controller="equipPosDI,2,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n4_kvla" name="pos5" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="26,410" size="60,60" group="n6_kvla" controller="equipPosDI,10,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n5_kvla" name="pos14" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="26,488" size="60,60" group="n6_kvla" controller="equipPosDI,8,diKuangKind,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n6_kvla" name="leftLayout" xy="26,98" size="60,450" advanced="true" layout="vt" lineGap="18" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n24_ld2e" name="pos6" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="420,98" size="60,60" group="n12_kvla" controller="equipPosDI,8,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n7_kvla" name="pos11" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="420,176" size="60,60" group="n12_kvla" controller="equipPosDI,3,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n8_kvla" name="pos10" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="420,254" size="60,60" group="n12_kvla" controller="equipPosDI,1,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n9_kvla" name="pos9" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="420,332" size="60,60" group="n12_kvla" controller="equipPosDI,2,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n10_kvla" name="pos8" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="420,410" size="60,60" group="n12_kvla" controller="equipPosDI,10,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n11_kvla" name="pos7" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="420,488" size="60,60" group="n12_kvla" controller="equipPosDI,4,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n12_kvla" name="rightLayout" xy="420,98" size="60,450" advanced="true" layout="vt" lineGap="18" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n17_kvla" name="pos12" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="109,488" size="60,60" controller="equipPosDI,11,diKuangKind,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n23_ld2e" name="pos13" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="338,488" size="60,60" controller="equipPosDI,8,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n21_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="-4,572" size="0,0">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <graph id="n14_kvla" name="model_root" xy="252,432" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <component id="n15_kvla" name="panel_touch" src="mzzl21" fileName="Components/panel_Touch.xml" xy="106,173" size="285,301">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n39_plaq" name="text_title" xy="186,83" size="132,39" group="n40_plaq" fontSize="28" color="#ffffff" align="center" vAlign="middle" strokeColor="#000000" singleLine="true" autoClearText="true" text="测试称号1">
+      <gearDisplay controller="titleType" pages="2"/>
+    </text>
+    <graph id="n38_plaq" name="model_title" xy="252,102" pivot="0.5,0.5" anchor="true" size="100,100" group="n40_plaq" blend="screen" lineSize="0" lineColor="#0033ff00" fillColor="#0033ff00">
+      <gearDisplay controller="titleType" pages="0"/>
+    </graph>
+    <component id="n41_plaq" name="movie_node" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="247,97" size="10,10" group="n40_plaq">
+      <gearDisplay controller="titleType" pages="4"/>
+    </component>
+    <group id="n40_plaq" name="titleGroup" xy="186,52" size="132,100" advanced="true">
+      <gearDisplay controller="isShowTitle" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n31_m76o" name="btn_cloth_1" src="9ph7v7b" fileName="Components/btn_cloth_chose.xml" xy="182,387" group="n37_m76o" visible="false" controller="kind,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n35_m76o" name="btn_cloth_2" src="9ph7v7b" fileName="Components/btn_cloth_chose.xml" xy="245,387" group="n37_m76o" visible="false" controller="kind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n37_m76o" name="tip" xy="182,387" size="119,56" visible="false" advanced="true">
+      <gearDisplay controller="isShowClothChoseTip" pages="0"/>
+      <gearDisplay2 controller="PanelKind" pages="0" condition="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n25_ld2e" name="btn_cloak_switch" src="ld2ev74" fileName="Components/btnSchemeSwitch.xml" xy="27,19" visible="false">
+      <gearDisplay controller="PanelKind" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n42_wodv" name="pos26" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="109,411" size="60,60" controller="equipPosDI,11,diKuangKind,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n43_wodv" name="pos27" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="338,411" size="60,60" controller="equipPosDI,11,diKuangKind,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+  <transition name="openSwitchCloth">
+    <item time="0" type="Alpha" target="n37_m76o" tween="true" startValue="0" endValue="0" duration="3" ease="Custom" customEase=""/>
+    <item time="0" type="XY" target="n37_m76o" tween="true" startValue="55.5,387" endValue="180.5,387" duration="6" ease="Custom" customEase=""/>
+    <item time="3" type="Alpha" target="n37_m76o" tween="true" startValue="0" endValue="1" duration="3" ease="Custom" customEase=""/>
+    <item time="6" type="Shake" target="n31_m76o" value="1,0.1"/>
+    <item time="6" type="Shake" target="n35_m76o" value="1,0.1"/>
+  </transition>
+</component>

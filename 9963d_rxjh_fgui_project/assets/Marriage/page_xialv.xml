@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1007,646">
+  <controller name="xialv" exported="true" pages="0,默认,1,情缘,2,金兰,3,结义" selected="0"/>
+  <controller name="skilltips" exported="true" pages="0,,1," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="显示"/>
+  </controller>
+  <displayList>
+    <component id="n0_la2y" name="default" src="la2yk" fileName="Components/xialv/xialv_default.xml" xy="0,0">
+      <gearDisplay controller="xialv" pages="0"/>
+    </component>
+    <component id="n1_la2y" name="jieyi" src="la2yn" fileName="Components/xialv/xialv_jieyi.xml" xy="-1,0">
+      <gearDisplay controller="xialv" pages="3"/>
+    </component>
+    <component id="n2_la2y" name="jinlan" src="la2yo" fileName="Components/xialv/xialv_jinlan.xml" xy="0,0">
+      <gearDisplay controller="xialv" pages="2"/>
+    </component>
+    <component id="n3_la2y" name="qinyuan" src="la2ym" fileName="Components/xialv/xialv_qinyuan.xml" xy="0,0">
+      <gearDisplay controller="xialv" pages="1"/>
+    </component>
+    <graph id="n9_shks" name="graph_fxialv_nan" xy="453,520" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen">
+      <gearDisplay controller="xialv" pages="1,2,3"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <graph id="n10_shks" name="graph_fxialv_nv" xy="271,520" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen">
+      <gearDisplay controller="xialv" pages="1,2,3"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <component id="n5_gwga" name="jieyuan" src="gwga3h" fileName="Components/xialv/page_jieyuan.xml" xy="-163,-50" pivot="0.5,0.5" visible="false"/>
+    <component id="n6_gwga" name="jieyuan2" src="gwga3i" fileName="Components/xialv/page_jieyuan2.xml" xy="-163,-50" visible="false"/>
+    <component id="n7_gwga" name="qinmufu" src="c1p917" fileName="Components/xialv/page_giftItem.xml" xy="-163,-50" visible="false"/>
+    <component id="n8_shks" name="skilltips" src="shks3j" fileName="Components/xialv/skillTips.xml" xy="-163,-50">
+      <gearDisplay controller="skilltips" pages="1"/>
+    </component>
+    <image id="n11_ggv0" name="n11" src="ggv03k" fileName="images/marriage/nan.png" xy="209,207">
+      <gearDisplay controller="xialv" pages="0"/>
+    </image>
+    <image id="n12_ggv0" name="n12" src="ggv03l" fileName="images/marriage/nv.png" xy="385,209">
+      <gearDisplay controller="xialv" pages="0"/>
+    </image>
+  </displayList>
+</component>

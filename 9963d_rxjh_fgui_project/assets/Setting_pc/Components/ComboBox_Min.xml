@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="106,21" extention="ComboBox">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_tqs7" name="n0" src="emvc54" fileName="image/comobox_frame.png" pkg="qa9a7rit" xy="0,0" size="106,21">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_tqs7" name="n1" src="emvc54" fileName="image/comobox_frame.png" pkg="qa9a7rit" xy="0,0" size="106,21" color="#cccccc">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_tqs7" name="n2" src="emvc54" fileName="image/comobox_frame.png" pkg="qa9a7rit" xy="0,0" size="106,21">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n6_11iqk" name="n6" src="emvc52" fileName="image/combobox_arrow_bg.png" pkg="qa9a7rit" xy="89,3" size="16,16" aspect="true">
+      <relation target="" sidePair="height-height,middle-middle,right-right"/>
+    </image>
+    <image id="n5_tqs7" name="n5" src="emvc51" fileName="image/combobox_arrow.png" pkg="qa9a7rit" xy="91,7">
+      <relation target="" sidePair="height-height,middle-middle,right-right"/>
+    </image>
+    <text id="n3_tqs7" name="title" xy="3,1" size="85,19" fontSize="12" color="#7cc3b3" align="center" vAlign="middle" autoSize="none" singleLine="true" text="循环释放">
+      <relation target="" sidePair="width-width,height-height,middle-middle"/>
+    </text>
+  </displayList>
+  <ComboBox dropdown="ui://o9dt5fs4f2ul5j"/>
+</component>

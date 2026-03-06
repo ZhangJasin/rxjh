@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="10,10">
+  <controller name="state" pages="0,,1,,2," selected="2">
+    <remark page="0" value="无"/>
+    <remark page="1" value="有"/>
+    <remark page="2" value="满"/>
+  </controller>
+  <displayList>
+    <loader id="n0_bbev" name="n0" xy="0,0" size="10,10" url="ui://xwp5ackogpqz59">
+      <gearIcon controller="state" pages="1,2" values="ui://xwp5ackogpqz58|ui://xwp5ackogpqz59" default="ui://xwp5ackogpqz57"/>
+    </loader>
+  </displayList>
+</component>

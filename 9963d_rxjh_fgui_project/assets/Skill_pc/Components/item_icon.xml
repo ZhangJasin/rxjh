@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,90" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n12_dgah" name="skill_bg" src="emvc3q" fileName="image/icon_item0.png" pkg="qa9a7rit" xy="40,35" pivot="0.5,0.5" anchor="true" size="64,64"/>
+    <loader id="n2_eion" name="skill_icon" xy="40,35" pivot="0.5,0.5" anchor="true" size="60,60" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <graph id="n8_hb5x" name="skill_mask" xy="40,55" pivot="0.5,0.5" anchor="true" size="60,20" visible="false" alpha="0.7" type="rect" fillColor="#ff000000"/>
+    <richtext id="n11_pdyt" name="text_condition" xy="40,55" pivot="0.5,0.5" anchor="true" size="60,20" fontSize="12" color="#ff0000" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="级别:10"/>
+    <text id="n9_nd1w" name="text_name" xy="40,80" pivot="0.5,0.5" anchor="true" size="82,20" fontSize="12" color="#cae5d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="名字名字名字名"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

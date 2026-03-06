@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="290,30">
+  <displayList>
+    <graph id="n4_rg1t" name="n4" xy="0,0" size="290,30" type="rect" fillColor="#80000000"/>
+    <text id="n0_rg1t" name="index" xy="0,0" size="30,30" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="11"/>
+    <text id="n1_rg1t" name="name" xy="50,0" size="120,30" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" text="名字"/>
+    <text id="n2_rg1t" name="score" xy="180,0" size="94,30" fontSize="14" color="#ffffff" align="right" vAlign="middle" autoSize="none" text="12345678911"/>
+  </displayList>
+</component>

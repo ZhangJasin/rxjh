@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1007,646">
+  <controller name="tips" exported="true" pages="0,关闭tips,1,打开tips" selected="0"/>
+  <controller name="yuanfen" exported="true" pages="0,关闭缘分界面,1,打开缘分界面" selected="0"/>
+  <displayList>
+    <component id="n0_la2y" name="n0" src="la2yi" fileName="Components/xialv/default_jieyuan.xml" xy="722,282"/>
+    <image id="n4_la2y" name="n4" src="la2yl" fileName="images/default_backGround.png" xy="10,105"/>
+    <component id="n7_la2y" name="btn_tips" src="la2y3" fileName="Components/common/btn_wenhao.xml" xy="684,108">
+      <gearDisplay controller="tips" pages="0,1"/>
+    </component>
+    <component id="n9_la2y" name="page_xunyuan" src="la2yg" fileName="Components/xialv/page_xunyuan.xml" xy="-156,-45">
+      <gearDisplay controller="yuanfen" pages="1"/>
+    </component>
+    <component id="n5_la2y" name="btn_findYuanfen" src="la2yf" fileName="Components/common/btn_green.xml" xy="780,580" group="n11_eoqr">
+      <gearDisplay controller="yuanfen" pages="0,1"/>
+    </component>
+    <text id="n6_la2y" name="n6" xy="780,580" size="159,53" group="n11_eoqr" fontSize="24" color="#ffff00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="寻找缘分"/>
+    <group id="n11_eoqr" name="n11" xy="780,580" size="159,53"/>
+  </displayList>
+</component>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="648,215">
+  <displayList>
+    <component id="n0_juj0" name="title" src="f2ul4r" fileName="Components/title_label.xml" xy="243,15" size="161,23">
+      <Label title="药水"/>
+    </component>
+    <graph id="n12_fskg" name="n12" xy="14,55" size="620,69" group="n6_juj0" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <list id="n4_juj0" name="hp_list" xy="98,60" size="534,59" group="n6_juj0" layout="flow_hz" selectionMode="multipleSingleClick" overflow="hidden" lineGap="15" lineItemCount="4" defaultItem="ui://o9dt5fs4f2ul57" autoItemSize="true" vAlign="middle" autoClearItems="true">
+      <item title="金疮药（小）"/>
+      <item title="金疮药（中）"/>
+      <item title="金疮药（大）"/>
+      <item title="金疮药（特）"/>
+      <item title="金疮药（超）"/>
+      <item title="秘制金疮药"/>
+      <item title="药仙金疮药"/>
+      <item title="皇级金疮药"/>
+    </list>
+    <text id="n5_juj0" name="hp_title" xy="36,90" pivot="0,0.5" anchor="true" size="34,23" group="n6_juj0" fontSize="15" color="#fcf1bf" align="center" vAlign="middle" text="红药"/>
+    <group id="n6_juj0" name="hp" xy="14,55" size="620,69"/>
+    <graph id="n13_fskg" name="n13" xy="14,139" size="620,69" group="n10_juj0" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <list id="n8_juj0" name="mp_list" xy="98,144" size="534,59" group="n10_juj0" layout="flow_hz" selectionMode="multipleSingleClick" overflow="hidden" lineGap="14" lineItemCount="4" defaultItem="ui://o9dt5fs4f2ul57" autoItemSize="true" autoClearItems="true">
+      <item title="金疮药（小）"/>
+      <item title="金疮药（中）"/>
+      <item title="金疮药（大）"/>
+      <item title="金疮药（特）"/>
+      <item title="金疮药（超）"/>
+      <item title="秘制金疮药"/>
+      <item title="药仙金疮药"/>
+      <item title="皇级金疮药"/>
+    </list>
+    <text id="n9_juj0" name="mp_title" xy="36,174" pivot="0,0.5" anchor="true" size="34,23" group="n10_juj0" fontSize="15" color="#fcf1bf" align="center" vAlign="middle" text="蓝药"/>
+    <group id="n10_juj0" name="mp" xy="14,139" size="620,69"/>
+    <component id="n11_nw2o" name="not_select_all" src="f2ul57" fileName="Components/tog_select.xml" xy="499,15">
+      <Button title="全不拾取"/>
+    </component>
+  </displayList>
+</component>

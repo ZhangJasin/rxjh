@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="8pthu2lw">
+  <resources>
+    <component id="nyalj" name="ChatPanel.xml" path="/" exported="true"/>
+    <image id="vgb0v" name="image_chat_select.png" path="/Images/" exported="true"/>
+    <component id="vgb0w" name="Button_channel.xml" path="/Components/"/>
+    <component id="dssqy" name="ChatItemRight.xml" path="/Components/" exported="true"/>
+    <component id="dssq12" name="ChatItemLeft.xml" path="/Components/" exported="true"/>
+    <image id="dssq13" name="btn_chat_emoji.png" path="/Images/" exported="true"/>
+    <image id="dssq14" name="btn_chat_pos.png" path="/Images/" exported="true"/>
+    <image id="dssq15" name="btn_chat_bag.png" path="/Images/" exported="true"/>
+    <image id="dssq17" name="btn_chat_hide.png" path="/Images/" exported="true"/>
+    <image id="dssq19" name="btn_chat_shout.png" path="/Images/" exported="true"/>
+    <component id="rlrvv50" name="ChatSysNode.xml" path="/Components/" exported="true"/>
+    <component id="giaiv51" name="ChatExItem.xml" path="/Components/"/>
+    <component id="q9lsv7n" name="ChatExShoutItem.xml" path="/Components/"/>
+    <image id="q9lsv7o" name="shout_12.png" path="/Images/" exported="true"/>
+    <image id="q9lsv7p" name="shout_13.png" path="/Images/" exported="true"/>
+    <image id="wi45v7v" name="btn_chat_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="10,12,0,24" qualityOption="source"/>
+    <image id="wi45v7w" name="chat_input_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="3,12,0,24" qualityOption="source"/>
+    <image id="wi45v7x" name="image_chat_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="4,13,0,26"/>
+    <component id="e7ebv80" name="ChatNotice.xml" path="/Components/"/>
+    <image id="m0wqv81" name="chat_line.png" path="/Images/"/>
+    <image id="m0wqv82" name="bg_bottom.png" path="/Images/" scale="9grid" scale9grid="20,5,40,72"/>
+    <image id="m0wqv83" name="bg_emoji.png" path="/Images/"/>
+    <image id="fyl5fve1" name="main_player_lv_bg.png" path="/Images/"/>
+    <image id="kx8cfve2" name="53b0920f-3774-4dae-9805-8d09eb3a82f5.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

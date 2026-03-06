@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="110,34" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="2"/>
+  <controller name="isSelected" pages="0,选中,1,未选中" selected="1"/>
+  <controller name="buttonName" exported="true" pages="0,热卖商品,1,珍惜道具,2,必买推荐,3,稀有道具" selected="0"/>
+  <displayList>
+    <image id="n6_kra4" name="bg_unselected" src="emvc4y" fileName="image/btn_green_normal2.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="isSelected" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n7_kra4" name="bg_selected" src="emvc50" fileName="image/btn_green_selected2.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="isSelected" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3_bf0g" name="btn_name" xy="55,17" pivot="0.5,0.5" anchor="true" size="108,32" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#c5dccc" align="center" vAlign="middle" autoSize="none" strokeColor="#28422f" singleLine="true" text="热卖商品">
+      <gearColor controller="isSelected" pages="0,1" values="#ffd86c,#28422f|#c5dccc,#28422f"/>
+      <gearText controller="buttonName" pages="1,2,3" values="珍惜道具|必买推荐|稀有道具" default="热卖商品"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="280,450">
+  <controller name="当前属性有数据否" pages="0,无,1,有" selected="0"/>
+  <displayList>
+    <image id="n1_eoqr" name="bg1" src="eoqr1k" fileName="images/tips底.png" xy="10,42" size="260,180"/>
+    <image id="n0_eoqr" name="bg2" src="eoqr1k" fileName="images/tips底.png" xy="10,261" size="260,180"/>
+    <image id="n2_eoqr" name="n2" src="eoqr1l" fileName="images/花纹1.png" xy="210,10"/>
+    <image id="n3_eoqr" name="n3" src="eoqr1l" fileName="images/花纹1.png" xy="210,230"/>
+    <image id="n4_eoqr" name="n4" src="eoqr1m" fileName="images/花纹2.png" xy="30,10"/>
+    <image id="n5_eoqr" name="n5" src="eoqr1m" fileName="images/花纹2.png" xy="30,230"/>
+    <text id="n6_eoqr" name="n6" xy="76,7" size="127,29" fontSize="20" color="#ffff00" align="center" autoSize="none" bold="true" text="当前属性"/>
+    <text id="n7_eoqr" name="n7" xy="76,227" size="127,29" fontSize="20" color="#ffff00" align="center" autoSize="none" bold="true" text="下级属性"/>
+    <text id="n10_eoqr" name="textShow_wu" xy="86,91" size="105,78" fontSize="58" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="无">
+      <gearDisplay controller="当前属性有数据否" pages="0"/>
+    </text>
+    <richtext id="n13_gwga" name="textLabel_1" xy="35,42" size="213,181" fontSize="20" color="#ffff00" vAlign="middle" autoSize="none" text=""/>
+    <richtext id="n14_gwga" name="textLabel_2" xy="35,261" size="213,181" fontSize="20" color="#ffff00" vAlign="middle" autoSize="none" text="生命值:100&#xA;内力值:200&#xA;命中:1"/>
+  </displayList>
+</component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,45" pivot="0.5,0.5" extention="Button">
+  <displayList>
+    <text id="n0_g5t3" name="gonow" xy="0,0" size="60,45" fontSize="16" color="#00ff00" align="center" vAlign="middle" autoSize="none" underline="true" text="前往"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>

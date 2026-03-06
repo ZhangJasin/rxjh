@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="373,516" opaque="false">
+  <displayList>
+    <component id="n0_la9j" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="0,0" size="349,516">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n1_la9j" name="text_title" xy="156,7" size="36,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" singleLine="true" autoClearText="true" text="属性">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n3_la9j" name="btn_tab_1" src="n055v" fileName="Components/btn_tab.xml" xy="345,44" size="28,60">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n4_la9j" name="btn_tab_2" src="n055v" fileName="Components/btn_tab.xml" xy="345,106" size="28,60">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n5_la9j" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="330,20">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n8_la9j" name="node_panel" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="7,39" size="334,467">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

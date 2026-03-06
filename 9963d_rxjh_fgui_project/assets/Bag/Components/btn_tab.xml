@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="40,90">
+  <controller name="isSelected" exported="true" pages="0,选中,1,未选中" selected="0"/>
+  <displayList>
+    <image id="n0_kvla" name="n0" src="zah9v4e" fileName="image/toggle_right_select.png" pkg="st7dgeqq" xy="0,0" size="40,90">
+      <gearDisplay controller="isSelected" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_kvla" name="n1" src="zah9v4f" fileName="image/toggle_right_unselect.png" pkg="st7dgeqq" xy="0,0" size="40,90">
+      <gearDisplay controller="isSelected" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_kvla" name="text_content" xy="0,4" size="33,82" font="ui://st7dgeqq9kdgkvpj" fontSize="22" color="#fced00" align="center" vAlign="middle" leading="-5" autoSize="none" strokeColor="#000000" text="装&#xA;备&#xA;栏">
+      <gearColor controller="isSelected" pages="0,1" values="#fced00,#000000|#cccccc,#000000"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

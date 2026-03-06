@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750">
+  <controller name="lv" pages="0,E,1,D,2,C,3,B,4,A,5,S" selected="0"/>
+  <displayList>
+    <component id="n0_h0oq" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="666,366" pivot="0.5,0.5" anchor="true" size="996,638" group="n26_h0oq">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n44_qa3g" name="n44" src="qa3go" fileName="Images/08.png" xy="174,102" size="982,579" group="n26_h0oq">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n3_h0oq" name="title" xy="641,61" pivot="0.5,0.5" size="48,32" group="n26_h0oq" fontSize="22" color="#ffffff" align="center" vAlign="middle" text="副本">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n40_h0oq" name="closeBtn" src="h0oqi" fileName="Components/closebtn_yuan.xml" xy="1115,52" group="n26_h0oq">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n26_h0oq" name="n26" xy="168,47" size="996,638" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n2_h0oq" name="n2" src="p6qfb3" fileName="Images/05boss/内容底.png" pkg="fgihxfye" xy="183,108" size="272,569" group="n27_h0oq">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n18_h0oq" name="treeList" xy="186,117" size="263,558" group="n27_h0oq" overflow="scroll" autoClearItems="true" treeView="true" indent="40" clickToExpand="1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item url="ui://yaixg5r3h0oqb" level="0"/>
+      <item url="ui://yaixg5r3h0oqa" level="1"/>
+      <item url="ui://yaixg5r3h0oqb" level="0"/>
+      <item url="ui://yaixg5r3h0oqa" level="1"/>
+    </list>
+    <group id="n27_h0oq" name="n27" xy="183,108" size="272,569" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <richtext id="n5_h0oq" name="tzinfo" xy="475,186" size="201,79" group="n28_h0oq" fontSize="24" color="#fff7d1" leading="8" autoSize="none" text="增加挑战次数：&lt;br&gt;副本挑战券数量：">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <image id="n10_h0oq" name="n10" src="km0sa9" fileName="Images/0tongyong/huawen1.png" pkg="fgihxfye" xy="1091,131" group="n28_h0oq">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n11_h0oq" name="n11" src="km0saa" fileName="Images/0tongyong/huawen2.png" pkg="fgihxfye" xy="910,131" group="n28_h0oq">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n16_h0oq" name="btn_jia" src="o2inbd" fileName="Components/05boss/btn_jia.xml" pkg="fgihxfye" xy="637,190" group="n28_h0oq">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n19_h0oq" name="name" xy="968,124" size="162,35" group="n28_h0oq" fontSize="20" color="#ffff00" vAlign="middle" autoSize="none" text="副本名字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n21_h0oq" name="bigName" xy="481,125" size="185,45" group="n28_h0oq" fontSize="28" color="#ffff00" vAlign="middle" autoSize="none" text="副本名字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n22_h0oq" name="n22" src="h0oq8" fileName="Images/通关评分.png" xy="962,186" group="n28_h0oq">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n23_h0oq" name="n23" src="h0oq7" fileName="Images/评分底.png" xy="918,190" group="n28_h0oq">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <loader id="n25_h0oq" name="n25" xy="987,245" size="54,52" group="n28_h0oq" url="ui://yaixg5r3h0oq5" autoSize="true">
+      <gearIcon controller="lv" pages="0,1,2,3,4" values="ui://yaixg5r3h0oq5|ui://yaixg5r3h0oq4|ui://yaixg5r3h0oq3|ui://yaixg5r3h0oq2|ui://yaixg5r3h0oq1" default="ui://yaixg5r3h0oq6"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <component id="n29_h0oq" name="tz" src="h0oqe" fileName="Components/btn.xml" xy="910,607" group="n28_h0oq">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="挑战" selectedTitle="挑战"/>
+    </component>
+    <component id="n30_h0oq" name="sd" src="h0oqf" fileName="Components/saodang.xml" xy="1029,607" group="n28_h0oq">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n39_h0oq" name="itemCount" xy="667,223" size="71,34" group="n28_h0oq" fontSize="24" color="#ffffff" autoSize="none" text="1&#xA;">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n31_h0oq" name="n31" xy="970,350" size="68,24" group="n28_h0oq" fontSize="16" color="#ffffff" text="等级要求">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n32_h0oq" name="lv" xy="995,380" size="24,26" group="n28_h0oq" fontSize="16" color="#ffffff" autoSize="none" text="35&#xA;">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n33_h0oq" name="n33" xy="970,410" size="100,24" group="n28_h0oq" fontSize="16" color="#ffffff" text="剩余挑战次数">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n34_h0oq" name="time" xy="995,439" size="44,26" group="n28_h0oq" fontSize="16" color="#ffffff" autoSize="none" text="1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n35_h0oq" name="n35" xy="970,470" size="68,24" group="n28_h0oq" fontSize="16" color="#ffffff" text="副本奖励">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n37_h0oq" name="n37" xy="677,584" size="213,60" group="n28_h0oq" fontSize="16" color="#ffffff" autoSize="none" text="在有限的时间内尽可能消灭挡在你面前的敌人">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <loader id="n41_h0oq" name="monTx" xy="603,584" size="60,60" group="n28_h0oq" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <component id="n42_h0oq" name="reward" src="h0oqk" fileName="Components/iconItem.xml" xy="995,510" group="n28_h0oq">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n43_h0oq" name="showTip" src="h0oql" fileName="Components/page_tanchuang.xml" xy="0,0" group="n28_h0oq" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n28_h0oq" name="n28" xy="0,0" size="1334,750" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

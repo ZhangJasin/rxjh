@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="tfv1zfb0">
+  <resources>
+    <component id="xp1i0" name="Bar_loading.xml" path="/Components/" exported="true"/>
+    <component id="xp1i1" name="PreLoadPanel.xml" path="/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

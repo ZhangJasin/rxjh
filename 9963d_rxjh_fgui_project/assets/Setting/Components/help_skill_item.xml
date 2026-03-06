@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="232,30" extention="Label">
+  <displayList>
+    <text id="n180_rmnb" name="title" xy="0,0" size="130,30" fontSize="20" color="#fcf1bf" vAlign="middle" autoSize="none" text="自动疾风脚步">
+      <relation target="" sidePair="width-width"/>
+    </text>
+    <component id="n179_rmnb" name="tog" src="rmnbvoj" fileName="Components/tog_switch_mini.xml" xy="130,0">
+      <relation target="" sidePair="right-right"/>
+    </component>
+  </displayList>
+</component>

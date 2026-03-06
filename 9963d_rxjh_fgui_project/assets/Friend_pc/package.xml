@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="hxz346vp">
+  <resources>
+    <component id="wmgr2" name="PCFriendPanel.xml" path="/" exported="true"/>
+    <component id="wmgr3" name="item_friend.xml" path="/Components/" exported="true"/>
+    <image id="wmgr5" name="friend_item_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="10,10,12,12"/>
+    <component id="wmgr6" name="btn_chat.xml" path="/Components/" exported="true"/>
+    <component id="wmgr7" name="item_menu.xml" path="/Components/" exported="true"/>
+    <component id="wmgr8" name="item_chat1.xml" path="/Components/" exported="true"/>
+    <component id="wmgrb" name="item_chat2.xml" path="/Components/" exported="true"/>
+    <image id="xxk3d" name="btn_friend_add.png" path="/Images/" exported="true"/>
+    <image id="xxk3e" name="btn_friend_emoj.png" path="/Images/" exported="true"/>
+    <image id="xxk3f" name="btn_friend_pos.png" path="/Images/" exported="true"/>
+    <component id="xxk3h" name="btn_add.xml" path="/Components/" exported="true"/>
+    <component id="xxk3k" name="btn_emoj.xml" path="/Components/" exported="true"/>
+    <component id="xxk3l" name="btn_pos.xml" path="/Components/" exported="true"/>
+    <component id="fmfyo" name="PCFriendApplyPanel.xml" path="/" exported="true"/>
+    <component id="fmfyp" name="item_menu2.xml" path="/Components/" exported="true"/>
+    <component id="fmfyq" name="item_search.xml" path="/Components/" exported="true"/>
+    <component id="fmfyr" name="btn_addFriend.xml" path="/Components/" exported="true"/>
+    <component id="fmfys" name="btn_refresh.xml" path="/Components/" exported="true"/>
+    <component id="fmfyt" name="btn_search.xml" path="/Components/" exported="true"/>
+    <component id="fmfyu" name="item_apply.xml" path="/Components/" exported="true"/>
+    <component id="fmfyv" name="btn_agree.xml" path="/Components/" exported="true"/>
+    <component id="fmfyw" name="btn_refuse.xml" path="/Components/" exported="true"/>
+    <component id="wqgfx" name="item_emoj.xml" path="/Components/" exported="true"/>
+    <image id="wi4510" name="input_friend_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="3,3,0,1"/>
+    <image id="jpvx11" name="btn_friend_info.png" path="/Images/"/>
+    <component id="jpvx12" name="btn_info.xml" path="/Components/" exported="true"/>
+    <image id="7ogs13" name="friend_item_select_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="10,10,12,12"/>
+    <component id="nrlc16" name="item_history.xml" path="/Components/" exported="true"/>
+    <component id="lmpz17" name="scroll_history.xml" path="/Components/" exported="true"/>
+    <component id="tg9618" name="btn_delete.xml" path="/Components/" exported="true"/>
+    <image id="qg2e19" name="btn_friend_x.png" path="/Images/" exported="true"/>
+    <image id="gpvo1b" name="friend_bottom.png" path="/Images/"/>
+    <image id="gpvo1c" name="friend_menu1.png" path="/Images/" exported="true"/>
+    <image id="gpvo1d" name="friend_menu2.png" path="/Images/" exported="true"/>
+    <image id="r73b1e" name="好友-PC版_spec.png" path="/Images/"/>
+    <image id="r73b1f" name="添加好友-PC版_spec.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

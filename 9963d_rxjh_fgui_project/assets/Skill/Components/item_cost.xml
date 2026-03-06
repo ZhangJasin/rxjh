@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="320,29" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <richtext id="n11_nd1w" name="text_cost" xy="0,0" size="320,29" fontSize="20" color="#fff7d1" autoSize="none" text="修炼所需历练：0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="0cnnwo4y">
+  <resources>
+    <component id="n19w0" name="item_line.xml" path="/Components/" exported="true"/>
+    <image id="n19w1" name="route_cell_bg.png" path="/Images/MapRoute/" exported="true" scale="9grid" scale9grid="12,12,8,8"/>
+    <image id="n19w2" name="route_select_box.png" path="/Images/MapRoute/" exported="true" scale="9grid" scale9grid="12,12,8,8"/>
+    <component id="n19w4" name="MapRoutePanel.xml" path="/" exported="true"/>
+    <image id="w08w6" name="切换线路-PC版_spec.png" path="/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="966,62" extention="Button" designImageOffsetX="-187" designImageOffsetY="-367">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_zah9" name="n0" src="wi4521" fileName="Images/list_bg_9.png" xy="0,0" size="966,62">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <graph id="n7_zah9" name="select_effect" xy="1,-1" size="959,62" visible="false" type="rect" lineSize="0" fillColor="#ff6e1669">
+      <gearDisplay controller="button" pages="3,5"/>
+    </graph>
+    <text id="n1_zah9" name="text_name" xy="124,31" pivot="0.5,0.5" anchor="true" size="76,26" fontSize="18" color="#f1ffeb" align="center" vAlign="middle" ubb="true" singleLine="true" text="抚琴的人"/>
+    <text id="n2_zah9" name="text_level" xy="337,31" pivot="0.5,0.5" anchor="true" size="52,26" fontSize="18" color="#f1ffeb" align="center" vAlign="middle" singleLine="true" text="999级"/>
+    <text id="n3_zah9" name="text_duty" xy="501,31" pivot="0.5,0.5" anchor="true" size="40,26" fontSize="18" color="#f1ffeb" align="center" vAlign="middle" singleLine="true" text="帮众"/>
+    <text id="n4_zah9" name="text_contribution" xy="671,32" pivot="0.5,0.5" anchor="true" size="14,26" fontSize="18" color="#f1ffeb" align="center" vAlign="middle" singleLine="true" text="0"/>
+    <text id="n6_zah9" name="text_online_state" xy="865,31" pivot="0.5,0.5" anchor="true" size="40,26" fontSize="18" color="#f1ffeb" align="center" vAlign="middle" singleLine="true" text="在线"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

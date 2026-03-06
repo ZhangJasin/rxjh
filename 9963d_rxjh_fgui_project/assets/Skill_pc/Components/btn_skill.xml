@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="120,110" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n5_fbc0" name="skill_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="20,0" size="80,80"/>
+    <loader id="n2_eion" name="skill_icon" xy="20,0" size="80,80" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <image id="n6_fbc0" name="skill_select" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="20,0" size="80,80">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+    <text id="n1_f0so" name="text_name" xy="60,94" pivot="0.5,0.5" anchor="true" size="120,24" fontSize="16" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="名字名字名字名"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

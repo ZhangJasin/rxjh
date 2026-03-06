@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="324,253">
+  <displayList>
+    <loader id="n14_qmm2" name="gloader_title" xy="0,0" size="324,253" grayed="true" url="ui://q18xgg759qta8" fill="scaleMatchHeight" clearOnPublish="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <image id="n15_qmm2" name="n15" src="n0552r" fileName="Images/Chenghao/tag_Get.png" xy="144,105" size="162,53">
+      <relation target="" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n16_qmm2" name="n16" src="n0552s" fileName="Images/Chenghao/tag_notGet.png" xy="144,105" size="162,53">
+      <relation target="" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n17_qmm2" name="image_selected" src="s9fq4u" fileName="Images/icon_item_select.png" xy="144,105" size="117,96">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+</component>

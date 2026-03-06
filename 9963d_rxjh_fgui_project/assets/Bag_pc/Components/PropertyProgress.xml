@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="348,33">
+  <controller name="propertyProgress" exported="true" pages="0,生命值,1,经验值,2,内力值,3,怒气值" selected="0"/>
+  <controller name="isHideBg" exported="true" pages="0,是,1,否" selected="0"/>
+  <displayList>
+    <image id="n0_g4sv" name="bg_progrss" src="emvc4k" fileName="Images/img_d2_9.png" xy="0,0" size="348,32" aspect="true">
+      <gearDisplay controller="isHideBg" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n7_k5e7" name="hpBar" src="n0551q" fileName="Images/red.png" xy="3,4" size="341,24" fillMethod="hz">
+      <gearDisplay controller="propertyProgress" pages="0"/>
+      <relation target="n0_g4sv" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <image id="n8_k5e7" name="hpExp" src="n0551r" fileName="Images/green.png" xy="3,4" size="342,24" fillMethod="hz">
+      <gearDisplay controller="propertyProgress" pages="1"/>
+      <relation target="n0_g4sv" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <image id="n6_k5e7" name="hpNeiLi" src="n0551s" fileName="Images/blue.png" xy="3,4" size="342,24" fillMethod="hz">
+      <gearDisplay controller="propertyProgress" pages="2"/>
+      <relation target="n0_g4sv" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <image id="n9_k5e7" name="hpNuqi" src="n0551t" fileName="Images/yellow.png" xy="3,4" size="342,24" fillMethod="hz">
+      <gearDisplay controller="propertyProgress" pages="3"/>
+      <relation target="n0_g4sv" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <text id="n2_g4sv" name="text_progress" xy="172,16" pivot="0.5,0.5" anchor="true" size="46,20" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="100/100">
+      <relation target="n0_g4sv" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

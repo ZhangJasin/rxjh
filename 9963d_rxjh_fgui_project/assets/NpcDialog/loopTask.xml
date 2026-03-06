@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <image id="n15_q872" name="n0" src="q8728m" fileName="Images/0tongyong/task_di2.png" pkg="fgihxfye" xy="0,570" size="1334,180"/>
+    <component id="n1_fiei" name="node_left" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="122,498" size="231,309">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <graph id="n10_fmnx" name="graph_task_npc" xy="239,800" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen"/>
+    <image id="n16_q872" name="n2" src="q8728o" fileName="Images/0tongyong/task_di1.png" pkg="fgihxfye" xy="141,696"/>
+    <text id="n3_fiei" name="npcname" xy="141,700" size="200,29" fontSize="20" color="#ffff00" align="center" vAlign="middle" autoSize="height" text="NPC名字"/>
+    <richtext id="n4_fiei" name="title" xy="407,576" size="92,32" fontSize="22" color="#00ff00" bold="true" strokeColor="#000000" text="任务标题"/>
+    <richtext id="n5_fiei" name="content" xy="407,609" size="579,59" fontSize="20" color="#ffffff" autoSize="none" text="任务内容任务内容任务内容任务内容任务内容任务内容任务内容任务内容任务内容任务内容容任务内容任务内容任务内容任务内容任务内容内容容任务内容任务内容任务内容任务内容任务内容"/>
+    <list id="n6_fiei" name="itemlist" xy="407,680" size="561,70" scale="0.8,0.8" layout="row" selectionMode="none" overflow="scroll" scroll="horizontal" colGap="5" defaultItem="ui://fgihxfyes9up6v" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n17_q872" name="jsdh" src="q8728p" fileName="Components/tongyong/Button_task.xml" pkg="fgihxfye" xy="997,694">
+      <Button title="【结束对话】" titleColor="#00ff00" titleFontSize="22"/>
+    </component>
+    <component id="n18_rlb8" name="lqph" src="q8728p" fileName="Components/tongyong/Button_task.xml" pkg="fgihxfye" xy="997,624">
+      <Button title="【领取跑环】" titleColor="#00ff00" titleFontSize="22"/>
+    </component>
+  </displayList>
+</component>

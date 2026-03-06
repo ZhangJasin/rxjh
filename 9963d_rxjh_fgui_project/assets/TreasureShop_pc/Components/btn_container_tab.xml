@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="81,27" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="isSelected" exported="true" pages="0,选择状态,1,未选择状态" selected="0"/>
+  <displayList>
+    <image id="n7_kra4" name="n7" src="emvc4x" fileName="image/btn_green_normal.png" pkg="qa9a7rit" xy="0,1" size="81,26">
+      <gearDisplay controller="isSelected" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n8_kra4" name="n8" src="emvc4z" fileName="image/btn_green_selected.png" pkg="qa9a7rit" xy="0,1" size="81,26">
+      <gearDisplay controller="isSelected" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n6_10pmd" name="title" xy="40,13" pivot="0.5,0.5" anchor="true" size="81,25" fontSize="12" color="#ffd83c" align="center" vAlign="middle" autoSize="none" singleLine="true" text="哈哈哈哈">
+      <gearColor controller="isSelected" pages="0,1" values="#ffd83c,#000000|#c5dccc,#000000"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

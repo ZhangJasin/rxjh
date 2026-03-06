@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="72,44" extention="Button">
+  <displayList>
+    <loader id="n1_kiyc" name="icon" xy="36,22" pivot="0.5,0.5" anchor="true" size="52,28" url="ui://zj419n3dke93v6e" fill="scaleFree" autoSize="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <Button/>
+</component>

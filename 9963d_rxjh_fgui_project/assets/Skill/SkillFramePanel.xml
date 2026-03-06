@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n11_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n10_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,50">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_vjv7" name="text_title" xy="667,78" pivot="0.5,0.5" anchor="true" size="52,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="武功">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n3_vjv7" name="list_page" xy="1161,116" size="40,400" overflow="hidden" lineGap="2" defaultItem="ui://qvb3eryhf0so0" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n7_fbc0" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n9_ha35" name="Node_Content" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="1334,750">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

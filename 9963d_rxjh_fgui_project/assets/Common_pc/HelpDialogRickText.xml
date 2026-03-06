@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="440,23">
+  <displayList>
+    <richtext id="n11_r1yg" name="title" xy="0,0" size="440,19" fontSize="12" color="#ffffff" autoSize="height" autoClearText="true" text="测试测试">
+      <relation target="" sidePair="width-width"/>
+    </richtext>
+  </displayList>
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="96,18">
+  <displayList>
+    <image id="n5_swkl" name="hcdi1" src="lg984z" fileName="Images/newhc/05.png" xy="0,1"/>
+    <image id="n9_swkl" name="hcdi2" src="lg984z" fileName="Images/newhc/05.png" xy="20,1"/>
+    <image id="n10_swkl" name="hcdi3" src="lg984z" fileName="Images/newhc/05.png" xy="40,1"/>
+    <image id="n11_swkl" name="hcdi4" src="lg984z" fileName="Images/newhc/05.png" xy="60,1"/>
+    <image id="n12_swkl" name="hcdi5" src="lg984z" fileName="Images/newhc/05.png" xy="80,1"/>
+    <loader id="n18_cm5h" name="hcimg1" xy="0,1" pivot="0.5,0.5" size="16,16" url="ui://bphbjao2lg9850" align="center" vAlign="middle" fill="scale" shrinkOnly="true" useResize="true"/>
+    <loader id="n19_cm5h" name="hcimg2" xy="20,1" pivot="0.5,0.5" size="16,16" url="ui://bphbjao2lg9850" align="center" vAlign="middle" fill="scale" shrinkOnly="true" useResize="true"/>
+    <loader id="n20_cm5h" name="hcimg3" xy="40,1" pivot="0.5,0.5" size="16,16" url="ui://bphbjao2lg9850" align="center" vAlign="middle" fill="scale" shrinkOnly="true" useResize="true"/>
+    <loader id="n21_cm5h" name="hcimg4" xy="60,1" pivot="0.5,0.5" size="16,16" url="ui://bphbjao2lg9850" align="center" vAlign="middle" fill="scale" shrinkOnly="true" useResize="true"/>
+    <loader id="n22_cm5h" name="hcimg5" xy="80,1" pivot="0.5,0.5" size="16,16" url="ui://bphbjao2lg9850" align="center" vAlign="middle" fill="scale" shrinkOnly="true" useResize="true"/>
+  </displayList>
+</component>

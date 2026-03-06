@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="390,56">
+  <displayList>
+    <image id="n12_hcvo" name="bg" src="emvc59" fileName="image/img_di3.png" pkg="qa9a7rit" xy="0,0" size="390,56"/>
+    <image id="n13_hcvo" name="icon_bg" src="emvc3q" fileName="image/icon_item0.png" pkg="qa9a7rit" xy="30,28" pivot="0.5,0.5" anchor="true" size="47,47"/>
+    <component id="n14_hcvo" name="avator" src="emvc7" fileName="common/CommonPlayerFrame.xml" pkg="qa9a7rit" xy="30,28" size="47,47"/>
+    <loader id="n9_leye" name="img_job" xy="65,28" pivot="0,0.5" anchor="true" size="40,40" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n4_f0so" name="text_name" xy="120,20" pivot="0,0.5" anchor="true" size="150,20" fontSize="12" color="#f1ffeb" ubb="true" autoSize="none" text="名字"/>
+    <text id="n7_f0so" name="text_level" xy="120,40" pivot="0,0.5" anchor="true" size="100,20" fontSize="12" color="#f1ffeb" vAlign="middle" autoSize="none" text="Lv：1"/>
+    <component id="n6_f0so" name="btn_invite" src="f0so1m" fileName="Components/btn_invite.xml" xy="350,28" pivot="0.5,0.5" anchor="true">
+      <Button title="哈哈哈"/>
+    </component>
+  </displayList>
+</component>

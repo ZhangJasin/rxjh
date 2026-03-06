@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" bgColorEnabled="true">
+  <displayList>
+    <image id="n21_ih0u" name="n0" src="oqrp1" fileName="Images/0tongyong/di1.png" xy="1,1" size="1332,750"/>
+    <list id="n0_ih0u" name="zhulist" xy="4,2" size="159,749" overflow="scroll">
+      <item url="ui://htj7cnmloqrp2"/>
+      <item url="ui://htj7cnmloqrp5"/>
+      <item url="ui://htj7cnmloqrp6"/>
+      <item url="ui://htj7cnmloqrp7"/>
+      <item url="ui://htj7cnmloqrp8"/>
+    </list>
+    <list id="n3_ih0u" name="list1" xy="164,8" size="221,746" visible="false" overflow="scroll">
+      <item url="ui://htj7cnmloqrp9"/>
+      <item url="ui://htj7cnmloqrpa"/>
+      <item url="ui://htj7cnmloqrpb"/>
+      <item url="ui://htj7cnmloqrpc"/>
+      <item url="ui://htj7cnmloqrpd"/>
+      <item url="ui://htj7cnmloqrpe"/>
+      <item url="ui://htj7cnmloqrpf"/>
+    </list>
+    <list id="n4_ih0u" name="list2" xy="167,2" size="221,746" visible="false" overflow="scroll">
+      <item url="ui://htj7cnmloqrpg"/>
+      <item url="ui://htj7cnmloqrph"/>
+    </list>
+    <list id="n23_v0ag" name="list3" xy="162,5" size="221,746" visible="false" overflow="scroll">
+      <item url="ui://htj7cnmloqrpi"/>
+      <item url="ui://htj7cnmloqrpj"/>
+      <item url="ui://htj7cnmloqrpk"/>
+    </list>
+    <list id="n27_v0ag" name="list4" xy="163,5" size="221,746" visible="false" overflow="scroll">
+      <item url="ui://htj7cnmloqrpl"/>
+      <item url="ui://htj7cnmloqrpm"/>
+    </list>
+    <list id="n28_v0ag" name="list5" xy="164,7" size="221,746" visible="false" overflow="scroll">
+      <item url="ui://htj7cnmloqrpn"/>
+      <item url="ui://htj7cnmloqrpo"/>
+      <item url="ui://htj7cnmloqrpp"/>
+      <item url="ui://htj7cnmloqrpq"/>
+      <item url="ui://htj7cnmloqrpr"/>
+    </list>
+    <component id="n5_ih0u" name="n11" src="oqrps" fileName="Components/GMBox/role/role_hb_panl.xml" xy="504,39" visible="false"/>
+    <component id="n6_ih0u" name="n12" src="oqrpw" fileName="Components/GMBox/role/role_dj_panl.xml" xy="504,38" visible="false"/>
+    <component id="n7_ih0u" name="n13" src="oqrpx" fileName="Components/GMBox/role/role_jn_panl.xml" xy="504,39" visible="false"/>
+    <component id="n8_ih0u" name="n14" src="oqrpy" fileName="Components/GMBox/role/role_buff_panl.xml" xy="504,39" visible="false"/>
+    <component id="n9_ih0u" name="n16" src="oqrpz" fileName="Components/GMBox/role/role_zz_panl.xml" xy="504,39" visible="false"/>
+    <component id="n10_ih0u" name="n15" src="oqrp10" fileName="Components/GMBox/role/role_attr_panl.xml" xy="504,38" visible="false"/>
+    <component id="n11_ih0u" name="n17" src="oqrp11" fileName="Components/GMBox/role/role_sex_panl.xml" xy="503,38" visible="false"/>
+    <component id="n12_ih0u" name="n21" src="oqrp12" fileName="Components/GMBox/monster/monster_sg_panl.xml" xy="504,37" visible="false"/>
+    <component id="n13_ih0u" name="n22" src="oqrp13" fileName="Components/GMBox/monster/monster_killall_panl.xml" xy="504,38" visible="false"/>
+    <component id="n22_ih0u" name="closegm" src="oqrp14" fileName="Components/GMBox/closegm.xml" xy="1091,2"/>
+    <component id="n24_v0ag" name="n31" src="oqrp16" fileName="Components/GMBox/item/item_add_panl.xml" xy="504,38" visible="false"/>
+    <component id="n25_v0ag" name="n32" src="oqrp17" fileName="Components/GMBox/item/item_clearbag_panl.xml" xy="503,30" visible="false"/>
+    <component id="n26_v0ag" name="n33" src="oqrp18" fileName="Components/GMBox/item/item_throw_panl.xml" xy="504,38" visible="false"/>
+    <component id="n29_v0ag" name="n41" src="oqrp19" fileName="Components/GMBox/map/map_goto_panl.xml" xy="504,34" visible="false"/>
+    <component id="n30_v0ag" name="n42" src="oqrp1a" fileName="Components/GMBox/map/map_clearitem_panl.xml" xy="505,38" visible="false"/>
+    <component id="n31_v0ag" name="n51" src="oqrp1b" fileName="Components/GMBox/sys/sys_humvarint_panl.xml" xy="505,39" visible="false"/>
+    <component id="n32_v0ag" name="n52" src="oqrp1c" fileName="Components/GMBox/sys/sys_humvarstr_panl.xml" xy="504,38" visible="false"/>
+    <component id="n33_v0ag" name="n53" src="oqrp1d" fileName="Components/GMBox/sys/sys_varint_panl.xml" xy="505,38" visible="false"/>
+    <component id="n34_v0ag" name="n54" src="oqrp1e" fileName="Components/GMBox/sys/sys_varstr_panl.xml" xy="504,38" visible="false"/>
+    <component id="n35_q872" name="btn_wudiopen" src="oqrp1f" fileName="Components/tongyong/fangbtn.xml" xy="414,9" size="85,73">
+      <Button title="  开启  无敌" titleColor="#ffff00"/>
+    </component>
+    <component id="n36_q872" name="btn_wudiclose" src="oqrp1f" fileName="Components/tongyong/fangbtn.xml" xy="528,8" size="85,73">
+      <Button title="  关闭  无敌" titleColor="#ffff00" titleFontSize="20"/>
+    </component>
+    <component id="n38_icqd" name="n55" src="oqrp1h" fileName="Components/GMBox/sys/sys_task_panl.xml" xy="504,40" visible="false"/>
+  </displayList>
+</component>

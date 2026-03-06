@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImage="ui://zj419n3dlb5ifvdr" designImageAlpha="0">
+  <displayList>
+    <component id="n0_fxh2" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="466,220" size="402,310">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n1_fxh2" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="840,233">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_fxh2" name="title" xy="667,248" pivot="0.5,0.5" anchor="true" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" singleLine="true" text="聊天设置">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n5_fxh2" name="img_title" src="fxh2fvc7" fileName="Images/ChatSetting/img_title.png" xy="489,277">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n3_fxh2" name="img_di" src="fxh2fvc8" fileName="Images/ChatSetting/img_di.png" xy="479,318" size="376,193">
+      <relation target="n7_fxh2" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </image>
+    <list id="n7_fxh2" name="List_channel" xy="479,318" size="376,193" layout="flow_hz" overflow="scroll" scrollBarFlags="128" lineGap="1" colGap="5" lineItemCount="3" defaultItem="ui://zj419n3dvoypvaw" align="center" vAlign="middle" scrollItemToViewOnClick="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

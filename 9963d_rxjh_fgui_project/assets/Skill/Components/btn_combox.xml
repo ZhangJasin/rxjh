@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,50" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n4_gpvo" name="bg" src="11iqkvoy" fileName="image/combobox_arrow_bg.png" pkg="st7dgeqq" xy="9,9" size="32,32"/>
+    <image id="n5_gpvo" name="bg2" src="11iqkvox" fileName="image/combobox_arrow.png" pkg="st7dgeqq" xy="9,9" size="32,32"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue=".8"/>
+</component>

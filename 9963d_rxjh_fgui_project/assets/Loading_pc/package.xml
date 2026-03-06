@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="frgqv9kr">
+  <resources>
+    <component id="fmfy0" name="PCLoadingPanel.xml" path="/" exported="true"/>
+    <component id="fmfy4" name="Bar_loading.xml" path="/Components/" exported="true"/>
+    <image id="m2wevl1" name="img_loading.png" path="/Images/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

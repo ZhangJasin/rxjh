@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n44_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="512,384" pivot="0.5,0.5" anchor="true" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n9_jui0" name="mapComponent" src="clzt5" fileName="Components/MiniMap/mapComponent.xml" xy="300,207" size="385,357">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n4_jui0" name="map_frame" src="clzt13" fileName="Images/MiniMap/Frame_9.png" xy="299,207" size="385,357">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n3_vmij" name="list_left" xy="181,244" size="118,344" overflow="scroll" defaultItem="ui://3tndc27qclzt2" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item title="泫勃派"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n19_nouy" name="list_right" xy="685,246" size="156,342" overflow="scroll" defaultItem="ui://3tndc27qclzte" align="center" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n21_nouy" name="map_Button" src="clzt0" fileName="Components/MiniMap/btn_map.xml" xy="180,208">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_vmij" name="mapName_Text" xy="512,187" pivot="0.5,0.5" anchor="true" size="52,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" autoClearText="true" text="泫勃派">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n27_a6v3" name="btn_debug" src="clztq" fileName="Components/MiniMap/btn_debug.xml" xy="783,188" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n33_oot3" name="btn_monster" src="clztb" fileName="Components/MiniMap/item_right_type.xml" xy="689,212">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="怪物" titleFontSize="12"/>
+    </component>
+    <component id="n35_oot3" name="btn_npc" src="clztb" fileName="Components/MiniMap/item_right_type.xml" xy="767,212">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="NPC" titleFontSize="12"/>
+    </component>
+    <text id="n39_oot3" name="n39" xy="310,569" size="88,19" fontSize="12" color="#ffffff" text="地图信息显示：">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n40_oot3" name="tog_boss" src="clztx" fileName="Components/MiniMap/tog_select.xml" xy="416,569" size="60,22">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button checked="true" title="首领"/>
+    </component>
+    <component id="n41_oot3" name="tog_monster" src="clztx" fileName="Components/MiniMap/tog_select.xml" xy="501,569" size="60,22">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button checked="true" title="怪物"/>
+    </component>
+    <component id="n42_oot3" name="tog_link" src="clztx" fileName="Components/MiniMap/tog_select.xml" xy="586,569" size="70,22">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button checked="true" title="传送门"/>
+    </component>
+    <component id="n29_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="503,401" size="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n10_jui0" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

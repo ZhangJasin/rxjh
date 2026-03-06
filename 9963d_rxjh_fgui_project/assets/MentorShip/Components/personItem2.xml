@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="772,110">
+  <controller name="todo" pages="0,,2,申请拜师,1,申请收徒" selected="2"/>
+  <displayList>
+    <component id="n7_h138" name="avator" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="20,28" size="56,56" touchable="false"/>
+    <text id="n1_h138" name="name" xy="95,0" size="100,110" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="名字"/>
+    <text id="n2_h138" name="lv" xy="225,0" size="100,110" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="等级"/>
+    <text id="n3_h138" name="guildName" xy="350,0" size="100,110" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="门派"/>
+    <component id="n4_h138" name="agree" src="gvalo3y" fileName="Components/btn_second_green.xml" xy="620,10">
+      <Button title="同意" selectedTitle="同意"/>
+    </component>
+    <component id="n6_h138" name="notAgree" src="gvalo3z" fileName="Components/btn_second_red.xml" xy="620,60">
+      <Button title="不同意" selectedTitle="不同意"/>
+    </component>
+    <text id="n8_x44m" name="n8" xy="471,0" size="121,110" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="申请收徒">
+      <gearText controller="todo" pages="0,1" values="|申请收徒" default="申请拜师"/>
+    </text>
+  </displayList>
+</component>

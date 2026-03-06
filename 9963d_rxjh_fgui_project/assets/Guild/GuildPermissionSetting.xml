@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImageOffsetX="102" designImageOffsetY="34" designImageAlpha="55">
+  <displayList>
+    <graph id="n125_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n123_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="329,175" size="674,400" group="n124_pzej"/>
+    <image id="n120_mlfe" name="n120" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="342,232" size="168,326" group="n124_pzej"/>
+    <image id="n121_mlfe" name="n121" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="511,232" size="478,326" group="n124_pzej"/>
+    <component id="n110_ghle" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="980,202" group="n124_pzej"/>
+    <text id="n108_k2u1" name="text_title" xy="666,202" pivot="0.5,0.5" anchor="true" size="100,34" group="n124_pzej" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" text="权限设置"/>
+    <graph id="n118_mlfe" name="n118" xy="724,248" size="120,35" group="n124_pzej" type="rect" lineColor="#801f4029" fillColor="#ff02160a" corner="3"/>
+    <text id="n114_lbe5" name="n114" xy="680,264" pivot="0.5,0.5" anchor="true" size="50,29" group="n124_pzej" fontSize="20" color="#ffd83c" vars="true" text="职位:"/>
+    <text id="n115_lbe5" name="text_rank" xy="724,248" size="119,34" group="n124_pzej" fontSize="20" color="#ffd83c" align="center" vAlign="middle" vars="true" autoSize="none" autoClearText="true" text="会长" input="true" maxLength="4">
+      <relation target="n118_mlfe" sidePair="width-width,height-height"/>
+    </text>
+    <component id="n98_jjgk" name="btn_reset" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="580,486" size="136,42" group="n124_pzej">
+      <Button title="重 置"/>
+    </component>
+    <component id="n112_lbe5" name="btn_save" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="786,486" size="136,42" group="n124_pzej">
+      <Button title="保 存"/>
+    </component>
+    <component id="n111_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="666,375" size="0,0" group="n124_pzej"/>
+    <list id="n113_lbe5" name="list_rank" xy="343,237" size="168,320" group="n124_pzej" overflow="scroll" lineGap="4" defaultItem="ui://tsu6gfnolbe5vop" autoItemSize="false" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n117_lbe5" name="list_permission" xy="528,315" size="461,149" group="n124_pzej" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBarFlags="128" lineGap="17" colGap="4" defaultItem="ui://tsu6gfnolbe5vnz" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n124_pzej" name="n124" xy="329,175" size="674,400" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

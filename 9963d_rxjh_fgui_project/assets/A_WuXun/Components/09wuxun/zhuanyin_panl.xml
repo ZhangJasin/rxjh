@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="978,584">
+  <controller name="selectEquip" pages="0,,1,,2," selected="2">
+    <remark page="0" value="未选择"/>
+    <remark page="1" value="选择中"/>
+    <remark page="2" value="已选择"/>
+  </controller>
+  <controller name="iswear" pages="0,,1," selected="1">
+    <remark page="0" value="未穿戴"/>
+    <remark page="1" value="穿戴"/>
+  </controller>
+  <displayList>
+    <image id="n113_uz9j" name="n113" src="oqrp1l" fileName="Images/09wuxun/zhujie/01.png" xy="0,0" size="978,584"/>
+    <list id="n51_fjq2" name="equipList" xy="20,11" size="300,396" overflow="scroll" margin="5,5,10,10" lineGap="5" defaultItem="ui://hed3v11ooqrps" autoClearItems="true">
+      <relation target="" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n53_fjq2" name="n53" src="oqrp1n" fileName="Images/05boss/内容底.png" xy="373,178" size="251,217"/>
+    <image id="n61_p3ya" name="n61" src="oqrp1n" fileName="Images/05boss/内容底.png" xy="701,178" size="248,217"/>
+    <component id="n54_fjq2" name="xzequip" src="oqrpy" fileName="Components/tongyong/item_select.xml" xy="457,64"/>
+    <component id="n57_fjq2" name="btn_zhuanyin" src="oqrp17" fileName="Components/tongyong/btn_zong.xml" xy="586,480">
+      <Button title="转 印" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <text id="n60_p3ya" name="wpdfont" xy="750,253" pivot="0.5,0.5" size="154,42" font="SimHei" fontSize="30" color="#a4d452" align="center" text="请选择装备">
+      <gearDisplay controller="selectEquip" pages="0"/>
+    </text>
+    <text id="n96_hujp" name="wpdfont2" xy="420,253" pivot="0.5,0.5" size="154,42" font="SimHei" fontSize="30" color="#a4d452" align="center" text="请选择装备">
+      <gearDisplay controller="iswear" pages="0"/>
+    </text>
+    <image id="n63_p3ya" name="n63" src="oqrp7" fileName="Images/09wuxun/箭头.png" xy="634,261" flip="hz"/>
+    <component id="n76_hujp" name="xzequip2" src="oqrpy" fileName="Components/tongyong/item_select.xml" xy="786,64" controller="c2,1,c1,4"/>
+    <component id="n77_hujp" name="btn_gx1" src="oqrp1v" fileName="Components/09wuxun/btn_gouxuan.xml" xy="410,200">
+      <gearDisplay controller="iswear" pages="1"/>
+      <Button checked="true"/>
+    </component>
+    <component id="n78_hujp" name="btn_gx2" src="oqrp1v" fileName="Components/09wuxun/btn_gouxuan.xml" xy="410,235">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n79_hujp" name="btn_gx3" src="oqrp1v" fileName="Components/09wuxun/btn_gouxuan.xml" xy="410,270">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n80_hujp" name="btn_gx4" src="oqrp1v" fileName="Components/09wuxun/btn_gouxuan.xml" xy="410,305">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n81_hujp" name="btn_gx5" src="oqrp1v" fileName="Components/09wuxun/btn_gouxuan.xml" xy="410,340">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <image id="n82_hujp" name="suo1" src="oqrp1y" fileName="Images/09wuxun/zhuanyin/01.png" xy="405,195" visible="false">
+      <gearDisplay controller="iswear" pages="1"/>
+    </image>
+    <image id="n83_hujp" name="suo2" src="oqrp1y" fileName="Images/09wuxun/zhuanyin/01.png" xy="406,230" visible="false">
+      <gearDisplay controller="iswear" pages="1"/>
+    </image>
+    <image id="n84_hujp" name="suo3" src="oqrp1y" fileName="Images/09wuxun/zhuanyin/01.png" xy="406,265" visible="false">
+      <gearDisplay controller="iswear" pages="1"/>
+    </image>
+    <image id="n85_hujp" name="suo4" src="oqrp1y" fileName="Images/09wuxun/zhuanyin/01.png" xy="406,300" visible="false">
+      <gearDisplay controller="iswear" pages="1"/>
+    </image>
+    <image id="n86_hujp" name="suo5" src="oqrp1y" fileName="Images/09wuxun/zhuanyin/01.png" xy="406,335" visible="false">
+      <gearDisplay controller="iswear" pages="1"/>
+    </image>
+    <richtext id="n87_hujp" name="curfont1" xy="447,196" size="103,26" font="SimHei" fontSize="18" color="#ff0000" vAlign="middle" text="4阶铸阶解锁">
+      <gearDisplay controller="iswear" pages="1"/>
+    </richtext>
+    <richtext id="n88_hujp" name="curfont2" xy="447,231" size="103,26" font="SimHei" fontSize="18" color="#ff0000" vAlign="middle" text="4阶铸阶解锁">
+      <gearDisplay controller="iswear" pages="1"/>
+    </richtext>
+    <richtext id="n89_hujp" name="curfont3" xy="447,266" size="103,26" font="SimHei" fontSize="18" color="#ff0000" vAlign="middle" text="4阶铸阶解锁">
+      <gearDisplay controller="iswear" pages="1"/>
+    </richtext>
+    <richtext id="n90_hujp" name="curfont4" xy="447,301" size="103,26" font="SimHei" fontSize="18" color="#ff0000" vAlign="middle" text="4阶铸阶解锁">
+      <gearDisplay controller="iswear" pages="1"/>
+    </richtext>
+    <richtext id="n91_hujp" name="curfont5" xy="447,336" size="103,26" font="SimHei" fontSize="18" color="#ff0000" vAlign="middle" text="4阶铸阶解锁">
+      <gearDisplay controller="iswear" pages="1"/>
+    </richtext>
+    <component id="n97_q3kv" name="btn_xz1" src="oqrp1v" fileName="Components/09wuxun/btn_gouxuan.xml" xy="737,201">
+      <gearDisplay controller="selectEquip" pages="2"/>
+      <Button checked="true"/>
+    </component>
+    <component id="n98_q3kv" name="btn_xz2" src="oqrp1v" fileName="Components/09wuxun/btn_gouxuan.xml" xy="737,236" visible="false">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </component>
+    <component id="n99_q3kv" name="btn_xz3" src="oqrp1v" fileName="Components/09wuxun/btn_gouxuan.xml" xy="737,271" visible="false">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </component>
+    <component id="n100_q3kv" name="btn_xz4" src="oqrp1v" fileName="Components/09wuxun/btn_gouxuan.xml" xy="737,306" visible="false">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </component>
+    <component id="n101_q3kv" name="btn_xz5" src="oqrp1v" fileName="Components/09wuxun/btn_gouxuan.xml" xy="737,341" visible="false">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </component>
+    <image id="n108_q3kv" name="xzsuo1" src="oqrp1y" fileName="Images/09wuxun/zhuanyin/01.png" xy="733,196" visible="false">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </image>
+    <image id="n109_q3kv" name="xzsuo2" src="oqrp1y" fileName="Images/09wuxun/zhuanyin/01.png" xy="734,231">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </image>
+    <image id="n110_q3kv" name="xzsuo3" src="oqrp1y" fileName="Images/09wuxun/zhuanyin/01.png" xy="734,266">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </image>
+    <image id="n111_q3kv" name="xzsuo4" src="oqrp1y" fileName="Images/09wuxun/zhuanyin/01.png" xy="734,301">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </image>
+    <image id="n112_q3kv" name="xzsuo5" src="oqrp1y" fileName="Images/09wuxun/zhuanyin/01.png" xy="734,336">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </image>
+    <richtext id="n102_q3kv" name="nextfont1" xy="774,197" size="103,26" font="SimHei" fontSize="18" color="#ff0000" vAlign="middle" text="4阶铸阶解锁">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </richtext>
+    <richtext id="n103_q3kv" name="nextfont2" xy="774,232" size="103,26" font="SimHei" fontSize="18" color="#ff0000" vAlign="middle" text="4阶铸阶解锁">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </richtext>
+    <richtext id="n104_q3kv" name="nextfont3" xy="774,267" size="103,26" font="SimHei" fontSize="18" color="#ff0000" vAlign="middle" text="4阶铸阶解锁">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </richtext>
+    <richtext id="n105_q3kv" name="nextfont4" xy="774,302" size="103,26" font="SimHei" fontSize="18" color="#ff0000" vAlign="middle" text="4阶铸阶解锁">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </richtext>
+    <richtext id="n106_q3kv" name="nextfont5" xy="774,337" size="103,26" font="SimHei" fontSize="18" color="#ff0000" vAlign="middle" text="4阶铸阶解锁">
+      <gearDisplay controller="selectEquip" pages="2"/>
+    </richtext>
+    <component id="n95_hujp" name="panl_addEquip" src="oqrp1z" fileName="Components/09wuxun/additempanl.xml" xy="-172,-80">
+      <gearDisplay controller="selectEquip" pages="1"/>
+    </component>
+  </displayList>
+</component>

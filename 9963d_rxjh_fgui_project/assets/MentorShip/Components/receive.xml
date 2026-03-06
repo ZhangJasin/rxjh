@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="130,40" extention="Button">
+  <displayList>
+    <image id="n2_g5t3" name="n2" src="je63v3d" fileName="image/btn_second_green.png" pkg="st7dgeqq" xy="0,0" size="130,40">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <richtext id="n0_g5t3" name="receive" xy="0,0" size="130,40" fontSize="18" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="待领取"/>
+  </displayList>
+  <Button/>
+</component>

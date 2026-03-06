@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="666,392" overflow="scroll" scrollBarFlags="16" bgColor="#000000">
+  <displayList>
+    <graph id="n269_fskg" name="n269" xy="7,206" size="651,169" group="n176_tqs7" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <text id="n257_tqs7" name="n257" xy="28,218" size="95,20" group="n260_tqs7" fontSize="13" color="#fcf1bf" vAlign="middle" text="不抢别人归属怪"/>
+    <component id="n256_tqs7" name="avoidConflictEn" src="f2ul52" fileName="Components/tog_switch_mini.xml" xy="151,218" group="n260_tqs7"/>
+    <text id="n258_tqs7" name="n258" xy="28,254" size="95,20" group="n260_tqs7" fontSize="13" color="#fcf1bf" vAlign="middle" text="不拾取丢弃物品"/>
+    <component id="n259_tqs7" name="ignoreDropByPlayerEn" src="f2ul52" fileName="Components/tog_switch_mini.xml" xy="151,254" group="n260_tqs7"/>
+    <group id="n260_tqs7" name="n260" xy="28,218" size="191,58" group="n176_tqs7"/>
+    <group id="n176_tqs7" name="jobSkillGroup" xy="7,206" size="651,169"/>
+    <graph id="n271_fskg" name="n271" xy="7,18" size="321,168" group="n212_tqs7" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <text id="n180_tqs7" name="n180" xy="18,35" size="82,20" group="n272_fskg" fontSize="13" color="#fcf1bf" vAlign="middle" text="被玩家攻击时"/>
+    <component id="n179_tqs7" name="onUnAttackMod" src="f2ul5i" fileName="Components/ComboBox_Min.xml" xy="116,34" size="77,21" group="n272_fskg">
+      <ComboBox title="不处理" visibleItemCount="10">
+        <item title="不处理"/>
+        <item title="反击"/>
+        <item title="逃跑"/>
+      </ComboBox>
+    </component>
+    <group id="n272_fskg" name="n272" xy="18,34" size="175,21" group="n212_tqs7"/>
+    <component id="n189_tqs7" name="useForEnemyEn" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="18,70" group="n273_fskg"/>
+    <text id="n188_tqs7" name="n188" xy="42,70" pivot="1,0" size="28,19" group="n273_fskg" fontSize="12" color="#ffffff" align="right" vAlign="middle" text="周围"/>
+    <image id="n186_tqs7" name="n186" src="bk1i5t" fileName="image/input_bg.png" pkg="qa9a7rit" xy="70,72" size="37,16" group="n273_fskg"/>
+    <text id="n187_tqs7" name="useForEnemyDis" xy="70,70" pivot="1,0" size="37,20" group="n273_fskg" fontSize="13" color="#00ff00" align="center" vAlign="middle" autoSize="none" singleLine="true" text="0" input="true" maxLength="2" restrict="[0-9]" keyboardType="4"/>
+    <text id="n185_tqs7" name="n185" xy="109,70" pivot="1,0" size="28,19" group="n273_fskg" fontSize="12" color="#ffffff" align="center" vAlign="middle" text="格有"/>
+    <image id="n184_tqs7" name="_" src="bk1i5t" fileName="image/input_bg.png" pkg="qa9a7rit" xy="136,72" size="37,16" group="n273_fskg"/>
+    <text id="n183_tqs7" name="useForEnemyNum" xy="136,70" pivot="1,0" size="37,20" group="n273_fskg" fontSize="13" color="#00ff00" align="center" vAlign="middle" autoSize="none" singleLine="true" text="0" input="true" maxLength="2" restrict="[0-9]" keyboardType="4"/>
+    <text id="n182_tqs7" name="n182" xy="175,70" size="64,19" group="n273_fskg" fontSize="12" color="#ffffff" align="right" vAlign="middle" text="个敌人使用"/>
+    <component id="n181_tqs7" name="useForEnemyValue" src="f2ul5i" fileName="Components/ComboBox_Min.xml" xy="241,69" size="77,21" group="n273_fskg">
+      <ComboBox title="不处理" visibleItemCount="3">
+        <item title="不处理"/>
+        <item title="反击"/>
+        <item title="逃跑"/>
+      </ComboBox>
+    </component>
+    <group id="n273_fskg" name="n273" xy="18,69" size="300,23" group="n212_tqs7"/>
+    <component id="n280_bk1i" name="useForRedNameEn" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="18,106" group="n289_bk1i"/>
+    <text id="n281_bk1i" name="n199" xy="42,106" pivot="1,0" size="28,19" group="n289_bk1i" fontSize="12" color="#ffffff" align="right" vAlign="middle" text="周围"/>
+    <image id="n282_bk1i" name="n197" src="bk1i5t" fileName="image/input_bg.png" pkg="qa9a7rit" xy="70,108" size="37,16" group="n289_bk1i"/>
+    <text id="n283_bk1i" name="useForRedNameDis" xy="70,106" pivot="1,0" size="37,20" group="n289_bk1i" fontSize="13" color="#00ff00" align="center" vAlign="middle" autoSize="none" singleLine="true" text="0" input="true" maxLength="2" restrict="[0-9]" keyboardType="4"/>
+    <text id="n284_bk1i" name="n196" xy="109,106" pivot="1,0" size="28,19" group="n289_bk1i" fontSize="12" color="#ffffff" align="center" vAlign="middle" text="格有"/>
+    <image id="n285_bk1i" name="n195" src="bk1i5t" fileName="image/input_bg.png" pkg="qa9a7rit" xy="136,108" size="37,16" group="n289_bk1i"/>
+    <text id="n286_bk1i" name="useForRedNameNum" xy="136,106" pivot="1,0" size="37,20" group="n289_bk1i" fontSize="13" color="#00ff00" align="center" vAlign="middle" autoSize="none" singleLine="true" text="0" input="true" maxLength="2" restrict="[0-9]" keyboardType="4"/>
+    <text id="n287_bk1i" name="n193" xy="175,106" size="64,19" group="n289_bk1i" fontSize="12" color="#ffffff" align="right" vAlign="middle" text="个敌人使用"/>
+    <component id="n288_bk1i" name="useForRedNameValue" src="f2ul5i" fileName="Components/ComboBox_Min.xml" xy="241,105" size="77,21" group="n289_bk1i">
+      <ComboBox title="不处理" visibleItemCount="3">
+        <item title="不处理"/>
+        <item title="反击"/>
+        <item title="逃跑"/>
+      </ComboBox>
+    </component>
+    <group id="n289_bk1i" name="n289" xy="18,105" size="300,23" group="n212_tqs7"/>
+    <component id="n290_bk1i" name="activeAtkEn" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="18,143" group="n299_bk1i"/>
+    <text id="n291_bk1i" name="n209" xy="42,143" pivot="1,0" size="28,19" group="n299_bk1i" fontSize="12" color="#ffffff" align="right" vAlign="middle" text="周围"/>
+    <image id="n292_bk1i" name="n207" src="bk1i5t" fileName="image/input_bg.png" pkg="qa9a7rit" xy="70,145" size="37,16" group="n299_bk1i"/>
+    <text id="n293_bk1i" name="activeAtkDis" xy="70,143" pivot="1,0" size="37,20" group="n299_bk1i" fontSize="13" color="#00ff00" align="center" vAlign="middle" autoSize="none" singleLine="true" text="0" input="true" maxLength="2" restrict="[0-9]" keyboardType="4"/>
+    <text id="n294_bk1i" name="n206" xy="109,143" pivot="1,0" size="112,19" group="n299_bk1i" fontSize="12" color="#ffffff" align="center" vAlign="middle" text="格有敌人时主动攻击"/>
+    <group id="n299_bk1i" name="n299" xy="18,143" size="203,22" group="n212_tqs7"/>
+    <group id="n212_tqs7" name="n212" xy="7,18" size="321,168"/>
+    <graph id="n274_fskg" name="n274" xy="337,18" size="321,168" group="n243_tqs7" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <component id="n244_tqs7" name="autoFightModForMap" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="348,35" pivot="0,0.5" group="n246_tqs7"/>
+    <text id="n245_tqs7" name="n245" xy="372,36" size="166,19" group="n246_tqs7" fontSize="12" color="#ffffff" vAlign="middle" text="模式一：  （全地图寻路挂机）"/>
+    <group id="n246_tqs7" name="n246" xy="348,35" size="190,22" group="n243_tqs7"/>
+    <component id="n301_bk1i" name="autoFightModForRang" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="348,67" pivot="0,0.5" group="n303_bk1i"/>
+    <text id="n302_bk1i" name="n248" xy="372,68" size="190,19" group="n303_bk1i" fontSize="12" color="#ffffff" vAlign="middle" text="模式二：  （固定坐标点范围挂机）"/>
+    <group id="n303_bk1i" name="n303" xy="348,67" size="214,22" group="n243_tqs7"/>
+    <text id="n250_tqs7" name="autoFightPointTitle" xy="372,107" size="88,19" group="n243_tqs7" fontSize="12" color="#ffffff" vAlign="middle" text="当前挂机坐标："/>
+    <text id="n262_lnxj" name="autoFightPoint" xy="457,107" size="179,19" group="n243_tqs7" fontSize="12" color="#ffffff" vAlign="middle" autoSize="none" text="（207,339）渤海渤海"/>
+    <text id="n251_tqs7" name="n251" xy="372,143" size="88,19" group="n261_tqs7" fontSize="12" color="#ffffff" vAlign="middle" text="挂机攻击范围："/>
+    <image id="n252_tqs7" name="n252" src="bk1i5t" fileName="image/input_bg.png" pkg="qa9a7rit" xy="460,145" size="38,16" group="n261_tqs7"/>
+    <text id="n263_lnxj" name="autoFightDis" xy="460,143" size="38,20" group="n261_tqs7" fontSize="13" color="#00ff00" align="center" vAlign="middle" autoSize="none" text="0"/>
+    <component id="n254_tqs7" name="autoFightSlider" src="f2ul5f" fileName="Components/slider_green_min.xml" xy="504,147" pivot="0,0.5" group="n261_tqs7">
+      <Slider value="50" max="100"/>
+    </component>
+    <group id="n261_tqs7" name="n261" xy="372,143" size="279,21" group="n243_tqs7"/>
+    <group id="n243_tqs7" name="n243" xy="337,18" size="321,168"/>
+  </displayList>
+</component>

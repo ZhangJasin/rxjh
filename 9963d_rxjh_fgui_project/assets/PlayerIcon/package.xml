@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="unvjiiod">
+  <resources>
+    <image id="lmdg0" name="main_avatar1_0.png" path="/Images/" exported="true"/>
+    <image id="lmdg1" name="main_avatar1_1.png" path="/Images/" exported="true"/>
+    <image id="lmdg2" name="main_avatar2_0.png" path="/Images/" exported="true"/>
+    <image id="lmdg3" name="main_avatar2_1.png" path="/Images/" exported="true"/>
+    <image id="lmdg4" name="main_avatar3_0.png" path="/Images/" exported="true"/>
+    <image id="lmdg5" name="main_avatar3_1.png" path="/Images/" exported="true"/>
+    <image id="lmdg6" name="main_avatar4_0.png" path="/Images/" exported="true"/>
+    <image id="lmdg7" name="main_avatar4_1.png" path="/Images/" exported="true"/>
+    <image id="lmdg8" name="main_avatar5_0.png" path="/Images/" exported="true"/>
+    <image id="lmdg9" name="main_avatar5_1.png" path="/Images/" exported="true"/>
+    <image id="lmdga" name="main_avatar6_0.png" path="/Images/" exported="true"/>
+    <image id="lmdgb" name="main_avatar6_1.png" path="/Images/" exported="true"/>
+    <image id="leyei" name="avatarjob_1.png" path="/Images/" exported="true"/>
+    <image id="leyej" name="avatarjob_2.png" path="/Images/" exported="true"/>
+    <image id="leyek" name="avatarjob_3.png" path="/Images/" exported="true"/>
+    <image id="leyel" name="avatarjob_4.png" path="/Images/" exported="true"/>
+    <image id="leyem" name="avatarjob_5.png" path="/Images/" exported="true"/>
+    <image id="leyen" name="avatarjob_6.png" path="/Images/" exported="true"/>
+    <image id="akxoo" name="avatar_4.png" path="/CustomIcon/" exported="true"/>
+    <image id="akxop" name="avatar_0.png" path="/CustomIcon/" exported="true"/>
+    <image id="akxoq" name="avatar_1.png" path="/CustomIcon/" exported="true"/>
+    <image id="akxor" name="avatar_2.png" path="/CustomIcon/" exported="true"/>
+    <image id="akxos" name="avatar_3.png" path="/CustomIcon/" exported="true"/>
+    <image id="zbcyt" name="frame_0.png" path="/Images/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="452,58" overflow="scroll">
+  <displayList>
+    <richtext id="n3_o4l6" name="n3" xy="0,0" size="452,58" font="SimHei" fontSize="20" color="#ffffff" leading="5" autoSize="height" text="1.使用强化石可对对应装备强化，强化后提升装备属性。"/>
+  </displayList>
+</component>

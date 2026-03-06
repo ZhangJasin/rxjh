@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n14_gveh" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n0_fxh2" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="415,50" size="500,650" group="n13_r075"/>
+    <image id="n3_fxh2" name="img_di" src="fxh2fvc8" fileName="Images/ChatSetting/img_di.png" xy="431,115" size="468,408" group="n13_r075"/>
+    <component id="n8_r075" name="Button_fightMode1" src="r075fvd1" fileName="Components/ModeSetting/ModeButton.xml" xy="441,541" size="146,50" group="n13_r075">
+      <Button title="怪物优先" selectedTitle="怪物优先"/>
+    </component>
+    <component id="n10_r075" name="Button_fightMode2" src="r075fvd1" fileName="Components/ModeSetting/ModeButton.xml" xy="592,541" size="146,50" group="n13_r075">
+      <Button title="玩家优先" selectedTitle="玩家优先"/>
+    </component>
+    <component id="n9_r075" name="Button_fightMode3" src="r075fvd1" fileName="Components/ModeSetting/ModeButton.xml" xy="743,541" size="146,50" group="n13_r075">
+      <Button title="只对玩家" selectedTitle="只对玩家"/>
+    </component>
+    <component id="n1_fxh2" name="Button_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="893,78" group="n13_r075"/>
+    <component id="n12_r075" name="Button_ok" src="r075fvd2" fileName="Components/ModeSetting/ModeButton2.xml" xy="598,622" group="n13_r075"/>
+    <list id="n7_fxh2" name="List_mode" xy="439,125" size="451,393" group="n13_r075" overflow="scroll" scrollBarFlags="128" lineGap="6" defaultItem="ui://zj419n3dr075fvd0" autoItemSize="false" align="center" autoClearItems="true" scrollItemToViewOnClick="false">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n2_fxh2" name="title" xy="665,78" pivot="0.5,0.5" anchor="true" size="100,34" group="n13_r075" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" singleLine="true" text="战斗模式"/>
+    <group id="n13_r075" name="n13" xy="415,50" size="500,650" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

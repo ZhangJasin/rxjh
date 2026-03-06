@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImage="ui://st7dgeqql6xyv5q" designImageOffsetX="-900" designImageOffsetY="64">
+  <controller name="grade" pages="0,白,1,绿,2,蓝,3,紫,4,橙,5,红" selected="0"/>
+  <displayList>
+    <graph id="n10_l6xy" name="Mask" xy="0,0" size="1024,768" visible="false" alpha="0.6" touchable="false" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n29_r1aj" name="n2" src="r1aj5x" fileName="Images/tips_bg.png" xy="628,309" pivot="1,0" anchor="true" size="232,150" restrictSize="232,0,150,0" group="n11_l6xy">
+      <relation target="n19_hkm9" sidePair="height-height"/>
+    </image>
+    <loader id="n28_r1aj" name="TopBg" xy="401,314" size="224,61" group="n11_l6xy" touchable="false" url="ui://ja5fet7sr1aj5r" autoSize="true">
+      <gearDisplay controller="grade" pages="0,1,2,3,4,5"/>
+      <gearIcon controller="grade" pages="1,2,3,4,5" values="ui://ja5fet7sr1aj5s|ui://ja5fet7sr1aj5t|ui://ja5fet7sr1aj5u|ui://ja5fet7sr1aj5v|ui://ja5fet7sr1aj5w" default="ui://ja5fet7sr1aj5r"/>
+    </loader>
+    <component id="n24_d4qh" name="CommonItem" src="emvc3" fileName="Icons/CommonItem.xml" pkg="qa9a7rit" xy="454,323" pivot="1,0" anchor="true" group="n11_l6xy" touchable="false">
+      <relation target="n28_r1aj" sidePair="middle-middle,left-left"/>
+    </component>
+    <text id="n5_l6xy" name="Name" xy="620,321" pivot="1,0" anchor="true" size="160,22" group="n11_l6xy" fontSize="14" color="#f2fbff" autoSize="none" autoClearText="true" text="">
+      <relation target="" sidePair="left-left,top-top"/>
+    </text>
+    <list id="n32_r1aj" name="TopContent" xy="460,341" size="160,36" group="n11_l6xy" touchable="false" layout="flow_vt" overflow="hidden" lineGap="-2" lineItemCount="2" foldInvisibleItems="true">
+      <item url="ui://ja5fet7sr1aj61" title="等级" name="Level"/>
+      <item url="ui://ja5fet7sr1aj61" title="阵营" name="Zy"/>
+      <item url="ui://ja5fet7sr1aj61" title="职业" name="Job"/>
+      <item url="ui://ja5fet7sr1aj61" title="转职" name="Ms"/>
+      <item url="ui://ja5fet7sr1aj61" title="性别" name="Sex"/>
+      <item url="ui://ja5fet7sr1aj61" title="部位" name="EquipType"/>
+    </list>
+    <list id="n19_hkm9" name="Content" xy="403,377" size="218,76" group="n11_l6xy" selectionMode="none" overflow="scroll" scrollBarFlags="32" margin="3,0,0,0" lineGap="2" autoItemSize="false" scrollItemToViewOnClick="false" foldInvisibleItems="true">
+      <item url="ui://ja5fet7s10e45e" name="QigongLv"/>
+      <item url="ui://ja5fet7s10e45e" name="BaseAttr"/>
+      <item url="ui://ja5fet7s10e45e" name="DuraNum"/>
+      <item url="ui://ja5fet7s10e45e" name="Desc"/>
+      <item url="ui://ja5fet7s10e45e" name="GetWay"/>
+      <item url="ui://ja5fet7s10e45e" name="MoneyNum"/>
+    </list>
+    <group id="n11_l6xy" name="Pop" xy="396,309" size="232,150" group="n34_pxu7" advanced="true"/>
+    <component id="n33_pxu7" name="panel_purchase" src="pxu766" fileName="Components/TipItemPurchasePop.xml" xy="624,328" group="n34_pxu7" visible="false">
+      <relation target="n11_l6xy" sidePair="left-right,bottom-bottom"/>
+    </component>
+    <group id="n34_pxu7" name="PopI" xy="396,309" size="232,150" advanced="true" layout="hz" colGap="-4" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n23_d4qh" name="checkBox_auto" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="399,457" group="n22_d4qh"/>
+    <text id="n21_d4qh" name="text_tip" xy="423,458" size="88,19" group="n22_d4qh" fontSize="12" color="#e3e3e3" strokeColor="#000000" text="此道具不再提示"/>
+    <group id="n22_d4qh" name="panel_auto_switch" xy="399,457" size="112,22" visible="false" advanced="true">
+      <relation target="n11_l6xy" sidePair="left-left,bottom-bottom"/>
+    </group>
+    <image id="n36_wodv" name="bg1" src="kcff5vp4" fileName="Images/tips_bg.png" pkg="zu7kdgts" xy="626,308" size="138,240" group="n39_wodv">
+      <relation target="n38_wodv" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n37_wodv" name="obtainName" xy="742,314" pivot="1,0" anchor="true" size="95,32" group="n39_wodv" fontSize="16" color="#f2fbff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" autoClearText="true" text="获取途径">
+      <relation target="n36_wodv" sidePair="center-center"/>
+    </text>
+    <list id="n38_wodv" name="list" xy="643,350" size="106,188" group="n39_wodv" selectionMode="none" overflow="scroll" margin="3,0,0,0" lineGap="2" defaultItem="ui://zu7kdgtswodv5vpe" align="center" autoClearItems="true">
+      <relation target="n36_wodv" sidePair="width-width,height-height,center-center"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n39_wodv" name="ObtainList" xy="626,308" size="138,240" visible="false" advanced="true"/>
+    <component id="n25_soey" name="Btn3" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="664,393" pivot="0.5,0.5" anchor="true" size="74,25" group="n40_en0m">
+      <relation target="n29_r1aj" sidePair="right-right,bottom-bottom"/>
+      <Button titleColor="#ffffff" titleFontSize="11" icon="ui://qa9a7ritemvc3h"/>
+    </component>
+    <component id="n26_soey" name="Btn2" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="664,419" pivot="0.5,0.5" anchor="true" size="74,25" group="n40_en0m">
+      <relation target="n29_r1aj" sidePair="right-right,bottom-bottom"/>
+      <Button titleColor="#ffffff" titleFontSize="11" icon="ui://qa9a7ritemvc3h"/>
+    </component>
+    <component id="n27_soey" name="Btn1" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="664,445" pivot="0.5,0.5" anchor="true" size="74,25" group="n40_en0m">
+      <relation target="n29_r1aj" sidePair="right-right,bottom-bottom"/>
+      <Button titleColor="#ffffff" titleFontSize="11" icon="ui://qa9a7ritemvc3h"/>
+    </component>
+    <group id="n40_en0m" name="btns" xy="627,380" size="74,77" advanced="true"/>
+    <component id="n41_en0m" name="Btn4" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="586,436" pivot="0.5,0.5" anchor="true" scale="0.6,0.6" visible="false">
+      <Button title="获取" titleColor="#ffff00" titleFontSize="21" selectedTitle="获取"/>
+    </component>
+  </displayList>
+</component>

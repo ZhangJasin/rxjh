@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,50">
+  <controller name="arrDir" pages="0,Left,4,UpperLeft,1,Up,5,UpperRight,2,Right,6,LowerRight,3,Down,7,LowerLeft" selected="0"/>
+  <displayList>
+    <image id="n14_o9ph" name="n14" src="lxrgv52" fileName="image/bg_tips.png" pkg="st7dgeqq" xy="0,0" size="200,50" group="n18_o9ph">
+      <relation target="n16_o9ph" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n17_o9ph" name="upArrow" src="lxrgv51" fileName="image/arrow.png" pkg="st7dgeqq" xy="84,-40" pivot="0.5,0.5" size="28,19" group="n18_o9ph" rotation="180">
+      <gearDisplay controller="arrDir" pages="1"/>
+      <relation target="n14_o9ph" sidePair="center-center,top-top"/>
+    </image>
+    <image id="n19_o9ph" name="downArrow" src="lxrgv51" fileName="image/arrow.png" pkg="st7dgeqq" xy="84,71" pivot="0.5,0.5" size="28,19" group="n18_o9ph">
+      <gearDisplay controller="arrDir" pages="3"/>
+      <relation target="n14_o9ph" sidePair="center-center,bottom-bottom"/>
+    </image>
+    <image id="n20_o9ph" name="rightArrow" src="lxrgv51" fileName="image/arrow.png" pkg="st7dgeqq" xy="215,15" pivot="0.5,0.5" size="28,19" group="n18_o9ph" rotation="-90">
+      <gearDisplay controller="arrDir" pages="2"/>
+      <relation target="n14_o9ph" sidePair="middle-middle,right-right"/>
+    </image>
+    <image id="n21_o9ph" name="leftArrow" src="lxrgv51" fileName="image/arrow.png" pkg="st7dgeqq" xy="-43,17" pivot="0.5,0.5" size="28,19" group="n18_o9ph" rotation="90">
+      <gearDisplay controller="arrDir" pages="0"/>
+      <relation target="n14_o9ph" sidePair="middle-middle,left-left"/>
+    </image>
+    <image id="n22_o9ph" name="upLeftArrow" src="lxrgv51" fileName="image/arrow.png" pkg="st7dgeqq" xy="-42,-38" pivot="0.5,0.5" size="28,19" group="n18_o9ph" rotation="135">
+      <gearDisplay controller="arrDir" pages="4"/>
+      <relation target="n14_o9ph" sidePair="center-center,left-left,top-top"/>
+    </image>
+    <image id="n23_o9ph" name="upRightArrow" src="lxrgv51" fileName="image/arrow.png" pkg="st7dgeqq" xy="212,-38" pivot="0.5,0.5" size="28,19" group="n18_o9ph" rotation="-135">
+      <gearDisplay controller="arrDir" pages="5"/>
+      <relation target="n14_o9ph" sidePair="center-center,right-right,top-top"/>
+    </image>
+    <image id="n24_o9ph" name="downLeftArrow" src="lxrgv51" fileName="image/arrow.png" pkg="st7dgeqq" xy="-42,67" pivot="0.5,0.5" size="28,19" group="n18_o9ph" rotation="45">
+      <gearDisplay controller="arrDir" pages="7"/>
+      <relation target="n14_o9ph" sidePair="center-center,left-left,bottom-bottom"/>
+    </image>
+    <image id="n25_o9ph" name="downRightArrow" src="lxrgv51" fileName="image/arrow.png" pkg="st7dgeqq" xy="212,67" pivot="0.5,0.5" size="28,19" group="n18_o9ph" rotation="-45">
+      <gearDisplay controller="arrDir" pages="6"/>
+      <relation target="n14_o9ph" sidePair="center-center,right-right,bottom-bottom"/>
+    </image>
+    <text id="n16_o9ph" name="desc" xy="9,11" size="180,29" group="n18_o9ph" fontSize="20" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="height" text=""/>
+    <component id="n26_7t9o" name="Node_sui" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="9,11" size="0,0" group="n18_o9ph">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n18_o9ph" name="GuideContent" xy="-43,-40" size="286,130" advanced="true">
+      <relation target="n16_o9ph" sidePair="width-width,height-height"/>
+    </group>
+  </displayList>
+  <relation target="n14_o9ph" sidePair="width-width,height-height"/>
+  <transition name="ArrowAni" autoPlayRepeat="-1">
+    <item time="0" type="XY" target="n17_o9ph" label="upArrowStart" tween="true" startValue="-,-32" endValue="-,-40" duration="6" label2="upArrowEnd" ease="Linear" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n19_o9ph" label="downArrowStart" tween="true" startValue="-,63" endValue="-,71" duration="6" label2="downArrowEnd" ease="Linear" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n20_o9ph" tween="true" startValue="207,-" endValue="215,-" duration="6" ease="Linear" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n21_o9ph" tween="true" startValue="-35,-" endValue="-43,-" duration="6" ease="Linear" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n22_o9ph" tween="true" startValue="-42,-38" endValue="-50,-44" duration="6" ease="Linear" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n23_o9ph" tween="true" startValue="212,-38" endValue="220,-44" duration="6" ease="Linear" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n24_o9ph" tween="true" startValue="-42,67" endValue="-50,75" duration="6" ease="Linear" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n25_o9ph" tween="true" startValue="212,67" endValue="218,75" duration="6" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+</component>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1060,590">
+  <controller name="attrtc" pages="4,,0,,1,,2,,3," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="喂养弹窗"/>
+    <remark page="2" value="属性加成弹窗"/>
+    <remark page="3" value="升星弹窗"/>
+    <remark page="4" value="升阶弹窗"/>
+  </controller>
+  <controller name="iswear" pages="0,,1," selected="0">
+    <remark page="0" value="有穿戴"/>
+    <remark page="1" value="无穿戴"/>
+  </controller>
+  <displayList>
+    <image id="n3_swkl" name="n3" src="swkl2t" fileName="Images/shuxing/bg4.png" xy="224,-1"/>
+    <image id="n5_swkl" name="n5" src="onai35" fileName="Images/jinhua/sxbg.png" xy="1,0" size="240,590"/>
+    <list id="n4_swkl" name="petList" xy="1,1" size="240,586" overflow="scroll" defaultItem="ui://bphbjao2swkl33">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n6_swkl" name="n6" src="onai35" fileName="Images/jinhua/sxbg.png" xy="782,-1" size="277,590"/>
+    <image id="n8_swkl" name="n8" src="swkl30" fileName="Images/shuxing/信息底.png" xy="309,20" size="408,53"/>
+    <text id="n9_swkl" name="petname" xy="462,29" pivot="0.5,0.5" size="100,34" fontSize="24" color="#ffff00" align="center" vAlign="middle" text="宠物名字"/>
+    <graph id="n10_swkl" name="graph_pet" xy="511,484" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <component id="n11_swkl" name="panel_touch" src="ger553" fileName="Components/tongyong/itemRoot.xml" pkg="fgihxfye" xy="367,138" size="287,343">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n12_kdof" name="n12" src="s5ms3m" fileName="Components/shuxing/wyitem.xml" xy="399,75"/>
+    <loader id="n19_kdof" name="di15" xy="295,214" size="74,74" url="ui://fgihxfyel2uigh">
+      <gearDisplay controller="iswear" pages="0"/>
+    </loader>
+    <loader id="n20_kdof" name="di16" xy="295,322" size="74,74" url="ui://fgihxfyel2uigh">
+      <gearDisplay controller="iswear" pages="0"/>
+    </loader>
+    <loader id="n21_kdof" name="di17" xy="655,214" size="74,74" url="ui://fgihxfyel2uigh">
+      <gearDisplay controller="iswear" pages="0"/>
+    </loader>
+    <loader id="n22_kdof" name="di18" xy="655,322" size="74,74" url="ui://fgihxfyel2uigh">
+      <gearDisplay controller="iswear" pages="0"/>
+    </loader>
+    <component id="n15_kdof" name="equip15" src="kdof36" fileName="Components/shuxing/equipItem.xml" xy="295,214" pivot="0.5,0.5" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="0"/>
+    </component>
+    <component id="n16_kdof" name="equip16" src="kdof36" fileName="Components/shuxing/equipItem.xml" xy="295,322" pivot="0.5,0.5" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="0"/>
+    </component>
+    <component id="n17_kdof" name="equip17" src="kdof36" fileName="Components/shuxing/equipItem.xml" xy="655,214" pivot="0.5,0.5" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="0"/>
+    </component>
+    <component id="n18_kdof" name="equip18" src="kdof36" fileName="Components/shuxing/equipItem.xml" xy="655,322" pivot="0.5,0.5" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="0"/>
+    </component>
+    <component id="n45_s5ms" name="btn_sxyl" src="wgst5q" fileName="Components/tongyong/fangbtn.xml" pkg="fgihxfye" xy="683,22" size="63,58">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="属性预览" titleFontSize="22"/>
+    </component>
+    <component id="n46_s5ms" name="btn_lssx" src="wgst5q" fileName="Components/tongyong/fangbtn.xml" pkg="fgihxfye" xy="683,95" size="63,58">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="灵兽升星" titleFontSize="22"/>
+    </component>
+    <component id="n48_qdwv" name="btn_pet" src="fjq2gq" fileName="Components/tongyong/btn_zong.xml" pkg="fgihxfye" xy="452,511" size="120,40" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="召 唤" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <list id="n49_klt8" name="tolentList" xy="785,5" size="276,474" layout="flow_hz" overflow="scroll" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://fgihxfyeqdwvis" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n39_kdof" name="panl_wyls" src="kdof3a" fileName="Components/shuxing/panl_wyls.xml" xy="-135,-80">
+      <gearDisplay controller="attrtc" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n40_kdof" name="panl_sxjc" src="kdof3c" fileName="Components/shuxing/panl_attrshow.xml" xy="-137,-80">
+      <gearDisplay controller="attrtc" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n41_kdof" name="panl_lssx" src="kdof3d" fileName="Components/shuxing/panl_petupxing.xml" xy="-137,-79">
+      <gearDisplay controller="attrtc" pages="2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n42_kdof" name="panl_lssj" src="kdof3h" fileName="Components/shuxing/panl_lssj.xml" xy="-137,-80">
+      <gearDisplay controller="attrtc" pages="3"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

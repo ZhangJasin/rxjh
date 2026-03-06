@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <loader id="n12_kt0f" name="Node_ECO" xy="0,0" size="1334,750" align="center" vAlign="middle"/>
+    <graph id="n10_kt0f" name="bg" xy="0,0" size="1334,750" type="rect" lineSize="0" fillColor="#99000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n13_j02m" name="bg_black" xy="0,0" size="1334,750" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n2_fhlw" name="time" xy="506,62" size="319,160" group="n5_fhlw" fontSize="125" color="#ffffff" text="14:35"/>
+    <component id="n6_kt0f" name="dragComponent" src="kt0f8" fileName="Component/DragComponent.xml" xy="386,442" group="n5_fhlw"/>
+    <component id="n9_kt0f" name="title" src="kt0fb" fileName="Component/title_label.xml" xy="449,588" size="433,34" group="n5_fhlw">
+      <Label title="可以长时间挂机多人副本和刷野怪"/>
+    </component>
+    <group id="n5_fhlw" name="n5" xy="386,62" size="560,560" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

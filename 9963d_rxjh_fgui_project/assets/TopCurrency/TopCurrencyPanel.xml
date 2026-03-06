@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <list id="n0_nnix" name="List_currency" xy="1130,22" pivot="1,0" anchor="true" size="963,28" layout="row" selectionMode="none" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="2" defaultItem="ui://rxwfe61pnnix1" align="right" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

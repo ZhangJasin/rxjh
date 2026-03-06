@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="24,24" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="btnkInd" exported="true" pages="0,add,1,minus,2,max,3,m_min,4,m_max" selected="4"/>
+  <displayList>
+    <image id="n6_g0ii" name="add" src="emvcc" fileName="image/+.png" xy="0,0" group="n9_tw0l">
+      <gearDisplay controller="btnkInd" pages="0"/>
+    </image>
+    <image id="n7_g0ii" name="minus" src="emvcd" fileName="image/-.png" xy="0,0" group="n9_tw0l">
+      <gearDisplay controller="btnkInd" pages="1"/>
+    </image>
+    <image id="n8_g0ii" name="max" src="emvce" fileName="image/MAX.png" xy="0,0" group="n9_tw0l">
+      <gearDisplay controller="btnkInd" pages="2"/>
+    </image>
+    <image id="n11_pxu7" name="m_min" src="pxu7kvpl" fileName="image/m_min.png" xy="0,0" group="n9_tw0l">
+      <gearDisplay controller="btnkInd" pages="3"/>
+    </image>
+    <image id="n10_pxu7" name="m_max" src="pxu7kvpk" fileName="image/m_max.png" xy="0,0" group="n9_tw0l">
+      <gearDisplay controller="btnkInd" pages="4"/>
+    </image>
+    <group id="n9_tw0l" name="n9" xy="0,0" size="25,25" advanced="true" layout="hz" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+  <Button downEffect="scale" downEffectValue=".8"/>
+  <relation target="n9_tw0l" sidePair="rightext-right"/>
+</component>

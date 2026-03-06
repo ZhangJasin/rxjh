@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,300">
+  <displayList>
+    <image id="n0_eoqr" name="n0" src="boje23" fileName="Images/newimg/tips底.png" pkg="seywlb2r" xy="0,0" size="300,300"/>
+    <image id="n1_eoqr" name="n1" src="boje1t" fileName="Images/newimg/花纹1.png" pkg="seywlb2r" xy="240,20"/>
+    <image id="n2_eoqr" name="n2" src="boje1s" fileName="Images/newimg/花纹2.png" pkg="seywlb2r" xy="20,20"/>
+    <text id="n3_eoqr" name="title" xy="100,15" size="100,30" fontSize="20" color="#ffff00" align="center" autoSize="none" text="道具数量"/>
+    <component id="n4_eoqr" name="show_item" src="boje2g" fileName="Components/newcom/show_item(brown).xml" pkg="seywlb2r" xy="118,76"/>
+    <image id="n6_eoqr" name="n6" src="boje1w" fileName="Images/newimg/smallBaseFrame.png" pkg="seywlb2r" xy="90,170" size="120,44"/>
+    <component id="n7_eoqr" name="btn_add" src="boje2e" fileName="Components/newcom/btn_jia.xml" pkg="seywlb2r" xy="210,170"/>
+    <component id="n8_eoqr" name="btn_reduce" src="boje26" fileName="Components/newcom/btn_jian.xml" pkg="seywlb2r" xy="46,170"/>
+    <text id="n9_eoqr" name="input_itemNum" xy="90,170" size="120,44" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="" input="true" prompt="1"/>
+    <component id="n11_eoqr" name="btn_yes" src="la2y15" fileName="Components/common/btn_red.xml" xy="90,234" size="120,45"/>
+    <text id="n12_eoqr" name="n7" xy="90,235" size="120,45" fontSize="18" color="#ffff00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="确定"/>
+  </displayList>
+</component>

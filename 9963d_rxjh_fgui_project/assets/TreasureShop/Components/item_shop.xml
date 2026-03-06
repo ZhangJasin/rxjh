@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="190,220">
+  <controller name="isXianGou" pages="0,是,1,否" selected="0"/>
+  <displayList>
+    <image id="n270_yh61" name="n274" src="yh61dv72" fileName="Images/di.png" xy="0,0" size="190,220">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n274_qug1" name="n270" src="kra4dv7b" fileName="Images/icon_item_select.png" xy="0,0" size="190,220" visible="false"/>
+    <component id="n269_jo9b" name="commonItem" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="56,71" size="78,78" aspect="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n251_cym7" name="text_name" xy="95,20" pivot="0.5,0.5" anchor="true" size="164,29" fontSize="18" color="#f6cd2b" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="回城符（柳善府）">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n254_cym7" name="text_xiangou" xy="37,150" size="115,29" fontSize="20" color="#ffffff" align="center" vAlign="middle" text="今日限购3次">
+      <gearDisplay controller="isXianGou" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n273_yh61" name="img_isXianGou" src="yh61dv74" fileName="Images/isXianGOu.png" xy="6,40">
+      <gearDisplay controller="isXianGou" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n272_yh61" name="com_money" src="efnsdv70" fileName="Components/com_money.xml" xy="54,182">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

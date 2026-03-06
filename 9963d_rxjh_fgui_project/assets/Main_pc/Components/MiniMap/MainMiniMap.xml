@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="166,184" opaque="false" designImage="ui://xwp5ackomjoj1" designImageOffsetX="-858">
+  <controller name="size" homePageType="specific" homePage="1" pages="0,,1,,2," selected="1">
+    <remark page="0" value="无"/>
+    <remark page="1" value="小"/>
+    <remark page="2" value="大"/>
+  </controller>
+  <displayList>
+    <component id="n5_ke93" name="Comp_Map" src="nc8ap" fileName="Components/MiniMap/MiniMapMap.xml" xy="163,26" pivot="1,0" anchor="true" size="160,156">
+      <gearDisplay controller="size" pages="1,2"/>
+      <gearXY controller="size" pages="0,1,2" values="163,26|163,26|163,26"/>
+      <gearSize controller="size" pages="2" values="449,449,1,1" default="160,156,1,1"/>
+    </component>
+    <image id="n25_s977" name="n25" src="nc8a14" fileName="Images/MiniMap/main_tip_bg.png" xy="-442,1" size="442,20" visible="false"/>
+    <image id="n15_nc8a" name="n15" src="nc8as" fileName="Images/MiniMap/main_minimap_di1.png" xy="0,0" size="166,24"/>
+    <image id="n16_nc8a" name="n16" src="nc8ar" fileName="Images/MiniMap/main_minimap_bg.png" xy="165,24" pivot="1,0" anchor="true" size="164,160">
+      <gearDisplay controller="size" pages="1,2"/>
+      <gearXY controller="size" default="165,24"/>
+      <gearSize controller="size" pages="2" values="454,453,1,1" default="164,160,1,1"/>
+    </image>
+    <image id="n14_r075" name="n14" src="nc8at" fileName="Images/MiniMap/main_minimap_di2.png" xy="3,26" size="60,16">
+      <gearDisplay controller="size" pages="1,2"/>
+      <gearXY controller="size" pages="2" values="-287,26" default="3,26"/>
+    </image>
+    <component id="n24_s977" name="Btn_music" src="s977kvpc" fileName="RadioRawButton.xml" pkg="o8ixb2zy" xy="4,4" size="16,16">
+      <Button icon="ui://xwp5ackonc8a12" selectedIcon="ui://xwp5ackobbev5c"/>
+    </component>
+    <component id="n22_fl3y" name="Btn_increase" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="146,4">
+      <Button icon="ui://xwp5ackonc8a10"/>
+    </component>
+    <component id="n23_fl3y" name="Btn_reduce" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="129,4">
+      <Button icon="ui://xwp5ackonc8a11"/>
+    </component>
+    <component id="n28_s977" name="Btn_tip" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="-474,2" size="16,18" visible="false">
+      <Button icon="ui://xwp5ackonc8a13"/>
+    </component>
+    <component id="n29_s977" name="Btn_help" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="-458,2" size="16,18" visible="false">
+      <Button icon="ui://xwp5ackos97716"/>
+    </component>
+    <component id="n33_9v0n" name="Btn_auto" src="9v0nv8g" fileName="Components/MiniMap/MiniMapAutoButton.xml" xy="120,184">
+      <gearXY controller="size" pages="0,1" values="120,24|120,184" default="120,477"/>
+    </component>
+    <component id="n12_r075" name="Btn_route" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="2,158" size="47,25">
+      <gearDisplay controller="size" pages="1,2"/>
+      <gearXY controller="size" pages="0,1,2" values="3,-57|2,158|-288,452"/>
+      <Button icon="ui://xwp5ackonc8au"/>
+    </component>
+    <text id="n6_ke93" name="Text_mapName" xy="21,1" size="107,22" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="shrink" strokeColor="#000000" autoClearText="true" text="地图名字"/>
+    <text id="n7_ke93" name="Text_pos" xy="4,23" size="56,22" fontSize="14" color="#ffffff" vAlign="middle" strokeColor="#000000" autoClearText="true" text="999,999">
+      <gearDisplay controller="size" pages="1,2"/>
+      <gearXY controller="size" pages="2" values="-286,23" default="4,23"/>
+    </text>
+    <text id="n9_ke93" name="Text_state" xy="164,23" pivot="1,0" anchor="true" size="60,22" fontSize="14" color="#00ff00" strokeColor="#000000" text="安全区域">
+      <gearDisplay controller="size" pages="1,2"/>
+    </text>
+    <text id="n30_s977" name="Text_tip" xy="-221,1" pivot="0.5,0" anchor="true" size="424,19" visible="false" fontSize="12" color="#81c8b4" align="center" leading="0" autoSize="none" autoClearText="true" text="提示">
+      <gearDisplay controller="size" pages="0,1,2"/>
+    </text>
+  </displayList>
+</component>

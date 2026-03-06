@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1060,590">
+  <controller name="sldpage" pages="0,,1," selected="1">
+    <remark page="0" value="合成"/>
+    <remark page="1" value="解除"/>
+  </controller>
+  <controller name="additemType" pages="0,,1,,2," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="幸运符列表"/>
+    <remark page="2" value="合成石列表"/>
+  </controller>
+  <displayList>
+    <image id="n3_swkl" name="n3" src="lg984w" fileName="Images/newhc/01.png" xy="77,0"/>
+    <image id="n5_swkl" name="n5" src="onai35" fileName="Images/jinhua/sxbg.png" xy="1,0" size="240,590"/>
+    <list id="n50_lg98" name="sldtopList" xy="-2,3" size="240,47" layout="row" margin="4,2,6,0" colGap="5" defaultItem="ui://bphbjao2kdof3j" selectionController="sldpage">
+      <relation target="" sidePair=""/>
+      <item title="合成"/>
+      <item title="解除"/>
+    </list>
+    <list id="n4_swkl" name="sldpetList" xy="1,51" size="238,536" overflow="scroll" defaultItem="ui://bphbjao2lg9854">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n51_cm5h" name="n51" src="lg984x" fileName="Images/newhc/02.png" xy="515,21"/>
+    <image id="n8_swkl" name="n8" src="lg984y" fileName="Images/newhc/03.png" xy="556,7"/>
+    <text id="n9_swkl" name="rate" xy="607,16" pivot="0.5,0.5" size="104,29" font="SimHei" fontSize="20" color="#00ff00" align="center" vAlign="middle" text="成功率:50%"/>
+    <component id="n48_qdwv" name="btn_hc" src="fpdq5z" fileName="Components/shuxing/btn_zong.xml" xy="602,534" size="120,40">
+      <gearDisplay controller="sldpage" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="合 成" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <component id="n65_cm5h" name="btn_jc" src="fpdq5z" fileName="Components/shuxing/btn_zong.xml" xy="602,534" size="120,40">
+      <gearDisplay controller="sldpage" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="解 除" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <image id="n55_cm5h" name="n55" src="cm5h55" fileName="Images/newhc/04.png" xy="415,233"/>
+    <text id="n56_cm5h" name="petname" xy="623,237" pivot="0.5,0.5" size="76,26" font="SimHei" fontSize="18" color="#ffffff" align="center" text="宠物名字"/>
+    <image id="n57_cm5h" name="n57" src="swkl22" fileName="Images/shuxing/宠物主界面底.png" xy="624,126">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <loader id="n58_cm5h" name="touxiang" xy="623,124" pivot="0.5,0.5" size="70,70" aspect="true" url="ui://bphbjao2swkl13" align="right" fill="scale" clearOnPublish="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <text id="n59_cm5h" name="checkfont" xy="573,503" size="202,26" font="SimHei" fontSize="18" color="#ffffff" text="使用20元宝提升5%成功率"/>
+    <component id="n60_cm5h" name="check" src="cm5h57" fileName="Components/hecheng/checkBox.xml" xy="538,500" controller="isSelected,0"/>
+    <component id="n61_cm5h" name="itemxyf" src="o4l655" fileName="Components/tongyong/item_select.xml" pkg="fgihxfye" xy="559,420" controller="c2,1,c1,3">
+      <gearDisplay controller="sldpage" pages="0"/>
+    </component>
+    <component id="n62_cm5h" name="itemts" src="o4l655" fileName="Components/tongyong/item_select.xml" pkg="fgihxfye" xy="689,420" controller="c2,1,c1,1">
+      <gearDisplay controller="sldpage" pages="0"/>
+    </component>
+    <component id="n67_cm5h" name="itemjc" src="qdwvis" fileName="Components/tongyong/additembtn3.xml" pkg="fgihxfye" xy="628,421">
+      <gearDisplay controller="sldpage" pages="1"/>
+    </component>
+    <component id="n63_cm5h" name="curlist" src="cm5h5b" fileName="Components/hecheng/itemsldlist.xml" xy="466,264"/>
+    <component id="n64_cm5h" name="nextlist" src="cm5h5b" fileName="Components/hecheng/itemsldlist.xml" xy="742,266"/>
+    <component id="n68_q1t4" name="panl_additem" src="q1t45c" fileName="Components/hecheng/additempanl.xml" xy="-141,-104">
+      <gearDisplay controller="additemType" pages="1,2"/>
+    </component>
+  </displayList>
+</component>

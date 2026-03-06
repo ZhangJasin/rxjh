@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="ja5fet7s">
+  <resources>
+    <component id="10e450" name="btn_CancelOrUse.xml" path="/Components/" exported="true"/>
+    <component id="10e451" name="btn_square_1.xml" path="/Components/" exported="true"/>
+    <component id="10e452" name="btn_square_2.xml" path="/Components/" exported="true"/>
+    <component id="10e453" name="text_scroll.xml" path="/Components/" exported="true"/>
+    <image id="10e454" name="btn_square_1_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="6,6,2,2"/>
+    <image id="10e455" name="btn_square_2_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="7,6,2,2"/>
+    <image id="10e456" name="text_equip_big.png" path="/Images/" exported="true"/>
+    <component id="10e457" name="CommonAttrTip.xml" path="/" exported="true"/>
+    <component id="10e458" name="CommonDialog.xml" path="/" exported="true"/>
+    <component id="10e459" name="CommonEquipTip.xml" path="/" exported="true"/>
+    <component id="10e45a" name="CommonHelpDialog.xml" path="/" exported="true"/>
+    <component id="10e45b" name="PCCommonItemSplitDialog.xml" path="/" exported="true"/>
+    <component id="10e45c" name="ComponentInput.xml" path="/"/>
+    <component id="10e45d" name="CommonItemTip.xml" path="/" exported="true"/>
+    <component id="10e45e" name="TipListLabel.xml" path="/"/>
+    <component id="10e45f" name="PCCommonNumberInput.xml" path="/" exported="true"/>
+    <component id="10e45g" name="CommonVideoWnd.xml" path="/" exported="true"/>
+    <component id="10e45h" name="ComponentTouch.xml" path="/"/>
+    <component id="10e45i" name="EquipTipListLabel.xml" path="/"/>
+    <component id="10e45j" name="EquipTipNode.xml" path="/" exported="true"/>
+    <component id="10e45k" name="HelpDialogBtn.xml" path="/" exported="true"/>
+    <component id="10e45l" name="HelpDialogRickText.xml" path="/" exported="true"/>
+    <component id="yp8h5m" name="PCCommonTitleTips.xml" path="/" exported="true"/>
+    <component id="yp8h5n" name="PCComponentTitleTip.xml" path="/Components/"/>
+    <component id="yp8h5o" name="titleAttributeCell.xml" path="/Components/"/>
+    <image id="yp8h5p" name="02.png" path="/Images/"/>
+    <image id="yp8h5q" name="bg_title.png" path="/Images/" scale="9grid" scale9grid="3,3,2,23"/>
+    <image id="r1aj5r" name="bg_grade_0.png" path="/Images/" exported="true" scale="9grid" scale9grid="56,15,112,30"/>
+    <image id="r1aj5s" name="bg_grade_1.png" path="/Images/" exported="true" scale="9grid" scale9grid="56,15,112,30"/>
+    <image id="r1aj5t" name="bg_grade_2.png" path="/Images/" exported="true" scale="9grid" scale9grid="56,15,112,30"/>
+    <image id="r1aj5u" name="bg_grade_3.png" path="/Images/" exported="true" scale="9grid" scale9grid="56,15,112,30"/>
+    <image id="r1aj5v" name="bg_grade_4.png" path="/Images/" exported="true" scale="9grid" scale9grid="56,15,112,30"/>
+    <image id="r1aj5w" name="bg_grade_5.png" path="/Images/" exported="true" scale="9grid" scale9grid="56,15,112,30"/>
+    <image id="r1aj5x" name="tips_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="50,50,240,314"/>
+    <image id="r1aj5y" name="title_left.png" path="/Images/" exported="true"/>
+    <image id="r1aj5z" name="title_right.png" path="/Images/" exported="true"/>
+    <component id="r1aj61" name="TipTopListLabel.xml" path="/"/>
+    <component id="r1aj63" name="TipImgTitleLabel.xml" path="/Components/"/>
+    <component id="w2ob64" name="TipPreviewModel.xml" path="/Components/"/>
+    <image id="w2ob65" name="bg01.png" path="/Images/" exported="true"/>
+    <component id="pxu766" name="TipItemPurchasePop.xml" path="/Components/"/>
+    <component id="pxu767" name="commonCostCell.xml" path="/Components/" exported="true"/>
+    <component id="fwsh68" name="EquipTipListLabel(1).xml" path="/"/>
+    <component id="fwsh69" name="obtainItem.xml" path="/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

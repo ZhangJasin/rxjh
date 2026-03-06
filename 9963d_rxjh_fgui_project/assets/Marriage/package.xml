@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="s7gyh5sv">
+  <resources>
+    <component id="la2y3" name="btn_wenhao.xml" path="/Components/common/" exported="true"/>
+    <component id="la2y4" name="btn_closeyuan.xml" path="/Components/common/" exported="true"/>
+    <component id="la2y5" name="xialvMain.xml" path="/" exported="true"/>
+    <image id="la2y6" name="bg_lv2.png" path="/images/" exported="true" scale="9grid" scale9grid="52,54,2,1"/>
+    <image id="la2yc" name="greenBtn.png" path="/images/" exported="true"/>
+    <component id="la2yf" name="btn_green.xml" path="/Components/common/" exported="true"/>
+    <component id="la2yg" name="page_xunyuan.xml" path="/Components/xialv/" exported="true"/>
+    <component id="la2yi" name="default_jieyuan.xml" path="/Components/xialv/" exported="true"/>
+    <image id="la2yj" name="default_jieyuan.png" path="/images/" exported="true"/>
+    <component id="la2yk" name="xialv_default.xml" path="/Components/xialv/" exported="true"/>
+    <image id="la2yl" name="default_backGround.png" path="/images/" exported="true"/>
+    <component id="la2ym" name="xialv_qinyuan.xml" path="/Components/xialv/" exported="true"/>
+    <component id="la2yn" name="xialv_jieyi.xml" path="/Components/xialv/" exported="true"/>
+    <component id="la2yo" name="xialv_jinlan.xml" path="/Components/xialv/" exported="true"/>
+    <image id="la2yp" name="qinyuan.png" path="/images/" exported="true"/>
+    <image id="la2yr" name="jinlan.png" path="/images/" exported="true"/>
+    <image id="la2ys" name="jieyi.png" path="/images/" exported="true"/>
+    <image id="la2yt" name="pageMark_noSelect.png" path="/images/" exported="true" scale="9grid" scale9grid="19,10,38,20"/>
+    <image id="la2yu" name="pageMark_Select.png" path="/images/" exported="true" scale="9grid" scale9grid="23,22,30,8"/>
+    <component id="la2yw" name="btn_page_select.xml" path="/Components/common/" exported="true"/>
+    <component id="la2yx" name="page_yuanjie.xml" path="/" exported="true"/>
+    <component id="la2yy" name="page_xialv.xml" path="/" exported="true"/>
+    <component id="la2yz" name="page_task.xml" path="/" exported="true"/>
+    <image id="la2y10" name="input_background.png" path="/images/" exported="true" scale="9grid" scale9grid="14,12,28,24"/>
+    <component id="la2y11" name="friendList.xml" path="/Components/xialv/" exported="true"/>
+    <image id="la2y12" name="informationBackground.png" path="/images/" exported="true" scale="9grid" scale9grid="59,22,118,44"/>
+    <image id="la2y13" name="select.png" path="/images/" exported="true"/>
+    <image id="la2y14" name="redBtn.png" path="/images/" exported="true" scale="9grid" scale9grid="16,13,32,26"/>
+    <component id="la2y15" name="btn_red.xml" path="/Components/common/" exported="true"/>
+    <component id="la2y16" name="jieyuanApply.xml" path="/Components/xialv/" exported="true"/>
+    <component id="c1p917" name="page_giftItem.xml" path="/Components/xialv/" exported="true"/>
+    <image id="eoqr18" name="frame_info.png" path="/images/" exported="true" scale="9grid" scale9grid="8,7,7,6"/>
+    <image id="eoqr19" name="icon_money_bg.png" path="/images/" exported="true" scale="9grid" scale9grid="8,6,16,12"/>
+    <component id="eoqr1a" name="ProgressBar.xml" path="/Components/common/" exported="true"/>
+    <image id="eoqr1c" name="icon_brown.png" path="/images/" exported="true"/>
+    <image id="eoqr1d" name="icon_red.png" path="/images/" exported="true"/>
+    <image id="eoqr1e" name="icon_item0.png" path="/images/" exported="true"/>
+    <component id="eoqr1f" name="show_head.xml" path="/Components/common/" exported="true"/>
+    <component id="eoqr1h" name="show_item(brown).xml" path="/Components/common/" exported="true"/>
+    <component id="eoqr1i" name="show_item(red).xml" path="/Components/common/" exported="true"/>
+    <component id="eoqr1j" name="selectItemNum.xml" path="/Components/xialv/" exported="true"/>
+    <image id="eoqr1k" name="tips底.png" path="/images/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="eoqr1l" name="花纹1.png" path="/images/" exported="true"/>
+    <image id="eoqr1m" name="花纹2.png" path="/images/" exported="true"/>
+    <image id="eoqr1q" name="inputField_bg_9.png" path="/images/" exported="true" scale="9grid" scale9grid="6,6,2,2"/>
+    <image id="eoqr1r" name="+.png" path="/images/" exported="true"/>
+    <image id="eoqr1s" name="-.png" path="/images/" exported="true"/>
+    <image id="eoqr1t" name="smallBaseFrame.png" path="/images/" exported="true"/>
+    <component id="eoqr1u" name="btn_add.xml" path="/Components/common/" exported="true"/>
+    <component id="eoqr1w" name="btn_reduce.xml" path="/Components/common/" exported="true"/>
+    <component id="eoqr1x" name="page_marriage.xml" path="/" exported="true"/>
+    <image id="eoqr1y" name="marriageBackground.png" path="/images/" exported="true"/>
+    <image id="eoqr1z" name="lock.png" path="/images/" exported="true"/>
+    <image id="eoqr20" name="下拉箭头.png" path="/images/" exported="true"/>
+    <image id="eoqr22" name="xin.png" path="/images/" exported="true"/>
+    <image id="eoqr23" name="日期底衬.png" path="/images/" exported="true" scale="9grid" scale9grid="2,2,4,4"/>
+    <image id="eoqr24" name="誓言底衬.png" path="/images/" exported="true" scale="9grid" scale9grid="3,3,6,6"/>
+    <image id="eoqr25" name="关闭.png" path="/images/" exported="true"/>
+    <image id="eoqr26" name="戒指底衬.png" path="/images/" exported="true" scale="9grid" scale9grid="25,8,50,30"/>
+    <component id="eoqr2d" name="selectMarriageTime_item.xml" path="/Components/drop_down box/"/>
+    <component id="eoqr2e" name="selectMarriageTime_popup.xml" path="/Components/drop_down box/"/>
+    <component id="eoqr2f" name="selectMarriageTime.xml" path="/Components/drop_down box/" exported="true"/>
+    <component id="eoqr2g" name="btn_pink.xml" path="/Components/common/" exported="true"/>
+    <component id="eoqr2h" name="selectMarriryWord_item.xml" path="/Components/drop_down box/"/>
+    <component id="eoqr2i" name="selectMarriryWord_popup.xml" path="/Components/drop_down box/"/>
+    <component id="eoqr2j" name="selectMarriryWord.xml" path="/Components/drop_down box/" exported="true"/>
+    <component id="eoqr2k" name="MarriageRingModel.xml" path="/Components/common/" exported="true"/>
+    <image id="eoqr2l" name="yuanbao.png" path="/images/" exported="true"/>
+    <component id="eoqr2m" name="show_item(green).xml" path="/Components/common/" exported="true"/>
+    <image id="eoqr2n" name="icon_green.png" path="/images/" exported="true"/>
+    <image id="eoqr2o" name="qinmidu.png" path="/images/marriage/" exported="true"/>
+    <image id="eoqr2p" name="chuansong.png" path="/images/marriage/" exported="true"/>
+    <image id="eoqr2q" name="qingyuan.png" path="/images/marriage/" exported="true"/>
+    <image id="eoqr2r" name="qingyuandi.png" path="/images/marriage/" exported="true"/>
+    <image id="eoqr2s" name="jieyi.png" path="/images/marriage/" exported="true"/>
+    <image id="eoqr2t" name="jieyidi.png" path="/images/marriage/" exported="true"/>
+    <image id="eoqr2u" name="releaseYuan.png" path="/images/marriage/" exported="true"/>
+    <image id="eoqr2v" name="jinlan.png" path="/images/marriage/" exported="true"/>
+    <image id="eoqr2w" name="jinlandi.png" path="/images/marriage/" exported="true"/>
+    <component id="eoqr2y" name="btn_transmission.xml" path="/Components/common/" exported="true"/>
+    <component id="eoqr30" name="btn_intimacy.xml" path="/Components/common/" exported="true"/>
+    <component id="eoqr31" name="btn_releaseYuan.xml" path="/Components/common/" exported="true"/>
+    <component id="eoqr34" name="show_itemUnlock.xml" path="/Components/common/" exported="true"/>
+    <component id="eoqr35" name="item_select.xml" path="/Components/common/" exported="true"/>
+    <component id="eoqr37" name="page_divorce.xml" path="/Components/xialv/" exported="true"/>
+    <image id="eoqr38" name="bg_second_panel.png" path="/images/" exported="true" scale="9grid" scale9grid="38,54,76,3"/>
+    <component id="eoqr39" name="star.xml" path="/Components/common/" exported="true"/>
+    <image id="eoqr3a" name="xing_hui.png" path="/images/marriage/" exported="true"/>
+    <image id="eoqr3b" name="xing)liang.png" path="/images/marriage/" exported="true"/>
+    <component id="eoqr3c" name="model_attribute.xml" path="/Components/xialv/" exported="true"/>
+    <component id="eoqr3e" name="model_costItem.xml" path="/Components/xialv/" exported="true"/>
+    <component id="l4xx3g" name="page_tips.xml" path="/Components/xialv/" exported="true"/>
+    <component id="gwga3h" name="page_jieyuan.xml" path="/Components/xialv/" exported="true"/>
+    <component id="gwga3i" name="page_jieyuan2.xml" path="/Components/xialv/" exported="true"/>
+    <component id="shks3j" name="skillTips.xml" path="/Components/xialv/" exported="true"/>
+    <image id="ggv03k" name="nan.png" path="/images/marriage/" exported="true"/>
+    <image id="ggv03l" name="nv.png" path="/images/marriage/" exported="true"/>
+    <image id="owir3o" name="半透内容底.png" path="/images/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <component id="hh4i3p" name="bg.xml" path="/Components/xialv/"/>
+    <image id="boje3q" name="main_player_exp_9.png" path="/images/" exported="true" scale="9grid" scale9grid="2,3,-1,6" duplicatePadding="true"/>
+    <image id="k9rf3r" name="下拉箭头-心.png" path="/images/"/>
+  </resources>
+  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Marriage" packageCount="2"/>
+</packageDescription>

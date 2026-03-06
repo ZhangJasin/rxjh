@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImageLayer="1">
+  <controller name="tog" pages="0,,1,,2,,3," selected="0"/>
+  <displayList>
+    <component id="n57_sv8g" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="512,384" pivot="0.5,0.5" anchor="true" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n58_sv8g" name="bg1" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="185,210" size="115,380">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n59_sv8g" name="bg2" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="305,245" size="535,345">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n60_sv8g" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n4_itla" name="text_title" xy="512,188" pivot="0.5,0.5" anchor="true" size="52,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" text="排行榜">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n6_itla" name="tree_list" xy="185,215" size="115,370" layout="flow_vt" overflow="scroll" lineGap="4" align="center" autoClearItems="true" treeView="true" indent="15" clickToExpand="1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item url="ui://vccyhmfwitlam" level="0"/>
+      <item url="ui://vccyhmfwid4uy" level="1"/>
+      <item url="ui://vccyhmfwid4uy" level="1"/>
+      <item url="ui://vccyhmfwid4uy" level="1"/>
+      <item url="ui://vccyhmfwitlam" level="0"/>
+      <item url="ui://vccyhmfwid4uy" level="1"/>
+      <item url="ui://vccyhmfwid4uy" level="1"/>
+      <item url="ui://vccyhmfwid4uy" level="1"/>
+    </list>
+    <list id="n7_itla" name="list_type" xy="305,215" size="500,28" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://vccyhmfwitlan" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n8_itla" name="list_rank" xy="310,280" size="500,260" overflow="scroll" lineGap="2" defaultItem="ui://vccyhmfwitlao" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n53_v75j" name="bg4" src="v75j16" fileName="Images/rank_top.png" xy="310,249" size="525,30" group="n38_nsq9">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n40_nsq9" name="text_info_rank" xy="345,264" pivot="0.5,0.5" anchor="true" size="60,20" group="n38_nsq9" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="排名">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n39_nsq9" name="list_title" xy="380,250" size="455,30" group="n38_nsq9" touchable="false" layout="row" selectionMode="none" overflow="scroll" scroll="horizontal" defaultItem="ui://vccyhmfwnsq9z" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n38_nsq9" name="top" xy="310,249" size="525,30"/>
+    <image id="n54_v75j" name="item_me" src="v75j15" fileName="Images/rank_bottom.png" xy="310,544" size="525,40" group="n44_nsq9">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n14_qpwo" name="text_myRank" xy="345,564" pivot="0.5,0.5" anchor="true" size="65,24" group="n44_nsq9" fontSize="12" color="#f1ffeb" align="center" autoSize="none" strokeColor="#000000" text="0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n41_nsq9" name="list_self" xy="380,544" size="455,40" group="n44_nsq9" touchable="false" layout="row" selectionMode="none" overflow="scroll" scroll="horizontal" defaultItem="ui://vccyhmfwnsq9z" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n44_nsq9" name="panel_self" xy="310,544" size="525,40"/>
+    <component id="n47_pl2t" name="btn_arrow" src="pl2t13" fileName="Components/btn_arrow.xml" xy="810,279" size="24,265">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n27_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="19,705" size="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

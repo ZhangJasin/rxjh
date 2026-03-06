@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="237,277" extention="Button" designImage="ui://tsu6gfnojjgk1m" designImageOffsetX="-183" designImageOffsetY="-183">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_jjgk" name="n0" src="vzjdvpd" fileName="Images/shop_item_bg.png" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_jjgk" name="title" xy="7,-1" size="237,41" fontSize="24" color="#fff000" align="center" vAlign="middle" autoSize="none" singleLine="true" text="守护符【精品】">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <component id="n7_tzp9" name="icon" src="vzjdvpb" fileName="Components/iconItem.xml" xy="90,105" size="66,67"/>
+    <image id="n3_jjgk" name="icon_discount" src="jjgk1r" fileName="Images/discount_bg.png" xy="2,-1" visible="false" alpha="0"/>
+    <text id="n4_jjgk" name="text_discount" xy="4,0" size="22,56" visible="false" alpha="0" fontSize="20" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" text="8折"/>
+    <component id="n9_x44m" name="icon_money" src="vzjdvpb" fileName="Components/iconItem.xml" xy="44,225" size="40,40"/>
+    <text id="n6_jjgk" name="text_money" xy="88,226" size="118,40" fontSize="24" color="#ffffff" vAlign="middle" leading="0" autoSize="none" text="10000"/>
+    <graph id="n8_x44m" name="click_node" xy="7,224" size="226,50" type="rect" lineColor="#00000000" fillColor="#00ffffff"/>
+  </displayList>
+  <Button/>
+</component>

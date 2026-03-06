@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImage="ui://dak5wnw9plaqvor" designImageAlpha="0">
+  <controller name="PageKind" pages="0,IDX_NULL,1,IDX_EQUIP,2,IDX_STATEMENT,3,IDX_TITLE" selected="0">
+    <remark page="3" value="称号"/>
+  </controller>
+  <displayList>
+    <graph id="n22_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n17_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,50">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n3_kvla" name="text_title" xy="667,78" pivot="0.5,0.5" anchor="true" size="52,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="装备">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n21_plaq" name="node_right" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="687,111" size="464,572">
+      <gearDisplay controller="PageKind" pages="1,2,3"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n4_kvla" name="node_left" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="179,111" size="504,572">
+      <gearDisplay controller="PageKind" pages="1,2,3"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n6_kvla" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n12_seb1" name="btn_bag_sort" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="1072,635" size="84,40">
+      <gearDisplay controller="PageKind" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="整理" titleColor="#fff000" titleFontSize="20" icon="ui://st7dgeqqje63v3e"/>
+    </component>
+    <component id="n24_ne41" name="btn_bag_shared" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="1050,599" size="100,40" visible="false">
+      <gearDisplay controller="PageKind" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="共享仓库" titleColor="#fff000" titleFontSize="20" icon="ui://st7dgeqqje63v3e"/>
+    </component>
+    <component id="n25_wodv" name="btn_bag_recycle" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="982,635" size="90,40">
+      <gearDisplay controller="PageKind" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="回收" titleColor="#fff000" titleFontSize="20" icon="ui://st7dgeqqje63v3e"/>
+    </component>
+    <component id="n9_kvla" name="btn_tab_1" src="kvlav6m" fileName="Components/btn_tab.xml" xy="1161,116" size="40,90">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n10_kvla" name="btn_tab_2" src="kvlav6m" fileName="Components/btn_tab.xml" xy="1161,208" size="40,90">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n11_kvla" name="btn_tab_3" src="kvlav6m" fileName="Components/btn_tab.xml" xy="1161,300" size="40,90">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n15_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="171,697" size="0,0"/>
+    <component id="n26_wodv" name="btn_bag_wareShop" src="wodvvp1" fileName="Components/blockBtn.xml" xy="900,616">
+      <gearDisplay controller="PageKind" pages="1"/>
+      <Button title="随身商店"/>
+    </component>
+    <component id="n27_wodv" name="btn_bag_warehouse" src="wodvvp1" fileName="Components/blockBtn.xml" xy="823,616">
+      <gearDisplay controller="PageKind" pages="1"/>
+      <Button title="随身仓库"/>
+    </component>
+    <component id="n28_wodv" name="btn_bag_extra" src="wodvvp1" fileName="Components/blockBtn.xml" xy="745,616">
+      <gearDisplay controller="PageKind" pages="1"/>
+      <Button title="附加仓库"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="220,72" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="isSelect" pages="0,未选中,1,选中" selected="0"/>
+  <displayList>
+    <image id="n31_yagp" name="n31" src="as7k22" fileName="Images/team_info_bg_9.png" xy="0,0" size="220,72"/>
+    <image id="n27_gval" name="item_select" src="gvalo3u" fileName="Images/friend_item_select_9.png" xy="0,0" size="220,72" visible="false">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+    <image id="n11_wmgr" name="icon_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="12,8" size="56,56" group="n23_npv4"/>
+    <component id="n24_qwah" name="avator" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="12,8" size="56,56" group="n23_npv4" touchable="false"/>
+    <loader id="n17_npv4" name="icon_job" xy="90,20" pivot="0,0.5" anchor="true" size="0,16" group="n23_npv4" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n5_qpwo" name="text_name" xy="76,12" size="129,24" group="n23_npv4" fontSize="16" color="#fffadc" autoSize="none" text="名字"/>
+    <text id="n6_qpwo" name="text_level" xy="68,41" pivot="1,0" anchor="true" size="50,25" group="n23_npv4" fontSize="18" color="#fffadc" align="right" autoSize="none" text="100"/>
+    <text id="n25_zi8s" name="text_state" xy="76,40" size="80,24" group="n23_npv4" fontSize="16" color="#fffadc" autoSize="none" text="离线"/>
+    <component id="n26_zi8s" name="btn_info" src="zi8so3s" fileName="Components/btn_info.xml" xy="179,40" size="38,29" group="n23_npv4" aspect="true" scale="0.75,0.75"/>
+    <group id="n23_npv4" name="frame" xy="12,8" size="205,61" advanced="true"/>
+    <component id="n22_npv4" name="btn_add" src="vjv7s" fileName="Components/btn_add.xml" xy="90,16" size="40,40"/>
+    <image id="n32_jvkq" name="n32" src="jvkqo6f" fileName="Images/道具选中效果框.png" xy="0,2" size="219,68">
+      <gearDisplay controller="isSelect" pages="1"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

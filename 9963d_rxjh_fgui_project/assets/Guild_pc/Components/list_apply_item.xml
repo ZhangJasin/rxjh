@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="649,42" extention="Button" designImage="ui://0xwve836gl5641" designImageOffsetX="-192" designImageOffsetY="-240">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_zah9" name="n0" src="gl562l" fileName="Images/list_bg_9.png" xy="0,0" size="649,42">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_zah9" name="text_name" xy="102,21" pivot="0.5,0.5" anchor="true" size="88,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" strokeColor="#000000" text="七个字长度要有"/>
+    <text id="n2_zah9" name="text_level" xy="276,21" pivot="0.5,0.5" anchor="true" size="37,19" fontSize="12" color="#03d3d9" align="center" vAlign="middle" strokeColor="#000000" text="222级"/>
+    <text id="n3_zah9" name="text_job" xy="420,21" pivot="0.5,0.5" anchor="true" size="32,22" fontSize="14" color="#e9eae9" align="center" vAlign="middle" strokeColor="#000000" text="职业"/>
+    <text id="n4_zah9" name="text_fight" xy="570,22" pivot="0.5,0.5" anchor="true" size="46,19" fontSize="12" color="#e9eae9" align="center" vAlign="middle" strokeColor="#000000" text="123456"/>
+    <image id="n8_jjgk" name="n8" src="emvc3v" fileName="image/checkbox_bg.png" pkg="qa9a7rit" xy="16,10" size="22,22"/>
+    <image id="n9_jjgk" name="icon_select" src="emvc3w" fileName="image/checkbox_icon.png" pkg="qa9a7rit" xy="16,11">
+      <gearDisplay controller="button" pages="3,5"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

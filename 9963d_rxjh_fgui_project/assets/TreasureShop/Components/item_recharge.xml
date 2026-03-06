@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="221,246">
+  <displayList>
+    <graph id="n248_bf0g" name="mask" xy="110,123" pivot="0.5,0.5" anchor="true" size="221,246" type="rect" fillColor="#00ffffff"/>
+    <image id="n227_cym7" name="img_table" src="vye13" fileName="Images/table_y.png" xy="16,92"/>
+    <image id="n250_bf0g" name="img_label_di" src="as7k5s" fileName="Images/btn_green_unload_9.png" xy="24,12" size="172,30"/>
+    <loader id="n251_bf0g" name="icon_coin_s" xy="38,26" pivot="0.5,0.5" anchor="true" size="50,50" url="ui://p8mjxubrvye1i" align="center" vAlign="middle" fill="scale"/>
+    <text id="n230_cym7" name="text_coin_num" xy="113,25" pivot="0.5,0.5" anchor="true" size="67,34" fontSize="24" color="#f6cd2b" align="center" vAlign="middle" autoSize="none" shadowColor="#f6cd2b" shadowOffset="1,1" text="60"/>
+    <loader id="n252_bf0g" name="icon_coin_b" xy="110,86" pivot="0.5,0.5" anchor="true" size="100,100" aspect="true" url="ui://p8mjxubrvye1q" align="center" vAlign="middle" fill="scale"/>
+    <component id="n243_cym7" name="btn_m_buy" src="bf0g59" fileName="Components/btn_recharge.xml" xy="5,187"/>
+  </displayList>
+</component>

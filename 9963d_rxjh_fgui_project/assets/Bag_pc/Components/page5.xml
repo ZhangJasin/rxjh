@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="316,54">
+  <displayList>
+    <image id="n334_q8ir" name="img_attr_list_di" src="n0551w" fileName="Images/img_input_di.png" xy="0,0" pivot="0,1" size="316,54">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n335_cptj" name="wuxun" src="n0551x" fileName="Components/item_attr_2.xml" xy="4,28" size="309,24">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n344_lt7h" name="shane" src="n0551x" fileName="Components/item_attr_2.xml" xy="4,2" size="308,24">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

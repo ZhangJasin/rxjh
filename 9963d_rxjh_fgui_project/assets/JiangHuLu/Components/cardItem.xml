@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="220,60">
+  <controller name="isActive" pages="0,,1," selected="1"/>
+  <displayList>
+    <image id="n4_pkt0" name="n4" src="pkt0q" fileName="Images/pull_content_bg.png" xy="5,0" size="210,60"/>
+    <graph id="n3_pkt0" name="n3" xy="5,0" size="210,60" type="rect" lineSize="0" fillColor="#ff402c11">
+      <gearDisplay controller="isActive" pages="1"/>
+    </graph>
+    <component id="n0_pkt0" name="status" src="pkt0o" fileName="Components/status.xml" xy="14,0"/>
+    <text id="n2_pkt0" name="text" xy="5,0" size="210,60" fontSize="20" color="#fcf1bf" align="center" vAlign="middle" autoSize="none" text="默默无闻·二"/>
+  </displayList>
+</component>

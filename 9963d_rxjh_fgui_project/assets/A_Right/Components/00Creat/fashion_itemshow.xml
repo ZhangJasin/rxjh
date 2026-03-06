@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,269" designImageLayer="1">
+  <displayList>
+    <image id="n1_gj3i" name="n1" src="lxrgv52" fileName="image/bg_tips.png" pkg="st7dgeqq" xy="0,0" size="200,269"/>
+    <graph id="n0_gj3i" name="graph_fashion_role" xy="100,259" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+  </displayList>
+</component>

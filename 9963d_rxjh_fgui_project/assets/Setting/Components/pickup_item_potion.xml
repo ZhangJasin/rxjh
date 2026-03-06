@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="964,356">
+  <displayList>
+    <component id="n0_juj0" name="title" src="kvl0v5p" fileName="Components/title_label.xml" xy="373,43">
+      <Label title="药水"/>
+    </component>
+    <graph id="n12_fskg" name="n12" xy="15,95" size="949,100" group="n6_juj0" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <list id="n4_juj0" name="hp_list" xy="234,145" pivot="0,0.5" anchor="true" size="727,79" group="n6_juj0" layout="flow_hz" selectionMode="multipleSingleClick" overflow="hidden" lineGap="15" lineItemCount="4" defaultItem="ui://xpq1wbq8o15xv64" autoItemSize="true" vAlign="middle" autoClearItems="true">
+      <item title="金疮药（小）"/>
+      <item title="金疮药（中）"/>
+      <item title="金疮药（大）"/>
+      <item title="金疮药（特）"/>
+      <item title="金疮药（超）"/>
+      <item title="秘制金疮药"/>
+      <item title="药仙金疮药"/>
+      <item title="皇级金疮药"/>
+    </list>
+    <text id="n5_juj0" name="hp_title" xy="18,144" pivot="0,0.5" anchor="true" size="216,44" group="n6_juj0" fontSize="28" color="#fcf1bf" align="center" vAlign="middle" autoSize="none" text="红药"/>
+    <group id="n6_juj0" name="hp" xy="15,95" size="949,100"/>
+    <graph id="n13_fskg" name="n13" xy="15,216" size="949,100" group="n10_juj0" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <list id="n8_juj0" name="mp_list" xy="234,266" pivot="0,0.5" anchor="true" size="727,79" group="n10_juj0" layout="flow_hz" selectionMode="multipleSingleClick" overflow="hidden" lineGap="14" lineItemCount="4" defaultItem="ui://xpq1wbq8o15xv64" autoItemSize="true" autoClearItems="true">
+      <item title="金疮药（小）"/>
+      <item title="金疮药（中）"/>
+      <item title="金疮药（大）"/>
+      <item title="金疮药（特）"/>
+      <item title="金疮药（超）"/>
+      <item title="秘制金疮药"/>
+      <item title="药仙金疮药"/>
+      <item title="皇级金疮药"/>
+    </list>
+    <text id="n9_juj0" name="mp_title" xy="18,266" pivot="0,0.5" anchor="true" size="216,44" group="n10_juj0" fontSize="28" color="#fcf1bf" align="center" vAlign="middle" autoSize="none" text="蓝药"/>
+    <group id="n10_juj0" name="mp" xy="15,216" size="949,100"/>
+    <component id="n11_nw2o" name="not_select_all" src="o15xv64" fileName="Components/tog_select.xml" xy="780,47">
+      <Button title="全不拾取"/>
+    </component>
+  </displayList>
+</component>

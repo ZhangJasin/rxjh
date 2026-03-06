@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImageLayer="1" bgColorEnabled="true" bgColor="#666666">
+  <displayList>
+    <component id="n2_o5lt" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="613,358" pivot="0.5,0.5" anchor="true" size="506,540">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n3_o5lt" name="title" xy="553,100" pivot="0.5,0.5" size="118,34" fontSize="24" color="#ffffff" autoSize="none" text="复活方式"/>
+    <text id="n10_o5lt" name="xhfont2" xy="553,216" size="230,34" fontSize="16" color="#ffffff" autoSize="none" text="消耗：             5"/>
+    <component id="n13_o5lt" name="item" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="603,213" size="63,63" scale="0.43,0.43"/>
+    <text id="n16_ler3" name="daojishi" xy="416,560" pivot="0.5,0.5" size="412,34" fontSize="24" color="#00ff00" autoSize="none" text=""/>
+    <component id="n27_k77d" name="btnfont2" src="k77dp" fileName="Components/anqfBtn.xml" xy="416,439"/>
+    <component id="n28_k77d" name="btnfont1" src="k77do" fileName="Components/ydfhBtn.xml" xy="417,249"/>
+  </displayList>
+</component>

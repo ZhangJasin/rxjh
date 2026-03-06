@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="110,40" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n5_fbc0" name="btn" src="je63v3c" fileName="image/btn_first_red.png" pkg="st7dgeqq" xy="0,0" size="110,40"/>
+    <text id="n3_f0so" name="text" xy="55,20" pivot="0.5,0.5" anchor="true" size="110,34" fontSize="20" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="配置"/>
+  </displayList>
+  <Button downEffect="dark" downEffectValue=".5"/>
+</component>

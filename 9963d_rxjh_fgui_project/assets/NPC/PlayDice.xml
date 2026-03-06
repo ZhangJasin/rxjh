@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <image id="n0_gszy" name="bg" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="494,310" size="354,143">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n2_gszy" name="list_ani" xy="505,368" pivot="0.5,0.5" size="335,32" layout="row" selectionMode="none" colGap="10" defaultItem="ui://vgis5swqgszy1" align="center" autoClearItems="true">
+      <relation target="n0_gszy" sidePair="width-width,center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n3_gszy" name="list_res" xy="505,368" pivot="0.5,0.5" size="335,32" layout="row" selectionMode="none" colGap="10" defaultItem="ui://vgis5swqgszy3" align="center" autoClearItems="true">
+      <relation target="n0_gszy" sidePair="width-width,center-center,middle-middle"/>
+      <item url="ui://vgis5swqgszy1"/>
+      <item url="ui://vgis5swqgszy1"/>
+      <item url="ui://vgis5swqgszy1"/>
+      <item url="ui://vgis5swqgszy1"/>
+      <item url="ui://vgis5swqgszy1"/>
+      <item url="ui://vgis5swqgszy1"/>
+      <item url="ui://vgis5swqgszy1"/>
+      <item url="ui://vgis5swqgszy1"/>
+    </list>
+  </displayList>
+</component>

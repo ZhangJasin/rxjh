@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="168,38" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <richtext id="n6_jui0" name="text_info" xy="0,0" size="168,38" fontSize="18" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="shrink" singleLine="true" autoClearText="true" text="阳光少年">
+      <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </richtext>
+  </displayList>
+  <Button mode="Check"/>
+</component>

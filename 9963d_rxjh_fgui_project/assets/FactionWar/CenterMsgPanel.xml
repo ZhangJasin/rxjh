@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750" pivot="0.5,0.5" opaque="false">
+  <displayList>
+    <richtext id="n0_iios" name="text" xy="352,178" size="644,171" fontSize="32" color="#ffffff" align="center" vAlign="middle" autoSize="none" text=""/>
+  </displayList>
+</component>

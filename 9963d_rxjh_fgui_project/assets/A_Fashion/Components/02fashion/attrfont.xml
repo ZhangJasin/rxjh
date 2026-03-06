@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="250,100" overflow="scroll" scrollBarFlags="2056">
+  <displayList>
+    <richtext id="n0_km0s" name="font" xy="24,0" size="287,291" touchable="false" fontSize="22" color="#fff5da" leading="10" autoClearText="true" text="属性：+10000000000000000&lt;br&gt;属性：+100&lt;br&gt;属性：+100&lt;br&gt;属性：+100&lt;br&gt;属性：+100&lt;br&gt;属性：+100&lt;br&gt;属性：+100&lt;br&gt;属性：+100"/>
+  </displayList>
+</component>

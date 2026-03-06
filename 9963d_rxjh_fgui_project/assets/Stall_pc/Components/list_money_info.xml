@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="179,27" extention="Button">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n56_ws4h" name="n56" src="emvc3v" fileName="image/checkbox_bg.png" pkg="qa9a7rit" xy="9,2" size="22,22" group="n53_ws4h"/>
+    <image id="n57_ws4h" name="icon_select" src="emvc3w" fileName="image/checkbox_icon.png" pkg="qa9a7rit" xy="9,3" group="n53_ws4h">
+      <gearDisplay controller="button" pages="3,5"/>
+    </image>
+    <text id="n55_ws4h" name="text_money_name" xy="39,2" size="28,19" group="n53_ws4h" fontSize="12" color="#ffffff" autoClearText="true" text="货币"/>
+    <text id="n29_tgh8" name="text_money_tax" xy="87,4" size="89,19" group="n53_ws4h" fontSize="12" color="#edc93c" text="江湖币扣税10%"/>
+    <group id="n53_ws4h" name="n53" xy="9,2" size="167,22"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

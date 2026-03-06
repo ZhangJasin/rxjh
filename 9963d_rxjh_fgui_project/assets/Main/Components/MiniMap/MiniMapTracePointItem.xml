@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="0,0" opaque="false">
+  <controller name="state" pages="0,,1," selected="1">
+    <remark page="0" value="超出范围"/>
+    <remark page="1" value="范围内"/>
+  </controller>
+  <displayList>
+    <loader id="n0_z45q" name="icon" xy="0,0" pivot="0.5,0.5" anchor="true" size="14,15" url="ui://zj419n3dpzjgfveb" autoSize="true">
+      <gearXY controller="state" pages="0,1" values="0,0|0,0"/>
+      <gearLook controller="state" pages="0" values="1,0,0,0" default="1,0,0,1"/>
+      <gearIcon controller="state" pages="0,1" values="ui://zj419n3dpzjgfvea|ui://zj419n3dpzjgfveb"/>
+    </loader>
+  </displayList>
+</component>

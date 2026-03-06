@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600" opaque="false">
+  <displayList>
+    <component id="n17_8w2f" name="Node_top_tips" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0"/>
+    <component id="n3_ilk5" name="Node_server_tips" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0" touchable="false"/>
+    <component id="n16_plbg" name="Node_effect" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0" touchable="false"/>
+    <component id="n4_ilk5" name="Node_system" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="400,0" size="0,0" touchable="false">
+      <relation target="" sidePair="center-center%"/>
+    </component>
+    <component id="n5_ilk5" name="Node_system_xy" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0" touchable="false"/>
+    <component id="n7_ilk5" name="Node_normal_tips" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="400,408" size="0,0" touchable="false">
+      <relation target="" sidePair="center-center%,middle-middle%"/>
+    </component>
+    <list id="n0_ilk5" name="List_timer_tips" xy="400,436" pivot="0.5,1" anchor="true" size="100,76" touchable="false" defaultItem="ui://dizl41lonv6e1" autoItemSize="false" align="center" autoClearItems="true" scrollItemToViewOnClick="false">
+      <relation target="" sidePair="center-center%,bottom-bottom%"/>
+      <item title="123456789012345"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n8_ilk5" name="Node_item_tips" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="49,536" size="0,0" touchable="false">
+      <relation target="" sidePair="bottom-bottom"/>
+    </component>
+    <component id="n15_rv4n" name="Node_exp_tips" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="50,436" size="0,0" touchable="false">
+      <relation target="" sidePair="bottom-bottom"/>
+    </component>
+    <component id="n9_ilk5" name="Node_attribute" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="527,120" size="0,0" touchable="false">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n10_ilk5" name="Node_timer_xy_tips" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="400,436" size="0,0" touchable="false">
+      <relation target="" sidePair="center-center%,middle-middle%"/>
+    </component>
+    <component id="n11_ilk5" name="Node_drop_tips" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0" touchable="false"/>
+  </displayList>
+</component>

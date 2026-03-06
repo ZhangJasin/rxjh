@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,300">
+  <displayList>
+    <component id="n7_vzpx" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="0,0" size="400,300"/>
+    <text id="n1_njtv" name="n1" xy="0,11" size="400,32" fontSize="22" color="#ffffff" align="center" autoSize="none" text="提示" input="true"/>
+    <richtext id="n2_njtv" name="n2" xy="30,69" size="340,145" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="今日次数已耗尽，不能继续刷新"/>
+    <component id="n5_njtv" name="queding" src="njtv2j" fileName="Components/quedingBtn.xml" xy="215,244"/>
+    <component id="n6_njtv" name="quxiao" src="njtv2i" fileName="Components/quxiaoBtn.xml" xy="70,244"/>
+  </displayList>
+</component>

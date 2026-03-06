@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="533,382" designImage="ui://qy7g0oycpy6v5g" designImageOffsetX="-333" designImageOffsetY="-209" designImageAlpha="0">
+  <displayList>
+    <image id="n18_10pmd" name="bg" src="emvc42" fileName="image/icon_money_bg.png" pkg="qa9a7rit" xy="3,35" size="365,309">
+      <relation target="n25_10pmd" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <list id="n25_10pmd" name="list_canSell" xy="3,35" size="365,309" layout="flow_hz" overflow="scroll" margin="4,0,0,0" lineGap="8" colGap="9" lineItemCount="7" defaultItem="ui://qy7g0oycemvc1w" align="center">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n26_10pmd" name="label_tip" xy="378,-6" size="148,42" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="选择对应出售的物品&#xA;长按单独出售">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n37_kra4" name="btn_once_sell" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="416,350">
+      <Button title="一键出售" titleColor="#fff000" titleFontSize="12"/>
+    </component>
+    <component id="n33_10pmd" name="combox_filter" src="emvc23" fileName="Components/cbx_filter.xml" xy="3,352" size="126,25">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <ComboBox visibleItemCount="6" autoClearItems="true">
+        <item title="[color=#FF0000]神品[/color]及以下物品" value="5"/>
+        <item title="[color=#F49C4C]极品[/color]及以下物品" value="4"/>
+        <item title="[color=#6600FF]上品[/color]及以下物品" value="3"/>
+        <item title="[color=#0099FF]中品[/color]及以下物品" value="2"/>
+        <item title="[color=#00FF00]下品[/color]及以下物品" value="1"/>
+        <item title="凡品" value="0"/>
+      </ComboBox>
+    </component>
+    <component id="n35_lfoc" name="checkbox_filter" src="emvc1x" fileName="Components/checkBox.xml" xy="136,353" size="22,22" aspect="true" controller="isSelected,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n20_10pmd" name="btn_tab_1" src="emvc21" fileName="Components/btn_container_tab.xml" xy="3,4" size="55,27" group="n38_py6v">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="全部"/>
+    </component>
+    <component id="n21_10pmd" name="btn_tab_2" src="emvc21" fileName="Components/btn_container_tab.xml" xy="58,4" size="55,27" group="n38_py6v">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="装备"/>
+    </component>
+    <component id="n22_10pmd" name="btn_tab_3" src="emvc21" fileName="Components/btn_container_tab.xml" xy="113,4" size="55,27" group="n38_py6v">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="道具"/>
+    </component>
+    <component id="n23_10pmd" name="btn_tab_4" src="emvc21" fileName="Components/btn_container_tab.xml" xy="168,4" size="55,27" group="n38_py6v">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="材料"/>
+    </component>
+    <component id="n24_10pmd" name="btn_tab_5" src="emvc21" fileName="Components/btn_container_tab.xml" xy="223,4" size="55,27" group="n38_py6v">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="合成石"/>
+    </component>
+    <component id="n34_lfoc" name="btn_tab_6" src="emvc21" fileName="Components/btn_container_tab.xml" xy="278,4" size="55,27" group="n38_py6v">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="其他"/>
+    </component>
+    <group id="n38_py6v" name="filterBtnGroup" xy="3,4" size="330,27" advanced="true" layout="hz" excludeInvisibles="true"/>
+    <image id="n40_py6v" name="bgRight" src="emvc42" fileName="image/icon_money_bg.png" pkg="qa9a7rit" xy="378,35" size="151,309">
+      <relation target="n41_py6v" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <list id="n41_py6v" name="list_resGet" xy="378,35" size="151,309" layout="flow_hz" overflow="scroll" margin="4,0,0,0" lineGap="8" colGap="6" lineItemCount="3" defaultItem="ui://qy7g0oycemvc22" align="center" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n43_baex" name="n43" src="baex5n" fileName="Images/icon_item1.png" xy="1327,2"/>
+  </displayList>
+</component>

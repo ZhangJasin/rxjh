@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n27_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n25_ghle" name="background" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="1000,650" group="n24_tiyp"/>
+    <component id="n1_hriw" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78" group="n24_tiyp"/>
+    <text id="n2_hriw" name="title" xy="667,78" pivot="0.5,0.5" anchor="true" size="500,34" group="n24_tiyp" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="设 置"/>
+    <loader id="n22_juj0" name="setting_content" xy="171,103" size="992,588" group="n24_tiyp" url="ui://xpq1wbq8juj016" autoSize="true" clearOnPublish="true"/>
+    <component id="n26_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="173,698" size="0,0" group="n24_tiyp">
+      <relation target="n25_ghle" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <list id="n23_juj0" name="page_switch_list" xy="1161,146" size="40,369" group="n24_tiyp" lineGap="3" defaultItem="ui://xpq1wbq8juj01i">
+      <item title="基础"/>
+      <item title="战斗"/>
+      <item title="显示"/>
+      <item title="挂机"/>
+    </list>
+    <group id="n24_tiyp" name="root" xy="167,50" size="1034,650" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

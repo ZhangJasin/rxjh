@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <controller name="selectItem" exported="true" pages="0,隐藏,1,显示" selected="0"/>
+  <controller name="itemtips" exported="true" pages="0,,1," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="显示"/>
+  </controller>
+  <displayList>
+    <component id="n15_epiq" name="bg" src="egru78" fileName="Components/tongyong/kongbg.xml" pkg="fgihxfye" xy="0,0"/>
+    <component id="n37_m0m5" name="backGround" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,425" pivot="0.5,0.5" anchor="true" size="600,540">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n1_c1p9" name="btn_close" src="la2y4" fileName="Components/common/btn_closeyuan.xml" xy="918,159"/>
+    <component id="n35_m0m5" name="btn_giftItem" src="wgst5q" fileName="Components/tongyong/fangbtn.xml" pkg="fgihxfye" xy="586,627" size="160,53">
+      <Button title="赠礼" titleColor="#ffff00" titleFontSize="24"/>
+    </component>
+    <text id="n3_c1p9" name="title" xy="607,159" size="120,45" fontSize="24" color="#cccccc" align="center" vAlign="middle" letterSpacing="2" autoSize="none" text="亲密度"/>
+    <text id="n4_c1p9" name="n4" xy="528,213" size="213,42" fontSize="24" color="#ffffcc" align="center" vAlign="middle" letterSpacing="2" ubb="true" autoSize="none" text="当前亲密度等级:"/>
+    <text id="n6_c1p9" name="textLabel_showIntimate" xy="743,213" size="58,42" fontSize="24" color="#ffff00" align="center" vAlign="middle" letterSpacing="2" ubb="true" autoSize="none" strokeColor="#000000" text="0级"/>
+    <image id="n8_eoqr" name="n8" src="eoqr19" fileName="images/icon_money_bg.png" xy="387,312" size="560,215"/>
+    <component id="n10_eoqr" name="progressBar2" src="eoqr1a" fileName="Components/common/ProgressBar.xml" xy="513,265">
+      <ProgressBar value="5" max="10"/>
+    </component>
+    <component id="n24_lppm" name="progressBar" src="bojeit" fileName="Components/tongyong/ProgressBar2.xml" pkg="fgihxfye" xy="513,266" size="300,30">
+      <ProgressBar value="50" max="100"/>
+      <property target="bar" propertyId="1" value="ui://s7gyh5svboje3q"/>
+    </component>
+    <text id="n11_eoqr" name="textLabel_progressNum" xy="663,280" pivot="0.5,0.5" anchor="true" size="54,29" fontSize="20" color="#ffffff" align="center" vAlign="middle" text="0/100"/>
+    <list id="n36_m0m5" name="itemlist" xy="417,322" size="500,195" layout="flow_hz" overflow="scroll" lineGap="10" colGap="30" lineItemCount="4" defaultItem="ui://fgihxfyem0m5bv" align="center" vAlign="middle" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n25_lppm" name="show_item1" src="eoqr1h" fileName="Components/common/show_item(brown).xml" xy="587,276" visible="false"/>
+    <component id="n26_lppm" name="show_item2" src="eoqr1i" fileName="Components/common/show_item(red).xml" xy="683,276" visible="false"/>
+    <component id="n14_eoqr" name="page_selectItemnum" src="eoqr1j" fileName="Components/xialv/selectItemNum.xml" xy="515,388">
+      <gearDisplay controller="selectItem" pages="1"/>
+    </component>
+    <text id="n28_m0m5" name="n28" xy="524,533" size="115,29" fontSize="20" color="#ffffff" vAlign="middle" text="拥有数量：0"/>
+    <image id="n29_m0m5" name="n29" src="eoqr1t" fileName="images/smallBaseFrame.png" xy="605,570" size="120,44"/>
+    <component id="n30_m0m5" name="btn_add" src="eoqr1u" fileName="Components/common/btn_add.xml" xy="725,570"/>
+    <component id="n31_m0m5" name="btn_reduce" src="eoqr1w" fileName="Components/common/btn_reduce.xml" xy="561,570"/>
+    <text id="n32_m0m5" name="input_itemNum" xy="605,570" size="120,44" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="" input="true" prompt="1"/>
+    <component id="n34_m0m5" name="btn_num" src="wgst5q" fileName="Components/tongyong/fangbtn.xml" pkg="fgihxfye" xy="803,573" size="100,36" visible="false">
+      <Button title="999" titleColor="#ffffff"/>
+    </component>
+    <component id="n27_hh4i" name="item_tips" src="hh4ibr" fileName="Components/Tip/item_tips.xml" pkg="fgihxfye" xy="0,0">
+      <gearDisplay controller="itemtips" pages="1"/>
+    </component>
+  </displayList>
+</component>

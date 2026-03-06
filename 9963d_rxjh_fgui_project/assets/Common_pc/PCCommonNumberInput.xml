@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n31_z6gu" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="355,168" size="312,432" group="n32_z6gu"/>
+    <component id="n2_tgh8" name="btn_no" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="395,551" group="n32_z6gu">
+      <Button title="取 消" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <component id="n3_tgh8" name="btn_yes" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="526,551" group="n32_z6gu">
+      <Button title="确 认" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <graph id="n4_tgh8" name="n4" xy="376,224" size="271,33" group="n32_z6gu" type="rect" lineColor="#ffcabe0f" fillColor="#ffb7c1b6"/>
+    <text id="n5_tgh8" name="text_show_num" xy="512,240" pivot="0.5,0.5" anchor="true" size="13,24" group="n32_z6gu" fontSize="16" align="center" vAlign="middle" text="0"/>
+    <component id="n6_tgh8" name="num_1" src="10e451" fileName="Components/btn_square_1.xml" xy="389,269" group="n22_tgh8"/>
+    <component id="n7_tgh8" name="num_2" src="10e451" fileName="Components/btn_square_1.xml" xy="451,269" group="n22_tgh8">
+      <Button title="2"/>
+    </component>
+    <component id="n8_tgh8" name="num_3" src="10e451" fileName="Components/btn_square_1.xml" xy="513,269" group="n22_tgh8">
+      <Button title="3"/>
+    </component>
+    <component id="n10_tgh8" name="add_10" src="10e452" fileName="Components/btn_square_2.xml" xy="575,269" group="n22_tgh8"/>
+    <component id="n9_tgh8" name="num_4" src="10e451" fileName="Components/btn_square_1.xml" xy="389,335" group="n22_tgh8">
+      <Button title="4"/>
+    </component>
+    <component id="n11_tgh8" name="num_5" src="10e451" fileName="Components/btn_square_1.xml" xy="451,335" group="n22_tgh8">
+      <Button title="5"/>
+    </component>
+    <component id="n12_tgh8" name="num_6" src="10e451" fileName="Components/btn_square_1.xml" xy="513,335" group="n22_tgh8">
+      <Button title="6"/>
+    </component>
+    <component id="n13_tgh8" name="add_50" src="10e452" fileName="Components/btn_square_2.xml" xy="575,335" group="n22_tgh8">
+      <Button title="+50"/>
+    </component>
+    <component id="n14_tgh8" name="num_7" src="10e451" fileName="Components/btn_square_1.xml" xy="389,401" group="n22_tgh8">
+      <Button title="7"/>
+    </component>
+    <component id="n15_tgh8" name="num_8" src="10e451" fileName="Components/btn_square_1.xml" xy="451,401" group="n22_tgh8">
+      <Button title="8"/>
+    </component>
+    <component id="n16_tgh8" name="num_9" src="10e451" fileName="Components/btn_square_1.xml" xy="513,401" group="n22_tgh8">
+      <Button title="9"/>
+    </component>
+    <component id="n17_tgh8" name="num_0" src="10e451" fileName="Components/btn_square_1.xml" xy="451,467" group="n22_tgh8">
+      <Button title="0"/>
+    </component>
+    <component id="n18_tgh8" name="add_100" src="10e452" fileName="Components/btn_square_2.xml" xy="575,401" group="n22_tgh8">
+      <Button title="+100"/>
+    </component>
+    <component id="n19_tgh8" name="btn_del" src="10e452" fileName="Components/btn_square_2.xml" xy="389,467" group="n22_tgh8">
+      <Button title="删除"/>
+    </component>
+    <component id="n20_tgh8" name="btn_back" src="10e452" fileName="Components/btn_square_2.xml" xy="513,467" group="n22_tgh8">
+      <Button title="返回"/>
+    </component>
+    <component id="n21_tgh8" name="btn_max" src="10e452" fileName="Components/btn_square_2.xml" xy="575,467" group="n22_tgh8">
+      <Button title="最大"/>
+    </component>
+    <group id="n22_tgh8" name="n22" xy="389,269" size="246,262" group="n32_z6gu"/>
+    <text id="n23_tgh8" name="title" xy="511,188" pivot="0.5,0.5" anchor="true" size="116,24" group="n32_z6gu" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="请输入物品价格"/>
+    <component id="n26_tmr6" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="653,188" group="n32_z6gu"/>
+    <group id="n32_z6gu" name="n32" xy="355,168" size="313,432" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

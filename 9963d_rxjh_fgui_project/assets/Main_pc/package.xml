@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="xwp5acko">
+  <resources>
+    <image id="mjoj2" name="image_player_arrow.png" path="/Images/Player/"/>
+    <image id="mjoj3" name="image_player_bg.png" path="/Images/Player/"/>
+    <image id="mjoj4" name="image_player_btn.png" path="/Images/Player/"/>
+    <image id="mjoj5" name="image_player_di1.png" path="/Images/Player/"/>
+    <image id="mjoj6" name="image_player_exp.png" path="/Images/Player/" scale="9grid" scale9grid="1,1,2,2"/>
+    <image id="mjoj9" name="image_player_hp.png" path="/Images/Player/" scale="9grid" scale9grid="2,2,4,4"/>
+    <image id="mjoja" name="image_player_lv_di.png" path="/Images/Player/"/>
+    <image id="mjojb" name="image_player_mp.png" path="/Images/Player/" scale="9grid" scale9grid="2,2,4,4"/>
+    <component id="mjojc" name="PCMainPlayer.xml" path="/" exported="true"/>
+    <component id="mjojn" name="ButtonMode.xml" path="/Components/Player/"/>
+    <component id="nc8ao" name="PCMainMiniMap.xml" path="/" exported="true"/>
+    <component id="nc8ap" name="MiniMapMap.xml" path="/Components/MiniMap/"/>
+    <image id="nc8aq" name="point_player.png" path="/Images/MiniMap/"/>
+    <image id="nc8ar" name="main_minimap_bg.png" path="/Images/MiniMap/" scale="9grid" scale9grid="100,100,-36,-40"/>
+    <image id="nc8as" name="main_minimap_di1.png" path="/Images/MiniMap/" scale="9grid" scale9grid="6,6,12,12"/>
+    <image id="nc8at" name="main_minimap_di2.png" path="/Images/MiniMap/"/>
+    <image id="nc8au" name="main_minimap_branch.png" path="/Images/MiniMap/"/>
+    <image id="nc8a10" name="main_minimap_increase.png" path="/Images/MiniMap/"/>
+    <image id="nc8a11" name="main_minimap_reduce.png" path="/Images/MiniMap/"/>
+    <image id="nc8a12" name="main_music.png" path="/Images/MiniMap/"/>
+    <image id="nc8a13" name="main_tip.png" path="/Images/MiniMap/"/>
+    <image id="nc8a14" name="main_tip_bg.png" path="/Images/MiniMap/" scale="9grid" scale9grid="9,5,1,10"/>
+    <component id="s97715" name="MainMiniMap.xml" path="/Components/MiniMap/"/>
+    <image id="s97716" name="main_help.png" path="/Images/MiniMap/"/>
+    <component id="ljrg17" name="PCMainBottom.xml" path="/" exported="true"/>
+    <image id="ljrg1d" name="main_state_auto_move.png" path="/Images/Bottom/"/>
+    <image id="ljrg1k" name="main_chat_arrow.png" path="/Images/Bottom/"/>
+    <component id="ljrg1l" name="ButtonAuto.xml" path="/Components/Bottom/"/>
+    <image id="ljrg1q" name="main_tips.png" path="/Images/Bottom/"/>
+    <component id="ljrg1r" name="PreLoadProgressBar.xml" path="/Components/Bottom/"/>
+    <image id="ljrg1t" name="bubble_chat.png" path="/Images/Bottom/Bubble/"/>
+    <image id="ljrg1u" name="bubble_mail.png" path="/Images/Bottom/Bubble/"/>
+    <image id="ljrg1v" name="bubble_bag.png" path="/Images/Bottom/Bubble/"/>
+    <image id="ljrg1w" name="bubble_friends.png" path="/Images/Bottom/Bubble/"/>
+    <image id="ljrg1x" name="bubble_goWarAlliance.png" path="/Images/Bottom/Bubble/"/>
+    <image id="ljrg1y" name="bubble_team.png" path="/Images/Bottom/Bubble/"/>
+    <component id="ljrg20" name="LabChat.xml" path="/Components/Chat/"/>
+    <component id="ljrg21" name="ChatNotice.xml" path="/Components/Chat/"/>
+    <image id="ljrg23" name="main_bottom_exp.png" path="/Images/Bottom/" scale="9grid" scale9grid="1,1,2,2"/>
+    <image id="ljrg24" name="main_logo.png" path="/Images/Bottom/"/>
+    <image id="ljrg25" name="main_btn_forge.png" path="/Images/Func/"/>
+    <image id="ljrg26" name="main_btn_guild.png" path="/Images/Func/"/>
+    <image id="ljrg27" name="main_btn_bag.png" path="/Images/Func/"/>
+    <image id="ljrg28" name="main_btn_friend.png" path="/Images/Func/"/>
+    <image id="ljrg29" name="main_btn_skill.png" path="/Images/Func/"/>
+    <image id="ljrg2a" name="main_btn_setting.png" path="/Images/Func/"/>
+    <image id="ljrg2b" name="main_btn_team.png" path="/Images/Func/"/>
+    <image id="ljrg2c" name="main_btn_pk.png" path="/Images/Func/"/>
+    <image id="ljrg2f" name="main_btn_shop.png" path="/Images/Func/"/>
+    <image id="ljrg2g" name="main_btn_status.png" path="/Images/Func/"/>
+    <image id="ljrg2h" name="main_btn_trans.png" path="/Images/Func/"/>
+    <image id="ljrg2i" name="main_btn_action.png" path="/Images/Func/"/>
+    <component id="ljrg2j" name="PCMainChat.xml" path="/" exported="true"/>
+    <image id="lh522z" name="main_chat_bg.png" path="/Images/Chat/" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="lh5230" name="main_chat_bottom_arrow.png" path="/Images/Chat/"/>
+    <image id="lh5231" name="main_chat_channel_bg.png" path="/Images/Chat/" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="lh5232" name="main_chat_channel_btn.png" path="/Images/Chat/"/>
+    <image id="lh5233" name="main_chat_channel_select.png" path="/Images/Chat/"/>
+    <image id="lh5234" name="main_chat_channel_unselect.png" path="/Images/Chat/"/>
+    <image id="lh5235" name="main_chat_horn.png" path="/Images/Chat/"/>
+    <image id="lh5236" name="main_chat_input_btn.png" path="/Images/Chat/"/>
+    <image id="lh5237" name="main_chat_input_di.png" path="/Images/Chat/"/>
+    <image id="lh5238" name="main_chat_left_bg.png" path="/Images/Chat/" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="lh5239" name="main_chat_point.png" path="/Images/Chat/"/>
+    <image id="lh523a" name="main_chat_pos.png" path="/Images/Chat/"/>
+    <image id="lh523b" name="main_chat_send.png" path="/Images/Chat/"/>
+    <image id="lh523c" name="main_chat_drag.png" path="/Images/Chat/"/>
+    <image id="lh523d" name="main_chat_top_arrow.png" path="/Images/Chat/"/>
+    <component id="lh523e" name="ChannelButton.xml" path="/Components/Chat/"/>
+    <component id="lh523f" name="ChatChannelButton.xml" path="/Components/Chat/"/>
+    <component id="lh523g" name="ChatSendButton.xml" path="/Components/Chat/"/>
+    <component id="lh523i" name="ChatSlider.xml" path="/Components/Chat/"/>
+    <component id="lh523l" name="ChatSliderButton.xml" path="/Components/Chat/"/>
+    <component id="lh523m" name="ChannelSendButton.xml" path="/Components/Chat/"/>
+    <component id="lh523n" name="Chat.xml" path="/Components/Chat/"/>
+    <image id="ucmr3o" name="main_btn_mail.png" path="/Images/Func/"/>
+    <image id="tj4v3p" name="point_green.png" path="/Images/MiniMap/" exported="true"/>
+    <component id="tj4v3q" name="MiniMapPoint.xml" path="/Components/MiniMap/" exported="true"/>
+    <image id="tj4v3r" name="actor_yellow.png" path="/Images/MiniMap/"/>
+    <image id="tj4v3s" name="point_monster.png" path="/Images/MiniMap/"/>
+    <image id="tj4v3t" name="point_link.png" path="/Images/MiniMap/"/>
+    <image id="tj4v3u" name="actor_green.png" path="/Images/MiniMap/"/>
+    <image id="tj4v3v" name="point_team.png" path="/Images/MiniMap/"/>
+    <image id="tj4v3w" name="actor_blue.png" path="/Images/MiniMap/"/>
+    <image id="tj4v3x" name="actor_red.png" path="/Images/MiniMap/"/>
+    <image id="tj4v44" name="main_mission_di.png" path="/Images/Assist/"/>
+    <component id="tj4v46" name="TeamOperationButton.xml" path="/Components/Player/"/>
+    <image id="tj4v47" name="main_team_operation_di.png" path="/Images/Player/" scale="9grid" scale9grid="13,12,4,7"/>
+    <component id="tj4v48" name="buffIcon.xml" path="/Components/Buff/"/>
+    <component id="g11o49" name="BuffTip.xml" path="/Components/Buff/" exported="true"/>
+    <image id="g11o4a" name="main_team_word_di.png" path="/Images/Player/" scale="9grid" scale9grid="5,6,4,3"/>
+    <image id="g11o4b" name="main_team_word_select_di.png" path="/Images/Player/" scale="9grid" scale9grid="5,5,5,4"/>
+    <component id="g11o4c" name="TeamFuncButton.xml" path="/Components/Player/"/>
+    <component id="g11o4d" name="TeamFuncRadioButton.xml" path="/Components/Player/"/>
+    <image id="g11o4e" name="main_team_point_select.png.png" path="/Images/Player/"/>
+    <image id="g11o4f" name="main_team_point_unselect.png" path="/Images/Player/"/>
+    <component id="g11o4g" name="TeamOperation.xml" path="/Components/Player/"/>
+    <component id="fa9c4p" name="QuickBox.xml" path="/Components/Bottom/"/>
+    <image id="fa9c4q" name="main_quick_bg.png" path="/Images/Right/"/>
+    <image id="fa9c4r" name="main_quick_add.png" path="/Images/Right/"/>
+    <component id="fa9c4s" name="QuickCDMask.xml" path="/Components/Bottom/"/>
+    <component id="km1v4t" name="QuickDragBox.xml" path="/Components/Bottom/" exported="true"/>
+    <font id="km1v4u" name="TimeFont.fnt" path="/Components/Bottom/" exported="true"/>
+    <image id="km1v4v" name="main_time_0.png" path="/Components/Bottom/TimeFont/"/>
+    <image id="km1v4w" name="main_time_1.png" path="/Components/Bottom/TimeFont/"/>
+    <image id="km1v4x" name="main_time_2.png" path="/Components/Bottom/TimeFont/"/>
+    <image id="km1v4y" name="main_time_3.png" path="/Components/Bottom/TimeFont/"/>
+    <image id="km1v4z" name="main_time_4.png" path="/Components/Bottom/TimeFont/"/>
+    <image id="km1v50" name="main_time_5.png" path="/Components/Bottom/TimeFont/"/>
+    <image id="km1v51" name="main_time_6.png" path="/Components/Bottom/TimeFont/"/>
+    <image id="km1v52" name="main_time_7.png" path="/Components/Bottom/TimeFont/"/>
+    <image id="km1v53" name="main_time_8.png" path="/Components/Bottom/TimeFont/"/>
+    <image id="km1v54" name="main_time_9.png" path="/Components/Bottom/TimeFont/"/>
+    <image id="km1v55" name="main_time_m.png" path="/Components/Bottom/TimeFont/"/>
+    <image id="gpqz56" name="image_combo_bg.png" path="/Images/Player/" scale="9grid" scale9grid="35,3,70,6"/>
+    <image id="gpqz57" name="image_combo_point0.png" path="/Images/Player/"/>
+    <image id="gpqz58" name="image_combo_point1.png" path="/Images/Player/"/>
+    <image id="gpqz59" name="image_combo_point2.png" path="/Images/Player/"/>
+    <component id="bbev5b" name="ComboPoint.xml" path="/Components/Player/" exported="true"/>
+    <image id="bbev5c" name="main_music_disable.png" path="/Images/MiniMap/"/>
+    <image id="bbev5e" name="main_assist_switch.png" path="/Images/Assist/" scale9grid="15,14,6,7"/>
+    <image id="bbev5i" name="main_assist_select_btn_9.png" path="/Images/Assist/" scale="9grid" scale9grid="8,9,4,6" duplicatePadding="true"/>
+    <image id="bbev5n" name="main_black_bg.png" path="/Images/Assist/" scale="9grid" scale9grid="5,5,6,6"/>
+    <component id="bbev5p" name="PCMainMission.xml" path="/" exported="true"/>
+    <component id="bbev5q" name="MissionItem.xml" path="/Components/Assist/"/>
+    <image id="bbev5t" name="main_btn.png" path="/Images/Assist/" scale="9grid" scale9grid="11,11,9,8"/>
+    <component id="bbev5u" name="MemberItem.xml" path="/Components/Assist/"/>
+    <image id="bbev5v" name="main_team_member_bg.png" path="/Images/Assist/" scale9grid="100,13,60,28" duplicatePadding="true"/>
+    <image id="bbev5z" name="main_team_leader.png" path="/Images/Assist/"/>
+    <image id="bbev68" name="main_player_lv_bg.png" path="/Images/Assist/"/>
+    <image id="bbev69" name="main_team_di.png" path="/Images/Assist/" scale="9grid" scale9grid="4,3,8,6"/>
+    <image id="bbev6a" name="main_team_hp.png" path="/Images/Assist/" scale="9grid" scale9grid="1,1,2,2"/>
+    <image id="bbev6b" name="main_team_mp.png" path="/Images/Assist/" scale="9grid" scale9grid="1,1,2,2"/>
+    <component id="bbev6c" name="PCMainTeam.xml" path="/" exported="true"/>
+    <image id="l8uu6d" name="main_chat_btn_emotion.png" path="/Images/Chat/"/>
+    <image id="l8uu6f" name="main_chat_btn_pos.png" path="/Images/Chat/"/>
+    <image id="l8uuv84" name="main_chat_emo_bg.png" path="/Images/Chat/"/>
+    <component id="l8uu6h" name="EmoItem.xml" path="/Components/Chat/"/>
+    <image id="bojo6d" name="main_bottom_func_select.png" path="/Images/Bottom/" scale="9grid" scale9grid="14,13,0,3"/>
+    <image id="bojo6e" name="main_bottom_left.png" path="/Images/Bottom/"/>
+    <image id="bojo6f" name="main_bottom_right.png" path="/Images/Bottom/"/>
+    <image id="bojo6g" name="main_quick_button_down.png" path="/Images/Bottom/"/>
+    <image id="bojo6h" name="main_quick_button_up.png" path="/Images/Bottom/"/>
+    <component id="bojo6i" name="QuickTip.xml" path="/Components/Bottom/"/>
+    <component id="m9h96l" name="ButtonFunc.xml" path="/Components/Bottom/"/>
+    <component id="m9h9v85" name="ButtonBubbleTip.xml" path="/Components/Bottom/"/>
+    <image id="m9h9v86" name="bubble_effect.png" path="/Components/Bottom/Bubble/"/>
+    <image id="m9h9v87" name="bubble_chat.png" path="/Components/Bottom/Bubble/"/>
+    <image id="m9h9v88" name="bubble_mail.png" path="/Components/Bottom/Bubble/"/>
+    <image id="m9h9v89" name="bubble_bag.png" path="/Components/Bottom/Bubble/"/>
+    <image id="m9h9v8a" name="bubble_friends.png" path="/Components/Bottom/Bubble/"/>
+    <image id="m9h9v8b" name="bubble_goWarAlliance.png" path="/Components/Bottom/Bubble/"/>
+    <image id="m9h9v8c" name="bubble_team.png" path="/Components/Bottom/Bubble/"/>
+    <component id="zn3dv8e" name="PCModeSetting.xml" path="/" exported="true"/>
+    <image id="zn3dfvdu" name="img_di.png" path="/Images/ModeSetting/" scale="9grid" scale9grid="8,7,2,2"/>
+    <component id="zn3dv8g" name="ModeItem.xml" path="/Components/ModeSetting/"/>
+    <image id="zn3dv8h" name="main_player_mode0.png" path="/Images/ModeSetting/" exported="true"/>
+    <component id="zn3dv8i" name="ModeButton.xml" path="/Components/ModeSetting/"/>
+    <image id="9v0nv8d" name="main_assist_select_btn_9.png" path="/Images/MiniMap/" scale9grid="10,10,42,8" duplicatePadding="true"/>
+    <component id="9v0nv8g" name="MiniMapAutoButton.xml" path="/Components/MiniMap/"/>
+    <image id="pp0lfvdv" name="main_player_mode1.png" path="/Images/ModeSetting/" exported="true"/>
+    <image id="pp0lfvdw" name="main_player_mode2.png" path="/Images/ModeSetting/" exported="true"/>
+    <image id="pp0lfvdx" name="main_player_mode3.png" path="/Images/ModeSetting/" exported="true"/>
+    <image id="pp0lfvdy" name="main_player_mode4.png" path="/Images/ModeSetting/" exported="true"/>
+    <image id="pp0lfvdz" name="main_player_mode5.png" path="/Images/ModeSetting/" exported="true"/>
+    <image id="pp0lfvdu" name="quality_select_frame_9.png" path="/Images/ModeSetting/" scale="9grid" scale9grid="18,19,3,4" duplicatePadding="true"/>
+    <image id="tp62fve1" name="main_assist_mission_top.png" path="/Images/Assist/"/>
+    <image id="tp62fve4" name="main_assist_team_top.png" path="/Images/Assist/"/>
+    <component id="rqwtfve6" name="Team.xml" path="/Components/Assist/"/>
+    <image id="pzjgfve9" name="main_bottom_bg.png" path="/Images/Bottom/" scale9grid="3,3,2,2" duplicatePadding="true"/>
+    <component id="u244fvea" name="MiniMapTracePointItem.xml" path="/Components/MiniMap/" exported="true"/>
+    <image id="u244fveb" name="minimap_traceArrow.png" path="/Images/MiniMap/"/>
+    <image id="u244fvec" name="minimap_tracePoint.png" path="/Images/MiniMap/"/>
+    <image id="kx8cfved" name="main_assist_arrow.png" path="/Images/Assist/"/>
+    <component id="kx8cfvee" name="ButtonSwitch.xml" path="/Components/Assist/"/>
+    <image id="lxvgfvef" name="main_bottom_exp_bg.png" path="/Images/Bottom/" scale="9grid" scale9grid="5,3,2,2"/>
+    <image id="lxvgfveg" name="main_bottom_img1.png" path="/Images/Bottom/"/>
+    <image id="solpfven" name="main_player_mode_arrow.png" path="/Images/Player/"/>
+    <image id="solpfveo" name="main_player_mode_bg.png" path="/Images/Player/" scale="9grid" scale9grid="19,5,38,10"/>
+    <component id="qug1fvf0" name="petProgress.xml" path="/Components/newmain/"/>
+    <image id="qug1fvf1" name="06.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvf2" name="zhuxian.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvf3" name="icon_xl.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvf4" name="ico_fb.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvf5" name="icon_gf.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvf6" name="icon_hy.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvf7" name="icon_st.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvf8" name="icon_qh.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvf9" name="icon_ht.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfa" name="icon_bt.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfb" name="icon_sz.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfc" name="icobn_gd.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfd" name="zhuanzhi.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfe" name="icon_gdtb.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvff" name="icon_ls.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfg" name="icon_yy.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfh" name="icon_bb.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfi" name="icon_bbtb.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfj" name="icon_bbwz.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfk" name="icon_zzzdtb.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfl" name="icon_js.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfm" name="icon_zy.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfn" name="icon_zz.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfo" name="icon_fh.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfp" name="icon_yj.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfq" name="icon_wx.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfr" name="zhixian.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfs" name="ywc2.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvft" name="ywc.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfu" name="A.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfv" name="B.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfw" name="bg_lv2.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfx" name="btn_hong.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfy" name="btn_lv.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvfz" name="C.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvg0" name="close_yuan.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvg1" name="D.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvg2" name="E.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvg3" name="main_player_pets_bg.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvg4" name="main_player_pets_bg2.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvg5" name="main_player_pets_bg_red.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvg6" name="pet_000.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvg7" name="pet_001.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvg8" name="pet_002.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvg9" name="pet_003.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvga" name="pet_004.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvgb" name="pet_005.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvgc" name="pet_006.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvgd" name="pet_007.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvge" name="pet_008.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvgf" name="richang.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvgg" name="S.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvgh" name="Skill_bg.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvgi" name="xuanshang.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvgj" name="icon_dz.png" path="/Images/newmain/" exported="true"/>
+    <image id="qug1fvgk" name="icon_mp.png" path="/Images/newmain/" exported="true"/>
+    <component id="k9rffvgl" name="PCMainAssist.xml" path="/"/>
+    <component id="k9rffvgm" name="Mission.xml" path="/Components/Assist/"/>
+    <image id="k9rffvgn" name="main_assist_mission_select.png" path="/Images/Assist/"/>
+    <image id="k9rffvgo" name="main_assist_mission_unselect.png" path="/Images/Assist/"/>
+    <image id="k9rffvgp" name="main_assist_team_select.png" path="/Images/Assist/"/>
+    <image id="k9rffvgq" name="main_assist_team_unselect.png" path="/Images/Assist/"/>
+    <image id="k9rffvgr" name="main_team_operation_di.png" path="/Images/Team/"/>
+    <image id="k9rffvgs" name="main_team_point_select.png.png" path="/Images/Team/"/>
+    <image id="k9rffvgt" name="main_team_point_unselect.png" path="/Images/Team/"/>
+    <image id="k9rffvgu" name="main_team_word_di.png" path="/Images/Team/"/>
+    <image id="k9rffvgv" name="main_team_word_select_di.png" path="/Images/Team/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

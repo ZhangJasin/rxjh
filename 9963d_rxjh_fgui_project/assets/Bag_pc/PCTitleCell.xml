@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="324,58">
+  <controller name="titleState" pages="0,未激活,1,未使用,2,使用中" selected="0"/>
+  <controller name="isSelected" exported="true" pages="0,选中,1,未选中" selected="0"/>
+  <controller name="isTimer" pages="0,开启,1,关闭" selected="0"/>
+  <controller name="isPin" pages="0,置顶,1,取消置顶" selected="0"/>
+  <displayList>
+    <image id="n19_la9j" name="icon_di" src="emvc3r" fileName="image/icon_item1.png" pkg="qa9a7rit" xy="12,8" size="42,42" aspect="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <graph id="n24_qrgs" name="mask" xy="0,0" size="324,58" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <loader id="n14_qmm2" name="gloader_title" xy="13,9" size="40,40" aspect="true" grayed="true" url="ui://brz7yunlla9j5o" align="center" vAlign="middle" fill="scale">
+      <gearLook controller="titleState" pages="0,1,2" values="1,0,1,1|1,0,0,1|1,0,0,1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <image id="n15_qmm2" name="n15" src="la9j53" fileName="Images/PCTitleBar/01.png" xy="261,31" size="63,27">
+      <gearDisplay controller="titleState" pages="2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n16_qmm2" name="n16" src="la9j52" fileName="Images/PCTitleBar/02.png" xy="261,31" size="63,27">
+      <gearDisplay controller="titleState" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n18_l6pc" name="n18" src="l6pc50" fileName="Images/PCTitleBar/split.png" xy="6,56">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </image>
+    <image id="n17_qmm2" name="image_selected" src="s9fq4u" fileName="Images/icon_item_select.png" xy="0,0" size="324,58">
+      <gearDisplay controller="isSelected" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n20_la9j" name="title_name" xy="78,18" size="60,22" fontSize="14" color="#8f8f8f" singleLine="true" autoClearText="true" text="测试称号">
+      <gearColor controller="titleState" pages="0" values="#8f8f8f,#000000" default="#00ff00,#000000"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n22_jsqt" name="time_left" xy="162,18" size="64,22" fontSize="14" color="#ff0000" singleLine="true" autoClearText="true" text="24天16时">
+      <gearDisplay controller="titleState" pages="1,2"/>
+      <gearDisplay2 controller="isTimer" pages="0" condition="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n23_qrgs" name="btn_pin" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="268,0" size="56,26">
+      <gearText controller="isPin" pages="1" values="置顶" default="取消置顶"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="取消置顶" titleColor="#fae2e0" titleFontSize="11" icon="ui://brz7yunlqrgs5s"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="3p14jcut">
+  <resources>
+    <font id="mwvr0" name="TextAtlas示例.fnt" path="/Default/" exported="true"/>
+    <image id="mwvr5" name="1900000668.png" path="/Default/" exported="true" scale="9grid" scale9grid="39,7,78,14"/>
+    <image id="mwvr6" name="1900000677.png" path="/Default/" exported="true" scale="9grid" scale9grid="16,25,32,50"/>
+    <image id="mwvr7" name="1900000678.png" path="/Default/" exported="true"/>
+    <image id="mwvr8" name="bg_szjm_01.png" path="/Default/" exported="true"/>
+    <image id="mwvr9" name="bg_szjm_02.png" path="/Default/" exported="true"/>
+    <image id="mwvra" name="bg_szjm_02_1.png" path="/Default/" exported="true"/>
+    <image id="mwvrb" name="bg_szjm_03_1.png" path="/Default/" exported="true"/>
+    <image id="mwvrc" name="bg_szjm_03_2.png" path="/Default/" exported="true" scale="9grid" scale9grid="79,2,158,4"/>
+    <image id="mwvrd" name="bg_xbzy_02.png" path="/Default/" exported="true"/>
+    <image id="mwvre" name="bg_xbzy_03.png" path="/Default/" exported="true"/>
+    <image id="mwvrf" name="btn_close_3.png" path="/Default/" exported="true"/>
+    <image id="mwvrg" name="btn_szjm_01.png" path="/Default/" exported="true"/>
+    <image id="mwvrh" name="npc_img_1.png" path="/Default/" exported="true" scale="9grid" scale9grid="174,114,350,56"/>
+    <image id="mwvri" name="green_check.png" path="/Default/" exported="true"/>
+    <image id="mwvrj" name="icon_item0.png" path="/Default/" exported="true" scale9grid="16,16,32,32"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

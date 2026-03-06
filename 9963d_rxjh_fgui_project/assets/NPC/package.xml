@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="vgis5swq">
+  <resources>
+    <component id="gszy0" name="PlayDice.xml" path="/" exported="true"/>
+    <movieclip id="gszy1" name="dice.jta" path="/" exported="true"/>
+    <component id="gszy3" name="dice_item.xml" path="/" exported="true"/>
+    <image id="gszy4" name="dice_result_1.png" path="/Images/" exported="true"/>
+    <image id="gszy5" name="dice_result_2.png" path="/Images/" exported="true"/>
+    <image id="gszy6" name="dice_result_3.png" path="/Images/" exported="true"/>
+    <image id="gszy7" name="dice_result_4.png" path="/Images/" exported="true"/>
+    <image id="gszy8" name="dice_result_5.png" path="/Images/" exported="true"/>
+    <image id="gszy9" name="dice_result_6.png" path="/Images/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

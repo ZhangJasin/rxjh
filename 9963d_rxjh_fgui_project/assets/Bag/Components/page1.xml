@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="464,49">
+  <displayList>
+    <image id="n70_fa8p" name="img_di_1" src="lt7hvnx" fileName="Images/img_input_di.png" xy="0,0" size="464,49">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="r8pbvoo" name="mingZi" src="r8pbvoo" fileName="Components/item_attr_1.xml" xy="10,8" size="220,32">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

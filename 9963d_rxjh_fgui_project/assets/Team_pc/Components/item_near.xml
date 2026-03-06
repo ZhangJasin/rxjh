@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="515,64">
+  <displayList>
+    <image id="n23_hcvo" name="bg" src="npv42s" fileName="Images/team_item_bg.png" xy="0,0" size="515,64"/>
+    <image id="n24_hcvo" name="icon_bg" src="emvc3q" fileName="image/icon_item0.png" pkg="qa9a7rit" xy="40,32" pivot="0.5,0.5" anchor="true" size="50,50"/>
+    <component id="n25_hcvo" name="avator" src="emvc7" fileName="common/CommonPlayerFrame.xml" pkg="qa9a7rit" xy="40,32" size="50,50"/>
+    <loader id="n12_leye" name="img_job" xy="70,20" pivot="0,0.5" anchor="true" size="30,30" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n4_f0so" name="text_name" xy="100,20" pivot="0,0.5" anchor="true" size="150,20" fontSize="12" color="#ffffff" ubb="true" autoSize="none" text="名字一二三四五"/>
+    <text id="n15_scjw" name="text_teamName" xy="80,45" pivot="0,0.5" anchor="true" size="150,20" fontSize="12" color="#ffda60" autoSize="none" text="名字"/>
+    <text id="n7_f0so" name="text_level" xy="55,35" pivot="1,0" anchor="true" size="40,20" fontSize="12" color="#ffffff" align="right" vAlign="middle" autoSize="none" strokeColor="#000000" text="0"/>
+    <text id="n14_leye" name="text_count" xy="250,20" pivot="0,0.5" anchor="true" size="100,20" fontSize="12" color="#fcf1bf" vAlign="middle" autoSize="none" text="0/0"/>
+    <text id="n18_tg96" name="text_pick" xy="250,45" pivot="0,0.5" anchor="true" size="100,20" fontSize="12" color="#fcf1bf" vAlign="middle" autoSize="none" text="模式：自由拾取"/>
+    <richtext id="n20_bzpv" name="text_needLv" xy="500,50" pivot="1,0.5" anchor="true" size="100,20" fontSize="12" color="#14ffed" align="right" autoSize="none" text="等级：1-100"/>
+    <component id="n11_nc45" name="btn_join" src="nc451w" fileName="Components/btn_join.xml" xy="460,25" pivot="0.5,0.5" anchor="true"/>
+    <component id="n16_scjw" name="btn_refuse" src="f0so1r" fileName="Components/btn_refuse.xml" xy="400,25" pivot="0.5,0.5" anchor="true"/>
+    <component id="n17_scjw" name="btn_agree" src="f0so1q" fileName="Components/btn_agree.xml" xy="470,25" pivot="0.5,0.5" anchor="true"/>
+  </displayList>
+</component>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="90,90">
+  <displayList>
+    <loader id="n1_vxse" name="img_icon" xy="0,0" size="90,90" align="center" vAlign="middle" fill="scaleFree" useResize="true"/>
+  </displayList>
+</component>

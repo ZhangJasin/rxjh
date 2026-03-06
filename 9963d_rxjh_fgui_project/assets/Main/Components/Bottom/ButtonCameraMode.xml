@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="46,46" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="cameraMode" pages="0,2.5d,1,3d,2,智能" selected="2"/>
+  <displayList>
+    <loader id="n3_mfvx" name="n3" xy="0,0" size="46,46" url="ui://zj419n3dcr66fvda">
+      <gearIcon controller="cameraMode" pages="0,1,2" values="ui://zj419n3dcr66fvd8|ui://zj419n3dcr66fvd9|ui://zj419n3dcr66fvda"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>

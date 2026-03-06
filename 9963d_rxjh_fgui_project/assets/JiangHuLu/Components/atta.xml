@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="432,40">
+  <controller name="IsUp" pages="0,,1," selected="1"/>
+  <displayList>
+    <image id="n1_pkt0" name="n1" src="pkt0e" fileName="Images/右箭头.png" xy="191,9"/>
+    <image id="n3_pkt0" name="n3" src="pkt0b" fileName="Images/上箭头.png" xy="406,7">
+      <gearDisplay controller="IsUp" pages="1"/>
+    </image>
+    <richtext id="n4_pkt0" name="n4" xy="10,0" size="172,40" fontSize="18" color="#fcf1bf" vAlign="middle" autoSize="shrink" text="生命:33333"/>
+    <richtext id="n6_pkt0" name="n6" xy="237,0" size="166,40" fontSize="18" color="#fcf1bf" vAlign="middle" autoSize="shrink" text="生命:33333"/>
+  </displayList>
+</component>

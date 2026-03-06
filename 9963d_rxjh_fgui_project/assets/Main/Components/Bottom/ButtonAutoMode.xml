@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="108,25">
+  <controller name="state" pages="0,,1," selected="0">
+    <remark page="0" value="关闭状态"/>
+    <remark page="1" value="打开状态"/>
+  </controller>
+  <displayList>
+    <image id="n62_fyl5" name="n62" src="fyl5fvdw" fileName="Images/Bottom/main_auto_mode_bg2.png" xy="0,0">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </image>
+    <component id="n67_fyl5" name="arrow" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="86,3" size="19,19">
+      <Button icon="ui://zj419n3dfyl5fve0"/>
+    </component>
+    <image id="n68_fyl5" name="n68" src="fyl5fvdu" fileName="Images/Bottom/main_auto_mode_arrow.png" xy="90,9" pivot="0.5,0.4">
+      <gearLook controller="state" pages="1" values="1,180,0,0" default="1,0,0,0"/>
+    </image>
+  </displayList>
+</component>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImage="ui://xwp5ackotj4v41" designImageAlpha="100">
+  <controller name="job" alias="职业" pages="0,,1," selected="0">
+    <remark page="0" value="默认"/>
+    <remark page="1" value="刺客"/>
+  </controller>
+  <displayList>
+    <component id="n63_ueby" name="player_icon" src="emvc7" fileName="common/CommonPlayerFrame.xml" pkg="qa9a7rit" xy="22,22" size="42,42" group="n24_mxa7" aspect="true"/>
+    <loader id="n59_mjoj" name="n59" xy="42,1" size="182,42" group="n24_mxa7" url="ui://xwp5ackomjoj3"/>
+    <image id="n60_mjoj" name="n60" src="mjoj5" fileName="Images/Player/image_player_di1.png" xy="186,5" group="n24_mxa7"/>
+    <image id="n65_gpqz" name="n65" src="gpqz56" fileName="Images/Player/image_combo_bg.png" xy="78,43" size="139,14" group="n24_mxa7">
+      <gearDisplay controller="job" pages="1"/>
+    </image>
+    <component id="n61_mjoj" name="Button_team" src="tj4v46" fileName="Components/Player/TeamOperationButton.xml" xy="186,23" group="n24_mxa7"/>
+    <component id="n16_mxa7" name="ProgressBar_hp" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="48,6" size="129,10" group="n24_mxa7">
+      <ProgressBar value="50" max="100"/>
+      <property target="bar" propertyId="1" value="ui://xwp5ackomjoj9"/>
+    </component>
+    <component id="n17_mxa7" name="ProgressBar_mp" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="48,19" size="129,10" group="n24_mxa7">
+      <ProgressBar value="50" max="100"/>
+      <property target="bar" propertyId="1" value="ui://xwp5ackomjojb"/>
+    </component>
+    <component id="n18_mxa7" name="ProgressBar_anger" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="48,34" size="129,4" group="n24_mxa7">
+      <ProgressBar value="50" max="100"/>
+      <property target="bar" propertyId="1" value="ui://xwp5ackomjoj6"/>
+    </component>
+    <loader id="n66_solp" name="Loader_modeArea" xy="-1,43" size="79,22" group="n24_mxa7" url="ui://xwp5ackosolpfveo"/>
+    <loader id="n67_solp" name="Loader_mode" xy="31,54" pivot="0.5,0.5" anchor="true" size="42,20" group="n24_mxa7" scale="0.7,0.7" touchable="false" url="ui://xwp5ackozn3dv8h" autoSize="true" clearOnPublish="true"/>
+    <image id="n68_solp" name="n68" src="solpfven" fileName="Images/Player/main_player_mode_arrow.png" xy="59,51" group="n24_mxa7"/>
+    <component id="n56_sfd7" name="Node_combos" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="81,45" size="132,10" group="n24_mxa7" touchable="false">
+      <gearDisplay controller="job" pages="1"/>
+    </component>
+    <graph id="n58_s3rd" name="Touch_player" xy="44,2" size="136,39" group="n24_mxa7" type="rect" lineSize="0" fillColor="#00ffffff"/>
+    <text id="n19_mxa7" name="Text_hp" xy="47,2" size="130,19" group="n24_mxa7" fontSize="12" color="#ffffff" align="center" leading="0" autoSize="height" autoClearText="true" text="0/0"/>
+    <text id="n20_mxa7" name="Text_mp" xy="47,14" size="130,19" group="n24_mxa7" fontSize="12" color="#ffffff" align="center" leading="0" autoSize="none" autoClearText="true" text="0/0"/>
+    <text id="n21_mxa7" name="Text_lv" xy="184,2" size="29,19" group="n24_mxa7" fontSize="12" color="#83c9b4" align="center" autoSize="none" autoClearText="true" text="00"/>
+    <graph id="n64_gpqz" name="Graph_angerEffect" xy="112,36" pivot="0.5,0.5" anchor="true" size="0,0" group="n24_mxa7" lineSize="0"/>
+    <group id="n24_mxa7" name="n24" xy="-1,1" size="225,64" advanced="true">
+      <relation target="" sidePair="left-left,top-top"/>
+    </group>
+    <component id="n69_qug1" name="petPro" src="qug1fvf0" fileName="Components/newmain/petProgress.xml" xy="228,3" visible="false"/>
+    <component id="n62_g11o" name="TeamOperation" src="g11o4g" fileName="Components/Player/TeamOperation.xml" xy="230,0" visible="false">
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
+  </displayList>
+</component>

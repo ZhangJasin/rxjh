@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,40">
+  <displayList>
+    <image id="n0_x44m" name="bg_input" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="0,0" size="260,40">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_x44m" name="searchText" xy="5,0" size="265,40" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text="" input="true" prompt="请输入昵称"/>
+    <component id="n3_x44m" name="search" src="x44mo65" fileName="Components/searchBtn.xml" xy="256,2" size="36,36"/>
+  </displayList>
+</component>

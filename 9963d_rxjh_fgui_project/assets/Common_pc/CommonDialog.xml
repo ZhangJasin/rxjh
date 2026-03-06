@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <displayList>
+    <graph id="n6_ldq2" name="Mask" xy="0,0" size="1024,768" alpha="0.7" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n19_qejx" name="n19" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="356,257" size="310,254" group="n21_qejx"/>
+    <image id="n1_ldq2" name="n1" src="emvc3p" fileName="image/frame_info.png" pkg="qa9a7rit" xy="368,302" size="286,134" group="n21_qejx" alpha="0.8"/>
+    <component id="n2_ldq2" name="btn_green" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="539,468" group="n21_qejx">
+      <Button title="确 认" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <component id="n3_ldq2" name="btn_red" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="399,468" group="n21_qejx">
+      <Button title="取 消" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <text id="n4_ldq2" name="title" xy="416,266" pivot="0.5,0.5" size="190,25" group="n21_qejx" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="温馨提示"/>
+    <component id="n12_ldq2" name="desc" src="10e453" fileName="Components/text_scroll.xml" xy="373,305" size="277,127" group="n21_qejx"/>
+    <image id="n8_ldq2" name="textInput_bg" src="emvc3p" fileName="image/frame_info.png" pkg="qa9a7rit" xy="368,438" size="286,26" group="n20_qejx" alpha="0.8"/>
+    <text id="n7_ldq2" name="textInput" xy="368,440" size="286,22" group="n20_qejx" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#93a7b2" align="center" autoSize="none" text="内容内容内容内容内容内容内容内容内容内" input="true"/>
+    <group id="n20_qejx" name="input_root" xy="368,438" size="286,26" group="n21_qejx" advanced="true"/>
+    <group id="n21_qejx" name="Panel" xy="356,257" size="310,254" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n14_r52e" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="654,276">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

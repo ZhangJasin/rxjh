@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1000,650">
+  <displayList>
+    <loader id="n6_plaq" name="bg_texture" xy="499,329" pivot="0.5,0.5" anchor="true" size="991,633" url="ui://st7dgeqqplaqkvp3" fill="scaleFree">
+      <relation target="n5_kra4" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </loader>
+    <image id="n5_kra4" name="bg" src="as7kvnn" fileName="image/bg_first_panel_9.png" xy="-1,0" size="1000,650">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+</component>

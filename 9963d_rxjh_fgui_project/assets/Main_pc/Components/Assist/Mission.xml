@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="168,158">
+  <displayList>
+    <image id="n2_tp62" name="n2" src="bbev5n" fileName="Images/Assist/main_black_bg.png" xy="0,24" size="168,134"/>
+    <loader id="n7_tp62" name="Loader_title" xy="0,0" size="143,25" url="ui://xwp5ackotp62fve1"/>
+    <component id="n4_tp62" name="Btn_arrow" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="142,0" size="26,25">
+      <Button icon="ui://xwp5ackobbev5e"/>
+    </component>
+    <list id="n0_d1ew" name="List_mission" xy="3,26" size="162,130" overflow="scroll" lineGap="2" defaultItem="ui://xwp5ackobbev5q" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n1_p70y" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,158" size="0,0">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,24">
+  <displayList>
+    <image id="n9_bf0g" name="bg_input" src="f2ul5b" fileName="Images/input_bg.png" xy="49,12" pivot="0.5,0.5" anchor="true" size="100,24" color="#999999">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n10_bf0g" name="input_value" xy="0,0" size="100,24" fontSize="12" color="#fcf1bf" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="" input="true" prompt="请输入兑换码">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+</component>

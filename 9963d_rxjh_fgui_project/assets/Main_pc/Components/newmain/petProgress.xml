@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,97" overflow="hidden" bgColor="#ff0000">
+  <displayList>
+    <image id="n24_o46r" name="n19" src="qug1fvg4" fileName="Images/newmain/main_player_pets_bg2.png" xy="0,0" size="100,100"/>
+    <image id="n25_o46r" name="n18" src="qug1fvg3" fileName="Images/newmain/main_player_pets_bg.png" xy="16,15"/>
+    <image id="n26_o46r" name="one" src="qug1fvg5" fileName="Images/newmain/main_player_pets_bg_red.png" xy="9,8" fillMethod="radial180" fillOrigin="3"/>
+    <image id="n27_o46r" name="two" src="qug1fvg5" fileName="Images/newmain/main_player_pets_bg_red.png" xy="50,8" flip="hz" fillMethod="radial180" fillOrigin="2"/>
+    <loader id="n23_jimm" name="petIcon" xy="16,14" size="68,68" aspect="true" fill="scaleFree"/>
+    <graph id="n10_v1f7" name="n10" xy="5,3" size="90,91" aspect="true" visible="false" type="eclipse" fillColor="#66000000"/>
+    <text id="n11_v1f7" name="n11" xy="24,23" size="59,32" visible="false" fontSize="22" color="#ffffff" align="center" autoSize="none" text="30s"/>
+    <text id="n12_jimm" name="n12" xy="24,48" size="57,32" visible="false" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="复活"/>
+  </displayList>
+</component>

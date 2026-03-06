@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImage="ui://tsu6gfnozah92">
+  <displayList>
+    <graph id="n8_zah9" name="Mask" xy="0,0" size="1334,750" type="rect" lineSize="0" fillColor="#80000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n9_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,54">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n1_zah9" name="btn_close" src="kxj1v4c" fileName="common/Button.xml" pkg="o8ixb2zy" xy="1135,56">
+      <Button icon="ui://st7dgeqqje63v3b"/>
+    </component>
+    <text id="n2_zah9" name="text_title" xy="453,64" size="439,39" fontSize="24" color="#95a9b5" align="center" vAlign="middle" autoSize="none" text="门派"/>
+  </displayList>
+</component>

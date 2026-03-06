@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n26_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n24_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="417,175" size="500,400">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n3_q8ir" name="title" xy="641,185" size="52,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="提示">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n23_rg2r" name="bg_di" src="7c351n" fileName="Images/img_dlg_di.png" xy="450,234" size="432,242">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n22_rg2r" name="item_node" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="546,260" size="72,72">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n5_q8ir" name="text_name" xy="639,260" size="144,29" fontSize="20" color="#ffffff" singleLine="true" autoClearText="true" text="这是名字七个字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n6_q8ir" name="label_price" xy="639,302" size="50,29" fontSize="20" color="#ffffff" singleLine="true" text="竞价:">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n7_q8ir" name="text_price" xy="728,301" size="48,29" fontSize="20" color="#f1ffeb" singleLine="true" text="9999">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n20_rg2r" name="icon_Money1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="694,300" size="32,32">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n13_q8ir" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="895,202">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n14_q8ir" name="cbx_select_price" src="q8irv" fileName="Components/Buy/cbx_jingjia.xml" xy="519,365" size="294,36">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <ComboBox title="当前加价5%" titleColor="#f1ffeb" visibleItemCount="6" direction="down">
+        <item title="当前竞价加价5%"/>
+        <item title="当前竞价加价10%"/>
+        <item title="当前竞价加价20%"/>
+        <item title="当前竞价加价30%"/>
+        <item title="当前竞价加价50%"/>
+        <item title="当前竞价加价100%"/>
+      </ComboBox>
+    </component>
+    <text id="n17_q8ir" name="label_cur_price_give" xy="568,429" size="90,29" group="n18_q8ir" fontSize="20" color="#f1ffeb" singleLine="true" text="当前出价:">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n21_rg2r" name="icon_Money2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="665,428" size="32,32" group="n18_q8ir">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n16_q8ir" name="text_price_player_give" xy="700,429" size="60,29" group="n18_q8ir" fontSize="20" color="#f1ffeb" autoSize="height" singleLine="true" text="9999">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n18_q8ir" name="set" xy="568,428" size="192,32" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n11_q8ir" name="btn_givePrice" src="r8pb1q" fileName="Components/btn_JingJia.xml" xy="515,505" size="136,42" group="n25_owd7">
+      <Button title="出 价" titleColor="#fff000" titleFontSize="22"/>
+    </component>
+    <component id="n12_q8ir" name="btn_cancel" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="681,505" group="n25_owd7">
+      <Button title="取 消"/>
+    </component>
+    <group id="n25_owd7" name="n25" xy="515,505" size="302,42" advanced="true" layout="hz" colGap="30" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

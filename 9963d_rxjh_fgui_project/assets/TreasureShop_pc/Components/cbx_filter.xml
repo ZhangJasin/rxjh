@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="35,25" extention="ComboBox">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_10pmd" name="n0" src="baex5m" fileName="Images/comboxDi.png" xy="0,0" size="35,25">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_10pmd" name="title" xy="3,3" size="10,19" fontSize="11" color="#7cc3b3" vAlign="middle" ubb="true" autoSize="none" strokeColor="#000000" singleLine="true" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <image id="n3_kra4" name="n3" src="emvc3a" fileName="Images/arrowdi.png" xy="13,3" size="19,19" aspect="true">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </image>
+    <image id="n2_kra4" name="down" src="emvc39" fileName="Images/arrow.png" xy="14,9">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </image>
+    <image id="n4_kra4" name="up" src="emvc39" fileName="Images/arrow.png" xy="14,9" flip="vt">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </image>
+  </displayList>
+  <ComboBox dropdown="ui://qy7g0oycemvc24"/>
+</component>

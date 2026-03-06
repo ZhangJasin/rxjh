@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="210,60">
+  <controller name="isShouChong" pages="0,是,1,否" selected="0"/>
+  <displayList>
+    <image id="n244_g0ii" name="btn_bg" src="vye19" fileName="Images/btn_yellow.png" xy="3,19" size="204,40">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n245_g0ii" name="img_link_left" src="kra4dv77" fileName="Images/link.png" xy="12,-3">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n246_g0ii" name="img_link_right" src="kra4dv77" fileName="Images/link.png" xy="198,-3">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n247_g0ii" name="tag_ShoChong" src="vye14" fileName="Images/first_Purchase.png" xy="3,19">
+      <gearDisplay controller="isShouChong" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n248_g0ii" name="text_count" xy="52,20" size="106,39" fontSize="24" color="#ffffcc" align="center" vAlign="middle" autoSize="none" shadowColor="#ffff99" shadowOffset="1,0" text="￥30">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

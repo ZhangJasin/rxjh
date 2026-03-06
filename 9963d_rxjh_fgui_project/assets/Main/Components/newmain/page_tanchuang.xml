@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n11_lng6" name="n1" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="450,250"/>
+    <component id="n2_eoqr" name="n2" src="bojefvf5" fileName="Components/newmain/btn_close.xml" xy="843,255"/>
+    <text id="n3_eoqr" name="text_tips" xy="617,258" size="112,38" fontSize="24" color="#ffff00" align="center" vAlign="middle" autoSize="none" bold="true" text="提示"/>
+    <text id="n4_eoqr" name="text" xy="502,348" pivot="0.5,0.5" size="330,29" fontSize="20" color="#ffff00" align="center" vAlign="middle" autoSize="height" bold="true" text="剩余挑战次数不足是否前往购买"/>
+    <component id="n13_lng6" name="btn_cancel" src="bojefvex" fileName="Components/newmain/btn_red.xml" xy="497,430" size="150,50" group="n8_eoqr"/>
+    <text id="n7_eoqr" name="n7" xy="497,430" size="150,50" group="n8_eoqr" fontSize="20" color="#ff0000" align="center" vAlign="middle" autoSize="none" bold="true" text="取消"/>
+    <group id="n8_eoqr" name="n8" xy="497,430" size="150,50"/>
+    <component id="n12_lng6" name="btn_ok" src="bojefvew" fileName="Components/newmain/btn_lv.xml" xy="688,431" size="150,50" group="n10_eoqr"/>
+    <text id="n9_eoqr" name="n9" xy="684,430" size="150,50" group="n10_eoqr" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="确定"/>
+    <group id="n10_eoqr" name="n10" xy="684,430" size="154,51"/>
+  </displayList>
+</component>

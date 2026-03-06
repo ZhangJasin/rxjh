@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="500,40" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n15_v75j" name="bg" src="v75j17" fileName="Images/rank_item_bg.png" xy="0,0" size="500,40"/>
+    <image id="n16_gnrt" name="select" src="emvc3s" fileName="image/icon_item_select.png" pkg="qa9a7rit" xy="0,0" size="500,40">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+    <loader id="n9_qpwo" name="img_rank" xy="35,20" pivot="0.5,0.5" anchor="true" size="30,30"/>
+    <text id="n7_qpwo" name="text_rank" xy="35,20" pivot="0.5,0.5" anchor="true" size="70,24" fontSize="12" color="#f1ffeb" align="center" autoSize="none" strokeColor="#000000" text="100"/>
+    <list id="n14_nsq9" name="list_value" xy="70,0" size="430,40" touchable="false" layout="row" selectionMode="none" overflow="scroll" scroll="horizontal" defaultItem="ui://vccyhmfwnsq9z" vAlign="middle">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

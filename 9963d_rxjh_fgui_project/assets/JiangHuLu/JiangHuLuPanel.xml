@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750">
+  <controller name="isShotMoreBox" pages="0,,1," selected="1"/>
+  <displayList>
+    <loader id="n13_pkt0" name="n13" xy="53,47" size="1208,650" url="ui://v2zz2kpppkt0j" fill="scaleFree"/>
+    <component id="n32_c1bl" name="btn_close" src="c1bl15" fileName="Components/btn_close.xml" xy="1219,53" size="45,45"/>
+    <list id="n18_c1bl" name="treeList" xy="210,75" size="220,573" group="n17_c1bl" overflow="scroll" lineGap="4" autoClearItems="true" treeView="true" indent="20" clickToExpand="1">
+      <item url="ui://v2zz2kpppkt0m" level="0"/>
+      <item url="ui://v2zz2kpppkt0p" level="1"/>
+      <item url="ui://v2zz2kpppkt0m" level="0"/>
+      <item url="ui://v2zz2kpppkt0p" level="1"/>
+    </list>
+    <group id="n17_c1bl" name="left" xy="210,75" size="220,573" advanced="true"/>
+    <image id="n20_c1bl" name="n20" src="pkt0q" fileName="Images/pull_content_bg.png" xy="435,118" size="432,160" group="n19_c1bl"/>
+    <list id="n21_c1bl" name="topAttr" xy="435,118" size="432,160" group="n19_c1bl" overflow="scroll" defaultItem="ui://v2zz2kpppkt0w" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n22_c1bl" name="n22" src="pkt0q" fileName="Images/pull_content_bg.png" xy="435,336" size="432,160" group="n19_c1bl"/>
+    <list id="n23_c1bl" name="bottomAttr" xy="435,336" size="432,160" group="n19_c1bl" overflow="scroll" defaultItem="ui://v2zz2kpppkt0w" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n24_c1bl" name="n24" src="s0oby" fileName="Components/title.xml" xy="435,78" size="432,32" group="n19_c1bl"/>
+    <component id="n39_filp" name="n39" src="filp18" fileName="Components/title3.xml" xy="435,292" group="n19_c1bl"/>
+    <group id="n19_c1bl" name="middle" xy="435,78" size="432,418" advanced="true"/>
+    <image id="n38_filp" name="n38" src="pkt0q" fileName="Images/pull_content_bg.png" xy="871,118" size="349,378" group="n29_c1bl"/>
+    <component id="n30_c1bl" name="n30" src="c1bl14" fileName="Components/title2.xml" xy="871,79" size="349,0" group="n29_c1bl"/>
+    <list id="n31_c1bl" name="taskList" xy="871,118" size="349,378" group="n29_c1bl" overflow="scroll" margin="5,5,5,5" lineGap="5" defaultItem="ui://v2zz2kppfilp17" autoClearItems="true">
+      <gearDisplay controller="isShotMoreBox" pages="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n29_c1bl" name="right" xy="871,79" size="349,417" advanced="true"/>
+    <image id="n26_c1bl" name="n26" src="pkt08" fileName="Images/江湖赠礼.png" xy="444,544" size="60,52" group="n40_nbpe"/>
+    <list id="n27_c1bl" name="awardList" xy="522,540" size="351,60" group="n40_nbpe" layout="row" overflow="scroll" scroll="horizontal" colGap="5" defaultItem="ui://v2zz2kppnjf4z">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n28_c1bl" name="btn_lingqu" src="njf410" fileName="Components/btn_second_red.xml" xy="900,554" size="130,37" group="n40_nbpe">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="免费领取" selectedTitle="免费领取"/>
+    </component>
+    <group id="n40_nbpe" name="bottomAward" xy="444,540" size="586,60" advanced="true"/>
+    <image id="n47_c8x1" name="n47" src="c8x119" fileName="Images/01.png" xy="900,158" size="295,46" group="n42_nbpe" aspect="true"/>
+    <list id="n41_nbpe" name="giftBagList" xy="880,219" pivot="0.5,0.5" size="330,60" group="n42_nbpe" layout="row" overflow="scroll" scroll="horizontal" colGap="5" defaultItem="ui://v2zz2kppnjf4z" align="center"/>
+    <text id="n43_nbpe" name="n43" xy="949,304" size="60,26" group="n42_nbpe" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text="消耗："/>
+    <component id="n44_nbpe" name="xhcl" src="njf4z" fileName="Components/iconItem.xml" xy="1010,298" size="40,40" group="n42_nbpe"/>
+    <text id="n45_nbpe" name="money_text" xy="1059,305" size="70,26" group="n42_nbpe" fontSize="18" color="#ff0000" vAlign="middle" autoSize="none" text="288&#xA;"/>
+    <component id="n46_nbpe" name="BuyGiftBag" src="njf410" fileName="Components/btn_second_red.xml" xy="980,351" size="130,37" group="n42_nbpe">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="立即购买" selectedTitle="立即购买"/>
+    </component>
+    <group id="n42_nbpe" name="chaozhilibao" xy="880,158" size="330,230" advanced="true">
+      <gearDisplay controller="isShotMoreBox" pages="1"/>
+    </group>
+  </displayList>
+</component>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="o8ixb2zy" hasFavorites="true">
+  <resources>
+    <component id="ilk5vnm" name="Node.xml" path="/" exported="true" favorite="true"/>
+    <component id="o6ikv5o" name="ProgressBar.xml" path="/" exported="true" favorite="true"/>
+    <component id="s977kvpc" name="RadioRawButton.xml" path="/" exported="true" favorite="true"/>
+    <component id="kxj1v4c" name="ScaleButton.xml" path="/" exported="true" favorite="true"/>
+    <component id="kxj1v3f" name="ScaleButtonText.xml" path="/" exported="true" favorite="true"/>
+    <component id="t2g5kvp5" name="ScaleRawButton.xml" path="/" exported="true" favorite="true"/>
+    <component id="t2g5kvp6" name="ScaleRawButtonText.xml" path="/" exported="true" favorite="true"/>
+    <component id="ftt5vo7" name="ScrollRText.xml" path="/" exported="true" favorite="true"/>
+    <component id="zwd8vnu" name="ScrollText.xml" path="/" exported="true" favorite="true"/>
+    <component id="t2g5kvp7" name="StateButton.xml" path="/" exported="true" favorite="true"/>
+    <component id="t2g5kvp8" name="StateButtonText.xml" path="/" exported="true" favorite="true"/>
+    <component id="t2g5kvp9" name="StateRawButton.xml" path="/" exported="true" favorite="true"/>
+    <component id="t2g5kvpa" name="StateRawButtonText.xml" path="/" exported="true" favorite="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

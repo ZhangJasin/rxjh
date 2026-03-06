@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="tk3jclwq">
+  <resources>
+    <component id="y0e40" name="ChangeCamera.xml" path="/" exported="true"/>
+    <image id="y0e41" name="bg_di.png" path="/Images/" exported="true" scale="9grid" scale9grid="11,106,22,212" duplicatePadding="true"/>
+    <component id="y0e42" name="CameraType.xml" path="/Components/" exported="true"/>
+    <image id="mfvxvb0" name="img_cell_25d.png" path="/Images/" exported="true"/>
+    <image id="mfvxvb2" name="img_cell_3d.png" path="/Images/" exported="true"/>
+    <image id="mfvxvb4" name="img_cell_zn.png" path="/Images/" exported="true"/>
+    <image id="y0e43" name="icon_item_select.png" path="/Images/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
+    <image id="y0e44" name="btn_second_red.png" path="/Images/" exported="true" scale="9grid" scale9grid="11,12,12,27"/>
+    <component id="y0e45" name="Button.xml" path="/Components/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

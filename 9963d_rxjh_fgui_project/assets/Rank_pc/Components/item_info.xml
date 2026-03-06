@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="110,30">
+  <displayList>
+    <text id="n4_f0so" name="text_value" xy="55,14" pivot="0.5,0.5" anchor="true" size="110,20" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="名字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

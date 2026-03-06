@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImageOffsetX="8">
+  <displayList>
+    <component id="n38_fk8a" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432" group="n42_qbyp"/>
+    <text id="n1_vi2o" name="title" xy="512,188" pivot="0.5,0.5" anchor="true" size="68,24" group="n42_qbyp" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="摊主摆摊"/>
+    <text id="n2_vi2o" name="text_tip" xy="187,211" size="166,19" group="n42_qbyp" fontSize="12" color="#fefefe" vAlign="middle" ubb="true" text="尚未拥有摊位  是否前往摆摊？"/>
+    <text id="n33_80vf" name="text_time" xy="187,236" size="164,19" group="n42_qbyp" fontSize="12" color="#fefefe" vAlign="middle" text="摊位结束倒计时：21小时52分"/>
+    <component id="n3_vi2o" name="btn_create" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="419,216" group="n42_qbyp">
+      <Button title="确 定"/>
+    </component>
+    <graph id="n4_vi2o" name="textInput_bg" xy="188,264" size="242,24" group="n42_qbyp" type="rect" lineColor="#ffc0b204" fillColor="#ffb7c1b6"/>
+    <text id="n5_vi2o" name="inputText_search" xy="188,263" size="242,25" group="n42_qbyp" fontSize="12" vAlign="middle" autoSize="none" text="" input="true" prompt="[color=#000000]输入摊位名，搜索想要的摊位[/color]">
+      <relation target="n4_vi2o" sidePair="width-width,height-height"/>
+    </text>
+    <component id="n6_vi2o" name="btn_search" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="735,261" group="n42_qbyp">
+      <Button title="搜 索" titleFontSize="14"/>
+    </component>
+    <component id="n9_tgh8" name="btn_pre_page" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="235,555" group="n42_qbyp">
+      <Button title="上一页" titleColor="#fff000"/>
+    </component>
+    <component id="n10_tgh8" name="btn_next_page" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="685,555" group="n42_qbyp">
+      <Button title="下一页" titleColor="#fff000"/>
+    </component>
+    <text id="n11_tgh8" name="text_page" xy="393,559" size="238,20" group="n42_qbyp" fontSize="12" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="none" text="第[color=#75EA49]1/10[/color]页"/>
+    <image id="n7_tgh8" name="list_bg" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="185,297" size="650,239" group="n42_qbyp"/>
+    <list id="n8_tgh8" name="list_stall" xy="189,301" size="647,236" group="n42_qbyp" layout="flow_hz" overflow="scroll" scrollBarFlags="170" lineGap="3" colGap="6" defaultItem="ui://3wc7qwaghfk80" autoClearItems="true">
+      <relation target="n7_tgh8" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n37_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="510,384" size="0,0" group="n42_qbyp"/>
+    <list id="n40_qbyp" name="list_filter" xy="439,264" size="203,25" group="n42_qbyp" layout="flow_hz" overflow="scroll" defaultItem="ui://3wc7qwagqbypkvph" vAlign="middle">
+      <item title="搜索商品名"/>
+      <item title="搜索摊位名"/>
+    </list>
+    <component id="n41_qbyp" name="btn_filter_collect" src="qbypkvpi" fileName="Components/btn_filter_multi.xml" xy="651,264" group="n42_qbyp"/>
+    <group id="n42_qbyp" name="n42" xy="174,168" size="676,432" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n16_tgh8" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

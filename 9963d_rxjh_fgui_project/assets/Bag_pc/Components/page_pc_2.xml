@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="334,68">
+  <displayList>
+    <image id="n29_j9jd" name="bg_di" src="sna94t" fileName="Images/heiDI.png" xy="0,0" size="334,68">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n30_j9jd" name="shili" src="j9jdh" fileName="Components/comNameAndValue.xml" xy="6,7" size="156,25" group="n37_rxaw"/>
+    <component id="n32_j9jd" name="mingsheng" src="j9jdh" fileName="Components/comNameAndValue.xml" xy="166,7" size="162,25" group="n37_rxaw"/>
+    <group id="n37_rxaw" name="n37" xy="6,7" size="322,25" advanced="true" layout="hz" colGap="4" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n31_j9jd" name="dengji" src="j9jdh" fileName="Components/comNameAndValue.xml" xy="6,37" size="156,25" group="n38_rxaw"/>
+    <component id="n33_j9jd" name="lilian" src="j9jdh" fileName="Components/comNameAndValue.xml" xy="166,37" size="162,25" group="n38_rxaw"/>
+    <group id="n38_rxaw" name="n38" xy="6,37" size="322,25" advanced="true" layout="hz" colGap="4">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

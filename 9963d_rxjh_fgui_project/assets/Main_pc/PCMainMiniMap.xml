@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" bgColorEnabled="true">
+  <displayList>
+    <component id="n45_s977" name="minimap" src="s97715" fileName="Components/MiniMap/MainMiniMap.xml" xy="858,0">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="180,324" opaque="false">
+  <displayList>
+    <image id="n24_jhxg" name="bg" src="emvc3u" fileName="image/bg_tips.png" pkg="qa9a7rit" xy="90,162" pivot="0.5,0.5" anchor="true" size="180,324">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n25_jhxg" name="skill_bg" src="emvc3q" fileName="image/icon_item0.png" pkg="qa9a7rit" xy="10,36" pivot="0,0.5" anchor="true" size="52,50">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <loader id="n3_hhwj" name="skill_icon" xy="10,36" pivot="0,0.5" anchor="true" size="52,50" aspect="true" touchable="false" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <text id="n6_hhwj" name="text_name" xy="65,24" pivot="0,0.5" anchor="true" size="110,22" fontSize="12" color="#fff7d1" autoSize="none" text="名字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <richtext id="n10_hhwj" name="text_condition" xy="65,39" size="102,19" touchable="false" fontSize="12" color="#fff7d1" autoSize="none" text="等级">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n14_hhwj" name="text_desc" xy="10,240" size="165,80" touchable="false" fontSize="12" color="#fff7d1" ubb="true" autoSize="none" text="级别：140 名声：升天四式(正)  踏日落伏旨+1 一箭双雕+1 双箭追魂+1 群体攻击技能 最多2个目标 放置快捷栏内右键点击激活平砍攻击目标">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n15_hhwj" name="text_weili" xy="10,156" size="162,19" touchable="false" fontSize="12" color="#fff7d1" autoSize="none" text="武功威力：">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n16_hhwj" name="text_neili" xy="10,176" size="162,19" touchable="false" fontSize="12" color="#fff7d1" autoSize="none" text="武功内功：">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n17_hhwj" name="text_cd" xy="10,196" size="162,19" touchable="false" fontSize="12" color="#fff7d1" autoSize="none" text="武功冷却：">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n26_spth" name="text0" xy="10,66" size="110,19" touchable="false" fontSize="12" color="#ffff00" vAlign="middle" autoSize="none" text="修练条件">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n12_hhwj" name="text1" xy="10,221" size="102,19" touchable="false" fontSize="12" color="#ffff00" vAlign="middle" autoSize="none" text="技能描述">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n13_hhwj" name="text2" xy="10,136" size="110,19" touchable="false" fontSize="12" color="#ffff00" vAlign="middle" autoSize="none" text="技能功效">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <list id="n21_vkxx" name="list_cost" xy="10,86" size="160,50" touchable="false" selectionMode="none" overflow="scroll" lineGap="-2" defaultItem="ui://0vpx0897nd1wy">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

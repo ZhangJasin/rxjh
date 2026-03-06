@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="313,98">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_108rv" name="n0" src="vdnef" fileName="Images/Select/img_role_select_bg.png" xy="5,4" group="n7_mhkn"/>
+    <text id="n5_108rv" name="text_level" xy="162,44" size="76,26" group="n7_mhkn" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="Lv.44">
+      <relation target="" sidePair=""/>
+    </text>
+    <text id="n1_108rv" name="text_name" xy="157,22" size="130,26" group="n7_mhkn" fontSize="18" color="#ffff8b" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="创建英雄雄雄雄">
+      <relation target="" sidePair=""/>
+    </text>
+    <component id="n9_lmdg" name="icon_avatar" src="vdneg" fileName="Components/Select/icon_avatar.xml" xy="10,8" group="n7_mhkn"/>
+    <loader id="n3_108rv" name="icon_job" xy="125,47" pivot="0.5,0.5" anchor="true" size="70,68" group="n7_mhkn" scale="0.6,0.6" url="ui://88oqthnqvdnej" align="center" vAlign="middle" autoSize="true">
+      <relation target="" sidePair=""/>
+    </loader>
+    <image id="n6_108rv" name="icon_select_effect" src="vdneh" fileName="Images/Select/img_role_select_9.png" xy="0,0" size="308,98" group="n7_mhkn" visible="false">
+      <relation target="" sidePair=""/>
+    </image>
+    <text id="n8_mhkn" name="text_create" xy="151,35" size="76,26" group="n7_mhkn" visible="false" fontSize="18" color="#ffffff" vAlign="middle" strokeColor="#000000" singleLine="true" text="创建英雄">
+      <relation target="" sidePair=""/>
+    </text>
+    <group id="n7_mhkn" name="item_root" xy="0,0" size="313,98" advanced="true">
+      <gearDisplay controller="button" pages=""/>
+    </group>
+  </displayList>
+</component>

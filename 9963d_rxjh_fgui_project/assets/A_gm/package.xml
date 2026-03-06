@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="htj7cnml">
+  <resources>
+    <component id="oqrp0" name="GMBox.xml" path="/" exported="true"/>
+    <image id="oqrp1" name="di1.png" path="/Images/0tongyong/" scale="9grid" scale9grid="28,20,56,40"/>
+    <component id="oqrp2" name="role_btn.xml" path="/Components/GMBox/"/>
+    <image id="oqrp3" name="btnhong1.png" path="/Images/0tongyong/" scale="9grid" scale9grid="31,16,62,32"/>
+    <image id="oqrp4" name="btnhong2.png" path="/Images/0tongyong/" scale="9grid" scale9grid="35,16,70,32" duplicatePadding="true"/>
+    <component id="oqrp5" name="monster_btn.xml" path="/Components/GMBox/"/>
+    <component id="oqrp6" name="item_btn.xml" path="/Components/GMBox/"/>
+    <component id="oqrp7" name="map_btn.xml" path="/Components/GMBox/"/>
+    <component id="oqrp8" name="sys_btn.xml" path="/Components/GMBox/"/>
+    <component id="oqrp9" name="role_hb_btn.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrpa" name="role_dj_btn.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrpb" name="role_jn_btn.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrpc" name="role_buff_btn.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrpd" name="role_attr_btn.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrpe" name="role_zz_btn.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrpf" name="role_sex_btn.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrpg" name="monster_sg_btn.xml" path="/Components/GMBox/monster/"/>
+    <component id="oqrph" name="monster_killall_btn.xml" path="/Components/GMBox/monster/"/>
+    <component id="oqrpi" name="item_add_btn.xml" path="/Components/GMBox/item/"/>
+    <component id="oqrpj" name="item_clearbag_btn.xml" path="/Components/GMBox/item/"/>
+    <component id="oqrpk" name="item_throw_btn.xml" path="/Components/GMBox/item/"/>
+    <component id="oqrpl" name="map_goto_btn.xml" path="/Components/GMBox/map/"/>
+    <component id="oqrpm" name="map_clearitem_btn.xml" path="/Components/GMBox/map/"/>
+    <component id="oqrpn" name="sys_humvarint_btn.xml" path="/Components/GMBox/sys/"/>
+    <component id="oqrpo" name="sys_humvarstr_btn.xml" path="/Components/GMBox/sys/"/>
+    <component id="oqrpp" name="sys_varint_btn.xml" path="/Components/GMBox/sys/"/>
+    <component id="oqrpq" name="sys_varstr_btn.xml" path="/Components/GMBox/sys/"/>
+    <component id="oqrpr" name="sys_task_change.xml" path="/Components/GMBox/sys/"/>
+    <component id="oqrps" name="role_hb_panl.xml" path="/Components/GMBox/role/"/>
+    <image id="oqrpt" name="srbbg.png" path="/Images/0tongyong/" scale="9grid" scale9grid="28,20,56,40" duplicatePadding="true"/>
+    <component id="oqrpu" name="Button.xml" path="/Components/GMBox/"/>
+    <image id="oqrpv" name="btn_lv.png" path="/Images/0tongyong/" scale="9grid" scale9grid="39,13,78,26"/>
+    <component id="oqrpw" name="role_dj_panl.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrpx" name="role_jn_panl.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrpy" name="role_buff_panl.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrpz" name="role_zz_panl.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrp10" name="role_attr_panl.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrp11" name="role_sex_panl.xml" path="/Components/GMBox/role/"/>
+    <component id="oqrp12" name="monster_sg_panl.xml" path="/Components/GMBox/monster/"/>
+    <component id="oqrp13" name="monster_killall_panl.xml" path="/Components/GMBox/monster/"/>
+    <component id="oqrp14" name="closegm.xml" path="/Components/GMBox/"/>
+    <image id="oqrp15" name="003.png" path="/Images/"/>
+    <component id="oqrp16" name="item_add_panl.xml" path="/Components/GMBox/item/"/>
+    <component id="oqrp17" name="item_clearbag_panl.xml" path="/Components/GMBox/item/"/>
+    <component id="oqrp18" name="item_throw_panl.xml" path="/Components/GMBox/item/"/>
+    <component id="oqrp19" name="map_goto_panl.xml" path="/Components/GMBox/map/"/>
+    <component id="oqrp1a" name="map_clearitem_panl.xml" path="/Components/GMBox/map/"/>
+    <component id="oqrp1b" name="sys_humvarint_panl.xml" path="/Components/GMBox/sys/"/>
+    <component id="oqrp1c" name="sys_humvarstr_panl.xml" path="/Components/GMBox/sys/"/>
+    <component id="oqrp1d" name="sys_varint_panl.xml" path="/Components/GMBox/sys/"/>
+    <component id="oqrp1e" name="sys_varstr_panl.xml" path="/Components/GMBox/sys/"/>
+    <component id="oqrp1f" name="fangbtn.xml" path="/Components/tongyong/"/>
+    <image id="oqrp1g" name="btn_hong.png" path="/Images/0tongyong/" scale="9grid" scale9grid="16,13,32,26"/>
+    <component id="oqrp1h" name="sys_task_panl.xml" path="/Components/GMBox/sys/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

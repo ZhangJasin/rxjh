@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="110,40" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_h0oq" name="btn" src="je63v3c" fileName="image/btn_first_red.png" pkg="st7dgeqq" xy="0,0" size="110,40"/>
+    <text id="n1_h0oq" name="text" xy="0,3" size="110,34" fontSize="22" color="#fff7d1" align="center" vAlign="middle" autoSize="none" text="扫荡">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.9"/>
+</component>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <loader id="n0_lmpz" name="bg" xy="990,570" pivot="0.5,0.5" anchor="true" size="168,220" group="n21_ezgo" url="ui://oj7dtpkyid4u2" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <text id="n15_a6dc" name="text_title" xy="990,480" pivot="0.5,0.5" anchor="true" size="160,34" group="n21_ezgo" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="快捷装备">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n1_lmpz" name="text_name" xy="990,605" pivot="0.5,0.5" anchor="true" size="200,29" group="n21_ezgo" fontSize="20" color="#faebe9" align="center" vAlign="middle" autoSize="none" text="门派战甲">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n18_isoe" name="text_cd" xy="1056,646" pivot="0.5,0.5" anchor="true" size="29,29" group="n21_ezgo" fontSize="20" color="#faebe9" align="center" vAlign="middle" text="(5)">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n12_id4u" name="text_no" xy="944,705" pivot="0,0.5" anchor="true" size="150,26" group="n21_ezgo" fontSize="18" color="#faebe9" vAlign="middle" autoSize="none" strokeColor="#000000" text="此道具不再提示">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n9_lmpz" name="btn_equip" src="lmpz1" fileName="Components/btn_equip.xml" xy="990,650" pivot="0.5,0.5" anchor="true" group="n21_ezgo">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n14_a6dc" name="btn_close" src="a6dc4" fileName="Components/btn_close.xml" xy="1074,460" group="n21_ezgo">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n13_id4u" name="check_show" src="yj7kvo1" fileName="common/checkbox_multi.xml" pkg="st7dgeqq" xy="920,705" pivot="0.5,0.5" anchor="true" size="25,25" group="n21_ezgo" scale="1.3,1.3">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n19_xwea" name="Node_Time" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="1058,645" pivot="0.5,0.5" anchor="true" size="30,30" group="n21_ezgo">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n20_pohx" name="Node_item" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="990,550" pivot="0.5,0.5" anchor="true" size="72,72" group="n21_ezgo">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n21_ezgo" name="panel" xy="890,460" size="211,258"/>
+  </displayList>
+</component>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,130" opaque="false">
+  <displayList>
+    <image id="n21_pxu7" name="n0" src="r1aj5x" fileName="Images/tips_bg.png" xy="0,0" size="200,130"/>
+    <image id="n19_qtq9" name="bg_input" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="101,21" pivot="0.5,0.5" anchor="true" size="84,24">
+      <relation target="n21_pxu7" sidePair="center-center,top-top"/>
+    </image>
+    <text id="n20_qtq9" name="input_count" xy="101,21" pivot="0.5,0.5" anchor="true" size="84,24" fontSize="15" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="12312412" input="true" prompt="请输入数字" keyboardType="4">
+      <relation target="n21_pxu7" sidePair="center-center,top-top"/>
+    </text>
+    <component id="n22_pxu7" name="btn_sub" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="33,9" size="23,24" controller="btnkInd,1">
+      <relation target="n21_pxu7" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n23_pxu7" name="btn_add" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="144,9" size="23,24" controller="btnkInd,0">
+      <relation target="n21_pxu7" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n24_pxu7" name="btn_m_min" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="7,8" size="24,24" controller="btnkInd,3">
+      <relation target="n21_pxu7" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n25_pxu7" name="btn_m_max" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="169,8" size="24,24" controller="btnkInd,4">
+      <relation target="n21_pxu7" sidePair="right-right,top-top"/>
+    </component>
+    <text id="n14_qtq9" name="text_buy_count" xy="10,34" size="64,19" fontSize="12" color="#cdd3d9" text="购买次数："/>
+    <text id="n15_qtq9" name="n15" xy="10,56" size="28,19" fontSize="12" color="#cdd3d9" text="售价"/>
+    <text id="n16_qtq9" name="n16" xy="10,78" size="28,19" fontSize="12" color="#cdd3d9" text="持有"/>
+    <component id="n26_pxu7" name="price_cell" src="pxu767" fileName="Components/commonCostCell.xml" xy="192,52" pivot="1,0" anchor="true" touchable="false">
+      <relation target="n21_pxu7" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n27_pxu7" name="have_cell" src="pxu767" fileName="Components/commonCostCell.xml" xy="192,74" pivot="1,0" anchor="true" touchable="false">
+      <relation target="n21_pxu7" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n28_pxu7" name="btn_purchase" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="63,95" size="74,28">
+      <Button title="购买"/>
+    </component>
+  </displayList>
+</component>

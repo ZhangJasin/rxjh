@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="81,35">
+  <displayList>
+    <loader id="n260_qhgz" name="loader_costIcon" xy="3,0" size="29,35" group="n262_iqa5" url="ui://p8mjxubrvye1j" align="center" vAlign="middle" fill="scale">
+      <relation target="n262_iqa5" sidePair="middle-middle,left-left"/>
+    </loader>
+    <text id="n259_cym7" name="text_count" xy="32,3" size="48,29" group="n262_iqa5" fontSize="20" color="#fff7d1" vAlign="middle" singleLine="true" autoClearText="true" text="1111"/>
+    <group id="n262_iqa5" name="n262" xy="3,0" size="77,35" advanced="true" layout="hz"/>
+  </displayList>
+  <relation target="n262_iqa5" sidePair="rightext-right"/>
+</component>

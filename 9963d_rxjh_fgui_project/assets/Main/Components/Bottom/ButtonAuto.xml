@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="48,48" extention="Button">
+  <controller name="state" alias="状态" pages="0,,1," selected="0">
+    <remark page="0" value="未开启"/>
+    <remark page="1" value="开启"/>
+  </controller>
+  <displayList>
+    <image id="n3_brvz" name="n3" src="kxj1v43" fileName="Images/Right/main_btn_auto.png" xy="0,0"/>
+    <loader id="n4_brvz" name="n4" xy="-8,30" size="64,18" url="ui://zj419n3dbrvzv7p" autoSize="true">
+      <gearXY controller="state" pages="0,1" values="-8,30|-8,30"/>
+      <gearIcon controller="state" pages="1" values="ui://zj419n3dkxj1v3l" default="ui://zj419n3dbrvzv7p"/>
+    </loader>
+  </displayList>
+  <Button/>
+</component>

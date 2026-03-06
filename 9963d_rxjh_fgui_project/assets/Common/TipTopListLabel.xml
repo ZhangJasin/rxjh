@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="10,24" extention="Label">
+  <displayList>
+    <text id="n15_l6xy" name="title" xy="5,0" pivot="0.5,0" anchor="true" size="10,24" fontSize="16" color="#b7dce4" align="center" ubb="true" strokeColor="#000000" autoClearText="true" text="">
+      <relation target="" sidePair="center-center"/>
+    </text>
+  </displayList>
+  <relation target="n15_l6xy" sidePair="width-width,height-height"/>
+</component>

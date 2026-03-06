@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1337,750">
+  <displayList>
+    <graph id="n1_xp1i" name="n1" xy="0,0" size="1337,750" type="rect" lineSize="0" fillColor="#80000000">
+      <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </graph>
+    <component id="n0_xp1i" name="bar_loading" src="xp1i0" fileName="Components/Bar_loading.xml" xy="68,600">
+      <ProgressBar value="50" max="100"/>
+    </component>
+    <text id="n2_xp1i" name="text_tips" xy="619,563" size="97,34" fontSize="24" color="#ffffff" text="下载中...">
+      <relation target="" sidePair="center-center"/>
+    </text>
+  </displayList>
+</component>

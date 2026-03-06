@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="218,34" extention="Label">
+  <displayList>
+    <image id="n1_hriw" name="right" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="218,16" pivot="1,0.5" anchor="true">
+      <relation target="" sidePair="right-right"/>
+    </image>
+    <image id="n4_qqle" name="left" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="0,16" pivot="0,0.5" anchor="true" flip="hz">
+      <relation target="" sidePair="left-left"/>
+    </image>
+    <text id="n3_hriw" name="title" xy="40,1" pivot="0,0.5" size="138,32" fontSize="22" color="#c6ab27" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+</component>

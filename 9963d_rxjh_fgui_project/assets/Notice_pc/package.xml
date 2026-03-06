@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="dizl41lo">
+  <resources>
+    <component id="nv6e0" name="PCNoticePanel.xml" path="/" exported="true"/>
+    <component id="nv6e1" name="LabelTimerNotice.xml" path="/Components/"/>
+    <component id="nv6e2" name="CompAttributeTip.xml" path="/Components/" exported="true"/>
+    <component id="nv6e3" name="CompSystemNotice.xml" path="/Components/" exported="true"/>
+    <image id="nv6e4" name="image_notice_horn.png" path="/Images/"/>
+    <component id="nv6e5" name="Label.xml" path="/Components/" exported="true"/>
+    <component id="nv6e6" name="LabelItemDropNotice.xml" path="/Components/" exported="true"/>
+    <component id="nv6e7" name="LabelItemTip.xml" path="/Components/" exported="true"/>
+    <component id="nv6e8" name="LabelServerNotice.xml" path="/Components/" exported="true"/>
+    <component id="nv6e9" name="LabelSystemNotice.xml" path="/Components/" exported="true"/>
+    <component id="nv6ea" name="LabelSystemScaleNotice.xml" path="/Components/" exported="true"/>
+    <image id="nv6eb" name="bg_notice.png" path="/Images/"/>
+    <component id="nv6ec" name="LabelSystemTip.xml" path="/Components/" exported="true"/>
+    <image id="nv6ed" name="bg_notice_tips_9.png" path="/Images/" scale="9grid" scale9grid="45,5,10,16" duplicatePadding="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="70,70">
+  <displayList>
+    <component id="n0_8s5i" name="ContentItem" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="0,0" size="70,70">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n6_8s5i" name="n6" src="q9lsv5j" fileName="image/icon_money_bg.png" pkg="st7dgeqq" xy="0,0" size="70,70" fillMethod="radial360" fillClockwise="false" fillAmount=""/>
+  </displayList>
+</component>

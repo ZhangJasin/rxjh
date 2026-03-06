@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="4op6gwol">
+  <resources>
+    <component id="flj60" name="LoginRoleCreate.xml" path="/" exported="true"/>
+    <image id="flj61" name="z_reference_image.png" path="/Images/"/>
+    <image id="flj6b" name="icon_job_select_1.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6c" name="icon_job_unselect_1.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6e" name="text_job_1.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6f" name="icon_attr_empty.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6g" name="icon_job_select_5.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6h" name="icon_job_unselect_5.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6j" name="text_job_5.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6k" name="icon_job_unselect_3.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6l" name="icon_job_select_3.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6n" name="text_job_3.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6o" name="img_job_bg.png" path="/Images/Create/"/>
+    <image id="flj6p" name="mask.png" path="/Images/Select/"/>
+    <image id="flj6q" name="icon_job_select_4.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6r" name="icon_job_unselect_4.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6s" name="icon_job_unselect_6.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6t" name="icon_job_select_6.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6v" name="icon_man.png" path="/Images/Create/"/>
+    <image id="flj6w" name="icon_woman.png" path="/Images/Create/"/>
+    <image id="flj6x" name="text_job_2.png" path="/Images/Create/" exported="true"/>
+    <image id="flj6y" name="img_introduce_frame.png" path="/Images/Create/" scale="9grid" scale9grid="0,17,329,34"/>
+    <image id="flj610" name="icon_job_select_2.png" path="/Images/Create/" exported="true"/>
+    <image id="flj611" name="icon_random.png" path="/Images/Create/"/>
+    <image id="flj612" name="img_select_job_frame.png" path="/Images/Create/"/>
+    <image id="flj613" name="icon_select_state.png" path="/Images/Create/"/>
+    <image id="flj614" name="text_job_4.png" path="/Images/Create/" exported="true"/>
+    <image id="flj616" name="icon_job_unselect_2.png" path="/Images/Create/" exported="true"/>
+    <image id="flj617" name="text_job_6.png" path="/Images/Create/" exported="true"/>
+    <component id="flj61g" name="job_select_item.xml" path="/Components/Create/"/>
+    <component id="flj61h" name="btn_single_click.xml" path="/Components/Create/"/>
+    <component id="flj61k" name="btn_sex_man.xml" path="/Components/Create/"/>
+    <component id="flj61l" name="btn_sex_woman.xml" path="/Components/Create/"/>
+    <component id="qnll1m" name="LoginRoleSelect.xml" path="/" exported="true"/>
+    <component id="108rv9" name="btn_back.xml" path="/Components/Select/"/>
+    <component id="108rv7" name="btn_enter_game.xml" path="/Components/Select/"/>
+    <component id="108rvb" name="btn_select_role.xml" path="/Components/Select/"/>
+    <image id="108rv2" name="btn_back.png" path="/Images/Select/"/>
+    <image id="108rv3" name="btn_enter_game.png" path="/Images/Select/"/>
+    <image id="108rv5" name="icon_add.png" path="/Images/Select/" exported="true"/>
+    <image id="108rv4" name="img_role_select_bg.png" path="/Images/Select/"/>
+    <image id="108rv1" name="z_reference_image(1).png" path="/Images/"/>
+    <component id="mhknvc" name="panel_touch.xml" path="/Components/"/>
+    <component id="lmdgvd" name="icon_avatar.xml" path="/Components/Select/"/>
+    <image id="7ogsve" name="img_name_frame_9.png" path="/Images/Create/" scale="9grid" scale9grid="4,4,0,1" duplicatePadding="true"/>
+    <image id="7ogsvf" name="img_role_select_9.png" path="/Images/Select/" scale="9grid" scale9grid="113,62,9,0"/>
+    <component id="gxjdvh" name="RoleLockText.xml" path="/" exported="true"/>
+    <component id="fsrpvi" name="btn_select_role_fill.xml" path="/Components/Select/"/>
+  </resources>
+  <publish name="" path="..\Assets\Res\game\FGUIExport\LoginRole" packageCount="2"/>
+</packageDescription>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n9_zdrm" name="closebg" src="oqrpb" fileName="Components/tongyong/kongbg.xml" xy="0,0"/>
+    <component id="n0_zdrm" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="642,358" pivot="0.5,0.5" anchor="true" size="500,360">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n1_zdrm" name="n1" xy="528,193" size="237,26" font="SimHei" fontSize="18" color="#ffffff" align="center" autoSize="none" text="删除地点"/>
+    <text id="n5_zdrm" name="n5" xy="537,287" size="233,29" font="SimHei" fontSize="20" color="#ffff00" align="center" autoSize="none" text="将删除已经选择的地点"/>
+    <component id="n6_zdrm" name="n6" src="oqrpc" fileName="Components/tongyong/Bbtnlv.xml" xy="481,444" size="137,49">
+      <Button title="取消"/>
+    </component>
+    <component id="n7_zdrm" name="n7" src="oqrp4" fileName="Components/tongyong/fangbtn.xml" xy="678,444" size="137,49">
+      <Button title="确定"/>
+    </component>
+    <text id="n8_zdrm" name="n8" xy="537,334" size="233,29" font="SimHei" fontSize="20" color="#ffff00" align="center" autoSize="none" text="希望删除请按确认按钮"/>
+  </displayList>
+</component>

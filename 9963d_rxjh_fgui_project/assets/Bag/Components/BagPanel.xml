@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="464,572">
+  <displayList>
+    <image id="n45_hkm9" name="n45" src="sna9vot" fileName="Images/heiDI.png" xy="0,40" size="464,454">
+      <relation target="n36_q9ls" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </image>
+    <image id="n48_ci4j" name="n48" src="sna9vot" fileName="Images/heiDI.png" xy="362,500" size="81,29">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n34_q9ls" name="BtnSort" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="360,532" size="84,40" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="整理" titleColor="#ffffff" titleFontSize="22" icon="ui://st7dgeqqje63v3c"/>
+    </component>
+    <component id="n35_q9ls" name="BtnSell" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="243,489" size="84,40" alpha="0">
+      <Button title="回收" titleColor="#ffffff" titleFontSize="22" icon="ui://st7dgeqqje63v3c"/>
+    </component>
+    <list id="n23_q9ls" name="List_Filter" xy="0,0" pivot="0,0.5" size="464,39" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" autoItemSize="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item url="ui://dak5wnw9q9ls3"/>
+      <item url="ui://dak5wnw9q9ls3"/>
+      <item url="ui://dak5wnw9q9ls3"/>
+      <item url="ui://dak5wnw9q9ls3"/>
+      <item url="ui://dak5wnw9q9ls3"/>
+      <item url="ui://dak5wnw9q9ls3"/>
+    </list>
+    <list id="n36_q9ls" name="List_Cell" xy="0,40" size="464,448" layout="flow_hz" overflow="scroll" scrollBarFlags="128" scrollBar="hidden" margin="10,0,2,2" lineGap="12" colGap="12" lineItemCount="6" defaultItem="ui://dak5wnw9q9lsf" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n46_hkm9" name="Num" xy="373,500" size="59,29" fontSize="20" color="#ff0000" align="center" vAlign="middle" ubb="true" strokeColor="#000000" singleLine="true" autoClearText="true" text="11111">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n47_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,572" size="0,0">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+  </displayList>
+</component>

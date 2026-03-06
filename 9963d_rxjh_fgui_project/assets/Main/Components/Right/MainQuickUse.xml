@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="137,137">
+  <displayList>
+    <component id="n139_n1l2" name="QuickUseBox1" src="n1l2vb9" fileName="Components/Right/QuickUseBox.xml" xy="0,0"/>
+    <component id="n140_n1l2" name="QuickUseBox2" src="n1l2vb9" fileName="Components/Right/QuickUseBox.xml" xy="73,0"/>
+    <component id="n141_n1l2" name="QuickUseBox3" src="n1l2vb9" fileName="Components/Right/QuickUseBox.xml" xy="0,71"/>
+    <component id="n142_n1l2" name="QuickUseBox4" src="n1l2vb9" fileName="Components/Right/QuickUseBox.xml" xy="73,71"/>
+  </displayList>
+</component>

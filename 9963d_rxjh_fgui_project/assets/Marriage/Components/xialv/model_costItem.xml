@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="160,36">
+  <displayList>
+    <text id="n0_eoqr" name="n0" xy="0,0" size="80,35" fontSize="20" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="消耗:"/>
+    <loader id="n3_eoqr" name="n3" xy="57,0" size="35,35" visible="false" url="ui://twx3ya3em2wevld" fill="scale"/>
+    <text id="n4_eoqr" name="n4" xy="100,3" size="54,29" fontSize="20" color="#502814" align="right" vAlign="middle" ubb="true" bold="true" text="0/100"/>
+    <component id="n5_hh4i" name="n5" src="ger551" fileName="Components/tongyong/itemkuang.xml" pkg="fgihxfye" xy="39,-19" pivot="0.5,0.5" scale="0.5,0.5"/>
+  </displayList>
+</component>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="162,42">
+  <controller name="state" pages="0,,1,,2," selected="0">
+    <remark page="0" value="相同地图"/>
+    <remark page="1" value="不同地图"/>
+    <remark page="2" value="离线"/>
+  </controller>
+  <displayList>
+    <image id="n21_o3hv" name="n21" src="bbev5v" fileName="Images/Assist/main_team_member_bg.png" xy="1,0"/>
+    <component id="n33_akxo" name="header_icon" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="0,0" size="42,42"/>
+    <image id="n37_bbev" name="n37" src="bbev68" fileName="Images/Assist/main_player_lv_bg.png" xy="3,28" size="23,12"/>
+    <image id="n38_bbev" name="n38" src="bbev69" fileName="Images/Assist/main_team_di.png" xy="46,3" size="111,18"/>
+    <image id="n39_bbev" name="n39" src="bbev69" fileName="Images/Assist/main_team_di.png" xy="46,31" size="111,8">
+      <gearDisplay controller="state" pages="0"/>
+    </image>
+    <image id="n40_bbev" name="n40" src="bbev69" fileName="Images/Assist/main_team_di.png" xy="46,22" size="111,8">
+      <gearDisplay controller="state" pages="0"/>
+    </image>
+    <image id="n41_bbev" name="n41" src="bbev69" fileName="Images/Assist/main_team_di.png" xy="46,22" size="111,17">
+      <gearDisplay controller="state" pages="1,2"/>
+    </image>
+    <component id="n25_o3hv" name="ProgressBar_hp" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="48,24" size="107,4">
+      <gearDisplay controller="state" pages="0"/>
+      <ProgressBar value="100" max="100"/>
+      <property target="bar" propertyId="1" value="ui://xwp5ackobbev6a"/>
+    </component>
+    <component id="n26_o3hv" name="ProgressBar_mp" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="48,33" size="107,4">
+      <gearDisplay controller="state" pages="0"/>
+      <ProgressBar value="100" max="100"/>
+      <property target="bar" propertyId="1" value="ui://xwp5ackobbev6b"/>
+    </component>
+    <image id="n36_my96" name="Img_leader" src="bbev5z" fileName="Images/Assist/main_team_leader.png" xy="0,-3"/>
+    <text id="n27_o3hv" name="Text_name" xy="47,1" size="109,20" fontSize="13" color="#ffb243" align="center" autoSize="shrink" strokeColor="#000000" text="玩家名字七个字"/>
+    <text id="n29_ke93" name="Text_level" xy="-2,25" size="34,19" fontSize="12" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" strokeColor="#000000" text="996"/>
+    <text id="n30_ke93" name="Text_map" xy="47,20" size="109,20" fontSize="13" color="#ffff00" align="center" leading="0" autoSize="shrink" strokeColor="#000000" text="地图">
+      <gearDisplay controller="state" pages="1,2"/>
+      <gearText controller="state" pages="2" values="离线" default="地图"/>
+    </text>
+  </displayList>
+</component>

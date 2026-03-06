@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="105,38" extention="Button">
+  <controller name="status" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n4_k5e7" name="unselectImg" src="rg1tt" fileName="Images/Assist/main_assist_unselect_btn_9.png" xy="0,0" size="105,38">
+      <gearDisplay controller="status" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_k5e7" name="selectImg" src="rg1tu" fileName="Images/Assist/main_assist_select_btn_9.png" xy="0,0" size="105,38">
+      <gearDisplay controller="status" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_o3hv" name="title" xy="0,0" size="105,38" fontSize="22" color="#62a95b" align="center" vAlign="middle" letterSpacing="4" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="按钮">
+      <gearColor controller="status" pages="1" values="#f1ffeb,#000000" default="#62a95b,#000000"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Check"/>
+</component>

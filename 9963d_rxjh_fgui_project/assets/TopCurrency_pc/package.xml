@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="oc3trviu">
+  <resources>
+    <component id="w6jl0" name="PCTopCurrencyPanel.xml" path="/" exported="true"/>
+    <component id="w6jl1" name="CurrencyItem.xml" path="/Components/"/>
+    <image id="w6jl2" name="Image_currency_bg.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

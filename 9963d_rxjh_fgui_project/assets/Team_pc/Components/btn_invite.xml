@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="58,25" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n3_hcvo" name="bg" src="emvc3g" fileName="image/btn_second_green.png" pkg="qa9a7rit" xy="0,0" size="58,25"/>
+    <text id="n1_f0so" name="text" xy="14,2" size="28,19" fontSize="12" color="#ffff00" strokeColor="#000000" text="邀请"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>

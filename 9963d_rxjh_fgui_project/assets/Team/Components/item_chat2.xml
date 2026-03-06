@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="550,120" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n11_wmgr" name="icon_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="540,20" pivot="1,0" anchor="true" size="80,80"/>
+    <component id="n18_qwah" name="avator" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="540,20" pivot="1,0" anchor="true" size="80,80"/>
+    <loader id="n19_akxo" name="Image_chatFrame" xy="70,50" pivot="1,0" size="380,87" url="ui://st7dgeqqakxov81" fill="scaleFree" useResize="true" clearOnPublish="true">
+      <relation target="n17_wmgr" sidePair="width-width,height-height"/>
+    </loader>
+    <richtext id="n17_wmgr" name="rich_msg" xy="435,50" pivot="1,0" anchor="true" size="356,84" restrictSize="0,360,0,84" fontSize="20" color="#fff5da" ubb="true" autoClearText="true" text="8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888"/>
+    <text id="n5_qpwo" name="text_name" xy="435,20" pivot="1,0" anchor="true" size="300,29" fontSize="20" color="#ffffff" align="right" ubb="true" autoSize="none" text="名字"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

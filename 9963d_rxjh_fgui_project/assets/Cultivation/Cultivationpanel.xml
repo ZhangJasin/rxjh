@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750">
+  <displayList>
+    <component id="n35_vzpx" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="168,18" size="1000,695">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n44_nymh" name="n44" src="nymh14" fileName="image/半透内容底.png" xy="170,71" size="988,631">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n1_k9u3" name="closeBtn" src="k9u31" fileName="Components/closebtn_yuan.xml" xy="1115,23">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_k9u3" name="n2" xy="664,51" pivot="0.5,0.5" anchor="true" size="139,34" fontSize="24" color="#9aafbb" align="center" autoSize="none" text="修炼之门">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n3_k9u3" name="mapList" xy="190,90" size="390,610" overflow="scroll" lineGap="5" defaultItem="ui://afrubrdxk9u36" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n36_nymh" name="n36" src="nymh13" fileName="image/img_mapnamebg.png" xy="728,87">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <richtext id="n4_k9u3" name="maptitle" xy="625,92" size="500,44" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="地图名字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n27_i7v9" name="mapjc" xy="630,149" size="500,100" fontSize="16" leading="5" autoSize="none" text=""/>
+    <image id="n37_nymh" name="n37" src="nymh11" fileName="image/img_titlebg.png" xy="625,262">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n8_k9u3" name="n8" src="k9u33" fileName="image/属性文字底.png" xy="614,262" size="151,32">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n9_k9u3" name="n9" xy="625,261" size="148,32" fontSize="18" color="#ffffff" autoSize="none" text="进入条件">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <richtext id="n28_i7v9" name="maptj" xy="630,310" size="500,100" fontSize="16" color="#ffff00" leading="5" autoSize="none" text=""/>
+    <image id="n42_nymh" name="n42" src="nymh11" fileName="image/img_titlebg.png" xy="625,431" size="146,28">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n14_k9u3" name="n14" xy="624,430" size="148,32" fontSize="18" color="#ffffff" autoSize="none" text="怪物等级">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n38_nymh" name="n38" src="nymh11" fileName="image/img_titlebg.png" xy="625,521" size="146,28">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n15_k9u3" name="n15" src="k9u33" fileName="image/属性文字底.png" xy="615,521" size="151,32">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n16_k9u3" name="n16" xy="624,520" size="148,32" fontSize="18" color="#ffffff" autoSize="none" text="怪物掉落">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n17_k9u3" name="monLv" xy="630,474" size="123,32" fontSize="16" color="#00ff00" autoSize="none" text="100-115级">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n39_nymh" name="n39" src="nymh12" fileName="image/img_1.png" xy="595,264">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n40_nymh" name="n40" src="nymh12" fileName="image/img_1.png" xy="593,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n41_nymh" name="n41" src="nymh12" fileName="image/img_1.png" xy="592,522">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n18_k9u3" name="reward" xy="625,570" size="515,60" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://afrubrdxk9u39">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </list>
+    <component id="n19_k9u3" name="goNow" src="k9u34" fileName="Components/goto.xml" xy="799,651">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="前往修炼" selectedTitle="前往修炼"/>
+    </component>
+    <graph id="n32_slmo" name="dialogModel" xy="0,0" size="1344,750" group="n34_slmo" type="rect" lineSize="0" lineColor="#00000000" fillColor="#80000000">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <component id="n33_slmo" name="dialog" src="slmov" fileName="Components/dialog.xml" xy="527,162" group="n34_slmo">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n34_slmo" name="hqtj" xy="0,0" size="1344,750" visible="false" advanced="true"/>
+  </displayList>
+</component>

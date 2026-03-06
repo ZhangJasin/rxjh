@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="v2zz2kpp">
+  <resources>
+    <component id="pkt00" name="JiangHuLuPanel.xml" path="/" exported="true"/>
+    <image id="pkt04" name="飞升-未选择.png" path="/Images/" exported="true"/>
+    <image id="pkt05" name="飞升-选中.png" path="/Images/" exported="true"/>
+    <image id="pkt06" name="江湖-未选择.png" path="/Images/" exported="true"/>
+    <image id="pkt07" name="江湖-选中.png" path="/Images/" exported="true"/>
+    <image id="pkt08" name="江湖赠礼.png" path="/Images/" exported="true"/>
+    <image id="pkt09" name="进行中.png" path="/Images/" exported="true"/>
+    <image id="pkt0a" name="内容底.png" path="/Images/" exported="true" scale="9grid" scale9grid="22,22,44,44"/>
+    <image id="pkt0b" name="上箭头.png" path="/Images/" exported="true"/>
+    <image id="pkt0c" name="页签.png" path="/Images/" exported="true"/>
+    <image id="pkt0d" name="已完成.png" path="/Images/" exported="true"/>
+    <image id="pkt0e" name="右箭头.png" path="/Images/" exported="true"/>
+    <image id="pkt0g" name="按钮-未激活.png" path="/Images/" exported="true"/>
+    <image id="pkt0h" name="按钮-已激活.png" path="/Images/" exported="true"/>
+    <image id="pkt0j" name="BG.png" path="/Images/" exported="true"/>
+    <component id="pkt0k" name="jianghuBtn.xml" path="/Components/" exported="true"/>
+    <component id="pkt0l" name="ItemTarget.xml" path="/Components/" exported="true"/>
+    <component id="pkt0m" name="cardTitle.xml" path="/Components/" exported="true"/>
+    <component id="pkt0o" name="status.xml" path="/Components/" exported="true"/>
+    <component id="pkt0p" name="cardItem.xml" path="/Components/" exported="true"/>
+    <image id="pkt0q" name="pull_content_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="28,20,56,40"/>
+    <image id="pkt0u" name="icon_pattern.png" path="/Images/" exported="true"/>
+    <component id="pkt0v" name="attaCard.xml" path="/Components/" exported="true"/>
+    <component id="pkt0w" name="atta.xml" path="/Components/" exported="true"/>
+    <component id="s0oby" name="title.xml" path="/Components/" exported="true"/>
+    <component id="njf4z" name="iconItem.xml" path="/Components/" exported="true"/>
+    <component id="njf410" name="btn_second_red.xml" path="/Components/" exported="true"/>
+    <component id="njf413" name="btn_second_green.xml" path="/Components/" exported="true"/>
+    <component id="c1bl14" name="title2.xml" path="/Components/" exported="true"/>
+    <component id="c1bl15" name="btn_close.xml" path="/Components/" exported="true"/>
+    <image id="c1bl16" name="main_funcDock_arrow.png" path="/Images/" exported="true"/>
+    <component id="filp17" name="taskItem.xml" path="/Components/" exported="true"/>
+    <component id="filp18" name="title3.xml" path="/Components/" exported="true"/>
+    <image id="c8x119" name="01.png" path="/Images/" exported="true"/>
+  </resources>
+  <publish name="" path="E:\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\JiangHuLu" packageCount="2"/>
+</packageDescription>

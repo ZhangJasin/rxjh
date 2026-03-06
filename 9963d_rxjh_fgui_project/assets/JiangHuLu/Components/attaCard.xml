@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,168">
+  <displayList>
+    <image id="n0_pkt0" name="n0" src="pkt0q" fileName="Images/pull_content_bg.png" xy="0,0" size="400,168"/>
+  </displayList>
+</component>

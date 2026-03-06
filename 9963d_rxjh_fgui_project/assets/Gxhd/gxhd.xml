@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750">
+  <displayList>
+    <graph id="n2_gkld" name="Mask" xy="-272,-121" size="2000,1000" alpha="0.7" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n3_x44m" name="n3" src="ix4b6w" fileName="Images/0tongyong/gxhddi.png" pkg="fgihxfye" xy="-1,92"/>
+    <image id="n4_x44m" name="n4" src="ix4b6x" fileName="Images/0tongyong/gxhd.png" pkg="fgihxfye" xy="541,165" scale="0.7,0.7"/>
+    <text id="n5_x44m" name="daojishi" xy="471,486" pivot="0.5,0.5" size="412,34" fontSize="24" color="#00ff00" autoSize="none" text=""/>
+    <list id="n6_x44m" name="list" xy="301,335" size="739,74" layout="row" overflow="scroll" scroll="horizontal" margin="0,0,10,10" colGap="20" defaultItem="ui://fgihxfyefovl6r" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

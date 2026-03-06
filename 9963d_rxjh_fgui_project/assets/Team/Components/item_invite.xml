@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="620,80">
+  <displayList>
+    <image id="n11_gpvo" name="n11" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,0" size="620,80"/>
+    <image id="n8_wqgf" name="icon_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="20,8"/>
+    <component id="n10_qwah" name="avator" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="20,8" size="64,64" touchable="false"/>
+    <loader id="n9_leye" name="img_job" xy="100,40" pivot="0,0.5" anchor="true" size="40,40" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n4_f0so" name="text_name" xy="150,25" pivot="0,0.5" anchor="true" size="200,29" fontSize="20" color="#f1ffeb" ubb="true" autoSize="none" text="名字"/>
+    <text id="n7_f0so" name="text_level" xy="150,60" pivot="0,0.5" anchor="true" size="100,29" fontSize="20" color="#f1ffeb" vAlign="middle" autoSize="none" text="Lv：1"/>
+    <component id="n6_f0so" name="btn_invite" src="f0so1m" fileName="Components/btn_invite.xml" xy="540,40" pivot="0.5,0.5" anchor="true" size="136,42">
+      <Button title="哈哈哈"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="260,60" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n33_gpvo" name="bg" src="npv42s" fileName="Images/team_item_bg.png" xy="0,0" size="260,60"/>
+    <image id="n34_hcvo" name="icon_bg" src="emvc3q" fileName="image/icon_item0.png" pkg="qa9a7rit" xy="35,30" pivot="0.5,0.5" anchor="true" size="50,50" group="n23_npv4"/>
+    <component id="n35_hcvo" name="avator" src="emvc7" fileName="common/CommonPlayerFrame.xml" pkg="qa9a7rit" xy="35,30" size="50,50" group="n23_npv4"/>
+    <loader id="n17_npv4" name="img_job" xy="70,20" pivot="0,0.5" anchor="true" size="25,25" group="n23_npv4" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n5_qpwo" name="text_name" xy="100,20" pivot="0,0.5" anchor="true" size="150,20" group="n23_npv4" fontSize="12" color="#ffffff" ubb="true" autoSize="none" text="名字"/>
+    <text id="n6_qpwo" name="text_level" xy="70,45" pivot="0,0.5" anchor="true" size="150,20" group="n23_npv4" fontSize="12" color="#ffda60" autoSize="none" text="Lv：100"/>
+    <image id="n18_npv4" name="img_leader" src="vjv7f" fileName="Images/team_flag.png" xy="240,5" size="18,37" group="n23_npv4" aspect="true"/>
+    <group id="n23_npv4" name="frame_team" xy="10,5" size="248,50" advanced="true"/>
+    <component id="n22_npv4" name="btn_add" src="vjv7s" fileName="Components/btn_add.xml" xy="105,5"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

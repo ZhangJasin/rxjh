@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <component id="n18_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="0,1" size="222,192">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n1_a6v3" name="scal_left" src="clzta" fileName="Components/MiniMap/btn_mapScal.xml" xy="92,78" pivot="0.5,0.5" anchor="true" group="n3_a6v3" skew="-90,-90">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+      <relation target="" sidePair=""/>
+      <Button icon="ui://3tndc27qclzty"/>
+    </component>
+    <component id="n0_a6v3" name="scal_right" src="clzta" fileName="Components/MiniMap/btn_mapScal.xml" xy="190,78" pivot="0.5,0.5" anchor="true" group="n3_a6v3" skew="90,90">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+      <relation target="" sidePair=""/>
+      <Button icon="ui://3tndc27qclzty"/>
+    </component>
+    <text id="n5_a6v3" name="scal_title" xy="17,62" size="58,32" group="n3_a6v3" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text="缩放：">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n4_a6v3" name="scal_input" xy="141,78" pivot="0.5,0.5" anchor="true" size="64,32" group="n3_a6v3" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="180" input="true">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n3_a6v3" name="scal" xy="17,62" size="189,32"/>
+    <component id="n6_a6v3" name="x_left" src="clzta" fileName="Components/MiniMap/btn_mapScal.xml" xy="92,120" pivot="0.5,0.5" anchor="true" group="n10_a6v3" skew="-90,-90">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://3tndc27qclzty"/>
+    </component>
+    <component id="n7_a6v3" name="x_right" src="clzta" fileName="Components/MiniMap/btn_mapScal.xml" xy="190,120" pivot="0.5,0.5" anchor="true" group="n10_a6v3" skew="90,90">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://3tndc27qclzty"/>
+    </component>
+    <text id="n8_a6v3" name="x_title" xy="17,104" size="75,32" group="n10_a6v3" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text="偏移x:">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n9_a6v3" name="x_input" xy="141,120" pivot="0.5,0.5" anchor="true" size="64,32" group="n10_a6v3" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="180" input="true">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n10_a6v3" name="x" xy="17,104" size="189,32"/>
+    <component id="n11_a6v3" name="y_left" src="clzta" fileName="Components/MiniMap/btn_mapScal.xml" xy="92,162" pivot="0.5,0.5" anchor="true" group="n15_a6v3" skew="-90,-90">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://3tndc27qclzty"/>
+    </component>
+    <component id="n12_a6v3" name="y_right" src="clzta" fileName="Components/MiniMap/btn_mapScal.xml" xy="190,162" pivot="0.5,0.5" anchor="true" group="n15_a6v3" skew="90,90">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://3tndc27qclzty"/>
+    </component>
+    <text id="n13_a6v3" name="y_title" xy="17,146" size="58,32" group="n15_a6v3" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text="偏移y:">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n14_a6v3" name="y_input" xy="141,162" pivot="0.5,0.5" anchor="true" size="64,32" group="n15_a6v3" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="180" input="true">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n15_a6v3" name="y" xy="17,146" size="189,32"/>
+    <graph id="n16_a6v3" name="drag" xy="0,0" size="222,53" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff"/>
+    <component id="n17_a6v3" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="196,28">
+      <relation target="n16_a6v3" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

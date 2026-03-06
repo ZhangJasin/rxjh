@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="45,45">
+  <displayList>
+    <component id="n45_yd58" name="Button_close" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="5,5" size="35,35">
+      <Button icon="ui://zj419n3dyd58v7k"/>
+    </component>
+  </displayList>
+</component>

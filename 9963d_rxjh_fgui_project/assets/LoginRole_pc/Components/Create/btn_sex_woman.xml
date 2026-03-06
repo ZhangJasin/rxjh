@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_flj6" name="n0" src="vdne9" fileName="Images/Create/icon_woman.png" xy="2,2">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_u1k0" name="select_effect" src="vdne7" fileName="Images/Create/icon_select_state.png" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button/>
+</component>

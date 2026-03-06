@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1100,540">
+  <controller name="isShowLimit" pages="0,显示,1,不显示" selected="0"/>
+  <displayList>
+    <list id="n0_g0ii" name="list_recharge" xy="199,12" size="899,520" layout="flow_hz" overflow="scroll" lineGap="3" lineItemCount="4" defaultItem="ui://qy7g0oycemvc1m">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n1_g0ii" name="n1" src="emvc2e" fileName="Images/left_bg.png" xy="7,51" group="n15_g0ii">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n2_g0ii" name="n2" src="emvc2p" fileName="Images/img_jrth.png" xy="50,20" group="n15_g0ii">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n3_g0ii" name="n3" xy="99,82" pivot="0.5,0.5" anchor="true" size="104,26" group="n15_g0ii" fontSize="18" color="#f9da8d" align="center" vAlign="middle" text="今日限购1次">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n5_g0ii" name="n5" src="emvc2f" fileName="Images/Sycee.png" xy="81,256" group="n15_g0ii">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n6_g0ii" name="n6" src="emvc2g" fileName="Images/Gem.png" xy="12,199" group="n15_g0ii">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n8_g0ii" name="text_limit_1" xy="99,176" size="10,34" group="n15_g0ii" fontSize="24" color="#f9fad0" strokeColor="#000000" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n11_g0ii" name="text_limit_2" xy="32,244" size="10,34" group="n15_g0ii" fontSize="24" color="#f9fad0" strokeColor="#000000" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n12_g0ii" name="text_limit_3" xy="104,292" size="10,34" group="n15_g0ii" fontSize="24" color="#f9fad0" strokeColor="#000000" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <richtext id="n14_g0ii" name="text_limit_desc" xy="24,345" size="140,34" group="n15_g0ii" fontSize="18" color="#f9fad0" autoSize="none" strokeColor="#000000" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <component id="n7_g0ii" name="btn_limit" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="18,413" group="n15_g0ii">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n17_wpel" name="n17" src="emvc2y" fileName="Images/lngot9.png" xy="50,116" group="n15_g0ii">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <group id="n15_g0ii" name="panel_limit" xy="7,20" size="178,469" advanced="true">
+      <gearDisplay controller="isShowLimit" pages="0"/>
+    </group>
+  </displayList>
+</component>

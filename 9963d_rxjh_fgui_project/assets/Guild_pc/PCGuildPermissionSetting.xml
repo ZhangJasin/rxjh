@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImageOffsetY="3" designImageAlpha="55">
+  <displayList>
+    <component id="n123_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432" group="n124_hfk8"/>
+    <image id="n120_mlfe" name="n120" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="189,212" size="116,380" group="n124_hfk8"/>
+    <list id="n113_lbe5" name="list_rank" xy="189,219" size="116,373" group="n124_hfk8" overflow="scroll" lineGap="4" defaultItem="ui://0xwve836gl5635" autoItemSize="false" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n110_ghle" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="834,189" group="n124_hfk8"/>
+    <text id="n108_k2u1" name="text_title" xy="512,188" pivot="0.5,0.5" anchor="true" size="68,24" group="n124_hfk8" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="权限设置"/>
+    <image id="n121_mlfe" name="n121" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="311,212" size="524,381" group="n126_9kdg"/>
+    <graph id="n118_mlfe" name="n118" xy="546,243" size="100,23" group="n126_9kdg" type="rect" lineSize="0" fillColor="#ff02160a"/>
+    <list id="n117_lbe5" name="list_permission" xy="331,294" size="484,229" group="n126_9kdg" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBarFlags="128" lineGap="25" colGap="8" lineItemCount="3" defaultItem="ui://0xwve836gl5634" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n111_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="505,393" size="0,0" group="n126_9kdg"/>
+    <text id="n114_lbe5" name="n114" xy="497,243" size="31,19" group="n127_9kdg" fontSize="12" color="#ffd83c" vars="true" text="职位:"/>
+    <text id="n115_lbe5" name="text_rank" xy="548,243" size="100,23" group="n127_9kdg" fontSize="12" color="#ffd83c" align="center" vAlign="middle" vars="true" autoSize="none" autoClearText="true" text="会长" input="true" maxLength="4">
+      <relation target="n118_mlfe" sidePair="width-width,height-height"/>
+    </text>
+    <group id="n127_9kdg" name="n127" xy="497,243" size="151,23" group="n126_9kdg"/>
+    <component id="n98_jjgk" name="btn_reset" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="410,538" group="n128_9kdg">
+      <Button title="重 置" titleFontSize="12"/>
+    </component>
+    <component id="n112_lbe5" name="btn_save" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="652,538" group="n128_9kdg">
+      <Button title="保 存" titleFontSize="12"/>
+    </component>
+    <group id="n128_9kdg" name="n128" xy="410,538" size="326,28" group="n126_9kdg"/>
+    <group id="n126_9kdg" name="n126" xy="311,212" size="524,381" group="n124_hfk8"/>
+    <group id="n124_hfk8" name="n124" xy="174,168" size="676,432" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

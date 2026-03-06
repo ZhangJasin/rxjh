@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="277,138">
+  <displayList>
+    <image id="n0_la2y" name="n0" src="la2yj" fileName="images/default_jieyuan.png" xy="0,0"/>
+    <text id="n1_la2y" name="n1" xy="138,110" pivot="0.5,0.5" anchor="true" size="106,34" fontSize="24" color="#ffffff" align="center" letterSpacing="2" strokeColor="#521818" text="尚未结缘"/>
+  </displayList>
+</component>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="lijtm30s">
+  <resources>
+    <image id="mj71a" name="icon_mail0.png" path="/Images/" exported="true"/>
+    <image id="mj71b" name="icon_mail1.png" path="/Images/" exported="true"/>
+    <component id="j3vnf" name="MailPanel.xml" path="/" exported="true"/>
+    <component id="j3vng" name="btn_close.xml" path="/Components/" exported="true"/>
+    <component id="j3vnk" name="btn_onekey.xml" path="/Components/" exported="true"/>
+    <component id="j3vnl" name="btn_delete.xml" path="/Components/" exported="true"/>
+    <component id="j3vnm" name="item_mail.xml" path="/Components/" exported="true"/>
+    <component id="k4ito" name="RichText_info.xml" path="/Components/" exported="true"/>
+    <component id="k4itp" name="btn_take.xml" path="/Components/" exported="true"/>
+    <image id="k4itr" name="mail_line.png" path="/Images/" exported="true" scale="9grid" scale9grid="2,2,-1,-1"/>
+    <component id="k4itt" name="btn_delread.xml" path="/Components/" exported="true"/>
+    <image id="wi45v" name="item_mail1_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="12,24,0,57"/>
+    <image id="wi45w" name="item_mail2_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="12,24,0,57"/>
+    <image id="xbzfx" name="mail_got.png" path="/Images/" exported="true"/>
+    <image id="o7ery" name="mail_red.png" path="/Images/"/>
+    <component id="bonhz" name="btn_sure.xml" path="/Components/" exported="true"/>
+    <component id="bonh10" name="btn_resure.xml" path="/Components/" exported="true"/>
+    <image id="twna13" name="mail_frame2.png" path="/Images/"/>
+    <image id="twna14" name="mail_frame3.png" path="/Images/"/>
+    <image id="jhgj16" name="邮件尺寸_spec.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

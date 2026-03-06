@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n1_10e45" name="mask" xy="1,1" size="1334,750" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n15_10e45" name="panel" src="10e45vov" fileName="Components/componentTitleTip.xml" xy="523,132">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

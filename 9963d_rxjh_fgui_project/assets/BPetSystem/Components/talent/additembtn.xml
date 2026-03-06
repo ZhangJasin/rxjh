@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,50" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n4_n22n" name="n4" src="lg984r" fileName="Images/newattr/pzkuang_zi.png" xy="0,0" size="50,50"/>
+    <component id="n5_n22n" name="itemRoot" src="ger553" fileName="Components/tongyong/itemRoot.xml" pkg="fgihxfye" xy="0,0" size="50,50"/>
+    <text id="n6_98nd" name="num" xy="45,47" pivot="1,1" anchor="true" size="43,22" font="SimHei" fontSize="14" color="#ffff00" align="right" autoSize="none" text=""/>
+  </displayList>
+  <Button mode="Check"/>
+</component>

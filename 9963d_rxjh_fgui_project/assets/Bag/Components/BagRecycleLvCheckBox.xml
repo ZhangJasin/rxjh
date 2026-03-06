@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="321,40" extention="Button">
+  <controller name="isSelect" pages="0,unSelect,1,Select" selected="0"/>
+  <displayList>
+    <text id="n5_hgpp" name="title" xy="14,3" pivot="0.5,0.5" size="177,32" fontSize="22" color="#ffffff" align="center" ubb="true" autoSize="none" autoClearText="true" text="10-20级"/>
+    <image id="n3_hgpp" name="icon_select" src="lxrgv57" fileName="image/checkbox_icon.png" pkg="st7dgeqq" xy="269,3" size="37,35" group="n6_hgpp">
+      <gearDisplay controller="isSelect" pages="1"/>
+    </image>
+    <image id="n4_hgpp" name="n4" src="r8pbvop" fileName="Images/checkbox_bg2.png" xy="267,0" size="40,40" group="n6_hgpp"/>
+    <group id="n6_hgpp" name="n6" xy="267,0" size="40,40" advanced="true"/>
+  </displayList>
+  <Button mode="Check"/>
+</component>

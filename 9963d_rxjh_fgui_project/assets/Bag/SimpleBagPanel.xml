@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false" designImage="ui://dak5wnw9xzvri">
+  <displayList>
+    <component id="n35_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="916,60" size="341,650" group="n33_e0sc"/>
+    <text id="n28_p3is" name="n28" xy="1066,71" size="52,34" group="n33_e0sc" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" text="背包"/>
+    <component id="n31_p3is" name="view_bag" src="gfplvoz" fileName="Components/BagPanel_4.xml" xy="931,120" size="310,572" group="n33_e0sc"/>
+    <component id="n34_ws4h" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1235,89" size="45,45" group="n33_e0sc"/>
+    <group id="n33_e0sc" name="n33" xy="916,60" size="341,650" advanced="true">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </group>
+  </displayList>
+</component>

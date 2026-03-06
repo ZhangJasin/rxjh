@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="30,30" pivot="0.5,0.5" extention="Button">
+  <displayList>
+    <image id="n48_c1cp" name="img_search_cancel" src="oxr7p" fileName="Images/close.png" xy="0,0"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>

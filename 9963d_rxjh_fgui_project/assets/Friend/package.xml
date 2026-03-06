@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="seywlb2r">
+  <resources>
+    <component id="wmgr2" name="FriendPanel.xml" path="/" exported="true"/>
+    <component id="wmgr3" name="item_friend.xml" path="/Components/" exported="true"/>
+    <image id="wmgr5" name="friend_item_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="91,23,182,46"/>
+    <component id="wmgr6" name="btn_chat.xml" path="/Components/" exported="true"/>
+    <component id="wmgr7" name="item_menu.xml" path="/Components/" exported="true"/>
+    <component id="wmgr8" name="item_chat1.xml" path="/Components/" exported="true"/>
+    <component id="wmgrb" name="item_chat2.xml" path="/Components/" exported="true"/>
+    <image id="xxk3d" name="btn_friend_add.png" path="/Images/" exported="true"/>
+    <image id="xxk3e" name="btn_friend_emoj.png" path="/Images/" exported="true"/>
+    <image id="xxk3f" name="btn_friend_pos.png" path="/Images/" exported="true"/>
+    <component id="xxk3h" name="btn_add.xml" path="/Components/" exported="true"/>
+    <component id="xxk3k" name="btn_emoj.xml" path="/Components/" exported="true"/>
+    <component id="xxk3l" name="btn_pos.xml" path="/Components/" exported="true"/>
+    <component id="fmfyo" name="FriendApplyPanel.xml" path="/" exported="true"/>
+    <component id="fmfyp" name="item_menu2.xml" path="/Components/" exported="true"/>
+    <component id="fmfyq" name="item_search.xml" path="/Components/" exported="true"/>
+    <component id="fmfyr" name="btn_addFriend.xml" path="/Components/" exported="true"/>
+    <component id="fmfys" name="btn_refresh.xml" path="/Components/" exported="true"/>
+    <component id="fmfyt" name="btn_search.xml" path="/Components/" exported="true"/>
+    <component id="fmfyu" name="item_apply.xml" path="/Components/" exported="true"/>
+    <component id="fmfyv" name="btn_agree.xml" path="/Components/" exported="true"/>
+    <component id="fmfyw" name="btn_refuse.xml" path="/Components/" exported="true"/>
+    <component id="wqgfx" name="item_emoj.xml" path="/Components/" exported="true"/>
+    <image id="wi45y" name="frame_friend_bg2_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="2,2,0,1" duplicatePadding="true"/>
+    <image id="jpvx11" name="btn_friend_info.png" path="/Images/"/>
+    <component id="jpvx12" name="btn_info.xml" path="/Components/" exported="true"/>
+    <image id="7ogs13" name="friend_item_select_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="80,22,46,44"/>
+    <component id="nrlc16" name="item_history.xml" path="/Components/" exported="true"/>
+    <component id="lmpz17" name="scroll_history.xml" path="/Components/" exported="true"/>
+    <component id="tg9618" name="btn_delete.xml" path="/Components/" exported="true"/>
+    <image id="qg2e19" name="btn_friend_x.png" path="/Images/" exported="true"/>
+    <image id="gpvo1b" name="friend_bottom.png" path="/Images/"/>
+    <image id="jhgj1f" name="好友_spec.png" path="/Images/"/>
+    <image id="jhgj1g" name="添加好友_spec.png" path="/Images/"/>
+    <image id="c4df1h" name="emoj_bg.png" path="/Images/"/>
+    <image id="boje1m" name="icon_brown.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1n" name="bg_second_panel.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1o" name="bg_lv2.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1p" name="+.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1q" name="-.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1r" name="心.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1s" name="花纹2.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1t" name="花纹1.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1u" name="frame_info.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1v" name="xin.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1w" name="smallBaseFrame.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1x" name="select.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1y" name="redBtn.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje1z" name="icon_red.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje20" name="icon_money_bg.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje21" name="icon_item0.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje22" name="icon_green.png" path="/Images/newimg/" exported="true"/>
+    <image id="boje23" name="tips底.png" path="/Images/newimg/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="boje24" name="greenBtn.png" path="/Images/newimg/" exported="true"/>
+    <component id="boje26" name="btn_jian.xml" path="/Components/newcom/" exported="true"/>
+    <component id="boje27" name="btn_xin.xml" path="/Components/newcom/" exported="true"/>
+    <component id="boje28" name="btn_xin2.xml" path="/Components/newcom/" exported="true"/>
+    <component id="boje2a" name="ProgressBar.xml" path="/Components/newcom/" exported="true"/>
+    <component id="boje2e" name="btn_jia.xml" path="/Components/newcom/" exported="true"/>
+    <component id="boje2f" name="selectItemNum.xml" path="/Components/newcom/" exported="true"/>
+    <component id="boje2g" name="show_item(brown).xml" path="/Components/newcom/" exported="true"/>
+    <component id="boje2h" name="page_giftItem.xml" path="/Components/newcom/" exported="true"/>
+    <image id="boje2i" name="main_player_exp_9.png" path="/Images/newimg/" exported="true" scale="9grid" scale9grid="2,3,-1,6" duplicatePadding="true"/>
+    <image id="k9rf2j" name="Friend_atlas0.png" path="/"/>
+    <component id="k9rf2k" name="btn_closeyuan.xml" path="/Components/newcom/"/>
+    <misc id="k9rf2l" name="Friend_fui.bytes" path="/"/>
+  </resources>
+  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Friend" packageCount="2"/>
+</packageDescription>

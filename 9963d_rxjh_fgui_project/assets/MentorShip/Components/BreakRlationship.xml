@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600">
+  <displayList>
+    <graph id="n5_slen" name="Mask" xy="-593,-194" size="2000,1000" alpha="0.7" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n6_slen" name="n6" src="dcneo5i" fileName="Components/ComponentTouch.xml" xy="112,104" group="n14_slen"/>
+    <component id="n7_slen" name="n7" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="132,124" pivot="0.5,0.5" size="600,352" group="n14_slen"/>
+    <component id="n8_slen" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="702,149" group="n14_slen"/>
+    <text id="n9_slen" name="title" xy="249,131" size="374,34" group="n14_slen" fontSize="24" color="#fffadc" align="center" vAlign="middle" autoSize="none" text="解除关系申请"/>
+    <text id="n0_slen" name="name" xy="163,179" size="100,30" group="n14_slen" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="姓名"/>
+    <text id="n3_slen" name="n3" xy="520,179" size="131,30" group="n14_slen" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="操作"/>
+    <text id="n4_slen" name="n4" xy="280,178" size="156,30" group="n14_slen" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="关系"/>
+    <list id="n15_slen" name="applyList" xy="138,222" size="585,234" group="n14_slen" overflow="scroll" lineGap="10" defaultItem="ui://pnop7ha6sleno67" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n14_slen" name="Panel" xy="112,104" size="620,400" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

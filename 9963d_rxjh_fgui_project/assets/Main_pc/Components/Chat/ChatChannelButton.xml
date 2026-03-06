@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="40,16" pivot="0.5,0.5" extention="Button">
+  <displayList>
+    <loader id="n4_kxj1" name="icon" xy="0,0" size="40,16" url="ui://xwp5ackolh5232" align="center" vAlign="middle" fill="scaleFree" autoSize="true"/>
+    <image id="n5_lh52" name="n5" src="lh5239" fileName="Images/Chat/main_chat_point.png" xy="3,5"/>
+    <text id="n3_kxj1" name="title" xy="25,8" pivot="0.5,0.5" anchor="true" size="40,20" fontSize="12" color="#f9f9f9" align="center" vAlign="middle" letterSpacing="2" autoSize="none" autoClearText="true" text="附近">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+  <relation target="n4_kxj1" sidePair="width-width,height-height"/>
+</component>

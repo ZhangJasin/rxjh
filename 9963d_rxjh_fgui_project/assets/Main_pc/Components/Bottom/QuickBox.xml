@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="30,30">
+  <displayList>
+    <loader id="n2_fa9c" name="Loader_icon" xy="0,0" size="30,30" fill="scale"/>
+    <component id="n3_fa9c" name="Progress_mask" src="fa9c4s" fileName="Components/Bottom/QuickCDMask.xml" xy="0,0" size="30,30" touchable="false">
+      <ProgressBar value="60" max="100"/>
+    </component>
+    <text id="n5_fa9c" name="Text_count" xy="15,15" pivot="0.5,0" anchor="true" size="32,19" fontSize="12" color="#ffffff" align="center" strokeColor="#000000" autoClearText="true" text="9999"/>
+    <text id="n6_m9h9" name="Text_key" xy="33,-4" pivot="1,0" anchor="true" size="51,19" fontSize="12" color="#ffffff" align="center" strokeColor="#000000" autoClearText="true" text="Ctrl+F10"/>
+  </displayList>
+</component>

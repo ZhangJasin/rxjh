@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <controller name="page" pages="0,,1,,2,,3," selected="0">
+    <remark page="0" value="武勋"/>
+    <remark page="1" value="锤炼"/>
+    <remark page="2" value="铸阶"/>
+    <remark page="3" value="转印"/>
+  </controller>
+  <controller name="dayGift" pages="0,,1," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="显示"/>
+  </controller>
+  <controller name="gxhd" pages="0,,1," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="显示"/>
+  </controller>
+  <controller name="tips" pages="0,,1," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="显示"/>
+  </controller>
+  <displayList>
+    <component id="n54_svai" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="1000,650">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n55_mwln" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1135,78">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n57_mwln" name="title" xy="628,61" pivot="0.5,0.5" size="76,34" font="SimSun" fontSize="24" color="#9aafbb" text="武  勋">
+      <gearDisplay controller="page" pages="0,1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n64_mwln" name="List_Page" xy="1156,97" size="51,554" scroll="horizontal" margin="4,2,6,0" lineGap="3" colGap="2" defaultItem="ui://hed3v11ooqrp1" selectionController="page">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item title="武勋"/>
+      <item title="锤炼"/>
+      <item title="铸阶"/>
+      <item title="转印"/>
+    </list>
+    <component id="n65_mwln" name="panl_wuxun" src="oqrp4" fileName="Components/09wuxun/wuxun_panl.xml" xy="179,108" size="978,584">
+      <gearDisplay controller="page" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n68_jdkj" name="panl_chuilian" src="oqrpq" fileName="Components/09wuxun/chuilian_panl.xml" xy="178,107">
+      <gearDisplay controller="page" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n69_jdkj" name="panl_dayGift" src="oqrp1a" fileName="Components/09wuxun/dayGift_panl.xml" xy="0,0">
+      <gearDisplay controller="dayGift" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n71_jdkj" name="panl_gxhd" src="oqrp1h" fileName="Components/zhizhao/gxhdpanl2.xml" xy="0,106">
+      <gearDisplay controller="gxhd" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n72_p3ya" name="panl_zhujie" src="oqrp1k" fileName="Components/09wuxun/zhujie_panl.xml" xy="178,107">
+      <gearDisplay controller="page" pages="2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n73_hujp" name="panl_zhuanyin" src="oqrp1u" fileName="Components/09wuxun/zhuanyin_panl.xml" xy="178,107">
+      <gearDisplay controller="page" pages="3"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n74_y1ql" name="btntips" src="oqrp21" fileName="Components/tongyong/btn_wenhao.xml" xy="1121,114">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n76_y1ql" name="panl_tips" src="oqrp23" fileName="Components/duanzao/tips2.xml" xy="0,0">
+      <gearDisplay controller="tips" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

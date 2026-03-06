@@ -1,0 +1,11 @@
+#AutoRun NPC RUNONDAY 00:00:00 @resetreward
+#AutoRun NPC RUNONDAY 00:00:00 @resetlooptask
+
+#AutoRun NPC RUNONWEEK 4:17:18 @resetfactionwar
+#AutoRun NPC RUNONWEEK 4:17:25 @stopayyly
+#AutoRun NPC RUNONWEEK 4:17:27 @changewarenterbtn
+#AutoRun NPC RUNONWEEK 4:17:29 @startfactionwar
+#AutoRun NPC RUNONWEEK 4:17:31 @finishwar
+#AutoRun NPC RUNONWEEK 4:17:33 @finishbosswar
+
+

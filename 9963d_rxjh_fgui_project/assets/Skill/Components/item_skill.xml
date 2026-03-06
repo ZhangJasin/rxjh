@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="530,140" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n16_w0rg" name="item_bg" src="as7kl" fileName="Images/skill_item_bg_9.png" xy="0,0" size="530,140"/>
+    <image id="n34_mh2i" name="bg_icon" src="mh2i12" fileName="Images/skill_icon_frame.png" xy="70,60" pivot="0.5,0.5" anchor="true"/>
+    <image id="n21_w0rg" name="bg_arrow" src="w0rgf" fileName="Images/skill_arrow.png" xy="150,60" pivot="0.5,0.5" anchor="true"/>
+    <component id="n33_hb5x" name="item_icon" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="72,60" pivot="0.5,0.5" anchor="true" size="80,80" aspect="true"/>
+    <text id="n36_fxpb" name="text_condition" xy="72,86" pivot="0.5,0.5" anchor="true" size="120,26" fontSize="18" color="#ff0000" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="二转解锁"/>
+    <text id="n35_mh2i" name="text_mainSkill" xy="72,115" pivot="0.5,0.5" anchor="true" size="120,29" fontSize="20" color="#cae5d1" align="center" vAlign="middle" autoSize="none" text="111"/>
+    <list id="n31_fe3n" name="list_icon" xy="180,70" pivot="0,0.5" anchor="true" size="330,130" layout="row" selectionMode="none" overflow="scroll" scroll="horizontal" defaultItem="ui://qvb3eryhfe3nj">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

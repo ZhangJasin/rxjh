@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,29" overflow="hidden" extention="Label">
+  <displayList>
+    <text id="n0_zwd8" name="title" xy="0,-1" size="10,29" fontSize="20" color="#ffffff" vAlign="middle" singleLine="true" autoClearText="true" text=""/>
+    <richtext id="n1_seto" name="Rtitle" xy="1,0" size="10,26" fontSize="18" color="#ffffff" vAlign="middle" singleLine="true" autoClearText="true" text=""/>
+  </displayList>
+</component>

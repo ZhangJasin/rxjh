@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false" designImage="ui://zj419n3ddpxov3f">
+  <controller name="type" pages="0,积分赛,1,BOSS战" selected="0"/>
+  <controller name="winerorloser" pages="0,winner,1,loser" selected="0"/>
+  <controller name="isShowResult" pages="0,,1," selected="1"/>
+  <displayList>
+    <component id="n8_o3hv" name="allBtn" src="rg1ts" fileName="Components/AssistButton1.xml" xy="1,187" size="124,38" group="n28_o3hv">
+      <gearText controller="type" pages="0,1" values="门派积分|门派伤害"/>
+      <Button title="门派积分"/>
+    </component>
+    <component id="n10_o3hv" name="personBtn" src="rg1ts" fileName="Components/AssistButton1.xml" xy="126,187" size="124,38" group="n28_o3hv">
+      <gearText controller="type" pages="0,1" values="个人积分|个人伤害"/>
+      <Button title="个人积分"/>
+    </component>
+    <image id="n37_rg1t" name="bg" src="rg1tz" fileName="Images/main_assist_mission_bg_9.png" xy="2,224" size="290,240" group="n28_o3hv"/>
+    <list id="n38_rg1t" name="itemList" xy="2,224" size="290,170" group="n28_o3hv" overflow="scroll" defaultItem="ui://sgmta2jcrg1tw" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n39_rg1t" name="myScore" src="rg1tx" fileName="Components/myScore.xml" xy="2,394" size="290,30" group="n28_o3hv"/>
+    <text id="n40_rg1t" name="finishTime" xy="2,424" size="149,40" group="n28_o3hv" fontSize="14" color="#ff0000" vAlign="middle" autoSize="none" text="结束时间：0:13:30"/>
+    <component id="n41_rg1t" name="goOutExit" src="rg1ty" fileName="Components/exit.xml" xy="185,424" size="90,40" group="n28_o3hv"/>
+    <group id="n28_o3hv" name="n28" xy="1,187" size="291,277" advanced="true">
+      <relation target="" sidePair="left-left,top-top"/>
+    </group>
+    <component id="n2_o6ik" name="Btn_arrow_war" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="255,187" size="39,38">
+      <relation target="" sidePair="left-left,top-top"/>
+      <Button icon="ui://sgmta2jcrg1tr"/>
+    </component>
+    <image id="n44_r1x3" name="n44" src="r1x31e" fileName="Images/01(2).png" xy="63,248" size="1212,349" group="n50_r1x3">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n43_r1x3" name="n43" src="r1x31f" fileName="Images/02(2).png" xy="169,55" size="996,291" group="n50_r1x3">
+      <gearDisplay controller="winerorloser" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n45_r1x3" name="n45" src="r1x31g" fileName="Images/03(1).png" xy="572,190" size="180,73" group="n50_r1x3">
+      <gearDisplay controller="winerorloser" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n47_r1x3" name="n47" src="r1x31h" fileName="Images/04(1).png" xy="168,55" size="995,291" group="n50_r1x3">
+      <gearDisplay controller="winerorloser" pages="1"/>
+    </image>
+    <image id="n52_r1x3" name="n52" src="r1x31i" fileName="Images/分割线.png" xy="1065,399" size="1,800" group="n50_r1x3" alpha="0.7" rotation="90">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n57_r1x3" name="n57" xy="335,360" size="60,34" group="n50_r1x3" fontSize="24" color="#ffff00" align="center" autoSize="none" text="排名">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n58_r1x3" name="n58" xy="410,360" size="200,34" group="n50_r1x3" fontSize="24" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="门派">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n59_r1x3" name="n59" xy="630,360" size="100,34" group="n50_r1x3" fontSize="24" color="#ffff00" text="门派积分">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n60_r1x3" name="n60" xy="782,360" size="100,34" group="n50_r1x3" fontSize="24" color="#ffff00" text="成员奖励">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n61_r1x3" name="pmindex" xy="335,425" size="60,34" group="n50_r1x3" fontSize="20" color="#fcf1bf" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n62_r1x3" name="guildName" xy="410,424" size="200,34" group="n50_r1x3" fontSize="20" color="#f1fcbf" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n63_r1x3" name="guildScore" xy="630,425" size="100,30" group="n50_r1x3" fontSize="20" color="#fcf1bf" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n64_r1x3" name="rewardList" xy="754,410" size="296,60" group="n50_r1x3" layout="row" overflow="scroll" scroll="horizontal" colGap="5" defaultItem="ui://sgmta2jcdrckf">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n65_r1x3" name="n65" xy="459,553" size="399,29" group="n50_r1x3" fontSize="20" color="#ff0000" align="center" text="门派第一阶段结束，进入第二阶段BOSS竞速">
+      <gearDisplay controller="winerorloser" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <loader id="n66_r1x3" name="modelzzc" xy="-346,-106" size="2000,1000" group="n50_r1x3">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <group id="n50_r1x3" name="result" xy="-346,-106" size="2000,1305" advanced="true">
+      <gearDisplay controller="isShowResult" pages="1"/>
+    </group>
+  </displayList>
+  <transition name="Hide" frameRate="60">
+    <item time="0" type="Visible" target="n28_o3hv" value="true"/>
+    <item time="0" type="XY" target="n28_o3hv" tween="true" startValue="2,187" endValue="-256,187" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n2_o6ik" tween="true" startValue="253,186" endValue="3,187" duration="10" ease="Linear"/>
+    <item time="10" type="Rotation" target="n2_o6ik" value="0"/>
+    <item time="12" type="Rotation" target="n2_o6ik" value="180"/>
+    <item time="12" type="Visible" target="n28_o3hv" value="true"/>
+    <item time="13" type="Visible" target="n28_o3hv" value="false"/>
+  </transition>
+</component>

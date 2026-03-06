@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="136,42" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n5_fbc0" name="btn" src="je63v3c" fileName="image/btn_first_red.png" pkg="st7dgeqq" xy="0,0" size="136,42">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3_f0so" name="text" xy="68,21" pivot="0.5,0.5" anchor="true" size="136,34" fontSize="22" color="#fced00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="重置键位">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="dark" downEffectValue=".5"/>
+</component>

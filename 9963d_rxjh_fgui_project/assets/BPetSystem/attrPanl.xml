@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="274,590">
+  <controller name="attrpage" pages="0,,1," selected="1">
+    <remark page="0" value="属性"/>
+    <remark page="1" value="兽灵丹"/>
+  </controller>
+  <controller name="attrtc" pages="4,,0,,1,,2,,3," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="喂养弹窗"/>
+    <remark page="2" value="属性加成弹窗"/>
+    <remark page="3" value="升星弹窗"/>
+    <remark page="4" value="升阶弹窗"/>
+  </controller>
+  <controller name="iswear" pages="0,,1," selected="0">
+    <remark page="0" value="有穿戴"/>
+    <remark page="1" value="无穿戴"/>
+  </controller>
+  <displayList>
+    <list id="n24_kdof" name="attrlist" xy="-1,114" size="274,173" overflow="scroll" margin="2,0,5,0" defaultItem="ui://bphbjao2kdof38">
+      <gearDisplay controller="attrpage" pages="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n25_kdof" name="topTabList" xy="10,2" size="253,47" layout="row" margin="4,2,6,0" colGap="15" defaultItem="ui://bphbjao2kdof3j" selectionController="attrpage">
+      <relation target="" sidePair=""/>
+      <item title="属性"/>
+      <item title="兽灵丹"/>
+    </list>
+    <richtext id="n26_kdof" name="zhuanhuafont" xy="54,300" pivot="0.5,0.5" size="180,46" font="SimHei" fontSize="16" color="#ff9966" align="center" vAlign="middle" text="宠物0%的属性转化给角色&lt;br&gt;(随宠物升阶增加)">
+      <gearDisplay controller="attrpage" pages="0"/>
+    </richtext>
+    <image id="n23_kdof" name="n23" src="s45r47" fileName="Images/newattr/011.png" xy="13,64">
+      <gearDisplay controller="attrpage" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n27_kdof" name="n27" src="s45r47" fileName="Images/newattr/011.png" xy="13,354">
+      <gearDisplay controller="attrpage" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n28_kdof" name="n28" xy="85,68" pivot="0.5,0.5" size="92,32" font="SimHei" fontSize="22" color="#ffff00" align="center" text="当前属性">
+      <gearDisplay controller="attrpage" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n29_kdof" name="n29" xy="85,359" pivot="0.5,0.5" size="92,32" font="SimHei" fontSize="22" color="#ffff00" align="center" text="宠物培养">
+      <gearDisplay controller="attrpage" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n33_kdof" name="n33" src="kdof3b" fileName="Components/shuxing/ProgressBar.xml" xy="97,411" size="163,22">
+      <gearDisplay controller="attrpage" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <ProgressBar value="50" max="100"/>
+    </component>
+    <text id="n34_kdof" name="n34" xy="1,411" size="87,24" font="SimHei" fontSize="16" color="#ffff00" autoSize="none" text="等级：1">
+      <gearDisplay controller="attrpage" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n35_kdof" name="btn_petuplv" src="fpdq5z" fileName="Components/shuxing/btn_zong.xml" xy="6,537" size="120,40">
+      <gearDisplay controller="attrpage" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="升 级" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <component id="n36_kdof" name="btn_petopenjie" src="fpdq5z" fileName="Components/shuxing/btn_zong.xml" xy="138,537" size="120,40">
+      <gearDisplay controller="attrpage" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="升 阶" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <list id="n37_kdof" name="xhitemlist" xy="2,453" pivot="0.5,0.5" size="259,66" layout="row" overflow="scroll" scroll="horizontal" margin="0,0,10,10" colGap="10" defaultItem="ui://fgihxfyeqdwvis" align="center" vAlign="middle" autoClearItems="true">
+      <gearDisplay controller="attrpage" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n43_kdof" name="btn_openpethc" src="fpdq5z" fileName="Components/shuxing/btn_zong.xml" xy="71,538" size="120,40">
+      <gearDisplay controller="attrpage" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="合 成" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <list id="n44_kdof" name="hcitemshow" xy="5,68" size="262,454" overflow="scroll" margin="5,5,10,10" lineGap="5" defaultItem="ui://bphbjao2kdof3i" autoClearItems="true">
+      <gearDisplay controller="attrpage" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n47_qdwv" name="btn_jihuo" src="fpdq5z" fileName="Components/shuxing/btn_zong.xml" xy="74,537" size="120,40" visible="false">
+      <gearDisplay controller="attrpage" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="激 活" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+  </displayList>
+</component>

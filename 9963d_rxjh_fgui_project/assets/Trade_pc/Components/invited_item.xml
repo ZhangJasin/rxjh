@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="520,61">
+  <displayList>
+    <loader id="n0_y7ps" name="icon_job" xy="18,3" pivot="0.5,0.5" size="50,50"/>
+    <text id="n1_y7ps" name="text_level" xy="78,13" size="62,26" fontSize="18" color="#ffffff" autoSize="none" text="Lv.100"/>
+    <text id="n2_y7ps" name="text_name" xy="158,13" size="156,26" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text="名字名字名字名字"/>
+    <component id="n3_y7ps" name="btn_agree" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="417,0" size="107,53" scale="0.7,0.7">
+      <Button title="同意"/>
+    </component>
+    <component id="n4_y7ps" name="btn_refuse" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="321,0" size="107,53" scale="0.7,0.7">
+      <Button title="拒绝"/>
+    </component>
+    <graph id="n8_y7ps" name="n8" xy="12,57" size="500,2" type="rect" lineSize="0" fillColor="#ff1a3112"/>
+  </displayList>
+</component>

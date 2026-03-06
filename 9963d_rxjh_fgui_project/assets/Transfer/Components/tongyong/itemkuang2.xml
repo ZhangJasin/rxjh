@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64">
+  <displayList>
+    <image id="n3_o4l6" name="n0" src="qtrmv6f" fileName="Images/04duanzao/kuangdi2.png" xy="0,0" size="64,64"/>
+    <component id="n1_ger5" name="itemRoot" src="qtrmv6g" fileName="Components/tongyong/itemRoot.xml" xy="1,0" size="64,62"/>
+    <text id="n5_uhft" name="num" xy="12,40" pivot="1,0" size="52,24" font="SimHei" fontSize="16" color="#ffff00" align="right" vAlign="bottom" autoClearText="true" text="000000"/>
+  </displayList>
+</component>

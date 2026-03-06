@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="120,40" extention="Button">
+  <displayList>
+    <image id="n2_slmo" name="n2" src="slmoy" fileName="image/btn_second_red.png" xy="0,0" size="120,40"/>
+    <text id="n1_qeaz" name="goto" xy="0,0" size="120,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="前往"/>
+  </displayList>
+  <Button downEffect="dark" downEffectValue="0.8"/>
+</component>

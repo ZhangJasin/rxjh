@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="165,50" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n11_id4u" name="bg1" src="lxrgv59" fileName="image/dropdown_content_bg.png" pkg="st7dgeqq" xy="2,0" size="160,50">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n12_id4u" name="bg2" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="2,2" size="160,45">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n7_j47s" name="text_n" xy="82,25" pivot="0.5,0.5" anchor="true" size="129,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#c5dccc" align="center" vAlign="middle" autoSize="none" text="名字">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <text id="n8_j47s" name="text_s" xy="82,25" pivot="0.5,0.5" anchor="true" size="129,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#ffd83c" align="center" vAlign="middle" autoSize="none" text="名字">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

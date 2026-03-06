@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="172,30">
+  <displayList>
+    <image id="n0_eoqr" name="a1" src="eoqr3a" fileName="images/marriage/xing_hui.png" xy="0,0"/>
+    <image id="n2_eoqr" name="a2" src="eoqr3a" fileName="images/marriage/xing_hui.png" xy="35,0"/>
+    <image id="n5_eoqr" name="n5" src="eoqr3a" fileName="images/marriage/xing_hui.png" xy="70,0"/>
+    <image id="n6_eoqr" name="n6" src="eoqr3a" fileName="images/marriage/xing_hui.png" xy="105,0"/>
+    <image id="n7_eoqr" name="n7" src="eoqr3a" fileName="images/marriage/xing_hui.png" xy="140,0"/>
+    <image id="n8_gwga" name="xing1" src="eoqr3b" fileName="images/marriage/xing)liang.png" xy="-4,-4"/>
+    <image id="n9_gwga" name="xing2" src="eoqr3b" fileName="images/marriage/xing)liang.png" xy="31,-4"/>
+    <image id="n10_gwga" name="xing3" src="eoqr3b" fileName="images/marriage/xing)liang.png" xy="66,-4"/>
+    <image id="n11_gwga" name="xing4" src="eoqr3b" fileName="images/marriage/xing)liang.png" xy="101,-4"/>
+    <image id="n12_gwga" name="xing5" src="eoqr3b" fileName="images/marriage/xing)liang.png" xy="136,-4"/>
+  </displayList>
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <image id="n0_vrex" name="bg" src="zah9v4i" fileName="image/bg_second_panel.png" pkg="st7dgeqq" xy="197,141" size="337,536" group="n57_d4a9"/>
+    <component id="n2_j9jd" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="508,168" group="n57_d4a9"/>
+    <component id="n54_j9jd" name="node_panel" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="209,226" size="312,440" group="n57_d4a9"/>
+    <text id="n56_d4a9" name="text_title" xy="330,150" size="71,26" group="n57_d4a9" fontSize="18" color="#ffffff" align="center" autoSize="none" strokeColor="#000000" text="装备栏&#xA;"/>
+    <group id="n57_d4a9" name="dragGroup" xy="197,141" size="337,536" advanced="true">
+      <relation target="n55_d4a9" sidePair="center-center,middle-middle"/>
+    </group>
+    <graph id="n55_d4a9" name="dragGrapic" xy="238,143" size="250,39" type="rect" lineColor="#0000cc00" fillColor="#0033ff00">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+  </displayList>
+</component>

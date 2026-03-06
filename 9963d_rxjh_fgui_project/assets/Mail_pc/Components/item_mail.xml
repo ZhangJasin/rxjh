@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="270,60" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n21_r73b" name="item_bg2" src="wi45w" fileName="Images/item_mail2_9.png" xy="0,0" size="270,60">
+      <gearDisplay controller="button" pages=""/>
+    </image>
+    <image id="n20_r73b" name="item_bg1" src="wi45v" fileName="Images/item_mail1_9.png" xy="0,0" size="270,60">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+    <image id="n22_r73b" name="img_redpoint" src="o7ery" fileName="Images/mail_red.png" xy="255,0"/>
+    <loader id="n4_j3vn" name="icon_state" xy="30,30" pivot="0.5,0.5" anchor="true" size="40,40"/>
+    <text id="n5_j3vn" name="text_title" xy="60,9" size="180,20" fontSize="12" color="#fff7d1" autoSize="none" text="名字"/>
+    <text id="n8_j3vn" name="text_sender" xy="60,30" size="120,19" fontSize="12" color="#fff7d1" autoSize="none" text="发件人："/>
+    <text id="n7_j3vn" name="text_time" xy="140,30" size="120,20" fontSize="12" color="#fff7d1" align="right" autoSize="none" text="2025-03-14"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

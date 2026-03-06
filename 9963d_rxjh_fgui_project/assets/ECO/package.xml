@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="f1cu2vp4">
+  <resources>
+    <image id="kt0f0" name="eff.png" path="/Images/"/>
+    <image id="kt0f1" name="slider_bg.png" path="/Images/" exported="true"/>
+    <image id="kt0f2" name="slider_fill.png" path="/Images/" exported="true"/>
+    <image id="kt0f3" name="slider_handler.png" path="/Images/" exported="true"/>
+    <component id="kt0f8" name="DragComponent.xml" path="/Component/" exported="true"/>
+    <component id="kt0f9" name="Slider1_grip.xml" path="/Component/" exported="true"/>
+    <component id="kt0fa" name="Slider1.xml" path="/Component/" exported="true"/>
+    <component id="kt0fb" name="title_label.xml" path="/Component/" exported="true"/>
+    <component id="j02mc" name="CommonECOWnd.xml" path="/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

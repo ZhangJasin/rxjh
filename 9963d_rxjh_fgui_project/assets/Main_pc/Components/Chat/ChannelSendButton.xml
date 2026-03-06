@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="38,16" extention="Button" bgColor="#000000">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <loader id="n3_lh52" name="n3" xy="0,0" size="38,16" url="ui://xwp5ackolh5234" autoSize="true">
+      <gearIcon controller="button" pages="1" values="ui://xwp5ackolh5233" default="ui://xwp5ackolh5234"/>
+    </loader>
+    <text id="n4_lh52" name="title" xy="0,-1" size="38,19" fontSize="12" color="#84a746" align="center" vAlign="middle" leading="0" letterSpacing="2" autoSize="height" autoClearText="true" text="频道">
+      <gearColor controller="button" pages="1" values="#b0e258,#000000" default="#84a746,#000000"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

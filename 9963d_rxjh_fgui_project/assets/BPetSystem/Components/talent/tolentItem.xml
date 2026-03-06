@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="270,135" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_tbp6" name="n0" src="lg984s" fileName="Images/newattr/01(2).png" xy="-4,-2" size="278,140">
+      <gearDisplay controller="button" pages="0,1,2,3"/>
+      <gearSize controller="button" pages="0,1,2,3" values="278,140,1,1|278,140,1,1|278,140,1,1|278,140,1,1"/>
+    </image>
+    <loader id="n7_tbp6" name="touxiang" xy="15,9" pivot="0.5,0.5" size="50,50" aspect="true" url="ui://bphbjao2s2ey3z" align="right" fill="scale" clearOnPublish="true">
+      <relation target="" sidePair="left-left,top-top"/>
+    </loader>
+    <text id="n14_swkl" name="name" xy="73,6" size="64,29" font="SimHei" fontSize="20" color="#0099cc" vAlign="middle" autoClearText="true" text="天赋名">
+      <relation target="" sidePair="left-left,top-top"/>
+    </text>
+    <richtext id="n20_klt8" name="level" xy="73,39" size="53,22" font="SimHei" fontSize="14" color="#ffff00" autoClearText="true" text="等级：1">
+      <relation target="" sidePair="left-left,top-top"/>
+    </richtext>
+    <richtext id="n19_klt8" name="desc" xy="12,63" size="246,68" font="SimHei" fontSize="16" color="#ffff00" autoSize="none" autoClearText="true" text="技能描述技能描述技能描述技能描述技能描述技能描述技能描述技能描述技能描述">
+      <relation target="" sidePair="left-left,top-top"/>
+    </richtext>
+  </displayList>
+  <Button mode="Check"/>
+  <relation target="n0_tbp6" sidePair="width-width,height-height"/>
+</component>

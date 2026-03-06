@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="44,44" pivot="0.5,0.5" extention="Button">
+  <displayList>
+    <loader id="n1_kxj1" name="icon" xy="22,22" pivot="0.5,0.5" anchor="true" size="44,44" fill="scaleFree" clearOnPublish="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <Button downEffect="scale" downEffectValue=".9"/>
+</component>

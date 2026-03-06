@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n4_n22n" name="n4" src="fbc0v4t" fileName="image/icon_item1.png" pkg="st7dgeqq" xy="0,0" size="64,64">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n5_n22n" name="itemRoot" src="fpdq5v" fileName="Components/hecheng/itemRoot.xml" xy="0,0" size="64,64">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n10_qdwv" name="n10" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="0,0" size="64,64" group="n12_qdwv">
+      <gearDisplay controller="button" pages=""/>
+    </image>
+    <image id="n11_qdwv" name="n11" src="lxrgv57" fileName="image/checkbox_icon.png" pkg="st7dgeqq" xy="4,4" size="55,55" group="n12_qdwv" visible="false"/>
+    <group id="n12_qdwv" name="RecycleSelect" xy="0,0" size="64,64" advanced="true">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </group>
+    <text id="n6_98nd" name="num" xy="59,61" pivot="1,1" anchor="true" size="28,24" font="SimHei" fontSize="16" color="#ffff00" align="right" vAlign="bottom" strokeColor="#000000" autoClearText="true" text="000">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </text>
+    <image id="n13_mawg" name="n13" src="fpdq5j" fileName="Images/newhc/01(1).png" xy="0,0" size="64,64" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n14_mawg" name="n14" src="s45r42" fileName="Images/newattr/016.png" xy="4,16" visible="false">
+      <relation target="" sidePair="left-left,top-top"/>
+    </image>
+  </displayList>
+  <Button mode="Check"/>
+</component>

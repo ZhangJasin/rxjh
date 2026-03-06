@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="168,158">
+  <controller name="state" pages="0,,1," selected="0">
+    <remark page="0" value="有队伍"/>
+    <remark page="1" value="无队伍"/>
+  </controller>
+  <displayList>
+    <image id="n9_tp62" name="state0Bg" src="bbev5n" fileName="Images/Assist/main_black_bg.png" xy="0,24" size="168,134">
+      <gearDisplay controller="state" pages="0"/>
+      <relation target="n5_d1ew" sidePair="height-height"/>
+    </image>
+    <image id="n13_rqwt" name="state1Bg" src="bbev5n" fileName="Images/Assist/main_black_bg.png" xy="0,24" size="168,134">
+      <gearDisplay controller="state" pages="1"/>
+    </image>
+    <loader id="n10_tp62" name="Loader_title" xy="0,0" size="143,25" url="ui://xwp5ackotp62fve4"/>
+    <component id="n15_kx8c" name="Btn_arrow" src="kx8cfvee" fileName="Components/Assist/ButtonSwitch.xml" xy="155,13" pivot="0.5,0.5" anchor="true"/>
+    <component id="n2_d1ew" name="Btn_createTeam" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="44,51" size="80,30">
+      <gearDisplay controller="state" pages="1"/>
+      <Button title="创建队伍" titleColor="#badec0" titleFontSize="13" icon="ui://xwp5ackobbev5t"/>
+    </component>
+    <component id="n3_d1ew" name="Btn_joinTeam" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="44,102" size="80,30">
+      <gearDisplay controller="state" pages="1"/>
+      <Button title="加入队伍" titleColor="#badec0" titleFontSize="13" icon="ui://xwp5ackobbev5t"/>
+    </component>
+    <component id="n6_d1ew" name="Btn_leaveTeam" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="85,127" size="80,30">
+      <gearDisplay controller="state" pages="0"/>
+      <relation target="n5_d1ew" sidePair="top-bottom"/>
+      <Button title="退出队伍" titleColor="#badec0" titleFontSize="13" icon="ui://xwp5ackobbev5t"/>
+    </component>
+    <component id="n7_d1ew" name="Btn_teamList" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="4,127" size="80,30">
+      <gearDisplay controller="state" pages="0"/>
+      <relation target="n5_d1ew" sidePair="top-bottom"/>
+      <Button title="队员列表" titleColor="#badec0" titleFontSize="13" icon="ui://xwp5ackobbev5t"/>
+    </component>
+    <list id="n5_d1ew" name="List_team" xy="4,27" size="162,100" restrictSize="0,0,100,0" overflow="scroll" lineGap="1" defaultItem="ui://xwp5ackobbev5u">
+      <gearDisplay controller="state" pages="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

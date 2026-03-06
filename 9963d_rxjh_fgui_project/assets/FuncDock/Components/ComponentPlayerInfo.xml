@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="376,309" designImage="ui://q0jqxcw9se4svl1" designImageOffsetY="-329">
+  <controller name="typeDialog" pages="0,选中玩家,1," selected="0"/>
+  <displayList>
+    <image id="n28_wi45" name="di_role_info" src="7c35v67" fileName="image/di.png" pkg="st7dgeqq" xy="0,0" size="376,318">
+      <relation target="n26_w092" sidePair="center-center,bottomext-bottom"/>
+    </image>
+    <component id="n12_w092" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="353,-8" pivot="0.5,0.5">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <image id="n34_s9fq" name="bg_di" src="us1mvl2" fileName="Images/black_bg.png" xy="20,124" size="334,180">
+      <relation target="n26_w092" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </image>
+    <list id="n26_w092" name="grid_layout_btn" xy="188,124" pivot="0.5,0" anchor="true" size="334,180" layout="flow_hz" margin="5,0,0,0" lineGap="8" colGap="8" lineItemCount="2" defaultItem="ui://q0jqxcw9m2wev5x" align="center" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n30_akxo" name="com_playerIcon" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="67,20" size="80,80" group="n36_iqa5"/>
+    <text id="n14_w092" name="text_player_name" xy="164,21" size="144,29" group="n36_iqa5" fontSize="20" color="#ffffff" vAlign="middle" ubb="true" autoClearText="true" text="玩家名字七个字"/>
+    <text id="n16_w092" name="text_player_level" xy="164,49" size="86,29" group="n36_iqa5" fontSize="20" color="#ffda60" vAlign="middle" autoClearText="true" text="等级：44"/>
+    <text id="n17_w092" name="text_player_sect" xy="164,71" size="144,29" group="n36_iqa5" fontSize="20" color="#14ffed" vAlign="middle" ubb="true" autoClearText="true" text="门派：落日战歌"/>
+    <group id="n36_iqa5" name="n36" xy="67,20" size="241,80" advanced="true">
+      <relation target="" sidePair="center-center,top-top"/>
+    </group>
+  </displayList>
+  <relation target="n28_wi45" sidePair="height-height"/>
+</component>

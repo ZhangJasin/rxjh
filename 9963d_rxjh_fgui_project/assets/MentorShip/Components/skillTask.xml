@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="346,70">
+  <controller name="status" pages="0,,1,,2," selected="1"/>
+  <displayList>
+    <text id="n0_lkqx" name="n0" xy="10,0" size="176,70" fontSize="22" color="#ffffff" vAlign="middle" autoSize="none" text="任务名字"/>
+    <component id="n2_lkqx" name="n2" src="gvalo3y" fileName="Components/btn_second_green.xml" xy="205,15">
+      <gearDisplay controller="status" pages="1"/>
+      <Button title="已完成" selectedTitle="已完成&#xA;"/>
+    </component>
+    <component id="n3_lkqx" name="gotodo" src="gvalo3y" fileName="Components/btn_second_green.xml" xy="205,15">
+      <gearDisplay controller="status" pages="0"/>
+      <Button title="去完成" selectedTitle="去完成"/>
+    </component>
+    <component id="n4_pt88" name="weilingqu" src="gvalo3y" fileName="Components/btn_second_green.xml" xy="205,15">
+      <gearDisplay controller="status" pages="2"/>
+      <Button title="待领取" selectedTitle="待领取"/>
+    </component>
+  </displayList>
+</component>

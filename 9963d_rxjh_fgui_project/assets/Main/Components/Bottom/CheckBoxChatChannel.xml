@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="103,40" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="isSelected" pages="0,已选中,1,未选中" selected="0"/>
+  <displayList>
+    <text id="n4_voyp" name="title" xy="70,20" pivot="0.5,0.5" anchor="true" size="48,32" fontSize="22" color="#ffffff" ubb="true" text="全选"/>
+    <image id="n5_voyp" name="n5" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="24,20" pivot="0.5,0.5" anchor="true" size="32,32">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n6_voyp" name="icon_select" src="lxrgv57" fileName="image/checkbox_icon.png" pkg="st7dgeqq" xy="24,20" pivot="0.5,0.5" anchor="true">
+      <gearDisplay controller="isSelected" pages="0"/>
+    </image>
+  </displayList>
+  <Button mode="Check"/>
+</component>

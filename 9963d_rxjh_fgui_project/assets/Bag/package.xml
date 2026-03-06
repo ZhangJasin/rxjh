@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="dak5wnw9">
+  <resources>
+    <component id="q9ls3" name="BagFilterTab.xml" path="/Components/" exported="true"/>
+    <component id="q9ls4" name="BagPageTab.xml" path="/Components/" exported="true"/>
+    <image id="q9ls9" name="shop.png" path="/Images/" exported="true"/>
+    <image id="q9lsa" name="stone_store.png" path="/Images/" exported="true"/>
+    <image id="q9lsb" name="store.png" path="/Images/" exported="true"/>
+    <component id="q9lsf" name="BagCellItem.xml" path="/Components/" exported="true"/>
+    <component id="xzvrh" name="StorageExPanel.xml" path="/" exported="true"/>
+    <component id="80j1k" name="BagRecyclePanel.xml" path="/" exported="true"/>
+    <component id="80j1m" name="BagRecycleTab.xml" path="/Components/" exported="true"/>
+    <component id="hgppn" name="BagRecycleCheckBox.xml" path="/Components/" exported="true"/>
+    <image id="hgppp" name="title_bg.png" path="/Images/" exported="true"/>
+    <component id="hgppq" name="BagRecycleLvCheckBox.xml" path="/Components/" exported="true"/>
+    <component id="kvlav6n" name="ComponentEquipPanel.xml" path="/Components/" exported="true"/>
+    <component id="fa8p22" name="ComponentPropertyPanel.xml" path="/Components/" exported="true"/>
+    <component id="g4sv1i" name="PropertyProgress.xml" path="/Components/" exported="true"/>
+    <component id="kvlav6m" name="btn_tab.xml" path="/Components/"/>
+    <component id="q8irv6h" name="page5.xml" path="/Components/" exported="true"/>
+    <component id="q8irv6i" name="page4.xml" path="/Components/" exported="true"/>
+    <component id="qjli1b" name="compText1.xml" path="/Components/" exported="true"/>
+    <component id="qjli1c" name="compText2.xml" path="/Components/" exported="true"/>
+    <component id="hszp2m" name="itemRoot.xml" path="/Components/" exported="true"/>
+    <component id="mzzl21" name="panel_Touch.xml" path="/Components/" exported="true"/>
+    <component id="kvlav6l" name="PlayerInfoPanel.xml" path="/" exported="true"/>
+    <image id="qjli13" name="img_text_di.png" path="/Images/" exported="true" scale="9grid" scale9grid="5,5,2,1" duplicatePadding="true"/>
+    <image id="qjliy" name="img_di1.png" path="/Images/" exported="true"/>
+    <component id="seb1r" name="BagPanel.xml" path="/Components/" exported="true"/>
+    <image id="q1zz2l" name="arrow.png" path="/Images/" exported="true"/>
+    <image id="mzzl1r" name="bg_player.png" path="/Images/" exported="true"/>
+    <image id="qjli16" name="bluedian.png" path="/Images/" exported="true"/>
+    <image id="qjli15" name="greendian.png" path="/Images/" exported="true"/>
+    <image id="qjli11" name="imgFontEffect.png" path="/Images/" exported="true"/>
+    <image id="k5e7v6c" name="img_d2.png" path="/Images/" exported="true"/>
+    <image id="qjliz" name="img_d211.png" path="/Images/" exported="true" scale="9grid" scale9grid="37,8,74,16"/>
+    <image id="qjli18" name="img_panel_di.png" path="/Images/" exported="true"/>
+    <component id="8s5iv6o" name="BagCdItem.xml" path="/Components/" exported="true"/>
+    <component id="p3isv6s" name="SimpleBagPanel.xml" path="/" exported="true"/>
+    <component id="ld2ev6y" name="page1.xml" path="/Components/" exported="true"/>
+    <component id="ld2ev6z" name="page2.xml" path="/Components/" exported="true"/>
+    <component id="ld2ev72" name="page3.xml" path="/Components/" exported="true"/>
+    <component id="ld2ev74" name="btnSchemeSwitch.xml" path="/Components/"/>
+    <image id="ld2ev75" name="schemeSwitch.png" path="/Images/" exported="true"/>
+    <component id="ld2ev76" name="btnSchemSwitch.xml" path="/Components/"/>
+    <component id="9ph7v7a" name="LookPlayerPanel.xml" path="/" exported="true"/>
+    <component id="9ph7v7b" name="btn_cloth_chose.xml" path="/Components/"/>
+    <component id="n7s0v7c" name="FilterBagPanel.xml" path="/Components/" exported="true"/>
+    <component id="n7s0v7d" name="OneFilterBagPanel.xml" path="/" exported="true"/>
+    <component id="h8ddv7e" name="StoragePanel.xml" path="/" exported="true"/>
+    <component id="80vf2h" name="ComboBox1.xml" path="/Components/" exported="true"/>
+    <component id="80vf2f" name="ComboBox1_item.xml" path="/Components/"/>
+    <component id="80vf2g" name="ComboBox1_popup.xml" path="/Components/"/>
+    <image id="80vf2c" name="comboBox_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="6,5,12,10"/>
+    <image id="80vf2e" name="comboBox_select_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="25,17,14,12"/>
+    <image id="h8ddvnt" name="comboBox_btn_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,9,12,10"/>
+    <image id="p34yvnu" name="img_d2_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="5,8,0,16"/>
+    <image id="lt7hvnv" name="attr_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="108,5,32,22"/>
+    <image id="lt7hvnx" name="img_input_di.png" path="/Images/" exported="true" scale="9grid" scale9grid="6,6,12,12"/>
+    <image id="lt7hvny" name="green.png" path="/Images/" exported="true" scale="9grid" scale9grid="1,12,1,0" qualityOption="source" duplicatePadding="true"/>
+    <image id="lt7hvnz" name="red.png" path="/Images/" exported="true" scale="9grid" scale9grid="2,12,-1,0" qualityOption="source" duplicatePadding="true"/>
+    <image id="lt7hvo0" name="yellow.png" path="/Images/" exported="true" scale="9grid" scale9grid="2,12,-1,0" duplicatePadding="true"/>
+    <image id="lt7hvo1" name="blue.png" path="/Images/" exported="true" scale="9grid" scale9grid="1,12,1,0" duplicatePadding="true"/>
+    <component id="lt7hvo2" name="item_attr_2.xml" path="/Components/"/>
+    <component id="lt7hvo6" name="item_attr_yellow.xml" path="/Components/"/>
+    <component id="lt7hvo7" name="item_attr_red.xml" path="/Components/"/>
+    <component id="lt7hvo8" name="item_attr_green.xml" path="/Components/"/>
+    <component id="lt7hvo9" name="item_attr_blue.xml" path="/Components/"/>
+    <component id="9qtavod" name="ComponentTitlePanel.xml" path="/Components/" exported="true"/>
+    <image id="9qtavoe" name="bg_cell.png" path="/Images/Chenghao/" exported="true"/>
+    <image id="9qtavof" name="tag_Get.png" path="/Images/Chenghao/" exported="true"/>
+    <image id="9qtavog" name="tag_notGet.png" path="/Images/Chenghao/" exported="true"/>
+    <image id="9qtavoh" name="bg_time.png" path="/Images/Chenghao/" exported="true"/>
+    <component id="9qtavoi" name="item_title.xml" path="/Components/"/>
+    <component id="9qtavoj" name="btn_use.xml" path="/Components/"/>
+    <image id="9qtavok" name="icon_item_select.png" path="/Images/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
+    <component id="r8pbvol" name="BagItemIcon.xml" path="/"/>
+    <component id="r8pbvom" name="LookPlayerSingleEquipPanel.xml" path="/"/>
+    <component id="r8pbvon" name="Button1.xml" path="/Components/"/>
+    <component id="r8pbvoo" name="item_attr_1.xml" path="/Components/"/>
+    <image id="r8pbvop" name="checkbox_bg2.png" path="/Images/" exported="true" scale="9grid" scale9grid="3,3,6,6"/>
+    <image id="r8pbvoq" name="green_check.png" path="/Images/" exported="true"/>
+    <image id="p8tovos" name="cloakSwi.png" path="/Images/" exported="true"/>
+    <image id="sna9vot" name="heiDI.png" path="/Images/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="xnzkvou" name="btn_filter_normal.png" path="/Images/" exported="true"/>
+    <image id="xnzkvov" name="btn_filter_selected.png" path="/Images/" exported="true"/>
+    <image id="xnzkvow" name="bag_di.png" path="/Images/" exported="true"/>
+    <image id="ur8qvox" name="bg_pin.png" path="/Images/" exported="true" scale="9grid" scale9grid="14,7,28,14"/>
+    <component id="tw0lvoy" name="SharedStoragePanel.xml" path="/" exported="true"/>
+    <component id="gfplvoz" name="BagPanel_4.xml" path="/Components/" exported="true"/>
+    <image id="wodvvp0" name="btnbg.png" path="/Images/" exported="true"/>
+    <component id="wodvvp1" name="blockBtn.xml" path="/Components/" exported="true"/>
+    <component id="s4v5vp2" name="blockBtn2.xml" path="/Components/"/>
+    <component id="s4v5vp3" name="blockBtn3.xml" path="/Components/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="210,140">
+  <displayList>
+    <image id="n5_swkl" name="hcdi1" src="lg984z" fileName="Images/newhc/05.png" xy="10,6"/>
+    <image id="n9_swkl" name="hcdi2" src="lg984z" fileName="Images/newhc/05.png" xy="10,34"/>
+    <image id="n10_swkl" name="hcdi3" src="lg984z" fileName="Images/newhc/05.png" xy="10,62"/>
+    <image id="n11_swkl" name="hcdi4" src="lg984z" fileName="Images/newhc/05.png" xy="10,90"/>
+    <image id="n12_swkl" name="hcdi5" src="lg984z" fileName="Images/newhc/05.png" xy="10,118"/>
+    <loader id="n18_cm5h" name="hcimg1" xy="10,6" pivot="0.5,0.5" size="16,16" url="ui://bphbjao2lg9850" align="center" vAlign="middle" fill="scale" shrinkOnly="true" useResize="true"/>
+    <loader id="n19_cm5h" name="hcimg2" xy="10,34" pivot="0.5,0.5" size="16,16" url="ui://bphbjao2lg9850" align="center" vAlign="middle" fill="scale" shrinkOnly="true" useResize="true"/>
+    <loader id="n20_cm5h" name="hcimg3" xy="10,62" pivot="0.5,0.5" size="16,16" url="ui://bphbjao2lg9850" align="center" vAlign="middle" fill="scale" shrinkOnly="true" useResize="true"/>
+    <loader id="n21_cm5h" name="hcimg4" xy="10,90" pivot="0.5,0.5" size="16,16" url="ui://bphbjao2lg9850" align="center" vAlign="middle" fill="scale" shrinkOnly="true" useResize="true"/>
+    <loader id="n22_cm5h" name="hcimg5" xy="10,118" pivot="0.5,0.5" size="16,16" url="ui://bphbjao2lg9850" align="center" vAlign="middle" fill="scale" shrinkOnly="true" useResize="true"/>
+    <text id="n23_cm5h" name="attr1" xy="36,0" size="58,26" font="SimHei" fontSize="18" color="#ffcc00" text="未合成"/>
+    <text id="n24_cm5h" name="attr2" xy="36,29" size="58,26" font="SimHei" fontSize="18" color="#ffcc00" text="未合成"/>
+    <text id="n25_cm5h" name="attr3" xy="36,57" size="58,26" font="SimHei" fontSize="18" color="#ffcc00" text="未合成"/>
+    <text id="n26_cm5h" name="attr4" xy="36,85" size="58,26" font="SimHei" fontSize="18" color="#ffcc00" text="未合成"/>
+    <text id="n27_cm5h" name="attr5" xy="36,113" size="58,26" font="SimHei" fontSize="18" color="#ffcc00" text="未合成"/>
+  </displayList>
+</component>

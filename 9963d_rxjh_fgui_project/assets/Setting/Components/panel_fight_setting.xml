@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="992,588" overflow="scroll" scrollBarFlags="16" bgColor="#000000">
+  <displayList>
+    <graph id="n214_fskg" name="n214" xy="12,48" size="690,180" group="n148_rmnb" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <component id="n215_fskg" name="player_title" src="kvl0v5p" fileName="Components/title_label.xml" xy="172,13" size="370,34" group="n148_rmnb">
+      <Label title="人物战斗药品保护"/>
+    </component>
+    <component id="n216_fskg" name="player_hp" src="fskgkvq6" fileName="Components/hpItemAutoUse.xml" xy="21,61" group="n148_rmnb"/>
+    <component id="n220_fskg" name="player_fast_hp" src="fskgkvq6" fileName="Components/hpItemAutoUse.xml" xy="21,99" group="n148_rmnb"/>
+    <component id="n167_rmnb" name="player_mp" src="fskgkvq7" fileName="Components/mapItemAutoUse.xml" xy="21,146" group="n148_rmnb"/>
+    <component id="n168_rmnb" name="player_fast_mp" src="fskgkvq7" fileName="Components/mapItemAutoUse.xml" xy="21,184" group="n148_rmnb"/>
+    <group id="n148_rmnb" name="player" xy="12,13" size="690,215"/>
+    <graph id="n221_fskg" name="n221" xy="12,280" size="690,228" group="n175_rmnb" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <component id="n222_fskg" name="pet_title" src="kvl0v5p" fileName="Components/title_label.xml" xy="173,245" size="370,34" group="n175_rmnb">
+      <Label title="宠物战斗药品保护"/>
+    </component>
+    <component id="n171_rmnb" name="pet_hp" src="fskgkvq6" fileName="Components/hpItemAutoUse.xml" xy="21,295" size="673,30" group="n175_rmnb"/>
+    <component id="n172_rmnb" name="pet_fast_hp" src="fskgkvq6" fileName="Components/hpItemAutoUse.xml" xy="21,333" size="673,30" group="n175_rmnb"/>
+    <component id="n173_rmnb" name="pet_mp" src="fskgkvq7" fileName="Components/mapItemAutoUse.xml" xy="21,380" group="n175_rmnb"/>
+    <component id="n174_rmnb" name="pet_fast_mp" src="fskgkvq7" fileName="Components/mapItemAutoUse.xml" xy="21,418" group="n175_rmnb"/>
+    <component id="n176_rmnb" name="pet_favor" src="fskgkvq7" fileName="Components/mapItemAutoUse.xml" xy="21,465" group="n175_rmnb"/>
+    <group id="n175_rmnb" name="pet" xy="12,245" size="690,263" visible="false" advanced="true"/>
+    <component id="n223_fskg" name="help_title" src="kvl0v5p" fileName="Components/title_label.xml" xy="735,12" size="219,34" group="n182_rmnb">
+      <Label title="辅助武功"/>
+    </component>
+    <graph id="n224_fskg" name="n224" xy="707,48" size="276,364" group="n182_rmnb" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <list id="n181_rmnb" name="help_list" xy="721,65" size="243,341" group="n182_rmnb" overflow="scroll" lineGap="13" defaultItem="ui://xpq1wbq8rmnbvok" autoClearItems="true">
+      <item title="梯云纵"/>
+      <item title="草上飞"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n182_rmnb" name="help" xy="707,12" size="276,400"/>
+    <loader id="n212_mnzb" name="replace_loader" xy="707,422" size="276,86" url="ui://xpq1wbq8mnzbvp1" align="center" vAlign="middle" clearOnPublish="true"/>
+    <text id="n190_mk3z" name="n190" xy="21,529" pivot="1,0" size="84,30" group="n198_mk3z" fontSize="20" color="#ffffff" vAlign="middle" autoSize="none" text="血量低于"/>
+    <image id="n225_t6uo" name="n225" src="11iqkvps" fileName="Images/input_bg.png" xy="102,529" size="37,29" group="n198_mk3z"/>
+    <text id="n192_mk3z" name="recoverSkillLimit" xy="102,529" pivot="1,0" size="37,29" group="n198_mk3z" fontSize="20" color="#00ff00" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="999" input="true" maxLength="3" restrict="[0-9]" keyboardType="4"/>
+    <text id="n193_mk3z" name="n193" xy="137,529" pivot="1,0" size="102,29" group="n198_mk3z" fontSize="20" color="#ffffff" vAlign="middle" text="%使用技能"/>
+    <component id="n197_mk3z" name="recoverSkillValue" src="cougkvqh" fileName="Components/ComboBox_Min_up.xml" xy="239,529" size="158,30" group="n198_mk3z">
+      <ComboBox visibleItemCount="3" direction="up">
+        <item title="不处理"/>
+        <item title="反击"/>
+        <item title="逃跑"/>
+      </ComboBox>
+    </component>
+    <group id="n198_mk3z" name="n198" xy="21,529" size="376,30"/>
+    <text id="n200_mk3z" name="n200" xy="526,529" pivot="1,0" size="164,30" group="n205_mk3z" fontSize="20" color="#ffffff" vAlign="middle" autoSize="none" text="组队成员血量低于"/>
+    <image id="n226_t6uo" name="n226" src="11iqkvps" fileName="Images/input_bg.png" xy="688,529" size="37,29" group="n205_mk3z"/>
+    <text id="n202_mk3z" name="teamRecoverSkillLimit" xy="688,529" pivot="1,0" size="37,30" group="n205_mk3z" fontSize="20" color="#00ff00" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="999" input="true" maxLength="3" restrict="[0-9]" keyboardType="4"/>
+    <text id="n203_mk3z" name="n203" xy="723,529" pivot="1,0" size="102,29" group="n205_mk3z" fontSize="20" color="#ffffff" vAlign="middle" autoSize="none" text="%使用技能"/>
+    <component id="n204_mk3z" name="teamRecoverSkillValue" src="cougkvqh" fileName="Components/ComboBox_Min_up.xml" xy="825,529" size="158,30" group="n205_mk3z">
+      <ComboBox visibleItemCount="3" direction="up" autoClearItems="true">
+        <item title="不处理"/>
+        <item title="反击"/>
+        <item title="逃跑"/>
+      </ComboBox>
+    </component>
+    <group id="n205_mk3z" name="n205" xy="526,529" size="457,30"/>
+    <component id="n134_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,586" size="0,0">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+  </displayList>
+</component>

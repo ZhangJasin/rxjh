@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="160,150" opaque="false">
+  <displayList>
+    <image id="n24_jhxg" name="bg" src="emvc3u" fileName="image/bg_tips.png" pkg="qa9a7rit" xy="80,0" pivot="0.5,0" anchor="true" size="160,150">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n6_hhwj" name="text_name" xy="80,20" pivot="0.5,0.5" anchor="true" size="100,22" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="名字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <richtext id="n10_hhwj" name="text_desc" xy="80,50" pivot="0.5,0.5" anchor="true" size="150,36" touchable="false" fontSize="12" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="none" text="描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n35_fg49" name="text_info" xy="80,70" pivot="0.5,0" anchor="true" size="150,73" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="center" leading="4" ubb="true" autoSize="height" text="级别10&#xA;持续时间40.0秒&#xA;-下一步-&#xA;持续时间43.0秒">
+      <relation target="" sidePair="width-width,height-height"/>
+    </richtext>
+  </displayList>
+</component>

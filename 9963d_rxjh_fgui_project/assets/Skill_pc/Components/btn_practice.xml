@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="108,36" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n6_jhxg" name="bg" src="emvc3f" fileName="image/btn_first_red.png" pkg="qa9a7rit" xy="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n3_f0so" name="text" xy="54,18" pivot="0.5,0.5" anchor="true" size="100,24" fontSize="16" color="#ffff00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="修炼"/>
+  </displayList>
+  <Button downEffect="dark" downEffectValue=".5"/>
+</component>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="479,83" opaque="false" designImage="ui://zj419n3ddpxov3f">
+  <controller name="type" alias="类型" pages="0,,1," selected="0">
+    <remark page="0" value="怪物"/>
+    <remark page="1" value="角色"/>
+  </controller>
+  <displayList>
+    <loader id="n68_r075" name="n68" xy="78,17" size="324,54" url="ui://zj419n3dk5e7v9e" fill="scaleFree">
+      <gearXY controller="type" pages="0,1" values="78,17|10,10"/>
+      <gearSize controller="type" pages="0,1" values="324,54,1,1|392,68,1,1"/>
+      <gearIcon controller="type" pages="1" values="ui://zj419n3d9c3pfvd6" default="ui://zj419n3dk5e7v9e"/>
+    </loader>
+    <image id="n69_r075" name="n69" src="k5e7v9i" fileName="Images/Target/main_target_hp_bg_9.png" xy="83,47" size="314,20"/>
+    <component id="n63_w622" name="ProgressBar_hpTween" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="83,47" size="314,20" alpha="0.5">
+      <ProgressBar value="50" max="100"/>
+      <property target="bar" propertyId="1" value="ui://zj419n3dk5e7v9h"/>
+    </component>
+    <component id="n16_mxa7" name="ProgressBar_hp" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="83,47" size="314,20">
+      <ProgressBar value="100" max="100"/>
+      <property target="bar" propertyId="1" value="ui://zj419n3dk5e7v9h"/>
+    </component>
+    <component id="n47_mcs4" name="Comp_head" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="10,10" size="68,68" aspect="true">
+      <gearDisplay controller="type" pages="1"/>
+    </component>
+    <text id="n19_mxa7" name="Text_hp" xy="83,44" size="313,27" fontSize="18" color="#ffffff" align="center" autoSize="none" strokeColor="#681616" autoClearText="true" text="0/0"/>
+    <text id="n52_ne4j" name="Text_level" xy="83,18" size="58,26" fontSize="18" color="#ffffff" text="Lv.999"/>
+    <text id="n71_r075" name="Text_belong" xy="268,18" size="131,26" fontSize="18" color="#ffffff" align="right" leading="0" autoSize="shrink" autoClearText="true" text="名字一共几个字"/>
+    <component id="n73_qer2" name="Label_name" src="ftt5vo7" fileName="ScrollRText.xml" pkg="o8ixb2zy" xy="141,18" size="126,26" touchable="false">
+      <gearSize controller="type" pages="0" values="126,26,1,1" default="257,26,1,1"/>
+      <relation target="n52_ne4j" sidePair="leftext-right"/>
+      <Label title="名字名字名字名字名字" titleColor="#ffffff" titleFontSize="18"/>
+    </component>
+    <component id="n45_yd58" name="Button_close" src="rrqifvds" fileName="Components/Target/TargetClose.xml" xy="380,-3"/>
+  </displayList>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="220,558">
+  <displayList>
+    <component id="n0_yagp" name="group_master" src="zi8so3q" fileName="Components/group_master.xml" xy="0,2" size="220,135"/>
+    <component id="n1_yagp" name="group_apprentice" src="zi8so3r" fileName="Components/group_apprentice.xml" xy="0,139"/>
+    <text id="n2_yagp" name="text_count" xy="0,438" pivot="0,0.5" size="220,45" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="ellipsis" text="未出师徒弟 0/3"/>
+    <component id="n3_yagp" name="btn_applylist" src="gvalo3y" fileName="Components/btn_second_green.xml" xy="47,492" size="130,45">
+      <Button title="申请列表" titleColor="#ffff00" titleFontSize="18"/>
+    </component>
+  </displayList>
+</component>

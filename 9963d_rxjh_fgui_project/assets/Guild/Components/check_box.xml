@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="273,32" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_n1mf" name="n0" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="0,0" size="31,31"/>
+    <image id="n3_n1mf" name="n3" src="jjgk1j" fileName="Images/select_icon.png" xy="0,0">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+    <text id="n1_n1mf" name="title" xy="56,0" size="216,29" fontSize="20" color="#c5dccc" vAlign="middle" letterSpacing="2" autoSize="none" singleLine="true" text="自动同意加入申请">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Check"/>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="72,72">
+  <displayList>
+    <image id="n1_lluo" name="n1" src="rg4i1f" fileName="Images/09wuxun/chuilian/01(1).png" xy="0,0" size="72,72">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n0_i4u8" name="n0" src="rg4i1g" fileName="Images/09wuxun/chuilian/02(1).png" xy="24,14" size="25,43" alpha="0.767">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+  </displayList>
+</component>

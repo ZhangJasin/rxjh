@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="3tndc27q">
+  <resources>
+    <component id="clzt0" name="btn_map.xml" path="/Components/MiniMap/"/>
+    <image id="clzt1" name="btn_map.png" path="/Images/MiniMap/"/>
+    <component id="clzt2" name="item_left.xml" path="/Components/MiniMap/" exported="true"/>
+    <image id="clzt3" name="item_normal.png" path="/Images/MiniMap/" scale="9grid" scale9grid="14,14,4,2"/>
+    <image id="clzt4" name="item_select.png" path="/Images/MiniMap/" scale="9grid" scale9grid="14,14,4,5"/>
+    <component id="clzt5" name="mapComponent.xml" path="/Components/MiniMap/"/>
+    <image id="clzt6" name="yanzhou.png" path="/Images/MiniMap/"/>
+    <component id="clzt7" name="line_component.xml" path="/Components/MiniMap/"/>
+    <component id="clzt8" name="map_point_node.xml" path="/Components/MiniMap/"/>
+    <component id="clzt9" name="targetPoint.xml" path="/Components/MiniMap/"/>
+    <component id="clzta" name="btn_mapScal.xml" path="/Components/MiniMap/"/>
+    <component id="clztb" name="item_right_type.xml" path="/Components/MiniMap/" exported="true"/>
+    <image id="clztc" name="tog_normal.png" path="/Images/MiniMap/"/>
+    <image id="clztd" name="tog_select.png" path="/Images/MiniMap/"/>
+    <component id="clzte" name="item_right.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="clztf" name="btn_transmit.xml" path="/Components/MiniMap/"/>
+    <image id="clztg" name="bg_transmit_item.png" path="/Images/MiniMap/"/>
+    <image id="clzth" name="item_transmit.png" path="/Images/MiniMap/"/>
+    <component id="clzti" name="map_point_icon.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="clztj" name="map_point_name_bg.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="clztk" name="map_point_name_default.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="clztm" name="map_point_player.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="clztn" name="map_point_name_npc.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="clzto" name="map_point_name_monster.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="clztp" name="map_point_name_bg_monster.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="clztq" name="btn_debug.xml" path="/Components/MiniMap/"/>
+    <component id="clztr" name="map_point_name_bg_boss.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="clzts" name="map_point_name_boss.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="clztt" name="map_point_icon_boss.xml" path="/Components/MiniMap/" exported="true"/>
+    <image id="clztu" name="point_boss.png" path="/Images/MiniMap/"/>
+    <component id="clztv" name="map_point_timedown_boss.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="clztw" name="map_point_name_friend.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="clztx" name="tog_select.xml" path="/Components/MiniMap/" exported="true"/>
+    <image id="clzty" name="scrollbar_arrow_up.png" path="/Images/MiniMap/"/>
+    <image id="clztz" name="point_npc.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="clzt10" name="point_player.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="clzt11" name="point_monster.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="clzt12" name="point_link.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="clzt13" name="Frame_9.png" path="/Images/MiniMap/" exported="true" scale="9grid" scale9grid="23,23,2,2" duplicatePadding="true"/>
+    <image id="clzt14" name="name_bg_9.png" path="/Images/MiniMap/" exported="true" scale="9grid" scale9grid="35,5,4,10"/>
+    <image id="clzt15" name="point_boss1.png" path="/Images/MiniMap/" exported="true"/>
+    <component id="clzt16" name="PCMiniMapDebugPanel.xml" path="/" exported="true"/>
+    <component id="clzt17" name="PCMiniMapPanel.xml" path="/" exported="true"/>
+    <component id="u24418" name="map_trace_point_item.xml" path="/Components/MiniMap/" exported="true"/>
+    <image id="u24419" name="traceArrow.png" path="/Images/MiniMap/"/>
+    <image id="u2441a" name="tracePoint.png" path="/Images/MiniMap/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

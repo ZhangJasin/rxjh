@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,30" pivot="0.5,0.5" anchor="true" opaque="false" extention="Label">
+  <displayList>
+    <image id="n2_k5e7" name="icon" src="k5e75" fileName="Images/bg_notice_tips_9.png" xy="200,0" pivot="0.5,0" anchor="true" size="360,30"/>
+    <text id="n0_ilk5" name="title" xy="200,15" pivot="0.5,0.5" anchor="true" size="172,32" fontSize="22" color="#ffffff" align="center" vAlign="middle" ubb="true" singleLine="true" autoClearText="true" text="12345678901234"/>
+  </displayList>
+</component>

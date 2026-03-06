@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,24">
+  <displayList>
+    <image id="n9_bf0g" name="bg_input" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="50,12" pivot="0.5,0.5" anchor="true" size="100,24">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n10_bf0g" name="input_count" xy="50,11" pivot="0.5,0.5" anchor="true" size="100,23" fontSize="12" color="#fff8db" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="" input="true" prompt="请输入数字" keyboardType="4">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+</component>

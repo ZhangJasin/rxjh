@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,40" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n3_gpvo" name="bg" src="je63v3e" fileName="image/btn_second_red.png" pkg="st7dgeqq" xy="0,0" size="100,40"/>
+    <text id="n1_f0so" name="text" xy="50,20" pivot="0.5,0.5" anchor="true" size="76,26" fontSize="18" color="#ffff00" strokeColor="#000000" text="申请加入"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue=".8"/>
+</component>

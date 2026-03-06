@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="460,24">
+  <displayList>
+    <richtext id="n0_rlrv" name="richText" xy="7,-5" size="445,29" fontSize="20" color="#ffffff" ubb="true" autoSize="height" text=""/>
+  </displayList>
+  <relation target="n0_rlrv" sidePair="height-height"/>
+</component>

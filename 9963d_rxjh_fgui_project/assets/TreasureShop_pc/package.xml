@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="qy7g0oyc">
+  <resources>
+    <component id="emvc1d" name="btn_res.xml" path="/Components/" exported="true"/>
+    <component id="emvc1e" name="btn_shop_green.xml" path="/Components/" exported="true"/>
+    <component id="emvc1f" name="btn_red.xml" path="/Components/" exported="true"/>
+    <image id="emvc1g" name="btn_red_9.png" path="/Images/" scale="9grid" scale9grid="10,0,2,53"/>
+    <component id="emvc1h" name="item_shop.xml" path="/Components/" exported="true"/>
+    <component id="emvc1i" name="TreasureGeneralPanel.xml" path="/Components/" exported="true"/>
+    <component id="emvc1j" name="btn_right_tab.xml" path="/Components/" exported="true"/>
+    <image id="emvc1k" name="Right_tab_9.png" path="/Images/" scale="9grid" scale9grid="0,6,45,2"/>
+    <image id="emvc1l" name="Selected_Tab_9.png" path="/Images/" scale="9grid" scale9grid="0,6,45,2"/>
+    <component id="emvc1m" name="item_recharge.xml" path="/Components/" exported="true"/>
+    <component id="emvc1n" name="btn_recharge.xml" path="/Components/" exported="true"/>
+    <image id="emvc1o" name="link.png" path="/Images/"/>
+    <component id="emvc1p" name="com_res.xml" path="/Components/" exported="true"/>
+    <component id="emvc1q" name="TreasureRechargePanel.xml" path="/Components/" exported="true"/>
+    <component id="emvc1r" name="item_npc_store.xml" path="/Components/" exported="true"/>
+    <component id="emvc1s" name="popup_npcstore.xml" path="/Components/" exported="true"/>
+    <component id="emvc1t" name="item_cost.xml" path="/Components/" exported="true"/>
+    <component id="emvc1u" name="item_npcBuy.xml" path="/Components/" exported="true"/>
+    <component id="emvc1w" name="item_sell.xml" path="/Components/" exported="true"/>
+    <component id="emvc1x" name="checkBox.xml" path="/Components/" exported="true"/>
+    <component id="emvc1y" name="com_money.xml" path="/Components/" exported="true"/>
+    <component id="emvc20" name="btn_once_sell.xml" path="/Components/" exported="true"/>
+    <component id="emvc21" name="btn_container_tab.xml" path="/Components/"/>
+    <component id="emvc22" name="item_resGet.xml" path="/Components/"/>
+    <component id="emvc23" name="cbx_filter.xml" path="/Components/" exported="true"/>
+    <component id="emvc24" name="cbx_filter_popup.xml" path="/Components/"/>
+    <component id="emvc25" name="cbx_filter_item.xml" path="/Components/"/>
+    <image id="emvc26" name="table_g.png" path="/Images/" exported="true"/>
+    <image id="emvc27" name="table_y.png" path="/Images/" exported="true"/>
+    <image id="emvc28" name="first_Purchase.png" path="/Images/" exported="true"/>
+    <image id="emvc29" name="time.png" path="/Images/" exported="true"/>
+    <image id="emvc2a" name="btn_yellow.png" path="/Images/" exported="true" scale="9grid" scale9grid="25,3,7,12"/>
+    <image id="emvc2b" name="bg_limit.png" path="/Images/" exported="true" scale="9grid" scale9grid="6,8,13,9" qualityOption="source" smoothing="false"/>
+    <image id="emvc2c" name="money_bg.png" path="/Images/" exported="true"/>
+    <image id="emvc2d" name="decoration.png" path="/Images/" exported="true"/>
+    <image id="emvc2e" name="left_bg.png" path="/Images/" exported="true"/>
+    <image id="emvc2f" name="Sycee.png" path="/Images/" exported="true"/>
+    <image id="emvc2g" name="Gem.png" path="/Images/" exported="true"/>
+    <image id="emvc2h" name="Yuanbao3.png" path="/Images/" exported="true"/>
+    <image id="emvc2i" name="Yuanbao2.png" path="/Images/" exported="true"/>
+    <image id="emvc2j" name="Yuanbao1.png" path="/Images/" exported="true"/>
+    <image id="emvc2k" name="money.png" path="/Images/" exported="true"/>
+    <image id="emvc2l" name="lock.png" path="/Images/" exported="true"/>
+    <image id="emvc2m" name="icon_scroll.png" path="/Images/" exported="true"/>
+    <image id="emvc2n" name="copper.png" path="/Images/" exported="true"/>
+    <image id="emvc2o" name="btn_close.png" path="/Images/" exported="true" scale="9grid" scale9grid="11,11,22,22"/>
+    <image id="emvc2p" name="img_jrth.png" path="/Images/" exported="true"/>
+    <image id="emvc2q" name="2001.png" path="/Images/" exported="true"/>
+    <image id="emvc2r" name="2002.png" path="/Images/" exported="true"/>
+    <image id="emvc2s" name="2003.png" path="/Images/" exported="true"/>
+    <image id="emvc2t" name="2004.png" path="/Images/" exported="true"/>
+    <image id="emvc2u" name="2005.png" path="/Images/" exported="true"/>
+    <image id="emvc2v" name="2006.png" path="/Images/" exported="true"/>
+    <image id="emvc2w" name="2007.png" path="/Images/" exported="true"/>
+    <image id="emvc2x" name="2008.png" path="/Images/" exported="true"/>
+    <image id="emvc2y" name="lngot9.png" path="/Images/" exported="true"/>
+    <image id="emvc2z" name="btn_green_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="35,0,2,56"/>
+    <image id="emvc30" name="btn_green_unload_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="8,6,1,2"/>
+    <image id="emvc31" name="cell_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="3,3,1,1"/>
+    <image id="emvc32" name="di.png" path="/Images/" exported="true" scale="9grid" scale9grid="14,39,5,2"/>
+    <image id="emvc33" name="isXianGOu.png" path="/Images/" exported="true"/>
+    <image id="emvc34" name="btn_green_clod.png" path="/Images/"/>
+    <image id="emvc36" name="icon_item_select.png" path="/Images/" exported="true"/>
+    <image id="emvc37" name="img_d2_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="6,15,-1,2" gridTile="12" qualityOption="source" smoothing="false" duplicatePadding="true" disableTrim="true"/>
+    <image id="emvc38" name="btn.png" path="/Images/" exported="true"/>
+    <image id="emvc39" name="arrow.png" path="/Images/" exported="true"/>
+    <image id="emvc3a" name="arrowdi.png" path="/Images/" exported="true"/>
+    <image id="emvc3b" name="icon_coin.png" path="/Images/"/>
+    <component id="emvc3c" name="PCBuyPanel.xml" path="/" exported="true"/>
+    <component id="emvc3d" name="NPCStorePanel.xml" path="/" exported="true"/>
+    <component id="emvc3e" name="PCNpcStoreNewPanel.xml" path="/" exported="true"/>
+    <component id="emvc3f" name="PCRecyclePanel.xml" path="/" exported="true"/>
+    <component id="emvc3g" name="PCSellPanel.xml" path="/" exported="true"/>
+    <component id="emvc3h" name="PCTreasurePanel.xml" path="/" exported="true"/>
+    <image id="djgs5h" name="di_panel.png" path="/Images/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="baex5j" name="sellDi.png" path="/Images/"/>
+    <image id="baex5k" name="img_kuang.png" path="/Images/"/>
+    <image id="baex5m" name="comboxDi.png" path="/Images/" scale="9grid" scale9grid="4,8,1,16"/>
+    <image id="baex5n" name="icon_item1.png" path="/Images/"/>
+  </resources>
+  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\TreasureShop_pc" packageCount="2"/>
+</packageDescription>

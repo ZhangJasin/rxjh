@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,50" opaque="false" extention="ProgressBar">
+  <controller name="Sharp" pages="0,圆形,1,方形" selected="0"/>
+  <displayList>
+    <loader id="n2_mxa7" name="loader_image" xy="0,0" size="50,50" touchable="false" url="ui://st7dgeqqld2evof" fill="scaleFree" useResize="true" fillMethod="radial360" fillClockwise="false">
+      <gearIcon controller="Sharp" pages="0,1" values="ui://st7dgeqqld2evof|ui://st7dgeqqld2evog"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <text id="n3_ld2e" name="text_cd" xy="13,11" size="24,26" fontSize="18" color="#ffffff" align="center" vAlign="middle" strokeColor="#000000" singleLine="true" autoClearText="true" text="11">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <ProgressBar/>
+  <customProperty target="bar" propertyId="1"/>
+</component>

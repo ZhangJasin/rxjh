@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,300" opaque="false">
+  <displayList>
+    <component id="n8_knfx" name="btn_BBG" src="oqrp4" fileName="Components/righttop/btn_BBG.xml" xy="696,0"/>
+    <component id="n9_knfx" name="btn_paimai" src="oqrp6" fileName="Components/righttop/btn_paimai.xml" xy="600,7"/>
+    <component id="n11_lppm" name="btn_bill" src="oqrpa" fileName="Components/righttop/btn_bill.xml" xy="500,-2"/>
+  </displayList>
+</component>

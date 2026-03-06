@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,50" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <loader id="n4_r0s1" name="n0" xy="0,0" size="100,50" autoSize="true">
+      <gearDisplay controller="button" pages="0"/>
+    </loader>
+    <loader id="n5_r0s1" name="n1" xy="0,0" size="100,50" fill="scaleFree">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <Button/>
+  <relation target="n4_r0s1" sidePair="width-width,height-height"/>
+  <customProperty target="n0" propertyId="1" label="图标up"/>
+  <customProperty target="n1" propertyId="1" label="图标down"/>
+</component>

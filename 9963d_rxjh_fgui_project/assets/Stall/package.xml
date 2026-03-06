@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="aakcgg80">
+  <resources>
+    <image id="vi2o1" name="stall_item_bg.png" path="/Images/"/>
+    <image id="vi2o3" name="bg.png" path="/Images/"/>
+    <component id="vi2ob" name="StallMain.xml" path="/" exported="true"/>
+    <component id="vi2od" name="list_stall_item.xml" path="/Components/"/>
+    <component id="tgh8f" name="btn_stall_common.xml" path="/Components/"/>
+    <component id="tgh8l" name="StallShelf.xml" path="/" exported="true"/>
+    <component id="tgh8m" name="btn_input_edit.xml" path="/Components/"/>
+    <component id="ut8e22" name="StallCreatePanel.xml" path="/" exported="true"/>
+    <image id="as7k25" name="head_top_9.png" path="/Images/" scale="9grid" scale9grid="15,0,-1,47"/>
+    <image id="as7k26" name="inputField_bg_9.png" path="/Images/" scale="9grid" scale9grid="13,17,7,2"/>
+    <image id="kvch28" name="btn_stall_9.png" path="/Images/" scale="9grid" scale9grid="9,0,5,42"/>
+    <component id="80vfvnq" name="toggle_menu.xml" path="/Components/"/>
+    <component id="80vf29" name="toggle_item_menu.xml" path="/Components/"/>
+    <component id="80vf2a" name="toggle_item_menu_sub.xml" path="/Components/"/>
+    <component id="80vf2b" name="item_product.xml" path="/Components/"/>
+    <image id="80vf2c" name="comboBox_bg_9.png" path="/Images/" scale="9grid" scale9grid="6,5,12,10"/>
+    <image id="80vf2e" name="comboBox_select_9.png" path="/Images/" scale="9grid" scale9grid="25,17,14,12"/>
+    <component id="g6swvnr" name="OnDropPanel.xml" path="/Components/"/>
+    <component id="jse8v5z" name="StallBuy.xml" path="/" exported="true"/>
+    <image id="ws4hv73" name="cell_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="17,37,9,5"/>
+    <component id="ws4hvns" name="list_money_info.xml" path="/Components/"/>
+    <component id="lbdsvnu" name="ComboBox1.xml" path="/Components/" exported="true"/>
+    <component id="lbdsvnv" name="ComboBox1_item.xml" path="/Components/"/>
+    <component id="lbdsvnw" name="ComboBox1_popup.xml" path="/Components/"/>
+    <image id="qzpnvnx" name="img_item_frame.png" path="/Images/"/>
+    <image id="qzpnvny" name="bg_black.png" path="/Images/" scale="9grid" scale9grid="16,15,32,30"/>
+    <component id="hfk8vo0" name="StallProduct.xml" path="/" exported="true"/>
+    <image id="dm7kvo1" name="arrow.png" path="/Images/"/>
+    <component id="kpjuvo3" name="btn_filter.xml" path="/Components/"/>
+    <image id="kpjuvo4" name="stall_item_name_bg.png" path="/Images/"/>
+    <component id="kpjuvo5" name="btn_star.xml" path="/Components/"/>
+    <image id="kpjuvo6" name="star_0.png" path="/Images/"/>
+    <image id="kpjuvo7" name="star_1.png" path="/Images/"/>
+    <image id="kpjukvpd" name="btn_edit_name.png" path="/Images/"/>
+    <image id="kpjukvpe" name="btn_share.png" path="/Images/"/>
+    <image id="kpjuvoa" name="btn_owner.png" path="/Images/"/>
+    <component id="kpjuvob" name="StallHistory.xml" path="/" exported="true"/>
+    <component id="kpjuvod" name="list_item_history.xml" path="/Components/"/>
+    <component id="qjt8kvpf" name="btn_filter_multi.xml" path="/Components/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

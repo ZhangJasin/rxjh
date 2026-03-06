@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="500,580">
+  <controller name="additem" exported="true" pages="0,关闭选择框,1,打开选择装备框,2,打开选择幸运符框,3,打开选择提升道具框" selected="0"/>
+  <displayList>
+    <image id="n0_ger5" name="n0" src="oqrpr" fileName="Images/04duanzao/rightbg.png" xy="38,12"/>
+    <component id="n23_egru" name="xzequip" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="215,202" visible="false">
+      <gearDisplay controller="additem" pages="0,1,2,3"/>
+    </component>
+    <component id="n20_jr5a" name="xzqhitem1" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="213,23" controller="c1,4">
+      <gearDisplay controller="additem" pages="0,1,2,3"/>
+    </component>
+    <component id="n24_egru" name="xzitem2" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="215,360" visible="false" controller="c1,1">
+      <gearDisplay controller="additem" pages="0,1,2,3"/>
+    </component>
+    <component id="n17_o4l6" name="xzitem1" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="217,361" controller="c1,3">
+      <gearDisplay controller="additem" pages="0,1,2,3"/>
+    </component>
+    <text id="n7_ger5" name="costfont1" xy="166,447" pivot="0,1" size="227,26" fontSize="18" color="#fcf1bf" autoSize="none" text="使用50元宝提升成功率"/>
+    <text id="n8_ger5" name="costfont2" xy="166,483" pivot="0,1" size="188,26" visible="false" fontSize="18" color="#fcf1bf" text="消耗：        100000000"/>
+    <component id="n9_ger5" name="costitem1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="218,479" size="120,120" scale="0.25,0.25" visible="false"/>
+    <component id="n10_ger5" name="qhbtn" src="oqrpy" fileName="Components/tongyong/tybtn1.xml" xy="157,515">
+      <Button title="觉醒"/>
+    </component>
+    <component id="n11_ger5" name="ischeck" src="oqrp10" fileName="Components/tongyong/checkBox.xml" xy="121,443"/>
+    <component id="n21_s9up" name="panl_additem" src="oqrp12" fileName="Components/duanzao/additempanl.xml" xy="-694,-92">
+      <gearDisplay controller="additem" pages="1,2,3"/>
+    </component>
+    <text id="n25_g17t" name="costfont3" xy="140,281" pivot="0,1" size="226,26" fontSize="18" color="#00ff00" align="center" autoSize="none" strokeColor="#000000" text="成功率加成：0%"/>
+    <text id="n26_g17t" name="costfont4" xy="115,314" pivot="0,1" size="277,26" fontSize="18" color="#ff0000" align="center" autoSize="none" strokeColor="#000000" text=""/>
+    <richtext id="n28_p6qf" name="qhfont" xy="264,62" pivot="1,0" size="13,24" fontSize="16" color="#00ff00" align="right" vAlign="middle" autoClearText="true" text="0"/>
+    <component id="n29_p6qf" name="xzqhitem2" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="347,69" visible="false" controller="c1,0">
+      <gearDisplay controller="additem" pages="0,1,2,3"/>
+    </component>
+    <richtext id="n30_p6qf" name="qhfont2" xy="400,108" pivot="1,0" size="13,24" visible="false" fontSize="16" color="#00ff00" align="right" vAlign="middle" autoClearText="true" text="0"/>
+  </displayList>
+</component>

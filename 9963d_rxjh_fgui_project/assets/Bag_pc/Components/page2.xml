@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="310,56">
+  <displayList>
+    <image id="n71_fa8p" name="img_di_2" src="n0551w" fileName="Images/img_input_di.png" xy="0,1" size="310,58">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n340_q8ir" name="Shili" src="n05520" fileName="Components/item_attr_1.xml" xy="3,4" group="n345_ogi9">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n341_q8ir" name="mingSheng" src="n05520" fileName="Components/item_attr_1.xml" xy="157,4" group="n345_ogi9">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n345_ogi9" name="n345" xy="3,4" size="304,24" advanced="true" layout="hz" colGap="4" excludeInvisibles="true"/>
+    <component id="n342_q8ir" name="dengJi" src="n05520" fileName="Components/item_attr_1.xml" xy="3,30" group="n346_ogi9">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n343_q8ir" name="liLian" src="n05520" fileName="Components/item_attr_1.xml" xy="157,30" group="n346_ogi9">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n346_ogi9" name="n346" xy="3,30" size="304,24" advanced="true" layout="hz" colGap="4" excludeInvisibles="true"/>
+  </displayList>
+</component>

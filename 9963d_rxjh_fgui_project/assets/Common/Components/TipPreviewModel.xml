@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="326,424">
+  <displayList>
+    <image id="n0_ttxf" name="n0" src="ttxf5vpb" fileName="Images/bg01.png" xy="2,2"/>
+    <image id="n1_ttxf" name="n1" src="ttxfkvpi" fileName="image/bg_pre.png" pkg="st7dgeqq" xy="-2,-1" size="330,428"/>
+    <graph id="n2_ttxf" name="model_root" xy="164,396" pivot="0.5,0.5" anchor="true" size="60,60" blend="screen">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+  </displayList>
+</component>

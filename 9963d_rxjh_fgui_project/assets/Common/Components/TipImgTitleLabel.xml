@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="110,29" extention="Label">
+  <displayList>
+    <image id="n16_kcff" name="n1" src="kcff5vp5" fileName="Images/title_left.png" xy="40,14" pivot="1,0.5" anchor="true">
+      <relation target="n15_l6xy" sidePair="middle-middle,right-left"/>
+    </image>
+    <text id="n15_l6xy" name="title" xy="50,0" pivot="0.5,0" size="10,29" fontSize="20" color="#ffff00" align="center" ubb="true" autoClearText="true" text="">
+      <relation target="" sidePair="center-center"/>
+    </text>
+    <image id="n17_kcff" name="n2" src="kcff5vp6" fileName="Images/title_right.png" xy="70,14" pivot="0,0.5" anchor="true" size="40,23">
+      <relation target="n15_l6xy" sidePair="middle-middle,left-right"/>
+    </image>
+  </displayList>
+  <relation target="n15_l6xy" sidePair="width-width,height-height"/>
+</component>

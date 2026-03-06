@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="130,32" extention="ComboBox">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n3_p35z" name="n3" src="11iqkvp0" fileName="image/comobox_frame.png" pkg="st7dgeqq" xy="0,0" size="130,32">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n4_p35z" name="n4" src="11iqkvoy" fileName="image/combobox_arrow_bg.png" pkg="st7dgeqq" xy="101,3"/>
+    <image id="n5_p35z" name="n5" src="11iqkvox" fileName="image/combobox_arrow.png" pkg="st7dgeqq" xy="101,3"/>
+    <text id="n1_80vf" name="title" xy="0,0" size="101,32" fontSize="20" color="#6eae9f" align="center" vAlign="middle" autoSize="none" singleLine="true" text="全部">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <ComboBox dropdown="ui://dak5wnw980vf2g"/>
+</component>

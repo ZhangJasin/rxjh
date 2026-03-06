@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="477,41" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="2"/>
+  <displayList>
+    <image id="n0_zah9" name="n0" src="m9rdvp7" fileName="Images/top_enum_unselect.png" xy="0,0" size="477,41">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_zah9" name="n1" src="m9rdvp8" fileName="Images/top_enum_select.png" xy="0,0" size="477,41">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3_zah9" name="title" xy="0,0" size="476,41" fontSize="24" color="#979797" align="center" vAlign="middle" autoSize="none" singleLine="true" text="成员列表">
+      <gearColor controller="button" pages="0,2" values="#979797,#000000|#979797,#000000" default="#f6cd2b,#000000"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

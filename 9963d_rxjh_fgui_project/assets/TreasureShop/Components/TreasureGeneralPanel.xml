@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1063,509">
+  <controller name="storeKind" exported="true" pages="0,元宝商城,1,江湖币商店" selected="0"/>
+  <displayList>
+    <component id="n263_bf0g" name="btn_tab_1" src="bxaz3q" fileName="Components/btn_shop_green.xml" xy="-18,9" size="172,56" controller="buttonName,0">
+      <gearDisplay controller="storeKind" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n264_bf0g" name="btn_tab_2" src="bxaz3q" fileName="Components/btn_shop_green.xml" xy="-18,74" size="172,56" controller="buttonName,1">
+      <gearDisplay controller="storeKind" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n267_qhgz" name="btn_tab_3" src="bxaz3q" fileName="Components/btn_shop_green.xml" xy="-18,9" size="172,56" controller="buttonName,2">
+      <gearDisplay controller="storeKind" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n268_qhgz" name="btn_tab_4" src="bxaz3q" fileName="Components/btn_shop_green.xml" xy="-18,74" size="172,56" controller="buttonName,3">
+      <gearDisplay controller="storeKind" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n266_bf0g" name="list_store" xy="169,2" size="886,509" layout="flow_hz" overflow="scroll" lineGap="21" colGap="-24" lineItemCount="4" defaultItem="ui://p8mjxubrcym74q" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

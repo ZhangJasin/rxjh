@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="112,50" extention="Button" initName="Button_channel">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <loader id="n4_qer2" name="n4" xy="56,25" pivot="0.5,0.5" anchor="true" size="112,50" url="ui://8pthu2lwwi45v7x" autoSize="true">
+      <gearIcon controller="button" pages="1" values="ui://8pthu2lwvgb0v" default="ui://8pthu2lwwi45v7x"/>
+    </loader>
+    <text id="n2_vgb0" name="title" xy="56,25" pivot="0.5,0.5" anchor="true" size="62,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#96bd90" align="center" letterSpacing="10" strokeColor="#000000" text="系统">
+      <gearColor controller="button" pages="0,1" values="#96bd90,#000000|#2f4b35,#ffffff"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <displayList>
+    <graph id="n39_mwp5" name="mask" xy="0,0" size="1024,768" alpha="0.7" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n35_mwp5" name="n35" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="171,168" size="676,432" group="n53_fskg"/>
+    <graph id="n45_fskg" name="n45" xy="182,210" size="655,380" group="n53_fskg" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <image id="n46_fskg" name="n46" src="f2ul60" fileName="Images/title_bg.png" xy="184,211" size="651,34" group="n47_fskg"/>
+    <text id="n27_mwp5" name="table_title1" xy="286,228" pivot="0.5,0.5" anchor="true" size="30,20" group="n47_fskg" fontSize="13" color="#ddfdd9" align="center" vAlign="middle" text="类型"/>
+    <text id="n28_mwp5" name="table_title2" xy="463,228" pivot="0.5,0.5" anchor="true" size="56,20" group="n47_fskg" fontSize="13" color="#ddfdd9" align="center" vAlign="middle" text="掉落显示"/>
+    <text id="n29_mwp5" name="table_title3" xy="605,228" pivot="0.5,0.5" anchor="true" size="56,20" group="n47_fskg" fontSize="13" color="#ddfdd9" text="自动拾取"/>
+    <text id="n30_mwp5" name="table_title4" xy="755,228" pivot="0.5,0.5" anchor="true" size="56,20" group="n47_fskg" fontSize="13" color="#ddfdd9" text="详细信息"/>
+    <image id="n55_bk1i" name="n55" src="f2ul5z" fileName="Images/line.png" xy="386,211" size="1,34" group="n47_fskg"/>
+    <image id="n56_bk1i" name="n56" src="f2ul5z" fileName="Images/line.png" xy="533,211" size="1,34" group="n47_fskg"/>
+    <image id="n57_bk1i" name="n57" src="f2ul5z" fileName="Images/line.png" xy="677,211" size="1,34" group="n47_fskg"/>
+    <group id="n47_fskg" name="table_title" xy="184,211" size="651,34" group="n53_fskg"/>
+    <text id="n36_mwp5" name="title" xy="510,187" pivot="0.5,0.5" anchor="true" size="68,24" group="n53_fskg" fontSize="16" color="#9aafbb" text="拾取设置"/>
+    <component id="n38_mwp5" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,188" pivot="0.5,0.5" anchor="true" group="n53_fskg"/>
+    <list id="n32_mwp5" name="list_content" xy="186,245" size="648,343" group="n53_fskg" selectionMode="none" overflow="scroll" lineGap="2" defaultItem="ui://o9dt5fs4f2ul5r" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item url="ui://o9dt5fs4f2ul4p"/>
+    </list>
+    <component id="n33_mwp5" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="260,559" size="0,0" group="n53_fskg">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <group id="n53_fskg" name="n53" xy="171,168" size="683,432" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

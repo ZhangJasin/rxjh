@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="365,80" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n11_wmgr" name="icon_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="335,40" pivot="0.5,0.5" anchor="true" size="50,50"/>
+    <component id="n20_r73b" name="avator" src="emvc7" fileName="common/CommonPlayerFrame.xml" pkg="qa9a7rit" xy="335,40" size="50,50"/>
+    <loader id="n19_akxo" name="Image_chatFrame" xy="-75,24" pivot="1,0" size="379,56" url="ui://qa9a7ritemvc1" fill="scaleFree" useResize="true" clearOnPublish="true">
+      <relation target="n17_wmgr" sidePair="width-width,height-height"/>
+    </loader>
+    <richtext id="n17_wmgr" name="rich_msg" xy="288,24" pivot="1,0" anchor="true" size="355,53" restrictSize="0,360,0,84" fontSize="12" color="#3333cc" letterSpacing="1" autoClearText="true" text="8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888"/>
+    <text id="n5_qpwo" name="text_name" xy="290,5" pivot="1,0" anchor="true" size="280,20" fontSize="13" color="#ffffff" align="right" ubb="true" autoSize="none" strokeColor="#000000" text="名字"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

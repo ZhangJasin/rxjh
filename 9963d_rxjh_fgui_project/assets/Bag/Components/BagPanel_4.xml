@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="310,572">
+  <displayList>
+    <image id="n45_hkm9" name="n45" src="sna9vot" fileName="Images/heiDI.png" xy="0,40" size="310,470">
+      <relation target="n36_q9ls" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </image>
+    <list id="n23_q9ls" name="List_Filter" xy="0,0" size="310,39" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" autoItemSize="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item url="ui://dak5wnw9q9ls3"/>
+      <item url="ui://dak5wnw9q9ls3"/>
+      <item url="ui://dak5wnw9q9ls3"/>
+      <item url="ui://dak5wnw9q9ls3"/>
+      <item url="ui://dak5wnw9q9ls3"/>
+      <item url="ui://dak5wnw9q9ls3"/>
+    </list>
+    <list id="n36_q9ls" name="List_Cell" xy="0,40" size="310,470" layout="flow_hz" overflow="scroll" scrollBarFlags="128" scrollBar="hidden" margin="10,0,2,2" lineGap="12" colGap="12" lineItemCount="4" defaultItem="ui://dak5wnw9q9lsf" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n46_hkm9" name="Num" xy="13,535" size="54,26" fontSize="18" color="#ff0000" align="center" vAlign="middle" ubb="true" strokeColor="#000000" singleLine="true" autoClearText="true" text="11111">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n47_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,572" size="0,0">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <component id="n48_gfpl" name="BtnSort" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="337,519" size="132,46" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="出售记录" titleColor="#f6e800" titleFontSize="22" icon="ui://st7dgeqqje63v3e"/>
+    </component>
+  </displayList>
+</component>

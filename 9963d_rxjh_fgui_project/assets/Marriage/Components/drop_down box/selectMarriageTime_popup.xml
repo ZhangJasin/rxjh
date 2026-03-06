@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="170,250">
+  <displayList>
+    <image id="n3_eoqr" name="n3" src="eoqr23" fileName="images/日期底衬.png" xy="0,0" size="170,250"/>
+    <list id="n1_eoqr" name="list" xy="0,0" size="170,250" overflow="scroll" defaultItem="ui://s7gyh5sveoqr2d">
+      <relation target="" sidePair="width-width"/>
+    </list>
+  </displayList>
+  <relation target="n1_eoqr" sidePair="height-height"/>
+</component>

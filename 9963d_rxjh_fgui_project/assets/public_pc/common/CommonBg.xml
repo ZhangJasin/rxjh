@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1000,650">
+  <displayList>
+    <loader id="n1_kra4" name="bg_texture" xy="500,325" pivot="0.5,0.5" anchor="true" size="991,643" url="ui://qa9a7ritemvc4w" fill="scaleFree">
+      <relation target="n5_kra4" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </loader>
+    <image id="n5_kra4" name="bg" src="emvc47" fileName="image/bg_first_panel_9.png" xy="0,1" size="1000,650">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+</component>

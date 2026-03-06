@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,40">
+  <displayList>
+    <component id="n0_vorr" name="iconItem" src="vorr22" fileName="Components/iconItem.xml" xy="0,-1"/>
+    <text id="n1_vorr" name="n1" xy="43,0" size="18,40" fontSize="20" color="#ff0000" align="center" vAlign="middle" autoSize="none" text="X">
+      <relation target="" sidePair=""/>
+    </text>
+    <text id="n2_vorr" name="n2" xy="62,0" size="38,40" fontSize="20" color="#ff0000" vAlign="middle" autoSize="none" text="1">
+      <relation target="" sidePair=""/>
+    </text>
+  </displayList>
+</component>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,35" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_80vf" name="n0" src="80vf2c" fileName="Images/comboBox_bg_9.png" xy="0,0" size="100,35" pkg="dak5wnw9">
+      <gearDisplay controller="button" pages="0,1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_80vf" name="n1" src="80vf2e" fileName="Images/comboBox_select_9.png" xy="0,0" size="100,35" pkg="dak5wnw9">
+      <gearDisplay controller="button" pages="2,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n4_80vf" name="title" xy="0,0" size="100,35" fontSize="20" color="#fffadf" align="center" vAlign="middle" autoSize="none" singleLine="true" text="类型一">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

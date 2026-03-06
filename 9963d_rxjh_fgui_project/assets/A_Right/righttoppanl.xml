@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false" designImage="ui://zj419n3ddpxov3f" bgColorEnabled="true">
+  <controller name="city" autoRadioGroupDepth="true" pages="0,,1," selected="1">
+    <remark page="0" value="回城符列表隐藏"/>
+    <remark page="1" value="回城符列表显示"/>
+  </controller>
+  <controller name="move" autoRadioGroupDepth="true" pages="0,,1," selected="1">
+    <remark page="0" value="传送按钮隐藏"/>
+    <remark page="1" value="传送按钮显示"/>
+  </controller>
+  <controller name="stronger" pages="0,,1," selected="0">
+    <remark page="0" value="变强隐藏"/>
+    <remark page="1" value="变强显示"/>
+  </controller>
+  <displayList>
+    <component id="n0_ih0u" name="shounabtn" src="oqrp1" fileName="Components/righttop/rightshounabtn.xml" xy="1092,12" pivot="1,0" anchor="true">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n1_ih0u" name="righttopbg" src="oqrp3" fileName="Components/righttop/righttop.xml" xy="1045,1" pivot="1,0" anchor="true" size="792,267">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <image id="n4_sr4c" name="n4" src="oqrpo" fileName="Images/00item/dian_hui.png" xy="1212,24" visible="false"/>
+    <image id="n5_sr4c" name="n5" src="oqrpp" fileName="Images/00item/dian_liang.png" xy="1188,23" visible="false"/>
+    <component id="n7_zdrm" name="citybtn" src="oqrpq" fileName="Components/tongyong/jiantoubtn.xml" xy="1025,281" pivot="1,0" anchor="true">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n10_zdrm" name="citylist" src="oqrpr" fileName="Components/tongyong/additempanl.xml" xy="986,283" pivot="1,0" anchor="true">
+      <gearDisplay controller="city" pages="1"/>
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <image id="n14_knfx" name="n14" src="oqrpy" fileName="Images/0tongyong/tip_kuang1.png" xy="835,531" size="133,45" scale="0.8,0.8">
+      <gearDisplay controller="move" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n15_knfx" name="n15" xy="838,533" size="100,24" font="SimHei" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="可用传送符">
+      <gearDisplay controller="move" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n17_q872" name="btn_move" src="oqrpz" fileName="Components/00item/btn_move.xml" xy="862,571" size="40,40">
+      <gearDisplay controller="move" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n19_ee1e" name="btn_gm" src="oqrp13" fileName="Components/righttop/btn_gm.xml" xy="950,164" size="94,88">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+  </displayList>
+</component>

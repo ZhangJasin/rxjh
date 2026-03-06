@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="600,450" bgColorEnabled="true">
+  <displayList>
+    <image id="n1_ih0u" name="n1" src="oqrpt" fileName="Images/0tongyong/srbbg.png" xy="163,59" size="273,43"/>
+    <image id="n5_ih0u" name="n2" src="oqrpt" fileName="Images/0tongyong/srbbg.png" xy="163,135" size="273,43"/>
+    <text id="n9_ih0u" name="srk1" xy="166,59" size="268,42" fontSize="20" color="#ffffff" autoSize="none" text="" input="true" prompt="地图id：不填默认当前地图"/>
+    <text id="n7_ih0u" name="srk2" xy="167,136" size="351,42" fontSize="20" color="#ffffff" autoSize="none" text="" input="true" prompt="格式：坐标x|坐标y|范围  默认随机"/>
+    <component id="n13_v0ag" name="btn1" src="oqrpu" fileName="Components/GMBox/Button.xml" xy="220,256"/>
+  </displayList>
+</component>

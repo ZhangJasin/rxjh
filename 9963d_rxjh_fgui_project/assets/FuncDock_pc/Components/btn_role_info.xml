@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="106,36" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n5_wi45" name="img_role_info_di" src="emvc3g" fileName="image/btn_second_green.png" pkg="qa9a7rit" xy="0,0" size="107,36">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3_w092" name="title" xy="0,0" size="106,36" fontSize="12" color="#fff000" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="查看玩家">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

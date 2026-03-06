@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImageOffsetX="-1" designImageOffsetY="8" designImageAlpha="55">
+  <displayList>
+    <component id="n113_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432" group="n116_gl56"/>
+    <text id="n108_k2u1" name="text_title" xy="508,187" pivot="0.5,0.5" anchor="true" size="68,24" group="n116_gl56" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="门派审批"/>
+    <image id="n48_zah9" name="Bg" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="185,216" size="654,342" group="n116_gl56"/>
+    <image id="n51_zah9" name="n51" src="gl5637" fileName="Images/item_title_bg.png" xy="187,218" size="650,33" group="n67_zah9"/>
+    <image id="n52_zah9" name="n52" src="gl563b" fileName="Images/split_line.png" xy="389,219" size="1,30" group="n67_zah9"/>
+    <image id="n55_zah9" name="n55" src="gl563b" fileName="Images/split_line.png" xy="536,219" size="1,30" group="n67_zah9"/>
+    <image id="n56_zah9" name="n56" src="gl563b" fileName="Images/split_line.png" xy="680,219" size="1,30" group="n67_zah9"/>
+    <text id="n59_zah9" name="n59" xy="261,224" size="60,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="玩家名称"/>
+    <text id="n60_zah9" name="n60" xy="448,224" size="32,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="等级"/>
+    <text id="n61_zah9" name="n61" xy="593,224" size="32,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="职业"/>
+    <text id="n62_zah9" name="n62" xy="737,224" size="46,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="战斗力"/>
+    <group id="n67_zah9" name="top_title" xy="187,218" size="650,33" group="n116_gl56" advanced="true"/>
+    <list id="n69_zah9" name="list_apply" xy="188,252" size="651,306" group="n116_gl56" selectionMode="multipleSingleClick" overflow="scroll" defaultItem="ui://0xwve836gl562y" autoItemSize="false" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n96_jjgk" name="btn_approve" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="718,564" group="n116_gl56">
+      <Button title="通过申请"/>
+    </component>
+    <component id="n97_jjgk" name="btn_refuse" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="625,564" group="n116_gl56">
+      <Button title="拒绝"/>
+    </component>
+    <component id="n98_jjgk" name="btn_setting" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="277,564" group="n116_gl56">
+      <Button title="设置"/>
+    </component>
+    <component id="n101_jjgk" name="btn_select_all" src="gl5630" fileName="Components/multi_select_btn.xml" xy="214,568" size="22,22" group="n103_jjgk"/>
+    <text id="n102_jjgk" name="n102" xy="238,566" size="36,24" group="n103_jjgk" fontSize="16" color="#ffffff" text="全选"/>
+    <group id="n103_jjgk" name="n103" xy="214,566" size="60,24" group="n116_gl56" advanced="true"/>
+    <component id="n111_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="508,384" size="0,0" group="n116_gl56"/>
+    <group id="n116_gl56" name="n116" xy="174,168" size="676,432" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n110_ghle" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="836,189" size="31,31">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

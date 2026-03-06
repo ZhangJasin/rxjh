@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750">
+  <controller name="status" pages="0,邀请,1,等待开战" selected="0"/>
+  <controller name="who" pages="0,师傅,1,徒弟" selected="0"/>
+  <controller name="isAgree" pages="0,,1," selected="0"/>
+  <displayList>
+    <graph id="n31_gkld" name="Mask" xy="-326,-77" size="2000,1000" alpha="0.7" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n1_gkld" name="n1" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="409,158" pivot="0.5,0.5" size="500,400">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n2_gkld" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="879,185" size="44,44">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n0_gkld" name="Invitation_list" xy="421,227" size="220,230" group="n15_gkld" overflow="hidden" lineGap="5" defaultItem="ui://pnop7ha6gkldo5x">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n3_gkld" name="title" xy="473,166" size="374,34" group="n15_gkld" fontSize="24" color="#fffadc" align="center" vAlign="middle" autoSize="none" text="邀请徒弟"/>
+    <richtext id="n4_gkld" name="n4" xy="655,234" size="238,216" group="n15_gkld" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="师徒副本需要与徒弟共同前往&#xA;勾选并邀请徒弟&#xA;完成师徒副本">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <component id="n5_gkld" name="btn_yaoqing" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="571,479" size="159,53" group="n15_gkld">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="邀请开战" selectedTitle="邀请开战"/>
+    </component>
+    <group id="n15_gkld" name="n15" xy="421,166" size="472,366" advanced="true">
+      <gearDisplay controller="status" pages="0"/>
+    </group>
+    <list id="n21_gkld" name="wait_list_apprentice" xy="414,267" size="488,127" group="n26_gkld" layout="row" overflow="hidden" lineGap="5" defaultItem="ui://pnop7ha6gkldo60" align="center" vAlign="middle">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n23_gkld" name="title" xy="471,166" size="374,34" group="n26_gkld" fontSize="24" color="#fffadc" align="center" vAlign="middle" autoSize="none" text="师徒副本"/>
+    <component id="n25_gkld" name="btn_chuzhan" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="570,479" size="159,53" group="n26_gkld">
+      <gearDisplay controller="who" pages="0"/>
+      <Button title="出战" selectedTitle="出战"/>
+    </component>
+    <text id="n27_gkld" name="dsjText" xy="623,432" size="49,26" group="n26_gkld" fontSize="18" color="#ffffff" align="center" text="00:30">
+      <gearDisplay controller="isAgree" pages="0"/>
+      <gearDisplay2 controller="who" pages="0" condition="1"/>
+    </text>
+    <component id="n29_gkld" name="btn_agree" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="694,474" group="n26_gkld">
+      <gearDisplay controller="who" pages="1"/>
+      <gearDisplay2 controller="isAgree" pages="0" condition="0"/>
+      <Button title="同意" selectedTitle="同意"/>
+    </component>
+    <component id="n30_gkld" name="btn_red" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="463,474" group="n26_gkld">
+      <gearDisplay controller="who" pages="1"/>
+      <gearDisplay2 controller="isAgree" pages="0" condition="0"/>
+      <Button title="取消"/>
+    </component>
+    <component id="n32_x44m" name="waiting" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="570,474" group="n26_gkld">
+      <gearDisplay controller="isAgree" pages="1"/>
+      <gearDisplay2 controller="who" pages="1" condition="0"/>
+      <Button title="等待其他玩家" selectedTitle="等待其他玩家"/>
+    </component>
+    <group id="n26_gkld" name="n26" xy="414,166" size="488,366" advanced="true">
+      <gearDisplay controller="status" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

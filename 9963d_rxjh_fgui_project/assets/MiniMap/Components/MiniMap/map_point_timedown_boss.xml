@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="162,34" pivot="0.5,0.5" anchor="true" extention="Label">
+  <displayList>
+    <text id="n4_b3bq" name="title" xy="124,45" pivot="0.5,0.5" anchor="true" size="84,29" fontSize="18" color="#ff0000" autoSize="none" singleLine="true" text="00:00:00">
+      <relation target="" sidePair="width-width%,height-height%,left-left%,top-top%"/>
+    </text>
+    <text id="n6_jqvi" name="tiem_title" xy="23,45" pivot="0.5,0.5" anchor="true" size="117,29" fontSize="18" color="#ff0000" align="right" autoSize="none" singleLine="true" text="复活倒计时:">
+      <relation target="" sidePair="width-width%,height-height%,left-left%,top-top%"/>
+    </text>
+  </displayList>
+</component>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1440,750">
+  <displayList>
+    <graph id="n24_cun7" name="n24" xy="0,549" size="1440,200" alpha="0.8" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n20_cun7" name="n20" src="cun79" fileName="image/task_di2.png" xy="0,549" size="1440,200"/>
+    <component id="n1_fiei" name="node_left" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="194,438" size="231,309">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <graph id="n10_fmnx" name="graph_role" xy="259,743" pivot="0.5,1" anchor="true" size="100,100" blend="screen"/>
+    <image id="n11_t4fp" name="n11" src="t4fp3" fileName="image/btnhong2.png" xy="152,641" size="211,47"/>
+    <text id="n3_fiei" name="npcname" xy="158,650" size="200,29" fontSize="20" color="#ffff00" align="center" vAlign="middle" autoSize="height" text="NPC名字"/>
+    <richtext id="n13_t4fp" name="content" xy="384,551" size="600,198" fontSize="20" color="#ffffff" vAlign="middle" autoSize="none" text="对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容对话内容"/>
+    <list id="n16_cun7" name="btnlist" xy="1024,557" size="150,180" selectionMode="none" lineGap="5" align="center" vAlign="middle"/>
+    <list id="n17_cun7" name="btnlist2" xy="1024,557" size="150,180" visible="false" overflow="scroll" lineGap="5"/>
+  </displayList>
+</component>

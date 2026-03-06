@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="70,70" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="BagItemType" pages="0,empty,1,item" selected="0"/>
+  <displayList>
+    <image id="n25_bmxb" name="n0" src="oqrpl" fileName="Images/04duanzao/kuangdi2.png" xy="0,0" size="70,70"/>
+    <component id="n23_ix4b" name="itemRoot" src="oqrpm" fileName="Components/tongyong/itemRoot.xml" xy="1,2" size="66,66">
+      <gearDisplay controller="BagItemType" pages="0,1"/>
+    </component>
+    <image id="n19_hgpp" name="n19" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="0,0" size="70,70" group="n21_hgpp"/>
+    <image id="n20_hgpp" name="n20" src="lxrgv57" fileName="image/checkbox_icon.png" pkg="st7dgeqq" xy="4,4" size="61,61" group="n21_hgpp"/>
+    <group id="n21_hgpp" name="RecycleSelect" xy="0,0" size="70,70" advanced="true">
+      <gearDisplay controller="button" pages="1"/>
+    </group>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

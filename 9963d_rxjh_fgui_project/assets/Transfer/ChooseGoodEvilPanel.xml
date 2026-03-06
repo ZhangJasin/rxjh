@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImage="ui://5rez3obxok5cv5r" designImageAlpha="35" designImageLayer="1">
+  <displayList>
+    <image id="n0_ok5c" name="n0" src="ok5cv5s" fileName="Images/img_goodevil_bg.png" xy="0,218"/>
+    <image id="n1_ok5c" name="n1" src="ok5cv5n" fileName="Images/btn_evil_add.png" xy="1114,391"/>
+    <image id="n2_ok5c" name="n2" src="ok5cv5m" fileName="Images/btn_good_add.png" xy="44,392"/>
+    <image id="n3_ok5c" name="n3" src="ok5cv5q" fileName="Images/img_good_icon.png" xy="396,207"/>
+    <image id="n4_ok5c" name="n4" src="ok5cv5p" fileName="Images/img_good.png" xy="448,222"/>
+    <image id="n5_ok5c" name="n5" src="ok5cv5u" fileName="Images/img_evil_icon.png" xy="729,207"/>
+    <image id="n6_ok5c" name="n6" src="ok5cv5t" fileName="Images/img_evil.png" xy="777,221"/>
+    <image id="n9_ok5c" name="n9" src="ok5cv5o" fileName="Images/img_reward_bg.png" xy="463,583"/>
+    <image id="n10_ok5c" name="n10" src="ok5cv5l" fileName="Images/img_reward.png" xy="492,585"/>
+    <list id="n11_ok5c" name="n11" xy="572,589" size="226,68" layout="row" scroll="horizontal" colGap="16" defaultItem="ui://5rez3obxp51lv5j" vAlign="middle">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n12_ok5c" name="n12" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="564,518">
+      <Button title="领取"/>
+    </component>
+    <text id="n13_ok5c" name="n13" xy="552,487" size="186,29" fontSize="20" color="#cccccc" strokeColor="#000000" text="60秒后自动选择阵营"/>
+  </displayList>
+</component>

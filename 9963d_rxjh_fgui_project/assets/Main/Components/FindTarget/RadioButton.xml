@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="40,90" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <loader id="n3_rd0b" name="icon" xy="0,0" size="40,90" touchable="false" url="ui://zj419n3dhpqdfve4" fill="scaleFree" autoSize="true">
+      <gearIcon controller="button" pages="0,1" values="ui://zj419n3dhpqdfve4|ui://zj419n3dhpqdfve3"/>
+    </loader>
+    <text id="n5_rd0b" name="title" xy="18,45" pivot="0.5,0.5" anchor="true" size="29,86" font="ui://st7dgeqq9kdgkvpj" fontSize="22" color="#c5dccc" align="center" leading="0" autoSize="height" strokeColor="#28422f" autoClearText="true" text="按&#xA;钮&#xA;一">
+      <gearColor controller="button" pages="0" values="#c5dccc,#28422f" default="#ffcc00,#28422f"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

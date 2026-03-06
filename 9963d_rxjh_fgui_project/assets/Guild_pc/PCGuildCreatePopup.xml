@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <displayList>
+    <graph id="n18_menb" name="mask" xy="0,0" size="1024,768" alpha="0.7" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n20_m9rd" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="362,169" size="300,430" group="n21_gl56"/>
+    <text id="n3_zah9" name="text_title" xy="478,177" size="68,24" group="n21_gl56" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="创建门派"/>
+    <image id="n4_zah9" name="n4" src="gl563r" fileName="Images/textinput_bg.png" xy="377,224" size="271,34" group="n7_zah9"/>
+    <text id="n6_zah9" name="input_name" xy="379,226" size="269,30" group="n7_zah9" fontSize="12" color="#546c48" align="center" vAlign="middle" autoSize="none" text="" input="true" prompt="请输入门派名称" maxLength="8">
+      <relation target="n4_zah9" sidePair="width-width,height-height"/>
+    </text>
+    <group id="n7_zah9" name="n7" xy="377,224" size="271,34" group="n21_gl56" advanced="true"/>
+    <component id="n11_zah9" name="btn_create" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="532,552" group="n21_gl56">
+      <Button title="创 建"/>
+    </component>
+    <component id="n12_zah9" name="btn_cancel" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="402,552" group="n21_gl56">
+      <Button title="取 消"/>
+    </component>
+    <image id="n17_7ogs" name="n17" src="gl563h" fileName="Images/content_bg_9.png" xy="377,268" size="273,244" group="n13_zah9"/>
+    <text id="n10_zah9" name="input_notice" xy="386,285" size="249,218" group="n13_zah9" fontSize="12" color="#ffffff" autoSize="none" autoClearText="true" text="1.创建门派，快乐游戏！"/>
+    <group id="n13_zah9" name="n13" xy="377,268" size="273,244" group="n21_gl56" advanced="true"/>
+    <list id="n16_u67p" name="list_condition" xy="365,518" size="299,30" group="n21_gl56" layout="flow_hz" overflow="scroll" defaultItem="ui://0xwve836gl562u" align="center" vAlign="middle">
+      <item/>
+    </list>
+    <group id="n21_gl56" name="n21" xy="362,169" size="302,430" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n2_zah9" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="650,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://st7dgeqqje63v3b"/>
+    </component>
+  </displayList>
+</component>

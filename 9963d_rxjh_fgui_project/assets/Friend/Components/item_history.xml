@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="500,600">
+  <displayList>
+    <richtext id="n0_nrlc" name="rich_history" xy="0,0" size="500,600" fontSize="24" color="#ffffff" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+  </displayList>
+</component>

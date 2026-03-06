@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="135,53" extention="Button">
+  <controller name="btnStatus" pages="0,前往报名,1,报名,2,报名成功,3,传送备战,4,前往战场" selected="0"/>
+  <displayList>
+    <image id="n4_r1x3" name="n4" src="k77dm" fileName="Images/btn_hong.png" xy="0,0" size="135,53"/>
+    <text id="n1_o0nq" name="n1" xy="4,4" size="128,45" fontSize="20" color="#ffff00" align="center" vAlign="middle" leading="0" autoSize="none" text="前往报名">
+      <gearText controller="btnStatus" pages="1,2,3,4" values="报名|报名成功|传送备战|前往战场" default="前往报名"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

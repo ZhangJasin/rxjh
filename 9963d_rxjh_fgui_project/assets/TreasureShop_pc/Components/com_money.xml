@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="55,20">
+  <displayList>
+    <loader id="n260_qhgz" name="loader_costIcon" xy="0,0" size="27,20" group="n261_m5m6" url="ui://qy7g0oycemvc2i" align="center" vAlign="middle" fill="scale">
+      <relation target="n261_m5m6" sidePair="middle-middle,left-left"/>
+    </loader>
+    <text id="n259_cym7" name="text_count" xy="23,0" size="28,19" group="n261_m5m6" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#fff7d1" vAlign="bottom" singleLine="true" autoClearText="true" text="1111"/>
+    <group id="n261_m5m6" name="group" xy="0,-1" size="51,22" advanced="true" layout="hz" colGap="-4" excludeInvisibles="true" autoSizeDisabled="true">
+      <relation target="" sidePair=""/>
+      <relation target="n259_cym7" sidePair="left-left,rightext-right"/>
+    </group>
+  </displayList>
+</component>

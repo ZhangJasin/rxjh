@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750">
+  <controller name="rightTab" pages="0,云挂机,1,离线挂机" selected="1"/>
+  <displayList>
+    <component id="n0_vzpx" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="189,42" pivot="0.5,0.5">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n1_vzpx" name="n1" xy="696,69" pivot="0.5,0.5" anchor="true" size="139,34" fontSize="24" color="#9aafbb" align="center" autoSize="none" text="云挂机">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n2_vzpx" name="CloseBtn" src="vzpx1" fileName="Components/closebtn_yuan.xml" xy="1131,46"/>
+    <list id="n4_vzpx" name="rightTabList" xy="1178,88" size="51,308" pageController="rightTab" margin="4,2,6,0" colGap="2" defaultItem="ui://1hyl0b7svzpx4" selectionController="rightTab">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item title="云挂机"/>
+      <item title="离线助手"/>
+    </list>
+    <list id="n3_vzpx" name="mapList" xy="191,105" size="200,570" group="n7_vzpx" overflow="scroll" lineGap="5" defaultItem="ui://1hyl0b7svzpx3" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n5_vzpx" name="monList" xy="404,163" size="741,508" group="n7_vzpx" overflow="scroll" lineGap="5" defaultItem="ui://1hyl0b7svzpxb" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n6_vzpx" name="toSet" src="vzpxa" fileName="Components/setBtn.xml" xy="1005,111" group="n7_vzpx">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n35_rcc1" name="enterXy" src="rcc1p" fileName="Components/enterXY.xml" xy="1108,163" size="200,140" group="n7_vzpx" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n32_rcc1" name="n32" src="rcc1n" fileName="image/分割线.png" xy="391,104" size="2,570" group="n7_vzpx">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <group id="n7_vzpx" name="n7" xy="191,104" size="1117,571" advanced="true">
+      <gearDisplay controller="rightTab" pages="0"/>
+    </group>
+    <component id="n41_sv3z" name="zhushou" src="sv3zr" fileName="Components/zhushou.xml" xy="199,97" group="n31_vzpx">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n31_vzpx" name="n31" xy="199,97" size="978,592" advanced="true">
+      <gearDisplay controller="rightTab" pages="1"/>
+    </group>
+  </displayList>
+</component>

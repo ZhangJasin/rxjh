@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n44_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="521,367" pivot="0.5,0.5" anchor="true" size="676,432" group="n48_clzt"/>
+    <component id="n10_jui0" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="848,171" group="n48_clzt"/>
+    <component id="n9_jui0" name="mapComponent" src="clzt5" fileName="Components/MiniMap/mapComponent.xml" xy="309,190" size="385,357" group="n48_clzt"/>
+    <image id="n4_jui0" name="map_frame" src="clzt13" fileName="Images/MiniMap/Frame_9.png" xy="308,190" size="385,357" group="n48_clzt"/>
+    <list id="n3_vmij" name="list_left" xy="190,227" size="118,344" group="n48_clzt" overflow="scroll" defaultItem="ui://3tndc27qclzt2" autoClearItems="true">
+      <item title="泫勃派"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n19_nouy" name="list_right" xy="694,229" size="156,342" group="n48_clzt" overflow="scroll" defaultItem="ui://3tndc27qclzte" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n21_nouy" name="map_Button" src="clzt0" fileName="Components/MiniMap/btn_map.xml" xy="189,191" group="n48_clzt"/>
+    <text id="n2_vmij" name="mapName_Text" xy="521,170" pivot="0.5,0.5" anchor="true" size="52,24" group="n48_clzt" fontSize="16" color="#9aafbb" align="center" vAlign="middle" autoClearText="true" text="泫勃派"/>
+    <component id="n27_a6v3" name="btn_debug" src="clztq" fileName="Components/MiniMap/btn_debug.xml" xy="792,171" pivot="0.5,0.5" anchor="true" group="n48_clzt"/>
+    <component id="n33_oot3" name="btn_monster" src="clztb" fileName="Components/MiniMap/item_right_type.xml" xy="698,195" group="n48_clzt">
+      <Button title="怪物"/>
+    </component>
+    <component id="n35_oot3" name="btn_npc" src="clztb" fileName="Components/MiniMap/item_right_type.xml" xy="776,195" group="n48_clzt">
+      <Button title="NPC"/>
+    </component>
+    <text id="n39_oot3" name="n39" xy="319,552" size="95,20" group="n48_clzt" fontSize="13" color="#ffffff" text="地图信息显示："/>
+    <component id="n40_oot3" name="tog_boss" src="clztx" fileName="Components/MiniMap/tog_select.xml" xy="425,552" size="60,22" group="n48_clzt">
+      <Button checked="true" title="首领"/>
+    </component>
+    <component id="n41_oot3" name="tog_monster" src="clztx" fileName="Components/MiniMap/tog_select.xml" xy="510,552" size="60,22" group="n48_clzt">
+      <Button checked="true" title="怪物"/>
+    </component>
+    <component id="n42_oot3" name="tog_link" src="clztx" fileName="Components/MiniMap/tog_select.xml" xy="595,552" size="70,22" group="n48_clzt">
+      <Button checked="true" title="传送门"/>
+    </component>
+    <component id="n29_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="512,384" size="0,0" group="n48_clzt"/>
+    <group id="n48_clzt" name="root" xy="183,151" size="680,432" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

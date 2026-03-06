@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n11_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n9_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="436,52" size="462,646">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n10_g2qe" name="n10" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="452,112" size="428,572">
+      <relation target="n9_kra4" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n6_cgy5" name="text_title" xy="667,78" pivot="0.5,0.5" anchor="true" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="切换线路">
+      <relation target="n9_kra4" sidePair="center-center,top-top"/>
+    </text>
+    <component id="n5_cgy5" name="btn_switch" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="599,605">
+      <relation target="n9_kra4" sidePair="center-center,bottom-bottom"/>
+      <Button title="切换线路" titleColor="#fced00"/>
+    </component>
+    <component id="n4_cgy5" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="875,78">
+      <relation target="n9_kra4" sidePair="right-right,top-top"/>
+    </component>
+    <list id="n7_cgy5" name="list_line" xy="518,154" size="300,434" overflow="scroll" lineGap="20" defaultItem="ui://2u2zlohfdldy2c">
+      <relation target="n9_kra4" sidePair="center-center,middle-middle"/>
+    </list>
+    <component id="n8_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="443,694" size="0,0">
+      <relation target="n9_kra4" sidePair="left-left,bottom-bottom"/>
+    </component>
+  </displayList>
+</component>

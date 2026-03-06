@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImage="ui://tsu6gfnom9rdvot">
+  <displayList>
+    <graph id="n56_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n53_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,50" group="n54_whi9"/>
+    <text id="n25_k2u1" name="text_title" xy="668,78" pivot="0.5,0.5" anchor="true" size="439,34" group="n54_whi9" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="门派申请"/>
+    <component id="n1_zah9" name="btn_quick_join" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="570,660" pivot="0.5,0.5" anchor="true" group="n54_whi9">
+      <Button title="自动加入"/>
+    </component>
+    <component id="n2_zah9" name="btn_refresh" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="720,660" pivot="0.5,0.5" anchor="true" group="n54_whi9">
+      <Button title="刷 新"/>
+    </component>
+    <component id="n42_u0jf" name="btn_join" src="ighbkvp6" fileName="common/btn_first_green.xml" pkg="st7dgeqq" xy="830,638" size="136,42" group="n54_whi9">
+      <Button title="申请加入" titleColor="#f5e700" titleFontSize="22"/>
+    </component>
+    <component id="n3_zah9" name="btn_create" src="ighbkvp6" fileName="common/btn_first_green.xml" pkg="st7dgeqq" xy="989,638" size="136,42" group="n54_whi9">
+      <Button title="创建门派" titleColor="#f5e700" titleFontSize="22"/>
+    </component>
+    <image id="n5_zah9" name="n5" src="7ogs26" fileName="Images/search_bg_9.png" xy="193,633" size="263,50" group="n8_zah9"/>
+    <component id="n6_zah9" name="btn_search" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="409,636" group="n8_zah9">
+      <Button icon="ui://st7dgeqqzah96"/>
+    </component>
+    <text id="n7_zah9" name="inputField_search" xy="198,637" size="210,42" group="n8_zah9" fontSize="20" color="#6aa89a" vAlign="middle" autoSize="none" text="" input="true" prompt="输入门派名称搜索....."/>
+    <group id="n8_zah9" name="n8" xy="193,633" size="263,50" group="n54_whi9" advanced="true"/>
+    <image id="n49_qjqa" name="n49" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="1047,126" size="40,23" group="n15_zah9"/>
+    <image id="n50_qjqa" name="n50" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="904,126" size="40,23" group="n15_zah9" scale="-1,1"/>
+    <text id="n51_qjqa" name="n51" xy="930,119" pivot="0.5,0.5" size="92,32" group="n15_zah9" fontSize="22" color="#ffff00" align="center" vAlign="middle" text="注意事项"/>
+    <image id="n30_7ogs" name="n30" src="m9rdvos" fileName="Images/join_list_right_bg.png" xy="797,151" size="354,197" group="n15_zah9"/>
+    <text id="n14_zah9" name="text_notice" xy="811,162" size="329,172" group="n15_zah9" fontSize="20" color="#fff7d1" leading="8" autoSize="none" autoClearText="true" text="门派不养闲人，请大家积极对门派做出贡献">
+      <relation target="" sidePair=""/>
+    </text>
+    <group id="n15_zah9" name="n15" xy="797,119" size="354,229" group="n54_whi9" advanced="true"/>
+    <image id="n16_zah9" name="n16" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="182,115" size="609,510" group="n17_zah9" color="#000000">
+      <relation target="" sidePair="left-left,top-top"/>
+    </image>
+    <list id="n4_zah9" name="list_join" xy="187,171" size="598,452" group="n17_zah9" overflow="scroll" lineGap="1" defaultItem="ui://tsu6gfnozah98" autoClearItems="true">
+      <relation target="n16_zah9" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n26_xdur" name="text_no_guild" xy="281,282" size="403,131" group="n17_zah9" fontSize="24" color="#f7f0ca" align="center" vAlign="middle" autoSize="none" text="暂无门派"/>
+    <image id="n33_u0jf" name="n33" src="m9rdvou" fileName="Images/join_list_title_bg.png" xy="185,118" size="601,50" group="n17_zah9"/>
+    <text id="n34_u0jf" name="n34" xy="237,125" pivot="0.5,0.5" size="92,32" group="n17_zah9" fontSize="22" color="#ddfdd9" align="center" vAlign="middle" singleLine="true" text="门派名称"/>
+    <text id="n35_u0jf" name="n35" xy="413,125" pivot="0.5,0.5" size="48,32" group="n17_zah9" fontSize="22" color="#ddfdd9" align="center" vAlign="middle" singleLine="true" text="等级"/>
+    <text id="n36_u0jf" name="n36" xy="518,125" pivot="0.5,0.5" size="48,32" group="n17_zah9" fontSize="22" color="#ddfdd9" align="center" vAlign="middle" singleLine="true" text="人数"/>
+    <text id="n37_u0jf" name="n37" xy="664,125" pivot="0.5,0.5" size="48,32" group="n17_zah9" fontSize="22" color="#ddfdd9" align="center" vAlign="middle" singleLine="true" text="帮主"/>
+    <group id="n17_zah9" name="n17" xy="182,115" size="609,510" group="n54_whi9" advanced="true"/>
+    <image id="n48_u0jf" name="n48" src="m9rdvos" fileName="Images/join_list_right_bg.png" xy="799,415" size="352,191" group="n41_u0jf"/>
+    <image id="n38_u0jf" name="n38" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="1045,383" size="40,23" group="n41_u0jf"/>
+    <image id="n39_u0jf" name="n39" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="902,383" size="40,23" group="n41_u0jf" scale="-1,1"/>
+    <text id="n40_u0jf" name="n40" xy="928,379" pivot="0.5,0.5" size="92,32" group="n41_u0jf" fontSize="22" color="#ffff00" align="center" vAlign="middle" text="申请条件"/>
+    <text id="n45_u0jf" name="n45" xy="919,480" size="104,29" group="n41_u0jf" fontSize="20" color="#fff7d1" align="right" vAlign="middle" text="需求等级："/>
+    <text id="n47_u0jf" name="text_need_level" xy="1009,480" size="15,29" group="n41_u0jf" fontSize="20" color="#fff7d1" vAlign="middle" text="1"/>
+    <text id="n44_u0jf" name="n44" xy="937,451" size="64,29" group="n55_ighb" fontSize="20" color="#fff7d1" align="right" vAlign="middle" text="阵营："/>
+    <text id="n46_u0jf" name="text_evild" xy="991,451" size="24,29" group="n55_ighb" fontSize="20" color="#fff7d1" vAlign="middle" text="邪"/>
+    <group id="n55_ighb" name="condition_evild" xy="937,451" size="78,29" group="n41_u0jf" advanced="true"/>
+    <group id="n41_u0jf" name="n41" xy="799,379" size="352,227" group="n54_whi9" advanced="true"/>
+    <component id="n52_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="173,697" size="0,0" group="n54_whi9"/>
+    <group id="n54_whi9" name="n54" xy="167,50" size="1000,650" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n32_ghle" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

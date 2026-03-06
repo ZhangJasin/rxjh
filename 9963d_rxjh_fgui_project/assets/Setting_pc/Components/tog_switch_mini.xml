@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="68,22" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0">
+    <action type="play_transition" fromPage="2" toPage="3" transition="open"/>
+    <action type="play_transition" fromPage="3" toPage="2" transition="close"/>
+  </controller>
+  <displayList>
+    <image id="n0_juj0" name="bg" src="f2ul4j" fileName="Images/progress_bg.png" xy="0,0"/>
+    <text id="n3_juj0" name="open" xy="0,0" size="28,19" fontSize="12" color="#7cc3b3" align="center" vAlign="middle" autoSize="none" singleLine="true" text="开">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <text id="n4_juj0" name="close" xy="39,0" size="28,19" fontSize="12" color="#445252" align="center" vAlign="middle" autoSize="none" singleLine="true" text="关">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <image id="n1_juj0" name="handle" src="f2ul53" fileName="Images/tog_handler.png" xy="0,0"/>
+  </displayList>
+  <Button mode="Check"/>
+  <transition name="open">
+    <item time="0" type="XY" target="n1_juj0" tween="true" startValue="0,-" endValue="30,-" duration="7"/>
+  </transition>
+  <transition name="close">
+    <item time="0" type="XY" target="n1_juj0" tween="true" startValue="30,-" endValue="0,-" duration="7"/>
+  </transition>
+</component>

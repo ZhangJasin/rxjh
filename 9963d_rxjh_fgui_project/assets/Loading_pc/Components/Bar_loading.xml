@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1000,35" extention="ProgressBar">
+  <displayList>
+    <image id="n3_wi45" name="bg" src="wi457" fileName="image/loading_bar_bg_9.png" pkg="st7dgeqq" xy="0,0" size="1000,35"/>
+    <image id="n4_wi45" name="bar" src="wi458" fileName="image/loading_bar_9.png" pkg="st7dgeqq" xy="26,7" size="948,20"/>
+    <text id="n2_fmfy" name="title" xy="0,30" size="1000,40" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="加载中">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <ProgressBar/>
+</component>

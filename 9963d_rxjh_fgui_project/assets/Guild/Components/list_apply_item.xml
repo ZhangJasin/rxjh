@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="960,62" extention="Button" designImageOffsetX="-187" designImageOffsetY="-367">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_zah9" name="n0" src="wi4521" fileName="Images/list_bg_9.png" xy="0,0" size="960,62">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <graph id="n7_zah9" name="click_select_effect" xy="1,-1" size="959,62" type="rect" lineSize="0" fillColor="#ff6e1669">
+      <gearDisplay controller="button" pages="3,5"/>
+    </graph>
+    <text id="n1_zah9" name="text_name" xy="64,3" size="191,57" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="抚琴的人"/>
+    <text id="n2_zah9" name="text_level" xy="342,3" size="92,57" fontSize="20" color="#03d3d9" align="center" vAlign="middle" autoSize="none" text="999级"/>
+    <text id="n3_zah9" name="text_job" xy="531,3" size="123,57" fontSize="20" color="#e9eae9" align="center" vAlign="middle" autoSize="none" text="职业"/>
+    <text id="n4_zah9" name="text_fight" xy="774,3" size="133,57" fontSize="20" color="#e9eae9" align="center" vAlign="middle" autoSize="none" text="123456"/>
+    <image id="n8_jjgk" name="n8" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="27,14" size="31,31"/>
+    <image id="n9_jjgk" name="icon_select" src="jjgk1j" fileName="Images/select_icon.png" xy="26,15">
+      <gearDisplay controller="button" pages="3,5"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

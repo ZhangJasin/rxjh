@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="96,10" extention="ProgressBar">
+  <displayList>
+    <graph id="n0_10iaf" name="n0" xy="0,0" size="96,10" type="rect" lineSize="0" lineColor="#ffa0a0a0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n1_10iaf" name="bar" xy="0,0" size="96,10" type="rect" lineSize="0" fillColor="#ffac7e14"/>
+    <text id="n2_10iaf" name="n2" xy="0,-3" size="52,15" fontSize="9" color="#ffffff" vAlign="middle" autoSize="none" text="资源下载中:"/>
+    <text id="n3_10iaf" name="title" xy="49,-3" size="50,15" fontSize="9" color="#ffffff" vAlign="middle" autoSize="none" text=""/>
+  </displayList>
+  <ProgressBar/>
+</component>

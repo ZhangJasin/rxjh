@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,45" opaque="false">
+  <displayList>
+    <text id="n0_l980" name="Text_name" xy="0,6" size="100,34" fontSize="24" color="#28ef01" strokeColor="#111111" autoClearText="true" text="变化属性"/>
+    <text id="n1_l980" name="Text_attr" xy="127,6" size="64,34" fontSize="24" color="#28ef01" strokeColor="#111111" autoClearText="true" text=" +99-99">
+      <relation target="n0_l980" sidePair="leftext-right"/>
+    </text>
+  </displayList>
+</component>

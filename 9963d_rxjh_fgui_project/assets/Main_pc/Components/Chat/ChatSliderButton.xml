@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="16,16" extention="Button">
+  <displayList>
+    <image id="n3_lh52" name="grip" src="lh523a" fileName="Images/Chat/main_chat_pos.png" xy="0,0"/>
+  </displayList>
+  <Button downEffect="dark" downEffectValue="0.5"/>
+</component>

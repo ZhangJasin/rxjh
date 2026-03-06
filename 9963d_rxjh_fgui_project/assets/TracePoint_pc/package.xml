@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="t0bnyv1i">
+  <resources>
+    <image id="beky0" name="img_arrow.png" path="/Images/"/>
+    <image id="beky1" name="img_point.png" path="/Images/"/>
+    <component id="beky2" name="TracePointItem.xml" path="/component/" exported="true"/>
+    <component id="beky3" name="PCTracePointPanel.xml" path="/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

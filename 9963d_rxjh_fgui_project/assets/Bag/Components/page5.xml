@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="464,90">
+  <displayList>
+    <image id="n334_q8ir" name="img_attr_list_di" src="lt7hvnx" fileName="Images/img_input_di.png" xy="0,0" pivot="0,1" size="464,90">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n335_cptj" name="wuxun" src="lt7hvo2" fileName="Components/item_attr_2.xml" xy="11,9"/>
+    <component id="n344_lt7h" name="shane" src="lt7hvo2" fileName="Components/item_attr_2.xml" xy="11,48"/>
+  </displayList>
+</component>

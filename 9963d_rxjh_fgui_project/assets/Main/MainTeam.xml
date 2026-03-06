@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="244,194">
+  <displayList>
+    <component id="n2_d1ew" name="Btn_createTeam" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="63,38" size="120,40" group="n4_d1ew">
+      <Button title="创建队伍" titleColor="#badec0" titleFontSize="20" icon="ui://zj419n3d9c3pfvd7"/>
+    </component>
+    <component id="n3_d1ew" name="Btn_joinTeam" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="63,117" size="120,40" group="n4_d1ew">
+      <Button title="加入队伍" titleColor="#badec0" titleFontSize="20" icon="ui://zj419n3d9c3pfvd7"/>
+    </component>
+    <group id="n4_d1ew" name="Group_noTeam" xy="63,38" size="120,119" advanced="true"/>
+    <list id="n5_d1ew" name="List_team" xy="0,0" size="244,160" group="n8_d1ew" overflow="scroll" margin="3,0,3,0" lineGap="3" defaultItem="ui://zj419n3do3hvv67">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n6_d1ew" name="Btn_teamInvite" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="3,161" size="118,32" group="n8_d1ew">
+      <Button title="邀请队员" titleColor="#badec0" titleFontSize="18" icon="ui://zj419n3d9c3pfvd7"/>
+    </component>
+    <component id="n7_d1ew" name="Btn_teamList" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="123,161" size="118,32" group="n8_d1ew">
+      <Button title="队员列表" titleColor="#badec0" titleFontSize="18" icon="ui://zj419n3d9c3pfvd7"/>
+    </component>
+    <group id="n8_d1ew" name="Group_haveTeam" xy="0,0" size="244,193" advanced="true"/>
+  </displayList>
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,19" extention="Label">
+  <displayList>
+    <image id="n18_r1aj" name="n1" src="r1aj5y" fileName="Images/title_left.png" xy="25,8" pivot="1,0.5" anchor="true">
+      <relation target="n15_l6xy" sidePair="middle-middle,right-left"/>
+    </image>
+    <text id="n15_l6xy" name="title" xy="35,0" pivot="0.5,0" size="10,19" fontSize="12" color="#ffff00" align="center" ubb="true" autoClearText="true" text="">
+      <relation target="" sidePair="center-center"/>
+    </text>
+    <image id="n19_r1aj" name="n2" src="r1aj5z" fileName="Images/title_right.png" xy="55,8" pivot="0,0.5" anchor="true">
+      <relation target="n15_l6xy" sidePair="middle-middle,left-right"/>
+    </image>
+  </displayList>
+  <relation target="n15_l6xy" sidePair="width-width,height-height"/>
+</component>

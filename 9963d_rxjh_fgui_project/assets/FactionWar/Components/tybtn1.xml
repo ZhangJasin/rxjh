@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="156,40" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n3_k77d" name="n3" src="k77dk" fileName="Images/btn_zong.png" xy="0,0"/>
+    <image id="n4_k77d" name="n4" src="k77dk" fileName="Images/btn_zong.png" xy="0,0"/>
+    <text id="n2_ijnx" name="title" xy="0,0" size="156,40" fontSize="22" color="#fff7d1" align="center" vAlign="middle" autoSize="none" singleLine="true" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="dark" downEffectValue="0.8"/>
+</component>

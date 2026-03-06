@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="648,42" extention="Button" designImage="ui://0xwve836hfk848" designImageOffsetX="-210" designImageOffsetY="-366">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_zah9" name="n0" src="gl562l" fileName="Images/list_bg_9.png" xy="0,0" size="648,42">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <graph id="n7_zah9" name="select_effect" xy="1,-1" size="644,43" visible="false" type="rect" lineSize="0" fillColor="#ff6e1669">
+      <gearDisplay controller="button" pages="3,5"/>
+    </graph>
+    <text id="n1_zah9" name="text_name" xy="44,12" pivot="0.5,0.5" size="84,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="抚琴的人"/>
+    <text id="n2_zah9" name="text_level" xy="173,12" pivot="0.5,0.5" size="101,19" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="222级"/>
+    <text id="n3_zah9" name="text_count" xy="288,12" pivot="0.5,0.5" size="91,19" fontSize="12" color="#e9eae9" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="1/200"/>
+    <text id="n4_zah9" name="text_owner" xy="404,12" pivot="0.5,0.5" size="98,19" fontSize="12" color="#e9eae9" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="帮主名"/>
+    <text id="n5_zah9" name="text_need_level" xy="535,12" pivot="0.5,0.5" size="89,19" fontSize="12" color="#e9eae9" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="0"/>
+    <loader id="n9_jxvr" name="icon_guild" xy="3,3" pivot="0.5,0.5" size="36,36" align="center" vAlign="middle" autoSize="true" clearOnPublish="true"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

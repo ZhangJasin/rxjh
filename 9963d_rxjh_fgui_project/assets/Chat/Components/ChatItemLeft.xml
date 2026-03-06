@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="460,112" designImage="ui://8pthu2lwnyalk" designImageOffsetX="-125" designImageOffsetY="-11">
+  <displayList>
+    <component id="n9_dssq" name="PlayerFrame" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="4,6" size="68,68"/>
+    <image id="n11_fyl5" name="n11" src="fyl5fve1" fileName="Images/main_player_lv_bg.png" xy="8,56"/>
+    <loader id="n10_rlrv" name="Image_chatFrame" xy="44,30" pivot="1,0" size="38,45" scale="-1,1" url="ui://st7dgeqqbl99v7y" fill="scaleFree" useResize="true" clearOnPublish="true">
+      <relation target="n5_dssq" sidePair="width-width,height-height"/>
+    </loader>
+    <text id="n4_dssq" name="Text_name" xy="90,0" pivot="0,0.5" size="144,29" fontSize="20" color="#ffffff" ubb="true" autoClearText="true" text="玩家名字七个字"/>
+    <text id="n7_dssq" name="Text_lv" xy="23,63" pivot="0.5,0.5" anchor="true" size="36,24" fontSize="16" color="#ffffff" align="center" vAlign="bottom" autoSize="none" singleLine="true" autoClearText="true" text="000"/>
+    <text id="n12_kx8c" name="Text_time" xy="90,79" size="124,26" fontSize="18" color="#90d898" singleLine="true" autoClearText="true" text="22/04/15 16:06">
+      <relation target="" sidePair="bottom-bottom"/>
+    </text>
+    <richtext id="n5_dssq" name="RichText" xy="102,38" size="10,29" restrictSize="0,300,0,0" fontSize="20" color="#fff5da" ubb="true" strokeColor="#000000" text=""/>
+  </displayList>
+  <relation target="n5_dssq" sidePair="height-height"/>
+</component>

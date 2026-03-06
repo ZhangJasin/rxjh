@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="84,28" extention="ComboBox">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_nojs" name="n0" src="emvc3h" fileName="image/btn_second_red.png" pkg="qa9a7rit" xy="0,0" size="84,28">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_nojs" name="n2" src="emvc3h" fileName="image/btn_second_red.png" pkg="qa9a7rit" xy="0,0" size="84,28" flip="vt">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_nojs" name="title" xy="14,4" size="39,19" group="n5_m5m6" fontSize="12" color="#fff7d1" align="right" vAlign="middle" ubb="true" strokeColor="#000000" singleLine="true" autoClearText="true" text="11111"/>
+    <image id="n3_nojs" name="n3" src="oxr74" fileName="Images/arrow.png" xy="53,10" size="14,10" group="n5_m5m6" aspect="true" color="#fff7d1">
+      <gearDisplay controller="button" pages="0,2"/>
+    </image>
+    <image id="n4_nojs" name="n4" src="oxr74" fileName="Images/arrow.png" xy="53,10" size="14,10" group="n5_m5m6" aspect="true" flip="vt">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+    <group id="n5_m5m6" name="n5" xy="14,4" size="53,19" advanced="true" layout="hz" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+  <ComboBox dropdown="ui://1e928y1xoxr71"/>
+</component>

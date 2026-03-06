@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="24,38" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n3_ih0u" name="n3" src="oqrp2" fileName="Images/0righttop/main_funcDock_arrow.png" xy="2,2">
+      <gearDisplay controller="button" pages="0,2"/>
+    </image>
+    <image id="n4_qk2l" name="n4" src="oqrp2" fileName="Images/0righttop/main_funcDock_arrow.png" xy="2,2" flip="hz">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+  </displayList>
+  <Button mode="Check" downEffect="dark" downEffectValue="0.8"/>
+</component>

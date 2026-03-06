@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n27_menb" name="mask" xy="2,-3" size="1334,750" alpha="0.3" touchable="false" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n29_s7ka" name="n29" src="plaqkvp3" fileName="image/caizhi.png" pkg="st7dgeqq" xy="441,99" size="451,593" group="n30_pzej"/>
+    <loader id="n28_menb" name="n1" xy="436,50" size="462,650" group="n30_pzej" url="ui://st7dgeqqas7kvnn" fill="scaleFree"/>
+    <component id="n2_tgh8" name="btn_no" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="493,621" group="n30_pzej">
+      <Button title="取 消"/>
+    </component>
+    <component id="n3_tgh8" name="btn_yes" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="684,621" group="n30_pzej">
+      <Button title="确 认"/>
+    </component>
+    <graph id="n4_tgh8" name="n4" xy="466,135" size="402,47" group="n30_pzej" type="rect" lineColor="#ffcabe0f" fillColor="#ffb7c1b6"/>
+    <text id="n5_tgh8" name="text_show_num" xy="467,137" size="400,44" group="n30_pzej" fontSize="24" align="center" vAlign="middle" autoSize="none" text="0"/>
+    <component id="n6_tgh8" name="num_1" src="zwd8vnq" fileName="Components/btn_square_1.xml" xy="484,204" group="n22_tgh8"/>
+    <component id="n7_tgh8" name="num_2" src="zwd8vnq" fileName="Components/btn_square_1.xml" xy="577,204" group="n22_tgh8">
+      <Button title="2"/>
+    </component>
+    <component id="n8_tgh8" name="num_3" src="zwd8vnq" fileName="Components/btn_square_1.xml" xy="670,204" group="n22_tgh8">
+      <Button title="3"/>
+    </component>
+    <component id="n10_tgh8" name="add_10" src="zwd8vnr" fileName="Components/btn_square_2.xml" xy="763,204" group="n22_tgh8"/>
+    <component id="n9_tgh8" name="num_4" src="zwd8vnq" fileName="Components/btn_square_1.xml" xy="484,302" group="n22_tgh8">
+      <Button title="4"/>
+    </component>
+    <component id="n11_tgh8" name="num_5" src="zwd8vnq" fileName="Components/btn_square_1.xml" xy="577,302" group="n22_tgh8">
+      <Button title="5"/>
+    </component>
+    <component id="n12_tgh8" name="num_6" src="zwd8vnq" fileName="Components/btn_square_1.xml" xy="670,302" group="n22_tgh8">
+      <Button title="6"/>
+    </component>
+    <component id="n13_tgh8" name="add_50" src="zwd8vnr" fileName="Components/btn_square_2.xml" xy="763,302" group="n22_tgh8">
+      <Button title="+50"/>
+    </component>
+    <component id="n14_tgh8" name="num_7" src="zwd8vnq" fileName="Components/btn_square_1.xml" xy="484,400" group="n22_tgh8">
+      <Button title="7"/>
+    </component>
+    <component id="n15_tgh8" name="num_8" src="zwd8vnq" fileName="Components/btn_square_1.xml" xy="577,400" group="n22_tgh8">
+      <Button title="8"/>
+    </component>
+    <component id="n16_tgh8" name="num_9" src="zwd8vnq" fileName="Components/btn_square_1.xml" xy="670,400" group="n22_tgh8">
+      <Button title="9"/>
+    </component>
+    <component id="n17_tgh8" name="num_0" src="zwd8vnq" fileName="Components/btn_square_1.xml" xy="577,498" group="n22_tgh8">
+      <Button title="0"/>
+    </component>
+    <component id="n18_tgh8" name="add_100" src="zwd8vnr" fileName="Components/btn_square_2.xml" xy="763,400" group="n22_tgh8">
+      <Button title="+100"/>
+    </component>
+    <component id="n19_tgh8" name="btn_del" src="zwd8vnr" fileName="Components/btn_square_2.xml" xy="484,498" group="n22_tgh8">
+      <Button title="删除"/>
+    </component>
+    <component id="n20_tgh8" name="btn_back" src="zwd8vnr" fileName="Components/btn_square_2.xml" xy="670,498" group="n22_tgh8">
+      <Button title="返回"/>
+    </component>
+    <component id="n21_tgh8" name="btn_max" src="zwd8vnr" fileName="Components/btn_square_2.xml" xy="763,498" group="n22_tgh8">
+      <Button title="删除"/>
+    </component>
+    <group id="n22_tgh8" name="n22" xy="484,204" size="368,388" group="n30_pzej"/>
+    <text id="n23_tgh8" name="title" xy="545,58" size="247,39" group="n30_pzej" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="请输入物品价格"/>
+    <component id="n26_tmr6" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="875,78" group="n30_pzej"/>
+    <group id="n30_pzej" name="n30" xy="436,50" size="462,650" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

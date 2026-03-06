@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" mask="n11" reversedMask="true">
+  <displayList>
+    <graph id="n0" name="blackBack" xy="0,0" size="1334,750" type="rect" lineSize="0" fillColor="#5c000000">
+      <relation target="" sidePair="height-height,width-width"/>
+    </graph>
+    <graph id="n11" name="window" xy="409,221" size="200,200" type="eclipse" lineSize="0"/>
+    <component id="n14_o9ph" name="GuideTip" src="o9ph8" fileName="GuideTipWithArrow.xml" xy="0,0" touchable="false"/>
+  </displayList>
+</component>

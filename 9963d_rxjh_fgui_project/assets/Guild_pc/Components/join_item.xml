@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="402,42" extention="Button" designImage="ui://0xwve836gl5644" designImageOffsetX="-175" designImageOffsetY="-307" designImageAlpha="70">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n4_zah9" name="n4" src="gl562l" fileName="Images/list_bg_9.png" xy="0,0" size="402,42">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n5_zah9" name="text_name" xy="1,11" pivot="0.5,0.5" size="130,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" autoClearText="true" text="七个字长度要有"/>
+    <text id="n6_zah9" name="text_level" xy="151,11" size="37,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" strokeColor="#000000" autoClearText="true" text="222级"/>
+    <text id="n7_zah9" name="text_member_count" xy="208,11" pivot="0.5,0.5" size="58,19" fontSize="12" color="#ffff00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" autoClearText="true" text="1/5"/>
+    <text id="n8_zah9" name="text_owner_name" xy="275,11" pivot="0.5,0.5" size="124,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" autoClearText="true" text="七个字长度要有"/>
+    <image id="n11_u0jf" name="effect_select" src="emvc3s" fileName="image/icon_item_select.png" pkg="qa9a7rit" xy="-1,0" size="403,42">
+      <gearDisplay controller="button" pages="3,5"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

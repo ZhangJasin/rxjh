@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n24_red8" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n6_wmgr" name="LookPlayerRoot" src="red84" fileName="Components/LookPlayerRoot.xml" xy="666,377" pivot="0.5,0.5" anchor="true" size="521,567">
+      <relation target="n25_red8" sidePair="center-center,middle-middle"/>
+    </component>
+    <graph id="n25_red8" name="drag" xy="401,44" size="476,51" type="rect" lineColor="#00000000" fillColor="#00ffffff">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+  </displayList>
+</component>

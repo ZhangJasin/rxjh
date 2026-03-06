@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="274,590">
+  <displayList>
+    <list id="n50_mawg" name="equipList" xy="-1,0" size="273,474" layout="flow_hz" overflow="scroll" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://bphbjao2mawg5g" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <richtext id="n51_mawg" name="n51" xy="68,165" pivot="0.5,0.5" size="136,93" visible="false" font="SimHei" fontSize="18" color="#ffcc00" align="center" vAlign="middle" autoSize="none" text="灵兽装备未解锁&lt;br&gt;无法穿戴">
+      <relation target="" sidePair="left-left,top-top"/>
+    </richtext>
+    <component id="n52_mawg" name="btn_zl" src="fpdq5z" fileName="Components/shuxing/btn_zong.xml" xy="78,536" size="120,40">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="整 理" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <component id="n53_mawg" name="btn_hs" src="fpdq5z" fileName="Components/shuxing/btn_zong.xml" xy="142,535" size="120,40" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="回 收" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <text id="n54_mawg" name="n54" xy="118,497" pivot="0.5,0.5" size="49,26" font="SimHei" fontSize="18" color="#ffff00" align="center" vAlign="middle" text="0/120"/>
+  </displayList>
+</component>

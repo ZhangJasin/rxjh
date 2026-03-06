@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="32,32">
+  <controller name="isSelected" exported="true" pages="0,不选中,1,选中" selected="0"/>
+  <controller name="c1" exported="true" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n0_ger5" name="n0" src="cm5h59" fileName="Images/newhc/gouxuandi.png" xy="0,0"/>
+    <image id="n1_ger5" name="n1" src="cm5h58" fileName="Images/newhc/gouxuan.png" xy="0,0">
+      <gearDisplay controller="isSelected" pages="1"/>
+    </image>
+  </displayList>
+</component>

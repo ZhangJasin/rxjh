@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="44,44" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="BagItemType" pages="0,empty,1,item" selected="0"/>
+  <displayList>
+    <image id="n3_q9ls" name="n3" src="emvc3r" fileName="image/icon_item1.png" pkg="qa9a7rit" xy="0,0" size="44,44">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n18_ljsg" name="ContentItem" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="44,44">
+      <gearDisplay controller="BagItemType" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n4_s6ej" name="Lock" src="emvc45" fileName="image/lock.png" pkg="qa9a7rit" xy="12,13" size="20,17" aspect="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n19_hgpp" name="n19" src="emvc3s" fileName="image/icon_item_select.png" pkg="qa9a7rit" xy="0,0" size="44,44" group="n21_hgpp"/>
+    <image id="n20_hgpp" name="n20" src="n0551f" fileName="Images/green_check.png" xy="0,0" size="44,44" group="n21_hgpp"/>
+    <group id="n21_hgpp" name="RecycleSelect" xy="0,0" size="44,44" advanced="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </group>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

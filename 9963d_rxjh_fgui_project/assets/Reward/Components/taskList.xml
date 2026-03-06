@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1150,535" overflow="scroll" opaque="false" scroll="horizontal" mask="n2_qmgd">
+  <displayList>
+    <list id="n0_qmgd" name="cardList" xy="0,0" size="1150,535" layout="row" overflow="scroll" scroll="horizontal" colGap="10" defaultItem="ui://hnt34a2thpp31" align="center" vAlign="middle"/>
+    <graph id="n2_qmgd" name="n2" xy="0,0" size="1150,538" type="rect" lineSize="0"/>
+  </displayList>
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="224,20" extention="Slider">
+  <displayList>
+    <image id="n0_juj0" name="n0" src="f2ul4j" fileName="Images/progress_bg.png" xy="0,0" size="224,20">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_juj0" name="bar" src="bk1i5w" fileName="image/progress_fill_red.png" pkg="qa9a7rit" xy="3,3" size="199,14">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n3_rmnb" name="grip" src="f2ul4l" fileName="Components/slider_grip.xml" xy="202,0">
+      <relation target="n1_juj0" sidePair="right-right"/>
+    </component>
+  </displayList>
+  <Slider titleType="value" wholeNumbers="true"/>
+</component>

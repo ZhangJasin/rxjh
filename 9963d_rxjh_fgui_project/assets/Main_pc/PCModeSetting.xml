@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImageOffsetX="-1" designImageOffsetY="17">
+  <displayList>
+    <component id="n9_zn3d" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="377,217" size="270,333" group="n18_pp0l"/>
+    <text id="n10_zn3d" name="n10" xy="512,237" pivot="0.5,0.5" anchor="true" size="68,24" group="n18_pp0l" fontSize="16" color="#9aafbb" text="战斗模式"/>
+    <image id="n12_zn3d" name="n12" src="zn3dfvdu" fileName="Images/ModeSetting/img_di.png" xy="387,259" size="251,199" group="n18_pp0l"/>
+    <list id="n11_zn3d" name="List_mode" xy="392,263" size="244,196" group="n18_pp0l" overflow="scroll" scrollBarFlags="128" lineGap="2" defaultItem="ui://xwp5ackozn3dv8g" autoItemSize="false">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n13_zn3d" name="Button_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="631,238" group="n18_pp0l"/>
+    <component id="n14_zn3d" name="Button_ok" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="469,510" size="85,27" group="n18_pp0l">
+      <Button title="确定" titleColor="#fff000" titleFontSize="16"/>
+    </component>
+    <component id="n15_pp0l" name="Button_fightMode1" src="zn3dv8i" fileName="Components/ModeSetting/ModeButton.xml" xy="389,464" group="n18_pp0l">
+      <Button title="怪物优先"/>
+    </component>
+    <component id="n16_pp0l" name="Button_fightMode2" src="zn3dv8i" fileName="Components/ModeSetting/ModeButton.xml" xy="472,464" group="n18_pp0l">
+      <Button title="玩家优先"/>
+    </component>
+    <component id="n17_pp0l" name="Button_fightMode3" src="zn3dv8i" fileName="Components/ModeSetting/ModeButton.xml" xy="555,464" group="n18_pp0l">
+      <Button title="只对玩家"/>
+    </component>
+    <group id="n18_pp0l" name="n18" xy="377,217" size="270,333" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

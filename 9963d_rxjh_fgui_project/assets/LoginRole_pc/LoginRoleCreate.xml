@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600" designImageAlpha="0">
+  <controller name="page" alias="测试" exported="true" pages="0,,1,,2," selected="0"/>
+  <controller name="c1" pages="0,,1," selected="0"/>
+  <displayList>
+    <list id="n18_flj6" name="list_job_select" xy="9,32" size="164,488" layout="flow_vt" overflow="scroll" scrollBarFlags="128" lineGap="16" defaultItem="ui://88oqthnqvdne0" autoClearItems="true">
+      <relation target="" sidePair="middle-middle,left-left"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <loader id="n30_flj6" name="loader_job" xy="619,75" pivot="0.5,0.5" size="94,48" group="n50_e0b9" url="ui://88oqthnqvdnep" autoSize="true"/>
+    <image id="n31_flj6" name="image_introduce_bg" src="vdney" fileName="Images/Create/img_introduce_frame.png" xy="566,132" size="214,85" group="n50_e0b9"/>
+    <text id="n32_flj6" name="text_introduce" xy="576,138" size="195,70" group="n50_e0b9" fontSize="16" color="#ffffff" leading="4" ubb="true" autoSize="none" strokeColor="#000000" text="刀客职业血量和防御力相对比较高,但是命中率低是他的弱点"/>
+    <image id="n45_bs2a" name="img_di" src="vdnem" fileName="Images/Create/icon_attr_empty.png" xy="575,241" group="n50_e0b9"/>
+    <graph id="n40_bs2a" name="graphic_Attribute" xy="575,241" size="184,176" group="n50_e0b9" lineSize="4" lineColor="#ff00ff00" fillColor="#ff9b6516"/>
+    <text id="n33_flj6" name="text_atk" xy="551,269" size="58,26" group="n50_e0b9" fontSize="18" color="#dbc988" leading="2" strokeColor="#000000" text="攻击力"/>
+    <text id="n34_flj6" name="text_hp" xy="639,220" size="58,26" group="n50_e0b9" fontSize="18" color="#dbc988" leading="2" strokeColor="#000000" text="生命力"/>
+    <text id="n35_flj6" name="text_def" xy="732,269" size="58,26" group="n50_e0b9" fontSize="18" color="#dbc988" leading="2" strokeColor="#000000" text="防御力"/>
+    <text id="n36_flj6" name="text_energy" xy="581,413" size="40,26" group="n50_e0b9" fontSize="18" color="#dbc988" leading="2" strokeColor="#000000" text="精力"/>
+    <text id="n37_flj6" name="text_hit" xy="708,413" size="76,26" group="n50_e0b9" fontSize="18" color="#dbc988" leading="2" strokeColor="#000000" text="致命打击"/>
+    <group id="n50_e0b9" name="n50" xy="551,75" size="239,364" advanced="true">
+      <relation target="" sidePair="height-height,middle-middle,right-right"/>
+    </group>
+    <component id="n39_mhkn" name="panel_touch" src="vdnei" fileName="Components/panel_touch.xml" xy="177,0" size="425,467">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n46_7ogs" name="n46" src="vdne13" fileName="Images/Create/img_name_frame_9.png" xy="313,535" size="176,42" group="n29_flj6"/>
+    <component id="n27_flj6" name="btn_sex_1" src="vdne8" fileName="Components/Create/btn_sex_woman.xml" xy="419,471" group="n52_s4oo"/>
+    <component id="n26_flj6" name="btn_sex_0" src="vdne5" fileName="Components/Create/btn_sex_man.xml" xy="324,471" group="n52_s4oo"/>
+    <component id="n19_flj6" name="btn_pre" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="146,534" size="130,45" group="n52_s4oo">
+      <Button title="上一步" titleColor="#fced00" titleFontSize="24" icon="ui://qa9a7ritemvc3h"/>
+    </component>
+    <text id="n22_flj6" name="textInput_name" xy="315,535" size="174,42" group="n29_flj6" fontSize="18" color="#a2b592" vAlign="middle" autoSize="none" bold="true" strokeColor="#000000" singleLine="true" text="" input="true" prompt="输入名称" maxLength="7"/>
+    <component id="n23_flj6" name="btn_random_name" src="vdne3" fileName="Components/Create/btn_single_click.xml" xy="449,541" size="32,29" group="n29_flj6" aspect="true"/>
+    <group id="n29_flj6" name="inputField_name" xy="313,535" size="176,42" group="n52_s4oo" advanced="true"/>
+    <component id="n20_flj6" name="btn_create_role" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="537,534" size="130,45" group="n52_s4oo">
+      <Button title="创建角色" titleColor="#fced00" titleFontSize="24" icon="ui://qa9a7ritemvc3h"/>
+    </component>
+    <group id="n52_s4oo" name="n52" xy="146,471" size="520,108" advanced="true">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
+  </displayList>
+</component>

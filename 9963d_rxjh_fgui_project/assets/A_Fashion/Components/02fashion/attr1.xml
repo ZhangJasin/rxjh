@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="250,190">
+  <displayList>
+    <image id="n7_km0s" name="n0" src="rg4ig" fileName="Images/02fashion/fash_rightxxd.png" xy="1,49" size="248,139"/>
+    <image id="n1_km0s" name="n1" src="rg4ih" fileName="Images/0tongyong/huawen1.png" xy="194,19"/>
+    <image id="n2_km0s" name="n2" src="rg4ii" fileName="Images/0tongyong/huawen2.png" xy="16,19"/>
+    <text id="n5_km0s" name="n5" xy="125,29" pivot="0.5,0.5" anchor="true" size="136,34" fontSize="24" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="激活属性"/>
+    <component id="n8_km0s" name="attrfont" src="rg4ij" fileName="Components/02fashion/attrfont.xml" xy="9,56" size="232,128"/>
+    <image id="n9_km0s" name="attrimg" src="rg4ik" fileName="Images/02fashion/fash_zwsx.png" xy="63,82" visible="false"/>
+  </displayList>
+</component>

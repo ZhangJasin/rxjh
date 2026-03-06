@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <controller name="tips" exported="true" pages="0,关闭tips,1,打开tips" selected="0"/>
+  <controller name="page" exported="true" pages="3,合成,0,强化" selected="0"/>
+  <displayList>
+    <component id="n1_ler3" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="129,43" size="1076,640">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n3_ler3" name="closebtn" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1175,71">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n4_ler3" name="n4" xy="610,53" pivot="0.5,0.5" size="139,34" fontSize="22" color="#ffffff" align="center" autoSize="none" text="锻造">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n6_ler3" name="n6" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="145,99" size="533,574">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n41_fpdq" name="List_Page" xy="1194,89" size="51,554" scroll="horizontal" margin="4,2,6,0" colGap="2" defaultItem="ui://fgihxfyeijnx4z" selectionController="page">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item title="合成"/>
+      <item title="强化"/>
+    </list>
+    <list id="n25_ger5" name="List_equip" xy="146,102" size="529,576" layout="flow_hz" overflow="scroll" margin="2,0,4,2" lineGap="5" colGap="5" lineItemCount="7" defaultItem="ui://bphbjao2a4au62" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n23_ger5" name="panl_qh" src="fpdq61" fileName="qianghua.xml" xy="692,96" size="498,580">
+      <gearDisplay2 controller="page" pages="0" condition="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n39_bmxb" name="panl_hc" src="fpdq60" fileName="hecheng.xml" xy="692,96">
+      <gearDisplay controller="page" pages="3"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n30_o4l6" name="btntips" src="fbc0v4p" fileName="common/btn_help.xml" pkg="st7dgeqq" xy="1155,126">
+      <gearDisplay controller="tips" pages="0,1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n40_qxgu" name="panl_tip" src="fpdq5l" fileName="tips.xml" xy="407,64">
+      <gearDisplay controller="tips" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

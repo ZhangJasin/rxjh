@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="102,32">
+  <displayList>
+    <image id="n7_qjli" name="img_di" src="qjliy" fileName="imageFgui/img_di1.png" xy="0,0"/>
+    <text id="n8_qjli" name="text" xy="51,16" pivot="0.5,0.5" anchor="true" size="86,32" fontSize="22" color="#a4d452" align="center" vAlign="middle" leading="1" letterSpacing="-2" ubb="true" autoClearText="true" text="哈哈哈哈">
+      <relation target="n7_qjli" sidePair="center-center,middle-middle"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

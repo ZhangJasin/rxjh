@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="242,24">
+  <displayList>
+    <text id="n4_f0so" name="Text_name" xy="40,12" pivot="0.5,0.5" anchor="true" size="60,22" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="地图地图"/>
+    <image id="n16_uapu" name="n0" src="t0pf6h" fileName="Images/bg_tips_content.png" xy="82,0" size="160,24"/>
+    <text id="n17_uapu" name="Input_key" xy="82,1" size="160,22" fontSize="12" color="#666666" align="center" vAlign="middle" autoSize="none" text="" input="true" prompt="未设置"/>
+  </displayList>
+</component>

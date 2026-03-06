@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="545,30">
+  <displayList>
+    <loader id="n12_leye" name="icon_state" xy="4,15" pivot="0,0.5" anchor="true" size="40,30" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n15_scjw" name="text_cond" xy="55,15" pivot="0,0.5" anchor="true" size="489,30" fontSize="18" color="#00ff00" vAlign="middle" autoSize="none" text="以满足拜师条件"/>
+  </displayList>
+</component>

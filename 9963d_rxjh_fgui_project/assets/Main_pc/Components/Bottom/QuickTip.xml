@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,39" pivot="0.5,0.5" anchor="true" extention="Label" bgColorEnabled="true">
+  <displayList>
+    <graph id="n1_celm" name="n1" xy="0,0" size="50,39" type="rect" lineColor="#ff999999" fillColor="#80000000">
+      <relation target="n0_celm" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <text id="n0_celm" name="title" xy="6,3" size="38,33" fontSize="12" color="#ffffff" align="center" leading="0" autoClearText="true" text="背包&#xA;Ctrl+B">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

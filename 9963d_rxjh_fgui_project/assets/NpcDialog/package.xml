@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="7p89srj7">
+  <resources>
+    <component id="t4fp1" name="npcDialog.xml" path="/" exported="true"/>
+    <image id="t4fp2" name="di1.png" path="/image/" exported="true" scale="9grid" scale9grid="28,20,56,40"/>
+    <image id="t4fp3" name="btnhong2.png" path="/image/" exported="true" scale="9grid" scale9grid="35,16,70,32" duplicatePadding="true"/>
+    <image id="t4fp4" name="btn_lv.png" path="/image/" exported="true" scale="9grid" scale9grid="39,13,78,26"/>
+    <component id="t4fp6" name="Bbtnlv.xml" path="/Components/" exported="true"/>
+    <component id="cun77" name="rightBtns.xml" path="/Components/" exported="true"/>
+    <image id="cun79" name="task_di2.png" path="/image/" exported="true" scale="9grid" scale9grid="32,58,64,116"/>
+    <component id="rlb8aj" name="loopTask.xml" path="/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

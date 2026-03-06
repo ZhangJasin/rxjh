@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImageOffsetX="10" designImageOffsetY="10">
+  <displayList>
+    <component id="n0_n19w" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_n19w" name="text_title" xy="493,176" size="36,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" text="充值">
+      <relation target="n0_n19w" sidePair="center-center,top-top"/>
+    </text>
+    <image id="n33_n19w" name="bg_fill_1" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="186,217" size="650,26" group="n9_n19w"/>
+    <text id="n5_n19w" name="text_1" xy="196,220" size="64,19" group="n9_n19w" fontSize="12" color="#fcf1bf" text="本服名称："/>
+    <text id="n6_n19w" name="text_servername" xy="306,220" size="52,19" group="n9_n19w" fontSize="12" color="#ffff00" text="本服名称"/>
+    <text id="n7_n19w" name="text_2" xy="545,220" size="64,19" group="n9_n19w" fontSize="12" color="#fcf1bf" text="充值角色："/>
+    <text id="n8_n19w" name="text_rolename" xy="634,220" size="52,19" group="n9_n19w" fontSize="12" color="#ffff00" text="充值角色"/>
+    <group id="n9_n19w" name="panel_1" xy="186,217" size="650,26" advanced="true">
+      <relation target="n0_n19w" sidePair="center-center,top-top"/>
+    </group>
+    <image id="n34_n19w" name="bg_fill_2" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="186,259" size="644,152" group="n29_n19w"/>
+    <text id="n11_n19w" name="text_3" xy="196,274" size="64,19" group="n29_n19w" fontSize="12" color="#fcf1bf" text="货币种类："/>
+    <list id="n12_n19w" name="list_coins" xy="288,261" size="500,50" group="n29_n19w" layout="row" overflow="scroll" scroll="horizontal" colGap="20" defaultItem="ui://0z7sfqs8n19w3">
+      <relation target="" sidePair=""/>
+      <item/>
+    </list>
+    <text id="n13_n19w" name="text_4" xy="196,324" size="64,19" group="n29_n19w" fontSize="12" color="#fcf1bf" text="充值金额："/>
+    <image id="n45_ja3e" name="input_bg" src="n19wd" fileName="Images/store_text_bg.png" xy="288,325" size="150,22" group="n29_n19w"/>
+    <text id="n15_n19w" name="input_money" xy="288,325" size="150,20" group="n29_n19w" fontSize="12" color="#7b98c0" autoSize="none" text="10" input="true" maxLength="8" keyboardType="4"/>
+    <text id="n16_n19w" name="text_exchange" xy="457,326" size="10,20" group="n29_n19w" fontSize="13" color="#fcf1bf" text=""/>
+    <text id="n17_n19w" name="text_5" xy="196,373" size="64,19" group="n29_n19w" fontSize="12" color="#fcf1bf" text="充值方式："/>
+    <component id="n35_n19w" name="btn_alipay" src="n19w0" fileName="Components/btn_alipay.xml" xy="288,371" group="n20_n19w"/>
+    <image id="n36_n19w" name="img_flag1" src="n19w9" fileName="Images/store_recharge2_1.png" xy="347,371" group="n20_n19w"/>
+    <group id="n20_n19w" name="panel_alipay" xy="288,371" size="75,28" group="n29_n19w" advanced="true"/>
+    <component id="n37_n19w" name="btn_weixin" src="n19w2" fileName="Components/btn_weixin.xml" xy="389,371" group="n23_n19w"/>
+    <image id="n38_n19w" name="img_flag2" src="n19w7" fileName="Images/store_recharge1_1.png" xy="448,371" group="n23_n19w"/>
+    <group id="n23_n19w" name="panel_weixin" xy="389,371" size="75,28" group="n29_n19w" advanced="true"/>
+    <component id="n39_n19w" name="btn_huabei" src="n19w1" fileName="Components/btn_huabei.xml" xy="490,371" group="n26_n19w"/>
+    <image id="n40_n19w" name="img_flag3" src="n19wb" fileName="Images/store_recharge3_1.png" xy="549,371" group="n26_n19w"/>
+    <group id="n26_n19w" name="panel_huabei" xy="490,371" size="74,28" group="n29_n19w" visible="false" advanced="true"/>
+    <component id="n41_ja3e" name="label_more" src="n19w4" fileName="Components/label_more.xml" xy="503,373" group="n29_n19w"/>
+    <component id="n42_ja3e" name="btn_submit" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="701,371" group="n29_n19w">
+      <Button title="确认支付" titleColor="#ffff00" titleFontSize="12"/>
+    </component>
+    <group id="n29_n19w" name="panel_2" xy="186,259" size="644,152" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n44_ja3e" name="bg_fill_3" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="186,428" size="644,152" group="n32_n19w"/>
+    <richtext id="n31_n19w" name="rich_desc" xy="196,446" size="520,20" restrictSize="0,0,0,130" group="n32_n19w" fontSize="13" color="#fff7d1" autoSize="none" text=""/>
+    <group id="n32_n19w" name="panel_3" xy="186,428" size="644,152" advanced="true">
+      <relation target="n0_n19w" sidePair="center-center,bottom-bottom"/>
+    </group>
+    <component id="n1_n19w" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="833,188" size="30,30">
+      <relation target="n0_n19w" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n3_n19w" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="179,596" size="0,0"/>
+  </displayList>
+</component>

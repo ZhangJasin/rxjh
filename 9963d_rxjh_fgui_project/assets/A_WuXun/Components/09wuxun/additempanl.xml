@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" bgColor="#ff0000">
+  <controller name="addlistshow" exported="true" pages="5,武器" selected="0"/>
+  <displayList>
+    <component id="n6_w4id" name="bg" src="oqrp1b" fileName="Components/tongyong/kongbg.xml" xy="0,0"/>
+    <image id="n3_o4l6" name="n3" src="oqrp20" fileName="Images/0tongyong/tipsdi.png" xy="846,235" size="295,290"/>
+    <text id="n8_hujp" name="wpdfont" xy="887,311" pivot="0.5,0.5" size="214,42" font="SimHei" fontSize="30" color="#ffff00" align="center" text="暂无已鉴定装备"/>
+    <list id="n5_o4l6" name="additemlist" xy="852,233" size="282,290" overflow="scroll" margin="2,2,2,2" lineGap="3" colGap="3" defaultItem="ui://hed3v11ooqrps" autoClearItems="true">
+      <relation target="" sidePair="width-width,height-height"/>
+      <item/>
+    </list>
+  </displayList>
+</component>

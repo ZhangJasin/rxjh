@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <controller name="page" pages="0,,1,,2,,3,,6," selected="0">
+    <remark page="0" value="属性"/>
+    <remark page="1" value="天赋"/>
+    <remark page="2" value="技能"/>
+    <remark page="3" value="装备"/>
+    <remark page="4" value="兽灵丹合成"/>
+  </controller>
+  <controller name="iswear" pages="0,,1," selected="0">
+    <remark page="0" value="无穿戴"/>
+    <remark page="1" value="有穿戴"/>
+  </controller>
+  <controller name="skillinfo" pages="0,,1," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="显示"/>
+  </controller>
+  <controller name="attrtc" pages="0,,1,,2,,3,,4," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="喂养"/>
+    <remark page="2" value="属性加成"/>
+    <remark page="3" value="升星"/>
+    <remark page="4" value="升阶"/>
+  </controller>
+  <displayList>
+    <component id="n54_svai" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="1080,652">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n55_swkl" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1175,76">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n56_swkl" name="n56" xy="640,62" pivot="0.5,0.5" size="48,32" font="SimHei" fontSize="22" color="#ffffff" align="center" vAlign="middle" text="灵兽">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n66_lg98" name="n66" src="s45r41" fileName="Images/newattr/01.png" xy="138,104"/>
+    <image id="n67_lg98" name="n67" src="s45r44" fileName="Images/newattr/014.png" xy="139,104" size="249,590"/>
+    <list id="n68_lg98" name="petList" xy="143,105" size="240,586" overflow="scroll" defaultItem="ui://bphbjao2swkl33">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n69_lg98" name="n69" src="s45r43" fileName="Images/newattr/015.png" xy="920,103" size="277,590"/>
+    <image id="n70_lg98" name="n70" src="s45r4b" fileName="Images/newattr/07.png" xy="531,133"/>
+    <text id="n71_lg98" name="petname" xy="600,133" pivot="0.5,0.5" size="100,34" font="SimHei" fontSize="24" color="#ffff00" align="center" vAlign="middle" text="宠物名字"/>
+    <image id="n72_lg98" name="n72" src="s45r4g" fileName="Images/newattr/02.png" xy="463,534"/>
+    <graph id="n73_lg98" name="graph_pet" xy="649,588" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <component id="n74_lg98" name="panel_touch" src="ger553" fileName="Components/tongyong/itemRoot.xml" pkg="fgihxfye" xy="504,242" size="287,343">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n75_lg98" name="n12" src="s5ms3m" fileName="Components/shuxing/wyitem.xml" xy="537,179"/>
+    <loader id="n76_lg98" name="di15" xy="433,318" size="74,74" url="ui://fgihxfyel2uigh">
+      <gearDisplay controller="iswear" pages="1"/>
+    </loader>
+    <loader id="n77_lg98" name="di16" xy="433,426" size="74,74" url="ui://fgihxfyel2uigh">
+      <gearDisplay controller="iswear" pages="1"/>
+    </loader>
+    <loader id="n78_lg98" name="di17" xy="793,318" size="74,74" url="ui://fgihxfyel2uigh">
+      <gearDisplay controller="iswear" pages="1"/>
+    </loader>
+    <loader id="n79_lg98" name="di18" xy="793,426" size="74,74" url="ui://fgihxfyel2uigh">
+      <gearDisplay controller="iswear" pages="1"/>
+    </loader>
+    <component id="n80_lg98" name="equip0" src="kdof36" fileName="Components/shuxing/equipItem.xml" xy="433,318" pivot="0.5,0.5" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n81_lg98" name="equip1" src="kdof36" fileName="Components/shuxing/equipItem.xml" xy="433,426" pivot="0.5,0.5" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n82_lg98" name="equip2" src="kdof36" fileName="Components/shuxing/equipItem.xml" xy="793,318" pivot="0.5,0.5" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n83_lg98" name="equip3" src="kdof36" fileName="Components/shuxing/equipItem.xml" xy="793,426" pivot="0.5,0.5" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n84_lg98" name="btn_sxyl" src="s45r4k" fileName="Components/shuxing/btn_attrzl.xml" xy="813,121">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="属性预览" titleFontSize="22"/>
+    </component>
+    <component id="n85_lg98" name="btn_lssx" src="s45r4j" fileName="Components/shuxing/btn_upstar.xml" xy="813,194">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="灵兽升星" titleFontSize="22"/>
+    </component>
+    <component id="n86_lg98" name="btn_pet" src="fpdq5z" fileName="Components/shuxing/btn_zong.xml" xy="590,625" size="120,40" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="召 唤" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <component id="n57_onai" name="attr_panl" src="swkl1k" fileName="attrPanl.xml" xy="922,103" size="274,590">
+      <gearDisplay controller="page" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n59_klt8" name="talent_panl" src="klt83t" fileName="talentPanl.xml" xy="924,104">
+      <gearDisplay controller="page" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n61_klt8" name="skill_panl" src="klt83w" fileName="skillPanl.xml" xy="924,104">
+      <gearDisplay controller="page" pages="2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n89_lg98" name="panl_sldhc" src="lg984u" fileName="sldHcPanl.xml" xy="142,104">
+      <gearDisplay controller="page" pages="6"/>
+    </component>
+    <component id="n90_mawg" name="equip_panl" src="mawg5f" fileName="equipPanl.xml" xy="924,107">
+      <gearDisplay controller="page" pages="3"/>
+    </component>
+    <list id="n58_kdof" name="List_Page" xy="1195,99" size="51,554" scroll="horizontal" margin="4,2,6,0" lineGap="3" colGap="2" defaultItem="ui://fgihxfyeijnx4z" align="right" selectionController="page">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item title="属性"/>
+      <item title="天赋"/>
+      <item title="技能"/>
+      <item title="装备"/>
+    </list>
+    <component id="n63_lg98" name="panl_sxjc" src="kdof3c" fileName="Components/shuxing/panl_attrshow.xml" xy="0,0">
+      <gearDisplay controller="attrtc" pages="2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n62_lg98" name="panl_wyls" src="kdof3a" fileName="Components/shuxing/panl_wyls.xml" xy="2,0">
+      <gearDisplay controller="attrtc" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n64_lg98" name="panl_lssx" src="kdof3d" fileName="Components/shuxing/panl_petupxing.xml" xy="0,1">
+      <gearDisplay controller="attrtc" pages="3"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n65_lg98" name="panl_lssj" src="kdof3h" fileName="Components/shuxing/panl_lssj.xml" xy="0,0">
+      <gearDisplay controller="attrtc" pages="4"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n88_lg98" name="panl_skillinfo" src="s2ey3y" fileName="Components/talent/talentPanl.xml" xy="416,106">
+      <gearDisplay controller="skillinfo" pages="1"/>
+    </component>
+  </displayList>
+</component>

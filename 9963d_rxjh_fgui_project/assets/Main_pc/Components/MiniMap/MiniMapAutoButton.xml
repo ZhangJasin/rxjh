@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="46,25" pivot="0.5,0.5" extention="Button">
+  <controller name="state" pages="0,,1," selected="0"/>
+  <displayList>
+    <loader id="n4_kxj1" name="icon" xy="0,0" size="46,25" url="ui://xwp5acko9v0nv8d" align="center" vAlign="middle" fill="scaleFree" autoSize="true"/>
+    <text id="n3_kxj1" name="title" xy="23,12" pivot="0.5,0.5" anchor="true" size="32,22" fontSize="14" color="#826223" align="center" vAlign="middle" text="挂机">
+      <gearText controller="state" pages="1" values="取消" default="挂机"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>

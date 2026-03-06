@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750" designImage="ui://q0jqxcw9se4svl0" designImageAlpha="0">
+  <displayList>
+    <graph id="n11_w092" name="mask" xy="0,0" size="1344,750" touchable="false" type="rect" lineColor="#00000000" fillColor="#00ffffff">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n0_w092" name="dialog_player_info" src="w092v66" fileName="Components/ComponentPlayerInfo.xml" xy="671,374" pivot="0.5,0.5" anchor="true" size="369,287">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="a4d4nzsc">
+  <resources>
+    <component id="y7ps1" name="invited_item.xml" path="/Components/"/>
+    <component id="y7psb" name="TradeMain.xml" path="/" exported="true"/>
+    <image id="hcozd" name="bg.png" path="/Images/" scale="9grid" scale9grid="10,7,20,14"/>
+    <component id="knrhf" name="btn_textinput.xml" path="/Components/"/>
+    <component id="ipjgvnv" name="item_trade.xml" path="/Components/" exported="true"/>
+    <image id="qeggvnw" name="textinput_bg.png" path="/Images/" scale="9grid" scale9grid="6,6,3,2"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

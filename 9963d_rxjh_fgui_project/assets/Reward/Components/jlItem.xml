@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64">
+  <controller name="type" pages="0,,1,,2,,3,,4,,5," selected="0"/>
+  <displayList>
+    <image id="n0_hpp3" name="n0" src="hpp3g" fileName="image/7000001.png" xy="0,0">
+      <gearDisplay controller="type" pages="0"/>
+    </image>
+    <image id="n1_hpp3" name="n1" src="hpp3h" fileName="image/7000002.png" xy="0,0">
+      <gearDisplay controller="type" pages="1"/>
+    </image>
+    <image id="n2_hpp3" name="n2" src="hpp3i" fileName="image/7000003.png" xy="0,0">
+      <gearDisplay controller="type" pages="2"/>
+    </image>
+    <image id="n3_hpp3" name="n3" src="hpp3j" fileName="image/7000004.png" xy="0,0">
+      <gearDisplay controller="type" pages="3"/>
+    </image>
+    <image id="n4_hpp3" name="n4" src="hpp3f" fileName="image/7000005.png" xy="0,0">
+      <gearDisplay controller="type" pages="4"/>
+    </image>
+    <image id="n5_hpp3" name="n5" src="hpp3l" fileName="image/7000006.png" xy="0,0">
+      <gearDisplay controller="type" pages="5"/>
+    </image>
+  </displayList>
+</component>

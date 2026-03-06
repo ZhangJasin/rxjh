@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="120,0">
+  <displayList>
+    <list id="n1_tqs7" name="list" xy="0,0" size="120,90" overflow="scroll" defaultItem="ui://xpq1wbq8tqs7vor">
+      <relation target="" sidePair="width-width"/>
+    </list>
+  </displayList>
+  <relation target="n1_tqs7" sidePair="height-height"/>
+</component>

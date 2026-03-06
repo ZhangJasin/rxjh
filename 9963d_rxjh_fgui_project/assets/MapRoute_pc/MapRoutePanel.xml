@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n2_n19w" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="358,168" size="312,430">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n4_n19w" name="n10" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="370,208" size="288,384">
+      <relation target="n2_n19w" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n5_n19w" name="text_title" xy="478,174" size="68,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" text="切换线路">
+      <relation target="n2_n19w" sidePair="center-center,top-top"/>
+    </text>
+    <component id="n7_n19w" name="btn_switch" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="471,546">
+      <relation target="n2_n19w" sidePair="center-center,bottom-bottom"/>
+      <Button title="切换线路" titleColor="#fff000" titleFontSize="12"/>
+    </component>
+    <component id="n3_n19w" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="654,188" size="30,30">
+      <relation target="n2_n19w" sidePair="right-right,top-top"/>
+    </component>
+    <list id="n10_n19w" name="list_line" xy="413,236" size="200,280" overflow="scroll" lineGap="18" defaultItem="ui://0cnnwo4yn19w0">
+      <relation target="n2_n19w" sidePair="center-center,middle-middle"/>
+    </list>
+    <component id="n8_n19w" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="364,598" size="0,0">
+      <relation target="n2_n19w" sidePair="left-left,bottom-bottom"/>
+    </component>
+  </displayList>
+</component>

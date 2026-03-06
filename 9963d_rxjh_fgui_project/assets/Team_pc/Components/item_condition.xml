@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="390,40">
+  <displayList>
+    <image id="n19_hcvo" name="bg" src="emvc59" fileName="image/img_di3.png" pkg="qa9a7rit" xy="0,0" size="390,40"/>
+    <text id="n4_f0so" name="text_name" xy="52,20" pivot="0.5,0.5" anchor="true" size="100,20" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="自由"/>
+    <text id="n7_f0so" name="text_level" xy="147,20" pivot="0.5,0.5" anchor="true" size="70,20" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="等级"/>
+    <text id="n14_l7f0" name="text_count" xy="237,20" pivot="0.5,0.5" anchor="true" size="60,23" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="不限"/>
+    <component id="n17_10pfo" name="btn_select" src="10pfo2w" fileName="Components/btn_select.xml" xy="340,20" pivot="0.5,0.5" anchor="true"/>
+  </displayList>
+</component>

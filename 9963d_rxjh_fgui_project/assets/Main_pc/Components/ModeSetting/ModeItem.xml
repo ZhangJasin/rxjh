@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="242,30" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <displayList>
+    <image id="n0_zn3d" name="n0" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,0" size="242,30">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_pp0l" name="n3" src="pp0lfvdu" fileName="Images/ModeSetting/quality_select_frame_9.png" xy="0,0" size="242,30">
+      <gearDisplay controller="button" pages="3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n1_zn3d" name="Loader_icon" xy="26,8" size="28,14" url="ui://xwp5ackozn3dv8h" fill="scaleFree"/>
+    <text id="n2_zn3d" name="Text_desc" xy="87,5" size="88,19" fontSize="12" color="#ffffff" text="可以攻击任何人"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

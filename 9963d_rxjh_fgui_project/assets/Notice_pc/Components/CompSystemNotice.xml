@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="660,19" pivot="0.5,0" anchor="true" opaque="false">
+  <displayList>
+    <graph id="n2_rbeg" name="n1" xy="0,0" size="660,19" alpha="0.5" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n1_rbeg" name="ImageHorn" src="nv6e4" fileName="Images/image_notice_horn.png" xy="-23,0" scale="0.3,0.3"/>
+    <component id="n3_rbeg" name="label" src="nv6e9" fileName="Components/LabelSystemNotice.xml" xy="0,0" size="660,19">
+      <relation target="" sidePair="width-width"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="124,54">
+  <displayList>
+    <graph id="n72_kvft" name="Mask" xy="0,0" pivot="0.5,0.5" anchor="true" size="5000,5000" type="rect" lineSize="0" fillColor="#00ffffff"/>
+    <image id="n62_g11o" name="n62" src="tj4v47" fileName="Images/Team/main_team_operation_di.png" xy="0,0" size="124,54">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n64_g11o" name="Button_createTeam" src="g11o4c" fileName="Components/Player/TeamFuncButton.xml" xy="7,9" size="110,18" group="n71_g11o">
+      <Button title="创建队伍"/>
+    </component>
+    <component id="n73_qqzg" name="Button_joinTeam" src="g11o4c" fileName="Components/Player/TeamFuncButton.xml" xy="7,28" size="110,18" group="n71_g11o">
+      <Button title="加入队伍"/>
+    </component>
+    <group id="n71_g11o" name="n71" xy="7,9" size="110,37" advanced="true" layout="vt" lineGap="1" excludeInvisibles="true"/>
+  </displayList>
+  <relation target="n71_g11o" sidePair="bottomext-bottom"/>
+</component>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <controller name="pageTo" pages="0,属性,1,称号" selected="0"/>
+  <displayList>
+    <component id="n14_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n1_m76o" name="text_title" xy="512,187" pivot="0.5,0.5" anchor="true" size="68,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" text="玩家信息">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n3_m76o" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n12_m76o" name="panel_equip" src="n05517" fileName="PCComponentEquipPanel.xml" xy="185,208" controller="PanelKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n13_m76o" name="panel_property" src="n0551b" fileName="PCComponentPropertyPanel.xml" xy="529,208">
+      <gearDisplay controller="pageTo" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n15_u8z5" name="panel_title" src="n0552o" fileName="PCComponentTitlePanel.xml" xy="530,208">
+      <gearDisplay controller="pageTo" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n16_u8z5" name="btn_tab_1" src="n055v" fileName="Components/btn_tab.xml" xy="845,236" size="30,60">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n17_u8z5" name="btn_tab_2" src="n055v" fileName="Components/btn_tab.xml" xy="845,297" size="30,60">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

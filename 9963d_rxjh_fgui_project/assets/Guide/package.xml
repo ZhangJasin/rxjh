@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="q3l7vvj0">
+  <resources>
+    <component id="rpol4" name="GuideLayer.xml" path="/" exported="true"/>
+    <movieclip id="xcfj6" name="rswcfhd.jta" path="/"/>
+    <component id="o9ph8" name="GuideTipWithArrow.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="Guide">
+    <atlas name="默认" index="0"/>
+  </publish>
+</packageDescription>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,32">
+  <displayList>
+    <richtext id="n5_p253" name="rich_name" xy="20,15" pivot="0,0.5" anchor="true" size="160,29" fontSize="20" color="#f1ffeb" vAlign="middle" autoSize="none" text="最小攻击力百分比："/>
+    <richtext id="n2_jh3v" name="rich_cur" xy="210,15" pivot="0.5,0.5" anchor="true" size="80,29" fontSize="20" color="#f1ffeb" align="right" vAlign="middle" autoSize="none" text="100.0%"/>
+    <richtext id="n4_jh3v" name="rich_next" xy="350,15" pivot="0.5,0.5" anchor="true" size="80,29" fontSize="20" color="#00ff00" vAlign="middle" autoSize="none" text="100.0%"/>
+    <image id="n3_jh3v" name="arrow" src="jh3v1d" fileName="Images/skill_arrow2.png" xy="280,16" pivot="0.5,0.5" anchor="true"/>
+  </displayList>
+</component>

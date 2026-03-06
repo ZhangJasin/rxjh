@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="170,41">
+  <controller name="isSelected" exported="true" pages="0,选中,1,未选中" selected="0"/>
+  <controller name="tabName" exported="true" pages="0,方案1,1,方案2,2,方案3" selected="0"/>
+  <displayList>
+    <image id="n74_mzzl" name="selected" src="zah9v4j" fileName="image/toggle_top_green_select.png" pkg="st7dgeqq" xy="85,20" pivot="0.5,0.5" anchor="true" size="170,41">
+      <gearDisplay controller="isSelected" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n75_mzzl" name="unselected" src="zah9v4k" fileName="image/toggle_top_green_unselect.png" pkg="st7dgeqq" xy="85,20" pivot="0.5,0.5" anchor="true" size="170,41">
+      <gearDisplay controller="isSelected" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n76_mzzl" name="text" xy="50,4" size="70,32" fontSize="22" color="#ffff00" align="center" vAlign="middle" strokeColor="#000000" text="方案一">
+      <gearDisplay controller="isSelected" pages="0"/>
+      <gearText controller="tabName" pages="0,2" values="方案一|方案三" default="方案二"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n78_mzzl" name="text2" xy="45,1" size="79,35" fontSize="25" color="#999999" align="center" vAlign="middle" strokeColor="#000000" text="方案一">
+      <gearDisplay controller="isSelected" pages="1"/>
+      <gearText controller="tabName" pages="0,2" values="方案一|方案三" default="方案二"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

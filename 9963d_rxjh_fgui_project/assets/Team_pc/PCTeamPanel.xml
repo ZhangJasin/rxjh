@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n58_hcvo" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="512,384" pivot="0.5,0.5" anchor="true" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n27_npv4" name="text_title" xy="504,185" pivot="0.3,0.5" anchor="true" size="36,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" autoSize="none" text="组队">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n63_spth" name="bg2" src="emvc58" fileName="image/img_search.png" pkg="qa9a7rit" xy="305,220" pivot="0.5,0.5" anchor="true" size="240,22" group="n28_npv4">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n6_vjv7" name="text1" xy="215,220" pivot="0.5,0.5" anchor="true" size="50,20" group="n28_npv4" fontSize="12" color="#7cc3b3" autoSize="none" text="目标：">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n7_vjv7" name="text_goal" xy="325,220" pivot="0.5,0.5" anchor="true" size="150,20" group="n28_npv4" fontSize="12" color="#7cc3b3" autoSize="none" text="哈哈哈哈哈哈哈">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n8_vjv7" name="btn_edit" src="vjv7l" fileName="Components/btn_edit.xml" xy="415,220" pivot="0.5,0.5" anchor="true" size="16,16" group="n28_npv4">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n28_npv4" name="frame_top" xy="185,209" size="240,22" advanced="true"/>
+    <image id="n59_hcvo" name="bg3" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="185,240" size="270,300">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n60_hcvo" name="bg4" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="460,240" size="375,300">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n22_w3wa" name="text_nobody" xy="644,390" pivot="0.5,0.5" anchor="true" size="300,60" font="ui://st7dgeqqje63v37" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n12_vjv7" name="btn_help" src="vjv7r" fileName="Components/btn_help.xml" xy="215,180" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n26_npv4" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n10_vjv7" name="btn_quit" src="vjv7o" fileName="Components/btn_quit.xml" xy="320,565" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n23_lmpz" name="btn_shout" src="jvqd5g" fileName="common/btn_first_green.xml" pkg="qa9a7rit" xy="730,220" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="一键喊话" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <component id="n31_npv4" name="btn_apply" src="jvqd5g" fileName="common/btn_first_green.xml" pkg="qa9a7rit" xy="610,220" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="申请消息" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <component id="n32_npv4" name="btn_setting" src="l7f02a" fileName="Components/btn_setting.xml" xy="810,220" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n33_npv4" name="list_team" xy="190,245" size="260,290" overflow="scroll" lineGap="2" defaultItem="ui://y890q37snpv42r">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n46_scjw" name="input_bg" src="scjwo3f" fileName="Images/input_team_9.png" xy="460,563" pivot="0,0.5" anchor="true" size="180,36" group="n52_scjw">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n37_scjw" name="input_chat" xy="460,563" pivot="0,0.5" anchor="true" size="180,24" group="n52_scjw" fontSize="16" color="#5f795d" vAlign="middle" leading="0" autoSize="none" text="" input="true" prompt="请点击输入" maxLength="54">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n38_scjw" name="list_chat" xy="465,243" size="365,290" group="n52_scjw" selectionMode="none" overflow="scroll" defaultItem="ui://pnop7ha6scjwo3l" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item url="ui://y890q37sscjwo3l"/>
+      <item url="ui://y890q37sscjwo3m"/>
+    </list>
+    <component id="n50_scjw" name="btn_emoj" src="scjwo3h" fileName="Components/btn_emoj.xml" xy="660,563" pivot="0.5,0.5" anchor="true" size="40,40" group="n52_scjw">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n49_scjw" name="btn_pos" src="scjwo3i" fileName="Components/btn_pos.xml" xy="700,563" pivot="0.5,0.5" anchor="true" size="40,40" group="n52_scjw">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n51_scjw" name="btn_chat" src="jvqd5g" fileName="common/btn_first_green.xml" pkg="qa9a7rit" xy="775,563" pivot="0.5,0.5" anchor="true" group="n52_scjw">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="发 送"/>
+    </component>
+    <group id="n52_scjw" name="panel_chat" xy="460,243" size="370,340" advanced="true"/>
+    <component id="n53_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

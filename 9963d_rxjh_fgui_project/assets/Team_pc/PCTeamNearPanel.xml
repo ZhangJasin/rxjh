@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n51_hcvo" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="512,384" pivot="0.5,0.5" anchor="true" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n52_hcvo" name="bg1" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="185,210" size="120,380">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n53_hcvo" name="bg2" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="310,210" size="525,345">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n37_10pfo" name="text_title" xy="512,188" pivot="0.5,0.5" anchor="true" size="68,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" text="队伍大厅">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n55_kelz" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n40_scjw" name="list_page" xy="186,209" size="118,357" overflow="scroll" margin="4,0,0,0" lineGap="4" defaultItem="ui://y890q37sscjwo30" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n9_vjv7" name="list_team" xy="315,215" size="515,335" selectionMode="none" overflow="scroll" lineGap="10" defaultItem="ui://y890q37snc451v" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+    </list>
+    <text id="n20_leye" name="text_nothing" xy="572,382" pivot="0.5,0.5" anchor="true" size="400,29" font="ui://st7dgeqqje63v37" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n33_leye" name="btn_refresh" src="f0so1n" fileName="Components/btn_refresh.xml" xy="765,575" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n34_leye" name="btn_create" src="leye25" fileName="Components/btn_create.xml" xy="635,575" pivot="0.5,0.5" anchor="true" size="84,28">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n54_hcvo" name="check_autoInvited" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="325,575" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n44_qpuy" name="text_check" xy="344,575" pivot="0,0.5" anchor="true" size="100,19" fontSize="12" color="#fcf1bf" text="自动同意队伍邀请">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n41_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

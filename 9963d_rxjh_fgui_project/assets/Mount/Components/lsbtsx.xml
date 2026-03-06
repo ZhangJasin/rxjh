@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="260,640">
+  <controller name="isActive" pages="0,未激活,1,已激活" selected="0"/>
+  <displayList>
+    <image id="n24_vzpx" name="n24" src="o0nqc" fileName="image/sxbg.png" xy="5,53" size="250,185"/>
+    <image id="n25_vzpx" name="n25" src="o0nqc" fileName="image/sxbg.png" xy="5,281" size="250,185"/>
+    <image id="n0_v5h4" name="n0" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="25,20" flip="hz"/>
+    <image id="n2_v5h4" name="n2" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="195,20"/>
+    <text id="n1_v5h4" name="n1" xy="5,14" size="250,32" fontSize="22" color="#f6cd2b" align="center" autoSize="none" text="灵宠属性">
+      <gearText controller="isActive" pages="0" values="灵宠属性" default="当前属性"/>
+    </text>
+    <list id="n3_v5h4" name="n3" xy="5,59" size="250,180" overflow="scroll" defaultItem="ui://vslix2m2o0nqp">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n4_v5h4" name="n4" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="25,246" flip="hz">
+      <gearDisplay controller="isActive" pages="1"/>
+    </image>
+    <image id="n5_v5h4" name="n5" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="195,246">
+      <gearDisplay controller="isActive" pages="1"/>
+    </image>
+    <text id="n6_v5h4" name="n6" xy="5,240" size="250,32" fontSize="22" color="#f6cd2b" align="center" autoSize="none" text="下级属性">
+      <gearDisplay controller="isActive" pages="1"/>
+    </text>
+    <list id="n7_v5h4" name="n7" xy="5,285" size="250,180" overflow="scroll" defaultItem="ui://vslix2m2o0nqp">
+      <gearDisplay controller="isActive" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n8_v5h4" name="n8" xy="55,538" size="70,32" fontSize="22" color="#fcf1bf" text="消耗："/>
+    <component id="n10_v5h4" name="xhcl" src="vorr21" fileName="Components/xhcl.xml" xy="115,534"/>
+    <image id="n11_v5h4" name="n11" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="25,492" flip="hz">
+      <gearDisplay controller="isActive" pages="0"/>
+    </image>
+    <image id="n12_v5h4" name="n12" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="195,492">
+      <gearDisplay controller="isActive" pages="0"/>
+    </image>
+    <text id="n13_v5h4" name="n13" xy="5,486" size="250,32" fontSize="22" color="#f6cd2b" align="center" autoSize="none" text="未拥有">
+      <gearDisplay controller="isActive" pages="0"/>
+    </text>
+    <component id="n15_v5h4" name="activeslBtn" src="v5h439" fileName="Components/activelsBtn.xml" xy="68,580">
+      <gearDisplay controller="isActive" pages="1"/>
+    </component>
+    <component id="n23_jimm" name="activeslBtn2" src="jimm3q" fileName="Components/activelsBtn2.xml" xy="68,580">
+      <gearDisplay controller="isActive" pages="0"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,113" extention="Button">
+  <displayList>
+    <image id="n0_lkqx" name="n0" src="lkqxo56" fileName="Images/skill_frame.png" xy="13,0"/>
+    <image id="n4_lkqx" name="n4" src="lkqxo55" fileName="Images/skill_add.png" xy="33,22"/>
+    <loader id="n2_lkqx" name="icon" xy="20,8" size="58,58" url="ui://793j2bfvvxserr" align="center" vAlign="middle" fill="scaleFree" clearOnPublish="true">
+      <relation target="" sidePair=""/>
+    </loader>
+    <text id="n3_lkqx" name="title" xy="-46,80" size="192,33" fontSize="22" color="#e7e7cb" align="center" vAlign="middle" autoSize="none" singleLine="true" text="">
+      <relation target="" sidePair=""/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

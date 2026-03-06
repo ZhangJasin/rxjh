@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,30" extention="Button">
+  <displayList>
+    <text id="n0_s46r" name="n0" xy="0,0" size="80,30" fontSize="14" color="#00ff00" align="center" vAlign="middle" autoSize="none" underline="true" text="退出"/>
+  </displayList>
+  <Button/>
+</component>

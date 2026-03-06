@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="45,118" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="tabKind" exported="true" pages="0,元宝商城,1,江湖币商城,2,充值" selected="0"/>
+  <controller name="isSelected" pages="0,选择,1,未选中" selected="1"/>
+  <displayList>
+    <image id="n0_b434" name="img_unselected" src="as7k5p" fileName="Images/Right_tab_9.png" xy="22,59" pivot="0.5,0.5" anchor="true" size="45,118" customData="元宝商城" color="#ffff00">
+      <gearDisplay controller="isSelected" pages="1"/>
+      <gearText controller="button" default=""/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n1_b434" name="img_selected" src="as7k5q" fileName="Images/Selected_Tab_9.png" xy="22,59" pivot="0.5,0.5" anchor="true" size="45,118">
+      <gearDisplay controller="isSelected" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n2_bf0g" name="text_tab_name" xy="22,59" pivot="0.5,0.5" anchor="true" size="45,118" fontSize="22" color="#cccccc" align="center" vAlign="middle" leading="-7" autoSize="none" strokeColor="#000000" text="元宝商城">
+      <gearColor controller="isSelected" pages="0,1" values="#fac800,#000000|#cccccc,#000000"/>
+      <gearText controller="tabKind" pages="1,2" values="江湖币商城|充值" default="元宝商城"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

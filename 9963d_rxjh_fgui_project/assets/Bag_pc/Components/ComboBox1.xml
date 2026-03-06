@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="89,22" extention="ComboBox" designImageOffsetX="-229" designImageOffsetY="-195">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_80vf" name="n0" src="emvc54" fileName="image/comobox_frame.png" pkg="qa9a7rit" xy="0,0" size="89,22">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_80vf" name="title" xy="3,1" pivot="0.5,0.5" size="65,20" fontSize="12" color="#6eae9f" align="center" vAlign="middle" autoSize="none" singleLine="true" text="全部">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <image id="n2_yqmu" name="n2" src="emvc52" fileName="image/combobox_arrow_bg.png" pkg="qa9a7rit" xy="70,2"/>
+    <image id="n3_yqmu" name="n3" src="emvc51" fileName="image/combobox_arrow.png" pkg="qa9a7rit" xy="73,7"/>
+  </displayList>
+  <ComboBox dropdown="ui://brz7yunln0552k"/>
+</component>

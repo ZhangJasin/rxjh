@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="978,584">
+  <controller name="ismj" alias="是否满级" pages="0,,1," selected="0">
+    <remark page="0" value="未满级"/>
+    <remark page="1" value="已满级"/>
+  </controller>
+  <displayList>
+    <image id="n10_mwln" name="n10" src="oqrpr" fileName="Images/09wuxun/chuilian/04.png" xy="0,0" size="984,584"/>
+    <list id="n51_fjq2" name="equipList" xy="20,11" size="300,396" overflow="scroll" margin="5,5,10,10" lineGap="5" defaultItem="ui://hed3v11ooqrps" autoClearItems="true">
+      <relation target="" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n53_fjq2" name="n53" src="oqrpw" fileName="Images/09wuxun/chuilian/02.png" xy="440,322" size="376,122"/>
+    <list id="n52_fjq2" name="attrlist" xy="465,324" size="351,113" overflow="scroll" margin="2,0,5,0" defaultItem="ui://hed3v11ooqrpd">
+      <gearDisplay controller="ismj" pages="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n58_fjq2" name="attrlist2" xy="467,324" size="329,113" overflow="scroll" margin="2,0,5,0" defaultItem="ui://hed3v11ooqrpx">
+      <gearDisplay controller="ismj" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n54_fjq2" name="xzequip" src="oqrpy" fileName="Components/tongyong/item_select.xml" xy="595,182" visible="false"/>
+    <image id="n63_uz9j" name="n63" src="oqrp16" fileName="Images/09wuxun/chuilian/01.png" xy="822,13"/>
+    <text id="n55_fjq2" name="curLv" xy="825,56" pivot="0,1" size="36,165" font="SimHei" fontSize="20" color="#ffff00" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#000000" text="锤炼等级 10"/>
+    <component id="n56_fjq2" name="item1" src="oqrpf" fileName="Components/tongyong/itemkuang2.xml" xy="600,451">
+      <gearDisplay controller="ismj" pages="0"/>
+    </component>
+    <component id="n57_fjq2" name="btn_chuilian" src="oqrp17" fileName="Components/tongyong/btn_zong.xml" xy="555,524">
+      <gearDisplay controller="ismj" pages="0"/>
+      <Button title="锤 炼" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <text id="n60_p3ya" name="wpdfont" xy="525,330" size="214,42" visible="false" font="SimHei" fontSize="30" color="#a4d452" align="center" strokeColor="#000000" text="未穿戴武勋装备"/>
+    <image id="n62_uz9j" name="n62" src="oqrp19" fileName="Images/09wuxun/chuilian/03.png" xy="453,455">
+      <gearDisplay controller="ismj" pages="1"/>
+    </image>
+  </displayList>
+</component>

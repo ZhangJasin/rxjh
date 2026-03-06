@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="220,72" extention="Button">
+  <displayList>
+    <image id="n31_yagp" name="n31" src="as7k22" fileName="Images/team_info_bg_9.png" xy="0,0" size="220,72"/>
+    <image id="n11_wmgr" name="icon_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="12,8" size="56,56" group="n23_npv4"/>
+    <component id="n24_qwah" name="avator" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="12,8" size="56,56" group="n23_npv4" touchable="false"/>
+    <loader id="n17_npv4" name="icon_job" xy="90,20" pivot="0,0.5" anchor="true" size="0,16" group="n23_npv4" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n5_qpwo" name="text_name" xy="76,12" size="80,24" group="n23_npv4" fontSize="16" color="#fffadc" autoSize="none" text="名字"/>
+    <text id="n6_qpwo" name="text_level" xy="68,41" pivot="1,0" anchor="true" size="50,25" group="n23_npv4" fontSize="18" color="#fffadc" align="right" autoSize="none" text="100"/>
+    <text id="n25_zi8s" name="text_state" xy="76,40" size="80,24" group="n23_npv4" fontSize="16" color="#fffadc" autoSize="none" text="离线"/>
+    <group id="n23_npv4" name="frame" xy="12,8" size="144,58" advanced="true"/>
+    <component id="n35_gkld" name="checkBox" src="gkldo5y" fileName="Components/checkBox.xml" xy="176,23"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

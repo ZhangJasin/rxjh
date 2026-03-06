@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="120,128">
+  <displayList>
+    <image id="n0_eoqr" name="n0" src="eoqr26" fileName="images/戒指底衬.png" xy="-1,0" size="120,128" group="n6_eoqr"/>
+    <image id="n1_eoqr" name="n1" src="eoqr2l" fileName="images/yuanbao.png" xy="8,89" size="49,49" group="n6_eoqr"/>
+    <component id="n2_eoqr" name="n2" src="eoqr2m" fileName="Components/common/show_item(green).xml" xy="28,28" size="64,64" group="n6_eoqr"/>
+    <text id="n3_eoqr" name="textLabel_itemCost" xy="52,99" size="54,32" group="n6_eoqr" fontSize="22" color="#00ff00" align="center" vAlign="middle" ubb="true" autoSize="none" text="999"/>
+    <text id="n4_eoqr" name="textLabel_itemName" xy="0,-2" size="120,32" group="n6_eoqr" fontSize="22" color="#502814" align="center" vAlign="middle" autoSize="none" text="白银戒指"/>
+    <group id="n6_eoqr" name="n6" xy="-1,-2" size="121,141"/>
+  </displayList>
+</component>

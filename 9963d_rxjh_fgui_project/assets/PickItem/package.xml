@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="j6j3xlho">
+  <resources>
+    <component id="jd910" name="PickItemEffectUI.xml" path="/" exported="true"/>
+    <component id="7usovnx" name="PickItemModel.xml" path="/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

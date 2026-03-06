@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="70,20" extention="Button">
+  <controller name="isSelect" pages="1,unSelect,0,Select" selected="0"/>
+  <displayList>
+    <text id="n5_hgpp" name="title" xy="20,0" size="49,20" fontSize="13" color="#ffffff" ubb="true" autoClearText="true" text="10-20级">
+      <relation target="" sidePair="rightext-right"/>
+    </text>
+    <image id="n4_hgpp" name="n4" src="n0552m" fileName="Images/comboBox_bg_9.png" xy="0,0" size="20,20" group="n6_hgpp" aspect="true"/>
+    <image id="n3_hgpp" name="icon_select" src="lxrgv57" fileName="image/checkbox_icon.png" pkg="st7dgeqq" xy="2,2" size="15,15" group="n6_hgpp" aspect="true">
+      <gearDisplay controller="isSelect" pages="0"/>
+    </image>
+    <group id="n6_hgpp" name="n6" xy="0,0" size="20,20" advanced="true"/>
+  </displayList>
+  <Button mode="Check"/>
+</component>

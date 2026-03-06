@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,300">
+  <displayList>
+    <image id="n0_eoqr" name="n0" src="eoqr1k" fileName="images/tips底.png" xy="0,0" size="300,300" pkg="s7gyh5sv"/>
+    <image id="n1_eoqr" name="n1" src="eoqr1l" fileName="images/花纹1.png" xy="240,20" pkg="s7gyh5sv"/>
+    <image id="n2_eoqr" name="n2" src="eoqr1m" fileName="images/花纹2.png" xy="20,20" pkg="s7gyh5sv"/>
+    <text id="n3_eoqr" name="title" xy="100,15" size="100,30" fontSize="20" color="#ffff00" align="center" autoSize="none" text="道具数量"/>
+    <component id="n4_eoqr" name="show_item" src="eoqr1h" fileName="Components/common/show_item(brown).xml" xy="118,76" pkg="s7gyh5sv"/>
+    <image id="n6_eoqr" name="n6" src="eoqr1t" fileName="images/smallBaseFrame.png" xy="90,170" size="120,44" pkg="s7gyh5sv"/>
+    <component id="n7_eoqr" name="btn_add" src="eoqr1u" fileName="Components/common/btn_add.xml" xy="210,170" pkg="s7gyh5sv"/>
+    <component id="n8_eoqr" name="btn_reduce" src="eoqr1w" fileName="Components/common/btn_reduce.xml" xy="46,170" pkg="s7gyh5sv"/>
+    <text id="n9_eoqr" name="input_itemNum" xy="90,170" size="120,44" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="" input="true" prompt="1"/>
+    <component id="n11_eoqr" name="btn_yes" src="la2y15" fileName="Components/common/btn_red.xml" xy="90,234" size="120,45" pkg="s7gyh5sv"/>
+    <text id="n12_eoqr" name="n7" xy="90,235" size="120,45" fontSize="18" color="#ffff00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="确定"/>
+  </displayList>
+</component>

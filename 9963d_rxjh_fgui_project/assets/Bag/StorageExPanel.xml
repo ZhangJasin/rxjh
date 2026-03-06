@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <graph id="n37_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n35_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="165,50" group="n36_yqmu"/>
+    <text id="n3_xzvr" name="Title" xy="667,78" pivot="0.5,0.5" anchor="true" size="52,34" group="n36_yqmu" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" text="仓库"/>
+    <component id="n29_svai" name="CheckBox" src="hgppn" fileName="Components/BagRecycleCheckBox.xml" xy="853,644" size="207,32" group="n36_yqmu">
+      <Button title="快捷存取" selectedTitle="快捷存取"/>
+    </component>
+    <component id="n27_hkm9" name="BtnClose" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1149,79" group="n36_yqmu"/>
+    <component id="n28_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="665,375" size="0,0" group="n36_yqmu"/>
+    <component id="n33_ragy" name="view_bag" src="n7s0v7c" fileName="Components/FilterBagPanel.xml" xy="680,115" size="463,519" group="n36_yqmu"/>
+    <image id="n15_hkm9" name="n15" src="sna9vot" fileName="Images/heiDI.png" xy="189,156" size="463,527" group="n34_ragy"/>
+    <text id="n32_h8dd" name="n32" xy="199,130" pivot="0,0.5" anchor="true" size="64,29" group="n34_ragy" fontSize="20" color="#ffffff" text="类型："/>
+    <component id="n31_h8dd" name="checkbox_type" src="80vf2h" fileName="Components/ComboBox1.xml" xy="276,130" pivot="0,0.5" anchor="true" size="131,32" group="n34_ragy">
+      <ComboBox visibleItemCount="10">
+        <item title="全部"/>
+        <item title="类型一"/>
+        <item title="类型二"/>
+      </ComboBox>
+    </component>
+    <list id="n19_hkm9" name="List_Cell" xy="202,166" size="449,516" group="n34_ragy" layout="flow_hz" overflow="scroll" scrollBarFlags="128" scrollBar="hidden" margin="2,0,2,2" lineGap="8" colGap="10" lineItemCount="6" defaultItem="ui://dak5wnw9q9lsf" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n34_ragy" name="n34" xy="189,114" size="463,569" group="n36_yqmu" advanced="true"/>
+    <group id="n36_yqmu" name="n36" xy="165,50" size="1006,650" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

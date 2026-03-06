@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="133,72" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n3_hriw" name="bg" src="f2ul4c" fileName="Images/quality_bg.png" xy="0,0" size="133,72">
+      <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </image>
+    <loader id="n8_hriw" name="icon" xy="2,2" size="129,68" url="ui://o9dt5fs4f2ul5w" align="center" vAlign="middle" fill="scale" clearOnPublish="true">
+      <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </loader>
+    <image id="n4_hriw" name="select" src="f2ul4d" fileName="Images/quality_select.png" xy="-2,-2" size="137,76">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </image>
+    <loader id="n5_hriw" name="quality_sign" xy="0,0" size="22,44" url="ui://o9dt5fs4f2ul61" autoSize="true" clearOnPublish="true"/>
+    <image id="n7_hriw" name="quality_recommend" src="f2ul4e" fileName="Images/quality_recommend.png" xy="140,-7" pivot="1,0" anchor="true"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750">
+  <displayList>
+    <image id="n0_ycsi" name="n0" src="ycsi2a" fileName="image/gxhdbg.png" xy="0,70"/>
+    <image id="n2_ycsi" name="n2" src="ycsi29" fileName="image/gxhd.png" xy="483,120"/>
+    <list id="n4_ycsi" name="hdList" xy="0,310" size="1344,64" touchable="false" layout="row" overflow="scroll" scroll="horizontal" margin="0,0,10,10" colGap="11" align="center" vAlign="middle"/>
+    <richtext id="n5_ycsi" name="djs" xy="581,460" size="180,53" fontSize="22" color="#00ff00" align="center" vAlign="middle" autoSize="none" text="3s自动关闭"/>
+    <graph id="n6_ycsi" name="n6" xy="0,286" size="1344,100" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff"/>
+  </displayList>
+</component>

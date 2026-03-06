@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImageOffsetX="9" designImageOffsetY="-1" designImageAlpha="100">
+  <controller name="isHaveLastPrice" pages="0,上架过,1,未上架过" selected="0"/>
+  <controller name="isHaveItemToAdd" pages="0,有,1,没有" selected="0"/>
+  <controller name="c1" pages="0,,1," selected="0"/>
+  <displayList>
+    <component id="n79_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n3_q8ir" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n9_q8ir" name="title" xy="518,187" pivot="0.5,0.5" anchor="true" size="68,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="right" singleLine="true" text="寄售物品">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n58_q8ir" name="img_bg_di" src="oxr719" fileName="Images/img_di.png" xy="526,237" size="312,355" group="n89_owd7"/>
+    <list id="n69_qa9y" name="list_tab" xy="526,209" size="312,28" group="n89_owd7" layout="flow_vt" overflow="scroll" scroll="horizontal" scrollBarFlags="128" lineItemCount="1" defaultItem="ui://1e928y1xoxr7j" vAlign="middle" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n59_q8ir" name="list_bag" xy="527,236" size="312,355" group="n89_owd7" layout="flow_hz" overflow="scroll" margin="8,0,0,0" lineGap="8" colGap="8" lineItemCount="6" defaultItem="ui://1e928y1xoxr7m" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n89_owd7" name="rightPanel" xy="526,209" size="313,382" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <text id="n78_d6vj" name="NoItemtip" xy="294,388" size="116,24" fontSize="16" color="#ffff00" align="center" vAlign="middle" strokeColor="#000000" singleLine="true" text="暂无可出售道具">
+      <gearDisplay controller="isHaveItemToAdd" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n87_owd7" name="n87" src="oxr71b" fileName="Images/bg.png" xy="183,210" size="339,383" group="n92_kc3n"/>
+    <image id="n72_o4ex" name="iconCurSelBg" src="oxr717" fileName="Images/img_item_kuang.png" xy="325,247" size="53,62" group="n92_kc3n" aspect="true"/>
+    <image id="n18_q8ir" name="bg_text_once_price" src="oxr7g" fileName="Images/img_input_di.png" xy="297,402" size="147,25" group="n92_kc3n"/>
+    <image id="n19_q8ir" name="bg_text_jsdj" src="oxr7g" fileName="Images/img_input_di.png" xy="297,370" size="147,25" group="n92_kc3n"/>
+    <image id="n12_q8ir" name="bg_text_currentCount" src="oxr7g" fileName="Images/img_input_di.png" xy="322,337" size="97,25" group="n92_kc3n"/>
+    <component id="n14_q8ir" name="btn_add" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="420,338" size="25,25" group="n92_kc3n" aspect="true">
+      <Button icon="ui://1e928y1xoxr7u"/>
+    </component>
+    <component id="n15_q8ir" name="btn_minus" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="295,338" size="25,25" group="n92_kc3n" aspect="true" rotation="180">
+      <Button icon="ui://1e928y1xoxr7u"/>
+    </component>
+    <component id="n16_q8ir" name="btn_max" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="448,338" size="25,25" group="n92_kc3n" aspect="true">
+      <Button icon="ui://1e928y1xoxr7x"/>
+    </component>
+    <text id="n5_q8ir" name="text_item_name" xy="334,311" size="36,24" group="n92_kc3n" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="直刀"/>
+    <text id="n6_q8ir" name="label_jishou_item_count" xy="214,339" size="55,19" group="n92_kc3n" fontSize="12" color="#b0c9b6" singleLine="true" text="寄售数量:"/>
+    <text id="n7_q8ir" name="label_jishou_money_count" xy="214,373" size="55,19" group="n92_kc3n" fontSize="12" color="#b0c9b6" singleLine="true" text="寄售底价:"/>
+    <text id="n8_q8ir" name="label_once_money_count" xy="219,408" pivot="1,0.5" size="67,19" group="n92_kc3n" fontSize="12" color="#b0c9b6" letterSpacing="8" singleLine="true" text="一口价:"/>
+    <text id="n21_q8ir" name="input_jsdj" xy="297,372" size="147,25" group="n92_kc3n" fontSize="12" color="#fff7d1" align="center" vAlign="middle" letterSpacing="2" autoSize="none" singleLine="true" autoClearText="true" text="233" input="true" keyboardType="4"/>
+    <text id="n20_q8ir" name="input_once_price" xy="297,405" size="147,25" group="n92_kc3n" fontSize="12" color="#fff7d1" align="center" vAlign="middle" letterSpacing="2" autoSize="none" singleLine="true" autoClearText="true" text="233" input="true" keyboardType="4"/>
+    <text id="n70_qa9y" name="input_jishou_count" xy="370,350" pivot="0.5,0.5" anchor="true" size="97,25" group="n92_kc3n" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="12312412" input="true" prompt="请输入数字" keyboardType="4"/>
+    <component id="n22_q8ir" name="btn_jiShou" src="oxr77" fileName="Components/btn_JingJia.xml" xy="261,463" group="n92_kc3n">
+      <gearXY controller="isHaveLastPrice" pages="0,1" values="261,463|310,458"/>
+      <Button title="寄售物品" titleColor="#fff000" titleFontSize="12"/>
+    </component>
+    <component id="n23_q8ir" name="btn_lastChuJia" src="oxr77" fileName="Components/btn_JingJia.xml" xy="364,463" group="n92_kc3n">
+      <gearDisplay controller="isHaveLastPrice" pages="0"/>
+      <Button title="上次出价" titleColor="#fff000" titleFontSize="12"/>
+    </component>
+    <text id="n26_q8ir" name="ti_2" xy="231,539" size="230,20" group="n92_kc3n" fontSize="13" color="#f1ffeb" ubb="true" singleLine="true" text="★数量大于1的物品，此处的价格为[color=#00FF00]总价[/color]"/>
+    <text id="n27_q8ir" name="text_tip" xy="231,558" size="185,20" group="n92_kc3n" fontSize="13" color="#f1ffeb" ubb="true" singleLine="true" text="★寄售低价最低不能小于[color=#FF0000]10元宝[/color]"/>
+    <component id="n66_qa9y" name="itemMoney1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="452,372" size="25,25" group="n92_kc3n" aspect="true"/>
+    <component id="n67_qa9y" name="itemMoney2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="452,405" size="25,25" group="n92_kc3n" aspect="true"/>
+    <component id="n73_o4ex" name="node_curSelected" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="330,255" size="43,43" group="n92_kc3n" aspect="true"/>
+    <group id="n92_kc3n" name="LeftPanel" xy="183,210" size="339,383" advanced="true">
+      <gearDisplay controller="isHaveItemToAdd" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

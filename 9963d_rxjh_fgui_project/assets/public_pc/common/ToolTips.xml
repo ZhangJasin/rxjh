@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="115,45" extention="Label">
+  <displayList>
+    <graph id="n1_celm" name="n1" xy="0,0" size="115,45" type="rect" fillColor="#80333333" corner="6">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n0_celm" name="title" xy="10,10" size="94,24" fontSize="16" color="#ffffff" autoClearText="true" text="1234567890"/>
+  </displayList>
+  <relation target="n0_celm" sidePair="width-width,height-height"/>
+</component>

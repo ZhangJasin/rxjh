@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="500,580">
+  <controller name="additem" exported="true" pages="0,关闭选择框,2,打开选择幸运符框,3,打开选择提升道具框" selected="0"/>
+  <displayList>
+    <image id="n0_ger5" name="n0" src="fpdq5o" fileName="Images/newhc/01(2).png" xy="38,12"/>
+    <component id="n24_egru" name="xzequip" src="fpdq5p" fileName="Components/hecheng/item_select.xml" xy="215,202" visible="false" controller="c1,0"/>
+    <component id="n20_jr5a" name="xzqhitem" src="fpdq5p" fileName="Components/hecheng/item_select.xml" xy="213,23" controller="c1,4">
+      <gearDisplay controller="additem" pages="0,1,2,3"/>
+    </component>
+    <component id="n17_o4l6" name="itemxyf" src="fpdq5p" fileName="Components/hecheng/item_select.xml" xy="157,360" controller="c1,3">
+      <gearDisplay controller="additem" pages="0,1,2,3"/>
+    </component>
+    <component id="n16_o4l6" name="itemts" src="fpdq5p" fileName="Components/hecheng/item_select.xml" xy="275,360" controller="c1,1">
+      <gearDisplay controller="additem" pages="0,1,2,3"/>
+    </component>
+    <text id="n7_ger5" name="costfont1" xy="166,464" pivot="0,1" size="227,26" fontSize="18" color="#fcf1bf" autoSize="none" text="使用50元宝提升成功率"/>
+    <component id="n10_ger5" name="btn_qh" src="fpdq5z" fileName="Components/shuxing/btn_zong.xml" xy="157,522">
+      <Button title="强 化" titleColor="#fff7d1" titleFontSize="22"/>
+    </component>
+    <component id="n11_ger5" name="ischeck" src="cm5h57" fileName="Components/hecheng/checkBox.xml" xy="121,460"/>
+    <component id="n21_s9up" name="panl_additem" src="q1t45c" fileName="Components/hecheng/additempanl.xml" xy="-693,-92">
+      <gearDisplay controller="additem" pages="1,2,3"/>
+    </component>
+    <text id="n25_g17t" name="costfont3" xy="140,281" pivot="0,1" size="226,26" fontSize="18" color="#00ff00" align="center" autoSize="none" strokeColor="#000000" text="成功率加成：0%"/>
+    <text id="n26_g17t" name="costfont4" xy="115,314" pivot="0,1" size="277,26" fontSize="18" color="#ff0000" align="center" autoSize="none" strokeColor="#000000" text=""/>
+  </displayList>
+</component>

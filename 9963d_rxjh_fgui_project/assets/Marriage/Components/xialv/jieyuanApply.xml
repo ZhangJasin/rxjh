@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="430,90">
+  <displayList>
+    <image id="n0_la2y" name="image_background" src="la2y12" fileName="images/informationBackground.png" xy="0,0" size="430,90"/>
+    <text id="n2_la2y" name="textLabe_name" xy="96,13" size="112,33" fontSize="20" color="#ffffff" vAlign="middle" autoSize="none" strokeColor="#000000" text="牛爷爷"/>
+    <text id="n3_la2y" name="textLabel_favorabilityNum" xy="95,54" size="110,23" fontSize="15" color="#ffffff" ubb="true" strokeColor="#000000" text="亲密度等级: 0级"/>
+    <component id="n4_la2y" name="btn_agree" src="la2y15" fileName="Components/common/btn_red.xml" xy="315,10"/>
+    <component id="n5_la2y" name="btn_reject" src="la2y15" fileName="Components/common/btn_red.xml" xy="315,50"/>
+    <text id="n6_la2y" name="text_agree" xy="315,10" size="90,30" font="FangSong" fontSize="18" color="#ffff00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="同意"/>
+    <text id="n7_la2y" name="text_reject" xy="315,50" size="90,30" font="FangSong" fontSize="18" color="#ffff00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="拒绝"/>
+    <component id="n10_eoqr" name="head" src="eoqr1f" fileName="Components/common/show_head.xml" xy="11,9" size="72,72"/>
+  </displayList>
+</component>

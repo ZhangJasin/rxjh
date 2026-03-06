@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n16_jdkj" name="bg" src="oqrp1b" fileName="Components/tongyong/kongbg.xml" xy="0,0"/>
+    <component id="n1_eoqr" name="n1" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="550,436"/>
+    <component id="n11_ggv0" name="btn_close" src="oqrp14" fileName="Components/tongyong/closebtn_yuan.xml" xy="889,161"/>
+    <text id="n3_eoqr" name="text_tips" xy="610,165" pivot="0.5,0.5" size="112,38" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" bold="true" text="每日奖励"/>
+    <image id="n15_jdkj" name="n15" src="oqrp1c" fileName="Images/09wuxun/黑底.png" xy="403,214" size="527,373"/>
+    <list id="n14_jdkj" name="DayGiftList" xy="405,219" size="520,362" overflow="scroll" defaultItem="ui://hed3v11ooqrp1d">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

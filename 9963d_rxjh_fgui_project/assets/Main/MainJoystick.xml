@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false" designImage="ui://zj419n3ddpxov3f" bgColorEnabled="true">
+  <displayList>
+    <image id="n6_u6gn" name="img_moveBG" src="u6gnv4j" fileName="Images/Joystick/main_roker_bg.png" xy="215,575" pivot="0.5,0.5" anchor="true" group="n4_jwok"/>
+    <image id="n5_u6gn" name="img_move" src="u6gnv4i" fileName="Images/Joystick/main_roker.png" xy="215,575" pivot="0.5,0.5" anchor="true" group="n4_jwok"/>
+    <group id="n4_jwok" name="Group_move" xy="140,500" size="150,150" advanced="true">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </group>
+    <graph id="n3_jwok" name="Graphic_touch" xy="0,282" pivot="0,1" size="445,468" type="rect" lineSize="0" fillColor="#00000000">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </graph>
+  </displayList>
+</component>

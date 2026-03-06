@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="350,40" extention="Button">
+  <displayList>
+    <text id="n0_s0ob" name="n0" xy="0,0" size="350,40" fontSize="22" color="#f2c629" align="center" vAlign="middle" autoSize="none" text="解锁任务"/>
+    <image id="n1_s0ob" name="n1" src="pkt0u" fileName="Images/icon_pattern.png" xy="266,8"/>
+    <image id="n2_s0ob" name="n2" src="pkt0u" fileName="Images/icon_pattern.png" xy="41,8" flip="hz"/>
+  </displayList>
+  <Button/>
+</component>

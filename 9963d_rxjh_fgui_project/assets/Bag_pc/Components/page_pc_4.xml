@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="334,395">
+  <displayList>
+    <image id="n47_j9jd" name="bg_di" src="sna94t" fileName="Images/heiDI.png" xy="0,0" size="334,395">
+      <relation target="n46_j9jd" sidePair="width-width,bottomext-bottom"/>
+    </image>
+    <list id="n46_j9jd" name="list_attr" xy="0,0" size="334,395" layout="flow_hz" overflow="scroll" scrollBarFlags="160" margin="5,0,-2,0" lineGap="5" colGap="11" lineItemCount="2" defaultItem="ui://brz7yunlj9jdh" align="center" autoClearItems="true" scrollItemToViewOnClick="false" foldInvisibleItems="true">
+      <relation target="" sidePair="width-width"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+  <relation target="n46_j9jd" sidePair="bottomext-bottom"/>
+</component>

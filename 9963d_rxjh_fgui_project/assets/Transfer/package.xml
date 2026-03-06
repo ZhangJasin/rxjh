@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="5rez3obx">
+  <resources>
+    <image id="io7h1" name="sample_transfer_succeed.png" path="/Images/"/>
+    <image id="io7h2" name="img_unlock_skill.png" path="/Images/"/>
+    <image id="io7h3" name="img_unlock_equip.png" path="/Images/"/>
+    <image id="io7h4" name="img_transfer_reward.png" path="/Images/"/>
+    <image id="io7h5" name="img_transfer_prop.png" path="/Images/"/>
+    <image id="io7h6" name="img_bg.png" path="/Images/"/>
+    <image id="io7h7" name="img_title_bg.png" path="/Images/"/>
+    <image id="io7h9" name="img_succeed_point.png" path="/Images/"/>
+    <image id="io7ha" name="img_transfer_succeed.png" path="/Images/"/>
+    <component id="io7hc" name="TransferPanel.xml" path="/" exported="true"/>
+    <image id="io7h17" name="sample_transfer_panel.png" path="/Images/"/>
+    <image id="io7h19" name="img_arrow.png" path="/Images/"/>
+    <component id="p51l1f" name="TransferSucceed.xml" path="/" exported="true"/>
+    <component id="p51lv5j" name="ItemIcon.xml" path="/Components/"/>
+    <component id="p51l1g" name="SkillIcon.xml" path="/Components/"/>
+    <component id="p51l1h" name="PropItem.xml" path="/Components/"/>
+    <component id="p51l1i" name="SucceedPropItem.xml" path="/Components/"/>
+    <image id="as7kv5k" name="img_prop_bg_9.png" path="/Images/" scale="9grid" scale9grid="20,21,2,2"/>
+    <image id="ok5cv5l" name="img_reward.png" path="/Images/"/>
+    <image id="ok5cv5m" name="btn_good_add.png" path="/Images/"/>
+    <image id="ok5cv5n" name="btn_evil_add.png" path="/Images/"/>
+    <image id="ok5cv5o" name="img_reward_bg.png" path="/Images/"/>
+    <image id="ok5cv5p" name="img_good.png" path="/Images/"/>
+    <image id="ok5cv5q" name="img_good_icon.png" path="/Images/"/>
+    <image id="ok5cv5r" name="sample_choosegoodevil_panel.png" path="/Images/"/>
+    <image id="ok5cv5s" name="img_goodevil_bg.png" path="/Images/"/>
+    <image id="ok5cv5t" name="img_evil.png" path="/Images/"/>
+    <image id="ok5cv5u" name="img_evil_icon.png" path="/Images/"/>
+    <component id="ok5cv5v" name="ChooseGoodEvilPanel.xml" path="/"/>
+    <component id="a72bv5w" name="panel_Touch.xml" path="/Components/"/>
+    <image id="s806v5y" name="img_succeed_title_bg.png" path="/Images/"/>
+    <component id="qtrmv5z" name="campPanl.xml" path="/" exported="true"/>
+    <image id="qtrmv60" name="jindutiao2.png" path="/Images/0tongyong/" scale="9grid" scale9grid="50,3,100,6"/>
+    <image id="qtrmv61" name="转职_正邪底.png" path="/Images/08camp/"/>
+    <image id="qtrmv62" name="正派旗子.png" path="/Images/08camp/"/>
+    <image id="qtrmv63" name="邪派旗子.png" path="/Images/08camp/"/>
+    <component id="qtrmv64" name="btn_xie.xml" path="/Components/08camp/"/>
+    <image id="qtrmv65" name="加入邪派-按钮.png" path="/Images/08camp/"/>
+    <component id="qtrmv66" name="btn_zeng.xml" path="/Components/08camp/"/>
+    <image id="qtrmv67" name="加入正派-按钮.png" path="/Images/08camp/"/>
+    <image id="qtrmv68" name="正 派.png" path="/Images/08camp/"/>
+    <image id="qtrmv69" name="邪 派.png" path="/Images/08camp/"/>
+    <image id="qtrmv6a" name="奖励底.png" path="/Images/08camp/"/>
+    <image id="qtrmv6b" name="任务奖励.png" path="/Images/08camp/"/>
+    <component id="qtrmv6c" name="fangbtn.xml" path="/Components/tongyong/"/>
+    <image id="qtrmv6d" name="btn_hong.png" path="/Images/0tongyong/" scale="9grid" scale9grid="16,13,32,26"/>
+    <component id="qtrmv6e" name="itemkuang2.xml" path="/Components/tongyong/"/>
+    <image id="qtrmv6f" name="kuangdi2.png" path="/Images/04duanzao/" scale="9grid" scale9grid="8,8,16,16" duplicatePadding="true"/>
+    <component id="qtrmv6g" name="itemRoot.xml" path="/Components/tongyong/"/>
+    <component id="qtrmv6h" name="gxhdpanl2.xml" path="/Components/zhizhao/"/>
+    <component id="qtrmv6i" name="kongbg.xml" path="/Components/tongyong/"/>
+    <image id="qtrmv6j" name="gxhddi.png" path="/Images/0tongyong/"/>
+    <image id="qtrmv6k" name="gxhd.png" path="/Images/0tongyong/"/>
+    <component id="qtrmv6l" name="closebtn_yuan.xml" path="/Components/tongyong/"/>
+    <image id="qtrmv6m" name="close_yuan.png" path="/Images/0tongyong/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

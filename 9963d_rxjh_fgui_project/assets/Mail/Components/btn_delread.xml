@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="136,42" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_k4it" name="btn" src="xd9tkvp2" fileName="image/btn_first_green.png" pkg="st7dgeqq" xy="0,0" size="136,42">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_k4it" name="text" xy="22,5" size="92,32" fontSize="22" color="#fced00" strokeColor="#000000" text="一键删除">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue=".8"/>
+</component>

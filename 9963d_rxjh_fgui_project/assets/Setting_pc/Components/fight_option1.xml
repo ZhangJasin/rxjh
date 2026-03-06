@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="186,59">
+  <displayList>
+    <graph id="n209_fskg" name="n209" xy="0,0" size="186,59" group="n188_obxz" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <component id="n207_mnzb" name="auto_assemble_arrow_enable" src="f2ul57" fileName="Components/tog_select.xml" xy="9,5" size="87,22" group="n188_obxz">
+      <Button title="自动装箭" titleFontSize="12"/>
+    </component>
+    <component id="n208_mnzb" name="auto_assemble_arrow_check" src="f2ul4w" fileName="Components/btn_check.xml" xy="117,6" group="n188_obxz"/>
+    <component id="n186_rmnb" name="auto_pickup_enable" src="f2ul57" fileName="Components/tog_select.xml" xy="9,32" size="87,22" group="n188_obxz">
+      <Button title="自动拾取" titleFontSize="12"/>
+    </component>
+    <component id="n187_rmnb" name="auto_pickup_check" src="f2ul4w" fileName="Components/btn_check.xml" xy="117,33" group="n188_obxz"/>
+    <group id="n188_obxz" name="auto_pick" xy="0,0" size="186,59"/>
+  </displayList>
+</component>

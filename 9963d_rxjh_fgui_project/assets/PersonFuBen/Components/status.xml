@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="27,26">
+  <controller name="status" pages="6,未解锁,0,E,1,D,2,C,3,B,4,A,5,S" selected="0"/>
+  <displayList>
+    <loader id="n9_h0oq" name="n9" xy="0,0" size="27,26" url="ui://yaixg5r3h0oqd" fill="scaleFree">
+      <gearIcon controller="status" pages="6,0,1,2,3,4,5" values="ui://yaixg5r3h0oqd|ui://yaixg5r3h0oq5|ui://yaixg5r3h0oq4|ui://yaixg5r3h0oq3|ui://yaixg5r3h0oq2|ui://yaixg5r3h0oq1|ui://yaixg5r3h0oq6"/>
+    </loader>
+  </displayList>
+</component>

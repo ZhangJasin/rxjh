@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,590">
+  <displayList>
+    <image id="n36_gval" name="n1" src="tgkjvoa" fileName="image/content_fill_bg.png" pkg="st7dgeqq" xy="1,2" size="748,586"/>
+    <image id="n50_yagp" name="n2" src="orj1vo3" fileName="image/di_1.png" pkg="st7dgeqq" xy="20,18" size="700,35"/>
+    <text id="n4_gval" name="text_bond_date" xy="36,23" pivot="0.5,0.5" size="194,24" fontSize="16" color="#ffff00" align="center" vAlign="middle" text="于2025年4月23日结为师徒"/>
+    <text id="n33_gval" name="text_1" xy="36,79" pivot="0.5,0.5" size="68,24" fontSize="16" color="#fffadc" align="center" vAlign="middle" text="出师条件"/>
+    <list id="n29_gval" name="list_graduate" xy="36,105" size="565,75" overflow="scroll" defaultItem="ui://pnop7ha6gvalo41" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <richtext id="n31_gval" name="rtext_reward" xy="635,23" size="68,24" fontSize="16" color="#00ff00" underline="true" text="出师奖励"/>
+    <richtext id="n32_gval" name="rtext_go" xy="635,160" size="68,24" fontSize="16" color="#00ff00" underline="true" text="前往仪式"/>
+    <component id="n27_gval" name="btn_breakup" src="gvalo3z" fileName="Components/btn_second_red.xml" xy="578,527">
+      <Button title="解除关系"/>
+    </component>
+    <image id="n63_yagp" name="n3" src="orj1vo3" fileName="image/di_1.png" pkg="st7dgeqq" xy="20,216" size="700,35" group="n43_gval"/>
+    <text id="n40_gval" name="text_task" xy="166,221" size="36,24" group="n43_gval" fontSize="16" color="#fcf1bf" text="任务">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n41_gval" name="text_jd" xy="576,221" size="68,24" group="n43_gval" fontSize="16" color="#fcf1bf" text="师徒奖励">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n42_gval" name="text_st" xy="405,221" size="36,24" group="n43_gval" fontSize="16" color="#fcf1bf" text="进度">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n43_gval" name="right_top_lan" xy="20,216" size="700,35" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <list id="n30_gval" name="list_tasks" xy="40,260" size="658,259" overflow="scroll" scroll="horizontal" margin="0,0,50,0" defaultItem="ui://pnop7ha6yagpo46" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

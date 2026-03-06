@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="ak0s7nki">
+  <resources>
+    <component id="ilk50" name="NoticePanel.xml" path="/" exported="true"/>
+    <component id="ilk51" name="Label.xml" path="/Components/" exported="true"/>
+    <component id="ilk52" name="LabelServerNotice.xml" path="/Components/" exported="true"/>
+    <component id="ilk54" name="LabelSystemTip.xml" path="/Components/" exported="true"/>
+    <image id="k5e75" name="bg_notice_tips_9.png" path="/Images/" scale="9grid" scale9grid="45,5,10,16" duplicatePadding="true"/>
+    <image id="rbeg6" name="image_notice_horn.png" path="/Images/"/>
+    <component id="rbeg7" name="LabelSystemNotice.xml" path="/Components/" exported="true"/>
+    <component id="rbeg8" name="CompSystemNotice.xml" path="/Components/" exported="true"/>
+    <component id="rbeg9" name="LabelSystemScaleNotice.xml" path="/Components/" exported="true"/>
+    <image id="rbega" name="bg_notice.png" path="/Images/"/>
+    <component id="l980b" name="LabelTimerNotice.xml" path="/Components/"/>
+    <component id="l980c" name="LabelItemTip.xml" path="/Components/" exported="true"/>
+    <component id="l980d" name="CompAttributeTip.xml" path="/Components/" exported="true"/>
+    <component id="rv4ne" name="LabelItemDropNotice.xml" path="/Components/" exported="true"/>
+    <image id="9a5ah" name="bg_item_tips.png" path="/Images/" scale="9grid" scale9grid="37,5,60,12"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="st7dgeqq">
+  <resources>
+    <component id="je63v39" name="block.xml" path="/" exported="true"/>
+    <image id="je63v3b" name="btn_close_1.png" path="/image/" exported="true"/>
+    <image id="je63v3c" name="btn_first_red.png" path="/image/" exported="true" scale9grid="25,0,4,53"/>
+    <image id="je63v3d" name="btn_second_green.png" path="/image/" exported="true" scale="9grid" scale9grid="13,12,11,27"/>
+    <image id="je63v3e" name="btn_second_red.png" path="/image/" exported="true" scale="9grid" scale9grid="11,12,12,27"/>
+    <component id="je630" name="btn_first_red.xml" path="/common/" exported="true"/>
+    <component id="zah9v4d" name="btn_second_red.xml" path="/common/" exported="true"/>
+    <image id="zah9v4e" name="toggle_right_select.png" path="/image/" exported="true"/>
+    <image id="zah9v4f" name="toggle_right_unselect.png" path="/image/" exported="true"/>
+    <image id="zah9v4g" name="icon_pattern.png" path="/image/" exported="true"/>
+    <component id="zah9v4h" name="btn_second_green.xml" path="/common/" exported="true"/>
+    <image id="zah9v4i" name="bg_second_panel.png" path="/image/" exported="true" scale="9grid" scale9grid="72,53,12,2"/>
+    <image id="zah9v4j" name="toggle_top_green_select.png" path="/image/" exported="true" scale="9grid" scale9grid="21,23,2,14"/>
+    <image id="zah9v4k" name="toggle_top_green_unselect.png" path="/image/" exported="true" scale="9grid" scale9grid="9,13,13,27"/>
+    <component id="dssq1a" name="CommonPlayerFrame.xml" path="/common/" exported="true"/>
+    <component id="fbc0v4o" name="btn_close.xml" path="/common/" exported="true"/>
+    <component id="fbc0v4p" name="btn_help.xml" path="/common/" exported="true"/>
+    <image id="fbc0v4q" name="btn_help.png" path="/image/" exported="true"/>
+    <image id="fbc0v4r" name="frame_info.png" path="/image/" exported="true" scale="9grid" scale9grid="8,7,7,6"/>
+    <image id="fbc0v4s" name="icon_item0.png" path="/image/" exported="true" scale9grid="16,16,32,32"/>
+    <image id="fbc0v4t" name="icon_item1.png" path="/image/" exported="true" scale9grid="16,16,32,32"/>
+    <image id="fbc0v4y" name="icon_item_select.png" path="/image/" exported="true" scale="9grid" scale9grid="7,6,1,2"/>
+    <image id="lxrgv51" name="arrow.png" path="/image/" exported="true"/>
+    <image id="lxrgv52" name="bg_tips.png" path="/image/" exported="true" scale="9grid" scale9grid="9,9,3,3"/>
+    <image id="lxrgv56" name="checkbox_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="8,8,16,16" qualityOption="source"/>
+    <image id="lxrgv57" name="checkbox_icon.png" path="/image/" exported="true"/>
+    <image id="lxrgv59" name="dropdown_content_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="9,9,3,3"/>
+    <image id="lxrgv5a" name="dropdown_content_select.png" path="/image/" exported="true" scale="9grid" scale9grid="11,11,3,4"/>
+    <image id="lxrgv5d" name="toggle_top_red_select.png" path="/image/" exported="true" scale="9grid" scale9grid="26,23,11,20"/>
+    <image id="lxrgv5e" name="toggle_top_red_unselect.png" path="/image/" exported="true" scale="9grid" scale9grid="15,9,6,33"/>
+    <component id="u13q1" name="CommonEquip.xml" path="/Icons/" exported="true"/>
+    <component id="u13q2" name="CommonItem.xml" path="/Icons/" exported="true"/>
+    <image id="cndsv5l" name="top_info_bg.png" path="/image/" exported="true"/>
+    <image id="q9lsv5j" name="icon_money_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="8,6,16,12"/>
+    <image id="q9lsv5k" name="toggle_select_1.png" path="/image/" exported="true" scale="9grid" scale9grid="24,0,5,39"/>
+    <image id="q9lsv5l" name="toggle_unselect_1.png" path="/image/" exported="true" scale="9grid" scale9grid="5,5,1,1"/>
+    <image id="q9lsv5n" name="lock.png" path="/image/" exported="true"/>
+    <component id="bf0gv5s" name="btn_AddOrMinus.xml" path="/common/" exported="true"/>
+    <image id="bf0gv5u" name="+.png" path="/image/"/>
+    <image id="bf0gv5v" name="-.png" path="/image/"/>
+    <image id="bf0gv5w" name="MAX.png" path="/image/"/>
+    <image id="m2wevky" name="btn_img_mode.png" path="/image/" exported="true" scale="9grid" scale9grid="14,16,31,22" qualityOption="source"/>
+    <image id="a6omvl2" name="1.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvl3" name="69.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvl4" name="68.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvl5" name="67.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvl6" name="66.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvl7" name="65.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvl8" name="64.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvl9" name="63.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvla" name="62.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlb" name="61.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlc" name="60.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvld" name="6.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvle" name="59.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlf" name="58.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlg" name="57.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlh" name="56.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvli" name="55.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlj" name="54.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlk" name="53.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvll" name="52.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlm" name="7.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvln" name="51.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlo" name="70.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlp" name="72.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlq" name="9.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlr" name="89.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvls" name="88.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlt" name="87.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlu" name="86.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlv" name="85.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlw" name="84.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlx" name="83.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvly" name="82.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvlz" name="81.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvm0" name="80.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvm1" name="8.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvm2" name="79.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvm3" name="78.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvm4" name="77.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvm5" name="76.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvm6" name="75.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvm7" name="74.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvm8" name="73.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvm9" name="71.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvma" name="90.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmb" name="50.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmc" name="49.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmd" name="27.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvme" name="26.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmf" name="25.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmg" name="24.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmh" name="23.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmi" name="22.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmj" name="21.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmk" name="20.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvml" name="2.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmm" name="19.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmn" name="18.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmo" name="17.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmp" name="16.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmq" name="15.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmr" name="14.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvms" name="13.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmt" name="12.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmu" name="11.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmv" name="10.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmw" name="28.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmx" name="5.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmy" name="29.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvmz" name="30.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvn0" name="48.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvn1" name="47.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvn2" name="46.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvn3" name="45.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvn4" name="44.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvn5" name="43.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvn6" name="42.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvn7" name="41.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvn8" name="40.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvn9" name="4.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvna" name="39.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvnb" name="38.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvnc" name="37.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvnd" name="36.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvne" name="35.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvnf" name="34.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvng" name="33.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvnh" name="32.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvni" name="31.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvnj" name="3.png" path="/image/Emoji/" exported="true"/>
+    <image id="a6omvnk" name="91.png" path="/image/Emoji/" exported="true"/>
+    <image id="as7kvnn" name="bg_first_panel_9.png" path="/image/" exported="true" scale="9grid" scale9grid="52,59,62,52"/>
+    <image id="as7kvno" name="btn_first_9.png" path="/image/" exported="true" scale="9grid" scale9grid="43,0,2,56"/>
+    <image id="wi458" name="loading_bar_9.png" path="/image/" exported="true" scale="9grid" scale9grid="4,5,8,10"/>
+    <image id="wi457" name="loading_bar_bg_9.png" path="/image/" exported="true" scale="9grid" scale9grid="33,8,0,16"/>
+    <component id="mzzl1w" name="ComponentPos.xml" path="/common/" exported="true"/>
+    <image id="mzzl1o" name="bg_erhuan.png" path="/image/" exported="true"/>
+    <image id="mzzl1p" name="bg_hubi.png" path="/image/" exported="true"/>
+    <image id="mzzl1q" name="bg_jiezhi.png" path="/image/" exported="true"/>
+    <image id="mzzl1s" name="bg_xianglian.png" path="/image/" exported="true"/>
+    <image id="mzzl1t" name="bg_xiezi.png" path="/image/" exported="true"/>
+    <image id="mzzl1u" name="bg_yifu.png" path="/image/" exported="true"/>
+    <image id="qjli12" name="img_equip_ex_di.png" path="/image/" exported="true"/>
+    <image id="iwe6vnw" name="pull_content_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="28,20,56,40"/>
+    <image id="k5e7v6a" name="img_d2_9.png" path="/image/" exported="true" scale="9grid" scale9grid="6,15,-1,2" gridTile="12" qualityOption="source" smoothing="false" duplicatePadding="true" disableTrim="true"/>
+    <image id="zah96" name="icon_search.png" path="/image/" exported="true"/>
+    <image id="qjli19" name="role_bg_di.png" path="/image/" exported="true"/>
+    <component id="yj7kvo1" name="checkbox_multi.xml" path="/common/" exported="true"/>
+    <image id="orj1vo3" name="di_1.png" path="/image/" exported="true" scale="9grid" scale9grid="6,5,3,1"/>
+    <image id="orj1vo4" name="di_2.png" path="/image/" exported="true" scale="9grid" scale9grid="5,3,1,2" duplicatePadding="true"/>
+    <image id="tgkjvoa" name="content_fill_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="16,18,9,5"/>
+    <image id="dxatvob" name="bg_wep.png" path="/image/" exported="true"/>
+    <component id="ld2evod" name="CdMask.xml" path="/common/" exported="true"/>
+    <image id="ld2evof" name="mask_black.png" path="/image/" exported="true"/>
+    <image id="ld2evog" name="mask_circle.png" path="/image/" exported="true"/>
+    <component id="celmvoh" name="ToolTips.xml" path="/common/" exported="true"/>
+    <image id="wh1cvok" name="arrow_blue.png" path="/image/" exported="true"/>
+    <image id="wh1cvol" name="arrow_green.png" path="/image/" exported="true"/>
+    <image id="dji0vom" name="arrow_yellow.png" path="/image/" exported="true"/>
+    <sound id="n1l2voo" name="Sound_click.mp3" path="/" exported="true"/>
+    <image id="bl99v7y" name="ChatFrame_0.png" path="/ChatBuddle/" exported="true" scale="9grid" scale9grid="15,20,4,22"/>
+    <image id="akxov81" name="ChatFrame_1.png" path="/ChatBuddle/" exported="true" scale="9grid" scale9grid="24,24,3,8"/>
+    <component id="kra4vor" name="CommonBg.xml" path="/common/" exported="true"/>
+    <image id="kra4vos" name="btn_green_normal.png" path="/image/" exported="true" scale="9grid" scale9grid="15,10,74,20"/>
+    <image id="kra4vot" name="btn_green_normal2.png" path="/image/" exported="true"/>
+    <image id="kra4vou" name="btn_green_selected.png" path="/image/" exported="true" scale="9grid" scale9grid="14,10,78,20"/>
+    <image id="kra4vov" name="btn_green_selected2.png" path="/image/" exported="true"/>
+    <image id="11iqkvox" name="combobox_arrow.png" path="/image/" exported="true"/>
+    <image id="11iqkvoy" name="combobox_arrow_bg.png" path="/image/" exported="true"/>
+    <image id="11iqkvoz" name="combobox_ex_frame.png" path="/image/" exported="true" scale="9grid" scale9grid="25,10,50,6"/>
+    <image id="11iqkvp0" name="comobox_frame.png" path="/image/" exported="true" scale="9grid" scale9grid="33,10,66,12"/>
+    <image id="7c35v67" name="di.png" path="/image/" exported="true" scale="9grid" scale9grid="94,42,188,249"/>
+    <image id="7c35vox" name="btn_tab.png" path="/image/" exported="true"/>
+    <image id="7c35voz" name="img_info_di.png" path="/image/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="7c35vp0" name="img_search.png" path="/image/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="7c35vp1" name="img_di3.png" path="/image/" exported="true" scale="9grid" scale9grid="6,6,12,12"/>
+    <image id="7c35vp2" name="img_di_2.png" path="/image/" exported="true" scale="9grid" scale9grid="6,6,12,12"/>
+    <image id="g2qekvp1" name="black_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="xd9tkvp2" name="btn_first_green.png" path="/image/" exported="true"/>
+    <image id="plaqkvp3" name="caizhi.png" path="/image/" exported="true" scale="tile" scale9grid="15,15,30,30" qualityOption="source" atlas="alone" duplicatePadding="true"/>
+    <image id="lt7hvob" name="img_equip_di2.png" path="/image/" exported="true"/>
+    <image id="plaqkvp4" name="img_equip_di.png" path="/image/" exported="true"/>
+    <image id="p8tokvp5" name="img_di_3.png" path="/image/"/>
+    <component id="ighbkvp6" name="btn_first_green.xml" path="/common/" exported="true"/>
+    <image id="hcvokvp9" name="btn_top_normal.png" path="/image/" exported="true" scale="9grid" scale9grid="30,10,60,20"/>
+    <image id="hcvokvpa" name="btn_top_selected.png" path="/image/" exported="true" scale="9grid" scale9grid="30,10,60,20"/>
+    <image id="gz1ykvpb" name="btn_top_normal2.png" path="/image/" exported="true" scale="9grid" scale9grid="50,10,100,20"/>
+    <image id="gz1ykvpc" name="btn_top_selected2.png" path="/image/" exported="true" scale="9grid" scale9grid="50,10,100,20"/>
+    <image id="gz1ykvpd" name="line_cut.png" path="/image/" exported="true"/>
+    <image id="c4dfkvpe" name="input_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="c4dfkvpf" name="dropdown_normal.png" path="/image/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="c4dfkvpg" name="dropdown_selected.png" path="/image/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="ttxfkvpi" name="bg_pre.png" path="/image/" exported="true" scale="9grid" scale9grid="42,36,11,9"/>
+    <font id="9kdgkvpj" name="FZBWKSK.ttf" path="/" renderMode="" samplePointSize="16"/>
+    <image id="pxu7kvpk" name="m_max.png" path="/image/" exported="true"/>
+    <image id="pxu7kvpl" name="m_min.png" path="/image/" exported="true"/>
+  </resources>
+  <publish name="" path="..\Assets\Res\game\FGUIExport\{publish_file_name}" packageCount="2" branchPath="..\Assets\Res\game\FGUIExport\{publish_file_name}_{branch_name}"/>
+</packageDescription>

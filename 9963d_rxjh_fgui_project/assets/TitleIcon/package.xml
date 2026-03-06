@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="q18xgg75">
+  <resources>
+    <image id="9qta0" name="300011.png" path="/Images/" exported="true"/>
+    <image id="9qta1" name="300008.png" path="/Images/" exported="true"/>
+    <image id="9qta2" name="300007.png" path="/Images/" exported="true"/>
+    <image id="9qta3" name="300006.png" path="/Images/" exported="true"/>
+    <image id="9qta4" name="300005.png" path="/Images/" exported="true"/>
+    <image id="9qta5" name="300004.png" path="/Images/" exported="true"/>
+    <image id="9qta6" name="300003.png" path="/Images/" exported="true"/>
+    <image id="9qta7" name="300002.png" path="/Images/" exported="true"/>
+    <image id="9qta8" name="300001.png" path="/Images/" exported="true"/>
+    <image id="9qta9" name="300022.png" path="/Images/" exported="true"/>
+    <image id="9qtaa" name="300021.png" path="/Images/" exported="true"/>
+    <image id="9qtab" name="300020.png" path="/Images/" exported="true"/>
+    <image id="9qtac" name="300019.png" path="/Images/" exported="true"/>
+    <image id="9qtad" name="300018.png" path="/Images/" exported="true"/>
+    <image id="9qtae" name="300017.png" path="/Images/" exported="true"/>
+    <image id="9qtaf" name="300016.png" path="/Images/" exported="true"/>
+    <image id="9qtag" name="300015.png" path="/Images/" exported="true"/>
+    <image id="9qtah" name="300014.png" path="/Images/" exported="true"/>
+    <image id="9qtai" name="300013.png" path="/Images/" exported="true"/>
+    <image id="9qtaj" name="300012.png" path="/Images/" exported="true"/>
+    <image id="9qtak" name="300009.png" path="/Images/" exported="true"/>
+    <image id="9qtal" name="300010.png" path="/Images/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

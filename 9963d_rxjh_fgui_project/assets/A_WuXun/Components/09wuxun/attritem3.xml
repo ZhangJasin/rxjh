@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="320,33">
+  <displayList>
+    <text id="n0_tbp6" name="n0" xy="35,2" size="87,29" font="SimHei" fontSize="20" color="#fff7d1" vAlign="middle" ubb="true" autoSize="none" text="攻击力"/>
+    <text id="n4_jdkj" name="n4" xy="203,2" pivot="1,0" size="55,29" font="SimHei" fontSize="20" color="#00ff00" vAlign="middle" autoSize="none" text="000000"/>
+  </displayList>
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n3_mxa7" name="n3" src="u6gnv4g" fileName="MainJoystick.xml" xy="0,0"/>
+    <component id="n2_mxa7" name="n2" src="mxa7v4l" fileName="MainBottom.xml" xy="0,0"/>
+    <component id="n5_ke93" name="n5" src="o6ikv5u" fileName="MainAssist.xml" xy="0,0"/>
+    <component id="n4_mxa7" name="n4" src="mxa7v4k" fileName="MainPlayer.xml" xy="0,0"/>
+    <component id="n6_brvz" name="n6" src="ke93v6b" fileName="MainRight.xml" xy="0,0"/>
+    <component id="n7_brvz" name="n7" src="ke93v6c" fileName="MainMiniMap.xml" xy="0,0"/>
+    <component id="n8_rd0b" name="n8" src="rd0bva5" fileName="MainFindTarget.xml" xy="0,0"/>
+  </displayList>
+</component>

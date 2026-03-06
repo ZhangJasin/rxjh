@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n17_o15x" name="btn_fullscreen_close" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="1,0" size="1021,768">
+      <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </component>
+    <component id="n18_fskg" name="n18" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="358,167" size="310,433" group="n33_fskg"/>
+    <graph id="n31_fskg" name="n31" xy="368,209" size="288,384" group="n33_fskg" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <text id="n19_fskg" name="n19" xy="512,175" pivot="0.5,0" anchor="true" size="68,24" group="n33_fskg" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="拾取设置"/>
+    <image id="n20_fskg" name="n20" src="f2ul60" fileName="Images/title_bg.png" xy="371,210" size="283,34" group="n25_fskg" alpha="0.5"/>
+    <image id="n21_fskg" name="n21" src="f2ul5z" fileName="Images/line.png" xy="492,210" size="1,34" group="n25_fskg"/>
+    <image id="n22_fskg" name="n22" src="f2ul5z" fileName="Images/line.png" xy="573,210" size="1,34" group="n25_fskg"/>
+    <text id="n3_ju4w" name="n3" xy="413,217" size="30,20" group="n25_fskg" fontSize="13" color="#ddfdd9" align="center" vAlign="middle" text="类型"/>
+    <text id="n4_ju4w" name="n4" xy="505,217" size="56,20" group="n25_fskg" fontSize="13" color="#ddfdd9" align="center" vAlign="middle" text="掉落显示"/>
+    <text id="n5_ju4w" name="n5" xy="585,217" size="56,20" group="n25_fskg" fontSize="13" color="#ddfdd9" align="center" vAlign="middle" text="自动拾取"/>
+    <group id="n25_fskg" name="title" xy="371,210" size="283,34" group="n33_fskg"/>
+    <component id="n1_kvl0" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="657,188" group="n33_fskg"/>
+    <list id="n15_qsf8" name="list_settings" xy="373,245" size="281,346" group="n33_fskg" overflow="scroll" lineGap="1" defaultItem="ui://o9dt5fs4f2ul5p" align="center">
+      <item title="通用装备"/>
+      <item title="通用装备(正派)"/>
+      <item title="通用装备(邪派)"/>
+      <item title="弓手装备(通用)"/>
+      <item title="弓手装备(正派)"/>
+      <item title="弓手装备(邪派)"/>
+      <item title="枪客装备(通用)"/>
+      <item title="枪客装备(正派)"/>
+      <item title="枪客装备(邪派)"/>
+      <item title="刺客装备(通用)"/>
+      <item title="刺客装备(正派)"/>
+      <item title="刺客装备(邪派)"/>
+      <item title="医生装备(通用)"/>
+      <item title="医生装备(正派)"/>
+      <item title="医生装备(邪派)"/>
+      <item title="刀客装备(通用)"/>
+      <item title="刀客装备(正派)"/>
+      <item title="刀客装备(邪派)"/>
+      <item title="剑客装备(通用)"/>
+      <item title="剑客装备(正派)"/>
+      <item title="剑客装备(邪派)"/>
+    </list>
+    <group id="n33_fskg" name="root" xy="358,167" size="314,433" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

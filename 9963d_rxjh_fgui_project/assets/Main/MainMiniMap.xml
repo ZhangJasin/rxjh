@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false" designImage="ui://zj419n3ddpxov3f" bgColorEnabled="true">
+  <controller name="showRoute" alias="显示切线" pages="0,,1," selected="1">
+    <remark page="0" value="显示"/>
+    <remark page="1" value="不显示"/>
+  </controller>
+  <displayList>
+    <component id="n5_ke93" name="CompMIniMap" src="km1vfvdo" fileName="Components/MiniMap/MainMiniMapComp.xml" xy="1116,0">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+  </displayList>
+</component>

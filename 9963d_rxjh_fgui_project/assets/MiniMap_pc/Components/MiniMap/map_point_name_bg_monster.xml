@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="74,20" anchor="true" extention="Label">
+  <displayList>
+    <loader id="n3_b3bq" name="icon" xy="37,20" pivot="0.5,1" anchor="true" size="74,20" url="ui://3tndc27qclzt14" align="center" vAlign="middle" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height,left-left,top-top"/>
+    </loader>
+  </displayList>
+</component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="464,557">
+  <displayList>
+    <image id="n323_q8ir" name="img_attr_list_di" src="lt7hvnx" fileName="Images/img_input_di.png" xy="0,0" pivot="0.5,0" size="464,559">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <list id="n324_q8ir" name="list_attr" xy="0,0" pivot="0.5,0" size="464,552" layout="flow_hz" margin="0,0,10,0" lineGap="9" colGap="6" lineItemCount="2" defaultItem="ui://dak5wnw9r8pbvoo" autoClearItems="true" scrollItemToViewOnClick="false">
+      <relation target="" sidePair="center-center"/>
+      <item/>
+    </list>
+  </displayList>
+  <relation target="n324_q8ir" sidePair="width-width,bottomext-bottom"/>
+</component>

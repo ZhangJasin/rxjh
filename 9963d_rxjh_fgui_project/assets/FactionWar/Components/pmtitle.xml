@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="950,50">
+  <displayList>
+    <image id="n8_r1x3" name="n8" src="r1x31c" fileName="Images/展开底2.png" xy="0,0" size="950,50"/>
+    <text id="n0_drck" name="n0" xy="0,0" size="115,50" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="排名"/>
+    <text id="n1_drck" name="n1" xy="133,0" size="200,50" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text="门派名称"/>
+    <text id="n2_drck" name="n2" xy="355,0" size="40,50" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="等级"/>
+    <text id="n4_drck" name="n4" xy="430,0" size="40,50" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="阵营"/>
+    <text id="n5_drck" name="n5" xy="500,0" size="150,50" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="门派战况"/>
+    <text id="n6_drck" name="n6" xy="690,0" size="100,50" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="排名奖励"/>
+  </displayList>
+</component>

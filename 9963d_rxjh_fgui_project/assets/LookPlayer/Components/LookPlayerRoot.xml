@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="536,650">
+  <displayList>
+    <component id="n44_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="0,-11" size="536,665">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n42_ft29" name="Node_attach_b" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="8,648" size="0,0"/>
+    <image id="n37_mqpj" name="n37" src="qjli19" fileName="image/role_bg_di.png" pkg="st7dgeqq" xy="6,106" size="522,540">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n39_tmr6" name="tab_scheme_1" src="mzzl1z" fileName="Components/ComponentSchemeTab.xml" xy="8,56" size="170,41">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n40_tmr6" name="tab_scheme_2" src="mzzl1z" fileName="Components/ComponentSchemeTab.xml" xy="183,56" size="170,41">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n41_tmr6" name="tab_scheme_3" src="mzzl1z" fileName="Components/ComponentSchemeTab.xml" xy="358,56" size="170,41">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_vjv7" name="text_title" xy="268,17" pivot="0.5,0.5" anchor="true" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" text="查看玩家">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n8_wmgr" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="512,18">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n23_l5kc" name="model_touch" src="o14p3" fileName="Components/model_touch.xml" xy="268,329" pivot="0.5,0.5" anchor="true"/>
+    <component id="n24_b35e" name="pos1" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="56,134" size="60,60" group="n30_b35e" controller="equipPosDI,11,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n25_b35e" name="pos2" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="56,209" size="60,60" group="n30_b35e" controller="equipPosDI,11,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n26_b35e" name="pos3" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="56,284" size="60,60" group="n30_b35e" controller="equipPosDI,11,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n27_b35e" name="pos4" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="56,359" size="60,60" group="n30_b35e" controller="equipPosDI,11,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n28_b35e" name="pos5" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="56,434" size="60,60" group="n30_b35e" controller="equipPosDI,11,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n29_b35e" name="pos6" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="56,509" size="60,60" group="n30_b35e" controller="equipPosDI,11,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n30_b35e" name="leftLayout" xy="56,134" size="60,435" advanced="true" layout="vt" lineGap="15" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n31_b35e" name="pos11" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="428,209" size="60,60" group="n36_b35e" controller="equipPosDI,11,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n32_b35e" name="pos10" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="428,284" size="60,60" group="n36_b35e" controller="equipPosDI,11,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n33_b35e" name="pos9" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="428,359" size="60,60" group="n36_b35e" controller="equipPosDI,11,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n34_b35e" name="pos8" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="428,434" size="60,60" group="n36_b35e" controller="equipPosDI,11,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n35_b35e" name="pos7" src="mzzl1w" fileName="common/ComponentPos.xml" pkg="st7dgeqq" xy="428,509" size="60,60" group="n36_b35e" controller="equipPosDI,11,diKuangKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n36_b35e" name="rightLayout" xy="428,209" size="60,360" advanced="true" layout="vt" lineGap="15" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <graph id="n38_rxpm" name="model_player" xy="218,461" size="100,100" blend="screen" lineColor="#00000000" fillColor="#00ffffff">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <component id="n43_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="8,648" size="0,0">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+  </displayList>
+</component>

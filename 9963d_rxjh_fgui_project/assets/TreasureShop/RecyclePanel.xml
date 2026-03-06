@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="794,568">
+  <displayList>
+    <image id="n35_10pmd" name="bg_left" src="q9lsv5j" fileName="image/icon_money_bg.png" pkg="st7dgeqq" xy="2,2" size="790,491">
+      <relation target="n34_10pmd" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <list id="n34_10pmd" name="list_recycle" xy="3,1" size="786,491" layout="flow_hz" overflow="scroll" margin="10,0,0,0" lineGap="11" colGap="11" lineItemCount="11" defaultItem="ui://p8mjxubr10pmdv6w" align="center">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n36_10pmd" name="label_tip" xy="2,495" size="788,70" fontSize="18" color="#cae5d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="所有道具装备均可回收，回收站可保留40件物品，超过40件物品时，按时间先后自动删除超过部分！">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n1_shks" name="bg" src="egru78" fileName="Components/tongyong/kongbg.xml" pkg="fgihxfye" xy="0,0" aspect="true"/>
+    <image id="n0_shks" name="n0" src="ih0u2l" fileName="Images/0tongyong/srbbg.png" pkg="fgihxfye" xy="349,276" size="400,219"/>
+    <text id="n2_shks" name="n2" xy="356,282" size="385,56" fontSize="20" color="#ffffff" autoSize="height" text="举案齐眉Lv.1：侠侣组队时打怪经验加成提升5%"/>
+    <richtext id="n3_shks" name="n3" xy="356,344" size="387,29" fontSize="20" color="#ffffff" autoSize="none" text="下级属性：40星升级"/>
+    <text id="n4_shks" name="n4" xy="356,379" size="385,56" fontSize="20" color="#ffffff" autoSize="height" text="举案齐眉Lv.2：侠侣组队时打怪经验加成提升8%"/>
+  </displayList>
+</component>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="186,48" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n13_gz1y" name="bg1" src="gz1ykvpb" fileName="image/btn_top_normal2.png" pkg="st7dgeqq" xy="0,0" size="186,48">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n14_gz1y" name="bg2" src="gz1ykvpc" fileName="image/btn_top_selected2.png" pkg="st7dgeqq" xy="0,0" size="186,48">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_itla" name="text_normal" xy="93,24" pivot="0.5,0.5" anchor="true" size="150,32" fontSize="22" color="#979797" align="center" vAlign="middle" autoSize="none" text="名字">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <text id="n8_wqgf" name="text_select" xy="93,24" pivot="0.5,0.5" anchor="true" size="150,32" fontSize="22" color="#f6cd2b" align="center" vAlign="middle" autoSize="none" text="名字">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

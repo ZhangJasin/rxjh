@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n51_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n37_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n49_jhgj" name="bg_list" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="180,115" size="410,510">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n50_jhgj" name="bg_info" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="595,115" size="555,510">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n43_twna" name="line1" src="twna13" fileName="Images/mail_frame2.png" xy="185,590" size="400,30">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n39_twna" name="line2" src="twna14" fileName="Images/mail_frame3.png" xy="597,120" size="550,70">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n40_twna" name="line3" src="twna14" fileName="Images/mail_frame3.png" xy="600,500" size="545,36">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n1_j3vn" name="text_title" xy="667,78" pivot="0.5,0.5" anchor="true" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="系统邮件">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n16_mw6c" name="text_name" xy="600,120" size="400,32" fontSize="22" color="#fff9da" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n25_mw6c" name="text_sender" xy="600,156" size="250,29" fontSize="20" color="#ff0000" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n26_mw6c" name="text_time" xy="840,156" size="300,29" fontSize="20" color="#fff9da" align="right" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n28_mw6c" name="text_info" xy="600,470" size="500,26" fontSize="18" color="#ff0000" autoSize="none" text="邮件已读后30天自动删除，请尽快领取附件。">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n29_mw6c" name="text_extra" xy="600,501" size="100,32" fontSize="22" color="#fff9da" autoSize="none" text="附件：">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <richtext id="n52_gnrt" name="text_count" xy="235,592" size="300,29" fontSize="20" color="#fff7d1" align="center" vAlign="middle" ubb="true" autoSize="none" text="邮件数量：0/100">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <component id="n15_mw6c" name="rich_component" src="k4ito" fileName="Components/RichText_info.xml" xy="600,200" size="545,260">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n3_j3vn" name="list_mail" xy="185,120" size="400,470" overflow="scroll" lineGap="1" defaultItem="ui://lijtm30sj3vnm" align="center" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n2_j3vn" name="btn_close" src="j3vng" fileName="Components/btn_close.xml" xy="1144,78" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n13_lkvd" name="btn_help" src="fbc0v4p" fileName="common/btn_help.xml" pkg="st7dgeqq" xy="230,78">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n12_k4it" name="btn_delAll" src="k4itt" fileName="Components/btn_delread.xml" xy="280,660" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n5_j3vn" name="btn_takeAll" src="j3vnk" fileName="Components/btn_onekey.xml" xy="492,660" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n48_put6" name="btn_sure" src="bonhz" fileName="Components/btn_sure.xml" xy="767,660" pivot="0.5,0.5" anchor="true" size="136,42" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n47_put6" name="btn_resure" src="bonh10" fileName="Components/btn_resure.xml" xy="980,660" pivot="0.5,0.5" anchor="true" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n21_mw6c" name="btn_delete" src="j3vnl" fileName="Components/btn_delete.xml" xy="767,660" pivot="0.5,0.5" anchor="true" size="136,42">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n20_mw6c" name="btn_take" src="k4itp" fileName="Components/btn_take.xml" xy="980,660" pivot="0.5,0.5" anchor="true" size="136,42">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n17_mw6c" name="list_items" xy="600,550" size="545,64" group="n34_mw6c" layout="row" selectionMode="none" overflow="scroll" scroll="horizontal" margin="0,0,10,10" colGap="5" defaultItem="ui://st7dgeqqu13q2" align="center" vAlign="middle" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n19_mw6c" name="img_got" src="xbzfx" fileName="Images/mail_got.png" xy="872,582" pivot="0.5,0.5" anchor="true" group="n34_mw6c" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <group id="n34_mw6c" name="panel_items" xy="600,550" size="545,64" advanced="true"/>
+    <component id="n35_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="172,698" size="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

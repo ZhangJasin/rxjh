@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="242,56">
+  <controller name="state" pages="0,,1,,2," selected="0">
+    <remark page="0" value="同地图"/>
+    <remark page="1" value="不同地图"/>
+    <remark page="2" value="离线"/>
+  </controller>
+  <displayList>
+    <image id="n21_o3hv" name="n21" src="o3hvv62" fileName="Images/Assist/main_team_member_bg.png" xy="0,0"/>
+    <component id="n33_akxo" name="header_icon" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="0,0" size="56,57">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n34_9c3p" name="n34" src="k5e7v9i" fileName="Images/Target/main_target_hp_bg_9.png" xy="60,28" size="162,12">
+      <gearDisplay controller="state" pages="0"/>
+    </image>
+    <image id="n35_9c3p" name="n35" src="k5e7v9i" fileName="Images/Target/main_target_hp_bg_9.png" xy="60,43" size="162,6">
+      <gearDisplay controller="state" pages="0"/>
+    </image>
+    <component id="n25_o3hv" name="ProgressBar_hp" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="60,28" size="162,12">
+      <gearDisplay controller="state" pages="0"/>
+      <ProgressBar value="100" max="100"/>
+      <property target="bar" propertyId="1" value="ui://zj419n3dgcudfvcc"/>
+    </component>
+    <component id="n26_o3hv" name="ProgressBar_mp" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="60,43" size="162,6">
+      <gearDisplay controller="state" pages="0"/>
+      <ProgressBar value="100" max="100"/>
+      <property target="bar" propertyId="1" value="ui://zj419n3dgcudfvcd"/>
+    </component>
+    <image id="n36_my96" name="Img_leader" src="my96fvdt" fileName="Images/Assist/main_team_leader.png" xy="0,-3"/>
+    <text id="n27_o3hv" name="Text_name" xy="60,2" size="168,24" fontSize="16" color="#ffff00" ubb="true" autoSize="none" strokeColor="#000000" text="玩家名字七个字"/>
+    <text id="n29_ke93" name="Text_level" xy="1,46" pivot="0,0.5" anchor="true" size="22,24" fontSize="16" color="#ffffff" vAlign="middle" leading="0" strokeColor="#000000" text="00"/>
+    <text id="n30_ke93" name="Text_map" xy="60,27" size="168,24" fontSize="16" color="#ffff00" leading="0" autoSize="none" strokeColor="#000000" text="地图">
+      <gearDisplay controller="state" pages="1,2"/>
+      <gearText controller="state" pages="2" values="离线" default="地图"/>
+    </text>
+  </displayList>
+</component>

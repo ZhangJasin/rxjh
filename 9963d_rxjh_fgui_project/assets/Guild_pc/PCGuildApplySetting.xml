@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" designImageOffsetX="-25">
+  <displayList>
+    <graph id="n29_menb" name="mask" xy="0,0" size="1024,768" alpha="0.7" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n30_m9rd" name="n30" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="357,266" size="310,254" group="n31_gl56"/>
+    <text id="n3_zah9" name="text_title" xy="402,274" size="220,24" group="n31_gl56" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="申请设置"/>
+    <component id="n11_zah9" name="btn_yes" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="470,483" group="n31_gl56">
+      <Button title="确 认"/>
+    </component>
+    <image id="n28_7ogs" name="n28" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="366,307" size="290,171" group="n31_gl56"/>
+    <text id="n16_jjgk" name="n16" xy="484,318" size="52,19" group="n31_gl56" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="center" text="等级需求"/>
+    <text id="n20_jjgk" name="n20" xy="372,393" size="279,39" group="n31_gl56" fontSize="12" color="#c5dccc" align="center" vAlign="middle" letterSpacing="2" autoSize="none" text="不低于所选择的等级条件"/>
+    <image id="n22_jjgk" name="n22" src="gl563i" fileName="Images/inputField_bg_9.png" xy="474,355" size="72,24" group="n31_gl56"/>
+    <component id="n23_jjgk" name="btn_sub" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="453,355" size="24,24" group="n31_gl56">
+      <Button icon="ui://qa9a7ritemvcd"/>
+    </component>
+    <component id="n24_jjgk" name="btn_add" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="543,355" size="24,24" group="n31_gl56">
+      <Button icon="ui://qa9a7ritemvcc"/>
+    </component>
+    <text id="n25_jjgk" name="textInput_level" xy="479,355" pivot="0.5,0.5" size="62,24" group="n31_gl56" fontSize="12" color="#fff9da" align="center" vAlign="middle" autoSize="none" singleLine="true" text="35" input="true" maxLength="3" keyboardType="4"/>
+    <component id="n26_n1mf" name="btn_auto_approve" src="gl5631" fileName="Components/check_box.xml" xy="426,438" group="n31_gl56"/>
+    <group id="n31_gl56" name="n31" xy="357,266" size="310,254" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n2_zah9" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="651,283">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://st7dgeqqje63v3b"/>
+    </component>
+  </displayList>
+</component>

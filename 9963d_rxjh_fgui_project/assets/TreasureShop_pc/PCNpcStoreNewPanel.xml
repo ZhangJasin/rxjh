@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImage="ui://qy7g0oycpy6v5g">
+  <displayList>
+    <component id="n7_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n6_10pmd" name="bg_left" src="emvc42" fileName="image/icon_money_bg.png" pkg="qa9a7rit" xy="184,210" size="118,381">
+      <relation target="n3_10pmd" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <text id="n2_10pmd" name="text_title" xy="511,188" pivot="0.5,0.5" anchor="true" size="66,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" singleLine="true" text="NPC商店">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n4_10pmd" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186" size="29,29" aspect="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n3_10pmd" name="list_tab" xy="184,210" size="118,381" overflow="scroll" scrollBarFlags="128" margin="4,0,0,0" lineGap="4" defaultItem="ui://qy7g0oycemvc1e" autoItemSize="false" align="center" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n5_10pmd" name="node_root" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="308,210" size="533,382">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

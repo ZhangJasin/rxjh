@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="125,40" extention="Button">
+  <controller name="button" exported="true" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n74_mzzl" name="selected" src="zah9v4j" fileName="image/toggle_top_green_select.png" pkg="st7dgeqq" xy="0,0" size="125,40">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n75_mzzl" name="unselected" src="zah9v4k" fileName="image/toggle_top_green_unselect.png" pkg="st7dgeqq" xy="0,0" size="125,40">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n77_o0nq" name="title" xy="0,0" size="125,40" fontSize="24" color="#979797" align="center" vAlign="middle" autoSize="none" text="">
+      <gearColor controller="button" pages="0,1" values="#979797,#000000|#f6cd2b,#000000"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Check"/>
+</component>

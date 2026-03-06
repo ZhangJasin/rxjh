@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="4lompvwt">
+  <resources>
+    <image id="mlmr0" name="hurt_tips_image_1.png" path="/Images/"/>
+    <component id="mlmr4" name="HurtTips.xml" path="/" exported="true"/>
+    <image id="80vf6" name="hurt_tips_image_2.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

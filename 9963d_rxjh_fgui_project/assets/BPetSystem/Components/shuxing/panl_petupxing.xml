@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n21_kdof" name="back" src="egru78" fileName="Components/tongyong/kongbg.xml" pkg="fgihxfye" xy="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <loader id="n14_kdof" name="bg" xy="667,375" pivot="0.5,0.5" anchor="true" size="534,460" url="ui://fgihxfyeuz9jie" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <text id="n3_eoqr" name="text_tips" xy="614,153" size="112,38" font="SimHei" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="灵兽升星">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n18_kdof" name="n18" src="swkl1v" fileName="Images/lingshou/进度条(1).png" xy="446,267" pivot="0.5,0.5" size="443,140">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n15_kdof" name="btn_lssx" src="wgst5q" fileName="Components/tongyong/fangbtn.xml" pkg="fgihxfye" xy="588,538" size="162,47">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="升星" titleFontSize="22"/>
+    </component>
+    <component id="n22_kdof" name="n22" src="swkl34" fileName="Components/shuxing/itemxing.xml" xy="446,212">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n23_kdof" name="n23" src="swkl34" fileName="Components/shuxing/itemxing.xml" xy="689,212">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n24_kdof" name="n24" src="kdof3f" fileName="Images/shengxing/右箭头.png" xy="650,228">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n26_kdof" name="wpdfont" xy="458,316" pivot="0.5,0.5" size="172,34" font="SimHei" fontSize="24" color="#a4d452" align="center" text="无升星属性加成">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n27_kdof" name="n27" src="kdof3f" fileName="Images/shengxing/右箭头.png" xy="650,323">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n28_kdof" name="curattrlist" xy="458,270" size="184,128" overflow="scroll" margin="2,0,5,0" lineGap="-5" defaultItem="ui://bphbjao2kdof3g" vAlign="middle" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n32_dwl6" name="nextattrlist" xy="698,270" size="184,128" overflow="scroll" margin="2,0,5,0" lineGap="-5" defaultItem="ui://bphbjao2kdof3g" vAlign="middle" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n29_kdof" name="attrfont" xy="576,418" pivot="0.5,0.5" size="184,29" font="SimHei" fontSize="20" color="#ffff00" align="center" vAlign="middle" bold="true" text="升星需宠物达到20级">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n30_kdof" name="itemlist" xy="538,460" pivot="0.5,0.5" size="259,64" layout="row" overflow="scroll" scroll="horizontal" margin="0,0,10,10" colGap="10" defaultItem="ui://fgihxfyeger552" align="center" vAlign="middle" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n31_s5ms" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="908,171">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

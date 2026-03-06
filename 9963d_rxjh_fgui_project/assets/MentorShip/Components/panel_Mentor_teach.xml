@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="992,588" opaque="false">
+  <controller name="who" pages="0,徒弟,1,师傅" selected="0"/>
+  <controller name="taskDesc" pages="0,不可领取,1,已领取,3,待领取" selected="0"/>
+  <controller name="isHave" pages="0,,1," selected="1"/>
+  <displayList>
+    <image id="n21_leye" name="bg_left" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="-11,1" size="235,585" group="n114_dos9"/>
+    <image id="n70_nxdg" name="n74" src="as7kvno" fileName="image/btn_first_9.png" pkg="st7dgeqq" xy="-3,16" size="220,55" group="n73_nxdg"/>
+    <text id="n71_nxdg" name="text_mentor" xy="-3,16" size="220,55" group="n73_nxdg" fontSize="22" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="我的师父"/>
+    <list id="n72_nxdg" name="list_mentor" xy="-3,74" size="220,75" group="n73_nxdg" overflow="hidden" lineGap="8" defaultItem="ui://pnop7ha6npv42r" autoClearItems="true">
+      <item/>
+    </list>
+    <group id="n73_nxdg" name="n73" xy="-3,16" size="220,133" group="n80_nxdg" advanced="true"/>
+    <image id="n74_nxdg" name="n78" src="as7kvno" fileName="image/btn_first_9.png" pkg="st7dgeqq" xy="-3,154" size="220,55" group="n77_nxdg"/>
+    <text id="n75_nxdg" name="text_apprentice" xy="-3,154" size="220,55" group="n77_nxdg" fontSize="22" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="我的徒弟"/>
+    <list id="n76_nxdg" name="list_apprentice" xy="-3,212" size="220,230" group="n77_nxdg" overflow="hidden" lineGap="5" defaultItem="ui://pnop7ha6npv42r" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n77_nxdg" name="n77" xy="-3,154" size="220,288" group="n80_nxdg" advanced="true"/>
+    <text id="n78_nxdg" name="text_count" xy="-3,466" pivot="0,0.5" size="220,45" group="n80_nxdg" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="ellipsis" text="未出师徒弟 0/3"/>
+    <component id="n79_nxdg" name="btn_applylist" src="gvalo3y" fileName="Components/btn_second_green.xml" xy="44,520" size="130,45" group="n80_nxdg">
+      <Button title="申请列表" titleColor="#ffff00" titleFontSize="18"/>
+    </component>
+    <group id="n80_nxdg" name="n80" xy="-3,16" size="220,549" group="n114_dos9" advanced="true"/>
+    <image id="n81_nxdg" name="n81" src="gvalo3x" fileName="Images/content_bg_9.png" xy="250,12" size="359,413" group="n97_nxdg"/>
+    <image id="n82_nxdg" name="n82" src="gvalo3x" fileName="Images/content_bg_9.png" xy="250,439" size="720,143" group="n97_nxdg"/>
+    <image id="n116_lkqx" name="n116" src="gvalo3x" fileName="Images/content_bg_9.png" xy="624,13" size="346,415" group="n97_nxdg"/>
+    <list id="n123_lkqx" name="getSkill" xy="256,74" size="359,113" group="n97_nxdg" layout="row" overflow="scroll" margin="0,0,20,20" colGap="10" defaultItem="ui://pnop7ha6lkqxo53">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n117_lkqx" name="n117" xy="256,27" size="346,32" group="n97_nxdg" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="武功传授"/>
+    <text id="n124_lkqx" name="n124" xy="256,200" size="346,32" group="n97_nxdg" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="贡献度"/>
+    <text id="n125_lkqx" name="n125" xy="260,269" size="120,26" group="n97_nxdg" fontSize="18" color="#ffffff" align="right" vAlign="middle" autoSize="none" text="贡献度等级："/>
+    <text id="n126_lkqx" name="n126" xy="260,340" size="120,26" group="n97_nxdg" fontSize="18" color="#ffffff" align="right" vAlign="middle" autoSize="none" text="贡献度："/>
+    <text id="n128_lkqx" name="n128" xy="624,27" size="346,32" group="n97_nxdg" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="解锁任务"/>
+    <list id="n129_lkqx" name="taskList" xy="624,74" size="346,338" group="n97_nxdg" overflow="scroll" lineGap="15" defaultItem="ui://pnop7ha6lkqxo54" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n130_lkqx" name="select_task_name" xy="275,455" size="116,24" group="n97_nxdg" fontSize="16" color="#ffffff" align="right" text="任务：任务名字"/>
+    <text id="n131_lkqx" name="sxtj" xy="275,495" size="148,24" group="n97_nxdg" fontSize="16" color="#ffffff" align="right" text="所需条件：任务条件"/>
+    <text id="n132_lkqx" name="jiangli" xy="275,535" size="116,24" group="n97_nxdg" fontSize="16" color="#ffffff" align="right" text="奖励：师傅奖励"/>
+    <component id="n135_lkqx" name="bklq" src="gvalo3z" fileName="Components/btn_second_red.xml" xy="795,504" group="n97_nxdg">
+      <gearDisplay controller="taskDesc" pages="0"/>
+      <Button title="不可领取" selectedTitle="不可领取"/>
+    </component>
+    <text id="n136_lkqx" name="n136" xy="795,505" size="130,45" group="n97_nxdg" fontSize="18" color="#00ff00" align="center" vAlign="middle" autoSize="none" text="已领取">
+      <gearDisplay controller="taskDesc" pages="1"/>
+    </text>
+    <text id="n161_lkqx" name="wdgxd" xy="400,270" size="170,26" group="n97_nxdg" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <component id="n169_lkqx" name="gxdjd" src="lkqxo52" fileName="Components/ProgressBar1.xml" xy="400,343" size="170,20" group="n97_nxdg">
+      <ProgressBar max="100"/>
+    </component>
+    <component id="n174_g5t3" name="lingqu" src="gvalo3y" fileName="Components/btn_second_green.xml" xy="795,504" group="n97_nxdg">
+      <gearDisplay controller="taskDesc" pages="3"/>
+      <Button title="领取" selectedTitle="领取&#xA;"/>
+    </component>
+    <text id="n175_lwvy" name="rwjd" xy="796,454" size="167,28" group="n97_nxdg" fontSize="16" color="#ffffff" autoSize="none" text="任务进度0/0"/>
+    <group id="n97_nxdg" name="group_skill" xy="250,12" size="720,570" group="n114_dos9" advanced="true">
+      <gearDisplay controller="who" pages="0"/>
+      <gearDisplay2 controller="isHave" pages="1" condition="0"/>
+    </group>
+    <image id="n137_lkqx" name="n137" src="gvalo3x" fileName="Images/content_bg_9.png" xy="241,11" size="267,570" group="n154_lkqx"/>
+    <image id="n139_lkqx" name="n139" src="gvalo3x" fileName="Images/content_bg_9.png" xy="519,13" size="463,570" group="n154_lkqx"/>
+    <list id="n140_lkqx" name="giveSkillList" xy="519,74" size="463,113" group="n154_lkqx" layout="row" overflow="scroll" margin="0,0,20,20" colGap="10" defaultItem="ui://pnop7ha6lkqxo53" align="center">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n141_lkqx" name="n141" xy="521,27" size="463,32" group="n154_lkqx" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="武功传授"/>
+    <text id="n142_lkqx" name="n142" xy="523,200" size="451,32" group="n154_lkqx" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="当前属性"/>
+    <list id="n155_lkqx" name="attrList" xy="524,243" size="450,198" group="n154_lkqx" layout="pagination" overflow="scroll" lineItemCount="2" defaultItem="ui://pnop7ha6d9vpo5p" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n156_lkqx" name="n156" xy="518,450" size="463,32" group="n154_lkqx" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="贡献度"/>
+    <text id="n163_lkqx" name="n163" xy="534,495" size="150,26" group="n154_lkqx" fontSize="18" color="#ffffff" align="right" vAlign="middle" autoSize="none" text="贡献度等级："/>
+    <text id="n164_lkqx" name="n164" xy="532,542" size="146,26" group="n154_lkqx" fontSize="18" color="#ffffff" align="right" vAlign="middle" autoSize="none" text="贡献度："/>
+    <text id="n166_lkqx" name="gxdlv" xy="681,495" size="275,26" group="n154_lkqx" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <graph id="n167_lkqx" name="model" xy="313,329" pivot="0.5,1" size="118,100" group="n154_lkqx" type="rect" lineSize="0" fillColor="#00000000"/>
+    <component id="n170_lkqx" name="gxdjdt" src="lkqxo52" fileName="Components/ProgressBar1.xml" xy="681,543" size="275,20" group="n154_lkqx">
+      <ProgressBar max="100"/>
+    </component>
+    <component id="n173_lkqx" name="setSkillView" src="lkqxo5d" fileName="MySkill.xml" xy="148,27" size="696,570" group="n154_lkqx" visible="false"/>
+    <group id="n154_lkqx" name="group_skill_master" xy="148,11" size="836,586" group="n114_dos9" advanced="true">
+      <gearDisplay controller="who" pages="1"/>
+      <gearDisplay2 controller="isHave" pages="1" condition="0"/>
+    </group>
+    <group id="n114_dos9" name="panel" xy="-11,1" size="995,596" advanced="true"/>
+  </displayList>
+</component>

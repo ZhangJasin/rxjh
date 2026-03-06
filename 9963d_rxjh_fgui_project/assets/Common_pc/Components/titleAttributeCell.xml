@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="171,32">
+  <controller name="isHaveJob" exported="true" pages="0,全职业,1,有职业" selected="0"/>
+  <controller name="jobIcon" pages="0,弓手,1,枪,2,刺客,3,法师,4,刀客,5,剑客" selected="0"/>
+  <displayList>
+    <image id="n16_yp8h" name="n16" src="yp8h5p" fileName="Images/02.png" xy="0,0" size="171,32">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n13_10e45" name="text_attr_name" xy="1,1" size="57,29" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#a4d452" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" autoClearText="true" text="123122">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n15_10e45" name="text_attr_value" xy="90,6" size="52,19" group="n17_yp8h" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#7cc3b3" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="11231231"/>
+    <loader id="n11_10e45" name="loader_job" xy="142,9" size="13,13" group="n17_yp8h" url="ui://zu7kdgts10e45voo" fill="scaleFree">
+      <gearDisplay controller="isHaveJob" pages="1"/>
+      <gearIcon controller="jobIcon" pages="1,2,3,4,5" values="ui://zu7kdgts10e45vop|ui://zu7kdgts10e45voq|ui://zu7kdgts10e45vor|ui://zu7kdgts10e45vos|ui://zu7kdgts10e45vot" default="ui://zu7kdgts10e45voo"/>
+    </loader>
+    <group id="n17_yp8h" name="valueGroup" xy="90,6" size="52,19" advanced="true" layout="hz" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

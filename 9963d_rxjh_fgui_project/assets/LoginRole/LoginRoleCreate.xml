@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImage="ui://4op6gwolflj61">
+  <controller name="page" alias="测试" exported="true" pages="0,,1,,2," selected="0"/>
+  <controller name="c1" pages="0,,1," selected="0"/>
+  <displayList>
+    <list id="n18_flj6" name="list_job_select" xy="80,43" size="223,610" layout="flow_vt" overflow="scroll" scrollBarFlags="128" lineGap="19" defaultItem="ui://4op6gwolflj61g" autoClearItems="true">
+      <relation target="" sidePair="middle-middle,left-left"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n19_flj6" name="btn_pre" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="242,663" size="176,50">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button title="上一步"/>
+    </component>
+    <component id="n26_flj6" name="btn_sex_0" src="flj61k" fileName="Components/Create/btn_sex_man.xml" xy="559,583">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <component id="n27_flj6" name="btn_sex_1" src="flj61l" fileName="Components/Create/btn_sex_woman.xml" xy="712,584">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <image id="n46_7ogs" name="n46" src="7ogsve" fileName="Images/Create/img_name_frame_9.png" xy="521,666" size="290,51" group="n29_flj6"/>
+    <text id="n22_flj6" name="textInput_name" xy="542,669" size="213,44" group="n29_flj6" fontSize="24" color="#a2b592" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="输入名称" maxLength="7"/>
+    <component id="n23_flj6" name="btn_random_name" src="flj61h" fileName="Components/Create/btn_single_click.xml" xy="766,674" group="n29_flj6"/>
+    <group id="n29_flj6" name="inputField_name" xy="521,666" size="290,51" advanced="true">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
+    <component id="n39_mhkn" name="panel_touch" src="mhknvc" fileName="Components/panel_touch.xml" xy="492,8" size="404,558"/>
+    <component id="n20_flj6" name="btn_create_role" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="928,664" size="176,50">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button title="创建角色"/>
+    </component>
+    <loader id="n30_flj6" name="loader_job" xy="1019,99" size="50,50" group="n47_q4e5" url="ui://4op6gwolflj614">
+      <relation target="" sidePair="middle-middle,left-right"/>
+    </loader>
+    <image id="n31_flj6" name="image_introduce_bg" src="flj6y" fileName="Images/Create/img_introduce_frame.png" xy="910,163" size="329,97" group="n47_q4e5">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </image>
+    <image id="n45_bs2a" name="img_di" src="flj6f" fileName="Images/Create/icon_attr_empty.png" xy="950,291" group="n47_q4e5" alpha="0.7">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </image>
+    <graph id="n40_bs2a" name="graphic_Attribute" xy="1086,420" pivot="0.5,0.5" anchor="true" size="288,269" group="n47_q4e5" aspect="true" lineSize="4" lineColor="#ff00ff00" fillColor="#ff9b6516">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </graph>
+    <text id="n32_flj6" name="text_introduce" xy="926,171" size="300,81" group="n47_q4e5" fontSize="20" color="#ffffff" leading="2" letterSpacing="2" ubb="true" autoSize="none" text="">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </text>
+    <text id="n33_flj6" name="text_atk" xy="893,347" size="76,34" group="n47_q4e5" fontSize="24" color="#fee89e" leading="2" strokeColor="#000000" text="攻击力">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </text>
+    <text id="n34_flj6" name="text_hp" xy="1041,265" size="76,34" group="n47_q4e5" fontSize="24" color="#fee89e" leading="2" strokeColor="#000000" text="生命力">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </text>
+    <text id="n35_flj6" name="text_def" xy="1180,347" size="76,34" group="n47_q4e5" fontSize="24" color="#fee89e" leading="2" strokeColor="#000000" text="防御力">
+      <relation target="" sidePair="middle-middle,left-right"/>
+    </text>
+    <text id="n36_flj6" name="text_energy" xy="963,525" size="52,34" group="n47_q4e5" fontSize="24" color="#fee89e" leading="2" strokeColor="#000000" text="精力">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </text>
+    <text id="n37_flj6" name="text_hit" xy="1137,526" size="100,34" group="n47_q4e5" fontSize="24" color="#fee89e" leading="2" strokeColor="#000000" text="致命打击">
+      <relation target="" sidePair="middle-middle,left-right"/>
+    </text>
+    <group id="n47_q4e5" name="n47" xy="893,99" size="363,461"/>
+  </displayList>
+</component>

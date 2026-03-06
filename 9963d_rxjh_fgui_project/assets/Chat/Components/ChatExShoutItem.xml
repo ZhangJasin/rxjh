@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="350,72" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="testBtn" exported="true" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <loader id="n3_q9ls" name="Icon" xy="7,3" size="66,66" url="ui://8pthu2lwq9lsv7o" fill="scaleFree" clearOnPublish="true"/>
+    <text id="n4_q9ls" name="Text" xy="102,23" size="115,29" fontSize="20" color="#ffffff" text="狮子吼（0）"/>
+    <image id="n5_q9ls" name="n5" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="301,21"/>
+    <image id="n6_q9ls" name="n6" src="lxrgv57" fileName="image/checkbox_icon.png" pkg="st7dgeqq" xy="301,22">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+  </displayList>
+  <Button mode="Check"/>
+</component>

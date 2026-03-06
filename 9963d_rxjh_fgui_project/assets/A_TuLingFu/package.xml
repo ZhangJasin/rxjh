@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="h5wbakzp">
+  <resources>
+    <component id="oqrp0" name="tulingfuPanl.xml" path="/" exported="true"/>
+    <component id="oqrp1" name="btnselect2.xml" path="/Components/tongyong/"/>
+    <image id="oqrp2" name="btnhong1.png" path="/Images/0tongyong/" scale="9grid" scale9grid="31,16,62,32"/>
+    <image id="oqrp3" name="xzkuang9.png" path="/Images/0tongyong/" scale="9grid" scale9grid="16,16,32,32" duplicatePadding="true"/>
+    <component id="oqrp4" name="fangbtn.xml" path="/Components/tongyong/"/>
+    <image id="oqrp5" name="btn_hong.png" path="/Images/0tongyong/" scale="9grid" scale9grid="16,13,32,26"/>
+    <component id="oqrp6" name="closebtn_yuan.xml" path="/Components/tongyong/"/>
+    <image id="oqrp7" name="close_yuan.png" path="/Images/0tongyong/"/>
+    <component id="oqrp8" name="btnselect.xml" path="/Components/tongyong/"/>
+    <image id="oqrp9" name="srbbg.png" path="/Images/0tongyong/" scale="9grid" scale9grid="28,20,56,40" duplicatePadding="true"/>
+    <component id="oqrpa" name="addjld.xml" path="/Components/city/"/>
+    <component id="oqrpb" name="kongbg.xml" path="/Components/tongyong/"/>
+    <component id="oqrpc" name="Bbtnlv.xml" path="/Components/tongyong/"/>
+    <image id="oqrpd" name="btn_lv.png" path="/Images/0tongyong/" scale="9grid" scale9grid="39,13,78,26"/>
+    <component id="oqrpe" name="deljld.xml" path="/Components/city/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

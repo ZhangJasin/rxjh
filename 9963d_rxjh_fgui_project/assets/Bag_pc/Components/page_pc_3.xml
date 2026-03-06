@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="312,117">
+  <displayList>
+    <image id="n37_j9jd" name="bg_di" src="sna94t" fileName="Images/heiDI.png" xy="0,0" size="312,117">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n30_j9jd" name="hp" src="d4a9m" fileName="Components/comNameAndProgress.xml" xy="5,2" size="303,27">
+      <relation target="" sidePair="width-width,middle-middle"/>
+    </component>
+    <component id="n44_d4a9" name="mp" src="d4a9m" fileName="Components/comNameAndProgress.xml" xy="5,29" size="303,27">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n45_d4a9" name="exp" src="d4a9m" fileName="Components/comNameAndProgress.xml" xy="5,58" size="303,27">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n46_d4a9" name="nuqi" src="d4a9m" fileName="Components/comNameAndProgress.xml" xy="5,87" size="303,27">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>

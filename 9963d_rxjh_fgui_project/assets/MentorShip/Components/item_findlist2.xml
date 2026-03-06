@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="250,440">
+  <displayList>
+    <image id="n24_nxdg" name="bg" src="tgkjvoa" fileName="image/content_fill_bg.png" pkg="st7dgeqq" xy="0,0" size="255,400"/>
+    <image id="n22_nxdg" name="bg2" src="qjli19" fileName="image/role_bg_di.png" pkg="st7dgeqq" xy="0,9" size="250,352"/>
+    <graph id="n1_nxdg" name="graph_model" xy="125,306" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen"/>
+    <loader id="n2_nxdg" name="icon_job" xy="8,315" size="48,50" aspect="true" scale="0.6,0.6"/>
+    <component id="n4_nxdg" name="panel_touch" src="o14p3" fileName="Components/model_touch.xml" pkg="fdqa7hvy" xy="125,182" pivot="0.5,0.5" anchor="true" size="200,280"/>
+    <text id="n5_nxdg" name="text_job" xy="79,325" size="36,24" aspect="true" fontSize="16" color="#ffffff" text="职业"/>
+    <text id="n6_nxdg" name="text_level" xy="160,325" pivot="1,0" anchor="true" size="47,24" aspect="true" fontSize="16" color="#ffffff" align="right" text="lv:100"/>
+    <text id="n7_nxdg" name="text_name" xy="96,12" size="76,26" fontSize="18" color="#ffffff" text="玩家名字"/>
+    <text id="n12_nxdg" name="text_guild" xy="99,34" size="68,24" fontSize="16" color="#ffff33" text="行会名字"/>
+    <text id="n9_nxdg" name="text_gender" xy="14,58" size="68,24" aspect="true" fontSize="16" color="#ffffff" align="right" text="性别：男"/>
+    <text id="n10_nxdg" name="text_online" xy="149,80" size="84,24" aspect="true" fontSize="16" color="#ffffff" align="right" text="在线：白天"/>
+    <text id="n11_nxdg" name="text_map" xy="14,80" size="84,24" aspect="true" fontSize="16" color="#ffffff" align="right" text="地区：白天"/>
+    <component id="n37_nxdg" name="btn_apply" src="gvalo3y" fileName="Components/btn_second_green.xml" xy="60,353" size="130,35">
+      <Button title="申请收徒" titleColor="#ffff00" titleFontSize="14"/>
+    </component>
+    <component id="n40_gkld" name="btn_info" src="foqko5u" fileName="Components/btn_search.xml" xy="207,17"/>
+  </displayList>
+</component>

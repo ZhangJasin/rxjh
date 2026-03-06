@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n66_j694" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n70_gpvo" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="550,700">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n73_h3mm" name="bg2" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="667,400" pivot="0.5,0.5" anchor="true" size="520,630">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n60_npv4" name="text_team" xy="667,52" pivot="0.5,0.5" anchor="true" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="队伍设置">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n1_vjv7" name="btn_close" src="vjv72" fileName="Components/btn_close.xml" xy="919,53" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n42_npv4" name="name" xy="535,125" pivot="1,0.5" anchor="true" size="100,34" group="n49_npv4" fontSize="22" color="#fcf1bf" align="right" autoSize="none" text="队伍名称">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n76_ch8l" name="input_bg" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="555,125" pivot="0,0.5" anchor="true" size="345,40" group="n49_npv4">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n47_npv4" name="input_name" xy="580,125" pivot="0,0.5" anchor="true" size="250,34" group="n49_npv4" fontSize="22" color="#ffffff" vAlign="middle" autoSize="none" text="" input="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n49_npv4" name="frame_name" xy="435,105" size="465,40" advanced="true"/>
+    <text id="n13_l7f0" name="lv" xy="535,185" pivot="1,0.5" anchor="true" size="100,34" group="n15_l7f0" fontSize="22" color="#fcf1bf" align="right" autoSize="none" text="等级要求">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n18_l7f0" name="line" xy="681,185" pivot="0,0.5" anchor="true" size="26,32" group="n15_l7f0" fontSize="22" color="#ffffff" text="至">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n41_npv4" name="line2" xy="846,185" pivot="0,0.5" anchor="true" size="26,32" group="n15_l7f0" fontSize="22" color="#ffffff" text="级">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n39_npv4" name="n39" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="555,185" pivot="0,0.5" anchor="true" size="102,36" group="n15_l7f0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n40_npv4" name="n40" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="730,185" pivot="0,0.5" anchor="true" size="102,36" group="n15_l7f0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n19_l7f0" name="input_min" xy="555,168" size="100,34" group="n15_l7f0" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="0" input="true" prompt="0" keyboardType="4">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n20_l7f0" name="input_max" xy="730,168" size="100,34" group="n15_l7f0" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1000" input="true" prompt="1000" keyboardType="4">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n15_l7f0" name="frame_level" xy="435,167" size="437,36" advanced="true"/>
+    <text id="n22_l7f0" name="text_camp" xy="535,240" pivot="1,0.5" anchor="true" size="100,34" group="n53_npv4" fontSize="22" color="#fcf1bf" align="right" autoSize="none" text="正邪要求">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n38_npv4" name="list_camp" xy="555,240" pivot="0,0.5" anchor="true" size="360,40" group="n53_npv4" layout="pagination" overflow="hidden" scroll="horizontal" lineGap="30" colGap="10" lineItemCount="3" lineItemCount2="1" defaultItem="ui://pnop7ha6npv42p" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n53_npv4" name="frame_camp" xy="435,220" size="480,40" advanced="true"/>
+    <text id="n10_l7f0" name="job" xy="535,300" pivot="1,0.5" anchor="true" size="100,34" group="n54_npv4" fontSize="22" color="#fcf1bf" align="right" autoSize="none" text="职业要求">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n11_l7f0" name="list_job" xy="555,280" size="360,120" group="n54_npv4" layout="pagination" selectionMode="multipleSingleClick" overflow="hidden" scroll="horizontal" lineGap="30" colGap="10" lineItemCount="3" lineItemCount2="2" defaultItem="ui://pnop7ha6npv42p" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n54_npv4" name="frame_job" xy="435,280" size="480,120" advanced="true"/>
+    <text id="n61_tg96" name="pick" xy="535,435" pivot="1,0.5" anchor="true" size="100,34" group="n64_tg96" fontSize="22" color="#fcf1bf" align="right" autoSize="none" text="掉落分配">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n75_c4df" name="pick_bg" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="555,435" pivot="0,0.5" anchor="true" size="345,40" group="n64_tg96">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n65_tg96" name="text_pick" xy="580,435" pivot="0,0.5" anchor="true" size="250,34" group="n64_tg96" fontSize="22" color="#ffffff" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n64_tg96" name="frame_pick" xy="435,415" size="465,40" advanced="true"/>
+    <text id="n67_es21" name="invite" xy="535,490" pivot="1,0.5" anchor="true" size="100,34" group="n69_es21" fontSize="22" color="#fcf1bf" align="right" autoSize="none" text="队员邀请">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n68_es21" name="list_invite" xy="555,470" size="360,40" group="n69_es21" layout="row" overflow="hidden" scroll="horizontal" lineGap="30" colGap="50" defaultItem="ui://pnop7ha6npv42p" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n69_es21" name="frame_invite" xy="435,470" size="480,40" advanced="true"/>
+    <text id="n55_npv4" name="auto" xy="535,550" pivot="1,0.5" anchor="true" size="100,34" group="n58_npv4" fontSize="22" color="#fcf1bf" align="right" autoSize="none" text="申请设置">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n56_npv4" name="list_auto" xy="555,530" size="360,120" group="n58_npv4" layout="pagination" overflow="hidden" scroll="horizontal" lineGap="15" colGap="50" lineItemCount="2" lineItemCount2="2" defaultItem="ui://pnop7ha6npv42p" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n58_npv4" name="frame_auto" xy="435,530" size="480,120" advanced="true"/>
+    <component id="n36_l7f0" name="btn_save" src="l7f02i" fileName="Components/btn_save.xml" xy="567,680" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n59_npv4" name="btn_reset" src="l7f02h" fileName="Components/btn_reset.xml" xy="767,680" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

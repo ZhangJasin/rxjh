@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="110,130" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n5_fbc0" name="skill_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="55,55" pivot="0.5,0.5" anchor="true" size="80,80"/>
+    <loader id="n2_eion" name="skill_icon" xy="55,55" pivot="0.5,0.5" anchor="true" size="80,80" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <graph id="n8_hb5x" name="skill_mask" xy="55,80" pivot="0.5,0.5" anchor="true" size="72,26" alpha="0.7" type="rect" fillColor="#ff000000"/>
+    <image id="n12_fxpb" name="icon_select" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="55,55" pivot="0.5,0.5" anchor="true" size="88,88" visible="false"/>
+    <richtext id="n11_pdyt" name="text_condition" xy="55,80" pivot="0.5,0.5" anchor="true" size="70,26" fontSize="18" color="#ff0000" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="10级"/>
+    <text id="n9_nd1w" name="text_name" xy="55,110" pivot="0.5,0.5" anchor="true" size="120,29" fontSize="18" color="#cae5d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="名字名字名字名"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="220,290">
+  <displayList>
+    <component id="n0_gval" name="n0" src="zi8so3p" fileName="Components/header_apprentice.xml" xy="0,2"/>
+    <list id="n1_gval" name="list_apprentice" xy="0,60" size="220,230" overflow="scroll" lineGap="5" defaultItem="ui://pnop7ha6npv42r">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

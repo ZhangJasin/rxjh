@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="955,60">
+  <displayList>
+    <component id="n0_hpp3" name="refresh" src="o0nq17" fileName="Components/tybtn1.xml" pkg="vslix2m2" xy="377,7">
+      <Button title="刷新消耗"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="272,122">
+  <displayList>
+    <image id="n19_o4ex" name="di" src="kra4dv76" fileName="Images/buy_item_di.png" xy="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n24_o4ex" name="n24" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="123,44" size="133,35">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n26_owd7" name="item_di" src="owd7dv7n" fileName="Images/物品框.png" xy="25,25">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n15_10pmd" name="s_text_name" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="123,13" size="130,29">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <text id="n14_10pmd" name="text_cost_count" xy="152,46" size="96,29" fontSize="20" color="#83f274" autoSize="none" singleLine="true" text="100000">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n16_10pmd" name="s_text_des" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="123,83" size="137,29">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <component id="n17_10pmd" name="node_item" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="31,32" size="60,60">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n18_10pmd" name="node_money" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="123,46" size="29,32">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

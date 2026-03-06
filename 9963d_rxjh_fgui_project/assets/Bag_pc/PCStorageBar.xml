@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="272,516" opaque="false">
+  <displayList>
+    <component id="n0_krex" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="0,0" size="272,516" group="n17_7hol"/>
+    <text id="n2_krex" name="text_title" xy="118,8" size="36,24" group="n17_7hol" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" singleLine="true" text="仓库"/>
+    <image id="n9_krex" name="img_logo" src="krex61" fileName="Images/PCStorageBar/logo_storage.png" xy="74,42" group="n17_7hol"/>
+    <component id="n5_krex" name="btn_next" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="175,463" group="n7_krex">
+      <Button icon="ui://qa9a7ritemvc3h"/>
+    </component>
+    <text id="n6_krex" name="text_btn_next" xy="191,467" size="52,19" group="n7_krex" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#fced00" strokeColor="#000000" singleLine="true" text="上 一 页"/>
+    <group id="n7_krex" name="left" xy="175,463" size="84,28" group="n17_7hol" advanced="true"/>
+    <component id="n3_krex" name="btn_prev" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="7,463" group="n8_krex">
+      <Button icon="ui://qa9a7ritemvc3h"/>
+    </component>
+    <text id="n4_krex" name="text_btn_prev" xy="23,467" size="52,19" group="n8_krex" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#fced00" strokeColor="#000000" singleLine="true" text="上 一 页"/>
+    <group id="n8_krex" name="right" xy="7,463" size="84,28" group="n17_7hol" advanced="true"/>
+    <list id="n10_krex" name="list_storage" xy="13,71" size="246,329" group="n17_7hol" layout="flow_hz" overflow="scroll" defaultItem="ui://brz7yunled395z" align="center" autoClearItems="true" scrollItemToViewOnClick="false">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n11_krex" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="254,19" group="n17_7hol"/>
+    <text id="n12_krex" name="text_page" xy="122,466" size="22,19" group="n17_7hol" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="center" vAlign="middle" strokeColor="#000000" singleLine="true" autoClearText="true" text="2/5"/>
+    <component id="n13_krex" name="btn_sort" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="175,425" group="n15_krex">
+      <Button icon="ui://qa9a7ritemvc3h"/>
+    </component>
+    <text id="n14_krex" name="text_btn_sort" xy="199,429" size="34,19" group="n15_krex" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#fced00" align="center" strokeColor="#000000" singleLine="true" text="整 理"/>
+    <group id="n15_krex" name="sort" xy="175,425" size="84,28" group="n17_7hol" advanced="true"/>
+    <text id="n16_krex" name="text_count" xy="13,427" size="34,19" group="n17_7hol" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" ubb="true" strokeColor="#000000" autoClearText="true" text="16/48"/>
+    <group id="n17_7hol" name="n17" xy="0,0" size="272,516" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

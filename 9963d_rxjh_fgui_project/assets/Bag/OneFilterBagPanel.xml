@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false" designImage="ui://dak5wnw9xzvri">
+  <displayList>
+    <component id="n36_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="758,60" size="500,650">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n28_p3is" name="title" xy="982,71" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" text="额外背包"/>
+    <component id="n34_ws4h" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1234,89"/>
+    <component id="n35_n7s0" name="view_bag" src="n7s0v7c" fileName="Components/FilterBagPanel.xml" xy="795,130" size="430,550"/>
+  </displayList>
+</component>

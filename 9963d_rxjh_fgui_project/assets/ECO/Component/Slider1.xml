@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="560,72" extention="Slider">
+  <displayList>
+    <graph id="n1_kt0f" name="bar" xy="66,4" size="490,64" type="rect" lineSize="0" fillColor="#003399ff"/>
+    <component id="n2_kt0f" name="grip" src="kt0f9" fileName="Component/Slider1_grip.xml" xy="494,5">
+      <relation target="n1_kt0f" sidePair="right-right"/>
+    </component>
+  </displayList>
+  <Slider/>
+</component>

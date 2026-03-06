@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="342,222">
+  <controller name="isSelected" pages="0,,1," selected="0"/>
+  <controller name="CameraMode" pages="0,2.5D,1,3D,2,智能" selected="2"/>
+  <displayList>
+    <loader id="n9_mfvx" name="gloader_bg" xy="0,0" size="342,222" url="ui://tk3jclwqmfvxvb4" fill="scaleFree" autoSize="true">
+      <gearIcon controller="CameraMode" pages="1,2" values="ui://tk3jclwqmfvxvb2|ui://tk3jclwqmfvxvb4" default="ui://tk3jclwqmfvxvb0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <image id="n6_d6vj" name="img_selected" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="0,0" size="342,222">
+      <gearDisplay controller="isSelected" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+</component>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="0vpx0897">
+  <resources>
+    <component id="f0so0" name="btn_right.xml" path="/Components/" exported="true"/>
+    <image id="f0so1" name="skill_icon_bg.png" path="/Images/" exported="true"/>
+    <component id="f0so2" name="PCSkillFramePanel.xml" path="/" exported="true"/>
+    <component id="f0so4" name="btn_menu.xml" path="/Components/" exported="true"/>
+    <component id="f0so6" name="btn_skill.xml" path="/Components/" exported="true"/>
+    <component id="eion7" name="btn_pad.xml" path="/Components/" exported="true"/>
+    <component id="fbc08" name="btn_reset.xml" path="/Components/" exported="true"/>
+    <image id="fbc09" name="skill_icon_select.png" path="/Images/" exported="true"/>
+    <component id="w0rga" name="PCSkillPracticePanel.xml" path="/" exported="true"/>
+    <component id="w0rgc" name="item_skill.xml" path="/Components/" exported="true"/>
+    <image id="w0rgf" name="skill_arrow.png" path="/Images/" exported="true"/>
+    <component id="w0rgh" name="btn_study.xml" path="/Components/" exported="true"/>
+    <component id="fe3nj" name="item_icon.xml" path="/Components/" exported="true"/>
+    <image id="o14pk" name="skill_book.png" path="/Images/" exported="true"/>
+    <image id="as7kl" name="skill_item_bg_9.png" path="/Images/" scale="9grid" scale9grid="23,32,2,50"/>
+    <image id="as7km" name="skill_title_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="36,0,2,39"/>
+    <image id="7uson" name="skill_icon_attack.png" path="/Images/"/>
+    <component id="j47so" name="PCSkillStudyPanel.xml" path="/" exported="true"/>
+    <component id="j47su" name="item_qigong.xml" path="/Components/" exported="true"/>
+    <component id="hhwjv" name="PCSkillTipsPanel.xml" path="/" exported="true"/>
+    <component id="hhwjw" name="btn_config.xml" path="/Components/" exported="true"/>
+    <component id="hhwjx" name="btn_practice.xml" path="/Components/" exported="true"/>
+    <component id="nd1wy" name="item_cost.xml" path="/Components/" exported="true"/>
+    <component id="awj8z" name="btn_cz.xml" path="/Components/" exported="true"/>
+    <component id="awj810" name="btn_czAll.xml" path="/Components/" exported="true"/>
+    <component id="apr011" name="btn_upgrade.xml" path="/Components/" exported="true"/>
+    <image id="mh2i12" name="skill_icon_frame.png" path="/Images/"/>
+    <image id="mh2i13" name="skill_icon_lock.png" path="/Images/"/>
+    <image id="ee0a14" name="skill_black_9.png" path="/Images/"/>
+    <image id="ee0a15" name="skill_line.png" path="/Images/" scale="9grid" scale9grid="95,0,190,0"/>
+    <image id="omcq1b" name="41修改.jpg" path="/Images/"/>
+    <image id="omcq1c" name="41修改01.jpg" path="/Images/"/>
+    <image id="omcq1d" name="btn_skill_add.png" path="/Images/" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="omcq1e" name="img_lv_bg.png" path="/Images/" scale="9grid" scale9grid="4,4,8,8"/>
+    <component id="omcq1f" name="btn_add.xml" path="/Components/" exported="true"/>
+    <component id="fg491g" name="panel_qigong_tips.xml" path="/Components/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

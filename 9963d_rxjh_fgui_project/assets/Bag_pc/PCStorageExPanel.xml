@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImageOffsetX="12" designImageOffsetY="17">
+  <displayList>
+    <component id="n35_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432" group="n36_yqmu"/>
+    <text id="n3_xzvr" name="Title" xy="512,188" pivot="0.5,0.5" anchor="true" size="36,24" group="n36_yqmu" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" text="仓库"/>
+    <component id="n28_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="176,597" size="0,0" group="n36_yqmu"/>
+    <component id="n33_ragy" name="view_bag" src="n0552h" fileName="Components/FilterBagPanel.xml" xy="527,239" size="310,350" group="n36_yqmu"/>
+    <image id="n15_hkm9" name="n15" src="sna94t" fileName="Images/heiDI.png" xy="185,239" size="310,351" group="n34_ragy"/>
+    <text id="n32_h8dd" name="n32" xy="191,214" size="40,19" group="n34_ragy" fontSize="12" color="#ffffff" text="类型："/>
+    <component id="n31_h8dd" name="checkbox_type" src="n0552i" fileName="Components/ComboBox1.xml" xy="235,212" size="89,22" group="n34_ragy">
+      <ComboBox visibleItemCount="10">
+        <item title="全部"/>
+        <item title="类型一"/>
+        <item title="类型二"/>
+      </ComboBox>
+    </component>
+    <list id="n19_hkm9" name="List_Cell" xy="191,245" size="303,341" group="n34_ragy" layout="flow_hz" overflow="scroll" scrollBarFlags="128" scrollBar="hidden" margin="2,0,2,2" lineGap="5" colGap="6" lineItemCount="6" defaultItem="ui://brz7yunln0551e" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n34_ragy" name="n34" xy="185,212" size="310,378" group="n36_yqmu" advanced="true"/>
+    <group id="n36_yqmu" name="n36" xy="174,168" size="676,432" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n27_hkm9" name="BtnClose" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,22" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_tgh8" name="n0" src="emvc3v" fileName="image/checkbox_bg.png" pkg="qa9a7rit" xy="0,0">
+      <relation target="" sidePair="left-left"/>
+    </image>
+    <image id="n1_tgh8" name="icon_select" src="emvc3w" fileName="image/checkbox_icon.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="left-left"/>
+    </image>
+    <text id="n2_juj0" name="title" xy="24,0" size="76,20" fontSize="12" color="#fcf1bf" autoSize="none" autoClearText="true" text="金创">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Check"/>
+</component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n15_epiq" name="bg" src="egru78" fileName="Components/tongyong/kongbg.xml" pkg="fgihxfye" xy="2,-1"/>
+    <component id="n0_c1p9" name="backGround" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="600,348"/>
+    <component id="n1_c1p9" name="btn_close" src="la2y4" fileName="Components/common/btn_closeyuan.xml" xy="916,207"/>
+    <text id="n3_c1p9" name="title" xy="607,207" size="120,45" fontSize="24" color="#cccccc" align="center" vAlign="middle" letterSpacing="2" autoSize="none" text="提示"/>
+    <text id="n4_c1p9" name="n4" xy="538,311" pivot="0.5,0.5" size="262,34" fontSize="24" color="#ffffcc" align="center" vAlign="middle" letterSpacing="2" ubb="true" text="是否要解除侠侣契约？"/>
+    <component id="n27_gwga" name="n27" src="wgst5v" fileName="Components/tongyong/Bbtnlv.xml" pkg="fgihxfye" xy="708,421">
+      <Button title="确定" titleColor="#ffffff" titleFontSize="22"/>
+    </component>
+    <component id="n28_gwga" name="n28" src="wgst5q" fileName="Components/tongyong/fangbtn.xml" pkg="fgihxfye" xy="475,421" size="159,53">
+      <Button title="取消" titleColor="#ff0000" titleFontSize="22"/>
+    </component>
+  </displayList>
+</component>

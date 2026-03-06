@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="230,30" opaque="false" extention="Label">
+  <controller name="grade" pages="0,,1,,2,,3,,4,,5," selected="4"/>
+  <displayList>
+    <image id="n7_9a5a" name="n7" src="9a5ah" fileName="Images/bg_item_tips.png" xy="0,0" size="230,30"/>
+    <loader id="n4_9a5a" name="Loader_grade" xy="0,0" pivot="0.5,0.5" size="30,30" aspect="true" url="ui://st7dgeqqfbc0v4s" align="right" fill="scaleFree" color="#c2853e">
+      <gearColor controller="grade" pages="0,1,2,3,4" values="#cfcbcb|#4cdc55|#41baf5|#9f4dff|#c2853e" default="#f86556"/>
+    </loader>
+    <loader id="n3_9a5a" name="Loader_icon" xy="1,1" size="28,28" aspect="true" url="ui://twx3ya3em2wevl2" fill="scale"/>
+    <image id="n8_tp62" name="Image_lock" src="q9lsv5n" fileName="image/lock.png" pkg="st7dgeqq" xy="0,21" scale="0.4,0.4"/>
+    <text id="n0_ilk5" name="title" xy="35,3" size="170,24" fontSize="16" color="#00ff00" align="center" vAlign="middle" ubb="true" singleLine="true" autoClearText="true" text="获得 金币金币金币 x 10"/>
+  </displayList>
+</component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="2u2zlohf">
+  <resources>
+    <component id="cgy50" name="MapRoutePanel.xml" path="/" exported="true"/>
+    <component id="dldy2c" name="item_line.xml" path="/Components/" exported="true"/>
+    <image id="g2qe2e" name="route_cell_bg.png" path="/Images/MapRoute/" exported="true" scale="9grid" scale9grid="12,12,8,8"/>
+    <image id="g2qe2f" name="route_select_box.png" path="/Images/MapRoute/" exported="true" scale="9grid" scale9grid="12,12,8,8"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

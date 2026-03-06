@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,50" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_q872" name="n0" src="oqrp10" fileName="Images/00item/item_chuansong.png" xy="15,-9" size="50,50" rotation="30">
+      <gearDisplay controller="button" pages="0,1,2,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_q872" name="n1" src="oqrp10" fileName="Images/00item/item_chuansong.png" xy="15,-9" size="50,50" rotation="30">
+      <gearDisplay controller="button" pages="0,1,2,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_q872" name="num" xy="1,28" size="46,24" fontSize="16" color="#ffffff" align="right" vAlign="bottom" autoSize="none" text=""/>
+  </displayList>
+  <Button/>
+</component>

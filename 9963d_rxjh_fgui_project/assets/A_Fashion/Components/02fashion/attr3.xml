@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="250,190">
+  <displayList>
+    <image id="n0_km0s" name="n0" src="rg4in" fileName="Images/0tongyong/di1.png" xy="0,49" size="248,139"/>
+    <image id="n1_km0s" name="n1" src="rg4ih" fileName="Images/0tongyong/huawen1.png" xy="198,19"/>
+    <image id="n2_km0s" name="n2" src="rg4ii" fileName="Images/0tongyong/huawen2.png" xy="12,19"/>
+    <text id="n5_km0s" name="n5" xy="125,29" pivot="0.5,0.5" anchor="true" size="140,34" fontSize="24" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="热血石属性"/>
+    <component id="n7_km0s" name="attrfont" src="rg4ij" fileName="Components/02fashion/attrfont.xml" xy="6,56" size="237,125"/>
+    <image id="n8_km0s" name="attrimg" src="rg4ik" fileName="Images/02fashion/fash_zwsx.png" xy="59,108" visible="false"/>
+  </displayList>
+</component>

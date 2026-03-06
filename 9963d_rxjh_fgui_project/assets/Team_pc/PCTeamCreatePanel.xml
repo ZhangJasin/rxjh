@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <component id="n63_hcvo" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="512,384" pivot="0.5,0.5" anchor="true" size="312,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n58_gpvo" name="bg1" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="512,400" pivot="0.5,0.5" anchor="true" size="290,380">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n59_gpvo" name="bg2" src="scjwo3f" fileName="Images/input_team_9.png" xy="545,255" pivot="0.5,0.5" anchor="true" size="185,30">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n66_hcvo" name="bg3" src="emvc58" fileName="image/img_search.png" pkg="qa9a7rit" xy="530,300" pivot="0.5,0.5" anchor="true" size="148,22">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n2_vjv7" name="text_title" xy="512,188" pivot="0.5,0.5" anchor="true" size="68,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" text="创建队伍">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n10_l7f0" name="name" xy="415,255" pivot="0.5,0.5" anchor="true" size="56,20" fontSize="12" color="#fcf18f" align="right" autoSize="none" text="队伍名称">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n22_l7f0" name="pick" xy="415,300" pivot="0.5,0.5" anchor="true" size="52,19" fontSize="12" color="#fcf18f" align="right" text="掉落分配">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n53_mp8v" name="text_pick" xy="520,300" pivot="0.5,0.5" anchor="true" size="100,20" fontSize="12" color="#7cc3b3" align="center" autoSize="none" text="随机分配">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n13_l7f0" name="apply" xy="415,345" pivot="0.5,0.5" anchor="true" size="56,20" fontSize="13" color="#fcf18f" align="right" text="申请设置">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n19_l7f0" name="input_name" xy="460,245" pivot="0,0.5" size="170,20" fontSize="12" vAlign="middle" autoSize="none" singleLine="true" text="我爱小小罗罗罗的队伍" input="true" maxLength="10">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n36_l7f0" name="btn_save" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="512,560" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="保 存" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <component id="n1_vjv7" name="btn_close" src="vjv72" fileName="Components/btn_close.xml" xy="658,188" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n52_mp8v" name="btn_pick" src="mp8v2v" fileName="Components/btn_pick.xml" xy="594,301" pivot="0.5,0.5" anchor="true" size="30,30">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n46_mp8v" name="list_auto" xy="460,332" size="120,120" layout="pagination" overflow="hidden" scroll="horizontal" lineGap="5" colGap="10" lineItemCount="1" lineItemCount2="3" defaultItem="ui://y890q37snpv42p" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n51_mp8v" name="list_pick" xy="460,310" size="120,120" visible="false" overflow="scroll" defaultItem="ui://y890q37svjv71c">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

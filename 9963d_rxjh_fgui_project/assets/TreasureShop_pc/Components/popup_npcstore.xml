@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="648,169" designImage="ui://qa9a7ritl6xyv5q" designImageOffsetX="-900" designImageOffsetY="64">
+  <displayList>
+    <graph id="n37_r4e4" name="mask" xy="-2,-1" size="427,170" alpha="0" type="rect" lineSize="0">
+      <relation target="n2_l6xy" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </graph>
+    <image id="n2_l6xy" name="n2" src="emvc3u" fileName="image/bg_tips.png" pkg="qa9a7rit" xy="-1,-1" size="424,170">
+      <relation target="n14_l6xy" sidePair="bottomext-bottom"/>
+    </image>
+    <component id="n36_fev4" name="icon_item" src="emvc3" fileName="Icons/CommonItem.xml" pkg="qa9a7rit" xy="35,17" pivot="1,1" size="64,64"/>
+    <text id="n5_l6xy" name="text_name" xy="382,16" pivot="1,0" anchor="true" size="276,26" fontSize="18" color="#ffffff" autoSize="none" autoClearText="true" text="名称">
+      <relation target="" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n6_l6xy" name="text_desc" xy="35,93" size="377,26" group="n16_l6xy" fontSize="18" color="#cccccc" vAlign="middle" leading="0" ubb="true" vars="true" autoSize="height" autoClearText="true" text="描述描述描述描述描述描"/>
+    <text id="n14_l6xy" name="text_way" xy="35,123" size="378,26" group="n16_l6xy" fontSize="18" color="#d19036" vAlign="middle" leading="0" ubb="true" vars="true" autoSize="height" autoClearText="true" text="途径">
+      <relation target="n6_l6xy" sidePair="left-left,top-bottom"/>
+    </text>
+    <group id="n16_l6xy" name="n16" xy="35,93" size="378,56"/>
+    <image id="n19_lz03" name="n19" src="emvc42" fileName="image/icon_money_bg.png" pkg="qa9a7rit" xy="423,0" size="225,169"/>
+    <text id="n20_lz03" name="n20" xy="430,10" size="44,29" fontSize="20" color="#ffffff" align="right" text="数量">
+      <relation target="n22_lz03" sidePair="middle-middle,right-left"/>
+    </text>
+    <component id="n22_lz03" name="btn_input_count" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="484,13" size="152,26"/>
+    <text id="n23_lz03" name="n23" xy="429,64" size="44,29" fontSize="20" color="#ffffff" align="right" text="价格"/>
+    <image id="n24_lz03" name="n24" src="emvc42" fileName="image/icon_money_bg.png" pkg="qa9a7rit" xy="484,66" size="152,26"/>
+    <text id="n30_lz03" name="text_count" xy="560,27" pivot="0.5,0.5" anchor="true" size="16,32" fontSize="22" color="#ffffff" align="center" vAlign="middle" text="1"/>
+    <text id="n26_lz03" name="text_price" xy="557,79" pivot="0.5,0.5" anchor="true" size="16,32" fontSize="22" color="#cdb178" align="center" vAlign="middle" text="1"/>
+    <component id="n28_lz03" name="btn_count_add" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="610,13" size="26,26">
+      <Button icon="ui://qa9a7ritemvcc"/>
+    </component>
+    <component id="n29_lz03" name="btn_count_sub" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="484,13" size="26,26">
+      <Button icon="ui://qa9a7ritemvcd"/>
+    </component>
+    <loader id="n25_lz03" name="icon_money" xy="500,78" pivot="0.5,0.5" anchor="true" size="36,26" scale="0.25,0.25" url="ui://qy7g0oycemvc3b" autoSize="true"/>
+    <component id="n32_lz03" name="btn_buy" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="482,111" size="115,38"/>
+    <list id="n33_fev4" name="list" xy="0,0" size="0,0" overflow="scroll"/>
+  </displayList>
+</component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="338,219" overflow="scroll">
+  <displayList>
+    <text id="n0_ldq2" name="text_notice" xy="0,1" size="338,60" fontSize="20" color="#fff7d1" leading="6" autoSize="none" autoClearText="true" text="门派不养闲人，请大家积极对门派做出贡献。" input="true" maxLength="100">
+      <relation target="" sidePair="width-width"/>
+    </text>
+  </displayList>
+</component>

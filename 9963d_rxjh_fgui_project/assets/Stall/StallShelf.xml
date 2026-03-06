@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImageOffsetX="2" designImageOffsetY="15">
+  <displayList>
+    <graph id="n54_menb" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n55_qzpn" name="n55" src="plaqkvp3" fileName="image/caizhi.png" pkg="st7dgeqq" xy="441,91" size="450,601" group="n57_ighb"/>
+    <loader id="n1_tgh8" name="n1" xy="436,50" size="462,650" group="n57_ighb" url="ui://st7dgeqqas7kvnn" fill="scaleFree"/>
+    <component id="n2_tgh8" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="875,78" group="n57_ighb"/>
+    <text id="n3_tgh8" name="n3" xy="636,61" size="52,34" group="n57_ighb" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="上架"/>
+    <image id="n56_qzpn" name="n56" src="qzpnvnx" fileName="Images/img_item_frame.png" xy="467,104" group="n57_ighb"/>
+    <component id="n44_g6sw" name="item" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="667,173" pivot="0.5,0.5" anchor="true" size="60,60" group="n57_ighb"/>
+    <text id="n5_tgh8" name="text_product_name" xy="668,232" pivot="0.5,0.5" anchor="true" size="92,32" group="n57_ighb" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="物品名字"/>
+    <text id="n6_tgh8" name="n6" xy="466,273" size="84,29" group="n14_tgh8" fontSize="20" color="#b0c9b6" align="center" text="出售数量"/>
+    <component id="n12_tgh8" name="btn_count_edit" src="tgh8m" fileName="Components/btn_input_edit.xml" xy="623,270" size="143,36" group="n14_tgh8"/>
+    <text id="n13_tgh8" name="text_count" xy="625,270" size="139,34" group="n14_tgh8" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="35">
+      <relation target="n12_tgh8" sidePair="width-width,height-height"/>
+    </text>
+    <component id="n10_tgh8" name="btn_count_sub" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="587,269" size="36,36" group="n14_tgh8">
+      <Button icon="ui://st7dgeqqbf0gv5v"/>
+    </component>
+    <component id="n9_tgh8" name="btn_count_add" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="767,269" size="36,36" group="n14_tgh8">
+      <Button icon="ui://st7dgeqqbf0gv5u"/>
+    </component>
+    <component id="n11_tgh8" name="btn_count_max" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="805,269" size="59,36" group="n14_tgh8">
+      <Button icon="ui://st7dgeqqbf0gv5w"/>
+    </component>
+    <group id="n14_tgh8" name="n14" xy="466,269" size="398,37" group="n57_ighb"/>
+    <text id="n17_tgh8" name="n18" xy="465,323" size="84,29" group="n23_tgh8" fontSize="20" color="#b0c9b6" align="center" text="出售单价"/>
+    <component id="n18_tgh8" name="btn_price_edit" src="tgh8m" fileName="Components/btn_input_edit.xml" xy="623,321" size="143,36" group="n23_tgh8"/>
+    <component id="n19_tgh8" name="btn_price_add" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="767,320" size="36,36" group="n23_tgh8">
+      <Button icon="ui://st7dgeqqbf0gv5u"/>
+    </component>
+    <text id="n20_tgh8" name="text_price" xy="624,321" size="141,34" group="n23_tgh8" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="35">
+      <relation target="n18_tgh8" sidePair="width-width,height-height"/>
+    </text>
+    <component id="n21_tgh8" name="btn_price_sub" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="587,320" size="36,36" group="n23_tgh8">
+      <Button icon="ui://st7dgeqqbf0gv5v"/>
+    </component>
+    <group id="n23_tgh8" name="n23" xy="465,320" size="338,37" group="n57_ighb"/>
+    <text id="n24_tgh8" name="n24" xy="466,374" size="84,29" group="n57_ighb" fontSize="20" color="#b0c9b6" align="center" text="交易货币"/>
+    <list id="n27_tgh8" name="list_money_type" xy="574,367" size="304,169" group="n57_ighb" layout="flow_hz" overflow="scroll" lineGap="20" defaultItem="ui://aakcgg80ws4hvns" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n41_tgh8" name="btn_cancel" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="501,627" size="136,42" group="n57_ighb">
+      <Button title="取 消"/>
+    </component>
+    <component id="n42_tgh8" name="btn_shelf" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="695,627" size="136,42" group="n57_ighb">
+      <Button title="上 架"/>
+    </component>
+    <text id="n30_tgh8" name="n30" xy="477,572" size="84,29" group="n50_ws4h" fontSize="20" color="#b0c9b6" align="center" autoSize="none" text="出售总价"/>
+    <text id="n53_ws4h" name="text_totol_name" xy="583,572" size="44,29" group="n50_ws4h" fontSize="20" color="#ffffff" align="right" vAlign="middle" strokeColor="#000000" autoClearText="true" text="货币"/>
+    <text id="n38_tgh8" name="text_total_price" xy="628,571" size="16,30" group="n50_ws4h" fontSize="21" color="#62ff50" text="1">
+      <relation target="n53_ws4h" sidePair="middle-middle,left-right"/>
+    </text>
+    <group id="n50_ws4h" name="total_price" xy="477,571" size="167,30" group="n57_ighb"/>
+    <text id="n32_tgh8" name="n32" xy="463,572" size="166,29" group="n51_ws4h" fontSize="20" color="#b0c9b6" align="center" autoSize="none" text="剩余上架额度"/>
+    <component id="n48_j3w4" name="icon_gold_1_remain" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="652,587" pivot="0.5,0.5" anchor="true" size="30,30" group="n51_ws4h" touchable="false"/>
+    <text id="n40_tgh8" name="text_gold_1_remain" xy="672,572" size="194,29" group="n51_ws4h" fontSize="20" color="#62ff50" autoSize="none" text="700000"/>
+    <group id="n51_ws4h" name="gold_1" xy="463,572" size="403,30" group="n57_ighb" visible="false" advanced="true"/>
+    <text id="n31_tgh8" name="n31" xy="464,520" size="166,29" group="n52_ws4h" fontSize="20" color="#b0c9b6" align="center" autoSize="none" text="剩余上架额度"/>
+    <component id="n47_j3w4" name="icon_gold_2_remain" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="637,520" pivot="0.5,0.5" size="30,30" group="n52_ws4h" touchable="false"/>
+    <text id="n39_tgh8" name="text_gold_2_remain" xy="672,520" size="194,29" group="n52_ws4h" fontSize="20" color="#62ff50" autoSize="none" text="70"/>
+    <group id="n52_ws4h" name="gold_2" xy="464,520" size="402,30" group="n57_ighb" visible="false" advanced="true"/>
+    <group id="n57_ighb" name="n57" xy="436,50" size="462,650" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="136,42" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n5_fmfy" name="btn" src="je63v3e" fileName="image/btn_second_red.png" pkg="st7dgeqq" xy="0,0" size="136,42">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_vjv7" name="text" xy="68,21" pivot="0.5,0.5" anchor="true" size="100,32" fontSize="22" color="#fced00" align="center" leading="0" autoSize="none" strokeColor="#000000" text="添加好友">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="dark" downEffectValue=".8"/>
+</component>

@@ -1,0 +1,57 @@
+-- 数据层：网络消息监听 + 缓存 + 事件发布
+local GuildMainPanelData = {
+    _state = {
+        
+    },
+    _listeners = {},       -- { eventName = { [token] = callback } }
+    _tokenSeed = 0,
+}
+
+function GuildMainPanelData.Get()
+    return GuildMainPanelData
+end
+
+-- 简单事件系统
+function GuildMainPanelData:Subscribe(event, cb)
+    if not self._listeners[event] then self._listeners[event] = {} end
+    self._tokenSeed = self._tokenSeed + 1
+    local token = tostring(self._tokenSeed)
+    self._listeners[event][token] = cb
+    return token
+end
+
+function GuildMainPanelData:Unsubscribe(token)
+    for _, bucket in pairs(self._listeners) do
+        if bucket[token] then
+            bucket[token] = nil
+            return true
+        end
+    end
+    return false
+end
+
+function GuildMainPanelData:_Emit(event, payload)
+    local bucket = self._listeners[event]
+    if not bucket then return end
+    for _, cb in pairs(bucket) do
+        pcall(cb, payload)
+    end
+end
+
+
+
+-- 对外请求接口（UI调用）
+function GuildMainPanelData:GetState()
+    return self._state
+end
+
+
+function GuildMainPanelData:UpdataPage1(data)
+    self:_Emit("data_UpdataPage1", data)
+end
+function GuildMainPanelData:UpdataPage2(data)
+    self:_Emit("data_UpdataPage2", data)
+end
+
+
+return GuildMainPanelData

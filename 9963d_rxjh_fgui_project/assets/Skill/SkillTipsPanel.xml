@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n1_hhwj" name="mask" xy="667,375" pivot="0.5,0.5" anchor="true" size="2400,1200" alpha="0.3" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n0_hhwj" name="bg" src="lxrgv52" fileName="image/bg_tips.png" pkg="st7dgeqq" xy="667,390" pivot="0.5,0.5" anchor="true" size="360,550" restrictSize="480,0,480,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n2_hhwj" name="skill_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="550,180" pivot="0.5,0.5" anchor="true" size="80,80">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <loader id="n3_hhwj" name="skill_icon" xy="550,180" pivot="0.5,0.5" anchor="true" size="80,80" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <text id="n6_hhwj" name="text_name" xy="610,160" pivot="0,0.5" anchor="true" size="220,32" fontSize="22" color="#fff7d1" autoSize="none" text="名字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <richtext id="n10_hhwj" name="text_condition" xy="610,200" pivot="0,0.5" anchor="true" size="220,29" fontSize="20" color="#fff7d1" autoSize="none" text="等级">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n14_hhwj" name="text_desc" xy="510,530" size="320,120" fontSize="20" color="#fff7d1" autoSize="none" text="级别：140 名声：升天四式(正)  踏日落伏旨+1 一箭双雕+1 双箭追魂+1 群体攻击技能 最多2个目标 放置快捷栏内右键点击激活平砍攻击目标">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n15_hhwj" name="text_weili" xy="510,380" size="300,29" fontSize="20" color="#fff7d1" autoSize="none" text="武功威力：">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n16_hhwj" name="text_neili" xy="510,410" size="300,29" fontSize="20" color="#fff7d1" autoSize="none" text="武功内功：">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n17_hhwj" name="text_cd" xy="510,440" size="300,29" fontSize="20" color="#fff7d1" autoSize="none" text="武功冷却：">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n24_lj68" name="text1" xy="510,240" pivot="0,0.5" anchor="true" size="300,32" fontSize="22" color="#ffff00" vAlign="middle" autoSize="none" text="修炼条件">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n12_hhwj" name="text2" xy="510,510" pivot="0,0.5" anchor="true" size="300,32" fontSize="22" color="#ffff00" vAlign="middle" autoSize="none" text="技能描述">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n13_hhwj" name="text3" xy="510,360" pivot="0,0.5" anchor="true" size="300,32" fontSize="22" color="#ffff00" vAlign="middle" autoSize="none" text="技能效果">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <component id="n18_hhwj" name="btn_config" src="hhwjw" fileName="Components/btn_config.xml" xy="846,540">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n20_hhwj" name="btn_practice" src="hhwjx" fileName="Components/btn_practice.xml" xy="846,540" size="136,42">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n23_apr0" name="btn_upgrade" src="apr011" fileName="Components/btn_upgrade.xml" xy="846,590"/>
+    <list id="n21_vkxx" name="list_cost" xy="510,260" size="320,90" selectionMode="none" overflow="scroll" defaultItem="ui://qvb3eryhnd1wy">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

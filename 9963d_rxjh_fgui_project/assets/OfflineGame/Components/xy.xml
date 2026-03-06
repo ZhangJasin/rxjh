@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,40">
+  <displayList>
+    <image id="n4_rcc1" name="n4" src="vzpxf" fileName="image/小底框.png" xy="0,0" size="200,40"/>
+    <text id="n1_rcc1" name="num" xy="5,0" size="19,40" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <text id="n2_rcc1" name="n2" xy="32,-1" size="40,40" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="坐标"/>
+    <text id="n3_rcc1" name="zb" xy="96,0" size="102,40" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text="{100,100}"/>
+  </displayList>
+</component>

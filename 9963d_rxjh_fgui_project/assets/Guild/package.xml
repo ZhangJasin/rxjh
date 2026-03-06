@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="tsu6gfno">
+  <resources>
+    <component id="zah90" name="GuildJoinList.xml" path="/" exported="true"/>
+    <component id="zah93" name="common_bg.xml" path="/Components/"/>
+    <component id="zah94" name="toggle_right_item.xml" path="/Components/"/>
+    <component id="zah98" name="join_item.xml" path="/Components/"/>
+    <image id="zah9g" name="item_title_bg.png" path="/Images/" scale="9grid" scale9grid="17,16,10,12"/>
+    <component id="zah9h" name="GuildCreatePopup.xml" path="/" exported="true"/>
+    <component id="zah9k" name="GuildMainPanel.xml" path="/" exported="true"/>
+    <image id="zah9m" name="icon_flag.png" path="/Images/" exported="true"/>
+    <image id="zah9p" name="icon_gold.png" path="/Images/"/>
+    <image id="zah9q" name="icon_coin.png" path="/Images/"/>
+    <component id="zah9t" name="progress_fund.xml" path="/Components/"/>
+    <image id="zah9v" name="info_panel_bg.png" path="/Images/"/>
+    <component id="zah9y" name="toggle_top_item.xml" path="/Components/"/>
+    <image id="zah910" name="split_line.png" path="/Images/"/>
+    <component id="zah911" name="list_guild_item.xml" path="/Components/"/>
+    <component id="zah912" name="list_event_item.xml" path="/Components/"/>
+    <component id="u67p13" name="create_condition_item.xml" path="/Components/"/>
+    <component id="f0nu1a" name="normal_item_frame.xml" path="/Components/"/>
+    <component id="f0nu1f" name="GuildApplySetting.xml" path="/" exported="true"/>
+    <image id="jjgk1h" name="btn_sub.png" path="/Images/" exported="true"/>
+    <image id="jjgk1i" name="btn_add.png" path="/Images/" exported="true"/>
+    <image id="jjgk1j" name="select_icon.png" path="/Images/"/>
+    <image id="jjgk1n" name="icon_refresh.png" path="/Images/" exported="true"/>
+    <component id="jjgk1o" name="label_icon_text.xml" path="/Components/"/>
+    <image id="jjgk1r" name="discount_bg.png" path="/Images/"/>
+    <component id="jjgk1s" name="GuildApplyList.xml" path="/" exported="true"/>
+    <component id="jjgk1t" name="list_apply_item.xml" path="/Components/"/>
+    <component id="jjgk1u" name="multi_select_btn.xml" path="/Components/"/>
+    <component id="n1mf1v" name="check_box.xml" path="/Components/"/>
+    <image id="n1mf1y" name="icon_edit.png" path="/Images/" exported="true"/>
+    <image id="wi451z" name="content_bg_9.png" path="/Images/" scale="9grid" scale9grid="11,8,2,3" duplicatePadding="true"/>
+    <image id="wi4520" name="inputField_bg_9.png" path="/Images/" scale="9grid" scale9grid="12,18,3,3" duplicatePadding="true"/>
+    <image id="wi4521" name="list_bg_9.png" path="/Images/" scale="9grid" scale9grid="15,21,10,12"/>
+    <image id="7ogs24" name="progress_bg_9.png" path="/Images/" scale="9grid" scale9grid="18,0,11,30" duplicatePadding="true"/>
+    <image id="7ogs25" name="progress_fill_9.png" path="/Images/" scale="9grid" scale9grid="6,5,2,7" duplicatePadding="true"/>
+    <image id="7ogs26" name="search_bg_9.png" path="/Images/" scale="9grid" scale9grid="12,18,12,13" duplicatePadding="true"/>
+    <component id="qvdnvnp" name="text_scroll.xml" path="/Components/"/>
+    <component id="jxvrvnq" name="list_member_item.xml" path="/Components/"/>
+    <image id="yj7kvnr" name="icon_flag_0.png" path="/Images/" exported="true"/>
+    <image id="yj7kvns" name="icon_flag_1.png" path="/Images/" exported="true"/>
+    <image id="vds7vnt" name="icon_flag_big_0.png" path="/Images/" exported="true"/>
+    <image id="vds7vnu" name="icon_flag_big_1.png" path="/Images/" exported="true"/>
+    <component id="lbe5vnv" name="GuildPermissionSetting.xml" path="/" exported="true"/>
+    <component id="lbe5vnz" name="list_permission_item.xml" path="/Components/"/>
+    <component id="lbe5vop" name="list_rank_item.xml" path="/Components/"/>
+    <component id="zah9n" name="btn_main_green.xml" path="/Components/"/>
+    <image id="m9rdvor" name="info_bg.png" path="/Images/"/>
+    <image id="m9rdvos" name="join_list_right_bg.png" path="/Images/" scale="9grid" scale9grid="21,21,3,2"/>
+    <image id="m9rdvou" name="join_list_title_bg.png" path="/Images/"/>
+    <image id="m9rdvp7" name="top_enum_unselect.png" path="/Images/"/>
+    <image id="m9rdvp8" name="top_enum_select.png" path="/Images/"/>
+    <image id="m9rdvp9" name="textinput_bg.png" path="/Images/" scale="9grid" scale9grid="6,5,2,4"/>
+    <image id="r8pbvpa" name="normal_item_frame.png" path="/Images/"/>
+    <component id="vzjdvpb" name="iconItem.xml" path="/Components/"/>
+    <component id="vzjdvpc" name="shop_item.xml" path="/Components/"/>
+    <image id="vzjdvpd" name="shop_item_bg.png" path="/Images/"/>
+    <component id="vzjdvpf" name="CommonDialog.xml" path="/Components/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

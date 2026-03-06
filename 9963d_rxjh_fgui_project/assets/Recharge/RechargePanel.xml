@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n65_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n60_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,50">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n3_p76m" name="text_title" xy="667,78" pivot="0.5,0.5" anchor="true" size="78,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="充&#x9;值">
+      <relation target="n60_kra4" sidePair="center-center,top-top"/>
+    </text>
+    <image id="n61_g2qe" name="bg_fill_1" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="182,124" size="970,38" group="n53_tgkj"/>
+    <text id="n9_p76m" name="text_1" xy="198,128" size="104,29" group="n53_tgkj" fontSize="20" color="#fcf1bf" text="本服名称："/>
+    <text id="n14_p76m" name="text_servername" xy="363,128" size="84,29" group="n53_tgkj" fontSize="20" color="#ffff00" text="本服名称"/>
+    <text id="n10_p76m" name="text_2" xy="718,128" size="104,29" group="n53_tgkj" fontSize="20" color="#fcf1bf" text="充值角色："/>
+    <text id="n15_p76m" name="text_rolename" xy="853,128" size="84,29" group="n53_tgkj" fontSize="20" color="#ffff00" text="充值角色"/>
+    <group id="n53_tgkj" name="panel_1" xy="182,124" size="970,38" advanced="true">
+      <relation target="n60_kra4" sidePair="center-center,top-top"/>
+    </group>
+    <image id="n62_p69z" name="bg_fill_2" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="187,185" size="960,225" group="n56_tgkj"/>
+    <text id="n11_p76m" name="text_3" xy="204,210" size="104,29" group="n56_tgkj" fontSize="20" color="#fcf1bf" text="货币种类："/>
+    <list id="n16_p76m" name="list_coins" xy="341,195" size="498,60" group="n56_tgkj" layout="row" overflow="scroll" scroll="horizontal" colGap="20" defaultItem="ui://beuq1dmsyfxbp">
+      <relation target="" sidePair=""/>
+      <item/>
+    </list>
+    <text id="n12_p76m" name="text_4" xy="203,284" size="104,29" group="n56_tgkj" fontSize="20" color="#fcf1bf" text="充值金额："/>
+    <image id="n63_p69z" name="input_bg" src="p76mc" fileName="Images/store_text_bg.png" xy="341,283" size="148,32" group="n56_tgkj"/>
+    <text id="n19_p76m" name="input_money" xy="341,283" size="148,30" group="n56_tgkj" fontSize="20" color="#7b98c0" autoSize="none" text="10" input="true" maxLength="8" keyboardType="4"/>
+    <text id="n20_p76m" name="text_exchange" xy="510,284" size="8,29" group="n56_tgkj" fontSize="20" color="#fcf1bf" text=""/>
+    <text id="n13_p76m" name="text_5" xy="203,357" size="104,29" group="n56_tgkj" fontSize="20" color="#fcf1bf" text="充值方式："/>
+    <component id="n25_p76m" name="btn_alipay" src="p76mf" fileName="Components/btn_alipay.xml" xy="341,354" size="108,42" group="n27_p76m"/>
+    <image id="n26_p76m" name="img_flag1" src="p76m8" fileName="Images/store_recharge2_1.png" xy="428,355" size="20,22" group="n27_p76m"/>
+    <group id="n27_p76m" name="panel_alipay" xy="341,354" size="108,42" group="n56_tgkj" advanced="true"/>
+    <component id="n31_p76m" name="btn_weixin" src="p76mg" fileName="Components/btn_weixin.xml" xy="493,354" size="108,42" group="n33_p76m"/>
+    <image id="n32_p76m" name="img_flag2" src="p76m6" fileName="Images/store_recharge1_1.png" xy="580,355" size="20,22" group="n33_p76m"/>
+    <group id="n33_p76m" name="panel_weixin" xy="493,354" size="108,42" group="n56_tgkj" advanced="true"/>
+    <component id="n34_p76m" name="btn_huabei" src="p76mh" fileName="Components/btn_huabei.xml" xy="645,354" size="108,42" group="n36_p76m"/>
+    <image id="n35_p76m" name="img_flag3" src="p76ma" fileName="Images/store_recharge3_1.png" xy="737,355" size="15,17" group="n36_p76m"/>
+    <group id="n36_p76m" name="panel_huabei" xy="645,354" size="108,42" group="n56_tgkj" visible="false" advanced="true"/>
+    <component id="n44_pfd4" name="label_more" src="pfd4q" fileName="Components/label_more.xml" xy="667,354" size="128,40" group="n56_tgkj">
+      <Label titleColor="#fcf1bf" titleFontSize="20"/>
+    </component>
+    <component id="n51_tgkj" name="btn_submit" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="952,354" size="136,42" group="n56_tgkj">
+      <Button title="确认支付"/>
+    </component>
+    <group id="n56_tgkj" name="panel_2" xy="187,185" size="960,225" advanced="true">
+      <relation target="n60_kra4" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n64_p69z" name="bg_fill_3" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="187,438" size="960,225" group="n57_tgkj"/>
+    <richtext id="n39_p76m" name="rich_desc" xy="199,452" size="520,29" restrictSize="0,0,0,270" group="n57_tgkj" fontSize="20" color="#fff7d1" autoSize="height" text=""/>
+    <group id="n57_tgkj" name="panel_3" xy="187,438" size="960,225" advanced="true">
+      <relation target="n60_kra4" sidePair="center-center,bottom-bottom"/>
+    </group>
+    <component id="n47_tgkj" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78">
+      <relation target="n60_kra4" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n58_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="174,697" size="0,0">
+      <relation target="n60_kra4" sidePair="left-left,bottom-bottom"/>
+    </component>
+  </displayList>
+</component>

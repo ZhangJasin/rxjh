@@ -1,0 +1,14 @@
+{
+  "langFiles": [
+    {
+      "name": "cn",
+      "path": "..\\Assets\\Res\\game\\Translate\\cn.xml",
+      "fontName": ""
+    },
+    {
+      "name": "en",
+      "path": "..\\Assets\\Res\\game\\Translate\\en.xml",
+      "fontName": ""
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n0_km0s" name="bg" src="rg4ix" fileName="Components/tongyong/kongbg.xml" xy="0,0"/>
+    <image id="n1_km0s" name="n1" src="rg4iy" fileName="Images/02fashion/fash_mltc.png" xy="667,375" pivot="0.5,0.5" anchor="true"/>
+    <component id="n2_km0s" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="915,125">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n4_icqd" name="n4" src="rg4ic" fileName="Images/02fashion/fash_mlzd.png" xy="484,170"/>
+    <image id="n3_icqd" name="n3" src="rg4iz" fileName="Images/02fashion/fash_meili.png" xy="494,176"/>
+    <text id="n5_icqd" name="n5" xy="435,153" size="197,35" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="魅力值"/>
+    <text id="n6_icqd" name="curmllv" xy="503,239" size="58,24" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <list id="n7_icqd" name="curattrlist" xy="437,287" size="192,268" overflow="scroll" lineGap="5" defaultItem="ui://k09jn1qdrg4i10" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <richtext id="n8_icqd" name="curneed" xy="433,578" size="200,34" fontSize="24" color="#ffffff" align="center" autoSize="none" text="当前魅力：2"/>
+    <image id="n11_icqd" name="n11" src="rg4ic" fileName="Images/02fashion/fash_mlzd.png" xy="753,169"/>
+    <image id="n12_icqd" name="n12" src="rg4iz" fileName="Images/02fashion/fash_meili.png" xy="763,175"/>
+    <text id="n13_icqd" name="n13" xy="703,152" size="196,35" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="下一级魅力值"/>
+    <text id="n14_icqd" name="nextmllv" xy="772,238" size="58,24" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <list id="n15_icqd" name="nextattrlist" xy="706,286" size="192,268" overflow="scroll" lineGap="5" defaultItem="ui://k09jn1qdrg4i10" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <richtext id="n16_icqd" name="nextneed" xy="702,577" size="200,34" fontSize="24" color="#ffffff" align="center" autoSize="none" text="需要魅力：11"/>
+  </displayList>
+</component>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="648,42" extention="Button" designImage="ui://0xwve836hfk846" designImageOffsetX="-187" designImageOffsetY="-251">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_zah9" name="n0" src="gl562l" fileName="Images/list_bg_9.png" xy="0,0" size="648,42">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <graph id="n7_zah9" name="select_effect" xy="1,-1" size="645,43" visible="false" type="rect" lineSize="0" fillColor="#ff6e1669">
+      <gearDisplay controller="button" pages="3,5"/>
+    </graph>
+    <text id="n1_zah9" name="text_name" xy="8,11" pivot="0.5,0.5" size="154,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="七个字长度要有"/>
+    <text id="n2_zah9" name="text_level" xy="172,11" pivot="0.5,0.5" size="103,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="222级"/>
+    <text id="n3_zah9" name="text_duty" xy="274,11" pivot="0.5,0.5" size="118,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="帮众"/>
+    <text id="n4_zah9" name="text_contribution" xy="400,11" pivot="0.5,0.5" size="101,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="0"/>
+    <text id="n6_zah9" name="text_online_state" xy="528,11" pivot="0.5,0.5" size="106,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="在线"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

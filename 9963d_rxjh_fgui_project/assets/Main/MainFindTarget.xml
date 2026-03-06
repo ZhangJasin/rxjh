@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false" designImageAlpha="100">
+  <controller name="state" pages="0,,1,,2," selected="0">
+    <remark page="0" value="人物"/>
+    <remark page="1" value="怪物"/>
+    <remark page="2" value="攻击者"/>
+  </controller>
+  <displayList>
+    <image id="n82_k5e7" name="bg" src="k5e7v9c" fileName="Images/FindTarget/main_find_target_bg_9.png" xy="767,144" size="262,394" group="n104_fyl5"/>
+    <image id="n105_hpqd" name="n105" src="hpqdfve5" fileName="Images/FindTarget/main_find_target_img.png" xy="959,163" group="n104_fyl5"/>
+    <image id="n106_hpqd" name="n106" src="hpqdfve5" fileName="Images/FindTarget/main_find_target_img.png" xy="839,163" group="n104_fyl5" scale="-1,1"/>
+    <component id="n96_8by8" name="Button_type1" src="8by8va8" fileName="Components/FindTarget/RadioButton.xml" xy="1029,174" group="n104_fyl5">
+      <Button checked="true" title="人&#xA;物"/>
+    </component>
+    <component id="n97_8by8" name="Button_type2" src="8by8va8" fileName="Components/FindTarget/RadioButton.xml" xy="1029,264" group="n104_fyl5">
+      <Button title="怪&#xA;物"/>
+    </component>
+    <component id="n100_fyl5" name="Button_type3" src="8by8va8" fileName="Components/FindTarget/RadioButton.xml" xy="1029,354" group="n104_fyl5">
+      <Button title="攻&#xA;击&#xA;者"/>
+    </component>
+    <component id="n99_fyl5" name="Button_close" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1006,124" size="46,46" group="n104_fyl5">
+      <Button icon="ui://zj419n3dfyl5fve2"/>
+    </component>
+    <component id="n108_hpqd" name="Button_sort1" src="hpqdfve8" fileName="Components/FindTarget/CheckButton.xml" xy="794,201" group="n104_fyl5">
+      <Button checked="true"/>
+    </component>
+    <component id="n109_hpqd" name="Button_sort2" src="hpqdfve8" fileName="Components/FindTarget/CheckButton.xml" xy="916,201" group="n104_fyl5"/>
+    <list id="n70_pqlj" name="ListTarget" xy="773,245" size="250,290" group="n104_fyl5" overflow="scroll" defaultItem="ui://zj419n3d8by8va9" align="center" autoClearItems="true" foldInvisibleItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n101_fyl5" name="n101" xy="852,157" size="92,32" group="n104_fyl5" fontSize="22" color="#ffff00" text="优先显示"/>
+    <text id="n102_fyl5" name="n102" xy="831,202" size="44,29" group="n104_fyl5" fontSize="20" color="#ffffff" text="附近"/>
+    <text id="n103_fyl5" name="n103" xy="953,202" size="44,29" group="n104_fyl5" fontSize="20" color="#ffffff" text="距离">
+      <gearText controller="state" pages="1,2" values="BOSS|伤害" default="距离"/>
+    </text>
+    <group id="n104_fyl5" name="n104" xy="767,124" size="302,414" advanced="true">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </group>
+  </displayList>
+</component>

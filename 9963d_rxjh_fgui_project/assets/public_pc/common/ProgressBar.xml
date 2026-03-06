@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,10" extention="ProgressBar">
+  <displayList>
+    <loader id="n2_mxa7" name="bar" xy="0,0" size="50,10" fill="scaleFree" useResize="true">
+      <relation target="" sidePair="height-height%"/>
+    </loader>
+  </displayList>
+  <ProgressBar/>
+  <customProperty target="bar" propertyId="1"/>
+</component>

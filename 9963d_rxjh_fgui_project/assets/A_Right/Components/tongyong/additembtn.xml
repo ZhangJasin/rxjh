@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="240,84" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_n22n" name="n0" src="oqrpu" fileName="Images/0tongyong/xxdi2.png" xy="0,0" size="240,84">
+      <gearDisplay controller="button" pages="0,1,2,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_n22n" name="name" xy="86,24" size="151,29" font="SimHei" fontSize="20" color="#fcfbbf" vAlign="middle" autoSize="none" text="寒玉石（闪避）"/>
+    <image id="n1_n22n" name="n1" src="oqrpv" fileName="Images/0tongyong/xzkuang9.png" xy="0,0" size="240,84" visible="false">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n4_n22n" name="n4" src="oqrpw" fileName="Images/0tongyong/pzkuang_zi.png" xy="15,8"/>
+    <component id="n7_knfx" name="itemRoot2" src="oqrpx" fileName="Components/tongyong/itemRoot.xml" xy="3,1" size="234,80"/>
+    <component id="n5_n22n" name="itemRoot" src="oqrpx" fileName="Components/tongyong/itemRoot.xml" xy="12,6" size="68,68"/>
+    <text id="n6_98nd" name="num" xy="74,68" pivot="1,1" anchor="true" size="59,26" fontSize="18" color="#ffff00" align="right" autoSize="none" text=""/>
+  </displayList>
+  <Button mode="Check"/>
+</component>

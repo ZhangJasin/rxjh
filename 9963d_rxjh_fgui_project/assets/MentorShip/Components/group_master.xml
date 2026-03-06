@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="220,135">
+  <displayList>
+    <component id="n0_zi8s" name="n0" src="cn6p2m" fileName="Components/header_master.xml" xy="0,2"/>
+    <list id="n1_zi8s" name="list_master" xy="0,60" size="220,75" overflow="scroll" lineGap="8" defaultItem="ui://pnop7ha6npv42r">
+      <item/>
+    </list>
+  </displayList>
+</component>

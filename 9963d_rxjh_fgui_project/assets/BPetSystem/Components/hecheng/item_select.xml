@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="73,73">
+  <controller name="c2" exported="true" pages="0,未选择装备,1,已选择装备" selected="0"/>
+  <controller name="c1" exported="true" pages="0,装备选择器,1,材料选择器,3,幸运符选择器,4,属性石选择器" selected="0"/>
+  <displayList>
+    <image id="n0_o4l6" name="n0" src="fpdq5u" fileName="Images/newhc/kuangdi1.png" xy="36,36" pivot="0.5,0.5" anchor="true"/>
+    <image id="n3_o4l6" name="n2" src="fpdq5q" fileName="Images/newhc/cost1.png" xy="36,36" pivot="0.5,0.5" anchor="true">
+      <gearDisplay controller="c1" pages="1"/>
+    </image>
+    <image id="n4_o4l6" name="n3" src="fpdq5r" fileName="Images/newhc/cost2.png" xy="36,36" pivot="0.5,0.5" anchor="true">
+      <gearDisplay controller="c1" pages="3"/>
+    </image>
+    <image id="n2_o4l6" name="n4" src="fpdq5t" fileName="Images/newhc/jia2.png" xy="36,36" pivot="0.5,0.5" anchor="true">
+      <gearDisplay controller="c1" pages="4"/>
+      <gearDisplay2 controller="c2" pages="1" condition="0"/>
+    </image>
+    <image id="n1_o4l6" name="n1" src="fpdq5s" fileName="Images/newhc/jia1.png" xy="36,36" pivot="0.5,0.5" anchor="true">
+      <gearDisplay controller="c2" pages="1"/>
+      <gearDisplay2 controller="c1" pages="1,3" condition="0"/>
+    </image>
+    <component id="n5_o4l6" name="itemRoot" src="fpdq5v" fileName="Components/hecheng/itemRoot.xml" xy="36,37" pivot="0.5,0.5" anchor="true" size="64,64"/>
+    <component id="n6_bmxb" name="closeitembtn" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="71,2" size="22,22" visible="false"/>
+    <text id="n7_a4au" name="n7" xy="56,45" pivot="1,0" size="10,19" fontSize="12" color="#66ff00" align="right" vAlign="middle" autoClearText="true" text=""/>
+    <loader id="n8_a4au" name="touxiang" xy="2,1" size="30,30" url="ui://bphbjao2h9r23n" fill="scale" clearOnPublish="true">
+      <relation target="" sidePair="left-left,top-top"/>
+    </loader>
+  </displayList>
+</component>

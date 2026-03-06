@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="180,280" opaque="false">
+  <controller name="Attribute_mode" pages="0,解锁属性,1,穿戴属性" selected="0"/>
+  <controller name="isHaveAttribute" pages="0,有,1,无" selected="0"/>
+  <displayList>
+    <loader id="n15_10e45" name="bg" xy="-1,0" size="180,280" touchable="false" url="ui://st7dgeqqlxrgv52" fill="scaleFree">
+      <relation target="n32_la9j" sidePair="center-center,bottomext-bottom"/>
+    </loader>
+    <image id="n8_10e45" name="icon_logo_left" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="12,12" size="36,22" group="n18_yp8h"/>
+    <text id="n5_10e45" name="text_titleName" xy="58,13" size="59,19" group="n18_yp8h" fontSize="12" color="#ffff00" strokeColor="#000000" singleLine="true" autoClearText="true" text="测试称号1"/>
+    <image id="n16_yp8h" name="icon_logo_right" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="127,12" size="36,22" group="n18_yp8h" flip="hz"/>
+    <group id="n18_yp8h" name="titleGroup" xy="12,12" size="151,22" advanced="true" layout="hz" colGap="10" excludeInvisibles="true">
+      <gearXY controller="isHaveAttribute" pages="0,1" values="12,12|13,35"/>
+      <relation target="n15_10e45" sidePair="center-center,top-top"/>
+    </group>
+    <image id="n24_la9j" name="n24" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="2,38" size="173,141" group="n31_la9j">
+      <relation target="n4_10e45" sidePair="center-center,bottomext-bottom"/>
+    </image>
+    <image id="n17_yp8h" name="bg2" src="yp8h5q" fileName="Images/bg_title.png" xy="4,42" size="170,23" group="n31_la9j"/>
+    <text id="n9_10e45" name="label_title_2" xy="62,45" size="52,19" group="n31_la9j" fontSize="12" color="#f6cd2b" align="center" vAlign="middle" singleLine="true" autoClearText="true" text="解锁属性">
+      <gearText controller="Attribute_mode" pages="1" values="穿戴属性" default="解锁属性"/>
+    </text>
+    <list id="n4_10e45" name="list_attrbute" xy="3,69" size="171,104" group="n31_la9j" touchable="false" overflow="scroll" scrollBarFlags="128" defaultItem="ui://ja5fet7syp8h5o" autoItemSize="false" align="center" autoClearItems="true" scrollItemToViewOnClick="false">
+      <gearSize controller="isHaveAttribute" pages="0,1" values="171,104,1,1|173,0,1,1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n31_la9j" name="titleGroup2" xy="2,38" size="173,141" advanced="true">
+      <gearDisplay controller="isHaveAttribute" pages="0"/>
+    </group>
+    <image id="n23_la9j" name="n23" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="2,187" size="172,89" group="n32_la9j"/>
+    <image id="n20_yp8h" name="bg3" src="yp8h5q" fileName="Images/bg_title.png" xy="3,186" size="171,29" group="n32_la9j"/>
+    <text id="n7_10e45" name="text_getWayDetail" xy="3,219" size="171,58" group="n32_la9j" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" autoClearText="true" text="哈哈哈哈哈啊啊啊啊12312312312312311231231231231231231231231231"/>
+    <text id="n21_yp8h" name="label_title_3" xy="60,189" size="56,23" group="n32_la9j" fontSize="12" color="#f6cd2b" vAlign="middle" autoSize="none" singleLine="true" text="获取途径"/>
+    <group id="n32_la9j" name="titleGroup3" xy="2,186" size="172,91" advanced="true">
+      <relation target="n4_10e45" sidePair="center-center,top-bottom"/>
+    </group>
+  </displayList>
+  <relation target="n15_10e45" sidePair="width-width,bottomext-bottom"/>
+</component>

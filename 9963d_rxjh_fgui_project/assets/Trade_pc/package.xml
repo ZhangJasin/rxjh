@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="tnpzvt56">
+  <resources>
+    <component id="vdot0" name="invited_item.xml" path="/Components/"/>
+    <component id="vdot1" name="btn_textinput.xml" path="/Components/"/>
+    <image id="vdot2" name="textinput_bg.png" path="/Images/" scale="9grid" scale9grid="6,6,3,2"/>
+    <component id="vdot3" name="item_trade.xml" path="/Components/" exported="true"/>
+    <image id="vdot4" name="bg.png" path="/Images/" scale="9grid" scale9grid="10,7,20,14"/>
+    <component id="vdot6" name="PCTradeMain.xml" path="/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="204,84" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_flj6" name="n0" src="flj6o" fileName="Images/Create/img_job_bg.png" xy="0,0">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_flj6" name="n1" src="flj612" fileName="Images/Create/img_select_job_frame.png" xy="-1,-1">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_flj6" name="title" xy="100,19" size="104,46" fontSize="22" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" text="刀客">
+      <gearDisplay controller="button" pages=""/>
+      <gearColor controller="button" pages="0,2" values="#ffffff,#000000|#ffffff,#000000" default="#ffffba,#000000"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <loader id="n3_flj6" name="icon_select" xy="0,4" size="79,76" url="ui://88oqthnqvdner" align="center" vAlign="middle">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n4_evc5" name="icon_unselect" xy="0,4" size="79,76" url="ui://88oqthnqvdneq" align="center" vAlign="middle">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

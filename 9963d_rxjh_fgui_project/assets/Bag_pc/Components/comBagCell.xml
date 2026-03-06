@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="42,42">
+  <displayList>
+    <image id="n74_emvc" name="bg" src="emvcr" fileName="Images/PCEquipBar/img_cell_bg.png" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n75_emvc" name="node_item" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="42,42">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>

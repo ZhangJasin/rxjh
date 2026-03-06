@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n11_wmgr" name="icon_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="32,32" pivot="0.5,0.5" anchor="true"/>
+    <component id="n12_ls99" name="commonItem" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="0,0" size="64,64">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

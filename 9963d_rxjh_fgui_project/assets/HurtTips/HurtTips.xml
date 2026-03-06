@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,755" opaque="false">
+  <displayList>
+    <image id="n0_mlmr" name="n0" src="mlmr0" fileName="Images/hurt_tips_image_1.png" xy="0,0" size="1334,95">
+      <relation target="" sidePair="width-width,top-top"/>
+    </image>
+    <image id="n1_mlmr" name="n1" src="80vf6" fileName="Images/hurt_tips_image_2.png" xy="1239,0" size="95,755">
+      <relation target="" sidePair="height-height,right-right"/>
+    </image>
+    <image id="n2_mlmr" name="n2" src="mlmr0" fileName="Images/hurt_tips_image_1.png" xy="0,660" size="1334,95" flip="vt">
+      <relation target="" sidePair="width-width,bottom-bottom"/>
+    </image>
+    <image id="n3_mlmr" name="n3" src="80vf6" fileName="Images/hurt_tips_image_2.png" xy="0,0" size="95,755" flip="hz">
+      <relation target="" sidePair="height-height,left-left"/>
+    </image>
+  </displayList>
+  <transition name="t0" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Alpha" target="n0_mlmr" tween="true" startValue="1" endValue="0.2" duration="48"/>
+    <item time="0" type="Alpha" target="n1_mlmr" tween="true" startValue="1" endValue="0.2" duration="48"/>
+    <item time="0" type="Alpha" target="n2_mlmr" tween="true" startValue="1" endValue="0.2" duration="48"/>
+    <item time="0" type="Alpha" target="n3_mlmr" tween="true" startValue="1" endValue="0.2" duration="48"/>
+    <item time="48" type="Alpha" target="n0_mlmr" tween="true" startValue="0.2" endValue="1" duration="24"/>
+    <item time="48" type="Alpha" target="n1_mlmr" tween="true" startValue="0.2" endValue="1" duration="24"/>
+    <item time="48" type="Alpha" target="n2_mlmr" tween="true" startValue="0.2" endValue="1" duration="24"/>
+    <item time="48" type="Alpha" target="n3_mlmr" tween="true" startValue="0.2" endValue="1" duration="24"/>
+  </transition>
+</component>

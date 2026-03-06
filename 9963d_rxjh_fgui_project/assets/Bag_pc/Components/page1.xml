@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="310,30">
+  <displayList>
+    <image id="n70_fa8p" name="img_di_1" src="n0551w" fileName="Images/img_input_di.png" xy="0,1" size="310,30">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="r8pbvoo" name="mingZi" src="n05520" fileName="Components/item_attr_1.xml" xy="3,3" group="n72_ogi9">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n71_ogi9" name="ID" src="n05520" fileName="Components/item_attr_1.xml" xy="157,3" group="n72_ogi9" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n72_ogi9" name="n72" xy="3,3" size="304,24" advanced="true" layout="hz" colGap="4"/>
+  </displayList>
+</component>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false" designImage="ui://dak5wnw9xzvri">
+  <displayList>
+    <graph id="n9_xzvr" name="n9" xy="111,60" size="438,630" group="n11_lz03" alpha="0" type="rect"/>
+    <component id="n12_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="109,52" size="438,646" group="n11_lz03"/>
+    <list id="n4_xzvr" name="List_Cell" xy="141,111" size="382,521" group="n11_lz03" layout="pagination" overflow="scroll" scrollBarFlags="136" scrollBar="hidden" margin="2,0,2,2" lineGap="10" colGap="12" lineItemCount="5" lineItemCount2="7" defaultItem="ui://qy7g0oycemvc1r">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n3_xzvr" name="text_title" xy="295,62" size="66,24" group="n11_lz03" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" text="NPC商店"/>
+    <text id="n5_xzvr" name="TextPage" xy="310,654" size="35,19" group="n11_lz03" fontSize="12" color="#ffffff" align="center" vAlign="middle" strokeColor="#000000" text="第1页"/>
+    <component id="n6_xzvr" name="BtnPre" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="165,650" group="n11_lz03">
+      <Button title="上 一 页" titleColor="#fced00" titleFontSize="12" icon="ui://qa9a7ritemvc3f"/>
+    </component>
+    <component id="n7_xzvr" name="BtnNext" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="406,650" group="n11_lz03">
+      <Button title="下 一 页" titleColor="#fced00" titleFontSize="12" icon="ui://qa9a7ritemvc3f"/>
+    </component>
+    <component id="n10_lz03" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="529,70" size="33,33" group="n11_lz03" aspect="true"/>
+    <group id="n11_lz03" name="n11" xy="109,52" size="440,646" advanced="true">
+      <relation target="" sidePair="middle-middle,left-left"/>
+    </group>
+  </displayList>
+</component>

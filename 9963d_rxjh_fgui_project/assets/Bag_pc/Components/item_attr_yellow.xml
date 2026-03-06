@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="310,25">
+  <displayList>
+    <graph id="n111_n055" name="mask" xy="0,0" size="310,25" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <component id="n114_n055" name="progress" src="n0551p" fileName="Components/PropertyProgress.xml" xy="60,0" size="246,25" controller="propertyProgress,3,isHideBg,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n115_ogi9" name="text_bg" src="n05522" fileName="Images/img_di1.png" xy="0,0" size="60,24">
+      <relation target="n116_ogi9" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </image>
+    <text id="n116_ogi9" name="text_name_attr" xy="2,2" size="56,20" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#a4d452" align="center" vAlign="middle" leading="1" ubb="true" autoSize="none" text="怒气值&#xA;">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

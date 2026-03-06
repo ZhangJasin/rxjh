@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,50">
+  <controller name="xingCro" pages="0,,1,,2," selected="2">
+    <remark page="0" value="1~5星"/>
+    <remark page="1" value="6~10星"/>
+    <remark page="2" value="11~15星"/>
+  </controller>
+  <displayList>
+    <image id="n5_swkl" name="an1" src="swkl2b" fileName="Images/shuxing/星级.png" xy="4,10"/>
+    <image id="n9_swkl" name="an2" src="swkl2b" fileName="Images/shuxing/星级.png" xy="44,10"/>
+    <image id="n10_swkl" name="an3" src="swkl2b" fileName="Images/shuxing/星级.png" xy="84,10"/>
+    <image id="n11_swkl" name="an4" src="swkl2b" fileName="Images/shuxing/星级.png" xy="124,10"/>
+    <image id="n12_swkl" name="an5" src="swkl2b" fileName="Images/shuxing/星级.png" xy="164,10"/>
+    <image id="n13_swkl" name="liang1" src="swkl2a" fileName="Images/shuxing/星级亮.png" xy="0,6" color="#ff0000">
+      <gearDisplay controller="xingCro" pages="0,1,2"/>
+      <gearColor controller="xingCro" pages="0,1,2" values="#ffffff|#00ff00|#ff0000"/>
+    </image>
+    <image id="n14_swkl" name="liang2" src="swkl2a" fileName="Images/shuxing/星级亮.png" xy="40,6" color="#ff0000">
+      <gearDisplay controller="xingCro" pages="0,1,2"/>
+      <gearColor controller="xingCro" pages="1,2" values="#00ff00|#ff0000" default="#ffffff"/>
+    </image>
+    <image id="n15_swkl" name="liang3" src="swkl2a" fileName="Images/shuxing/星级亮.png" xy="80,6" color="#ff0000">
+      <gearDisplay controller="xingCro" pages="0,1,2"/>
+      <gearColor controller="xingCro" pages="1,2" values="#00ff00|#ff0000" default="#ffffff"/>
+    </image>
+    <image id="n16_swkl" name="liang4" src="swkl2a" fileName="Images/shuxing/星级亮.png" xy="120,6" color="#ff0000">
+      <gearDisplay controller="xingCro" pages="0,1,2"/>
+      <gearColor controller="xingCro" pages="1,2" values="#00ff00|#ff0000" default="#ffffff"/>
+    </image>
+    <image id="n17_swkl" name="liang5" src="swkl2a" fileName="Images/shuxing/星级亮.png" xy="160,6" color="#ff0000">
+      <gearDisplay controller="xingCro" pages="0,1,2"/>
+      <gearColor controller="xingCro" pages="1,2" values="#00ff00|#ff0000" default="#ffffff"/>
+    </image>
+  </displayList>
+</component>

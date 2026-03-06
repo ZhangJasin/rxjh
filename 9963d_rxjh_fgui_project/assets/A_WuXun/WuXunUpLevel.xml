@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <loader id="n60_ciua" name="back" xy="667,375" pivot="0.5,0.5" anchor="true" size="1334,750" url="ui://hed3v11ooqrp26" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <loader id="n54_svai" name="bg" xy="667,375" pivot="0.5,0.5" anchor="true" size="588,624" url="ui://hed3v11ooqrp27" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <graph id="n55_jdkj" name="graph_fashion_role" xy="671,578" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <component id="n56_jdkj" name="panel_touch" src="oqrp6" fileName="Components/tongyong/itemRoot.xml" xy="527,232" size="287,343">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false">
+  <displayList>
+    <image id="n75_jhxg" name="bg1" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="512,400" pivot="0.5,0.5" anchor="true" size="390,410">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n7_f0so" name="list_page" xy="512,178" pivot="0.5,0.5" anchor="true" size="380,28" layout="row" overflow="hidden" scroll="horizontal" defaultItem="ui://0vpx0897f0so4" align="center" vAlign="middle">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n58_j47s" name="list_qigong" xy="512,400" pivot="0.5,0.5" anchor="true" size="380,400" layout="pagination" overflow="scroll" lineItemCount="5" defaultItem="ui://0vpx0897j47su">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <richtext id="n80_spth" name="text_myScore" xy="480,613" size="64,19" fontSize="12" color="#c5dccc" align="center" vAlign="middle" strokeColor="#000000" text="剩余气功点">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <component id="n81_fg49" name="panel_tips" src="fg491g" fileName="Components/panel_qigong_tips.xml" xy="130,280" visible="false"/>
+  </displayList>
+</component>

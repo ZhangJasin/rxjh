@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,140">
+  <displayList>
+    <image id="n0_rcc1" name="n0" src="rcc1o" fileName="image/信息底.png" xy="0,0" size="200,140"/>
+    <list id="n1_rcc1" name="n1" xy="0,0" size="200,140" overflow="scroll" lineGap="5" defaultItem="ui://1hyl0b7srcc1q">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

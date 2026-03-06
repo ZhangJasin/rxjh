@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="281,42" extention="Label">
+  <displayList>
+    <image id="n26_fskg" name="n26" src="f2ul5q" fileName="Images/item_bg.png" xy="0,0" size="281,42"/>
+    <text id="n28_fskg" name="title" xy="12,11" size="130,19" fontSize="12" color="#f1ffeb" autoSize="none" text="通用装备（正派）"/>
+    <component id="n29_fskg" name="switch_show" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="150,11"/>
+    <component id="n30_fskg" name="switch_pickup" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="231,11"/>
+  </displayList>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="73,103" extention="Button" bgColor="#e7e7cb">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n7_fe6e" name="n7" src="11iqkvpa" fileName="Images/new/技能框.png" xy="0,0"/>
+    <loader id="n5_fe6e" name="icon" xy="7,8" size="58,58" url="ui://793j2bfvvxserr" align="center" vAlign="middle" fill="scaleFree" clearOnPublish="true">
+      <relation target="" sidePair=""/>
+    </loader>
+    <text id="n3_fe6e" name="title" xy="-5,74" size="84,29" fontSize="20" color="#fcf1bf" align="center" vAlign="middle" singleLine="true" text="神龙破甲">
+      <relation target="" sidePair=""/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

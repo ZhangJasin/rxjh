@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="40,40" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n44_scjw" name="bg" src="scjwo3c" fileName="Images/btn_team_emoj.png" xy="2,4">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n45_hcvo" name="bg2" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="-130,-315" size="300,300">
+      <gearDisplay controller="button" pages="3,5"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n41_wqgf" name="list_emoj" xy="-129,-315" size="300,300" layout="pagination" selectionMode="none" overflow="scroll" defaultItem="ui://y890q37sscjwo3j" align="center">
+      <gearDisplay controller="button" pages="3,5"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+  <Button mode="Check" downEffect="dark" downEffectValue=".9"/>
+</component>

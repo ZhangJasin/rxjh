@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,590">
+  <displayList>
+    <component id="n0_yagp" name="group_empty" src="gvalo3w" fileName="Components/group_empty.xml" xy="0,0" size="750,590" visible="false"/>
+    <component id="n1_yagp" name="group_has" src="gvalo40" fileName="Components/group_has.xml" xy="0,0"/>
+  </displayList>
+</component>

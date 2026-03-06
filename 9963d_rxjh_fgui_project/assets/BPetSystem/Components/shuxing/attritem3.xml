@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="206,32">
+  <displayList>
+    <image id="n5_s45r" name="n5" src="s45r4n" fileName="Images/newattr/01(1).png" xy="0,0"/>
+    <text id="n0_tbp6" name="n0" xy="4,2" size="80,26" font="SimHei" fontSize="18" color="#fff7d1" vAlign="middle" ubb="true" autoSize="none" text="攻击力"/>
+    <text id="n4_jdkj" name="n4" xy="87,2" pivot="1,0" size="114,26" font="SimHei" fontSize="18" color="#00ff00" vAlign="middle" autoSize="none" text="000000"/>
+  </displayList>
+</component>

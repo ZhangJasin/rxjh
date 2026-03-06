@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,35" extention="Button">
+  <displayList>
+    <image id="n0_wodv" name="n0" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="0,0" size="100,35">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_wodv" name="text" xy="0,0" size="100,35" fontSize="16" color="#ffff00" align="center" vAlign="middle" autoSize="none" singleLine="true" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

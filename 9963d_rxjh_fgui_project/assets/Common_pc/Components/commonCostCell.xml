@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="62,26">
+  <displayList>
+    <component id="n266_pxu7" name="item_money" src="emvc3" fileName="Icons/CommonItem.xml" pkg="qa9a7rit" xy="3,0" size="26,26" group="n262_iqa5">
+      <relation target="n262_iqa5" sidePair="middle-middle,left-left"/>
+    </component>
+    <text id="n263_qtq9" name="text_count" xy="29,3" size="32,19" group="n262_iqa5" fontSize="12" color="#cdd3d9" ubb="true" singleLine="true" autoClearText="true" text="1111">
+      <relation target="n262_iqa5" sidePair="middle-middle"/>
+    </text>
+    <group id="n262_iqa5" name="n1" xy="3,0" size="58,26" advanced="true" layout="hz"/>
+  </displayList>
+  <relation target="n262_iqa5" sidePair="rightext-right"/>
+</component>

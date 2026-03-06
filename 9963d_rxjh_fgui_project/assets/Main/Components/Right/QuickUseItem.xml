@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="220,78">
+  <displayList>
+    <image id="n123_z7bg" name="n123" src="k5e7v9e" fileName="Images/Target/main_target_bg1_9.png" xy="0,0" size="220,78"/>
+    <component id="n124_z7bg" name="ItemShow" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="3,2"/>
+    <component id="n126_z7bg" name="ScrollText_name" src="zwd8vnu" fileName="common/ScrollText.xml" pkg="o8ixb2zy" xy="76,24" size="140,29" touchable="false">
+      <Label titleColor="#ffffff"/>
+    </component>
+  </displayList>
+</component>

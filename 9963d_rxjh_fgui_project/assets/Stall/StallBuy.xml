@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImageOffsetX="11" designImageOffsetY="-12">
+  <displayList>
+    <graph id="n43_menb" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n45_ighb" name="n45" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="436,174" size="462,400" group="n48_ighb"/>
+    <image id="n47_ighb" name="n47" src="qzpnvnx" fileName="Images/img_item_frame.png" xy="467,228" size="400,225" group="n48_ighb"/>
+    <text id="n23_tgh8" name="title" xy="543,182" size="247,36" group="n48_ighb" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#94a8b4" align="center" vAlign="middle" autoSize="none" text="购买"/>
+    <component id="n2_tgh8" name="btn_no" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="504,499" size="136,42" group="n48_ighb">
+      <Button title="取 消"/>
+    </component>
+    <component id="n3_tgh8" name="btn_yes" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="693,499" size="136,42" group="n48_ighb">
+      <Button title="确 认"/>
+    </component>
+    <component id="n27_jse8" name="icon_item" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="637,267" size="60,57" group="n48_ighb"/>
+    <text id="n28_jse8" name="text_item_name" xy="666,356" pivot="0.5,0.5" anchor="true" size="92,32" group="n48_ighb" fontSize="22" color="#ffffff" autoClearText="true" text="物品名称"/>
+    <text id="n29_jse8" name="n29" xy="508,394" size="64,29" group="n48_ighb" fontSize="20" color="#c2c8be" text="数量：">
+      <relation target="n35_jse8" sidePair="middle-middle,right-left"/>
+    </text>
+    <component id="n33_jse8" name="btn_max" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="789,393" size="58,32" group="n35_jse8">
+      <Button icon="ui://st7dgeqqbf0gv5w"/>
+    </component>
+    <component id="n34_jse8" name="btn_input_edit" src="tgh8m" fileName="Components/btn_input_edit.xml" xy="608,394" size="142,33" group="n35_jse8"/>
+    <component id="n30_jse8" name="btn_add" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="751,393" size="35,32" group="n35_jse8">
+      <Button icon="ui://st7dgeqqbf0gv5u"/>
+    </component>
+    <component id="n31_jse8" name="btn_sub" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="571,393" size="35,32" group="n35_jse8">
+      <Button icon="ui://st7dgeqqbf0gv5v"/>
+    </component>
+    <group id="n35_jse8" name="n35" xy="571,393" size="275,33" group="n48_ighb"/>
+    <text id="n36_jse8" name="n36" xy="579,459" size="104,29" group="n48_ighb" fontSize="20" color="#ffffff" text="购买总价："/>
+    <text id="n38_jse8" name="text_total_price" xy="730,459" size="15,29" group="n48_ighb" fontSize="20" color="#b0e01c" autoClearText="true" text="1"/>
+    <text id="n40_jse8" name="text_count" xy="610,394" size="138,30" group="n48_ighb" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="1"/>
+    <text id="n42_ws4h" name="text_gold" xy="682,459" size="44,29" group="n48_ighb" fontSize="20" color="#ffffff" strokeColor="#000000" text="货币"/>
+    <group id="n48_ighb" name="n48" xy="436,174" size="462,400" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImageLayer="1">
+  <displayList>
+    <component id="n50_s806" name="loader_bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="690,376" pivot="0.5,0.5" anchor="true" size="1000,650" group="n49_gab2"/>
+    <image id="n47_a72b" name="img_role_bg" src="qjli19" fileName="image/role_bg_di.png" pkg="st7dgeqq" xy="200,114" size="434,572" group="n49_gab2"/>
+    <component id="n1_vjv7" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1165,78" group="n49_gab2"/>
+    <text id="n2_vjv7" name="text_title" xy="690,78" pivot="0.5,0.5" anchor="true" size="52,34" group="n49_gab2" fontSize="24" color="#9aafbb" text="转职"/>
+    <image id="n4_io7h" name="img_arrow" src="io7h19" fileName="Images/img_arrow.png" xy="899,164" group="n49_gab2" rotation="-90"/>
+    <text id="n6_io7h" name="txt_job_origin" xy="704,123" size="179,34" group="n49_gab2" fontSize="24" color="#ffff00" align="right" text="灭世刀 【四转】"/>
+    <text id="n7_io7h" name="txt_job_next" xy="978,124" size="155,34" group="n49_gab2" fontSize="24" color="#ffff00" text="刀魔 【五转】"/>
+    <image id="n21_p51l" name="img_prop_bg" src="as7kv5k" fileName="Images/img_prop_bg_9.png" xy="630,178" size="550,240" group="n49_gab2"/>
+    <image id="n22_p51l" name="img_skill_title" src="io7h2" fileName="Images/img_unlock_skill.png" xy="697,189" group="n49_gab2" visible="false"/>
+    <list id="n23_p51l" name="list_skill" xy="642,220" pivot="0.5,0.5" size="300,90" group="n49_gab2" visible="false" layout="row" selectionMode="none" overflow="hidden" colGap="12" defaultItem="ui://5rez3obxp51l1g" autoItemSize="false" align="center" vAlign="middle">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n24_p51l" name="img_prop_title" src="io7h5" fileName="Images/img_transfer_prop.png" xy="967,189" group="n49_gab2"/>
+    <list id="n42_p51l" name="list_prop" xy="955,215" size="200,175" group="n49_gab2" selectionMode="none" lineGap="2" defaultItem="ui://5rez3obxp51l1h">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n33_p51l" name="img_equip_title" src="io7h3" fileName="Images/img_unlock_equip.png" xy="697,189" group="n49_gab2"/>
+    <text id="n34_p51l" name="txt_equip" xy="726,220" pivot="0.5,0.5" size="136,32" group="n49_gab2" fontSize="22" color="#ffffff" align="center" text="五转高级装备"/>
+    <image id="n35_p51l" name="img_condition_bg" src="as7kv5k" fileName="Images/img_prop_bg_9.png" xy="630,428" size="550,256" group="n49_gab2"/>
+    <text id="n36_p51l" name="txt_condition_title" xy="639,442" size="124,34" group="n49_gab2" fontSize="24" color="#ffffff" text="转职条件："/>
+    <text id="n37_p51l" name="txt_mission_title" xy="639,496" size="124,34" group="n49_gab2" fontSize="24" color="#ffffff" text="当前任务："/>
+    <text id="n38_p51l" name="txt_condition" xy="761,442" size="299,34" group="n49_gab2" fontSize="24" color="#00ff00" ubb="true" text="角色等级达到100级(99/100)"/>
+    <richtext id="n51_nymh" name="txt_mission" xy="760,496" size="380,34" group="n49_gab2" fontSize="24" color="#00ff00" autoSize="none" text=""/>
+    <image id="n40_p51l" name="img_reward" src="io7h4" fileName="Images/img_transfer_reward.png" xy="711,552" group="n49_gab2"/>
+    <list id="n17_p51l" name="list_reward" xy="647,595" pivot="1,0" size="305,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://5rez3obxp51lv5j">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n12_p51l" name="btn_complete" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="1000,613" group="n49_gab2">
+      <Button title="完成转职"/>
+    </component>
+    <graph id="n44_ok5c" name="graph_role" xy="415,607" pivot="0.5,0.5" anchor="true" size="100,100" group="n49_gab2" blend="screen"/>
+    <component id="n45_a72b" name="panel_Touch" src="a72bv5w" fileName="Components/panel_Touch.xml" xy="198,108" size="432,588" group="n49_gab2"/>
+    <component id="n48_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="196,697" size="0,0" group="n49_gab2"/>
+    <group id="n49_gab2" name="node" xy="190,51" size="1000,650" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

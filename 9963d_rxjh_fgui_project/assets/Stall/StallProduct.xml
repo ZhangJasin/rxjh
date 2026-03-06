@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false" designImageOffsetX="3">
+  <displayList>
+    <component id="n11_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="317,50" size="700,650" group="n21_kpju"/>
+    <component id="n1_tgh8" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="995,78" size="44,45" group="n21_kpju"/>
+    <text id="n2_tgh8" name="title_stall_name" xy="539,61" size="281,34" group="n21_kpju" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="商品"/>
+    <text id="n16_kpju" name="title_owner_name" xy="337,114" size="136,32" group="n21_kpju" fontSize="22" color="#ffffff" vAlign="middle" ubb="true" text="摊主名称啊啊"/>
+    <image id="n3_tgh8" name="container_bg" src="qzpnvny" fileName="Images/bg_black.png" xy="334,157" size="666,467" group="n21_kpju"/>
+    <list id="n4_tgh8" name="list_product" xy="335,163" size="664,456" group="n21_kpju" layout="flow_hz" overflow="scroll" lineGap="5" colGap="3" defaultItem="ui://aakcgg8080vf2b" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n5_tgh8" name="n5" xy="398,660" pivot="0.5,0.5" anchor="true" size="127,29" group="n21_kpju" fontSize="20" color="#30ff00" align="center" autoSize="none" text="剩余时间："/>
+    <text id="n6_tgh8" name="text_remain_time" xy="537,660" pivot="0.5,0.5" anchor="true" size="174,29" group="n21_kpju" fontSize="20" color="#30ff00" autoSize="none" text="0天7小时15分3秒">
+      <relation target="n5_tgh8" sidePair="left-right"/>
+    </text>
+    <component id="n9_qjqa" name="btn_close_shop" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="936,660" pivot="0.5,0.5" anchor="true" size="136,42" group="n21_kpju" scale="0.9,0.9">
+      <Button title="关闭摊位"/>
+    </component>
+    <component id="n12_dm7k" name="btn_next" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="1008,356" size="21,36" group="n21_kpju" scale="1.3,1.3">
+      <Button icon="ui://aakcgg80dm7kvo1"/>
+    </component>
+    <component id="n13_dm7k" name="btn_prev" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="305,356" size="21,36" group="n21_kpju" scale="-1.3,1.3">
+      <Button icon="ui://aakcgg80dm7kvo1"/>
+    </component>
+    <component id="n10_r1h5" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="648,684" size="0,0" group="n21_kpju"/>
+    <component id="n14_kpju" name="btn_share" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="951,111" size="44,40" group="n21_kpju">
+      <Button icon="ui://aakcgg80kpjukvpe"/>
+    </component>
+    <component id="n15_kpju" name="btn_edit" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="889,111" size="44,40" group="n21_kpju">
+      <Button icon="ui://aakcgg80kpjukvpd"/>
+    </component>
+    <component id="n17_kpju" name="btn_star" src="kpjuvo5" fileName="Components/btn_star.xml" xy="905,660" pivot="0.5,0.5" anchor="true" group="n19_kpju"/>
+    <text id="n18_kpju" name="text_star" xy="960,660" pivot="0.5,0.5" anchor="true" size="64,29" group="n19_kpju" fontSize="20" color="#ffffff" text="已收藏"/>
+    <group id="n19_kpju" name="node_star" xy="886,642" size="106,35" group="n21_kpju" advanced="true"/>
+    <component id="n20_kpju" name="btn_owner_info" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="476,117" size="36,32" group="n21_kpju">
+      <relation target="n16_kpju" sidePair="left-right"/>
+      <Button icon="ui://aakcgg80kpjuvoa"/>
+    </component>
+    <component id="n22_gfpl" name="btn_sell_history" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="780,660" pivot="0.5,0.5" anchor="true" size="136,42" group="n21_kpju" scale="0.9,0.9">
+      <Button title="售卖记录"/>
+    </component>
+    <group id="n21_kpju" name="Root" xy="305,50" size="724,650" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+  <transition name="left">
+    <item time="0" type="XY" target="n21_kpju" tween="true" startValue="260,-,0.195,0.067" endValue="24,-,0.018,0.067" duration="9"/>
+  </transition>
+  <transition name="center">
+    <item time="0" type="XY" target="n21_kpju" tween="true" startValue="24,50,0.018,0.067" endValue="305,-,0.229,0.067" duration="9"/>
+  </transition>
+</component>

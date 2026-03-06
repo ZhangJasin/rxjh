@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="brz7yunl" hasFavorites="true">
+  <resources>
+    <image id="j9jd1" name="status_box1.png" path="/Images/"/>
+    <image id="j9jd2" name="img_text_di.png" path="/Images/" exported="true" scale="9grid" scale9grid="5,5,2,1" duplicatePadding="true"/>
+    <component id="j9jd3" name="page_pc_1.xml" path="/Components/" exported="true"/>
+    <component id="j9jd4" name="comName.xml" path="/Components/" exported="true"/>
+    <component id="j9jd5" name="comValue.xml" path="/Components/" exported="true"/>
+    <component id="j9jd6" name="page_pc_2.xml" path="/Components/" exported="true"/>
+    <image id="j9jdb" name="hp_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="1,6,1,12" smoothing="false" duplicatePadding="true"/>
+    <image id="j9jdc" name="exp_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="1,6,1,12" smoothing="false" duplicatePadding="true"/>
+    <image id="j9jdd" name="neili_9.png" path="/Images/" scale="9grid" scale9grid="1,6,1,12" smoothing="false" duplicatePadding="true"/>
+    <image id="j9jde" name="chijiuli_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="1,6,1,12" smoothing="false" duplicatePadding="true"/>
+    <component id="j9jdf" name="comProgress.xml" path="/Components/" exported="true"/>
+    <component id="j9jdg" name="page_pc_3.xml" path="/Components/" exported="true"/>
+    <component id="j9jdh" name="comNameAndValue.xml" path="/Components/" exported="true"/>
+    <component id="j9jdi" name="page_pc_4.xml" path="/Components/" exported="true"/>
+    <component id="j9jdj" name="page_pc_5.xml" path="/Components/" exported="true"/>
+    <component id="j9jdk" name="PCPropertyBar.xml" path="/" exported="true"/>
+    <component id="d4a9m" name="comNameAndProgress.xml" path="/Components/" exported="true"/>
+    <image id="emvcp" name="img_logo.png" path="/Images/PCEquipBar/"/>
+    <image id="emvcq" name="img_di.png" path="/Images/PCEquipBar/"/>
+    <image id="emvcr" name="img_cell_bg.png" path="/Images/PCEquipBar/"/>
+    <component id="emvcs" name="comBagCell.xml" path="/Components/"/>
+    <component id="n055u" name="PCPlayerInfoPanel.xml" path="/" exported="true"/>
+    <component id="n055v" name="btn_tab.xml" path="/Components/"/>
+    <component id="n05516" name="btnSchemSwitch.xml" path="/Components/"/>
+    <component id="n05517" name="PCComponentEquipPanel.xml" path="/" exported="true"/>
+    <component id="n05518" name="btn_cloth_chose.xml" path="/Components/"/>
+    <component id="n05519" name="btnSchemeSwitch.xml" path="/Components/"/>
+    <component id="n0551b" name="PCComponentPropertyPanel.xml" path="/" exported="true"/>
+    <component id="n0551c" name="BagFilterTab.xml" path="/Components/" exported="true"/>
+    <component id="n0551d" name="BagPageTab.xml" path="/Components/" exported="true"/>
+    <component id="n0551e" name="BagCellItem.xml" path="/Components/" exported="true"/>
+    <image id="n0551f" name="green_check.png" path="/Images/"/>
+    <component id="n0551g" name="BagRecycleTab.xml" path="/Components/" exported="true"/>
+    <component id="n0551h" name="BagRecycleCheckBox.xml" path="/Components/" exported="true"/>
+    <image id="n0551i" name="checkbox_bg2.png" path="/Images/" scale="9grid" scale9grid="3,3,6,6"/>
+    <component id="n0551j" name="BagRecycleLvCheckBox.xml" path="/Components/" exported="true"/>
+    <component id="n0551p" name="PropertyProgress.xml" path="/Components/" exported="true"/>
+    <image id="n0551q" name="red.png" path="/Images/" scale="9grid" scale9grid="1,11,1,2" qualityOption="source" duplicatePadding="true"/>
+    <image id="n0551r" name="green.png" path="/Images/" scale="9grid" scale9grid="1,11,1,2" qualityOption="source" duplicatePadding="true"/>
+    <image id="n0551s" name="blue.png" path="/Images/" scale="9grid" scale9grid="1,11,1,2" duplicatePadding="true"/>
+    <image id="n0551t" name="yellow.png" path="/Images/" scale="9grid" scale9grid="1,11,1,2" duplicatePadding="true"/>
+    <component id="n0551v" name="page5.xml" path="/Components/" exported="true"/>
+    <image id="n0551w" name="img_input_di.png" path="/Images/" scale="9grid" scale9grid="6,6,12,12"/>
+    <component id="n0551x" name="item_attr_2.xml" path="/Components/"/>
+    <image id="n0551y" name="attr_bg.png" path="/Images/" scale="9grid" scale9grid="89,1,11,29"/>
+    <component id="n0551z" name="page4.xml" path="/Components/" exported="true"/>
+    <component id="n05520" name="item_attr_1.xml" path="/Components/"/>
+    <component id="n05521" name="compText1.xml" path="/Components/" exported="true"/>
+    <image id="n05522" name="img_di1.png" path="/Images/" scale9grid="25,8,50,16"/>
+    <component id="n05523" name="compText2.xml" path="/Components/" exported="true"/>
+    <component id="n05524" name="itemRoot.xml" path="/Components/" exported="true"/>
+    <component id="n05525" name="panel_Touch.xml" path="/Components/" exported="true"/>
+    <component id="n05526" name="PCBagPanel.xml" path="/" exported="true"/>
+    <component id="n05527" name="BagCdItem.xml" path="/Components/" exported="true"/>
+    <component id="n05528" name="page1.xml" path="/Components/" exported="true"/>
+    <component id="n05529" name="page2.xml" path="/Components/" exported="true"/>
+    <component id="n0552a" name="page3.xml" path="/Components/" exported="true"/>
+    <component id="n0552b" name="item_attr_red.xml" path="/Components/"/>
+    <component id="n0552c" name="item_attr_blue.xml" path="/Components/"/>
+    <component id="n0552d" name="item_attr_green.xml" path="/Components/"/>
+    <component id="n0552e" name="item_attr_yellow.xml" path="/Components/"/>
+    <image id="n0552g" name="schemeSwitch.png" path="/Images/"/>
+    <component id="n0552h" name="FilterBagPanel.xml" path="/Components/" exported="true"/>
+    <component id="n0552i" name="ComboBox1.xml" path="/Components/" exported="true"/>
+    <image id="n0552j" name="comboBox_btn_9.png" path="/Images/" scale="9grid" scale9grid="13,9,12,10"/>
+    <component id="n0552k" name="ComboBox1_popup.xml" path="/Components/"/>
+    <component id="n0552l" name="ComboBox1_item.xml" path="/Components/"/>
+    <image id="n0552m" name="comboBox_bg_9.png" path="/Images/" scale="9grid" scale9grid="6,5,12,10"/>
+    <image id="n0552n" name="comboBox_select_9.png" path="/Images/" scale="9grid" scale9grid="25,17,14,12"/>
+    <component id="n0552o" name="PCComponentTitlePanel.xml" path="/" exported="true"/>
+    <component id="n0552p" name="item_title.xml" path="/Components/"/>
+    <image id="n0552q" name="bg_cell.png" path="/Images/Chenghao/"/>
+    <image id="n0552r" name="tag_Get.png" path="/Images/Chenghao/"/>
+    <image id="n0552s" name="tag_notGet.png" path="/Images/Chenghao/"/>
+    <image id="n0552t" name="bg_time.png" path="/Images/Chenghao/"/>
+    <component id="n0552u" name="btn_use.xml" path="/Components/"/>
+    <image id="n0552y" name="title_bg.png" path="/Images/"/>
+    <component id="n0552z" name="PCLookPlayerPanel.xml" path="/" exported="true"/>
+    <component id="n05531" name="LookPlayerSingleEquipPanel.xml" path="/"/>
+    <component id="n05532" name="OneFilterBagPanel.xml" path="/" exported="true"/>
+    <component id="n05534" name="PCSimpleBagPanel.xml" path="/" exported="true"/>
+    <component id="n05535" name="PCStorageExPanel.xml" path="/" exported="true"/>
+    <component id="n05536" name="PCStoragePanel.xml" path="/" exported="true"/>
+    <image id="mygr38" name="cell_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="3,3,1,1"/>
+    <image id="p8to39" name="cloakSwi.png" path="/Images/"/>
+    <image id="emvc4k" name="img_d2_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="6,15,-1,2" gridTile="12" qualityOption="source" smoothing="false" duplicatePadding="true" disableTrim="true"/>
+    <component id="xisl4m" name="PCEquipBar.xml" path="/" exported="true"/>
+    <image id="xisl4n" name="logo_yuanzhuang.png" path="/Images/PCEquipBar/"/>
+    <image id="xisl4o" name="logo_huanhua.png" path="/Images/PCEquipBar/"/>
+    <image id="xisl4p" name="B-背包-PC版_spec(1).png" path="/"/>
+    <image id="xisl4q" name="img_btn.png" path="/Images/PCEquipBar/"/>
+    <component id="xisl4r" name="btn_sort.xml" path="/Components/"/>
+    <image id="sna94t" name="heiDI.png" path="/Images/" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="emvc4b" name="bg_erhuan.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
+    <image id="emvc4c" name="bg_hubi.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
+    <image id="emvc4d" name="bg_jiezhi.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
+    <image id="emvc4q" name="bg_wep.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
+    <image id="emvc4e" name="bg_xianglian.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
+    <image id="emvc4f" name="bg_xiezi.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
+    <image id="emvc4g" name="bg_yifu.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
+    <image id="s9fq4u" name="icon_item_select.png" path="/Images/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
+    <component id="oxr74w" name="PCTitleBar.xml" path="/" exported="true"/>
+    <component id="qmm24z" name="PCTitleCell.xml" path="/"/>
+    <image id="l6pc50" name="split.png" path="/Images/PCTitleBar/"/>
+    <image id="la9j51" name="1000401.jpg" path="/"/>
+    <image id="la9j52" name="02.png" path="/Images/PCTitleBar/"/>
+    <image id="la9j53" name="01.png" path="/Images/PCTitleBar/"/>
+    <image id="la9j54" name="3000022.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j55" name="3000019.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j56" name="3000018.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j57" name="3000017.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j58" name="3000016.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j59" name="3000015.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5a" name="3000014.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5b" name="3000013.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5c" name="3000012.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5d" name="3000011.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5e" name="3000010.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5f" name="300009.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5g" name="300008.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5h" name="300007.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5i" name="300006.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5j" name="300005.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5k" name="300004.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5l" name="300003.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5m" name="300002.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5n" name="300001.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5o" name="3000020.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <image id="la9j5p" name="3000021.png" path="/Images/PCTitleBar/titleIcon/"/>
+    <component id="la9j5q" name="PCBarRootPanel.xml" path="/" exported="true"/>
+    <component id="tibb5r" name="PCTitleCell.xml" path="/Components/"/>
+    <image id="qrgs5s" name="bg_pin.png" path="/Images/" scale="9grid" scale9grid="14,7,28,14"/>
+    <image id="p8nb5t" name="02.png" path="/Images/PCEquipBar/"/>
+    <image id="p8nb5u" name="01.png" path="/Images/PCEquipBar/"/>
+    <component id="p8nb5v" name="btnCloakSwitch.xml" path="/Components/"/>
+    <image id="p8nb5w" name="logo_pifeng.png" path="/Images/PCEquipBar/"/>
+    <component id="nzf85x" name="PCBagOnDragDropPanel.xml" path="/" exported="true"/>
+    <image id="d2im5y" name="split_line.png" path="/Images/PCEquipBar/"/>
+    <component id="ed395z" name="PCBagCellItem.xml" path="/Components/" exported="true"/>
+    <component id="krex60" name="PCStorageBar.xml" path="/" exported="true"/>
+    <image id="krex61" name="logo_storage.png" path="/Images/PCStorageBar/"/>
+    <component id="gusf63" name="ScaleButtonText.xml" path="/Components/" exported="true" favorite="true"/>
+    <component id="gusf6j" name="BagRecyclePanel.xml" path="/" exported="true"/>
+    <image id="gusf6k" name="title_bg(1).png" path="/Images/"/>
+    <component id="gusf6l" name="PCBagPanelForHS.xml" path="/Components/huishou/" exported="true"/>
+    <component id="qkki62" name="PCBagPanel_1.xml" path="/" exported="true"/>
+    <component id="lhpj6m" name="PCStatusBar.xml" path="/"/>
+    <component id="lhpj6n" name="blockBtn.xml" path="/Components/"/>
+    <component id="lhpj6o" name="blockBtn2.xml" path="/Components/"/>
+    <component id="lhpj6p" name="blockBtn3.xml" path="/Components/"/>
+    <component id="lhpj6q" name="PCEquipBarBagCell.xml" path="/Components/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

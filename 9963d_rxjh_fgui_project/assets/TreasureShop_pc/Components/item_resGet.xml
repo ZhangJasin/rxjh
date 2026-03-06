@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="44,44">
+  <controller name="isSelected" pages="0,显示,1,不显示" selected="0"/>
+  <displayList>
+    <loader id="n2_10pmd" name="loader_di" xy="0,0" size="44,44" url="ui://qy7g0oycbaex5n" fill="scale">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n3_10pmd" name="node_root" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="44,44" aspect="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="648,42">
+  <displayList>
+    <image id="n48_fskg" name="n48" src="f2ul5q" fileName="Images/item_bg.png" xy="0,0" size="648,42" alpha="0.914"/>
+    <text id="n49_fskg" name="text_name" xy="2,11" size="203,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="height" text="10级装备"/>
+    <component id="n50_fskg" name="switch_show" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="269,11"/>
+    <component id="n51_fskg" name="switch_pickup" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="412,11"/>
+    <component id="n52_fskg" name="btn_detail" src="f2ul4o" fileName="Components/pickup_item_btn.xml" xy="495,1">
+      <Button titleColor="#ffff00" titleFontSize="12"/>
+    </component>
+  </displayList>
+</component>

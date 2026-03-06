@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="58,58" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="btnschemeID" pages="0,主装备,1,副装备" selected="1"/>
+  <displayList>
+    <image id="n5_n055" name="n5" src="n05513" fileName="Images/cloakSwi.png" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3_n055" name="title" xy="0,38" size="58,20" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="披风">
+      <gearText controller="btnschemeID" pages="0,1" values="原装|披风"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

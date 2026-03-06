@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,200">
+  <displayList>
+    <list id="n5_cun7" name="n5" xy="0,10" size="150,180" overflow="scroll" lineGap="5" align="center" vAlign="middle">
+      <item url="ui://7p89srj7t4fp6"/>
+      <item url="ui://7p89srj7t4fp6"/>
+      <item url="ui://7p89srj7t4fp6"/>
+      <item url="ui://7p89srj7t4fp6"/>
+    </list>
+  </displayList>
+</component>

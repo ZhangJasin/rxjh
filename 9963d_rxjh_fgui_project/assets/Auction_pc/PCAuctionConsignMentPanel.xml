@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="664,394" pivot="0.5,0.5" anchor="true" designImage="ui://1e928y1xkc3n1s" designImageOffsetX="-172" designImageOffsetY="-186" designImageAlpha="51">
+  <displayList>
+    <image id="n46_q8ir" name="bg_right_list" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="4,6" size="655,343">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n45_q8ir" name="list_consignment" xy="4,48" size="655,300" overflow="scroll" lineGap="1" defaultItem="ui://1e928y1xoxr7q" align="center" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n52_q8ir" name="btn_consignment" src="oxr77" fileName="Components/btn_JingJia.xml" xy="286,358">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="寄售物品" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <text id="n68_q8ir" name="text_num" xy="514,362" size="100,19" fontSize="12" color="#fff7d1" align="center" singleLine="true" text="已上架数量：1/10">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n70_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,394" size="0,0">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <component id="n69_q8ir" name="btn_help" src="emvc9" fileName="common/btn_help.xml" pkg="qa9a7rit" xy="641,373">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n38_q8ir" name="di_top" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="6,11" size="651,34" group="n72_kc3n">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n39_q8ir" name="fengexian1" src="oxr715" fileName="Images/split.png" xy="171,17" size="2,21" group="n72_kc3n">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n67_q8ir" name="fengexian3" src="oxr715" fileName="Images/split.png" xy="308,17" size="2,21" group="n72_kc3n">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n50_q8ir" name="fengexian4" src="oxr715" fileName="Images/split.png" xy="424,17" size="2,21" group="n72_kc3n">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n49_q8ir" name="fengexian5" src="oxr715" fileName="Images/split.png" xy="529,17" size="2,21" group="n72_kc3n">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n47_q8ir" name="label_name" xy="86,18" size="30,20" group="n72_kc3n" fontSize="13" color="#d9f9d5" strokeColor="#000000" text="商品">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n41_q8ir" name="label_price_jp" xy="216,18" size="56,20" group="n72_kc3n" fontSize="13" color="#d9f9d5" strokeColor="#000000" text="竞拍价格">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n43_q8ir" name="label_price_once" xy="345,18" size="43,20" group="n72_kc3n" fontSize="13" color="#d9f9d5" strokeColor="#000000" text="一口价">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n42_q8ir" name="label_left_time" xy="450,18" size="56,20" group="n72_kc3n" fontSize="13" color="#d9f9d5" strokeColor="#000000" text="剩余时间">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n48_q8ir" name="label_operator" xy="577,18" size="30,20" group="n72_kc3n" fontSize="13" color="#d9f9d5" strokeColor="#000000" text="操作">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n72_kc3n" name="n72" xy="6,11" size="651,34" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

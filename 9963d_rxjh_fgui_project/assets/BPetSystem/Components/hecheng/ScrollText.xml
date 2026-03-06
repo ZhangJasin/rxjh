@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,29" overflow="hidden" extention="Label">
+  <displayList>
+    <text id="n0_zwd8" name="title" xy="0,-1" size="274,29" font="SimHei" fontSize="20" color="#00ff00" vAlign="middle" singleLine="true" autoClearText="true" text="滚动文本1231231231241231231"/>
+    <richtext id="n1_seto" name="Rtitle" xy="1,0" size="247,26" font="SimHei" fontSize="18" color="#00ff00" vAlign="middle" singleLine="true" autoClearText="true" text="滚动文本1231231231241231231"/>
+  </displayList>
+</component>

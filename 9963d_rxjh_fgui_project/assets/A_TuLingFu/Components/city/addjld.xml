@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n8_zdrm" name="closebg" src="oqrpb" fileName="Components/tongyong/kongbg.xml" xy="0,0"/>
+    <component id="n0_zdrm" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="642,358" pivot="0.5,0.5" anchor="true" size="500,360">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n1_zdrm" name="n1" xy="528,193" size="237,26" font="SimHei" fontSize="18" color="#ffcc33" align="center" autoSize="none" text="请输入要保存的地点名称"/>
+    <text id="n2_zdrm" name="n2" xy="524,241" size="237,29" font="SimHei" fontSize="20" color="#ffffff" align="center" autoSize="none" text="地图名称"/>
+    <image id="n3_zdrm" name="n3" src="oqrp9" fileName="Images/0tongyong/srbbg.png" xy="506,290" size="273,43"/>
+    <text id="n4_zdrm" name="srk1" xy="511,295" size="264,31" font="SimHei" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="" input="true" prompt="请输入记录点名称" maxLength="15"/>
+    <text id="n5_zdrm" name="n5" xy="540,359" size="210,56" font="SimHei" fontSize="20" color="#ffffff" align="center" autoSize="none" text="字数不能超过15个字符是否确认使用此名称"/>
+    <component id="n6_zdrm" name="n6" src="oqrpc" fileName="Components/tongyong/Bbtnlv.xml" xy="481,444" size="137,49">
+      <Button title="取消"/>
+    </component>
+    <component id="n7_zdrm" name="n7" src="oqrp4" fileName="Components/tongyong/fangbtn.xml" xy="678,444" size="137,49">
+      <Button title="确定"/>
+    </component>
+  </displayList>
+</component>

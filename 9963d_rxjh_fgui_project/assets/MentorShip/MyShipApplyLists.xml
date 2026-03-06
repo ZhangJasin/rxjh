@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <component id="n1_nxdg" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="785,520">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n2_nxdg" name="btn_close" src="vjv72" fileName="Components/btn_close.xml" xy="1009,117">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n8_h138" name="list" xy="280,232" size="772,372" overflow="scroll" lineGap="10" defaultItem="ui://pnop7ha6x44mo62" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n12_x44m" name="n12" src="x44mo63" fileName="Components/personTitle2.xml" xy="280,179">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="115,40" extention="Button">
+  <controller name="button" exported="true" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n74_mzzl" name="selected" src="lg9853" fileName="Images/newhc/xz.png" xy="0,0" size="115,40">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n75_mzzl" name="unselected" src="lg9852" fileName="Images/newhc/ct.png" xy="0,0" size="115,40">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n77_o0nq" name="title" xy="0,0" size="115,40" font="SimHei" fontSize="24" color="#979797" align="center" vAlign="middle" autoSize="none" text="">
+      <gearColor controller="button" pages="0,1" values="#979797,#000000|#f6cd2b,#000000"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Check"/>
+</component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,34">
+  <displayList>
+    <text id="n0_p51l" name="txt_prop_title" xy="0,0" size="76,34" fontSize="24" color="#ffffff" vAlign="middle" text="属性："/>
+    <text id="n1_p51l" name="txt_prop" xy="123,0" pivot="1,0" size="76,34" fontSize="24" color="#ffffff" align="right" vAlign="middle" text="+100000"/>
+  </displayList>
+</component>

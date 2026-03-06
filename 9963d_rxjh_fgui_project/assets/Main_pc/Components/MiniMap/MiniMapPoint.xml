@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="12,12" pivot="0.5,0.5" anchor="true" opaque="false" extention="Label">
+  <controller name="style" alias="样式" pages="0,,1,,2,,3,,4,,5,,6,,7," selected="7">
+    <remark page="0" value="绿"/>
+    <remark page="1" value="怪物"/>
+    <remark page="2" value="传送"/>
+    <remark page="3" value="npc"/>
+    <remark page="4" value="队员"/>
+    <remark page="5" value="正-玩家"/>
+    <remark page="6" value="邪-玩家"/>
+    <remark page="7" value="无正邪-玩家"/>
+  </controller>
+  <displayList>
+    <loader id="n1_b3bq" name="icon" xy="6,6" pivot="0.5,0.5" anchor="true" size="10,25" touchable="false" url="ui://xwp5ackotj4v3r" align="center" vAlign="middle" fill="scale" autoSize="true" clearOnPublish="true">
+      <gearIcon controller="style" pages="1,2,3,4,5,6,7" values="ui://xwp5ackotj4v3s|ui://xwp5ackotj4v3t|ui://xwp5ackotj4v3u|ui://xwp5ackotj4v3v|ui://xwp5ackotj4v3w|ui://xwp5ackotj4v3x|ui://xwp5ackotj4v3r" default="ui://zj419n3dke93v6r"/>
+      <relation target="" sidePair="width-width%,height-height%,left-left%,top-top%"/>
+    </loader>
+  </displayList>
+</component>

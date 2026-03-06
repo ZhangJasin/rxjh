@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750">
+  <displayList>
+    <graph id="n31_o806" name="mask" xy="-173,-116" size="1678,957" alpha="0.7" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n32_o806" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="432,177" size="480,400">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n37_o806" name="btn_minus" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="537,401">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://st7dgeqqbf0gv5v"/>
+    </component>
+    <component id="n38_o806" name="btn_add" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="760,401">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://st7dgeqqbf0gv5u"/>
+    </component>
+    <component id="n39_o806" name="btn_max" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="813,401" size="74,44">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://st7dgeqqbf0gv5w"/>
+    </component>
+    <text id="n40_o806" name="label_count" xy="468,402" size="64,42" fontSize="30" color="#fffadc" text="数量">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n41_o806" name="text_name" xy="669,371" pivot="0.5,0.5" anchor="true" size="36,39" fontSize="28" color="#fffadc" autoClearText="true" text="22">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n42_o806" name="text_title" xy="432,184" pivot="0.5,0.5" size="470,34" fontSize="24" color="#fffadc" align="center" vAlign="middle" letterSpacing="-2" autoSize="none" autoClearText="true" text="购买"/>
+    <text id="n43_o806" name="text_tip" xy="437,454" size="473,32" fontSize="22" color="#fffadc" align="center" ubb="true" autoSize="none" singleLine="true" autoClearText="true" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n44_o806" name="iconNode" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="633,270" size="72,72">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n47_o806" name="btn_red" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="475,492">
+      <Button title="取消"/>
+    </component>
+    <image id="n48_o806" name="bg_input" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="672,422" pivot="0.5,0.5" anchor="true" size="174,43">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n49_o806" name="input_count" xy="672,421" pivot="0.5,0.5" anchor="true" size="174,43" fontSize="24" color="#fff8db" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="12312412" input="true" prompt="请输入数字" maxLength="3" restrict="[0-9]" keyboardType="4">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <component id="n50_x44m" name="btn_green" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="705,492">
+      <Button title="购买"/>
+    </component>
+  </displayList>
+</component>

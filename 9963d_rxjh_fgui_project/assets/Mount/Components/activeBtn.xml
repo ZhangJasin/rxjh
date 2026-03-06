@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="125,40" extention="Button">
+  <displayList>
+    <image id="n2_o0nq" name="n2" src="je63v3d" fileName="image/btn_second_green.png" pkg="st7dgeqq" xy="0,0" size="125,40"/>
+    <text id="n1_o0nq" name="n1" xy="0,0" size="125,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

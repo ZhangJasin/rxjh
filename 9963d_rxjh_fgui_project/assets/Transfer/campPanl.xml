@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <controller name="gxhd" pages="0,,1," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="显示"/>
+  </controller>
+  <displayList>
+    <image id="n70_rsy6" name="n70" src="qtrmv60" fileName="Images/0tongyong/jindutiao2.png" xy="0,0" size="1334,750" group="n69_rsy6" alpha="0.8">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <loader id="n54_svai" name="bg" xy="667,329" pivot="0.5,0.5" anchor="true" size="1334,237" group="n69_rsy6" url="ui://5rez3obxqtrmv61" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <image id="n55_ixnv" name="n55" src="qtrmv62" fileName="Images/08camp/正派旗子.png" xy="388,200" group="n69_rsy6">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n56_ixnv" name="n56" src="qtrmv63" fileName="Images/08camp/邪派旗子.png" xy="734,199" group="n69_rsy6">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n57_ixnv" name="n57" src="qtrmv64" fileName="Components/08camp/btn_xie.xml" xy="1082,381" group="n69_rsy6">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n58_ixnv" name="n58" src="qtrmv66" fileName="Components/08camp/btn_zeng.xml" xy="72,380" group="n69_rsy6">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n59_ixnv" name="n59" src="qtrmv68" fileName="Images/08camp/正 派.png" xy="439,214" group="n69_rsy6">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n60_ixnv" name="n60" src="qtrmv69" fileName="Images/08camp/邪 派.png" xy="785,212" group="n69_rsy6">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n61_ixnv" name="n61" src="qtrmv6a" fileName="Images/08camp/奖励底.png" xy="459,579" pivot="0.5,0.5" group="n69_rsy6">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n62_ixnv" name="n62" src="qtrmv6b" fileName="Images/08camp/任务奖励.png" xy="493,582" group="n69_rsy6">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n64_ixnv" name="n64" src="qtrmv6c" fileName="Components/tongyong/fangbtn.xml" xy="585,518" size="168,53" group="n69_rsy6">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="推荐加入" titleFontSize="24"/>
+    </component>
+    <richtext id="n65_rsy6" name="font1" xy="59,259" size="337,81" group="n69_rsy6" fontSize="22" color="#ffffff" autoSize="none" text="&lt;font color=&apos;#00FF00&apos;&gt;侠义为先，正道沧桑&lt;/font&gt;；以侠义精神为根基">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n66_rsy6" name="font2" xy="947,259" size="342,80" group="n69_rsy6" fontSize="22" color="#ffffff" autoSize="none" text="&lt;font color=&apos;#00FF00&apos;&gt;唯我独尊，邪道通天&lt;/font&gt;；崇尚个人实力与权谋">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <list id="n68_rsy6" name="itemlist" xy="569,588" size="277,65" group="n69_rsy6" layout="row" overflow="scroll" scroll="horizontal" margin="0,0,10,10" colGap="20" defaultItem="ui://5rez3obxqtrmv6e" align="center" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n69_rsy6" name="n69" xy="0,0" size="1334,750" advanced="true">
+      <gearDisplay controller="gxhd" pages="0"/>
+    </group>
+    <component id="n67_rsy6" name="panl_gxhd" src="qtrmv6h" fileName="Components/zhizhao/gxhdpanl2.xml" xy="0,130">
+      <gearDisplay controller="gxhd" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

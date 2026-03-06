@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="53,72" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_eoqr" name="n0" src="eoqr2p" fileName="images/marriage/chuansong.png" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_ngzb" name="n1" src="owir3o" fileName="images/半透内容底.png" xy="0,0" size="53,72"/>
+  </displayList>
+  <Button/>
+</component>

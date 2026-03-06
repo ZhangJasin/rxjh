@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="328,90" extention="Button" designImage="ui://aakcgg80kpjuvo8" designImageOffsetX="-333" designImageOffsetY="-115">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_tgh8" name="n0" src="ws4hv73" fileName="Images/cell_bg_9.png" xy="0,0" size="328,90">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_tgh8" name="text_name" xy="86,9" size="64,29" group="n12_ws4h" fontSize="20" color="#ffffff" vAlign="middle" singleLine="true" autoClearText="true" text="寒玉石"/>
+    <text id="n3_tgh8" name="t1" xy="284,9" size="24,29" group="n12_ws4h" fontSize="20" color="#ffffff" align="right" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="个">
+      <relation target="n0_tgh8" sidePair="right-right,top-top"/>
+    </text>
+    <text id="n4_tgh8" name="text_count" xy="212,9" size="70,29" group="n12_ws4h" fontSize="20" color="#85e963" align="right" vAlign="middle" ubb="true" singleLine="true" autoClearText="true" text="111111">
+      <relation target="n3_tgh8" sidePair="middle-middle,right-right"/>
+    </text>
+    <image id="n8_tgh8" name="n8" src="qzpnvny" fileName="Images/bg_black.png" xy="144,49" size="159,29" group="n9_tgh8">
+      <relation target="n0_tgh8" sidePair="rightext-right"/>
+    </image>
+    <text id="n5_tgh8" name="n5" xy="92,48" size="50,29" group="n9_tgh8" fontSize="20" color="#ffffff" text="单价:"/>
+    <text id="n6_tgh8" name="text_price" xy="229,49" size="26,29" group="n9_tgh8" fontSize="20" color="#85e963" vAlign="middle" ubb="true" singleLine="true" autoClearText="true" text="12">
+      <relation target="n14_ws4h" sidePair="middle-middle,right-left"/>
+    </text>
+    <text id="n14_ws4h" name="text_money_name" xy="258,49" size="44,29" group="n9_tgh8" fontSize="20" color="#ffffff" align="right" vAlign="middle" strokeColor="#000000" text="货币">
+      <relation target="n8_tgh8" sidePair="middle-middle,right-right"/>
+    </text>
+    <group id="n9_tgh8" name="n9" xy="92,48" size="211,30" group="n12_ws4h"/>
+    <component id="n10_b3ko" name="item" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="9,11" pivot="0.5,0.5" size="72,72" group="n12_ws4h"/>
+    <group id="n12_ws4h" name="n12" xy="9,9" size="299,74"/>
+    <image id="n13_ws4h" name="empty" src="ws4hv73" fileName="Images/cell_bg_9.png" xy="0,0" size="328,90">
+      <relation target="n0_tgh8" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button downEffect="dark" downEffectValue=".8"/>
+</component>

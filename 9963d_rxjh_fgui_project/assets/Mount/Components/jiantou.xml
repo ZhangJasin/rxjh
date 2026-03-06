@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="19,34" extention="Button">
+  <displayList>
+    <image id="n1_da6o" name="toleft" src="ih0u1r" fileName="Images/0righttop/main_funcDock_arrow.png" pkg="fgihxfye" xy="0,0" flip="hz"/>
+  </displayList>
+  <Button/>
+</component>

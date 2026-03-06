@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="140,40">
+  <displayList>
+    <richtext id="n0_vzpx" name="n0" xy="0,0" size="140,40" fontSize="22" color="#30ff00" align="right" vAlign="middle" autoSize="none" underline="true" text="修改挂机设置"/>
+  </displayList>
+</component>

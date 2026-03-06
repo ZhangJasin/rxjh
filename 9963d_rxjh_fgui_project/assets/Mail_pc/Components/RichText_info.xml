@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="360,170" overflow="scroll">
+  <displayList>
+    <richtext id="n3_g5je" name="rich_content" xy="0,0" size="360,36" fontSize="12" color="#fff9da" autoSize="height" autoClearText="true" text="邮件内容邮件内容邮件内容邮件内容邮件内容邮件内容邮件内容邮件内容邮件内容邮件内容邮件内容邮件内容邮件内容邮件内容">
+      <relation target="" sidePair="width-width,height-height"/>
+    </richtext>
+  </displayList>
+</component>

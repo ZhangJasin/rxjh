@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,98" mask="n0_lmdg">
+  <displayList>
+    <graph id="n0_lmdg" name="mask" xy="0,0" size="100,98" type="eclipse" lineSize="0">
+      <relation target="" sidePair="width-width%,height-height%,center-center%,middle-middle%"/>
+    </graph>
+    <loader id="n1_lmdg" name="icon" xy="0,0" size="100,98" url="ui://4op6gwol108rv5" align="center" vAlign="middle" fill="scale" clearOnPublish="true"/>
+  </displayList>
+</component>

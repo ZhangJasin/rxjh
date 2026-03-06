@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="174,56" pivot="0.5,0.5" extention="Button">
+  <controller name="expanded" alias="是否折叠" pages="0,折叠,1,散开" selected="0"/>
+  <controller name="isHasChild" pages="0,无,1,有" selected="0"/>
+  <controller name="isSelected" pages="0,选中,1,未选中" selected="0"/>
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="leaf" exported="true" pages="0,文件夹,1,页节点" selected="0"/>
+  <displayList>
+    <image id="n7_rxpm" name="bg" src="7c35vox" fileName="image/btn_tab.png" pkg="st7dgeqq" xy="0,0" size="174,56">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n8_rg2r" name="bg_selected" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="1,0" size="174,56">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n4_rxpm" name="text_content" xy="61,11" size="52,34" group="n9_m5m6" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#f6cd2b" align="right" vAlign="middle" strokeColor="#000000" text="武器"/>
+    <image id="n5_rxpm" name="img_array" src="lxrgv51" fileName="image/arrow.png" pkg="st7dgeqq" xy="113,18" group="n9_m5m6">
+      <gearDisplay controller="expanded" pages="1"/>
+      <gearDisplay2 controller="isHasChild" pages="1" condition="0"/>
+    </image>
+    <image id="n6_rxpm" name="img_array_" src="lxrgv51" fileName="image/arrow.png" pkg="st7dgeqq" xy="113,18" group="n9_m5m6" flip="vt">
+      <gearDisplay controller="expanded" pages="0"/>
+      <gearDisplay2 controller="isHasChild" pages="1" condition="0"/>
+    </image>
+    <group id="n9_m5m6" name="n9" xy="61,11" size="52,34" advanced="true" layout="hz" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

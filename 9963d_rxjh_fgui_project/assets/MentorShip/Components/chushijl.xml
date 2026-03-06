@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n6_ldq2" name="Mask" xy="-348,-123" size="2000,1000" alpha="0.7" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n15_y56p" name="n15" src="dcneo5i" fileName="Components/ComponentTouch.xml" xy="417,175" group="n5_ldq2"/>
+    <component id="n0_ldq2" name="n0" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="417,175" pivot="0.5,0.5" size="500,400" group="n5_ldq2"/>
+    <component id="n14_r52e" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="886,201" group="n5_ldq2"/>
+    <text id="n4_ldq2" name="title" xy="480,182" size="374,34" group="n5_ldq2" fontSize="24" color="#fffadc" align="center" vAlign="middle" autoSize="none" text="出师奖励"/>
+    <text id="n18_pt88" name="n18" xy="485,289" size="103,34" group="n5_ldq2" fontSize="24" color="#ffffff" autoSize="none" text="师傅奖励"/>
+    <text id="n19_pt88" name="n19" xy="737,290" size="103,34" group="n5_ldq2" fontSize="24" color="#ffffff" autoSize="none" text="徒弟奖励"/>
+    <component id="n21_pt88" name="masterBox" src="pt88o5o" fileName="Components/iconItem.xml" xy="508,355" size="60,60" group="n5_ldq2"/>
+    <component id="n22_pt88" name="appriceBox" src="pt88o5o" fileName="Components/iconItem.xml" xy="758,355" size="60,60" group="n5_ldq2"/>
+    <group id="n5_ldq2" name="Panel" xy="417,175" size="500,400" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

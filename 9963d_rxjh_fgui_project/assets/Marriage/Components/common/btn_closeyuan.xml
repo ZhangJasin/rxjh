@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="45,45" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_ler3" name="n0" src="ler347" fileName="Images/0tongyong/close_yuan.png" xy="0,0" pkg="fgihxfye">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_ler3" name="n1" src="ler347" fileName="Images/0tongyong/close_yuan.png" xy="0,0" pkg="fgihxfye">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_ler3" name="n2" src="ler347" fileName="Images/0tongyong/close_yuan.png" xy="0,0" pkg="fgihxfye">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_ler3" name="n3" src="ler347" fileName="Images/0tongyong/close_yuan.png" xy="0,0" pkg="fgihxfye">
+      <gearDisplay controller="button" pages="3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>

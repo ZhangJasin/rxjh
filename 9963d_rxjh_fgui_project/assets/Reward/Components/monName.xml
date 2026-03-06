@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="57,287">
+  <displayList>
+    <image id="n0_hpp3" name="n0" src="hpp36" fileName="image/nameBg.png" xy="0,0"/>
+    <richtext id="n2_hpp3" name="n2" xy="8,26" size="40,257" fontSize="22" color="#ffffff" align="center" autoSize="none" text="怪物名字"/>
+  </displayList>
+</component>

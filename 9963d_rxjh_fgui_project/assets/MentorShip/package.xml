@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="pnop7ha6">
+  <resources>
+    <component id="vjv72" name="btn_close.xml" path="/Components/" exported="true"/>
+    <image id="vjv76" name="btn_team_add.png" path="/Images/" exported="true"/>
+    <image id="vjv78" name="btn_team_write.png" path="/Images/" exported="true"/>
+    <component id="vjv7r" name="btn_help.xml" path="/Components/" exported="true"/>
+    <component id="vjv7s" name="btn_add.xml" path="/Components/" exported="true"/>
+    <component id="f0so1g" name="item_intro_task.xml" path="/Components/" exported="true"/>
+    <component id="nc451u" name="MentorShipPanel.xml" path="/" exported="true"/>
+    <component id="nc451v" name="item_cond.xml" path="/Components/" exported="true"/>
+    <image id="as7k20" name="item_normal_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="11,11,2,2"/>
+    <image id="as7k22" name="team_info_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="119,12,1,2"/>
+    <image id="leye26" name="team_frame_top.png" path="/Images/" exported="true" scale="9grid" scale9grid="12,12,24,24"/>
+    <image id="l7f029" name="btn_team_set.png" path="/Images/" exported="true"/>
+    <component id="l7f02a" name="btn_setting.xml" path="/Components/" exported="true"/>
+    <image id="l7f02c" name="Mentor_frame_info.png" path="/Images/" exported="true" scale="9grid" scale9grid="43,29,86,58"/>
+    <image id="l7f02e" name="team_zhenying1.png" path="/Images/" exported="true"/>
+    <image id="l7f02f" name="team_zhenying2.png" path="/Images/" exported="true"/>
+    <image id="l7f02g" name="team_zhenying3.png" path="/Images/" exported="true"/>
+    <component id="cn6p2m" name="header_master.xml" path="/Components/" exported="true"/>
+    <component id="npv42r" name="item_slot.xml" path="/Components/" exported="true"/>
+    <image id="npv42s" name="team_item_bg.png" path="/Images/" exported="true"/>
+    <image id="scjwo34" name="btn_menu4.png" path="/Images/" exported="true"/>
+    <image id="scjwo3f" name="input_team_9.png" path="/Images/" scale="9grid" scale9grid="3,3,0,1"/>
+    <component id="gibco3n" name="btn_tab.xml" path="/Components/" exported="true"/>
+    <component id="zi8so3p" name="header_apprentice.xml" path="/Components/" exported="true"/>
+    <component id="zi8so3q" name="group_master.xml" path="/Components/" exported="true"/>
+    <component id="zi8so3r" name="group_apprentice.xml" path="/Components/" exported="true"/>
+    <component id="zi8so3s" name="btn_info.xml" path="/Components/" exported="true"/>
+    <image id="zi8so3t" name="btn_friend_info.png" path="/Images/"/>
+    <image id="gvalo3u" name="friend_item_select_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="80,22,46,44"/>
+    <component id="gvalo3w" name="group_empty.xml" path="/Components/" exported="true"/>
+    <image id="gvalo3x" name="content_bg_9.png" path="/Images/" scale="9grid" scale9grid="15,16,7,9" duplicatePadding="true"/>
+    <component id="gvalo3y" name="btn_second_green.xml" path="/Components/" exported="true"/>
+    <component id="gvalo3z" name="btn_second_red.xml" path="/Components/" exported="true"/>
+    <component id="gvalo40" name="group_has.xml" path="/Components/" exported="true"/>
+    <component id="gvalo41" name="item_graduate_cond.xml" path="/Components/" exported="true"/>
+    <image id="gvalo42" name="neirongDI.png" path="/Images/" scale="9grid" scale9grid="3,3,6,6" duplicatePadding="true"/>
+    <image id="gvalo43" name="split.png" path="/Images/"/>
+    <component id="yagpo44" name="group_right.xml" path="/Components/" exported="true"/>
+    <component id="yagpo45" name="group_left.xml" path="/Components/" exported="true"/>
+    <component id="yagpo46" name="item_task.xml" path="/Components/" exported="true"/>
+    <component id="l4sro47" name="FindMentorPanel.xml" path="/" exported="true"/>
+    <component id="nxdgo48" name="item_candidate.xml" path="/Components/" exported="true"/>
+    <component id="nxdgo49" name="item_apply.xml" path="/Components/" exported="true"/>
+    <component id="nxdgo4a" name="item_findlist.xml" path="/Components/" exported="true"/>
+    <image id="nxdgo4b" name="icon_class1.png" path="/Images/"/>
+    <image id="nxdgo4c" name="icon_class2.png" path="/Images/"/>
+    <image id="nxdgo4d" name="icon_class3.png" path="/Images/"/>
+    <image id="nxdgo4e" name="icon_class4.png" path="/Images/"/>
+    <image id="nxdgo4f" name="icon_class5.png" path="/Images/"/>
+    <image id="nxdgo4g" name="icon_class6.png" path="/Images/"/>
+    <image id="nxdgo4k" name="main_assist_unselect_btn_9.png" path="/Images/" scale="9grid" scale9grid="8,9,4,5" duplicatePadding="true"/>
+    <component id="dos9o4l" name="panel_Mentor_main.xml" path="/Components/" exported="true"/>
+    <component id="dos9o4m" name="panel_Mentor_teach.xml" path="/Components/" exported="true"/>
+    <component id="dos9o4n" name="switch_pag.xml" path="/Components/" exported="true"/>
+    <component id="w9m6o4o" name="FindPublishPanel.xml" path="/" exported="true"/>
+    <image id="w9m6o4r" name="main_player_addition_add.png" path="/Images/"/>
+    <image id="w9m6o4s" name="main_player_bg_9.png" path="/Images/" scale="9grid" scale9grid="6,6,1,1" duplicatePadding="true"/>
+    <component id="w9m6o4t" name="item_publish_left.xml" path="/Components/" exported="true"/>
+    <image id="w9m6o4u" name="item_publis_left_bg_9.png" path="/Images/" scale="9grid" scale9grid="10,10,12,10" duplicatePadding="true"/>
+    <image id="w9m6o4v" name="item_publis_left_select_9.png" path="/Images/" scale="9grid" scale9grid="10,10,10,8" duplicatePadding="true"/>
+    <component id="w9m6o4w" name="item_publish_right.xml" path="/Components/" exported="true"/>
+    <component id="lkqxo4x" name="ShipApplyLists.xml" path="/" exported="true"/>
+    <component id="lkqxo4y" name="FindApprenticePanel.xml" path="/" exported="true"/>
+    <component id="lkqxo4z" name="item_findlist2.xml" path="/Components/" exported="true"/>
+    <component id="lkqxo50" name="personItem.xml" path="/Components/" exported="true"/>
+    <component id="lkqxo51" name="personTitle.xml" path="/Components/" exported="true"/>
+    <component id="lkqxo52" name="ProgressBar1.xml" path="/Components/" exported="true"/>
+    <component id="lkqxo53" name="skillItem.xml" path="/Components/" exported="true"/>
+    <component id="lkqxo54" name="skillTask.xml" path="/Components/" exported="true"/>
+    <image id="lkqxo55" name="skill_add.png" path="/Images/"/>
+    <image id="lkqxo56" name="skill_frame.png" path="/Images/"/>
+    <image id="lkqxo58" name="skill_icon_attack.png" path="/Images/"/>
+    <component id="lkqxo59" name="btn_skill.xml" path="/Components/" exported="true"/>
+    <component id="lkqxo5c" name="SkillTipsPanel.xml" path="/" exported="true"/>
+    <component id="lkqxo5d" name="MySkill.xml" path="/" exported="true"/>
+    <image id="lkqxo5e" name="skill_icon_attack(1).png" path="/Images/"/>
+    <component id="lkqxo5f" name="item_cost.xml" path="/Components/" exported="true"/>
+    <component id="lkqxo5g" name="btn_config.xml" path="/Components/" exported="true"/>
+    <component id="dcneo5h" name="CommonDialog.xml" path="/Components/" exported="true"/>
+    <component id="dcneo5i" name="ComponentTouch.xml" path="/Components/" exported="true"/>
+    <component id="dcneo5j" name="MentorCheckBox.xml" path="/Components/" exported="true"/>
+    <component id="g5t3o5k" name="receive.xml" path="/Components/" exported="true"/>
+    <component id="g5t3o5l" name="gonow.xml" path="/Components/" exported="true"/>
+    <image id="g5t3o5m" name="taskbg.png" path="/Images/" exported="true" scale="9grid" scale9grid="66,6,132,12"/>
+    <component id="pt88o5n" name="chushijl.xml" path="/Components/" exported="true"/>
+    <component id="pt88o5o" name="iconItem.xml" path="/Components/" exported="true"/>
+    <component id="d9vpo5p" name="item_attr_1.xml" path="/Components/" exported="true"/>
+    <image id="d9vpo5q" name="img_di1.png" path="/Components/"/>
+    <image id="d9vpo5r" name="img_d2_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="5,8,0,16"/>
+    <image id="d9vpo5s" name="img_di1.png" path="/Images/" exported="true"/>
+    <component id="foqko5u" name="btn_search.xml" path="/Components/" exported="true"/>
+    <image id="gkldo5v" name="checkbox_bg2.png" path="/Images/" exported="true" scale="9grid" scale9grid="5,5,3,3"/>
+    <component id="gkldo5w" name="Invitation.xml" path="/" exported="true"/>
+    <component id="gkldo5x" name="item_select_slot.xml" path="/Components/" exported="true"/>
+    <component id="gkldo5y" name="checkBox.xml" path="/Components/" exported="true"/>
+    <component id="gkldo60" name="item_waiting_slot.xml" path="/Components/" exported="true"/>
+    <component id="x44mo61" name="MyShipApplyLists.xml" path="/" exported="true"/>
+    <component id="x44mo62" name="personItem2.xml" path="/Components/" exported="true"/>
+    <component id="x44mo63" name="personTitle2.xml" path="/Components/" exported="true"/>
+    <component id="x44mo64" name="searchView.xml" path="/Components/" exported="true"/>
+    <component id="x44mo65" name="searchBtn.xml" path="/Components/" exported="true"/>
+    <component id="sleno66" name="BreakRlationship.xml" path="/Components/" exported="true"/>
+    <component id="sleno67" name="BreakItem.xml" path="/Components/" exported="true"/>
+    <component id="q7pvo68" name="MentorShipShop.xml" path="/Components/" exported="true"/>
+    <component id="q7pvo69" name="shop_item.xml" path="/Components/"/>
+    <image id="q7pvo6a" name="shop_item_bg.png" path="/Images/"/>
+    <image id="q7pvo6b" name="discount_bg.png" path="/Images/"/>
+    <component id="q7pvo6c" name="CommonDialogShop.xml" path="/Components/" exported="true"/>
+    <image id="u8r1o6d" name="半透内容底.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="qlo0o6e" name="bg_limit.png" path="/Images/" exported="true" scale="9grid" scale9grid="6,8,13,9" qualityOption="source" smoothing="false"/>
+    <image id="jvkqo6f" name="道具选中效果框.png" path="/Images/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

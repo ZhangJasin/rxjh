@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <component id="n36_10pfo" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="1000,650" group="n116_dos9">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n37_10pfo" name="text_title" xy="666,78" pivot="0.5,0.5" anchor="true" size="52,34" group="n116_dos9" fontSize="24" color="#9aafbb" text="师徒">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n38_10pfo" name="btn_close" src="vjv72" fileName="Components/btn_close.xml" xy="1141,76" pivot="0.5,0.5" anchor="true" size="45,45" group="n116_dos9">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n113_nxdg" name="btn_help" src="vjv7r" fileName="Components/btn_help.xml" xy="698,62" size="30,30" group="n116_dos9">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <loader id="n114_dos9" name="mentor_content" xy="188,101" size="976,588" group="n116_dos9" url="ui://pnop7ha6dos9o4l">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <list id="n115_dos9" name="page_switch_list" xy="1162,110" size="45,369" group="n116_dos9" lineGap="3" defaultItem="ui://pnop7ha6dos9o4n">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item title="师徒"/>
+      <item title="传功"/>
+      <item title="商店"/>
+    </list>
+    <group id="n116_dos9" name="mastermain" xy="167,50" size="1040,650" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n117_slen" name="BreakRlationship" src="sleno66" fileName="Components/BreakRlationship.xml" xy="268,130" size="800,504" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <loader id="n118_u8r1" name="helpBg" xy="0,1" size="1344,750" group="n121_u8r1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <image id="n122_u8r1" name="n122" src="u8r1o6d" fileName="Images/半透内容底.png" xy="718,81" size="400,170" group="n121_u8r1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <richtext id="n120_u8r1" name="helpText" xy="729,90" size="381,160" group="n121_u8r1" fontSize="12" color="#ffffff" autoSize="none" text="1.玩家一转后方可拜师，玩家二转以上方可收徒，师徒之间等级差需20级才可以结成师徒关系。&#xA;2.每位师傅最多收取三名徒弟，不同职业间不可结成师徒关系。&#xA;3.师徒任意一方可提出解除关系申请，提出申请后24小时方可解除师徒关系。&#xA;4.解除关系申请人可取消解除关系过程，非申请人可通过解除关系按钮立即解除师徒关系。&#xA;5.师徒关系解除后，师徒任务自动清除。&#xA;6.玩家建立师徒关系之后，点击头像即可进入任务界面。">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <group id="n121_u8r1" name="helpInfo" xy="0,1" size="1344,750" visible="false" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

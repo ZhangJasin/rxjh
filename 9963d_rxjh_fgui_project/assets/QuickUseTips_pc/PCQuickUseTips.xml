@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <component id="n22_eq1q" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="990,570" pivot="0.5,0.5" anchor="true" size="164,200" group="n21_ezgo">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n25_eq1q" name="bg2" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="917,511" size="145,98" group="n21_ezgo">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n15_a6dc" name="text_title" xy="940,478" size="100,24" group="n21_ezgo" fontSize="12" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="快捷装备">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n1_lmpz" name="text_name" xy="920,583" size="140,24" group="n21_ezgo" fontSize="12" color="#faebe9" align="center" vAlign="middle" autoSize="none" text="装备名字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n18_isoe" name="text_cd" xy="1042,628" size="23,24" group="n21_ezgo" fontSize="12" color="#faebe9" align="center" vAlign="middle" autoSize="none" text="(5)">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n12_id4u" name="text_no" xy="950,673" size="120,24" group="n21_ezgo" fontSize="16" color="#faebe9" vAlign="middle" autoSize="none" strokeColor="#000000" text="此道具不再提示">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n9_lmpz" name="btn_equip" src="lmpz1" fileName="Components/btn_equip.xml" xy="940,622" group="n21_ezgo">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button titleFontSize="12"/>
+    </component>
+    <component id="n23_eq1q" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="1059,490" group="n21_ezgo">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n24_eq1q" name="check_show" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="930,685" pivot="0.5,0.5" anchor="true" size="25,25" group="n21_ezgo">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n20_pohx" name="Node_item" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="990,550" pivot="0.5,0.5" anchor="true" size="52,52" group="n21_ezgo">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n21_ezgo" name="panel" xy="908,470" size="166,227"/>
+  </displayList>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,20" extention="Label">
+  <displayList>
+    <image id="n1_juj0" name="bg" src="f2ul4j" fileName="Images/progress_bg.png" xy="0,0" size="60,20">
+      <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </image>
+    <text id="n0_juj0" name="title" xy="0,0" size="60,20" fontSize="12" color="#a4d452" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="高帧率率">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+</component>

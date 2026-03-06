@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="beuq1dms">
+  <resources>
+    <component id="x6cj0" name="RechargePanel.xml" path="/" exported="true"/>
+    <image id="p76m3" name="store_cell_bg.png" path="/Images/" exported="true"/>
+    <image id="p76m5" name="store_recharge1.png" path="/Images/" exported="true"/>
+    <image id="p76m6" name="store_recharge1_1.png" path="/Images/" exported="true"/>
+    <image id="p76m7" name="store_recharge2.png" path="/Images/" exported="true"/>
+    <image id="p76m8" name="store_recharge2_1.png" path="/Images/" exported="true"/>
+    <image id="p76m9" name="store_recharge3.png" path="/Images/" exported="true"/>
+    <image id="p76ma" name="store_recharge3_1.png" path="/Images/" exported="true"/>
+    <image id="p76mb" name="store_select_cell.png" path="/Images/" exported="true" scale="9grid" scale9grid="20,21,40,42" smoothing="false"/>
+    <image id="p76mc" name="store_text_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
+    <component id="p76mf" name="btn_alipay.xml" path="/Components/"/>
+    <component id="p76mg" name="btn_weixin.xml" path="/Components/"/>
+    <component id="p76mh" name="btn_huabei.xml" path="/Components/"/>
+    <component id="yfxbp" name="coin_cell.xml" path="/Components/"/>
+    <component id="pfd4q" name="label_more.xml" path="/Components/"/>
+    <component id="dwcrr" name="RechargeQRCodePanel.xml" path="/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

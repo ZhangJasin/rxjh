@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="32,32">
+  <displayList>
+    <loader id="n0_gszy" name="icon" xy="0,0" pivot="0.5,0.5" size="32,32">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+</component>

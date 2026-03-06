@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="464,572" overflow="scroll" bgColor="#ff0000">
+  <controller name="c1" pages="0,,1," selected="0"/>
+  <displayList>
+    <list id="n352_ld2e" name="list_property" xy="0,0" size="464,572" overflow="scroll" lineGap="4" autoItemSize="false" align="center" autoClearItems="true" foldInvisibleItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item url="ui://dak5wnw9ld2ev6y"/>
+      <item url="ui://dak5wnw9ld2ev6z"/>
+      <item url="ui://dak5wnw9ld2ev72"/>
+      <item url="ui://dak5wnw9q8irv6i"/>
+      <item url="ui://dak5wnw9q8irv6h"/>
+    </list>
+    <component id="n351_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,572" size="0,0">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="y890q37s">
+  <resources>
+    <component id="vjv70" name="PCTeamPanel.xml" path="/" exported="true"/>
+    <component id="vjv72" name="btn_close.xml" path="/Components/" exported="true"/>
+    <component id="vjv73" name="item_menu.xml" path="/Components/" exported="true"/>
+    <image id="vjv76" name="btn_team_add.png" path="/Images/" exported="true"/>
+    <image id="vjv78" name="btn_team_write.png" path="/Images/" exported="true"/>
+    <image id="vjv79" name="icon_class1.png" path="/Images/" exported="true"/>
+    <image id="vjv7a" name="icon_class2.png" path="/Images/" exported="true"/>
+    <image id="vjv7b" name="icon_class3.png" path="/Images/" exported="true"/>
+    <image id="vjv7c" name="icon_class4.png" path="/Images/" exported="true"/>
+    <image id="vjv7d" name="icon_class5.png" path="/Images/" exported="true"/>
+    <image id="vjv7e" name="icon_class6.png" path="/Images/" exported="true"/>
+    <image id="vjv7f" name="team_flag.png" path="/Images/" exported="true"/>
+    <component id="vjv7l" name="btn_edit.xml" path="/Components/" exported="true"/>
+    <component id="vjv7o" name="btn_quit.xml" path="/Components/" exported="true"/>
+    <component id="vjv7p" name="btn_apply.xml" path="/Components/" exported="true"/>
+    <component id="vjv7r" name="btn_help.xml" path="/Components/" exported="true"/>
+    <component id="vjv7s" name="btn_add.xml" path="/Components/" exported="true"/>
+    <component id="vjv71c" name="item_pick.xml" path="/Components/" exported="true"/>
+    <component id="f0so1g" name="item_invite.xml" path="/Components/" exported="true"/>
+    <component id="f0so1m" name="btn_invite.xml" path="/Components/" exported="true"/>
+    <component id="f0so1n" name="btn_refresh.xml" path="/Components/" exported="true"/>
+    <component id="f0so1o" name="PCTeamApplyPanel.xml" path="/" exported="true"/>
+    <component id="f0so1p" name="item_apply.xml" path="/Components/" exported="true"/>
+    <component id="f0so1q" name="btn_agree.xml" path="/Components/" exported="true"/>
+    <component id="f0so1r" name="btn_refuse.xml" path="/Components/" exported="true"/>
+    <component id="nc451u" name="PCTeamNearPanel.xml" path="/" exported="true"/>
+    <component id="nc451v" name="item_near.xml" path="/Components/" exported="true"/>
+    <component id="nc451w" name="btn_join.xml" path="/Components/" exported="true"/>
+    <component id="leye23" name="PCTeamInvitePanel.xml" path="/" exported="true"/>
+    <component id="leye25" name="btn_create.xml" path="/Components/" exported="true"/>
+    <component id="l7f027" name="btn_refuseAll.xml" path="/Components/" exported="true"/>
+    <component id="l7f028" name="btn_agreeAll.xml" path="/Components/" exported="true"/>
+    <image id="l7f029" name="btn_team_set.png" path="/Images/" exported="true"/>
+    <component id="l7f02a" name="btn_setting.xml" path="/Components/" exported="true"/>
+    <component id="l7f02b" name="PCTeamSettingPanel.xml" path="/" exported="true"/>
+    <component id="l7f02d" name="item_setbox.xml" path="/Components/" exported="true"/>
+    <image id="l7f02e" name="team_zhenying1.png" path="/Images/" exported="true"/>
+    <image id="l7f02f" name="team_zhenying2.png" path="/Images/" exported="true"/>
+    <image id="l7f02g" name="team_zhenying3.png" path="/Images/" exported="true"/>
+    <component id="l7f02h" name="btn_reset.xml" path="/Components/" exported="true"/>
+    <component id="l7f02i" name="btn_save.xml" path="/Components/" exported="true"/>
+    <component id="lmpz2j" name="btn_shout.xml" path="/Components/" exported="true"/>
+    <component id="cn6p2l" name="PCTeamTargetPanel.xml" path="/" exported="true"/>
+    <component id="cn6p2m" name="item_condition.xml" path="/Components/" exported="true"/>
+    <component id="npv42o" name="PCTeamCreatePanel.xml" path="/" exported="true"/>
+    <component id="npv42p" name="check_set.xml" path="/Components/" exported="true"/>
+    <component id="npv42r" name="item_team.xml" path="/Components/" exported="true"/>
+    <image id="npv42s" name="team_item_bg.png" path="/Images/" exported="true"/>
+    <component id="mp8v2v" name="btn_pick.xml" path="/Components/" exported="true"/>
+    <component id="10pfo2w" name="btn_select.xml" path="/Components/" exported="true"/>
+    <component id="scjwo30" name="item_menu2.xml" path="/Components/" exported="true"/>
+    <image id="scjwo3c" name="btn_team_emoj.png" path="/Images/" exported="true"/>
+    <image id="scjwo3d" name="btn_team_pos.png" path="/Images/" exported="true"/>
+    <image id="scjwo3e" name="frame_team_bg2_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="1,1,2,2"/>
+    <image id="scjwo3f" name="input_team_9.png" path="/Images/" scale="9grid" scale9grid="3,3,0,1"/>
+    <component id="scjwo3g" name="btn_chat.xml" path="/Components/" exported="true"/>
+    <component id="scjwo3h" name="btn_emoj.xml" path="/Components/" exported="true"/>
+    <component id="scjwo3i" name="btn_pos.xml" path="/Components/" exported="true"/>
+    <component id="scjwo3j" name="item_emoj.xml" path="/Components/" exported="true"/>
+    <component id="scjwo3l" name="item_chat1.xml" path="/Components/" exported="true"/>
+    <component id="scjwo3m" name="item_chat2.xml" path="/Components/" exported="true"/>
+    <component id="lxrgv4z" name="checkbox_single.xml" path="/Components/" exported="true"/>
+    <image id="lxrgv58" name="cut_line.png" path="/Images/" exported="true"/>
+    <image id="hcvov5f" name="组队-PC版_spec.png" path="/Images/"/>
+    <image id="hcvov5g" name="创建队伍-PC版_spec.png" path="/Images/"/>
+    <image id="hcvov5h" name="入队审批-PC版_spec.png" path="/Images/"/>
+    <image id="hcvov5i" name="邀请入队-PC版_spec.png" path="/Images/"/>
+    <image id="hcvov5j" name="队伍大厅1-PC版_spec.png" path="/Images/"/>
+    <image id="hcvov5k" name="队伍设置_6_spec.png" path="/Images/"/>
+    <image id="hcvov5l" name="目标-PC版_spec.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

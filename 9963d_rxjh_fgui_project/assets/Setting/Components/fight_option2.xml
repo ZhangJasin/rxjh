@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="276,86">
+  <displayList>
+    <graph id="n189_fskg" name="n189" xy="0,0" size="276,86" group="n188_obxz" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <component id="n186_rmnb" name="auto_pickup_enable" src="o15xv64" fileName="Components/tog_select.xml" xy="14,27" size="125,32" group="n188_obxz">
+      <Button title="自动拾取"/>
+    </component>
+    <component id="n187_rmnb" name="auto_pickup_check" src="rmnbvof" fileName="Components/btn_check.xml" xy="167,28" size="90,30" group="n188_obxz"/>
+    <group id="n188_obxz" name="auto_pick" xy="0,0" size="276,86"/>
+  </displayList>
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="339,55">
+  <controller name="status" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n4_filp" name="n4" src="pkt0a" fileName="Images/内容底.png" xy="0,0" size="339,55"/>
+    <component id="n0_filp" name="tofinish" src="njf413" fileName="Components/btn_second_green.xml" xy="202,5">
+      <gearDisplay controller="status" pages="0"/>
+      <Button title="去完成" selectedTitle="去完成"/>
+    </component>
+    <richtext id="n1_filp" name="taskName" xy="4,0" size="192,55" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text=""/>
+    <text id="n2_filp" name="n2" xy="245,11" size="70,32" fontSize="22" color="#00ff00" bold="true" text="已完成">
+      <gearDisplay controller="status" pages="1"/>
+    </text>
+  </displayList>
+</component>

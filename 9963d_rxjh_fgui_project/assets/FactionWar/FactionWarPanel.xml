@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1344,750">
+  <controller name="rightTabs" pages="0,门派战,1,排名" selected="0"/>
+  <displayList>
+    <component id="n0_drck" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,369" pivot="0.5,0.5" anchor="true" size="1000,695" group="n5_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n1_drck" name="title" xy="657,49" pivot="0.5,0.5" anchor="true" size="139,34" group="n5_drck" fontSize="24" color="#9aafbb" align="center" autoSize="none" text="门派战">
+      <gearText controller="rightTabs" pages="1" values="上期排名" default="门派战"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n2_drck" name="closeBtn" src="drck1" fileName="Components/closebtn_yuan.xml" xy="1116,27" group="n5_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n3_drck" name="rightTabList" xy="1156,73" size="51,245" group="n5_drck" pageController="rightTabs" margin="4,2,6,0" colGap="2" defaultItem="ui://sgmta2jcdrck5" selectionController="rightTabs">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item title="门派战"/>
+      <item title="排名"/>
+    </list>
+    <group id="n5_drck" name="main" xy="167,21" size="1040,695" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n59_r1x3" name="n59" src="r1x315" fileName="Images/01.png" xy="172,69" size="986,642" group="n22_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n36_s949" name="first" src="s94910" fileName="Components/model.xml" xy="597,210" size="150,300" group="n22_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n37_s949" name="second" src="s94910" fileName="Components/model.xml" xy="436,248" size="150,300" group="n22_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n38_s949" name="third" src="s94910" fileName="Components/model.xml" xy="766,248" size="150,300" group="n22_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n39_s949" name="fourth" src="s94910" fileName="Components/model.xml" xy="301,288" size="150,300" group="n22_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n41_s949" name="fifth" src="s94910" fileName="Components/model.xml" xy="916,288" size="150,300" group="n22_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n13_drck" name="registrBtn" src="drck7" fileName="Components/activeBtn.xml" xy="604,634" size="135,53" group="n22_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n60_r1x3" name="n60" src="r1x316" fileName="Images/02.png" xy="203,153" size="34,138" group="n23_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n61_r1x3" name="n61" src="r1x317" fileName="Images/01(1).png" xy="239,153" size="200,138" group="n23_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n18_drck" name="registrationList" xy="240,153" size="200,138" group="n23_drck" overflow="scroll" lineGap="1" defaultItem="ui://sgmta2jcdrcka">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n23_drck" name="showAllRegist" xy="203,153" size="237,138" group="n22_drck" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n62_r1x3" name="n62" src="r1x319" fileName="Images/04.png" xy="368,524" size="617,107" group="n22_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n63_r1x3" name="n63" src="r1x318" fileName="Images/03.png" xy="218,84" size="218,55" group="n22_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <richtext id="n65_r1x3" name="n65" xy="472,526" size="400,100" group="n22_drck" fontSize="18" color="#fcf1bf" align="center" vAlign="middle" autoSize="none" text="&lt;font color=&apos;#f1ffeb&apos;&gt;开启时间：每周三&lt;/font&gt;&#xA;&lt;font color=&apos;#33ff00&apos;&gt;20:00-20:30&lt;/font&gt;&#xA;&lt;font color=&apos;#f1ffeb&apos;&gt;请提前5分钟进入备战&lt;/font&gt;">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <text id="n64_r1x3" name="myGuildName" xy="240,93" size="173,34" group="n22_drck" fontSize="24" color="#fcf1bf" align="center" vAlign="middle" autoSize="none" text="我的门派名字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n22_drck" name="n22" xy="172,69" size="986,642" advanced="true">
+      <gearDisplay controller="rightTabs" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n24_drck" name="n24" src="drckd" fileName="Components/pmtitle.xml" xy="190,91" size="950,50" group="n26_drck">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n25_drck" name="pmList" xy="190,170" size="950,500" group="n26_drck" overflow="scroll" lineGap="10" defaultItem="ui://sgmta2jcdrcke">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n26_drck" name="n26" xy="190,91" size="950,579" advanced="true">
+      <gearDisplay controller="rightTabs" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

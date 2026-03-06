@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="500,600">
+  <displayList>
+    <component id="n0_o4l6" name="tipbg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="0,0" size="500,600"/>
+    <component id="n1_o4l6" name="closetips" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="471,27"/>
+    <text id="n2_o4l6" name="title" xy="255,27" pivot="0.5,0.5" anchor="true" size="84,29" fontSize="20" color="#ff9900" autoSize="none" text="装备强化"/>
+    <component id="n3_o4l6" name="infoScro" src="ngzbbp" fileName="Components/duanzao/infoScro.xml" pkg="fgihxfye" xy="23,56" size="452,533"/>
+  </displayList>
+</component>

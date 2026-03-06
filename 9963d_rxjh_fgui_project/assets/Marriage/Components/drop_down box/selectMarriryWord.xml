@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="340,38" extention="ComboBox">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_eoqr" name="n0" src="eoqr24" fileName="images/誓言底衬.png" xy="0,0" size="340,38">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_eoqr" name="title" xy="10,0" size="320,38" fontSize="22" color="#502814" vAlign="middle" autoSize="none" singleLine="true" text="世间万物，满目星辰皆是你！">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <image id="n2_eoqr" name="n2" src="eoqr22" fileName="images/下拉箭头-心.png" xy="304,8">
+      <gearDisplay controller="button" pages="0,2"/>
+    </image>
+    <image id="n3_eoqr" name="n3" src="eoqr22" fileName="images/下拉箭头-心.png" xy="304,9" flip="vt">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+  </displayList>
+  <ComboBox dropdown="ui://s7gyh5sveoqr2i"/>
+</component>

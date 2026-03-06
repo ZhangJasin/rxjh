@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="162,63">
+  <controller name="img" autoRadioGroupDepth="true" exported="true" pages="0,,1,,2,,3,,4,,5," selected="0">
+    <remark page="0" value="主"/>
+    <remark page="1" value="转职"/>
+    <remark page="2" value="支线"/>
+    <remark page="3" value="悬赏"/>
+    <remark page="4" value="江湖"/>
+    <remark page="5" value="跑环"/>
+  </controller>
+  <displayList>
+    <image id="n17_bbev" name="n17" src="tj4v44" fileName="Images/Assist/main_mission_di.png" xy="0,0" size="162,63">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <richtext id="n13_o3hv" name="RichText_title" xy="23,3" size="137,20" fontSize="13" color="#ffff00" leading="0" ubb="true" autoSize="ellipsis" autoClearText="true" text="任务标题任务标题任务标题任务标题"/>
+    <richtext id="n14_o3hv" name="RichText_content" xy="2,25" size="158,35" fontSize="13" color="#ffffff" leading="0" ubb="true" autoSize="height" autoClearText="true" text="任务内容任务内容任务内容"/>
+    <richtext id="n18_qug1" name="RichText_progress" xy="83,3" size="75,20" visible="false" fontSize="13" color="#ffffff" align="right" vAlign="middle" leading="0" ubb="true" autoSize="none" autoClearText="true" text="任务内容任务内容任务内容">
+      <relation target="" sidePair="right-right,top-top"/>
+    </richtext>
+    <image id="n19_qug1" name="n19" src="qug1fvf1" fileName="Images/newmain/06.png" xy="0,1" scale="0.7,0.7">
+      <gearDisplay controller="img" pages="4"/>
+    </image>
+    <image id="n20_qug1" name="n20" src="qug1fvgf" fileName="Images/newmain/richang.png" xy="0,-2" scale="0.7,0.7">
+      <gearDisplay controller="img" pages="5"/>
+    </image>
+    <image id="n21_qug1" name="n21" src="qug1fvgi" fileName="Images/newmain/xuanshang.png" xy="0,-1" scale="0.7,0.7">
+      <gearDisplay controller="img" pages="3"/>
+    </image>
+    <image id="n22_qug1" name="ywc" src="qug1fvfs" fileName="Images/newmain/ywc2.png" xy="130,1" visible="false"/>
+    <image id="n23_qug1" name="n23" src="qug1fvfr" fileName="Images/newmain/zhixian.png" xy="0,-1" scale="0.7,0.7">
+      <gearDisplay controller="img" pages="2"/>
+    </image>
+    <image id="n24_qug1" name="n24" src="qug1fvfd" fileName="Images/newmain/zhuanzhi.png" xy="0,-2" scale="0.7,0.7">
+      <gearDisplay controller="img" pages="1"/>
+    </image>
+    <image id="n25_qug1" name="n25" src="qug1fvf2" fileName="Images/newmain/zhuxian.png" xy="-2,-4" scale="0.7,0.7">
+      <gearDisplay controller="img" pages="0"/>
+    </image>
+  </displayList>
+  <relation target="n14_o3hv" sidePair="height-height"/>
+</component>

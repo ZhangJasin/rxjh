@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="992,588">
+  <displayList>
+    <graph id="n0_q7pv" name="moneyBg" xy="742,12" size="180,40" group="n5_q7pv" type="rect" fillColor="#e6071202">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <list id="n1_q7pv" name="showItemList" xy="13,56" size="952,506" group="n5_q7pv" layout="pagination" overflow="scroll" lineItemCount="4" lineItemCount2="10" defaultItem="ui://pnop7ha6q7pvo69" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n2_q7pv" name="money_text" xy="814,15" size="101,40" group="n5_q7pv" fontSize="22" color="#ffff00" autoSize="none" text="0"/>
+    <component id="n6_q7pv" name="moneyIcon" src="pt88o5o" fileName="Components/iconItem.xml" xy="758,11" size="40,40" group="n5_q7pv"/>
+    <component id="n7_q7pv" name="dialogToBuy" src="q7pvo6c" fileName="Components/CommonDialogShop.xml" xy="-171,-98" size="1344,750" group="n5_q7pv" visible="false"/>
+    <group id="n5_q7pv" name="GuildShipList" xy="-171,-98" size="1344,750" advanced="true"/>
+  </displayList>
+</component>

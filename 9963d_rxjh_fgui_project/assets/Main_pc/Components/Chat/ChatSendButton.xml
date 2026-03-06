@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="37,20" pivot="0.5,0.5" extention="Button">
+  <displayList>
+    <loader id="n4_kxj1" name="icon" xy="0,0" size="38,20" url="ui://xwp5ackolh523b" align="center" vAlign="middle" fill="scaleFree" autoSize="true"/>
+    <text id="n3_kxj1" name="title" xy="17,9" pivot="0.5,0.5" anchor="true" size="32,20" fontSize="13" color="#3a571c" align="center" vAlign="middle" leading="0" letterSpacing="2" autoSize="none" text="发送"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+  <relation target="n4_kxj1" sidePair="width-width,height-height"/>
+</component>

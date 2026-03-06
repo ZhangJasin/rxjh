@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="72,72">
+  <displayList>
+    <loader id="n3_bvmt" name="Image_headDi" xy="36,36" pivot="0.5,0.5" anchor="true" size="72,72" aspect="true" url="ui://unvjiiodzbcyt" align="center" vAlign="middle" fill="scale">
+      <relation target="" sidePair="width-width%,height-height%"/>
+    </loader>
+    <loader id="n2_dssq" name="Image_head" xy="36,36" pivot="0.5,0.5" anchor="true" size="64,64" aspect="true" url="ui://unvjiiodlmdg0" align="center" vAlign="middle" fill="scale" clearOnPublish="true">
+      <relation target="" sidePair="rightext-right%,topext-top%,bottomext-bottom%,leftext-left%"/>
+    </loader>
+    <loader id="n1_dssq" name="Image_headFrame" xy="36,36" pivot="0.5,0.5" anchor="true" size="85,85" aspect="true" touchable="false" url="ui://un65xjnnakxo1" align="center" vAlign="middle" fill="scale" clearOnPublish="true">
+      <relation target="n3_bvmt" sidePair="rightext-right%,topext-top%,bottomext-bottom%,leftext-left%"/>
+    </loader>
+  </displayList>
+</component>

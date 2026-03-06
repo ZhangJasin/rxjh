@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600" opaque="false">
+  <displayList>
+    <list id="n0_nnix" name="List_currency" xy="213,3" size="434,19" layout="row" selectionMode="none" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="2" defaultItem="ui://oc3trviuw6jl1" autoItemSize="false" autoClearItems="true" scrollItemToViewOnClick="false">
+      <relation target="" sidePair="center-center,top-top"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

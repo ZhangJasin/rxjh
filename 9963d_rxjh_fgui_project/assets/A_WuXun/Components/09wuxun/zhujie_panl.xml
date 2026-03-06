@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="978,584">
+  <controller name="ismj" alias="是否满级" pages="0,,1," selected="0">
+    <remark page="0" value="未满级"/>
+    <remark page="1" value="已满级"/>
+  </controller>
+  <controller name="iswear" pages="0,,1," selected="1">
+    <remark page="0" value="未穿戴武勋装备"/>
+    <remark page="1" value="选择武勋装备"/>
+  </controller>
+  <controller name="skilltips" alias="技能描述" pages="0,,1," selected="0">
+    <remark page="0" value="隐藏"/>
+    <remark page="1" value="显示"/>
+  </controller>
+  <displayList>
+    <image id="n78_uz9j" name="n78" src="oqrp1l" fileName="Images/09wuxun/zhujie/01.png" xy="1,-1" size="978,584"/>
+    <image id="n79_uz9j" name="n79" src="oqrp1m" fileName="Images/09wuxun/zhujie/02.png" xy="13,4" size="314,573"/>
+    <list id="n51_fjq2" name="equipList" xy="20,11" size="300,396" overflow="scroll" margin="5,5,10,10" lineGap="5" defaultItem="ui://hed3v11ooqrps" autoClearItems="true">
+      <relation target="" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n53_fjq2" name="n53" src="oqrp1n" fileName="Images/05boss/内容底.png" xy="373,196" size="251,217">
+      <gearDisplay controller="iswear" pages="1"/>
+    </image>
+    <list id="n58_fjq2" name="attrlist1" xy="349,198" size="275,113" overflow="scroll" margin="2,0,5,0" defaultItem="ui://hed3v11ooqrpx">
+      <gearDisplay controller="iswear" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n61_p3ya" name="n61" src="oqrp1n" fileName="Images/05boss/内容底.png" xy="700,196" size="248,217">
+      <gearDisplay controller="iswear" pages="1"/>
+    </image>
+    <list id="n62_p3ya" name="attrlist2" xy="676,201" size="268,113" overflow="scroll" margin="2,0,5,0" defaultItem="ui://hed3v11ooqrpx">
+      <gearDisplay controller="iswear" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n54_fjq2" name="xzequip" src="oqrpy" fileName="Components/tongyong/item_select.xml" xy="622,64">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n56_fjq2" name="item1" src="oqrpf" fileName="Components/tongyong/itemkuang2.xml" xy="629,438">
+      <gearDisplay controller="ismj" pages="0"/>
+      <gearDisplay2 controller="iswear" pages="1" condition="0"/>
+    </component>
+    <component id="n57_fjq2" name="btn_zhujie" src="oqrp17" fileName="Components/tongyong/btn_zong.xml" xy="586,516">
+      <gearDisplay controller="ismj" pages="0"/>
+      <gearDisplay2 controller="iswear" pages="1" condition="0"/>
+      <Button title="铸 阶" titleColor="#ffffff" titleFontSize="20"/>
+    </component>
+    <text id="n59_fjq2" name="mjfont" xy="566,457" pivot="0.5,0.5" size="196,34" font="SimHei" fontSize="24" color="#ff0000" align="center" text="已达最大铸阶等级">
+      <gearDisplay controller="ismj" pages="1"/>
+      <gearDisplay2 controller="iswear" pages="1" condition="0"/>
+    </text>
+    <image id="n80_uz9j" name="n80" src="oqrp1o" fileName="Images/09wuxun/zhujie/03.png" xy="471,230">
+      <gearDisplay controller="iswear" pages="0"/>
+    </image>
+    <text id="n60_p3ya" name="wpdfont" xy="554,235" size="214,42" font="SimHei" fontSize="30" color="#a4d452" align="center" text="未穿戴武勋装备">
+      <gearDisplay controller="iswear" pages="0"/>
+    </text>
+    <image id="n63_p3ya" name="n63" src="oqrp7" fileName="Images/09wuxun/箭头.png" xy="637,284">
+      <gearDisplay controller="iswear" pages="1"/>
+    </image>
+    <text id="n65_p3ya" name="n65" xy="450,323" pivot="0.5,0.5" size="94,26" font="SimHei" fontSize="18" color="#ffff00" align="center" vAlign="middle" text="[武勋技能]">
+      <gearDisplay controller="iswear" pages="1"/>
+    </text>
+    <text id="n66_p3ya" name="n66" xy="779,323" pivot="0.5,0.5" size="94,26" font="SimHei" fontSize="18" color="#ffff00" align="center" vAlign="middle" text="[武勋技能]">
+      <gearDisplay controller="iswear" pages="1"/>
+    </text>
+    <component id="n67_p3ya" name="curskill1" src="oqrp1p" fileName="Components/09wuxun/btn_wuxun_skill.xml" xy="389,356" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n68_p3ya" name="curskill2" src="oqrp1p" fileName="Components/09wuxun/btn_wuxun_skill.xml" xy="444,356" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n69_p3ya" name="curskill3" src="oqrp1p" fileName="Components/09wuxun/btn_wuxun_skill.xml" xy="499,356" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n70_p3ya" name="curskill4" src="oqrp1p" fileName="Components/09wuxun/btn_wuxun_skill.xml" xy="554,356" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n71_p3ya" name="nextskill1" src="oqrp1p" fileName="Components/09wuxun/btn_wuxun_skill.xml" xy="718,356" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n72_p3ya" name="nextskill2" src="oqrp1p" fileName="Components/09wuxun/btn_wuxun_skill.xml" xy="773,356" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n73_p3ya" name="nextskill3" src="oqrp1p" fileName="Components/09wuxun/btn_wuxun_skill.xml" xy="828,356" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <component id="n74_p3ya" name="nextskill4" src="oqrp1p" fileName="Components/09wuxun/btn_wuxun_skill.xml" xy="883,356" scale="0.8,0.8">
+      <gearDisplay controller="iswear" pages="1"/>
+    </component>
+    <text id="n76_y1ql" name="curequipname" xy="464,156" pivot="0.5,0.5" size="70,32" font="SimHei" fontSize="22" color="#ffff00" align="center" vAlign="middle" text="装备名">
+      <gearDisplay controller="iswear" pages="1"/>
+    </text>
+    <text id="n77_y1ql" name="nextequipname" xy="789,150" pivot="0.5,0.5" size="70,32" font="SimHei" fontSize="22" color="#ffff00" align="center" vAlign="middle" text="装备名">
+      <gearDisplay controller="iswear" pages="1"/>
+    </text>
+    <component id="n75_hujp" name="panl_skilltips" src="oqrp1s" fileName="Components/Tip/skillTips2.xml" xy="-172,-138">
+      <gearDisplay controller="skilltips" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

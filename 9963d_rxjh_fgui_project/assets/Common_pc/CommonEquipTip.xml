@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImage="ui://st7dgeqqfl5sv5p" designImageOffsetY="64">
+  <displayList>
+    <graph id="n10_l6xy" name="Mask" xy="1,0" size="1024,768" visible="false" alpha="0.6" touchable="false" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n29_svai" name="Pop3" src="10e45j" fileName="EquipTipNode.xml" xy="566,274" pivot="1,0" anchor="true" group="n25_fl5s" visible="false" touchable="false"/>
+    <component id="n32_rz3a" name="Pop2" src="10e45j" fileName="EquipTipNode.xml" xy="566,274" pivot="1,0" anchor="true" group="n25_fl5s" visible="false" touchable="false"/>
+    <component id="n28_svai" name="Pop1" src="10e45j" fileName="EquipTipNode.xml" xy="738,274" pivot="1,0" anchor="true" group="n25_fl5s" touchable="false"/>
+    <group id="n25_fl5s" name="Pops" xy="286,274" size="452,220" advanced="true" layout="hz" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n36_soey" name="Btn2" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="772,454" pivot="0.5,0.5" anchor="true" size="74,25">
+      <relation target="n25_fl5s" sidePair="right-right"/>
+      <relation target="n28_svai" sidePair="bottom-bottom"/>
+      <Button titleColor="#ffffff" titleFontSize="11" icon="ui://qa9a7ritemvc3h"/>
+    </component>
+    <component id="n37_soey" name="Btn1" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="772,479" pivot="0.5,0.5" anchor="true" size="74,25">
+      <relation target="n25_fl5s" sidePair="right-right"/>
+      <relation target="n28_svai" sidePair="bottom-bottom"/>
+      <Button titleColor="#ffffff" titleFontSize="11" icon="ui://qa9a7ritemvc3h"/>
+    </component>
+  </displayList>
+</component>

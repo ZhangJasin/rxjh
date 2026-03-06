@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="35,35">
+  <displayList>
+    <image id="n1_dxat" name="n1" src="vzjdfvga" fileName="Images/newmain/Skill_bg.png" xy="18,18" pivot="0.5,0.5" anchor="true" size="35,35">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n0_8s5i" name="buffIcon_loader" xy="2,2" size="31,31" url="ui://793j2bfvvxsemt" fill="scaleFree" clearOnPublish="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="966,62" extention="Button" designImageOffsetX="-186" designImageOffsetY="-204">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_zah9" name="n0" src="wi4521" fileName="Images/list_bg_9.png" xy="0,0" size="966,62">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <graph id="n6_n1mf" name="select_effect" xy="0,0" size="960,62" visible="false" type="rect" lineSize="0" fillColor="#ff6e1669">
+      <gearDisplay controller="button" pages="3,5"/>
+    </graph>
+    <text id="n3_zah9" name="text_time" xy="18,13" size="449,36" fontSize="20" color="#ddfdd9" align="center" vAlign="middle" autoSize="none" text="2023-07-20 18:51:48"/>
+    <text id="n4_zah9" name="text_event" xy="487,12" size="471,38" fontSize="20" color="#ddfdd9" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" autoClearText="true" text="梨音进行了银两捐赠"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="40,40">
+  <displayList>
+    <image id="n0_xisl" name="img_bg" src="emvcr" fileName="Images/PCEquipBar/img_cell_bg.png" xy="-1,-1">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n1_xisl" name="itemNode" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="40,40">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="110,18" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n3_g11o" name="n3" src="g11o4a" fileName="Images/Team/main_team_word_di.png" xy="0,0" size="110,18">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n4_g11o" name="n4" src="g11o4b" fileName="Images/Team/main_team_word_select_di.png" xy="0,0" size="110,18">
+      <gearDisplay controller="button" pages="1,2,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n5_g11o" name="title" xy="4,-1" size="28,19" fontSize="12" color="#ffffff" autoClearText="true" text="按钮">
+      <relation target="" sidePair="middle-middle"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

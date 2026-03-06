@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="673,32" extention="Label">
+  <displayList>
+    <component id="n216_fskg" name="enable" src="yj7kvo1" fileName="common/checkbox_multi.xml" pkg="st7dgeqq" xy="0,0" size="32,32" aspect="true"/>
+    <richtext id="n217_fskg" name="title" xy="38,3" size="166,26" fontSize="18" color="#fcf1bf" ubb="true" autoClearText="true" text="内力低于[color=#00FF00]70%[/color]时使用">
+      <relation target="" sidePair=""/>
+    </richtext>
+    <component id="n218_fskg" name="slider" src="rmnbvoi" fileName="Components/slider_blue.xml" xy="233,2" size="334,28">
+      <Slider value="50" max="100"/>
+    </component>
+    <component id="n219_fskg" name="check" src="rmnbvof" fileName="Components/btn_check.xml" xy="583,3" size="86,26"/>
+  </displayList>
+</component>

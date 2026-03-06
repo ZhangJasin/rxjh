@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="385,357" overflow="scroll" scroll="both" scrollBarFlags="400" scrollBar="hidden">
+  <displayList>
+    <loader id="n18_gxj9" name="map_loader" xy="0,0" size="385,357" url="ui://3tndc27qclzt6" fill="scaleFree" clearOnPublish="true"/>
+    <component id="n25_av1i" name="graph_line" src="clzt7" fileName="Components/MiniMap/line_component.xml" xy="0,0" size="385,357">
+      <relation target="n18_gxj9" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n19_gxj9" name="node_point" src="clzt8" fileName="Components/MiniMap/map_point_node.xml" xy="0,0" size="385,357">
+      <relation target="n18_gxj9" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n20_gxj9" name="node_info" src="clzt8" fileName="Components/MiniMap/map_point_node.xml" xy="0,0" size="385,357">
+      <relation target="n18_gxj9" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n24_o15x" name="targetPoint" src="clzt9" fileName="Components/MiniMap/targetPoint.xml" xy="81,30"/>
+    <component id="n22_gxj9" name="node_player" src="clzt8" fileName="Components/MiniMap/map_point_node.xml" xy="0,0" size="385,357">
+      <relation target="n18_gxj9" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n27_pzjg" name="node_tracePoint" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="385,357" touchable="false">
+      <relation target="n18_gxj9" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>

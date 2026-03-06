@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <controller name="dialogType" pages="0,单按钮,1,双按钮" selected="0"/>
+  <displayList>
+    <graph id="n0_bf0g" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n27_fhb3" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="417,175" size="500,400">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n2_bf0g" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="895,202">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n4_bf0g" name="btn_first" src="bf0gv5t" fileName="Components/btn_CancelOrUse.xml" xy="565,526" pivot="0.5,0.5" anchor="true">
+      <gearDisplay controller="dialogType" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n5_bf0g" name="btn_second" src="bf0gv5t" fileName="Components/btn_CancelOrUse.xml" xy="778,525" pivot="0.5,0.5" anchor="true">
+      <gearDisplay controller="dialogType" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n6_bf0g" name="btn_single" src="bf0gv5t" fileName="Components/btn_CancelOrUse.xml" xy="666,524" pivot="0.5,0.5" anchor="true" size="136,42">
+      <gearDisplay controller="dialogType" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n15_bf0g" name="text_name" xy="664,369" pivot="0.5,0.5" anchor="true" size="26,29" fontSize="20" color="#fffadc" autoClearText="true" text="22">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n17_bf0g" name="text_title" xy="609,186" pivot="0.5,0.5" size="116,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" letterSpacing="-2" autoClearText="true" text="哈哈哈哈哈">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n23_usy1" name="text_tip" xy="430,456" size="473,26" fontSize="18" color="#fffadc" align="center" ubb="true" autoSize="none" singleLine="true" autoClearText="true" text="哈哈哈哈哈哈哈">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n24_ke1c" name="iconNode" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="628,269" size="72,72">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n14_bf0g" name="label_count" xy="469,407" size="44,29" fontSize="20" color="#fffadc" text="数量">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n19_g0ii" name="btn_minus" src="bf0gv5s" fileName="common/btn_AddOrMinus.xml" pkg="st7dgeqq" xy="535,404" pageController="dialogType" controller="btnkInd,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n9_bf0g" name="input_count" src="bf0gv5w" fileName="ComponentInput.xml" xy="664,421" pivot="0.5,0.5" anchor="true" size="168,39">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n20_g0ii" name="btn_max" src="bf0gv5s" fileName="common/btn_AddOrMinus.xml" pkg="st7dgeqq" xy="804,404" size="60,36" controller="btnkInd,2">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n29_tw0l" name="btn_add" src="bf0gv5s" fileName="common/btn_AddOrMinus.xml" pkg="st7dgeqq" xy="757,404">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

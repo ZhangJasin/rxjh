@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="500,500">
+  <displayList>
+    <component id="n8_lg98" name="back" src="egru78" fileName="Components/tongyong/kongbg.xml" pkg="fgihxfye" xy="-411,-119">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n0_s2ey" name="n0" src="swkl1p" fileName="Images/lingshou/背景图.png" xy="0,0" size="500,500"/>
+    <image id="n2_s2ey" name="n2" src="mwlnfe" fileName="Images/09wuxun/目录底.png" pkg="fgihxfye" xy="92,11" size="328,40">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n3_s2ey" name="n3" xy="177,12" pivot="0.5,0.5" size="157,36" fontSize="20" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="当前效果"/>
+    <image id="n4_s2ey" name="n4" src="mwlnfe" fileName="Images/09wuxun/目录底.png" pkg="fgihxfye" xy="92,235" size="328,40">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n5_s2ey" name="n5" xy="177,236" pivot="0.5,0.5" size="157,36" fontSize="20" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="下级效果"/>
+    <richtext id="n6_s2ey" name="curfont" xy="52,67" size="397,158" fontSize="18" color="#ffff00" align="center" autoSize="none" text="信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述"/>
+    <richtext id="n7_s2ey" name="nextfont" xy="52,295" size="397,158" fontSize="18" color="#ffff00" align="center" autoSize="none" text="信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述"/>
+  </displayList>
+</component>

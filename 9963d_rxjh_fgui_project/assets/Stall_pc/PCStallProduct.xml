@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768" opaque="false" designImageOffsetX="-177" designImageOffsetY="-36">
+  <displayList>
+    <component id="n11_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="276,153" size="472,461" group="n24_qbyp"/>
+    <component id="n1_tgh8" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="734,173" size="31,31" group="n24_qbyp"/>
+    <text id="n2_tgh8" name="title_stall_name" xy="330,161" pivot="0.5,0.5" size="364,24" group="n24_qbyp" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="商品"/>
+    <image id="n3_tgh8" name="container_bg" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="284,236" size="456,320" group="n24_qbyp"/>
+    <list id="n4_tgh8" name="list_product" xy="287,242" size="450,309" group="n24_qbyp" layout="flow_hz" overflow="scroll" lineGap="2" colGap="2" defaultItem="ui://3wc7qwaghfk89" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n5_tgh8" name="n5" xy="289,575" size="64,19" group="n24_qbyp" fontSize="12" color="#ffffff" align="center" text="剩余时间："/>
+    <text id="n6_tgh8" name="text_remain_time" xy="350,575" size="99,19" group="n24_qbyp" fontSize="12" color="#ffffff" text="0天7小时15分3秒">
+      <relation target="n5_tgh8" sidePair="left-right"/>
+    </text>
+    <component id="n9_qjqa" name="btn_close_shop" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="649,569" group="n24_qbyp">
+      <Button title="关闭摊位" titleFontSize="12"/>
+    </component>
+    <component id="n10_r1h5" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="512,384" size="0,0" group="n24_qbyp"/>
+    <text id="n14_qbyp" name="title_owner_name" xy="296,203" size="76,19" group="n24_qbyp" fontSize="12" color="#ffffff" ubb="true" text="摊主名称啊啊"/>
+    <component id="n15_qbyp" name="btn_owner_info" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="377,203" size="24,22" group="n24_qbyp">
+      <relation target="n14_qbyp" sidePair="left-right"/>
+      <Button icon="ui://3wc7qwagqbyp17"/>
+    </component>
+    <component id="n16_qbyp" name="btn_share" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="687,201" size="30,27" group="n24_qbyp">
+      <Button icon="ui://3wc7qwagqbyp12"/>
+    </component>
+    <component id="n17_qbyp" name="btn_edit" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="648,201" size="30,27" group="n24_qbyp">
+      <Button icon="ui://3wc7qwagqbyp13"/>
+    </component>
+    <component id="n18_qbyp" name="btn_sell_history" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="547,568" group="n24_qbyp" visible="false">
+      <Button title="售卖记录" titleFontSize="12"/>
+    </component>
+    <component id="n19_qbyp" name="btn_star" src="qbypkvpg" fileName="Components/btn_star.xml" xy="660,571" group="n21_qbyp"/>
+    <text id="n20_qbyp" name="text_star" xy="689,574" size="40,19" group="n21_qbyp" fontSize="12" color="#ffffff" text="已收藏"/>
+    <group id="n21_qbyp" name="node_star" xy="660,571" size="69,25" group="n24_qbyp" advanced="true"/>
+    <component id="n22_qbyp" name="btn_next" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="741,362" size="22,36" group="n24_qbyp">
+      <Button icon="ui://3wc7qwagqbypkvpj"/>
+    </component>
+    <component id="n23_qbyp" name="btn_prev" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="260,362" size="22,36" group="n24_qbyp" scale="-1,1">
+      <Button icon="ui://3wc7qwagqbypkvpj"/>
+    </component>
+    <group id="n24_qbyp" name="Root" xy="260,153" size="503,461" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+  <transition name="left">
+    <item time="0" type="XY" target="n24_qbyp" tween="true" startValue="260,-" endValue="1,-,0.001,0.199" duration="9"/>
+  </transition>
+  <transition name="center">
+    <item time="0" type="XY" target="n24_qbyp" tween="true" startValue="1,-,0.001,0.199" endValue="260,-,0.254,0.199" duration="9"/>
+  </transition>
+</component>

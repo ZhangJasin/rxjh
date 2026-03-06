@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="120,140">
+  <displayList>
+    <image id="n12_my28" name="img_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="24,5" size="64,64" aspect="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n11_gval" name="commonItem" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="24,5" size="64,64">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n4_f0so" name="text_task" xy="0,106" pivot="0,0.5" anchor="true" size="120,52" fontSize="18" color="#ffffff" autoSize="none" text="完成规定任务">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

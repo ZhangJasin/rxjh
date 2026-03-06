@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="bzmikhgu">
+  <resources>
+    <image id="itla5" name="rank_icon1.png" path="/Images/" exported="true"/>
+    <image id="itla6" name="rank_icon2.png" path="/Images/" exported="true"/>
+    <image id="itla7" name="rank_icon3.png" path="/Images/" exported="true"/>
+    <component id="itlag" name="RankPanel.xml" path="/" exported="true"/>
+    <component id="itlah" name="btn_close.xml" path="/Components/" exported="true"/>
+    <component id="itlam" name="item_group.xml" path="/Components/" exported="true"/>
+    <component id="itlan" name="item_menu.xml" path="/Components/" exported="true"/>
+    <component id="itlao" name="item_rank.xml" path="/Components/" exported="true"/>
+    <component id="id4uy" name="item_child.xml" path="/Components/" exported="true"/>
+    <component id="nsq9z" name="item_info.xml" path="/Components/" exported="true"/>
+    <image id="pl2t12" name="rank_arrow.png" path="/Images/" exported="true" scale="9grid" scale9grid="9,98,18,196"/>
+    <component id="pl2t13" name="btn_arrow.xml" path="/Components/" exported="true"/>
+    <image id="v75j15" name="rank_bottom.png" path="/Images/" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="v75j16" name="rank_top.png" path="/Images/"/>
+    <image id="v75j17" name="rank_item_bg.png" path="/Images/"/>
+    <image id="jhgj18" name="P-排行榜-(2)_spec.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

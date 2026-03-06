@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="250,28" extention="Slider">
+  <displayList>
+    <image id="n0_juj0" name="n0" src="11iqkvpo" fileName="Images/new/进度条底9.png" xy="0,0" size="250,28">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_juj0" name="bar" src="11iqkvpq" fileName="Images/new/进度条蓝9.png" xy="3,4" size="214,20"/>
+    <component id="n3_rmnb" name="grip" src="juj014" fileName="Components/slider_grip.xml" xy="217,0">
+      <relation target="n1_juj0" sidePair="right-right"/>
+    </component>
+  </displayList>
+  <Slider titleType="value" wholeNumbers="true"/>
+</component>

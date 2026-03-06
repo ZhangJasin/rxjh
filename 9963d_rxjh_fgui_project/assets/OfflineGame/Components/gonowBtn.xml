@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,60" pivot="0.5,0.5" extention="Button">
+  <displayList>
+    <image id="n0_vzpx" name="n0" src="vzpxd" fileName="image/绿二级按钮.png" xy="0,0" size="200,62"/>
+    <text id="n1_vzpx" name="n1" xy="0,0" size="200,62" fontSize="24" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="立即前往"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>

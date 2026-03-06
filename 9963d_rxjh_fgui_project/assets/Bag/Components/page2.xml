@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="464,88">
+  <displayList>
+    <image id="n71_fa8p" name="img_di_2" src="lt7hvnx" fileName="Images/img_input_di.png" xy="0,0" size="464,88">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n340_q8ir" name="Shili" src="r8pbvoo" fileName="Components/item_attr_1.xml" xy="10,9" size="220,32" group="n344_se4s">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n341_q8ir" name="mingSheng" src="r8pbvoo" fileName="Components/item_attr_1.xml" xy="234,9" size="220,32" group="n344_se4s">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n344_se4s" name="n344" xy="10,9" size="444,32"/>
+    <component id="n342_q8ir" name="dengJi" src="r8pbvoo" fileName="Components/item_attr_1.xml" xy="10,47" size="220,32" group="n345_se4s">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n343_q8ir" name="liLian" src="r8pbvoo" fileName="Components/item_attr_1.xml" xy="234,47" size="220,32" group="n345_se4s">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n345_se4s" name="n345" xy="10,47" size="444,32"/>
+  </displayList>
+</component>

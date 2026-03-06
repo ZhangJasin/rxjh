@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="90,30" extention="Label">
+  <displayList>
+    <component id="n1_juj0" name="title" src="juj010" fileName="Components/title_item.xml" xy="0,0"/>
+    <loader id="n2_juj0" name="icon" xy="92,15" pivot="0,0.5" anchor="true" size="50,50" vAlign="middle"/>
+  </displayList>
+</component>

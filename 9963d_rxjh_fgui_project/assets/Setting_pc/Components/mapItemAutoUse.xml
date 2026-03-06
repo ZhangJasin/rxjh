@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="454,22" extention="Label">
+  <displayList>
+    <component id="n216_fskg" name="enable" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="0,0" aspect="true"/>
+    <richtext id="n217_fskg" name="title" xy="25,1" size="102,19" fontSize="12" color="#fcf1bf" ubb="true" autoClearText="true" text="生命低于[color=#00FF00]70[/color]时使用">
+      <relation target="" sidePair=""/>
+    </richtext>
+    <component id="n218_fskg" name="slider" src="bk1i6a" fileName="Components/slider_blue.xml" xy="156,1">
+      <Slider value="50" max="100"/>
+    </component>
+    <component id="n219_fskg" name="check" src="f2ul4w" fileName="Components/btn_check.xml" xy="390,1"/>
+  </displayList>
+</component>

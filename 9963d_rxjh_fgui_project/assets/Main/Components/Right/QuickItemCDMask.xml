@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="53,53" extention="ProgressBar">
+  <displayList>
+    <image id="n2_r52e" name="bar" src="ld2evog" fileName="image/mask_circle.png" pkg="st7dgeqq" xy="0,0" size="53,53" fillMethod="radial360" fillClockwise="false" fillAmount="75"/>
+  </displayList>
+  <ProgressBar/>
+</component>

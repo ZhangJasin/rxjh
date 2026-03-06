@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="62,62">
+  <displayList>
+    <image id="n150_nz0t" name="n150" src="z7bgvan" fileName="Images/Right/main_quick_bg.png" xy="0,0"/>
+    <component id="n133_z7bg" name="Button_add" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="31,31" pivot="0.5,0.5" anchor="true" size="30,30">
+      <Button icon="ui://zj419n3dz7bgvam"/>
+    </component>
+    <component id="n152_bojo" name="Button_icon" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="3,3" size="53,53" group="n151_nz0t"/>
+    <component id="n149_r52e" name="Progress_mask" src="r52evat" fileName="Components/Right/QuickItemCDMask.xml" xy="4,4" size="53,53" group="n151_nz0t" touchable="false">
+      <ProgressBar value="100" max="100"/>
+    </component>
+    <text id="n142_z7bg" name="Text_count" xy="31,40" pivot="0.5,0" anchor="true" size="54,26" group="n151_nz0t" fontSize="18" color="#ffffff" strokeColor="#000000" autoClearText="true" text="99999"/>
+    <group id="n151_nz0t" name="Group_item" xy="3,3" size="54,62" visible="false" advanced="true"/>
+  </displayList>
+</component>

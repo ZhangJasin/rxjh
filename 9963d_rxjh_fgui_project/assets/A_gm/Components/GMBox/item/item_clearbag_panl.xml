@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="600,450" bgColorEnabled="true">
+  <displayList>
+    <image id="n1_ih0u" name="n1" src="oqrpt" fileName="Images/0tongyong/srbbg.png" xy="164,95" size="273,43"/>
+    <text id="n9_ih0u" name="srk1" xy="169,96" size="200,42" fontSize="20" color="#ffffff" autoSize="none" text="" input="true" prompt="角色名：不填则自己"/>
+    <component id="n13_v0ag" name="btn1" src="oqrpu" fileName="Components/GMBox/Button.xml" xy="220,205"/>
+  </displayList>
+</component>

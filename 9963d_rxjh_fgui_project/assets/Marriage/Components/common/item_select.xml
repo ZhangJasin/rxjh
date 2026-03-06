@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="68,68">
+  <controller name="c2" pages="0,可添加物品,1,不可添加物品" selected="0"/>
+  <displayList>
+    <image id="n0_o4l6" name="n0" src="ler34k" fileName="Images/04duanzao/kuangdi1.png" pkg="fgihxfye" xy="0,0" pivot="0.5,0.5" size="68,68"/>
+    <image id="n2_o4l6" name="n4" src="ler34p" fileName="Images/04duanzao/jia2.png" pkg="fgihxfye" xy="33,35" pivot="0.5,0.5" anchor="true">
+      <gearDisplay2 controller="c2" pages="0" condition="0"/>
+    </image>
+    <component id="n5_o4l6" name="itemRoot" src="ger553" fileName="Components/tongyong/itemRoot.xml" pkg="fgihxfye" xy="0,0"/>
+    <loader id="n8_eoqr" name="n8" xy="0,0" size="68,68"/>
+  </displayList>
+</component>

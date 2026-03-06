@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="44,44" pivot="0.5,0.5" extention="Button">
+  <displayList>
+    <image id="n30_nojs" name="btn_prev_fast" src="oxr7x" fileName="Images/arrow_up.png" xy="1,43" size="44,44" rotation="-90">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>

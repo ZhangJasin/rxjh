@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="240,27">
+  <displayList>
+    <text id="n0_tbp6" name="n0" xy="7,0" size="89,26" font="SimHei" fontSize="18" color="#fff7d1" vAlign="middle" ubb="true" autoSize="none" text="攻击力"/>
+    <text id="n1_tbp6" name="n1" xy="190,0" pivot="1,0" size="49,26" font="SimHei" fontSize="18" color="#00ff00" align="right" vAlign="middle" text="00000"/>
+    <image id="n2_tbp6" name="n2" src="tbp6c5" fileName="Images/06yuyi/提升箭头.png" pkg="fgihxfye" xy="158,0" size="24,29"/>
+    <text id="n4_jdkj" name="n4" xy="98,0" pivot="1,0" size="49,26" font="SimHei" fontSize="18" color="#00ff00" vAlign="middle" text="00000"/>
+  </displayList>
+</component>

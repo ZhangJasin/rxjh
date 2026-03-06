@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="htd1mfhz">
+  <resources>
+    <component id="oqrp0" name="taskDeliver.xml" path="/" exported="true"/>
+    <image id="oqrp1" name="task_di2.png" path="/Images/0tongyong/" scale="9grid" scale9grid="32,58,64,116"/>
+    <component id="oqrp2" name="itemRoot.xml" path="/Components/tongyong/"/>
+    <image id="oqrp3" name="task_di1.png" path="/Images/0tongyong/"/>
+    <component id="oqrp4" name="bag_item2.xml" path="/Components/tongyong/"/>
+    <image id="oqrp5" name="kuangdi2.png" path="/Images/04duanzao/" scale="9grid" scale9grid="8,8,16,16" duplicatePadding="true"/>
+    <component id="oqrp6" name="kongbg.xml" path="/Components/tongyong/"/>
+    <component id="oqrp7" name="Button_task.xml" path="/Components/tongyong/"/>
+    <image id="oqrp8" name="task_btn.png" path="/Images/0tongyong/"/>
+    <component id="oqrp9" name="gxhdpanl2.xml" path="/Components/zhizhao/"/>
+    <image id="oqrpa" name="gxhddi.png" path="/Images/0tongyong/"/>
+    <image id="oqrpb" name="gxhd.png" path="/Images/0tongyong/"/>
+    <component id="oqrpc" name="closebtn_yuan.xml" path="/Components/tongyong/"/>
+    <image id="oqrpd" name="close_yuan.png" path="/Images/0tongyong/"/>
+    <component id="oqrpe" name="itemkuang2.xml" path="/Components/tongyong/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

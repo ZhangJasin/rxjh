@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="84,28" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="buttonKind" exported="true" pages="0,红色,1,绿色" selected="0"/>
+  <displayList>
+    <image id="n0_nojs" name="n0" src="emvc5c" fileName="image/btn_first_green.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="button" pages="0"/>
+      <gearDisplay2 controller="buttonKind" pages="1" condition="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_nojs" name="n1" src="emvc5c" fileName="image/btn_first_green.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+      <gearDisplay2 controller="buttonKind" pages="1" condition="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_nojs" name="n2" src="emvc5c" fileName="image/btn_first_green.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="button" pages="2"/>
+      <gearDisplay2 controller="buttonKind" pages="1" condition="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_nojs" name="n3" src="emvc5c" fileName="image/btn_first_green.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="button" pages="3"/>
+      <gearDisplay2 controller="buttonKind" pages="1" condition="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n5_7c35" name="n5" src="emvc3f" fileName="image/btn_first_red.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="buttonKind" pages="0"/>
+      <gearDisplay2 controller="button" pages="0" condition="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n6_7c35" name="n6" src="emvc3f" fileName="image/btn_first_red.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="buttonKind" pages="0"/>
+      <gearDisplay2 controller="button" pages="1" condition="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n7_7c35" name="n7" src="emvc3f" fileName="image/btn_first_red.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="buttonKind" pages="0"/>
+      <gearDisplay2 controller="button" pages="2" condition="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n8_7c35" name="n8" src="emvc3f" fileName="image/btn_first_red.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="buttonKind" pages="0"/>
+      <gearDisplay2 controller="button" pages="3" condition="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n4_nojs" name="title" xy="0,0" size="84,28" fontSize="12" color="#fced00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>
