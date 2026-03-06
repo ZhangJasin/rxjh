@@ -66,6 +66,8 @@
     <image id="rg4i1s" name="WuXun_15023.png" path="/Images/00Creat/" exported="true"/>
     <image id="rg4i1t" name="WuXun_15024.png" path="/Images/00Creat/" exported="true"/>
     <image id="rg4i1u" name="WuXun_15025.png" path="/Images/00Creat/" exported="true"/>
+    <image id="ff7i1y" name="icon_hddt.png" path="/Images/0righttop/"/>
+    <component id="ff7i20" name="btn_hddt.xml" path="/Components/righttop/"/>
   </resources>
   <publish name=""/>
 </packageDescription>
