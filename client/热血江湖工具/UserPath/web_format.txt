@@ -1,0 +1,3 @@
+//webgl图集压缩修改为ASTC_4x4
+//配置开启的文件夹,如下
+//Image/private/main

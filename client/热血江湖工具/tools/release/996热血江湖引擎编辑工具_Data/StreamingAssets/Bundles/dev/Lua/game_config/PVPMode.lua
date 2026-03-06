@@ -1,0 +1,51 @@
+local config = { 
+	[0] = { 
+		ID=0,
+		Name="全体模式",
+		Desc="可以攻击任何目标",
+		CanSelect=1,
+		Order=0,
+		Script="pkmodel0",
+	},
+	[1] = { 
+		ID=1,
+		Name="和平模式",
+		Desc="只攻击怪物",
+		CanSelect=1,
+		Order=1,
+		Script="pkmodel1",
+	},
+	[2] = { 
+		ID=2,
+		Name="组队模式",
+		Desc="不攻击同队伍玩家",
+		CanSelect=1,
+		Order=2,
+		Script="pkmodel2",
+	},
+	[3] = { 
+		ID=3,
+		Name="门派模式",
+		Desc="不攻击同行会玩家",
+		CanSelect=1,
+		Order=3,
+		Script="pkmodel3",
+	},
+	[4] = { 
+		ID=4,
+		Name="善恶模式",
+		Desc="只攻击PK值大于0的",
+		CanSelect=1,
+		Order=4,
+		Script="pkmodel4",
+	},
+	[5] = { 
+		ID=5,
+		Name="阵营模式",
+		Desc="不攻击同阵营玩家（正邪）",
+		CanSelect=1,
+		Order=5,
+		Script="pkmodel5",
+	},
+}
+return config

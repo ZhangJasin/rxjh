@@ -1,0 +1,114 @@
+{
+  "disableTypeTree": true,
+  "encryptAssetBundle": false,
+  "directories": [
+    {
+      "dir": "Image",
+      "type": "sprite",
+      "build": "eachFolder",
+      "package": 1,
+      "modelAnimtionType": 0,
+      "textureCompression": null,
+      "ignoreExtensions": ""
+    },
+    {
+      "dir": "ImageBG",
+      "type": "singleSprite",
+      "build": null,
+      "package": 1,
+      "modelAnimtionType": 0,
+      "textureCompression": null,
+      "ignoreExtensions": ""
+    },
+    {
+      "dir": "FXFrame",
+      "type": "sprite",
+      "build": "eachFolder",
+      "package": 1,
+      "modelAnimtionType": 0,
+      "textureCompression": null,
+      "ignoreExtensions": ""
+    },
+    {
+      "dir": "Icon",
+      "type": "singleSprite",
+      "build": null,
+      "package": 1,
+      "modelAnimtionType": 0,
+      "textureCompression": null,
+      "ignoreExtensions": ""
+    },
+    {
+      "dir": "Font",
+      "type": "",
+      "build": null,
+      "package": 1,
+      "modelAnimtionType": 0,
+      "textureCompression": null,
+      "ignoreExtensions": ""
+    },
+    {
+      "dir": "Lua",
+      "type": "",
+      "build": "folder",
+      "package": 1,
+      "modelAnimtionType": 0,
+      "textureCompression": null,
+      "ignoreExtensions": ""
+    },
+    {
+      "dir": "Data_config",
+      "type": "",
+      "build": "eachFolder",
+      "package": 1,
+      "modelAnimtionType": 0,
+      "textureCompression": null,
+      "ignoreExtensions": ""
+    },
+    {
+      "dir": "Map/Minimap",
+      "type": "singleSprite",
+      "build": null,
+      "package": 3,
+      "modelAnimtionType": 0,
+      "textureCompression": null,
+      "ignoreExtensions": ""
+    },
+    {
+      "dir": "Model/Suit",
+      "type": "",
+      "build": null,
+      "package": 3,
+      "modelAnimtionType": 0,
+      "textureCompression": "CompressedHQ",
+      "ignoreExtensions": ".mat,.mesh,.png"
+    },
+    {
+      "dir": "Prefab/UI",
+      "type": "",
+      "build": null,
+      "package": 1,
+      "modelAnimtionType": 0,
+      "textureCompression": null,
+      "ignoreExtensions": ""
+    },
+    {
+      "dir": "FGUIExport",
+      "type": "eachSubFolder",
+      "build": null,
+      "package": 1,
+      "modelAnimtionType": 0,
+      "textureCompression": null,
+      "ignoreExtensions": ""
+    },
+    {
+      "dir": "Video",
+      "type": "",
+      "build": "copy",
+      "package": 1,
+      "modelAnimtionType": 0,
+      "textureCompression": null,
+      "ignoreExtensions": ""
+    }
+  ]
+}

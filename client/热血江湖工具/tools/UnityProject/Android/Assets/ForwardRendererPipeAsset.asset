@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944246e8d4d2a8344b07f91cdd8e110e, type: 3}
+  m_Name: ForwardRendererPipeAsset
+  m_EditorClassIdentifier: 
+  useCameraRelativeRendering: 0
+  isUseMDCustomPipeline: 1
+  supportsDynamicBatching: 0
+  lightsUseLinearIntensity: 1
+  tonemapMode: 2
+  renderTargetFormat: 22
+  msaaQuality: 1
+  aaSetting: 3
+  smaaAreaTex: {fileID: 0}
+  smaaSearchTex: {fileID: 0}
+  antialiasingQuality: 0
+  depthBufferBits: 32
+  defaultDepthTargetFormat: 14
+  gammaSpaceUI: 1
+  renderScale: 1
+  renderSceneScale: 1
+  CharacterShadowReslution: 1024
+  MainLightShadowReslution: 1024
+  additionalLightsRenderingMode: 1
+  additionalLightsPerObjectLimit: 32
+  supportsAdditionalLightShadows: 0
+  useLightShadowBias: 1
+  additionalLightsShadowDefaultResolutionTier: 1
+  additionalLightsShadowReslution: 1024
+  additionalLightsShadowDistance: 30
+  additionalLightsShadowCascadeBorder: 0.2
+  noPointLightShadow: 1
+  lightFalloffSRP: 0
+  CBFREnable: 0
+  CBFR_LightDistance: 500
+  CBFR_MaxLightPerCluster: 16
+  CBFR_XRES: 32
+  CBFR_YRES: 16
+  CBFR_ZRES: 64
+  mainLightShadowEnable: 0
+  softShadow: 1
+  shadowDepthBias: 0.3
+  shadowNormalBias: 0.3
+  shadowDistance: 40
+  shadowNearPlane: 1
+  mainLightShadowCascadeBorder: 0
+  shadowCascadesCount: 1
+  MainLightShadowDistance: 0.25
+  cascade4Split: {x: 0.067, y: 0.2, z: 0.467}
+  cascadeCacheUpdateLow: 1
+  OpaqueTextureDawnSample: 0.5
+  effectSetting: {fileID: 11400000, guid: 8fcbe91b7826aac42a3586bc74286094, type: 2}
+  generateOpaqueTexture: 1
+  generateDepthTexture: 1
+  UseSrpBatcher: 1
+  RecoverZBufferForUI: 0
+  RenderToRTNoPostEffect: 0
+  Is_Platform_Windows: 0
+  drawDiyCloud: 0
+  HasPreZPass: 1
+  HasTransparentPreZ: 0
+  HasTransparentLightMapObj: 0
+  HasSSRims: 0
+  UseAlphaForBloom: 0
+  HasColorCorrectionForUIAndScene: 0
+  UiAndSceneLUT: {fileID: 0}
+  HasPBRValidator: 0
+  debugOverDrawEnable: 0

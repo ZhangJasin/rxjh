@@ -1,0 +1,4 @@
+//webgl图集最大尺寸修改为2048
+//配置开启的文件夹,如下
+//Image/private/buff_icon
+
