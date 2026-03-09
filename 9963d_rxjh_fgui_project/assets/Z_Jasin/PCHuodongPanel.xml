@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <displayList>
+    <component id="n7_rqcp" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n2_ff7i" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="833,188" size="30,30">
+      <relation target="n7_rqcp" sidePair="right-right,top-top"/>
+    </component>
+    <text id="n1_ff7i" name="text_title" xy="465,176" size="68,24" font="ui://st7dgeqq9kdgkvpj" fontSize="16" color="#9aafbb" text="活动大厅">
+      <relation target="n7_rqcp" sidePair="center-center,top-top"/>
+    </text>
+  </displayList>
+</component>

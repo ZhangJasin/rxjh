@@ -7,7 +7,9 @@
     <component id="n4_rqcp" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,50">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n2_ff7i" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78"/>
+    <component id="n2_ff7i" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78">
+      <relation target="n4_rqcp" sidePair="right-right,top-top"/>
+    </component>
     <text id="n1_ff7i" name="text_title" xy="618,62" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="活动大厅">
       <relation target="n4_rqcp" sidePair="center-center,top-top"/>
     </text>

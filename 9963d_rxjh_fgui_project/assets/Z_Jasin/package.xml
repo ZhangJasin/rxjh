@@ -2,6 +2,7 @@
 <packageDescription id="cog9akwf">
   <resources>
     <component id="ff7i3" name="HuodongPanel.xml" path="/" exported="true"/>
+    <component id="rqcp4" name="PCHuodongPanel.xml" path="/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
