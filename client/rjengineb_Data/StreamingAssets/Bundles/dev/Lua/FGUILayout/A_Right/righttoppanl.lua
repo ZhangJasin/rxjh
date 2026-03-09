@@ -90,7 +90,12 @@ function righttoppanl:Create()
     end)
     -- 充值按钮点击事件绑定
     FGUI:setOnClickEvent(self._righttop.btn_bill, function()
-        FGUI:Open("Recharge", "RechargePanel", {}, FGUI_LAYER.NORMAL, { destroyTime = 1 })
+        --TODO:原底板切换不同端UI
+        if isPC then
+            FGUI:Open("Recharge_pc", "PCRechargePanel", {}, FGUI_LAYER.NORMAL, { destroyTime = 1 })
+        else
+            FGUI:Open("Recharge", "RechargePanel", {}, FGUI_LAYER.NORMAL, { destroyTime = 1 })
+        end
     end)
 
     -- 活动大厅按钮点击事件绑定
