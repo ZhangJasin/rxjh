@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="cog9akwf">
   <resources>
-    <component id="ff7i3" name="HuodongPanel.xml" path="/"/>
+    <component id="ff7i3" name="HuodongPanel.xml" path="/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
