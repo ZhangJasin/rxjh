@@ -3,6 +3,10 @@
   <resources>
     <component id="ff7i3" name="HuodongPanel.xml" path="/" exported="true"/>
     <component id="rqcp4" name="PCHuodongPanel.xml" path="/" exported="true"/>
+    <image id="rqcp6" name="1.png" path="/Images/"/>
+    <component id="rqcpc" name="btn_page.xml" path="/Components/"/>
+    <component id="rqcpf" name="Changwan.xml" path="/" exported="true"/>
+    <component id="rqcph" name="Yueka.xml" path="/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
