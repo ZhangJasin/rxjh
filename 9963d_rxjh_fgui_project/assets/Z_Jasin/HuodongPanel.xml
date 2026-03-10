@@ -14,5 +14,7 @@
       <relation target="n4_rqcp" sidePair="center-center,top-top"/>
     </text>
     <image id="n6_rqcp" name="xian" src="rqcp6" fileName="Images/1.png" xy="357,105" size="590,4" rotation="90"/>
+    <component id="n36_rqcp" name="btn_page1" src="rqcpc" fileName="Components/btn_page.xml" xy="181,114" visible="false" controller="btn_name,0,isSelected,0"/>
+    <component id="n37_rqcp" name="btn_page2" src="rqcpc" fileName="Components/btn_page.xml" xy="181,175" visible="false" controller="btn_name,1,isSelected,1"/>
   </displayList>
 </component>

@@ -7,6 +7,9 @@
     <component id="rqcpc" name="btn_page.xml" path="/Components/"/>
     <component id="rqcpf" name="Changwan.xml" path="/" exported="true"/>
     <component id="rqcph" name="Yueka.xml" path="/" exported="true"/>
+    <component id="rqcpi" name="btn_page_pc.xml" path="/Components/"/>
+    <component id="rqcpk" name="PCChangwan.xml" path="/" exported="true"/>
+    <component id="rqcpl" name="PCYueka.xml" path="/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

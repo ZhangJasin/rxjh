@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="110,34" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="btn_name" exported="true" pages="0,畅 玩 特 权,1,月 卡" selected="1"/>
+  <controller name="isSelected" exported="true" pages="0,选中,1,未选中" selected="1"/>
+  <displayList>
+    <image id="n0_rqcp" name="n0" src="emvc4y" fileName="image/btn_green_normal2.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="isSelected" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n1_rqcp" name="n1" src="emvc50" fileName="image/btn_green_selected2.png" pkg="qa9a7rit" xy="0,0">
+      <gearDisplay controller="isSelected" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n2_rqcp" name="title" xy="55,17" pivot="0.5,0.5" anchor="true" size="108,32" font="ui://st7dgeqq9kdgkvpj" fontSize="16" color="#c5dccc" align="center" vAlign="middle" autoSize="none" strokeColor="#28422f" singleLine="true" text="月 卡">
+      <gearColor controller="isSelected" pages="1" values="#c5dccc,#28422f" default="#ffd86c,#28422f"/>
+      <gearText controller="btn_name" pages="1" values="月 卡" default="畅 玩 特 权"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>

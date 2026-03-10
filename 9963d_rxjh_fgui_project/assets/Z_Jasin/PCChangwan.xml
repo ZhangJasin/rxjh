@@ -11,7 +11,7 @@
       <relation target="n7_rqcp" sidePair="center-center,top-top"/>
     </text>
     <image id="n8_rqcp" name="xian" src="rqcp6" fileName="Images/1.png" xy="300,206" size="390,4" rotation="90"/>
-    <component id="n10_rqcp" name="btn_page1" src="rqcpi" fileName="Components/btn_page_pc.xml" xy="183,211" visible="false" controller="btn_name,0,isSelected,0"/>
-    <component id="n11_rqcp" name="btn_page2" src="rqcpi" fileName="Components/btn_page_pc.xml" xy="183,251" visible="false" controller="btn_name,1,isSelected,1"/>
+    <component id="n10_rqcp" name="btn_page1" src="rqcpi" fileName="Components/btn_page_pc.xml" xy="183,211" controller="btn_name,0,isSelected,0"/>
+    <component id="n11_rqcp" name="btn_page2" src="rqcpi" fileName="Components/btn_page_pc.xml" xy="183,251" controller="btn_name,1,isSelected,1"/>
   </displayList>
 </component>

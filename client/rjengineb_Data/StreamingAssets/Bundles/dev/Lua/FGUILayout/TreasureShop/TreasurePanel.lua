@@ -19,9 +19,7 @@ function TreasurePanel:InitData()
     self._cur_cT = 1                                                       -- 当前货币类型
     self._pageValues = SL:GetValue("NPC_STORE_PAGES_BY_GROUP", self._group) -- storeGroup表中PagesName
     self._costFilterListData = {}                                          -- 货币list的数据
-    self._current_storeData = {}                                           -- 最终显示的商品信息
-    SL:dump(self._pageValues)
-    SL:dump(self._current_storeData)
+    self._current_storeData = {}                                          -- 最终显示的商品信息
 end
 
 -- 获取所有需要用组件和控制器
