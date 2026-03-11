@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="75,75">
+  <displayList>
+    <image id="n0_rqcp" name="n0" src="rqcpn" fileName="Images/icon_item1.png" xy="6,6"/>
+    <component id="n1_rqcp" name="commonItem" src="emvc3" fileName="Icons/CommonItem.xml" pkg="qa9a7rit" xy="15,15"/>
+  </displayList>
+</component>

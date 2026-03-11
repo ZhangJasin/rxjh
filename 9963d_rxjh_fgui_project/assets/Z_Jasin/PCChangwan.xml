@@ -13,5 +13,14 @@
     <image id="n8_rqcp" name="xian" src="rqcp6" fileName="Images/1.png" xy="300,206" size="390,4" rotation="90"/>
     <component id="n10_rqcp" name="btn_page1" src="rqcpi" fileName="Components/btn_page_pc.xml" xy="183,211" controller="btn_name,0,isSelected,0"/>
     <component id="n11_rqcp" name="btn_page2" src="rqcpi" fileName="Components/btn_page_pc.xml" xy="183,251" controller="btn_name,1,isSelected,1"/>
+    <component id="n12_rqcp" name="item1" src="rqcpm" fileName="Components/item_pc.xml" xy="323,292"/>
+    <component id="n13_rqcp" name="item2" src="rqcpm" fileName="Components/item_pc.xml" xy="425,292" size="75,75"/>
+    <component id="n14_rqcp" name="item3" src="rqcpm" fileName="Components/item_pc.xml" xy="527,292" size="75,75"/>
+    <component id="n15_rqcp" name="item4" src="rqcpm" fileName="Components/item_pc.xml" xy="629,292" size="75,75"/>
+    <component id="n16_rqcp" name="item5" src="rqcpm" fileName="Components/item_pc.xml" xy="731,292" size="75,75"/>
+    <component id="n18_rqcp" name="item6" src="rqcpm" fileName="Components/item_pc.xml" xy="375,386" size="75,75"/>
+    <component id="n19_rqcp" name="item9" src="rqcpm" fileName="Components/item_pc.xml" xy="681,386" size="75,75"/>
+    <component id="n20_rqcp" name="item7" src="rqcpm" fileName="Components/item_pc.xml" xy="477,386" size="75,75"/>
+    <component id="n21_rqcp" name="item8" src="rqcpm" fileName="Components/item_pc.xml" xy="579,386" size="75,75"/>
   </displayList>
 </component>

@@ -10,6 +10,8 @@
     <component id="rqcpi" name="btn_page_pc.xml" path="/Components/"/>
     <component id="rqcpk" name="PCChangwan.xml" path="/" exported="true"/>
     <component id="rqcpl" name="PCYueka.xml" path="/" exported="true"/>
+    <component id="rqcpm" name="item_pc.xml" path="/Components/"/>
+    <image id="rqcpn" name="icon_item1.png" path="/Images/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

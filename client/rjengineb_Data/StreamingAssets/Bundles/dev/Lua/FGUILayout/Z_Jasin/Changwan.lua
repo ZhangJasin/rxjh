@@ -1,5 +1,6 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local Changwan = class("Changwan", BaseFGUILayout)
+local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 
 function Changwan:Create()
     self._ui = FGUI:ui_delegate(self.component)
@@ -16,6 +17,33 @@ function Changwan:Create()
 
         FGUI:Close("Z_Jasin", isPC and "PCChangwan" or "Changwan")
     end)
+
+    --加载item
+    local itemLst = {
+        [1] = 1319,
+        [2] = 1320,
+        [3] = 1321,
+        [4] = 1322,
+        [5] = 1323,
+        [6] = 1324,
+        [7] = 1325,
+        [8] = 1326,
+        [9] = 1327,
+    }
+    for i, v in ipairs(itemLst) do
+        local item = FGUI:GetChild(self._ui["item" .. i], "commonItem")
+        ItemUtil:RefreshItemUIByData(item, SL:GetValue("ITEM_DATA", v))
+        FGUI:setOnRollOverEvent(item, function()
+            local tipData = {}
+            tipData.itemData = SL:GetValue("ITEM_DATA", v)
+            tipData.hideCompare = true
+            tipData.hideButtons = true
+            FGUIFunction:OpenItemTips(tipData)
+        end)
+        FGUI:setOnRollOutEvent(item, function()
+            FGUIFunction:CloseItemTips()
+        end)
+    end
 end
 
 function Changwan:Destroy()
