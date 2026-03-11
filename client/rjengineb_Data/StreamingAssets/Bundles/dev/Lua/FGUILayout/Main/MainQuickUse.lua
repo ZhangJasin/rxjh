@@ -206,10 +206,14 @@ function MainQuickUse:OnItemRenderListQuick(index, item)
         local selectIndex = self.selectIndex
         self:OnHideSelect()
         if not selectIndex then return end
-        self:SetItemIndex(selectIndex, data.Index)
+        local itemIndex = nil
+        if self.quickBarIds[selectIndex] ~= data.Index then
+            itemIndex = data.Index
+        end  
+        self:SetItemIndex(selectIndex, itemIndex)
         local box = self._boxs[selectIndex]
         if box then
-            box:SetItem(data.Index)
+            box:SetItem(itemIndex)
         end
     end})
     ItemUtil:SetLongPressOrClick(itemShow.component, nil, function()
@@ -229,6 +233,7 @@ function MainQuickUse:SaveQuickIds()
     for i = 1, BOX_COUNT do
         str = str .. (self.quickBarIds[i] or "") .. "|"
     end
+    SL:print("SaveQuickIds11111===",str)
     SL:SetLocalString(SAVE_KEY, str)
     -- dump(self.quickBarIds, "quickBarIds2")
     ssrMessage:sendmsgEx("quickItem", "AttrData",self.quickBarIds)
