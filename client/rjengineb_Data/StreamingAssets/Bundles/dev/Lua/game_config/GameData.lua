@@ -149,7 +149,7 @@ local config = {
 	},
 	["GuildMsgFColor"] = { 
 		k="GuildMsgFColor",
-		value=219,
+		value=254,
 	},
 	["GroupMsgFColor"] = { 
 		k="GroupMsgFColor",
@@ -169,7 +169,7 @@ local config = {
 	},
 	["GreenMsgFColor"] = { 
 		k="GreenMsgFColor",
-		value=219,
+		value=254,
 	},
 	["QvFuMsgFColor"] = { 
 		k="QvFuMsgFColor",
@@ -237,7 +237,7 @@ local config = {
 	},
 	["InSafeDisableDrop"] = { 
 		k="InSafeDisableDrop",
-		value=0,
+		value=1,
 	},
 	["CanDropPrice"] = { 
 		k="CanDropPrice",
@@ -257,7 +257,7 @@ local config = {
 	},
 	["BagAddSendMail"] = { 
 		k="BagAddSendMail",
-		value=1,
+		value=0,
 	},
 	["AutoPickRange"] = { 
 		k="AutoPickRange",
@@ -285,7 +285,7 @@ local config = {
 	},
 	["guild_Rank"] = { 
 		k="guild_Rank",
-		value="0#帮主#1#127&1#副帮主#2#111&2#长老#200#15&3#精英#200#0&4#成员#200#0",
+		value="0#帮主#1&1#副帮主#2&2#长老#200&3#精英#200&4#成员#200",
 	},
 	["guild_RankSet"] = { 
 		k="guild_RankSet",
@@ -337,7 +337,7 @@ local config = {
 	},
 	["PaimaiMoneyCnt"] = { 
 		k="PaimaiMoneyCnt",
-		value="1#100000#500|2#20000#250",
+		value="2#20000#250|1#100000#500",
 	},
 	["PaimaiDefEffId"] = { 
 		k="PaimaiDefEffId",
@@ -389,7 +389,7 @@ local config = {
 	},
 	["SaveLuaInstance"] = { 
 		k="SaveLuaInstance",
-		value=0,
+		value=1,
 	},
 	["HumViewRange"] = { 
 		k="HumViewRange",
@@ -397,7 +397,7 @@ local config = {
 	},
 	["NewKfDay"] = { 
 		k="NewKfDay",
-		value=0,
+		value=1,
 	},
 	["Arrow_equipment"] = { 
 		k="Arrow_equipment",
