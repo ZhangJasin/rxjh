@@ -233,7 +233,6 @@ function MainQuickUse:SaveQuickIds()
     for i = 1, BOX_COUNT do
         str = str .. (self.quickBarIds[i] or "") .. "|"
     end
-    SL:print("SaveQuickIds11111===",str)
     SL:SetLocalString(SAVE_KEY, str)
     -- dump(self.quickBarIds, "quickBarIds2")
     ssrMessage:sendmsgEx("quickItem", "AttrData",self.quickBarIds)
