@@ -40,19 +40,25 @@ function EquipDuanZao.qianghua(actor, data)
     local qhlv = linkitem(actor, "INTVALUE0")
     local nextlv = qhlv + 1
     local falselv = qhlv - 1 <= 0 and 0 or qhlv - 1
-
+    
     -- 强化等级上限判断  强化15级以上或者加工装备失败
     if qhlv >= 15 or posindex > 5 then
         falselv = -1 -- 装备损坏
     end
-    if nextlv > #EquipQHTab[posindex]['attridList'] then
+    local itemid = linkitem(actor, "INDEX")
+    local qhTabIndex = ItemEquip[itemid]['EquipQHTabId']
+    local curQHTabData = EquipQHTab[posindex]
+    if qhTabIndex then
+        curQHTabData = EquipQHTab[qhTabIndex]
+    end
+    if nextlv > #curQHTabData['attridList'] then
         sendmsg(actor, 9, "已达到当前强化等级上限！")
         return
     end
 
     -- 材料消耗判断
-    local xhitemtab = EquipQHTab[posindex]['xhitemList'][nextlv]
-    local xhnumtab = EquipQHTab[posindex]['xhnumList'][nextlv]
+    local xhitemtab = curQHTabData['xhitemList'][nextlv]
+    local xhnumtab = curQHTabData['xhnumList'][nextlv]
     if type(xhitemtab) == "number" then
         if getItemNum(actor, xhitemtab) < xhnumtab then
             sendmsg(actor, 9, "消耗材料数量不足！")
@@ -69,16 +75,16 @@ function EquipDuanZao.qianghua(actor, data)
 
     -- 成功率计算
     local sum = math.random(1, 100)
-    local basesuc = EquipQHTab[posindex]['sucjl_arr'][nextlv]
+    local basesuc = curQHTabData['sucjl_arr'][nextlv]
     if gxybxh == 1 then
         local ybnum = getItemNum(actor, "元宝")
-        local needyb = EquipQHTab[posindex]['addsucc_arr'][1]
+        local needyb = curQHTabData['addsucc_arr'][1]
         if ybnum < needyb then
             sendmsg(actor, 9, "元宝不足！！")
             return
         end
         delItemNum(actor, "元宝", needyb)
-        basesuc = basesuc + EquipQHTab[posindex]['addsucc_arr'][2]
+        basesuc = basesuc + curQHTabData['addsucc_arr'][2]
     end
 
     -- 材料消耗
@@ -151,11 +157,11 @@ function EquipDuanZao.qianghua(actor, data)
         clearcustomitemabil(actor, -1, 0)
     else
         changecustomitemtext(actor, -1, 0, posindex > 5 and "[加工]" or "[强化]")
-        if type(EquipQHTab[posindex]['attridList'][nextlv]) == "number" then
-            changecustomitemabil(actor, -1, 0, 1, EquipQHTab[posindex]['attridList'][nextlv], EquipQHTab[posindex]['attrList'][nextlv])
+        if type(curQHTabData['attridList'][nextlv]) == "number" then
+            changecustomitemabil(actor, -1, 0, 1, curQHTabData['attridList'][nextlv], curQHTabData['attrList'][nextlv])
         else
-            for i = 1, #EquipQHTab[posindex]['attridList'][nextlv] do
-                changecustomitemabil(actor, -1, 0, i, EquipQHTab[posindex]['attridList'][nextlv][i], EquipQHTab[posindex]['attrList'][nextlv][i])
+            for i = 1, #curQHTabData['attridList'][nextlv] do
+                changecustomitemabil(actor, -1, 0, i, curQHTabData['attridList'][nextlv][i], curQHTabData['attrList'][nextlv][i])
             end
         end
     end

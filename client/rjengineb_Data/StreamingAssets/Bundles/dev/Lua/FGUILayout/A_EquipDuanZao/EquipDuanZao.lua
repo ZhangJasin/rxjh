@@ -332,6 +332,7 @@ function EquipDuanZao:baglist()
         if bagequiplist[index] then
             self.selectEquipStdMode = bagequiplist[index].StdMode
             self.qhequipMakeIndex = bagequiplist[index].MakeIndex
+            self.selectEquipQHTabIndex = SL:GetValue("ITEM_DATA",bagequiplist[index].Index).EquipQHTabId
             self:GetAddItem()
             self:upitem2num()
             self:succfont()
@@ -359,9 +360,10 @@ function EquipDuanZao:equiplist()
         local itemRoot = FGUI:GetChild(context.data, "itemRoot")
         local index = FGUI:GetIntData(itemRoot)
         local selectedIndex = FGUI:GList_getSelectedIndex(self.ListEquip)
-        if equipposlist[index] then
+        if equipposlist[index] then            
             self.selectEquipStdMode = equipposlist[index].StdMode
             self.qhequipMakeIndex = equipposlist[index].MakeIndex
+            self.selectEquipQHTabIndex = SL:GetValue("ITEM_DATA",equipposlist[index].Index).EquipQHTabId
             self:GetAddItem()
             self:upitem2num()
             self:succfont()
@@ -891,6 +893,8 @@ function EquipDuanZao:clearequip()
     end
     self.selectEquipStdMode = 0
     self.qhequipMakeIndex = 0
+    self.selectEquipQHTabIndex = nil
+
     FGUI:setVisible(self.rightbg.xzequip, false)
     FGUI:GList_clearSelection(self.ListBag)
     FGUI:GList_clearSelection(self.ListEquip)
@@ -910,7 +914,11 @@ function EquipDuanZao:upitem2num()
         self:clearitem3()
         return
     end
-    local xhitemtab1, xhnumtab1 = EquipQHTab[equippos3[self.selectEquipStdMode]]['xhitemList'][self.qhequiplv+1], EquipQHTab[equippos3[self.selectEquipStdMode]]['xhnumList'][self.qhequiplv+1]
+    local curQHTabData = EquipQHTab[equippos3[self.selectEquipStdMode]]
+    if self.selectEquipQHTabIndex then
+        curQHTabData = EquipQHTab[self.selectEquipQHTabIndex]
+    end
+    local xhitemtab1, xhnumtab1 = curQHTabData['xhitemList'][self.qhequiplv+1], curQHTabData['xhnumList'][self.qhequiplv+1]
     local xhitemid1, xhitemnum1 = 0, 0
     if type(xhitemtab1) == "number" then
         xhitemid1, xhitemnum1 = xhitemtab1, xhnumtab1
@@ -988,8 +996,12 @@ function EquipDuanZao:succfont()
             gxyb = EquipFYTab[equippos3[self.selectEquipStdMode]]['addsucc_arr'][1]
             gxcgl = EquipFYTab[equippos3[self.selectEquipStdMode]]['addsucc_arr'][2]
         else
-            gxyb = EquipQHTab[equippos3[self.selectEquipStdMode]]['addsucc_arr'][1]
-            gxcgl = EquipQHTab[equippos3[self.selectEquipStdMode]]['addsucc_arr'][2]
+            local curQHTabData = EquipQHTab[equippos3[self.selectEquipStdMode]]
+            if self.selectEquipQHTabIndex then
+                curQHTabData = EquipQHTab[self.selectEquipQHTabIndex]
+            end
+            gxyb = curQHTabData['addsucc_arr'][1]
+            gxcgl = curQHTabData['addsucc_arr'][2]
         end
         if self.checkBoxIsSelected.selectedIndex == 1 then
             basesuc = basesuc + gxcgl
