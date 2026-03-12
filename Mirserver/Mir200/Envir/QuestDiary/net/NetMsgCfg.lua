@@ -17,6 +17,9 @@ ssrNetMsgCfg.npcDialog                     = "npcDialog"                        
 ssrNetMsgCfg.bag                           = "bag"                                                  -- 背包
 ssrNetMsgCfg.MentorShip                    = "MentorShip"                                           -- 师徒
 
+--Z_Jasin
+ssrNetMsgCfg.Changwan                      = "Changwan"                                                --畅玩特权
+
 --自定义消息ID
 ssrNetMsgCfg.USER_MESSAGE_ID  = 1000000
 

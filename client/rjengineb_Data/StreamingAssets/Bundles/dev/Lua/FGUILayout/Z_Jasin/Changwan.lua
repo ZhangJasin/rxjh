@@ -32,18 +32,26 @@ function Changwan:Create()
     }
     for i, v in ipairs(itemLst) do
         local item = FGUI:GetChild(self._ui["item" .. i], "commonItem")
-        ItemUtil:RefreshItemUIByData(item, SL:GetValue("ITEM_DATA", v))
-        FGUI:setOnRollOverEvent(item, function()
-            local tipData = {}
-            tipData.itemData = SL:GetValue("ITEM_DATA", v)
-            tipData.hideCompare = true
-            tipData.hideButtons = true
-            FGUIFunction:OpenItemTips(tipData)
-        end)
-        FGUI:setOnRollOutEvent(item, function()
-            FGUIFunction:CloseItemTips()
-        end)
+        if item then
+            ItemUtil:RefreshItemUIByData(item, SL:GetValue("ITEM_DATA", v))
+            FGUI:setOnRollOverEvent(item, function()
+                local tipData = {}
+                tipData.itemData = SL:GetValue("ITEM_DATA", v)
+                tipData.hideCompare = true
+                tipData.hideButtons = true
+                FGUIFunction:OpenItemTips(tipData)
+            end)
+            FGUI:setOnRollOutEvent(item, function()
+                FGUIFunction:CloseItemTips()
+            end)
+        end
     end
+
+    --领取按钮
+    FGUI:setOnClickEvent(self._ui.btn_sub, function()
+        SL:dump("领取")
+        ssrMessage:sendmsgEx("Changwan", "recv")
+    end)
 end
 
 function Changwan:Destroy()

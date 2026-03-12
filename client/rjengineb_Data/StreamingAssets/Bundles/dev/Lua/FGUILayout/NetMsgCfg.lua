@@ -33,6 +33,10 @@ ssrNetMsgCfg.MentorShipTeach                =  "MentorShipTeach"     --师徒传
 ssrNetMsgCfg.Invitation                     =  "Invitation"     --师徒副本
 ssrNetMsgCfg.BagRecycleViewModel            =  "BagRecycleViewModel"               --自动回收 
 
+--Z_Jasin
+ssrNetMsgCfg.Changwan                       = "Changwan"                   --畅玩特权
+
+
 --自定义消息ID
 ssrNetMsgCfg.USER_MESSAGE_ID  = 1000000
 

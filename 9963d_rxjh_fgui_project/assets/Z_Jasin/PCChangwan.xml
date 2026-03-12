@@ -22,5 +22,8 @@
     <component id="n19_rqcp" name="item9" src="rqcpm" fileName="Components/item_pc.xml" xy="681,386" size="75,75"/>
     <component id="n20_rqcp" name="item7" src="rqcpm" fileName="Components/item_pc.xml" xy="477,386" size="75,75"/>
     <component id="n21_rqcp" name="item8" src="rqcpm" fileName="Components/item_pc.xml" xy="579,386" size="75,75"/>
+    <component id="n25_rqcp" name="btn_sub" src="rqcpo" fileName="Components/btn_sub_pc.xml" xy="507,519">
+      <Button title="领 取" titleColor="#ffd86c" titleFontSize="22"/>
+    </component>
   </displayList>
 </component>
