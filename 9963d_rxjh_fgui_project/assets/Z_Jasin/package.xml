@@ -13,6 +13,8 @@
     <component id="rqcpm" name="item_pc.xml" path="/Components/"/>
     <image id="rqcpn" name="icon_item1.png" path="/Images/"/>
     <component id="rqcpo" name="btn_sub_pc.xml" path="/Components/"/>
+    <component id="rqcpp" name="item.xml" path="/Components/"/>
+    <component id="rqcpr" name="btn_sub.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

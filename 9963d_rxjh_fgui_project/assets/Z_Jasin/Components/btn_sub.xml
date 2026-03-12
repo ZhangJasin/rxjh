@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="136,42" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_rqcp" name="n0" src="je63v3c" fileName="image/btn_first_red.png" pkg="st7dgeqq" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_rqcp" name="title" xy="0,0" size="136,42" font="ui://st7dgeqq9kdgkvpj" fontSize="12" align="center" vAlign="middle" autoSize="none" strokeColor="#28422f" singleLine="true" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

@@ -16,5 +16,17 @@
     <image id="n6_rqcp" name="xian" src="rqcp6" fileName="Images/1.png" xy="357,105" size="590,4" rotation="90"/>
     <component id="n34_rqcp" name="btn_page1" src="rqcpc" fileName="Components/btn_page.xml" xy="181,114" controller="btn_name,0"/>
     <component id="n35_rqcp" name="btn_page2" src="rqcpc" fileName="Components/btn_page.xml" xy="181,175" controller="btn_name,1,isSelected,1"/>
+    <component id="n37_rqcp" name="item1" src="rqcpp" fileName="Components/item.xml" xy="428,247"/>
+    <component id="n38_rqcp" name="item2" src="rqcpp" fileName="Components/item.xml" xy="566,247"/>
+    <component id="n39_rqcp" name="item3" src="rqcpp" fileName="Components/item.xml" xy="704,247"/>
+    <component id="n40_rqcp" name="item4" src="rqcpp" fileName="Components/item.xml" xy="842,247"/>
+    <component id="n43_rqcp" name="item5" src="rqcpp" fileName="Components/item.xml" xy="980,247"/>
+    <component id="n44_rqcp" name="item6" src="rqcpp" fileName="Components/item.xml" xy="492,400"/>
+    <component id="n45_rqcp" name="item7" src="rqcpp" fileName="Components/item.xml" xy="630,400"/>
+    <component id="n46_rqcp" name="item8" src="rqcpp" fileName="Components/item.xml" xy="768,400"/>
+    <component id="n47_rqcp" name="item9" src="rqcpp" fileName="Components/item.xml" xy="906,400"/>
+    <component id="n42_rqcp" name="btn_sub" src="rqcpr" fileName="Components/btn_sub.xml" xy="681,599">
+      <Button title="领 取" titleColor="#ffd86c" titleFontSize="22"/>
+    </component>
   </displayList>
 </component>
