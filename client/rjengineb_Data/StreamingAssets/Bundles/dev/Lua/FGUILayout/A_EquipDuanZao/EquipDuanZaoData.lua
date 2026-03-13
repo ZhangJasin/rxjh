@@ -59,11 +59,21 @@ function EquipDuanZaoData:RequestQiangHua(params)
     ssrMessage:sendmsgEx("EquipDuanZao", "qianghua", params)
 end
 
+-- 强化转移请求
+function EquipDuanZaoData:RequestTransfer(params)
+    ssrMessage:sendmsgEx("EquipDuanZao", "transfer", params)
+end
+
 -- 网络消息回调（由 ssrMessage 注册指向本 data 脚本）
 
 -- 穿戴装备更新
 function EquipDuanZaoData:OnEquipUpdate()
     self:_Emit("equip_update")
+end
+
+-- 强化转移更新回调
+function EquipDuanZaoData:UpdataTransfer(data)
+    self:_Emit("transfer_update", data)
 end
 
 -- 强化更新回调

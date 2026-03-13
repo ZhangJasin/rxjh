@@ -10,7 +10,7 @@
       <gearDisplay controller="button" pages="1,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n2_ijnx" name="title" xy="6,0" size="29,90" font="SimHei" fontSize="20" color="#ffffff" align="center" vAlign="middle" leading="7" autoSize="none" strokeColor="#000000" text="">
+    <text id="n2_ijnx" name="title" xy="6,0" size="29,90" font="SimHei" fontSize="17" color="#ffffff" align="center" vAlign="middle" leading="1" autoSize="none" strokeColor="#000000" text="">
       <gearColor controller="button" pages="1,3" values="#ffff00,#000000|#ffff00,#000000" default="#ffffff,#000000"/>
       <relation target="" sidePair="width-width,height-height"/>
     </text>

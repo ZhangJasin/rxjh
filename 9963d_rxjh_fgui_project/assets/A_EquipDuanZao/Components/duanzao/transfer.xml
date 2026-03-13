@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="500,580">
+  <controller name="additem" exported="true" pages="0,关闭选择框,1,打开选择源装备框,2,打开选择目标装备框,3,打开选择材料框" selected="0"/>
+  <displayList>
+    <image id="n0_ger5" name="n0" src="oqrpr" fileName="Images/04duanzao/rightbg.png" xy="38,12"/>
+    <text id="n1_ger5" name="sourceLabel" xy="214,97" size="76,26" font="SimHei" fontSize="18" color="#fcf1bf" text="源装备："/>
+    <component id="n24_egru" name="sourceEquip" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="215,21">
+      <gearDisplay controller="additem" pages="0,1"/>
+    </component>
+    <text id="n2_ger5" name="targetLabel" xy="212,271" size="94,26" font="SimHei" fontSize="18" color="#fcf1bf" text="目标装备："/>
+    <component id="n25_egru" name="targetEquip" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="215,201">
+      <gearDisplay controller="additem" pages="0,2"/>
+    </component>
+    <text id="n4_ger5" name="sourceInfo" xy="225,42" size="52,24" font="SimHei" fontSize="16" color="#00ff00" text="未选择"/>
+    <text id="n5_ger5" name="sourceLevel" xy="293,98" size="20,24" font="SimHei" fontSize="16" color="#ffff00" align="right" text="+0"/>
+    <text id="n6_ger5" name="targetInfo" xy="224,231" size="52,24" font="SimHei" fontSize="16" color="#00ff00" text="未选择"/>
+    <text id="n7_ger5" name="targetLevel" xy="297,271" size="20,24" font="SimHei" fontSize="16" color="#ffff00" align="right" text="+0"/>
+    <text id="n11_ger5" name="costfont2" xy="128,346" pivot="0,1" size="226,26" font="SimHei" fontSize="18" color="#fcf1bf" autoSize="none" text="消耗材料："/>
+    <component id="n12_ger5" name="costitem1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="228,348" size="27,27"/>
+    <text id="n13_ger5" name="costitemnum" xy="256,351" size="22,26" font="SimHei" fontSize="18" color="#00ff00" text="x5"/>
+    <component id="n21_ger5" name="transferBtn" src="oqrpy" fileName="Components/tongyong/tybtn1.xml" xy="180,431">
+      <Button title="强化转移"/>
+    </component>
+    <component id="n23_s9up" name="panl_additem" src="oqrp12" fileName="Components/duanzao/additempanl.xml" xy="-693,-92">
+      <gearDisplay controller="additem" pages="1,2,3"/>
+    </component>
+  </displayList>
+</component>

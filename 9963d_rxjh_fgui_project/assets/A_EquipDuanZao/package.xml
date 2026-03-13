@@ -39,6 +39,7 @@
     <component id="oqrp1c" name="hecheng.xml" path="/Components/duanzao/"/>
     <component id="oqrp1d" name="juexing.xml" path="/Components/duanzao/"/>
     <component id="oqrp1e" name="fuhun.xml" path="/Components/duanzao/"/>
+    <component id="oqrp1j" name="transfer.xml" path="/Components/duanzao/"/>
     <component id="oqrp1f" name="btn_wenhao.xml" path="/Components/tongyong/"/>
     <image id="oqrp1g" name="wenhao.png" path="/Images/0tongyong/"/>
     <component id="oqrp1h" name="tips.xml" path="/Components/duanzao/"/>

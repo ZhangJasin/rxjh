@@ -367,6 +367,136 @@ function EquipDuanZao.hecheng(actor, data)
     
 end
 
+-- 强化转移功能
+-- @param actor 玩家对象
+-- @param data 参数表 [源装备makeIndex, 目标装备makeIndex, 是否在背包中]
+function EquipDuanZao.transfer(actor, data)
+    local sourceMakeIndex = tostring(data[1])
+    local targetMakeIndex = tostring(data[2])
+    local isBag = tonumber(data[3]) or 0
+    
+    if sourceMakeIndex == "0" or targetMakeIndex == "0" then
+        sendmsg(actor, 9, "请选择源装备和目标装备！")
+        return
+    end
+    
+    if sourceMakeIndex == targetMakeIndex then
+        sendmsg(actor, 9, "源装备和目标装备不能相同！")
+        return
+    end
+    
+    -- 获取源装备信息
+    linkitembymakeindex(actor, sourceMakeIndex)
+    local sourceStdMode = linkitem(actor, "STDMODE")
+    local sourceQhLv = linkitem(actor, "INTVALUE0")
+    local sourceItemId = linkitem(actor, "INDEX")
+    
+    -- 获取目标装备信息
+    linkitembymakeindex(actor, targetMakeIndex)
+    local targetStdMode = linkitem(actor, "STDMODE")
+    local targetQhLv = linkitem(actor, "INTVALUE0")
+    local targetItemId = linkitem(actor, "INDEX")
+    
+    -- 检查装备类型是否相同
+    if sourceStdMode ~= targetStdMode then
+        sendmsg(actor, 9, "源装备和目标装备类型不一致！")
+        return
+    end
+    
+    -- 检查源装备是否有强化等级
+    if sourceQhLv < 1 then
+        sendmsg(actor, 9, "源装备没有强化等级！")
+        return
+    end
+    
+    -- 检查目标装备强化等级是否已满（固定上限30级）
+    if targetQhLv >= 30 then
+        sendmsg(actor, 9, "目标装备强化等级已达到上限！")
+        return
+    end
+    if sourceQhLv <= targetQhLv then
+        sendmsg(actor, 9, "源装备强化等级低，无需转移！")
+        return
+    end
+    
+    -- 检查消耗材料（固定5个强化石，物品ID:143）
+    local costItem = 143  -- 强化石物品ID
+    local costItemNum = 5 -- 固定消耗5个
+    if getItemNum(actor, costItem) < costItemNum then
+        sendmsg(actor, 9, "强化石数量不足！需要5个强化石")
+        return
+    end
+    
+    -- 计算转移后的等级（固定100%保留）
+    local transferLevel = sourceQhLv  -- 100%保留源装备等级
+    if transferLevel < 1 then
+        transferLevel = 1
+    end
+    
+    -- 检查是否超过目标装备上限（30级）
+    if transferLevel > 30 then
+        transferLevel = 30
+    end
+    
+    -- 固定100%成功率，无需随机检查
+    
+    -- 消耗材料（5个强化石）
+    delItemNum(actor, costItem, costItemNum)
+    
+    -- 转移强化等级    
+    -- 2. 目标装备获得转移的强化等级
+    linkitembymakeindex(actor, targetMakeIndex)
+    changeitemaddvalue(actor, -1, 0, "=", transferLevel)
+    
+    -- 3. 更新目标装备属性
+    local posindex = equippos2[targetStdMode]
+    local qhTabIndex = ItemEquip[targetItemId]['EquipQHTabId']
+    local curQHTabData = EquipQHTab[posindex]
+    if qhTabIndex then
+        curQHTabData = EquipQHTab[qhTabIndex]
+    end
+    
+    -- 清除目标装备原有强化属性
+    clearcustomitemabil(actor, -1, 0)
+    
+    -- 添加新的强化属性
+    if transferLevel > 0 then
+        changecustomitemtext(actor, -1, 0, "[强化]")
+        if type(curQHTabData['attridList'][transferLevel]) == "number" then
+            changecustomitemabil(actor, -1, 0, 1, curQHTabData['attridList'][transferLevel], curQHTabData['attrList'][transferLevel])
+        else
+            for i = 1, #curQHTabData['attridList'][transferLevel] do
+                changecustomitemabil(actor, -1, 0, i, curQHTabData['attridList'][transferLevel][i], curQHTabData['attrList'][transferLevel][i])
+            end
+        end
+    end
+    
+    -- 更新源装备属性以及强化等级（清空后）
+    linkitembymakeindex(actor, sourceMakeIndex)
+    changeitemaddvalue(actor, -1, 0, "=", 0)
+    clearcustomitemabil(actor, -1, 0)
+    changecustomitemtext(actor, -1, 0, "")
+    
+    -- 更新客户端显示
+    updateitemtoclient(actor, -1)
+    
+    -- 发送成功消息
+    sendmsg(actor, 9, string.format("强化转移成功！源装备强化等级清空，目标装备获得+%d强化", transferLevel))
+    
+    -- 通知客户端更新
+    Message.sendmsgEx(actor, "EquipDuanZao", "UpdataTransfer", { 
+        param1 = 1, 
+        param2 = transferLevel,
+        param3 = 0  -- 源装备固定清0
+    })
+    
+    -- 更新武器特效
+    local targetEquipObj = itemobjbymakeindex(actor, targetMakeIndex)
+    if targetStdMode == 5 then  -- 武器
+        EquipDuanZao.showWeaponEffect(actor, targetEquipObj)
+    end
+end
+
 
 -- 提升类道具：成功后效果
 function EquipDuanZao.itemTSSuc(actor, xhitemid2, nextlv, qhlv)
