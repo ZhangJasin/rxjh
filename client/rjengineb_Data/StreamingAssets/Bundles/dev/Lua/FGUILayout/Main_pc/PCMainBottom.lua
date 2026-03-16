@@ -350,11 +350,12 @@ function PCMainBottom:UpdateAutoState(isAutoFight, isAutoMove)
     if self._isAutoFight ~= isAutoFight then
         self._isAutoFight = isAutoFight
         if isAutoFight then
+            FGUI:setVisible(self._ui.Graph_autoFight, true)
             FGUI:UIModel_resume(self._ui.Graph_autoFight)
         else
             FGUI:UIModel_pause(self._ui.Graph_autoFight)
+            FGUI:setVisible(self._ui.Graph_autoFight, false)
         end
-        FGUI:setVisible(self._ui.Graph_autoFight, isAutoFight)
     end
     if isAutoFight then isAutoMove = false end
     if isAutoMove == nil then
