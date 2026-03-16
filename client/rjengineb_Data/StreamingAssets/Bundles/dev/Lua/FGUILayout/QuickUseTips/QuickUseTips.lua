@@ -99,7 +99,7 @@ function QuickUseTips:Refresh(data)
     end
 end
 
-local extData = {itemTipData = {from = ItemFrom.BAG, hideButtons = true}}
+local extData = {itemTipData = {from = ItemFrom.BAG, hideButtons = true}, doubleClickCallback = false}
 function QuickUseTips:UpdateItem(itemData)
     if not itemData then
         return
