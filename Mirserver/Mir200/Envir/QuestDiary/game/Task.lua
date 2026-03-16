@@ -476,6 +476,45 @@ end
 --- 个人BOSS  暂无
 
 -------------------------------↓↓↓ 网络消息 ↓↓↓---------------------------------------
+-- 检测玩家当前位置附近是否有任务交付NPC
+function Task.checkNearbyTaskNpc(actor)
+    local TaskProgress_data = getCurTask(actor)
+    local playerX = targetinfo(actor, "X")
+    local playerY = targetinfo(actor, "Y")
+    local playerMap = targetinfo(actor, "NEWMAP")
+    local nearbyTaskNpc = false
+    
+    for k,v in pairs(TaskProgress_data) do
+        local taskid = tonumber(k)
+        local neednpc = Task_cfg[taskid]['task_finnpc'] or 0
+        local state = TaskProgress_data[""..taskid]['state'] or 0
+        
+        -- 只检查已完成且需要NPC交付的任务
+        if state == _taskState.finish and neednpc > 0 then
+            local task_fintype = Task_cfg[taskid]['task_fintype']
+            -- 只检查需要到NPC交付的任务 (task_fintype == 2)
+            if task_fintype == 2 then
+                local postab = Task_cfg[taskid]['task_finpos']
+                if postab and postab[1] == tostring(playerMap) then
+                    local npcX = tonumber(postab[2])
+                    local npcY = tonumber(postab[3])
+                    local range = tonumber(postab[4]) or 5
+                    
+                    -- 计算玩家与NPC的距离
+                    local distance = math.sqrt((playerX - npcX) ^ 2 + (playerY - npcY) ^ 2)
+                    -- 如果在NPC范围内，说明附近有任务NPC
+                    if distance <= range then
+                        nearbyTaskNpc = true
+                        break
+                    end
+                end
+            end
+        end
+    end
+    
+    return nearbyTaskNpc
+end
+
 -- 点npc打开面板
 function Task.Clicknpc(actor, npcid)
 	-- print("接取任务npcid",npcid)
@@ -632,7 +671,7 @@ function Task.xunlu(actor, data)
     local taskid = tonumber(data[1])
     local playlevel = level(actor)                  --玩家等级
     local needlevel = Task_cfg[taskid]['task_level'] or 0
-    if needlevel > playlevel then   
+    if needlevel > playlevel then
         return
     end
     -- if true then
@@ -645,7 +684,22 @@ function Task.xunlu(actor, data)
     local jindu = Task_cfg[taskid]['task_progress'] or 1
     local state = TaskProgress_data[""..taskid]['state'] or 0
     local task_fintype = Task_cfg[taskid]['task_fintype']
-    autoplaygame(actor,1)
+    
+    -- 判断寻路目标类型：NPC还是野外
+    local isNpcTarget = false
+    if state == _taskState.finish and task_fintype == 2 then  -- 寻路到NPC交付任务
+        isNpcTarget = true
+    end
+    
+    if isNpcTarget then
+        -- 目标是NPC，停止自动挂机
+        autoplaygame(actor,0)
+        sethumvar(actor,VarCfg.N_task_xunlu_auto,0)
+    else
+        -- 目标是野外，开始自动挂机
+        autoplaygame(actor,1)
+    end
+    
     if state == _taskState.finish then   --寻路到npc
         if task_fintype == 2 then  --寻路npc交付任务
             --opennpcshowex(actor, Task_cfg[taskid]['task_finnpc'], 10, 10, 0)
