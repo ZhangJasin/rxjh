@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="500,580">
-  <controller name="additem" exported="true" pages="0,关闭选择框,1,打开选择源装备框,2,打开选择目标装备框,3,打开选择材料框" selected="0"/>
+  <controller name="additem" exported="true" pages="0,关闭选择框,1,打开选择装备框,2,打开选择幸运符框,3,打开选择提升道具框" selected="0"/>
   <displayList>
     <image id="n0_ger5" name="n0" src="oqrpr" fileName="Images/04duanzao/rightbg.png" xy="38,12"/>
-    <text id="n1_ger5" name="sourceLabel" xy="214,97" size="76,26" font="SimHei" fontSize="18" color="#fcf1bf" text="源装备："/>
-    <component id="n24_egru" name="sourceEquip" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="215,21">
+    <component id="n24_egru" name="xzequip" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="215,202" controller="c1,0"/>
+    <component id="n20_jr5a" name="xzqhitem1" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="213,23" controller="c1,4">
       <gearDisplay controller="additem" pages="0,1"/>
     </component>
-    <text id="n2_ger5" name="targetLabel" xy="212,271" size="94,26" font="SimHei" fontSize="18" color="#fcf1bf" text="目标装备："/>
-    <component id="n25_egru" name="targetEquip" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="215,201">
-      <gearDisplay controller="additem" pages="0,2"/>
+    <component id="n17_o4l6" name="xzitem1" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="157,360" visible="false">
+      <gearDisplay controller="additem" pages="0,1,2,3"/>
     </component>
-    <text id="n4_ger5" name="sourceInfo" xy="225,42" size="52,24" font="SimHei" fontSize="16" color="#00ff00" text="未选择"/>
-    <text id="n5_ger5" name="sourceLevel" xy="293,98" size="20,24" font="SimHei" fontSize="16" color="#ffff00" align="right" text="+0"/>
-    <text id="n6_ger5" name="targetInfo" xy="224,231" size="52,24" font="SimHei" fontSize="16" color="#00ff00" text="未选择"/>
-    <text id="n7_ger5" name="targetLevel" xy="297,271" size="20,24" font="SimHei" fontSize="16" color="#ffff00" align="right" text="+0"/>
-    <text id="n11_ger5" name="costfont2" xy="128,346" pivot="0,1" size="226,26" font="SimHei" fontSize="18" color="#fcf1bf" autoSize="none" text="消耗材料："/>
-    <component id="n12_ger5" name="costitem1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="228,348" size="27,27"/>
-    <text id="n13_ger5" name="costitemnum" xy="256,351" size="22,26" font="SimHei" fontSize="18" color="#00ff00" text="x5"/>
-    <component id="n21_ger5" name="transferBtn" src="oqrpy" fileName="Components/tongyong/tybtn1.xml" xy="180,431">
+    <component id="n16_o4l6" name="xzitem2" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="275,360" visible="false">
+      <gearDisplay controller="additem" pages="0,1,2,3"/>
+    </component>
+    <text id="n7_ger5" name="costfont1" xy="166,464" pivot="0,1" size="227,26" visible="false" font="SimHei" fontSize="18" color="#fcf1bf" autoSize="none" text="使用50元宝提升成功率"/>
+    <text id="n8_ger5" name="costfont2" xy="145,494" pivot="0,1" size="226,26" visible="false" font="SimHei" fontSize="18" color="#fcf1bf" autoSize="none" text="消耗：             1000"/>
+    <component id="n9_ger5" name="costitem1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="204,493" size="27,27" visible="false"/>
+    <component id="n10_ger5" name="qhbtn" src="oqrpy" fileName="Components/tongyong/tybtn1.xml" xy="157,515">
       <Button title="强化转移"/>
     </component>
-    <component id="n23_s9up" name="panl_additem" src="oqrp12" fileName="Components/duanzao/additempanl.xml" xy="-693,-92">
-      <gearDisplay controller="additem" pages="1,2,3"/>
+    <component id="n11_ger5" name="ischeck" src="oqrp10" fileName="Components/tongyong/checkBox.xml" xy="121,460" visible="false"/>
+    <component id="n21_s9up" name="panl_additem" src="oqrp12" fileName="Components/duanzao/additempanl.xml" xy="-693,-92">
+      <gearDisplay controller="additem" pages="1"/>
     </component>
+    <richtext id="n23_egru" name="qhfont" xy="264,67" pivot="1,0" size="13,24" visible="false" fontSize="16" color="#00ff00" align="right" vAlign="middle" autoClearText="true" text="0"/>
+    <text id="n25_g17t" name="costfont3" xy="140,281" pivot="0,1" size="226,26" visible="false" font="SimHei" fontSize="18" color="#00ff00" align="center" autoSize="none" strokeColor="#000000" text="成功率加成：0%"/>
+    <text id="n26_g17t" name="costfont4" xy="115,314" pivot="0,1" size="277,26" visible="false" font="SimHei" fontSize="18" color="#ff0000" align="center" autoSize="none" strokeColor="#000000" text=""/>
+    <component id="n27_w4id" name="xzqhitem2" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="347,69">
+      <gearDisplay controller="additem" pages=""/>
+    </component>
+    <richtext id="n28_w4id" name="qhfont2" xy="400,108" pivot="1,0" size="13,24" visible="false" fontSize="16" color="#00ff00" align="right" vAlign="middle" autoClearText="true" text="0"/>
+    <text id="n29_g8gy" name="n29" xy="217,95" size="64,29" fontSize="20" color="#ccff00" align="center" text="源装备"/>
+    <text id="n30_g8gy" name="n30" xy="211,276" size="84,29" fontSize="20" color="#ccff00" align="center" text="目标装备"/>
   </displayList>
 </component>
