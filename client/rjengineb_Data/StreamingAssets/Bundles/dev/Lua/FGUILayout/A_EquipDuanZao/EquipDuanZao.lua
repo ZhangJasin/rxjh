@@ -46,6 +46,16 @@ function EquipDuanZao:Create()
     self._ui = FGUI:ui_delegate(self.component)
     FGUI:SetCloseUIWhenClickOutside(self)
 
+    --适配pc端UI
+    local isPC = SL:GetValue("IS_PC_OPER_MODE")
+    local screenW = SL:GetValue("SCREEN_WIDTH")
+    local screenH = SL:GetValue("SCREEN_HEIGHT")
+    if isPC then 
+        FGUI:setScale(self.component, 0.85, 0.85)
+        FGUI:setPosition(self.component, screenW / 2, screenH / 2)
+        FGUI:setAnchorPoint(self.component, 0.5, 0.5, true)
+    end
+
     -- 关闭按钮点击事件绑定 ---关闭按钮
     FGUI:setOnClickEvent(self._ui.closebtn, function()
         FGUI:Close("A_EquipDuanZao", "EquipDuanZao")
