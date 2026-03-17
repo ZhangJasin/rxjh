@@ -409,8 +409,8 @@ function EquipDuanZao.transfer(actor, data)
         return
     end
     
-    -- 检查目标装备强化等级是否已满（固定上限30级）
-    if targetQhLv >= 30 then
+    -- 检查目标装备强化等级是否已满（固定上限15级）
+    if targetQhLv >= 15 then
         sendmsg(actor, 9, "目标装备强化等级已达到上限！")
         return
     end
@@ -433,9 +433,9 @@ function EquipDuanZao.transfer(actor, data)
         transferLevel = 1
     end
     
-    -- 检查是否超过目标装备上限（30级）
-    if transferLevel > 30 then
-        transferLevel = 30
+    -- 检查是否超过目标装备上限（15级）
+    if transferLevel > 15 then
+        transferLevel = 15
     end
     
     -- 固定100%成功率，无需随机检查
