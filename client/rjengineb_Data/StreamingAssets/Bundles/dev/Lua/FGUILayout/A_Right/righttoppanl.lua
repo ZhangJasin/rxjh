@@ -86,7 +86,12 @@ function righttoppanl:Create()
     end)
     -- 拍卖行按钮点击事件绑定
     FGUI:setOnClickEvent(self._righttop.btn_paimai, function()
-        FGUI:Open("Auction", "AuctionRootPanel", {}, FGUI_LAYER.NORMAL, { destroyTime = 1 })
+        --TODO:原底板切换不同端UI
+        if isPC then
+            FGUI:Open("Auction_pc", "PCAuctionRootPanel", {}, FGUI_LAYER.NORMAL, { destroyTime = 1 })
+        else
+            FGUI:Open("Auction", "AuctionRootPanel", {}, FGUI_LAYER.NORMAL, { destroyTime = 1 })
+        end
     end)
     -- 充值按钮点击事件绑定
     FGUI:setOnClickEvent(self._righttop.btn_bill, function()
