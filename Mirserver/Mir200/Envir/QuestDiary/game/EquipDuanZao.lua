@@ -41,8 +41,8 @@ function EquipDuanZao.qianghua(actor, data)
     local nextlv = qhlv + 1
     local falselv = qhlv - 1 <= 0 and 0 or qhlv - 1
     
-    -- 强化等级上限判断  强化15级以上或者加工装备失败
-    if qhlv >= 15 or posindex > 5 then
+    -- 强化等级上限判断  强化8级以上或者加工装备失败
+    if qhlv >= 8 or posindex > 5 then
         falselv = -1 -- 装备损坏
     end
     local itemid = linkitem(actor, "INDEX")

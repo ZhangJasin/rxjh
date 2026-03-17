@@ -4,9 +4,7 @@
   <displayList>
     <image id="n0_ger5" name="n0" src="oqrpr" fileName="Images/04duanzao/rightbg.png" xy="38,12"/>
     <component id="n24_egru" name="xzequip" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="215,202" controller="c1,0"/>
-    <component id="n20_jr5a" name="xzqhitem1" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="213,23" controller="c1,4">
-      <gearDisplay controller="additem" pages="0,1"/>
-    </component>
+    <component id="n20_jr5a" name="xzqhitem1" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="213,23" controller="c1,0"/>
     <component id="n17_o4l6" name="xzitem1" src="oqrps" fileName="Components/tongyong/item_select.xml" xy="157,360" visible="false">
       <gearDisplay controller="additem" pages="0,1,2,3"/>
     </component>
