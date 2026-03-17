@@ -2025,8 +2025,8 @@ local config = {
 	},
 	[14] = { 
 		idx=14,
-		desc="9",
-		stdmode=9,
+		desc="51",
+		stdmode=51,
 		xhitemList = {
 			[1] = 143,
 			[2] = 143,
