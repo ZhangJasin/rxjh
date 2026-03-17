@@ -11062,7 +11062,7 @@ local config = {
 	},
 	[1310] = { 
 		ID=1310,
-		Name="金刚石（内功）",
+		Name="金刚石（气功）",
 		ShowName="金刚石",
 		StdMode=1,
 		SubType=5,
