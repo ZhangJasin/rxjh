@@ -150,16 +150,25 @@ function BagRecycleViewModel:RefreshSelectItemsByConditions()
 			local itemCfg =  SL:GetValue("ITEM_DATA", v.Index or v.ID)
 			if itemCfg and itemCfg.recycle and itemCfg.recycle ~= "" then
 				local itemSelect = false
+				-- 检查等级条件（如果开启）
 				if self.checkLevel then
 					itemSelect = self:CheckConditions(itemCfg,self.checkLvConditionGroups)
 				end
 
-				if itemSelect then
-					itemSelect = self:CheckConditions(itemCfg,self.checkEquipConditionGroups)
+				-- 检查装备条件
+				local equipSelect = self:CheckConditions(itemCfg,self.checkEquipConditionGroups)
+
+				-- 如果等级筛选开启，需要同时满足等级和装备条件
+				-- 如果等级筛选未开启，只需要满足装备条件
+				if self.checkLevel then
+					itemSelect = itemSelect and equipSelect
+				else
+					itemSelect = equipSelect
 				end
 
 				local otherSelect = self:CheckConditions(itemCfg,self.checkOtherConditionGroups)
-				SL:onLUAEvent(LUA_EVENT_BAG_RECYCLE_SELECT, {isSelect = itemSelect or otherSelect ,selectList= { {MakeIndex = v.MakeIndex,pos = k,ID =v.Index,cnt = v.OverLap or 1}},updateMoney = false } )
+				local finalSelect = itemSelect or otherSelect
+				SL:onLUAEvent(LUA_EVENT_BAG_RECYCLE_SELECT, {isSelect = finalSelect ,selectList= { {MakeIndex = v.MakeIndex,pos = k,ID =v.Index,cnt = v.OverLap or 1}},updateMoney = false } )
 			end
 		end
 	end

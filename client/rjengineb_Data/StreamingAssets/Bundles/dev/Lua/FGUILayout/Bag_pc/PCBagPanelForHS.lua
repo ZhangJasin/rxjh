@@ -158,40 +158,32 @@ function PCBagPanelForHS:UpdateCellView(itemView,bagData)
 	self.packageItemViewCache[id] = itemContentView	
 	local childIdx = FGUI:GetChildIndex(self._ui.List_Cell, itemView)
 	local index = FGUI:GList_childIndexToItemIndex(self._ui.List_Cell, childIdx)
-	
-	-- FGUI:setOnRollOverEvent(itemContentView.component, function()
-	-- 	if FGUI:DragDropManager_getDragging() then
-	-- 		return
-	-- 	end
-	-- 	self:RollOverEvent(index)
-	-- end)
 
-    -- FGUI:setOnRollOutEvent(itemContentView.component, function()
-	-- 	if FGUI:DragDropManager_getDragging() then
-	-- 		return
-	-- 	end
-	-- 	self:RollOutEvent(index)
-	-- end)
+	FGUI:setOnRollOverEvent(itemContentView.component, function()
+		if FGUI:DragDropManager_getDragging() then
+			return
+		end
+		self:RollOverEvent(index)
+	end)
 
-	-- FGUI:setOnClickEvent(itemContentView.component, function(eventData)
-	-- 	if self.clickDelay then return end
-	-- 	FGUIFunction:CloseItemTips()
-	-- 	local touchId = FGUI:InputEvent_getTouchId(eventData)
-	-- 	local data = {
-	-- 		type = FGUIDefine.PCQuickType.Item,
-	-- 		itemIndex = itemData.Index,
-	-- 		makeIndex = itemData.MakeIndex,
-	-- 		from = ItemFrom.BAG,
-	-- 		dragStartSelectPage = self.bagViewModel.selectType, -- 页签判断防止滚轮操作
-	-- 	}
-		
-	-- 	-- 1.使用原图,尺寸可能偏大
-	-- 	-- FGUI:DragDropManager_startDrag(itemContentView.component,"ui://public_pc/CommonItem",data,touchId,FGUIFunction.CloseBagCheckDragView)
-	-- 	FGUIFunction:OpenBagCheckDragView()
-	-- 	local commmonItem = FGUI:GLoader_getComponent(FGUI:DragDropManager_getDragAgent())
-	-- 	ItemUtil:SetItemIconByItemID(commmonItem,itemData.Index)
-	-- 	ItemUtil:UpdateItemGradeByItemID(commmonItem,itemData.Index)
-	-- end)
+    FGUI:setOnRollOutEvent(itemContentView.component, function()
+		if FGUI:DragDropManager_getDragging() then
+			return
+		end
+		self:RollOutEvent(index)
+	end)
+
+	FGUI:setOnClickEvent(itemContentView.component, function(eventData)
+		if self.clickDelay then return end
+		-- 回收界面左键点击选中/取消选中
+		if FGUI:CheckOpen("Bag_pc", "BagRecyclePanel") then
+			FGUIFunction:CloseItemTips()
+			local bagData = self:GetCurShowBagCellData(index + 1)
+			if bagData then
+				SL:onLUAEvent(LUA_EVENT_BAG_CELL_CLICK, bagData)
+			end
+		end
+	end)
 
 	FGUI:setOnRightClickEvent(itemContentView.component,function(eventData)
 		if self.clickDelay then return end
