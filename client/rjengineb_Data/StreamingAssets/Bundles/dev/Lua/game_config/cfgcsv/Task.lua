@@ -1731,8 +1731,8 @@ local config = {
 		task_finnpc=5,
 		task_pos = {
 			[1] = 102,
-			[2] = 127,
-			[3] = 162,
+			[2] = 130,
+			[3] = 173,
 			[4] = 3,
 		},
 		task_drop = {

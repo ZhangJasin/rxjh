@@ -10,9 +10,6 @@ local config = {
 		Appr=100006,
 		NameColor=251,
 		NpcTalk="npc_talk_400001",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[2] = { 
 		ID=2,
@@ -26,10 +23,6 @@ local config = {
 		Appr=100001,
 		NameColor=251,
 		NpcTalk="npc_talk_400002",
-		Function_Button = {
-			[1] = 3,
-			[2] = 4,
-		},
 	},
 	[3] = { 
 		ID=3,
@@ -43,10 +36,6 @@ local config = {
 		Appr=100003,
 		NameColor=251,
 		NpcTalk="npc_talk_400003",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=1,
 	},
 	[4] = { 
@@ -61,11 +50,6 @@ local config = {
 		Appr=100002,
 		NameColor=251,
 		NpcTalk="npc_talk_400004",
-		Function_Button = {
-			[1] = 1,
-			[2] = 5,
-			[3] = 4,
-		},
 		Npc_Store=2,
 	},
 	[5] = { 
@@ -79,10 +63,6 @@ local config = {
 		Appr=100004,
 		NameColor=251,
 		NpcTalk="npc_talk_400005",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=3,
 	},
 	[6] = { 
@@ -97,10 +77,6 @@ local config = {
 		Appr=100005,
 		NameColor=251,
 		NpcTalk="npc_talk_400006",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=28,
 	},
 	[7] = { 
@@ -115,9 +91,6 @@ local config = {
 		Appr=100047,
 		NameColor=251,
 		NpcTalk="npc_talk_400007",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[8] = { 
 		ID=8,
@@ -131,9 +104,6 @@ local config = {
 		Appr=100008,
 		NameColor=251,
 		NpcTalk="npc_talk_400008",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[9] = { 
 		ID=9,
@@ -147,9 +117,6 @@ local config = {
 		Appr=100007,
 		NameColor=251,
 		NpcTalk="npc_talk_400009",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[10] = { 
 		ID=10,
@@ -162,9 +129,6 @@ local config = {
 		Appr=100020,
 		NameColor=251,
 		NpcTalk="npc_talk_400010",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[11] = { 
 		ID=11,
@@ -178,9 +142,6 @@ local config = {
 		Appr=100098,
 		NameColor=251,
 		NpcTalk="npc_talk_400011",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[13] = { 
 		ID=13,
@@ -194,9 +155,6 @@ local config = {
 		Appr=100012,
 		NameColor=251,
 		NpcTalk="npc_talk_400011",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[14] = { 
 		ID=14,
@@ -210,9 +168,6 @@ local config = {
 		Appr=100013,
 		NameColor=251,
 		NpcTalk="npc_talk_400012",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[15] = { 
 		ID=15,
@@ -225,10 +180,6 @@ local config = {
 		Appr=100014,
 		NameColor=251,
 		NpcTalk="npc_talk_400013",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=4,
 	},
 	[16] = { 
@@ -242,9 +193,6 @@ local config = {
 		Appr=100048,
 		NameColor=251,
 		NpcTalk="npc_talk_400014",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[17] = { 
 		ID=17,
@@ -258,9 +206,6 @@ local config = {
 		Appr=100027,
 		NameColor=251,
 		NpcTalk="npc_talk_400015",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[18] = { 
 		ID=18,
@@ -274,9 +219,6 @@ local config = {
 		Appr=100018,
 		NameColor=251,
 		NpcTalk="npc_talk_400016",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[19] = { 
 		ID=19,
@@ -289,9 +231,6 @@ local config = {
 		Appr=100050,
 		NameColor=251,
 		NpcTalk="npc_talk_400017",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[20] = { 
 		ID=20,
@@ -305,10 +244,6 @@ local config = {
 		Appr=100020,
 		NameColor=251,
 		NpcTalk="npc_talk_400018",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=9,
 	},
 	[21] = { 
@@ -323,10 +258,6 @@ local config = {
 		Appr=100039,
 		NameColor=251,
 		NpcTalk="npc_talk_400019",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=8,
 	},
 	[22] = { 
@@ -341,9 +272,6 @@ local config = {
 		Appr=100040,
 		NameColor=251,
 		NpcTalk="npc_talk_400020",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[23] = { 
 		ID=23,
@@ -357,9 +285,6 @@ local config = {
 		Appr=100017,
 		NameColor=251,
 		NpcTalk="npc_talk_400021",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[24] = { 
 		ID=24,
@@ -373,9 +298,6 @@ local config = {
 		Appr=100041,
 		NameColor=251,
 		NpcTalk="npc_talk_400022",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[25] = { 
 		ID=25,
@@ -389,9 +311,6 @@ local config = {
 		Appr=100019,
 		NameColor=251,
 		NpcTalk="npc_talk_400023",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[26] = { 
 		ID=26,
@@ -405,10 +324,6 @@ local config = {
 		Appr=100037,
 		NameColor=251,
 		NpcTalk="npc_talk_400024",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=7,
 	},
 	[27] = { 
@@ -423,9 +338,6 @@ local config = {
 		Appr=100038,
 		NameColor=251,
 		NpcTalk="npc_talk_400025",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[28] = { 
 		ID=28,
@@ -438,9 +350,6 @@ local config = {
 		Appr=100021,
 		NameColor=251,
 		NpcTalk="npc_talk_400026",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[29] = { 
 		ID=29,
@@ -454,10 +363,6 @@ local config = {
 		Appr=100062,
 		NameColor=251,
 		NpcTalk="npc_talk_400027",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=6,
 	},
 	[30] = { 
@@ -472,9 +377,6 @@ local config = {
 		Appr=100061,
 		NameColor=251,
 		NpcTalk="npc_talk_400028",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[31] = { 
 		ID=31,
@@ -488,9 +390,6 @@ local config = {
 		Appr=100059,
 		NameColor=251,
 		NpcTalk="npc_talk_400029",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[32] = { 
 		ID=32,
@@ -504,9 +403,6 @@ local config = {
 		Appr=100063,
 		NameColor=251,
 		NpcTalk="npc_talk_400030",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[33] = { 
 		ID=33,
@@ -520,9 +416,6 @@ local config = {
 		Appr=100056,
 		NameColor=251,
 		NpcTalk="npc_talk_400031",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[34] = { 
 		ID=34,
@@ -536,9 +429,6 @@ local config = {
 		Appr=100058,
 		NameColor=251,
 		NpcTalk="npc_talk_400032",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[35] = { 
 		ID=35,
@@ -551,9 +441,6 @@ local config = {
 		Appr=100066,
 		NameColor=251,
 		NpcTalk="npc_talk_400033",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[36] = { 
 		ID=36,
@@ -567,9 +454,6 @@ local config = {
 		Appr=100055,
 		NameColor=251,
 		NpcTalk="npc_talk_400034",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[37] = { 
 		ID=37,
@@ -583,10 +467,6 @@ local config = {
 		Appr=100054,
 		NameColor=251,
 		NpcTalk="npc_talk_400035",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=22,
 	},
 	[38] = { 
@@ -601,10 +481,6 @@ local config = {
 		Appr=100064,
 		NameColor=251,
 		NpcTalk="npc_talk_400036",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=23,
 	},
 	[39] = { 
@@ -619,9 +495,6 @@ local config = {
 		Appr=100057,
 		NameColor=251,
 		NpcTalk="npc_talk_400037",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[40] = { 
 		ID=40,
@@ -635,10 +508,6 @@ local config = {
 		Appr=100060,
 		NameColor=251,
 		NpcTalk="npc_talk_400038",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=21,
 	},
 	[42] = { 
@@ -653,9 +522,6 @@ local config = {
 		Appr=100068,
 		NameColor=251,
 		NpcTalk="npc_talk_400039",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[43] = { 
 		ID=43,
@@ -669,9 +535,6 @@ local config = {
 		Appr=100067,
 		NameColor=251,
 		NpcTalk="npc_talk_400040",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[44] = { 
 		ID=44,
@@ -685,9 +548,6 @@ local config = {
 		Appr=100033,
 		NameColor=251,
 		NpcTalk="npc_talk_400041",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[45] = { 
 		ID=45,
@@ -701,9 +561,6 @@ local config = {
 		Appr=100052,
 		NameColor=251,
 		NpcTalk="npc_talk_400042",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[46] = { 
 		ID=46,
@@ -717,10 +574,6 @@ local config = {
 		Appr=100034,
 		NameColor=251,
 		NpcTalk="npc_talk_400043",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=15,
 	},
 	[47] = { 
@@ -735,10 +588,6 @@ local config = {
 		Appr=100081,
 		NameColor=251,
 		NpcTalk="npc_talk_400044",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=14,
 	},
 	[48] = { 
@@ -753,9 +602,6 @@ local config = {
 		Appr=100074,
 		NameColor=251,
 		NpcTalk="npc_talk_400045",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[49] = { 
 		ID=49,
@@ -769,9 +615,6 @@ local config = {
 		Appr=100075,
 		NameColor=251,
 		NpcTalk="npc_talk_400046",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[50] = { 
 		ID=50,
@@ -785,9 +628,6 @@ local config = {
 		Appr=100076,
 		NameColor=251,
 		NpcTalk="npc_talk_400047",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[51] = { 
 		ID=51,
@@ -800,10 +640,6 @@ local config = {
 		Appr=100098,
 		NameColor=251,
 		NpcTalk="npc_talk_400048",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=18,
 	},
 	[52] = { 
@@ -818,9 +654,6 @@ local config = {
 		Appr=100020,
 		NameColor=251,
 		NpcTalk="npc_talk_400049",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[53] = { 
 		ID=53,
@@ -834,9 +667,6 @@ local config = {
 		Appr=100078,
 		NameColor=251,
 		NpcTalk="npc_talk_400050",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[54] = { 
 		ID=54,
@@ -850,10 +680,6 @@ local config = {
 		Appr=100077,
 		NameColor=251,
 		NpcTalk="npc_talk_400051",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=20,
 	},
 	[55] = { 
@@ -868,10 +694,6 @@ local config = {
 		Appr=100079,
 		NameColor=251,
 		NpcTalk="npc_talk_400052",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=19,
 	},
 	[56] = { 
@@ -886,9 +708,6 @@ local config = {
 		Appr=100080,
 		NameColor=251,
 		NpcTalk="npc_talk_400053",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[57] = { 
 		ID=57,
@@ -902,9 +721,6 @@ local config = {
 		Appr=100009,
 		NameColor=251,
 		NpcTalk="npc_talk_400054",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[58] = { 
 		ID=58,
@@ -918,9 +734,6 @@ local config = {
 		Appr=100011,
 		NameColor=251,
 		NpcTalk="npc_talk_400055",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[59] = { 
 		ID=59,
@@ -933,9 +746,6 @@ local config = {
 		Appr=100010,
 		NameColor=251,
 		NpcTalk="npc_talk_400056",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[60] = { 
 		ID=60,
@@ -948,10 +758,6 @@ local config = {
 		Appr=100049,
 		NameColor=251,
 		NpcTalk="npc_talk_400057",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=5,
 	},
 	[61] = { 
@@ -966,9 +772,6 @@ local config = {
 		Appr=100028,
 		NameColor=251,
 		NpcTalk="npc_talk_400058",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[62] = { 
 		ID=62,
@@ -982,9 +785,6 @@ local config = {
 		Appr=100015,
 		NameColor=251,
 		NpcTalk="npc_talk_400059",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[63] = { 
 		ID=63,
@@ -998,9 +798,6 @@ local config = {
 		Appr=100022,
 		NameColor=251,
 		NpcTalk="npc_talk_400060",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[64] = { 
 		ID=64,
@@ -1014,9 +811,6 @@ local config = {
 		Appr=100046,
 		NameColor=251,
 		NpcTalk="npc_talk_400061",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[65] = { 
 		ID=65,
@@ -1030,9 +824,6 @@ local config = {
 		Appr=100051,
 		NameColor=251,
 		NpcTalk="npc_talk_400062",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[66] = { 
 		ID=66,
@@ -1046,10 +837,6 @@ local config = {
 		Appr=100044,
 		NameColor=251,
 		NpcTalk="npc_talk_400063",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 	},
 	[67] = { 
 		ID=67,
@@ -1063,9 +850,6 @@ local config = {
 		Appr=100045,
 		NameColor=251,
 		NpcTalk="npc_talk_400064",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[68] = { 
 		ID=68,
@@ -1079,9 +863,6 @@ local config = {
 		Appr=100042,
 		NameColor=251,
 		NpcTalk="npc_talk_400065",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[69] = { 
 		ID=69,
@@ -1095,9 +876,6 @@ local config = {
 		Appr=100043,
 		NameColor=251,
 		NpcTalk="npc_talk_400066",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[70] = { 
 		ID=70,
@@ -1111,9 +889,6 @@ local config = {
 		Appr=100024,
 		NameColor=251,
 		NpcTalk="npc_talk_400067",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[71] = { 
 		ID=71,
@@ -1127,10 +902,6 @@ local config = {
 		Appr=100023,
 		NameColor=251,
 		NpcTalk="npc_talk_400068",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=11,
 	},
 	[72] = { 
@@ -1145,9 +916,6 @@ local config = {
 		Appr=100025,
 		NameColor=251,
 		NpcTalk="npc_talk_400069",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[73] = { 
 		ID=73,
@@ -1161,10 +929,6 @@ local config = {
 		Appr=100026,
 		NameColor=251,
 		NpcTalk="npc_talk_400070",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=12,
 	},
 	[74] = { 
@@ -1179,10 +943,6 @@ local config = {
 		Appr=100095,
 		NameColor=251,
 		NpcTalk="npc_talk_400071",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=10,
 	},
 	[75] = { 
@@ -1197,9 +957,6 @@ local config = {
 		Appr=100087,
 		NameColor=251,
 		NpcTalk="npc_talk_400072",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[76] = { 
 		ID=76,
@@ -1213,9 +970,6 @@ local config = {
 		Appr=100090,
 		NameColor=251,
 		NpcTalk="npc_talk_400073",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[77] = { 
 		ID=77,
@@ -1229,10 +983,6 @@ local config = {
 		Appr=100092,
 		NameColor=251,
 		NpcTalk="npc_talk_400074",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=27,
 	},
 	[78] = { 
@@ -1247,10 +997,6 @@ local config = {
 		Appr=100091,
 		NameColor=251,
 		NpcTalk="npc_talk_400075",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=26,
 	},
 	[79] = { 
@@ -1265,9 +1011,6 @@ local config = {
 		Appr=100089,
 		NameColor=251,
 		NpcTalk="npc_talk_400076",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[80] = { 
 		ID=80,
@@ -1280,10 +1023,6 @@ local config = {
 		Appr=100100,
 		NameColor=251,
 		NpcTalk="npc_talk_400077",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=25,
 	},
 	[81] = { 
@@ -1298,9 +1037,6 @@ local config = {
 		Appr=100088,
 		NameColor=251,
 		NpcTalk="npc_talk_400078",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[82] = { 
 		ID=82,
@@ -1313,10 +1049,6 @@ local config = {
 		Appr=100096,
 		NameColor=251,
 		NpcTalk="npc_talk_400079",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=24,
 	},
 	[83] = { 
@@ -1331,9 +1063,6 @@ local config = {
 		Appr=100094,
 		NameColor=251,
 		NpcTalk="npc_talk_400080",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[84] = { 
 		ID=84,
@@ -1347,9 +1076,6 @@ local config = {
 		Appr=100097,
 		NameColor=251,
 		NpcTalk="npc_talk_400081",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[85] = { 
 		ID=85,
@@ -1362,9 +1088,6 @@ local config = {
 		Appr=100035,
 		NameColor=251,
 		NpcTalk="npc_talk_400082",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[86] = { 
 		ID=86,
@@ -1378,9 +1101,6 @@ local config = {
 		Appr=100036,
 		NameColor=251,
 		NpcTalk="npc_talk_400083",
-		Function_Button = {
-			[1] = 4,
-		},
 	},
 	[87] = { 
 		ID=87,
@@ -1394,10 +1114,6 @@ local config = {
 		Appr=100053,
 		NameColor=251,
 		NpcTalk="npc_talk_400084",
-		Function_Button = {
-			[1] = 5,
-			[2] = 4,
-		},
 		Npc_Store=16,
 	},
 }

@@ -201,15 +201,15 @@ local config = {
 	},
 	["KillByMonstDropUseItem"] = { 
 		k="KillByMonstDropUseItem",
-		value=1,
+		value=0,
 	},
 	["KillByHumanDropUseItem"] = { 
 		k="KillByHumanDropUseItem",
-		value=1,
+		value=0,
 	},
 	["DropPlayLevel"] = { 
 		k="DropPlayLevel",
-		value=1,
+		value=42,
 	},
 	["HumMaxDropCount"] = { 
 		k="HumMaxDropCount",
@@ -337,7 +337,7 @@ local config = {
 	},
 	["PaimaiMoneyCnt"] = { 
 		k="PaimaiMoneyCnt",
-		value="2#20000#250|1#100000#500",
+		value="1#100000#500|2#20000#250",
 	},
 	["PaimaiDefEffId"] = { 
 		k="PaimaiDefEffId",

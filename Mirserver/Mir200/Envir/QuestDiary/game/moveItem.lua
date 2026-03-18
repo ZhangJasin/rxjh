@@ -136,14 +136,6 @@ function moveItem.move(actor, data)
     local isauto = gethumvar(actor, VarCfg.N_task_xunlu_auto)
     if isauto == 1 then
         sethumvar(actor, VarCfg.N_task_xunlu_auto, 0)
-        
-        -- 检查附近是否有任务NPC，如果有则不继续挂机
-        local Task = require("Envir/QuestDiary/game/Task")
-        local hasTaskNpc = Task.checkNearbyTaskNpc(actor)
-        
-        if not hasTaskNpc then
-            addtimerex(actor, 103, 200, 1,"@ontimer103","")  -- 延时挂机
-        end
     end
 end
 

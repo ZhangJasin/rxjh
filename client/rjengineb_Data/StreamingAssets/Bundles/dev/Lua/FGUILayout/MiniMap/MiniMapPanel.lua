@@ -1044,5 +1044,18 @@ end
 
 function MiniMapPanel:OnReceiveUseTransfer()
 	print("服务器收到 使用传送符")
+	SL:SetValue("BATTLE_AUTO_MOVE_END")
+	SL:SetValue("BATTLE_AFK_END")
+	
+	-- 检查当前任务的task_turntype是否为1，如果是则开启自动挂机
+	local taskDeliverData = require("FGUILayout/A_TaskDeliver/taskDeliverData")
+	local taskID = taskDeliverData:GetTaskID()
+	if taskID then
+		local Task_cfg = require("game_config/cfgcsv/Task")
+		local taskTurnType = Task_cfg[taskID]['task_turntype']
+		if taskTurnType and taskTurnType == 1 then
+			SL:SetValue("BATTLE_AFK_BEGIN")
+		end
+	end
 end
 return MiniMapPanel

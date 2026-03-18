@@ -439,6 +439,7 @@ function PCMiniMapPanel:OnClickTransmitBtn(context)
 
 	local idx = FGUI:GetIntData(context.sender)
 	local info = self._tempDatas[idx + 1]
+	ssrMessage:sendmsgEx("moveItem", "move",{{self._mapId, info.X, info.Y}})
 	if self._rightListType == RIGHT_TYPE_NPC then
 		if (not info.X) or (not info.Y) then return end
 		SL:RequestUseTransfer(self._mapId, info.X, info.Y)
@@ -1061,6 +1062,19 @@ end
 
 function PCMiniMapPanel:OnReceiveUseTransfer()
 	print("服务器收到 使用传送符")
+	SL:SetValue("BATTLE_AUTO_MOVE_END")
+	SL:SetValue("BATTLE_AFK_END")
+	
+	-- 检查当前任务的task_turntype是否为1，如果是则开启自动挂机
+	local taskDeliverData = require("FGUILayout/A_TaskDeliver/taskDeliverData")
+	local taskID = taskDeliverData:GetTaskID()
+	if taskID then
+		local Task_cfg = require("game_config/cfgcsv/Task")
+		local taskTurnType = Task_cfg[taskID]['task_turntype']
+		if taskTurnType and taskTurnType == 1 then
+			SL:SetValue("BATTLE_AFK_BEGIN")
+		end
+	end
 end
 
 function PCMiniMapPanel:RoundPointPosition(element, x, y)
