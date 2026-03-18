@@ -8,8 +8,10 @@ local config = {
 		Name="泫勃派门主",
 		MapRightName="泫勃派门主[主线]",
 		Appr=100006,
-		NameColor=251,
 		NpcTalk="npc_talk_400001",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[2] = { 
 		ID=2,
@@ -21,8 +23,11 @@ local config = {
 		Name="韦大宝",
 		MapRightName="韦大宝[仓库]",
 		Appr=100001,
-		NameColor=251,
 		NpcTalk="npc_talk_400002",
+		Function_Button = {
+			[1] = 3,
+			[2] = 4,
+		},
 	},
 	[3] = { 
 		ID=3,
@@ -34,8 +39,11 @@ local config = {
 		Name="平十指",
 		MapRightName="平十指[药店]",
 		Appr=100003,
-		NameColor=251,
 		NpcTalk="npc_talk_400003",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
 		Npc_Store=1,
 	},
 	[4] = { 
@@ -50,6 +58,12 @@ local config = {
 		Appr=100002,
 		NameColor=251,
 		NpcTalk="npc_talk_400004",
+		Function_Button = {
+			[1] = 1,
+			[2] = 2,
+			[3] = 5,
+			[4] = 4,
+		},
 		Npc_Store=2,
 	},
 	[5] = { 
@@ -61,8 +75,11 @@ local config = {
 		Name="银娇龙",
 		MapRightName="银娇龙[商店]",
 		Appr=100004,
-		NameColor=251,
 		NpcTalk="npc_talk_400005",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
 		Npc_Store=3,
 	},
 	[6] = { 
@@ -75,8 +92,11 @@ local config = {
 		Name="金香玉",
 		MapRightName="金香玉[任务]",
 		Appr=100005,
-		NameColor=251,
 		NpcTalk="npc_talk_400006",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
 		Npc_Store=28,
 	},
 	[7] = { 
@@ -89,8 +109,10 @@ local config = {
 		Name="小香",
 		MapRightName="小香[灵兽]",
 		Appr=100047,
-		NameColor=251,
 		NpcTalk="npc_talk_400007",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[8] = { 
 		ID=8,
@@ -102,8 +124,10 @@ local config = {
 		Name="温晓余",
 		MapRightName="温晓余[邪派]",
 		Appr=100008,
-		NameColor=251,
 		NpcTalk="npc_talk_400008",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[9] = { 
 		ID=9,
@@ -115,8 +139,10 @@ local config = {
 		Name="花有缺",
 		MapRightName="花有缺[正派]",
 		Appr=100007,
-		NameColor=251,
 		NpcTalk="npc_talk_400009",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[10] = { 
 		ID=10,
@@ -127,8 +153,10 @@ local config = {
 		Name="天耀光魄",
 		MapRightName="天耀光魄[兑换]",
 		Appr=100020,
-		NameColor=251,
 		NpcTalk="npc_talk_400010",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[11] = { 
 		ID=11,
@@ -140,8 +168,10 @@ local config = {
 		Name="浮元子",
 		MapRightName="浮元子",
 		Appr=100098,
-		NameColor=251,
 		NpcTalk="npc_talk_400011",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[13] = { 
 		ID=13,
@@ -153,8 +183,10 @@ local config = {
 		Name="柳正关关主 柳絮",
 		MapRightName="柳正关关主 柳絮",
 		Appr=100012,
-		NameColor=251,
-		NpcTalk="npc_talk_400011",
+		NpcTalk="npc_talk_400012",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[14] = { 
 		ID=14,
@@ -166,8 +198,12 @@ local config = {
 		Name="萧春水",
 		MapRightName="萧春水",
 		Appr=100013,
-		NameColor=251,
-		NpcTalk="npc_talk_400012",
+		NpcTalk="npc_talk_400013",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=4,
 	},
 	[15] = { 
 		ID=15,
@@ -178,9 +214,10 @@ local config = {
 		Name="红凤凰",
 		MapRightName="红凤凰",
 		Appr=100014,
-		NameColor=251,
-		NpcTalk="npc_talk_400013",
-		Npc_Store=4,
+		NpcTalk="npc_talk_400014",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[16] = { 
 		ID=16,
@@ -191,8 +228,10 @@ local config = {
 		Name="南宫柳",
 		MapRightName="南宫柳",
 		Appr=100048,
-		NameColor=251,
-		NpcTalk="npc_talk_400014",
+		NpcTalk="npc_talk_400015",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[17] = { 
 		ID=17,
@@ -204,8 +243,10 @@ local config = {
 		Name="楚留情",
 		MapRightName="楚留情",
 		Appr=100027,
-		NameColor=251,
-		NpcTalk="npc_talk_400015",
+		NpcTalk="npc_talk_400016",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[18] = { 
 		ID=18,
@@ -217,8 +258,10 @@ local config = {
 		Name="韦白白白",
 		MapRightName="韦白白白",
 		Appr=100018,
-		NameColor=251,
-		NpcTalk="npc_talk_400016",
+		NpcTalk="npc_talk_400017",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[19] = { 
 		ID=19,
@@ -229,8 +272,12 @@ local config = {
 		Name="慕容光",
 		MapRightName="慕容光",
 		Appr=100050,
-		NameColor=251,
-		NpcTalk="npc_talk_400017",
+		NpcTalk="npc_talk_400018",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=9,
 	},
 	[20] = { 
 		ID=20,
@@ -242,9 +289,12 @@ local config = {
 		Name="谢晓风",
 		MapRightName="谢晓风",
 		Appr=100020,
-		NameColor=251,
-		NpcTalk="npc_talk_400018",
-		Npc_Store=9,
+		NpcTalk="npc_talk_400019",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=8,
 	},
 	[21] = { 
 		ID=21,
@@ -256,9 +306,10 @@ local config = {
 		Name="掌财长老 石成金",
 		MapRightName="掌财长老 石成金",
 		Appr=100039,
-		NameColor=251,
-		NpcTalk="npc_talk_400019",
-		Npc_Store=8,
+		NpcTalk="npc_talk_400020",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[22] = { 
 		ID=22,
@@ -270,8 +321,10 @@ local config = {
 		Name="执法长老 严世镜",
 		MapRightName="执法长老 严世镜",
 		Appr=100040,
-		NameColor=251,
-		NpcTalk="npc_talk_400020",
+		NpcTalk="npc_talk_400021",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[23] = { 
 		ID=23,
@@ -283,8 +336,10 @@ local config = {
 		Name="神武门主车敬墨",
 		MapRightName="神武门主车敬墨",
 		Appr=100017,
-		NameColor=251,
-		NpcTalk="npc_talk_400021",
+		NpcTalk="npc_talk_400022",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[24] = { 
 		ID=24,
@@ -296,8 +351,10 @@ local config = {
 		Name="神武门副门主闻四海",
 		MapRightName="神武门副门主闻四海",
 		Appr=100041,
-		NameColor=251,
-		NpcTalk="npc_talk_400022",
+		NpcTalk="npc_talk_400023",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[25] = { 
 		ID=25,
@@ -309,8 +366,12 @@ local config = {
 		Name="令狐二中",
 		MapRightName="令狐二中",
 		Appr=100019,
-		NameColor=251,
-		NpcTalk="npc_talk_400023",
+		NpcTalk="npc_talk_400024",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=7,
 	},
 	[26] = { 
 		ID=26,
@@ -322,9 +383,10 @@ local config = {
 		Name="传功长老 上官音",
 		MapRightName="传功长老 上官音",
 		Appr=100037,
-		NameColor=251,
-		NpcTalk="npc_talk_400024",
-		Npc_Store=7,
+		NpcTalk="npc_talk_400025",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[27] = { 
 		ID=27,
@@ -336,20 +398,26 @@ local config = {
 		Name="授戒长老 上官玄",
 		MapRightName="授戒长老 上官玄",
 		Appr=100038,
-		NameColor=251,
-		NpcTalk="npc_talk_400025",
+		NpcTalk="npc_talk_400026",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[28] = { 
 		ID=28,
 		Script="杨不凡",
 		MapName="501",
 		X=174,
-		Y=61,
+		Y=59,
 		Name="杨不凡",
 		MapRightName="杨不凡",
 		Appr=100021,
-		NameColor=251,
-		NpcTalk="npc_talk_400026",
+		NpcTalk="npc_talk_400027",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=6,
 	},
 	[29] = { 
 		ID=29,
@@ -361,9 +429,10 @@ local config = {
 		Name="北海村长",
 		MapRightName="北海村长",
 		Appr=100062,
-		NameColor=251,
-		NpcTalk="npc_talk_400027",
-		Npc_Store=6,
+		NpcTalk="npc_talk_400028",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[30] = { 
 		ID=30,
@@ -375,8 +444,10 @@ local config = {
 		Name="光之使者",
 		MapRightName="光之使者",
 		Appr=100061,
-		NameColor=251,
-		NpcTalk="npc_talk_400028",
+		NpcTalk="npc_talk_400029",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[31] = { 
 		ID=31,
@@ -388,8 +459,10 @@ local config = {
 		Name="莫彦君",
 		MapRightName="莫彦君",
 		Appr=100059,
-		NameColor=251,
-		NpcTalk="npc_talk_400029",
+		NpcTalk="npc_talk_400030",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[32] = { 
 		ID=32,
@@ -401,8 +474,10 @@ local config = {
 		Name="花牡丹",
 		MapRightName="花牡丹",
 		Appr=100063,
-		NameColor=251,
-		NpcTalk="npc_talk_400030",
+		NpcTalk="npc_talk_400031",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[33] = { 
 		ID=33,
@@ -414,8 +489,10 @@ local config = {
 		Name="金十龄",
 		MapRightName="金十龄",
 		Appr=100056,
-		NameColor=251,
-		NpcTalk="npc_talk_400031",
+		NpcTalk="npc_talk_400032",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[34] = { 
 		ID=34,
@@ -427,8 +504,10 @@ local config = {
 		Name="王语然",
 		MapRightName="王语然",
 		Appr=100058,
-		NameColor=251,
-		NpcTalk="npc_talk_400032",
+		NpcTalk="npc_talk_400033",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[35] = { 
 		ID=35,
@@ -439,8 +518,10 @@ local config = {
 		Name="乞丐老人",
 		MapRightName="乞丐老人",
 		Appr=100066,
-		NameColor=251,
-		NpcTalk="npc_talk_400033",
+		NpcTalk="npc_talk_400034",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[36] = { 
 		ID=36,
@@ -452,8 +533,12 @@ local config = {
 		Name="司空揽月",
 		MapRightName="司空揽月",
 		Appr=100055,
-		NameColor=251,
-		NpcTalk="npc_talk_400034",
+		NpcTalk="npc_talk_400035",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=22,
 	},
 	[37] = { 
 		ID=37,
@@ -465,9 +550,12 @@ local config = {
 		Name="金蓉蓉",
 		MapRightName="金蓉蓉",
 		Appr=100054,
-		NameColor=251,
-		NpcTalk="npc_talk_400035",
-		Npc_Store=22,
+		NpcTalk="npc_talk_400036",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=23,
 	},
 	[38] = { 
 		ID=38,
@@ -479,9 +567,10 @@ local config = {
 		Name="肖铁钧",
 		MapRightName="肖铁钧",
 		Appr=100064,
-		NameColor=251,
-		NpcTalk="npc_talk_400036",
-		Npc_Store=23,
+		NpcTalk="npc_talk_400037",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[39] = { 
 		ID=39,
@@ -493,8 +582,12 @@ local config = {
 		Name="吕孤城",
 		MapRightName="吕孤城",
 		Appr=100057,
-		NameColor=251,
-		NpcTalk="npc_talk_400037",
+		NpcTalk="npc_talk_400038",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=21,
 	},
 	[40] = { 
 		ID=40,
@@ -506,9 +599,10 @@ local config = {
 		Name="暗之使者",
 		MapRightName="暗之使者",
 		Appr=100060,
-		NameColor=251,
-		NpcTalk="npc_talk_400038",
-		Npc_Store=21,
+		NpcTalk="npc_talk_400039",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[42] = { 
 		ID=42,
@@ -520,8 +614,10 @@ local config = {
 		Name="石惊天",
 		MapRightName="石惊天",
 		Appr=100068,
-		NameColor=251,
-		NpcTalk="npc_talk_400039",
+		NpcTalk="npc_talk_400040",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[43] = { 
 		ID=43,
@@ -533,8 +629,10 @@ local config = {
 		Name="余琳琅",
 		MapRightName="余琳琅",
 		Appr=100067,
-		NameColor=251,
-		NpcTalk="npc_talk_400040",
+		NpcTalk="npc_talk_400041",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[44] = { 
 		ID=44,
@@ -546,8 +644,10 @@ local config = {
 		Name="木心兰",
 		MapRightName="木心兰",
 		Appr=100033,
-		NameColor=251,
-		NpcTalk="npc_talk_400041",
+		NpcTalk="npc_talk_400042",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[45] = { 
 		ID=45,
@@ -559,8 +659,12 @@ local config = {
 		Name="上官清风",
 		MapRightName="上官清风",
 		Appr=100052,
-		NameColor=251,
-		NpcTalk="npc_talk_400042",
+		NpcTalk="npc_talk_400043",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=15,
 	},
 	[46] = { 
 		ID=46,
@@ -572,9 +676,12 @@ local config = {
 		Name="段天明",
 		MapRightName="段天明",
 		Appr=100034,
-		NameColor=251,
-		NpcTalk="npc_talk_400043",
-		Npc_Store=15,
+		NpcTalk="npc_talk_400044",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=14,
 	},
 	[47] = { 
 		ID=47,
@@ -586,9 +693,10 @@ local config = {
 		Name="关少峰",
 		MapRightName="关少峰",
 		Appr=100081,
-		NameColor=251,
-		NpcTalk="npc_talk_400044",
-		Npc_Store=14,
+		NpcTalk="npc_talk_400045",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[48] = { 
 		ID=48,
@@ -600,8 +708,10 @@ local config = {
 		Name="黄剑宇",
 		MapRightName="黄剑宇",
 		Appr=100074,
-		NameColor=251,
-		NpcTalk="npc_talk_400045",
+		NpcTalk="npc_talk_400046",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[49] = { 
 		ID=49,
@@ -613,21 +723,27 @@ local config = {
 		Name="黄浩虎",
 		MapRightName="黄浩虎",
 		Appr=100075,
-		NameColor=251,
-		NpcTalk="npc_talk_400046",
+		NpcTalk="npc_talk_400047",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[50] = { 
 		ID=50,
-		Script="艺花兰",
+		Script="花艺兰",
 		MapName="1401",
 		X=85.7,
 		Y=209.7,
 		Dir=180,
-		Name="艺花兰",
-		MapRightName="艺花兰",
+		Name="花艺兰",
+		MapRightName="花艺兰",
 		Appr=100076,
-		NameColor=251,
-		NpcTalk="npc_talk_400047",
+		NpcTalk="npc_talk_400048",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=18,
 	},
 	[51] = { 
 		ID=51,
@@ -638,9 +754,10 @@ local config = {
 		Name="月宫姮娥",
 		MapRightName="月宫姮娥",
 		Appr=100098,
-		NameColor=251,
-		NpcTalk="npc_talk_400048",
-		Npc_Store=18,
+		NpcTalk="npc_talk_400049",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[52] = { 
 		ID=52,
@@ -652,8 +769,10 @@ local config = {
 		Name="仙渺阁主",
 		MapRightName="仙渺阁主",
 		Appr=100020,
-		NameColor=251,
-		NpcTalk="npc_talk_400049",
+		NpcTalk="npc_talk_400050",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[53] = { 
 		ID=53,
@@ -665,8 +784,12 @@ local config = {
 		Name="宋景琳",
 		MapRightName="宋景琳",
 		Appr=100078,
-		NameColor=251,
-		NpcTalk="npc_talk_400050",
+		NpcTalk="npc_talk_400051",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=20,
 	},
 	[54] = { 
 		ID=54,
@@ -678,9 +801,12 @@ local config = {
 		Name="吴霸武",
 		MapRightName="吴霸武",
 		Appr=100077,
-		NameColor=251,
-		NpcTalk="npc_talk_400051",
-		Npc_Store=20,
+		NpcTalk="npc_talk_400052",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=19,
 	},
 	[55] = { 
 		ID=55,
@@ -692,9 +818,10 @@ local config = {
 		Name="徐晓兰",
 		MapRightName="徐晓兰",
 		Appr=100079,
-		NameColor=251,
-		NpcTalk="npc_talk_400052",
-		Npc_Store=19,
+		NpcTalk="npc_talk_400053",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[56] = { 
 		ID=56,
@@ -706,8 +833,10 @@ local config = {
 		Name="梅红",
 		MapRightName="梅红",
 		Appr=100080,
-		NameColor=251,
-		NpcTalk="npc_talk_400053",
+		NpcTalk="npc_talk_400054",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[57] = { 
 		ID=57,
@@ -719,8 +848,10 @@ local config = {
 		Name="三邪关关主翅娟",
 		MapRightName="三邪关关主翅娟",
 		Appr=100009,
-		NameColor=251,
-		NpcTalk="npc_talk_400054",
+		NpcTalk="npc_talk_400055",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[58] = { 
 		ID=58,
@@ -732,8 +863,10 @@ local config = {
 		Name="周叔通",
 		MapRightName="周叔通",
 		Appr=100011,
-		NameColor=251,
-		NpcTalk="npc_talk_400055",
+		NpcTalk="npc_talk_400056",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[59] = { 
 		ID=59,
@@ -744,8 +877,12 @@ local config = {
 		Name="陆小凰",
 		MapRightName="陆小凰",
 		Appr=100010,
-		NameColor=251,
-		NpcTalk="npc_talk_400056",
+		NpcTalk="npc_talk_400057",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=5,
 	},
 	[60] = { 
 		ID=60,
@@ -756,9 +893,10 @@ local config = {
 		Name="南宫絮",
 		MapRightName="南宫絮",
 		Appr=100049,
-		NameColor=251,
-		NpcTalk="npc_talk_400057",
-		Npc_Store=5,
+		NpcTalk="npc_talk_400058",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[61] = { 
 		ID=61,
@@ -770,8 +908,10 @@ local config = {
 		Name="裘千米",
 		MapRightName="裘千米",
 		Appr=100028,
-		NameColor=251,
-		NpcTalk="npc_talk_400058",
+		NpcTalk="npc_talk_400059",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[62] = { 
 		ID=62,
@@ -783,8 +923,10 @@ local config = {
 		Name="千晓生",
 		MapRightName="千晓生",
 		Appr=100015,
-		NameColor=251,
-		NpcTalk="npc_talk_400059",
+		NpcTalk="npc_talk_400060",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[63] = { 
 		ID=63,
@@ -796,8 +938,10 @@ local config = {
 		Name="柳善提督府府主施薇",
 		MapRightName="柳善提督府府主施薇",
 		Appr=100022,
-		NameColor=251,
-		NpcTalk="npc_talk_400060",
+		NpcTalk="npc_talk_400061",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[64] = { 
 		ID=64,
@@ -809,8 +953,10 @@ local config = {
 		Name="柳善府二府主段雨",
 		MapRightName="柳善府二府主段雨",
 		Appr=100046,
-		NameColor=251,
-		NpcTalk="npc_talk_400061",
+		NpcTalk="npc_talk_400062",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[65] = { 
 		ID=65,
@@ -822,8 +968,11 @@ local config = {
 		Name="慕容明",
 		MapRightName="慕容明",
 		Appr=100051,
-		NameColor=251,
-		NpcTalk="npc_talk_400062",
+		NpcTalk="npc_talk_400063",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
 	},
 	[66] = { 
 		ID=66,
@@ -835,8 +984,10 @@ local config = {
 		Name="金木天王 南宫木",
 		MapRightName="金木天王 南宫木",
 		Appr=100044,
-		NameColor=251,
-		NpcTalk="npc_talk_400063",
+		NpcTalk="npc_talk_400064",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[67] = { 
 		ID=67,
@@ -848,8 +999,10 @@ local config = {
 		Name="玉水天王 项秋水",
 		MapRightName="玉水天王 项秋水",
 		Appr=100045,
-		NameColor=251,
-		NpcTalk="npc_talk_400064",
+		NpcTalk="npc_talk_400065",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[68] = { 
 		ID=68,
@@ -861,8 +1014,10 @@ local config = {
 		Name="飓风天王 风清飘",
 		MapRightName="飓风天王 风清飘",
 		Appr=100042,
-		NameColor=251,
-		NpcTalk="npc_talk_400065",
+		NpcTalk="npc_talk_400066",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[69] = { 
 		ID=69,
@@ -874,8 +1029,10 @@ local config = {
 		Name="烈焰天王 慕容火",
 		MapRightName="烈焰天王 慕容火",
 		Appr=100043,
-		NameColor=251,
-		NpcTalk="npc_talk_400066",
+		NpcTalk="npc_talk_400067",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[70] = { 
 		ID=70,
@@ -887,8 +1044,12 @@ local config = {
 		Name="萧十二郎",
 		MapRightName="萧十二郎",
 		Appr=100024,
-		NameColor=251,
-		NpcTalk="npc_talk_400067",
+		NpcTalk="npc_talk_400068",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=11,
 	},
 	[71] = { 
 		ID=71,
@@ -900,9 +1061,10 @@ local config = {
 		Name="轩辕二光",
 		MapRightName="轩辕二光",
 		Appr=100023,
-		NameColor=251,
-		NpcTalk="npc_talk_400068",
-		Npc_Store=11,
+		NpcTalk="npc_talk_400069",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[72] = { 
 		ID=72,
@@ -914,8 +1076,12 @@ local config = {
 		Name="上官晓仙",
 		MapRightName="上官晓仙",
 		Appr=100025,
-		NameColor=251,
-		NpcTalk="npc_talk_400069",
+		NpcTalk="npc_talk_400070",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=12,
 	},
 	[73] = { 
 		ID=73,
@@ -927,9 +1093,12 @@ local config = {
 		Name="丁冬夏",
 		MapRightName="丁冬夏",
 		Appr=100026,
-		NameColor=251,
-		NpcTalk="npc_talk_400070",
-		Npc_Store=12,
+		NpcTalk="npc_talk_400071",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=10,
 	},
 	[74] = { 
 		ID=74,
@@ -941,9 +1110,10 @@ local config = {
 		Name="季时雨",
 		MapRightName="季时雨",
 		Appr=100095,
-		NameColor=251,
-		NpcTalk="npc_talk_400071",
-		Npc_Store=10,
+		NpcTalk="npc_talk_400072",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[75] = { 
 		ID=75,
@@ -955,8 +1125,10 @@ local config = {
 		Name="郭晋玄",
 		MapRightName="郭晋玄",
 		Appr=100087,
-		NameColor=251,
-		NpcTalk="npc_talk_400072",
+		NpcTalk="npc_talk_400073",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[76] = { 
 		ID=76,
@@ -968,8 +1140,12 @@ local config = {
 		Name="美琳",
 		MapRightName="美琳",
 		Appr=100090,
-		NameColor=251,
-		NpcTalk="npc_talk_400073",
+		NpcTalk="npc_talk_400074",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=27,
 	},
 	[77] = { 
 		ID=77,
@@ -981,9 +1157,12 @@ local config = {
 		Name="白震宇",
 		MapRightName="白震宇",
 		Appr=100092,
-		NameColor=251,
-		NpcTalk="npc_talk_400074",
-		Npc_Store=27,
+		NpcTalk="npc_talk_400075",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=26,
 	},
 	[78] = { 
 		ID=78,
@@ -995,22 +1174,27 @@ local config = {
 		Name="文星竹",
 		MapRightName="文星竹",
 		Appr=100091,
-		NameColor=251,
-		NpcTalk="npc_talk_400075",
-		Npc_Store=26,
+		NpcTalk="npc_talk_400076",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[79] = { 
 		ID=79,
-		Script="姜大壮",
+		Script="姜大状",
 		MapName="1601",
 		X=111.9,
 		Y=105.7,
 		Dir=180,
-		Name="姜大壮",
-		MapRightName="姜大壮",
+		Name="姜大状",
+		MapRightName="姜大状",
 		Appr=100089,
-		NameColor=251,
-		NpcTalk="npc_talk_400076",
+		NpcTalk="npc_talk_400077",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=25,
 	},
 	[80] = { 
 		ID=80,
@@ -1021,9 +1205,10 @@ local config = {
 		Name="薛妍芝",
 		MapRightName="薛妍芝",
 		Appr=100100,
-		NameColor=251,
-		NpcTalk="npc_talk_400077",
-		Npc_Store=25,
+		NpcTalk="npc_talk_400078",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[81] = { 
 		ID=81,
@@ -1035,8 +1220,12 @@ local config = {
 		Name="江云鹤",
 		MapRightName="江云鹤",
 		Appr=100088,
-		NameColor=251,
-		NpcTalk="npc_talk_400078",
+		NpcTalk="npc_talk_400079",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=24,
 	},
 	[82] = { 
 		ID=82,
@@ -1047,9 +1236,10 @@ local config = {
 		Name="白锦堂",
 		MapRightName="白锦堂",
 		Appr=100096,
-		NameColor=251,
-		NpcTalk="npc_talk_400079",
-		Npc_Store=24,
+		NpcTalk="npc_talk_400080",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[83] = { 
 		ID=83,
@@ -1061,8 +1251,10 @@ local config = {
 		Name="程咬银",
 		MapRightName="程咬银",
 		Appr=100094,
-		NameColor=251,
-		NpcTalk="npc_talk_400080",
+		NpcTalk="npc_talk_400081",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[84] = { 
 		ID=84,
@@ -1074,8 +1266,10 @@ local config = {
 		Name="彩玉",
 		MapRightName="彩玉",
 		Appr=100097,
-		NameColor=251,
-		NpcTalk="npc_talk_400081",
+		NpcTalk="npc_talk_400082",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[85] = { 
 		ID=85,
@@ -1086,8 +1280,10 @@ local config = {
 		Name="木平之",
 		MapRightName="木平之",
 		Appr=100035,
-		NameColor=251,
-		NpcTalk="npc_talk_400082",
+		NpcTalk="npc_talk_400083",
+		Function_Button = {
+			[1] = 4,
+		},
 	},
 	[86] = { 
 		ID=86,
@@ -1099,8 +1295,12 @@ local config = {
 		Name="风三娘",
 		MapRightName="风三娘",
 		Appr=100036,
-		NameColor=251,
-		NpcTalk="npc_talk_400083",
+		NpcTalk="npc_talk_400084",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=16,
 	},
 	[87] = { 
 		ID=87,
@@ -1112,9 +1312,12 @@ local config = {
 		Name="上官明月",
 		MapRightName="上官明月",
 		Appr=100053,
-		NameColor=251,
-		NpcTalk="npc_talk_400084",
-		Npc_Store=16,
+		NpcTalk="npc_talk_400085",
+		Function_Button = {
+			[1] = 5,
+			[2] = 4,
+		},
+		Npc_Store=17,
 	},
 }
 return config
