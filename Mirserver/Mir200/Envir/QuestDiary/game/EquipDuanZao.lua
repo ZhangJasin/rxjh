@@ -373,7 +373,6 @@ end
 function EquipDuanZao.transfer(actor, data)
     local sourceMakeIndex = tostring(data[1])
     local targetMakeIndex = tostring(data[2])
-    local isBag = tonumber(data[3]) or 0
     
     if sourceMakeIndex == "0" or targetMakeIndex == "0" then
         sendmsg(actor, 9, "请选择源装备和目标装备！")
@@ -490,11 +489,8 @@ function EquipDuanZao.transfer(actor, data)
         param3 = 0  -- 源装备固定清0
     })
     
-    -- 更新武器特效
     local targetEquipObj = itemobjbymakeindex(actor, targetMakeIndex)
-    if targetStdMode == 5 then  -- 武器
-        EquipDuanZao.showWeaponEffect(actor, targetEquipObj)
-    end
+    EquipDuanZao.showWeaponEffect(actor, targetEquipObj)
 end
 
 

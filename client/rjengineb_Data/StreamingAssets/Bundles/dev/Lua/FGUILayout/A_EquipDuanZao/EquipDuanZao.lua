@@ -195,13 +195,14 @@ function EquipDuanZao:Create()
     table.insert(self._eventTokens, EquipDuanZaoData:Subscribe("transfer_update", function(data)
         if tonumber(data.param1) == 1 then  -- 转移成功
             local newLevel = tonumber(data.param2) or 0
+            -- 强制刷新装备数据（包括身上装备）
+            self:GetPageData()
+            -- 刷新列表显示
+            self:RefrsList()
             -- 清空源装备和目标装备选择
             self:clearSourceEquip()
             self:clearTargetEquip()
-            
-            -- 刷新列表
-            self:GetPageData()
-            self:RefrsList()
+            -- 刷新道具消耗显示
             self:upitem2num_transfer()
             -- 显示成功消息
             SL:ShowScreenCenterTip(string.format("强化转移成功！目标装备获得+%d强化", newLevel), 251, 0, 200, 1, 1)
@@ -235,6 +236,19 @@ function EquipDuanZao:Destroy()
 end
 
 function EquipDuanZao:onUpdata()
+    -- 如果是强化转移页面，需要刷新装备数据
+    if self.pageControlle.selectedIndex == 2 then
+        -- 强制刷新装备数据（包括身上装备）
+        self:GetPageData()
+        -- 刷新列表显示
+        self:RefrsList()
+        -- 清除选中装备
+        self:clearSourceEquip()
+        self:clearTargetEquip()
+        -- 刷新道具消耗显示
+        self:upitem2num_transfer()
+        return
+    end
     self:GetPageData()
     self:RefrsList()
     self:clearequip()
@@ -1378,8 +1392,7 @@ function EquipDuanZao:onTransferClicked()
     local EquipDuanZaoData = SL:RequireFile("FGUILayout/A_EquipDuanZao/EquipDuanZaoData")
     EquipDuanZaoData:RequestTransfer({
         self.sourceEquipMakeIndex,
-        self.targetEquipMakeIndex,
-        self.itemlistControlle.selectedIndex
+        self.targetEquipMakeIndex
     })
 end
 
