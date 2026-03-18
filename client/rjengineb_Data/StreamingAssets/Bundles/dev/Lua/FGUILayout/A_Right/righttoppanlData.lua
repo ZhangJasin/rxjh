@@ -51,6 +51,8 @@ end
 -- 使用传送符道具
 function righttoppanlData:RequestMove(param)
     ssrMessage:sendmsgEx("moveItem", "move", param)
+    -- SL:RequestUseTransfer(param[1][1], param[1][2], param[1][3])
+    SL:RegisterLUAEvent(LUA_EVENT_CHANGE_SCENE, "righttoppanlData", handler(self, self.OnReceiveUseTransfer))
 end
 -- 使用道具弹窗
 function righttoppanlData:RequestUseItem(data)
@@ -111,6 +113,7 @@ function righttoppanlData:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_TARGET_CAHNGE, "righttoppanlData", handler(self, self.onTargerChange))
     SL:RegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "righttoppanlData", handler(self, self.OnRefreshPropertyShow))
     SL:RegisterLUAEvent(LUA_EVENT_ROLE_PROPERTY_INITED, "righttoppanlData", handler(self, self.OnRefreshPropertyShow))
+    
 end
 
 -- 移除全局事件
@@ -120,6 +123,22 @@ function righttoppanlData:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_TARGET_CAHNGE, "righttoppanlData")
     SL:UnRegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "righttoppanlData")
     SL:UnRegisterLUAEvent(LUA_EVENT_ROLE_PROPERTY_INITED, "righttoppanlData")
+
 end
 
+function righttoppanlData:OnReceiveUseTransfer()
+    SL:UnRegisterLUAEvent(LUA_EVENT_CHANGE_SCENE, "righttoppanlData")
+	SL:SetValue("BATTLE_AUTO_MOVE_END")
+	SL:SetValue("BATTLE_AFK_END")
+	
+	-- 检查当前任务的task_turntype是否为1，如果是则开启自动挂机
+	local taskID = taskDeliverData:GetTaskID()
+	if taskID then
+		local Task_cfg = require("game_config/cfgcsv/Task")
+		local taskTurnType = Task_cfg[taskID]['task_turntype']
+		if taskTurnType and taskTurnType == 1 then
+			SL:SetValue("BATTLE_AFK_BEGIN")
+		end
+	end
+end
 return righttoppanlData

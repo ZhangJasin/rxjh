@@ -679,7 +679,7 @@ function Task.xunlu(actor, data)
     --     return
     -- end
     sethumvar(actor,VarCfg.U_click_taskID,taskid)  --当前点击
-	-- print("寻路",taskid)
+	print("寻路",taskid)
     local TaskProgress_data = getCurTask(actor)
     local jindu = Task_cfg[taskid]['task_progress'] or 1
     local state = TaskProgress_data[""..taskid]['state'] or 0

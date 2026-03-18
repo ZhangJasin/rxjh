@@ -1043,7 +1043,7 @@ end
 ---------------------------------------------------
 
 function MiniMapPanel:OnReceiveUseTransfer()
-	print("服务器收到 使用传送符")
+	-- print("服务器收到 使用传送符")
 	SL:SetValue("BATTLE_AUTO_MOVE_END")
 	SL:SetValue("BATTLE_AFK_END")
 	
