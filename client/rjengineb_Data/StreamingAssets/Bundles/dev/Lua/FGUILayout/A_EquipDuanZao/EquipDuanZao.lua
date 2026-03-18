@@ -94,8 +94,11 @@ function EquipDuanZao:Create()
         self.itemlistControlle.selectedIndex = index
         FGUI:Controller_setSelectedIndex(self.additemControlle, 0)
 
-        self:clearequip()
-        self:succfont()
+        -- 强化转移页面切换时不清除选中数据
+        if self.pageControlle.selectedIndex ~= 2 then
+            self:clearequip()
+            self:succfont()
+        end
     end)
 
     self.pageControlle.selectedIndex = 0
@@ -192,13 +195,13 @@ function EquipDuanZao:Create()
     table.insert(self._eventTokens, EquipDuanZaoData:Subscribe("transfer_update", function(data)
         if tonumber(data.param1) == 1 then  -- 转移成功
             local newLevel = tonumber(data.param2) or 0
-            self.qhequipMakeIndex = 0
+            -- 清空源装备和目标装备选择
+            self:clearSourceEquip()
+            self:clearTargetEquip()
+            
+            -- 刷新列表
             self:GetPageData()
-            self:GetAddItem()
             self:RefrsList()
-            FGUI:GList_clearSelection(self.ListBag)
-            FGUI:GList_clearSelection(self.ListEquip)
-            self:clearequip()
             self:upitem2num_transfer()
             -- 显示成功消息
             SL:ShowScreenCenterTip(string.format("强化转移成功！目标装备获得+%d强化", newLevel), 251, 0, 200, 1, 1)
@@ -241,6 +244,16 @@ end
 --- InitData: 初始化右侧功能区数据和事件
 -----------------------------------------------------------------------
 function EquipDuanZao:InitData()
+     -- 判断是否打开了tips
+     self.tipsControlle = FGUI:getController(self.component, "tips")
+     self.tipinfoScro = FGUI:ui_delegate(self.tipsbg.infoScro)
+     FGUI:GRichTextField_setText(self.tipinfoScro['n3'], EquipQHTab[self.pageControlle.selectedIndex + 1]['TIPS'])
+     FGUI:GRichTextField_setText(self.tipsbg['title'], EquipQHTab[self.pageControlle.selectedIndex + 1]['title'])
+     FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+     -- 点击tips
+     FGUI:setOnClickEvent(self._ui.btntips, handler(self, self.btnTipsClicked))
+     FGUI:setOnClickEvent(self.tipsbg.closetips, handler(self, self.btnTipsClicked))
+
     -- 根据页签选中初始化右侧面板及相关事件绑定
     -- 新页签顺序：0=合成, 1=装备强化, 2=强化转移, 3=首饰加工, 4=装备赋予
     if self.pageControlle.selectedIndex == 0 then
@@ -250,9 +263,37 @@ function EquipDuanZao:InitData()
     elseif self.pageControlle.selectedIndex == 1 then
         self.rightbg = FGUI:ui_delegate(self._ui.panl_qh)
         self.additemControlle = FGUI:getController(self._ui.panl_qh, "additem")
-    elseif self.pageControlle.selectedIndex == 2 then        
+    elseif self.pageControlle.selectedIndex == 2 then
+        -- 强化转移页面:使用独立的UI面板
         self.rightbg = FGUI:ui_delegate(self._ui.panl_transfer)
         self.additemControlle = FGUI:getController(self._ui.panl_transfer, "additem")
+        self.addlistshowControlle = FGUI:getController(self._ui.panl_transfer, "addlistshow")
+        -- 初始化强化转移相关变量
+        self.sourceEquipMakeIndex = 0
+        self.targetEquipMakeIndex = 0
+        self.sourceEquipLevel = 0
+        self.targetEquipLevel = 0
+        
+        -- 为转移页面的装备槽创建ui_delegate以便访问子组件
+        self.xzequip = FGUI:ui_delegate(self.rightbg.xzequip)
+        self.xzqhitem1 = FGUI:ui_delegate(self.rightbg.xzqhitem1)
+        if self.rightbg.xzqhitem2 then
+            self.xzqhitem2 = FGUI:ui_delegate(self.rightbg.xzqhitem2)
+        end
+        
+        -- 设置关闭按钮点击事件
+        FGUI:setOnClickEvent(self.xzequip.closeitembtn, function()
+            self:clearTargetEquip()
+        end)
+        FGUI:setOnClickEvent(self.xzqhitem1.closeitembtn, function()
+            self:clearSourceEquip()
+        end)
+        
+        -- 设置强化转移按钮点击事件
+        FGUI:setOnClickEvent(self.rightbg.qhbtn, handler(self, self.onTransferClicked))
+        -- 更新道具消耗显示
+        self:upitem2num_transfer()
+        return
     elseif self.pageControlle.selectedIndex == 3 then
         self.rightbg = FGUI:ui_delegate(self._ui.panl_jg)
         self.additemControlle = FGUI:getController(self._ui.panl_jg, "additem")
@@ -266,16 +307,7 @@ function EquipDuanZao:InitData()
     self.checkBoxIsSelected = FGUI:getController(self.rightbg.ischeck, "isSelected")
     -- 判断是否选择了添加道具窗口
     self.addlistshowControlle = FGUI:getController(self.rightbg.panl_additem, "addlistshow")
-    -- 判断是否打开了tips
-    self.tipsControlle = FGUI:getController(self.component, "tips")
-    self.tipinfoScro = FGUI:ui_delegate(self.tipsbg.infoScro)
-    FGUI:GRichTextField_setText(self.tipinfoScro['n3'], EquipQHTab[self.pageControlle.selectedIndex + 1]['TIPS'])
-    FGUI:GRichTextField_setText(self.tipsbg['title'], EquipQHTab[self.pageControlle.selectedIndex + 1]['title'])
-    FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
-    -- 点击tips
-    FGUI:setOnClickEvent(self._ui.btntips, handler(self, self.btnTipsClicked))
-    FGUI:setOnClickEvent(self.tipsbg.closetips, handler(self, self.btnTipsClicked))
-
+   
     -- 幸运符点击事件
     FGUI:setOnClickEvent(self.rightbg.xzitem1, handler(self, self.btnSelectItemClicked1))
     if self.rightbg.xzitem2 then
@@ -314,11 +346,6 @@ function EquipDuanZao:InitData()
             EquipDuanZaoData:RequestFuYu({
                 self.qhitem1, self.qhitem2, self.qhitem3, 
                 self.qhequipMakeIndex, self.checkBoxIsSelected.selectedIndex, 
-                self.itemlistControlle.selectedIndex
-            })
-        elseif self.pageControlle.selectedIndex == 2 then      -- 强化转移
-            EquipDuanZaoData:RequestTransfer({
-                self.qhequipMakeIndex, self.qhitem3Makeid, 
                 self.itemlistControlle.selectedIndex
             })
         else
@@ -370,19 +397,20 @@ function EquipDuanZao:baglist()
         local index = FGUI:GetIntData(itemRoot)
         local selectedIndex = FGUI:GList_getSelectedIndex(self.ListBag)
         if bagequiplist[index] then
-           -- 正常的装备选择逻辑
-           self.selectEquipStdMode = bagequiplist[index].StdMode
-           self.qhequipMakeIndex = bagequiplist[index].MakeIndex
-           self.selectEquipQHTabIndex = SL:GetValue("ITEM_DATA",bagequiplist[index].Index).EquipQHTabId
-           self:GetAddItem()
-           if self.pageControlle.selectedIndex == 2 then
-            self:upitem2num_transfer()
-           else
-            self:upitem2num()
-           end
-           
-           self:succfont()
-           self.page2selectindex = selectedIndex
+            -- 强化转移页面特殊处理
+            if self.pageControlle.selectedIndex == 2 then
+                -- 背包装备列表选中则更新xzqhitem1组件
+                self:updateTransferEquipDisplay(bagequiplist[index], true)
+            else
+                -- 正常的装备选择逻辑
+                self.selectEquipStdMode = bagequiplist[index].StdMode
+                self.qhequipMakeIndex = bagequiplist[index].MakeIndex
+                self.selectEquipQHTabIndex = SL:GetValue("ITEM_DATA",bagequiplist[index].Index).EquipQHTabId
+                self:GetAddItem()
+                self:upitem2num()
+                self:succfont()
+            end
+            self.page2selectindex = selectedIndex
         else
             if self.page2selectindex > 0 then
                 FGUI:GList_setSelectedIndex(self.ListBag, self.page2selectindex)
@@ -407,17 +435,19 @@ function EquipDuanZao:equiplist()
         local index = FGUI:GetIntData(itemRoot)
         local selectedIndex = FGUI:GList_getSelectedIndex(self.ListEquip)
         if equipposlist[index] then
-            -- 正常的装备选择逻辑
-            self.selectEquipStdMode = equipposlist[index].StdMode
-            self.qhequipMakeIndex = equipposlist[index].MakeIndex
-            self.selectEquipQHTabIndex = SL:GetValue("ITEM_DATA",equipposlist[index].Index).EquipQHTabId
-            self:GetAddItem()
+            -- 强化转移页面特殊处理
             if self.pageControlle.selectedIndex == 2 then
-            self:upitem2num_transfer()
-           else
-            self:upitem2num()
-           end
-            self:succfont()
+                -- 装备列表选中则更新xzequip组件
+                self:updateTransferEquipDisplay(equipposlist[index], false)
+            else
+                -- 正常的装备选择逻辑
+                self.selectEquipStdMode = equipposlist[index].StdMode
+                self.qhequipMakeIndex = equipposlist[index].MakeIndex
+                self.selectEquipQHTabIndex = SL:GetValue("ITEM_DATA",equipposlist[index].Index).EquipQHTabId
+                self:GetAddItem()
+                self:upitem2num()
+                self:succfont()
+            end
             self.page1selectindex = selectedIndex
         else
             if self.page1selectindex > 0 then
@@ -1225,6 +1255,134 @@ function EquipDuanZao:upitem2num_transfer()
     FGUI:setVisible(self.xzqhitem2.itemRoot, true)
     FGUI:GRichTextField_setText(self.rightbg.qhfont2, "<font color='" .. color .. "'>" .. xhitemnum .. "</font>")
 end
+
+
+-----------------------------------------------------------------------
+--- updateTransferEquipDisplay: 更新强化转移装备显示
+-- @param equipData 装备数据
+-- @param isSource 是否为源装备(true=源装备/xzequip, false=目标装备/xzqhitem1)
+-----------------------------------------------------------------------
+function EquipDuanZao:updateTransferEquipDisplay(equipData, isSource)
+    -- 根据isSource选择要更新的组件
+    -- 身上装备列表 -> 更新xzequip (目标装备区)
+    -- 背包装备列表 -> 更新xzqhitem1 (源装备区)
+    local uiComponent = self.xzequip
+    local makeIndexVar = "targetEquipMakeIndex"
+    local levelVar = "targetEquipLevel"
+    if isSource then
+        uiComponent = self.xzqhitem1
+        makeIndexVar = "sourceEquipMakeIndex"
+        levelVar = "sourceEquipLevel"
+    end
+    
+    -- 清理原有显示
+    if FGUI:GetChildCount(uiComponent.itemRoot) > 0 then
+        FGUI:RemoveChildAt(uiComponent.itemRoot, 0, true)
+    end
+
+    -- 创建装备显示
+    local extData = {}
+    extData.hideTip = false
+    extData.itemTipData = equipData
+    extData.clickCallback = false
+    extData.doubleClickCallback = true
+    extData.bgVisible = false
+
+    local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
+    local itemobj = ItemUtil:ItemShow_Create(equipData, uiComponent.itemRoot, extData)
+    if itemobj.hideArrow then
+        itemobj:hideArrow()
+    end
+
+    -- 获取强化等级
+    local qhLevel = 0
+    for i = 1, #equipData.Values do
+        if equipData.Values[i]['Id'] == 0 then  -- INTVALUE0 是强化等级
+            qhLevel = equipData.Values[i]['Value']
+            break
+        end
+    end
+
+    -- 更新变量
+    self[makeIndexVar] = equipData.MakeIndex
+    self[levelVar] = qhLevel
+    FGUI:setVisible(uiComponent.closeitembtn, true)
+  
+    -- 更新按钮状态
+    self:updateTransferDisplay()
+end
+
+-----------------------------------------------------------------------
+--- updateTransferDisplay: 更新强化转移显示
+-----------------------------------------------------------------------
+function EquipDuanZao:updateTransferDisplay()
+    -- transfer.xml 中只有基本的按钮和装备显示组件
+    -- 更新按钮状态
+    local canTransfer = self.sourceEquipMakeIndex ~= 0 and
+                       self.targetEquipMakeIndex ~= 0 and
+                       self.sourceEquipLevel > 0
+    FGUI:GButton_setGrey(self.rightbg.qhbtn, not canTransfer)
+end
+
+-----------------------------------------------------------------------
+--- clearSourceEquip: 清除源装备
+-----------------------------------------------------------------------
+function EquipDuanZao:clearSourceEquip()
+    if FGUI:GetChildCount(self.xzqhitem1.itemRoot) > 0 then
+        FGUI:RemoveChildAt(self.xzqhitem1.itemRoot, 0, true)
+    end
+    self.sourceEquipMakeIndex = 0
+    self.sourceEquipLevel = 0
+    FGUI:setVisible(self.xzqhitem1.closeitembtn, false)
+    FGUI:GList_clearSelection(self.ListBag)
+    -- 更新按钮状态
+    self:updateTransferDisplay()
+end
+
+-----------------------------------------------------------------------
+--- clearTargetEquip: 清除目标装备
+-----------------------------------------------------------------------
+function EquipDuanZao:clearTargetEquip()
+    if FGUI:GetChildCount(self.xzequip.itemRoot) > 0 then
+        FGUI:RemoveChildAt(self.xzequip.itemRoot, 0, true)
+    end
+    self.targetEquipMakeIndex = 0
+    self.targetEquipLevel = 0
+    FGUI:setVisible(self.xzequip.closeitembtn, false)
+    FGUI:GList_clearSelection(self.ListEquip)
+    -- 更新按钮状态
+    self:updateTransferDisplay()
+end
+
+-----------------------------------------------------------------------
+--- onTransferClicked: 点击强化转移按钮
+-----------------------------------------------------------------------
+function EquipDuanZao:onTransferClicked()
+    -- 检查条件
+    if self.sourceEquipMakeIndex == 0 then
+        SL:ShowScreenCenterTip("请选择源装备！", 251, 0, 200, 1, 0.3)
+        return
+    end
+
+    if self.targetEquipMakeIndex == 0 then
+        SL:ShowScreenCenterTip("请选择目标装备！", 251, 0, 200, 1, 0.3)
+        return
+    end
+
+    if self.sourceEquipLevel <= 0 then
+        SL:ShowScreenCenterTip("源装备没有强化等级！", 251, 0, 200, 1, 0.3)
+        return
+    end
+
+    -- 发送强化转移请求
+    local EquipDuanZaoData = SL:RequireFile("FGUILayout/A_EquipDuanZao/EquipDuanZaoData")
+    EquipDuanZaoData:RequestTransfer({
+        self.sourceEquipMakeIndex,
+        self.targetEquipMakeIndex,
+        self.itemlistControlle.selectedIndex
+    })
+end
+
 
 return EquipDuanZao
 
