@@ -41,18 +41,23 @@ function EquipDuanZao.qianghua(actor, data)
     local nextlv = qhlv + 1
     local falselv = qhlv - 1 <= 0 and 0 or qhlv - 1
     
-    -- 强化等级上限判断  强化8级以上或者加工装备失败
-    if qhlv >= 8 or posindex > 5 then
+    -- 强化等级上限判断  强化8级以上或者加工装备5级以上失败
+    if qhlv >= 8 or (posindex > 5 and qhlv >= 5) then
         falselv = -1 -- 装备损坏
     end
     local itemid = linkitem(actor, "INDEX")
-    local qhTabIndex = ItemEquip[itemid]['EquipQHTabId']
+    local qhTabIndex = ItemEquip[itemid]['EquipQHTabId']   
+    if not qhTabIndex then
+        sendmsg(actor, 9, posindex > 5 and "60级以上首饰才可加工！" or "当前装备不可强化！")
+        return
+    end
+    
     local curQHTabData = EquipQHTab[posindex]
     if qhTabIndex then
         curQHTabData = EquipQHTab[qhTabIndex]
     end
     if nextlv > #curQHTabData['attridList'] then
-        sendmsg(actor, 9, "已达到当前强化等级上限！")
+        sendmsg(actor, 9, "已达到当前等级上限！")
         return
     end
 
@@ -136,18 +141,18 @@ function EquipDuanZao.qianghua(actor, data)
             else
                 delbodybymakeindex(actor, equipmakeIndex)
             end
-            sendmsg(actor, 9, "强化失败!装备已损坏！")
+            sendmsg(actor, 9, posindex > 5 and "加工失败!装备已损坏！" or "强化失败!装备已损坏！")
             Message.sendmsgEx(actor, "EquipDuanZao", "UpdataQH", { param1 = 0, param2 = 0 })
             return
         else
-            sendmsg(actor, 9, "强化失败!当前装备强化等级：" .. falselv)
+            sendmsg(actor, 9, posindex > 5 and "加工失败!当前装备强化等级：" .. falselv or "强化失败!当前装备强化等级：" .. falselv)
             nextlv = falselv
         end
     else
         if useitem2flag then
             nextlv = EquipDuanZao.itemTSSuc(actor, xhitemid2, nextlv, qhlv)
         end
-        sendmsg(actor, 9, "强化成功!当前装备强化等级：" .. nextlv)
+        sendmsg(actor, 9, posindex > 5 and "加工成功!当前装备强化等级：" .. nextlv or "强化成功!当前装备强化等级：" .. nextlv)
     end
     -- 修改装备标记值
     changeitemaddvalue(actor, -1, 0, "=", nextlv)

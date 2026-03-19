@@ -604,7 +604,7 @@ function EquipDuanZao:GetPageData()
     for i, data in pairs(bagData) do
         local isequip = SL:GetValue("BAG_ITEM_IS_EQUIP", data, data.ID)
         if isequip then
-            local equipData = SL:GetValue("BAG_DATA_BY_MAKEINDEX", i)
+            local equipData = SL:GetValue("BAG_DATA_BY_MAKEINDEX", i) 
             local yhcnum, maxhcnum, yjxlv = 0, equipData.SyntheticStone or 0, 0
             if equippos2[page][equipData.StdMode] then
                 for j = 1, #equipData.Values do
@@ -614,7 +614,14 @@ function EquipDuanZao:GetPageData()
                     end
                 end
                 if (page == 1 and (yhcnum < maxhcnum or maxhcnum == 0)) or page ~= 1 then
-                    table.insert(bagequiplist, equipData)
+                    if page == 4 then
+                        local itemData= SL:GetValue("ITEM_DATA", equipData.Index)
+                        if itemData.NeedLevel >= 60 then
+                            table.insert(bagequiplist, equipData)
+                        end
+                    else
+                        table.insert(bagequiplist, equipData)
+                    end                    
                 end
                 csindex = csindex + 1
             end
@@ -661,7 +668,14 @@ function EquipDuanZao:GetPageData()
                     end
                 end
                 if (page == 1 and (yhcnum < maxhcnum or maxhcnum == 0)) or page ~= 1 then
-                    table.insert(equipposlist, equipData)
+                    if page == 4 then
+                        local itemData= SL:GetValue("ITEM_DATA", equipData.Index)
+                        if itemData.NeedLevel >= 60 then
+                            table.insert(equipposlist, equipData)
+                        end
+                    else
+                        table.insert(equipposlist, equipData)
+                    end   
                 end
             end
         end
@@ -1108,11 +1122,17 @@ function EquipDuanZao:succfont()
     end
     if self.qhequipMakeIndex ~= 0 and (self.pageControlle.selectedIndex == 1 or self.pageControlle.selectedIndex == 3) then
         if self.pageControlle.selectedIndex == 3 then
-            FGUI:GTextField_setText(self.rightbg.costfont4, "加工失败后首饰破碎")
-        elseif self.qhequiplv > 7 then
-            FGUI:GTextField_setText(self.rightbg.costfont4, "8-15级 强化失败后装备破碎")
-        else
-            FGUI:GTextField_setText(self.rightbg.costfont4, "0-7级 强化失败后装备降级")
+            if self.qhequiplv > 4 then
+                FGUI:GTextField_setText(self.rightbg.costfont4, "5-10级 加工失败后首饰破碎")
+            else
+                FGUI:GTextField_setText(self.rightbg.costfont4, "0-4级 加工失败后首饰降级")
+            end
+        elseif self.pageControlle.selectedIndex == 1 then
+            if self.qhequiplv > 7 then
+                FGUI:GTextField_setText(self.rightbg.costfont4, "8-15级 强化失败后装备破碎")
+            else
+                FGUI:GTextField_setText(self.rightbg.costfont4, "0-7级 强化失败后装备降级")
+            end
         end
     else
         FGUI:GTextField_setText(self.rightbg.costfont4, "")
