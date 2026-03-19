@@ -632,7 +632,7 @@ function EquipDuanZao:GetPageData()
     end
     for k, v in pairs(EquipQHItemTab) do
         local data = SL:GetValue("ITEM_DATA", k)
-        if page == 2 and v.itemtype == 2 then
+        if v.itemtype == 2 and (page == 2 or page == 4 or page == 5) then
             if v['limitpos'] == 5 then
                 table.insert(bagitemlist[1], data)
             else
@@ -1208,14 +1208,13 @@ function EquipDuanZao:ListadditemRender(idx, item)
         local att = FGUI:GetChild(item, "att")
         local num = FGUI:GetChild(item, "num")
         FGUI:GTextField_setText(name, "" .. itemname)
-        --if self.pageControlle.selectedIndex ~= 2 then
-            local attrstr = EquipQHItemTab[self.additemshowlist[idx + 1].ID]['TIPS'] or ""
-            if EquipQHItemTab[self.additemshowlist[idx + 1].ID]['itemtype'] == 1 or 
-               EquipQHItemTab[self.additemshowlist[idx + 1].ID]['itemtype'] == 6 then
-                itemnum = ""
-            end
-            FGUI:GTextField_setText(num, "" .. itemnum)
-        --end
+        local attrstr = EquipQHItemTab[self.additemshowlist[idx + 1].ID]['TIPS'] or ""
+        if EquipQHItemTab[self.additemshowlist[idx + 1].ID]['itemtype'] == 1 or 
+            EquipQHItemTab[self.additemshowlist[idx + 1].ID]['itemtype'] == 6 then
+            itemnum = ""
+        end
+        FGUI:GTextField_setText(num, "" .. itemnum)
+  
        
         if self.addlistshowControlle.selectedIndex == 2 and (self.pageControlle.selectedIndex == 0) then
             local itemConfig = self.additemshowlist[idx+1].ExAbil

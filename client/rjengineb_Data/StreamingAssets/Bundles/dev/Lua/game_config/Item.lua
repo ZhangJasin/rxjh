@@ -2040,7 +2040,7 @@ local config = {
 	},
 	[459] = { 
 		ID=459,
-		Name="取玉符（防具）",
+		Name="取玉符",
 		StdMode=1,
 		Looks=2161,
 		Price="0#1#1000",
@@ -2212,7 +2212,7 @@ local config = {
 	},
 	[468] = { 
 		ID=468,
-		Name="金刚守护符",
+		Name="守护符",
 		StdMode=1,
 		Looks=2080,
 		Price="0#1#1000",
@@ -11462,7 +11462,7 @@ local config = {
 	},
 	[2003] = { 
 		ID=2003,
-		Name="初级升龙符（武器）",
+		Name="初级升龙符",
 		StdMode=1,
 		Looks=2078,
 		OverLap=9999,
