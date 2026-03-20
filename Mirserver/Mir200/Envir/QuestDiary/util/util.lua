@@ -1181,6 +1181,20 @@ function MentorShipChangTask(actor,task_target,task_target_param,data)
     end
 end
 
+function getEquipLvById(itemId)
+    if not ItemEquip_cfg[itemId] then       
+        return 0
+    end
+    local needStr = ItemEquip_cfg[itemId].Need
+    if needStr then
+        -- Need格式: "职业#性别#等级" 或 "职业#性别"
+        local parts = string.split(needStr, "#")
+        if parts and #parts >= 3 then
+            return tonumber(parts[3]) or 0
+        end
+    end
+    return 0
+end
 ------#####装备标记使用情况
 ------#####装备标记使用情况
 ------#####装备标记使用情况

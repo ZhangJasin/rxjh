@@ -342,6 +342,7 @@ function EquipDuanZao:InitData()
         self.costitem1 = FGUI:ui_delegate(self.rightbg.costitem1)
     end
     self.qhequipMakeIndex = 0
+    self.selectEquipLv = 0
     self.qhitem1, self.qhitem2, self.qhitem3, self.qhitem4 = 0, 0, 0, 0
     self.selectEquipStdMode = 0
     self.qhequiplv = 0  -- 选中装备对应功能等级
@@ -420,6 +421,12 @@ function EquipDuanZao:baglist()
                 self.selectEquipStdMode = bagequiplist[index].StdMode
                 self.qhequipMakeIndex = bagequiplist[index].MakeIndex
                 self.selectEquipQHTabIndex = SL:GetValue("ITEM_DATA",bagequiplist[index].Index).EquipQHTabId
+                -- 合成页面需要重新获取bagitemlist数据
+                if self.pageControlle.selectedIndex == 0 then
+                    local itemData= SL:GetValue("ITEM_DATA", bagequiplist[index].Index)
+                    self.selectEquipLv = itemData.NeedLevel
+                    self:GetPageData()
+                end
                 self:GetAddItem()
                 self:upitem2num()
                 self:succfont()
@@ -458,6 +465,12 @@ function EquipDuanZao:equiplist()
                 self.selectEquipStdMode = equipposlist[index].StdMode
                 self.qhequipMakeIndex = equipposlist[index].MakeIndex
                 self.selectEquipQHTabIndex = SL:GetValue("ITEM_DATA",equipposlist[index].Index).EquipQHTabId
+                -- 合成页面需要重新获取bagitemlist数据
+                if self.pageControlle.selectedIndex == 0 then
+                    local itemData= SL:GetValue("ITEM_DATA", bagequiplist[index].Index)
+                    self.selectEquipLv = itemData.NeedLevel
+                    self:GetPageData()
+                end
                 self:GetAddItem()
                 self:upitem2num()
                 self:succfont()
@@ -627,12 +640,24 @@ function EquipDuanZao:GetPageData()
             end
         else
             if EquipQHItemTab[data.ID] then
-                if page == 1 and EquipQHItemTab[data.ID].itemtype == 1 then
-                    if EquipQHItemTab[data.ID]['limitpos'] == 5 then  -- 武器
-                        table.insert(bagitemlist[1], data)
-                    else
-                        table.insert(bagitemlist[2], data)
+                if page == 1 and EquipQHItemTab[data.ID].itemtype == 1 and self.selectEquipLv then
+                    --需增加等级限制
+                    local minLv = EquipQHItemTab[data.ID]['equipMinLv']
+                    local maxLv = EquipQHItemTab[data.ID]['equipMaxLv']
+                    local canAdd = true
+                    if minLv and self.selectEquipLv < minLv then
+                        canAdd = false
                     end
+                    if maxLv and self.selectEquipLv > maxLv then
+                        canAdd = false
+                    end
+                    if canAdd then
+                        if EquipQHItemTab[data.ID]['limitpos'] == 5 then  -- 武器
+                            table.insert(bagitemlist[1], data)
+                        else
+                            table.insert(bagitemlist[2], data)
+                        end
+                    end                    
                 end
             end
         end
@@ -1005,6 +1030,7 @@ function EquipDuanZao:clearequip()
     self.selectEquipStdMode = 0
     self.qhequipMakeIndex = 0
     self.selectEquipQHTabIndex = nil
+    self.selectEquipLv = 0
 
     FGUI:setVisible(self.rightbg.xzequip, false)
     FGUI:GList_clearSelection(self.ListBag)

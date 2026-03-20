@@ -320,11 +320,27 @@ function EquipDuanZao.hecheng(actor, data)
         sendmsg(actor, 9, "已达到当前装备合成槽上限！")
         return
     end
-    --xhitemid3 = 2013
+
+    local equipLv = getEquipLvById(itemid)
     if not EquipQHItemTab[xhitemid3] then
         sendmsg(actor, 9, "请选择合成石道具！")
         return
     end
+
+    --增加等级限制
+    local minLv = EquipQHItemTab[xhitemid3]['equipMinLv'] or 0
+    local maxLv = EquipQHItemTab[xhitemid3]['equipMaxLv'] or 999
+
+    -- 检查装备等级是否满足合成石要求
+    if minLv and equipLv < minLv then
+        sendmsg(actor, 9, string.format("装备等级不足！需要%d级装备", minLv))
+        return
+    end
+    if maxLv and equipLv > maxLv then
+        sendmsg(actor, 9, string.format("装备等级过高！需要%d级以下装备", maxLv))
+        return
+    end
+
     local sum = math.random(1,10000)
     local basesuc = EquipHCTab[posindex]['EquipHCRatio_arr'][nextlv]
     if gxybxh == 1 then
