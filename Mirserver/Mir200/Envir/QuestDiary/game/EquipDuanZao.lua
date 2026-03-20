@@ -190,7 +190,7 @@ function EquipDuanZao.fuyu(actor, data)
     local stdmode = linkitem(actor, "STDMODE")
     local posindex = equippos2[stdmode]
     local qhlv = linkitem(actor, "INTVALUE0")
-    local eqfylv = (qhlv - 20) > 0 and (qhlv - 20) or 0
+    local eqfylv = (qhlv - 5) > 0 and (qhlv - 5) or 0 --强化到+6及以上时给提升赋予等级
     local fylv = linkitem(actor, "INTVALUE1")
     local nextlv = fylv + 1
     local falselv = 0
@@ -274,7 +274,7 @@ function EquipDuanZao.fuyu(actor, data)
     changeitemaddvalue(actor, -1, 1, "=", nextlv)
 
     -- 属性刷新
-    if qhlv > 20 then
+    if qhlv > 5 then
         changecustomitemtext(actor, -1, 1, "[赋予：" .. nextlv .. "+" .. eqfylv .. "阶段]")
     else
         changecustomitemtext(actor, -1, 1, "[赋予：" .. nextlv .. "阶段]")
