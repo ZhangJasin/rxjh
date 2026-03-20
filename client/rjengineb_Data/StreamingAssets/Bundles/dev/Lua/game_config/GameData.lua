@@ -377,7 +377,7 @@ local config = {
 	},
 	["AutoChangeGuildMasterTime"] = { 
 		k="AutoChangeGuildMasterTime",
-		value=1,
+		value=72,
 	},
 	["HttpPostTime"] = { 
 		k="HttpPostTime",
