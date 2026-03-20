@@ -1763,5 +1763,11 @@ local config = {
 		SendToClient=1,
 		AbilAuto="1#-1#1000#0#0#1#1",
 	},
+	[110044] = { 
+		ID=110044,
+		BuffType=0,
+		Name="¡È ﬁ Ù–‘",
+		ListenTrigger=7,
+	},
 }
 return config

@@ -230,6 +230,8 @@ local config = {
 			},
 		},
 		Model_Scale=1.3,
+		Actor_Attr=0.02,
+		Exp_Attr=0.02,
 	},
 	[1002] = { 
 		ID=1002,
@@ -462,6 +464,8 @@ local config = {
 			},
 		},
 		Model_Scale=1.5,
+		Actor_Attr=0.02,
+		Exp_Attr=0.02,
 	},
 	[1003] = { 
 		ID=1003,
@@ -694,6 +698,8 @@ local config = {
 			},
 		},
 		Model_Scale=2,
+		Actor_Attr=0.03,
+		Exp_Attr=0.02,
 	},
 	[1004] = { 
 		ID=1004,
@@ -926,6 +932,8 @@ local config = {
 			},
 		},
 		Model_Scale=1.8,
+		Actor_Attr=0.03,
+		Exp_Attr=0.02,
 	},
 	[1005] = { 
 		ID=1005,
@@ -1158,6 +1166,8 @@ local config = {
 			},
 		},
 		Model_Scale=2,
+		Actor_Attr=0.04,
+		Exp_Attr=0.02,
 	},
 	[1006] = { 
 		ID=1006,
@@ -1390,6 +1400,8 @@ local config = {
 			},
 		},
 		Model_Scale=1.9,
+		Actor_Attr=0.04,
+		Exp_Attr=0.02,
 	},
 	[1007] = { 
 		ID=1007,
@@ -1622,6 +1634,8 @@ local config = {
 			},
 		},
 		Model_Scale=1.3,
+		Actor_Attr=0.05,
+		Exp_Attr=0.03,
 	},
 	[1008] = { 
 		ID=1008,
@@ -1854,6 +1868,8 @@ local config = {
 			},
 		},
 		Model_Scale=1.3,
+		Actor_Attr=0.05,
+		Exp_Attr=0.03,
 	},
 	[1009] = { 
 		ID=1009,
@@ -2086,6 +2102,8 @@ local config = {
 			},
 		},
 		Model_Scale=1.3,
+		Actor_Attr=0.06,
+		Exp_Attr=0.04,
 	},
 	[2101] = { 
 		ID=2101,
