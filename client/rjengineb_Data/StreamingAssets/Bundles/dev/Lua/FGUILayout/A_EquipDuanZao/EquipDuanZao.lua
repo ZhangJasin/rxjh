@@ -670,13 +670,13 @@ function EquipDuanZao:GetPageData()
             else
                 table.insert(bagitemlist[2], data)
             end
-        elseif page == 4 and v['itemtype'] == 4 then
+        elseif page == 5 and v['itemtype'] == 4 then
             if v['limitpos'] == 5 then
                 table.insert(bagitemlist[1], data)
             elseif v['limitpos'] == 3 then
                 table.insert(bagitemlist[2], data)
             end
-        elseif page == 4 and v['itemtype'] == 5 then
+        elseif page == 5 and v['itemtype'] == 5 then
             table.insert(bagitemlist[3], data)
         end
     end  
