@@ -3,7 +3,7 @@ local config = {
 		idx=1,
 		stdmode=5,
 		addsucc_arr = {
-			[1] = 20,
+			[1] = 50,
 			[2] = 5,
 		},
 		EquipHCCost_arr = {
@@ -25,7 +25,7 @@ local config = {
 		idx=2,
 		stdmode=3,
 		addsucc_arr = {
-			[1] = 20,
+			[1] = 50,
 			[2] = 5,
 		},
 		EquipHCCost_arr = {
@@ -47,7 +47,7 @@ local config = {
 		idx=3,
 		stdmode=8,
 		addsucc_arr = {
-			[1] = 20,
+			[1] = 50,
 			[2] = 5,
 		},
 		EquipHCCost_arr = {
@@ -69,7 +69,7 @@ local config = {
 		idx=4,
 		stdmode=9,
 		addsucc_arr = {
-			[1] = 20,
+			[1] = 50,
 			[2] = 5,
 		},
 		EquipHCCost_arr = {
@@ -91,7 +91,7 @@ local config = {
 		idx=5,
 		stdmode=51,
 		addsucc_arr = {
-			[1] = 20,
+			[1] = 50,
 			[2] = 5,
 		},
 		EquipHCCost_arr = {
