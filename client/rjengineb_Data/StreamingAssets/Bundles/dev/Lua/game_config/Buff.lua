@@ -2119,5 +2119,12 @@ local config = {
 		SendToClient=1,
 		AbilAuto="1#-1#1000#0#0#1#1",
 	},
+	[110044] = { 
+		ID=110044,
+		BuffType=0,
+		Name="灵兽属性",
+		Tips="灵兽总属性",
+		ListenTrigger=7,
+	},
 }
 return config
