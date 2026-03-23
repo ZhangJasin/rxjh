@@ -13,6 +13,15 @@ local ItemEquip           = require("Envir/QuestDiary/game_config/ItemEquip.lua"
 -- 装备位置映射
 local equippos2 = { [5]=1, [3]=2, [8]=3, [9]=4, [51]=5, [15]=6, [19]=7, [22]=8 ,[53]=9}
 
+local qhGroupId = 0 --强化加工使用 自定义属性组0
+local fyGroupId = 1 --赋予使用 自定义属性组1
+local hcGroupId = 2 --合成使用 自定义属性组2
+local isPercentAttr ={
+    [104] = 1,
+    [107]= 1,
+    [108]= 1,
+    [127]= 1,
+} --万分比属性
 
 -- 打开锻造界面
 function EquipDuanZao.openshow(actor, page)
@@ -313,6 +322,7 @@ function EquipDuanZao.hecheng(actor, data)
     local itemid = linkitem(actor, "INDEX")
     local stdmode = linkitem(actor, "STDMODE")
     local posindex = equippos2[stdmode]
+    local qhlv = linkitem(actor, "INTVALUE0")
     local hclv = linkitem(actor, "INTVALUE2")  --已镶嵌合成石数量
     local nextlv = hclv+1
     local hccnum = ItemEquip[itemid]['SyntheticStone'] or 0
@@ -371,12 +381,24 @@ function EquipDuanZao.hecheng(actor, data)
     else
         sendmsg(actor, 9, "镶嵌合成石成功！")
     end
-    --nextlv = 16
     changecustomitemtext(actor, -1, 2, "[合成石]")
 
     changeitemaddvalue(actor, -1, 2, "=", nextlv)  --已镶嵌数
 
-    changecustomitemabil(actor, -1, 2, hclv, hcattrid, hcattrvalue)
+    --强化等级 提升合成
+    local addValue = 0     -- 数值加成
+    if qhlv > 6 then
+        if hclv < 2 then --第一或第二个合成石
+            addValue = qhlv - 6
+        else
+            addValue = qhlv - 7
+        end
+    end
+    if addValue > 0 and isPercentAttr[hcattrid] then
+        addValue = addValue * 100 --万分比
+    end
+    changecustomitemabil(actor, -1, 2, hclv, hcattrid, hcattrvalue+addValue)
+
     updateitemtoclient(actor,-1)  -- 将修改后的属性刷新到客户端
 
     --sendmymsg(actor, 10015, 1, 0, 0, "" )
