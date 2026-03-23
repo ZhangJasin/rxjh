@@ -16,6 +16,8 @@ local equippos2 = { [5]=1, [3]=2, [8]=3, [9]=4, [51]=5, [15]=6, [19]=7, [22]=8 ,
 local qhGroupId = 0 --强化加工使用 自定义属性组0
 local fyGroupId = 1 --赋予使用 自定义属性组1
 local hcGroupId = 2 --合成使用 自定义属性组2
+local hcBaseValue ={3,4,5,6}  --合成使用 合成石1-4对应的基础属性值存储
+
 local isPercentAttr ={
     [104] = 1,
     [107]= 1,
@@ -179,7 +181,12 @@ function EquipDuanZao.qianghua(actor, data)
             end
         end
     end
-    -- print("equipObj", equipObj)
+
+    -- 根据强化等级更新合成石和属性石属性
+    if posindex <= 5 and qhlv > 5  then        
+        EquipDuanZao.updateEquipAttrsByQHLv(actor, equipmakeIndex, nextlv)
+    end
+
     EquipDuanZao.showWeaponEffect(actor, equipObj)
     updateitemtoclient(actor, -1)
     Message.sendmsgEx(actor, "EquipDuanZao", "UpdataQH", { param1 = 1, param2 = nextlv })
@@ -398,10 +405,9 @@ function EquipDuanZao.hecheng(actor, data)
         addValue = addValue * 100 --万分比
     end
     changecustomitemabil(actor, -1, 2, hclv, hcattrid, hcattrvalue+addValue)
-
+    changeitemaddvalue(actor, -1, 3+hclv, "=", hcattrvalue) --存储合成石基础属性
     updateitemtoclient(actor,-1)  -- 将修改后的属性刷新到客户端
 
-    --sendmymsg(actor, 10015, 1, 0, 0, "" )
     if nextlv == hccnum then
         Message.sendmsgEx(actor, "EquipDuanZao","UpdataHC",{param1=1})
     else
@@ -489,7 +495,10 @@ function EquipDuanZao.transfer(actor, data)
     -- 2. 目标装备获得转移的强化等级
     linkitembymakeindex(actor, targetMakeIndex)
     changeitemaddvalue(actor, -1, 0, "=", transferLevel)
-    
+    if transferLevel > 5 then        
+        EquipDuanZao.updateEquipAttrsByQHLv(actor, targetMakeIndex, transferLevel)
+    end
+
     -- 3. 更新目标装备属性
     local posindex = equippos2[targetStdMode]
     local qhTabIndex = ItemEquip[targetItemId]['EquipQHTabId']
@@ -513,11 +522,15 @@ function EquipDuanZao.transfer(actor, data)
         end
     end
     
+
     -- 更新源装备属性以及强化等级（清空后）
     linkitembymakeindex(actor, sourceMakeIndex)
     changeitemaddvalue(actor, -1, 0, "=", 0)
     clearcustomitemabil(actor, -1, 0)
     changecustomitemtext(actor, -1, 0, "")
+    if transferLevel > 5 then        
+        EquipDuanZao.updateEquipAttrsByQHLv(actor, sourceMakeIndex, 0)
+    end
     
     -- 更新客户端显示
     updateitemtoclient(actor, -1)
@@ -607,6 +620,84 @@ function EquipDuanZao.showWeaponEffect(actor, itemObj)
             end
         end
 	end
+end
+
+-- 根据强化等级更新合成石和属性石属性
+-- @param actor 玩家对象
+-- @param equipmakeIndex 装备makeIndex
+-- @param qhlv 强化等级
+function EquipDuanZao.updateEquipAttrsByQHLv(actor, equipmakeIndex, qhlv)
+    if not equipmakeIndex or equipmakeIndex == "0" then
+        return
+    end
+
+    linkitembymakeindex(actor, equipmakeIndex)
+    local itemid = linkitem(actor, "INDEX")
+    local stdmode = linkitem(actor, "STDMODE")
+    local posindex = equippos2[stdmode]
+
+    -- 更新属性石属性（INTVALUE1）
+    local fylv = linkitem(actor, "INTVALUE1")
+    if fylv > 0 then
+        -- 获取属性石属性ID
+        local attrid = custitemattinfo(actor, "-1_1_1_ID")
+
+        -- 获取赋予阶段等级（eqfylv，即装备强化等级-5）
+        local eqfylv = 0
+        if qhlv > 5 then
+            eqfylv = qhlv - 5
+        end
+        local finalLv = fylv + eqfylv
+        if finalLv > 0 and attrid and attrid > 0 then
+            local attrLvList = EquipFYTab[posindex]['attrList']
+            if attrLvList then
+                -- 根据attrid找到对应的索引
+                local attridindex = 0
+                for i, aid in ipairs(EquipFYTab[posindex]['attrid_arr']) do
+                    if aid == attrid then
+                        attridindex = i
+                        break
+                    end
+                end
+
+                if attridindex > 0 and attrLvList[attridindex] then
+                    -- 确保不超出属性表范围
+                    if finalLv > #attrLvList[attridindex] then
+                        finalLv = #attrLvList[attridindex]
+                    end
+                    local value = attrLvList[attridindex][finalLv]
+                    changecustomitemabil(actor, -1, 1, 1, attrid, value)
+                end
+            end
+        end
+    end
+
+    -- 更新合成石属性（INTVALUE2）
+    local hclv = linkitem(actor, "INTVALUE2")
+    if hclv > 0 then
+        -- 遍历所有已镶嵌的合成石，重新计算属性加成
+        for i = 0, hclv - 1 do
+            local attrid = custitemattinfo(actor, string.format("-1_2_%d_ID", i))
+            local attrBaseValue = linkitem(actor, string.format("INTVALUE%d",3+i))
+
+            if attrid and attrid > 0 and attrBaseValue and attrBaseValue > 0 then
+                -- 根据强化等级计算合成石属性加成
+                local addValue = 0
+                if i < 2 and qhlv > 6 then
+                    addValue = qhlv - 6
+                end
+                if i> 1 and qhlv > 7 then
+                    addValue = qhlv - 7
+                end
+
+                if addValue > 0 and isPercentAttr[attrid] then
+                    addValue = addValue * 100 --万分比
+                end
+
+                changecustomitemabil(actor, -1, 2, i, attrid, attrBaseValue + addValue)
+            end
+        end
+    end
 end
 
 -- 事件注册
