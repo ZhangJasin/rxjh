@@ -33,9 +33,28 @@
       <item/>
       <item/>
     </list>
-    <richtext id="n80_spth" name="text_myScore" xy="480,613" size="64,19" fontSize="12" color="#c5dccc" align="center" vAlign="middle" strokeColor="#000000" text="剩余气功点">
+    <richtext id="n80_spth" name="text_myScore" xy="580,613" size="64,19" fontSize="12" color="#c5dccc" align="center" vAlign="middle" strokeColor="#000000" text="剩余气功点">
       <relation target="" sidePair="center-center,middle-middle"/>
     </richtext>
-    <component id="n81_fg49" name="panel_tips" src="fg491g" fileName="Components/panel_qigong_tips.xml" xy="130,280" visible="false"/>
+    <component id="n81_fg49" name="panel_tips" src="fg491g" fileName="Components/panel_qigong_tips.xml" xy="0,0" visible="false"/>
+    <graph id="n82_fvar" name="mask" xy="512,384" pivot="0.5,0.5" anchor="true" size="1024,768" visible="false" alpha="0" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n88_fvar" name="bg_scheme" src="emvc54" fileName="image/comobox_frame.png" pkg="qa9a7rit" xy="400,622" pivot="0.5,0.5" anchor="true" size="160,24" group="n87_fvar">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n84_fvar" name="text_scheme" xy="395,622" pivot="0.5,0.5" anchor="true" size="120,22" group="n87_fvar" fontSize="14" color="#7cc3b3" align="center" vAlign="middle" autoSize="none" singleLine="true" text="请输入名字...">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n89_fvar" name="btn_scheme" src="fvar1l" fileName="Components/btn_combox.xml" xy="468,623" pivot="0.5,0.5" anchor="true" size="30,30" group="n87_fvar">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n86_fvar" name="list_scheme" xy="400,604" pivot="0.5,1" anchor="true" size="160,120" group="n87_fvar" visible="false" overflow="scroll" defaultItem="ui://0vpx0897fvar1m" align="center" vAlign="bottom" renderOrder="descent">
+      <relation target="" sidePair="center-center,top-top"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n87_fvar" name="panel_scheme" xy="320,484" size="163,154"/>
   </displayList>
 </component>

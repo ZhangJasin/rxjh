@@ -8,8 +8,6 @@ local IDX_TITLE                                                 = 2 -- 称号
 function PCBarRootPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
-    -- FGUI:setDragable(self._ui.dragGrapic,true)
-    -- FGUI:SetCloseUIWhenClickOutside(self)
     self._index = IDX_NULL
     self._pageDatas = {
         [IDX_PROPERTY] = {

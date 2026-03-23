@@ -5,7 +5,7 @@ local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 
 function PCTipJiShouPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:setWindowDrag(self.component, self._ui.bg)
     self:GetAllFGuiData()
     self:InitOnClickEvent()
     self:InitData()
@@ -62,7 +62,7 @@ function PCTipJiShouPanel:BtnOKClicked()
     end
     -- 上架数量有没有超过
     local curSPmCount = #SL:GetValue("PAIMAI_SELF_DATA")
-    local maxPmCount = SL:GetValue("GAME_DATA","MaxPaimaiCount")
+    local maxPmCount = SL:GetValue("GAME_DATA","AuctionCountMax")
     if curSPmCount >= maxPmCount then
         SL:ShowSystemTips(string.format(GET_STRING(30000068),maxPmCount))
         return

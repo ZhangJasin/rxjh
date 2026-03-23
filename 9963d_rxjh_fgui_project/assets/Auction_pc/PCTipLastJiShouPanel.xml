@@ -7,49 +7,51 @@
     <text id="n1_usy1" name="title" xy="494,257" size="36,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#fffadc" text="提示">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <image id="n9_usy1" name="bg_di" src="oxr718" fileName="Images/img_dlg_di.png" xy="367,291" size="290,170">
+    <image id="n9_usy1" name="bg_di" src="oxr718" fileName="Images/img_dlg_di.png" xy="367,291" size="290,153">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <text id="n2_usy1" name="text_content" xy="397,314" size="229,23" fontSize="15" color="#f1ffeb" align="center" ubb="true" singleLine="true" autoClearText="true" text="是否填入[color=#FFFF00]【枪碎片】[/color]的上次出价？">
+    <text id="n2_usy1" name="text_content" xy="420,322" size="184,19" fontSize="12" color="#f1ffeb" align="center" ubb="true" singleLine="true" autoClearText="true" text="是否填入[color=#FFFF00]【枪碎片】[/color]的上次出价？">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n6_usy1" name="label_jiShouCount" xy="425,350" size="79,23" fontSize="15" color="#ffffff" singleLine="true" text="寄售数量：">
+    <text id="n6_usy1" name="label_jiShouCount" xy="432,351" size="64,19" fontSize="12" color="#33cc00" vAlign="middle" singleLine="true" text="寄售数量：">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n7_usy1" name="label_jiShouDiJia" xy="425,378" size="79,23" fontSize="15" color="#ffffff" singleLine="true" text="寄售底价：">
+    <text id="n7_usy1" name="label_jiShouDiJia" xy="432,375" size="64,19" fontSize="12" color="#33cc00" singleLine="true" text="寄售底价：">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n8_usy1" name="label_once_price" xy="440,406" size="64,23" fontSize="15" color="#ffffff" align="center" singleLine="true" text="一口价：&#xA;">
+    <text id="n8_usy1" name="label_once_price" xy="444,399" size="52,19" fontSize="12" color="#33cc00" align="center" singleLine="true" text="一口价：&#xA;">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n3_usy1" name="text_jishou_count" xy="537,350" size="28,23" fontSize="15" color="#ffffff" singleLine="true" text="111">
+    <text id="n3_usy1" name="text_jishou_count" xy="512,349" size="100,23" fontSize="12" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" text="111">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
     <component id="n12_usy1" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="647,268">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n10_usy1" name="btn_cancel" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="412,479" group="n16_owd7">
+    <component id="n10_usy1" name="btn_cancel" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="412,455" group="n16_owd7">
       <Button title="取 消" titleColor="#fced00" titleFontSize="12"/>
     </component>
-    <component id="n11_usy1" name="btn_ok" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="526,479" group="n16_owd7">
+    <component id="n11_usy1" name="btn_ok" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="526,455" group="n16_owd7">
       <Button title="确 认" titleColor="#fced00" titleFontSize="12"/>
     </component>
-    <group id="n16_owd7" name="n16" xy="412,479" size="200,28" advanced="true" layout="hz" colGap="30" excludeInvisibles="true">
+    <group id="n16_owd7" name="n16" xy="412,455" size="200,28" advanced="true" layout="hz" colGap="30" excludeInvisibles="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <text id="n4_usy1" name="text_jiShoudiJia" xy="552,377" size="20,23" group="n17_kc3n" fontSize="15" color="#ffffff" singleLine="true" text="11">
+    <component id="n4_usy1" name="text_jiShoudiJia" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="535,373" size="84,23" group="n17_kc3n">
       <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <component id="n13_usy1" name="icon_money_1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="529,377" size="23,23" group="n17_kc3n" aspect="true">
+      <Label titleColor="#ffffff" titleFontSize="12"/>
+    </component>
+    <component id="n13_usy1" name="icon_money_1" src="emvc3" fileName="Icons/CommonItem.xml" pkg="qa9a7rit" xy="512,373" size="23,23" group="n17_kc3n" aspect="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <group id="n17_kc3n" name="n17" xy="529,377" size="43,23"/>
-    <text id="n5_usy1" name="text_price_once" xy="552,406" size="20,23" group="n18_kc3n" fontSize="15" color="#ffffff" singleLine="true" text="11">
+    <group id="n17_kc3n" name="n17" xy="512,373" size="107,23"/>
+    <component id="n5_usy1" name="text_price_once" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="535,397" size="79,23" group="n18_kc3n">
       <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <component id="n14_usy1" name="icon_money_2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="529,406" size="23,23" group="n18_kc3n" aspect="true">
+      <Label titleColor="#ffffff" titleFontSize="12"/>
+    </component>
+    <component id="n14_usy1" name="icon_money_2" src="emvc3" fileName="Icons/CommonItem.xml" pkg="qa9a7rit" xy="512,397" size="23,23" group="n18_kc3n" aspect="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <group id="n18_kc3n" name="n18" xy="529,406" size="43,23"/>
+    <group id="n18_kc3n" name="n18" xy="512,397" size="102,23"/>
   </displayList>
 </component>

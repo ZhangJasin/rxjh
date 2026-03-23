@@ -3,7 +3,7 @@ local PCSettingSetItemOrderPanel = class("PCSettingSetItemOrderPanel", BaseFGUIL
 
 function PCSettingSetItemOrderPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:SetCloseUIWhenClickOutside(self)
     self:InitData()
     self:InitEvent()
 end

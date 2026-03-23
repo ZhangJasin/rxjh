@@ -49,6 +49,13 @@
     <image id="7ogsvf" name="img_role_select_9.png" path="/Images/Select/" scale="9grid" scale9grid="113,62,9,0"/>
     <component id="gxjdvh" name="RoleLockText.xml" path="/" exported="true"/>
     <component id="fsrpvi" name="btn_select_role_fill.xml" path="/Components/Select/"/>
+    <image id="hfgivj" name="登录界面移动端.jpg" path="/Images/Restore/"/>
+    <image id="hfgivk" name="登录界面移动端01.jpg" path="/Images/Restore/"/>
+    <image id="hfgivl" name="01.png" path="/Images/Restore/"/>
+    <component id="hfgivp" name="LoginRoleRestore.xml" path="/" exported="true"/>
+    <component id="mrrvvq" name="recover_list_item.xml" path="/Components/Restore/"/>
+    <component id="mrrvvr" name="more_role_btn.xml" path="/Components/Restore/"/>
+    <component id="mrrvvs" name="recover_btn.xml" path="/Components/Restore/"/>
   </resources>
-  <publish name="" path="..\Assets\Res\game\FGUIExport\LoginRole" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>

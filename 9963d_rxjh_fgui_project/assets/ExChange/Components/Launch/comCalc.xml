@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="346,218">
+  <displayList>
+    <component id="n80_qop5" name="btn_minus" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="1,1" size="60,30">
+      <relation target="" sidePair="left-left,top-top"/>
+      <Button title="-1" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug117" selectedIcon="ui://ajuz4mddfug117"/>
+    </component>
+    <image id="n94_qop5" name="bg_cal" src="qop5r" fileName="Images/img_input_di.png" xy="81,1" size="183,29">
+      <relation target="" sidePair="top-top"/>
+    </image>
+    <text id="n95_qop5" name="text_cal" xy="81,1" size="183,29" fontSize="20" color="#b0c9b6" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="">
+      <relation target="" sidePair="top-top"/>
+    </text>
+    <component id="n96_qop5" name="btn_add" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="286,1" size="60,30">
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button title="+1" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug117" selectedIcon="ui://ajuz4mddfug117"/>
+    </component>
+    <component id="n97_qop5" name="btn_1" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="1,37" size="70,40">
+      <relation target="" sidePair="middle-middle,left-left"/>
+      <Button title="1" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug117" selectedIcon="ui://ajuz4mddfug117"/>
+    </component>
+    <component id="n100_qop5" name="btn_2" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="93,37" size="70,40">
+      <Button title="2" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug117" selectedIcon="ui://ajuz4mddfug117"/>
+    </component>
+    <component id="n99_qop5" name="btn_3" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="185,37" size="70,40">
+      <Button title="3" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug117" selectedIcon="ui://ajuz4mddfug117"/>
+    </component>
+    <component id="n101_qop5" name="btn_10" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="277,37" size="70,40">
+      <relation target="" sidePair="middle-middle,right-right"/>
+      <Button title="+10" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug118" selectedIcon="ui://ajuz4mddfug118"/>
+    </component>
+    <component id="n98_qop5" name="btn_4" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="1,83" size="70,40">
+      <relation target="" sidePair="middle-middle,left-left"/>
+      <Button title="4" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug117" selectedIcon="ui://ajuz4mddfug117"/>
+    </component>
+    <component id="n107_qop5" name="btn_5" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="93,83" size="70,40">
+      <Button title="5" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug117" selectedIcon="ui://ajuz4mddfug117"/>
+    </component>
+    <component id="n108_qop5" name="btn_6" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="185,83" size="70,40">
+      <Button title="6" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug117" selectedIcon="ui://ajuz4mddfug117"/>
+    </component>
+    <component id="n103_qop5" name="btn_100" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="277,83" size="70,40">
+      <relation target="" sidePair="middle-middle,right-right"/>
+      <Button title="+100" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug118" selectedIcon="ui://ajuz4mddfug118"/>
+    </component>
+    <component id="n109_qop5" name="btn_7" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="1,129" size="70,40">
+      <relation target="" sidePair="middle-middle,left-left"/>
+      <Button title="7" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug117" selectedIcon="ui://ajuz4mddfug117"/>
+    </component>
+    <component id="n110_qop5" name="btn_8" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="93,129" size="70,40">
+      <Button title="8" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug117" selectedIcon="ui://ajuz4mddfug117"/>
+    </component>
+    <component id="n111_qop5" name="btn_9" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="185,129" size="70,40">
+      <Button title="9" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug117" selectedIcon="ui://ajuz4mddfug117"/>
+    </component>
+    <component id="n105_qop5" name="btn_min" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="277,129" size="70,40">
+      <relation target="" sidePair="middle-middle,right-right"/>
+      <Button title="最小值" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug118" selectedIcon="ui://ajuz4mddfug118"/>
+    </component>
+    <component id="n113_qop5" name="btn_clear" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="1,177" size="70,40">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+      <Button title="清理" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug118" selectedIcon="ui://ajuz4mddfug118"/>
+    </component>
+    <component id="n112_qop5" name="btn_0" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="93,177" size="70,40">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="0" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug117" selectedIcon="ui://ajuz4mddfug117"/>
+    </component>
+    <component id="n114_qop5" name="btn_return" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="185,177" size="70,40">
+      <relation target="" sidePair="top-bottom"/>
+      <Button title="退格" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug118" selectedIcon="ui://ajuz4mddfug118"/>
+    </component>
+    <component id="n106_qop5" name="btn_max" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="277,177" size="70,40">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <Button title="最大值" titleColor="#d5dea0" titleFontSize="20" icon="ui://ajuz4mddfug118" selectedIcon="ui://ajuz4mddfug118"/>
+    </component>
+  </displayList>
+</component>

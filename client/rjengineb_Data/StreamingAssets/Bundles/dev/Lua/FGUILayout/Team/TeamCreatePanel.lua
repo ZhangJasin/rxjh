@@ -11,7 +11,7 @@ local PICK_DATA = {
 
 function TeamCreatePanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 
 	self:InitData()
 	self:InitEvent()
@@ -99,7 +99,7 @@ function TeamCreatePanel:OnClickAuto(context)
 	self._autoValue = idx
 end
 
-function TeamCreatePanel:OnClickBtnSave()
+function TeamCreatePanel:OnClickBtnSave(eventData)
 	local teamName = FGUI:GTextInput_getText(self._ui.input_name)
 	teamName = string.trim(teamName)
 	if string.len(teamName) <= 0 then 

@@ -40,12 +40,11 @@ function PCTreasureStoreItem:RefreshItemIcon(item,data)
     local isMoneyEnough,costType = SL:GetValue("NPC_STORE_GET_ENOUGH_COSTTYPE",data.Costtype,data.Nowprice)
     local costArr = string.split(data.Costtype,"#")
     if not isMoneyEnough then
-        -- FGUI:GTextField_setColor(text_count,"#FF0000")
     else
         FGUI:GTextField_setColor(text_count,"#FFF7D1")
     end
 
-    FGUI:GTextField_setText(text_name,data.Desc)
+    FGUIFunction:ScrollText_setString(text_name,data.Desc,nil,1)
     FGUI:GTextField_setText(text_count,SL:GetThousandSepString(data.Nowprice))
 
     -- 货币类型
@@ -54,7 +53,6 @@ function PCTreasureStoreItem:RefreshItemIcon(item,data)
 
     -- 商品ICON
     ItemUtil:RefreshItemUIByData(commonItem,SL:GetValue("ITEM_DATA", data.Itemid))
-    -- ItemUtil:AddItemClick(commonItem,SL:GetValue("ITEM_DATA", data.Itemid))
     ItemUtil:SetItemSubScriptByItemID(commonItem,data.Itemid)
     data.OverLap = data.Quantity
     data.isShowCount = data.Quantity > 1

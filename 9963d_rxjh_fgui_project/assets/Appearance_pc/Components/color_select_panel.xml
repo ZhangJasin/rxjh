@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="155,155" extention="Button">
+  <displayList>
+    <image id="n5_tdbp" name="icon" src="qxa15" fileName="ReadEnable/helmetcolor_color.png" xy="0,0" size="155,155"/>
+  </displayList>
+  <Button/>
+</component>

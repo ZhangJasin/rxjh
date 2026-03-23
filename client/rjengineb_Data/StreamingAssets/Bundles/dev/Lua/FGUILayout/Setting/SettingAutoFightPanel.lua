@@ -14,7 +14,8 @@ function OptionsHandlerBase:Init(key, item)
     self.key = key
     self.item = item
 end
-function OptionsHandlerBase:OnValueChanged(context)
+function OptionsHandlerBase:OnValueChanged(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 end
 
 local TogHandler = class("TogHandler", OptionsHandlerBase)
@@ -165,20 +166,6 @@ function SettingAutoFightPanel.Create()
 end
 
 function SettingAutoFightPanel:InitData()
-    -- self._selectScheme = SL:GetValue("SETTING_FIGHT_JOB_SKILL_SCHEME_SELECT")
-    -- self._releaseModel = SL:GetValue("SETTING_FIGHT_JOB_SKILL_RELEASE_MODEL")
-
-    -- self._schemeNames = {}
-    -- for i = 1, SCHEME_COUNT, 1 do
-    --     self._schemeNames[i] = SL:GetValue("SETTING_FIGHT_JOB_SKILL_SCHEME_NAME", i-1)
-    -- end
-
-    -- self.handler_OnSchemeNameChanged = handler(self, self.OnSchemeNameChanged)
-    -- self.handler_OnSelectSchemeChanged = handler(self, self.OnSelectSchemeChanged)
-    -- self.handler_OnSelectReleaseModelChanged = handler(self, self.OnSelectReleaseModelChanged)
-    -- self.handler_JobSkillListRender = handler(self, self.JobSkillListRender)
-    -- self.handler_OnClickJobSkill = handler(self, self.OnClickJobSkill)
-
     self._enemies_nearby_id = {}
     self._enemies_nearby_name = {}
     self._enemies_nearby_select = SL:GetValue("SETTING_ITEM_ENEMIES_NEARBY")
@@ -221,13 +208,6 @@ function SettingAutoFightPanel:InitData()
 end
 
 function SettingAutoFightPanel:InitEvent()
-    -- FGUI:setOnFocusOut(self._ui.jobSkillSchemeName, self.handler_OnSchemeNameChanged)
-    -- FGUI:GComboBox_setOnChangeCallback(self._ui.jobSkillSchemeSelect, self.handler_OnSelectSchemeChanged)
-    -- FGUI:GComboBox_setOnChangeCallback(self._ui.jobSkillReleaseModelSelect, self.handler_OnSelectReleaseModelChanged)
-    -- -- 职业技能
-    -- FGUI:GList_itemRenderer(self._ui.jobSkillList, self.handler_JobSkillListRender)
-    -- FGUI:GList_addOnClickItemEvent(self._ui.jobSkillList, self.handler_OnClickJobSkill)
-
     for name, info in pairs(infoTb) do
         local item = self._ui[name]
         local handler = info.func()
@@ -269,14 +249,6 @@ function SettingAutoFightPanel:OnActiveAtkEnChanged(context)
 end
 
 function SettingAutoFightPanel:RefreshPanel()
-    -- -- 设置方案名
-    -- FGUI:GComboBox_setSelectedIndex(self._ui.jobSkillSchemeSelect, self._selectScheme)
-    -- FGUI:GComboBox_setItems(self._ui.jobSkillSchemeSelect, self._schemeNames)
-    -- -- 设置技能释放方式
-    -- FGUI:GComboBox_setSelectedIndex(self._ui.jobSkillReleaseModelSelect, self._releaseModel)
-
-    -- self:RefreshJobSkills()
-	
 	local aX,aY = SL:GetValue("MAP_PLAYER_POS")
 	FGUI:GTextField_setText(self._ui.autoFightPoint, string.format("（%0.0f,%0.0f） %s", aX, aY, SL:GetValue("MAP_NAME")))
 	

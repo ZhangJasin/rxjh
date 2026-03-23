@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="654,390" pivot="0.5,0.5" anchor="true">
+  <displayList>
+    <image id="n0_cozz" name="bg_right_list" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="0,0" size="654,369">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n1_cozz" name="di_top" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,1" size="654,30">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n2_cozz" name="fengexian1" src="fts214" fileName="Images/split(1).png" xy="85,6" size="3,21">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n3_cozz" name="fengexian3" src="fts214" fileName="Images/split(1).png" xy="276,6" size="3,21">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n5_cozz" name="fengexian5" src="fts214" fileName="Images/split(1).png" xy="507,6" size="3,21">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n6_cozz" name="label_status" xy="31,7" size="28,19" fontSize="12" color="#d9f9d5" text="状态">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n7_cozz" name="label_goods" xy="163,7" size="52,19" fontSize="12" color="#d9f9d5" singleLine="true" text="道具信息">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n8_cozz" name="label_count" xy="395,7" size="28,19" fontSize="12" color="#d9f9d5" singleLine="true" text="金额">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n9_cozz" name="label_time" xy="565,7" size="28,19" fontSize="12" color="#d9f9d5" singleLine="true" text="日期">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n12_cozz" name="list_record" xy="4,36" size="645,326" overflow="scroll" lineGap="1" defaultItem="ui://08g55xx7fts2t" align="center" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n13_cozz" name="noItemtip" src="iwlbkvq9" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="220,109">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label title="暂无记录"/>
+    </component>
+    <text id="n14_qop5" name="text_tip" xy="1,370" size="368,19" fontSize="12" color="#ffffff" autoSize="none" strokeColor="#000000" singleLine="true" text="出售/购买记录各记录最多为30条"/>
+    <component id="n15_qop5" name="filter" src="fts2w" fileName="Components/Record/comboxFilter.xml" xy="575,372" size="64,15">
+      <ComboBox visibleItemCount="10" direction="up">
+        <item title="全部记录" value="1"/>
+        <item title="出售记录" value="2"/>
+        <item title="购买记录" value="3"/>
+      </ComboBox>
+    </component>
+  </displayList>
+</component>

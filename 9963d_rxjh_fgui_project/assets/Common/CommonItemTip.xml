@@ -2,23 +2,23 @@
 <component size="1334,750" opaque="false" designImage="ui://st7dgeqql6xyv5q" designImageOffsetX="-900" designImageOffsetY="64">
   <controller name="grade" pages="0,白,1,绿,2,蓝,3,紫,4,橙,5,红" selected="0"/>
   <displayList>
-    <graph id="n10_l6xy" name="Mask" xy="-11,3" size="1334,750" alpha="0.6" type="rect" fillColor="#ff000000">
+    <graph id="n10_l6xy" name="Mask" xy="0,0" size="1334,750" alpha="0.6" type="rect" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <image id="n24_kcff" name="n2" src="kcff5vp4" fileName="Images/tips_bg.png" xy="693,272" pivot="1,0" anchor="true" size="331,204" restrictSize="338,0,204,0" group="n11_l6xy">
-      <relation target="n19_hkm9" sidePair="width-width,height-height"/>
+    <image id="n24_kcff" name="n2" src="kcff5vp4" fileName="Images/tips_bg.png" xy="836,273" pivot="1,0" anchor="true" size="338,204" restrictSize="338,0,204,0" group="n11_l6xy">
+      <relation target="n19_hkm9" sidePair="height-height"/>
     </image>
-    <loader id="n23_kcff" name="TopBg" xy="359,277" size="334,98" group="n11_l6xy" touchable="false" url="ui://zu7kdgtskcff5voy" fill="scaleFree" autoSize="true">
+    <loader id="n23_kcff" name="TopBg" xy="502,278" size="334,98" group="n11_l6xy" touchable="false" url="ui://zu7kdgtskcff5voy" fill="scaleFree" autoSize="true">
       <gearDisplay controller="grade" pages="0,1,2,3,4,5"/>
       <gearIcon controller="grade" pages="1,2,3,4,5" values="ui://zu7kdgtskcff5voz|ui://zu7kdgtskcff5vp0|ui://zu7kdgtskcff5vp1|ui://zu7kdgtskcff5vp2|ui://zu7kdgtskcff5vp3" default="ui://zu7kdgtskcff5voy"/>
     </loader>
-    <component id="n4_l6xy" name="CommonItem" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="439,291" pivot="1,0" anchor="true" size="57,64" group="n11_l6xy" touchable="false">
+    <component id="n4_l6xy" name="CommonItem" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="582,292" pivot="1,0" anchor="true" size="64,64" group="n11_l6xy" touchable="false">
       <relation target="n23_kcff" sidePair="middle-middle,left-left"/>
     </component>
-    <text id="n5_l6xy" name="Name" xy="686,291" pivot="1,0" anchor="true" size="229,29" group="n11_l6xy" fontSize="20" color="#f2fbff" autoSize="none" autoClearText="true" text="">
+    <text id="n5_l6xy" name="Name" xy="829,292" pivot="1,0" anchor="true" size="236,29" group="n11_l6xy" fontSize="20" color="#f2fbff" autoSize="none" strokeColor="#000000" autoClearText="true" text="">
       <relation target="" sidePair="left-left,top-top"/>
     </text>
-    <list id="n27_kcff" name="TopContent" xy="450,319" size="229,47" group="n11_l6xy" touchable="false" layout="flow_vt" overflow="hidden" lineItemCount="2" foldInvisibleItems="true">
+    <list id="n27_kcff" name="TopContent" xy="593,320" size="236,47" group="n11_l6xy" touchable="false" layout="flow_vt" overflow="hidden" lineItemCount="2" foldInvisibleItems="true">
       <item url="ui://zu7kdgtskcff5vp7" title="等级" name="Level"/>
       <item url="ui://zu7kdgtskcff5vp7" title="阵营" name="Zy"/>
       <item url="ui://zu7kdgtskcff5vp7" title="职业" name="Job"/>
@@ -26,44 +26,39 @@
       <item url="ui://zu7kdgtskcff5vp7" title="性别" name="Sex"/>
       <item url="ui://zu7kdgtskcff5vp7" title="部位" name="EquipType"/>
     </list>
-    <list id="n19_hkm9" name="Content" xy="362,367" size="317,100" group="n11_l6xy" selectionMode="none" overflow="scroll" scrollBarFlags="32" margin="3,0,0,0" lineGap="2" autoItemSize="false" scrollItemToViewOnClick="false" foldInvisibleItems="true">
+    <list id="n19_hkm9" name="Content" xy="505,368" size="324,100" group="n11_l6xy" selectionMode="none" overflow="scroll" scrollBarFlags="32" margin="3,0,0,0" lineGap="2" autoItemSize="false" scrollItemToViewOnClick="false" foldInvisibleItems="true">
       <item url="ui://zu7kdgtshkm9v62" name="QigongLv"/>
       <item url="ui://zu7kdgtshkm9v62" name="BaseAttr"/>
       <item url="ui://zu7kdgtshkm9v62" name="DuraNum"/>
       <item url="ui://zu7kdgtshkm9v62" name="Desc"/>
       <item url="ui://zu7kdgtshkm9v62" name="GetWay"/>
       <item url="ui://zu7kdgtshkm9v62" name="MoneyNum"/>
+      <item url="ui://zu7kdgtshkm9v62" name="CurNum"/>
+      <item url="ui://zu7kdgtshkm9v62" name="LimitTime"/>
     </list>
-    <group id="n11_l6xy" name="Pop" xy="355,272" size="331,204" group="n29_qtq9" advanced="true"/>
-    <component id="n28_qtq9" name="panel_purchase" src="qtq95vpc" fileName="Components/TipItemPurchasePop.xml" xy="686,286" size="289,190" group="n29_qtq9" visible="false">
+    <group id="n11_l6xy" name="Pop" xy="498,273" size="338,204" group="n29_qtq9" advanced="true"/>
+    <component id="n28_qtq9" name="panel_purchase" src="qtq95vpc" fileName="Components/TipItemPurchasePop.xml" xy="833,287" group="n29_qtq9" visible="false">
       <relation target="n11_l6xy" sidePair="left-right,bottom-bottom"/>
     </component>
-    <component id="n37_x8cy" name="ObtainList" src="z28d5vph" fileName="Components/ObtainList.xml" xy="689,271" size="223,204" group="n29_qtq9" visible="false">
-      <relation target="n11_l6xy" sidePair="height-height"/>
-    </component>
-    <group id="n29_qtq9" name="PopI" xy="355,272" size="331,204" advanced="true" layout="hz" excludeInvisibles="true">
+    <group id="n29_qtq9" name="PopI" xy="498,273" size="338,204" advanced="true" layout="hz" excludeInvisibles="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <component id="n20_uwun" name="checkBox_auto" src="yj7kvo1" fileName="common/checkbox_multi.xml" pkg="st7dgeqq" xy="357,474" group="n22_uwun"/>
-    <text id="n21_uwun" name="text_tip" xy="393,478" size="130,26" group="n22_uwun" fontSize="18" color="#e3e3e3" strokeColor="#000000" text="此道具不再提示"/>
-    <group id="n22_uwun" name="panel_auto_switch" xy="357,474" size="166,32" visible="false" advanced="true">
-      <relation target="n11_l6xy" sidePair="left-left,bottom-bottom"/>
-    </group>
-    <component id="n35_wodv" name="Btn4" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="633,445" pivot="0.5,0.5" anchor="true" visible="false">
+    <component id="n17_m2we" name="Btn3" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="894,368" pivot="0.5,0.5" anchor="true" size="118,40">
       <relation target="n24_kcff" sidePair="right-right,bottom-bottom"/>
-      <Button title="获取" titleColor="#ffff00" titleFontSize="21" selectedTitle="获取"/>
-    </component>
-    <component id="n17_m2we" name="Btn3" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="746,368" pivot="0.5,0.5" anchor="true" size="118,40" group="n38_fm7v">
       <Button titleColor="#ffffff" titleFontSize="21" icon="ui://st7dgeqqje63v3e"/>
     </component>
-    <component id="n7_l6xy" name="Btn2" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="746,411" pivot="0.5,0.5" anchor="true" size="118,40" group="n38_fm7v">
+    <component id="n7_l6xy" name="Btn2" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="894,411" pivot="0.5,0.5" anchor="true" size="118,40">
+      <relation target="n24_kcff" sidePair="right-right,bottom-bottom"/>
       <Button titleColor="#ffffff" titleFontSize="21" icon="ui://st7dgeqqje63v3e"/>
     </component>
-    <component id="n8_l6xy" name="Btn1" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="746,454" pivot="0.5,0.5" anchor="true" size="118,40" group="n38_fm7v">
+    <component id="n8_l6xy" name="Btn1" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="894,454" pivot="0.5,0.5" anchor="true" size="118,40">
+      <relation target="n24_kcff" sidePair="right-right,bottom-bottom"/>
       <Button titleColor="#ffffff" titleFontSize="21" icon="ui://st7dgeqqje63v3e"/>
     </component>
-    <group id="n38_fm7v" name="btns" xy="687,348" size="118,126" advanced="true">
-      <relation target="n29_qtq9" sidePair="left-right,bottom-bottom"/>
+    <component id="n20_uwun" name="checkBox_auto" src="yj7kvo1" fileName="common/checkbox_multi.xml" pkg="st7dgeqq" xy="500,475" group="n22_uwun"/>
+    <text id="n21_uwun" name="text_tip" xy="536,479" size="130,26" group="n22_uwun" fontSize="18" color="#e3e3e3" strokeColor="#000000" text="此道具不再提示"/>
+    <group id="n22_uwun" name="panel_auto_switch" xy="500,475" size="166,32" visible="false" advanced="true">
+      <relation target="n11_l6xy" sidePair="left-left,bottom-bottom"/>
     </group>
   </displayList>
 </component>

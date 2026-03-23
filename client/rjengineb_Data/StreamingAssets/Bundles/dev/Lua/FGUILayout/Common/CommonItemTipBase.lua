@@ -9,9 +9,8 @@ local CommonPurchaseItemPop = requireFGUILayout("Common/CommonPurchaseItemPop")
     data.hideCompare    --如果是装备，判断否隐藏装备比较
 	data.buyParam		-- 购买相关参数, 有则显示购买框 
 ]]
-local attrConfigs = SL:GetValue("ATTR_CONFIGS")
-local fashion_jihuo  =  require("game_config/cfgcsv/fashion_jihuo")    -- 时装激活表 ItemTipsDesc
-local ItemTipsDesc  =  require("game_config/cfgcsv/ItemTipsDesc")      -- 自定义物品描述
+
+
 function CommonItemTipBase:Create()
 	self._ui = FGUI:ui_delegate(self.component)
 	--对应
@@ -25,7 +24,9 @@ function CommonItemTipBase:Create()
 	self.textList[21] = self._ui.Content:GetChild("MoneyNum")
 	self.textList[25] = self._ui.Content:GetChild("DuraNum")
 	self.textList[26] = self._ui.Content:GetChild("DuraNum")
-	self.textList[27] = self._ui.Content:GetChild("QigongLv")
+    self.textList[27] = self._ui.Content:GetChild("QigongLv")
+    self.textList[28] = self._ui.Content:GetChild("CurNum")
+    self.textList[29] = self._ui.Content:GetChild("LimitTime")
 
 	-- Top
 	self._topContent = self._ui.TopContent
@@ -39,7 +40,7 @@ function CommonItemTipBase:Create()
 	self.stageClickHandler = handler(self, self.StageClickEvent)
 
 	self.STAGE_EVENT_COMMON_TIP = "STAGE_EVENT_COMMON_TIP"
-	
+
 	self.onChangeAutoSwitchHandler = handler(self, self.OnChangeAutoSwitchEvent)
 
 	self._purchaseBtnKeys = {"btn_add", "btn_sub", "btn_m_min", "btn_m_max", "btn_purchase"}
@@ -62,6 +63,9 @@ function CommonItemTipBase:Enter(data)
 end
 
 function CommonItemTipBase:Exit()
+	if self.textList[29] then
+		FGUI:stopAllActions(self.textList[29])
+	end
 	self._purchasePanel:Exit()
 	if SL:GetValue("IS_PC_OPER_MODE") then
 		FGUI:StageEvent_RemoveListener(self.STAGE_EVENT_COMMON_TIP)
@@ -72,22 +76,26 @@ function CommonItemTipBase:InitAutoSwitchPanel(isShow)
 	if SL:GetValue("IS_PC_OPER_MODE") then
 		isShow = false
 	end
+	local repeatSwitch = SL:GetValue("SETTING_QUICKWINDOW_NOT_REPEATED_SHOW")
+    if isShow and repeatSwitch then
+        isShow = false
+    end
 	FGUI:setVisible(self._ui.panel_auto_switch, isShow)
 	if isShow and self._curItemID then
 		local autoCheckBox = FGUI:GetChild(self._ui.panel_auto_switch, "checkBox_auto")
-		FGUI:GButton_setSelected(autoCheckBox, SL:GetQuickUseItemShow(self._curItemID))
+		FGUI:GButton_setSelected(autoCheckBox, FGUIFunction:GetQuickUseItemShow(self._curItemID))
 		FGUI:setOnClickEvent(autoCheckBox, self.onChangeAutoSwitchHandler)
 	end
 end
 
 function CommonItemTipBase:OnChangeAutoSwitchEvent()
 	local isSelected = FGUI:GButton_getSelected(self._ui.checkBox_auto)
-	SL:SetQuickUseItemShow(self._curItemID, isSelected)
+	FGUIFunction:SetQuickUseItemShow(self._curItemID, isSelected)
 end
 
 function CommonItemTipBase:InitItemPurchasePanel(buyParam)
 	local isShow = false
-	if buyParam and next(buyParam) then
+	if buyParam and next(buyParam) and (buyParam.storeId or buyParam.customBuy) then
 		buyParam.itemID = self._curItemID
 		isShow = true
 	end
@@ -169,24 +177,14 @@ function CommonItemTipBase:RefreshItemView(data)
 	ItemUtil:RefreshItemUIByData(self._ui.CommonItem,itemData)
 	ItemUtil:UpdateIsShowLockByItemID(self._ui.CommonItem,itemData)
 	ItemUtil:SetItemSubScriptByItemID(self._ui.CommonItem,itemData.ID)
-	
+
 	local gradeController = FGUI:getController(self.component, "grade")
 	if itemData.Grade and gradeController then
 		gradeController.selectedIndex = itemData.Grade
 	end
 
 	local nameColor = itemData.Color and SL:GetColorByStyleId(itemData.Color) or "#FFFFFF"
-	local nameStr = itemData.Name
-	if itemData.Dura and itemData.Dura > 0 and itemData.DuraMax then
-		-- dump(itemData)
-		local duraStr = "\n持久度：" .. math.floor(itemData.Dura/1000) .. "/" .. math.floor(itemData.DuraMax/1000)
-		duraStr = string.format("[color=%s]%s[/color]","#00ff00",duraStr)
-		duraStr = string.format("[size=%s]%s[/size]",20,duraStr)
-		nameStr = nameStr .. duraStr
-	end 
-	FGUI:GTextField_setLineSpacing(self._ui.Name, 10)
-	FGUI:GTextField_setUBBEnabled(self._ui.Name, true)
-	FGUI:GTextField_setText(self._ui.Name,nameStr)
+	FGUI:GTextField_setText(self._ui.Name,itemData.Name)
     FGUI:GTextField_setColor(self._ui.Name, nameColor)
 
 	local groupId = itemData.TipsGroupId or 7
@@ -194,7 +192,6 @@ function CommonItemTipBase:RefreshItemView(data)
 	for k, v in pairs(self.textList) do
 		FGUI:setVisible(v, false)
 	end
-	self._buttons = {self._ui.Btn1,self._ui.Btn2,self._ui.Btn3}
 	for i, module in ipairs(groupCfg.Module) do
 		local moduleCfg = SL:GetValue("ITEMTIPS_MODULE_CONFIG", module)
 		local showModuleName = moduleCfg and moduleCfg.NameShow == 1
@@ -204,20 +201,6 @@ function CommonItemTipBase:RefreshItemView(data)
 			FGUI:setVisible(textContent, true)
 			if module == 1 then										--描述
 				local desc = itemData.Desc
-				if itemData.ExAbil then
-                    local desc2 = self:GetZDYData(itemData.ID,itemData.ExAbil)
-					-- print(desc2)
-                    -- FGUI:GTextField_setText(self.textList[23], string.format("[color=%s]%s[/color]","#FFFFFF",desc))
-					if ItemTipsDesc[itemData.ID] then
-						desc = self:GetZDYDesc(itemData)
-					end
-					if desc then
-                    	desc = desc2..desc
-					else
-						desc = desc2
-					end
-					-- print(desc)
-                end
 				if desc and string.len(desc) > 0 then
 					FGUI:GTextField_setText(textContent, showModuleName and string.format("%s%s", moduleCfg.Name, desc) or desc)
 				else
@@ -234,19 +217,18 @@ function CommonItemTipBase:RefreshItemView(data)
 				end
 			end
 			if module == 14 then									--出处
-				-- local config = SL:GetValue("ITEM_DATA", itemData.Index or itemData.ID)
-				-- if config and config.GetWayInfo  then
-				-- 	local pathInfo = config.GetWayInfo or ""
-				-- 	if pathInfo and string.len(pathInfo) > 0 then
-				-- 		FGUI:GTextField_setText(textContent, showModuleName and string.format("%s%s", moduleCfg.Name, pathInfo) or pathInfo)
-				-- 	else
-				-- 		FGUI:setVisible(textContent, false)
-				-- 	end
-				-- else
-				-- 	SL:Print("config or config.GetWayInfo is nil",itemData.Index or itemData.ID)
-				-- 	FGUI:setVisible(textContent, false)
-				-- end
-				self._buttons = {self._ui.Btn1,self._ui.Btn2,self._ui.Btn3,self._ui.Btn4 }
+				local config = SL:GetValue("ITEM_DATA", itemData.Index or itemData.ID)
+				if config and config.GetWayInfo  then
+					local pathInfo = config.GetWayInfo or ""
+					if pathInfo and string.len(pathInfo) > 0 then
+						FGUI:GTextField_setText(textContent, showModuleName and string.format("%s%s", moduleCfg.Name, pathInfo) or pathInfo)
+					else
+						FGUI:setVisible(textContent, false)
+					end
+				else
+					SL:Print("config or config.GetWayInfo is nil",itemData.Index or itemData.ID)
+					FGUI:setVisible(textContent, false)
+				end
 			end
 			if module == 15 then									 -- 职业
                 if not conditionData.job then
@@ -274,7 +256,7 @@ function CommonItemTipBase:RefreshItemView(data)
                 conditionData.TransferLV = conditionData.TransferLV or 0
 
                 local color = ItemUtil:CheckTransferLV(itemData) and "#FFFFFF" or "#FF0000"
-                local desc = string.format("%s%s", conditionData.TransferName, string.format(SL:GetValue("I18N_STRING", 70000101), SL:GetValue("I18N_STRING", 5000 + conditionData.TransferLV)))
+                local desc = conditionData.TransferName
                 FGUI:GTextField_setText(textContent, string.format("[color=%s]%s[/color]", color, showModuleName and string.format("%s%s", moduleCfg.Name, desc) or desc))
             end
 		
@@ -320,18 +302,18 @@ function CommonItemTipBase:RefreshItemView(data)
 				str = showModuleName and string.format("%s%s", moduleCfg.Name, str) or str
 				FGUI:GTextField_setText(textContent, str)
 			end
-			
+
 			if module == 22 then									 -- 性别
                 local sex = itemData.Gender or 0
                 local mySex = SL:GetValue("SEX")
                 local sexStr = ""
                 local sexTypeStr = ""
                 local color = "#FFFFFF"
-                if sex and sex >= 0 then
+                if sex and sex >= 0 and sex <= 1 then
                     color = sex == mySex and "#FFFFFF" or "#FF0000"
                     sexTypeStr = SL:GetValue("I18N_STRING", 60003004 + sex)
-                else
-                    sexTypeStr = ""
+                elseif sex == 2 then    -- 通用
+                    sexTypeStr = SL:GetValue("I18N_STRING", 70000104)
                 end
                 sexStr = string.format("[color=%s]%s[/color]", color, showModuleName and string.format("%s%s", moduleCfg.Name, sexTypeStr) or sexTypeStr)
                 FGUI:GTextField_setText(textContent,sexStr)
@@ -343,11 +325,14 @@ function CommonItemTipBase:RefreshItemView(data)
             end
 
 			if module == 25 or module == 26 then
-				if itemData.Dura then
-					FGUI:GTextField_setText(textContent, showModuleName and string.format("%s%s", moduleCfg.Name, itemData.Dura) or itemData.Dura)
+				local duraV = itemData.Dura or itemData.DuraMax
+				if duraV then
+					FGUI:GTextField_setText(textContent, showModuleName and string.format("%s%s", moduleCfg.Name, duraV) or duraV)
+				else
+					FGUI:setVisible(textContent, false)
 				end
 			end
-			
+
 			if module == 27 then
                 local qigongId = itemData.nQiGongId
                 local qigongLv = itemData.nQiGongLv
@@ -359,59 +344,51 @@ function CommonItemTipBase:RefreshItemView(data)
                     FGUI:setVisible(textContent, false)
                 end
             end
-			
+
+			if module == 28 then                                    -- 数量显示
+                local num = SL:GetThousandSepString(SL:GetValue("ITEM_COUNT", self._curItemID))
+                local desc = showModuleName and string.format("%s%s", moduleCfg.Name, num) or num
+                FGUI:GTextField_setText(textContent, desc)
+            end
+
+			if module == 29 then
+                local desc, needCountDown = self:GetLimitTimeStr(itemData)
+                if desc and string.len(desc) > 0 then
+                    FGUI:GTextField_setText(textContent, showModuleName and string.format("%s%s", moduleCfg.Name, desc) or desc)
+					if needCountDown then
+						FGUI:stopAllActions(textContent)
+						SL:schedule(textContent, function()
+							local desc = self:GetLimitTimeStr(itemData)
+                    		FGUI:GTextField_setText(textContent, showModuleName and string.format("%s%s", moduleCfg.Name, desc) or desc)
+						end, 1)
+					end
+                else
+                    FGUI:setVisible(textContent, false)
+                end
+            end
 		end
 	end
-	
-	if self.itemFashionShow then
-		FGUI:RemoveFromParent(self.itemFashionShow, true)
-		self.itemFashionShow = nil
-	end
-	if fashion_jihuo[itemData.ID] then
-		local fashionID,type,fashionName = fashion_jihuo[itemData.ID]['Anicount'],fashion_jihuo[itemData.ID]['type'],fashion_jihuo[itemData.ID]['equipname']
-		self:addFashionShow(fashionID,type,fashionName)
-	end
+
+	self:ReorderContentList(groupCfg.Module)
 end
 
-function CommonItemTipBase:addFashionShow(fashionID,type,fashionName)  -- 添加时装道具使用预览
-	
-	self.itemFashionShow =  FGUI:CreateObject(self._ui.CommonItem, "A_Right", "fashion_itemshow",false)
-	FGUI:setSortingOrder(self.itemFashionShow, 99998)
-
-	FGUI:setPositionX(self.itemFashionShow, -225)
-	FGUI:setPositionY(self.itemFashionShow, -26)
-	local modelobj = FGUI:GetChild(self.itemFashionShow,"graph_fashion_role")
-    self._ItemFashionModel = self:UIModel_Bind(modelobj)
-	-- FGUI:UIModel_setObjectEulerAngles(self._ItemFashionModel, nil, 0, 0, 0)
-
-    local bodyId = nil
-    local weaponId = nil
-    local helmetId = nil
-	local faceId = nil
-    local Sex = SL:GetValue("SEX")
-	if string.find(fashionName,"男") then
-		Sex = 0
-	elseif string.find(fashionName,"女") then
-		Sex = 1
+-- 重新排序子控件
+function CommonItemTipBase:ReorderContentList(orderList)
+	if not orderList or #orderList <= 0 then
+		return
 	end
-    local Job = SL:GetValue("JOB")
-    local modelData = SL:GetValue("FEATURE")
-    if modelData then 
-		local extData = {}
-		extData.sex = Sex
-		extData.job = Job
-		extData.bodyId   = modelData.clothID == 0 and bodyId or modelData.clothID
-		extData.helmetId = modelData.helmetID == 0 and helmetId or modelData.helmetID
-        extData.weaponId = modelData.weaponID == 0 and weaponId or modelData.weaponID
-		extData.faceId   = modelData.faceID == 0 and weaponId or modelData.faceID
-        if type == 1 then           -- 披风界面
-            extData.bodyId = fashionID
-        elseif type == 2 then      -- 幻武界面
-            extData.weaponId = fashionID
-        elseif type == 3 then       -- 头饰界面
-            extData.helmetId = fashionID
+    local contentList = self._ui.Content
+
+	local orderIndex = 0
+    for i = 1, #orderList do
+		local moduleId = orderList[i]
+        local child = self.textList[moduleId]
+		local childIndex = child and FGUI:GetChildIndex(contentList, child)
+		local childValid = childIndex and childIndex ~= -1
+        if childValid then
+            FGUI:SetChildIndex(contentList, child, orderIndex)
+			orderIndex = orderIndex + 1
         end
-        self._FashionModelIndex = FGUI:UIModel_addCharacterModel(self._ItemFashionModel, extData, Vector3.New(0, 0, -1), nil,Vector3.one * 1)
     end
 end
 
@@ -445,77 +422,58 @@ function CommonItemTipBase:GetShowAttData(itemData)
 		if addNewLine == 1 then
 			showAttStr = showAttStr.. '\n'
 		end
-		if name == "气功等级" then
-			showAttStr = string.format("%s[color=%s]%s+%s[/color]", showAttStr, SL:GetColorByStyleId(att.color or 255), name, value)
-		else
-			showAttStr = string.format("%s[color=%s]%s：%s[/color]", showAttStr, SL:GetColorByStyleId(att.color or 255), name, value)
-		end
+		showAttStr = string.format("%s[color=%s]%s：%s[/color]", showAttStr, SL:GetColorByStyleId(att.color or 255), name, value)
 		addNewLine = 1
 	end
 
 	return showAttStr
 end
-local enterbag_cfg   =  require("game_config/cfgcsv/enterbag")
---自定义属性
-function CommonItemTipBase:GetZDYData(itemID,itemConfig)
-    -- for i=1,#itemConfig.abil do
-    --    print(itemConfig.abil[i]['i'])
-    --    print(itemConfig.abil[i]['v'])
-    --    dump(itemConfig.abil[i]['v'])
-    -- end
-    --鉴定
-    local suitStr = ""
-    if itemConfig.abil[1] then
-        local title = itemConfig.abil[1]['t']
-        local qhtab = itemConfig.abil[1]['v']
-        local pos = 0
-        if title ~= "" then
-            suitStr = suitStr..string.format("\n[color=#ff0000]%s[/color]", ""..title.."")
-			suitStr = suitStr.."\n"
-            -- dump(attrConfigs)
-            -- dump(qhtab)
-            for i=1,#qhtab do
-            	local attId     = qhtab[i][2] or 0     -- 属性ID 绑定表
-            	local value     = qhtab[i][3] or 0     -- 属性值
-                local name = attrConfigs[attId]['Name']..""
-				local color     = attrConfigs[attId]['Color'] or 0  -- 属性颜色
-				local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
-				local percent   = attrConfigs[attId]['Type'] or 0   -- 是否是百分比
-				if percent == 1 then
-					value = string.format("%.1f", value / 100) * 10 / 10   .. "%"
-				end
-				if name == "气功等级" then
-					suitStr = suitStr..string.format("[color="..colorHex.."]%s+%s[/color]", name, value)
-				else
-					suitStr = suitStr..string.format("[color="..colorHex.."]%s：%s[/color]", name, value)
-				end
-                
-				suitStr = suitStr.."\n"
-            end
+
+---------------------------------------------------------------------------
+-- 限时时间显示
+function CommonItemTipBase:GetLimitTimeStr(itemData)
+    local str = ""
+    if not itemData then
+        return str
+    end
+    local limitType = itemData.CutDownType
+    if not limitType then
+        return str
+    end
+    
+    local startTime = itemData.startTime
+    local totalTime = itemData.totalTime
+    if startTime == 0 and totalTime == 0 then
+        return str
+    end
+
+	local needCountDown = false
+    if limitType == 1 then  -- 获得后开始计时(离线也计算时间)
+		local endTime = startTime + totalTime
+        local date = os.date("*t", endTime)
+        str = string.format("[color=#fd392f]%d/%02d/%02d %02d:%02d:%02d到期[/color]", date.year, date.month, date.day, date.hour, date.min, date.sec)
+    
+    elseif limitType == 2 then -- 获得后开始计时(离线不会计算时间)
+        local remainTime = math.max(totalTime - (SL:GetValue("SERVER_TIME") - startTime), 0)
+        str = string.format("[color=#fabf33]%s[/color]", SL:SecondToHMS(remainTime, true))
+		needCountDown = true
+
+    elseif limitType == 4 then -- 穿戴后开始计时
+        local isEquip = itemData.MakeIndex and SL:GetValue("EQUIP_DATA_BY_MAKEINDEX", itemData.MakeIndex)
+        local remainTime = totalTime
+        if isEquip then
+            remainTime = math.max(totalTime - (SL:GetValue("SERVER_TIME") - startTime), 0)
+			needCountDown = true
         end
+        str = string.format("[color=#fabf33]%s[/color]", SL:SecondToHMS(remainTime, true))
     end
-    return suitStr
-end
---自定义描述
-function CommonItemTipBase:GetZDYDesc(itemData)
-    --鉴定
-	local Str = ""
-	if ItemTipsDesc[itemData.ID]['Dec_FuHunItem'] then
-		Str = ItemTipsDesc[itemData.ID]['Dec_FuHunItem']
-	end
-	local value = 0
-    if itemData.ExAbil and itemData.ExAbil.abil and string.find(itemData.ExAbil.abil[1]['t'],"鉴定属性") then
-		local attId     = itemData.ExAbil.abil[1]['v'][1][2] or 0     -- 属性ID 绑定表
-		local percent   = attrConfigs[attId]['Type'] or 0   -- 是否是百分比
-		value = itemData.ExAbil.abil[1]['v'][1][3]
-		if percent == 1 then
-			value = string.format("%.1f", value / 100) * 10 / 10
-		end
-        
+
+    -- 手机端字号20
+    if str and string.len(str) > 0 and not SL:GetValue("IS_PC_OPER_MODE") then
+        str = string.format("[size=20]%s[/size]", str)
     end
-	Str = string.format("[color=#00ff00]"..Str.."[/color]", value)
-	Str = Str
-    return Str
+
+    return str, needCountDown
 end
 
 return CommonItemTipBase

@@ -16,11 +16,7 @@ function FuncDock.main()
         FGUIFunction:LookRankPlayerInfo(FuncDock.openData)
     end)
 
-    SL:RegisterLUAEvent(LUA_EVENT_RESPONSE_LOOK_PLAYER_INFO, "FuncDock",function(param1,param2,parma3)
-        -- print("LUA_EVENT_RESPONSE_LOOK_PLAYER_INFO",param1,param2,parma3)
-        if parma3 and parma3 == 666 then
-            return
-        end
+    SL:RegisterLUAEvent(LUA_EVENT_RESPONSE_LOOK_PLAYER_INFO, "FuncDock",function()
         if not SL:GetValue("IS_PC_OPER_MODE") then
             --查看 0:单装备面板 1:装备+属性面板
             local value = SL:GetValue("GAME_DATA", "lookPlayerMode")
@@ -43,4 +39,3 @@ end
 function FuncDock.setOpenData(data)
     FuncDock.openData = data
 end
-

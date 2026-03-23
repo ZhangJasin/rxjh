@@ -40,7 +40,6 @@ function PCPropertyBar:RefreshPropertyPage()
         local dengjiComp = FGUI:GetChild(self._pageList[2],"dengji")
         local mingshengComp = FGUI:GetChild(self._pageList[2],"mingsheng")
         local lilianComp = FGUI:GetChild(self._pageList[2],"lilian")
-        -- local chenghaoComp = FGUI:GetChild(self._pageList[2],"chenghao")
 
         local transformConfig = SL:GetMetaValue("TRANSFER_MAINPLAYER_CONFIG")
         local mingSheng = ""
@@ -63,7 +62,6 @@ function PCPropertyBar:RefreshPropertyPage()
         self:SetValueInText(mingshengComp,GET_STRING(30000043),mingSheng or "")
         self:SetValueInText(dengjiComp,SL:GetValue("ATTR_CONFIG_NAME_BY_ID", SLDefine.ATTRIBUTE.LEVEL),SL:GetValue("LEVEL") or "")
         self:SetValueInText(lilianComp,GET_STRING(30000044),SL:GetValue("MONEY", 7) or "")
-        -- self:SetValueInText(chenghaoComp,GET_STRING(30000041),SL:GetValue("USER_NAME") or "")
     end
 
     if self._pageList[3] then

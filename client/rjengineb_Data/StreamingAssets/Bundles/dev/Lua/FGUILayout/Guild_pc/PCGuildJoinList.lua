@@ -5,7 +5,6 @@ local ItemShow = SL:RequireFile("FGUILayout/Item/ItemShow")
 function PCGuildJoinList:Create()
 	self.super.Create(self)
 	self._ui = FGUI:ui_delegate(self.component)
-	--FGUI:SetCloseUIWhenClickOutside(self)
 	FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 	self._curListData = nil
 	self._curSelectData = nil
@@ -25,7 +24,8 @@ function PCGuildJoinList:Create()
 	FGUI:setOnClickEvent(self._ui.btn_quick_join, handler(self, self.OnClickQuickJoinEvent))
 
 	-- 刷新
-	FGUI:setOnClickEvent(self._ui.btn_refresh, function ()
+	FGUI:setOnClickEvent(self._ui.btn_refresh, function (eventData)
+    	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 		SL:RequestGuildList(0)
 		FGUI:GButton_setBright(self._ui.btn_quick_join, true)
 	end)
@@ -92,7 +92,8 @@ function PCGuildJoinList:OnClickJoinItemEvent(context)
 end
 
 -- 点击加入公会列表Item上的 加入按钮 事件
-function PCGuildJoinList:OnClickJoinButtonEvent()
+function PCGuildJoinList:OnClickJoinButtonEvent(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 	local curData = self._curSelectData
 	if not curData then return end
 	local playerLv = SL:GetValue("LEVEL") or 1

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="33,33" pivot="0.5,0.5" extention="Button">
+  <controller name="isSelected" exported="true" pages="0,选中,1,不选中" selected="0"/>
+  <controller name="isHaveText" pages="0,有文本,1,没文本" selected="0"/>
+  <displayList>
+    <image id="n0_lfoc" name="n0" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="0,0" size="33,33">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_lfoc" name="icon_select" src="lxrgv57" fileName="image/checkbox_icon.png" pkg="st7dgeqq" xy="0,0" size="33,33">
+      <gearDisplay controller="isSelected" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button/>
+</component>

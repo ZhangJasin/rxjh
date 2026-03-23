@@ -13,7 +13,8 @@ FuncDockUtil.FuncDockType = {
     Func_Monster_Head       = 9,    -- 点击人形怪头像
     Func_Near_Player        = 10,   -- 附近玩家
     Func_Archenemy          = 11,   -- 宿敌
-    Func_Player_Rank        = 12    -- 排行榜
+    Func_Player_Rank        = 12,   -- 排行榜
+    Func_Stall              = 13,   -- 摆摊查看摊主   
 }
 
 local FuncType = FuncDockUtil.FuncDockType
@@ -190,7 +191,14 @@ FuncDockUtil.FuncConfig = {
         BtnType.add_blacklist,
         BtnType.out_blacklist,
         -- BtnType.challenge
-    }
+    },
+    [FuncType.Func_Stall] = {
+        BtnType.look_role,
+        BtnType.chat,
+        BtnType.add_friend,
+        BtnType.add_blacklist,
+        BtnType.out_blacklist,
+    },
 }
 local FuncConfig = FuncDockUtil.FuncConfig
 
@@ -381,8 +389,6 @@ typeFunction[BtnType.add_blacklist] = function(targetId)
 end
         
 typeFunction[BtnType.horse_invite] = function(targetId)
-    --邀请上马
-    -- SL:RequestInviteInHorse(targetId)--TODO
 end
 
 -- 传入target信息

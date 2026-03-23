@@ -28,6 +28,9 @@ SettingKey.Type = {
     MOVE_RIGHT  = 25,
     CLOSE_UI    = 26,
     AUCTION     = 27,
+    BAG_SMALL   = 28,
+    STATUS_SMALL= 29,
+    EXCHANGE    = 30,
 }
 
 local ConfigDefaultKey = requireGameConfig("DefaultKey")
@@ -163,6 +166,7 @@ function SettingKey.SetCustomKey(id, keys, tip)
     local oldKeyStr = setting.keysStr
     if oldKeyStr ~= "" then
         KeyMap[keysStr] = nil
+		KeyMap[oldKeyStr] = nil
         if not IsInit then
             SettingKey.RemoveKeyboardEvent(id, setting.keys)
         end

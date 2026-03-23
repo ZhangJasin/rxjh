@@ -8,7 +8,7 @@ local defualtMoneyType = 0
 function StallShelf:Create()
 	self.super.Create(self)
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 
 	self._curInputVal = 0 	-- 当前输入值
 	self._lastInputVal = 0 	-- 上一次输入值
@@ -96,7 +96,6 @@ end
 function StallShelf:OnMoneyListRenderer(idx, item)
 	local data = self._goldInfos[idx + 1]
 	local id = data.i	--货币id
-	--local remain = data.v	--货币额度
 	local tax = data.t	--货币税率
 	local moneyData = SL:GetValue("ITEM_DATA", id) or {}
 	self._goldInfos[idx + 1].Name = moneyData.Name
@@ -145,13 +144,6 @@ function StallShelf:OnClickShelfEvent()
 
 	local goldListIndex = FGUI:GList_getSelectedIndex(self._ui.list_money_type)
 	local goldType = self._goldInfos[goldListIndex + 1].i
-
-	--比较额度是否充足
-	-- local totalPrice = self._productCount * self._productPrice
-	-- if totalPrice > self._goldInfos[goldListIndex + 1].v then
-	-- 	SL:ShowSystemTips(GET_STRING(90010019))
-	-- 	return
-	-- end
 
 	SL:RequestStallPutOnItem(self._makeindex, self._productCount, self._productPrice, goldType)
 end

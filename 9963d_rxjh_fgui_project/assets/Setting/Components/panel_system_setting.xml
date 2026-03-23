@@ -22,30 +22,27 @@
       <Button title="礼包兑换" titleFontSize="22"/>
     </component>
     <group id="n99_knkx" name="n99" xy="23,31" size="381,130"/>
-    <component id="n36_sdtg" name="btnPrivacyPolicy" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="56,220" size="136,42" group="n100_knkx">
-      <Button title="隐私协议" titleFontSize="22"/>
+    <component id="n36_sdtg" name="btnPrivacyPolicy" src="ll07kvqj" fileName="Components/btn_raw_size.xml" xy="44,220" size="150,42" group="n100_knkx">
+      <Button title="隐私协议" icon="ui://st7dgeqqje63v3e"/>
     </component>
-    <component id="n37_sdtg" name="btnChildrenPrivacyPolicy" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="223,220" size="136,42" group="n100_knkx">
-      <Button title="儿童隐私协议" titleFontSize="20"/>
+    <component id="n37_sdtg" name="btnChildrenPrivacyPolicy" src="ll07kvqj" fileName="Components/btn_raw_size.xml" xy="224,220" size="150,42" group="n100_knkx">
+      <Button title="儿童隐私协议" titleFontSize="20" icon="ui://st7dgeqqje63v3e"/>
     </component>
-    <component id="n39_sdtg" name="btnTermsOfService" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="56,276" size="136,42" group="n100_knkx">
-      <Button title="用户协议" titleFontSize="22"/>
+    <component id="n39_sdtg" name="btnTermsOfService" src="ll07kvqj" fileName="Components/btn_raw_size.xml" xy="44,277" size="150,42" group="n100_knkx">
+      <Button title="用户协议" titleFontSize="22" icon="ui://st7dgeqqje63v3e"/>
     </component>
-    <component id="n40_sdtg" name="btnThirdPartyDataSharing" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="223,276" size="136,42" group="n100_knkx">
-      <Button title="第三方共享" titleFontSize="22"/>
+    <component id="n40_sdtg" name="btnThirdPartyDataSharing" src="ll07kvqj" fileName="Components/btn_raw_size.xml" xy="224,277" size="150,42" group="n100_knkx">
+      <Button title="第三方共享" titleFontSize="22" icon="ui://st7dgeqqje63v3e"/>
     </component>
-    <component id="n41_sdtg" name="btnContactSupport" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="56,330" size="136,42" group="n100_knkx">
-      <Button title="联系客服" titleFontSize="22"/>
+    <component id="n41_sdtg" name="btnContactSupport" src="ll07kvqj" fileName="Components/btn_raw_size.xml" xy="44,334" size="150,42" group="n100_knkx">
+      <Button title="联系客服" titleFontSize="22" icon="ui://st7dgeqqje63v3e"/>
     </component>
-    <component id="n42_sdtg" name="btnDeleteAccount" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="223,330" size="136,42" group="n100_knkx">
-      <Button title="注销账号" titleFontSize="22"/>
+    <component id="n42_sdtg" name="btnDeleteAccount" src="ll07kvqj" fileName="Components/btn_raw_size.xml" xy="224,334" size="150,42" group="n100_knkx">
+      <Button title="注销账号" titleFontSize="22" icon="ui://st7dgeqqje63v3e"/>
     </component>
-    <group id="n100_knkx" name="n100" xy="56,220" size="303,152"/>
+    <group id="n100_knkx" name="n100" xy="44,220" size="330,156"/>
     <graph id="n107_ll07" name="n107" xy="9,522" size="400,50" group="n101_knkx" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
-    <richtext id="n48_93yi" name="icp_desc" xy="23,534" pivot="1,0" size="227,29" group="n101_knkx" fontSize="20" color="#ffffff" text="沪ICP备12024575号-10A"/>
-    <component id="n49_93yi" name="btnICP" src="ll07kvqi" fileName="Components/btn_second_red.xml" xy="257,526" size="136,42" group="n101_knkx">
-      <Button title="查  询"/>
-    </component>
+    <richtext id="n48_93yi" name="icp_desc" xy="70,534" pivot="0.5,0.5" size="279,29" group="n101_knkx" fontSize="20" color="#ffffff" ubb="true" text="沪ICP备12024575号-10A  &lt;a href=&apos;openICP&apos;&gt;[color=#ffff00]查询[/color]&lt;/a&gt;"/>
     <group id="n101_knkx" name="n101" xy="9,522" size="400,50"/>
     <graph id="n106_onel" name="n106" xy="422,12" size="560,495" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
     <component id="n96_knkx" name="base_setting_component" src="hriwy" fileName="Components/panel_setting_component.xml" xy="422,12" size="560,495"/>

@@ -11,7 +11,6 @@ local PICK_DATA = {
 
 function PCTeamCreatePanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	--FGUI:SetCloseUIWhenClickOutside(self)
 	FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
 	self:InitData()

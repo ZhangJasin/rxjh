@@ -13,9 +13,9 @@
     <text id="n3_tgh8" name="n3" xy="493,173" size="36,24" group="n59_m10s" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" text="上架"/>
     <image id="n56_qzpn" name="n56" src="gpvly" fileName="Images/img_item_frame_1.png" xy="378,201" group="n59_m10s"/>
     <component id="n44_g6sw" name="item" src="emvc3" fileName="Icons/CommonItem.xml" pkg="qa9a7rit" xy="512,247" pivot="0.5,0.5" anchor="true" size="40,40" group="n59_m10s"/>
-    <text id="n5_tgh8" name="text_product_name" xy="512,289" pivot="0.5,0.5" anchor="true" size="52,19" group="n59_m10s" fontSize="12" color="#ffffff" align="center" vAlign="middle" text="物品名字"/>
+    <text id="n5_tgh8" name="text_product_name" xy="512,289" pivot="0.5,0.5" anchor="true" size="267,19" group="n59_m10s" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="物品名字"/>
     <text id="n6_tgh8" name="n6" xy="376,314" size="52,19" group="n14_tgh8" fontSize="12" color="#b0c9b6" align="center" text="出售数量"/>
-    <image id="n12_tgh8" name="btn_count_edit" src="kuszkvpl" fileName="btn_count_edit.png" xy="484,314" group="n14_tgh8"/>
+    <loader id="n12_tgh8" name="btn_count_edit" xy="484,314" size="96,23" group="n14_tgh8" url="ui://3wc7qwaghfk85" fill="scaleFree"/>
     <text id="n13_tgh8" name="text_count" xy="487,314" pivot="0.5,0.5" size="90,21" group="n14_tgh8" fontSize="12" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="none" text="35" input="true" maxLength="10" keyboardType="4"/>
     <component id="n10_tgh8" name="btn_count_sub" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="459,313" size="24,24" group="n14_tgh8">
       <Button icon="ui://qa9a7ritemvcd"/>
@@ -28,7 +28,7 @@
     </component>
     <group id="n14_tgh8" name="n14" xy="376,313" size="269,24" group="n59_m10s"/>
     <text id="n17_tgh8" name="n18" xy="376,349" size="52,19" group="n23_tgh8" fontSize="12" color="#b0c9b6" align="center" text="出售单价"/>
-    <image id="n18_tgh8" name="btn_price_edit" src="kuszkvpm" fileName="btn_price_edit.png" xy="484,347" group="n23_tgh8"/>
+    <loader id="n18_tgh8" name="btn_price_edit" xy="484,349" size="95,24" group="n23_tgh8" url="ui://3wc7qwaghfk85" fill="scaleFree"/>
     <component id="n19_tgh8" name="btn_price_add" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="581,348" size="24,24" group="n23_tgh8">
       <Button icon="ui://st7dgeqqbf0gv5u"/>
     </component>
@@ -36,7 +36,7 @@
     <component id="n21_tgh8" name="btn_price_sub" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="459,348" size="24,24" group="n23_tgh8">
       <Button icon="ui://qa9a7ritemvcd"/>
     </component>
-    <group id="n23_tgh8" name="n23" xy="376,347" size="229,24" group="n59_m10s"/>
+    <group id="n23_tgh8" name="n23" xy="376,348" size="229,25" group="n59_m10s"/>
     <text id="n24_tgh8" name="n24" xy="376,382" size="52,19" group="n59_m10s" fontSize="12" color="#b0c9b6" align="center" text="交易货币"/>
     <list id="n27_tgh8" name="list_money_type" xy="448,382" size="207,119" group="n59_m10s" layout="flow_hz" overflow="scroll" defaultItem="ui://3wc7qwaghfk8c" autoClearItems="true">
       <item/>

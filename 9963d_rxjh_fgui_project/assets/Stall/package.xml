@@ -19,7 +19,6 @@
     <image id="80vf2c" name="comboBox_bg_9.png" path="/Images/" scale="9grid" scale9grid="6,5,12,10"/>
     <image id="80vf2e" name="comboBox_select_9.png" path="/Images/" scale="9grid" scale9grid="25,17,14,12"/>
     <component id="g6swvnr" name="OnDropPanel.xml" path="/Components/"/>
-    <component id="jse8v5z" name="StallBuy.xml" path="/" exported="true"/>
     <image id="ws4hv73" name="cell_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="17,37,9,5"/>
     <component id="ws4hvns" name="list_money_info.xml" path="/Components/"/>
     <component id="lbdsvnu" name="ComboBox1.xml" path="/Components/" exported="true"/>
@@ -40,6 +39,19 @@
     <component id="kpjuvob" name="StallHistory.xml" path="/" exported="true"/>
     <component id="kpjuvod" name="list_item_history.xml" path="/Components/"/>
     <component id="qjt8kvpf" name="btn_filter_multi.xml" path="/Components/"/>
+    <component id="ptxukvpg" name="StallShoppingCart.xml" path="/" exported="true"/>
+    <image id="ptxukvph" name="shopping_cart_item_bg.png" path="/Images/"/>
+    <image id="ptxukvpi" name="shopping_cart_select_bg.png" path="/Images/"/>
+    <image id="ptxukvpj" name="shopping_cart_select_icon.png" path="/Images/"/>
+    <image id="ptxukvpk" name="product_shopping_cart_icon_0.png" path="/Images/"/>
+    <image id="ptxukvpl" name="product_shopping_cart_icon_1.png" path="/Images/"/>
+    <image id="ptxukvpm" name="shopping_cart_close.png" path="/Images/"/>
+    <component id="ptxukvpo" name="shopping_item.xml" path="/Components/"/>
+    <component id="ptxukvpp" name="btn_shopping_select.xml" path="/Components/"/>
+    <component id="ptxukvpq" name="shopping_money_item.xml" path="/Components/"/>
+    <component id="ptxukvpr" name="btn_add_del_shopping.xml" path="/Components/"/>
+    <image id="q030kvpt" name="btn_cart.png" path="/Images/"/>
+    <component id="my1vkvpu" name="btn_cart.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

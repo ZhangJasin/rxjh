@@ -14,7 +14,7 @@ function VisitorStorageExPanel:Create()
 
 	self._ui.bagCellList = FGUI:GetChild(self._ui.view_bag, "List_Cell")
 	self.handler_storageItemRenderer = handler(self, self.ListViewStorageCellRenderer)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	FGUI:setOnClickEvent(self._ui.BtnClose, handler(self, self.Close))
 	-- 仓库列表显示
 	FGUI:GList_itemRenderer(self._ui.List_Cell, self.handler_storageItemRenderer)

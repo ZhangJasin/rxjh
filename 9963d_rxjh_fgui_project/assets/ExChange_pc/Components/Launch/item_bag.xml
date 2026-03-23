@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="44,44">
+  <displayList>
+    <loader id="n17_qop5" name="loader_di" xy="0,0" size="44,44" url="ui://08g55xx7fts215" fill="scale">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n18_qop5" name="node_root" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="44,44">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n19_fug1" name="isSelected" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="-2,-2" size="48,48" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+</component>

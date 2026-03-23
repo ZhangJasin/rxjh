@@ -21,7 +21,7 @@ function TracePoint.main()
     SL:RegisterLUAEvent(LUA_EVENT_AUTO_MOVE_END, "TracePoint", TracePoint.OnAutoMoveEnd)
 
     --测试
-    -- local key = TracePoint.Show(256, nil, 331, "101", "Test1 ")
+    -- local key = TracePoint.Show(256, nil, 331, "101", "Test1")
     -- TracePoint.Hide(key)
 end
 

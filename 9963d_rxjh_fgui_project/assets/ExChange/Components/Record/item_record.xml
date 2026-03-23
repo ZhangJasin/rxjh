@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="966,62">
+  <displayList>
+    <image id="n90_tmr6" name="n90" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,0" size="966,62">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n84_q8ir" name="text_time" xy="745,13" size="202,32" fontSize="22" color="#f1ffeb" align="center" vAlign="middle" singleLine="true" autoClearText="true" text="2025/05/03 15:23:14&#xA;">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n89_q8ir" name="text_goods_name" xy="250,14" size="158,32" fontSize="22" color="#f1ffeb" singleLine="true" autoClearText="true" text="卓越的帕西的黑">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n87_q8ir" name="text_count" xy="502,14" size="203,32" fontSize="22" color="#f1ffeb" align="center" autoSize="none" singleLine="true" autoClearText="true" text="9999">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n91_d2d6" name="icon_money" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="470,14" size="32,32">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n88_q8ir" name="text_status" xy="21,14" size="92,32" fontSize="22" color="#ffff00" align="center" singleLine="true" autoClearText="true" text="上架成功">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n86_q8ir" name="text_price" xy="865,14" size="10,32" fontSize="22" color="#f1ffeb" singleLine="true" autoClearText="true" text=""/>
+    <component id="n92_upk8" name="item_node" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="191,3" size="55,55">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

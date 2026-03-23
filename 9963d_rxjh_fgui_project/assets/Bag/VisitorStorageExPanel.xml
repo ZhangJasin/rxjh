@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <graph id="n37_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n35_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="166,50" group="n36_yqmu"/>
+    <text id="n3_xzvr" name="Title" xy="666,79" pivot="0.5,0.5" anchor="true" size="52,34" group="n36_yqmu" fontSize="24" color="#9aafbb" align="center" text="仓库"/>
+    <component id="n27_hkm9" name="BtnClose" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1150,79" group="n36_yqmu"/>
+    <component id="n28_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="666,375" size="0,0" group="n36_yqmu"/>
+    <component id="n33_ragy" name="view_bag" src="n7s0v7c" fileName="Components/FilterBagPanel.xml" xy="681,115" size="463,519" group="n36_yqmu"/>
+    <image id="n15_hkm9" name="n15" src="sna9vot" fileName="Images/heiDI.png" xy="190,156" size="463,527" group="n34_ragy"/>
+    <list id="n19_hkm9" name="List_Cell" xy="203,166" size="449,516" group="n34_ragy" layout="flow_hz" overflow="scroll" scrollBarFlags="128" scrollBar="hidden" margin="2,0,2,2" lineGap="8" colGap="10" lineItemCount="6" defaultItem="ui://dak5wnw9q9lsf" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n34_ragy" name="n34" xy="190,156" size="463,527" group="n36_yqmu" advanced="true"/>
+    <group id="n36_yqmu" name="n36" xy="166,50" size="1006,650" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

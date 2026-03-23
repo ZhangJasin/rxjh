@@ -5,7 +5,6 @@
     <image id="n11_qqzg" name="n11" src="bbev5n" fileName="Images/Assist/main_black_bg.png" xy="0,128" size="168,134" group="n16_qqzg"/>
     <loader id="n12_qqzg" name="Loader_title" xy="0,104" size="143,25" group="n16_qqzg" url="ui://xwp5ackotp62fve1"/>
     <list id="n14_qqzg" name="List_mission" xy="3,130" size="162,130" group="n16_qqzg" overflow="scroll" lineGap="2" defaultItem="ui://xwp5ackobbev5q" autoClearItems="true">
-      <relation target="n11_qqzg" sidePair="width-width,height-height"/>
       <item/>
       <item/>
       <item/>

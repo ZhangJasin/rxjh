@@ -34,7 +34,7 @@
     <component id="n19_flj6" name="btn_pre" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="146,534" size="130,45" group="n52_s4oo">
       <Button title="上一步" titleColor="#fced00" titleFontSize="24" icon="ui://qa9a7ritemvc3h"/>
     </component>
-    <text id="n22_flj6" name="textInput_name" xy="315,535" size="174,42" group="n29_flj6" fontSize="18" color="#a2b592" vAlign="middle" autoSize="none" bold="true" strokeColor="#000000" singleLine="true" text="" input="true" prompt="输入名称" maxLength="7"/>
+    <text id="n22_flj6" name="textInput_name" xy="315,535" size="174,42" group="n29_flj6" fontSize="18" color="#a2b592" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="" input="true" prompt="输入名称" maxLength="7"/>
     <component id="n23_flj6" name="btn_random_name" src="vdne3" fileName="Components/Create/btn_single_click.xml" xy="449,541" size="32,29" group="n29_flj6" aspect="true"/>
     <group id="n29_flj6" name="inputField_name" xy="313,535" size="176,42" group="n52_s4oo" advanced="true"/>
     <component id="n20_flj6" name="btn_create_role" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="537,534" size="130,45" group="n52_s4oo">

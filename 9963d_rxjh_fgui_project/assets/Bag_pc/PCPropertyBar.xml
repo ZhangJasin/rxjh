@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="334,467" opaque="false">
   <displayList>
-    <list id="n53_j9jd" name="comProperty" xy="0,0" size="334,467" overflow="scroll" lineGap="8" autoClearItems="true" foldInvisibleItems="true">
+    <list id="n53_j9jd" name="comProperty" xy="0,32" size="334,435" overflow="scroll" lineGap="8" autoClearItems="true" foldInvisibleItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
       <item url="ui://brz7yunlj9jd3"/>
       <item url="ui://brz7yunlj9jd6"/>
       <item url="ui://brz7yunlj9jdg"/>
       <item url="ui://brz7yunlj9jdj"/>
       <item url="ui://brz7yunlj9jdi"/>
     </list>
+    <image id="n54_xwe2" name="n54" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="87,7">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n55_xwe2" name="n55" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="222,7" flip="hz">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n56_xwe2" name="n56" xy="124,4" size="85,24" fontSize="12" color="#a4d452" align="center" vAlign="middle" autoSize="none" singleLine="true" text="基础属性"/>
   </displayList>
 </component>

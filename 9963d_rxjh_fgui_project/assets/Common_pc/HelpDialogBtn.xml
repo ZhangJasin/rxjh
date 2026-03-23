@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="440,53" pivot="0.5,0.5" extention="Button">
+<component size="376,53" pivot="0.5,0.5" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n0_zah9" name="n0" src="emvc5c" fileName="image/btn_first_green.png" pkg="qa9a7rit" xy="177,12" size="86,28">
+    <image id="n0_zah9" name="n0" src="emvc5c" fileName="image/btn_first_green.png" pkg="qa9a7rit" xy="145,12" size="86,28">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n1_zah9" name="title" xy="177,12" size="84,28" fontSize="12" color="#ffff00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="名称">
+    <text id="n1_zah9" name="title" xy="146,12" size="84,28" fontSize="12" color="#ffff00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="名称">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
   </displayList>

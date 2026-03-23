@@ -466,12 +466,15 @@
     <image id="ik1cfvc1" name="main_skill_monster_2.png" path="/Images/" exported="true"/>
     <image id="ik1cfvc2" name="main_skill_player_1.png" path="/Images/" exported="true"/>
     <image id="ik1cfvc3" name="main_skill_player_2.png" path="/Images/" exported="true"/>
-    <image id="bojefvc4" name="main_btn_target.png" path="/Images/" exported="true"/>
-    <image id="bojefvdc" name="Skill_150015.png" path="/Images/" exported="true"/>
-    <image id="bojefvdd" name="Skill_150017.png" path="/Images/" exported="true"/>
-    <image id="bojefvde" name="Skill_150019.png" path="/Images/" exported="true"/>
-    <image id="bojefvdg" name="Skill_150020.png" path="/Images/" exported="true"/>
-    <image id="bojefve0" name="Skill_bg.png" path="/Images/" exported="true"/>
+    <image id="itl8fvc5" name="Skill_320010.png" path="/Images/" exported="true"/>
+    <image id="itl8fvc6" name="Skill_320011.png" path="/Images/" exported="true"/>
+    <image id="itl8fvc7" name="Skill_320012.png" path="/Images/" exported="true"/>
+    <image id="itl8fvc8" name="Skill_320013.png" path="/Images/" exported="true"/>
+    <image id="itl8fvc9" name="Skill_320014.png" path="/Images/" exported="true"/>
+    <image id="itl8fvca" name="Skill_320015.png" path="/Images/" exported="true"/>
+    <image id="itl8fvcb" name="Skill_320016.png" path="/Images/" exported="true"/>
+    <image id="itl8fvcc" name="Skill_320017.png" path="/Images/" exported="true"/>
+    <image id="itl8fvcd" name="Skill_320018.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

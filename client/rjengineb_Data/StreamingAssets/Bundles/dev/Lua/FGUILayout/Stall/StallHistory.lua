@@ -8,7 +8,7 @@ function StallHistory:Create()
 	self._historyData = {}
 	self.handler_onHistoryListRenderer = handler(self, self.OnHistoryListRenderer)
 
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	FGUI:setOnClickEvent(self._ui.btn_close, handler(self, self.Close))
 	FGUI:GList_itemRenderer(self._ui.list_history, handler(self, self.OnHistoryListRenderer))
 end

@@ -137,7 +137,6 @@ function SellPanel:SendToSell(num)
         end 
     end
 
-    -- print("makeIndexListStr=",makeIndexListStr)
     SL:RequestNPCStoreSell(self.serverGroupID,makeIndexListStr)
 end
 
@@ -162,9 +161,7 @@ function SellPanel:RefreshData()
 end
 
 function SellPanel:RefreshDataAndView()
-    -- print("刷新列表---------------")
     self._canSellData_list = self:TabFilterData()
-    -- SL:print_t(self._canSellData_list)
     FGUI:GList_setNumItems(self.list_canSell,self._bag_open_counts)
     self:RefreshResGetList()
 end
@@ -228,8 +225,6 @@ end
 function SellPanel:RefreshResGetList()
     self.Res = {}
     self.ResMoneyIDs = {}
-    -- print("RefreshResGetList")
-    -- SL:print_t(self._preSellList)
 
     for k,v in pairs(self._preSellList) do
         if v and v.Price then
@@ -285,11 +280,7 @@ function SellPanel:SellItemRender(idx, item)
         end
 
         local longPressCall = function()
-            -- if data.BagData.OverLap > 1 then
-                self:SellOnItem(data)
-            -- else
-                -- self:SellItemClicked(item)
-            -- end
+            self:SellOnItem(data)
         end
         ItemUtil:SetLongPressOrClick(item,pressCall,longPressCall,1)
         FGUI:setVisible(node_root,true)

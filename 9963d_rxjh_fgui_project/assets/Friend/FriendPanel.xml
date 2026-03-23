@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" opaque="false">
   <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
-  <controller name="qinmidu" exported="true" pages="0,,1," selected="0">
-    <remark page="0" value="隐藏"/>
-    <remark page="1" value="显示"/>
-  </controller>
   <displayList>
     <graph id="n68_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
@@ -35,12 +31,14 @@
     <text id="n48_ygri" name="text_title" xy="667,78" pivot="0.5,0.5" anchor="true" size="52,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="好友">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n39_olk0" name="text_nothing" xy="385,417" pivot="0.5,0.5" anchor="true" size="200,34" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="暂无好友">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
     <text id="n40_olk0" name="text_online" xy="384,666" pivot="0.5,0.5" anchor="true" size="250,29" fontSize="20" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="人数">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
+    <image id="n71_i00u" name="img_nothing" src="iwlbkvpz" fileName="image/img.png" pkg="st7dgeqq" xy="197,265" group="n69_i00u"/>
+    <text id="n39_olk0" name="text_nothing" xy="382,522" pivot="0.5,0.5" anchor="true" size="200,34" group="n69_i00u" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="暂无好友"/>
+    <group id="n69_i00u" name="panel_nothing" xy="197,265" size="371,280" visible="false" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
     <image id="n60_gpvo" name="chat_info_bg" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="590,160" size="560,460" group="n49_nrlc">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
@@ -73,8 +71,5 @@
     </component>
     <group id="n52_nrlc" name="panel_history" xy="590,160" size="560,525" advanced="true"/>
     <component id="n58_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="172,698" size="0,0"/>
-    <component id="n69_vzjd" name="panl_qinmidu" src="boje2h" fileName="Components/newcom/page_giftItem.xml" xy="0,0">
-      <gearDisplay controller="qinmidu" pages="1"/>
-    </component>
   </displayList>
 </component>

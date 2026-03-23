@@ -9,7 +9,11 @@ RechargePanel.PAY_TYPE = {
 
 function RechargePanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+    if SL:GetValue("IS_PC_OPER_MODE") then
+        FGUIFunction:setWindowDrag(self.component, self._ui.bg)
+    else
+	    FGUIFunction:SetCloseUIWhenClickOutside(self)
+    end
     
     self._productID = nil       -- 商品ID
     self._exchange = 0          -- 获得货币值
@@ -47,9 +51,18 @@ function RechargePanel:InitRechargeUI()
     -- 第三方支付不显示花呗
     local bSDKPay = SL:GetValue("IS_SDK_PAY")
     if bSDKPay then
-        FGUI:setVisible(self._ui.btn_huabei, false)
-        FGUI:setVisible(self._ui.text_more, false)
-        FGUI:setVisible(self._ui.btn_weixin, true)
+        FGUI:setVisible(self._ui.panel_huabei, false)
+        FGUI:setVisible(self._ui.label_more, false)
+        FGUI:setVisible(self._ui.panel_weixin, true)
+    end
+
+    -- SDK登录不显示支付方式选择
+    if SL:GetValue("IS_SDK_LOGIN") then
+        FGUI:setVisible(self._ui.text_5, false)
+        FGUI:setVisible(self._ui.panel_alipay, false)
+        FGUI:setVisible(self._ui.panel_weixin, false)
+        FGUI:setVisible(self._ui.panel_huabei, false)
+        FGUI:setVisible(self._ui.label_more, false)
     end
 end
 

@@ -3,7 +3,7 @@ local SettingRedeemCodePanel = class("SettingRedeemCodePanel", BaseFGUILayout)
 
 function SettingRedeemCodePanel:Create()
 	self._ui				= FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	self:InitData()
 	self:InitEvent()
 end 

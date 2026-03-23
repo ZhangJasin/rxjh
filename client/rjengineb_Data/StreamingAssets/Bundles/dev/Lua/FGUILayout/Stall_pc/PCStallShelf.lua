@@ -86,7 +86,6 @@ end
 function PCStallShelf:OnMoneyListRenderer(idx, item)
 	local data = self._goldInfos[idx + 1]
 	local id = data.i	--货币id
-	--local remain = data.v	--货币额度
 	local tax = data.t	--货币税率
 	local moneyData = SL:GetValue("ITEM_DATA", id) or {}
 	self._goldInfos[idx + 1].Name = moneyData.Name
@@ -177,13 +176,6 @@ function PCStallShelf:OnClickShelfEvent()
 
 	local goldListIndex = FGUI:GList_getSelectedIndex(self._ui.list_money_type)
 	local goldType = self._goldInfos[goldListIndex + 1].i
-
-	--比较额度是否充足
-	-- local totalPrice = self._productCount * self._productPrice
-	-- if totalPrice > self._goldInfos[goldListIndex + 1].v then
-	-- 	SL:ShowSystemTips(GET_STRING(90010019))
-	-- 	return
-	-- end
 
 	SL:RequestStallPutOnItem(self._makeindex, self._productCount, self._productPrice, goldType)
 end

@@ -131,7 +131,6 @@ function GuideLayer:HandleArrowAnimation(task)
 	end
 
 	FGUI:Transition_play(self._arrowAni)
-	--FGUI:Transition_setKeyValue(self._arrowAni,"downArrowStart",10,10)
 end
 
 

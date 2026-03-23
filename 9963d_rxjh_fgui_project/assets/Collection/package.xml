@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="m0snxhdp">
+  <resources>
+    <component id="qlfj0" name="ProgressBar.xml" path="/Components/" exported="true"/>
+    <component id="qlfj1" name="CollectionPanel.xml" path="/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

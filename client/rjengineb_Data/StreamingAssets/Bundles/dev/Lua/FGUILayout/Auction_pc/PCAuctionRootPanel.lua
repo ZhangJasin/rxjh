@@ -34,13 +34,14 @@ function PCAuctionRootPanel:Create()
         }
     }
 
+    FGUIFunction:AdaptNotch(self.component)
     self:GetAllFGuiData()
     self:InitClickEvent()
     self:InitUI()
 end
 
 function PCAuctionRootPanel:InitUI()
-        -- 初始化页签名字
+    -- 初始化页签名字
     for index = 1,3 do
         local text_Content = FGUI:GetChild(self._ui["btn_right_tab_"..index],"text_Content")
         FGUI:GTextField_setText(text_Content,GET_STRING(RIGHT_TAB_NAME[index]))
@@ -107,14 +108,6 @@ function PCAuctionRootPanel:InitClickEvent()
     FGUI:setOnClickEvent(self.btn_right_tab_3,handler(self,self.BtnRightTab3Clicked))
 end
 
-function PCAuctionRootPanel:InitAdapt()
-    local screenW = SL:GetValue("SCREEN_WIDTH")
-    local screenH = SL:GetValue("SCREEN_HEIGHT")
-    local safeL, safeR, safeB, safeT = SL:GetValue("SCREEN_SAFE_AREA_RATIO")
-    FGUI:setSize(self.component, screenW - safeR - safeL, screenH - safeB - safeT)
-    FGUI:setPosition(self.component, safeL, safeT)
-end
-
 function PCAuctionRootPanel:BtnRightTab1Clicked()
     self:PageTo(IDX_BUY)
 end
@@ -142,7 +135,6 @@ end
 
 function PCAuctionRootPanel:Enter()
     FGUIFunction:ShowTopCurrency(SL:GetValue("GAME_DATA","NPCStoreMoneyList"))
-    self:InitAdapt()
     self:RegisterEvent()
     self:PageTo(IDX_BUY)
 

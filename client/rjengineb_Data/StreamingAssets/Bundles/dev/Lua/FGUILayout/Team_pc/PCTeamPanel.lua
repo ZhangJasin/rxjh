@@ -8,7 +8,6 @@ local AVATOR_DATA = {}
 
 function PCTeamPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	--FGUI:SetCloseUIWhenClickOutside(self)
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
 	self:InitData()
@@ -213,15 +212,8 @@ function PCTeamPanel:OnRendererChat(idx, item)
         FGUI:GRichTextField_setText(rich_msg, SL:ChatParser_Parse(data.Msg))
     end
 
-    -- local richWidth = FGUI:GRichTextField_getTextWidth(rich_msg)
-    -- local richHeight = FGUI:GRichTextField_getTextHeight(rich_msg)
-    -- richWidth = richWidth > 364 and 364 or richWidth
-    -- richHeight = richHeight > 84 and 84 or richHeight
-    -- local ui_chatBg = FGUI:GetChild(item, "chat_bg")
-    -- local imageW = math.max(60, richWidth + 30) 
-    -- local imageH = math.max(50, richHeight + 10)
-    -- FGUI:setSize(ui_chatBg, imageW, imageH)
     FGUI:GList_ScrollToView(self._ui.list_chat,idx)
+    FGUI:SetIntData(item, idx)
 end
 
 -- list emoj
@@ -302,7 +294,8 @@ function PCTeamPanel:OnClickOpenInvite(context)
 	FGUI:Open("Team_pc", "PCTeamInvitePanel")
 end
 
-function PCTeamPanel:OnClickShout(context)
+function PCTeamPanel:OnClickShout(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 	local nowTime = os.time()
     if self._cdTime and self._cdTime > nowTime then
         SL:ShowSystemTips(GET_STRING(40010030))
@@ -337,14 +330,12 @@ function PCTeamPanel:OnClickShout(context)
 end
 
 function PCTeamPanel:OnClickPositionLink(context)
-    local hrefStr = context.data
-    local strs =  string.split(hrefStr, "|")
-    if not strs or #strs ==0 then
-        return
-    end
-
-    local index = tonumber(strs[1])
+    local index = FGUI:GetIntData(context.sender.parent) + 1
     local data = self._messages[index]
+    if not data then 
+        return 
+    end
+    
     if data.MT == MSGTYPE.Position then
         local mapData = data.Msg
         local mapName = mapData.mapName

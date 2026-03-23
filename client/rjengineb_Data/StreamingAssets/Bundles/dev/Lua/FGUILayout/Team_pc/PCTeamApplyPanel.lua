@@ -3,7 +3,6 @@ local PCTeamApplyPanel = class("PCTeamApplyPanel", BaseFGUILayout)
 
 function PCTeamApplyPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	--FGUI:SetCloseUIWhenClickOutside(self)
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
 	self:InitData()
@@ -52,10 +51,9 @@ function PCTeamApplyPanel:OnUpdateTeamApplyList()
 end
 
 function PCTeamApplyPanel:RefreshNothingInfo()
+    FGUI:setVisible(self._ui.panel_nothing, #self._applyList == 0)
     if #self._applyList == 0 then 
         FGUI:GTextField_setText(self._ui.text_nothing, GET_STRING(40010035))
-    else 
-        FGUI:GTextField_setText(self._ui.text_nothing, "")
     end 
 end
 
@@ -91,15 +89,17 @@ function PCTeamApplyPanel:ApplyListRenderer(idx, item)
 	FGUI:SetIntData(item, idx)
 end
 
-function PCTeamApplyPanel:OnClickBtnAgree(context)
-	local index = FGUI:GetIntData(context.sender.parent) + 1
+function PCTeamApplyPanel:OnClickBtnAgree(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+	local index = FGUI:GetIntData(eventData.sender.parent) + 1
     local data = self._applyList[index]
     if not data then 
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
 
     if data.isInvited then 
         SL:RequestAgreeTeamInvite(data.UserID)
@@ -109,15 +109,17 @@ function PCTeamApplyPanel:OnClickBtnAgree(context)
     self:OnUpdateTeamApplyList()
 end
 
-function PCTeamApplyPanel:OnClickBtnRefuse(context)
-	local index = FGUI:GetIntData(context.sender.parent) + 1
+function PCTeamApplyPanel:OnClickBtnRefuse(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+	local index = FGUI:GetIntData(eventData.sender.parent) + 1
     local data = self._applyList[index]
     if not data then 
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
 
     if data.isInvited then 
         SL:RequestRefuseTeamInvite(data.UserID)
@@ -127,12 +129,16 @@ function PCTeamApplyPanel:OnClickBtnRefuse(context)
     self:OnUpdateTeamApplyList()
 end
 
-function PCTeamApplyPanel:OnClickBtnAgreeAll(context)
+function PCTeamApplyPanel:OnClickBtnAgreeAll(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     SL:RequestTeamAllApplyAgree()
     self:OnUpdateTeamApplyList()
 end
 
-function PCTeamApplyPanel:OnClickBtnRefuseAll(context)
+function PCTeamApplyPanel:OnClickBtnRefuseAll(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     SL:RequestTeamAllApplyRefuse()
     self:OnUpdateTeamApplyList()
 end

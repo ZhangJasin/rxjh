@@ -44,12 +44,13 @@ function PCMainMiniMap:Create()
     FGUI:setOnClickEvent(self._ui.Btn_reduce, handler(self, self.OnReduceMap))
     FGUI:setOnClickEvent(self._ui.Btn_music, handler(self, self.OnClickMusic))
     FGUI:setOnClickEvent(self._ui.Btn_auto, handler(self, self.OnClickAuto))
+    FGUI:setOnClickEvent(self._ui.Btn_recharge, handler(self, self.OnClickRecharge))
     FGUI:GButton_setChangeStateOnClick(self._ui.Btn_music, false)
 end
 
 function PCMainMiniMap:Enter()
 	self:RegisterEvent()
-    self:InitAdapt()
+    FGUIFunction:AdaptNotch(self.component)
 
     self:UpdateMapData()
 
@@ -112,14 +113,6 @@ function PCMainMiniMap:UpdateMapData()
     self._mapAble = SL:GetValue("MINIMAP_ABLE")
     FGUI:setVisible(self._ui.Comp_Map, self._mapAble)
     self:UpdatePointsTimer()
-end
-
-function PCMainMiniMap:InitAdapt()
-    local screenW = SL:GetValue("SCREEN_WIDTH")
-    local screenH = SL:GetValue("SCREEN_HEIGHT")
-    local safeL, safeR, safeB, safeT = SL:GetValue("SCREEN_SAFE_AREA_RATIO")
-    FGUI:setSize(self.component, screenW - safeR - safeL, screenH - safeB - safeT)
-    FGUI:setPosition(self.component, safeL, safeT)
 end
 
 function PCMainMiniMap:UpdateMapState()
@@ -577,8 +570,6 @@ function PCMainMiniMap:ShowFindPathLine()
     local playerX, playerZ = SL:GetValue("MAP_PLAYER_POS")
     local pathIdx = SL:GetValue("MAP_CURRENT_PATH_INDEX")
 	if size >= 1 then
-	-- local dis = math.abs(points[1].x - playerX) + math.abs(points[1].z - playerZ)
-	-- if size > 1 or dis > 1 then
 		local t = {}
         local len = 0
         local x = 0
@@ -651,12 +642,12 @@ function PCMainMiniMap:OnClickAuto()
     end
 end
 
+function PCMainMiniMap:OnClickRecharge()
+    FGUIFunction:SwitchPanel("Recharge_pc", "RechargePanel", nil, nil, {classPath = "FGUILayout/Recharge/RechargePanel"})
+end
+
 function PCMainMiniMap:OnOpenMiniMap()
-    if SL:GetValue("IS_PC_OPER_MODE") then
-        FGUI:Open("MiniMap_pc", "PCMiniMapPanel", nil, nil, {classPath = "FGUILayout/MiniMap_pc/PCMiniMapPanel"})
-    else
-        FGUI:Open("MiniMap", "MiniMapPanel")
-    end
+    FGUI:Open("MiniMap_pc", "PCMiniMapPanel")
 end
 
 function PCMainMiniMap:OnOpenMapRoute()

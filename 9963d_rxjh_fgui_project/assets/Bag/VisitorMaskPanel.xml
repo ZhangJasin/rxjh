@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImage="ui://dak5wnw9plaqvor" designImageAlpha="0">
+  <controller name="PageKind" pages="0,IDX_NULL,1,IDX_EQUIP,2,IDX_STATEMENT,3,IDX_TITLE" selected="0">
+    <remark page="3" value="称号"/>
+  </controller>
+  <displayList>
+    <graph id="n22_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.2" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n12_seb1" name="btn_back_box" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="551,106" size="115,40" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="返回交易行" titleColor="#fff000" titleFontSize="20" icon="ui://st7dgeqqje63v3c"/>
+    </component>
+    <component id="n13_8s5i" name="btn_box" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="551,106" size="84,40">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="返回盒子" titleColor="#fff000" titleFontSize="20" icon="ui://st7dgeqqje63v3c"/>
+    </component>
+    <component id="n24_ne41" name="btn_info" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="330,106" size="100,40">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="个人信息" titleColor="#fff000" titleFontSize="20" icon="ui://st7dgeqqje63v3c"/>
+    </component>
+    <component id="n16_n7s0" name="btn_wugong" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="441,106" size="98,40">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="武功" titleColor="#fff000" titleFontSize="20" icon="ui://st7dgeqqje63v3c"/>
+    </component>
+  </displayList>
+</component>

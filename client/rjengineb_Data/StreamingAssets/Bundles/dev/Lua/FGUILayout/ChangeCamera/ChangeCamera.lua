@@ -20,7 +20,6 @@ function ChangeCamera:GetAllFGuiData()
 end
 
 function ChangeCamera:InitOnClickEvent()
-    -- FGUI:setOnClickEvent(self.mask,handler(self,self.OnClose))
     FGUI:setOnClickEvent(self.btn_sure,handler(self,self.BtnSureClicked))
 end
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="90,43" pivot="0.5,0.5" extention="Button">
+  <controller name="isSelected" pages="0,选中,1,未选中" selected="0"/>
+  <displayList>
+    <image id="n4_tmr6" name="n4" src="fts28" fileName="Images/img_btn_selected.png" xy="0,0" size="90,43">
+      <gearDisplay controller="isSelected" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n5_tmr6" name="n5" src="fts29" fileName="Images/img_btn_normal.png" xy="0,0" size="90,43">
+      <gearDisplay controller="isSelected" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3_tmr6" name="title" xy="1,5" size="87,33" fontSize="22" color="#f6cd2b" align="center" vAlign="middle" autoSize="none" singleLine="true" text="全 部">
+      <gearColor controller="isSelected" pages="0,1" values="#f6cd2b,#000000|#f1ffeb,#000000"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.8"/>
+</component>

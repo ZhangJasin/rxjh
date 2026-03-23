@@ -119,8 +119,6 @@
     <image id="emvc3i" name="toggle_right_select.png" path="/image/" exported="true"/>
     <image id="emvc3j" name="toggle_right_unselect.png" path="/image/" exported="true"/>
     <image id="emvc3k" name="icon_pattern.png" path="/image/" exported="true"/>
-    <image id="emvc3m" name="toggle_top_green_select.png" path="/image/" exported="true" scale="9grid" scale9grid="21,23,2,14"/>
-    <image id="emvc3n" name="toggle_top_green_unselect.png" path="/image/" exported="true" scale="9grid" scale9grid="9,13,13,27"/>
     <image id="emvc3o" name="btn_help.png" path="/image/" exported="true"/>
     <image id="emvc3p" name="frame_info.png" path="/image/" exported="true" scale="9grid" scale9grid="8,7,7,6"/>
     <image id="emvc3q" name="icon_item0.png" path="/image/" exported="true" scale9grid="16,16,32,32"/>
@@ -130,26 +128,11 @@
     <image id="emvc3u" name="bg_tips.png" path="/image/" exported="true" scale="9grid" scale9grid="9,9,3,3"/>
     <image id="emvc3v" name="checkbox_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="6,6,10,10" qualityOption="source"/>
     <image id="emvc3w" name="checkbox_icon.png" path="/image/" exported="true"/>
-    <image id="emvc3x" name="dropdown_content_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="9,9,3,3"/>
-    <image id="emvc3y" name="dropdown_content_select.png" path="/image/" exported="true" scale="9grid" scale9grid="11,11,3,4"/>
-    <image id="emvc3z" name="toggle_top_red_select.png" path="/image/" exported="true" scale="9grid" scale9grid="26,23,11,20"/>
-    <image id="emvc40" name="toggle_top_red_unselect.png" path="/image/" exported="true" scale="9grid" scale9grid="15,9,6,33"/>
-    <image id="emvc41" name="top_info_bg.png" path="/image/" exported="true"/>
     <image id="emvc42" name="icon_money_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="8,6,16,12"/>
-    <image id="emvc43" name="toggle_select_1.png" path="/image/" exported="true" scale="9grid" scale9grid="24,0,5,39"/>
-    <image id="emvc44" name="toggle_unselect_1.png" path="/image/" exported="true" scale="9grid" scale9grid="5,5,1,1"/>
     <image id="emvc45" name="lock.png" path="/image/" exported="true"/>
-    <image id="emvc46" name="btn_img_mode.png" path="/image/" exported="true" scale="9grid" scale9grid="14,16,31,22" qualityOption="source"/>
     <image id="emvc47" name="bg_first_panel_9.png" path="/image/" exported="true" scale="9grid" scale9grid="45,42,18,29"/>
-    <image id="emvc48" name="btn_first_9.png" path="/image/" exported="true" scale="9grid" scale9grid="43,0,2,56"/>
-    <image id="emvc49" name="loading_bar_9.png" path="/image/" exported="true" scale="9grid" scale9grid="4,5,8,10"/>
-    <image id="emvc4a" name="loading_bar_bg_9.png" path="/image/" exported="true" scale="9grid" scale9grid="33,8,0,16"/>
     <image id="emvc4h" name="img_equip_di.png" path="/image/" exported="true"/>
-    <image id="emvc4j" name="pull_content_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="9,9,1,1"/>
     <image id="emvc4l" name="icon_search.png" path="/image/" exported="true"/>
-    <image id="emvc4n" name="di_1.png" path="/image/" exported="true" scale="9grid" scale9grid="6,5,3,1"/>
-    <image id="emvc4o" name="di_2.png" path="/image/" exported="true" scale="9grid" scale9grid="5,3,1,2" duplicatePadding="true"/>
-    <image id="emvc4p" name="content_fill_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="16,18,9,5"/>
     <image id="emvc4r" name="mask_black.png" path="/image/" exported="true"/>
     <image id="emvc4s" name="mask_circle.png" path="/image/" exported="true"/>
     <image id="emvc4t" name="arrow_blue.png" path="/image/" exported="true"/>
@@ -164,7 +147,6 @@
     <image id="emvc52" name="combobox_arrow_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="6,6,6,6"/>
     <image id="emvc53" name="combobox_ex_frame.png" path="/image/" exported="true" scale="9grid" scale9grid="6,6,4,4"/>
     <image id="emvc54" name="comobox_frame.png" path="/image/" exported="true" scale="9grid" scale9grid="6,6,4,4"/>
-    <image id="emvc55" name="di.png" path="/image/" exported="true" scale="9grid" scale9grid="94,42,188,249"/>
     <image id="emvc56" name="btn_tab.png" path="/image/" exported="true"/>
     <image id="emvc57" name="img_info_di.png" path="/image/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
     <image id="emvc58" name="img_search.png" path="/image/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
@@ -177,16 +159,11 @@
     <image id="plaq5f" name="img_equip_di2.png" path="/image/" exported="true"/>
     <component id="jvqd5g" name="btn_first_green.xml" path="/common/" exported="true"/>
     <image id="s9fq5h" name="cale9_4.png" path="/image/" exported="true" scale="9grid" scale9grid="6,6,4,4"/>
-    <image id="s9fq5i" name="scale9_1.png" path="/image/"/>
-    <image id="s9fq5j" name="scale9_2.png" path="/image/"/>
-    <image id="s9fq5k" name="scale9_3.png" path="/image/"/>
     <image id="hcvo5l" name="btn_top_normal.png" path="/image/" exported="true" scale="9grid" scale9grid="20,7,40,14"/>
     <image id="hcvo5m" name="btn_top_selected.png" path="/image/" exported="true" scale="9grid" scale9grid="20,7,40,14"/>
     <image id="hcvo5n" name="dropdown_normal.png" path="/image/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
     <image id="hcvo5o" name="dropdown_selected.png" path="/image/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
     <image id="hcvo5p" name="line_cut.png" path="/image/" exported="true"/>
-    <image id="tqcw5q" name="btn_top_normal2.png" path="/image/" exported="true" scale="9grid" scale9grid="10,10,116,8"/>
-    <image id="tqcw5r" name="btn_top_selected2.png" path="/image/" exported="true" scale="9grid" scale9grid="10,10,116,8"/>
     <image id="bk1i5t" name="input_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="6,6,4,4"/>
     <image id="bk1i5u" name="progress_fill_blue.png" path="/image/" exported="true" scale="9grid" scale9grid="3,0,2,8"/>
     <image id="bk1i5v" name="progress_fill_green.png" path="/image/" exported="true" scale="9grid" scale9grid="3,0,2,8"/>
@@ -196,11 +173,33 @@
     <image id="cwzm5z" name="role_bg_di.png" path="/image/" exported="true"/>
     <font id="bekykvpi" name="SIMSUN.ttf" path="/" renderMode="raster_hinted" samplePointSize="16"/>
     <image id="w2obkvpj" name="bg_pre.png" path="/image/" exported="true" scale="9grid" scale9grid="27,23,9,5"/>
-    <font id="rqwtkvph" name="FZBWKSK.ttf" path="/" renderMode="" samplePointSize="16"/>
+    <font id="rqwtkvph" name="FZBWKSK.ttf" path="/" exported="true" renderMode="" samplePointSize="16"/>
     <image id="pxu7kvpk" name="m_max.png" path="/image/" exported="true"/>
     <image id="pxu7kvpl" name="m_min.png" path="/image/" exported="true"/>
     <image id="uxamkvpm" name="btn_third_green.png" path="/image/" exported="true"/>
     <image id="uxamkvpn" name="btn_thrid_red.png" path="/image/" exported="true"/>
+    <image id="aipbkvpo" name="clock.png" path="/image/"/>
+    <image id="pf15kvpp" name="di_kuang_scale9.png" path="/image/" exported="true" scale="9grid" scale9grid="28,24,5,3"/>
+    <component id="pf15kvpq" name="CommonDlgBg.xml" path="/common/" exported="true"/>
+    <image id="raxukvpr" name="bg_arrow.png" path="/EquipIconBg/" exported="true"/>
+    <image id="raxukvps" name="bg_erhuan.png" path="/EquipIconBg/" exported="true"/>
+    <image id="raxukvpt" name="bg_hubi.png" path="/EquipIconBg/" exported="true"/>
+    <image id="raxukvpu" name="bg_jiezhi.png" path="/EquipIconBg/" exported="true"/>
+    <image id="raxukvpv" name="bg_menjia.png" path="/EquipIconBg/" exported="true"/>
+    <image id="raxukvpw" name="bg_neijia.png" path="/EquipIconBg/" exported="true"/>
+    <image id="raxukvpx" name="bg_pifeng.png" path="/EquipIconBg/" exported="true"/>
+    <image id="raxukvpy" name="bg_shouzhuo.png" path="/EquipIconBg/" exported="true"/>
+    <image id="raxukvpz" name="bg_wep.png" path="/EquipIconBg/" exported="true"/>
+    <image id="raxukvq0" name="bg_xianglian.png" path="/EquipIconBg/" exported="true"/>
+    <image id="raxukvq1" name="bg_xiezi.png" path="/EquipIconBg/" exported="true"/>
+    <image id="raxukvq2" name="bg_yifu.png" path="/EquipIconBg/" exported="true"/>
+    <image id="e5w7kvq3" name="bg_bishou.png" path="/EquipIconBg/" exported="true"/>
+    <image id="e5w7kvq4" name="bg_dao.png" path="/EquipIconBg/" exported="true"/>
+    <image id="e5w7kvq5" name="bg_fazhang.png" path="/EquipIconBg/" exported="true"/>
+    <image id="e5w7kvq6" name="bg_gongjian.png" path="/EquipIconBg/" exported="true"/>
+    <image id="e5w7kvq7" name="bg_qiang.png" path="/EquipIconBg/" exported="true"/>
+    <image id="iwlbkvq8" name="img.png" path="/image/" exported="true"/>
+    <component id="iwlbkvq9" name="iconNotingCom.xml" path="/common/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

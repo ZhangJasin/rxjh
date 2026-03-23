@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n0_rcpa" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,50">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n4_rcpa" name="text_title" xy="629,60" size="76,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" singleLine="true" text="交易所">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n8_rcpa" name="btn_right_tab_1" src="rcpa1" fileName="Components/tab_right.xml" xy="1161,109">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n9_rcpa" name="btn_right_tab_2" src="rcpa1" fileName="Components/tab_right.xml" xy="1161,199">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n10_rcpa" name="btn_right_tab_3" src="rcpa1" fileName="Components/tab_right.xml" xy="1161,289">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n18_rcpa" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n19_rcpa" name="Node_Content" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="668,400" size="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

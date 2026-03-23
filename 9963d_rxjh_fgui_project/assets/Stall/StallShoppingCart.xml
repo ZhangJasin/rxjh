@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImageOffsetX="-2">
+  <displayList>
+    <graph id="n54_menb" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n58_ptxu" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="371,54" size="592,642" group="n57_ighb"/>
+    <text id="n59_ptxu" name="n59" xy="506,65" pivot="0.5,0.5" size="322,34" group="n57_ighb" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="购物车"/>
+    <image id="n60_ptxu" name="n60" src="qzpnvny" fileName="Images/bg_black.png" xy="388,117" size="558,492" group="n57_ighb"/>
+    <list id="n61_ptxu" name="list_shop" xy="391,118" size="553,491" group="n57_ighb" selectionMode="multipleSingleClick" overflow="scroll" lineGap="5" defaultItem="ui://aakcgg80ptxukvpo" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n62_ptxu" name="n62" xy="393,620" size="45,26" group="n57_ighb" fontSize="18" color="#f1ffeb" align="center" text="合计:"/>
+    <list id="n70_ptxu" name="list_total_money" xy="458,621" size="312,60" group="n57_ighb" layout="flow_hz" overflow="scroll" lineGap="5" colGap="22" lineItemCount="2" defaultItem="ui://aakcgg80ptxukvpq" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n71_ptxu" name="btn_buy_all" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="778,624" size="156,50" group="n57_ighb">
+      <Button title="结 算"/>
+    </component>
+    <component id="n72_ptxu" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="937,83" group="n57_ighb"/>
+    <component id="n73_obw0" name="text_empty_tip" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="481,238" size="371,280" group="n57_ighb">
+      <Label title="暂无商品"/>
+    </component>
+    <group id="n57_ighb" name="n57" xy="371,54" size="592,642" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

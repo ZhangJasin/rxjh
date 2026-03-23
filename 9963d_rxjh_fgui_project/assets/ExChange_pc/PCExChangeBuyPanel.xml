@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="654,390" pivot="0.5,0.5" anchor="true" designImage="ui://5i0v372fxisl27" designImageOffsetX="-172" designImageOffsetY="558" designImageAlpha="0">
+  <controller name="isShowPage" pages="0,显示,1,不显示" selected="0"/>
+  <controller name="isShowloading" pages="0,显示,1,不显示" selected="0"/>
+  <controller name="isSelectItem" pages="0,有选中的item,1,无选中的item" selected="0"/>
+  <controller name="isHaveResult" pages="0,没有搜索结果,1,有搜索结果" selected="0"/>
+  <controller name="itemType" pages="0,汇总信息,1,所有物品,2,收藏列表" selected="1"/>
+  <controller name="isHaveSearchKey" pages="0,有搜索词,1,没有搜索词" selected="0"/>
+  <displayList>
+    <image id="n33_mqpj" name="bg_left_list" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="2,-2" size="124,391">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n31_mqpj" name="list_filter" xy="4,0" size="118,384" layout="flow_hz" overflow="scroll" margin="9,0,0,0" lineGap="4" align="center" autoClearItems="true" treeView="true" indent="15" clickToExpand="1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </list>
+    <image id="n21_nojs" name="bg_right_list" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="128,-1" size="527,389">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n57_cozz" name="noItemtip" src="iwlbkvq9" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="201,68" size="371,280">
+      <gearDisplay controller="isHaveResult" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label title="暂无商品"/>
+    </component>
+    <list id="n22_nojs" name="list_data" xy="134,64" size="511,318" layout="flow_hz" overflow="scroll" lineGap="2" defaultItem="ui://08g55xx7fts20" align="center" autoClearItems="true" foldInvisibleItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n58_cozz" name="btn_refresh" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="511,6" size="60,28">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="刷新" titleColor="#fff000" titleFontSize="12" icon="ui://qa9a7ritemvc5c" selectedIcon="ui://qa9a7ritemvc5c"/>
+    </component>
+    <component id="n59_cozz" name="btn_collection" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="576,6" size="60,28">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="收藏" titleColor="#fff000" titleFontSize="12" icon="ui://qa9a7ritemvc3f" selectedIcon="ui://qa9a7ritemvc3f"/>
+    </component>
+    <image id="n15_nojs" name="di_top" src="fts210" fileName="Images/di_3.png" xy="134,40" size="514,21">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n16_nojs" name="fengexian1" src="fts211" fileName="Images/split.png" xy="302,40" size="2,20">
+      <gearXY controller="itemType" pages="0,1,2" values="326,40|302,40|240,40"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n17_nojs" name="fengexian2" src="fts211" fileName="Images/split.png" xy="387,40" size="2,20">
+      <gearDisplay controller="itemType" pages="0,1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n60_mm98" name="fengexian3" src="fts211" fileName="Images/split.png" xy="560,40" size="2,20">
+      <gearXY controller="itemType" pages="1" values="560,40" default="537,40"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n20_nojs" name="label_info" xy="208,39" size="52,20" fontSize="12" color="#d9f9d5" autoSize="none" text="物品信息">
+      <gearXY controller="itemType" pages="0,1,2" values="227,40|208,39|321,41"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n18_nojs" name="label_SellCount" xy="331,40" size="52,20" fontSize="12" color="#d9f9d5" autoSize="none" text="出售数量">
+      <gearDisplay controller="itemType" pages="0,1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n61_cozz" name="filter_money" src="fts25" fileName="Components/Buy/comboxMoney.xml" xy="468,41" size="71,18">
+      <gearDisplay controller="itemType" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <ComboBox visibleItemCount="10" direction="down" autoClearItems="true"/>
+    </component>
+    <text id="n19_nojs" name="label_buy" xy="582,40" size="28,20" fontSize="12" color="#d9f9d5" autoSize="none" text="购买">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n62_beyy" name="label_price" xy="456,40" size="52,20" fontSize="12" color="#d9f9d5" autoSize="none" text="出售价格">
+      <gearDisplay controller="itemType" pages="0"/>
+      <gearText controller="itemType" pages="0" values="出售价格(最低)" default="出售价格"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n38_mqpj" name="img_bg_input" src="7c35vp0" fileName="image/img_search.png" pkg="st7dgeqq" xy="135,6" size="168,29" group="n40_mqpj">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n36_mqpj" name="input_search" xy="139,6" size="164,28" group="n40_mqpj" fontSize="12" color="#7cc3b3" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="请输入关键词搜索">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n41_mqpj" name="btn_search" src="fts22" fileName="Components/Buy/btn_search.xml" xy="306,7" size="28,28" group="n40_mqpj">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n48_c1cp" name="btn_clear_search" src="fts2f" fileName="Components/Buy/switchSearch.xml" xy="280,10" size="20,20" group="n40_mqpj" aspect="true">
+      <gearDisplay controller="isHaveSearchKey" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n40_mqpj" name="input" xy="135,6" size="199,29" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n43_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="-28,390" size="0,0">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <image id="n53_iqqn" name="loading" src="maso1k" fileName="Images/img_loading.png" xy="382,192" pivot="0.5,0.5" anchor="true" size="51,51" aspect="true">
+      <gearDisplay controller="isShowloading" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n63_maso" name="btn_return" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="446,6" size="60,28">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="返回&#xA;" titleColor="#fff000" titleFontSize="12" icon="ui://qa9a7ritemvc5c" selectedIcon="ui://qa9a7ritemvc5c"/>
+    </component>
+  </displayList>
+  <transition name="loading">
+    <item time="0" type="Rotation" target="n53_iqqn" value="0"/>
+    <item time="0" type="Rotation" target="n53_iqqn" tween="true" startValue="0" endValue="360" duration="48" ease="Custom" customEase=""/>
+  </transition>
+</component>

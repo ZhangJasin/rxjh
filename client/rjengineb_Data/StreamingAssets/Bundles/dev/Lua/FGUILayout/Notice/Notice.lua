@@ -56,6 +56,7 @@ function Notice.RegisterMobile()
         SL:onLUAEvent(LUA_EVENT_NOTICE_ITEM_TIPS, str, icon, grade, isLock, false)
     end)
     SL:RegisterLUAEvent(LUA_EVENT_EXP_CHANGE_VALUE, "Notice", function(value)
+        if value == 0 then return end
         local str = sformat(GET_STRING(value > 0 and 60001005 or 60001006), value)
         local isGet = value > 0
         local icon = "ui://ItemIcon/002155"

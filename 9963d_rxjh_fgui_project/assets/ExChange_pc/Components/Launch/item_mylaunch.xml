@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="470,50">
+  <displayList>
+    <image id="n0_qop5" name="img_di" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,0" size="470,50">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n6_qop5" name="itemRoot" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="11,3" size="44,44">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n7_qop5" name="text_name" xy="57,15" size="90,19" fontSize="12" color="#f1ffeb" vAlign="middle" autoSize="none" singleLine="true" text="商品名称七个字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n9_qop5" name="text_price" xy="182,5" size="86,19" fontSize="12" color="#f1ffeb" autoSize="none" singleLine="true" text="999,999,999">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n10_qop5" name="text_single_price" xy="181,24" size="87,19" fontSize="12" color="#f1ffeb" autoSize="none" singleLine="true" text="单价:555">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n11_qop5" name="text_time_launch" xy="280,5" size="112,19" fontSize="12" color="#f1ffeb" singleLine="true" text="2026-1-15 00:00:00">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n12_qop5" name="text_time_under" xy="281,24" size="109,19" fontSize="12" color="#f1ffeb" text="下架计时:  00:00:00">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n14_qop5" name="btn_getBack" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="415,8" size="33,33">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://qa9a7ritemvc3e" selectedIcon="ui://qa9a7ritemvc3e"/>
+    </component>
+    <component id="n15_nny3" name="icon_Money" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="146,9" size="33,32">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

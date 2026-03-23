@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="selected" exported="true" pages="0,选中,1,未选中" selected="0"/>
+  <displayList>
+    <image id="n6_o4ex" name="bg_di" src="qop510" fileName="Images/kuang.png" xy="0,0" size="64,64">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n5_qa9y" name="item_root" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="64,64">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n4_qa9y" name="isSelected" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="0,0" size="64,64" visible="false">
+      <gearDisplay controller="selected" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button/>
+</component>

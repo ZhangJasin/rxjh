@@ -8,7 +8,7 @@ function MapRoutePanel:Create()
     if SL:GetValue("IS_PC_OPER_MODE") then
 	    FGUIFunction:setWindowDrag(self.component, self._ui.background)
     else
-        FGUI:SetCloseUIWhenClickOutside(self)
+        FGUIFunction:SetCloseUIWhenClickOutside(self)
     end
 
     self:InitEvent()
@@ -63,7 +63,8 @@ function MapRoutePanel:InitEvent()
     FGUI:setOnClickEvent(self._ui.btn_close, handler(self, self.OnClose))
 end
 
-function MapRoutePanel:OnSwitchRoute()
+function MapRoutePanel:OnSwitchRoute(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
     if not self._selectRouteIdx or self._selectRouteIdx < 1 then
         return
     end

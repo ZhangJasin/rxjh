@@ -191,7 +191,6 @@ function TracePointPanel:UpdatePosition(data)
 
     --显示区域修正
     local angle = nil
-    -- x, y, angle = self:GetSquareAdjust(x, y)
     x, y, angle = self:GetEllipseAdjust(x, y)
     if not angle then
         -- 不修正
@@ -206,7 +205,7 @@ function TracePointPanel:UpdatePosition(data)
 end
 
 function TracePointPanel:UpdateDistance(data)
-    if data._state ~= 1 then return end-- 范围内状态才更新距离文字
+    -- if data._state ~= 1 then return end-- 范围内状态才显示距离文字
     local playerX, playerZ = SL:GetValue("MAP_PLAYER_POS")
     if playerX == data._curPX and playerZ == data._curPZ then return end
     data._curPX = playerX
@@ -215,10 +214,9 @@ function TracePointPanel:UpdateDistance(data)
     local z = playerZ - data.z
     local dis = math.floor(math.sqrt(x * x + z * z))
     if dis > 0 then
-        FGUI:setVisible(data._txtDistance, true)
-        FGUI:GTextField_setText(data._txtDistance, (data.des or "") .. dis .. GET_STRING(40041003))
+        FGUI:GTextField_setText(data._txtDistance, (data.des or "") .. " " .. dis .. GET_STRING(40041003))
     else
-        FGUI:setVisible(data._txtDistance, false)
+        FGUI:GTextField_setText(data._txtDistance, data.des or "")
     end
 end
 
@@ -379,7 +377,6 @@ function TracePointPanel:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_RMV_TRACE_POINT, "TracePointPanel", handler(self, self.OnRmvTracePoint))
 
     SL:RegisterLUAEvent(LUA_EVENT_CHANGE_SCENE, "TracePointPanel", handler(self, self.UpdatePointDatas))
-    -- SL:RegisterLUAEvent(LUA_EVENT_WINDOW_SIZE_CHANGE, "TracePointPanel", handler(self, self.UpdateSquareLimitSize))
     SL:RegisterLUAEvent(LUA_EVENT_WINDOW_SIZE_CHANGE, "TracePointPanel", handler(self, self.UpdateEllipseLimitSize))
     SL:RegisterLUAEvent(LUA_EVENT_SCENE_LOAD_END, "TracePointPanel", handler(self, self.UpdateSceneHAll))
 end

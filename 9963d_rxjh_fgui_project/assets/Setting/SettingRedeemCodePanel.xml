@@ -5,8 +5,12 @@
     <graph id="n25_menb" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <image id="n26_fskg" name="bg" src="zah9v4i" fileName="image/bg_second_panel.png" pkg="st7dgeqq" xy="391,178" size="552,340" group="n22_tj99"/>
-    <graph id="n28_fskg" name="n28" xy="402,241" size="530,267" group="n22_tj99" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <image id="n26_fskg" name="bg" src="zah9v4i" fileName="image/bg_second_panel.png" pkg="st7dgeqq" xy="391,178" size="552,340" group="n22_tj99">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <graph id="n28_fskg" name="n28" xy="402,241" size="530,267" group="n22_tj99" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
     <component id="n2_bf0g" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="924,202" group="n22_tj99">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>

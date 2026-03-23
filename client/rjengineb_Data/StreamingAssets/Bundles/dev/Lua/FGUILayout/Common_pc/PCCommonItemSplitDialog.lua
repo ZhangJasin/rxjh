@@ -2,37 +2,38 @@ local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local PCCommonItemSplitDialog = class("PCCommonItemSplitDialog", BaseFGUILayout)
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 -- 使用方法
--- local data = {}
--- data.itemData = {
---     Grade = 3,
---     isShowCount = 100,
---     OverLap = 10,
---     Looks = 3535,
---     Name = "道具"
--- }
-
--- data.dialogType = 0  单按钮 1 双按钮
-
---    isOk = 0 单按钮回调
---    isOk = 0 isOK = 1 双按钮回调
---    isOk = 2 关闭按钮回调
--- data.btnClicked = function(isOK,num)
---     if isOK == 0 then
---     elseif isOK == 1 then
---         FGUI:Close("Common", "PCCommonItemSplitDialog")
---     elseif isOk == 2 then    -- 关闭按钮
---         FGUI:Close("Common", "PCCommonItemSplitDialog")
---     end
-
---     print("当前数量 =============" .. num)
--- end
-
-
--- data.maxNum = 100
--- data.title = "装备拆分"
--- data.minNum = 10
--- SL:OpenCommonItemSplitDialog(data)
-
+--[[
+	-- local data = {}
+	-- data.itemData = {
+	--     Grade = 3,
+	--     isShowCount = 100,
+	--     OverLap = 10,
+	--     Looks = 3535,
+	--     Name = "道具"
+	-- }
+	
+	-- data.dialogType = 0  单按钮 1 双按钮
+	
+	--    isOk = 0 单按钮回调
+	--    isOk = 0 isOK = 1 双按钮回调
+	--    isOk = 2 关闭按钮回调
+	-- data.btnClicked = function(isOK,num)
+	--     if isOK == 0 then
+	--     elseif isOK == 1 then
+	--         FGUI:Close("Common", "PCCommonItemSplitDialog")
+	--     elseif isOk == 2 then    -- 关闭按钮
+	--         FGUI:Close("Common", "PCCommonItemSplitDialog")
+	--     end
+	
+	--     print("当前数量 =============" .. num)
+	-- end
+	
+	
+	-- data.maxNum = 100
+	-- data.title = "装备拆分"
+	-- data.minNum = 10
+	-- SL:OpenCommonItemSplitDialog(data)
+--]]
 
 -- 角色方案面板
 function PCCommonItemSplitDialog:Create()
@@ -215,14 +216,23 @@ end
 -- 刷新总价显示
 function PCCommonItemSplitDialog:RefreshTotalPriceShow()
     -- 是否显示文字
-    if self._data.singlePrice and self._data.costName then
-        FGUI:GTextField_setText(self.text_tip,string.format(GET_STRING(30000063),self._data.costName .. self._data.singlePrice * self.num))
-        FGUI:setVisible(self.text_tip,self._data.singlePrice and self._data.costName)
+    if self._data and not string.isNullOrEmpty(self._data.costType) then
+		local totalPrice = self.num * self._data.singlePrice
+        local isMoneyEnough,costType,currentMoney,costList = SL:GetValue("NPC_STORE_GET_ENOUGH_COSTTYPE",self._data.costType,totalPrice)
+        if isMoneyEnough then
+			FGUI:GTextField_setText(self.text_tip,string.format(GET_STRING(30000063),"[color=#00FF00]"..self._data.singlePrice * self.num.. "[/color]"..self._data.costName))
+		else
+			FGUI:GTextField_setText(self.text_tip,string.format(GET_STRING(30000063),"[color=#FF0000]"..self._data.singlePrice * self.num.. "[/color]"..self._data.costName))
+		end
+					
+		FGUI:setVisible(self.text_tip,true)
+    else
+        FGUI:setVisible(self.text_tip,false)
     end
 
-    
+    -- NPC商店物品卖出
     if self._data.multPrice  and next(self._data.multPrice) then
-        local str = GET_STRING(30000110)
+        local str = ""
         local count = 1
         local totalCount = #self._data.multPrice
         for k,v in pairs(self._data.multPrice) do
@@ -237,8 +247,8 @@ function PCCommonItemSplitDialog:RefreshTotalPriceShow()
                 count = count + 1
             end
         end
-        FGUI:GTextField_setText(self.text_tip,str)
-        FGUI:setVisible(self.text_tip,self._data.multPrice  and next(self._data.multPrice))
+        FGUI:GTextField_setText(self.text_tip,string.format(GET_STRING(30000063),str))
+        FGUI:setVisible(self.text_tip,self._data.multPrice and next(self._data.multPrice))
     end
 end
 
@@ -251,9 +261,6 @@ function PCCommonItemSplitDialog:CleanCache()
         ItemUtil:ItemShow_Release(self.itemShow)
     end
 end
-
-
-
 
 function PCCommonItemSplitDialog:RefreshItemNode()
     self:CleanCache()

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="160,24" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n16_fvar" name="bg1" src="hcvo5n" fileName="image/dropdown_normal.png" pkg="qa9a7rit" xy="80,12" pivot="0.5,0.5" anchor="true" size="160,24"/>
+    <image id="n17_fvar" name="bg2" src="hcvo5o" fileName="image/dropdown_selected.png" pkg="qa9a7rit" xy="80,12" pivot="0.5,0.5" anchor="true" size="160,24">
+      <gearDisplay controller="button" pages="1,2,3"/>
+    </image>
+    <text id="n11_kelz" name="input_title" xy="75,12" pivot="0.5,0.5" anchor="true" size="120,22" fontSize="14" color="#bdf5e8" align="center" vAlign="middle" autoSize="none" singleLine="true" text="我我我我我我我" input="true" prompt="请输入名字..." maxLength="7"/>
+    <loader id="n10_kelz" name="select" xy="0,0" size="160,24">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <image id="n15_kelz" name="img_add" src="fvar1n" fileName="Images/skill_add.png" xy="75,12" pivot="0.5,0.5" anchor="true" size="24,24"/>
+    <component id="n18_fvar" name="btn_edit" src="fvar1o" fileName="Components/btn_edit.xml" xy="134,0"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

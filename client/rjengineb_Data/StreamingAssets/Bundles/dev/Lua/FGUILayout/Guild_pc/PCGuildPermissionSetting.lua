@@ -51,8 +51,7 @@ function PCGuildPermissionSetting:Create()
 	self.handler_rankListRenderer = handler(self, self.OnRankListItemRenderer)
 	self.handler_permissionListRenderer = handler(self, self.OnPermissionListItemRenderer)
 	self.handler_onClickRankItem = handler(self, self.OnClickRankItem)
-
-	--FGUI:SetCloseUIWhenClickOutside(self)
+	
 	FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
 	FGUI:GList_itemRenderer(self._ui.list_rank, self.handler_rankListRenderer)
@@ -87,7 +86,8 @@ function PCGuildPermissionSetting:OnClickRankItem()
 end
 
 -- 点击保存
-function PCGuildPermissionSetting:OnClickSave()
+function PCGuildPermissionSetting:OnClickSave(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 	local selection = FGUI:GList_getSelection(self._ui.list_permission)
 	local permission = 0
 	for _, itemIndex in ipairs(selection) do	
@@ -101,7 +101,8 @@ function PCGuildPermissionSetting:OnClickSave()
 end
 
 -- 点击重置
-function PCGuildPermissionSetting:OnClickReset()
+function PCGuildPermissionSetting:OnClickReset(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 	if not self._curSelectRankInfo then return end
 	SL:RequestGuildRankPermission(self._curSelectRankInfo.ID)
 	self:RefreshPermission(true)

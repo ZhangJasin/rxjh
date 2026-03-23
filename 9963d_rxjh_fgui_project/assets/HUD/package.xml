@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="97h0q01w">
   <resources>
-    <image id="bojed" name="zheng.png" path="/Images/" exported="true"/>
-    <image id="bojee" name="hong.png" path="/Images/" exported="true"/>
-    <image id="bojef" name="lan.png" path="/Images/" exported="true"/>
-    <image id="bojeg" name="xie.png" path="/Images/" exported="true"/>
-    <image id="d4gch" name="hp_red_bg_boss.png" path="/Images/" exported="true"/>
-    <image id="d4gci" name="hp_red_bg2.png" path="/Images/" exported="true"/>
-    <image id="d4gcj" name="hp_red_boss.png" path="/Images/" exported="true"/>
-    <image id="d4gck" name="hp_red2.png" path="/Images/" exported="true"/>
-    <image id="d4gcl" name="hp_red.png" path="/Images/" exported="true"/>
-    <image id="d4gcm" name="hp_red_bg.png" path="/Images/" exported="true"/>
+    <image id="b8de9" name="hp_red.png" path="/Images/" exported="true"/>
+    <image id="b8dea" name="hp_red2.png" path="/Images/"/>
+    <image id="b8deb" name="hp_red_bg.png" path="/Images/" exported="true"/>
+    <image id="b8dec" name="hp_red_bg2.png" path="/Images/"/>
+    <image id="iu5wd" name="hp_red_bg_boss.png" path="/Images/" exported="true" scale="9grid" scale9grid="68,13,14,16"/>
+    <image id="iu5we" name="hp_red_boss.png" path="/Images/" exported="true" scale="9grid" scale9grid="5,6,10,4"/>
+    <image id="yh4cf" name="10001.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

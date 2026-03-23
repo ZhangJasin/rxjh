@@ -123,14 +123,12 @@ function OutBlockPanel:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_CHANGE_SCENE, "OutBlockPanel", handler(self, self.OnBreak))
     SL:RegisterLUAEvent(LUA_EVENT_PLAYER_ACTION_BEGIN, "OutBlockPanel", handler(self, self.OnBreak))
     SL:RegisterLUAEvent(LUA_EVENT_PLAYER_ACTION_PROCESS, "OutBlockPanel", handler(self, self.OnBreak))
-    -- SL:RegisterLUAEvent(LUA_EVENT_THROW_DAMAGE, "OutBlockPanel", handler(self, self.OnBreak))
 end
 
 function OutBlockPanel:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_CHANGE_SCENE, "OutBlockPanel")
     SL:UnRegisterLUAEvent(LUA_EVENT_PLAYER_ACTION_BEGIN, "OutBlockPanel")
     SL:UnRegisterLUAEvent(LUA_EVENT_PLAYER_ACTION_PROCESS, "OutBlockPanel")
-    -- SL:UnRegisterLUAEvent(LUA_EVENT_THROW_DAMAGE, "OutBlockPanel")
 end
 
 return OutBlockPanel

@@ -31,8 +31,7 @@ function LoginRoleSelect:Create()
 
 	-- 返回
 	FGUI:setOnClickEvent(self._ui.btn_back, function ()
-		local shiwan = global.L_GameEnvManager:GetEnvDataByKey("shiwan")
-		if  shiwan and tonumber(shiwan) == 1 then
+		if SL:GetValue("BOX_TRADING_VISITOR") then
 			return
 		end
 		self:Close()
@@ -42,8 +41,7 @@ function LoginRoleSelect:Create()
 	-- 开始游戏
 	FGUI:setOnClickEvent(self._ui.btn_enter, function ()
 		--试玩 自动进入游戏
-		local shiwan = global.L_GameEnvManager:GetEnvDataByKey("shiwan")
-		if  shiwan and tonumber(shiwan) == 1 then
+		if SL:GetValue("BOX_TRADING_VISITOR") then
 			SL:RequestEnterGame()
 			return
 		end
@@ -60,6 +58,7 @@ function LoginRoleSelect:Create()
 	end)
 
 	FGUI:setOnClickEvent(self._ui.btn_delete_role, handler(self, self.DeleteRole))
+	FGUI:setOnClickEvent(self._ui.btn_restore_role, handler(self, self.RestoreRole))
 
 	-- 取回角色
 	if self._ui.btn_retrieve_role then
@@ -77,8 +76,7 @@ function LoginRoleSelect:Create()
 	
 	--试玩 自动进入游戏
 	SL:ScheduleOnce(function()
-		local shiwan = global.L_GameEnvManager:GetEnvDataByKey("shiwan")
-		if  shiwan and tonumber(shiwan) == 1 then
+		if SL:GetValue("BOX_TRADING_VISITOR") then
 			SL:RequestEnterGame()
 			return
 		end
@@ -200,8 +198,7 @@ end
 
 -- 点击角色列表事件
 function LoginRoleSelect:OnClickRoleListEvent(context)
-	local shiwan = global.L_GameEnvManager:GetEnvDataByKey("shiwan")
-	if  shiwan and tonumber(shiwan) == 1 then
+	if SL:GetValue("BOX_TRADING_VISITOR") then
 		return
 	end
 	local selectIdx = FGUI:GList_getSelectedIndex(self._ui["list_role"])
@@ -219,8 +216,7 @@ function LoginRoleSelect:SelectRole(index, isInit)
 	end
 	
 	local roles = SL:GetValue("LOGIN_DATA") or {}
-	local shiwan = global.L_GameEnvManager:GetEnvDataByKey("shiwan")
-	if  shiwan and tonumber(shiwan) == 1 then
+	if SL:GetValue("BOX_TRADING_VISITOR") then
 		index = 1
 	else
 		if  roles[index] and ( roles[index].LockChar == 1 or roles[index].LockChar == 3) then
@@ -358,10 +354,6 @@ function LoginRoleSelect:ShowRoleModel(index, data)
 				local sex = data.sex or 0
 				roleFeature.faceId =  FGUIFunction:GetFaceIDBySex(sex,classConfig)
 			end
-            -- roleFeature.rWeapon = roleFeature.rWeapon or classConfig.WeaponID
-			-- if data.job == global.MMO.ACTOR_PLAYER_JOB_3 then
-			-- 	roleFeature.lWeapon = roleFeature.rWeapon
-			-- end
         end
 		
         local modelCallback = function()
@@ -427,8 +419,7 @@ end
 
 -- 删除角色
 function LoginRoleSelect:DeleteRole()
-	local shiwan = global.L_GameEnvManager:GetEnvDataByKey("shiwan")
-	if  shiwan and tonumber(shiwan) == 1 then
+	if SL:GetValue("BOX_TRADING_VISITOR") then
 		return
 	end
 
@@ -459,11 +450,27 @@ function LoginRoleSelect:DeleteRole()
     SL:OpenCommonDialog(data)
 end
 
+function LoginRoleSelect:RestoreRole()
+	SL:RequestRestoreRoleInfo()
+end
+
+function LoginRoleSelect:OnRestoreRoleInfoRefresh()
+	if #self._rolesData >=4 then
+		SL:ShowSystemTips(GET_STRING(10001023))
+		return
+	end
+	FGUI:Open(self._packageName, "LoginRoleRestore", nil, nil, {classPath = "FGUILayout/LoginRole/LoginRoleRestore"})
+end
+
 function LoginRoleSelect:Close()
 	self.super.Close(self)
 end
 
 function LoginRoleSelect:OnUpdateRoles()
+	for _, model in pairs(self._models) do
+		SL:ClearCreateSceneModel(model)
+	end
+	self._models = {}
 	self:InitRoles()
 end
 
@@ -480,11 +487,13 @@ end
 function LoginRoleSelect:RegisterEvent()
 	SL:RegisterLUAEvent(LUA_EVENT_LOGIN_ROLE_UPDATE, "LoginRoleSelect", handler(self, self.OnUpdateRoles))
 	SL:RegisterLUAEvent(LUA_EVENT_LOGIN_ROLE_REFRESH_SELECT, "LoginRoleSelect", handler(self, self.OnRefreshSelectRole))
+	SL:RegisterLUAEvent(LUA_EVENT_LOGIN_ROLE_RESTORE_REFRESH, "LoginRoleSelect", handler(self, self.OnRestoreRoleInfoRefresh))
 end
 
 function LoginRoleSelect:UnRegisterEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_LOGIN_ROLE_UPDATE, "LoginRoleSelect")
 	SL:UnRegisterLUAEvent(LUA_EVENT_LOGIN_ROLE_REFRESH_SELECT, "LoginRoleSelect")
+	SL:UnRegisterLUAEvent(LUA_EVENT_LOGIN_ROLE_RESTORE_REFRESH, "LoginRoleRestore")
 end
 
 return LoginRoleSelect

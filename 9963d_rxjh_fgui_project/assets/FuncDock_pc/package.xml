@@ -7,7 +7,6 @@
     <image id="us1mvl2" name="black_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
     <component id="w092v5z" name="PCFuncDockTip.xml" path="/" exported="true"/>
     <image id="hvnkvl3" name="bg01.png" path="/Images/"/>
-    <image id="hvnkvl4" name="di_kuang_scale9.png" path="/Images/" scale="9grid" scale9grid="28,24,5,3"/>
     <component id="hvnkvl6" name="PCFuncDockNewTip.xml" path="/" exported="true"/>
     <image id="mi87vl7" name="1.png" path="/Images/job/"/>
     <image id="mi87vl8" name="2.png" path="/Images/job/"/>

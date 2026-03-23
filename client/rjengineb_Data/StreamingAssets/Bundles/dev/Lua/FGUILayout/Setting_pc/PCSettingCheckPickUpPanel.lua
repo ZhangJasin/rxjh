@@ -3,7 +3,7 @@ local PCSettingCheckPickUpPanel = class("PCSettingCheckPickUpPanel", BaseFGUILay
 
 function PCSettingCheckPickUpPanel:Create()
 	self._ui				= FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	self._list_settings		= self._ui.list_settings
 	self:InitData()
 	self:InitEvent()
@@ -28,7 +28,6 @@ end
 
 function PCSettingCheckPickUpPanel:InitEvent()
 	FGUI:setOnClickEvent(self._ui.btn_close, self.handler_clickCloseBtn)
-	-- FGUI:setOnClickEvent(self._ui.btn_fullscreen_close, self.handler_clickCloseBtn)
 	self.handler_OnShowDropItemSwitchChange = handler(self, self.OnShowDropItemSwitchChange)
 	self.handler_OnPickUpSwitchChange = handler(self, self.OnPickUpSwitchChange)
 end

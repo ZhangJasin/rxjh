@@ -4,7 +4,7 @@ local GuildApplyList = class("GuildApplyList", BaseFGUILayout)
 function GuildApplyList:Create()
 	self.super.Create(self)
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	self._applyData = {}
 	self._isAllSelected = false
 
@@ -67,7 +67,13 @@ end
 -- 刷新申请列表
 function GuildApplyList:RefreshApplyList(applyList)
 	self._applyData = applyList.List
-	FGUI:GList_setNumItems(self._ui.list_apply, #self._applyData)
+	if not self._applyData or #self._applyData == 0 then
+		FGUI:setVisible(self._ui.text_empty_tip, true)
+		FGUI:GList_setNumItems(self._ui.list_apply, 0)
+	else
+		FGUI:setVisible(self._ui.text_empty_tip, false)
+		FGUI:GList_setNumItems(self._ui.list_apply, #self._applyData)
+	end	
 end
 
 -- 点击申请列表项
@@ -77,7 +83,8 @@ function GuildApplyList:OnClickApplyItem(context)
 end
 
 -- 通过申请
-function GuildApplyList:OnClickApproveEvent()
+function GuildApplyList:OnClickApproveEvent(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 	if not self._applyData then return end
 
 	local selectItemsIdx = FGUI:GList_getSelection(self._ui.list_apply)
@@ -116,7 +123,8 @@ function GuildApplyList:OnClickApproveEvent()
 end
 
 -- 拒绝
-function GuildApplyList:OnClickRefuseEvent()
+function GuildApplyList:OnClickRefuseEvent(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 	if not self._applyData then return end
 	local selectItemsIdx = FGUI:GList_getSelection(self._ui.list_apply)
 	local uidList = {}

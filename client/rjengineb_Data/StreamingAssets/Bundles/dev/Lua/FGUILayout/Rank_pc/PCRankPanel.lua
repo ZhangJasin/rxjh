@@ -29,7 +29,6 @@ local VIEW_INDEX = 4
 
 function PCRankPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	--FGUI:SetCloseUIWhenClickOutside(self)
 	FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 	self:InitData()
 	self:InitEvent()
@@ -100,7 +99,8 @@ function PCRankPanel:InitEvent()
 			FGUI:GTextField_setText(text_normal, menu.Name)
 			FGUI:GTextField_setText(text_select, menu.Name)
 
-			FGUI:addOnClickMultipleEvent(childCell, function()
+			FGUI:addOnClickMultipleEvent(childCell, function(eventData)
+				FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 				FGUI:GButton_setSelected(parentCell, true)
 
 				self:SelectGroup(i)
@@ -205,7 +205,9 @@ function PCRankPanel:ItemRendererType(idx, item)
     FGUI:GTextField_setText(text_select, data.name)
 end
 
-function PCRankPanel:OnClickItemType(context)
+function PCRankPanel:OnClickItemType(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	local idx = FGUI:GList_getSelectedIndex(self._ui.list_type)
     FGUI:GList_setSelectedIndex(self._ui.list_type, idx)
 
@@ -350,7 +352,9 @@ function PCRankPanel:ItemRendererRank(idx, item)
     FGUI:GList_setNumItems(list_value, #self._rankInfo)
 end
 
-function PCRankPanel:OnClickItemRank(context)
+function PCRankPanel:OnClickItemRank(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	local selectIdx = FGUI:GList_getSelectedIndex(self._ui.list_rank) + 1
 	local rankData = self._rankList[selectIdx]
 	if rankData then 
@@ -364,7 +368,7 @@ function PCRankPanel:OnClickItemRank(context)
             targetId = self._selectUserID,
             TipsType = SL:GetValue("DOCKTYPE_NENUM").Func_Player_Rank,
         }
-		FGUIFunction:RequestPlayerDataAndSetTipType(data)
+        FGUIFunction:RequestPlayerDataAndSetTipType(data)
 	end
 end
 

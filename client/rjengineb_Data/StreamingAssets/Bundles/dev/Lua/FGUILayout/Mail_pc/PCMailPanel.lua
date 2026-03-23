@@ -6,7 +6,6 @@ local MAX_MAIL_COUNT = 100
 
 function PCMailPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	--FGUI:SetCloseUIWhenClickOutside(self)
 	FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 	
 	self:InitData()
@@ -49,8 +48,9 @@ function PCMailPanel:InitEvent()
 	FGUI:setOnClickEvent(self._ui.btn_resure, handler(self, self.OnClickReSure))
 end
 
-function PCMailPanel:OnClickTakeAll(context)
-	FGUI:delayTouchEnabled(context.sender, 0.5)
+function PCMailPanel:OnClickTakeAll(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	local mailList = SL:GetValue("MAIL_LIST")
 	if not mailList or not next(mailList) then
 		SL:ShowSystemTips(GET_STRING(50000017))
@@ -60,8 +60,9 @@ function PCMailPanel:OnClickTakeAll(context)
 	SL:RequestMailList()
 end
 
-function PCMailPanel:OnClickDeleteAll(context)
-	FGUI:delayTouchEnabled(context.sender, 0.5)
+function PCMailPanel:OnClickDeleteAll(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	if self:CheckAbleDeleteAllReadMail() then
 		SL:RequestDelReadMail()
 	else
@@ -74,8 +75,9 @@ function PCMailPanel:OnClickDeleteAll(context)
 	end
 end
 
-function PCMailPanel:OnClickTakeOne(context)
-	FGUI:delayTouchEnabled(context.sender, 0.5)
+function PCMailPanel:OnClickTakeOne(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	if self:CheckAbleTakeRewardMailByID(self._curMailID) then 
 		SL:RequestGetMailRewardByID(self._curMailID)
 	else         
@@ -113,8 +115,9 @@ function PCMailPanel:OnClickReSure(context)
 	end
 end
 
-function PCMailPanel:OnClickDeleteOne(context)
-	FGUI:delayTouchEnabled(context.sender, 0.5)
+function PCMailPanel:OnClickDeleteOne(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	if self._curMailID > 0 then 
 		if self:CheckAbleDeleteReadMailByID(self._curMailID) then
 			SL:RequestDelMail(self._curMailID)
@@ -139,7 +142,7 @@ function PCMailPanel:OnUpdateMailList()
     self._mailList = SL:GetValue("MAIL_SORT_LIST") or {}
 	local color = #self._mailList > 0 and "#00ff00" or "#ff0000"
 	FGUI:GTextField_setText(self._ui.text_count, string.format(GET_STRING(50000020),color, #self._mailList, MAX_MAIL_COUNT))
-	FGUI:setVisible(self._ui.text_nothing, #self._mailList <= 0)
+	FGUI:setVisible(self._ui.panel_nothing, #self._mailList <= 0)
 
     FGUI:GList_setNumItems(self._ui.list_mail, #self._mailList)
 
@@ -276,6 +279,7 @@ function PCMailPanel:RefreshMailInfo()
 				end
 			end	
 			FGUI:GList_itemRenderer(self._ui.list_items, function (idx, item)
+				FGUI:setSize(item,44,44)
 				local index = idx + 1
 				local data = mail.sItem[index]
 				if not data then 
@@ -299,8 +303,6 @@ function PCMailPanel:RefreshMailInfo()
 					ItemUtil:RefreshItemUIByData(item, itemData)
 					ItemUtil:AddItemClick(item, itemData)
 				end 
-
-				FGUI:setSize(item,44,44)
 			end)
 			FGUI:GList_setNumItems(self._ui.list_items, #mail.sItem)
 		end

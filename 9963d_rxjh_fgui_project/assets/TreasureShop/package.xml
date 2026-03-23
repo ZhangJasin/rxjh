@@ -51,7 +51,7 @@
     <image id="lz03l" name="cell_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="3,3,1,1"/>
     <component id="lz03v5x" name="popup_npcstore.xml" path="/Components/" exported="true"/>
     <component id="seb1v6o" name="item_cost.xml" path="/Components/" exported="true"/>
-    <component id="10pmdv6p" name="NpcStoreNewPanel.xml" path="/" exported="true"/>
+    <component id="10pmdv6p" name="NPCStoreNewPanel.xml" path="/" exported="true"/>
     <component id="10pmdv6q" name="item_npcBuy.xml" path="/Components/" exported="true"/>
     <component id="10pmdv6r" name="BuyPanel.xml" path="/" exported="true"/>
     <component id="10pmdv6s" name="cbx_filter_item.xml" path="/Components/"/>
@@ -84,5 +84,5 @@
     <image id="owd7dv7n" name="物品框.png" path="/Images/" exported="true"/>
     <image id="tw0ldv7o" name="comboxDi.png" path="/Images/" scale="9grid" scale9grid="4,8,1,16"/>
   </resources>
-  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\TreasureShop" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>

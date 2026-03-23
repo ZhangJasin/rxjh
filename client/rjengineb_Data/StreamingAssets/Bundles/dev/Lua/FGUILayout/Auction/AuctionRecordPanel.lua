@@ -53,6 +53,7 @@ end
 
 function AuctionRecordPanel:GetAllFGuiData()
     self.list_record = self._ui.list_record
+    self.ctrl_isHaveRecord = FGUI:getController(self.component,"isHaveRecord")
 end
 
 function AuctionRecordPanel:InitClickEvent()
@@ -60,8 +61,9 @@ end
 
 function AuctionRecordPanel:RefreshRecordList()
     print("self._record")
-    SL:print_t(self._record)
-    FGUI:GList_setNumItems(self.list_record, #self._record)
+    local nums = table.nums(self._record or {})
+    FGUI:Controller_setSelectedIndex(self.ctrl_isHaveRecord,nums > 0 and 1 or 0)
+    FGUI:GList_setNumItems(self.list_record, nums)
 end
 
 function AuctionRecordPanel:RefreshRecordData(data)

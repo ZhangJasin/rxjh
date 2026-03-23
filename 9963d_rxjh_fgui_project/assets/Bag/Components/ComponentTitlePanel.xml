@@ -2,12 +2,17 @@
 <component size="464,572">
   <controller name="titleState" pages="0,未激活,1,未使用,2,使用中" selected="0"/>
   <controller name="ModeWho" pages="0,MainPlayer,1,OtherPlayer" selected="0"/>
+  <controller name="isHaveTitle" pages="0,没有称号,1,有称号" selected="0"/>
   <displayList>
     <image id="n10_9qta" name="n10" src="lt7hvnx" fileName="Images/img_input_di.png" xy="0,0" size="464,473">
       <gearXY controller="ModeWho" pages="0,1" values="0,0|0,49"/>
       <gearSize controller="ModeWho" pages="0,1" values="464,473,1,1|464,572,1,1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
+    <component id="n13_iwlb" name="tip" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="47,79">
+      <gearDisplay controller="isHaveTitle" pages="0"/>
+      <Label title="暂无称号"/>
+    </component>
     <list id="n6_9qta" name="list_title" xy="8,6" size="447,455" layout="flow_hz" overflow="scroll" scrollBarFlags="2048" lineGap="4" colGap="4" lineItemCount="2" defaultItem="ui://dak5wnw99qtavoi" align="center" autoClearItems="true">
       <gearXY controller="ModeWho" pages="0,1" values="8,6|8,53"/>
       <gearSize controller="ModeWho" pages="0,1" values="447,455,1,1|464,557,1,1"/>

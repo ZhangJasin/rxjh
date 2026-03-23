@@ -4,7 +4,7 @@ local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 
 function LookPlayerSingleEquipPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:SetCloseUIWhenClickOutside(self)
     self._pageList = {}
     self:GetAllFGuiData()
     self:InitData()
@@ -62,8 +62,6 @@ function LookPlayerSingleEquipPanel:UpdatePlayerEquip()
     -- equips
     self:ClearAllEquipItem()
     local tEquipt = SL:GetValue("L.M.EQUIP_POS_DATAS") or {}
-    -- print("玩家装备")
-    -- SL:print_t(tEquipt)
     for pos, equip in pairs(tEquipt) do
         local equipData = SL:GetValue("L.M.EQUIP_BY_MAKEINDEX",equip.MakeIndex)
         if equipData then  

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="106,0">
   <displayList>
-    <list id="n1_tqs7" name="list" xy="0,0" size="106,90" overflow="scroll" defaultItem="ui://o9dt5fs4f2ul5k">
-      <relation target="" sidePair="width-width"/>
+    <list id="n1_tqs7" name="list" xy="0,-90" size="106,90" overflow="scroll" defaultItem="ui://o9dt5fs4f2ul5k">
+      <relation target="" sidePair="width-width,bottom-bottom"/>
     </list>
   </displayList>
   <relation target="n1_tqs7" sidePair="height-height"/>

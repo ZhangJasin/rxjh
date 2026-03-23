@@ -8,7 +8,6 @@ function HudBase:ctor(uiHud)
     self._hudVisibleList = {}
     self._labelName = HUDHelp:GetChild(uiHud, HudConfig.HUDNode.name, HUDComponentName.CSLabel)
     self._hudVisibleList[self._labelName] = true
-    self._hudAllVisible = true
 
     self._offsetY = nil
     self._cacheName = nil
@@ -33,6 +32,7 @@ end
 
 function HudBase:Cleanup()
 	self._offsetY = -9999
+	HUDHelp:CleanCamera(self._cameraHUDRefID)
     HUDHelp:SetPosition(self._uiHud, -9999,-9999,-9999)
     HUDHelp:ClearLabelGradientColor(self._labelName)
     if self._buffs then 
@@ -41,7 +41,6 @@ function HudBase:Cleanup()
         end 
     end
 
-    HUDHelp:CleanCamera(self._cameraHUDRefID)
     self._cameraHUDRefID = nil
 end
 
@@ -91,6 +90,7 @@ function HudBase:SetHudOffsetY(offsetY)
     self._offsetY = offsetY
 
     HUDHelp:SetPosition(self._uiHud, HudConfig.HUDInitPos.x, offsetY, HudConfig.HUDInitPos.z)
+	self:RefreshHUDScaleDirty()
 end 
 
 -- 设置名字
@@ -189,7 +189,6 @@ function HudBase:CreateHudBuffIcon(buffID)
 
     local time = HUDHelp:GetBuffTime(uiBuff)
     HUDHelp:SetLabelText(time, "")
-    -- labelTime.OutlineDelta = UnityVector2Mid
 
     return uiBuff
 end
@@ -237,6 +236,13 @@ function HudBase:RefHudName()
     local showName = SL:GetValue("ACTOR_SHOWNAME", self._actorID)
     self:SetHudName(showName)
 end 
+
+-- 刷新HUD缩放
+function HudBase:RefreshHUDScaleDirty()
+	if global.gameCameraController then
+		return global.gameCameraController:RefreshHUDScaleDirty(self._cameraHUDRefID)
+	end
+end
 
 function HudBase:RefreshLabelNameColor()
 end

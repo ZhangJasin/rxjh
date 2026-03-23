@@ -4,9 +4,13 @@
     <component id="n3_108rv" name="btn_back" src="vdnea" fileName="Components/Select/btn_back.xml" xy="10,9">
       <relation target="" sidePair="left-left,top-top"/>
     </component>
-    <component id="n0_108rv" name="btn_delete_role" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="41,512" size="126,40">
+    <component id="n0_108rv" name="btn_delete_role" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="41,458" size="126,40">
       <relation target="" sidePair="left-left,bottom-bottom"/>
       <Button title="删除角色" titleColor="#ffff00" titleFontSize="24" icon="ui://qa9a7ritemvc3h"/>
+    </component>
+    <component id="n14_ec6q" name="btn_restore_role" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="41,510" size="126,40">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+      <Button title="找回角色" titleColor="#ffff00" titleFontSize="24" icon="ui://qa9a7ritemvc3h"/>
     </component>
     <component id="n1_108rv" name="btn_enter" src="vdnec" fileName="Components/Select/btn_enter_game.xml" xy="575,410">
       <relation target="" sidePair="right-right,bottom-bottom"/>
@@ -17,7 +21,7 @@
     <component id="n8_mhkn" name="panel_touch" src="vdnei" fileName="Components/panel_touch.xml" xy="186,0" size="432,600">
       <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
     </component>
-    <list id="n6_108rv" name="list_role" xy="505,30" size="313,310" overflow="scroll" scrollBarFlags="128" margin="0,0,1,0" lineGap="8" defaultItem="ui://88oqthnqvdnee" autoClearItems="true">
+    <list id="n6_108rv" name="list_role" xy="505,20" size="313,398" overflow="scroll" scrollBarFlags="128" defaultItem="ui://88oqthnqvdnee" autoClearItems="true">
       <relation target="" sidePair="right-right,top-top"/>
       <item/>
       <item/>
@@ -26,6 +30,10 @@
     </list>
     <component id="n13_gxjd" name="Node_lock" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="-267,-75" size="0,0" touchable="false">
       <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n15_fz8h" name="btn_retrieve_role" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="337,11" size="126,40" visible="false">
+      <relation target="" sidePair="center-center,top-top"/>
+      <Button title="取回角色"/>
     </component>
   </displayList>
 </component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="ngfdjf8p">
+  <resources>
+    <folder id="/ReadEnable/" name="ReadEnable" path="/" atlas="alone_npot"/>
+    <component id="tdbp0" name="HelmetColorPanel.xml" path="/" exported="true"/>
+    <image id="tdbp2" name="helmetcolor_model_bg.png" path="/Images/"/>
+    <image id="tdbp4" name="helmetcolor_slider_btn.png" path="/Images/"/>
+    <image id="tdbp5" name="helmetcolor_slider_bg.png" path="/Images/"/>
+    <image id="tdbp6" name="helmetcolor_color.png" path="/ReadEnable/"/>
+    <component id="tdbp7" name="helmet_color_slider_grip.xml" path="/Components/"/>
+    <component id="tdbp8" name="helmet_color_slider.xml" path="/Components/"/>
+    <component id="tdbp9" name="color_select_panel.xml" path="/Components/"/>
+    <image id="if77a" name="helmetcolor_color_frame.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

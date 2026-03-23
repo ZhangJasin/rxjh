@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="174,40" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n4_kpju" name="n4" src="q030kvpt" fileName="Images/btn_cart.png" xy="0,0" size="44,40"/>
+    <text id="n3_kpju" name="title" xy="46,0" size="128,40" fontSize="22" color="#f3e902" vAlign="middle" letterSpacing="2" autoSize="none" underline="true" singleLine="true" text="我的购物车">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

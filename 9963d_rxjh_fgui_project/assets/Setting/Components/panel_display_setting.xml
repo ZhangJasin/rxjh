@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="992,588" overflow="scroll" scrollBarFlags="16" bgColor="#000000">
   <displayList>
-    <graph id="n174_fskg" name="n174" xy="8,60" size="240,364" group="n143_w01c" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <graph id="n174_fskg" name="n174" xy="8,60" size="240,395" group="n143_w01c" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
     <component id="n142_w01c" name="enBaseCtrl" src="rmnbvok" fileName="Components/help_skill_item.xml" xy="8,23" size="229,30" group="n143_w01c">
       <Label title="基础控制" titleColor="#ffff00"/>
     </component>
@@ -26,8 +26,8 @@
     <component id="n172_l3yw" name="enPropertyFloatWord" src="rmnbvok" fileName="Components/help_skill_item.xml" xy="23,360" size="215,30" group="n143_w01c">
       <Label title="属性飘字"/>
     </component>
-    <group id="n143_w01c" name="baseCtrlGroup" xy="8,23" size="240,401"/>
-    <graph id="n175_fskg" name="n175" xy="253,60" size="240,364" group="n152_w01c" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <group id="n143_w01c" name="baseCtrlGroup" xy="8,23" size="240,432"/>
+    <graph id="n175_fskg" name="n175" xy="253,60" size="240,395" group="n152_w01c" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
     <component id="n151_w01c" name="enSelfCtrl" src="rmnbvok" fileName="Components/help_skill_item.xml" xy="253,23" size="229,30" group="n152_w01c">
       <Label title="自身控制" titleColor="#ffff00"/>
     </component>
@@ -46,8 +46,8 @@
     <component id="n149_w01c" name="enSelfCompanions" src="rmnbvok" fileName="Components/help_skill_item.xml" xy="268,266" size="215,30" group="n152_w01c">
       <Label title="屏蔽宝宝"/>
     </component>
-    <group id="n152_w01c" name="selfCtrlGroup" xy="253,23" size="240,401"/>
-    <graph id="n176_fskg" name="n176" xy="498,60" size="240,364" group="n161_w01c" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <group id="n152_w01c" name="selfCtrlGroup" xy="253,23" size="240,432"/>
+    <graph id="n176_fskg" name="n176" xy="498,60" size="240,395" group="n161_w01c" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
     <component id="n160_w01c" name="enFriendCtrl" src="rmnbvok" fileName="Components/help_skill_item.xml" xy="498,23" size="229,30" group="n161_w01c">
       <Label title="友方控制" titleColor="#ffff00"/>
     </component>
@@ -69,8 +69,8 @@
     <component id="n159_w01c" name="enFrndCompanions" src="rmnbvok" fileName="Components/help_skill_item.xml" xy="513,313" size="215,30" group="n161_w01c">
       <Label title="屏蔽宝宝"/>
     </component>
-    <group id="n161_w01c" name="friendCtrlGroup" xy="498,23" size="240,401"/>
-    <graph id="n177_fskg" name="n177" xy="743,60" size="240,364" group="n170_w01c" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <group id="n161_w01c" name="friendCtrlGroup" xy="498,23" size="240,432"/>
+    <graph id="n177_fskg" name="n177" xy="743,60" size="240,395" group="n170_w01c" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
     <component id="n169_w01c" name="enEnemyCtrl" src="rmnbvok" fileName="Components/help_skill_item.xml" xy="742,23" size="232,30" group="n170_w01c">
       <Label title="敌方控制" titleColor="#ffff00"/>
     </component>
@@ -90,25 +90,25 @@
     <component id="n167_w01c" name="enEnemyCompanions" src="rmnbvok" fileName="Components/help_skill_item.xml" xy="757,266" size="215,30" group="n170_w01c">
       <Label title="屏蔽宝宝"/>
     </component>
-    <group id="n170_w01c" name="enemyCtrlGroup" xy="742,23" size="241,401"/>
-    <text id="n180_k1kj" name="title" xy="8,436" size="130,30" group="n184_k1kj" fontSize="20" color="#ffff00" autoSize="none" text="飘字选择">
+    <group id="n170_w01c" name="enemyCtrlGroup" xy="742,23" size="241,432"/>
+    <text id="n180_k1kj" name="title" xy="8,473" size="130,30" group="n184_k1kj" fontSize="20" color="#ffff00" autoSize="none" text="飘字选择">
       <relation target="" sidePair="width-width"/>
     </text>
-    <graph id="n178_k1kj" name="n178" xy="8,472" size="274,62" group="n184_k1kj" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
-    <component id="n182_k1kj" name="tog_damage1" src="o15xv64" fileName="Components/tog_select.xml" xy="23,487" group="n184_k1kj">
+    <graph id="n178_k1kj" name="n178" xy="8,509" size="274,62" group="n184_k1kj" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <component id="n182_k1kj" name="tog_damage1" src="o15xv64" fileName="Components/tog_select.xml" xy="23,524" group="n184_k1kj">
       <Button title="手游飘字"/>
     </component>
-    <component id="n183_k1kj" name="tog_damage2" src="o15xv64" fileName="Components/tog_select.xml" xy="156,487" group="n184_k1kj">
+    <component id="n183_k1kj" name="tog_damage2" src="o15xv64" fileName="Components/tog_select.xml" xy="156,524" group="n184_k1kj">
       <Button title="复古飘字"/>
     </component>
-    <group id="n184_k1kj" name="danmageCtrlGroup" xy="8,436" size="274,98"/>
-    <text id="n185_e9jq" name="quickWindowTitle" xy="287,436" size="130,30" group="n189_e9jq" fontSize="20" color="#ffff00" autoSize="none" text="快捷使用提示">
+    <group id="n184_k1kj" name="danmageCtrlGroup" xy="8,473" size="274,98"/>
+    <text id="n185_e9jq" name="quickWindowTitle" xy="287,473" size="130,30" group="n189_e9jq" fontSize="20" color="#ffff00" autoSize="none" text="快捷使用提示">
       <relation target="" sidePair="width-width"/>
     </text>
-    <graph id="n186_e9jq" name="n187" xy="287,472" size="155,62" group="n189_e9jq" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
-    <component id="n187_e9jq" name="tog_quickWindow" src="o15xv64" fileName="Components/tog_select.xml" xy="302,487" size="136,32" group="n189_e9jq">
+    <graph id="n186_e9jq" name="n187" xy="287,509" size="155,62" group="n189_e9jq" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <component id="n187_e9jq" name="tog_quickWindow" src="o15xv64" fileName="Components/tog_select.xml" xy="302,524" size="136,32" group="n189_e9jq">
       <Button title="不重复出现"/>
     </component>
-    <group id="n189_e9jq" name="quickWindowGroup" xy="287,436" size="155,98"/>
+    <group id="n189_e9jq" name="quickWindowGroup" xy="287,473" size="155,98"/>
   </displayList>
 </component>

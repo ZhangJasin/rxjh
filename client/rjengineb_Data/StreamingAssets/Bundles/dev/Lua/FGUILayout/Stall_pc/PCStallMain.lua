@@ -7,6 +7,7 @@ function PCStallMain:Create()
 	self._ui = FGUI:ui_delegate(self.component)
 	FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 	self._my_stall_data = {}	-- 自身摊位数据
+	self._all_shop_list = {}	-- 当前分类的所有摊位数据
 	self._shop_list = {}		-- 显示摊位数据
 	self._shop_count = 0		-- 商铺数据个数
 	self.handler_browse_stall = handler(self, self.OnClickBrowseStall)
@@ -31,6 +32,8 @@ function PCStallMain:Create()
 		self:GotoPage(self._curPage + 1)
 	end)
 
+	FGUI:setOnClickEvent(self._ui.btn_shopping, handler(self, self.OnClickShoppingCart))
+
 	-- 摊位购买
 	FGUI:GList_setVirtual(self._ui.list_stall)
 	FGUI:GList_itemRenderer(self._ui.list_stall, self.handler_onStallItemRender)
@@ -39,6 +42,7 @@ end
 
 function PCStallMain:Enter()
     self:RegisterEvent()
+	FGUIFunction:ShowTopCurrency(SL:GetValue("GAME_DATA", "BagMoneyList"))
 	-- 查询收藏店铺列表
 	SL:RequestStallCollectList()
 	-- 查询自身店铺信息
@@ -61,6 +65,7 @@ function PCStallMain:Exit()
 	end
 	FGUI:Close("Stall_pc", "PCStallProduct")
 	FGUI:Close("Bag_pc", "PCSimpleBagPanel")
+	FGUIFunction:HideTopCurrency()
 end
 
 function PCStallMain:Close()
@@ -87,6 +92,12 @@ function PCStallMain:OnSearchStall()
 	self._curPage = 1
 	FGUI:GTextField_setText(self._ui.text_page, string.format(GET_STRING(90010001), self._curPage, self._maxPageCount))
 end
+
+-- 打开购物车
+function PCStallMain:OnClickShoppingCart()
+	FGUI:Open("Stall_pc", "PCStallShoppingCart")
+end
+
 
 -- 点击收藏按钮
 function PCStallMain:OnClickFilterCollect()
@@ -117,8 +128,8 @@ function PCStallMain:GotoPage(page)
 
 	if self._isFlipQuery then
 		SL:RequestStallQueryShopByPage( self._curPage)
-	else
-		FGUI:ScrollPane_setCurrentPageY(self._scrollPane, self._curPage - 1)
+	else	
+		self:ShowShopListByCurPage()
 	end
 
 	FGUI:GTextField_setText(self._ui.text_page, string.format(GET_STRING(90010001), self._curPage, self._maxPageCount))
@@ -183,13 +194,35 @@ function PCStallMain:OnRefreshShopList(data, isFlipQuery, totalPage)
 	else
 		filterData = data
 	end
-	
-	self._shop_list = filterData
+
+	self._all_shop_list = filterData
 	self._isFlipQuery = isFlipQuery
+	self._maxPageCount = totalPage or 1
+	self:ShowShopListByCurPage()
+end
+
+function PCStallMain:ShowShopListByCurPage()
+	self._shop_list = {}
+	if self._isFlipQuery then
+		self._shop_list = self._all_shop_list
+	else
+		local curPage = self._curPage
+
+		for i = 1, countPerPage do
+			self._shop_list[i] = self._all_shop_list[countPerPage * (curPage - 1) + i]
+		end
+	end
+
 	self._shop_count = #self._shop_list
 	FGUI:GList_setNumItems(self._ui.list_stall, self._shop_count)
-	self._maxPageCount = totalPage
+	if self._shop_count == 0 then
+		FGUI:setVisible(self._ui.text_empty_tip, true)
+	else
+		FGUI:setVisible(self._ui.text_empty_tip, false)
+	end
 
+
+	FGUI:GTextField_setText(self._ui.text_page, string.format(GET_STRING(90010001), self._curPage, self._maxPageCount))
 	if FGUI:CheckOpen("Stall_pc", "PCStallProduct") then
 		local shopData = self._shop_list[self._curBrowseIndex]
 		if shopData then

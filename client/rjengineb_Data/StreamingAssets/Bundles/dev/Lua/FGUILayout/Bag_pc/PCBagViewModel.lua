@@ -2,18 +2,20 @@ local PCBagViewModel = class("PCBagViewModel")
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 SL:RequireFile("FGUILayout/Bag_pc/PCBagCell")
 
-function PCBagViewModel:ctor()
+function PCBagViewModel:ctor(parent)
+	self.viewComponent = parent
 	self:InitData()
 	self._disableCellDoubleClick = false
 	self._itemUse = true
 end
 
-function PCBagViewModel:Bind(viewComponent)
-	self.viewComponent = viewComponent
-end
-function PCBagViewModel:UnBind()
-	self.viewComponent = nil
-end
+-- function PCBagViewModel:Bind(viewComponent)
+-- 	self = viewComponent
+-- end
+-- function PCBagViewModel:UnBind()
+-- 	self = nil
+-- end
+
 function PCBagViewModel:Enter(data)
 	if data then
 		self._disableCellDoubleClick = data.disableCellDoubleClick
@@ -25,6 +27,7 @@ function PCBagViewModel:Enter(data)
 		self._itemUse = data.itemUse
 	end
 
+	self._bindParentView = data.bindParentView or FGUIDefine.BindParentView.PCBagPanel
 	self:RegisterEvent()
 	self:RefreshData()
 end
@@ -36,18 +39,17 @@ end
 function PCBagViewModel:RefreshData()
 	self:UpdateBagPosition(true)
 end
-function PCBagViewModel:CalculateShowCount()
+function PCBagViewModel:CalculateShowCount(bagRows)
 	local openCount = SL:GetValue("BAG_OPEN_SIZE") -- 开启的格子数
 	local totalCount = SL:GetValue("BAG_MAX_SIZE")
-	local extra = openCount % self._BagRow
+	local extra = openCount % bagRows
 	local showCnt = openCount
-	showCnt = showCnt + self._BagRow * 2 - extra
+	showCnt = showCnt + bagRows * 2 - extra
 	return math.min(totalCount,showCnt)
 end
 
 function PCBagViewModel:InitData()
-	self._BagRow        = 6
-	self.selectType    = 1         -- 选中的类型
+	self.selectType     = 1         -- 选中的类型
 	self._bagCells      = {}        -- 物品节点
 	self:InitBagItems()
 end
@@ -58,7 +60,6 @@ function PCBagViewModel:InitBagItems()
 	self._bagCellTypeIndexToViewDic = {}	--用于筛选的dic,存放bagcell index to viewIndex 的索引
 	-- show size
 	local openCount = SL:GetValue("BAG_OPEN_SIZE") -- 开启的格子数
-	local showCount = self:CalculateShowCount() -- 客户端显示格子数
 	local totalCount = SL:GetValue("BAG_MAX_SIZE")
 	local allData = self:GetAllBagData()
 	self.itemCnt = 0
@@ -110,10 +111,22 @@ function PCBagViewModel:ExChangeTwoPos(dragMakeIndex,newPos)
 		end
 		
 		if self._bagCells[dragStartStartViewIndex] and self._bagCells[newPos] then
-			self._bagCells[dragStartStartViewIndex],self._bagCells[newPos] = self._bagCells[newPos],self._bagCells[dragStartStartViewIndex]
 			SL:SetValue("BAG_EXCHANGE_TWO_ITEM_POS",dragStartStartViewIndex,newPos)
 			SL:Print("数据交换成功")
 		end
+	end
+end
+
+function PCBagViewModel:ToExChangeTwoPos(oldpos,newPos)
+	if self._bagCells[oldpos] and self._bagCells[newPos] then
+        -- 交换数据
+        self._bagCells[oldpos],self._bagCells[newPos] = self._bagCells[newPos],self._bagCells[oldpos]
+    end
+
+	if self.viewComponent and self.viewComponent.UpdateCellViewByViewIdAndBagData then
+		print("PCBagViewModel",oldpos,newPos)
+		self.viewComponent:UpdateCellViewByViewIdAndBagData(oldpos,self._bagCells[oldpos])
+		self.viewComponent:UpdateCellViewByViewIdAndBagData(newPos,self._bagCells[newPos])
 	end
 end
 
@@ -391,24 +404,6 @@ function PCBagViewModel:RefreshCurPageBagCell()
 		end
 	end
 end
-function PCBagViewModel:RecycleSelectCell(data)
-	if not FGUI:CheckOpen("Bag_pc", "BagRecyclePanel") or (not data) then
-		return
-	end
-
-	local isSelect = data.isSelect
-	local selectList = data.selectList
-
-	for i = 1, #selectList do
-		local index = selectList[i].pos
-		self._bagCells[index]:SetRecycleSelect(isSelect)
-		local  res,viewIndex = self:GetCurShowBagCellDataAndViewIndexByPos(index)
-		if res and viewIndex and viewIndex > 0 and self.viewComponent then
-			self.viewComponent:UpdateCellViewByViewIdAndBagData(viewIndex,res)
-		end
-	end
-
-end
 
 function PCBagViewModel:GetViewIndexByMakeIndex(MakeIndex)
 	local newIndex = SL:GetValue("BAG_POS_MARK_BY_MAKEINDEX", MakeIndex) or 0
@@ -427,34 +422,31 @@ end
 
 --------------------------- 注册事件 -----------------------------
 function PCBagViewModel:RegisterEvent()
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_UPDATE_LIST, "PCBagViewModel",  handler(self,self.UpdateBagPosition))
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_ADD, "PCBagViewModel",  handler(self,self.AddBagItem))
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_DEL, "PCBagViewModel",  handler(self,self.DeleteBagItem))
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_UPDATE, "PCBagViewModel",  handler(self,self.OnUpdateBagItem))
-	--SL:RegisterLUAEvent(LUA_EVENT_BAG_RECOVERY_UPDATE, "PCBagViewModel", handler(self, self.OnUpdateBagRecovery))
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_CELL_UNLOCK, "PCBagViewModel",  handler(self,self.UpdateBagSize))
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_RECYCLE_SELECT, "PCBagViewModel",  handler(self,self.RecycleSelectCell))
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_REFRESH_PAGE, "PCBagViewModel",  handler(self,self.RefreshCurPageBagCell))
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_CD, "PCBagViewModel",  handler(self,self.RefreshCurPageBagCell))
-	SL:RegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_ADD,"PCBagViewModel",handler(self,self.RefreshCurPageBagCell))
-	SL:RegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_DEL,"PCBagViewModel",handler(self,self.RefreshCurPageBagCell))
-	SL:RegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_UPDATE,"PCBagViewModel",handler(self,self.RefreshCurPageBagCell))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_UPDATE_LIST, "PCBagViewModel"..self._bindParentView,  handler(self,self.UpdateBagPosition))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_ADD, "PCBagViewModel"..self._bindParentView,  handler(self,self.AddBagItem))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_DEL, "PCBagViewModel"..self._bindParentView,  handler(self,self.DeleteBagItem))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_UPDATE, "PCBagViewModel"..self._bindParentView,  handler(self,self.OnUpdateBagItem))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_CELL_UNLOCK, "PCBagViewModel"..self._bindParentView,  handler(self,self.UpdateBagSize))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_REFRESH_PAGE, "PCBagViewModel"..self._bindParentView,  handler(self,self.RefreshCurPageBagCell))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_EXCHANGE_TWO_POS, "PCBagViewModel"..self._bindParentView,  handler(self,self.ToExChangeTwoPos))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_CD, "PCBagViewModel"..self._bindParentView,  handler(self,self.RefreshCurPageBagCell))
+	SL:RegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_ADD,"PCBagViewModel"..self._bindParentView,handler(self,self.RefreshCurPageBagCell))
+	SL:RegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_DEL,"PCBagViewModel"..self._bindParentView,handler(self,self.RefreshCurPageBagCell))
+	SL:RegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_UPDATE,"PCBagViewModel"..self._bindParentView,handler(self,self.RefreshCurPageBagCell))
 end
 
 function PCBagViewModel:UnRegisterEvent()
-	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_UPDATE_LIST, "PCBagViewModel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_ADD, "PCBagViewModel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_DEL, "PCBagViewModel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_UPDATE, "PCBagViewModel")
-	--SL:UnRegisterLUAEvent(LUA_EVENT_BAG_RECOVERY_UPDATE, "PCBagViewModel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_CELL_UNLOCK, "PCBagViewModel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_RECYCLE_SELECT, "PCBagViewModel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_REFRESH_PAGE, "PCBagViewModel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_CD, "PCBagViewModel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_ADD, "PCBagViewModel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_DEL, "PCBagViewModel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_UPDATE, "PCBagViewModel")
+	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_UPDATE_LIST, "PCBagViewModel"..self._bindParentView)
+	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_ADD, "PCBagViewModel"..self._bindParentView)
+	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_DEL, "PCBagViewModel"..self._bindParentView)
+	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_UPDATE, "PCBagViewModel"..self._bindParentView)
+	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_CELL_UNLOCK, "PCBagViewModel"..self._bindParentView)
+	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_EXCHANGE_TWO_POS, "PCBagViewModel"..self._bindParentView)
+	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_REFRESH_PAGE, "PCBagViewModel"..self._bindParentView)
+	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_CD, "PCBagViewModel"..self._bindParentView)
+	SL:UnRegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_ADD, "PCBagViewModel"..self._bindParentView)
+	SL:UnRegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_DEL, "PCBagViewModel"..self._bindParentView)
+	SL:UnRegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_UPDATE, "PCBagViewModel"..self._bindParentView)
 end
 
-
-return  PCBagViewModel.new()
+return  PCBagViewModel

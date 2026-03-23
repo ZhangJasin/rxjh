@@ -21,7 +21,7 @@
       <gearDisplay controller="progressType" pages="3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n36_j9jd" name="text_progress" xy="191,18" pivot="0.5,0.5" anchor="true" size="49,19" fontSize="12" color="#ffffff" align="center" vAlign="middle" text="100/100">
+    <text id="n36_j9jd" name="text_progress" xy="191,18" pivot="0.5,0.5" anchor="true" size="10,19" fontSize="12" color="#ffffff" align="center" vAlign="middle" strokeColor="#000000" singleLine="true" autoClearText="true" text="">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
   </displayList>

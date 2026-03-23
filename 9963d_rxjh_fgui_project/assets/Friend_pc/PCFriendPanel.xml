@@ -28,12 +28,14 @@
     <text id="n48_ygri" name="text_title" xy="512,188" pivot="0.5,0.5" anchor="true" size="36,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" autoSize="none" text="好友">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n39_olk0" name="text_nothing" xy="320,415" pivot="0.5,0.5" anchor="true" size="200,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="暂无好友">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
     <richtext id="n74_spth" name="text_online" xy="289,568" size="60,19" fontSize="12" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="人数：0/0">
       <relation target="" sidePair="center-center,middle-middle"/>
     </richtext>
+    <image id="n76_i00u" name="img_nothing" src="iwlbkvq8" fileName="image/img.png" pkg="qa9a7rit" xy="193,320" group="n75_i00u"/>
+    <text id="n39_olk0" name="text_nothing" xy="319,494" pivot="0.5,0.5" anchor="true" size="200,26" group="n75_i00u" font="ui://qa9a7ritrqwtkvph" fontSize="18" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="暂无好友"/>
+    <group id="n75_i00u" name="panel_nothing" xy="193,320" size="253,190" visible="false" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
     <image id="n71_r73b" name="info_bg" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="460,240" size="375,310" group="n49_nrlc">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>

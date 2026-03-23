@@ -93,7 +93,7 @@ function PCMainBottom:Enter()
     self._buffs:Enter()
 	self:RegisterEvent()
 
-    self:InitAdapt()
+    FGUIFunction:AdaptNotch(self.component)
 	self:OnRefreshPropertyShow()
     self:UpdateAutoState()
     self:InitBubbleTips()
@@ -121,13 +121,6 @@ function PCMainBottom:Destroy()
     end
 end
 
-function PCMainBottom:InitAdapt()
-    local safeBottom = SL:GetValue("SCREEN_SAFE_AREA_BOTTOM")
-    local screenH = SL:GetValue("SCREEN_HEIGHT")
-    FGUI:setHeight(self.component, screenH - safeBottom)
-    FGUI:setPositionY(self.component, 0)
-end
-
 function PCMainBottom:OnRefreshPropertyShow()
     local curExp = SL:GetValue("EXP") or 0
 	local maxExp = SL:GetValue("MAXEXP")
@@ -144,15 +137,21 @@ function PCMainBottom:OnRefreshBubbleTips(data)
     end
 end
 
-function PCMainBottom:OnClickAction()
+function PCMainBottom:OnClickAction(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     FGUIFunction:SwitchPanel("Stall_pc", "PCStallMain")
 end
 
-function PCMainBottom:OnClickTeam()
+function PCMainBottom:OnClickTeam(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     FGUIFunction:SwitchPanel("Team_pc", "PCTeamNearPanel")
 end
 
-function PCMainBottom:OnClickGuild()
+function PCMainBottom:OnClickGuild(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     if FGUI:CheckOpen("Guild_pc", "PCGuildJoinList") or FGUI:CheckOpen("Guild_pc", "PCGuildMainPanel") then
         FGUIFunction:CloseGuildAutoUI()
     else
@@ -160,31 +159,45 @@ function PCMainBottom:OnClickGuild()
     end 
 end
 
-function PCMainBottom:OnClickStatus()
+function PCMainBottom:OnClickStatus(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     FGUIFunction:SwitchPanel("Bag_pc","PCPlayerInfoPanel",2)
 end
 
-function PCMainBottom:OnClickBag()
+function PCMainBottom:OnClickBag(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     FGUIFunction:SwitchPanel("Bag_pc","PCPlayerInfoPanel",1)
 end
 
-function PCMainBottom:OnClickSkill()
+function PCMainBottom:OnClickSkill(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     FGUIFunction:SwitchPanel("Skill_pc", "PCSkillFramePanel", 1)
 end
 
-function PCMainBottom:OnClickMail()
+function PCMainBottom:OnClickMail(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     FGUIFunction:SwitchPanel("Mail_pc", "PCMailPanel")
 end
 
-function PCMainBottom:OnClickShop()
+function PCMainBottom:OnClickShop(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     FGUIFunction:SwitchPanel("TreasureShop_pc", "PCTreasurePanel")
 end
 
-function PCMainBottom:OnClickFriend()
+function PCMainBottom:OnClickFriend(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     FGUIFunction:SwitchPanel("Friend_pc", "PCFriendPanel", FGUIDefine.FriendPage.Recent)
 end
 
-function PCMainBottom:OnClickSetting()
+function PCMainBottom:OnClickSetting(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     FGUIFunction:SwitchPanel("Setting_pc", "PCSettingPanel")
 end
 
@@ -255,6 +268,7 @@ function PCMainBottom:AddBubbleTips(data)
     local cell = self:CreateBubbleTipsCell(data)
     self._bubbleTipsCells[data.id] = cell
 
+    self:PlayBubbleTipEffects()
     SL:PlaySound(50004)
 end
 
@@ -274,6 +288,18 @@ function PCMainBottom:RmvBubbleTips(data)
     if data.timer then
         SL:UnSchedule(data.timer)
         data.timer = nil
+    end
+end
+
+-- 重新排列多个特效播放效果
+function PCMainBottom:PlayBubbleTipEffects()
+    local num = FGUI:GList_getNumItems(self._ui.List_bubbleTip)
+    local len = num - 1
+    for i = 0, len do
+        local cell = FGUI:GetChildAt(self._ui.List_bubbleTip, i)
+        local trans = FGUI:GetTransition(cell, "effect")
+        FGUI:Transition_stop(trans)
+        FGUI:Transition_play(trans, nil, -1, 0)
     end
 end
 
@@ -350,12 +376,11 @@ function PCMainBottom:UpdateAutoState(isAutoFight, isAutoMove)
     if self._isAutoFight ~= isAutoFight then
         self._isAutoFight = isAutoFight
         if isAutoFight then
-            FGUI:setVisible(self._ui.Graph_autoFight, true)
             FGUI:UIModel_resume(self._ui.Graph_autoFight)
         else
             FGUI:UIModel_pause(self._ui.Graph_autoFight)
-            FGUI:setVisible(self._ui.Graph_autoFight, false)
         end
+        FGUI:setVisible(self._ui.Graph_autoFight, isAutoFight)
     end
     if isAutoFight then isAutoMove = false end
     if isAutoMove == nil then

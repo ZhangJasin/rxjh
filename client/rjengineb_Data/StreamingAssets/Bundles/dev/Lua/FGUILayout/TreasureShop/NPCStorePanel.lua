@@ -71,7 +71,6 @@ function NPCStorePanel:InitPopupMenu()
 	FGUI:setOnClickEvent(self._ui_popup.btn_count_sub, function ()
 		self:ModifyBuyCount(-1)
 	end)
-	-- FGUI:setOnClickEvent(self._ui_popup.btn_input_count, handler(self, self.OnClickInputCountButton))
 	-- 购买
 	FGUI:setOnClickEvent(self._ui_popup.btn_buy, handler(self, self.OnClickBuyButton))
 end

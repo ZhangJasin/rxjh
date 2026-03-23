@@ -43,8 +43,8 @@
     <image id="w2ob65" name="bg01.png" path="/Images/" exported="true"/>
     <component id="pxu766" name="TipItemPurchasePop.xml" path="/Components/"/>
     <component id="pxu767" name="commonCostCell.xml" path="/Components/" exported="true"/>
-    <component id="fwsh68" name="EquipTipListLabel(1).xml" path="/"/>
-    <component id="fwsh69" name="obtainItem.xml" path="/"/>
+    <component id="hhwjv" name="PCSkillTip.xml" path="/" exported="true"/>
+    <component id="nd1wy" name="SKillTip_item_cost.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

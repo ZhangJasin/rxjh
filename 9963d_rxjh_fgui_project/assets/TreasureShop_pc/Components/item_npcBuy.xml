@@ -8,13 +8,13 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <component id="n15_10pmd" name="s_text_name" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="71,13" size="78,16">
-      <Label titleColor="#000000" titleFontSize="12"/>
+      <Label titleColor="#f6cd2b" titleFontSize="12"/>
     </component>
     <text id="n14_10pmd" name="text_cost_count" xy="91,30" size="54,19" fontSize="12" color="#ffffff" autoSize="none" singleLine="true" text="100000">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n16_10pmd" name="s_text_des" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="71,51" size="78,17">
-      <Label titleColor="#000000" titleFontSize="12"/>
+    <component id="n16_10pmd" name="s_text_des" src="ftt5vo7" fileName="ScrollRText.xml" pkg="o8ixb2zy" xy="71,51" size="78,17">
+      <Label titleFontSize="12"/>
     </component>
     <image id="n25_baex" name="img_di" src="baex5k" fileName="Images/img_kuang.png" xy="18,19" size="44,44" aspect="true">
       <relation target="n17_10pmd" sidePair="center-center,middle-middle"/>

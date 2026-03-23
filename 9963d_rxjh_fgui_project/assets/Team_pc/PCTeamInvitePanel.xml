@@ -10,9 +10,11 @@
     <text id="n30_mp8v" name="text_title" xy="512,252" pivot="0.5,0.5" anchor="true" size="68,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" text="邀请入队">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n12_leye" name="text_nothing" xy="512,414" pivot="0.5,0.5" anchor="true" size="300,29" font="ui://st7dgeqqje63v37" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
+    <image id="n39_gqkz" name="img_nothing" src="iwlbkvq8" fileName="image/img.png" pkg="qa9a7rit" xy="385,319" group="n41_gqkz"/>
+    <text id="n40_gqkz" name="text_nothing" xy="511,493" pivot="0.5,0.5" anchor="true" size="200,26" group="n41_gqkz" font="ui://qa9a7ritrqwtkvph" fontSize="18" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="暂无队伍"/>
+    <group id="n41_gqkz" name="panel_nothing" xy="385,319" size="253,190" visible="false" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
+    </group>
     <list id="n32_mp8v" name="list_page" xy="315,275" size="380,28" layout="row" overflow="hidden" scroll="horizontal" defaultItem="ui://y890q37svjv73" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>

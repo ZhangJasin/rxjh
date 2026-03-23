@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n0_stn1" name="mask" xy="0,0" size="1334,750" alpha="0.3" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n1_stn1" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="417,175" size="500,400">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_stn1" name="title" xy="641,185" size="52,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="提示">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n3_stn1" name="bg_di" src="stn11i" fileName="Images/ditu2.png" xy="430,232" size="472,249">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n4_stn1" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="895,202">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n5_stn1" name="btn_cancel" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="516,504" group="n7_stn1">
+      <Button title="取 消"/>
+    </component>
+    <component id="n6_stn1" name="btn_ok" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="682,505" group="n7_stn1">
+      <Button title="确 定"/>
+    </component>
+    <group id="n7_stn1" name="n7" xy="516,504" size="302,43" advanced="true" layout="hz" colGap="30" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <text id="n8_stn1" name="text_name" xy="586,333" size="161,29" fontSize="20" color="#ffcc00" align="center" autoSize="none" strokeColor="#000000" singleLine="true" text="这是名字七个字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n9_stn1" name="item_node" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="631,257" size="72,72">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n19_stn1" name="label_count" xy="475,384" size="44,29" fontSize="20" color="#fffadc" singleLine="true" text="数量">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n20_stn1" name="btn_minus" src="bf0gv5s" fileName="common/btn_AddOrMinus.xml" pkg="st7dgeqq" xy="541,381" controller="btnkInd,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n21_stn1" name="input_count" src="stn11j" fileName="Components/Buy/ComponentInput.xml" xy="670,398" pivot="0.5,0.5" anchor="true" size="168,39">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n22_stn1" name="btn_max" src="bf0gv5s" fileName="common/btn_AddOrMinus.xml" pkg="st7dgeqq" xy="810,381" size="60,36" controller="btnkInd,2">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n23_stn1" name="btn_add" src="bf0gv5s" fileName="common/btn_AddOrMinus.xml" pkg="st7dgeqq" xy="763,381">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n24_stn1" name="label_need" xy="594,430" size="90,29" group="n27_stn1" fontSize="20" color="#fffadc" singleLine="true" text="需要花费:"/>
+    <component id="n25_stn1" name="money_need" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="686,428" size="33,32" group="n27_stn1"/>
+    <text id="n26_stn1" name="money_need_count" xy="721,430" size="26,29" group="n27_stn1" fontSize="20" color="#ffffff" singleLine="true" autoClearText="true" text="20"/>
+    <group id="n27_stn1" name="n27" xy="594,428" size="153,32" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

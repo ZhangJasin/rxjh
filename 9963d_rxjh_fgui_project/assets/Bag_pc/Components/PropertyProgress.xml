@@ -23,7 +23,7 @@
       <gearDisplay controller="propertyProgress" pages="3"/>
       <relation target="n0_g4sv" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </image>
-    <text id="n2_g4sv" name="text_progress" xy="172,16" pivot="0.5,0.5" anchor="true" size="46,20" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="100/100">
+    <text id="n2_g4sv" name="text_progress" xy="172,16" pivot="0.5,0.5" anchor="true" size="46,19" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="center" vAlign="middle" strokeColor="#000000" text="100/100">
       <relation target="n0_g4sv" sidePair="center-center,middle-middle"/>
     </text>
   </displayList>

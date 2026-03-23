@@ -2,7 +2,6 @@ local CommonItemTipBase = requireFGUILayout("Common/CommonItemTipBase")
 local CommonItemTip = class("CommonItemTip", CommonItemTipBase)
 local ItemFrom = SL:GetValue("ITEMFROMUI_ENUM")
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
-local ObtainListData           =  require("game_config/cfgcsv/Obtain")          --获取来源
 --[[
 	data.from           --从哪个界面打开Tip,用于逻辑判断SL:GetValue("ITEMFROMUI_ENUM")
 	data.itemData		--物品数据
@@ -18,17 +17,9 @@ function CommonItemTip:Create()
 	self._ui.bg = self._ui.Pop --截图节点禁止删除
 end
 
---按钮默认 794 351
 function CommonItemTip:Enter(data)
 	self.super.Enter(self,data)
-	self._itemData = data.itemData
 	self:RefreshBtnState(data)
-	FGUI:setVisible(self._ui.ObtainList,false)
-	-- self.baseBtnXY = FGUI:getPosition(self._ui.Pop)
-	-- local pw,ph = FGUI:getPosition(self._ui.Pop)、
-	-- local tWid2, tHei2 = FGUI:getSize(self._ui.Pop) 
-	-- self.btnsX = tWid2 + pw - 4
-	-- FGUI:setPosition(self._ui.btns,self.btnsX,351)
 end
 
 function CommonItemTip:Exit()
@@ -47,7 +38,7 @@ function CommonItemTip:CheckInitiatorIsButton(data)
 	local eventInitiator = FGUI:EventContext_getInitiator(data.eventData)
 	if eventInitiator then
 		local  p = FGUI:GetParent(eventInitiator)
-		for k, v in pairs(self._buttons) do								--需要判断一下是否点击到当前界面的按钮上
+		for k, v in pairs(	self._buttons) do								--需要判断一下是否点击到当前界面的按钮上
 			if FGUI:GetContainer(v) == p then
 				return false
 			end
@@ -64,9 +55,6 @@ function CommonItemTip:CheckInitiatorIsButton(data)
 				return false
 			end
 		end
-		if FGUI:GetContainer(self._ui.list) == p then
-			return false
-		end
 	end
 	return true
 end
@@ -78,12 +66,8 @@ function CommonItemTip:SetBtnInfo(btnIndex, itemData, btnCfgType)
 	FGUI:GButton_setTitle(button, btnCfg.btnName)
 
 	FGUI:setOnClickEvent(button, function()
-		if btnCfg.btnName == "获取" then
-			self:showObtainList()
-		else
 		btnCfg.func(itemData)
 		self:CloseTip()
-		end
 	end)
 
 end
@@ -94,7 +78,6 @@ function CommonItemTip:RefreshBtnState(data)
 	local canUse = SL:CheckItemUseNeed(itemData)
 	local addBtnMap = {}
 	local  showSplit = SL:GetValue("GAME_DATA","ItemSplit") == 1
-	FGUI:setVisible(self._ui.Btn4 , false)
 	for i = 1, #self._buttons do
 		local btnCfgType = -1
 		if not hideBtn then
@@ -103,6 +86,8 @@ function CommonItemTip:RefreshBtnState(data)
 			local isTradeOpen = FGUI:CheckOpen("Trade", "TradeMain") or FGUI:CheckOpen("Trade", "PCTradeMain")
 			local isStorageExOpen = FGUI:CheckOpen("Bag", "StorageExPanel") or FGUI:CheckOpen("Bag_pc", "PCStorageExPanel")
 			local isStallOpen = FGUI:CheckOpen("Stall", "StallProduct") or FGUI:CheckOpen("Stall", "PCStallProduct")
+			-- 交易所上架面板是否打开
+			local isExChangeOpen = FGUI:CheckOpen("ExChange","ExChangeRootPanel")
 			if isOpen and npcIndex then
 				-- 放入仓库
 
@@ -129,6 +114,11 @@ function CommonItemTip:RefreshBtnState(data)
 			elseif isStallOpen then
 				if data.from == ItemFrom.BAG and not addBtnMap[12] then
 					btnCfgType = 12
+				end
+			elseif isExChangeOpen then
+				-- 交易所上架面板是否打开
+				if data.from == ItemFrom.ExChange and not addBtnMap[14] then
+					btnCfgType = 14
 				end
 			else
 				-- 使用道具
@@ -158,63 +148,10 @@ function CommonItemTip:RefreshBtnState(data)
 				end
 			end
 		end
-		if i == 4  then
-			btnCfgType = 22
-		end
+
 		self:SetBtnInfo(i, itemData, btnCfgType)
 		addBtnMap[btnCfgType] = 1
 	end
-end
-
-function CommonItemTip:showObtainList()
-	if FGUI:getVisible(self._ui.ObtainList) then
-		FGUI:setVisible(self._ui.ObtainList,false)
-		-- FGUI:setPosition(self._ui.btns,self.btnsX,351)
-		return 
-	else
-		FGUI:setVisible(self._ui.ObtainList,true)
-	end
-    -- local obtainNameTxt =  FGUI:GetChild(self.component, "obtainName")
-    -- FGUI:GTextField_setText(obtainNameTxt, "获取途径")
-	-- local tWid2, tHei2 = FGUI:getSize(self._ui.Pop) 
-	-- FGUI:setHeight(self._ui.ObtainList, tHei2)
-	-- FGUI:setHeight(self._ui.list, tHei2- 55 )
-	-- FGUI:setPosition(self._ui.btns,self.btnsX + 228,351)
-	-- local pw,ph = FGUI:getPosition(self._ui.Pop)
-	-- FGUI:setPosition(self._ui.ObtainList,self.btnsX,ph)
-    local dataconfig = SL:GetValue("ITEM_DATA",tonumber(self._itemData.ID))
-    local getWayInfoList = SL:Split(dataconfig.GetWayInfo, "|")
-    local obtainList = {}
-    for i=1,#ObtainListData do
-        local data = ObtainListData[i]
-        for w=1,#getWayInfoList do
-            if tonumber(getWayInfoList[w]) == tonumber(data.ID) then
-                table.insert(obtainList,data)
-            end
-        end
-    end
-	local obtainNameTxt =  FGUI:GetChild(self._ui.ObtainList, "obtainName")
-    FGUI:GTextField_setText(obtainNameTxt, "获取途径")
-	local list = FGUI:GetChild(self._ui.ObtainList,"list")
-    FGUI:GList_itemRenderer(list, function(idx,item)
-    -- FGUI:GList_itemRenderer(self._ui.list, function(idx,item)
-        local text = FGUI:GetChild(item,"text")
-        local data = obtainList[idx+1]
-        FGUI:GTextField_setText(text,data.Desc)
-        FGUI:setOnClickEvent(item,function() 
-            --关掉tip
-			dump("点击了")
-			-- FGUI:CloseTop()
-            self:CloseTip()
-            if data.Func=="Open" then
-                FGUI:Open(data.PackageName,data.ComponentName)
-            elseif data.Func == "RequestGroupData" then
-                SL:RequestGroupData(0)
-            end  
-        end)
-    end)
-
-    FGUI:GList_setNumItems(list, #obtainList)
 end
 
 return CommonItemTip

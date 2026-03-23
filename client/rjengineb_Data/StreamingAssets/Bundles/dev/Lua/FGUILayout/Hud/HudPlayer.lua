@@ -92,8 +92,6 @@ function HudPlayer:Init(actorID)
     self._updateKuaFuNameSpriteLayout = false 
     self._updateKuaFuGuildNameTextLayout = false 
     self._updateKuaFuGuildNameSpriteLayout = false 
-    self._updateKuaFuGuildTextLayout = false 
-    self._updateKuaFuGuildSpriteLayout = false 
     self._nameHalfWidth = nil
     self._guildHalfWidth = nil
     self._kuaFuHalfWidth = nil
@@ -101,23 +99,6 @@ function HudPlayer:Init(actorID)
     if self._kuaFuNode then 
         self:SetVisible(self._kuaFuNode, false)
     end
-    if self._kuaFuGuildNode then 
-        self:SetVisible(self._kuaFuGuildNode, false)
-    end
-
-    HUDHelp:SetLabelHalfWidthCallBack(self._labelName, handler(self,self.NameHalfWidthCallBackEx))
-end
-
-function HudPlayer:NameHalfWidthCallBackEx(halfWidth)
-    halfWidth = halfWidth / 100
-    local namePosX, namePosY, namePosZ = HUDHelp:GetPosition(self._labelName)
-    -- 正邪阵营
-    if not self._campHUD then
-        self._campHUD = HUDHelp:CreateSprite(self._uiHud, "camp", 0, 0, "xie")
-        self:SetVisible(self._campHUD, false)
-    end
-    HUDHelp:SetPosition(self._campHUD, -halfWidth - 0.3, namePosY + 0.06, namePosZ)
-    SL:onLUAEvent("LUA_EVENT_PLAYER_CAMPHUD_UPDATE", self._actorID)
 end
 
 function HudPlayer:Cleanup()
@@ -131,14 +112,16 @@ function HudPlayer:Cleanup()
         end
         self._kuaFuNode = nil
     end
-
-    if self._kuaFuGuildNode then 
-        if self._kuaFuType == HudConfig.KuaFuType.TEXT then 
-            HUDHelp:RecycelLabel(self._kuaFuGuildNode)
-        elseif self._kuaFuType == HudConfig.KuaFuType.SPRITE then 
-            HUDHelp:RecycelSprite(self._kuaFuGuildNode)
-        end
-        self._kuaFuGuildNode = nil
+    if self._BoxTitle then 
+        HUDHelp:RecycelFx(self._BoxTitle)
+        self._BoxTitle = nil
+        self._BoxTitleHeight = 0
+    end
+    if self._BoxTitle then 
+        HUDHelp:RecycelFx(self._BoxTitle)
+        self._BoxTitle = nil
+        self._BoxTitleID = nil
+        self._BoxTitleHeight = 0
     end
 end
 
@@ -150,7 +133,6 @@ function HudPlayer:SetHUDVisibleByType(iType,visible)
         self._cacheHudHpTypeVisible = visible
         self:SetVisible(self._spriteMeshHPBG, visible)
         self:SetVisible(self._spriteMeshHP, visible)
-        -- self:SetVisible(self._spriteMeshHPAni, visible)
     elseif iType == HudConfig.HUDType.Name then 
         if self._cacheHudNameTypeVisible == visible then
             return 
@@ -258,7 +240,8 @@ function HudPlayer:SetLabelGuildText(guild)
     local lastGuild = self._cacheGuild
     
     self._cacheGuild = guild
-    local name2, hudType, kuaFuName, param3, param4 = FGUIFunction:GetHudServerName(guild)
+    local name2, hudType, kuaFuName, param3, param4 = FGUIFunction:GetHudServerName(guild, self._actorID)
+    
     local refAnchor = false
     if self._guildHorizontal then 
         refAnchor = true
@@ -269,9 +252,6 @@ function HudPlayer:SetLabelGuildText(guild)
             self._updateKuaFuGuildNameSpriteLayout = true
         else
             self._updateGuildNameLayout = true
-            if self._kuaFuGuildNode then 
-                HUDHelp:SetVisible(self._kuaFuGuildNode, false)
-            end
         end
     else 
         if guild ~= "" and lastGuild == "" then 
@@ -279,23 +259,6 @@ function HudPlayer:SetLabelGuildText(guild)
         end
         if guild == "" and lastGuild ~= "" then 
             HUDHelp:SetPosition(self._attachTitle, 0, self._titleY - 0.3, 0)
-        end
-        if hudType then 
-            if hudType == HudConfig.KuaFuType.TEXT then 
-                refAnchor = true
-                self._updateKuaFuGuildTextLayout = true
-            elseif hudType == HudConfig.KuaFuType.SPRITE then 
-                self._updateKuaFuGuildSpriteLayout = true
-                if self._kuaFuType == HudConfig.KuaFuType.SPRITE then 
-                    self._kuaFuGuildIconOffsetX= param3
-                    self._kuaFuGuildIconOffsetY = param4
-                end
-            end
-            self:SetKuaFuGuild(hudType, kuaFuName, param3)
-        else 
-            if self._kuaFuGuildNode then 
-                HUDHelp:SetVisible(self._kuaFuGuildNode, false)
-            end
         end
     end
     if refAnchor then 
@@ -328,7 +291,7 @@ function HudPlayer:SetHudName(name)
         return 
     end 
     self._cacheName = name
-    local name2, hudType, kuaFuName, param3, param4 = FGUIFunction:GetHudServerName(name)
+    local name2, hudType, kuaFuName, param3, param4 = FGUIFunction:GetHudServerName(name,self._actorID)
     self._kuaFuType = hudType
     if hudType then 
         self:SetKuaFuName(hudType, kuaFuName, param3)
@@ -542,39 +505,6 @@ function HudPlayer:SetKuaFuName(hudType, kuaFuName, kuaFuColor)
     end
 end
 
-function HudPlayer:SetKuaFuGuild(hudType, kuaFuName, kuaFuColor)
-    if not self._kuaFuGuildNode then 
-        local x, y, _=  HUDHelp:GetPosition(self._labelGuild)
-        self._cacheKuaFuGuild = kuaFuName
-        if hudType == HudConfig.KuaFuType.TEXT then 
-            self._kuaFuGuildNode = HUDHelp:CreateHudLabel(self._uiHud, "kuaFuTextGuild", x, y, kuaFuName)
-            HUDHelp:SetLabelAnchor(self._kuaFuGuildNode, HUDAnchor.Right)  
-            HUDHelp:SetLabelText(self._kuaFuGuildNode, kuaFuName)
-            HUDHelp:SetLabelColor(self._kuaFuGuildNode, kuaFuColor.r,kuaFuColor.g, kuaFuColor.b, kuaFuColor.a)
-            HUDHelp:SetLabelHalfWidthCallBack(self._kuaFuGuildNode, handler(self,self.KuaFuGuildHalfWidthCallBack))
-            self._updateKuaFuGuildTextLayout = true
-            self._kuafuGuildHalfWidth = nil
-        elseif hudType == HudConfig.KuaFuType.SPRITE then 
-            self._kuaFuGuildNode = HUDHelp:CreateSprite(self._uiHud, "kuaFuIconGuild", x, y, kuaFuName)
-            self._kuaFuType = HudConfig.KuaFuType.SPRITE
-        end
-        
-    else 
-        self:SetVisible(self._kuaFuGuildNode, true)
-        if hudType == HudConfig.KuaFuType.TEXT then 
-            if self._cacheKuaFuGuild ~= kuaFuName then 
-                self._updateKuaFuGuildTextLayout = true
-                self._kuafuGuildHalfWidth = nil
-                HUDHelp:SetLabelText(self._kuaFuGuildNode, kuaFuName)
-            end
-        elseif hudType == HudConfig.KuaFuType.SPRITE then 
-            if self._cacheKuaFuGuild ~= kuaFuName then 
-                HUDHelp:SetSpriteName(self._kuaFuGuildNode, kuaFuName)
-            end
-        end
-    end
-end
-
 function HudPlayer:NameHalfWidthCallBack(halfWidth)
     self._nameHalfWidth = halfWidth / 100
     if self._updateGuildNameLayout then 
@@ -599,12 +529,6 @@ function HudPlayer:GuildHalfWidthCallBack(halfWidth)
     if self._updateGuildNameLayout then 
         self:UpdateGuildNameLayout()
     end
-    if self._updateKuaFuGuildTextLayout then 
-        self:UpdateKuaFuGuildTextLayout()
-    end
-    if self._updateKuaFuGuildSpriteLayout then 
-        self:UpdateKuaFuGuildSpriteLayout()
-    end
     if self._updateKuaFuGuildNameTextLayout then 
         self:UpdateKuaFuGuildNameTextLayout()
     end
@@ -623,12 +547,6 @@ function HudPlayer:KuaFuHalfWidthCallBack(halfWidth)
     end
 end
 
-function HudPlayer:KuaFuGuildHalfWidthCallBack(halfWidth)
-    self._kuafuGuildHalfWidth = halfWidth / 100
-    if self._updateKuaFuGuildTextLayout then 
-        self:UpdateKuaFuGuildTextLayout()
-    end
-end
 
 --更新行会跟名字的位置
 function HudPlayer:UpdateGuildNameLayout()
@@ -683,39 +601,6 @@ function HudPlayer:UpdateKuaFuNameSpriteLayout()
 
     self._updateKuaFuNameSpriteLayout = false
 end
------------------------------------------------------
---更新跨服文字跟行会文字的位置
-function HudPlayer:UpdateKuaFuGuildTextLayout()
-    if not self._guildHalfWidth 
-        or not self._kuafuGuildHalfWidth
-        or not self._cacheKuaFuGuild 
-        or self._cacheKuaFuGuild == ""
-        or not self._cacheGuild
-        or self._cacheGuild == "" then 
-        return
-    end
-    
-    local guildPosX, guildPosY, guildPosZ = HUDHelp:GetPosition(self._labelGuild)
-    local halfWidth = self._guildHalfWidth + self._kuafuGuildHalfWidth
-    local offsetX = 2 *self._kuafuGuildHalfWidth - halfWidth
-    local guildOffsetX = halfWidth - 2*self._guildHalfWidth
-    HUDHelp:SetPosition(self._kuaFuGuildNode, offsetX,guildPosY, guildPosZ)
-    HUDHelp:SetPosition(self._labelGuild, guildOffsetX,guildPosY, guildPosZ)
-
-    self._updateKuaFuGuildTextLayout = false
-end
---更新跨服图标跟行会文字的位置
-function HudPlayer:UpdateKuaFuGuildSpriteLayout()
-    if not self._guildHalfWidth 
-        or not self._cacheGuild
-        or self._cacheGuild == "" then 
-        return
-    end
-    
-    local guildPosX, guildPosY, guildPosZ = HUDHelp:GetPosition(self._labelGuild)
-    HUDHelp:SetPosition(self._kuaFuGuildNode, -self._guildHalfWidth + self._kuaFuGuildIconOffsetX,guildPosY + self._kuaFuGuildIconOffsetY, guildPosZ)
-    self._updateKuaFuGuildSpriteLayout = false
-end
 ------------------------------------------------------
 --更新跨服文字跟行会文字还有名字的位置
 function HudPlayer:UpdateKuaFuGuildNameTextLayout()
@@ -767,4 +652,56 @@ function HudPlayer:UpdateKuaFuGuildNameSpriteLayout()
     end
 end
 ------------------------------------------------------
+
+function HudPlayer:RefIcons() 
+    HudPlayer.super.RefIcons(self)
+    self:RefBoxTitleHeight()
+end
+
+function HudPlayer:RefBoxTitle() 
+    local boxTitleID = SL:GetValue("ACTOR_BOX_TITLE_ID", self._actorID)
+    if self._BoxTitle and self._BoxTitleID ~= boxTitleID then 
+        HUDHelp:RecycelFx(self._BoxTitle)
+        self._titleHeight = self._titleHeight - self._BoxTitleHeight - 0.01
+        self._BoxTitle = nil
+        self._BoxTitleHeight = 0
+        self._BoxTitleID = nil
+    end
+    if boxTitleID and boxTitleID ~= 0 and not self._BoxTitle then 
+        self._BoxTitleID = boxTitleID
+        boxTitleID = boxTitleID + 5099
+        --序列帧特效
+        self._BoxTitleHeight = SL:GetValue("ICON_HEIGHT_BY_ID", boxTitleID)
+        self._BoxTitle = HUDHelp:CreateFx(self._attachTitle, "BoxTitle_"..boxTitleID, 0, self._titleHeight + self._BoxTitleHeight / 2, boxTitleID)
+        self._titleHeight = self._titleHeight + self._BoxTitleHeight + 0.01
+    end
+end
+
+function HudPlayer:RefBoxTitleVisible() 
+    local isVisible = true
+    repeat
+        if SL:GetValue("ACTOR_IS_MAINPLAYER", self._actorID) then 
+            if not SL:GetValue("MY_BOX_TITLE_STATE", self._actorID) then
+                isVisible = false
+                break
+            end
+        else
+            if not SL:GetValue("OTHER_BOX_TITLE_STATE", self._actorID) then
+                isVisible = false
+                break
+            end
+        end
+        
+    until true
+    if self._BoxTitle then 
+        HUDHelp:SetFxVisible(self._BoxTitle, isVisible)
+    end
+end
+
+function HudPlayer:RefBoxTitleHeight() 
+    if self._BoxTitle then 
+        HUDHelp:SetFxPosition(self._BoxTitle, 0, self._titleHeight + self._BoxTitleHeight / 2, 0)
+        self._titleHeight = self._titleHeight + self._BoxTitleHeight + 0.01
+    end
+end
 return HudPlayer

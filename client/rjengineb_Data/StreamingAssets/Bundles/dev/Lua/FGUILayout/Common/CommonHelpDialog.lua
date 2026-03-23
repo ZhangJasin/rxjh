@@ -7,7 +7,7 @@ local btnUrl = "ui://zu7kdgtssb5ovoh"
 function CommonHelpDialog:Create()
 	self.super.Create(self)
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	self._strArr = {}
 	self._strArrLen = 0
 	self._handler_OnRichTextRenderer = handler(self, self.OnRichTextRenderer)

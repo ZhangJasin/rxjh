@@ -5,13 +5,10 @@ local IDX_NULL = 0
 local IDX_MISSION = 1
 local IDX_TEAM = 2
 
--- 添加数据层引用
-local MainAssistData = SL:RequireFile("FGUILayout/Main/MainAssistData")
-
 function MainAssist:Create()
 	self._ui = FGUI:ui_delegate(self.component)
     FGUI:setSortingOrder(self.component, FGUIDefine.MainOrder.Main)
-    
+
     self._index = IDX_NULL
     self._hideAssist = false
 
@@ -26,28 +23,18 @@ function MainAssist:Create()
         },
     }
 
-
     FGUI:GButton_setChangeStateOnClick(self._ui.Btn_mission, false)
     FGUI:GButton_setChangeStateOnClick(self._ui.Btn_team, false)
     FGUI:setOnClickEvent(self._ui.Btn_arrow, handler(self, self.OnSwitch))
     FGUI:setOnClickEvent(self._ui.Btn_mission, handler(self, self.ShowMission))
     FGUI:setOnClickEvent(self._ui.Btn_team, handler(self, self.ShowTeam))
 
-    -- 订阅数据层事件
-    self._subscriptions = {}
-    self._subscriptions.change_show = MainAssistData:Subscribe("change_show", handler(self, self.OnChangeShow))
-end
-
--- 处理数据层事件
-function MainAssist:OnChangeShow(isShow)
-    FGUI:setVisible(self._ui.Btn_arrow, isShow) 
-    FGUI:setVisible(self._ui.n28, isShow) 
+    FGUIFunction:AdaptNotch(self.component)
 end
 
 function MainAssist:Enter()
 	self:RegisterEvent()
 
-    self:InitAdapt()
 	self:ShowMission()
 
     SL:ComponentAttach(SLDefine.SUIComponentTable.MainRootAssist, self._ui.Node_attach)
@@ -70,26 +57,10 @@ function MainAssist:Destroy()
     end
     self._pageDatas = nil
     self._isDestroy = true
-
-    -- 取消订阅
-    if self._subscriptions then
-        for _, token in pairs(self._subscriptions) do
-            MainAssistData:Unsubscribe(token)
-        end
-        self._subscriptions = nil
-    end
 end
 
 
 --------------------------------------------------------
-
-function MainAssist:InitAdapt()
-    local screenW = SL:GetValue("SCREEN_WIDTH")
-    local screenH = SL:GetValue("SCREEN_HEIGHT")
-    local safeL, safeR, safeB, safeT = SL:GetValue("SCREEN_SAFE_AREA_RATIO")
-    FGUI:setSize(self.component, screenW - safeR - safeL, screenH - safeB - safeT)
-    FGUI:setPosition(self.component, safeL, safeT)
-end
 
 function MainAssist:OnShow()
     self:ChangeHideStatus(false)
@@ -154,14 +125,6 @@ function MainAssist:PageOpen(index)
     local pageData = self._pageDatas[self._index]
     if not pageData then return end
     local pageObj = pageData.obj
-    -- 同步流程
-    -- if not pageObj then
-    --     pageObj = FGUI:CreateObject(self._ui.Node_Content, "Main", pageData.objName, true)
-    --     pageData.obj = pageObj
-    -- end
-    -- FGUI:setVisible(pageObj.component, true)
-    -- pageObj:Enter()
-
     -- 异步流程
     if not pageObj then
         if pageData.loading then return end

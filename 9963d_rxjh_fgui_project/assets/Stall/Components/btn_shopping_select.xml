@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="56,56" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n4_kpju" name="n4" src="ptxukvpi" fileName="Images/shopping_cart_select_bg.png" xy="0,0"/>
+    <image id="n5_kpju" name="n5" src="ptxukvpj" fileName="Images/shopping_cart_select_icon.png" xy="4,5">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+  </displayList>
+  <Button mode="Check"/>
+</component>

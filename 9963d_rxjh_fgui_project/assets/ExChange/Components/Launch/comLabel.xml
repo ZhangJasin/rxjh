@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="277,32">
+  <displayList>
+    <image id="n33_qop5" name="bg" src="qop5r" fileName="Images/img_input_di.png" xy="0,0" size="277,32">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n55_qop5" name="label" xy="1,1" size="124,29" fontSize="20" color="#b0c9b6" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="1111111111111111111"/>
+    <text id="n57_qop5" name="text" xy="125,1" size="120,29" group="n59_stn1" fontSize="20" color="#b0c9b6" align="right" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="暂无成交"/>
+    <component id="n58_qop5" name="icon_money" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="245,-1" size="32,32" group="n59_stn1" aspect="true"/>
+    <group id="n59_stn1" name="n59" xy="125,-1" size="152,32" advanced="true" layout="hz" excludeInvisibles="true">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </group>
+  </displayList>
+</component>

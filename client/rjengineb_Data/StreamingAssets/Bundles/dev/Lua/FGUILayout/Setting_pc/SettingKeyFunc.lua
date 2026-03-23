@@ -59,9 +59,7 @@ SettingKeyFunc.PressFunc = {
     [Type.QUICK8] = function() PCGameMain.DoQuickUse(8) end,
     [Type.QUICK9] = function() PCGameMain.DoQuickUse(9) end,
     [Type.QUICK10] = function() PCGameMain.DoQuickUse(10) end,
-    [Type.SPLIT_ITEM] = function()
-        SL:Print("物品拆分Press")
-    end,
+    [Type.SPLIT_ITEM] = function() end,
     [Type.MOVE_UP] = function()
         movdDir.y = movdDir.y - 1
         UpdateMoveDir()
@@ -87,12 +85,19 @@ SettingKeyFunc.PressFunc = {
     [Type.AUCTION] = function()
         FGUIFunction:SwitchPanel("Auction_pc", "PCAuctionRootPanel")
     end,
+    [Type.BAG_SMALL] = function()
+        FGUI:Open("Bag_pc","PCEquipBar",nil,FGUI_LAYER.NORMAL,{fullScreen = true})
+    end,
+    [Type.STATUS_SMALL]=function()
+        FGUI:Open("Bag_pc","PCBarRootPanel",nil,FGUI_LAYER.NORMAL,{fullScreen = true})
+    end,
+    [Type.EXCHANGE]=function()
+        FGUI:Open("ExChange_pc","PCExChangeRootPanel",nil,FGUI_LAYER.NORMAL,{fullScreen = true})
+    end
 }
 
 SettingKeyFunc.ReleaseFunc = {
-    [Type.SPLIT_ITEM] = function()
-        SL:Print("物品拆分Release")
-    end,
+    [Type.SPLIT_ITEM] = function() end,
     [Type.MOVE_UP] = function()
         movdDir.y = movdDir.y + 1
         UpdateMoveDir()

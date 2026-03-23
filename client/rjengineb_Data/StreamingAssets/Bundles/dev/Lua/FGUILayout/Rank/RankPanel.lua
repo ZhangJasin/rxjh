@@ -29,7 +29,7 @@ local VIEW_INDEX = 4
 
 function RankPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	self:InitData()
 	self:InitEvent()
 	FGUI:setOnClickEvent(self._ui.btn_close, function()
@@ -102,7 +102,8 @@ function RankPanel:InitEvent()
 			FGUI:GTextField_setText(text_normal, menu.Name)
 			FGUI:GTextField_setText(text_select, menu.Name)
 
-			FGUI:addOnClickMultipleEvent(childCell, function()
+			FGUI:addOnClickMultipleEvent(childCell, function(eventData)
+				FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 				FGUI:GButton_setSelected(parentCell, true)
 
 				self:SelectGroup(i)
@@ -135,6 +136,7 @@ function RankPanel:InitEvent()
     FGUI:GList_setNumItems(self._ui.list_title, #self._rankInfo)
 
 	-- rank 
+ 	FGUI:GList_setVirtual(self._ui.list_rank)
 	FGUI:GList_itemRenderer(self._ui.list_rank, handler(self, self.ItemRendererRank))
     FGUI:GList_addOnClickItemEvent(self._ui.list_rank, handler(self, self.OnClickItemRank))
 end
@@ -207,7 +209,9 @@ function RankPanel:ItemRendererType(idx, item)
     FGUI:GTextField_setText(text_select, data.name)
 end
 
-function RankPanel:OnClickItemType(context)
+function RankPanel:OnClickItemType(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	local idx = FGUI:GList_getSelectedIndex(self._ui.list_type)
     FGUI:GList_setSelectedIndex(self._ui.list_type, idx)
 
@@ -359,7 +363,9 @@ function RankPanel:ItemRendererRank(idx, item)
     FGUI:GList_setNumItems(list_value, #self._rankInfo)
 end
 
-function RankPanel:OnClickItemRank(context)
+function RankPanel:OnClickItemRank(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+	
 	local selectIdx = FGUI:GList_getSelectedIndex(self._ui.list_rank) + 1
 	local rankData = self._rankList[selectIdx]
 	if rankData then 

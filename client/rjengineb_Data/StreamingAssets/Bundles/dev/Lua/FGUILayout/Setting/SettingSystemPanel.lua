@@ -95,13 +95,10 @@ function SettingSystemPanel:Init_PolicyUI()
         showICP = true
         FGUI:GRichTextField_setText(self._ui.icp_desc, string.format(GET_STRING(80000305), icpFilingDesc))
 
-        -- local btnICPWidth = FGUI:getWidth(self._ui.btnICP)
         local icpDescWidth = FGUI:GRichTextField_getTextWidth(self._ui.icp_desc)
-        -- FGUI:setPositionX(self._ui.btnICP, icpDescWidth + btnICPWidth / 2)
     end
 
     FGUI:setVisible(self._ui.icp_desc, showICP == true)
-    -- FGUI:setVisible(self._ui.btnICP, showICP == true)
 end
 
 function SettingSystemPanel:InitEvent()
@@ -155,13 +152,14 @@ function SettingSystemPanel:Init_Quality()
     self:Refresh_Quality()
 end
 
-function SettingSystemPanel:OnClickQualityBtn(context)
-    local childIdx = FGUI:GetChildIndex(self._ui_system.quality_list, context.data)
+function SettingSystemPanel:OnClickQualityBtn(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local childIdx = FGUI:GetChildIndex(self._ui_system.quality_list, eventData.data)
 	local index = FGUI:GList_childIndexToItemIndex(self._ui_system.quality_list, childIdx) + 1
     local handler = self.qualityHandler[index]
     local quality = handler.quality
     if SL:GetValue("SETTING_QUALITY") == quality then return end
-    local reload=global.ConstantConfig["ScreenReload"] and global.ConstantConfig["ScreenReload"] ~= 0
     SL:SetValue("SETTING_QUALITY", quality)
     self:Refresh_Quality()
     self:Refresh_PlayerCount()
@@ -186,7 +184,9 @@ function SettingSystemPanel:Init_HighFrameRate()
     FGUI:GButton_setSelected(self._ui_system.switch_high_frame, isHighFrame)
 end
 
-function SettingSystemPanel:OnSwitchHighFrame()
+function SettingSystemPanel:OnSwitchHighFrame(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     local isHighFrame = FGUI:GButton_getSelected(self._ui_system.switch_high_frame)
     if isHighFrame == SL:GetValue("SETTING_HIGH_FRAME_RATE") then
         return
@@ -214,7 +214,9 @@ function SettingSystemPanel:Init_VSyncEnable()
     FGUI:GButton_setSelected(self._ui_system.switch_vsync_count, vSyncEnable)
 end
 
-function SettingSystemPanel:OnSwitchVSyncEnable()
+function SettingSystemPanel:OnSwitchVSyncEnable(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     local vSyncEnable = FGUI:GButton_getSelected(self._ui_system.switch_vsync_count)
     if vSyncEnable == SL:GetValue("SETTING_VSYNC_ENABLE") then
         return
@@ -228,7 +230,9 @@ function SettingSystemPanel:Init_AutoECO()
     FGUI:GButton_setSelected(self._ui_system.switch_ECO, enable)
 end
 
-function SettingSystemPanel:OnSwitchAutoECO()
+function SettingSystemPanel:OnSwitchAutoECO(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     local enable = FGUI:GButton_getSelected(self._ui_system.switch_ECO)
     if enable == SL:GetValue("SETTING_AUTO_ECO") then
         return
@@ -267,8 +271,10 @@ function SettingSystemPanel:Refresh_AASetting()
     FGUI:GButton_setSelected(self._ui_system.switch_aasetting, enable)
 end
 
-function SettingSystemPanel:OnAASettingChanged(context)
-    local enable = FGUI:GButton_getSelected(context.sender)
+function SettingSystemPanel:OnAASettingChanged(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local enable = FGUI:GButton_getSelected(eventData.sender)
     SL:SetValue("SETTING_PIPELINE_ANITI", enable)
 end
 
@@ -287,8 +293,10 @@ function SettingSystemPanel:Refresh_MsaaQuality()
     FGUI:GComboBox_setSelectedIndex(self._ui_system.comboBox_msaaQuality, level)
 end
 
-function SettingSystemPanel:OnMsaaQualityChanged(context)
-    local level = FGUI:GComboBox_getSelectedIndex(context.sender)
+function SettingSystemPanel:OnMsaaQualityChanged(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local level = FGUI:GComboBox_getSelectedIndex(eventData.sender)
     if SL:GetValue("SETTING_MSAA_QUALITY") == level then
         return
     end
@@ -305,7 +313,9 @@ function SettingSystemPanel:Refresh_Fog()
     FGUI:GButton_setSelected(self._ui_system.switch_fog, enable)
 end
 
-function SettingSystemPanel:OnFogChanged(context)
+function SettingSystemPanel:OnFogChanged(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     local enable = FGUI:GButton_getSelected(self._ui_system.switch_fog)
     SL:SetValue("SETTING_FOG", enable)
 end

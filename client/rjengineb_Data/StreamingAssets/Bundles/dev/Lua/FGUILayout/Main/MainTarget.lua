@@ -1,6 +1,5 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local MainTarget = class("MainTarget", BaseFGUILayout)
-local FuncDockUtil = requireFGUILayout("FuncDock/FuncDockUtil")
 
 function MainTarget:Create()
 	self._ui = FGUI:ui_delegate(FGUI:GetChild(self.component, "Target"))
@@ -105,11 +104,12 @@ function MainTarget:UpdateTargetInfo()
             Level = SL:GetValue("ACTOR_LEVEL", targetID),
             GuildName = SL:GetValue("ACTOR_GUILD_NAME",targetID),
             targetId = targetID,
-            TipsType = isTeamMember and SL:GetValue("DOCKTYPE_NENUM").Func_Team or SL:GetValue("DOCKTYPE_NENUM").Func_Near_Player,
             FrameID = SL:GetValue("ACTOR_AVATAR_FRAME",targetID)
         }
 
         local clickCallback = function()
+            local isTeamMember = SL:GetValue("TEAM_IS_MEMBER", targetID)
+            data.TipsType = isTeamMember and SL:GetValue("DOCKTYPE_NENUM").Func_Team or SL:GetValue("DOCKTYPE_NENUM").Func_Near_Player
             FGUIFunction:OpenFuncDockTips(data)
         end
 
@@ -125,7 +125,7 @@ function MainTarget:UpdateTargetNameInfo()
     local targetID = self._targetID
     local level = 0
     local name
-
+    
     if SL:GetValue("ACTOR_IS_PLAYER", targetID) then
         name = FGUIFunction:GetServerName(SL:GetValue("ACTOR_NAME", targetID)) or ""
         level = SL:GetValue("ACTOR_LEVEL", targetID) or 0
@@ -134,16 +134,9 @@ function MainTarget:UpdateTargetNameInfo()
         local typeIndex = SL:GetValue("ACTOR_TYPE_INDEX", targetID)
         level = SL:GetValue("MONSTER_LEVEL", typeIndex)
     end
-    print("***********************************",SL:GetValue("ACTOR_IS_PET",targetID))
-    if SL:GetValue("ACTOR_IS_PET",targetID) then
-        --看的是宠物，隐藏宠物对应等级
-        FGUI:setVisible(self._ui.Text_level,false)
-    else
-        FGUI:GTextField_setText(self._ui.Text_level, "Lv:" .. level)
-        FGUI:setVisible(self._ui.Text_level,true)
-    end
-    print("***********************************")
-    FGUIFunction:ScrollText_setString(self._ui.Label_name, name, 1, 0)
+    
+    FGUI:GTextField_setText(self._ui.Text_level, "Lv:" .. level)
+    FGUI:GTextField_setText(self._ui.Text_name, name)
 end
 
 function MainTarget:UpdateTargetOwner()

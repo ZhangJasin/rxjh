@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="676,432" opaque="false" designImage="ui://dak5wnw9xzvri">
   <displayList>
-    <component id="n30_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="-1,0" size="676,432">
+    <component id="n30_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="0,0" size="676,432">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <image id="n15_hkm9" name="n15" src="sna94t" fileName="Images/heiDI.png" xy="23,62" size="310,309">

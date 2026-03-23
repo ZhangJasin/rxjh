@@ -132,7 +132,8 @@ function PCTeamSettingPanel:OnClickApply(context)
 	self._autoValue = idx
 end
 
-function PCTeamSettingPanel:OnClickBtnReset()
+function PCTeamSettingPanel:OnClickBtnReset(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 	self:ResetSettingData()
 	self:UpdataSettingUI()
 	SL:ShowSystemTips(GET_STRING(40010044))
@@ -145,7 +146,8 @@ local function formatnumber(sNum)
 	result = result:reverse():gsub("^,", "")
 	return result
 end 
-function PCTeamSettingPanel:OnClickBtnSave()
+function PCTeamSettingPanel:OnClickBtnSave(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 	local teamName = FGUI:GTextField_getText(self._ui.input_name) or ""
     local levelMin = tonumber(FGUI:GTextField_getText(self._ui.input_min)) or 1
     local levelMax = tonumber(FGUI:GTextField_getText(self._ui.input_max)) or 100

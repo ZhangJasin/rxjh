@@ -10,7 +10,7 @@
     <text id="n3_tgh8" name="n3" xy="636,61" size="52,34" group="n57_ighb" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="上架"/>
     <image id="n56_qzpn" name="n56" src="qzpnvnx" fileName="Images/img_item_frame.png" xy="467,104" group="n57_ighb"/>
     <component id="n44_g6sw" name="item" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="667,173" pivot="0.5,0.5" anchor="true" size="60,60" group="n57_ighb"/>
-    <text id="n5_tgh8" name="text_product_name" xy="668,232" pivot="0.5,0.5" anchor="true" size="92,32" group="n57_ighb" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="物品名字"/>
+    <text id="n5_tgh8" name="text_product_name" xy="668,232" pivot="0.5,0.5" anchor="true" size="370,32" group="n57_ighb" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="物品名字"/>
     <text id="n6_tgh8" name="n6" xy="466,273" size="84,29" group="n14_tgh8" fontSize="20" color="#b0c9b6" align="center" text="出售数量"/>
     <component id="n12_tgh8" name="btn_count_edit" src="tgh8m" fileName="Components/btn_input_edit.xml" xy="623,270" size="143,36" group="n14_tgh8"/>
     <text id="n13_tgh8" name="text_count" xy="625,270" size="139,34" group="n14_tgh8" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="35">

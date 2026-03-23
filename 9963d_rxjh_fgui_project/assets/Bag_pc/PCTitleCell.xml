@@ -42,7 +42,7 @@
     <component id="n23_qrgs" name="btn_pin" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="268,0" size="56,26">
       <gearText controller="isPin" pages="1" values="置顶" default="取消置顶"/>
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Button title="取消置顶" titleColor="#fae2e0" titleFontSize="11" icon="ui://brz7yunlqrgs5s"/>
+      <Button title="取消置顶" titleColor="#fae2e0" titleFontSize="12" icon="ui://brz7yunlqrgs5s"/>
     </component>
   </displayList>
 </component>

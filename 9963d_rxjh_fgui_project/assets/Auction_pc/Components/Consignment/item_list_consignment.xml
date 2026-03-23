@@ -1,39 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="648,42">
+<component size="648,60" bgColor="#383838">
   <displayList>
-    <image id="n68_tmr6" name="img_bg" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,0" size="648,42">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <image id="n68_tmr6" name="img_bg" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,0" size="648,60">
+      <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n59_q8ir" name="text_item_name" xy="54,11" size="88,19" fontSize="12" color="#f1ffeb" singleLine="true" text="卓越的帕西的黑"/>
-    <component id="n67_q8ir" name="btn_down" src="oxr77" fileName="Components/btn_JingJia.xml" xy="540,7">
+    <text id="n59_q8ir" name="text_item_name" xy="54,20" size="88,19" fontSize="12" color="#f1ffeb" vAlign="middle" singleLine="true" text="卓越的帕西的黑"/>
+    <component id="n67_q8ir" name="btn_down" src="oxr77" fileName="Components/btn_JingJia.xml" xy="540,16">
       <relation target="" sidePair="center-center,middle-middle"/>
       <Button title="下架" titleColor="#fff000" titleFontSize="12"/>
     </component>
-    <component id="n72_usy1" name="item_node" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="11,5" size="32,32" aspect="true">
+    <component id="n72_usy1" name="item_node" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="11,14" size="32,32" aspect="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <text id="n65_q8ir" name="status_jp" xy="447,2" size="52,19" group="n73_kc3n" fontSize="12" color="#979797" align="center" vAlign="middle" singleLine="true" text="无人竞拍">
+    <text id="n65_q8ir" name="status_jp" xy="442,11" size="52,19" group="n73_kc3n" fontSize="12" color="#979797" align="center" vAlign="middle" singleLine="true" text="无人竞拍">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n66_q8ir" name="text_time" xy="447,21" size="52,19" group="n73_kc3n" fontSize="12" color="#ffff00" align="center" singleLine="true" autoClearText="true" text="23:26:52">
+    <text id="n66_q8ir" name="text_time" xy="442,30" size="52,19" group="n73_kc3n" fontSize="12" color="#ffff00" align="center" singleLine="true" autoClearText="true" text="23:26:52">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <group id="n73_kc3n" name="n73" xy="447,2" size="52,38" advanced="true">
+    <group id="n73_kc3n" name="n73" xy="442,11" size="52,38" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <text id="n64_q8ir" name="text_price_once" xy="357,11" size="32,19" group="n74_kc3n" fontSize="12" color="#f1ffeb" singleLine="true" text="9999"/>
-    <component id="n70_usy1" name="item_money2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="338,11" size="19,19" group="n74_kc3n" aspect="true">
+    <text id="n76_hyt2" name="n76" xy="192,10" size="55,19" fontSize="12" color="#00ff00" text="竞拍价格:"/>
+    <text id="n77_hyt2" name="n77" xy="204,30" size="43,19" fontSize="12" color="#ffff00" text="一口价:"/>
+    <text id="n64_q8ir" name="text_price_once" xy="267,30" size="136,19" fontSize="12" color="#f1ffeb" autoSize="none" singleLine="true" autoClearText="true" text="9999"/>
+    <text id="n63_q8ir" name="text_price_jp" xy="267,10" size="136,19" fontSize="12" color="#f1ffeb" autoSize="none" singleLine="true" autoClearText="true" text="9999"/>
+    <component id="n70_usy1" name="item_money2" src="emvc3" fileName="Icons/CommonItem.xml" pkg="qa9a7rit" xy="248,30" size="19,19" aspect="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <group id="n74_kc3n" name="n74" xy="338,11" size="50,19" advanced="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </group>
-    <text id="n63_q8ir" name="text_price_jp" xy="236,11" size="32,19" group="n75_kc3n" fontSize="12" color="#f1ffeb" singleLine="true" text="9999"/>
-    <component id="n69_usy1" name="item_money1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="217,11" size="19,19" group="n75_kc3n" aspect="true">
+    <component id="n69_usy1" name="item_money1" src="emvc3" fileName="Icons/CommonItem.xml" pkg="qa9a7rit" xy="248,10" size="19,19" aspect="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <group id="n75_kc3n" name="n75" xy="217,11" size="50,19" advanced="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </group>
   </displayList>
 </component>

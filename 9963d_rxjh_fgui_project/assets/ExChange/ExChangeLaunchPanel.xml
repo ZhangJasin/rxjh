@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1000,600" pivot="0.5,0.5" anchor="true">
+  <displayList>
+    <list id="n14_qop5" name="list_bag" xy="751,6" size="241,550" layout="flow_hz" overflow="scroll" defaultItem="ui://ajuz4mddqop5n">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n0_qop5" name="di_top" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="9,7" size="740,50" group="n10_qop5">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_qop5" name="fengexian1" src="cozzf" fileName="Images/split(1).png" xy="307,11" size="0,42" group="n10_qop5"/>
+    <image id="n2_qop5" name="fengexian3" src="cozzf" fileName="Images/split(1).png" xy="455,11" size="0,42" group="n10_qop5"/>
+    <image id="n4_qop5" name="fengexian5" src="cozzf" fileName="Images/split(1).png" xy="656,11" size="0,42" group="n10_qop5"/>
+    <text id="n5_qop5" name="label_name" xy="129,17" size="110,29" group="n10_qop5" fontSize="20" color="#d9f9d5" align="center" autoSize="none" text="物品信息"/>
+    <text id="n6_qop5" name="label_price" xy="340,17" size="110,29" group="n10_qop5" fontSize="20" color="#d9f9d5" align="center" autoSize="none" text="出售价格"/>
+    <text id="n7_qop5" name="label_launch_time" xy="527,17" size="110,29" group="n10_qop5" fontSize="20" color="#d9f9d5" align="center" autoSize="none" text="上架时间"/>
+    <text id="n8_qop5" name="label_get_back" xy="671,17" size="70,29" group="n10_qop5" fontSize="20" color="#d9f9d5" align="center" autoSize="none" text="取回&#xA;"/>
+    <group id="n10_qop5" name="panel_top" xy="9,7" size="740,50" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n17_qop5" name="bg_list" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="7,58" size="744,502">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n11_qop5" name="list_my_launch" xy="9,60" size="740,495" overflow="scroll" lineGap="1" defaultItem="ui://ajuz4mddqop5l" align="center">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n13_qop5" name="text_launch_count" xy="10,564" size="253,29" fontSize="20" color="#ffffff" vAlign="middle" autoSize="none" strokeColor="#000000" text="可上架数量:5/30">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n15_qop5" name="text_bag_count" xy="753,564" size="133,29" fontSize="20" color="#ffffff" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="55/160">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n16_qop5" name="btn_refresh" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="912,562" size="80,32">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="刷新" titleColor="#fff000" titleFontSize="16" icon="ui://st7dgeqqxd9tkvp2" selectedIcon="ui://st7dgeqqxd9tkvp2"/>
+    </component>
+    <component id="n18_fts2" name="noItemtip" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="183,164">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label title="暂无记录"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="8kmmve26">
+  <resources>
+    <folder id="/ReadEnable/" name="ReadEnable" path="/" atlas="alone_npot"/>
+    <component id="qxa10" name="helmet_color_slider_grip.xml" path="/Components/"/>
+    <image id="qxa11" name="helmetcolor_slider_btn.png" path="/Images/"/>
+    <component id="qxa12" name="helmet_color_slider.xml" path="/Components/"/>
+    <image id="qxa13" name="helmetcolor_slider_bg.png" path="/Images/"/>
+    <component id="qxa14" name="color_select_panel.xml" path="/Components/"/>
+    <image id="qxa15" name="helmetcolor_color.png" path="/ReadEnable/"/>
+    <component id="qxa17" name="PCHelmetColorPanel.xml" path="/" exported="true"/>
+    <image id="qxa1vld" name="helmetcolor_model_bg.png" path="/Images/"/>
+    <image id="if77vle" name="helmetcolor_color_frame.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

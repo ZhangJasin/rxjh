@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="154,22" extention="Slider">
+  <displayList>
+    <graph id="n3_tdbp" name="ori_color" xy="0,0" size="154,22" type="rect" lineSize="2" lineColor="#ff9d9558" fillColor="#ff000000" corner="3">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <loader id="n0_tdbp" name="target_color" xy="2,2" size="150,18" url="ui://8kmmve26qxa13" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <graph id="n1_tdbp" name="bar" xy="23,2" size="129,18" visible="false" type="rect" lineSize="0" fillColor="#ff3399ff"/>
+    <component id="n2_tdbp" name="grip" src="qxa10" fileName="Components/helmet_color_slider_grip.xml" xy="128,-2" size="26,26">
+      <relation target="n1_tdbp" sidePair="right-right"/>
+    </component>
+  </displayList>
+  <Slider/>
+</component>

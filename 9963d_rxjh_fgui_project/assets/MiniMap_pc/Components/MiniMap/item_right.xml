@@ -10,9 +10,10 @@
       <gearDisplay controller="button" pages="1,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <richtext id="n4_nouy" name="title" xy="10,17" pivot="0,0.5" anchor="true" size="79,20" fontSize="12" color="#ffffff" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="野猫">
+    <component id="n4_nouy" name="name" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="10,17" pivot="0,0.5" anchor="true" size="79,20">
       <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
-    </richtext>
+      <Label title="野猫" titleColor="#ffffff" titleFontSize="12"/>
+    </component>
     <richtext id="n5_oot3" name="level" xy="89,9" size="34,19" fontSize="12" color="#ffda60" align="right" vAlign="middle" ubb="true" singleLine="true" text="Lv.56">
       <relation target="" sidePair="right-right"/>
     </richtext>

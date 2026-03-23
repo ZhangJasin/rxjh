@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="373,90" extention="Button">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_ptxu" name="n0" src="swfdkvpq" fileName="Images/shopping_bg.png" xy="19,0"/>
+    <image id="n1_ptxu" name="n22" src="swfdkvpr" fileName="Images/shopping_select_0.png" xy="0,25"/>
+    <image id="n24_mcl5" name="icon_select" src="swfdkvpt" fileName="Images/shopping_select_1.png" xy="3,29">
+      <gearDisplay controller="button" pages="3,5"/>
+    </image>
+    <component id="n2_ptxu" name="item" src="emvc3" fileName="Icons/CommonItem.xml" pkg="qa9a7rit" xy="48,9" size="44,44"/>
+    <text id="n3_ptxu" name="text_owner_name" xy="96,7" size="124,19" fontSize="12" color="#ffcc00" text="店主：玩家名字七个字"/>
+    <text id="n4_ptxu" name="text_item_name" xy="96,25" size="134,19" fontSize="12" color="#fcf1bf" autoSize="none" text="道具：道具名字七个字"/>
+    <text id="n5_ptxu" name="n5" xy="234,24" size="55,20" fontSize="12" color="#a4d452" autoSize="none" text="销售总量"/>
+    <image id="n6_ptxu" name="n6" src="hfk85" fileName="Images/inputField_bg_9.png" xy="289,25" size="74,19"/>
+    <text id="n8_ptxu" name="text_total_count" xy="290,24" size="72,19" fontSize="12" color="#7cc3b3" align="center" vAlign="middle" autoSize="none" text="9999999"/>
+    <component id="n7_ptxu" name="btn_delete" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="358,0" size="14,14">
+      <Button icon="ui://3wc7qwagswfdkvpu"/>
+    </component>
+    <text id="n9_ptxu" name="n9" xy="96,45" size="29,19" fontSize="12" color="#a4d452" autoSize="none" text="单价"/>
+    <image id="n10_ptxu" name="n10" src="hfk85" fileName="Images/inputField_bg_9.png" xy="125,45" size="107,19"/>
+    <text id="n11_ptxu" name="text_price" xy="125,45" size="75,19" fontSize="12" color="#7cc3b3" align="center" vAlign="middle" autoSize="none" text="9999999"/>
+    <text id="n12_ptxu" name="text_price_money_name" xy="199,45" size="32,19" fontSize="12" color="#7cc3b3" align="center" vAlign="middle" autoSize="none" text="元宝"/>
+    <text id="n13_ptxu" name="n13" xy="235,45" size="54,19" fontSize="12" color="#a4d452" autoSize="none" text="购买数量"/>
+    <image id="n14_ptxu" name="n14" src="hfk85" fileName="Images/inputField_bg_9.png" xy="289,46" size="51,16"/>
+    <text id="n15_ptxu" name="text_buy_count" xy="289,44" size="50,19" fontSize="12" color="#7cc3b3" align="center" vAlign="middle" autoSize="none" singleLine="true" text="99999" input="true" maxLength="5"/>
+    <component id="n17_ptxu" name="btn_count_max" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="340,47" size="25,14">
+      <Button icon="ui://qa9a7ritemvce"/>
+    </component>
+    <text id="n19_ptxu" name="n19" xy="235,63" size="33,19" fontSize="12" color="#f1ffeb" autoSize="none" text="总价:"/>
+    <image id="n20_ptxu" name="n20" src="hfk85" fileName="Images/inputField_bg_9.png" xy="267,62" size="97,21"/>
+    <text id="n21_ptxu" name="text_total_price" xy="268,63" size="58,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="9999999"/>
+    <text id="n22_ptxu" name="text_total_price_money_name" xy="326,63" size="36,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="元宝"/>
+    <text id="n23_mcl5" name="text_fail_tip" xy="48,63" size="181,19" fontSize="12" color="#ff0000" autoSize="none" text="闭店时间:"/>
+    <component id="n25_my1v" name="btn_owner_info" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="222,10" size="16,14">
+      <relation target="n3_ptxu" sidePair="left-right"/>
+      <Button icon="ui://3wc7qwagqbyp17"/>
+    </component>
+  </displayList>
+  <Button mode="Check"/>
+</component>

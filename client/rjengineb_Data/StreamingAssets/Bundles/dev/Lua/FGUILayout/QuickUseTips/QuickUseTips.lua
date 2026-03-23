@@ -79,7 +79,7 @@ function QuickUseTips:Refresh(data)
         equipPos = SL:GetValue("EQUIP_POSLIST_BY_STDMODE", self._itemData.StdMode)
     end
 
-    -- 是否重复
+    -- 是否重复(道具和非左右手装备 去重)
     for _, v in pairs(self._itemPool._data) do
         if data.ID == v.ID then
             if not equipPos or (equipPos and #equipPos == 1) then 
@@ -99,7 +99,7 @@ function QuickUseTips:Refresh(data)
     end
 end
 
-local extData = {itemTipData = {from = ItemFrom.BAG, hideButtons = true}, doubleClickCallback = false}
+local extData = {itemTipData = {from = ItemFrom.BAG, hideButtons = true}}
 function QuickUseTips:UpdateItem(itemData)
     if not itemData then
         return
@@ -130,6 +130,13 @@ function QuickUseTips:UpdateItem(itemData)
         FGUI:GTextField_setText(self._ui.text_title, GET_STRING(60013004))
         FGUI:GButton_setTitle(self._ui.btn_equip, GET_STRING(60013002))
     end
+
+    -- checkbox 
+    local isSel = FGUIFunction:GetQuickUseItemShow(itemData.ID)
+    FGUI:GButton_setSelected(self._ui.check_show, isSel)
+    local repeatSwitch = SL:GetValue("SETTING_QUICKWINDOW_NOT_REPEATED_SHOW")
+    FGUI:setVisible(self._ui.check_show, not repeatSwitch)
+    FGUI:setVisible(self._ui.text_no, not repeatSwitch)
 end
 
 function QuickUseTips:TipsTick()
@@ -150,7 +157,7 @@ end
 function QuickUseTips:OnClickIsShow(context)
     local isSel = FGUI:GButton_getSelected(context.sender)
     local itemID = self._itemData.ID
-    SL:SetQuickUseItemShow(itemID, isSel)
+    FGUIFunction:SetQuickUseItemShow(itemID, isSel)
 end
 
 return QuickUseTips

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <controller name="page_member" pages="0,,1," selected="0"/>
+  <displayList>
+    <component id="n93_qgy3" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432" group="n97_qgy3"/>
+    <image id="n79_zah9" name="n85" src="gl5637" fileName="Images/item_title_bg.png" xy="186,214" size="650,34" group="n97_qgy3"/>
+    <image id="n94_qgy3" name="n94" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="184,213" size="653,376" group="n97_qgy3"/>
+    <image id="n84_zah9" name="n86" src="gl563b" fileName="Images/split_line.png" xy="508,217" size="1,30" group="n97_qgy3"/>
+    <text id="n85_zah9" name="n87" xy="332,221" size="32,22" group="n97_qgy3" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" text="时间"/>
+    <text id="n86_zah9" name="n88" xy="670,231" pivot="0.5,0.5" anchor="true" size="32,22" group="n97_qgy3" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" text="事件"/>
+    <list id="n78_zah9" name="list_event" xy="187,251" size="650,334" group="n97_qgy3" layout="flow_hz" overflow="scroll" defaultItem="ui://0xwve836gl562t" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n98_120c2" name="text_empty_tip" src="iwlbkvq9" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="385,316" group="n97_qgy3">
+      <Label title="暂无事件"/>
+    </component>
+    <group id="n97_qgy3" name="n97" xy="174,168" size="676,432" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n96_qgy3" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

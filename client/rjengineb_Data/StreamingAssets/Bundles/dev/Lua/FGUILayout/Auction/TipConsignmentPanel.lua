@@ -6,7 +6,7 @@ local ItemMoney = SL:RequireFile("FGUILayout/Item/ItemMoney")
 -- 拍卖行寄售页面
 function TipConsignmentPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:SetCloseUIWhenClickOutside(self)
 
     self:InitData()
     self:GetAllFGuiData()
@@ -195,20 +195,27 @@ function TipConsignmentPanel:RefreshLeftPanelInfo()
     self._cur_selected_item =  ItemUtil:ItemShow_Create(itemData,self.node_curSelected,{OverLap = data.BagData.OverLap})
     self._cur_jishou_count = 1
     self:RefreshJiShouCount()
-    self._cfgPaiMaiData = SL:GetValue("PAIMAI_CONFIG",data.ItemData.nPaimaiConfig)
+    self._cfgPaiMaiData = SL:GetValue("PAIMAI_CONFIG",data.ItemData.nPaimaiConfig)[1]
     if self._cfgPaiMaiData then
         self._cur_jishou_diJia = self._cfgPaiMaiData.nPrice
         self._cur_once_price = self._cfgPaiMaiData.nPrice
         -- 最低寄售底价
         if self._cfgPaiMaiData.nPriceLimit then
             self._min_JiShouDIJia = self._cfgPaiMaiData.nPrice - self._cfgPaiMaiData.nPriceLimit
-            self._max_JiShouDIJia = self._cfgPaiMaiData.nPrice + self._cfgPaiMaiData.nPriceLimit
         else
             self._min_JiShouDIJia = 1
+        end
+
+        -- 最高寄售底价
+        if self._cfgPaiMaiData.nPriceLimitMax then
+            self._max_JiShouDIJia = self._cfgPaiMaiData.nPrice + self._cfgPaiMaiData.nPriceLimitMax
+        else
             self._max_JiShouDIJia = nil
         end
-        self._cur_costType = self._cfgPaiMaiData.nCurrency
-        local moneyData = SL:GetValue("ITEM_DATA",self._cfgPaiMaiData.nCurrency)
+        
+        self._cur_costType = tonumber(self._cfgPaiMaiData.nCurrency)
+        self._cur_jishou_diJia = self._min_JiShouDIJia
+        local moneyData = SL:GetValue("ITEM_DATA",self._cur_costType)
         self:RefreshMoneyItemShow(moneyData)
         self:RefreshTipMinJiShou(moneyData)
         self:RefreshJiShouDiJia()
@@ -404,7 +411,9 @@ end
 -- 上一次出价
 function TipConsignmentPanel:BtnLastChuJia()
     local data = self._can_paiMai_data[self._selected_item_index]
-    FGUI:Open("Auction","TipLastJiShouPanel",data)
+    if data then
+        FGUI:Open("Auction","TipLastJiShouPanel",data)
+    end
 end
 
 -- 减一数量

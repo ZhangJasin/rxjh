@@ -4,7 +4,7 @@ local GuildApplySetting = class("GuildApplySetting", BaseFGUILayout)
 function GuildApplySetting:Create()
 	self.super.Create(self)
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	self._curLimitLevel = 1
 	self._autoLevel = nil --自动申请需要的等级
 	FGUI:setOnClickEvent(self._ui.btn_close, handler(self, self.Close))
@@ -41,7 +41,9 @@ function GuildApplySetting:OnLevelInputChange()
 end
 
 -- 点击确认
-function GuildApplySetting:OnClickYesButton()
+function GuildApplySetting:OnClickYesButton(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	-- 自动申请设置
 	local isAutoApprove = FGUI:GButton_getSelected(self._ui.btn_auto_approve)
 	local curAutoApprove = SL:GetValue("GUILD_AUTO_APPROVE_APPLY")

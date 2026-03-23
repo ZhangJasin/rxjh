@@ -56,7 +56,9 @@
       <item/>
       <item/>
     </list>
-    <text id="n26_xdur" name="text_no_guild" xy="281,282" size="403,131" group="n17_zah9" fontSize="24" color="#f7f0ca" align="center" vAlign="middle" autoSize="none" text="暂无门派"/>
+    <component id="n26_xdur" name="text_no_guild" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="292,235" size="371,280" group="n17_zah9">
+      <Label title="暂无门派"/>
+    </component>
     <image id="n33_u0jf" name="n33" src="m9rdvou" fileName="Images/join_list_title_bg.png" xy="185,118" size="601,50" group="n17_zah9"/>
     <text id="n34_u0jf" name="n34" xy="237,125" pivot="0.5,0.5" size="92,32" group="n17_zah9" fontSize="22" color="#ddfdd9" align="center" vAlign="middle" singleLine="true" text="门派名称"/>
     <text id="n35_u0jf" name="n35" xy="413,125" pivot="0.5,0.5" size="48,32" group="n17_zah9" fontSize="22" color="#ddfdd9" align="center" vAlign="middle" singleLine="true" text="等级"/>

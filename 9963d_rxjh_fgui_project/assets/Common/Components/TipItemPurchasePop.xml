@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="292,190" opaque="false">
+  <controller name="btn_pos" pages="0,居中,1,靠右" selected="0"/>
   <displayList>
     <image id="n0_qtq9" name="n0" src="kcff5vp4" fileName="Images/tips_bg.png" xy="0,0" size="292,190"/>
     <image id="n19_qtq9" name="bg_input" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="146,34" pivot="0.5,0.5" anchor="true" size="122,34">
@@ -20,7 +21,9 @@
     <component id="n10_qtq9" name="btn_m_max" src="bf0gv5s" fileName="common/btn_AddOrMinus.xml" pkg="st7dgeqq" xy="246,15" controller="btnkInd,4">
       <relation target="n0_qtq9" sidePair="right-right,top-top"/>
     </component>
-    <component id="n12_qtq9" name="btn_purchase" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="97,142" size="94,38">
+    <component id="n21_i6y9" name="btn_custom" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="19,161" pivot="0,0.5" anchor="true" size="94,38" visible="false"/>
+    <component id="n12_qtq9" name="btn_purchase" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="102,142" size="94,38">
+      <gearXY controller="btn_pos" pages="0" values="102,142" default="179,142"/>
       <Button title="购买" titleFontSize="22"/>
     </component>
     <text id="n14_qtq9" name="text_buy_count" xy="11,57" size="94,26" fontSize="18" color="#cdd3d9" text="购买次数："/>

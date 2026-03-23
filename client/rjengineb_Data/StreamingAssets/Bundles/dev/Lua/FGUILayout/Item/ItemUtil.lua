@@ -1,18 +1,17 @@
 local ItemUtil = {}
-local BaseFGUILayout = requireFGUI("BaseFGUILayout")
-local enterbag_cfg   =  require("game_config/cfgcsv/enterbag")
-local AttScore_cfg   =  require("game_config/AttScore")
-local _PetEquipPos = {           -- 宠物装备位置
-    ["灵兽利爪"]  = 0,    
-    ["灵兽护具"]  = 1,    
-    ["灵兽系带"]  = 2,    
-    ["灵兽兽环"]  = 3,    
-}
+
+ItemUtil.SORTING_ORDER_BG          = 1 -- 背景
+ItemUtil.SORTING_ORDER_ICON        = 2 -- 图标
+ItemUtil.SORTING_ORDER_ARROW       = 3 -- 箭头
+ItemUtil.SORTING_ORDER_BIND        = 4 -- 锁图标
+ItemUtil.SORTING_ORDER_COUNT       = 5 -- 数量文本
+ItemUtil.SORTING_ORDER_SUBSCRIPT   = 6 -- subScript文本
+ItemUtil.SORTING_ORDER_STAR        = 7 -- 星级文本
+ItemUtil.SORTING_ORDER_LIMIT_TIME  = 8 -- 限时标志
+
 -- 服务器道具属性变更，在这里变更服务器属性为前端需要的属性
 local cjson = require("cjson")
 local itemconfig0 = {}
-local WuXunPanlData = SL:RequireFile("FGUILayout/A_WuXun/WuXunPanlData")
-
 function ItemUtil:FixItemDataByServerRawData(item, onEquip)
     if not item or not next(item) then
         print("=======================================")
@@ -24,7 +23,7 @@ function ItemUtil:FixItemDataByServerRawData(item, onEquip)
     itemconfig0 = ItemConfigProxy:GetItemConfigByIndex(item.Index)
     if not itemconfig0 or next(itemconfig0) == nil then
         print("=======================================")
-        print("no this item: my index is " .. item.Index)
+        print("no this item: my index is " .. tostring(item.Index))
         print("=======================================")
     end
 
@@ -64,6 +63,7 @@ function ItemUtil:FixItemDataByServerRawData(item, onEquip)
         itemconfig.ExtendInfo = item.Src
     end 
 
+    -- vtime + rtime = 截止时间
     itemconfig.startTime = item.vtime       -- 获取时的时间戳
     itemconfig.totalTime = item.rtime       -- 剩余时间
     itemconfig.Bind = item.bind             -- 绑定
@@ -99,12 +99,13 @@ function ItemUtil:FixItemDataByServerRawData(item, onEquip)
 
     return itemconfig
 end
+
 function ItemUtil:RefreshItemUIByData(fgui_obj,itemData)
     if not fgui_obj or not itemData then
         SL:PrintError("itemData or fgui_obj is nil")
         return
     end
-    attrConfigs = SL:GetValue("ATTR_CONFIGS")
+
     -- 数量显示
     ItemUtil:SetItemCountByItemData(fgui_obj,itemData)
     -- 更新品级
@@ -113,157 +114,10 @@ function ItemUtil:RefreshItemUIByData(fgui_obj,itemData)
     ItemUtil:SetItemIconByItemID(fgui_obj,itemData.ID)
     -- 更新镶嵌层数
     ItemUtil:SetItemStarByItemData(fgui_obj, itemData)
-    --自定义属性
-    local isequip = SL:GetValue("BAG_ITEM_IS_EQUIP", itemData, itemData.ID)
-    --print("isequip="..tostring(isequip))
-    -- dump(itemDate,"itemDate")
-    if isequip or _PetEquipPos[itemDate and itemDate.StdName or ""] then
-        ItemUtil:SetEquipQHByItemData(fgui_obj,itemData)  --装备强化
-    else
-        ItemUtil:ClearHCDShow(fgui_obj)
-    end
-end
--- 清理合成点显示
-function ItemUtil:ClearHCDShow(commonItem)
-    -- 合成点显示配置
-    if HCDObj_cfd[commonItem] and #HCDObj_cfd[commonItem] > 0 then
-        for i=1,#HCDObj_cfd[commonItem] do
-            FGUI:RemoveFromParent(HCDObj_cfd[commonItem][i], true)
-        end
-        HCDObj_cfd[commonItem] = nil
-    end
-end
--- 通过道具强化等级
-function ItemUtil:SetEquipQHByItemData(commonItem,itemData)
-    -- dump(commonItem)
-    local ItemFrom = SL:GetValue("ITEMFROMUI_ENUM")
-    local str = ""
-    local stoneNum = itemData.SyntheticStone or 0
-    local extraParam = {}
-    -- 清理合成点显示
-    ItemUtil:ClearHCDShow(commonItem)
-    if stoneNum and stoneNum > 0 then    -- 未配置仅显示镶嵌属性
-        local yhcnum = 0
-        if itemData.Values then
-            for j = 1, #itemData.Values do
-                if itemData.Values[j]['Id'] == 2 then
-                    yhcnum = itemData.Values[j]['Value']
-                    break
-                end
-            end
-        end
-        -- print("yhcnum="..yhcnum.."  stoneNum="..stoneNum,"  name="..itemData.Name)
-        if yhcnum > 0 then
-            HCDObj_cfd[commonItem] = {}
-            for i = 1, stoneNum do
-                local itemChannel
-                if i <= yhcnum then
-                    itemChannel = FGUI:CreateObject(commonItem, "A_Right", "dian_liang",false)
-                else
-                    itemChannel = FGUI:CreateObject(commonItem, "A_Right", "dian_hui",false)
-                end
-                local x,y = 3+(i-1)%4*13,3+math.floor((i-1)/4)*13
-                FGUI:setPositionX(itemChannel, x)
-                FGUI:setPositionY(itemChannel, y) 
-                --local sy = FGUI:GetChildIndex(commonItem, itemChannel)
-                table.insert(HCDObj_cfd[commonItem],itemChannel)
-                --FGUI:RemoveFromParent(itemChannel, true)
-            end
-            
-        end
-    end
-    -- 武勋装备鉴定蒙版配置  WuXunJianDing_cfd
-    if WuXunJianDing_cfd[commonItem] then
-        FGUI:RemoveFromParent(WuXunJianDing_cfd[commonItem], true)
-        WuXunJianDing_cfd[commonItem] = nil
-    end
-    -- 获取武勋装备锤炼等级 是否为武勋装备
-    local wxcllv,iswxequip = 0,false
-    -- dump(itemData)
-    -- 判断是否为武勋装备
-    if itemData.StdMode and itemData.StdMode >= 71 and itemData.StdMode <= 74 then
-        local WuXun_ChuiLianList = WuXunPanlData.Get()._state.WuXun_ChuiLianList or {}
-        local itemConfig = itemData.ExAbil
-        local isJianDIng = false
-        if itemConfig and itemConfig.abil[1] then
-            isJianDIng = true
-        end
-        --  print("isJianDIng="..tostring(isJianDIng))
-        -- 未鉴定 显示鉴定蒙版
-        if not isJianDIng then
-            -- 创建鉴定蒙版
-            local itemChannel = FGUI:CreateObject(commonItem, "A_Right", "wuxun_jian_ding",false)
-            WuXunJianDing_cfd[commonItem] = itemChannel
-            local w,h = FGUI:getSize(commonItem)
-            FGUI:setScale(itemChannel, w/72, h/72)
-        end
-        -- 是否穿戴中 武勋锤炼等级只有穿戴中的装备有
-        if itemData.Where and itemData.Where > -1 then  
-             
-            wxcllv = WuXun_ChuiLianList[""..itemData.Where] or 0
-        end
-        iswxequip = true
-    end
-
-    --print("通过道具强化等级=")
-    if not commonItem then
-        SL:PrintError("传参错误","SetItemIconByItemID commonItem is nil")
-        return
-    end
-    local Text_star = FGUI:GetChild(commonItem,"Text_star")
-    if not Text_star then
-        SL:PrintError("FGUI组件缺失错误","SetItemCountByItemData Text_star is not exist")
-        return
-    end
-    local text_count = FGUI:GetChild(commonItem,"Text_count")
-    if not text_count then
-        SL:PrintError("FGUI组件缺失错误","SetItemCountByItemData Text_count is not exist")
-        return
-    end
-    local Text_Subscript = FGUI:GetChild(commonItem,"Text_Subscript")
-    if not Text_Subscript then
-        SL:PrintError("FGUI组件缺失错误","SetItemCountByItemData Text_Subscript is not exist")
-        return
-    end
-
-    if not itemData.Values then
-        --SL:PrintError("FGUI组件缺失错误","SetItemCountByItemData itemData.Values is not exist")
-        return
-    end
-
-    
-    -- 装备强化等级  武勋铸阶等级
-    local qhlv,wxzjLv = 0,0
-    -- dump(itemData.Values)
-    for i=1,#itemData.Values do
-        if itemData.Values[i]['Id'] == 0 then
-            qhlv = itemData.Values[i]['Value']
-        elseif itemData.Values[i]['Id'] == 2 then
-            wxzjLv = itemData.Values[i]['Value']
-        end
-    end
-    -- 是武勋装备时
-    FGUI:GTextField_setText(Text_star,"")
-    if wxcllv > 0 then
-        FGUI:setVisible(Text_star,true)
-        FGUI:GTextField_setAlign(Text_star,0)
-        FGUI:GTextField_setColor(Text_star,"#00ff00")
-        FGUI:GTextField_setFontSize(Text_star,20)
-        FGUI:GTextField_setText(Text_star,"+"..wxcllv) 
-    end
-    if qhlv > 0 then
-        FGUI:setVisible(text_count,true)
-        FGUI:GTextField_setAlign(text_count,0)
-        FGUI:GTextField_setColor(text_count,"#00ff00")
-        FGUI:GTextField_setFontSize(text_count,20)
-        FGUI:GTextField_setText(text_count,"+"..qhlv)  
-    elseif wxzjLv > 0 and iswxequip then 
-        FGUI:setVisible(text_count,true)
-        FGUI:GTextField_setAlign(text_count,0)
-        FGUI:GTextField_setColor(text_count,"#00ff00")
-        FGUI:GTextField_setFontSize(text_count,20)
-        FGUI:GTextField_setText(text_count,wxzjLv.."阶")  
-    end
+	-- 设置特效
+    ItemUtil:SetEffectByItemID(fgui_obj,itemData.ID)
+    -- PC模式下焦点进出tip显示
+    ItemUtil:SetTipItemInAndOut(fgui_obj,itemData)
 end
 
 -- 通过ItemID设置头像ICON
@@ -314,11 +168,32 @@ function ItemUtil:UpdateItemGradeByItemID(component, itemID)
     if itemData.Grade then
         local ctrl_control = FGUI:getController(component,"grade")
         ctrl_control.selectedIndex = itemData.Grade
-        -- FGUI:GLoader_setUrl(gloader_imgGrade, string.format("ui://public/icon_item%s", itemData.Grade))
     end
 
     FGUI:setVisible(gloader_imgGrade, itemData.Grade)
 end
+
+-- pc模式下设置焦点进出tip
+function ItemUtil:SetTipItemInAndOut(component,itemData)
+    if not component then
+        return
+    end
+
+    if not itemData or not next(itemData) then
+        return
+    end
+
+    if SL:GetValue("IS_PC_OPER_MODE") then
+        FGUI:setOnRollOverEvent(component,function()
+            FGUIFunction:OpenItemTips({itemData = itemData,hideButtons = true})
+        end)
+
+        FGUI:setOnRollOutEvent(component,function()
+            FGUIFunction:CloseItemTips()
+        end)
+    end
+end
+
 
 -- 添加点击事件
 function ItemUtil:AddItemClick(component,itemData,clickCallBack)
@@ -341,7 +216,7 @@ function ItemUtil:UpdateItemCount(GTextField_count, count)
         FGUI:GTextField_setText(GTextField_count, 0)
         return
     end
-
+    
     FGUI:GTextField_setText(GTextField_count, SL:GetSimpleNumber(count))
 end
 
@@ -426,7 +301,7 @@ function ItemUtil:SetItemCountByItemData(commonItem,itemData)
         SL:PrintError("传参错误","SetItemCountByItemData itemData is nil")
         return
     end
-    
+
     --数量显示
     if itemData.isShowCount then
         if itemData.OverLap then         --用服务器字段名
@@ -448,26 +323,10 @@ function ItemUtil:SetItemStarByItemData(commonItem, itemData)
         SL:PrintError("传参错误","SetItemStarByItemData itemData is nil")
         return
     end
-    --dump(itemData.ExAbil.abil)
-    local isPercent = false  -- 是否是百分比
-    if enterbag_cfg[itemData.ID] and enterbag_cfg[itemData.ID]['RightSubscript'] == 1 and itemData.ExAbil and itemData.ExAbil.abil and string.find(itemData.ExAbil.abil[1]['t'],"鉴定属性") then
-        local attId     = itemData.ExAbil.abil[1]['v'][1][2] or 0     -- 属性ID 绑定表
-		local percent   = AttScore_cfg[attId]['Type'] or 0   -- 是否是百分比
-		local value     = itemData.ExAbil.abil[1]['v'][1][3]
-		if percent == 1 then
-			value = string.format("%.1f", value / 100) * 10 / 10
-            isPercent = true
-		end
-        itemData.Star = value
-    end
+
     -- 层数
     if itemData.Star then
-        if isPercent then
-            FGUI:GTextField_setText(starText, string.format("+%s%%", itemData.Star))
-        else
-            FGUI:GTextField_setText(starText, string.format("+%s", itemData.Star))
-        end
-        FGUI:GTextField_setColor(starText, "#00ff00") 
+        FGUI:GTextField_setText(starText, string.format("+%s", itemData.Star))
     end
     FGUI:setVisible(starText, itemData.Star and itemData.Star > 0 and true or false)
 end
@@ -504,7 +363,7 @@ function ItemUtil:SetItemIconByItemID(commonItem,itemID)
     else
         SL:PrintError(" SetItemIconByItemID itemData.ID = [".. itemData.ID .."] Looks is nil")
     end
-
+    
     FGUI:GLoader_setUrl(image_icon, path)
 end
 
@@ -535,8 +394,8 @@ function ItemUtil:SetItemSubScriptByItemID(commonItem,itemID)
         FGUI:setVisible(Text_Subscript,false)
         return
     end
-    -- 对齐方式#颜色#字体大小#文字内容
-    local arr = string.split(itemData.Subscript,"#")
+    -- 对齐方式移动端颜色#字体大小#文字内容&
+    local arr = string.split(itemData.Subscript,"&")
     if string.isNullOrEmpty(arr) then
         FGUI:setVisible(Text_Subscript,false)
         return
@@ -547,17 +406,27 @@ function ItemUtil:SetItemSubScriptByItemID(commonItem,itemID)
         return
     end
 
-    if #arr ~= 4 then
-        FGUI:setVisible(Text_Subscript,false)
-        return
+    if not SL:GetValue("IS_PC_OPER_MODE") then
+        if arr[1] then
+            local arrContent = string.split(arr[1],"#")
+            -- 0:Left 1:Center 2:Right
+            FGUI:GTextField_setAlign(Text_Subscript,tonumber(arrContent[1]))
+            FGUI:GTextField_setColor(Text_Subscript,"#"..arrContent[2])
+            FGUI:GTextField_setFontSize(Text_Subscript,tonumber(arrContent[3]))
+            FGUI:GTextField_setText(Text_Subscript,arrContent[4] or "")
+            FGUI:setVisible(Text_Subscript,true)
+        end
+    else
+        if arr[2] then
+            local arrContent = string.split(arr[2],"#")
+            -- 0:Left 1:Center 2:Right
+            FGUI:GTextField_setAlign(Text_Subscript,tonumber(arrContent[1]))
+            FGUI:GTextField_setColor(Text_Subscript,"#"..arrContent[2])
+            FGUI:GTextField_setFontSize(Text_Subscript,tonumber(arrContent[3]))
+            FGUI:GTextField_setText(Text_Subscript,arrContent[4] or "")
+            FGUI:setVisible(Text_Subscript,true)
+        end
     end
-
-    -- 0:Left 1:Center 2:Right
-    FGUI:GTextField_setAlign(Text_Subscript,tonumber(arr[1]))
-    FGUI:GTextField_setColor(Text_Subscript,"#"..arr[2])
-    FGUI:GTextField_setFontSize(Text_Subscript,tonumber(arr[3]))
-    FGUI:GTextField_setText(Text_Subscript,arr[4] or "")
-    FGUI:setVisible(Text_Subscript,true)
 end
 
 
@@ -577,7 +446,7 @@ function ItemUtil:SetCountTextFontColor(commonItem,colorRGB)
         SL:PrintError("FGUI错误","找不到名为Text_count组件")
         return
     end
-    
+
     FGUI:GTextField_setColor(Text_count,colorRGB)
 end
 
@@ -649,6 +518,7 @@ function ItemUtil:SetEquipArrowType(commonEquip, arrowType)
 end
 --------------------------------------commonEquip------------------------------------------------
 
+--[[
 --extData参数
 --extData.hideTip 是否隐藏默认的Tip
 --extData.itemTipData table类型，对应ItemTips.ShowTip传入的参数
@@ -658,6 +528,7 @@ end
 --extData.CountOutlineColor 数量字体描边
 --extData.bgVisible 背景隐藏
 --extData.OverLap 道具数量
+--]]
 function ItemUtil:ItemShow_Create(itemData,parent,extData)
     local isEquip = SL:GetValue("BAG_ITEM_IS_EQUIP",itemData)
     local comName = isEquip and "CommonEquip" or "CommonItem"
@@ -670,12 +541,13 @@ function ItemUtil:ItemShow_Create(itemData,parent,extData)
         local w,h = FGUI:getSize(parent)
         FGUI:setSize(targetObj, w, h)
     end
-    
+
     item:UpdateUIByData(itemData,extData)
     return item
 end
 
 -- 通过itemID创建itemShow
+--[[
 --extData.hideTip 是否隐藏默认的Tip
 --extData.itemTipData table类型，对应ItemTips.ShowTip传入的参数
 --extData.clickCallback 单击事件回调
@@ -684,6 +556,7 @@ end
 --extData.CountOutlineColor 数量字体描边
 --extData.bgVisible 背景隐藏
 --extData.OverLap 道具数量
+--]]
 function ItemUtil:ItemShow_CreateEX(extData,parent)
     local itemData = SL:GetValue("ITEM_DATA",extData.ID)
     local isEquip = SL:GetValue("BAG_ITEM_IS_EQUIP",itemData)
@@ -895,6 +768,45 @@ function ItemUtil:GetItemFilterType(itemData)
     return realType
 end
 
+function ItemUtil:CheckShowPreviewModel(itemData)
+	local isShow = false
+	if not itemData then
+		return isShow
+	end
+	local groupId = itemData.TipsGroupId or 7
+    local groupCfg = SL:GetValue("ITEMTIPS_GROUP_CONFIG", groupId)
+    if groupCfg.Preview and groupCfg.Preview == 1 then
+		local featureData = SL:GetValue("FEATURE")
+		local modelID = itemData.Model
+		if not featureData or not modelID then
+			return isShow
+		end
+
+		local pos = SL:GetValue("EQUIP_POS_BY_STDMODE", itemData.StdMode)
+		if not pos then
+			return isShow
+		end
+
+		local appearPos = SL:GetValue("APPEAR_POS_BY_EQUIP_POS", pos)
+		if not appearPos or appearPos == -1 then
+			return isShow
+		end
+		
+		local sex = SL:GetValue("SEX")
+		local job = SL:GetValue("JOB")
+
+		local cSex = itemData.Gender or 0
+		-- 性别不同不显示预览
+		if sex ~= cSex then
+			return isShow
+		end
+
+		isShow = true
+	end
+
+	return isShow
+end
+
 local TIME_INTERVAL = 1.5
 function ItemUtil:SetLongPressOrClick(component,pressCall,longPressCall,TimeInterval)
     local touchBeginTime = 0
@@ -927,8 +839,8 @@ function ItemUtil:SetLongPressOrClick(component,pressCall,longPressCall,TimeInte
     local function endFunc(eventData)
         if SL:GetValue("TIME") - touchBeginTime < TimeInterval then
             if scheduleId then
-               SL:UnSchedule(scheduleId)
-               scheduleId = nil 
+                SL:UnSchedule(scheduleId)
+                scheduleId = nil 
             end
             if pressCall then
                 pressCall(eventData)
@@ -938,5 +850,222 @@ function ItemUtil:SetLongPressOrClick(component,pressCall,longPressCall,TimeInte
     FGUI:setOnTouchEvent(component, beginFunc, moveFunc, endFunc)
 end
 
+-- 初始化component的sortingOrder，可以通过改变SortingOrder改变组件层级
+function ItemUtil:InitSortingOrder(component)
+    if not component then
+        return
+    end
+
+    local Image_bg = FGUI:GetChild(component,"Image_bg")
+    if Image_bg then
+        FGUI:setSortingOrder(Image_bg,ItemUtil.SORTING_ORDER_BG)
+    end
+
+    local Image_icon = FGUI:GetChild(component,"Image_icon")
+    if Image_icon then
+        FGUI:setSortingOrder(Image_icon,ItemUtil.SORTING_ORDER_ICON)
+    end
+
+    local Image_arrow = FGUI:GetChild(component,"Image_arrow")
+    if Image_arrow then
+        FGUI:setSortingOrder(Image_arrow,ItemUtil.SORTING_ORDER_ARROW)
+    end
+
+    local Image_bind = FGUI:GetChild(component,"Image_bind")
+    if Image_bind then
+        FGUI:setSortingOrder(Image_bind,ItemUtil.SORTING_ORDER_BIND)
+    end
+
+    local Text_count = FGUI:GetChild(component,"Text_count")
+    if Text_count then
+        FGUI:setSortingOrder(Text_count,ItemUtil.SORTING_ORDER_COUNT)
+    end
+    
+    local Text_Subscript = FGUI:GetChild(component,"Text_Subscript")
+    if Text_Subscript then
+        FGUI:setSortingOrder(Text_Subscript,ItemUtil.SORTING_ORDER_SUBSCRIPT)
+    end
+
+    local Text_star = FGUI:GetChild(component,"Text_star")
+    if Text_star then
+        FGUI:setSortingOrder(Text_star,ItemUtil.SORTING_ORDER_STAR)
+    end
+
+	SL:Print("设置层级")
+end
+
+
+ItemUtil.effectDictCache = {}                 
+function ItemUtil:SetEffectByItemID(component,itemID)
+    if ENABLE_PROFILER then
+        Profiler.BeginSample("SetEffectByItemID start")
+    end
+    local obj = nil 
+    if not component then
+        return obj
+    end
+	
+	local parentGuid = FGUI:GetID(component)
+	-- 先清理特效
+	ItemUtil:ClearDictEffectByItemComponent(parentGuid)
+    if not itemID then
+        return obj
+    end
+
+    if type(itemID) == "string" then
+        itemID = tonumber(itemID)
+    end
+	
+    local itemData = SL:GetValue("ITEM_DATA",itemID)
+    if string.isNullOrEmpty(itemData.bEffect) then
+        return obj
+    end
+
+    ItemUtil:InitSortingOrder(component)
+    
+	if ENABLE_PROFILER then
+        Profiler.EndSample()
+    end
+
+    if not component.onDispose then
+        FGUI:addOnDispose(component,function()
+            ItemUtil:ClearDictEffectByItemComponent(parentGuid)
+        end)
+    end
+
+    SL:Print("特效字段",itemData.bEffect)
+    if ENABLE_PROFILER then
+        Profiler.BeginSample("SetEffectByItemID 1")
+    end
+    local part = string.split(itemData.bEffect,"&")
+    --特效ID#模式#播放速度&X坐标#Y坐标#缩放比例&PC端X坐标#PC端Y坐标#PC端缩放比例
+    local paramPart1 = string.split(part[1],"#")
+    -- 特效ID#模式#播放速度
+    local sfxID = paramPart1[1]
+    local mode = tonumber(paramPart1[2])
+    local speed = paramPart1[3]
+    if ENABLE_PROFILER then
+        Profiler.EndSample()
+    end
+    if ENABLE_PROFILER then
+        Profiler.BeginSample("SetEffectByItemID GMovieClip_create")
+    end
+    
+    obj = FGUI:GMovieClip_create(component,sfxID)
+    if ENABLE_PROFILER then
+        Profiler.EndSample()
+    end
+    if ENABLE_PROFILER then
+        Profiler.BeginSample("SetEffectByItemID logic")
+    end
+    -- 设置特效组件锚点为正中心(0.5,0.5)
+    FGUI:setAnchorPoint(obj,0.5,0.5,true)
+    local paramPart2 = string.split(part[2],"#")
+    -- X坐标#Y坐标#缩放比例 移动端参数
+    local mobileOffsetX = tonumber(paramPart2[1])
+    local mobileOffsetY = tonumber(paramPart2[2])
+    local mobileScale = tonumber(paramPart2[3])
+
+    local paramPart3 = string.split(part[3],"#")
+    -- PC端X坐标#PC端Y坐标#PC端缩放比例
+    local pcOffsetX = tonumber(paramPart3[1])
+    local pcOffsetY = tonumber(paramPart3[2])
+    local pcScale = tonumber(paramPart3[3])
+    local width,height = FGUI:getSize(component)
+    -- 设置特效大小与父组件大小一样，可通过比例调整适配
+    -- FGUI:setSize(obj, width, height)
+    if SL:GetValue("IS_PC_OPER_MODE") then
+        local baseWidth = 44
+        local scale = width / baseWidth
+
+        FGUI:setScale(obj,pcScale * scale,pcScale * scale)
+        FGUI:setPosition(obj,width/2 + pcOffsetX,height/2 + pcOffsetY)
+    else
+        local baseWidth = 64
+        local scale = width / baseWidth
+        FGUI:setScale(obj,mobileScale * scale,mobileScale * scale)
+        FGUI:setPosition(obj,width/2 + mobileOffsetX,height/2 + mobileOffsetY)
+    end
+
+    -- 设置播放速度
+    FGUI:GMovieClip_setTimeScale(obj, speed)
+    -- 设置显示层级
+    local Image_icon = FGUI:GetChild(component,"Image_icon")
+    if Image_icon and obj then
+        local sortingOrder =  FGUI:getSortingOrder(Image_icon)
+		-- 设置层级
+        -- 修改显示层级
+		SL:Print("设置层级",sortingOrder)    
+        FGUI:setSortingOrder(obj,(mode == 1) and sortingOrder + 1 or sortingOrder - 1)
+    end
+
+    local data = {}
+    data.obj = obj
+    data.sfxID = sfxID
+    data.itemID = itemID
+    ItemUtil:SaveEffectDataToDict(parentGuid,data)
+    if ENABLE_PROFILER then
+        Profiler.EndSample()
+    end
+end
+
+
+-- 移除通过配置表bEffect字段添加的特效
+function ItemUtil:RemoveAllEffectOnItem(component)
+	if not component then
+		return
+	end 
+	
+	local parentGuid = FGUI:GetID(component)
+	if parentGuid then
+		ItemUtil:ClearDictEffectByItemComponent(parentGuid)
+	end
+end
+
+
+-- 存储特效
+function ItemUtil:SaveEffectDataToDict(parentGuid,data)
+    if not ItemUtil.effectDictCache then
+        return
+    end
+
+    if not ItemUtil.effectDictCache[parentGuid] then
+        ItemUtil.effectDictCache[parentGuid] = {}
+    end
+
+    table.insert(ItemUtil.effectDictCache[parentGuid],data)
+end
+
+
+-- parentGuid可以通过FGUI:GetID(component)获取
+function ItemUtil:ClearDictEffectByItemComponent(parentGuid)
+    if not parentGuid then
+        return
+    end
+
+    if not ItemUtil.effectDictCache or not next(ItemUtil.effectDictCache) then
+        return
+    end
+
+    if not ItemUtil.effectDictCache[parentGuid] then
+        return
+    end
+
+    for k,v in pairs(ItemUtil.effectDictCache[parentGuid]) do
+        FGUI:RemoveFromParent(v.obj, true)
+        SL:Print("清理物品["..v.itemID.."]特效"..v.sfxID)
+        v = nil
+    end
+
+    ItemUtil.effectDictCache[parentGuid] = {}
+end
+
+
+function ItemUtil:ClearCache()
+    -- 清理item特效记录容器
+    for k,v in pairs(ItemUtil.effectDictCache) do
+        ItemUtil:ClearDictEffectByItemComponent(k)
+    end
+end
 
 return ItemUtil

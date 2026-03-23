@@ -3,7 +3,7 @@ local TipOncePricePanel = class("TipOncePricePanel", BaseFGUILayout)
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 function TipOncePricePanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:SetCloseUIWhenClickOutside(self)
     self:InitData()
     self:GetAllFGuiData()
     self:InitClickEvent()
@@ -47,11 +47,12 @@ function TipOncePricePanel:RefreshUI()
     self.itemShow = ItemUtil:ItemShow_Create(self.data.useritem,self.item_node)
     
     FGUI:GTextField_setText(self.text_name,itemData.Name)
-    FGUI:GTextField_setText(self.text_price,SL:GetThousandSepString(self.data.lastprice))
+	FGUIFunction:ScrollText_setString(self.text_price,SL:GetThousandSepString(self.data.lastprice),1,0)
 
     local moneyData = SL:GetValue("ITEM_DATA",self.data.type)
     ItemUtil:RefreshItemUIByData(self.icon_Money1,moneyData)
     ItemUtil:SetItemGradeVisible(self.icon_Money1,false)
+    ItemUtil:SetItemCountVisible(self.icon_Money1,false)
 end
 
 

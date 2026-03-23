@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,18">
+  <displayList>
+    <image id="n65_wms0" name="n65" src="hfk85" fileName="Images/inputField_bg_9.png" xy="0,0" size="100,18"/>
+    <text id="n66_wms0" name="text_money_name" xy="10,-1" size="33,19" fontSize="12" color="#ffffff" autoSize="none" text="元宝:"/>
+    <text id="n67_wms0" name="text_money_count" xy="40,-1" size="61,19" fontSize="12" color="#ffffff" autoSize="none" text="1000000"/>
+  </displayList>
+</component>

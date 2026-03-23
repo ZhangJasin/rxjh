@@ -21,18 +21,16 @@ function ChatPanel:Create()
 	self._itemDatas = {}
 	self._itemUI = {}
 	self._chatData = {}
-	self.shoutItemData = {}
-	self.selectShoutItem = -1
-
+	self._cellChache = {}
 	self.MsgLinkEventHandler = handler(self, self.MsgLinkEvent)
 	self.MsgSystemLinkEventHandler = handler(self, self.MsgSystemLinkEvent)
 
+	FGUIFunction:AdaptNotch(self.component)
 	self:InitView()
 	self:InitInput()
 end
 
 function ChatPanel:Enter(data)
-	FGUIFunction:AdaptNotch(self.component)
 	if not self.isShow then
 		self:OpenAnimation()
 	end
@@ -46,6 +44,7 @@ function ChatPanel:Enter(data)
 end
 
 function ChatPanel:Exit()
+	FGUI:GList_setNumItems(self._ui.ListView_cells, 0)
 	self:RemoveEvent()
 	local listNum = FGUI:GList_getNumItems(self._ui.ListView_notice)
 	if listNum > 0 then
@@ -109,6 +108,10 @@ function ChatPanel:ListViewCellsItemRenderer(idx, item)
 	local index = idx + 1
 	local data = self._chatData[index]
 	if not data then return end
+	local itemId = FGUI:GetID(item)
+	local curData = self._cellChache[itemId]
+	if curData == data then return end
+	self._cellChache[itemId] = data
 	self:onRefreshChatMsg(data, item)
 end
 
@@ -164,12 +167,7 @@ function ChatPanel:InitInput()
 		end
 		-- 存储到输入缓存
 		SL:SetValue("CHAT_INPUT_CACHE", input)
-		if channel == CHANNEL.Shout then
-			SL:RequestSendChatMsg(input, CHANNEL.ItemShout)
-		else
-			SL:RequestSendChatMsg(input, channel)
-		end
-
+		SL:RequestSendChatMsg(input, channel)
 	end)
 
 	FGUI:setOnClickEvent(self._ui.Button_pos, function ()
@@ -219,11 +217,6 @@ function ChatPanel:UpdateReceiveChannel()
 		FGUI:setVisible(self._ui.Node_forbid, false)
 		FGUI:setVisible(self._ui.Layout_send, true)
 	end
-	if channel == CHANNEL.Shout then
-		self:SelectShoutItem()
-	end
-
-	FGUI:setVisible(self._ui.Text_shout,  channel == CHANNEL.Shout)
 end
 
 function ChatPanel:onAddInput(str)
@@ -327,6 +320,7 @@ function ChatPanel:MsgLinkEvent(context)
         local route = mapData.route or 1
         local mapX = mapData.mapX
         local mapY = mapData.mapY
+		if route == 0 then route = 1 end
 		FGUIFunction:AutoMove(mapId, mapX, mapY, route)
     elseif data.MT == MSGTYPE.Equip then
         local itemData = data.Msg
@@ -338,20 +332,15 @@ function ChatPanel:MsgLinkEvent(context)
             local itemData =  SL:GetValue("ITEM_DATA", itemData.Index)
 			FGUIFunction:OpenItemTips({itemData = itemData, hideButtons = true})
         end
-		-- FGUIFunction:OpenItemTips({itemData = cItem,hideButtons = true })
 	elseif data.MT == MSGTYPE.Trade then
 		if SL:GetValue("STALL_IS_NEW_QUERY_TYPE") then
 			local userId = data.Msg.userId or ""
 			SL:RequestOpenShopByUserId(userId)
 		else
-			local shopName = ""
-            if type(data.Msg) == "string" then
-                shopName = data.Msg
-			else
-                shopName = data.Msg and data.Msg.shopName or ""
-            end
-            SL:RequestOpenShop(shopName)	
+			local shopName = data.Msg.shopName or ""
+			SL:RequestOpenShop(shopName)
 		end
+		
     else
         local param = data.param
 		if param and param.type == 1 then
@@ -379,15 +368,12 @@ function ChatPanel:RefreshPlayerMessageItem(data, item)
 	end
 
 	data.TipsType = SL:GetValue("DOCKTYPE_NENUM").Func_Player_Head
-	data.targetName = sendName
 	data.targetId = sendId
-	data.GuildName = SL:GetValue("ACTOR_GUILD_NAME",data.targetId) or ""
-	data.FrameID = data.PhotoframeID
 	-- 头像点击
 	local clickCallback = function()
 		-- 非本人查看
 		if not isSelf then
-			FGUIFunction:OpenFuncDockTips(data)
+			FGUIFunction:RequestPlayerDataAndSetTipType(data)
 		end
 	end
 
@@ -410,7 +396,12 @@ function ChatPanel:RefreshPlayerMessageItem(data, item)
 		local mapY = mapData.mapY
 		local route = mapData.route or 1
 		local posRGB = SL:GetColorByStyleId(218)
-		local msg = string.format("[U][color=%s][url=][%s-%s %s,%s][/url][/color][/U]", posRGB, mapName, route, mapX, mapY)
+		local msg
+		if route == 0 then--此地图无分线
+			msg = string.format("[U][color=%s][url=][%s %s,%s][/url][/color][/U]", posRGB, mapName, mapX, mapY)
+		else
+			msg = string.format("[U][color=%s][url=][%s-%s %s,%s][/url][/color][/U]", posRGB, mapName, route, mapX, mapY)
+		end
 		FGUI:GRichTextField_setText(richText, msg)
 	elseif data.MT == MSGTYPE.Equip then
 		local itemData = data.Msg
@@ -419,12 +410,7 @@ function ChatPanel:RefreshPlayerMessageItem(data, item)
 		local msg = string.format("[U][color=%s][url=][%s][/url][/color][/U]", color, name)
 		FGUI:GRichTextField_setText(richText, msg)
 	elseif data.MT == MSGTYPE.Trade then
-		local shopName = ""
-		if type(data.Msg) == "string" then
-			shopName = data.Msg
-		else
-			shopName = data.Msg and data.Msg.shopName or ""
-		end
+		local shopName = data.Msg.shopName or ""
 		local shopStr = SL:GetValue("I18N_STRING", 90010031)
 		local msg = string.format(shopStr, shopName)
 		FGUI:GRichTextField_setText(richText,msg)
@@ -641,17 +627,11 @@ function ChatPanel:InitChatEx()
 
 	FGUI:setOnClickEvent(self._ui.Button_emoji, handler(self, self.ShowChatEx, 1))
 	FGUI:setOnClickEvent(self._ui.Button_bag, handler(self, self.ShowChatEx, 2))
-	FGUI:setOnClickEvent(self._ui.Text_shout, handler(self, self.ShowChatEx, 3))
 	FGUI:setOnClickEvent(self._ui.MaskEx, handler(self, self.HideChatEx))
 
 	FGUI:GList_addOnClickItemEvent(self._ui.ListView_chatEx, handler(self, self.ChatExItemClickEvent))
 	FGUI:GList_itemRenderer(self._ui.ListView_chatEx, handler(self, self.ListViewChatExRenderer))
 	FGUI:GList_setVirtual(self._ui.ListView_chatEx)
-
-
-	FGUI:GList_itemRenderer(self._ui.ListView_shout, handler(self, self.ListViewShoutRenderer))
-	FGUI:GList_addOnClickItemEvent(self._ui.ListView_shout, handler(self, self.ListViewShoutClick))
-	self:InitShoutId()
 end
 
 function ChatPanel:SendChatItemMsg(itemData)
@@ -723,47 +703,12 @@ function ChatPanel:FillPackageItem(index, item)
 end
 
 
-function ChatPanel:ListViewShoutRenderer(idx, item)
-	local itemId = self.shoutItemData[idx + 1]
-	local itemName = SL:GetValue("ITEM_NAME", tonumber(itemId))
-	local itemCnt = SL:GetValue("ITEM_COUNT", tonumber(itemId))
-	local str = string.format("%s(%d)",itemName or "",itemCnt)
-	FGUI:GLoader_setUrl(FGUI:GetChild(item,"Icon"), "ui://Chat/shout_"..itemId)
-	FGUI:GTextField_setText(FGUI:GetChild(item,"Text"), str)
-end
-
-function ChatPanel:ListViewShoutClick(context)
-	local index = FGUI:GetChildIndex(self._ui.ListView_shout, context.data)
-	if index == self.selectShoutItem then
-		self.selectShoutItem = -1
-		FGUI:GList_clearSelection(self._ui.ListView_shout)
-	else
-		self.selectShoutItem = index
-	end
-end
-
 function ChatPanel:ListViewChatExRenderer(idx, item)
 	local index = idx + 1
 	if self._showChatEx == 1 then
 		self:FillEmojiItem(index, item)
 	elseif self._showChatEx == 2 then
 		self:FillPackageItem(index, item)
-	end
-end
-
-function ChatPanel:InitShoutId()
-	local disPlayItem = SL:GetValue("GAME_DATA", "SpeakerType")
-	local shouts = string.split(disPlayItem, "|")
-	self.shoutItemData = shouts
-end
-
-function ChatPanel:SelectShoutItem()
-	if self.selectShoutItem == 0 then
-		FGUI:GTextField_setText(self._ui.Text_shout, GET_STRING(40001136))
-	elseif self.selectShoutItem == 1 then
-		FGUI:GTextField_setText(self._ui.Text_shout, GET_STRING(40001137))
-	else
-		FGUI:GTextField_setText(self._ui.Text_shout, GET_STRING(40001138))
 	end
 end
 
@@ -778,15 +723,11 @@ function ChatPanel:ShowChatEx(index)
 	elseif index == 2 then
 		self.chatExItems = SL:GetValue("CHAT_SHOW_ITEMS")
 		FGUI:GList_setNumItems(self._ui.ListView_chatEx, #self.chatExItems)
-	elseif index == 3 then
-		FGUI:GList_setNumItems(self._ui.ListView_shout, #self.shoutItemData)
 	end
 end
 
 function ChatPanel:HideChatEx()
 	self._showChatEx = 0
-	SL:SetValue("SELECTED_SHOUT_ITEM", self.selectShoutItem )
-	self:SelectShoutItem()
 	if 	FGUI:Transition_getIsPlaying(self.chatExTrans) then
 		return
 	end

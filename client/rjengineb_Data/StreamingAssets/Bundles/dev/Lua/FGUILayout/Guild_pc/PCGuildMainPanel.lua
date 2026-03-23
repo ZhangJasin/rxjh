@@ -24,14 +24,12 @@ local img_flag_blue_big_url = isPC and "ui://0xwve836s4oo40" or "ui://tsu6gfnovd
 function PCGuildMainPanel:Create()
 	self.super.Create(self)
 	self._ui = FGUI:ui_delegate(self.component)
-	--FGUI:SetCloseUIWhenClickOutside(self)
 	FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 	self._membersData = nil
 	self._guildListData = nil
 	self.handler_onClickPageSwitchEvent = handler(self, self.OnClickPageSwitchItemEvent)
 	self.handler_showMemberPopup = handler(self, self.ShowMemberPopup)
 	self.handler_onMemberListRenderer = handler(self, self.OnMemberItemRenderer)
-	self.handler_onEventListRenderer = handler(self, self.OnEventItemRenderer)
 	self.handler_onGuildListRenderer = handler(self, self.OnGuildListRenderer)
 	self._oldNotice = nil --行会公告编辑之前内容
 	-- 成员操作弹出框
@@ -60,12 +58,15 @@ function PCGuildMainPanel:Create()
 	FGUI:setOnClickEvent(self._ui.check_owner, handler(self, self.OnChangeGuildListMode))
 	FGUI:setOnClickEvent(self._ui.notice_edit_yes, handler(self, self.ConfirmNoticeEdit))
 	FGUI:setOnClickEvent(self._ui.notice_edit_no, handler(self, self.CancelNoticeEdit))
+	FGUI:setOnClickEvent(self._ui.btn_event, handler(self, self.OpenGuildEventPanel))
 
-	FGUI:setOnClickEvent(self._ui.btn_donate_1, function ()
+	FGUI:setOnClickEvent(self._ui.btn_donate_1, function (eventData)
+    	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 		self:OnClickDonationButton(1)
 	end)
 
-	FGUI:setOnClickEvent(self._ui.btn_donate_2, function ()
+	FGUI:setOnClickEvent(self._ui.btn_donate_2, function (eventData)
+    	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 		self:OnClickDonationButton(2)
 	end)
 	
@@ -74,12 +75,9 @@ function PCGuildMainPanel:Create()
 	end)
 
 	FGUI:GList_setVirtual(self._ui.list_member)
-	FGUI:GList_setVirtual(self._ui.list_event)
 	FGUI:GList_itemRenderer(self._ui.list_member, self.handler_onMemberListRenderer)
-	FGUI:GList_itemRenderer(self._ui.list_event, self.handler_onEventListRenderer)
 	FGUI:GList_itemRenderer(self._ui.list_guild, self.handler_onGuildListRenderer)
 	FGUI:GList_addOnClickItemEvent(self._ui.list_page_switch, self.handler_onClickPageSwitchEvent)
-	FGUI:GList_addOnClickItemEvent(self._ui.list_menu, handler(self, self.OnClickTopToggle))
 	self:UpdateNoticeEditState(false)
 end
 
@@ -111,24 +109,14 @@ function PCGuildMainPanel:SelectPage(pageIdx)
 	if pageIdx == 0 then
 		SL:RequestGuildInfo()
 	elseif pageIdx == 1 then
-		self:OnClickTopToggle()
+		FGUI:GList_setNumItems(self._ui.list_member, 0)
+		-- 成员
+		SL:RequestGuildMemberList()
 	elseif pageIdx == 2 then
 		self:OnChangeGuildListMode()
 	end
 end
 
--- 点击上边页签（成员、事件）
-function PCGuildMainPanel:OnClickTopToggle()
-	local selectIdx = FGUI:GList_getSelectedIndex(self._ui.list_menu)
-	if selectIdx == 0 then
-		FGUI:GList_setNumItems(self._ui.list_member, 0)
-		-- 成员
-		SL:RequestGuildMemberList()
-	elseif selectIdx == 1 then
-		-- 事件
-		SL:RequestQueryGuildEventList()
-	end
-end
 -----------------------------------主界面---------------------------------
 --begin
 -- 刷新主界面信息
@@ -310,52 +298,14 @@ function PCGuildMainPanel:OnMemberItemRenderer(idx, item)
 	FGUI:SetIntData(item, idx)
 end
 
+-- 打开门派事件
+function PCGuildMainPanel:OpenGuildEventPanel()
+	FGUI:Open("Guild_pc", "PCGuildEventPanel")
+end
+
 -- 打开申请列表
 function PCGuildMainPanel:OpenApplyList()
 	FGUI:Open("Guild_pc", "PCGuildApplyList")
-end
-
--- 刷新事件列表
-function PCGuildMainPanel:RefreshEventList(listData)
-	self._eventsData = listData
-	if not self._eventsData then
-		FGUI:GList_setNumItems(self._ui.list_event, 0)
-		return
-	end
-	self._eventsCount = #self._eventsData
-	FGUI:GList_setNumItems(self._ui.list_event, self._eventsCount)
-end
-
-function PCGuildMainPanel:OnEventItemRenderer(idx, item)
-	if not self._eventsData then return end
-	-- 倒叙显示，时间大的在前
-	local data = self._eventsData[idx + 1]
-	if not data then 
-		return
-	end
-	local configStr = SL:GetValue("EVENT_LIST_CONFIG_STRING", data.id)
-	local time = os.date("%Y-%m-%d %H:%M:%S", data.time)
-	local errorStr = nil
-	if not configStr then 
-		SL:release_print("EVENT_LIST_CONFIG_STRING is nil, id:".. data.id)
-		errorStr = "Error EventLog ID:" .. data.id
-	end
-
-	-- 计算%s数量
-	local count = 0
-	for _ in string.gmatch(configStr, "%%s") do
-		count = count + 1
-	end
-
-	if count > #data.params then
-		SL:release_print("EVENT_LIST_CONFIG_STRING params number error, id:".. data.id)
-		errorStr = "Error:" .. configStr
-	end
-
-	
-	FGUI:GTextField_setText(FGUI:GetChild(item, "text_time"), time)
-	local str = errorStr or string.format(configStr, table.unpack(data.params,1,count))
-	FGUI:GTextField_setText(FGUI:GetChild(item, "text_event"), str)
 end
 
 -- 刷新成员信息
@@ -419,7 +369,18 @@ function PCGuildMainPanel:OnRefreshGuildList(listData)
 	if not listData then return end
 	-- 按等级从高到低排序
 	listData = HashToSortArray(listData, function (a, b)
-		return a.Level > b.Level
+		-- 等级排序
+		if a.Level ~= b.Level then
+			return a.Level > b.Level
+		end
+
+		-- 人数排序
+		if a.Member ~= b.Member then
+			return a.Member > b.Member
+		end
+
+		-- 经验排序
+		return a.Exp > b.Exp
 	end)
 	self._guildListData = listData
 	FGUI:GList_setNumItems(self._ui.list_guild, #self._guildListData)
@@ -485,7 +446,6 @@ function PCGuildMainPanel:RegisterEvent()
 	SL:RegisterLUAEvent(LUA_EVENT_GUILD_MEMBER_LIST, "PCGuildMainPanel", handler(self, self.RefreshMemberList))
 	SL:RegisterLUAEvent(LUA_EVENT_GUILD_EDITOR_NOTICE_FAIL, "PCGuildMainPanel", handler(self, self.OnEditNoticeFail))
 	SL:RegisterLUAEvent(LUA_EVENT_GUILD_LIST, "PCGuildMainPanel", handler(self, self.OnRefreshGuildList))
-	SL:RequestGameActionLogAddListener(1, LUA_EVENT_GUILD_EVENT_LIST, "PCGuildMainPanel", handler(self, self.RefreshEventList))
 end
 
 function PCGuildMainPanel:RemoveEvent()
@@ -494,7 +454,6 @@ function PCGuildMainPanel:RemoveEvent()
 	SL:UnRegisterLUAEvent(LUA_EVENT_GUILD_MEMBER_LIST, "PCGuildMainPanel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_GUILD_EDITOR_NOTICE_FAIL, "PCGuildMainPanel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_GUILD_LIST, "PCGuildMainPanel")
-	SL:RequestGameActionLogRemoveListener(1, LUA_EVENT_GUILD_EVENT_LIST, "PCGuildMainPanel")
 end
 
 return PCGuildMainPanel

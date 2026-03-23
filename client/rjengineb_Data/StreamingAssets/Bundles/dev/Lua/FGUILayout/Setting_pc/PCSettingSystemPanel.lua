@@ -1,6 +1,17 @@
 local PCSettingPageBase = requireFGUILayout("Setting_pc/PCSettingPageBase")
 local PCSettingSystemPanel = class("PCSettingSystemPanel", PCSettingPageBase)
 
+local pcResolutionList = {
+    "800x600",
+    "1024x768",
+    "1334x750",
+    "1280x1024",
+    "1600x900",
+    "1600x1200",
+    "1680x1050",
+    "1920x1080"
+}
+
 function PCSettingSystemPanel:Enter()
     PCSettingSystemPanel.super.Enter(self)
     self._packageName = "Setting_pc"
@@ -46,6 +57,8 @@ function PCSettingSystemPanel:Enter()
     self:Init_AASetting()
 	self:Init_MsaaQuality()
     self:Init_RotateCameraOfLeftKey()
+    self:Init_FullscreenMode()
+    self:Init_ScreenResolution()
     self:Init_Fog()
     self:Init_PlayerCount()
     self:Init_CameraDistance()
@@ -70,9 +83,16 @@ end
 
 function PCSettingSystemPanel:InitData()
     self._ui_width_standard = 1024
-    self._max_ui_scale = math.max(1, SL:GetValue("SCREEN_REAL_WIDTH") / self._ui_width_standard)
-    self._max_ui_scale = math.round(self._max_ui_scale * 10)
-    self._max_ui_scale = self._max_ui_scale / 10
+
+    local deviceW = SL:GetValue("DEVICE_SCREEN_WIDTH")
+    local deviceH = SL:GetValue("DEVICE_SCREEN_HEIGHT")
+    for i = #pcResolutionList, 1, -1 do
+        local t = string.split(pcResolutionList[i], "x")
+        if tonumber(t[1]) > deviceW or tonumber(t[2]) > deviceH then
+            print("Remove:"..pcResolutionList[i])
+            table.remove(pcResolutionList, i)
+        end
+    end
 end
 
 function PCSettingSystemPanel:Init_PolicyUI()
@@ -101,13 +121,10 @@ function PCSettingSystemPanel:Init_PolicyUI()
         showICP = true
         FGUI:GRichTextField_setText(self._ui.icp_desc, string.format(GET_STRING(80000305), icpFilingDesc))
 
-        -- local btnICPWidth = FGUI:getWidth(self._ui.btnICP)
         local icpDescWidth = FGUI:GRichTextField_getTextWidth(self._ui.icp_desc)
-        -- FGUI:setPositionX(self._ui.btnICP, icpDescWidth + btnICPWidth / 2)
     end
 
     FGUI:setVisible(self._ui.icp_desc, showICP == true)
-    -- FGUI:setVisible(self._ui.btnICP, showICP == true)
 end
 
 function PCSettingSystemPanel:InitEvent()
@@ -138,7 +155,6 @@ function PCSettingSystemPanel:InitEvent()
     FGUI:addOnClickEvent(self._ui.btnBackToLogin, handler(self, self.OnClickBackToLoginBtn))
     FGUI:addOnClickEvent(self._ui.btnOutBlock, handler(self, self.OnClickDisengageBtn))
 
-    -- FGUI:addOnClickEvent(self._ui.btnICP, handler(self, self.OnClickICPBtn))
     FGUI:GRichTextField_addOnLinkClickEvent(self._ui.icp_desc, handler(self, self.OnClickICPBtn))
     if self._ui.btn_copy then
         FGUI:addOnClickEvent(self._ui.btn_copy, handler(self, self.CopyUserId))
@@ -165,13 +181,14 @@ function PCSettingSystemPanel:Init_Quality()
     self:Refresh_Quality()
 end
 
-function PCSettingSystemPanel:OnClickQualityBtn(context)
-    local childIdx = FGUI:GetChildIndex(self._ui_system.quality_list, context.data)
+function PCSettingSystemPanel:OnClickQualityBtn(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local childIdx = FGUI:GetChildIndex(self._ui_system.quality_list, eventData.data)
 	local index = FGUI:GList_childIndexToItemIndex(self._ui_system.quality_list, childIdx) + 1
     local handler = self.qualityHandler[index]
     local quality = handler.quality
     if SL:GetValue("SETTING_QUALITY") == quality then return end
-    local reload=global.ConstantConfig["ScreenReload"] and global.ConstantConfig["ScreenReload"] ~= 0
     SL:SetValue("SETTING_QUALITY", quality)
     self:Refresh_Quality()
     self:Refresh_PlayerCount()
@@ -196,7 +213,9 @@ function PCSettingSystemPanel:Init_HighFrameRate()
     FGUI:GButton_setSelected(self._ui_system.switch_high_frame, isHighFrame)
 end
 
-function PCSettingSystemPanel:OnSwitchHighFrame()
+function PCSettingSystemPanel:OnSwitchHighFrame(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     local isHighFrame = FGUI:GButton_getSelected(self._ui_system.switch_high_frame)
     if isHighFrame == SL:GetValue("SETTING_HIGH_FRAME_RATE") then
         return
@@ -224,7 +243,9 @@ function PCSettingSystemPanel:Init_VSyncEnable()
     FGUI:GButton_setSelected(self._ui_system.switch_vsync_count, vSyncEnable)
 end
 
-function PCSettingSystemPanel:OnSwitchVSyncEnable()
+function PCSettingSystemPanel:OnSwitchVSyncEnable(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     local vSyncEnable = FGUI:GButton_getSelected(self._ui_system.switch_vsync_count)
     if vSyncEnable == SL:GetValue("SETTING_VSYNC_ENABLE") then
         return
@@ -238,7 +259,9 @@ function PCSettingSystemPanel:Init_AutoECO()
     FGUI:GButton_setSelected(self._ui_system.switch_ECO, enable)
 end
 
-function PCSettingSystemPanel:OnSwitchAutoECO()
+function PCSettingSystemPanel:OnSwitchAutoECO(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     local enable = FGUI:GButton_getSelected(self._ui_system.switch_ECO)
     if enable == SL:GetValue("SETTING_AUTO_ECO") then
         return
@@ -277,8 +300,10 @@ function PCSettingSystemPanel:Refresh_AASetting()
     FGUI:GButton_setSelected(self._ui_system.switch_aasetting, enable)
 end
 
-function PCSettingSystemPanel:OnAASettingChanged(context)
-    local enable = FGUI:GButton_getSelected(context.sender)
+function PCSettingSystemPanel:OnAASettingChanged(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local enable = FGUI:GButton_getSelected(eventData.sender)
     SL:SetValue("SETTING_PIPELINE_ANITI", enable)
 end
 
@@ -300,6 +325,59 @@ end
 function PCSettingSystemPanel:OnRotateCameraOfLeftKeyChanged(context)
     local enable = FGUI:GButton_getSelected(self._ui_system.switch_rotateCameraOfLeftKey)
     SL:SetValue("SETTING_ROTATE_CAMERA_OF_LEFT_KEY", enable)
+end
+
+function PCSettingSystemPanel:Init_FullscreenMode()
+    FGUI:GButton_setSelected(self._ui_system.switch_FullscreenMode, SL:GetValue("SCREEN_FULLSCREEN"))
+    FGUI:GButton_setOnChangedCallback(self._ui_system.switch_FullscreenMode, handler(self, self.OnFullScreenModeChanged))
+end
+
+function PCSettingSystemPanel:OnFullScreenModeChanged(context)
+    local enable = FGUI:GButton_getSelected(self._ui_system.switch_FullscreenMode)
+    SL:SetValue("SCREEN_FULLSCREEN", enable)
+end
+
+function PCSettingSystemPanel:Init_ScreenResolution()
+    local sWidth = SL:GetValue("SCREEN_WIDTH")
+    local sHeight = SL:GetValue("SCREEN_HEIGHT")
+    self._selectResolutionIdx = nil
+    for i = 1, #pcResolutionList do
+        local t = string.split(pcResolutionList[i], "x")
+        if tonumber(t[1]) == sWidth and tonumber(t[2]) == sHeight then
+            self._selectResolutionIdx = i
+            break
+        end
+    end
+    FGUI:GComboBox_setItems(self._ui_system.comboBox_screenResolution, pcResolutionList)
+    if self._selectResolutionIdx then
+        FGUI:GComboBox_setSelectedIndex(self._ui_system.comboBox_screenResolution, self._selectResolutionIdx - 1)
+    else
+        FGUI:GComboBox_setTitle(self._ui_system.comboBox_screenResolution, tostring(sWidth).."x"..tostring(sHeight))
+    end
+    FGUI:GComboBox_setOnChangeCallback(self._ui_system.comboBox_screenResolution, handler(self, self.OnScreenResolutionChanged))
+end
+
+function PCSettingSystemPanel:OnScreenResolutionChanged(context)
+    local selected = FGUI:GComboBox_getSelectedIndex(self._ui_system.comboBox_screenResolution)
+    local resolution = pcResolutionList[selected + 1]
+    local resolutionStr = string.split(resolution, "x")
+    local width = tonumber(resolutionStr[1])
+    local height = tonumber(resolutionStr[2])
+
+    local fullScreen = SL:GetValue("SCREEN_FULLSCREEN")
+    SL:SetResolution(width, height, fullScreen)
+
+    -- if width <= self._ui_width_standard then
+    --     SL:SetValue("SETTING_UI_SCALE", 1)
+    -- else
+    --     local maxScale = math.max(1, width / self._ui_width_standard)
+    --     maxScale = math.round(maxScale * 10)
+    --     local scale = math.round((maxScale - 10) / 2) + 10
+    --     scale = scale / 10
+    --     SL:SetValue("SETTING_UI_SCALE", scale)
+    -- end
+    SL:SetValue("SETTING_UI_SCALE", 1)
+    self:Init_UIScale(width)
 end
 
 function PCSettingSystemPanel:Refresh_MsaaQuality()
@@ -404,17 +482,32 @@ function PCSettingSystemPanel:OnChange_FixLimit(context)
     FGUI:GTextField_setText(self._ui_system.fix_limit_value, string.format("%.0f", value))
 end
 
-function PCSettingSystemPanel:Init_UIScale(context)
+function PCSettingSystemPanel:Init_UIScale(width)
+    FGUI:GSlider_setWholeNumbers(self._slider_ui_scale, true)
+    if not width then
+        width = SL:GetValue("SCREEN_WIDTH") 
+    end
+    self._max_ui_scale = math.max(1, width / self._ui_width_standard)
+    self._max_ui_scale = math.round(self._max_ui_scale * 10)
+    self._max_ui_scale = self._max_ui_scale / 10
+
     FGUI:GSlider_setMax(self._slider_ui_scale, self._max_ui_scale * 10)
     FGUI:GSlider_setMin(self._slider_ui_scale, 10)
-    FGUI:GSlider_setWholeNumbers(self._slider_ui_scale, true)
+    if self._max_ui_scale <= 1 then
+        FGUI:setVisible(self._ui_system.slider_ui_scale, false)
+        FGUI:setVisible(self._ui_system.ui_scale_value, false)
+	else
+		FGUI:setVisible(self._ui_system.slider_ui_scale, true)
+		FGUI:setVisible(self._ui_system.ui_scale_value, true)
+    end
+    
     local scale = SL:GetValue("SETTING_UI_SCALE")
     scale = math.min(self._max_ui_scale, scale)
     scale = math.max(1, scale)
-    FGUI:GSlider_setValue(self._slider_ui_scale, scale*10)
+    FGUI:GSlider_setValue(self._slider_ui_scale, scale * 10)
     FGUI:GTextField_setText(self._ui_system.ui_scale_value, string.format("%.1f", scale))
     FGUI:setVisible(self._ui_system.ui_scale_btn, false)
-    if SL:GetValue("SCREEN_REAL_WIDTH") <= self._ui_width_standard then
+    if SL:GetValue("SCREEN_WIDTH") <= self._ui_width_standard then
         FGUI:setVisible(self._ui_system.slider_ui_scale, false)
         FGUI:setVisible(self._ui_system.ui_scale_value, false) 
     end

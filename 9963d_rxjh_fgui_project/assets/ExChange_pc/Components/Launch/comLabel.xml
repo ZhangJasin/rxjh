@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="277,19">
+  <controller name="modeText" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n33_qop5" name="bg" src="fts2r" fileName="Images/img_input_di.png" xy="0,1" size="277,19">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n55_qop5" name="label" xy="1,-1" size="124,19" fontSize="12" color="#b0c9b6" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="1111111111111111111">
+      <relation target="" sidePair="height-height,left-left"/>
+    </text>
+    <text id="n57_qop5" name="text" xy="38,2" size="112,19" group="n60_fts2" fontSize="12" color="#b0c9b6" align="right" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="暂无成交"/>
+    <text id="n61_uj97" name="text" xy="150,2" size="112,19" group="n60_fts2" fontSize="12" color="#b0c9b6" align="right" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="暂无成交" input="true"/>
+    <component id="n58_qop5" name="icon_money" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="262,1" size="15,15" group="n60_fts2" aspect="true"/>
+    <group id="n60_fts2" name="n60" xy="38,1" size="239,20" advanced="true" layout="hz" excludeInvisibles="true">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </group>
+  </displayList>
+</component>

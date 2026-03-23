@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1024,768">
   <displayList>
-    <loader id="n9_fmfy" name="bg_loading" xy="512,384" pivot="0.5,0.5" anchor="true" size="1024,768" url="ui://kk5ws5kwfmfy6" align="center" vAlign="middle" fill="scaleFree" useResize="true" clearOnPublish="true">
+    <loader id="n9_fmfy" name="bg_loading" xy="512,384" pivot="0.5,0.5" anchor="true" size="1024,768" align="center" vAlign="middle" fill="scaleFree" useResize="true" clearOnPublish="true">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <component id="n10_fmfy" name="bar_loading" src="fmfy4" fileName="Components/Bar_loading.xml" xy="512,660" pivot="0.5,0.5" anchor="true" size="1000,35">

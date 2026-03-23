@@ -348,24 +348,6 @@ function BagViewModel:RefreshCurPageBagCell()
 		self.viewComponent:RefreshPageNum()
 	end
 end
-function BagViewModel:RecycleSelectCell(data)
-	if not FGUI:CheckOpen("Bag", "BagRecyclePanel") or (not data) then
-		return
-	end
-
-	local isSelect = data.isSelect
-	local selectList = data.selectList
-
-	for i = 1, #selectList do
-		local index = selectList[i].pos
-		self._bagCells[index]:SetRecycleSelect(isSelect)
-		local  res,viewIndex = self:GetCurShowBagCellDataAndViewIndexByPos(index)
-		if res and viewIndex and viewIndex > 0 and self.viewComponent then
-			self.viewComponent:UpdateCellViewByViewIdAndBagData(viewIndex,res)
-		end
-	end
-
-end
 
 function BagViewModel:GetViewIndexByMakeIndex(MakeIndex)
 	local newIndex = SL:GetValue("BAG_POS_MARK_BY_MAKEINDEX", MakeIndex) or 0
@@ -388,9 +370,7 @@ function BagViewModel:RegisterEvent()
 	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_ADD, "BagViewModel",  handler(self,self.AddBagItem))
 	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_DEL, "BagViewModel",  handler(self,self.DeleteBagItem))
 	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_UPDATE, "BagViewModel",  handler(self,self.OnUpdateBagItem))
-	--SL:RegisterLUAEvent(LUA_EVENT_BAG_RECOVERY_UPDATE, "BagViewModel", handler(self, self.OnUpdateBagRecovery))
 	SL:RegisterLUAEvent(LUA_EVENT_BAG_CELL_UNLOCK, "BagViewModel",  handler(self,self.UpdateBagSize))
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_RECYCLE_SELECT, "BagViewModel",  handler(self,self.RecycleSelectCell))
 	SL:RegisterLUAEvent(LUA_EVENT_BAG_REFRESH_PAGE, "BagViewModel",  handler(self,self.RefreshCurPageBagCell))
 	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_CD, "BagViewModel",  handler(self,self.RefreshCurPageBagCell))
 	SL:RegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_ADD,"BagViewModel",handler(self,self.RefreshCurPageBagCell))
@@ -403,9 +383,7 @@ function BagViewModel:UnRegisterEvent()
 	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_ADD, "BagViewModel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_DEL, "BagViewModel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_UPDATE, "BagViewModel")
-	--SL:UnRegisterLUAEvent(LUA_EVENT_BAG_RECOVERY_UPDATE, "BagViewModel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_CELL_UNLOCK, "BagViewModel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_RECYCLE_SELECT, "BagViewModel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_REFRESH_PAGE, "BagViewModel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_CD, "BagViewModel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_PLAYER_EQUIP_ADD, "BagViewModel")

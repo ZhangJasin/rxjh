@@ -30,6 +30,7 @@ function PCTitleBar:GetAllFGuiData()
     self.ctrl_curSelectedTitleState = FGUI:getController(self.component,"curSelectedTitleState")
     self.ctrl_isHaveSelected = FGUI:getController(self.component,"isHaveSelected")
     self.ctrl_isTimer = FGUI:getController(self.component,"isTimer")
+    self.ctrl_isHaveTitle = FGUI:getController(self.component,"isHaveTitle")
     self.time_left = self._ui.text_leftTime
 end
 
@@ -49,7 +50,6 @@ end
 
 function PCTitleBar:InitUI()
     FGUI:GList_itemRenderer(self.title_list,handler(self,self.TitleItemRender))
-    -- FGUI:GList_addOnClickItemEvent(self.title_list,handler(self,self.TitleItemClicked))
     FGUI:GList_setVirtual(self.title_list)
 end
 
@@ -152,15 +152,10 @@ end
 
 function PCTitleBar:RefreshTitleList()
     self.titleData = SL:GetValue("TITLE_SHOW_LIST") or {}
+    FGUI:Controller_setSelectedIndex(self.ctrl_isHaveTitle,table.nums(self.titleData) > 0 and 1 or 0)
     FGUI:GList_setNumItems(self.title_list,table.nums(self.titleData or {}))
     self:RefreshButton()
 end
-
--- function PCTitleBar:TitleItemClicked(eventData)
---     local childIdx = FGUI:GetChildIndex(self.title_list, eventData.data)
---     local idx = FGUI:GList_childIndexToItemIndex(self.title_list, childIdx)
---     self:SwitchSelected(idx,eventData.data)
--- end
 
 function PCTitleBar:SwitchSelected(idx,cell)
     self._lastSelectCell = self._curSelectCell
@@ -245,7 +240,9 @@ function PCTitleBar:RefreshButton()
     end
 end
 
-function PCTitleBar:BtnUseClicked()
+function PCTitleBar:BtnUseClicked(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     if not self._curSelectedIndex then
         return
     end

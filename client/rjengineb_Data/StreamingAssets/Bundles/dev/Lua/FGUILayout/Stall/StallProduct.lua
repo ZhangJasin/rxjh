@@ -44,14 +44,13 @@ function StallProduct:Create()
 	FGUI:setOnClickEvent(self._ui.btn_sell_history, function ()
 		FGUI:Open("Stall", "StallHistory", self._data.Userid)
 	end)
+	FGUI:setOnClickEvent(self._ui.btn_cart, function ()
+		FGUI:Open("Stall", "StallShoppingCart")
+	end)
 end
 
-function StallProduct:Enter()
-	self:RegisterEvent()
-	FGUIFunction:ShowTopCurrency(SL:GetValue("GAME_DATA", "BagMoneyList"))
-end
-
-function StallProduct:Refresh(data) 
+function StallProduct:Refresh(data)
+    self:RegisterEvent()
 	local scrollPanel = FGUI:GetScrollPane(self._ui.list_product)
 	FGUI:ScrollPane_scrollTop(scrollPanel, false)
 	if not data then return end
@@ -67,6 +66,7 @@ function StallProduct:Refresh(data)
 	FGUI:setVisible(self._ui.btn_share, self._isSelf)
 	FGUI:setVisible(self._ui.node_star, not self._isSelf)
 	FGUI:setVisible(self._ui.btn_owner_info, not self._isSelf)
+	self:RefreshShoppingCartCount()
 
 	if not self._isSelf then
 		local isCollected = self._data.IsCollected
@@ -123,8 +123,7 @@ end
 function StallProduct:Exit()
 	self:RemoveEvent()
 	FGUI:Close("Bag", "SimpleBagPanel")
-	FGUI:Close("Stall", "StallBuy")
-	FGUIFunction:HideTopCurrency()
+	FGUIFunction:CloseItemTips()
 	if self._timeSchedule then
 		SL:UnSchedule(self._timeSchedule)
 		self._timeSchedule = nil
@@ -209,6 +208,18 @@ function StallProduct:OnRefreshProductInfo(data)
 	end
 end
 
+-- 刷新购物车数量
+function StallProduct:RefreshShoppingCartCount()
+	local data = SL:GetValue("STALL_SHOPPING_CART_DATA")
+	local num = data and #data or 0
+	if num == 0 then
+		FGUI:setVisible(self._ui.text_cart_count, false)	
+	else
+		FGUI:setVisible(self._ui.text_cart_count, true)
+		FGUI:GTextField_setText(self._ui.text_cart_count, num)
+	end
+end
+
 -- 点击编辑店铺名按钮
 function StallProduct:OnClickEditNameButton()
 	local data = {}
@@ -272,14 +283,10 @@ end
 
 -- 点击查看摊位主
 function StallProduct:OnClickOwnerInfo()
-	local dockData = {}
-	dockData.targetName = self._data.UserName
-    dockData.targetId = tonumber(self._data.Userid)
-	dockData.TipsType = SL:GetValue("DOCKTYPE_NENUM").Func_Friend
-	dockData.Level = 2
-	dockData.Job = 1
-	dockData.Sex = 1
-    FGUIFunction:OpenFuncDockTips(dockData)
+	local data = {}
+	data.targetId = tonumber(self._data.Userid)
+	data.TipsType = SL:GetValue("DOCKTYPE_NENUM").Func_Stall
+    FGUIFunction:RequestPlayerDataAndSetTipType(data)
 end
 
 function StallProduct:IsOnSelfShopPoint()
@@ -318,7 +325,7 @@ function StallProduct:OnTakeOffSuccess(makeindex, notTips)
 
 		if self._curBuyMakeIndex and makeindex == self._curBuyMakeIndex then
 			self._curBuyMakeIndex = nil
-			FGUI:Close("Stall", "StallBuy")
+			FGUIFunction:CloseItemTips()
 			SL:ShowSystemTips(GET_STRING(90010028))
 		end
 	end
@@ -329,10 +336,42 @@ function StallProduct:OnTakeOffSuccess(makeindex, notTips)
 end
 
 -- 打开购买界面
-function StallProduct:OpenBuyPanel(data)
-	if not data then return end
-	self._curBuyMakeIndex = data.useritem.MakeIndex
-	FGUI:Open("Stall", "StallBuy", data)
+function StallProduct:OpenBuyPanel(productData)
+	if not productData then return end
+	self._curBuyMakeIndex = productData.useritem.MakeIndex
+	local buyData = {}
+	buyData.itemData = productData.useritem
+    buyData.hideCompare = true
+    buyData.hideButtons = true
+	buyData.buyParam = {}
+	buyData.buyParam.num = 1
+	buyData.buyParam.minNum = 1
+	buyData.buyParam.maxNum = productData.useritem.OverLap
+	buyData.buyParam.price = productData.price
+	buyData.buyParam.coinId = productData.type
+	buyData.buyParam.customBuy = true
+	local isInCart = SL:GetValue("STALL_IS_IN_SHOPPING_CART", self._curBuyMakeIndex)
+	buyData.buyParam.customLeftBtnText = isInCart and SL:GetValue("I18N_STRING", 90010042) or SL:GetValue("I18N_STRING", 90010040)
+	buyData.buyParam.customLeftBtnWidth = 130
+	buyData.buyParam.customLeftBtnFunc = function (input)
+		if input and input.inputNum then
+			if isInCart then
+				SL:RequestStallRemoveFromShoppingCart(self._curBuyMakeIndex)
+				SL:ShowSystemTips(SL:GetValue("I18N_STRING", 90010043))
+			else
+				SL:RequestStallAddToShoppingCart(self._data, productData, input.inputNum)
+				SL:ShowSystemTips(SL:GetValue("I18N_STRING", 90010041))
+			end		
+			FGUI:GList_setNumItems(self._ui.list_product, self._capacity)
+			FGUIFunction:CloseItemTips()
+		end	
+	end
+	buyData.buyParam.customBuyFunc = function (input)
+		if input and input.inputNum then
+			SL:RequestStallBuyItem(self._curBuyMakeIndex, productData.price, input.inputNum)
+		end
+	end
+    FGUIFunction:OpenItemTips(buyData)
 end
 
 -- 打开下架界面
@@ -377,6 +416,7 @@ function StallProduct:OnBuyItem(data)
 		end
 	end
 	FGUI:GList_setNumItems(self._ui.list_product, self._capacity)
+	FGUIFunction:CloseItemTips()
 end
 
 -- 物品变化
@@ -404,10 +444,10 @@ function StallProduct:OnBuyFailTips(errorType)
 	elseif errorType == -6 then
 		SL:ShowSystemTips(GET_STRING(70000006))
 	else
-		SL:ShowSystemTips(GET_STRING(30000039))
-		SL:RequestStallQueryItems(self._data.Userid)
-		FGUI:Close("Stall", "StallBuy")
-	end	
+		SL:ShowSystemTips(GET_STRING(30000039))	
+	end
+	SL:RequestStallQueryItems(self._data.Userid)
+	FGUIFunction:CloseItemTips()
 end
 
 function StallProduct:OnChangeShopName(name)
@@ -446,6 +486,7 @@ function StallProduct:RegisterEvent()
 	SL:RegisterLUAEvent(LUA_EVENT_STALL_CLOSE_SHOP, "StallProduct", handler(self, self.Close))
 	SL:RegisterLUAEvent(LUA_EVENT_STALL_CHANGE_SHOP_NAME, "StallProduct", handler(self, self.OnChangeShopName))
 	SL:RegisterLUAEvent(LUA_EVENT_STALL_COLLECT_SHOP, "StallProduct", handler(self, self.OnCollectShop))	--收藏店铺
+	SL:RegisterLUAEvent(LUA_EVENT_STALL_REFRESH_CART, "StallProduct", handler(self, self.RefreshShoppingCartCount))
 end
 
 function StallProduct:RemoveEvent()
@@ -459,6 +500,7 @@ function StallProduct:RemoveEvent()
 	SL:UnRegisterLUAEvent(LUA_EVENT_STALL_CLOSE_SHOP, "StallProduct")
 	SL:UnRegisterLUAEvent(LUA_EVENT_STALL_CHANGE_SHOP_NAME, "StallProduct")
 	SL:UnRegisterLUAEvent(LUA_EVENT_STALL_COLLECT_SHOP, "StallProduct")
+	SL:UnRegisterLUAEvent(LUA_EVENT_STALL_REFRESH_CART, "StallProduct")
 end
 
 return StallProduct

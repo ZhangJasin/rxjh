@@ -8,7 +8,7 @@ local AVATOR_DATA = {}
 
 function TeamPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 
 	self:InitData()
 	self:InitEvent()
@@ -212,16 +212,9 @@ function TeamPanel:OnRendererChat(idx, item)
     else 
         FGUI:GRichTextField_setText(rich_msg, SL:ChatParser_Parse(data.Msg))
     end
-
-    -- local richWidth = FGUI:GRichTextField_getTextWidth(rich_msg)
-    -- local richHeight = FGUI:GRichTextField_getTextHeight(rich_msg)
-    -- richWidth = richWidth > 364 and 364 or richWidth
-    -- richHeight = richHeight > 84 and 84 or richHeight
-    -- local ui_chatBg = FGUI:GetChild(item, "chat_bg")
-    -- local imageW = math.max(60, richWidth + 30) 
-    -- local imageH = math.max(50, richHeight + 10)
-    -- FGUI:setSize(ui_chatBg, imageW, imageH)
+    
     FGUI:GList_ScrollToView(self._ui.list_chat,idx)
+    FGUI:SetIntData(item, idx)
 end
 
 -- list emoj
@@ -302,7 +295,8 @@ function TeamPanel:OnClickOpenInvite(context)
 	FGUI:Open("Team", "TeamInvitePanel")
 end
 
-function TeamPanel:OnClickShout(context)
+function TeamPanel:OnClickShout(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 	local nowTime = os.time()
     if self._cdTime and self._cdTime > nowTime then
         SL:ShowSystemTips(GET_STRING(40010030))
@@ -337,14 +331,12 @@ function TeamPanel:OnClickShout(context)
 end
 
 function TeamPanel:OnClickPositionLink(context)
-    local hrefStr = context.data
-    local strs =  string.split(hrefStr, "|")
-    if not strs or #strs ==0 then
-        return
+    local index = FGUI:GetIntData(context.sender.parent) + 1
+    local data = self._messages[index]
+    if not data then 
+        return 
     end
 
-    local index = tonumber(strs[1])
-    local data = self._messages[index]
     if data.MT == MSGTYPE.Position then
         local mapData = data.Msg
         local mapName = mapData.mapName

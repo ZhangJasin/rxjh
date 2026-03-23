@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="664,394" pivot="0.5,0.5" anchor="true" designImage="ui://1e928y1xkc3n1u" designImageOffsetX="-1" designImageOffsetY="-817">
+  <controller name="isHaveRecord" pages="0,没有记录,1,有记录" selected="0"/>
   <displayList>
     <image id="n69_q8ir" name="bg_right_list" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="4,6" size="655,343">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -50,10 +51,15 @@
       <item/>
       <item/>
     </list>
+    <component id="n87_iwlb" name="noItemtip" src="iwlbkvq9" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="205,103">
+      <gearDisplay controller="isHaveRecord" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label title="暂无记录"/>
+    </component>
     <component id="n83_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,394" size="0,0">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
-    <text id="n84_ewso" name="n84" xy="149,358" size="366,23" fontSize="15" color="#ffffff" singleLine="true" text="保留50条购买/出售/上架/下架记录,记录更新可能有延迟">
+    <text id="n84_ewso" name="n84" xy="185,360" size="294,19" fontSize="12" color="#ff0000" strokeColor="#000000" singleLine="true" text="保留50条购买/出售/上架/下架记录,记录更新可能有延迟">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
   </displayList>

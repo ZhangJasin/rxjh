@@ -2,25 +2,25 @@
 <component size="1334,750" opaque="false">
   <displayList>
     <image id="n64_mh2i" name="bg1" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="180,165" size="510,460"/>
-    <image id="n65_mh2i" name="bg2" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="930,500" pivot="0.5,0.5" anchor="true" size="430,340"/>
-    <image id="n37_w0rg" name="bg_title1" src="as7km" fileName="Images/skill_title_9.png" xy="930,140" pivot="0.5,0.5" anchor="true" size="360,40">
+    <image id="n65_mh2i" name="bg2" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="930,520" pivot="0.5,0.5" anchor="true" size="430,340"/>
+    <image id="n37_w0rg" name="bg_title1" src="as7km" fileName="Images/skill_title_9.png" xy="930,180" pivot="0.5,0.5" anchor="true" size="360,40">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <image id="n66_mh2i" name="bg_title2" src="as7km" fileName="Images/skill_title_9.png" xy="930,310" pivot="0.5,0.5" anchor="true" size="360,40">
+    <image id="n66_mh2i" name="bg_title2" src="as7km" fileName="Images/skill_title_9.png" xy="930,330" pivot="0.5,0.5" anchor="true" size="360,40">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <text id="n38_w0rg" name="text_skillName" xy="930,140" pivot="0.5,0.5" anchor="true" size="100,32" fontSize="22" color="#f6cd2b" align="center" vAlign="middle" autoSize="none" text="技能名字">
+    <text id="n38_w0rg" name="text_skillName" xy="930,180" pivot="0.5,0.5" anchor="true" size="100,32" fontSize="22" color="#f6cd2b" align="center" vAlign="middle" autoSize="none" text="技能名字">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n67_ee0a" name="text_skillDesc" xy="930,310" pivot="0.5,0.5" anchor="true" size="92,32" fontSize="22" color="#f6cd2b" align="center" vAlign="middle" autoSize="none" text="气功描述">
+    <text id="n67_ee0a" name="text_skillDesc" xy="930,330" pivot="0.5,0.5" anchor="true" size="92,32" fontSize="22" color="#f6cd2b" align="center" vAlign="middle" autoSize="none" text="气功描述">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
     <richtext id="n77_oy20" name="text_myScore" xy="560,655" pivot="0.5,0.5" anchor="true" size="250,29" fontSize="20" color="#f1ffeb" align="right" vAlign="middle" autoSize="none" text="剩余气功点数：999999"/>
-    <richtext id="n69_ee0a" name="rich_desc" xy="930,380" pivot="0.5,0.5" anchor="true" size="380,90" fontSize="20" color="#f1ffeb" align="center" autoSize="none" text="技能详情&#xA;技能详情&#xA;技能详情&#xA;技能详情">
+    <richtext id="n69_ee0a" name="rich_desc" xy="930,400" pivot="0.5,0.5" anchor="true" size="380,90" fontSize="20" color="#f1ffeb" align="center" autoSize="none" text="技能详情&#xA;技能详情&#xA;技能详情&#xA;技能详情">
       <relation target="" sidePair="center-center,middle-middle"/>
     </richtext>
-    <richtext id="n59_efbo" name="text_level" xy="940,585" pivot="0.5,0.5" anchor="true" size="300,29" fontSize="20" color="#ff0000" align="center" vAlign="middle" autoSize="none" text=""/>
-    <richtext id="n60_efbo" name="text_score" xy="940,585" pivot="0.5,0.5" anchor="true" size="300,29" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text=""/>
+    <richtext id="n59_efbo" name="text_level" xy="940,605" pivot="0.5,0.5" anchor="true" size="300,29" fontSize="20" color="#ff0000" align="center" vAlign="middle" autoSize="none" text=""/>
+    <richtext id="n60_efbo" name="text_score" xy="940,605" pivot="0.5,0.5" anchor="true" size="300,29" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text=""/>
     <text id="n76_bnsy" name="text_lvex" xy="320,655" pivot="0.5,0.5" anchor="true" size="200,29" fontSize="20" color="#f1ffeb" vAlign="middle" autoSize="none" text="显示额外气功等级">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
@@ -29,7 +29,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n58_j47s" name="list_qigong" xy="205,175" size="460,381" layout="pagination" overflow="scroll" lineGap="26" colGap="32" lineItemCount="4" defaultItem="ui://qvb3eryhj47su">
+    <list id="n58_j47s" name="list_qigong" xy="205,175" size="460,440" layout="pagination" overflow="scroll" lineGap="26" colGap="32" lineItemCount="4" defaultItem="ui://qvb3eryhj47su">
       <item/>
       <item/>
       <item/>
@@ -47,22 +47,41 @@
       <item/>
       <item/>
     </list>
-    <list id="n83_jh3v" name="list_desc" xy="930,500" pivot="0.5,0.5" anchor="true" size="400,130" overflow="hidden" scroll="horizontal" defaultItem="ui://qvb3eryhjh3v1e" align="center" vAlign="middle" autoClearItems="true">
+    <list id="n83_jh3v" name="list_desc" xy="930,520" pivot="0.5,0.5" anchor="true" size="400,130" overflow="hidden" scroll="horizontal" defaultItem="ui://qvb3eryhjh3v1e" align="center" vAlign="middle" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <component id="n70_ee0a" name="icon_select" src="j47su" fileName="Components/item_qigong.xml" xy="930,210" pivot="0.5,0.5" anchor="true" touchable="false"/>
-    <component id="n42_w0rg" name="btn_study" src="w0rgh" fileName="Components/btn_study.xml" xy="1030,635" pivot="0.5,0.5" anchor="true">
+    <component id="n70_ee0a" name="icon_select" src="j47su" fileName="Components/item_qigong.xml" xy="930,245" pivot="0.5,0.5" anchor="true" touchable="false"/>
+    <component id="n42_w0rg" name="btn_study" src="w0rgh" fileName="Components/btn_study.xml" xy="1030,655" pivot="0.5,0.5" anchor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n61_awj8" name="btn_cz" src="awj8z" fileName="Components/btn_cz.xml" xy="830,635" pivot="0.5,0.5" anchor="true" size="136,42"/>
+    <component id="n61_awj8" name="btn_cz" src="awj8z" fileName="Components/btn_cz.xml" xy="830,655" pivot="0.5,0.5" anchor="true" size="136,42"/>
     <component id="n62_awj8" name="btn_czAll" src="awj810" fileName="Components/btn_czAll.xml" xy="830,900" pivot="0.5,0.5" anchor="true" visible="false"/>
     <component id="n75_bnsy" name="check_level" src="yj7kvo1" fileName="common/checkbox_multi.xml" pkg="st7dgeqq" xy="200,655" pivot="0.5,0.5" anchor="true">
       <Button checked="true"/>
     </component>
-    <component id="n85_qug1" name="btn_Recommend" src="qug11q" fileName="Components/btn_Recommend.xml" xy="192,573" visible="false"/>
+    <component id="n89_q9il" name="check_main" src="eyqz1o" fileName="Components/check_set.xml" xy="750,120"/>
+    <graph id="n90_q9il" name="mask" xy="668,375" pivot="0.5,0.5" anchor="true" size="1334,750" visible="false" alpha="0" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n84_q9il" name="bg_scheme" src="11iqkvp0" fileName="image/comobox_frame.png" pkg="st7dgeqq" xy="1050,135" pivot="0.5,0.5" anchor="true" size="200,36" group="n88_q9il">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n85_q9il" name="text_scheme" xy="1040,135" pivot="0.5,0.5" anchor="true" size="160,32" group="n88_q9il" fontSize="22" color="#7cc3b3" align="center" vAlign="middle" autoSize="none" singleLine="true" text="请输入名字...">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n86_q9il" name="btn_scheme" src="kelz1j" fileName="Components/btn_combox.xml" xy="1130,135" pivot="0.5,0.5" anchor="true" group="n88_q9il">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n87_q9il" name="list_scheme" xy="1050,155" pivot="0.5,0" anchor="true" size="200,200" group="n88_q9il" visible="false" overflow="scroll" defaultItem="ui://qvb3eryhkelz1h">
+      <relation target="" sidePair="center-center,top-top"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n88_q9il" name="panel_scheme" xy="950,110" size="205,245"/>
   </displayList>
 </component>

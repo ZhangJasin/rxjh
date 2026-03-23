@@ -50,7 +50,8 @@ function JumpUI.LoadDefineLinks()
         [LINK_TYPE.GuildList]           = {open = function() FGUI:Open("Guild", "GuildJoinList") end,               packageName = "Guild", componentName = "GuildJoinList"},
         [LINK_TYPE.GuildCreate]         = {open = function() FGUI:Open("Guild", "GuildJoinList") end,               packageName = "Guild", componentName = "GuildJoinList"},
         [LINK_TYPE.Mail]                = {open = function() FGUI:Open("Mail", "MailPanel") end,                    packageName = "Mail", componentName = "MailPanel"},
-        [LINK_TYPE.Team]                = {open = function() FGUI:Open("Team", "TeamPanel") end,                    packageName = "Team", componentName = "TeamPanel"},
+        [LINK_TYPE.Team]                = {open = function() FGUIFunction:OpenTeamAutoUI() end,                     close = function() FGUIFunction:CloseTeamAutoUI() end,
+                                            checkOpen = function() return FGUIFunction:CheckTeamAutoIsOpen() end},
         [LINK_TYPE.MiniMap]             = {open = function() FGUI:Open("MiniMap", "MiniMapPanel") end,              packageName = "MiniMap", componentName = "MiniMapPanel"},
         [LINK_TYPE.Recharge]            = {open = function() FGUI:Open("Recharge", "RechargePanel") end, packageName = "Recharge", componentName = "RechargePanel"},
         [LINK_TYPE.Friend]              = {open = function() FGUI:Open("Friend", "FriendPanel", 1) end,        packageName = "Friend", componentName = "FriendPanel"},
@@ -71,37 +72,61 @@ end
 
 function JumpUI.LoadDefineLinksPC()
     return {
-        [LINK_TYPE.Equip]               = {open = function() FGUI:Open("Bag","PlayerInfoPanel") end, packageName = "Bag", componentName = "PlayerInfoPanel"},
-        [LINK_TYPE.Bag]                 = {open = function() FGUIFunction:OpenBag() end, packageName = "Bag", componentName = "PlayerInfoPanel"},
+        [LINK_TYPE.Equip]               = {open = function() FGUI:Open("Bag_pc","PCPlayerInfoPanel") end, packageName = "Bag_pc", componentName = "PCPlayerInfoPanel"},
+        [LINK_TYPE.Bag]                 = {open = function() FGUIFunction:OpenBag() end, packageName = "Bag_pc", componentName = "PCPlayerInfoPanel"},
         [LINK_TYPE.Guild]               = {open = function() FGUIFunction:OpenGuildAutoUI() end, close = function() FGUIFunction:CloseGuildAutoUI() end, 
-                                            checkOpen = function() return FGUI:CheckOpen("Guild", "GuildMainPanel") or FGUI:CheckOpen("Guild", "GuildJoinList") end},
-        [LINK_TYPE.GuildMain]           = {open = function() FGUIFunction:OpenGuildMainFrameUI(1) end, packageName = "Guild", componentName = "GuildMainPanel"},
-        [LINK_TYPE.GuildMember]         = {open = function() FGUIFunction:OpenGuildMainFrameUI(2) end, packageName = "Guild", componentName = "GuildMainPanel"},
-        [LINK_TYPE.GuildList]           = {open = function() FGUI:Open("Guild", "GuildJoinList") end, packageName = "Guild", componentName = "GuildJoinList"},
-        [LINK_TYPE.GuildCreate]         = {open = function() FGUI:Open("Guild", "GuildJoinList") end, packageName = "Guild", componentName = "GuildJoinList"},
+                                            checkOpen = function() return FGUI:CheckOpen("Guild_pc", "PCGuildMainPanel") or FGUI:CheckOpen("Guild_pc", "PCGuildJoinList") end},
+        [LINK_TYPE.GuildMain]           = {open = function() FGUIFunction:OpenGuildMainFrameUI(1) end, packageName = "Guild_pc", componentName = "PCGuildMainPanel"},
+        [LINK_TYPE.GuildMember]         = {open = function() FGUIFunction:OpenGuildMainFrameUI(2) end, packageName = "Guild_pc", componentName = "PCGuildMainPanel"},
+        [LINK_TYPE.GuildList]           = {open = function() FGUI:Open("Guild_pc", "PCGuildJoinList") end, packageName = "Guild_pc", componentName = "PCGuildJoinList"},
+        [LINK_TYPE.GuildCreate]         = {open = function() FGUI:Open("Guild_pc", "PCGuildJoinList") end, packageName = "Guild_pc", componentName = "PCGuildJoinList"},
         [LINK_TYPE.Mail]                = {open = function() FGUI:Open("Mail_pc", "PCMailPanel") end, packageName = "Mail_pc", componentName = "PCMailPanel"},
-        [LINK_TYPE.Team]                = {open = function() FGUI:Open("Team_pc", "PCTeamPanel") end, packageName = "Team_pc", componentName = "PCTeamPanel"},
-        [LINK_TYPE.MiniMap]             = {open = function() FGUI:Open("MiniMap", "MiniMapPanel") end, packageName = "MiniMap", componentName = "MiniMapPanel"},
-        [LINK_TYPE.Recharge]            = {open = function() FGUI:Open("Recharge_pc", "RechargePanel", nil, nil, {classPath = "FGUILayout/Recharge/RechargePanel"}) end, packageName = "Recharge", componentName = "RechargePanel"},
-        [LINK_TYPE.Friend]              = {open = function() FGUI:Open("Friend_PC", "PCFriendPanel", 1) end,        packageName = "Friend_PC", componentName = "PCFriendPanel"},
+        [LINK_TYPE.Team]                = {open = function() FGUIFunction:OpenTeamAutoUI() end,                     close = function() FGUIFunction:CloseTeamAutoUI() end,
+                                            checkOpen = function() return FGUIFunction:CheckTeamAutoIsOpen() end},
+        [LINK_TYPE.MiniMap]             = {open = function() FGUI:Open("MiniMap_pc", "PCMiniMapPanel") end, packageName = "MiniMap_pc", componentName = "PCMiniMapPanel"},
+        [LINK_TYPE.Recharge]            = {open = function() FGUI:Open("Recharge_pc", "RechargePanel", nil, nil, {classPath = "FGUILayout/Recharge/RechargePanel"}) end, packageName = "Recharge_pc", componentName = "RechargePanel"},
+        [LINK_TYPE.Friend]              = {open = function() FGUI:Open("Friend_pc", "PCFriendPanel", 1) end,        packageName = "Friend_pc", componentName = "PCFriendPanel"},
         [LINK_TYPE.Rank]                = {open = function(param) FGUI:Open("Rank_pc", "PCRankPanel", param) end, packageName = "Rank_pc", componentName = "PCRankPanel"},
         [LINK_TYPE.Chat]                = {open = function() FGUI:Open("Chat", "ChatPanel") end, packageName = "Chat", componentName = "ChatPanel"},
         [LINK_TYPE.SettingBasic]        = {open = function() FGUI:Open("Setting_pc", "PCSettingPanel", 1) end, packageName = "Setting_pc", componentName = "PCSettingPanel"},
         [LINK_TYPE.ExitToRole]          = {open = function() SL:RequestLeaveWorld() end},
         [LINK_TYPE.ForceExitToRole]     = {open = function() SL:ForceLeaveWorld() end},
         [LINK_TYPE.AssistChange]        = {open = function() SLBridge:onLUAEvent(LUA_EVENT_ASSIST_SHOW) end, close = function() SLBridge:onLUAEvent(LUA_EVENT_ASSIST_HIDE) end},
-        [LINK_TYPE.Storage]             = {open = function() FGUI:Open("Bag", "StoragePanel") end, packageName = "Bag", componentName = "StoragePanel"},
-        [LINK_TYPE.Auction]             = {open = function() FGUI:Open("Auction", "AuctionRootPanel") end, packageName = "Auction", componentName = "AuctionRootPanel"},
-        [LINK_TYPE.TreasureShop]        = {open = function() SL:RequestGroupData(0) end, packageName = "TreasureShop", componentName = "TreasurePanel"},
-        [LINK_TYPE.Skill]               = {open = function() FGUI:Open("Skill_pc", "PCSkillFramePanel", 1) end, packageName = "Skill_pc", componentName = "PCSkillFramePanel"},
+        [LINK_TYPE.Storage]             = {open = function() FGUI:Open("Bag_pc", "PCStoragePanel") end, packageName = "Bag_pc", componentName = "PCStoragePanel"},
+        [LINK_TYPE.Auction]             = {open = function() FGUI:Open("Auction_pc", "PCAuctionRootPanel") end, packageName = "Auction_pc", componentName = "PCAuctionRootPanel"},
+        [LINK_TYPE.TreasureShop]        = {open = function() SL:RequestGroupData(0) end, packageName = "TreasureShop_pc", componentName = "PCTreasurePanel"},
+        [LINK_TYPE.Skill]               = {open = function(param) FGUI:Open("Skill_pc", "PCSkillFramePanel", param and param==0 and 1 or 1) end, packageName = "Skill_pc", componentName = "PCSkillFramePanel"},
         [LINK_TYPE.TTSQ]                = {open = function(param) SL:Open996BoxTTSQ() end,     close = function() SL:Close996BoxTTSQ() end,checkOpen = function() return SL._IsOpen996BoxTTSQ end},
         [LINK_TYPE.Trading]             = {open = function(param) SL:OpenTradingBankUI() end,     close = function()  end},
-
     }
 end
 
 function JumpUI.FindLinkByID(jumpID)
     return JumpUI._links[jumpID]
+end
+
+local function openLayer(link, param)
+    if link and link.open then
+        link.open(param)           
+    end
+end
+local function closeLayer(link, param)
+    if link and link.close then
+        link.close(param)
+    elseif link and link.packageName and link.componentName then
+        FGUI:Close(link.packageName, link.componentName)
+    end
+end
+local function checkLayerIsOpen(link)
+    if link and link.checkOpen then 
+        return link.checkOpen()
+    end
+
+    if link and link.packageName and link.componentName then
+        return FGUI:CheckOpen(link.packageName, link.componentName)
+    end
+
+    return false
 end
 
 function JumpUI.JumpTo(jumpID, param, param1)
@@ -110,48 +135,25 @@ function JumpUI.JumpTo(jumpID, param, param1)
     if not link then
         return
     end
-    local function openLayer()
-        if link and link.open then
-            link.open(param)           
-        end
-    end
-    local function closeLayer()
-        if link and link.close then
-            link.close(param)
-        elseif link and link.packageName and link.componentName then
-            FGUI:Close(link.packageName, link.componentName)
-        end
-    end
-    local function checkLayerIsOpen()
-        if link and link.checkOpen then 
-            return link.checkOpen()
-        end
-
-        if link and link.packageName and link.componentName then
-            return FGUI:CheckOpen(link.packageName, link.componentName)
-        end
-
-        return false
-    end
-
+    
     if not param1 or param1 == 0 then -- 0: 打开 已打开界面则关闭
         -- 伸缩类型
         if jumpID == LINK_TYPE.AssistChange then
             SLBridge:onLUAEvent(LUA_EVENT_ASSIST_CHANGE)
             return
         end
-        if checkLayerIsOpen() then
-            closeLayer() 
+        if checkLayerIsOpen(link) then
+            closeLayer(link, param) 
         else
-            openLayer()
+            openLayer(link, param)
         end
     else
         if param1 == 1 then -- 1: 强制打开
-            if not checkLayerIsOpen() then
-                openLayer()
+            if not checkLayerIsOpen(link) then
+                openLayer(link, param)
             end
         else -- 关闭
-            closeLayer()
+            closeLayer(link, param)
         end
     end
 

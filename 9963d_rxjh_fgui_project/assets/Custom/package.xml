@@ -17,6 +17,7 @@
     <image id="mwvrh" name="npc_img_1.png" path="/Default/" exported="true" scale="9grid" scale9grid="174,114,350,56"/>
     <image id="mwvri" name="green_check.png" path="/Default/" exported="true"/>
     <image id="mwvrj" name="icon_item0.png" path="/Default/" exported="true" scale9grid="16,16,32,32"/>
+    <image id="mg8gk" name="image_red.png" path="/Default/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

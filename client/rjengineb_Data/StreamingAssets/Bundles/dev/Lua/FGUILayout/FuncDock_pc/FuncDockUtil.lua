@@ -96,7 +96,6 @@ FuncDockUtil.FuncConfig = {
         BtnType.invite_guild,
         BtnType.add_blacklist,
         BtnType.out_blacklist,
-        -- BtnType.horse_invite
     },
     [FuncType.Func_Player_Head] = {
         BtnType.look_role,
@@ -108,7 +107,6 @@ FuncDockUtil.FuncConfig = {
         BtnType.invite_guild,
         BtnType.add_blacklist,
         BtnType.out_blacklist,
-        -- BtnType.horse_invite
     },
     [FuncType.Func_Team] = {
         BtnType.look_role,
@@ -189,7 +187,6 @@ FuncDockUtil.FuncConfig = {
         BtnType.invite_guild,
         BtnType.add_blacklist,
         BtnType.out_blacklist,
-        -- BtnType.challenge
     }
 }
 local FuncConfig = FuncDockUtil.FuncConfig
@@ -379,8 +376,6 @@ typeFunction[BtnType.add_blacklist] = function(targetId)
 end
         
 typeFunction[BtnType.horse_invite] = function(targetId)
-    --邀请上马
-    -- SL:RequestInviteInHorse(targetId)--TODO
 end
 
 -- 传入target信息

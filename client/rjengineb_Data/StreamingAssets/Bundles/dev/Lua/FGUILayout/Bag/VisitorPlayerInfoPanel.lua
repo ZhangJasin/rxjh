@@ -9,7 +9,7 @@ local IDX_MONEY = 4 -- 货币
 
 function VisitorPlayerInfoPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:SetCloseUIWhenClickOutside(self)
 
     self._tradingData = {}
     

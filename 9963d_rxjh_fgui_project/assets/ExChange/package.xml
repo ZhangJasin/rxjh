@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="ajuz4mdd">
+  <resources>
+    <component id="rcpa0" name="ExChangeRootPanel.xml" path="/" exported="true"/>
+    <component id="rcpa1" name="tab_right.xml" path="/Components/"/>
+    <component id="rcpa4" name="ExChangeBuyPanel.xml" path="/" exported="true"/>
+    <component id="rcpa5" name="item_search.xml" path="/Components/Buy/" exported="true"/>
+    <component id="rcpa6" name="Item_tree_Item_root.xml" path="/Components/Buy/"/>
+    <image id="rcpa7" name="di_3.png" path="/Images/" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="rcpa8" name="split.png" path="/Images/"/>
+    <component id="rcpa9" name="btn_search.xml" path="/Components/Buy/"/>
+    <image id="rcpaa" name="arrow_up.png" path="/Images/"/>
+    <image id="rcpab" name="arrow_right.png" path="/Images/"/>
+    <component id="rcpac" name="btn_JingJia.xml" path="/Components/"/>
+    <component id="cozzd" name="ExChangeRecordPanel.xml" path="/" exported="true"/>
+    <component id="cozze" name="ExChangeLaunchPanel.xml" path="/" exported="true"/>
+    <image id="cozzf" name="split(1).png" path="/Images/"/>
+    <component id="cozzg" name="item_record.xml" path="/Components/Record/"/>
+    <component id="cozzh" name="comboxMoney_item.xml" path="/Components/Buy/"/>
+    <component id="cozzi" name="comboxMoney_popup.xml" path="/Components/Buy/"/>
+    <component id="cozzj" name="comboxMoney.xml" path="/Components/Buy/" exported="true"/>
+    <image id="cozzk" name="arrow.png" path="/Images/"/>
+    <component id="qop5l" name="item_mylaunch.xml" path="/Components/Launch/"/>
+    <image id="qop5m" name="icon_item1.png" path="/Images/" exported="true"/>
+    <component id="qop5n" name="item_bag.xml" path="/Components/Launch/"/>
+    <component id="qop5o" name="ExChangeLaunchDialog.xml" path="/" exported="true"/>
+    <image id="qop5p" name="bg.png" path="/Images/"/>
+    <image id="qop5q" name="img_item_kuang.png" path="/Images/"/>
+    <image id="qop5r" name="img_input_di.png" path="/Images/" scale="9grid" scale9grid="6,6,12,12"/>
+    <component id="qop5s" name="comboxFilter_item.xml" path="/Components/Record/"/>
+    <component id="qop5t" name="comboxFilter_popup.xml" path="/Components/Record/"/>
+    <component id="qop5u" name="comboxFilter.xml" path="/Components/Record/" exported="true"/>
+    <image id="qop5v" name="img_di.png" path="/Images/" scale="9grid" scale9grid="6,6,12,12"/>
+    <component id="qop5w" name="Item_tab.xml" path="/Components/Buy/"/>
+    <image id="qop5x" name="img_btn_selected.png" path="/Images/"/>
+    <image id="qop5y" name="img_btn_normal.png" path="/Images/"/>
+    <component id="qop5z" name="item_Button.xml" path="/Components/Buy/"/>
+    <image id="qop510" name="kuang.png" path="/Images/"/>
+    <component id="qop511" name="comboxLaunchMoney_item.xml" path="/Components/Launch/"/>
+    <component id="qop512" name="comboxLaunchMoney_popup.xml" path="/Components/Launch/"/>
+    <component id="qop513" name="comboxLaunchMoney.xml" path="/Components/Launch/" exported="true"/>
+    <component id="qop514" name="comLabel.xml" path="/Components/Launch/"/>
+    <component id="qop515" name="comCalc.xml" path="/Components/Launch/"/>
+    <component id="fug116" name="checkBox.xml" path="/Components/" exported="true"/>
+    <image id="fug117" name="btn_square_1_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="6,6,2,2"/>
+    <image id="fug118" name="btn_square_2_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="7,6,2,2"/>
+    <component id="irrl19" name="item_listleft_parent.xml" path="/Components/Buy/" exported="true"/>
+    <component id="irrl1a" name="item_listleft_child.xml" path="/Components/Buy/" exported="true"/>
+    <image id="irrl1b" name="itemSelect.png" path="/Images/" scale="9grid" scale9grid="9,11,11,7"/>
+    <component id="9z3d1c" name="switchSearch.xml" path="/Components/Buy/" exported="true"/>
+    <image id="9z3d1d" name="close.png" path="/Images/"/>
+    <component id="uf3f1e" name="checkBox.xml" path="/Components/Buy/" exported="true"/>
+    <component id="uf3f1f" name="checkBoxText.xml" path="/Components/Buy/"/>
+    <component id="uf3f1g" name="btn_moneyMore.xml" path="/Components/Buy/"/>
+    <component id="stn11h" name="ExChangeBuyDialog.xml" path="/" exported="true"/>
+    <image id="stn11i" name="ditu2.png" path="/Images/" scale="9grid" scale9grid="4,4,1,1" duplicatePadding="true"/>
+    <component id="stn11j" name="ComponentInput.xml" path="/Components/Buy/"/>
+    <image id="fts21k" name="74.png" path="/Images/" exported="true"/>
+    <image id="maso1l" name="img_loading.png" path="/Images/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

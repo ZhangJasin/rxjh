@@ -47,14 +47,13 @@ function PCStallProduct:Create()
 	FGUI:setOnClickEvent(self._ui.btn_sell_history, function ()
 		FGUI:Open("Stall_pc", "PCStallHistory", self._data.Userid)
 	end)
-end
-
-function PCStallProduct:Enter()
-	self:RegisterEvent()
-	FGUIFunction:ShowTopCurrency(SL:GetValue("GAME_DATA", "BagMoneyList"))
+	FGUI:setOnClickEvent(self._ui.btn_cart, function ()
+		FGUI:Open("Stall_pc", "PCStallShoppingCart")
+	end)
 end
 
 function PCStallProduct:Refresh(data)
+    self:RegisterEvent()
 	local scrollPanel = FGUI:GetScrollPane(self._ui.list_product)
 	FGUI:ScrollPane_scrollTop(scrollPanel, false)
 	if not data then return end
@@ -63,6 +62,7 @@ function PCStallProduct:Refresh(data)
 	self._product_data = {}
 	SL:RequestStallQueryItems(data.Userid)
 	self._closeTime = data.CloseTime or 0
+	self:RefreshShoppingCartCount()
 
 	FGUI:setVisible(self._ui.btn_close_shop, self._isSelf)
 	FGUI:setVisible(self._ui.btn_sell_history, self._isSelf)
@@ -126,8 +126,7 @@ end
 function PCStallProduct:Exit()
 	self:RemoveEvent()
 	FGUI:Close("Bag_pc", "PCSimpleBagPanel")
-	FGUI:Close("Stall_pc", "PCStallBuy")
-	FGUIFunction:HideTopCurrency()
+	FGUI:Close("Common_pc", "PCCommonItemSplitDialog")
 
 	if self._timeSchedule then
 		SL:UnSchedule(self._timeSchedule)
@@ -223,11 +222,24 @@ function PCStallProduct:ShowItemTips(context)
 	FGUIFunction:OpenItemTips({itemData = data.useritem, hideButtons = true})
 end
 
+
 -- 刷新商品界面信息
 function PCStallProduct:OnRefreshProductInfo(data)
 	if data then
 		self._product_data = data
 		FGUI:GList_setNumItems(self._ui.list_product, self._capacity)
+	end
+end
+
+-- 刷新购物车数量
+function PCStallProduct:RefreshShoppingCartCount()
+	local data = SL:GetValue("STALL_SHOPPING_CART_DATA")
+	local num = data and #data or 0
+	if num == 0 then
+		FGUI:setVisible(self._ui.text_cart_count, false)	
+	else
+		FGUI:setVisible(self._ui.text_cart_count, true)
+		FGUI:GTextField_setText(self._ui.text_cart_count, num)
 	end
 end
 
@@ -297,14 +309,10 @@ end
 
 -- 点击查看摊位主
 function PCStallProduct:OnClickOwnerInfo()
-	local dockData = {}
-	dockData.targetName = self._data.UserName
-    dockData.targetId = tonumber(self._data.Userid)
-	dockData.TipsType = SL:GetValue("DOCKTYPE_NENUM").Func_Friend
-	dockData.Level = 2
-	dockData.Job = 1
-	dockData.Sex = 1
-    FGUIFunction:OpenFuncDockTips(dockData)
+	local data = {}
+	data.targetId = tonumber(self._data.Userid)
+	data.TipsType = SL:GetValue("DOCKTYPE_NENUM").Func_Stall
+    FGUIFunction:RequestPlayerDataAndSetTipType(data)
 end
 
 function PCStallProduct:IsOnSelfShopPoint()
@@ -343,7 +351,7 @@ function PCStallProduct:OnTakeOffSuccess(makeindex, notTips)
 
 		if self._curBuyMakeIndex and makeindex == self._curBuyMakeIndex then
 			self._curBuyMakeIndex = nil
-			FGUI:Close("Stall_pc", "PCStallBuy")
+			FGUIFunction:CloseItemTips()
 			SL:ShowSystemTips(GET_STRING(90010028))
 		end
 	end
@@ -356,8 +364,40 @@ end
 -- 打开购买界面
 function PCStallProduct:OpenBuyPanel(data)
 	if not data then return end
-	self._curBuyMakeIndex = data.useritem.MakeIndex
-	FGUI:Open("Stall_pc", "PCStallBuy", data)
+	local itemData = data.useritem
+	self._curBuyMakeIndex = itemData.MakeIndex
+	local buyData = {}
+    buyData.dialogType = 1
+    buyData.title = GET_STRING(30000002)
+    buyData.itemData = itemData
+    buyData.minNum = 1
+    buyData.maxNum = itemData.OverLap
+    buyData.singlePrice = data.price
+    buyData.costType = tostring(data.type)
+	buyData.costName = SL:GetValue("ITEM_NAME", data.type)
+    buyData.isShowCount = true
+	local isInCart = SL:GetValue("STALL_IS_IN_SHOPPING_CART", self._curBuyMakeIndex)
+	local btnName = isInCart and 90010042 or 90010040
+    buyData.btnNames = {SL:GetValue("I18N_STRING", btnName), SL:GetValue("I18N_STRING", 30000002)}
+    buyData.btnClicked = function(isOk,num)
+        if isOk == 0 then
+			if isInCart then
+				SL:RequestStallRemoveFromShoppingCart(self._curBuyMakeIndex)
+				SL:ShowSystemTips(SL:GetValue("I18N_STRING", 90010043))
+			else
+				SL:RequestStallAddToShoppingCart(self._data, data, num)
+				SL:ShowSystemTips(SL:GetValue("I18N_STRING", 90010041))
+			end	
+			FGUI:GList_setNumItems(self._ui.list_product, self._capacity)
+            FGUI:Close("Common_pc", "PCCommonItemSplitDialog")
+        elseif isOk == 1 then
+			SL:RequestStallBuyItem(self._curBuyMakeIndex, data.price, num)
+        elseif isOk == 2 then
+            FGUI:Close("Common_pc", "PCCommonItemSplitDialog")
+        end
+    end
+    FGUIFunction:OpenCommonItemSplitDialog(buyData)
+
 end
 
 -- 打开下架界面
@@ -402,6 +442,7 @@ function PCStallProduct:OnBuyItem(data)
 		end
 	end
 	FGUI:GList_setNumItems(self._ui.list_product, self._capacity)
+	  FGUI:Close("Common_pc", "PCCommonItemSplitDialog")
 end
 
 -- 物品变化
@@ -429,10 +470,10 @@ function PCStallProduct:OnBuyFailTips(errorType)
 	elseif errorType == -6 then
 		SL:ShowSystemTips(GET_STRING(70000006))
 	else
-		SL:ShowSystemTips(GET_STRING(30000039))
-		SL:RequestStallQueryItems(self._data.Userid)
-		FGUI:Close("Stall_pc", "PCStallBuy")
-	end	
+		SL:ShowSystemTips(GET_STRING(30000039))	
+	end
+	SL:RequestStallQueryItems(self._data.Userid)
+	FGUI:Close("Common_pc", "PCCommonItemSplitDialog")
 end
 
 function PCStallProduct:OnChangeShopName(name)
@@ -472,6 +513,7 @@ function PCStallProduct:RegisterEvent()
 	SL:RegisterLUAEvent(LUA_EVENT_STALL_CLOSE_SHOP, "PCStallProduct", handler(self, self.Close))
 	SL:RegisterLUAEvent(LUA_EVENT_STALL_CHANGE_SHOP_NAME, "PCStallProduct", handler(self, self.OnChangeShopName))
 	SL:RegisterLUAEvent(LUA_EVENT_STALL_COLLECT_SHOP, "PCStallProduct", handler(self, self.OnCollectShop))	--收藏店铺
+	SL:RegisterLUAEvent(LUA_EVENT_STALL_REFRESH_CART, "PCStallProduct", handler(self, self.RefreshShoppingCartCount))
 end
 
 function PCStallProduct:RemoveEvent()
@@ -486,6 +528,7 @@ function PCStallProduct:RemoveEvent()
 	SL:UnRegisterLUAEvent(LUA_EVENT_STALL_CLOSE_SHOP, "PCStallProduct")
 	SL:UnRegisterLUAEvent(LUA_EVENT_STALL_CHANGE_SHOP_NAME, "PCStallProduct")
 	SL:UnRegisterLUAEvent(LUA_EVENT_STALL_COLLECT_SHOP, "PCStallProduct")
+	SL:UnRegisterLUAEvent(LUA_EVENT_STALL_REFRESH_CART, "PCStallProduct")
 end
 
 return PCStallProduct

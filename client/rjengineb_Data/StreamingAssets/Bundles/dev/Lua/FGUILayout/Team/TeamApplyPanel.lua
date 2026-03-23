@@ -3,7 +3,7 @@ local TeamApplyPanel = class("TeamApplyPanel", BaseFGUILayout)
 
 function TeamApplyPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 
 	self:InitData()
 	self:InitEvent()
@@ -52,10 +52,9 @@ function TeamApplyPanel:OnUpdateTeamApplyList()
 end
 
 function TeamApplyPanel:RefreshNothingInfo()
+    FGUI:setVisible(self._ui.panel_nothing, #self._applyList == 0)
     if #self._applyList == 0 then 
         FGUI:GTextField_setText(self._ui.text_nothing, GET_STRING(40010035))
-    else 
-        FGUI:GTextField_setText(self._ui.text_nothing, "")
     end 
 end
 
@@ -91,15 +90,17 @@ function TeamApplyPanel:ApplyListRenderer(idx, item)
 	FGUI:SetIntData(item, idx)
 end
 
-function TeamApplyPanel:OnClickBtnAgree(context)
-	local index = FGUI:GetIntData(context.sender.parent) + 1
+function TeamApplyPanel:OnClickBtnAgree(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+	local index = FGUI:GetIntData(eventData.sender.parent) + 1
     local data = self._applyList[index]
     if not data then 
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
 
     if data.isInvited then 
         SL:RequestAgreeTeamInvite(data.UserID)
@@ -109,15 +110,17 @@ function TeamApplyPanel:OnClickBtnAgree(context)
     self:OnUpdateTeamApplyList()
 end
 
-function TeamApplyPanel:OnClickBtnRefuse(context)
-	local index = FGUI:GetIntData(context.sender.parent) + 1
+function TeamApplyPanel:OnClickBtnRefuse(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+	local index = FGUI:GetIntData(eventData.sender.parent) + 1
     local data = self._applyList[index]
     if not data then 
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
 
     if data.isInvited then 
         SL:RequestRefuseTeamInvite(data.UserID)
@@ -127,12 +130,16 @@ function TeamApplyPanel:OnClickBtnRefuse(context)
     self:OnUpdateTeamApplyList()
 end
 
-function TeamApplyPanel:OnClickBtnAgreeAll(context)
+function TeamApplyPanel:OnClickBtnAgreeAll(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     SL:RequestTeamAllApplyAgree()
     self:OnUpdateTeamApplyList()
 end
 
-function TeamApplyPanel:OnClickBtnRefuseAll(context)
+function TeamApplyPanel:OnClickBtnRefuseAll(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     SL:RequestTeamAllApplyRefuse()
     self:OnUpdateTeamApplyList()
 end

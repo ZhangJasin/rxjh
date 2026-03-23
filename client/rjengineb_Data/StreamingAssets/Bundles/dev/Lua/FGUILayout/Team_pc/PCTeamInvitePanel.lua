@@ -9,7 +9,6 @@ local PAGE_DATA = {
 
 function PCTeamInvitePanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	--FGUI:SetCloseUIWhenClickOutside(self)
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
 	self:InitData()
@@ -65,7 +64,9 @@ function PCTeamInvitePanel:PageRenderer(idx, item)
     FGUI:GTextField_setText(text_select, data.name)
 end
 
-function PCTeamInvitePanel:OnClickPage()
+function PCTeamInvitePanel:OnClickPage(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     local index = FGUI:GList_getSelectedIndex(self._ui.list_page) + 1
     self:SelectPage(index)
 end
@@ -159,11 +160,10 @@ function PCTeamInvitePanel:OnUpdateTeamMemberList(index)
 end
 
 function PCTeamInvitePanel:RefreshNothingInfo()
+    FGUI:setVisible(self._ui.panel_nothing, #self._members == 0)
     if #self._members == 0 then 
         local sNothing = PAGE_DATA[self._selPage].nothing
         FGUI:GTextField_setText(self._ui.text_nothing, sNothing)
-    else 
-        FGUI:GTextField_setText(self._ui.text_nothing, "")
     end 
 end
 
@@ -199,7 +199,9 @@ function PCTeamInvitePanel:InviteListRenderer(idx, item)
     local ui_btnInvite = FGUI:GetChild(item, "btn_invite")
     FGUI:GButton_setBright(ui_btnInvite, true)
     FGUI:GButton_setGrey(ui_btnInvite, false)
-    FGUI:setOnClickEvent(ui_btnInvite, function()
+    FGUI:setOnClickEvent(ui_btnInvite, function(eventData)
+        FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
         self._selUID = member.uid
         SL:RequestInviteJoinTeam(self._selUID)
         FGUI:GButton_setBright(ui_btnInvite, false)

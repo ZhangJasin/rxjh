@@ -17,7 +17,7 @@ local IDX_RECORD = 3
 -- 拍卖行
 function AuctionRootPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:SetCloseUIWhenClickOutside(self)
     self._index = IDX_NULL
 
     self._pageDatas = {
@@ -35,6 +35,7 @@ function AuctionRootPanel:Create()
         }
     }
 
+    FGUIFunction:AdaptNotch(self.component)
     self:GetAllFGuiData()
     self:InitClickEvent()
     self:InitUI()
@@ -109,14 +110,6 @@ function AuctionRootPanel:InitClickEvent()
     FGUI:setOnClickEvent(self.btn_right_tab_3,handler(self,self.BtnRightTab3Clicked))
 end
 
-function AuctionRootPanel:InitAdapt()
-    local screenW = SL:GetValue("SCREEN_WIDTH")
-    local screenH = SL:GetValue("SCREEN_HEIGHT")
-    local safeL, safeR, safeB, safeT = SL:GetValue("SCREEN_SAFE_AREA_RATIO")
-    FGUI:setSize(self.component, screenW - safeR - safeL, screenH - safeB - safeT)
-    FGUI:setPosition(self.component, safeL, safeT)
-end
-
 function AuctionRootPanel:BtnRightTab1Clicked()
     self:PageTo(IDX_BUY)
 end
@@ -144,7 +137,6 @@ end
 
 function AuctionRootPanel:Enter()
     FGUIFunction:ShowTopCurrency(SL:GetValue("GAME_DATA","NPCStoreMoneyList"))
-    self:InitAdapt()
     self:RegisterEvent()
     self:PageTo(IDX_BUY)
 

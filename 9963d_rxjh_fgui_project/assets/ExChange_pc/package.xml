@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="08g55xx7">
+  <resources>
+    <component id="fts20" name="item_search.xml" path="/Components/Buy/"/>
+    <component id="fts21" name="Item_tree_Item_root.xml" path="/Components/Buy/"/>
+    <component id="fts22" name="btn_search.xml" path="/Components/Buy/"/>
+    <component id="fts23" name="comboxMoney_item.xml" path="/Components/Buy/"/>
+    <component id="fts24" name="comboxMoney_popup.xml" path="/Components/Buy/"/>
+    <component id="fts25" name="comboxMoney.xml" path="/Components/Buy/" exported="true"/>
+    <image id="fts26" name="arrow.png" path="/Images/"/>
+    <component id="fts27" name="Item_tab.xml" path="/Components/Buy/"/>
+    <image id="fts28" name="img_btn_selected.png" path="/Images/"/>
+    <image id="fts29" name="img_btn_normal.png" path="/Images/"/>
+    <component id="fts2a" name="item_Button.xml" path="/Components/Buy/"/>
+    <image id="fts2b" name="kuang.png" path="/Images/"/>
+    <component id="fts2c" name="item_listleft_parent.xml" path="/Components/Buy/" exported="true"/>
+    <component id="fts2d" name="item_listleft_child.xml" path="/Components/Buy/" exported="true"/>
+    <image id="fts2e" name="itemSelect.png" path="/Images/" scale="9grid" scale9grid="9,11,11,7"/>
+    <component id="fts2f" name="switchSearch.xml" path="/Components/Buy/" exported="true"/>
+    <image id="fts2g" name="close.png" path="/Images/"/>
+    <component id="fts2h" name="checkBox.xml" path="/Components/Buy/" exported="true"/>
+    <component id="fts2i" name="checkBoxText.xml" path="/Components/Buy/"/>
+    <component id="fts2j" name="btn_moneyMore.xml" path="/Components/Buy/"/>
+    <component id="fts2k" name="ComponentInput.xml" path="/Components/Buy/"/>
+    <component id="fts2l" name="item_mylaunch.xml" path="/Components/Launch/"/>
+    <component id="fts2m" name="item_bag.xml" path="/Components/Launch/"/>
+    <component id="fts2n" name="comboxLaunchMoney_item.xml" path="/Components/Launch/"/>
+    <component id="fts2o" name="comboxLaunchMoney_popup.xml" path="/Components/Launch/"/>
+    <component id="fts2p" name="comboxLaunchMoney.xml" path="/Components/Launch/" exported="true"/>
+    <component id="fts2q" name="comLabel.xml" path="/Components/Launch/"/>
+    <image id="fts2r" name="img_input_di.png" path="/Images/" scale="9grid" scale9grid="6,6,12,12"/>
+    <component id="fts2t" name="item_record.xml" path="/Components/Record/"/>
+    <component id="fts2u" name="comboxFilter_item.xml" path="/Components/Record/"/>
+    <component id="fts2v" name="comboxFilter_popup.xml" path="/Components/Record/"/>
+    <component id="fts2w" name="comboxFilter.xml" path="/Components/Record/" exported="true"/>
+    <component id="fts2x" name="tab_right.xml" path="/Components/"/>
+    <component id="fts2y" name="btn_JingJia.xml" path="/Components/"/>
+    <component id="fts2z" name="checkBox.xml" path="/Components/" exported="true"/>
+    <image id="fts210" name="di_3.png" path="/Images/" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="fts211" name="split.png" path="/Images/"/>
+    <image id="fts212" name="arrow_up.png" path="/Images/"/>
+    <image id="fts213" name="arrow_right.png" path="/Images/"/>
+    <image id="fts214" name="split(1).png" path="/Images/"/>
+    <image id="fts215" name="icon_item1.png" path="/Images/" exported="true"/>
+    <image id="fts216" name="bg.png" path="/Images/"/>
+    <image id="fts217" name="img_item_kuang.png" path="/Images/"/>
+    <image id="fts218" name="img_di.png" path="/Images/" scale="9grid" scale9grid="6,6,12,12"/>
+    <image id="fts219" name="btn_square_1_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="6,6,2,2"/>
+    <image id="fts21a" name="btn_square_2_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="7,6,2,2"/>
+    <image id="fts21b" name="ditu2.png" path="/Images/" scale="9grid" scale9grid="4,4,1,1" duplicatePadding="true"/>
+    <image id="fts21c" name="74.png" path="/Images/" exported="true"/>
+    <component id="fts21d" name="PCExChangeBuyDialog.xml" path="/" exported="true"/>
+    <component id="fts21e" name="PCExChangeBuyPanel.xml" path="/" exported="true"/>
+    <component id="fts21f" name="PCExChangeLaunchDialog.xml" path="/" exported="true"/>
+    <component id="fts21g" name="PCExChangeLaunchPanel.xml" path="/" exported="true"/>
+    <component id="fts21h" name="PCExChangeRecordPanel.xml" path="/" exported="true"/>
+    <component id="fts21i" name="PCExChangeRootPanel.xml" path="/" exported="true"/>
+    <component id="uj971j" name="label_com.xml" path="/Components/Launch/"/>
+    <image id="maso1k" name="img_loading.png" path="/Images/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

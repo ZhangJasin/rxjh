@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="76,34">
+  <displayList>
+    <graph id="n150_xgon" name="n150" xy="0,0" size="76,28" type="rect" lineColor="#ff999999" fillColor="#80000000"/>
+    <component id="n152_xgon" name="Button_auto" src="f2gcfvep" fileName="Components/Bottom/ButtonAuto.xml" xy="56,5">
+      <Button checked="true"/>
+    </component>
+    <text id="n151_xgon" name="n151" xy="4,4" size="52,20" fontSize="12" color="#ffffff" vAlign="middle" autoSize="none" text="挂机释放"/>
+  </displayList>
+</component>

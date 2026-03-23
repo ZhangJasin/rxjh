@@ -14,11 +14,6 @@ function GameMain.main()
 	-- 快捷使用
 	FGUI:Open("QuickUseTips", "QuickUseTips", nil, nil)
 	
-	-- 物品拾取 飞入背包 UI
-	-- FGUI:Open("PickItem", "PickItemUIParent", nil, FGUI_LAYER.BG)
-
-
-
 	SL:RegisterLUAEvent(LUA_EVENT_TARGET_CAHNGE, "GameMain", GameMain.OnTargetChange)
 end
 

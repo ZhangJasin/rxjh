@@ -46,7 +46,7 @@ function PCSettingDisplayPanel:InitData()
         }, { -- 屏蔽血条
             comName = "enHpHud",
             key = "SETTING_HEALTH_BAR_EN"
-        },{ -- 属性飘字开关
+        }, { -- 属性飘字开关
             comName = "enPropertyFloatWord",
             key = "SETTING_PROPERTY_TIPS_EN"
         }}
@@ -109,6 +109,12 @@ function PCSettingDisplayPanel:InitData()
         }, { -- 屏蔽敌方宝宝
             comName = "enEnemyCompanions",
             key = "SETTING_ENEMY_COMPANIONS_EN"
+        }, { -- 怪物血量显示
+            comName = "enEnemyHP",
+            key = "SETTING_ENEMY_HP_VALUE_EN"
+        }, { -- 怪物百分比血量显示
+            comName = "enEnemyPercentHP",
+            key = "SETTING_ENEMT_HP_SHOW_AS_PERCENTAGE_EN"
         }}
     }}
 end
@@ -145,8 +151,10 @@ function PCSettingDisplayPanel:InitItem(info, group, idx)
     FGUI:GButton_setOnChangedCallback(tog, handler(self, self.OnSwtichChanged))
 end
 
-function PCSettingDisplayPanel:OnSwtichChanged(context)
-    local id = FGUI:GetIntData(context.sender)
+function PCSettingDisplayPanel:OnSwtichChanged(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local id = FGUI:GetIntData(eventData.sender)
     local group, idx = self:GetInfo(id)
     local info = nil
     if idx == 0 then
@@ -154,7 +162,7 @@ function PCSettingDisplayPanel:OnSwtichChanged(context)
     else
         info = self.infoTable[group].child[idx]
     end
-    local enable = FGUI:GButton_getSelected(context.sender)
+    local enable = FGUI:GButton_getSelected(eventData.sender)
     SL:SetValue(info.key, enable)
     if idx == 0 then
         for idx, v in ipairs(info.child) do
@@ -165,20 +173,24 @@ function PCSettingDisplayPanel:OnSwtichChanged(context)
     end
 end
 
-function PCSettingDisplayPanel:OnDamageStyle1Changed(context)
-    local enable = FGUI:GButton_getSelected(context.sender)
+function PCSettingDisplayPanel:OnDamageStyle1Changed(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local enable = FGUI:GButton_getSelected(eventData.sender)
     if not enable then
-        FGUI:GButton_setSelected(context.sender, true)    
+        FGUI:GButton_setSelected(eventData.sender, true)    
         return
     end
     SL:SetValue("SETTING_DAMAGE_STYLE", 2)
     FGUI:GButton_setSelected(self._ui.tog_damage2, not enable)
 end
 
-function PCSettingDisplayPanel:OnDamageStyle2Changed(context)
-    local enable = FGUI:GButton_getSelected(context.sender)
+function PCSettingDisplayPanel:OnDamageStyle2Changed(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local enable = FGUI:GButton_getSelected(eventData.sender)
     if not enable then
-        FGUI:GButton_setSelected(context.sender, true)    
+        FGUI:GButton_setSelected(eventData.sender, true)    
         return
     end
     SL:SetValue("SETTING_DAMAGE_STYLE", 1)

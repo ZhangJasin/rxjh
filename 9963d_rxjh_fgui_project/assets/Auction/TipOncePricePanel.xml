@@ -7,37 +7,36 @@
     <component id="n26_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="417,175" size="500,400">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <image id="n25_rg2r" name="bg_di" src="7c351n" fileName="Images/img_dlg_di.png" xy="451,235" size="432,182">
+    <image id="n25_rg2r" name="bg_di" src="7c351n" fileName="Images/img_dlg_di.png" xy="433,235" size="468,200">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <text id="n3_q8ir" name="title" xy="641,186" size="52,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="提示">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n22_rg2r" name="item_node" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="547,286" size="72,72">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </component>
-    <text id="n5_q8ir" name="text_name" xy="640,283" size="10,32" fontSize="22" color="#ffffff" singleLine="true" text="">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <text id="n6_q8ir" name="label_price" xy="640,328" size="70,29" fontSize="20" color="#ffffff" singleLine="true" text="一口价:">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <text id="n7_q8ir" name="text_price" xy="749,328" size="48,29" fontSize="20" color="#ffffff" singleLine="true" text="9999">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <component id="n20_rg2r" name="icon_Money1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="716,327" size="32,32">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </component>
     <component id="n13_q8ir" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="895,202">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <text id="n24_rg2r" name="label_tip" xy="540,424" size="253,26" fontSize="18" color="#f1ffeb" align="center" vAlign="middle" text="一口价为直接成交价,是否寄售?"/>
+    <text id="n24_rg2r" name="label_tip" xy="540,454" size="253,26" fontSize="18" color="#f1ffeb" align="center" vAlign="middle" text="一口价为直接成交价,是否寄售?">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
     <component id="n11_q8ir" name="btn_givePrice" src="r8pb1q" fileName="Components/btn_JingJia.xml" xy="698,505" size="136,42" group="n27_owd7">
       <Button title="出 价" titleColor="#fced00" titleFontSize="22"/>
     </component>
     <component id="n12_q8ir" name="btn_cancel" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="510,505" size="136,42" group="n27_owd7">
       <Button title="取 消"/>
     </component>
-    <group id="n27_owd7" name="n27" xy="510,505" size="324,42"/>
+    <group id="n27_owd7" name="n27" xy="510,505" size="324,42" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n22_rg2r" name="item_node" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="631,249" size="72,72" group="n28_jnjc"/>
+    <text id="n5_q8ir" name="text_name" xy="583,335" size="168,32" group="n28_jnjc" fontSize="22" color="#ffcc00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text=""/>
+    <text id="n6_q8ir" name="label_price" xy="554,379" size="70,29" group="n28_jnjc" fontSize="20" color="#33cc00" singleLine="true" text="一口价:"/>
+    <component id="n7_q8ir" name="text_price" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="666,379" size="114,29" group="n28_jnjc">
+      <Label titleColor="#ffffff"/>
+    </component>
+    <component id="n20_rg2r" name="icon_Money1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="632,377" size="32,32" group="n28_jnjc"/>
+    <group id="n28_jnjc" name="n28" xy="554,249" size="226,160" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>

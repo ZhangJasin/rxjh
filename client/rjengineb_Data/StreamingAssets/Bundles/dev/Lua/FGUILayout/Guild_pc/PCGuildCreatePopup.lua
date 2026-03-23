@@ -5,7 +5,7 @@ local ItemShow = SL:RequireFile("FGUILayout/Item/ItemShow")
 function PCGuildCreatePopup:Create()
 	self.super.Create(self)
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	self._costs = {}
 
 	-- 关闭
@@ -52,7 +52,9 @@ function PCGuildCreatePopup:InitM2RandGuildName()
 end
 
 -- 创建行会点击事件
-function PCGuildCreatePopup:OnClickCreateGuildEvent()
+function PCGuildCreatePopup:OnClickCreateGuildEvent(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	-- 判断是否满足条件
 	local canCreate = true
 	local itemId = nil

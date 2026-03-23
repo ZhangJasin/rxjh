@@ -49,5 +49,5 @@
     <component id="njtv2i" name="quxiaoBtn.xml" path="/Components/" exported="true"/>
     <component id="njtv2j" name="quedingBtn.xml" path="/Components/" exported="true"/>
   </resources>
-  <publish name="" path="E:\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Reward" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>

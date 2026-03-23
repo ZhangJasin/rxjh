@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="30,30" opaque="false" extention="Label">
+  <displayList>
+    <loader id="n2_fa9c" name="icon" xy="0,0" size="30,30" touchable="false" fill="scale">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+</component>

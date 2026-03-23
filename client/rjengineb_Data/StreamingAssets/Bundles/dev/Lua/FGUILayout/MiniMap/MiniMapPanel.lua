@@ -28,12 +28,8 @@ end
 
 function MiniMapPanel:Create()
 	self._ui				= FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
-	if SL:GetValue("IS_PC_OPER_MODE") then
-        self._packageName = "MiniMap_pc"
-    else
-        self._packageName = "MiniMap"
-    end
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
+	self._packageName = "MiniMap"
 	self._tracePoint = FGUIFunction:BindClass(self._ui("mapComponent", "node_tracePoint"), "TracePoint/TracePointBox")
 	self._tracePoint:Create(self._packageName, "map_trace_point_item", handler(self, self.CalcMiniMapPos), 0)
 	self._map_loader		= FGUI:getChildByName(self._ui.mapComponent, "map_loader")
@@ -132,6 +128,7 @@ end
 function MiniMapPanel:InitData()
 	-- 关闭按钮
 	self.handler_clickCloseBtn				= handler(self, self.OnClose)
+	self.handler_OnLoadMapFileSuccess		= handler(self, self.OnLoadMapFileSuccess)
 
 	-- 左边列表Render
 	self.handler_leftItemRender				= handler(self, self.LeftItemRender)
@@ -149,7 +146,7 @@ function MiniMapPanel:InitData()
 	-- 刷新Boss复活倒计时
 	self.handler_updateTimeDown				= handler(self, self.PointProcressorBossUpdateTimeDown)
 
-	self._mapSizeW, self._mapSizeH = FGUI:getSize(self._map_loader)
+	self._uiSizeW, self._uiSizeH = FGUI:getSize(self._ui.mapComponent)
 	self._pointHandlers = 
 	{
 		[POINT_TYPE_LINK] = {
@@ -211,7 +208,6 @@ function MiniMapPanel:InitEvent()
 	FGUI:GList_addOnClickItemEvent(self._ui.list_right, self.handler_clickRightItem)
 
 	FGUI:setOnClickEvent(self._ui.mapComponent, handler(self, self.OnClickMap))
-	-- FGUI:setOnClickEvent(self._ui.btn_transmit, handler(self, self.OnClickTransmitButton))
 	FGUI:setOnClickEvent(self._ui.btn_monster, handler(self, self.OnClickMonsterType))
 	FGUI:setOnClickEvent(self._ui.btn_npc, handler(self, self.OnClickNpcType))
 	FGUI:GButton_setOnChangedCallback(self._ui.tog_boss, handler(self, self.OnSwitchBossFilter))
@@ -277,9 +273,6 @@ function MiniMapPanel:ChangeMap(mapId)
 	local offset 			= SL:GetValue("MINIMAP_OFFSET", self._mapId)
 	self._offsetX			= offset[1]
 	self._offsetY			= offset[2]
-    local mapCameraSize		= SL:GetValue("MINIMAP_CAMERA_SIZE", self._mapId)
-    self._mapParamX			= self._mapSizeW / self._mapSizeH * mapCameraSize
-    self._mapParamY			= mapCameraSize
 	self._tempDatas			= nil
 	self._timeDownInfos		= {}
 	self._actorPoints		= {}
@@ -289,18 +282,9 @@ function MiniMapPanel:ChangeMap(mapId)
 		self._timeDownSign = nil
 	end
 
-	self:RecycleElement()
-	-- 小地图怪物数据请求
-	SL:RequestMiniMapMonsters(self._mapId)
-	FGUI:GLoader_setUrl(self._map_loader, SL:GetValue("MINIMAP_FILE", self._mapId))
+	FGUI:GLoader_setUrl(self._map_loader, "")
+	FGUI:GLoader_setUrl(self._map_loader, SL:GetValue("MINIMAP_FILE", self._mapId), self.handler_OnLoadMapFileSuccess)
 	FGUI:GTextField_setText(self._ui.mapName_Text, SL:GetValue("MAP_NAME", self._mapId) or "")
-
-	self._pointPlayer		= nil
-	self:CreatePlayerPoint()
-	self:RefreshRightList()
-	self:RefreshPoints()
-	self:UpdateFindPath()
-	self:InitActorPoints()
 end
 
 -- 当灯光变化
@@ -308,7 +292,42 @@ function MiniMapPanel:OnChangeLight()
 	if not self._isCurMap then
 		return
 	end
-	FGUI:GLoader_setUrl(self._map_loader, SL:GetValue("MINIMAP_FILE", self._mapId))
+	FGUI:GLoader_setUrl(self._map_loader, "")
+	FGUI:GLoader_setUrl(self._map_loader, SL:GetValue("MINIMAP_FILE", self._mapId), self.handler_OnLoadMapFileSuccess)
+end
+
+function MiniMapPanel:OnLoadMapFileSuccess()
+	local img = FGUI:GLoader_getImage(self._map_loader)
+	local texture = img.texture
+    local width = texture and texture.width or 616
+    local height = texture and texture.height or 570
+
+	-- 计算宽高比
+	local imageRatio = width / height
+	local uiRatio = self._uiSizeW/self._uiSizeH
+
+	if imageRatio > uiRatio then
+		self._mapSizeW = self._uiSizeH*imageRatio
+		self._mapSizeH = self._uiSizeH
+	else
+		self._mapSizeW = self._uiSizeW
+		self._mapSizeH = self._uiSizeW/imageRatio
+	end
+	FGUI:setSize(self._map_loader, self._mapSizeW, self._mapSizeH)
+
+    local mapCameraSize		= SL:GetValue("MINIMAP_CAMERA_SIZE", self._mapId)
+    self._mapParamX			= self._mapSizeW / self._mapSizeH * mapCameraSize
+    self._mapParamY			= mapCameraSize
+	self._pointPlayer		= nil
+	self:RecycleElement()
+	-- 小地图怪物数据请求
+	SL:RequestMiniMapMonsters(self._mapId)
+	self:CreatePlayerPoint()
+	self:RefreshRightList()
+	self:RefreshPoints()
+	self:UpdateFindPath()
+	self:InitActorPoints()
+	self._tracePoint:SetMapID(self._mapId)
 end
 
 function MiniMapPanel:OnMapChange()
@@ -342,7 +361,10 @@ function MiniMapPanel:GetRightListType()
 end
 
 -- 选择怪物
-function MiniMapPanel:OnClickMonsterType()
+function MiniMapPanel:OnClickMonsterType(eventData)
+	if eventData and eventData.sender then 
+    	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+	end
 	self:SetRightListType(RIGHT_TYPE_MONSTER)
 	local list = SL:GetValue("MON_GEN_LIST", self._mapId)
 	local monList = {}
@@ -361,7 +383,8 @@ function MiniMapPanel:OnClickMonsterType()
 end
 
 -- 选择Npc
-function MiniMapPanel:OnClickNpcType()
+function MiniMapPanel:OnClickNpcType(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 	self:SetRightListType(RIGHT_TYPE_NPC)
 	local list = SL:GetValue("NPC_LIST", self._mapId)
 	local npcList = {}
@@ -420,7 +443,6 @@ function MiniMapPanel:OnClickTransmitBtn(context)
 
 	local idx = FGUI:GetIntData(context.sender)
 	local info = self._tempDatas[idx + 1]
-	ssrMessage:sendmsgEx("moveItem", "move",{{self._mapId, info.X, info.Y}})
 	if self._rightListType == RIGHT_TYPE_NPC then
 		if (not info.X) or (not info.Y) then return end
 		SL:RequestUseTransfer(self._mapId, info.X, info.Y)
@@ -784,6 +806,10 @@ end
 function MiniMapPanel:OnClickMap(context)
 	local tX, tY = FGUI:getTouchPosition(context)
 	local x, y = FGUI:WorldToLocal(self._ui.mapComponent, tX, tY)
+		
+	local scrollPane = FGUI:GetScrollPane(self._ui.mapComponent)
+	x = x + FGUI:ScrollPane_getPosX(scrollPane)
+	y = y + FGUI:ScrollPane_getPosY(scrollPane)
 	
 	local actorX, actorZ = self:GetActorPosition(x, y)
 	SL:SetValue("BATTLE_AUTO_MOVE_BEGIN", self._mapId, actorX, actorZ, nil, SLDefine.AUTO_MOVE_TO_DEST_FROM.MINIMAP)
@@ -847,12 +873,18 @@ end
 
 -- BEGIN 队友=====================================================
 function MiniMapPanel:InitActorPoints()
-	local playerList, nPlayer = global.playerManager:FindPlayerIDInCurrViewField()
+	if not self._isCurMap then
+		return
+	end
+	local playerList, nPlayer =SL:GetValue("FIND_IN_VIEW_PLAYER_LIST")
     for i = 1, nPlayer do
         self:AddActorPoint(playerList[i])
     end
 end
 function MiniMapPanel:OnActorInOfView(actorId)
+	if not self._isCurMap then
+		return
+	end
     if SL:GetValue("ACTOR_IS_MAINPLAYER", actorId) then
         self:UpdatePlayerPos()
     else
@@ -861,24 +893,39 @@ function MiniMapPanel:OnActorInOfView(actorId)
 end
 
 function MiniMapPanel:OnActorOutOfView(actorId)
+	if not self._isCurMap then
+		return
+	end
     self:RmvActorPoint(actorId)
 end
 
 function MiniMapPanel:OnActorDie(actorId)
+	if not self._isCurMap then
+		return
+	end
     self:RmvActorPoint(actorId)
 end
 
 function MiniMapPanel:OnActorRevive(actorId)
+	if not self._isCurMap then
+		return
+	end
     self:AddActorPoint(actorId)
 end
 
 function MiniMapPanel:OnActorAction(actorID, act)
+	if not self._isCurMap then
+		return
+	end
     if SL:CheckIsMoveAction(act) then
         self:UpdateActorPoint(actorID)
     end
 end
 
 function MiniMapPanel:AddActorPoint(actorId)
+	if not self._isCurMap then
+		return
+	end
 	-- 死亡
     if SL:GetValue("ACTOR_IS_DIE", actorId) then
         self:RmvActorPoint(actorId)
@@ -919,12 +966,14 @@ function MiniMapPanel:AddActorPoint(actorId)
 	local actorName = SL:GetValue("ACTOR_NAME", actorId)
 	actorName = FGUIFunction:GetServerName(actorName)
 	FGUI:GLabel_setTitle(name, actorName)
-	-- self:AotoSetPointNameBgWidth(name, name_bg)
 	handler = {icon = icon, name = name, info = info}
 	self._actorPoints[actorId] = handler
 end
 
 function MiniMapPanel:UpdateActorPoint(actorId)
+	if not self._isCurMap then
+		return
+	end
 	local handler = self._actorPoints[actorId]
 	if not handler then
 		return
@@ -937,6 +986,9 @@ function MiniMapPanel:UpdateActorPoint(actorId)
 end
 
 function MiniMapPanel:RmvActorPoint(actorId)
+	if not self._isCurMap then
+		return
+	end
 	local handler = self._actorPoints[actorId]
 	if not handler then
 		return
@@ -965,16 +1017,12 @@ function MiniMapPanel:FindPathBegin()
 		self:ClearPath()
 		return
 	end
-	-- local moveType = SL:GetValue("MAP_CURRENT_MOVE_TYPE")
-	-- if moveType == SLDefine.INPUT_MOVETYPE.INPUT_MOVE_TYPE_AUTOMOVE or 
-    --     moveType == SLDefine.INPUT_MOVETYPE.INPUT_MOVE_TYPE_AFK or
-    --     moveType == SLDefine.INPUT_MOVETYPE.INPUT_MOVE_TYPE_OTHER then
-		if self.scheduleId == nil then
-			self.scheduleId = SL:Schedule(function()
-				self:ShowFindPathLine()
-			end, 0.2)
-		end
-	-- end
+
+	if self.scheduleId == nil then
+		self.scheduleId = SL:Schedule(function()
+			self:ShowFindPathLine()
+		end, 0.2)
+	end
 end
 
 function MiniMapPanel:ShowFindPathLine()
@@ -1043,19 +1091,6 @@ end
 ---------------------------------------------------
 
 function MiniMapPanel:OnReceiveUseTransfer()
-	-- print("服务器收到 使用传送符")
-	SL:SetValue("BATTLE_AUTO_MOVE_END")
-	SL:SetValue("BATTLE_AFK_END")
-	
-	-- 检查当前任务的task_turntype是否为1，如果是则开启自动挂机
-	local taskDeliverData = require("FGUILayout/A_TaskDeliver/taskDeliverData")
-	local taskID = taskDeliverData:GetTaskID()
-	if taskID then
-		local Task_cfg = require("game_config/cfgcsv/Task")
-		local taskTurnType = Task_cfg[taskID]['task_turntype']
-		if taskTurnType and taskTurnType == 1 then
-			SL:SetValue("BATTLE_AFK_BEGIN")
-		end
-	end
+	print("服务器收到 使用传送符")
 end
 return MiniMapPanel

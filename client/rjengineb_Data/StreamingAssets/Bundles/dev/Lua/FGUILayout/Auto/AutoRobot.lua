@@ -318,6 +318,9 @@ function AutoRobot:PetAutoRestoreFastHp(delta)
     local pets = SL:GetValue("PETS")
     for petID, _ in pairs(pets) do
         repeat
+            if not SL:GetValue("ACTOR_IS_PET", petID) then 
+                break
+            end
             local curHP = SL:GetValue("ACTOR_HP", petID)
             local maxHP = SL:GetValue("ACTOR_MAXHP", petID)
             if curHP == 0 or maxHP == 0 then 
@@ -351,6 +354,9 @@ function AutoRobot:PetAutoRestoreHp(delta)
     local pets = SL:GetValue("PETS")
     for petID, _ in pairs(pets) do
         repeat
+            if not SL:GetValue("ACTOR_IS_PET", petID) then 
+                break
+            end
             local curHP = SL:GetValue("ACTOR_HP", petID)
             local maxHP = SL:GetValue("ACTOR_MAXHP", petID)
             if curHP == 0 or maxHP == 0 then 
@@ -401,6 +407,9 @@ function AutoRobot:PetAutoRestoreFastMp(delta)
     local pets = SL:GetValue("PETS")
     for petID, _ in pairs(pets) do
         repeat
+            if not SL:GetValue("ACTOR_IS_PET", petID) then 
+                break
+            end
             local curMP = SL:GetValue("ACTOR_MP", petID)
             local maxMP = SL:GetValue("ACTOR_MAXMP", petID)
             if maxMP == 0 then 
@@ -434,6 +443,9 @@ function AutoRobot:PetAutoRestoreMp(delta)
     local pets = SL:GetValue("PETS")
     for petID, _ in pairs(pets) do
         repeat
+            if not SL:GetValue("ACTOR_IS_PET", petID) then 
+                break
+            end
             local curMP = SL:GetValue("ACTOR_MP", petID)
             local maxMP = SL:GetValue("ACTOR_MAXMP", petID)
             if maxMP == 0 then 
@@ -473,6 +485,9 @@ function AutoRobot:PetAutoRestoreLoyalty(delta)
     local pets = SL:GetValue("PETS")
     for petID, _ in pairs(pets) do
         repeat
+            if not SL:GetValue("ACTOR_IS_PET", petID) then 
+                break
+            end
             local curLoyalty = SL:GetValue("PET_LOYALTY", petID) or -1
             local maxLoyalty = SL:GetValue("PET_MAX_LOYALTY", petID)
             if curLoyalty == -1 then 

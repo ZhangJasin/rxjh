@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="brz7yunl" hasFavorites="true">
+<packageDescription id="brz7yunl">
   <resources>
     <image id="j9jd1" name="status_box1.png" path="/Images/"/>
     <image id="j9jd2" name="img_text_di.png" path="/Images/" exported="true" scale="9grid" scale9grid="5,5,2,1" duplicatePadding="true"/>
@@ -45,7 +45,7 @@
     <component id="n0551v" name="page5.xml" path="/Components/" exported="true"/>
     <image id="n0551w" name="img_input_di.png" path="/Images/" scale="9grid" scale9grid="6,6,12,12"/>
     <component id="n0551x" name="item_attr_2.xml" path="/Components/"/>
-    <image id="n0551y" name="attr_bg.png" path="/Images/" scale="9grid" scale9grid="89,1,11,29"/>
+    <image id="n0551y" name="attr_bg.png" path="/Images/" scale="9grid" scale9grid="90,10,11,13"/>
     <component id="n0551z" name="page4.xml" path="/Components/" exported="true"/>
     <component id="n05520" name="item_attr_1.xml" path="/Components/"/>
     <component id="n05521" name="compText1.xml" path="/Components/" exported="true"/>
@@ -80,7 +80,6 @@
     <image id="n0552y" name="title_bg.png" path="/Images/"/>
     <component id="n0552z" name="PCLookPlayerPanel.xml" path="/" exported="true"/>
     <component id="n05531" name="LookPlayerSingleEquipPanel.xml" path="/"/>
-    <component id="n05532" name="OneFilterBagPanel.xml" path="/" exported="true"/>
     <component id="n05534" name="PCSimpleBagPanel.xml" path="/" exported="true"/>
     <component id="n05535" name="PCStorageExPanel.xml" path="/" exported="true"/>
     <component id="n05536" name="PCStoragePanel.xml" path="/" exported="true"/>
@@ -94,13 +93,6 @@
     <image id="xisl4q" name="img_btn.png" path="/Images/PCEquipBar/"/>
     <component id="xisl4r" name="btn_sort.xml" path="/Components/"/>
     <image id="sna94t" name="heiDI.png" path="/Images/" scale="9grid" scale9grid="4,4,8,8"/>
-    <image id="emvc4b" name="bg_erhuan.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
-    <image id="emvc4c" name="bg_hubi.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
-    <image id="emvc4d" name="bg_jiezhi.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
-    <image id="emvc4q" name="bg_wep.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
-    <image id="emvc4e" name="bg_xianglian.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
-    <image id="emvc4f" name="bg_xiezi.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
-    <image id="emvc4g" name="bg_yifu.png" path="/Images/PCComponentEquipPanel/" exported="true"/>
     <image id="s9fq4u" name="icon_item_select.png" path="/Images/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
     <component id="oxr74w" name="PCTitleBar.xml" path="/" exported="true"/>
     <component id="qmm24z" name="PCTitleCell.xml" path="/"/>
@@ -142,16 +134,7 @@
     <component id="ed395z" name="PCBagCellItem.xml" path="/Components/" exported="true"/>
     <component id="krex60" name="PCStorageBar.xml" path="/" exported="true"/>
     <image id="krex61" name="logo_storage.png" path="/Images/PCStorageBar/"/>
-    <component id="gusf63" name="ScaleButtonText.xml" path="/Components/" exported="true" favorite="true"/>
-    <component id="gusf6j" name="BagRecyclePanel.xml" path="/" exported="true"/>
-    <image id="gusf6k" name="title_bg(1).png" path="/Images/"/>
-    <component id="gusf6l" name="PCBagPanelForHS.xml" path="/Components/huishou/" exported="true"/>
     <component id="qkki62" name="PCBagPanel_1.xml" path="/" exported="true"/>
-    <component id="lhpj6m" name="PCStatusBar.xml" path="/"/>
-    <component id="lhpj6n" name="blockBtn.xml" path="/Components/"/>
-    <component id="lhpj6o" name="blockBtn2.xml" path="/Components/"/>
-    <component id="lhpj6p" name="blockBtn3.xml" path="/Components/"/>
-    <component id="lhpj6q" name="PCEquipBarBagCell.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

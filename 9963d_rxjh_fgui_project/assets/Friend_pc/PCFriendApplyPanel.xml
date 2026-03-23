@@ -28,6 +28,11 @@
     <image id="n25_r73b" name="bg2" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="512,400" pivot="0.5,0.5" anchor="true" size="285,260">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
+    <image id="n29_itl8" name="img_nothing" src="iwlbkvq8" fileName="image/img.png" pkg="qa9a7rit" xy="385,305" group="n31_itl8"/>
+    <text id="n30_itl8" name="text_nothing" xy="511,479" pivot="0.5,0.5" anchor="true" size="200,26" group="n31_itl8" font="ui://qa9a7ritrqwtkvph" fontSize="18" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="暂无好友"/>
+    <group id="n31_itl8" name="panel_nothing" xy="385,305" size="253,190" visible="false" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
     <list id="n3_vjv7" name="list_page" xy="512,255" pivot="0.5,0.5" anchor="true" size="280,28" layout="row" overflow="hidden" scroll="horizontal" defaultItem="ui://hxz346vpfmfyp" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>

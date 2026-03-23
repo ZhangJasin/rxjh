@@ -16,7 +16,7 @@ function PCAuctionConsignMentPanel:InitUI()
 end
 
 function PCAuctionConsignMentPanel:InitData()
-    self.MaxPaimaiCount = SL:GetValue("GAME_DATA", "MaxPaimaiCount") or 8
+    self.MaxPaimaiCount = SL:GetValue("GAME_DATA", "AuctionCountMax") or 8
     self.mySellsData = {}
     self.scheduleSet = {}
     self.cellList = {}
@@ -58,6 +58,8 @@ function PCAuctionConsignMentPanel:ListViewCellsItemRenderer(idx,cell)
         
         if not string.isNullOrEmpty(data.currname) then
             FGUI:GTextField_setText(status_jp,data.currname)
+        else
+            FGUI:GTextField_setText(status_jp,GET_STRING(30000201))
         end
 
         local itemData = SL:GetValue("ITEM_DATA",data.useritem.Index)
@@ -108,6 +110,7 @@ function PCAuctionConsignMentPanel:GetAllFGuiData()
     self.btn_consignment = self._ui.btn_consignment
     self.btn_help = self._ui.btn_help
     self.text_num = self._ui.text_num
+    self.ctrl_isHaveShangJia = FGUI:getController(self.component,"isHaveShangJia")
 end
 
 function PCAuctionConsignMentPanel:InitClickEvent()
@@ -142,8 +145,9 @@ end
 function PCAuctionConsignMentPanel:RefreshData()
     print("刷新我上架的物品")
     self.mySellsData = SL:GetValue("PAIMAI_SELF_DATA")
-    SL:print_t(self.mySellsData)
-    FGUI:GList_setNumItems(self.list_consignment, table.nums(self.mySellsData))
+    local nums = table.nums(self.mySellsData)
+    FGUI:Controller_setSelectedIndex(self.ctrl_isHaveShangJia,nums > 0 and 1 or 0)
+    FGUI:GList_setNumItems(self.list_consignment,nums )
     self:RefreshCount()
 end
 
@@ -152,16 +156,11 @@ function PCAuctionConsignMentPanel:RequestQueryMySell()
 end
 
 function PCAuctionConsignMentPanel:RegisterEvent()
-    SL:RegisterLUAEvent(LUA_EVENT_MY_AUCTION_MY_SELLS, "PCAuctionConsignMentPanel", handler(self,self.RefreshData))
-    -- SL:RegisterLUAEvent(LUA_EVENT_MY_AUCTION_ADD_SELL_SUCC,"PCAuctionConsignMentPanel",handler(self,self.RequestQueryMySell))
-    -- SL:RegisterLUAEvent(LUA_EVENT_MY_AUCTION_DEL_SELL_SUCC,"PCAuctionConsignMentPanel",handler(self,self.RequestQueryMySell))
-    
+    SL:RegisterLUAEvent(LUA_EVENT_MY_AUCTION_MY_SELLS, "PCAuctionConsignMentPanel", handler(self,self.RefreshData))    
 end
 
 function PCAuctionConsignMentPanel:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_MY_AUCTION_MY_SELLS, "PCAuctionConsignMentPanel")
-    -- SL:UnRegisterLUAEvent(LUA_EVENT_MY_AUCTION_ADD_SELL_SUCC, "PCAuctionConsignMentPanel")
-    -- SL:UnRegisterLUAEvent(LUA_EVENT_MY_AUCTION_DEL_SELL_SUCC, "PCAuctionConsignMentPanel")
 end
 
 return PCAuctionConsignMentPanel

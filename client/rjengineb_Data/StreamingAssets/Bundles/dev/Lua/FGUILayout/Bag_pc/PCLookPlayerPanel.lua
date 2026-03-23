@@ -9,7 +9,6 @@ local MODEL_SCALE = 0.7
 function PCLookPlayerPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
-    -- FGUI:SetCloseUIWhenClickOutside(self)
     self._pageList = {}
     self:GetAllFGuiData()
     self:InitUI()
@@ -173,7 +172,6 @@ function PCLookPlayerPanel:UpdatePlayerInfo()
         self:SetValueInText(Shili,GET_STRING(30000042),showCampStr)
         self:SetValueInText(mingShengComp,GET_STRING(30000043),mingSheng)
         self:SetValueInText(dengJi,SL:GetValue("ATTR_CONFIG_NAME_BY_ID", SLDefine.ATTRIBUTE.LEVEL),data.Level or "")
-        -- self:SetValueInText(liLian,GET_STRING(30000044),data.LLPoint)
     end
     
     if self._pageList[3] then
@@ -186,12 +184,12 @@ function PCLookPlayerPanel:UpdatePlayerInfo()
         local processNeiLi = FGUI:GetChild(item_attr_mp,"progress")
         local processExp = FGUI:GetChild(item_attr_exp,"progress")
         local processNuqi = FGUI:GetChild(item_attr_nuqi,"progress")
-        local hpData = data.Abil[2]
+        local hpData = data.Abil[SLDefine.ATTRIBUTE.HP]
         self:SetProgressBar(processHp,"hpBar",hpData.curValue,hpData.maxValue,1)
-        local mpData = data.Abil[3]
+        local mpData = data.Abil[SLDefine.ATTRIBUTE.MP]
         self:SetProgressBar(processNeiLi,"hpNeiLi",mpData.curValue,mpData.maxValue,1)
         self:SetProgressBar(processExp,"hpExp",data.Exp,data.MaxExp,1)
-        self:SetProgressBar(processNuqi,"hpNuqi",data.Abil[5].maxValue,1000,2)
+        self:SetProgressBar(processNuqi,"hpNuqi",data.Abil[SLDefine.ATTRIBUTE.ANGER].maxValue,1000,2)
     end
 
     if self._pageList[4] then
@@ -202,9 +200,13 @@ function PCLookPlayerPanel:UpdatePlayerInfo()
             for k,v in pairs(data.Abil) do
                 local cfg = SL:GetValue("ATTR_CONFIG",v.id)
                 if cfg then
-                    if v.id ~= SLDefine.ATTRIBUTE.HP and v.id ~= SLDefine.ATTRIBUTE.MP
-                        and v.id ~= SLDefine.ATTRIBUTE.LEVEL and v.id ~= SLDefine.ATTRIBUTE.EXP
-                        and v.id ~= SLDefine.ATTRIBUTE.ANGER and cfg.Isshow == 1 and cfg.Attribute == 0
+                    if v.id ~= SLDefine.ATTRIBUTE.HP 
+						and v.id ~= SLDefine.ATTRIBUTE.MP
+                        and v.id ~= SLDefine.ATTRIBUTE.LEVEL 
+						and v.id ~= SLDefine.ATTRIBUTE.EXP
+                        and v.id ~= SLDefine.ATTRIBUTE.ANGER 
+						and (cfg.Isshow == 1 or (cfg.Isshow == 2 and (data.maxValue and data.maxValue > 0))) 
+						and cfg.Attribute == 0
                     then
                         local data = v
                         if not cfg.Name then
@@ -446,6 +448,7 @@ function PCLookPlayerPanel:UpdateRoleModel()
         extData.weaponId = modelData.rWeapon == 0 and weaponId or modelData.rWeapon
         extData.wingId = modelData.wingId or 0
 		extData.faceId = faceId
+        extData.helmetColor  = modelData.helmetColor or 0
         self._modelIndex = FGUI:UIModel_addCharacterModel(
             self._model, extData, Vector3.New(0,0,0),nil,Vector3.New(MODEL_SCALE,MODEL_SCALE,MODEL_SCALE))
     end
@@ -494,7 +497,7 @@ function  PCLookPlayerPanel:SetModelRotate(uiTouch)
 end
 
 -----------------------------------注册事件--------------------------------------
-function PCLookPlayerPanel:RegisterEvent() 
+function PCLookPlayerPanel:RegisterEvent()
 end
 
 function PCLookPlayerPanel:RemoveEvent()

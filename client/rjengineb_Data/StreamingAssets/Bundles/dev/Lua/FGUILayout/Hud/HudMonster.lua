@@ -9,11 +9,12 @@ function HudMonster:ctor(uiHud)
     self._spriteMeshHP          = HUDHelp:GetChild(self._uiHud, HudConfig.HUDNode.hp, HUDComponentName.CSSpriteMeshScale9)
     self._spriteMeshHPAni       = HUDHelp:GetChild(self._uiHud, HudConfig.HUDNode.hpAni, HUDComponentName.CSSpriteMeshScale9)
     self._attachTitle           = HUDHelp:GetChild(self._uiHud, HudConfig.HUDNode.attachTitle)  
-
+    self._labelHP               = HUDHelp:GetChild(self._uiHud, HudConfig.HUDNode.hpLabel, HUDComponentName.CSLabel)
     self._hudVisibleList[self._spriteMeshHPBG] = true
     self._hudVisibleList[self._spriteMeshHP] = true
     self._hudVisibleList[self._spriteMeshHPAni] = true
     self._hudVisibleList[self._attachTitle] = true
+    self._hudVisibleList[self._labelHP] = true
 
     HUDHelp:SetSpriteName(self._spriteMeshHPBG, HudConfig.HPConfig.HP_NORMAL_BG.res)
     HUDHelp:SetSpriteName(self._spriteMeshHP, HudConfig.HPConfig.HP_RED.res)
@@ -27,19 +28,27 @@ function HudMonster:ctor(uiHud)
     self:SetSpriteScale9Size(self._spriteMeshHP,HudConfig.HPConfig.HP_RED.size)
     self:SetSpriteScale9Size(self._spriteMeshHPAni,HudConfig.HPConfig.HP_RED.size)
     
+    self._cacheLevel = nil
+    self._cacheHPLabel = nil
     self._cacheHPResType = nil
     self._cacheHPPercent = nil
     self._cacheHPAniPercent = nil
     self._cacheHudHpTypeVisible = nil
+    self._cacheHudHpLabelTypeVisible = nil
 
     self:SetVisible(self._spriteMeshHPAni, false)
     HUDHelp:SetLabelHalfWidthCallBack(self._labelName, handler(self,self.NameHalfWidthCallBack))
+
+    local _, titleY, _ = HUDHelp:GetPosition(self._attachTitle)
+    self._titleY = titleY 
+    self._titleYDown = titleY - 0.25
 end
 
 function HudMonster:Init(actorID)
     HudMonster.super.Init(self, actorID)
     self:SetHUDVisibleByType(HudConfig.HUDType.Name, false)
     self:SetHUDVisibleByType(HudConfig.HUDType.HP, false)
+    self:SetHUDVisibleByType(HudConfig.HUDType.HPLabel, false)
 
     if self._kuaFuNode then 
         self:SetVisible(self._kuaFuNode, false)
@@ -63,6 +72,10 @@ end
 
 function HudMonster:SetHudHPVisible(visible)
     self:SetHUDVisibleByType(HudConfig.HUDType.HP, visible)
+end
+
+function HudMonster:SetHudHPLabelVisible(visible)
+    self:SetHUDVisibleByType(HudConfig.HUDType.HPLabel, visible)
 end
 
 function HudMonster:SetHudHPResType(type)
@@ -119,7 +132,7 @@ function HudMonster:SetHUDVisibleByType(iType,visible)
         self._cacheHudHpTypeVisible = visible
         self:SetVisible(self._spriteMeshHPBG, visible)
         self:SetVisible(self._spriteMeshHP, visible)
-        -- self:SetVisible(self._spriteMeshHPAni, visible)
+        
     elseif iType == HudConfig.HUDType.Name then 
         if self._cacheHudNameTypeVisible == visible then
             return 
@@ -132,6 +145,12 @@ function HudMonster:SetHUDVisibleByType(iType,visible)
         end
         self._cacheHudTitleTypeVisible = visible
         self:SetVisible(self._attachTitle, visible)
+    elseif iType == HudConfig.HUDType.HPLabel then
+        if self._cacheHudHpLabelTypeVisible == visible then
+            return 
+        end
+        self._cacheHudHpLabelTypeVisible = visible
+        self:SetVisible(self._labelHP, visible)
     end
 end 
 
@@ -157,6 +176,38 @@ function HudMonster:SetHudHPAniPercent(percent)
     HUDHelp:SetSpritePercent(self._spriteMeshHPAni, percent)
 end 
 
+function HudMonster:RefHudHPLabel()
+    if not SL:GetValue("IS_PC_OPER_MODE") then 
+    end
+    local curValue = SL:GetValue("ACTOR_HP", self._actorID)
+    local maxValue = SL:GetValue("ACTOR_MAXHP", self._actorID)
+    local hpLabel = string.format("%d/%d", curValue, maxValue)
+    
+    if SL:GetValue("SETTING_ENEMT_HP_SHOW_AS_PERCENTAGE_EN") then --百分比显示 
+        maxValue = math.max(maxValue, 1)
+        local curPercent = curValue / maxValue * 100
+        hpLabel = string.format("%.1f%%", curPercent)
+    end
+    if hpLabel == self._cacheHPLabel then
+        return
+    end
+    self._cacheHPLabel = hpLabel
+    HUDHelp:SetLabelText(self._labelHP, hpLabel)
+end 
+
+function HudMonster:UpdateTitleY(HPLabelVisible)
+    local titleX, titleY, titleZ = HUDHelp:GetPosition(self._attachTitle)
+    if HPLabelVisible then 
+        if titleY ~= self._titleY then 
+            HUDHelp:SetPosition(self._attachTitle, titleX, self._titleY, titleZ)
+        end
+    else 
+        if titleY ~= self._titleYDown then 
+            HUDHelp:SetPosition(self._attachTitle, titleX, self._titleYDown, titleZ)
+        end
+    end
+end
+
 function HudMonster:RefreshLabelNameVisible()
     local isVisible = true
     repeat
@@ -171,10 +222,6 @@ function HudMonster:RefreshLabelNameVisible()
         end
 
         if SL:GetValue("ACTOR_IS_DIE", self._actorID) then 
-            isVisible = false
-            break
-        end
-        if SL:GetValue("ACTOR_IS_PET",self._actorID) then
             isVisible = false
             break
         end
@@ -235,10 +282,6 @@ function HudMonster:RefreshHPBarVisible()
             isVisible = false
             break
         end
-        if SL:GetValue("ACTOR_IS_PET",self._actorID) then
-            isVisible = false
-            break
-        end
 
         --屏蔽血条
         if SL:GetValue("SETTING_HEALTH_BAR_EN") then 
@@ -260,6 +303,52 @@ function HudMonster:RefreshHPBarVisible()
     until true
 
     self:SetHudHPVisible(isVisible)
+end
+
+function HudMonster:RefreshLabelHPVisible()
+    local isVisible = true
+    repeat
+        if not SL:GetValue("IS_PC_OPER_MODE") then 
+            isVisible = false
+            break
+        end
+        
+        if SL:GetValue("ACTOR_IS_COLLECTION", self._actorID) then 
+            isVisible = false
+            break
+        end
+
+        if SL:GetValue("ACTOR_IS_ESCORT", self._actorID) then 
+            isVisible = false
+            break
+        end
+
+        if SL:GetValue("ACTOR_IS_DIE", self._actorID) then 
+            isVisible = false
+            break
+        end
+
+        --屏蔽血条文本
+        if not SL:GetValue("SETTING_ENEMY_HP_VALUE_EN") then 
+            isVisible = false
+            break
+        end
+        
+        local masterID = SL:GetValue("ACTOR_MASTER_ID", self._actorID)
+        if masterID == 0 then 
+            local typeIndex = SL:GetValue("ACTOR_TYPE_INDEX", self._actorID)
+            local bossSign = SL:GetValue("MONSTER_BOSS_SIGN", typeIndex) or 0
+            
+            if bossSign == 0 and SL:GetValue("SELECT_TARGET_ID") ~= self._actorID then
+                isVisible = false
+                break
+            end
+        end
+
+    until true
+
+    self:SetHudHPLabelVisible(isVisible)
+    self:UpdateTitleY(isVisible)
 end
 
 function HudMonster:RefreshAllTitleVisible()
@@ -300,13 +389,13 @@ end
 
 
 -- 设置名字
-function HudMonster:SetHudName(name)
-    if self._cacheName == name then 
+function HudMonster:SetHudName(name, refLevel)
+    if self._cacheName == name and not refLevel then 
         return 
     end 
     self._cacheName = name
 
-    local name2, hudType, kuaFuName, param3, param4 = FGUIFunction:GetHudServerName(name)
+    local name2, hudType, kuaFuName, param3, param4 = FGUIFunction:GetHudServerName(name, self._actorID)
     self._kuaFuType = hudType
     if self._kuaFuType then 
         self:SetKuaFuName(hudType, kuaFuName, param3)
@@ -328,7 +417,11 @@ function HudMonster:SetHudName(name)
 
     if HUDHelp:GetLabelText(self._labelName) ~= name2 then 
         self._nameHalfWidth = nil
-        HUDHelp:SetLabelText(self._labelName, name2)
+        local nameStr = name2
+        if self._cacheLevel then 
+            nameStr = string.format("%s[Lv:%d]", name2, self._cacheLevel)
+        end
+        HUDHelp:SetLabelText(self._labelName, nameStr)
     else 
         if self._nameHalfWidth then 
             self:NameHalfWidthCallBack(self._nameHalfWidth * 100)
@@ -336,6 +429,17 @@ function HudMonster:SetHudName(name)
     end
 end
 
+-- 刷新level
+function HudMonster:RefLevel()
+    local level = SL:GetValue("ACTOR_LEVEL", self._actorID)
+    if self._cacheLevel == level then 
+        return 
+    end
+    self._cacheLevel = level
+    if self._cacheName then 
+        self:SetHudName(self._cacheName, true)
+    end
+end
 function HudMonster:SetNameAnchor()
     if self._kuaFuType == HudConfig.KuaFuType.TEXT then 
         local nameLastAnchor =  HUDHelp:GetLabelAnchor(self._labelName) 

@@ -4,13 +4,12 @@ local MainSUI = class("MainSUI", BaseFGUILayout)
 function MainSUI:Create()
 	self._ui = FGUI:ui_delegate(self.component)
     FGUI:setSortingOrder(self.component, FGUIDefine.MainOrder.SUI)
+
+    FGUIFunction:AdaptNotch(self.component)
 end
 
 function MainSUI:Enter()
 	self:RegisterEvent()
-
-    self:InitAdapt()
-
     
     SL:ComponentAttach(SLDefine.SUIComponentTable.MainRootLT, self._ui.LT)
     SL:ComponentAttach(SLDefine.SUIComponentTable.MainRootRT, self._ui.RT)
@@ -41,13 +40,6 @@ end
 
 --------------------------------------------------------------------------------
 
-function MainSUI:InitAdapt()
-    local screenW = SL:GetValue("SCREEN_WIDTH")
-    local screenH = SL:GetValue("SCREEN_HEIGHT")
-    local safeL, safeR, safeB, safeT = SL:GetValue("SCREEN_SAFE_AREA_RATIO")
-    FGUI:setSize(self.component, screenW - safeR - safeL, screenH - safeB - safeT)
-    FGUI:setPosition(self.component, safeL, safeT)
-end
 
 
 -----------------------------------注册事件--------------------------------------

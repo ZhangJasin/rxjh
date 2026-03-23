@@ -5,12 +5,6 @@ local DOUBLE_CLICK_INTERVAL = 0.2
 function BagCell.UpdateCellView(itemView,bagData)
 
     FGUI:setVisible(FGUI:GetChild(itemView, "Lock"), 	bagData._isLock)
-    if FGUI:CheckOpen("Bag", "BagRecyclePanel") then
-        FGUI:setVisible(FGUI:GetChild(itemView, "RecycleSelect"),bagData.recycleSelect)
-    else
-        FGUI:setVisible(FGUI:GetChild(itemView, "RecycleSelect"),false)
-    end
-
     local  c = FGUI:getController(itemView,"BagItemType")
     if not bagData._itemId or bagData._itemId == 0 then
         FGUI:Controller_setSelectedIndex(c,0)

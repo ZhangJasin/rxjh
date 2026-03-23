@@ -9,8 +9,8 @@
     <component id="oxr75" name="item_paiMai.xml" path="/Components/Buy/"/>
     <component id="oxr76" name="Item_paiMai_Item_root.xml" path="/Components/Buy/"/>
     <component id="oxr77" name="btn_JingJia.xml" path="/Components/"/>
-    <component id="oxr78" name="Item_listlift_child.xml" path="/Components/Buy/" exported="true"/>
-    <image id="oxr79" name="itemSelect.png" path="/Images/" scale="9grid" scale9grid="8,8,16,16"/>
+    <component id="oxr78" name="item_listleft_child.xml" path="/Components/Buy/" exported="true"/>
+    <image id="oxr79" name="itemSelect.png" path="/Images/" scale="9grid" scale9grid="9,10,12,7"/>
     <component id="oxr7a" name="item_listleft_parent.xml" path="/Components/Buy/" exported="true"/>
     <image id="oxr7b" name="寄售界面-标注图.png" path="/Components/Buy/"/>
     <component id="oxr7c" name="cbx_jingjia_item.xml" path="/Components/Buy/"/>

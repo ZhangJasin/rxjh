@@ -4,8 +4,8 @@
     <image id="n45_hkm9" name="n45" src="sna94t" fileName="Images/heiDI.png" xy="0,21" size="310,309">
       <relation target="n36_q9ls" sidePair="width-width,height-height,center-center,middle-middle"/>
     </image>
-    <component id="n48_gusf" name="BtnSort" src="gusf63" fileName="Components/ScaleButtonText.xml" xy="225,340" size="84,28" visible="false">
-      <Button title="整 理" titleColor="#ffff00" titleFontSize="12" icon="ui://st7dgeqqje63v3c"/>
+    <component id="n34_q9ls" name="BtnSort" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="226,340" size="84,28" visible="false">
+      <Button title="整 理" titleColor="#fced00" titleFontSize="12" icon="ui://st7dgeqqje63v3c"/>
     </component>
     <component id="n35_q9ls" name="BtnSell" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="243,489" size="84,40" alpha="0">
       <Button title="回收" titleColor="#ffffff" titleFontSize="22" icon="ui://st7dgeqqje63v3c"/>

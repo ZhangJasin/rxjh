@@ -24,7 +24,8 @@ function PCStoragePanel:Enter(data)
 	self.firstEnter = false
 	self.bagPanel:Enter({ 
 		disableCellDoubleClick = self._disableCellDoubleClick,
-		itemUse = false})
+		itemUse = false,
+		bindParentView = FGUIDefine.BindParentView.PCStoragePanel})
 	SL:ComponentAttach(SLDefine.SUIComponentTable.Storage, self._ui.Node_attach)
 end
 
@@ -143,14 +144,6 @@ function PCStoragePanel:UpdateCellView(itemView,bagData)
 		self:RightClickEvent(index)
 	end)
 
-	FGUI:setOnRollOverEvent(itemContentView.component, function()
-		self:RollOverEvent(index)
-	end)
-
-    FGUI:setOnRollOutEvent(itemContentView.component, function()
-		self:RollOutEvent(index)
-	end)
-
 	FGUI:setOnClickEvent(itemContentView.component, function(eventData)
 		if self.clickDelay then return end
 		FGUIFunction:CloseItemTips()
@@ -166,8 +159,7 @@ function PCStoragePanel:UpdateCellView(itemView,bagData)
 		FGUI:DragDropManager_startDrag(itemContentView.component,"ui://public_pc/CommonItem", data, touchId,FGUIFunction.CloseBagCheckDragView)
 		FGUIFunction:OpenBagCheckDragView()
 		local commmonItem = FGUI:GLoader_getComponent(FGUI:DragDropManager_getDragAgent())
-		ItemUtil:SetItemIconByItemID(commmonItem,itemData.Index)
-		ItemUtil:UpdateItemGradeByItemID(commmonItem,itemData.Index)
+		ItemUtil:RefreshItemUIByData(commmonItem,itemData)
 	end)
 end
 
@@ -176,7 +168,7 @@ function PCStoragePanel:onCellDropEvent(itemView,eventData)
 	SL:ScheduleOnce(handler(self, self.OnDelayClickEnd, nil, true), 0.1)
 	local childIdx = FGUI:GetChildIndex(self._ui.List_Cell, itemView)
 	local endPos = FGUI:GList_childIndexToItemIndex(self._ui.List_Cell, childIdx)
-	if eventData.inputEvent.button == 0 and
+	if FGUI:InputEvent_getButton(eventData) == 0 and
 		eventData.data and 
 		eventData.data.makeIndex then
 		-- 来源仓库
@@ -195,6 +187,8 @@ function PCStoragePanel:onCellDropEvent(itemView,eventData)
 				end
 
 				SL:SetValue("STORAGE_EXCHANGE_TWO_POS",startIndex,endIndex)
+				self:UpdateCellViewByViewIdAndStorageData(startIndex,self:GetCurShowStorageCellData(startIndex))
+				self:UpdateCellViewByViewIdAndStorageData(endIndex,self:GetCurShowStorageCellData(endIndex))
 			end
 			return
 		end
@@ -230,22 +224,6 @@ end
 
 function PCStoragePanel:OnDelayClickEnd()
     self.clickDelay = false
-end
-
-function PCStoragePanel:RollOverEvent(idx)
-	local index = self:GetStorageDataIndex(idx + 1)
-	local storageCellData = self:GetCurShowStorageCellData(index)
-	if storageCellData then
-		storageCellData:RollOverCell()
-	end
-end
-
-function PCStoragePanel:RollOutEvent(idx)
-	local index = self:GetStorageDataIndex(idx + 1)
-	local storageCellData = self:GetCurShowStorageCellData(index)
-	if storageCellData then
-		storageCellData:RollOutCell()
-	end
 end
 
 function PCStoragePanel:RightClickEvent(idx)
@@ -507,8 +485,6 @@ function PCStoragePanel:BagCellClickEvent(bagItem)
 			SL:RequestPutOutStorageData(bagItem._itemData)
 		end
 		bagItem:SetTipEnable(false)
-		-- 关闭使用
-		-- bagItem:SetUseItemEnable(false)
 	end
 end
 --------------------------- 注册事件 -----------------------------

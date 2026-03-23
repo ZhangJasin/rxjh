@@ -4,7 +4,6 @@ local PCGuildApplyList = class("PCGuildApplyList", BaseFGUILayout)
 function PCGuildApplyList:Create()
 	self.super.Create(self)
 	self._ui = FGUI:ui_delegate(self.component)
-	--FGUI:SetCloseUIWhenClickOutside(self)
 	FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 	self._applyData = {}
 	self._isAllSelected = false
@@ -68,7 +67,13 @@ end
 -- 刷新申请列表
 function PCGuildApplyList:RefreshApplyList(applyList)
 	self._applyData = applyList.List
-	FGUI:GList_setNumItems(self._ui.list_apply, #self._applyData)
+	if not self._applyData or #self._applyData == 0 then
+		FGUI:setVisible(self._ui.text_empty_tip, true)
+		FGUI:GList_setNumItems(self._ui.list_apply, 0)
+	else
+		FGUI:setVisible(self._ui.text_empty_tip, false)
+		FGUI:GList_setNumItems(self._ui.list_apply, #self._applyData)
+	end	
 end
 
 -- 点击申请列表项
@@ -78,7 +83,9 @@ function PCGuildApplyList:OnClickApplyItem(context)
 end
 
 -- 通过申请
-function PCGuildApplyList:OnClickApproveEvent()
+function PCGuildApplyList:OnClickApproveEvent(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	if not self._applyData then return end
 
 	local selectItemsIdx = FGUI:GList_getSelection(self._ui.list_apply)
@@ -106,7 +113,6 @@ function PCGuildApplyList:OnClickApproveEvent()
 	end
 
 	if #retainItems == 0 then
-		--SL:DelBubbleTips(10)
 	end
 
 	local applyList = {}
@@ -117,7 +123,9 @@ function PCGuildApplyList:OnClickApproveEvent()
 end
 
 -- 拒绝
-function PCGuildApplyList:OnClickRefuseEvent()
+function PCGuildApplyList:OnClickRefuseEvent(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+	
 	if not self._applyData then return end
 	local selectItemsIdx = FGUI:GList_getSelection(self._ui.list_apply)
 	local uidList = {}
@@ -148,7 +156,6 @@ function PCGuildApplyList:OnClickRefuseEvent()
 	end
 
 	if #retainItems == 0 then
-		--SL:DelBubbleTips(10)
 	end
 
 	local applyList = {}
@@ -162,8 +169,6 @@ function PCGuildApplyList:OpenSettingPanel()
 	FGUI:Open("Guild_pc", "PCGuildApplySetting")
 end
 
-
-
 function PCGuildApplyList:OnApplyItemRenderer(idx, item)
 	local data = self._applyData[idx + 1]
 	FGUI:GTextField_setText(FGUI:GetChild(item, "text_name"), FGUIFunction:GetServerName(data.UserName))
@@ -172,7 +177,6 @@ function PCGuildApplyList:OnApplyItemRenderer(idx, item)
 	local jobStr = SL:GetValue("JOB_NAME_BY_ID", data.Job)
 	FGUI:GTextField_setText(FGUI:GetChild(item, "text_job"), jobStr)
 	FGUI:GTextField_setText(FGUI:GetChild(item, "text_fight"), data.Fight or 0)
-	--FGUI:GButton_setSelected(item, self._isAllSelected)
 end
 
 function PCGuildApplyList:RegisterEvent()

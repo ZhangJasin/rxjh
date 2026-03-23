@@ -5,7 +5,6 @@ local PCTreasureStoreItem = SL:RequireFile("FGUILayout/TreasureShop_pc/PCTreasur
 -- 初始化
 function PCTreasurePanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    --FGUI:SetCloseUIWhenClickOutside(self)
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
     self:InitData()
@@ -30,22 +29,20 @@ function PCTreasurePanel:GetAllFGuiData()
     self.costFilterList = self._ui.costFilterList
     self.pageList = self._ui.pageList
     self.storeList = self._ui.storeList
+    self.ctrl_isHaveStore = FGUI:getController(self.component,"isHaveStore")
 end
 
 function PCTreasurePanel:InitUI()
     -- 商品List
     FGUI:GList_itemRenderer(self.storeList,handler(self,self.StoreListItemRenderer))
-    -- FGUI:GList_setDefaultItem(self.storeList,"ui://p8mjxubrcym74q")
     FGUI:GList_addOnClickItemEvent(self.storeList, handler(self, self.OnClickStoreItem))
 
     -- costFilter
     FGUI:GList_itemRenderer(self.costFilterList,handler(self,self.CostFilterItemRender))
-    -- FGUI:GList_setDefaultItem(self.costFilterList,"ui://p8mjxubrseb1v6o")
     FGUI:GList_addOnClickItemEvent(self.costFilterList, handler(self, self.CostFilterItemClick))
 
     -- page
     FGUI:GList_itemRenderer(self.pageList,handler(self,self.PageItemRender))
-    -- FGUI:GList_setDefaultItem(self.pageList,"ui://p8mjxubrbxaz3q")
     FGUI:GList_addOnClickItemEvent(self.pageList, handler(self, self.PageItemClick))
 
     -- 从配置获取显示的按钮信息  刷新4个按钮
@@ -95,6 +92,7 @@ end
 
 -- 左边页签按钮点击
 function PCTreasurePanel:PageItemClick(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
     local idx = FGUI:GetChildIndex(self.pageList,eventData.data)
     self:RefreshCostListByPage(idx + 1)
 end
@@ -126,6 +124,7 @@ function PCTreasurePanel:RefreshStoreData(index)
                                             self._pageValues[self._page],
                                             self._costFilterListData[self._cur_cT])
     self._current_storeData = self:SortStoreItem(self._current_storeData)
+    FGUI:Controller_setSelectedIndex(self.ctrl_isHaveStore,table.nums(self._current_storeData) > 0 and 1 or 0)
     FGUI:GList_setNumItems(self.storeList,table.count(self._current_storeData))
 end
 
@@ -163,7 +162,9 @@ function PCTreasurePanel:OnClickStoreItem(eventData)
     end
     
     local minCount = 0
-    local maxCount = math.floor(currentMoney/data.Nowprice)
+	-- 获取所有货币的总和
+	local totalMoney = SL:GetValue("NPC_STORTE_GET_TOTAL_MONEY_BY_COSTTYPE",data.Costtype)
+    local maxCount = math.floor(totalMoney/data.Nowprice)
     if data.OnceCount then
         local onceCountArray = string.split(data.OnceCount,"#")
         minCount = tonumber(onceCountArray[1]) or 1
@@ -181,6 +182,7 @@ function PCTreasurePanel:OnClickStoreItem(eventData)
     _data.minNum = minCount
     _data.maxNum = maxCount
     _data.singlePrice = data.Nowprice
+    _data.costType = data.Costtype
     _data.costName = costTypeName
     _data.isShowCount = true
     _data.OverLap = data.Quantity
@@ -192,7 +194,11 @@ function PCTreasurePanel:OnClickStoreItem(eventData)
             if SL:GetValue("BAG_IS_FULL", true) then
                 return
             end
-            SL:RequestStoreBuy(data.ID,num,0)
+			
+			local isMoneyEnough,costType,currentMoney,costList = SL:GetValue("NPC_STORE_GET_ENOUGH_COSTTYPE",data.Costtype,num * data.Nowprice)
+			TreasureShop.ReqBuyDialog(costList,function()
+				SL:RequestStoreBuy(data.ID,num,0)
+			end)
             FGUI:Close("Common_pc", "PCCommonItemSplitDialog")
         elseif isOk == 2 then
             FGUI:Close("Common_pc", "PCCommonItemSplitDialog")
@@ -252,6 +258,7 @@ function PCTreasurePanel:RefreshBuyRep(data)
             SL:ShowSystemTips(GET_STRING(30000039))
             return
         end
+        self:RefreshStoreListView()
     end
 end
 
@@ -260,13 +267,11 @@ function PCTreasurePanel:RefreshStoreListView()
 end
 
 function PCTreasurePanel:RegisterEvent()
-    SL:RegisterLUAEvent(LUA_EVENT_MONEY_CHANGE, "Treasure", handler(self, self.RefreshStoreListView))
     SL:RegisterLUAEvent(LUA_EVENT_NPCSTORE_UPDATE, "Treasure", handler(self, self.RepStoreDataUpdate))
     SL:RegisterLUAEvent(LUA_EVENT_NPCSTORE_BUY, "Treasure", handler(self, self.RefreshBuyRep))
 end
 
 function PCTreasurePanel:RemoveEvent()
-    SL:UnRegisterLUAEvent(LUA_EVENT_MONEY_CHANGE, "Treasure")
     SL:UnRegisterLUAEvent(LUA_EVENT_NPCSTORE_UPDATE, "Treasure")
     SL:UnRegisterLUAEvent(LUA_EVENT_NPCSTORE_BUY, "Treasure")
 end

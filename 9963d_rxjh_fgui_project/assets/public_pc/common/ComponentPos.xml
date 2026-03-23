@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="70,70">
-  <controller name="equipPosDI" exported="true" pages="1,耳环,2,戒指,3,项链,4,鞋子,8,衣服,10,护臂,11,通用,12,武器" selected="0"/>
-  <controller name="diKuangKind" exported="true" pages="0,特殊,1,普通,2,无" selected="1"/>
+  <controller name="equipPosDI" exported="true" pages="1,耳环,2,戒指,3,项链,4,鞋子,8,衣服,10,护臂,11,通用,18,手镯,19,门甲,20,内甲,21,箭矢,22,披风,12,武器(弓手),23,武器(枪客),24,武器(刺客),25,武器(医生),26,武器(刀客),27,武器(剑客)" selected="17"/>
+  <controller name="diKuangKind" exported="true" pages="0,特殊,1,普通,2,无" selected="0"/>
   <displayList>
-    <loader id="n55_mzzl" name="bg_di" xy="-4,-4" pivot="0.5,0.5" size="78,78" url="ui://qa9a7ritemvc4h" align="center" vAlign="middle" fill="scaleFree">
+    <loader id="n55_mzzl" name="bg_di" xy="-4,-4" pivot="0.5,0.5" size="78,78" url="ui://qa9a7ritplaq5f" align="center" vAlign="middle" fill="scaleFree">
       <gearSize controller="diKuangKind" pages="0" values="78,78,1,1" default="78,78,1,1"/>
       <gearIcon controller="diKuangKind" pages="0,1,2" values="ui://qa9a7ritplaq5f|ui://qa9a7ritemvc4h|"/>
       <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
     </loader>
-    <loader id="n61_mzzl" name="bg_equip_kind" xy="10,4" pivot="0.5,0.5" size="50,61" url="ui://brz7yunlemvc4b" align="center" vAlign="middle" fill="scale">
-      <gearIcon controller="equipPosDI" pages="2,3,4,8,10,11,12" values="ui://brz7yunlemvc4d|ui://brz7yunlemvc4e|ui://brz7yunlemvc4f|ui://brz7yunlemvc4g|ui://brz7yunlemvc4c||ui://brz7yunlemvc4q" default="ui://brz7yunlemvc4b"/>
+    <loader id="n61_mzzl" name="bg_equip_kind" xy="10,4" pivot="0.5,0.5" size="50,61" url="ui://qa9a7ritraxukvpz" align="center" vAlign="middle" fill="scale">
+      <gearIcon controller="equipPosDI" pages="1,2,3,4,8,10,11,18,19,20,21,22,12,23,24,25,26,27" values="ui://qa9a7ritraxukvps|ui://qa9a7ritraxukvpu|ui://qa9a7ritraxukvq0|ui://qa9a7ritraxukvq1|ui://qa9a7ritraxukvq2|ui://qa9a7ritraxukvpt||ui://qa9a7ritraxukvpy|ui://qa9a7ritraxukvpv|ui://qa9a7ritraxukvpw|ui://qa9a7ritraxukvpr|ui://qa9a7ritraxukvpx|ui://qa9a7rite5w7kvq6|ui://qa9a7rite5w7kvq7|ui://qa9a7rite5w7kvq3|ui://qa9a7rite5w7kvq5|ui://qa9a7rite5w7kvq4|ui://qa9a7ritraxukvpz"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
   </displayList>

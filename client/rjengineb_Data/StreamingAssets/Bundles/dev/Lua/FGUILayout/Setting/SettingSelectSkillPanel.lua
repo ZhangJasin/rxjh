@@ -3,7 +3,7 @@ local SettingSelectSkillPanel = class("SettingSelectSkillPanel", BaseFGUILayout)
 
 function SettingSelectSkillPanel:Create()
 	self._ui				= FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	self:InitData()
 	self:InitEvent()
 end 

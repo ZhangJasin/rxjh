@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <controller name="page_member" pages="0,,1," selected="0"/>
+  <displayList>
+    <graph id="n97_qgy3" name="mask" xy="0,0" size="1334,750" type="rect" lineSize="0" fillColor="#4c000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n93_t5g1" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,50" group="n94_t5g1"/>
+    <image id="n98_qgy3" name="n98" src="wi451z" fileName="Images/content_bg_9.png" xy="180,114" size="974,570" group="n94_t5g1"/>
+    <image id="n79_zah9" name="n85" src="zah9g" fileName="Images/item_title_bg.png" xy="184,116" size="966,49" group="n94_t5g1"/>
+    <image id="n84_zah9" name="n86" src="zah910" fileName="Images/split_line.png" xy="666,114" size="2,50" group="n94_t5g1"/>
+    <text id="n85_zah9" name="n87" xy="413,139" pivot="0.5,0.5" anchor="true" size="44,29" group="n94_t5g1" fontSize="20" color="#ddfdd9" align="center" vAlign="middle" leading="7" text="时间"/>
+    <text id="n86_zah9" name="n88" xy="912,139" pivot="0.5,0.5" anchor="true" size="44,29" group="n94_t5g1" fontSize="20" color="#ddfdd9" align="center" vAlign="middle" leading="7" text="事件"/>
+    <text id="n95_qgy3" name="n95" xy="540,61" size="257,34" group="n94_t5g1" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="门派事件"/>
+    <component id="n96_qgy3" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78" group="n94_t5g1"/>
+    <list id="n78_zah9" name="list_event" xy="179,168" size="976,512" group="n94_t5g1" layout="flow_hz" overflow="scroll" lineGap="4" defaultItem="ui://tsu6gfnozah912" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n99_120c2" name="text_empty_tip" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="481,269" group="n94_t5g1">
+      <Label title="暂无事件"/>
+    </component>
+    <group id="n94_t5g1" name="n94" xy="167,50" size="1000,650" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

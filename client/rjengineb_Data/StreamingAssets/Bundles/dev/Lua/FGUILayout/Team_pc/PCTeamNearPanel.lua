@@ -16,7 +16,6 @@ local PICK_DATA = {
 
 function PCTeamNearPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	--FGUI:SetCloseUIWhenClickOutside(self)
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
 	self:InitData()
@@ -76,7 +75,9 @@ function PCTeamNearPanel:PageRenderer(idx, item)
     FGUI:GTextField_setText(text_select, data.name)
 end
 
-function PCTeamNearPanel:OnClickPage()
+function PCTeamNearPanel:OnClickPage(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     local index = FGUI:GList_getSelectedIndex(self._ui.list_page) + 1
     self:SelectPage(index)
 end
@@ -191,16 +192,17 @@ function PCTeamNearPanel:OnUpdateNearTeam()
 end
 
 function PCTeamNearPanel:RefreshNothingInfo()
+    FGUI:setVisible(self._ui.panel_nothing, #self._nearList == 0)
     if #self._nearList == 0 then 
         local sNothing = PAGE_DATA[self._selPage].nothing
         FGUI:GTextField_setText(self._ui.text_nothing, sNothing)
-    else 
-        FGUI:GTextField_setText(self._ui.text_nothing, "")
     end 
 end
 
-function PCTeamNearPanel:OnClickBtnJoin(context)
-	local index = FGUI:GetIntData(context.sender.parent) + 1
+function PCTeamNearPanel:OnClickBtnJoin(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+	local index = FGUI:GetIntData(eventData.sender.parent) + 1
 	local data = self._nearList[index]
     if not data then 
         return
@@ -211,33 +213,37 @@ function PCTeamNearPanel:OnClickBtnJoin(context)
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
     SL:RequestApplyJoinTeam(data.MasterID)
 end
 
-function PCTeamNearPanel:OnClickBtnAgree(context)
-	local index = FGUI:GetIntData(context.sender.parent) + 1
+function PCTeamNearPanel:OnClickBtnAgree(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+	local index = FGUI:GetIntData(eventData.sender.parent) + 1
     local data = self._nearList[index]
     if not data then 
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
     SL:RequestAgreeTeamInvite(data.UserID)
     self:Close()
 end
 
-function PCTeamNearPanel:OnClickBtnRefuse(context)
-	local index = FGUI:GetIntData(context.sender.parent) + 1
+function PCTeamNearPanel:OnClickBtnRefuse(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+	local index = FGUI:GetIntData(eventData.sender.parent) + 1
     local data = self._nearList[index]
     if not data then 
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
     SL:RequestRefuseTeamInvite(data.UserID)
     self:OnUpdateNearTeam()
 end
@@ -250,8 +256,8 @@ function PCTeamNearPanel:OnClickBtnCreateTeam(event)
     self:Close() 
 end
 
-function PCTeamNearPanel:OnClickBtnRefresh(context)
-	FGUI:delayTouchEnabled(context.sender, 0.5)
+function PCTeamNearPanel:OnClickBtnRefresh(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 
     if self._selPage == 1 then 
         SL:RequestRandomTeam()

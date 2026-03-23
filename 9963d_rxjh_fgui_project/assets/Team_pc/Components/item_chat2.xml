@@ -4,11 +4,12 @@
   <displayList>
     <image id="n11_wmgr" name="icon_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="335,40" pivot="0.5,0.5" anchor="true" size="50,50"/>
     <component id="n20_r73b" name="avator" src="emvc7" fileName="common/CommonPlayerFrame.xml" pkg="qa9a7rit" xy="335,40" size="50,50"/>
-    <loader id="n19_akxo" name="Image_chatFrame" xy="-74,24" pivot="1,0" size="378,56" url="ui://qa9a7ritemvc1" fill="scaleFree" useResize="true" clearOnPublish="true">
+    <loader id="n19_akxo" name="Image_chatFrame" xy="5,26" pivot="1,0" size="300,40" url="ui://qa9a7ritemvc0" fill="scaleFree" useResize="true" clearOnPublish="true">
       <relation target="n17_wmgr" sidePair="width-width,height-height"/>
     </loader>
-    <richtext id="n17_wmgr" name="rich_msg" xy="290,24" pivot="1,0" anchor="true" size="354,53" restrictSize="0,360,0,84" fontSize="12" color="#660000" autoClearText="true" text="8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888"/>
+    <richtext id="n17_wmgr" name="rich_msg" xy="280,24" pivot="1,0" anchor="true" size="268,42" restrictSize="0,270,0,0" fontSize="14" color="#660000" autoClearText="true" text="11111111111111111111111111111111111111111111111111111111111"/>
     <text id="n5_qpwo" name="text_name" xy="290,5" pivot="1,0" anchor="true" size="280,20" fontSize="12" color="#ffffff" align="right" ubb="true" autoSize="none" text="名字"/>
   </displayList>
   <Button mode="Radio"/>
+  <relation target="n19_akxo" sidePair="bottomext-bottom"/>
 </component>

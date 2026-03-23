@@ -4,12 +4,10 @@ local PCSkillFramePanel = class("PCSkillFramePanel", BaseFGUILayout)
 local PAGE_DATA = {
 	[1] = {name = "武功", componentName = "PCSkillStudyPanel", obj = nil},
 	[2] = {name = "气功", componentName = "PCSkillPracticePanel", obj = nil},
-	-- [3] = {name = "设置", componentName = "PCSkillSettingPanel", obj = nil},
 }
 
 function PCSkillFramePanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	--FGUI:SetCloseUIWhenClickOutside(self)
 	FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
 	self:InitData()

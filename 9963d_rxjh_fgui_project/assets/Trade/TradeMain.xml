@@ -4,10 +4,9 @@
     <component id="n62_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="115,40" size="462,669" group="n65_jk3v"/>
     <component id="n34_hcoz" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="554,68" group="n65_jk3v"/>
     <text id="n35_hcoz" name="text_title" xy="320,50" size="52,34" group="n65_jk3v" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="交易"/>
-    <text id="n36_hcoz" name="text_target_name" xy="346,109" pivot="0.5,0.5" anchor="true" size="92,32" group="n43_hcoz" fontSize="22" color="#ffffff" ubb="true" autoClearText="true" text="角色名字"/>
+    <text id="n36_hcoz" name="text_target_name" xy="202,93" pivot="0.5,0.5" size="288,32" group="n43_hcoz" fontSize="22" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="none" autoClearText="true" text="角色名字"/>
     <image id="n39_hcoz" name="n39" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="130,128" size="429,213" group="n43_hcoz"/>
-    <image id="n63_jk3v" name="target_money_bg" src="qeggvnw" fileName="Images/textinput_bg.png" xy="132,344" size="326,47" group="n43_hcoz"/>
-    <text id="n45_hcoz" name="text_target_money_count" xy="189,353" size="15,29" group="n43_hcoz" fontSize="20" text="0"/>
+    <text id="n45_hcoz" name="text_target_money_count" xy="189,353" size="15,29" group="n43_hcoz" fontSize="20" color="#ffffff" text="0"/>
     <component id="n46_hcoz" name="icon_target_money" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="164,367" pivot="0.5,0.5" anchor="true" size="30,30" group="n43_hcoz"/>
     <list id="n47_hcoz" name="list_target_items" xy="134,133" size="422,205" group="n43_hcoz" layout="flow_hz" overflow="scroll" lineGap="4" colGap="7" defaultItem="ui://a4d4nzscipjgvnv" autoClearItems="true">
       <item/>
@@ -22,8 +21,8 @@
     </list>
     <image id="n57_l98g" name="n57" src="lxrgv5a" fileName="image/dropdown_content_select.png" pkg="st7dgeqq" xy="462,346" size="96,42" group="n43_hcoz"/>
     <text id="n58_l98g" name="text_target_state" xy="475,351" size="70,32" group="n43_hcoz" fontSize="22" color="#cc3300" strokeColor="#000000" text="未接受"/>
-    <group id="n43_hcoz" name="target" xy="130,93" size="429,298" group="n65_jk3v"/>
-    <text id="n48_hcoz" name="text_self_name" xy="346,410" pivot="0.5,0.5" anchor="true" size="92,32" group="n55_hcoz" fontSize="22" color="#ffffff" ubb="true" autoClearText="true" text="角色名字"/>
+    <group id="n43_hcoz" name="target" xy="130,93" size="429,295" group="n65_jk3v"/>
+    <text id="n48_hcoz" name="text_self_name" xy="220,394" pivot="0.5,0.5" size="252,32" group="n55_hcoz" fontSize="22" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="none" autoClearText="true" text="角色名字"/>
     <image id="n49_hcoz" name="n51" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="130,429" size="429,213" group="n55_hcoz"/>
     <component id="n51_hcoz" name="btn_agree" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="463,648" size="95,43" group="n55_hcoz">
       <Button title="接 受" titleColor="#f6e800" titleFontSize="22"/>
@@ -33,9 +32,9 @@
       <item/>
       <item/>
     </list>
-    <component id="n60_knrh" name="btn_edit_money" src="knrhf" fileName="Components/btn_textinput.xml" xy="132,646" size="326,48" group="n55_hcoz"/>
+    <component id="n60_knrh" name="btn_edit_money" src="knrhf" fileName="Components/btn_textinput.xml" xy="182,646" size="276,48" group="n55_hcoz"/>
     <component id="n53_hcoz" name="icon_self_money" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="164,670" pivot="0.5,0.5" anchor="true" size="30,30" group="n55_hcoz"/>
-    <text id="n52_hcoz" name="text_self_money_count" xy="189,655" size="15,29" group="n55_hcoz" fontSize="20" vAlign="middle" text="0"/>
+    <text id="n52_hcoz" name="text_self_money_count" xy="189,655" size="261,29" group="n55_hcoz" fontSize="20" vAlign="middle" autoSize="none" text="0"/>
     <group id="n55_hcoz" name="self" xy="130,394" size="429,300" group="n65_jk3v"/>
     <group id="n65_jk3v" name="n65" xy="115,40" size="462,669" advanced="true">
       <relation target="" sidePair="middle-middle,left-left"/>

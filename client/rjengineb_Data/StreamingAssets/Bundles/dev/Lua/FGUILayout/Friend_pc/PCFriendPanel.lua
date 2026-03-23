@@ -12,7 +12,6 @@ local AVATOR_DATA = {}
 
 function PCFriendPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-    --FGUI:SetCloseUIWhenClickOutside(self)   
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
 	self:InitData()
@@ -107,7 +106,9 @@ function PCFriendPanel:UpdatePageItemRenderer(idx, item)
     FGUI:GTextField_setText(text_select, data.name)
 end
 
-function PCFriendPanel:OnClickPage(context)
+function PCFriendPanel:OnClickPage(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     local index = FGUI:GList_getSelectedIndex(self._ui.list_page) + 1
     self._targetID = nil
     self._targetData = nil
@@ -168,11 +169,10 @@ end
 
 function PCFriendPanel:SetNothingVisible()
     local count = #self._showList
+    FGUI:setVisible(self._ui.panel_nothing, count == 0)
     if count == 0 then 
         local sNothing = PAGE_DATA[self._selPage].nothing
         FGUI:GTextField_setText(self._ui.text_nothing, sNothing)
-    else 
-        FGUI:GTextField_setText(self._ui.text_nothing, "")
     end 
 end
 
@@ -400,15 +400,7 @@ function PCFriendPanel:OnRendererChat(idx, item)
     else 
         FGUI:GRichTextField_setText(rich_msg, SL:ChatParser_Parse(data.Msg))
     end
-
-    -- local richWidth = FGUI:GRichTextField_getTextWidth(rich_msg)
-    -- local richHeight = FGUI:GRichTextField_getTextHeight(rich_msg)
-    -- richWidth = richWidth > 364 and 364 or richWidth
-    -- richHeight = richHeight > 84 and 84 or richHeight
-    -- local ui_chatBg = FGUI:GetChild(item, "chat_bg")
-    -- local imageW = math.max(60, richWidth + 30) 
-    -- local imageH = math.max(50, richHeight + 10)
-    -- FGUI:setSize(ui_chatBg, imageW, imageH)
+    
     FGUI:GList_ScrollToView(self._ui.list_chat, idx)
     FGUI:SetIntData(item, idx)
 end
@@ -477,7 +469,9 @@ function PCFriendPanel:OnClickItemEmoj(context)
 end
 
 -- evnet
-function PCFriendPanel:OnSendMessage()
+function PCFriendPanel:OnSendMessage(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     if not self._targetID then 
         SL:ShowSystemTips(GET_STRING(40000110))
         return
@@ -499,7 +493,9 @@ function PCFriendPanel:OnSendMessage()
     SL:RequestSendChatPriavteMsg(msg, self._targetID, self._targetData)
 end
 
-function PCFriendPanel:OnSendPostion()
+function PCFriendPanel:OnSendPostion(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     SL:RequestSendChatPosMsg(SLDefine.CHAT_CHANNEL.Private, self._targetID, self._targetData)
 end
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImageOffsetX="-12" designImageOffsetY="-2">
+  <displayList>
+    <component id="n0_tdbp" name="n0" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="295,135" size="744,480" group="n15_qxa1"/>
+    <text id="n2_tdbp" name="n2" xy="558,145" size="217,34" group="n15_qxa1" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" letterSpacing="20" autoSize="none" text="染色"/>
+    <image id="n3_tdbp" name="n3" src="tdbp2" fileName="Images/helmetcolor_model_bg.png" xy="309,196" group="n15_qxa1"/>
+    <image id="n4_tdbp" name="n4" src="g2qekvp1" fileName="image/black_bg.png" pkg="st7dgeqq" xy="673,197" size="348,407" group="n15_qxa1"/>
+    <image id="n16_iaa2" name="n16" src="if77a" fileName="Images/helmetcolor_color_frame.png" xy="728,211" size="227,226" group="n15_qxa1"/>
+    <component id="n5_tdbp" name="color_select_panel" src="tdbp9" fileName="Components/color_select_panel.xml" xy="732,213" group="n15_qxa1"/>
+    <image id="n6_tdbp" name="n6" src="7c35vp2" fileName="image/img_di_2.png" pkg="st7dgeqq" xy="681,471" size="90,30" group="n15_qxa1"/>
+    <text id="n7_tdbp" name="n7" xy="684,474" size="83,24" group="n15_qxa1" fontSize="16" color="#a3c161" align="center" letterSpacing="2" autoSize="none" text="强度调整"/>
+    <component id="n9_tdbp" name="slider_color" src="tdbp8" fileName="Components/helmet_color_slider.xml" xy="774,473" size="236,26" group="n15_qxa1">
+      <Slider value="70" max="100"/>
+    </component>
+    <text id="n10_tdbp" name="text_tip" xy="797,474" size="213,24" group="n15_qxa1" fontSize="16" color="#f7f3c7" letterSpacing="2" autoSize="none" text="请选择你的颜色"/>
+    <component id="n11_tdbp" name="btn_no" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="683,539" size="156,50" group="n15_qxa1">
+      <Button title="取消"/>
+    </component>
+    <component id="n12_tdbp" name="btn_ok" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="854,539" size="156,50" group="n15_qxa1">
+      <Button title="确定"/>
+    </component>
+    <graph id="n13_tdbp" name="model_root" xy="476,576" size="10,10" group="n15_qxa1" type="rect"/>
+    <component id="n14_tdbp" name="panel_touch" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="310,197" size="347,404" group="n15_qxa1"/>
+    <group id="n15_qxa1" name="n15" xy="295,135" size="744,480" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n1_tdbp" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1020,163">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

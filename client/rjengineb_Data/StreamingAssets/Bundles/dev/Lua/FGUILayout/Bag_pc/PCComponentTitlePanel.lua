@@ -24,6 +24,7 @@ function PCComponentTitlePanel:GetAllFGuiData()
     self.text_titleGet = self._ui.text_titleGet
     self.list_title = self._ui.list_title
     self.ctrl_ModeWho = FGUI:getController(self.component,"ModeWho")
+    self.ctrl_isHaveTitle = FGUI:getController(self.component,"isHaveTitle")
 end
 
 function PCComponentTitlePanel:CleanSchedule()
@@ -126,7 +127,6 @@ function PCComponentTitlePanel:TitleItemRender(idx,item)
 end
 
 function PCComponentTitlePanel:OnTitleItemFocusIn(eventData)
-    print("OnTitleItemFocusIn===================================")
     local cell = eventData.sender
     local index = FGUI:GetChildIndex(self.list_title, cell)
     index = FGUI:GList_childIndexToItemIndex(self.list_title, index)
@@ -146,6 +146,7 @@ end
 
 function PCComponentTitlePanel:RefreshTitleList()
     self.titleData = SL:GetValue("TITLE_SHOW_LIST") or {}
+    FGUI:Controller_setSelectedIndex(self.ctrl_isHaveTitle,table.nums(self.titleData) > 0 and 1 or 0)
     FGUI:GList_setNumItems(self.list_title,table.nums(self.titleData or {}))
     self:RefreshButton()
     self:RefreshTitleGetCount()

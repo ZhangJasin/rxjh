@@ -145,8 +145,10 @@ function SettingDisplayPanel:InitItem(info, group, idx)
     FGUI:GButton_setOnChangedCallback(tog, handler(self, self.OnSwtichChanged))
 end
 
-function SettingDisplayPanel:OnSwtichChanged(context)
-    local id = FGUI:GetIntData(context.sender)
+function SettingDisplayPanel:OnSwtichChanged(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local id = FGUI:GetIntData(eventData.sender)
     local group, idx = self:GetInfo(id)
     local info = nil
     if idx == 0 then
@@ -154,7 +156,7 @@ function SettingDisplayPanel:OnSwtichChanged(context)
     else
         info = self.infoTable[group].child[idx]
     end
-    local enable = FGUI:GButton_getSelected(context.sender)
+    local enable = FGUI:GButton_getSelected(eventData.sender)
     SL:SetValue(info.key, enable)
     if idx == 0 then
         for idx, v in ipairs(info.child) do
@@ -165,20 +167,24 @@ function SettingDisplayPanel:OnSwtichChanged(context)
     end
 end
 
-function SettingDisplayPanel:OnDamageStyle1Changed(context)
-    local enable = FGUI:GButton_getSelected(context.sender)
+function SettingDisplayPanel:OnDamageStyle1Changed(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local enable = FGUI:GButton_getSelected(eventData.sender)
     if not enable then
-        FGUI:GButton_setSelected(context.sender, true)    
+        FGUI:GButton_setSelected(eventData.sender, true)    
         return
     end
     SL:SetValue("SETTING_DAMAGE_STYLE", 2)
     FGUI:GButton_setSelected(self._ui.tog_damage2, not enable)
 end
 
-function SettingDisplayPanel:OnDamageStyle2Changed(context)
-    local enable = FGUI:GButton_getSelected(context.sender)
+function SettingDisplayPanel:OnDamageStyle2Changed(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local enable = FGUI:GButton_getSelected(eventData.sender)
     if not enable then
-        FGUI:GButton_setSelected(context.sender, true)    
+        FGUI:GButton_setSelected(eventData.sender, true)    
         return
     end
     SL:SetValue("SETTING_DAMAGE_STYLE", 1)

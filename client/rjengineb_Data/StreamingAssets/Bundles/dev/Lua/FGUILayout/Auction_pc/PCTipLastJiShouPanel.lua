@@ -6,7 +6,7 @@ local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 
 function PCTipLastJiShouPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:setWindowDrag(self.component, self._ui.bg)
     self:GetAllFGuiData()
     self:InitOnClickEvent()
     self:InitData()
@@ -34,6 +34,13 @@ function PCTipLastJiShouPanel:InitOnClickEvent()
 end
 
 function PCTipLastJiShouPanel:BtnOKClicked()
+    local curSPmCount = #SL:GetValue("PAIMAI_SELF_DATA")
+    local maxPmCount = SL:GetValue("GAME_DATA","AuctionCountMax")
+    if curSPmCount >= maxPmCount then
+        SL:ShowSystemTips(string.format(GET_STRING(30000068),maxPmCount))
+        return
+    end
+
     local makeIndex = self.data.BagData.MakeIndex
     local count = self.historyData.count
     local price = self.historyData.price
@@ -54,11 +61,11 @@ function PCTipLastJiShouPanel:RefreshUI()
     ItemUtil:SetItemCountVisible(self.icon_money_1,false)
     ItemUtil:RefreshItemUIByData(self.icon_money_2,MoneyData)
     ItemUtil:SetItemGradeVisible(self.icon_money_2,false)
-    ItemUtil:SetItemCountVisible(self.icon_money_1,false)
+    ItemUtil:SetItemCountVisible(self.icon_money_2,false)
     FGUI:GTextField_setText(self.text_content,string.format(GET_STRING(30000078),self.data.ItemData.Name))
     FGUI:GTextField_setText(self.text_jishou_count,self.historyData.count)
-    FGUI:GTextField_setText(self.text_jiShoudiJia,SL:GetThousandSepString(self.historyData.price))
-    FGUI:GTextField_setText(self.text_price_once,SL:GetThousandSepString(self.historyData.lastprice))
+	FGUIFunction:ScrollText_setString(self.text_jiShoudiJia,SL:GetThousandSepString(self.historyData.price),1,0)
+	FGUIFunction:ScrollText_setString(self.text_price_once,SL:GetThousandSepString(self.historyData.lastprice),1,0)
 end
 
 function PCTipLastJiShouPanel:Enter(data)

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="269,424">
+  <displayList>
+    <loader id="n1_pf15" name="gloader_tex" xy="0,0" size="267,424" url="ui://qa9a7ritemvc4w" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n0_pf15" name="gloader_bg" xy="0,0" size="269,424" url="ui://qa9a7ritpf15kvpp" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+</component>

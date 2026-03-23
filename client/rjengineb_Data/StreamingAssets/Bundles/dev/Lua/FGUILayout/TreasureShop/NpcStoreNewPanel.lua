@@ -9,7 +9,7 @@ local PACKAGE_NAME                              = "TreasureShop"
 
 function NpcStoreNewPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:SetCloseUIWhenClickOutside(self)
 
     self._index = IDX_NULL
     self._pageDatas = {
@@ -51,6 +51,8 @@ function NpcStoreNewPanel:TabItemRender(idx, item)
 end
 
 function NpcStoreNewPanel:TabItemClicked(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     local idx = FGUI:GetChildIndex(self.list_tab,eventData.data)
     self:PageTo(idx + 1)
 end

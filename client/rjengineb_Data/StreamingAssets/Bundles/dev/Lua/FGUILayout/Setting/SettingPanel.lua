@@ -9,7 +9,7 @@ function SettingPanel:Create()
 	self._ui				= FGUI:ui_delegate(self.component)
 	
 	self._packageName = "Setting"
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	self:InitData()
 	self:InitEvent()
 end 

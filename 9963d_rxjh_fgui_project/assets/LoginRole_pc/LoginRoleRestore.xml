@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600">
+  <displayList>
+    <component id="n15_hfgi" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="243,162" size="314,275" group="n37_ec6q"/>
+    <text id="n36_ec6q" name="title" xy="365,169" pivot="0.5,0.5" size="68,24" group="n37_ec6q" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="角色恢复"/>
+    <component id="n16_hfgi" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="538,182" group="n37_ec6q"/>
+    <image id="n27_mrrv" name="mask" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="252,203" size="296,174" group="n37_ec6q"/>
+    <list id="n24_mrrv" name="role_list" xy="253,204" size="294,171" group="n37_ec6q" overflow="scroll" defaultItem="ui://88oqthnqec6qvx" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n33_mrrv" name="restore_btn" src="mrrv1g" fileName="Components/Restore/recover_btn.xml" xy="347,388" size="106,34" group="n37_ec6q">
+      <Button title="恢 复"/>
+    </component>
+    <group id="n37_ec6q" name="root" xy="243,162" size="314,275" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

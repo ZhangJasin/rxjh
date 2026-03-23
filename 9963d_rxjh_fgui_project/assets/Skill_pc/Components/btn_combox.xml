@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="30,30" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n6_fvar" name="bg1" src="emvc52" fileName="image/combobox_arrow_bg.png" pkg="qa9a7rit" xy="15,15" pivot="0.5,0.5" anchor="true" size="20,20"/>
+    <image id="n7_fvar" name="bg2" src="emvc51" fileName="image/combobox_arrow.png" pkg="qa9a7rit" xy="15,15" pivot="0.5,0.5" anchor="true" size="12,12" rotation="180"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue=".8"/>
+</component>

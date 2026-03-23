@@ -22,11 +22,9 @@ function QuickUseBox:Create(root, index)
 end
 
 function QuickUseBox:Enter()
-	-- self:RegisterEvent()
 end
 
 function QuickUseBox:Exit()
-	-- self:RemoveEvent()
 
     if self.touchTimer then
         SL:UnSchedule(self.touchTimer)
@@ -58,7 +56,6 @@ function QuickUseBox:SetItem(itemId, force)
         FGUI:GButton_setIcon(self._ui.Button_icon, iconPath)
         self.itemData = SL:GetValue("BAG_DATA_BY_INDEX", itemId)
         if not self.itemData then
-            -- self:UpdateCount(count)
             self.root:SetItemIndex(self.index, nil)
             self:SetItem(nil)
         else
@@ -79,6 +76,7 @@ function QuickUseBox:OnSelectItem(eventData)
 end
 
 function QuickUseBox:OnClickItem(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
     if not self.itemData then return end
     if self.cdEndTime and self.cdEndTime > SL:GetValue("SERVER_TIME") then return end
     local holdTime = FGUI:InputEvent_getHoldTime(eventData)

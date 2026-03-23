@@ -51,7 +51,7 @@
     </component>
     <text id="n67_knkx" name="text_msaaQuality" xy="245,266" size="64,19" group="n69_knkx" fontSize="12" color="#ffffff" text="抗锯齿等级"/>
     <component id="n68_knkx" name="comboBox_msaaQuality" src="f2ul5i" fileName="Components/ComboBox_Min.xml" xy="308,265" size="53,21" group="n69_knkx">
-      <ComboBox title="关闭" visibleItemCount="10">
+      <ComboBox title="关闭" visibleItemCount="4">
         <item title="关闭"/>
         <item title="低"/>
         <item title="中"/>
@@ -59,7 +59,23 @@
       </ComboBox>
     </component>
     <component id="n79_mxha" name="switch_rotateCameraOfLeftKey" src="f2ul57" fileName="Components/tog_select.xml" xy="14,294" size="120,22" group="n69_knkx">
-      <Button title="左键拖拽旋转镜头" titleColor="#ffffff" titleFontSize="12"/>
+      <Button title="左键旋转镜头" titleColor="#ffffff" titleFontSize="12"/>
+    </component>
+    <component id="n83_jdcb" name="switch_FullscreenMode" src="f2ul57" fileName="Components/tog_select.xml" xy="135,294" size="77,22" group="n69_knkx">
+      <Button title="全屏模式" titleColor="#ffffff" titleFontSize="12"/>
+    </component>
+    <text id="n84_jdcb" name="text_screenResolution" xy="236,294" size="40,19" group="n69_knkx" fontSize="12" color="#ffffff" text="分辨率"/>
+    <component id="n85_jdcb" name="comboBox_screenResolution" src="f2ul5i" fileName="Components/ComboBox_Min.xml" xy="275,293" size="86,21" group="n69_knkx">
+      <ComboBox title="1080*1920" visibleItemCount="4" autoClearItems="true">
+        <item title="800*600"/>
+        <item title="1024*768"/>
+        <item title="1334*750"/>
+        <item title="1280*1024"/>
+        <item title="1600*900"/>
+        <item title="1600*1200"/>
+        <item title="1680*1050"/>
+        <item title="1920*1080"/>
+      </ComboBox>
     </component>
     <group id="n69_knkx" name="n69" xy="0,107" size="377,214"/>
     <component id="n70_knkx" name="music_title" src="f2ul4r" fileName="Components/title_label.xml" xy="115,322" size="147,23" group="n76_knkx">

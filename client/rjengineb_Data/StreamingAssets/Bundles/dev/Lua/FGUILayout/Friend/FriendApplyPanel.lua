@@ -2,13 +2,13 @@ local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local FriendApplyPanel = class("FriendApplyPanel", BaseFGUILayout)
 
 local PAGE_DATA = {
-	[1] = {name = "添加好友", page = 1},
-	[2] = {name = "好友申请", page = 2},
+	[1] = {name = "添加好友", page = 1, nothing = "暂无好友"},
+	[2] = {name = "好友申请", page = 2, nothing = "暂无申请"},
 }
 
 function FriendApplyPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:SetCloseUIWhenClickOutside(self)
 
 	self:InitData()
 	self:InitEvent()
@@ -93,6 +93,16 @@ function FriendApplyPanel:OnUpdateList(bSearch)
     end  
 
     FGUI:GList_setNumItems(self._ui.list_friend, #self._showList)
+    self:SetNothingVisible()
+end
+
+function FriendApplyPanel:SetNothingVisible()
+    local count = #self._showList
+    FGUI:setVisible(self._ui.panel_nothing, count == 0)
+    if count == 0 then 
+        local sNothing = PAGE_DATA[self._selPage].nothing
+        FGUI:GTextField_setText(self._ui.text_nothing, sNothing)
+    end 
 end
 
 local AVATOR_DATA = {}
@@ -144,49 +154,54 @@ function FriendApplyPanel:OnRendererList(idx, item)
     FGUI:SetIntData(item, idx)
 end
 
-function FriendApplyPanel:OnClickBtnAddFriend(context)
-    print("add friend")
-    local index = FGUI:GetIntData(context.sender.parent) + 1
+function FriendApplyPanel:OnClickBtnAddFriend(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local index = FGUI:GetIntData(eventData.sender.parent) + 1
     local data = self._showList[index]
     if not data then 
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
     SL:RequestAddFriend(data.UserID or data.UserId)
 end
 
-function FriendApplyPanel:OnClickBtnAgree(context)
-    print("agree")
-    local index = FGUI:GetIntData(context.sender.parent) + 1
+function FriendApplyPanel:OnClickBtnAgree(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local index = FGUI:GetIntData(eventData.sender.parent) + 1
     local data = self._showList[index]
     if not data then 
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
     SL:RequestAgreeFriendApply(data.UserID)
     self:OnUpdateList()
 end
 
 
-function FriendApplyPanel:OnClickBtnRefuse(context)
-    print("refuse")
-    local index = FGUI:GetIntData(context.sender.parent) + 1
+function FriendApplyPanel:OnClickBtnRefuse(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local index = FGUI:GetIntData(eventData.sender.parent) + 1
     local data = self._showList[index]
     if not data then 
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
     SL:RequestRefuseFriendApply(data.UserID)
     self:OnUpdateList()
 end
 
-function FriendApplyPanel:OnClickSearchFriend(context)
+function FriendApplyPanel:OnClickSearchFriend(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     if self._selPage == 2 then 
         return 
     end 
@@ -200,7 +215,9 @@ function FriendApplyPanel:OnClickSearchFriend(context)
     SL:RequestSearchFriend(inputStr)
 end
 
-function FriendApplyPanel:OnClickRefreshBatch(context)
+function FriendApplyPanel:OnClickRefreshBatch(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     SL:RequestRandomFriend()
 end
 

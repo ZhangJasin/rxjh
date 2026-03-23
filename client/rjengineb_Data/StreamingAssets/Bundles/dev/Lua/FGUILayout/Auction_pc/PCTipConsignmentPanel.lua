@@ -6,7 +6,7 @@ local ItemMoney = SL:RequireFile("FGUILayout/Item/ItemMoney")
 -- 拍卖行寄售页面
 function PCTipConsignmentPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
     self:InitData()
     self:GetAllFGuiData()
@@ -16,13 +16,13 @@ end
 
 function PCTipConsignmentPanel:InitUI()
     local configValue = SL:GetValue("GAME_DATA", "BackpackTab")
-	self.arrayNameTable = string.split(configValue, "|")
+    self.arrayNameTable = string.split(configValue, "|")
     self:ClickTabCellEvent(1)
     self:ClickBagCellEvent(1)
 end
 
 function PCTipConsignmentPanel:RefreshTabList()
-    FGUI:GList_setNumItems(self.list_tab,#self.arrayNameTable)
+    FGUI:GList_setNumItems(self.list_tab, #self.arrayNameTable)
 end
 -- 初始化数据
 function PCTipConsignmentPanel:InitData()
@@ -84,46 +84,46 @@ function PCTipConsignmentPanel:GetAllFGuiData()
 
     self.text_tip = self._ui.text_tip
     -- 控制器是否已经上架过
-    self.ctrl_isHaveLastPrice = FGUI:getController(self.component,"isHaveLastPrice")
+    self.ctrl_isHaveLastPrice = FGUI:getController(self.component, "isHaveLastPrice")
     -- 是否有道具可以上架
-    self.ctrl_isHaveItemToAdd = FGUI:getController(self.component,"isHaveItemToAdd")
+    self.ctrl_isHaveItemToAdd = FGUI:getController(self.component, "isHaveItemToAdd")
 end
 
 function PCTipConsignmentPanel:InitClickEvent()
-    FGUI:setOnClickEvent(self.btn_close,handler(self,self.OnClose))
-    FGUI:setOnClickEvent(self.btn_jiShou,handler(self,self.BtnJiShouClicked))
-    FGUI:setOnClickEvent(self.btn_lastChuJia,handler(self,self.BtnLastChuJia))
-    FGUI:setOnClickEvent(self.btn_minus,handler(self,self.BtnMinusClicked))
-    FGUI:setOnClickEvent(self.btn_add,handler(self,self.BtnAddClicked))
-    FGUI:setOnClickEvent(self.btn_max,handler(self,self.BtnMaxClicked))
+    FGUI:setOnClickEvent(self.btn_close, handler(self, self.OnClose))
+    FGUI:setOnClickEvent(self.btn_jiShou, handler(self, self.BtnJiShouClicked))
+    FGUI:setOnClickEvent(self.btn_lastChuJia, handler(self, self.BtnLastChuJia))
+    FGUI:setOnClickEvent(self.btn_minus, handler(self, self.BtnMinusClicked))
+    FGUI:setOnClickEvent(self.btn_add, handler(self, self.BtnAddClicked))
+    FGUI:setOnClickEvent(self.btn_max, handler(self, self.BtnMaxClicked))
 
-    FGUI:GList_itemRenderer(self.list_tab,handler(self,self.TabItemRender))
-    FGUI:GList_addOnClickItemEvent(self.list_tab,handler(self,self.TabItemClicked))
-    
-    FGUI:GList_itemRenderer(self.list_bag,handler(self,self.BagItemRender))
+    FGUI:GList_itemRenderer(self.list_tab, handler(self, self.TabItemRender))
+    FGUI:GList_addOnClickItemEvent(self.list_tab, handler(self, self.TabItemClicked))
+
+    FGUI:GList_itemRenderer(self.list_bag, handler(self, self.BagItemRender))
     FGUI:GList_setVirtual(self.list_bag)
-    FGUI:GList_addOnClickItemEvent(self.list_bag,handler(self,self.BagItemClicked))
-    FGUI:setOnFocusOut(self.input_jishou_count,handler(self,self.InputJiShouCountFoucsIn))
-    FGUI:setOnFocusOut(self.input_once_price,handler(self,self.InputOncePriceOnFocusOut))
-    FGUI:setOnFocusOut(self.input_jsdj,handler(self,self.InputJiShouDiJiaOnFocusOut))
+    FGUI:GList_addOnClickItemEvent(self.list_bag, handler(self, self.BagItemClicked))
+    FGUI:setOnFocusOut(self.input_jishou_count, handler(self, self.InputJiShouCountFoucsIn))
+    FGUI:setOnFocusOut(self.input_once_price, handler(self, self.InputOncePriceOnFocusOut))
+    FGUI:setOnFocusOut(self.input_jsdj, handler(self, self.InputJiShouDiJiaOnFocusOut))
 end
 
-function PCTipConsignmentPanel:TabItemRender(idx,item)
+function PCTipConsignmentPanel:TabItemRender(idx, item)
     local index = idx + 1
     local data = self.arrayNameTable[index]
     if data then
-        local title = FGUI:GetChild(item,"title")
-        FGUI:GTextField_setText(title,data)
+        local title = FGUI:GetChild(item, "title")
+        FGUI:GTextField_setText(title, data)
     end
 
-    local ctrl = FGUI:getController(item,"isSelected")
+    local ctrl = FGUI:getController(item, "isSelected")
     ctrl.selectedIndex = index == self._cur_tab_index and 0 or 1
 end
 
 function PCTipConsignmentPanel:TabItemClicked(contextData)
     local childIdx = FGUI:GetChildIndex(self.list_tab, contextData.data)
-	local idx = FGUI:GList_childIndexToItemIndex(self.list_tab, childIdx)
-	self:ClickTabCellEvent(idx + 1)
+    local idx = FGUI:GList_childIndexToItemIndex(self.list_tab, childIdx)
+    self:ClickTabCellEvent(idx + 1)
 end
 
 -- 过滤数据
@@ -131,9 +131,9 @@ function PCTipConsignmentPanel:TabFilterData()
     local data = SL:GetValue("PAIMAI_BAG_DATA")
     local filterData = {}
 
-    for k,v in pairs(data) do
-        if self._cur_tab_index == 1 or v.itemType  == self._cur_tab_index then
-            table.insert(filterData,v)
+    for k, v in pairs(data) do
+        if self._cur_tab_index == 1 or v.itemType == self._cur_tab_index then
+            table.insert(filterData, v)
         end
     end
     return filterData
@@ -145,30 +145,30 @@ function PCTipConsignmentPanel:ClickTabCellEvent(idx)
     self:RefreshCanPaiMaiData()
 end
 
-function PCTipConsignmentPanel:BagItemRender(idx,item)
+function PCTipConsignmentPanel:BagItemRender(idx, item)
     local index = idx + 1
     local data = self._can_paiMai_data[index]
-    local item_root = FGUI:GetChild(item,"item_root")
-    local isSelected = FGUI:GetChild(item,"isSelected")
+    local item_root = FGUI:GetChild(item, "item_root")
+    local isSelected = FGUI:GetChild(item, "isSelected")
     local id = FGUI:GetID(item)
 
     if data then
-        if self._item_list [id] then
-            ItemUtil:ItemShow_Release(self._item_list [id])
+        if self._item_list[id] then
+            ItemUtil:ItemShow_Release(self._item_list[id])
         end
-        FGUI:setVisible(item_root,true)
-        FGUI:setVisible(isSelected,self._selected_item_index == index)
-        self._item_list[id] =  ItemUtil:ItemShow_Create(data.BagData,item_root,{disableClick = true})
+        FGUI:setVisible(item_root, true)
+        FGUI:setVisible(isSelected, self._selected_item_index == index)
+        self._item_list[id] = ItemUtil:ItemShow_Create(data.BagData, item_root, {disableClick = true})
     else
-        FGUI:setVisible(item_root,false)
-        FGUI:setVisible(isSelected,false)
+        FGUI:setVisible(item_root, false)
+        FGUI:setVisible(isSelected, false)
     end
 end
 
 function PCTipConsignmentPanel:BagItemClicked(contextData)
     local childIdx = FGUI:GetChildIndex(self.list_bag, contextData.data)
-	local idx = FGUI:GList_childIndexToItemIndex(self.list_bag, childIdx)
-	self:ClickBagCellEvent(idx + 1)
+    local idx = FGUI:GList_childIndexToItemIndex(self.list_bag, childIdx)
+    self:ClickBagCellEvent(idx + 1)
 end
 
 -- bagCell点击
@@ -179,64 +179,70 @@ end
 
 -- 左边面板信息
 function PCTipConsignmentPanel:RefreshLeftPanelInfo()
-    self.ctrl_isHaveItemToAdd.selectedIndex =  table.nums(self._can_paiMai_data) == 0 and 1 or 0
+    self.ctrl_isHaveItemToAdd.selectedIndex = table.nums(self._can_paiMai_data) == 0 and 1 or 0
     local data = self._can_paiMai_data[self._selected_item_index]
     if not data then
         return
     end
 
-    FGUI:GList_setNumItems(self.list_bag,self._bag_open_counts)
+    FGUI:GList_setNumItems(self.list_bag, self._bag_open_counts)
     if self._cur_selected_item then
         ItemUtil:ItemShow_Release(self._cur_selected_item)
     end
 
-
     local itemData = data.ItemData
-    FGUI:GTextField_setText(self.text_item_name,itemData.Name or "")
-    self._cur_selected_item =  ItemUtil:ItemShow_Create(itemData,self.node_curSelected,{OverLap = data.BagData.OverLap})
+    FGUI:GTextField_setText(self.text_item_name, itemData.Name or "")
+    self._cur_selected_item =
+        ItemUtil:ItemShow_Create(itemData, self.node_curSelected, {OverLap = data.BagData.OverLap})
     self._cur_jishou_count = 1
     self:RefreshJiShouCount()
-    self._cfgPaiMaiData = SL:GetValue("PAIMAI_CONFIG",data.ItemData.nPaimaiConfig)
+    self._cfgPaiMaiData = SL:GetValue("PAIMAI_CONFIG", data.ItemData.nPaimaiConfig)[1]
     if self._cfgPaiMaiData then
         self._cur_jishou_diJia = self._cfgPaiMaiData.nPrice
         self._cur_once_price = self._cfgPaiMaiData.nPrice
         -- 最低寄售底价
         if self._cfgPaiMaiData.nPriceLimit then
             self._min_JiShouDIJia = self._cfgPaiMaiData.nPrice - self._cfgPaiMaiData.nPriceLimit
-            self._max_JiShouDIJia = self._cfgPaiMaiData.nPrice + self._cfgPaiMaiData.nPriceLimit
         else
             self._min_JiShouDIJia = 1
+        end
+
+        -- 最高寄售底价
+        if self._cfgPaiMaiData.nPriceLimitMax then
+            self._max_JiShouDIJia = self._cfgPaiMaiData.nPrice + self._cfgPaiMaiData.nPriceLimitMax
+        else
             self._max_JiShouDIJia = nil
         end
-        self._cur_costType = self._cfgPaiMaiData.nCurrency
-        local moneyData = SL:GetValue("ITEM_DATA",self._cfgPaiMaiData.nCurrency)
+        self._cur_costType = tonumber(self._cfgPaiMaiData.nCurrency)
+        self._cur_jishou_diJia = self._min_JiShouDIJia
+        local moneyData = SL:GetValue("ITEM_DATA", self._cur_costType)
         self:RefreshMoneyItemShow(moneyData)
         self:RefreshTipMinJiShou(moneyData)
         self:RefreshJiShouDiJia()
         self:RefreshOncePrice()
     end
 
-    self.ctrl_isHaveLastPrice.selectedIndex = SL:GetValue("PAIMAI_ADD_HISTORY_LOG",itemData.ID)  ~= nil and 0 or 1
+    self.ctrl_isHaveLastPrice.selectedIndex = SL:GetValue("PAIMAI_ADD_HISTORY_LOG", itemData.ID) ~= nil and 0 or 1
 end
 
 -- 刷新货币图标显示
 function PCTipConsignmentPanel:RefreshMoneyItemShow(moneyData)
     if not moneyData then
-        moneyData = SL:GetValue("ITEM_DATA",1)
-        SL:PrintError("配表错误","获取不到货币类型,请检查配置表")
+        moneyData = SL:GetValue("ITEM_DATA", 1)
+        SL:PrintError("配表错误", "获取不到货币类型,请检查配置表")
         return
     end
 
     if self._item_money1 then
         self._item_money1:UpdateItemData(moneyData)
     else
-        self._item_money1 = ItemMoney.new(self.itemMoney1,moneyData)
+        self._item_money1 = ItemMoney.new(self.itemMoney1, moneyData)
     end
 
     if self._item_money2 then
         self._item_money2:UpdateItemData(moneyData)
     else
-        self._item_money2 = ItemMoney.new(self.itemMoney2,moneyData)
+        self._item_money2 = ItemMoney.new(self.itemMoney2, moneyData)
     end
 
     self._item_money1:UpdateItemCounts(false)
@@ -247,7 +253,7 @@ end
 function PCTipConsignmentPanel:RefreshTipMinJiShou(moneyData)
     if moneyData and moneyData.Name then
         local showStr = self._min_JiShouDIJia < 0 and 0 or self._min_JiShouDIJia .. moneyData.Name
-        FGUI:GTextField_setText(self.text_tip,string.format(GET_STRING(30000060),showStr))
+        FGUI:GTextField_setText(self.text_tip, string.format(GET_STRING(30000060), showStr))
     end
 end
 
@@ -272,10 +278,10 @@ function PCTipConsignmentPanel:InputJiShouCountEndInput(input)
             return
         end
 
-        if input >=  data.BagData.OverLap then
+        if input >= data.BagData.OverLap then
             input = data.BagData.OverLap
         end
-        
+
         self._cur_jishou_count = input
         self:RefreshJiShouCount()
     end
@@ -294,8 +300,8 @@ function PCTipConsignmentPanel:InputJiShouCountFoucsIn(context)
         if number > bagData.BagData.OverLap then
             number = bagData.BagData.OverLap
         end
-        
-        FGUI:GTextField_setText(self.input_jishou_count,number)
+
+        FGUI:GTextField_setText(self.input_jishou_count, number)
         self:InputJiShouCountEndInput(number)
     end
 end
@@ -311,12 +317,12 @@ function PCTipConsignmentPanel:InputJiShouDiJiaOnFocusOut(context)
     local input = tonumber(content)
     if self._max_JiShouDIJia then
         if input < self._min_JiShouDIJia or input > self._max_JiShouDIJia then
-            SL:ShowSystemTips(string.format(GET_STRING(31000000),self._min_JiShouDIJia,self._max_JiShouDIJia))
+            SL:ShowSystemTips(string.format(GET_STRING(31000000), self._min_JiShouDIJia, self._max_JiShouDIJia))
             input = self._min_JiShouDIJia
         end
     else
         if input < self._min_JiShouDIJia then
-            SL:ShowSystemTips(string.format(GET_STRING(31000002),self._min_JiShouDIJia))
+            SL:ShowSystemTips(string.format(GET_STRING(31000002), self._min_JiShouDIJia))
             input = self._min_JiShouDIJia
         end
     end
@@ -339,7 +345,7 @@ function PCTipConsignmentPanel:InputOncePriceOnFocusOut(context)
         return
     end
 
-    self._cur_once_price= tonumber(content)
+    self._cur_once_price = tonumber(content)
     if self._cur_once_price < self._cur_jishou_diJia then
         SL:ShowSystemTips(GET_STRING(31000001))
         self._cur_once_price = self._cur_jishou_diJia
@@ -353,7 +359,7 @@ function PCTipConsignmentPanel:CleanCache()
         ItemUtil:ItemShow_Release(self._cur_selected_item)
     end
 
-    for k,v in pairs(self._item_list) do
+    for k, v in pairs(self._item_list) do
         if v then
             ItemUtil:ItemShow_Release(v)
         end
@@ -365,19 +371,21 @@ function PCTipConsignmentPanel:Destory()
 end
 
 function PCTipConsignmentPanel:RefreshJiShouCount()
-    FGUI:GTextInput_setText(self.input_jishou_count,self._cur_jishou_count)
+    FGUI:GTextInput_setText(self.input_jishou_count, self._cur_jishou_count)
 end
 
 -- 刷新背包
 function PCTipConsignmentPanel:RefreshCanPaiMaiData()
     self._bag_open_counts = SL:GetValue("BAG_OPEN_SIZE")
     self._can_paiMai_data = self:TabFilterData()
-    FGUI:GList_setNumItems(self.list_bag,self._bag_open_counts)
+    FGUI:GList_setNumItems(self.list_bag, self._bag_open_counts)
     self:ClickBagCellEvent(1)
 end
 
 function PCTipConsignmentPanel:RegisterEvent()
-    SL:RegisterLUAEvent(LUA_EVENT_MY_AUCTION_ADD_SELL_SUCC, "PCTipConsignmentPanel", handler(self, self.RefreshCanPaiMaiData))
+    SL:RegisterLUAEvent(
+        LUA_EVENT_MY_AUCTION_ADD_SELL_SUCC, "PCTipConsignmentPanel", handler(self, self.RefreshCanPaiMaiData)
+    )
 end
 
 function PCTipConsignmentPanel:RemoveEvent()
@@ -402,15 +410,17 @@ function PCTipConsignmentPanel:BtnJiShouClicked()
         data._cur_jishou_count = self._cur_jishou_count
         data._cur_jishou_diJia = self._cur_jishou_diJia
         data._cur_costType = self._cur_costType
-        data._cfgPaiMaiData  = self._cfgPaiMaiData
-        FGUI:Open("Auction_pc","PCTipJiShouPanel",data)
+        data._cfgPaiMaiData = self._cfgPaiMaiData
+        FGUI:Open("Auction_pc", "PCTipJiShouPanel", data)
     end
 end
 
 -- 上一次出价
 function PCTipConsignmentPanel:BtnLastChuJia()
     local data = self._can_paiMai_data[self._selected_item_index]
-    FGUI:Open("Auction_pc","PCTipLastJiShouPanel",data)
+    if data then
+        FGUI:Open("Auction_pc", "PCTipLastJiShouPanel", data)
+    end
 end
 
 -- 减一数量
@@ -429,7 +439,7 @@ function PCTipConsignmentPanel:BtnAddClicked()
     if not data then
         return
     end
-    if self._cur_jishou_count >=  data.BagData.OverLap then
+    if self._cur_jishou_count >= data.BagData.OverLap then
         self._cur_jishou_count = data.BagData.OverLap
     end
     self:RefreshJiShouCount()
@@ -444,7 +454,6 @@ function PCTipConsignmentPanel:BtnMaxClicked()
     self._cur_jishou_count = data.BagData.OverLap
     self:RefreshJiShouCount()
 end
-
 
 function PCTipConsignmentPanel:OnClose()
     self.super.Close(self)

@@ -50,15 +50,20 @@ function PCCommonTitleTips:TitleAttributeItemRender(idx,item)
         end
 
         local attributeName = SL:GetValue("ATTR_CONFIG_NAME_BY_ID",data.attributeId)
+        local attributeCfg = SL:GetValue("ATTR_CONFIG",data.attributeId)
+        if attributeCfg and attributeCfg.Type then
+            if attributeCfg.Type == 0 then
+                FGUI:GTextField_setText(text_attr_value,data.attributeValue)
+            elseif attributeCfg.Type == 1 then
+                FGUI:GTextField_setText(text_attr_value,string.format("%.1f",data.attributeValue/10000).."%")
+            end
+        end
+
         FGUI:GTextField_setText(text_attr_name,attributeName)
-        FGUI:GTextField_setText(text_attr_value,data.attributeValue)
     end
 end
 
 function PCCommonTitleTips:InitUI()
-    -- print("data=====================")
-    -- SL:print_t(self.data)
-
     local itemEquipData = SL:GetValue("ITEM_DATA",self.data.itemID)
     FGUI:GTextField_setText(self.text_titleName,itemEquipData.Name or "")
     FGUI:GTextField_setText(self.text_getWayDetail,itemEquipData.GetWayInfo or "")

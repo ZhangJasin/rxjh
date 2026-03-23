@@ -20,7 +20,8 @@ function PCComponentEquipPanel:InitUI()
     FGUI:setOnClickEvent(self.btn_cloak_switch,handler(self,self.btnCloakSwitchClicked))
 end
 
-function PCComponentEquipPanel:btnCloakSwitchClicked(data)
+function PCComponentEquipPanel:btnCloakSwitchClicked(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
     SL:RequestOperateIsOpenFashion(not SL:GetValue("SETTING_GET_IS_SHOW_FASHION"))
 end
 
@@ -31,6 +32,7 @@ function PCComponentEquipPanel:GetAllFGuiData()
     self.movie_node = self._ui.movie_node
     self.exPosGongjian = self._ui.exPosGongjian
     self.pos12 = self._ui.pos12 -- 弓箭手专有装备格
+    self.pos1 = self._ui.pos1
     self.btn_cloak_switch = self._ui.btn_cloak_switch
     self.btn_scheme_switch = self._ui.btn_scheme_switch
     self.btn_cloth_1 = self._ui.btn_cloth_1
@@ -44,6 +46,8 @@ function PCComponentEquipPanel:GetAllFGuiData()
     self.ani_openSwitchCloth = FGUI:GetTransition(self.component,"openSwitchCloth")
     self.ctl_titleType = FGUI:getController(self.component,"titleType")
     self.ctl_isShowTitile = FGUI:getController(self.component,"isShowTitle")
+    -- 获取武器槽位的控制器
+    self.ctrl_equipPosDI = FGUI:getController(self.pos1,"equipPosDI")
 end
 
 function PCComponentEquipPanel:SwitchCtlisShowTitile(isShow)
@@ -169,6 +173,8 @@ function PCComponentEquipPanel:RefreshRole()
     extData.chestFxId = featureData.chestFxID
     extData.headFxId = featureData.headFxID
     extData.wingFxId = featureData.wingFxID
+	
+    extData.helmetColor = featureData.helmetColor
 
     if not self._uiModel then
         self._uiModel = self:UIModel_Bind(self.model_root)
@@ -216,6 +222,9 @@ function PCComponentEquipPanel:RefreshRole()
 		FGUI:UIModel_setCharacterFx(self._uiModel, self._modelIndex, extData.headFxId,
 			FGUI.CHARACTER_EFFECT_TYPE.MODEL_EFFECT_HEAD)
 		
+		FGUI:UIModel_setCharacterFx(self._uiModel, self._modelIndex, extData.helmetColor,
+			FGUI.CHARACTER_EFFECT_TYPE.MODEL_EFFECT_HELMET_COLOR)
+		
 		FGUI:UIModel_apply(self._uiModel, self._modelIndex)
     end
 end
@@ -238,9 +247,11 @@ function PCComponentEquipPanel:RefreshScheme()
     self:RefreshTip()
 end
 
--- 弓手职业才显示
 function PCComponentEquipPanel:RefreshEquipCheck()
+    -- 弓手职业才显示
     FGUI:setVisible(self.pos12,SL:GetValue("JOB") == MMO.ACTOR_PLAYER_JOB_1)
+    -- 查看fgui控制器equipPosDI设置(图标对应职业)
+    FGUI:Controller_setSelectedIndex(self.ctrl_equipPosDI,11 + SL:GetValue("JOB"))
 end
 
 function PCComponentEquipPanel:RefreshEquipItemByPosAndEquipData(equipData)
@@ -270,15 +281,6 @@ function PCComponentEquipPanel:RefreshEquipItemByPosAndEquipData(equipData)
                 SL:TakeOffPlayerEquip(equipData)
             end)
             
-            -- tips
-            FGUI:setOnRollOverEvent(currentItem.component,function()
-                FGUIFunction:OpenItemTips({itemData = equipData,hideButtons = true})
-            end)
-
-            FGUI:setOnRollOutEvent(currentItem.component,function()
-                FGUIFunction:CloseItemTips()
-            end)
-
             FGUI:setOnClickEvent(currentItem.component, function(eventData)
                 if self.clickDelay then return end
                 local touchId = FGUI:InputEvent_getTouchId(eventData)
@@ -292,8 +294,7 @@ function PCComponentEquipPanel:RefreshEquipItemByPosAndEquipData(equipData)
                 FGUI:DragDropManager_startDrag(currentItem.component,"ui://public_pc/CommonItem", data, touchId,FGUIFunction.CloseBagCheckDragView)
                 FGUIFunction:OpenBagCheckDragView()
                 local commmonItem = FGUI:GLoader_getComponent(FGUI:DragDropManager_getDragAgent())
-                ItemUtil:SetItemIconByItemID(commmonItem,equipData.Index)
-                ItemUtil:UpdateItemGradeByItemID(commmonItem,equipData.Index)
+                ItemUtil:RefreshItemUIByData(commmonItem,equipData)
 	        end)
         end
     end

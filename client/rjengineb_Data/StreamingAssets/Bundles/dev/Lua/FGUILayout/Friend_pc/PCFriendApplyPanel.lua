@@ -1,25 +1,25 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
-local FriendApplyPanel = class("FriendApplyPanel", BaseFGUILayout)
+local PCFriendApplyPanel = class("PCFriendApplyPanel", BaseFGUILayout)
 
 local PAGE_DATA = {
-	[1] = {name = "添加好友", page = 1},
-	[2] = {name = "好友申请", page = 2},
+	[1] = {name = "添加好友", page = 1, nothing = "暂无好友"},
+	[2] = {name = "好友申请", page = 2, nothing = "暂无申请"},
 }
 
-function FriendApplyPanel:Create()
+function PCFriendApplyPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:SetCloseUIWhenClickOutside(self)
 
 	self:InitData()
 	self:InitEvent()
     self:InitPage()
 end 
 
-function FriendApplyPanel:Close()
+function PCFriendApplyPanel:Close()
 	self.super.Close(self)
 end
 
-function FriendApplyPanel:Enter(page)
+function PCFriendApplyPanel:Enter(page)
     if not page then
         page = 1
     end 
@@ -27,17 +27,17 @@ function FriendApplyPanel:Enter(page)
     self:RegisterEvent()
 end
 
-function FriendApplyPanel:Exit()
+function PCFriendApplyPanel:Exit()
 	self:RemoveEvent()
 end
 
-function FriendApplyPanel:InitData()
+function PCFriendApplyPanel:InitData()
     self._selPage = 1
     self._showList = {}
     self._searchData = nil
 end
 
-function FriendApplyPanel:InitEvent()
+function PCFriendApplyPanel:InitEvent()
     FGUI:setOnClickEvent(self._ui.btn_close, handler(self, self.Close))
     FGUI:setOnClickEvent(self._ui.mask, handler(self, self.Close))
     FGUI:setOnClickEvent(self._ui.btn_search, handler(self, self.OnClickSearchFriend))
@@ -46,13 +46,13 @@ function FriendApplyPanel:InitEvent()
 	FGUI:GList_itemRenderer(self._ui.list_friend, handler(self, self.OnRendererList))
 end
 
-function FriendApplyPanel:InitPage()
+function PCFriendApplyPanel:InitPage()
     FGUI:GList_itemRenderer(self._ui.list_page, handler(self, self.UpdatePageItemRenderer))
     FGUI:GList_setNumItems(self._ui.list_page, #PAGE_DATA)
     FGUI:GList_addOnClickItemEvent(self._ui.list_page, handler(self, self.OnClickPage))
 end
 
-function FriendApplyPanel:UpdatePageItemRenderer(idx, item)
+function PCFriendApplyPanel:UpdatePageItemRenderer(idx, item)
     local index = idx + 1
     local data = PAGE_DATA[index]
     if not data then 
@@ -65,12 +65,12 @@ function FriendApplyPanel:UpdatePageItemRenderer(idx, item)
     FGUI:GTextField_setText(text_select, data.name)
 end
 
-function FriendApplyPanel:OnClickPage()
+function PCFriendApplyPanel:OnClickPage()
     local index = FGUI:GList_getSelectedIndex(self._ui.list_page) + 1
     self:SelectPage(index)
 end
 
-function FriendApplyPanel:SelectPage(index)
+function PCFriendApplyPanel:SelectPage(index)
 	FGUI:GList_setSelectedIndex(self._ui.list_page, index - 1)
 	self._selPage = index
 
@@ -78,7 +78,7 @@ function FriendApplyPanel:SelectPage(index)
     self:OnUpdateList()
 end
 
-function FriendApplyPanel:OnUpdateList(bSearch)
+function PCFriendApplyPanel:OnUpdateList(bSearch)
     self._showList = {}
     if bSearch then 
         if self._searchData then 
@@ -93,10 +93,20 @@ function FriendApplyPanel:OnUpdateList(bSearch)
     end  
 
     FGUI:GList_setNumItems(self._ui.list_friend, #self._showList)
+    self:SetNothingVisible()
+end
+
+function PCFriendApplyPanel:SetNothingVisible()
+    local count = #self._showList
+    FGUI:setVisible(self._ui.panel_nothing, count == 0)
+    if count == 0 then 
+        local sNothing = PAGE_DATA[self._selPage].nothing
+        FGUI:GTextField_setText(self._ui.text_nothing, sNothing)
+    end 
 end
 
 local AVATOR_DATA = {}
-function FriendApplyPanel:OnRendererList(idx, item)
+function PCFriendApplyPanel:OnRendererList(idx, item)
     if not self._showList or not next(self._showList) then  
         return 
     end 
@@ -144,49 +154,54 @@ function FriendApplyPanel:OnRendererList(idx, item)
     FGUI:SetIntData(item, idx)
 end
 
-function FriendApplyPanel:OnClickBtnAddFriend(context)
-    print("add friend")
-    local index = FGUI:GetIntData(context.sender.parent) + 1
+function PCFriendApplyPanel:OnClickBtnAddFriend(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local index = FGUI:GetIntData(eventData.sender.parent) + 1
     local data = self._showList[index]
     if not data then 
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
     SL:RequestAddFriend(data.UserID or data.UserId)
 end
 
-function FriendApplyPanel:OnClickBtnAgree(context)
-    print("agree")
-    local index = FGUI:GetIntData(context.sender.parent) + 1
+function PCFriendApplyPanel:OnClickBtnAgree(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local index = FGUI:GetIntData(eventData.sender.parent) + 1
     local data = self._showList[index]
     if not data then 
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
     SL:RequestAgreeFriendApply(data.UserID)
     self:OnUpdateList()
 end
 
 
-function FriendApplyPanel:OnClickBtnRefuse(context)
-    print("refuse")
-    local index = FGUI:GetIntData(context.sender.parent) + 1
+function PCFriendApplyPanel:OnClickBtnRefuse(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local index = FGUI:GetIntData(eventData.sender.parent) + 1
     local data = self._showList[index]
     if not data then 
         return
     end 
 
-    FGUI:GButton_setBright(context.sender, false)
-    FGUI:GButton_setGrey(context.sender, true)
+    FGUI:GButton_setBright(eventData.sender, false)
+    FGUI:GButton_setGrey(eventData.sender, true)
     SL:RequestRefuseFriendApply(data.UserID)
     self:OnUpdateList()
 end
 
-function FriendApplyPanel:OnClickSearchFriend(context)
+function PCFriendApplyPanel:OnClickSearchFriend(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     if self._selPage == 2 then 
         return 
     end 
@@ -200,35 +215,37 @@ function FriendApplyPanel:OnClickSearchFriend(context)
     SL:RequestSearchFriend(inputStr)
 end
 
-function FriendApplyPanel:OnClickRefreshBatch(context)
+function PCFriendApplyPanel:OnClickRefreshBatch(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     SL:RequestRandomFriend()
 end
 
-function FriendApplyPanel:OnUpdateApplyList(data)
+function PCFriendApplyPanel:OnUpdateApplyList(data)
     self:OnUpdateList()
 end
 
-function FriendApplyPanel:OnUpdateRandom(data)
+function PCFriendApplyPanel:OnUpdateRandom(data)
     self:OnUpdateList()
 end
 
-function FriendApplyPanel:UpdateSearchResult(data)
+function PCFriendApplyPanel:UpdateSearchResult(data)
     if not data then return end
     self._searchData = data
     self:OnUpdateList(true)
 end
 
 -----------------------------------注册事件--------------------------------------
-function FriendApplyPanel:RegisterEvent()
-    SL:RegisterLUAEvent(LUA_EVENT_FRIEND_APPLY, "FriendApplyPanel", handler(self, self.OnUpdateApplyList))
-    SL:RegisterLUAEvent(LUA_EVENT_FRIEND_RANDOM_UPDATE, "FriendApplyPanel", handler(self, self.OnUpdateRandom))
-    SL:RegisterLUAEvent(LUA_EVENT_FRIEND_SEARCH_UPDATE, "FriendApplyPanel", handler(self, self.UpdateSearchResult))  
+function PCFriendApplyPanel:RegisterEvent()
+    SL:RegisterLUAEvent(LUA_EVENT_FRIEND_APPLY, "PCFriendApplyPanel", handler(self, self.OnUpdateApplyList))
+    SL:RegisterLUAEvent(LUA_EVENT_FRIEND_RANDOM_UPDATE, "PCFriendApplyPanel", handler(self, self.OnUpdateRandom))
+    SL:RegisterLUAEvent(LUA_EVENT_FRIEND_SEARCH_UPDATE, "PCFriendApplyPanel", handler(self, self.UpdateSearchResult))  
 end
 
-function FriendApplyPanel:RemoveEvent()
-    SL:UnRegisterLUAEvent(LUA_EVENT_FRIEND_APPLY, "FriendApplyPanel")
-    SL:UnRegisterLUAEvent(LUA_EVENT_FRIEND_RANDOM_UPDATE, "FriendApplyPanel")
-    SL:UnRegisterLUAEvent(LUA_EVENT_FRIEND_SEARCH_UPDATE, "FriendApplyPanel")
+function PCFriendApplyPanel:RemoveEvent()
+    SL:UnRegisterLUAEvent(LUA_EVENT_FRIEND_APPLY, "PCFriendApplyPanel")
+    SL:UnRegisterLUAEvent(LUA_EVENT_FRIEND_RANDOM_UPDATE, "PCFriendApplyPanel")
+    SL:UnRegisterLUAEvent(LUA_EVENT_FRIEND_SEARCH_UPDATE, "PCFriendApplyPanel")
 end
 
-return FriendApplyPanel
+return PCFriendApplyPanel

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="o9dt5fs4" hasFavorites="true">
+<packageDescription id="o9dt5fs4">
   <resources>
     <component id="f2ul4a" name="panel_setting_component.xml" path="/Components/"/>
     <component id="f2ul4b" name="quality_component.xml" path="/Components/"/>
@@ -69,13 +69,7 @@
     <component id="t0pf6g" name="item_key.xml" path="/Components/" exported="true"/>
     <image id="t0pf6h" name="bg_tips_content.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,13,4,7"/>
     <component id="mxha6i" name="btn_apply.xml" path="/Components/"/>
-    <component id="ll076j" name="ScaleButtonText.xml" path="/Components/" exported="true" favorite="true"/>
-    <component id="k9rf6k" name="SettingCheckPickUpPanel.xml" path="/"/>
-    <component id="k9rf6l" name="SettingPanel.xml" path="/"/>
-    <component id="k9rf6m" name="SettingPickUpPanel.xml" path="/"/>
-    <component id="k9rf6n" name="SettingRedeemCodePanel.xml" path="/"/>
-    <component id="k9rf6o" name="SettingSelectSkillPanel.xml" path="/"/>
-    <component id="k9rf6p" name="SettingSetItemOrderPanel.xml" path="/"/>
+    <image id="gsii6j" name="key_board_input_bg.png" path="/Images/" scale="9grid" scale9grid="6,6,4,4"/>
   </resources>
-  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Setting_pc" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>

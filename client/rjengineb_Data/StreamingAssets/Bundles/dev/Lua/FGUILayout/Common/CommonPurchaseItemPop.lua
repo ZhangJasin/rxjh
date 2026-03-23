@@ -13,18 +13,26 @@ local ItemMoney = SL:RequireFile("FGUILayout/Item/ItemMoney")
 	-- buyCount = 最大购买次数
 	-- curBuyCount = 当前购买次数
 	-- purchaseType = 购买类型
+
+	-- customBuy = bool 是否自定义购买(无需商品ID)
+	-- customLeftBtnText = 自定义左侧按钮文本 (配置增加左侧按钮显示)
+	-- customLeftBtnWidth = 自定义左侧按钮宽度
+	-- customLeftBtnFunc = 自定义左侧按钮事件触发 function
+	-- customBuyFunc = 自定义购买按钮事件触发 function
 ]]
 function CommonPurchaseItemPop:Create()
 	self.super.Create(self)
 	self._ui = FGUI:ui_delegate(self.component)
 
     self._countInput = self._ui.input_count
+	self._posController = FGUI:getController(self.component, "btn_pos")
     
     self.onAddNumHandler = handler(self, self.OnAddNumEvent)
 	self.onSubNumHandler = handler(self, self.OnSubNumEvent)
 	self.onSetMinNumHandler = handler(self, self.OnSetMinNumEvent)
 	self.onSetMaxNumHandler = handler(self, self.OnSetMaxNumEvent)
 	self.onPurchaseItemHandler = handler(self, self.OnPurchaseItemEvent)
+	self.onCustomBtnHandler = handler(self, self.OnCustomBtnEvent)
 	self.onInputItemHandler	= handler(self, self.OnInputItemEvent)
     
     FGUI:setOnClickEvent(self._ui.btn_add, self.onAddNumHandler)
@@ -32,6 +40,7 @@ function CommonPurchaseItemPop:Create()
 	FGUI:setOnClickEvent(self._ui.btn_m_min, self.onSetMinNumHandler)
 	FGUI:setOnClickEvent(self._ui.btn_m_max, self.onSetMaxNumHandler)
 	FGUI:setOnClickEvent(self._ui.btn_purchase, self.onPurchaseItemHandler)
+	FGUI:setOnClickEvent(self._ui.btn_custom, self.onCustomBtnHandler)
     if SL:GetValue("IS_PC_OPER_MODE") then
 		FGUI:setOnFocusIn(self._countInput, self.onInputItemHandler)
 	else
@@ -83,8 +92,11 @@ function CommonPurchaseItemPop:OnSetMaxNumEvent()
 	self:UpdatePriceShow()
 end
 
-function CommonPurchaseItemPop:OnPurchaseItemEvent()
-	if not self._storeID then
+local sharedTab = {}
+function CommonPurchaseItemPop:OnPurchaseItemEvent(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+	if not self._storeID and not self._customBuy then
 		return
 	end
 	
@@ -94,10 +106,10 @@ function CommonPurchaseItemPop:OnPurchaseItemEvent()
 	end
 
 	local price = self._inputNum * self._price
-	local isMoneyEnough, costType, currentMoney,costList= SL:GetValue("NPC_STORE_GET_ENOUGH_COSTTYPE", self._coinID, price)
+	local isMoneyEnough, costType, currentMoney, costList = SL:GetValue("NPC_STORE_GET_ENOUGH_COSTTYPE", self._coinID, price)
 	local costTypeName = SL:GetValue("ITEM_DATA",costType).Name
 	if not isMoneyEnough then
-		SL:ShowSystemTips(string.format(GET_STRING(30000010),costTypeName))
+		SL:ShowSystemTips(string.format(SL:GetValue("I18N_STRING", 30000010), costTypeName))
         return
 	end
 
@@ -105,31 +117,27 @@ function CommonPurchaseItemPop:OnPurchaseItemEvent()
 	    return
 	end
 
-	local len = table.nums(costList)
-	if len ~= 1 then
-		local index = 1
-		local str = ""
-		for k,v in pairs(costList) do
-			if index ~= 1 then
-				local coinData = SL:GetValue("ITEM_DATA", v.costID)
-				str = string.format("%s[color=#FF00000]%s%s[/color]%s", str, v.costCount, coinData.Name, ((index ~= len) and SL:GetValue("I18N_STRING",30000401) or ""))
-			end
-			index = index + 1
-		end
-		local data = {}
-		data.str =  string.format(SL:GetValue("I18N_STRING",30000400),str)
-		data.btnDesc = {SL:GetValue("I18N_STRING",1001),SL:GetValue("I18N_STRING",1000)}
-		data.callback = function(num)
-			if num == 1 then
-				SL:RequestStoreBuy(self._storeID, self._inputNum, self._purchaseType)
-			elseif num == 2 then
+	if self._customBuyFunc then
+		sharedTab.inputNum = self._inputNum
+		self._customBuyFunc(sharedTab)
+		return
+	end
 
-			end
-			FGUIFunction:CloseItemTips()
-		end
-		SL:OpenCommonDialog(data)
-	else
+	if not self._storeID then
+		return
+	end
+
+	local callBack = function()
 		SL:RequestStoreBuy(self._storeID, self._inputNum, self._purchaseType)
+	end
+
+	TreasureShop.ReqBuyDialog(costList,callBack)
+end
+
+function CommonPurchaseItemPop:OnCustomBtnEvent()
+	if self._customLeftBtnFunc then
+		sharedTab.inputNum = self._inputNum
+		self._customLeftBtnFunc(sharedTab)
 	end
 end
 
@@ -163,7 +171,7 @@ function CommonPurchaseItemPop:UpdatePriceShow()
 	local isMoneyEnough = SL:GetValue("NPC_STORE_GET_ENOUGH_COSTTYPE", self._coinID, price)
 	local priceText = FGUI:GetChild(self._ui.price_cell, "text_count")
 	FGUI:GTextField_setText(priceText, tostring(price))
-	FGUI:GTextField_setColor(priceText, isMoneyEnough and "#CDD3D9" or "#FF0000")
+	FGUI:GTextField_setColor(priceText, isMoneyEnough and "#00FF00" or "#FF0000")
 end
 
 function CommonPurchaseItemPop:InitItemPurchasePanel(data)
@@ -198,6 +206,17 @@ function CommonPurchaseItemPop:InitItemPurchasePanel(data)
 	self._maxBuyCount = buyCount
 	self._purchaseType = purchaseType
 	self._coinName = moneyData and moneyData.Name or "ERROR货币"
+	self._customBuy = data.customBuy
+	self._customBuyFunc = data.customBuyFunc
+	self._customLeftBtnFunc = data.customLeftBtnFunc
+	self._showCustomLeftBtn = data.customLeftBtnText
+	
+	FGUI:Controller_setSelectedIndex(self._posController, self._showCustomLeftBtn and 1 or 0)
+	FGUI:setVisible(self._ui.btn_custom, self._showCustomLeftBtn and true or false)
+	if self._showCustomLeftBtn then
+		FGUI:GButton_setTitle(self._ui.btn_custom, data.customLeftBtnText or "")
+		FGUI:setWidth(self._ui.btn_custom, data.customLeftBtnWidth or FGUI:getWidth(self._ui.btn_purchase))
+	end
 
 	FGUI:GTextInput_setText(self._countInput, num)
 	if not self._maxBuyCount then
@@ -207,12 +226,10 @@ function CommonPurchaseItemPop:InitItemPurchasePanel(data)
 		FGUI:GTextField_setText(self._ui.text_buy_count, string.format("购买次数：%s/%s", curBuyCount, buyCount))
 	end
 	local priceCell = self._ui.price_cell
-	local priceText = FGUI:GetChild(priceCell, "text_count")
-	FGUI:GTextField_setText(priceText, tostring(price))
-	FGUI:GTextField_setColor(priceText, haveNum and haveNum >= price and "#CDD3D9" or "#FF0000")
 	local haveCell = self._ui.have_cell
 	local haveText = FGUI:GetChild(haveCell, "text_count")
 	FGUI:GTextField_setText(haveText, tostring(haveNum))
+	self:UpdatePriceShow()
 
 	local priceItem = FGUI:GetChild(priceCell, "item_money")
 	local haveItem = FGUI:GetChild(haveCell, "item_money")

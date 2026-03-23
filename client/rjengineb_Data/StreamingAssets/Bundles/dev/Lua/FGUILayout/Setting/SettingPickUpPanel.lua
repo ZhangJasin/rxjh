@@ -2,7 +2,7 @@ local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local SettingPickUpPanel = class("SettingPickUpPanel", BaseFGUILayout)
 
 function SettingPickUpPanel:Create()
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
     self._packageName = "Setting"
 	self._ui = FGUI:ui_delegate(self.component)
 	self._list_content = self._ui.list_content

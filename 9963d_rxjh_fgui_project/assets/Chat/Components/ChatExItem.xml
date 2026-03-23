@@ -2,13 +2,13 @@
 <component size="80,80" pivot="0.5,0.5">
   <controller name="ChatExType" pages="0,emoji,1,item" selected="0"/>
   <displayList>
-    <loader id="n0_giai" name="Content" xy="0,0" size="80,80" url="ui://8pthu2lwgiaiv52" fill="scale" clearOnPublish="true">
+    <loader id="n0_giai" name="Content" xy="0,0" size="80,80" url="ui://st7dgeqqa6omvl2" fill="scale" clearOnPublish="true">
       <gearDisplay controller="ChatExType" pages="0"/>
     </loader>
-    <component id="n7_u13q" name="ContentItem" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="0,0" size="80,80">
+    <component id="n7_u13q" name="ContentItem" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="80,80">
       <gearDisplay controller="ChatExType" pages="1"/>
     </component>
-    <component id="n2_giai" name="Btn" src="kxj1v4c" fileName="common/Button.xml" pkg="o8ixb2zy" xy="-16,-16" size="92,92">
+    <component id="n2_giai" name="Btn" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="-16,-16" size="92,92">
       <relation target="n0_giai" sidePair="width-width,height-height"/>
     </component>
   </displayList>

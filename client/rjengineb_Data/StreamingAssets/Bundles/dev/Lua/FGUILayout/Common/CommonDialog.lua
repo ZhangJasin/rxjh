@@ -159,7 +159,6 @@ function CommonDialog:InitEdit()
 	FGUI:GTextField_setText(self._editBox, "")
     if self._editBox and editParams then
         if editParams.inputMode then
-			--FGUI:GTextInput_setRestrict(self._editBox, val)
         end
         if editParams.maxLength then
             FGUI:GTextInput_setMaxLength(self._editBox, editParams.maxLength)

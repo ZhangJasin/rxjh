@@ -6,7 +6,7 @@ function CommonNumberInput:Create()
 	self.super.Create(self)
 	self._ui = FGUI:ui_delegate(self.component)
 	self._maxNum = defaultMax
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	self._curInputVal = 0
 	FGUI:setOnClickEvent(self._ui.btn_no, handler(self, self.OnClickCancelButton))
 	FGUI:setOnClickEvent(self._ui.btn_yes, handler(self, self.OnClickSureButton))

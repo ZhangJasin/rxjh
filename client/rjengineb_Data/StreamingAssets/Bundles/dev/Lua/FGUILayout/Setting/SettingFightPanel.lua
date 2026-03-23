@@ -325,9 +325,11 @@ function SettingFightPanel:HelpListRender(idx, item)
     FGUI:GButton_setOnChangedCallback(tog, self.handler_OnHelpSkillEnableChanged)
 end
 
-function SettingFightPanel:OnHelpSkillEnableChanged(context)
-    local id = FGUI:GetIntData(context.sender) + 1
-    local enable = FGUI:GButton_getSelected(context.sender)
+function SettingFightPanel:OnHelpSkillEnableChanged(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+    local id = FGUI:GetIntData(eventData.sender) + 1
+    local enable = FGUI:GButton_getSelected(eventData.sender)
     self._helpSkillList[id].enable = enable
 
     self:SaveHelpSkillList()

@@ -41,11 +41,11 @@ function ItemAutoUse.main()
 
     -- 玩家升级 quickuse 检测
     SL:RegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "ItemAutoUse", function(data)
-        SL:CheckBagQuickUse()
+        FGUIFunction:CheckBagQuickUse()
     end)
 
     -- 玩家登录 quickuse 检测
     SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_INIT, "ItemAutoUse", function(data)
-        SL:CheckBagQuickUse()
+        FGUIFunction:CheckBagQuickUse()
     end)
 end

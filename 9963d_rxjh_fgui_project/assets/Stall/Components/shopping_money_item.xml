@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="143,26">
+  <displayList>
+    <image id="n63_ptxu" name="n63" src="as7k26" fileName="Images/inputField_bg_9.png" xy="0,0" size="143,26" group="n69_ptxu"/>
+    <text id="n64_ptxu" name="text_money_name" xy="15,0" size="40,24" group="n69_ptxu" fontSize="16" color="#f1ffeb" align="center" text="元宝:"/>
+    <text id="n65_ptxu" name="text_money_count" xy="59,0" size="82,24" group="n69_ptxu" fontSize="16" color="#f1ffeb" autoSize="none" text="1000000"/>
+    <group id="n69_ptxu" name="n69" xy="0,0" size="143,26"/>
+  </displayList>
+</component>

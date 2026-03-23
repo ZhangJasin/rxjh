@@ -4,6 +4,7 @@ local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 
 function PCTipJingjiaPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
+    FGUIFunction:setWindowDrag(self.component, self._ui.bg)
     self:InitData()
     self:GetAllFGuiData()
     self:InitClickEvent()
@@ -11,22 +12,22 @@ end
 
 function PCTipJingjiaPanel:InitData()
     self._itemShow = nil
-    -- 总百分比加成
-    self._bonus  = 0
 end
 
 function PCTipJingjiaPanel:GetAllFGuiData()
+    self.mask = self._ui.mask
     self.btn_close = self._ui.btn_close
     self.text_price = self._ui.text_price
     self.btn_cancel = self._ui.btn_cancel
     self.btn_givePrice = self._ui.btn_givePrice
     self.icon_Money1 = self._ui.icon_Money1
     self.icon_Money2 = self._ui.icon_Money2
-    self.mask = self._ui.mask
-    self.text_price_player_give = self._ui.text_price_player_give
     self.text_name = self._ui.text_name
     self.item_node = self._ui.item_node
-    self.cbx_select_price = self._ui.cbx_select_price
+    self.input_price = self._ui.input_price
+    self.btn_minus = self._ui.btn_minus
+    self.btn_add = self._ui.btn_add
+    self.btn_max = self._ui.btn_max
 end
 
 function PCTipJingjiaPanel:Destory()
@@ -44,7 +45,51 @@ function PCTipJingjiaPanel:InitClickEvent()
     FGUI:setOnClickEvent(self.btn_close,handler(self,self.OnClose))
     FGUI:setOnClickEvent(self.btn_cancel,handler(self,self.OnClose))
     FGUI:setOnClickEvent(self.btn_givePrice,handler(self,self.BtnPriceGiveClicked))
-    FGUI:GComboBox_setOnChangeCallback(self.cbx_select_price,handler(self,self.CBXPriceChanged))
+    FGUI:setOnFocusOut(self.input_price,handler(self,self.InputPriceClicked))
+    FGUI:setOnClickEvent(self.btn_minus,handler(self,self.BtnMinusClicked))
+    FGUI:setOnClickEvent(self.btn_add,handler(self,self.BtnAddClicked))
+end
+
+function PCTipJingjiaPanel:BtnMinusClicked()
+    if self.num <= self.data.price + 1 then
+        self.num = self.data.price + 1
+    else
+        self.num = self.num - 1
+    end
+    self:CheckNum()
+end
+
+function PCTipJingjiaPanel:BtnAddClicked()
+    if self.num >= self.data.lastprice then
+        self.num = self.data.lastprice
+    else
+        self.num = self.num + 1
+    end
+    self:CheckNum()
+end
+
+
+function PCTipJingjiaPanel:InputPriceClicked()
+    local input = FGUI:GTextInput_getText(self.input_price)
+    if string.isNullOrEmpty(input) then
+        SL:ShowSystemTips(GET_STRING(30000201))
+        return
+    end
+
+    self.num = tonumber(input)
+    self:CheckNum()
+end
+
+function PCTipJingjiaPanel:CheckNum()
+    if self.num <= self.data.price + 1  then
+        self.num = self.data.price + 1
+    end
+
+    if self.num > self.data.lastprice then
+        self.num = self.data.lastprice 
+    end
+
+    FGUI:GTextInput_setText(self.input_price,self.num)
 end
 
 function PCTipJingjiaPanel:CBXPriceChanged()
@@ -59,26 +104,28 @@ function PCTipJingjiaPanel:RefreshUI()
     local itemData = SL:GetValue("ITEM_DATA",self.data.index)
     self._itemShow = ItemUtil:ItemShow_Create(self.data.useritem,self.item_node)
 
-    local paiMaiConfig = SL:GetValue("PAIMAI_CONFIG",itemData.nPaimaiConfig)
+    local paiMaiConfig = SL:GetValue("PAIMAI_CONFIG",itemData.nPaimaiConfig)[1]
     print(paiMaiConfig.BiddingGear)
     self.BiddingGear = string.split(paiMaiConfig.BiddingGear,"#")
 
     local strs = {}
     for k,v in ipairs(self.BiddingGear) do
         strs[k] = string.format(GET_STRING(30000081),math.floor(tonumber(v)*0.01) .. "%")
-    end 
-    FGUI:GComboBox_setItems(self.cbx_select_price, strs)
+    end
 
     FGUI:GTextField_setText(self.text_name,itemData.Name)
-    FGUI:GTextField_setText(self.text_price,SL:GetThousandSepString(self.curJoinPrice))
+    FGUIFunction:GTextField_setText(self.text_price,SL:GetThousandSepString(self.curJoinPrice))
 
     local moneyData = SL:GetValue("ITEM_DATA",self.data.type)
     ItemUtil:RefreshItemUIByData(self.icon_Money1,moneyData)
     ItemUtil:RefreshItemUIByData(self.icon_Money2,moneyData)
     ItemUtil:SetItemGradeVisible(self.icon_Money1,false)
     ItemUtil:SetItemGradeVisible(self.icon_Money2,false)
-  
-    self:CBXPriceChanged()
+    ItemUtil:SetItemCountVisible(self.icon_Money1,false)
+    ItemUtil:SetItemCountVisible(self.icon_Money2,false)
+
+    self.num = self.data.price + 1
+    self:CheckNum()
 end
 
 -- 出价

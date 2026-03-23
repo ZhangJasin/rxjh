@@ -138,7 +138,6 @@ function PCMainBuff:OnBuffFocusOut(eventData)
     if not self.buffTipData then return end
     if self.buffTipData.id ~= data.id then return end
     if idx ~= self.tipIdx then return end
-    -- if not self.buffTipUI then return end
     self:HideBuffTip()
 end
 

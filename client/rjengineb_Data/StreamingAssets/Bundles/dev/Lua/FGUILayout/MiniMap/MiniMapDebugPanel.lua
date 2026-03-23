@@ -129,8 +129,7 @@ function MiniMapDebugPanel:RefreshActorPoint()
     MiniMapPanelObj:RecycleElement()
     -- 小地图怪物数据请求
     SL:RequestMiniMapMonsters(MiniMapPanelObj._mapId)
-
-    -- MiniMapPanelObj:InitMapPosition()
+    
     MiniMapPanelObj._pointPlayer = MiniMapPanelObj:CreatePlayerPoint()
     MiniMapPanelObj:RefreshPoints()
     MiniMapPanelObj:UpdateFindPath()

@@ -19,7 +19,7 @@ function StorageExPanel:Create()
 	self.handler_bagItemRenderer = handler(self, self.OnBagListItemRenderer)
 	self.handler_bagItemClick = handler(self, self.ClickBagCellEvent)
 	self.handler_storageItemClick = handler(self, self.ClickStorageCellEvent)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	FGUI:setOnClickEvent(self._ui.BtnClose, handler(self, self.Close))
 	-- 仓库列表显示
 	FGUI:GList_itemRenderer(self._ui.List_Cell, self.handler_storageItemRenderer)
@@ -302,19 +302,14 @@ function StorageExPanel:OnRefreshStorageExData(classify)
 	end
 
 	local openCount = SL:GetValue("STORAGE_EX_OPEN_SIZE", self._storageId)
-	local totalCount = SL:GetValue("STORAGE_EX_TOTAL_SIZE", self._storageId)
 
-	for i = 1, totalCount do
+	for i = 1, openCount do
 		local cell = self._storageCells[i]
 		if not cell then
-			if i <= openCount then
-				self._storageCells[i] = BagCell.new(i,nil,false,ItemFrom.STORAGE_EX)
-			else
-				self._storageCells[i] = BagCell.new(i,nil,true,ItemFrom.STORAGE_EX)
-			end
+			self._storageCells[i] = BagCell.new(i,nil,false,ItemFrom.STORAGE_EX)
 		end
 	end
-	FGUI:GList_setNumItems(self._ui.List_Cell, totalCount)
+	FGUI:GList_setNumItems(self._ui.List_Cell, openCount)
 end
 
 -- 将槽位信息转化为道具信息用于显示

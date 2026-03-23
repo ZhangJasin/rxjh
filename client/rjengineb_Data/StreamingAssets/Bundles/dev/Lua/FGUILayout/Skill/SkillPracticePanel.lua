@@ -6,6 +6,8 @@ local PAGE_DATA = {
 	[2] = {name = "登封气功", page = 2},
 }
 
+local MAX_QIGONG_SCHEME_COUNT = 6
+
 function SkillPracticePanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
     self:InitData()
@@ -20,21 +22,40 @@ function SkillPracticePanel:Enter()
     ------------交易行截图end----------
     
     self:SelectPage(tradingIndex and 2 or 1)
+    self:InitQiGongSchemes()
+
+    FGUIFunction:RegisterGuideData(FGUIDefine.GuideDataKey.SkillGuideFunc,handler(self,self.GetSkillGuideIcon))
 end
 
 function SkillPracticePanel:Exit()
+    self._selPage = 1
+    self._qigongList = {}
+    self._qigongCell = {}
     self._selQiGong = nil
+    self._showExtraLv = true
+    self._selScheme = nil
+    self._schemeNames = {}
+    self._inputState = 1
 	self:RemoveEvent()
+
+    FGUIFunction:UnRegisterGuideData(FGUIDefine.GuideDataKey.SkillGuideFunc)
 end
 
 function SkillPracticePanel:InitData()
     self._selPage = 1
     self._qigongList = {}
+    self._qigongCell = {}
     self._selQiGong = nil
     self._showExtraLv = true
+    self._selScheme = nil
+    self._schemeNames = {}
+    self._inputState = 1
 end
 
 function SkillPracticePanel:InitEvent()
+    -- Scheme点击空白  
+	FGUI:setOnClickEvent(self._ui.mask, handler(self, self.OnClickSchemeMask))
+
     -- btn 
 	FGUI:setOnClickEvent(self._ui.btn_study, handler(self, self.OnClickStudy))
 	FGUI:setOnClickEvent(self._ui.btn_cz, handler(self, self.OnClickReSet))
@@ -51,6 +72,13 @@ function SkillPracticePanel:InitEvent()
     -- list
 	FGUI:GList_itemRenderer(self._ui.list_qigong, handler(self, self.OnListItemRenderer))
     FGUI:GList_addOnClickItemEvent(self._ui.list_qigong, handler(self, self.OnClickSkillIcon))
+
+    -- 方案 
+    FGUI:GList_itemRenderer(self._ui.list_scheme, handler(self, self.SchemeListRenderer))
+	FGUI:setOnClickEvent(self._ui.btn_scheme, handler(self, self.OnClickBtnScheme))
+
+    -- 是否显示在主界面
+    FGUI:setOnClickEvent(self._ui.check_main, handler(self, self.OnClickSchemeShowMain))
 end
 
 function SkillPracticePanel:ItemRendererPage(idx, item)
@@ -88,6 +116,7 @@ function SkillPracticePanel:SelectPage(index)
         return a.Sort < b.Sort
     end)
 
+    table.clear(self._qigongList)
     self._qigongList = qigongData
     self:UpdatePlayerInfo()
     self:UpdateSkillList()
@@ -96,6 +125,7 @@ end
 
 -- 左边 气功列表
 function SkillPracticePanel:UpdateSkillList()
+    table.clear(self._qigongCell)
 	FGUI:GList_setSelectedIndex(self._ui.list_qigong, -1)
     FGUI:GList_setNumItems(self._ui.list_qigong, #self._qigongList)
 end
@@ -106,6 +136,8 @@ function SkillPracticePanel:OnListItemRenderer(idx, item)
     if not data then 
         return 
     end
+
+    self._qigongCell[data.ID] = item
 
     local ui_icon = FGUI:GetChild(item, "skill_icon")
     local path = SL:GetValue("SKILL_QIGONG_SQUARE_ICON_BY_ID", data.ID)
@@ -301,8 +333,8 @@ function SkillPracticePanel:UpdatePlayerInfo()
 end
 
 -- 升级
-function SkillPracticePanel:OnClickStudy(context)
-    FGUI:delayTouchEnabled(context.sender, 0.5)
+function SkillPracticePanel:OnClickStudy(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
     if not self._selQiGong then 
         return 
     end 
@@ -316,8 +348,8 @@ function SkillPracticePanel:OnClickStudy(context)
 end
 
 -- 重置
-function SkillPracticePanel:OnClickReSet(context)
-    FGUI:delayTouchEnabled(context.sender, 0.5)
+function SkillPracticePanel:OnClickReSet(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
     if not self._selQiGong then 
         return 
     end 
@@ -326,8 +358,8 @@ function SkillPracticePanel:OnClickReSet(context)
 end
 
 -- 重置全部
-function SkillPracticePanel:OnClickReSetAll(context)
-    FGUI:delayTouchEnabled(context.sender, 0.5)
+function SkillPracticePanel:OnClickReSetAll(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
     SL:RequestQiGongReset()
 end
 
@@ -415,6 +447,181 @@ function SkillPracticePanel:CheckQiGongOk(skillID, showTips)
     return true
 end 
 
+-- 引导返回节点
+function SkillPracticePanel:GetSkillGuideIcon(qigongParam)
+    local param = string.split(qigongParam, "#")
+    local group = tonumber(param[1])
+    if not group or group ~= 2 then 
+        return 
+    end 
+
+    local qigongID = tonumber(param[2])
+    if not qigongID then 
+        return 
+    end 
+
+    local page = tonumber(param[3])
+    if not page then 
+        return 
+    end 
+
+    if self._qigongCell[qigongID] then     
+        return self._qigongCell[qigongID]
+    end 
+end
+
+---气功方案
+function SkillPracticePanel:InitQiGongSchemes()
+    -- 初始化方案名字
+    local count = SL:GetValue("SKILL_QIGONG_SCHEME_COUNT")
+    local schemes = {}
+    for i = 1, count do
+        schemes[i] = SL:GetValue("GET_QIONG_SCHEME_NAME", i-1)
+    end
+    self._schemeNames = HashToSortArray(schemes)
+
+    table.insert(self._schemeNames, "")
+
+    -- 方案
+    local scheme = SL:GetValue("SKILL_QIGONG_SEL_SCHEME")
+    self._selScheme = scheme
+    FGUI:GTextField_setText(self._ui.text_scheme, self._schemeNames[scheme+1])
+    FGUI:setHeight(self._ui.list_scheme, #self._schemeNames * 40)
+    FGUI:GList_setNumItems(self._ui.list_scheme, #self._schemeNames)
+
+    -- 方案是否显示主界面
+    local isShow = SL:GetValue("SETTING_MAIN_SKILL_SCHEME_SHOW")
+    FGUI:GButton_setSelected(self._ui.check_main, isShow)
+
+    self:SetInputing(1)
+end
+
+function SkillPracticePanel:SchemeListRenderer(idx, item)
+	local index = idx + 1
+	local name = self._schemeNames[index]
+	if not name then 
+		return 
+	end 
+
+	local input_name = FGUI:GetChild(item, "input_title")
+	local ui_select = FGUI:GetChild(item, "select")
+	local btn_edit = FGUI:GetChild(item, "btn_edit")
+	local img_add = FGUI:GetChild(item, "img_add")
+    FGUI:setVisible(input_name, name ~= "")
+    FGUI:setVisible(btn_edit, name ~= "")
+    FGUI:setVisible(img_add, name == "")
+    self:RefreshSchemeItemTouchState(item)
+
+    -- input
+	FGUI:GTextField_setText(input_name, name)
+    FGUI:setOnFocusOut(input_name, function()
+        local inputName = FGUI:GTextInput_getText(input_name)
+        if string.len(inputName) == 0 then 
+            self:SetInputing(0)
+            self:RefreshSchemeItemTouchState(item)
+            return 
+        end 
+        self:SetInputing(1)
+        self:RefreshSchemeItemTouchState(item)
+
+        self._schemeNames[idx+1] = inputName
+        SL:SetValue("SET_QIONG_SCHEME_NAME", idx, inputName)
+        if self._selScheme == idx then 
+            FGUI:GTextField_setText(self._ui.text_scheme, inputName)
+        end 
+    end)
+
+    -- btn select
+	FGUI:setOnClickEvent(ui_select, function()
+        if not self:CheckInputing() then 
+            return
+        end 
+        
+        -- add
+        if name == "" then 
+            local count = SL:GetValue("SKILL_QIGONG_SCHEME_COUNT")
+            if count >= MAX_QIGONG_SCHEME_COUNT then 
+                SL:ShowSystemTips(string.format(GET_STRING(60012028), MAX_QIGONG_SCHEME_COUNT))
+                return 
+            end 
+
+            SL:RequestQiGongSchemeAdd(idx)
+            return 
+        end 
+
+        -- select
+        local lastIdx = self._selScheme
+        FGUI:GTextField_setText(self._ui.text_scheme, name)
+        if lastIdx ~= idx then 
+            SL:RequestQiGongSchemeChange(idx) 
+        end 
+
+        self:HideSchemeUI()
+	end)
+
+    -- btn edit
+	FGUI:setOnClickEvent(btn_edit, function()
+        if not self:CheckInputing() then 
+            return
+        end 
+
+        self:SetInputing(0)
+        self:RefreshSchemeItemTouchState(item)
+		FGUI:GTextField_setText(input_name, "")
+	end)
+end
+
+function SkillPracticePanel:OnClickBtnScheme()
+    if not self:CheckInputing() then 
+        return
+    end 
+
+    self:ShowSchemeUI()
+    FGUI:GList_setNumItems(self._ui.list_scheme, #self._schemeNames)
+end
+
+function SkillPracticePanel:OnClickSchemeMask()
+    if not self:CheckInputing() then 
+        return
+    end 
+
+    self:HideSchemeUI()
+end
+
+function SkillPracticePanel:OnClickSchemeShowMain(context)
+    local isShow = FGUI:GButton_getSelected(context.sender)
+    SL:SetValue("SETTING_MAIN_SKILL_SCHEME_SHOW", isShow)
+end
+
+function SkillPracticePanel:ShowSchemeUI()
+    FGUI:setVisible(self._ui.list_scheme, not FGUI:getVisible(self._ui.list_scheme))
+    FGUI:setVisible(self._ui.mask, FGUI:getVisible(self._ui.list_scheme))
+end
+
+function SkillPracticePanel:HideSchemeUI()
+    FGUI:setVisible(self._ui.list_scheme, false)
+    FGUI:setVisible(self._ui.mask, false)
+end
+
+function SkillPracticePanel:RefreshSchemeItemTouchState(item)
+	local input_name = FGUI:GetChild(item, "input_title")
+	local ui_select = FGUI:GetChild(item, "select")
+    FGUI:setTouchEnabled(input_name, self._inputState == 0)
+    FGUI:setTouchEnabled(ui_select, self._inputState ~= 0)
+end 
+
+function SkillPracticePanel:SetInputing(state)
+    self._inputState = state
+end
+
+function SkillPracticePanel:CheckInputing()
+    if self._inputState == 0 then 
+        SL:ShowSystemTips(GET_STRING(60012029))
+        return false
+    end 
+
+    return true
+end
 
 function SkillPracticePanel:OnQiGongLevelUp(skillID)
     self._selQiGong = SL:GetValue("SKILL_QIGONG_BY_ID", skillID)
@@ -423,15 +630,37 @@ function SkillPracticePanel:OnQiGongLevelUp(skillID)
     self:UpdatePlayerInfo()
 end 
 
+-- 事件 增加方案
+function SkillPracticePanel:OnQiGongSchemeAdd(idx)
+    local schemeName = SL:GetValue("GET_QIONG_SCHEME_NAME",idx)
+    local index = idx + 1
+    self._schemeNames[index] = schemeName
+    table.insert(self._schemeNames, "")
+
+    FGUI:GList_setNumItems(self._ui.list_scheme, #self._schemeNames)
+    FGUI:setHeight(self._ui.list_scheme, #self._schemeNames * 40)
+end
+
+-- 事件 改变方案
+function SkillPracticePanel:OnQiGongSchemeChange(idx)
+    local schemeName = SL:GetValue("GET_QIONG_SCHEME_NAME",idx)
+    FGUI:GTextField_setText(self._ui.text_scheme, schemeName) 
+    self._selScheme = idx
+
+    self:SelectPage(1)
+end
 
 -----------------------------------注册事件--------------------------------------
 function SkillPracticePanel:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_LEVELUP, "SkillPracticePanel", handler(self, self.OnQiGongLevelUp))
+    SL:RegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_SCHEME_ADD, "SkillPracticePanel", handler(self, self.OnQiGongSchemeAdd))
+    SL:RegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_SCHEME_CHANGE, "SkillPracticePanel", handler(self, self.OnQiGongSchemeChange))
 end
 
 function SkillPracticePanel:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_LEVELUP, "SkillPracticePanel")
-
+    SL:UnRegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_SCHEME_ADD, "SkillPracticePanel")
+    SL:UnRegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_SCHEME_CHANGE, "SkillPracticePanel")
 end
 
 return SkillPracticePanel

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="35,53" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_mrrv" name="n0" src="emvc3h" fileName="image/btn_second_red.png" pkg="qa9a7rit" xy="0,0" size="35,53">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_mrrv" name="title" xy="0,0" size="35,53" fontSize="14" color="#ffff00" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.9"/>
+</component>

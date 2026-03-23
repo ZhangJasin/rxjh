@@ -178,6 +178,23 @@ function PCTradeMain:OnTargetItemsRenderer(idx, item)
         itemData.isShowCount = true
         local itemContentView =ItemUtil:ItemShow_Create(itemData, node_item)
 	    itemViewCache[id] = itemContentView
+        FGUI:setOnRollOverEvent(itemContentView.component, function()
+            if FGUI:DragDropManager_getDragging() then
+                return
+            end
+            local tipData = {}
+            tipData.itemData = itemData
+            tipData.from = ItemFrom.TRADE
+            tipData.hideButtons = true
+            FGUIFunction:OpenItemTips(tipData)
+        end)
+
+        FGUI:setOnRollOutEvent(itemContentView.component, function()
+            if FGUI:DragDropManager_getDragging() then
+                return
+            end
+            FGUIFunction:CloseItemTips()
+        end)
     end
 end
 
@@ -197,6 +214,26 @@ function PCTradeMain:OnSelfItemsRenderer(idx, item)
 	    itemViewCache[id] = itemContentView
         FGUI:SetIntData(item, idx)
         FGUI:setOnRightClickEvent(item, self.handler_onClickItemEvent)
+
+        --移上去显示物品提示
+        FGUI:setOnRollOverEvent(itemContentView.component, function()
+            if FGUI:DragDropManager_getDragging() then
+                return
+            end
+            local tipData = {}
+            tipData.itemData = itemData
+            tipData.from = ItemFrom.TRADE
+            tipData.hideButtons = true
+            FGUIFunction:OpenItemTips(tipData)
+        end)
+
+        FGUI:setOnRollOutEvent(itemContentView.component, function()
+            if FGUI:DragDropManager_getDragging() then
+                return
+            end
+            FGUIFunction:CloseItemTips()
+        end)
+
 
         FGUI:setOnClickEvent(itemContentView.component, function(eventData)
             if self.clickDelay then return end

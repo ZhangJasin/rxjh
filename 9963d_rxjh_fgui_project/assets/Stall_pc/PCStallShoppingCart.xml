@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n60_swfd" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="467,156" size="396,438" group="n72_wms0"/>
+    <component id="n61_swfd" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="850,173" group="n72_wms0"/>
+    <image id="n62_swfd" name="n62" src="hfk8a" fileName="Images/bg_black.png" xy="475,197" size="379,334" group="n72_wms0"/>
+    <text id="n63_swfd" name="n63" xy="527,163" size="275,24" group="n72_wms0" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="购物车"/>
+    <list id="n64_swfd" name="list_shop" xy="475,200" size="383,330" group="n72_wms0" layout="flow_vt" selectionMode="multipleSingleClick" overflow="scroll" lineGap="2" defaultItem="ui://3wc7qwagswfdkvps" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n68_wms0" name="n68" xy="478,540" size="44,19" group="n72_wms0" fontSize="12" color="#ffffff" autoSize="none" text="合计："/>
+    <list id="n70_wms0" name="list_total_money" xy="523,542" size="211,41" group="n72_wms0" layout="flow_hz" overflow="scroll" lineGap="3" colGap="10" lineItemCount="2" defaultItem="ui://3wc7qwagwms0kvpv" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n71_wms0" name="btn_buy_all" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="755,548" group="n72_wms0">
+      <Button title="结 算"/>
+    </component>
+    <component id="n73_obw0" name="text_empty_tip" src="iwlbkvq9" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="540,276" size="253,190" group="n72_wms0">
+      <Label title="暂无商品"/>
+    </component>
+    <group id="n72_wms0" name="n72" xy="467,156" size="398,438" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

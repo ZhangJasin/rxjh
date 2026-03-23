@@ -4,11 +4,6 @@ local ItemFrom = SL:GetValue("ITEMFROMUI_ENUM")
 local DOUBLE_CLICK_INTERVAL = 0.2
 function PCBagCell.UpdateCellView(itemView,bagData)
     FGUI:setVisible(FGUI:GetChild(itemView, "Lock"), bagData._isLock)
-    if FGUI:CheckOpen("Bag_pc", "BagRecyclePanel") then
-        FGUI:setVisible(FGUI:GetChild(itemView, "RecycleSelect"),bagData.recycleSelect)
-    else
-        FGUI:setVisible(FGUI:GetChild(itemView, "RecycleSelect"),false)
-    end
 
     local  c = FGUI:getController(itemView,"BagItemType")
     if not bagData._itemId or bagData._itemId == 0 then
@@ -68,20 +63,6 @@ end
 
 function PCBagCell:SetUseItemEnable(isUse)
     self.useItem = isUse
-end
-
-function PCBagCell:RollOverCell()
-    if self.showTip then
-        local tipData = self:GetTipData()
-        if tipData then
-            FGUIFunction:OpenItemTips(tipData)
-        end
-    end
-
-end
-
-function PCBagCell:RollOutCell()
-    FGUIFunction:CloseItemTips()
 end
 
 function PCBagCell:GetTipData()

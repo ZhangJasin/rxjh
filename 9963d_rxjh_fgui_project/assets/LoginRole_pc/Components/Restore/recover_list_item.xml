@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="294,60" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n38_ec6q" name="frame_bg" src="hfgivm" fileName="Images/Restore/02.png" xy="0,0"/>
+    <component id="n41_ec6q" name="playerFram" src="emvc7" fileName="common/CommonPlayerFrame.xml" pkg="qa9a7rit" xy="31,32" scale="0.69,0.69"/>
+    <text id="n42_ec6q" name="playerName" xy="66,7" size="141,24" fontSize="16" color="#ffffff" autoSize="none" text="玩家名字七个字"/>
+    <text id="n43_ec6q" name="job" xy="65,32" size="39,20" fontSize="13" color="#f0f1bf" autoSize="none" text="战士"/>
+    <text id="n44_ec6q" name="levelTitle" xy="207,32" size="44,20" fontSize="13" color="#ffffff" autoSize="none" text="等级："/>
+    <text id="n45_ec6q" name="playerLevel" xy="246,32" size="44,20" fontSize="13" color="#30ff00" autoSize="none" text="888"/>
+    <image id="n46_ec6q" name="select" src="emvc3s" fileName="image/icon_item_select.png" pkg="qa9a7rit" xy="0,0" size="294,60">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+  </displayList>
+  <Button mode="Check"/>
+</component>

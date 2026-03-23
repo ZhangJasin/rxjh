@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="511,50">
+  <controller name="isSelect" pages="0,选中,1,不选中" selected="0"/>
+  <controller name="isCollected" pages="0,收藏的,1,未被收藏" selected="0"/>
+  <controller name="isCanCollected" pages="0,能收藏的,1,不能收藏" selected="0"/>
+  <controller name="itemType" pages="0,汇总信息的item,1,某物品的所有订单的item,2,收藏列表的item" selected="2"/>
+  <displayList>
+    <image id="n0_nojs" name="n0" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,0" size="511,50">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n1_nojs" name="itemRoot" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="119,4" size="44,44">
+      <gearXY controller="itemType" pages="0,1,2" values="59,2|-48,3|119,4"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n2_nojs" name="text_name" xy="168,16" size="88,19" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" singleLine="true" text="商品名称七个字">
+      <gearXY controller="itemType" pages="0,1,2" values="105,15|6,15|168,16"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n12_8mfo" name="iconMoney1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="251,9" size="33,32">
+      <gearDisplay controller="itemType" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n5_nojs" name="text_price_jingJia" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="283,10" size="111,29">
+      <gearDisplay controller="itemType" pages="0,1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label titleColor="#ffffff" titleFontSize="12"/>
+    </component>
+    <component id="n18_cozz" name="btn_buy" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="425,10" size="78,30">
+      <gearText controller="itemType" pages="1" values="购买" default="前去购买"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="前去购买" titleColor="#fff000" titleFontSize="12" icon="ui://qa9a7ritemvc5c" selectedIcon="ui://qa9a7ritemvc5c"/>
+    </component>
+    <loader id="n19_cozz" name="target_collection" xy="19,8" size="33,33" url="ui://08g55xx7fts21c" fill="scaleFree">
+      <gearDisplay controller="itemType" pages="0,2"/>
+      <gearLook controller="isCollected" pages="1" values="1,0,1,1" default="1,0,0,1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <text id="n20_beyy" name="text_sell_count" xy="213,15" size="18,19" fontSize="12" color="#ffffff" align="center" singleLine="true" text="20">
+      <gearDisplay controller="itemType" pages="0,1"/>
+    </text>
+  </displayList>
+</component>

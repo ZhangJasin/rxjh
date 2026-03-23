@@ -6,7 +6,7 @@ local MODEL_SCALE = 0.8
 function PCFuncDockNewTip:Create()
     self._ui = FGUI:ui_delegate(self.component)
     self.dialog_player_info = self._ui.dialog_player_info
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:SetCloseUIWhenClickOutside(self)
     self:GetAllFGuiData()
     self:InitGridLayout()
     self:InitOnClickEvent()
@@ -49,7 +49,7 @@ end
 
 -- 可以根据类别动态设置按钮
 function PCFuncDockNewTip:InitButtonData()
-    -- merageData ---
+    -- mergeData ---
     self._data.targetName = self._server_data.Name
     self._data.Sex = self._server_data.Sex
     self._data.Job = self._server_data.Job
@@ -71,13 +71,11 @@ function PCFuncDockNewTip:Enter(data)
     end
 
     self._data = data
-    self:RegisterEvent()
     self:RefreshView()
 end
 
 function PCFuncDockNewTip:Exit()
     self:ClearModel()
-    self:RemoveEvent()
 end
 
 function PCFuncDockNewTip:ClearModel()
@@ -117,6 +115,7 @@ function PCFuncDockNewTip:RefreshLeft()
         extData.chestFxId = self.featureData.chestFxId
         extData.headFxId = self.featureData.headFxId
         extData.wingFxId = self.featureData.wingFxId
+        extData.helmetColor = self.featureData.helmetColor
         FGUI:UIModel_setObjectEulerAngles(self._model, nil, 0, 0, 0)
         self._modelIndex = FGUI:UIModel_addCharacterModel(self._model, extData, Vector3.New(0,0,0), nil, Vector3.New(MODEL_SCALE,MODEL_SCALE,MODEL_SCALE))
         FGUI:UIModel_setModelCallback(self._model, function(index)
@@ -209,12 +208,6 @@ end
 -- 关闭面板
 function PCFuncDockNewTip:OnClose()
     self.super.Close(self)
-end
------------------------------------注册事件--------------------------------------
-function PCFuncDockNewTip:RegisterEvent()
-end
-
-function PCFuncDockNewTip:RemoveEvent()
 end
 
 return PCFuncDockNewTip

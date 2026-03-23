@@ -3,7 +3,7 @@ local ModeSetting = class("ModeSetting", BaseFGUILayout)
 
 function ModeSetting:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:SetCloseUIWhenClickOutside(self)
     FGUI:setOnClickEvent(self._ui.Button_close, handler(self, self.Close))
     FGUI:setOnClickEvent(self._ui.Button_ok, handler(self, self.OnSure))
     FGUI:setOnClickEvent(self._ui.Button_fightMode1, handler(self, self.ClickMode1))

@@ -9,14 +9,13 @@ function ItemMoney:ctor(component,data)
 end
 
 function ItemMoney:UpdateItemData(data)
-    if not data then
+    if data then
         self._itemData = data
     end
     self:UpdateUI(false)
 end
 
 function ItemMoney:UpdateUI(isShow)
-    -- self._itemData.isShowCount = false
     self:UpdateIcon()
     self:UpdateItemGrade()
     self:UpdateItemCounts()

@@ -27,5 +27,5 @@
     <component id="h0oqn" name="btn_red.xml" path="/Components/" exported="true"/>
     <image id="qa3go" name="08.png" path="/Images/" exported="true" scale="9grid" scale9grid="291,170,582,340"/>
   </resources>
-  <publish name="" path="E:\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\PersonFuBen" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>

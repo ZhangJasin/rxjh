@@ -54,7 +54,7 @@
       <gearDisplay controller="isShowBufList" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <image id="n54_8s5i" name="img_buff_bg" src="orj1vo4" fileName="image/di_2.png" pkg="st7dgeqq" xy="296,135" size="300,300">
+    <image id="n54_8s5i" name="img_buff_bg" src="q9lsv5j" fileName="image/icon_money_bg.png" pkg="st7dgeqq" xy="296,135" size="300,300" color="#000000">
       <gearDisplay controller="isShowBufList" pages="0"/>
     </image>
     <list id="n49_8s5i" name="list_buff" xy="296,136" size="300,300" overflow="scroll" defaultItem="ui://zj419n3d8s5ivai" autoClearItems="true">
@@ -69,6 +69,5 @@
       <item/>
     </list>
     <graph id="n62_rrqi" name="Graph_angerEffect" xy="186,56" pivot="0.5,0.5" anchor="true" size="0,0" lineSize="0"/>
-    <component id="n63_vzjd" name="petPro" src="vzjdfvet" fileName="Components/newmain/petProgress.xml" xy="316,3" visible="false"/>
   </displayList>
 </component>

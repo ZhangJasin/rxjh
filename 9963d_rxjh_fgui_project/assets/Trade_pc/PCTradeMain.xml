@@ -4,7 +4,7 @@
     <component id="n62_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="66,159" size="310,450" group="n56_l98g"/>
     <component id="n34_hcoz" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="363,175" size="31,31" group="n56_l98g"/>
     <text id="n35_hcoz" name="text_title" xy="202,166" size="36,24" group="n56_l98g" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" text="交易"/>
-    <text id="n36_hcoz" name="text_target_name" xy="196,198" size="52,19" group="n43_hcoz" fontSize="12" color="#ffffff" autoClearText="true" text="角色名字"/>
+    <text id="n36_hcoz" name="text_target_name" xy="125,198" pivot="0.5,0.5" size="194,19" group="n43_hcoz" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="角色名字"/>
     <graph id="n42_hcoz" name="n42" xy="78,220" size="287,144" group="n43_hcoz" type="rect" lineSize="0" fillColor="#ff142b1b" corner="4"/>
     <text id="n45_hcoz" name="text_target_money_count" xy="107,373" size="11,19" group="n43_hcoz" fontSize="12" color="#ffffff" text="0"/>
     <component id="n46_hcoz" name="icon_target_money" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="91,382" pivot="0.5,0.5" anchor="true" size="24,24" group="n43_hcoz"/>
@@ -21,7 +21,7 @@
     <image id="n57_l98g" name="n57" src="lxrgv5a" fileName="image/dropdown_content_select.png" pkg="st7dgeqq" xy="280,367" size="84,28" group="n43_hcoz"/>
     <text id="n58_l98g" name="text_target_state" xy="302,371" size="40,19" group="n43_hcoz" fontSize="12" color="#cc3300" align="center" vAlign="middle" text="未接受"/>
     <group id="n43_hcoz" name="target" xy="78,198" size="287,197" group="n56_l98g"/>
-    <text id="n48_hcoz" name="text_self_name" xy="196,401" size="52,19" group="n55_hcoz" fontSize="12" color="#ffffff" autoClearText="true" text="角色名字"/>
+    <text id="n48_hcoz" name="text_self_name" xy="137,401" pivot="0.5,0.5" size="170,19" group="n55_hcoz" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="角色名字"/>
     <graph id="n50_hcoz" name="n52" xy="79,422" size="285,143" group="n55_hcoz" type="rect" lineSize="0" fillColor="#ff142b1b" corner="4"/>
     <component id="n51_hcoz" name="btn_agree" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="280,570" size="84,28" group="n55_hcoz">
       <Button title="接受" titleColor="#fced00" titleFontSize="12" icon="ui://qa9a7ritemvc3h"/>
@@ -37,8 +37,8 @@
       <item/>
       <item/>
     </list>
-    <component id="n60_knrh" name="btn_edit_money" src="vdot1" fileName="Components/btn_textinput.xml" xy="128,569" size="148,31" group="n55_hcoz"/>
-    <text id="n52_hcoz" name="text_self_money_count" xy="107,575" size="11,19" group="n55_hcoz" fontSize="12" vAlign="middle" text="0"/>
+    <image id="n60_knrh" name="btn_edit_money" src="ehxm7" fileName="btn_edit_money.png" xy="106,569" size="170,31" group="n55_hcoz"/>
+    <text id="n52_hcoz" name="text_self_money_count" xy="107,575" size="168,19" group="n55_hcoz" fontSize="12" vAlign="middle" autoSize="none" singleLine="true" text="0" input="true" maxLength="15"/>
     <group id="n55_hcoz" name="self" xy="79,401" size="285,199" group="n56_l98g"/>
     <group id="n56_l98g" name="n56" xy="66,159" size="312,450" advanced="true">
       <relation target="" sidePair="middle-middle,left-left"/>

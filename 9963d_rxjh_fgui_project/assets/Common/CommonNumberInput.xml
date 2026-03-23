@@ -56,7 +56,7 @@
       <Button title="返回"/>
     </component>
     <component id="n21_tgh8" name="btn_max" src="zwd8vnr" fileName="Components/btn_square_2.xml" xy="763,498" group="n22_tgh8">
-      <Button title="删除"/>
+      <Button title="最大"/>
     </component>
     <group id="n22_tgh8" name="n22" xy="484,204" size="368,388" group="n30_pzej"/>
     <text id="n23_tgh8" name="title" xy="545,58" size="247,39" group="n30_pzej" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="请输入物品价格"/>

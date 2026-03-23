@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="654,390" pivot="0.5,0.5" anchor="true">
+  <displayList>
+    <image id="n17_qop5" name="bg_list" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="2,-2" size="647,357">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n14_qop5" name="list_bag" xy="476,0" size="178,352" layout="flow_hz" overflow="scroll" defaultItem="ui://08g55xx7fts2m" align="center">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n0_qop5" name="di_top" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="4,0" size="470,31">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_qop5" name="fengexian1" src="fts214" fileName="Images/split(1).png" xy="148,5" size="2,20"/>
+    <image id="n2_qop5" name="fengexian3" src="fts214" fileName="Images/split(1).png" xy="248,5" size="2,20"/>
+    <image id="n4_qop5" name="fengexian5" src="fts214" fileName="Images/split(1).png" xy="404,5" size="2,20"/>
+    <text id="n5_qop5" name="label_name" xy="56,6" size="52,19" fontSize="12" color="#d9f9d5" align="center" text="物品信息"/>
+    <text id="n6_qop5" name="label_price" xy="175,6" size="52,19" fontSize="12" color="#d9f9d5" align="center" text="出售价格"/>
+    <text id="n7_qop5" name="label_launch_time" xy="293,6" size="52,19" fontSize="12" color="#d9f9d5" align="center" text="上架时间"/>
+    <text id="n8_qop5" name="label_get_back" xy="418,6" size="28,20" fontSize="12" color="#d9f9d5" align="center" autoSize="none" text="取回&#xA;"/>
+    <list id="n11_qop5" name="list_my_launch" xy="2,32" size="470,320" overflow="scroll" lineGap="1" defaultItem="ui://08g55xx7fts2l" align="center">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n13_qop5" name="text_launch_count" xy="2,357" size="191,29" fontSize="12" color="#ffffff" vAlign="middle" autoSize="none" strokeColor="#000000" text="可上架数量:5/30">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n15_qop5" name="text_bag_count" xy="478,357" size="71,29" fontSize="12" color="#ffffff" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="55/160">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n16_qop5" name="btn_refresh" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="567,357" size="80,28">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="刷新" titleColor="#fff000" titleFontSize="12" icon="ui://st7dgeqqxd9tkvp2" selectedIcon="ui://st7dgeqqxd9tkvp2"/>
+    </component>
+    <component id="n18_fts2" name="noItemtip" src="iwlbkvq9" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="119,77">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label title="暂无记录"/>
+    </component>
+    <text id="n19_hesi" name="n19" xy="329,362" size="145,19" fontSize="12" color="#cc6600" autoSize="none" strokeColor="#000000" singleLine="true" text="tip:右键物品栏物品可上架">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

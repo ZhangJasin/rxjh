@@ -21,6 +21,7 @@ end
 
 function BuyPanel:GetAllFGuiData()
     self.list_buy = self._ui.list_buy
+    self.ctrl_isHaveStore = FGUI:getController(self.component,"isHaveStore")
 end
 
 function BuyPanel:InitOnClickEvent()
@@ -29,9 +30,9 @@ end
 function BuyPanel:RefreshDataAndList()
     self.storeData = SL:GetValue("NPC_STORE_DATA_BY_GROUPID",self.groupID)
     self.storeData = self:SortStoreItem(self.storeData)
-    -- print("self.storeData")
-    -- SL:print_t(self.storeData )
-    FGUI:GList_setNumItems(self.list_buy,table.nums(self.storeData))
+    local nums = table.nums(self.storeData)
+    FGUI:Controller_setSelectedIndex(self.ctrl_isHaveStore, nums > 0 and 1 or 0)
+    FGUI:GList_setNumItems(self.list_buy,nums)
 end
 
 function BuyPanel:InitUI()
@@ -81,7 +82,7 @@ function BuyPanel:BuyItemRender(idx, item)
                 FGUIFunction:ScrollText_setString(s_text_des, string.format(limitBuyKind[tonumber(arr[1])],leftCount),0.5, 0)
             end
         else
-            FGUIFunction:ScrollText_setString(s_text_des, GET_STRING(30000056),0.5, 0)
+            FGUIFunction:ScrollText_setString(s_text_des, GET_STRING(30000056),0.5, 0,{strokeColor = "#000000",strokeSize = 1})
         end
 
         -- 当金额不足时
@@ -144,90 +145,60 @@ function BuyPanel:SortStoreItem(list)
 end
 
 function BuyPanel:BuyItemClicked(eventData)
-    local node_item = FGUI:GetChild(eventData.data,"node_item")
-    if FGUIFunction:PosIsInRectWidget(node_item,eventData) then
-        return
-    end
-
-    local node_money = FGUI:GetChild(eventData.data,"node_money")
-    if FGUIFunction:PosIsInRectWidget(node_money,eventData) then
-        return
-    end
+    local _data = {}
+    _data.hideCompare = true
+    _data.hideButtons = true
+    _data.buyParam = {}
+    _data.buyParam.purchaseType = self.groupID
 
     local childIdx = FGUI:GetChildIndex(self.list_buy, eventData.data)
     local idx = FGUI:GList_childIndexToItemIndex(self.list_buy, childIdx)
     local data = {}
     data = self.storeData[idx + 1]
+    _data.itemData = SL:GetValue("ITEM_DATA", data.Itemid)
     local leftCount = -1
     if data.Limitbuy then
         local count = tonumber(string.split(data.Limitbuy,"#")[2])
         leftCount = count
+        _data.buyParam.buyCount = count
         if data.BuyCount then
             leftCount = count - data.BuyCount
+            _data.buyParam.curBuyCount = data.BuyCount
         end
     end
 
-    --点击购买
-    if data.Limitbuy ~= nil and leftCount <= 0 then
-        SL:ShowSystemTips(string.format(GET_STRING(30000013)))
-        return
-    end
-
+    _data.buyParam.storeId = data.ID
     local isEnoughMoney,costType,currentTotalMoney = SL:GetValue("NPC_STORE_GET_ENOUGH_COSTTYPE",data.Costtype,data.Nowprice)
-    local costTypeName = SL:GetValue("ITEM_DATA",costType).Name
-    if not isEnoughMoney then
-        SL:ShowSystemTips(string.format(GET_STRING(30000010),costTypeName))
-        return
-    end
-    
+
+    _data.buyParam.coinId = data.Costtype
+    _data.buyParam.price = data.Nowprice
+	local totalMoney = SL:GetValue("NPC_STORTE_GET_TOTAL_MONEY_BY_COSTTYPE",data.Costtype)
     local minCount = 1
-    local maxCount = math.floor(currentTotalMoney/data.Nowprice)
+    local maxCount = math.floor(totalMoney/data.Nowprice)
     if data.OnceCount then
         local onceCountArray = string.split(data.OnceCount,"#")
         minCount = tonumber(onceCountArray[1]) or 1
         maxCount = math.min(maxCount,tonumber(onceCountArray[2]))
     end
     
+    -- 最小购买数量
+    _data.buyParam.minNum = minCount
     if leftCount > 0 then
         maxCount = math.min(maxCount,leftCount)
     end
 
-    local _data = {}
-    _data.dialogType = 1
-    _data.title = GET_STRING(30000002)
-    _data.itemData = SL:GetValue("ITEM_DATA", data.Itemid)
-    _data.minNum = minCount
-    _data.maxNum = maxCount
-    _data.singlePrice = data.Nowprice
-    _data.costName = costTypeName
-    _data.OverLap = data.Quantity
-    _data.btnNames = {GET_STRING(1000),GET_STRING(30000002)}
-    _data.btnClicked = function(isOk,num)
-        if isOk == 0 then
-            FGUI:Close("Common", "CommonItemSplitDialog")
-        elseif isOk == 1 then
-            if SL:GetValue("BAG_IS_FULL", true) then
-                return
-            end
-
-            SL:RequestStoreBuy(data.ID,num,self.groupID)
-            FGUI:Close("Common", "CommonItemSplitDialog")
-        elseif isOk == 2 then
-            FGUI:Close("Common", "CommonItemSplitDialog")
-        end
-    end
-    FGUIFunction:OpenCommonItemSplitDialog(_data)
+    -- 醉倒购买数量
+    _data.buyParam.maxNum = maxCount
+    FGUIFunction:OpenItemTips(_data)
 end
 
 function BuyPanel:RegisterEvent()
-    SL:RegisterLUAEvent(LUA_EVENT_MONEY_CHANGE, "BuyPanel", handler(self, self.RefreshDataAndList))
     SL:RegisterLUAEvent(LUA_EVENT_NPCSTORE_UPDATE, "BuyPanel", handler(self, self.RefreshDataAndList))
     SL:RegisterLUAEvent(LUA_EVENT_NPCSTORE_BUY, "BuyPanel", handler(self, self.RefreshDataAndList))
     
 end
 
 function BuyPanel:RemoveEvent()
-    SL:UnRegisterLUAEvent(LUA_EVENT_MONEY_CHANGE, "BuyPanel")
     SL:UnRegisterLUAEvent(LUA_EVENT_NPCSTORE_UPDATE, "BuyPanel")
     SL:UnRegisterLUAEvent(LUA_EVENT_NPCSTORE_BUY, "BuyPanel")
 end

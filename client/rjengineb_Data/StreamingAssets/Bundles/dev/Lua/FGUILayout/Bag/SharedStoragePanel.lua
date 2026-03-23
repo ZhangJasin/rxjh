@@ -3,12 +3,9 @@ local SharedStoragePanel = class("SharedStoragePanel", BaseFGUILayout)
 
 function SharedStoragePanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	self.firstEnter = true
 	self._disableCellDoubleClick = true
-
-	-- self:InitData()
-	-- self:InitView()
 end
 
 function SharedStoragePanel:InitView()

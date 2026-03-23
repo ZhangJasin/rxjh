@@ -9,7 +9,6 @@ local PACKAGE_NAME                              = "TreasureShop_pc"
 
 function PCNpcStoreNewPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    --FGUI:SetCloseUIWhenClickOutside(self)
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
     self._index = IDX_NULL
@@ -52,6 +51,8 @@ function PCNpcStoreNewPanel:TabItemRender(idx, item)
 end
 
 function PCNpcStoreNewPanel:TabItemClicked(eventData)
+    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
     local idx = FGUI:GetChildIndex(self.list_tab,eventData.data)
     self:PageTo(idx + 1)
 end

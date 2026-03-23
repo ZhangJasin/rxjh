@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="220,140">
-  <controller name="titleState" pages="0,未激活,1,未使用,2,使用中" selected="0"/>
+  <controller name="titleState" pages="0,未激活,1,未使用,2,使用中" selected="1"/>
   <controller name="isSelected" pages="0,选中,1,未选中" selected="0"/>
   <controller name="isTimer" pages="0,开启,1,关闭" selected="0"/>
   <controller name="isPin" pages="0,置顶,1,未置顶" selected="0"/>
   <controller name="isShowPin" pages="0,显示,1,不显示" selected="0"/>
-  <controller name="titleType" pages="0,Type = 1 特效,1,Type = 2 文本,2,Type = 3 序列帧" selected="0">
+  <controller name="titleType" pages="2,Type = 1 特效,3,Type = 2 文本,4,Type = 3 序列帧" selected="1">
     <remark page="0" value="对应titleIcon中Type字段"/>
     <remark page="1" value="对应titleIcon中Type字段"/>
     <remark page="2" value="对应titleIcon中Type字段"/>
   </controller>
   <displayList>
-    <image id="n0_9qta" name="bgdi" src="9qtavoe" fileName="Images/Chenghao/bg_cell.png" xy="0,0" size="220,140" grayed="true">
+    <image id="n0_9qta" name="bgdi" src="9qtavoe" fileName="Images/Chenghao/bg_cell.png" xy="0,0" size="220,140">
       <gearLook controller="titleState" pages="0" values="1,0,1,0" default="1,0,0,0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <loader id="n6_9qta" name="gloader_title" xy="1,-1" size="217,138" grayed="true" url="ui://q18xgg759qta8" align="center" vAlign="middle" fill="scale" clearOnPublish="true">
+    <loader id="n6_9qta" name="gloader_title" xy="1,-1" size="217,138" url="ui://q18xgg759qta8" align="center" vAlign="middle" fill="scale" clearOnPublish="true">
+      <gearDisplay controller="titleType" pages="2,4"/>
       <gearLook controller="titleState" pages="0" values="1,0,1,1" default="1,0,0,1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
+    <text id="n16_awdt" name="text_title" xy="76,50" size="68,39" fontSize="28" color="#ffffff" strokeColor="#000000" singleLine="true" autoClearText="true" text="1111">
+      <gearDisplay controller="titleType" pages="3"/>
+      <gearColor controller="titleState" pages="0" values="#cccccc,#000000" default="#ffffff,#000000"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
     <graph id="n15_qrgs" name="mask" xy="0,0" size="220,140" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff">
       <relation target="" sidePair="center-center,middle-middle"/>
     </graph>

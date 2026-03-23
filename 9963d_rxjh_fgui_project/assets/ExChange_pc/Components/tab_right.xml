@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="24,60">
+  <controller name="isSelectedRightTab" exported="true" pages="0,选中,1,未选中" selected="0"/>
+  <controller name="content" pages="0,购买,1,寄售,2,记录" selected="0"/>
+  <displayList>
+    <image id="n0_y0nx" name="n0" src="zah9v4e" fileName="image/toggle_right_select.png" pkg="st7dgeqq" xy="0,0" size="24,60">
+      <gearDisplay controller="isSelectedRightTab" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_y0nx" name="n1" src="zah9v4f" fileName="image/toggle_right_unselect.png" pkg="st7dgeqq" xy="0,0" pivot="0.5,0.5" size="24,60">
+      <gearDisplay controller="isSelectedRightTab" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_y0nx" name="text_Content" xy="-1,0" size="24,60" font="ui://st7dgeqq9kdgkvpj" fontSize="16" color="#fac800" align="center" vAlign="middle" leading="0" autoSize="none" strokeColor="#000000" text="购买">
+      <gearColor controller="isSelectedRightTab" pages="0,1" values="#fac800,#000000|#cccccc,#000000"/>
+      <gearText controller="content" pages="0,1" values="购买|寄售" default="记录"/>
+    </text>
+  </displayList>
+</component>

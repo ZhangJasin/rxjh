@@ -84,11 +84,18 @@ function AutoFindDropItem:IsPickable(dropItemID)
         end 
     end
 
-    -- check owner
-    if not FGUIFunction:CheckDropItemAutoPick(dropItemID) then
-        return false
+    if self._isAFK then 
+        -- check owner
+        if not FGUIFunction:CheckDropItemAutoPick(dropItemID) then
+            return false
+        end
+    else 
+        if FGUIFunction.CheckDropItemPick then 
+            local res, failCode = FGUIFunction:CheckDropItemPick(dropItemID) 
+            if not res then 
+                return res, failCode
+            end
+        end
     end
-
-    
     return true
 end

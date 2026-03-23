@@ -56,6 +56,40 @@ function AuctionBuyPanel:InitData()
     self._minPage = 1
     self._maxPage = 1
     self._curPage = 1
+	self._selectItemIndex = - 1
+    self._reqData = nil
+    self._sendTimer = nil
+end
+
+-- 开启定时器
+function AuctionBuyPanel:StartTimer()
+    self:EndTimer()
+    self._sendTimer = SL:Schedule(handler(self,self.SendHandler),0.2)
+end
+
+-- 定时器句柄
+function AuctionBuyPanel:SendHandler()
+    if not self._reqData then
+        return
+    end
+
+    local result = SL:RequestAuctionPaiMaiPageInfo(self._reqData,self._curPage)
+    -- 发送成功，移除发送数据
+    if result == true then
+        self._reqData = nil
+    end
+end
+
+-- 关闭定时器
+function AuctionBuyPanel:EndTimer()
+    if self._sendTimer then
+       SL:UnSchedule(self._sendTimer)
+    end
+end
+
+-- 清除发送缓存
+function AuctionBuyPanel:ClearSendCache()
+    self._reqData = nil
 end
 
 function AuctionBuyPanel:CleanCache()
@@ -90,9 +124,12 @@ function AuctionBuyPanel:GetAllFGuiData()
     self.ctrl_isSearchByKeyWord = FGUI:getController(self.component,"isSearchByKeyWord")
     self.btn_search = self._ui.btn_search
     self.btn_search_switch = self._ui.btn_search_switch
-
+	self.btn_jingjia = self._ui.btn_jingjia
+	self.btn_buy = self._ui.btn_buy
     self.loading = FGUI:GetTransition(self.component, "loading")
     self.ctrl_loading = FGUI:getController(self.component,"isShowloading")
+	self.ctrl_isSelectItem = FGUI:getController(self.component,"isSelectItem")
+    self.ctrl_isHaveStore = FGUI:getController(self.component,"isHaveStore")
 end
 
 function AuctionBuyPanel:InitClickEvent()
@@ -102,9 +139,37 @@ function AuctionBuyPanel:InitClickEvent()
     FGUI:setOnClickEvent(self.btn_search_switch,handler(self,self.BtnSearchSwitch))
     FGUI:setOnClickEvent(self.btn_next_fast,handler(self,self.BtnNextFastClicked))
     FGUI:setOnClickEvent(self.btn_prev_fast,handler(self,self.BtnPrevFastClicked))
+	FGUI:setOnClickEvent(self.btn_jingjia,handler(self,self.BtnJingJiaClicked))
+	FGUI:setOnClickEvent(self.btn_buy,handler(self,self.BtnBuyClicked))
     FGUI:GComboBox_setOnChangeCallback(self.cbx_allCamp,handler(self,self.CBXAllCampChanged))
     FGUI:GComboBox_setOnChangeCallback(self.cbx_allGrade,handler(self,self.CBXAllGradeChanged))
     FGUI:GComboBox_setOnChangeCallback(self.cbx_allLevel,handler(self,self.CBXAllLevelChanged))
+end
+
+function AuctionBuyPanel:BtnJingJiaClicked()
+	if self._selectItemIndex == -1 then
+		return
+	end
+	
+	local data = self._currentPageData[self._selectItemIndex + 1]
+	if not data then
+		return
+	end
+	
+	FGUI:Open("Auction","TipJingjiaPanel",data)
+end
+
+function AuctionBuyPanel:BtnBuyClicked()
+	if self._selectItemIndex == -1 then
+		return
+	end
+
+	local data = self._currentPageData[self._selectItemIndex + 1]
+	if not data then
+		return
+	end
+
+	FGUI:Open("Auction","TipOncePricePanel",data)
 end
 
 function AuctionBuyPanel:BtnSearchClicked()
@@ -164,15 +229,13 @@ function AuctionBuyPanel:CBXAllLevelChanged()
     self:RequestPaiMaiPage()
 end
 
-
-
 function AuctionBuyPanel:InitUI()
     -- 初始化树形结构
     self.rootTreeNode = FGUI:GTree_getRootNode(self.tree_list)
     for _key,_value in ipairs(self._treeData.tree) do
         local isHasChild = type(_value) ~= "number"
         
-        local parent = FGUI:GTreeNode_Create("ui://5i0v372frxpmj",isHasChild)
+        local parent = FGUI:GTreeNode_Create("ui://Auction/item_listleft_parent",isHasChild)
         FGUI:GTreeNode_addChild(self.rootTreeNode,parent)
         local comp = FGUI:GTreeNode_getCell(parent)
         FGUI:addOnClickMultipleEvent(comp,function()
@@ -186,7 +249,7 @@ function AuctionBuyPanel:InitUI()
         FGUI:GTreeNode_setExpanded(parent,true)
         if _value and isHasChild then
             for _nPage,_value_ in pairs(_value) do
-                local child = FGUI:GTreeNode_Create("ui://5i0v372fmqpjh",false)
+                local child = FGUI:GTreeNode_Create("ui://Auction/item_listleft_child",false)
                 FGUI:GTreeNode_addChild(parent,child)
                 local compChild = FGUI:GTreeNode_getCell(child)
                 local text_content = FGUI:GetChild(compChild,"text_content")
@@ -204,7 +267,6 @@ function AuctionBuyPanel:InitUI()
     FGUI:GList_itemRenderer(self.list_PaiMai,handler(self,self.ListViewCellsItemRenderer))
     FGUI:GList_setVirtual(self.list_PaiMai)
     -- -- 输入框占位字
-    -- FGUI:GTextInput_setPromptText(self.input_search,"请输入关键词搜索")
     -- 初始化品质过滤器
     local data = SL:GetValue("ITEM_ALL_GRADE_NAME")
     local colorStrs = {}
@@ -223,8 +285,32 @@ function AuctionBuyPanel:InitUI()
 end
 
 function AuctionBuyPanel:CellClicked(context)
-    print("CellClicked-----------")
+	local childIdx = FGUI:GetChildIndex(self.list_PaiMai, context.data)
+	local idx = FGUI:GList_childIndexToItemIndex(self.list_PaiMai, childIdx)
+	self:SelectCell(idx)
 end
+
+function AuctionBuyPanel:SelectCell(idx)
+	if FGUI:GList_getNumItems(self.list_PaiMai) <= 0 then
+		self._selectItemIndex = -1
+		self.ctrl_isSelectItem.selectedIndex = 1
+		return
+	end
+	
+	if self._selectItemIndex ~= -1 then
+		local item = FGUI:GetChildAt(self.list_PaiMai,self._selectItemIndex)
+		local ctrl_isSelect = FGUI:getController(item,"isSelect")
+		ctrl_isSelect.selectedIndex = 1
+	end
+		
+	self._selectItemIndex  = idx
+	local select_cell = FGUI:GetChildAt(self.list_PaiMai,self._selectItemIndex)
+	local ctrl_isSelect_cell = FGUI:getController(select_cell,"isSelect")
+	-- 设置选中效果
+	ctrl_isSelect_cell.selectedIndex = 0
+	self.ctrl_isSelectItem.selectedIndex = 0
+end
+
 
 function AuctionBuyPanel:ListViewCellsItemRenderer(idx,cell)
     local index = idx + 1
@@ -238,12 +324,11 @@ function AuctionBuyPanel:ListViewCellsItemRenderer(idx,cell)
         local itemRoot = FGUI:GetChild(cell,"itemRoot")
         local iconMoney1 = FGUI:GetChild(cell,"iconMoney1")
         local iconMoney2 = FGUI:GetChild(cell,"iconMoney2")
-        local btn_jingjia = FGUI:GetChild(cell,"btn_jingjia")
-        local btn_buy = FGUI:GetChild(cell,"btn_buy")
         local text_status = FGUI:GetChild(cell,"text_status")
-
+		local ctrl_isSelect = FGUI:getController(cell,"isSelect")
         FGUI:GTextField_setText(text_price_jingJia,data.currprice ~= 0 and SL:GetThousandSepString(data.currprice) or SL:GetThousandSepString(data.price))
         FGUI:GTextField_setText(text_price_once,SL:GetThousandSepString(data.lastprice) or "")
+		ctrl_isSelect.selectedIndex = (idx == self._selectItemIndex) and 0 or 1
 
         if self._iconItemList[id] then
             ItemUtil:ItemShow_Release(self._iconItemList[id])
@@ -271,6 +356,8 @@ function AuctionBuyPanel:ListViewCellsItemRenderer(idx,cell)
         -- 当有竞拍者时下显示竞拍者名字
         if not string.isNullOrEmpty(data.currname) then
             FGUI:GTextField_setText(text_status,data.currname)
+        else
+            FGUI:GTextField_setText(text_status,GET_STRING(30000204))
         end
 
         local itemData = SL:GetValue("ITEM_DATA",data.index)
@@ -283,20 +370,11 @@ function AuctionBuyPanel:ListViewCellsItemRenderer(idx,cell)
         ItemUtil:SetItemCountVisible(iconMoney2,false)
         ItemUtil:SetItemGradeVisible(iconMoney1,false)
         ItemUtil:SetItemGradeVisible(iconMoney2,false)
-
-        -- 竞价
-        FGUI:setOnClickEvent(btn_jingjia,function()
-            FGUI:Open("Auction","TipJingjiaPanel",data)
-        end)
-
-        -- 一口价
-        FGUI:setOnClickEvent(btn_buy,function()
-            FGUI:Open("Auction","TipOncePricePanel",data)
-        end)
     end
 end
 
 function AuctionBuyPanel:Enter()
+    self:StartTimer()
     self:RegisterEvent()
     SL:ComponentAttach(SLDefine.SUIComponentTable.AuctionBuy, self._ui.Node_attach)
     self.ctrl_isSearchByKeyWord.selectedIndex = 1
@@ -307,6 +385,9 @@ end
 function AuctionBuyPanel:Exit()
     SL:ComponentDetach(SLDefine.SUIComponentTable.AuctionBuy)
     self:RemoveEvent()
+    self:EndTimer()
+    self:ClearSendCache()
+    self:PlayerLoadingActionBySwitch(false)
 end
 
 function AuctionBuyPanel:BtnNextClicked()
@@ -335,7 +416,10 @@ end
 
 -- 刷新列表
 function AuctionBuyPanel:RefreshPaiMaiList()
-    FGUI:GList_setNumItems(self.list_PaiMai,table.count(self._currentPageData))
+	local num = table.nums(self._currentPageData)
+    FGUI:Controller_setSelectedIndex(self.ctrl_isHaveStore,num > 0 and 1 or 0)
+    FGUI:GList_setNumItems(self.list_PaiMai,num)
+	self:SelectCell(0)
 end
 
 -- 刷新当前页的数据
@@ -361,6 +445,7 @@ end
 
 -- 请求数据
 function AuctionBuyPanel:RequestPaiMaiPage()
+    self:PlayerLoadingActionBySwitch()
     if self.ctrl_isSearchByKeyWord.selectedIndex == 1 then
         local data = {
             page = self._nPage,
@@ -370,7 +455,7 @@ function AuctionBuyPanel:RequestPaiMaiPage()
             levelhi = self._levelhi,
         }
         
-        SL:RequestAuctionPaiMaiPageInfo(data,self._curPage)
+        self._reqData = data
     end
 end
 
@@ -416,23 +501,14 @@ function AuctionBuyPanel:BuyTips(recog)
     end   
 end
 
-function AuctionBuyPanel:PlayerLoadingActionByTime(time)
-    self.ctrl_loading.selectedIndex = time > 0 and 0 or 1
-    if self._scheduleID then
-        SL:UnSchedule(self._scheduleID)
-        self._scheduleID = nil
-    end
-    if time > 0 then
-        if  FGUI:Transition_getIsPlaying(self.loading) then
+function AuctionBuyPanel:PlayerLoadingActionBySwitch(open)
+    self.ctrl_loading.selectedIndex = open and 0 or 1
+    if open == true then
+        if FGUI:Transition_getIsPlaying(self.loading) then
             FGUI:Transition_setPaused(self.loading,true)
         end
 
         FGUI:Transition_play(self.loading,nil,-1)
-        self._scheduleID = ScheduleOnce(function()
-            self._scheduleID = nil
-            FGUI:Transition_setPaused(self.loading,true)
-            self.ctrl_loading.selectedIndex = 1
-        end, time)
     else
         if FGUI:Transition_getIsPlaying(self.loading) then
             FGUI:Transition_setPaused(self.loading,true)
@@ -446,7 +522,7 @@ function AuctionBuyPanel:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_AUCTION_PAGE_UPDATE, "AuctionBuyPanel", handler(self,self.RefreshData))
     SL:RegisterLUAEvent(LUA_EVENT_AUCTION_BUY_RESULT, "AuctionBuyPanel", handler(self,self.BuyTips))
     SL:RegisterLUAEvent(LUA_EVENT_STALL_BUY_FAIL_TIPS, "AuctionBuyPanel", handler(self,self.BuyTips))
-    SL:RegisterLUAEvent(LUA_EVENT_MY_AUCTION_LOADING_UPDATE, "AuctionBuyPanel", handler(self, self.PlayerLoadingActionByTime))
+    SL:RegisterLUAEvent(LUA_EVENT_MY_AUCTION_LOADING_UPDATE, "AuctionBuyPanel", handler(self, self.PlayerLoadingActionBySwitch))
 end
 
 function AuctionBuyPanel:RemoveEvent()

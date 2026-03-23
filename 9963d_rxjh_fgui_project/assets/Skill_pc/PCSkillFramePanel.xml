@@ -16,7 +16,7 @@
     <component id="n12_dgah" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="700,146">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n9_ha35" name="Node_Content" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="2,-1" size="1024,768">
+    <component id="n9_ha35" name="Node_Content" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="1024,768">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
   </displayList>

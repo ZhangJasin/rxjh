@@ -110,8 +110,8 @@ function AutoController:StateBegin(actCompleted)
         return true
     end
 
-    -- 脱战返回挂机点
-    if self:CheckBackToAfkPoint() then
+    -- 周围无怪返回挂机点
+    if self:CheckBackToAfkPoint(actCompleted) then
         return true
     end
 
@@ -285,7 +285,7 @@ function AutoController:CheckAutoFindTarget(actCompleted)
         return false
     end
 
-    if SL:GetValue("BATTLE_IS_AUTO_MOVE") then
+    if SL:GetValue("BATTLE_IS_AUTO_MOVE") and SL:GetValue("MAP_CURRENT_MOVE_TYPE") ~= SLDefine.INPUT_MOVETYPE.INPUT_MOVE_TYPE_AFK then
         return false
     end
 
@@ -401,12 +401,12 @@ function AutoController:CheckLaunchLockSkill()
     return true
 end
 
-function AutoController:CheckBackToAfkPoint()
+function AutoController:CheckBackToAfkPoint(actCompleted)
     if not SL:GetValue("BATTLE_IS_AFK") then
         return false
     end
 
-    if SL:GetValue("BATTLE_IS_FIGHT_STATE") then 
+    if not SL:ActionIsIdle(actCompleted) then
         return false
     end
 

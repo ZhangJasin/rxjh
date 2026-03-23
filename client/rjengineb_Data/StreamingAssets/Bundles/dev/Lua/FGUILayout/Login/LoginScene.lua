@@ -2,8 +2,6 @@ LoginScene = {
     _loginSceneName = "1002",
     _loginRolePosition = Vector3.New(0, 0, -9.71),
     _camerPosition = Vector3.New(0, 0, -9.71),
-    -- _createRolePosition = Vector3.New(5.75, 0.39, -9.71),
-    -- _createRoleCameraPosition = Vector3.New(5.75, 0, -9.71),
     _loginRoleScal = Vector3.New(1,1,1),
     _cameraMoveSpeed = 10,
     _loginRoleRotationY = 180,
@@ -11,7 +9,6 @@ LoginScene = {
     _cameraPitch = 0,
     _cameraDistance = 5,
     _cameraTargetY = 0.9,
-    --_cameraFarClipPlane = 3000,--TODO 到GameSettingsController.GetCameraFarClipPlane()函数，按照性能分级
 }
 
 function LoginScene:GetSceneName()

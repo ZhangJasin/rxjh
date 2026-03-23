@@ -5,8 +5,9 @@ local countPerPage = 6 -- 每页摊位数
 function StallMain:Create()
 	self.super.Create(self)
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	self._my_stall_data = {}	-- 自身摊位数据
+	self._all_shop_list = {}	-- 当前分类的所有摊位数据
 	self._shop_list = {}		-- 显示摊位数据
 	self._shop_count = 0		-- 商铺数据个数
 	self.handler_browse_stall = handler(self, self.OnClickBrowseStall)
@@ -29,7 +30,9 @@ function StallMain:Create()
 	-- 下一页
 	FGUI:setOnClickEvent(self._ui.btn_next_page, function ()
 		self:GotoPage(self._curPage + 1)
-	end)	
+	end)
+
+	FGUI:setOnClickEvent(self._ui.btn_shopping, handler(self, self.OnClickShoppingCart))
 
 	-- 摊位购买
 	FGUI:GList_setVirtual(self._ui.list_stall)
@@ -39,6 +42,7 @@ end
 
 function StallMain:Enter()
     self:RegisterEvent()
+	FGUIFunction:ShowTopCurrency(SL:GetValue("GAME_DATA", "BagMoneyList"))
 	-- 查询收藏店铺列表
 	SL:RequestStallCollectList()
 	-- 查询自身店铺信息
@@ -60,6 +64,7 @@ function StallMain:Exit()
 	end
 	FGUI:Close("Stall", "StallProduct")
 	FGUI:Close("Bag", "SimpleBagPanel")
+	FGUIFunction:HideTopCurrency()
 end
 
 function StallMain:Close()
@@ -85,6 +90,11 @@ function StallMain:OnSearchStall()
 	end
 	self._curPage = 1
 	FGUI:GTextField_setText(self._ui.text_page, string.format(GET_STRING(90010001), self._curPage, self._maxPageCount))
+end
+
+-- 打开购物车
+function StallMain:OnClickShoppingCart()
+	FGUI:Open("Stall", "StallShoppingCart")
 end
 
 
@@ -117,8 +127,8 @@ function StallMain:GotoPage(page)
 
 	if self._isFlipQuery then
 		SL:RequestStallQueryShopByPage( self._curPage)
-	else
-		FGUI:ScrollPane_setCurrentPageY(self._scrollPane, self._curPage - 1)
+	else	
+		self:ShowShopListByCurPage()
 	end
 
 	FGUI:GTextField_setText(self._ui.text_page, string.format(GET_STRING(90010001), self._curPage, self._maxPageCount))
@@ -170,7 +180,7 @@ end
 -- 刷新摊位列表数据
 function StallMain:OnRefreshShopList(data, isFlipQuery, totalPage)
 	if not data then return end
-	
+
 	-- 收藏筛选
 	local isCollected = FGUI:GButton_getSelected(self._ui.btn_filter_collect)
 	local filterData = {}
@@ -183,12 +193,34 @@ function StallMain:OnRefreshShopList(data, isFlipQuery, totalPage)
 	else
 		filterData = data
 	end
-	
-	self._shop_list = filterData
+
+	self._all_shop_list = filterData
 	self._isFlipQuery = isFlipQuery
+	self._maxPageCount = totalPage or 1
+	self:ShowShopListByCurPage()
+end
+
+function StallMain:ShowShopListByCurPage()
+	self._shop_list = {}
+	if self._isFlipQuery then
+		self._shop_list = self._all_shop_list
+	else
+		local curPage = self._curPage
+
+		for i = 1, countPerPage do
+			self._shop_list[i] = self._all_shop_list[countPerPage * (curPage - 1) + i]
+		end
+	end
+
 	self._shop_count = #self._shop_list
 	FGUI:GList_setNumItems(self._ui.list_stall, self._shop_count)
-	self._maxPageCount = totalPage or 1
+	if self._shop_count == 0 then
+		FGUI:setVisible(self._ui.text_empty_tip, true)
+	else
+		FGUI:setVisible(self._ui.text_empty_tip, false)
+	end
+
+
 	FGUI:GTextField_setText(self._ui.text_page, string.format(GET_STRING(90010001), self._curPage, self._maxPageCount))
 	if FGUI:CheckOpen("Stall", "StallProduct") then
 		local shopData = self._shop_list[self._curBrowseIndex]
@@ -258,7 +290,7 @@ function StallMain:OpenCreateStallPanel()
 end
 
 -- 是否在摆摊区域
-function StallMain:IsOnStallArea()	
+function StallMain:IsOnStallArea()
 	return SL:GetValue("STALL_IS_ON_SHOP_AREA")
 end
 

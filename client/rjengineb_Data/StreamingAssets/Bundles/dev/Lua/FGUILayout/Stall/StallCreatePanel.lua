@@ -5,7 +5,7 @@ local StallCreatePanel = class("StallCreatePanel", BaseFGUILayout)
 function StallCreatePanel:Create()
 	self.super.Create(self)
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	FGUI:setOnClickEvent(self._ui.btn_cancel, handler(self, self.Close))
 	FGUI:setOnClickEvent(self._ui.btn_sure, handler(self, self.OnClickSureEvent))
 end

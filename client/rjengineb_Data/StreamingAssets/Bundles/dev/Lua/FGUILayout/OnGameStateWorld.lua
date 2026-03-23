@@ -4,24 +4,15 @@
 
 function OnGameStateWorld()
     SL:Print("Hello World, This is OnGameStateWorld!")
-    -- 清除缓存  重新加载CampUpdate
-    -- 清除缓存  重新加载CampUpdate
-    package.loaded["FGUILayout/Hud/CampUpdate"] = nil
-    SL:RequireFile("FGUILayout/Hud/CampUpdate") -- 阵营更新
-    -- 事件
-    SL:RequireFile("FGUILayout/Apanl/init")
-    --全局表
-    HCDObj_cfd = {}         -- 合成点对象  背包整理时销毁用
-    WuXunJianDing_cfd = {}  -- 武勋装备未鉴定时添加用
-    WuXunOBJ_cfg = {}       -- 武勋tips对象
 end
 OnGameStateWorld()
 
 local IsPC = SL:GetValue("IS_PC_OPER_MODE")
-
-if IsPC then FGUI:SetDefaultFont("SIMSUN") end
-
 -----------------------------------------------------------------------------
+-- 游戏世界一些初始化
+SL:RequireFile("FGUILayout/FGUIDesignGameWorld")
+FGUIDesignGameWorld.main()
+
 -- 断网处理
 SL:RequireFile("FGUILayout/Network/Network")
 Network.main()
@@ -42,6 +33,10 @@ AutoController.main()
 SL:RequireFile("FGUILayout/Auto/AutoRobot")
 AutoRobot.main()
 
+--自动反击
+SL:RequireFile("FGUILayout/Auto/AutoFightBack")
+AutoFightBack.main()
+
 --找目标
 SL:RequireFile("FGUILayout/Auto/AutoFindTarget")
 SL:RequireFile("FGUILayout/Auto/AutoFindDropItem")
@@ -50,7 +45,10 @@ SL:RequireFile("FGUILayout/Auto/AutoFindDropItem")
 SL:RequireFile("FGUILayout/JumpUI")
 JumpUI.main()
 
------------------------------------------------------------------------------
+-- 称号
+SL:RequireFile("FGUILayout/Bag/TitleCheck")
+TitleCheck.main()
+
 -- 升级 触发
 SL:RequireFile("FGUILayout/Levelup/Levelup")
 Levelup.main()
@@ -71,7 +69,6 @@ TreasureShop.main()
 SL:RequireFile("FGUILayout/FuncDock/FuncDock")
 FuncDock.main()
 
------------------------------------------------------------------------------
 -- 行会
 SL:RequireFile("FGUILayout/Guild/Guild")
 Guild.main()
@@ -79,6 +76,10 @@ Guild.main()
 -- 背包
 SL:RequireFile("FGUILayout/Bag/Bag")
 Bag.main()
+
+-- FuncDock
+SL:RequireFile("FGUILayout/FuncDock/FuncDock")
+FuncDock.main()
 
 -- 摆摊
 SL:RequireFile("FGUILayout/Stall/Stall")
@@ -105,10 +106,10 @@ SL:RequireFile("FGUILayout/TopCurrency/TopCurrency")
 TopCurrency.main()
 
 -- 快捷键
--- if IsPC then
+if IsPC then
     SL:RequireFile("FGUILayout/Setting_pc/SettingKey")
     SettingKey.main()
--- end
+end
 
 if IsPC then
     SL:RequireFile("FGUILayout/Bag_pc/PCBagOnDragDrop")
@@ -130,6 +131,10 @@ NPCTalk.main()
 SL:RequireFile("FGUILayout/Item/ItemAutoUse")
 ItemAutoUse.main()
 
+-- item特效管理
+local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
+ItemUtil:ClearCache()
+
 -- 播放一些触发音效
 SL:RequireFile("FGUILayout/PlaySound/PlaySound")
 PlaySound.main()
@@ -145,6 +150,12 @@ if IsPC then
 else
     SL:RequireFile("FGUILayout/Main/GameMain")
     GameMain.main()
+end
+
+-- 自动施法数据
+if IsPC then
+    SL:RequireFile("FGUILayout/Main_pc/PCAutoSkill")
+    PCAutoSkill.main()
 end
 
 -- 聊天-上线欢迎

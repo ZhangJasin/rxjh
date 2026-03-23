@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="21,19" extention="Label">
+  <controller name="isSelected" exported="true" pages="0,选中,1,未选中" selected="0"/>
+  <displayList>
+    <image id="n123_uf3f" name="n123" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="0,0" size="19,19" group="n128_uf3f"/>
+    <image id="n124_uf3f" name="icon_select" src="lxrgv57" fileName="image/checkbox_icon.png" pkg="st7dgeqq" xy="0,0" size="19,19" group="n128_uf3f">
+      <gearDisplay controller="isSelected" pages="0"/>
+    </image>
+    <group id="n128_uf3f" name="n128" xy="0,0" size="19,19" advanced="true">
+      <relation target="" sidePair="middle-middle,left-left"/>
+    </group>
+    <text id="n125_uf3f" name="title" xy="21,0" size="10,19" fontSize="12" color="#b0c9b6" vAlign="middle" strokeColor="#000000" singleLine="true" text="">
+      <relation target="" sidePair="middle-middle"/>
+    </text>
+  </displayList>
+  <relation target="n125_uf3f" sidePair="rightext-right"/>
+</component>

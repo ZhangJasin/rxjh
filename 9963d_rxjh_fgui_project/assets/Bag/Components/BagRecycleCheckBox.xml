@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="142,32" extention="Button">
-  <controller name="isSelect" pages="0,unSelect,1,Select" selected="0"/>
+  <controller name="isSelect" pages="0,Select,1,unSelect" selected="0"/>
   <displayList>
-    <text id="n5_hgpp" name="title" xy="39,0" size="68,26" fontSize="18" color="#ffffff" vAlign="middle" ubb="true" autoClearText="true" text="10-20级">
+    <text id="n5_hgpp" name="title" xy="39,0" size="102,32" fontSize="18" color="#ffffff" vAlign="middle" ubb="true" autoSize="none" autoClearText="true" text="10-20级">
       <relation target="" sidePair="height-height%,rightext-right%"/>
     </text>
     <image id="n4_hgpp" name="n4" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="0,0" size="32,32" group="n6_hgpp"/>
     <image id="n3_hgpp" name="icon_select" src="lxrgv57" fileName="image/checkbox_icon.png" pkg="st7dgeqq" xy="0,0" size="32,32" group="n6_hgpp">
-      <gearDisplay controller="isSelect" pages="1"/>
+      <gearDisplay controller="isSelect" pages="0"/>
     </image>
     <group id="n6_hgpp" name="n6" xy="0,0" size="32,32" advanced="true">
       <relation target="" sidePair="height-height%,leftext-left%"/>

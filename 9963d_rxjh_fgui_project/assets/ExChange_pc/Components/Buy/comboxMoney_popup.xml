@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="75,200">
+  <displayList>
+    <image id="n2_fts2" name="n2" src="q9lsv5j" fileName="image/icon_money_bg.png" pkg="st7dgeqq" xy="0,0" size="75,200">
+      <relation target="n1_cozz" sidePair="width-width,height-height"/>
+    </image>
+    <list id="n1_cozz" name="list" xy="0,0" size="75,200" overflow="scroll" defaultItem="ui://08g55xx7fts23">
+      <relation target="" sidePair="width-width"/>
+    </list>
+  </displayList>
+  <relation target="n1_cozz" sidePair="height-height"/>
+</component>

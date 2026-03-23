@@ -22,6 +22,8 @@ function ItemShow:UpdateUI(extData)
     self:SetCountTextOutLine()
     self:SetBgVisbleByExtDataConfig()
     self:UpdateIsShowLock()
+    self:AddEffectToItem()
+    self:UpdateItemTipInAndOut()
 end
 
 -- 更新数据

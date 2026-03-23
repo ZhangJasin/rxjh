@@ -1,7 +1,7 @@
 ItemTips = {}
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 local ItemFrom = SL:GetValue("ITEMFROMUI_ENUM")
-local fashion_jihuo            =  require("game_config/cfgcsv/fashion_jihuo")    -- 时装激活表 ItemTipsDesc
+
 local HIDE_TIP_EVENT = "HIDE_TIP_EVENT"
 function ItemTips.Init()
     FGUI:StageEvent_AddListener(HIDE_TIP_EVENT,function() ItemTips.CloseItemTips()  end,2)
@@ -175,47 +175,26 @@ local BtnCfg = {
             SL:onLUAEvent(LUA_EVENT_STALL_OPEN_SHELF, bagItem)
         end
     },
-    
+    [13] = {
+        btnName     = "外观对比",   -- 单独外观对比按钮
+        func        = function(dataList)
+            FGUI:Open("Common", "EquipComparePreviewTips", dataList)
+        end,
+    },
+    [14] = {
+        btnName     = "去上架",  -- 交易所上架
+        func        = function(data)
+            if not SL:GetValue("IS_PC_OPER_MODE") then
+                FGUI:Open("ExChange", "ExChangeLaunchDialog", data)
+            end
+        end,
+    },
     [-1] = {
         btnName  = "",
         func = function (data)
             print("Not ClickEvent....")
         end
-    },
-    [21] = {
-        btnName     = "鉴定", -- 武勋装备鉴定
-        func = function (data)
-            ssrMessage:sendmsgEx("wuxun", "WuXunEquipCheck",{data.MakeIndex})
-        end
-    },
-    [22] = {
-        btnName  = "获取",
-        func = function (data)
-            -- print("获取")
-        end
-    },
-    [23] = {  -- 宠物装备脱下
-        btnName  = "脱下",
-        func = function (data)
-            -- dump(data,"宠物装备脱下")
-            ssrMessage:sendmsgEx("PetSystemPay", "unTakeEquipPet",{MakeIndex = data.petEquipMakeIndex , mark = data.petMark})
-        end
-    },
-    [24] = {  -- 宠物装备佩戴
-        btnName  = "佩戴",
-        func = function (data)
-            -- dump(data,"宠物装备佩戴")
-            ssrMessage:sendmsgEx("PetSystemPay", "takeEquipPet",{MakeIndex = data.petEquipMakeIndex , mark = data.petMark})
-        end
-    },
-    [25] = {  -- 宠物装备强化合成
-        btnName  = "提升",
-        func = function (data)
-            -- dump(data,"宠物装备提升")
-            FGUI:Close("BPetSystem", "PetSystemPay")
-            FGUI:Open("BPetSystem", "PetEquipSys",{},FGUI_LAYER.NORMAL,{destroyTime = 1})
-        end
-    },
+    }
 }
 
 function ItemTips.GetBtnCfg(btnType)

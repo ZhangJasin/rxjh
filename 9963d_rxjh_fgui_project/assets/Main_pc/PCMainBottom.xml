@@ -22,6 +22,14 @@
       <relation target="" sidePair="left-right,bottom-bottom"/>
       <ProgressBar value="50" max="100"/>
     </component>
+    <list id="n34_brvz" name="List_bubbleTip" xy="661,671" size="331,33" layout="row" colGap="4" defaultItem="ui://xwp5ackom9h9v85" align="right" autoClearItems="true">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
     <loader id="n124_bojo" name="n124" xy="10,715" size="392,53" group="n76_jloc" url="ui://xwp5ackobojo6e" fill="scaleFree" autoSize="true"/>
     <image id="n147_7ug3" name="n147" src="lxvgfveg" fileName="Images/Bottom/main_bottom_img1.png" xy="0,716" size="10,52" group="n76_jloc"/>
     <component id="n134_m9h9" name="Btn_status" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="34,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
@@ -61,28 +69,20 @@
     <image id="n146_7ug3" name="n146" src="lxvgfveg" fileName="Images/Bottom/main_bottom_img1.png" xy="1014,716" size="10,52" group="n94_ljak" flip="hz"/>
     <loader id="n96_fa9c" name="Button_quickUp" xy="630,720" size="10,8" group="n94_ljak" url="ui://xwp5ackobojo6h" autoSize="true"/>
     <loader id="n121_km1v" name="Button_quickDown" xy="630,745" size="10,8" group="n94_ljak" url="ui://xwp5ackobojo6g" autoSize="true"/>
-    <component id="n98_fa9c" name="QuickBox1" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="660,737" pivot="0.5,0.5" anchor="true" size="30,30" group="n94_ljak"/>
-    <component id="n110_fa9c" name="QuickBox2" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="697,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
-    <component id="n111_fa9c" name="QuickBox3" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="734,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
-    <component id="n112_fa9c" name="QuickBox4" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="771,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
-    <component id="n113_fa9c" name="QuickBox5" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="808,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
-    <component id="n114_fa9c" name="QuickBox6" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="845,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
-    <component id="n115_fa9c" name="QuickBox7" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="882,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
-    <component id="n116_fa9c" name="QuickBox8" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="919,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
-    <component id="n117_fa9c" name="QuickBox9" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="956,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
-    <component id="n118_fa9c" name="QuickBox10" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="993,737" pivot="0.5,0.5" anchor="true" group="n94_ljak"/>
+    <component id="n98_fa9c" name="QuickBox1" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="645,722" pivot="0.5,0.5" size="30,30" group="n94_ljak"/>
+    <component id="n110_fa9c" name="QuickBox2" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="682,722" pivot="0.5,0.5" group="n94_ljak"/>
+    <component id="n111_fa9c" name="QuickBox3" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="719,722" pivot="0.5,0.5" group="n94_ljak"/>
+    <component id="n112_fa9c" name="QuickBox4" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="756,722" pivot="0.5,0.5" group="n94_ljak"/>
+    <component id="n113_fa9c" name="QuickBox5" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="793,722" pivot="0.5,0.5" group="n94_ljak"/>
+    <component id="n114_fa9c" name="QuickBox6" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="830,722" pivot="0.5,0.5" group="n94_ljak"/>
+    <component id="n115_fa9c" name="QuickBox7" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="867,722" pivot="0.5,0.5" group="n94_ljak"/>
+    <component id="n116_fa9c" name="QuickBox8" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="904,722" pivot="0.5,0.5" group="n94_ljak"/>
+    <component id="n117_fa9c" name="QuickBox9" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="941,722" pivot="0.5,0.5" group="n94_ljak"/>
+    <component id="n118_fa9c" name="QuickBox10" src="fa9c4p" fileName="Components/Bottom/QuickBox.xml" xy="978,722" pivot="0.5,0.5" group="n94_ljak"/>
     <text id="n148_7ug3" name="Text_quickIndex" xy="629,727" size="13,19" group="n94_ljak" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="center" leading="0" autoSize="none" autoClearText="true" text="1"/>
     <group id="n94_ljak" name="Group_quick" xy="615,714" size="409,54" advanced="true">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
-    <list id="n34_brvz" name="List_bubbleTip" xy="661,671" size="331,33" layout="row" colGap="4" defaultItem="ui://xwp5ackom9h9v85" align="right" autoClearItems="true">
-      <relation target="" sidePair="right-right,bottom-bottom"/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
     <list id="n95_tj4v" name="List_buff" xy="992,704" pivot="0,1" anchor="true" size="32,324" layout="flow_vt" overflow="scroll" lineGap="3" defaultItem="ui://xwp5ackotj4v48" align="center" vAlign="bottom" autoClearItems="true" scrollItemToViewOnClick="false">
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <item/>
@@ -100,5 +100,6 @@
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </graph>
     <component id="n125_bojo" name="QuickTip" src="bojo6i" fileName="Components/Bottom/QuickTip.xml" xy="28,546" pivot="0.5,1" anchor="true" touchable="false"/>
+    <component id="n150_xgon" name="SkillAutoSet" src="xgonfvet" fileName="Components/Bottom/SkillAutoSet.xml" xy="660,721" pivot="0.5,1" anchor="true"/>
   </displayList>
 </component>

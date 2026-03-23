@@ -102,6 +102,7 @@ FGUIDefine.GuideDataKey = {
 	ChatHideFunc 		= 2,
 	BagGuideFunc 		= 3,
 	MissionGuideFunc 	= 4,
+	SkillGuideFunc 		= 5,
 }
 
 FGUIDefine.TeamPickType = {
@@ -115,3 +116,22 @@ FGUIDefine.PCQuickType = {
 	Item 				= 0,
 	Skill 				= 1,
 }
+
+FGUIDefine.SkillTipOp = {
+	Set 				= 0,	--配置
+	Study 				= 1,	--修炼
+	Upgrade 			= 2,	--升级
+	Close 				= 3,	--关闭
+}
+
+-- 仅限pc背包绑定PCBagViewModel使用
+FGUIDefine.BindParentView = {
+	PCBagPanel = 1, 					-- 背包
+	PCEquipBar = 2, 					-- 小版背包
+	PCStoragePanel = 3, 				-- 仓库
+	PCTradeMain = 4, 					-- 交易
+	PCStallMain = 5,					-- 摆摊
+}
+
+FGUIDefine.DelayClickTime = 0.2
+

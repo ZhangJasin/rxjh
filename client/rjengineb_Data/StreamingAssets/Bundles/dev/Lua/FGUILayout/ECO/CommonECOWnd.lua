@@ -70,7 +70,6 @@ end
 
 function CommonECOWnd:UpdateTime()
     local date = os.date("*t", SL:GetValue("SERVER_TIME"))
-    -- local timeStr = string.format("%02d:%02d:%02d", date.hour, date.min, date.sec)
     local timeStr = string.format("%02d:%02d", date.hour, date.min)
     FGUI:GTextField_setText(self._ui.time, timeStr)
 end

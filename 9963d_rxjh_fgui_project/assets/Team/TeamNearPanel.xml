@@ -27,9 +27,6 @@
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
     </list>
-    <text id="n20_leye" name="text_nothing" xy="760,370" pivot="0.5,0.5" anchor="true" size="600,90" font="ui://st7dgeqqje63v37" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
     <component id="n33_leye" name="btn_refresh" src="f0so1n" fileName="Components/btn_refresh.xml" xy="1040,660" pivot="0.5,0.5" anchor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
@@ -40,8 +37,13 @@
     <component id="n45_qpuy" name="check_autoInvited" src="yj7kvo1" fileName="common/checkbox_multi.xml" pkg="st7dgeqq" xy="390,660" pivot="0.5,0.5" anchor="true" size="40,40">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <text id="n44_qpuy" name="text_check" xy="420,660" pivot="0,0.5" anchor="true" size="164,29" fontSize="20" color="#fcf1bf" autoSize="none" text="自动同意队伍邀请">
+    <text id="n44_qpuy" name="text_check" xy="420,659" pivot="0,0.5" anchor="true" size="164,29" fontSize="20" color="#fcf1bf" vAlign="middle" autoSize="none" text="自动同意队伍邀请">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
+    <image id="n52_i00u" name="img_nothing" src="iwlbkvpz" fileName="image/img.png" pkg="st7dgeqq" xy="574,230" group="n54_i00u"/>
+    <text id="n53_i00u" name="text_nothing" xy="759,487" pivot="0.5,0.5" anchor="true" size="200,34" group="n54_i00u" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="暂无队伍"/>
+    <group id="n54_i00u" name="panel_nothing" xy="574,230" size="371,280" visible="false" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>

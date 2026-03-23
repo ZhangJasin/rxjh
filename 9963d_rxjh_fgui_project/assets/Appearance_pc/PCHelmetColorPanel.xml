@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600" designImageOffsetX="-12" designImageOffsetY="-2">
+  <displayList>
+    <component id="n0_tdbp" name="n0" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="158,130" size="483,339" group="n16_qxa1"/>
+    <image id="n15_qxa1" name="n15" src="qxa1vld" fileName="Images/helmetcolor_model_bg.png" xy="168,173" group="n16_qxa1"/>
+    <text id="n2_tdbp" name="n2" xy="291,137" size="217,24" group="n16_qxa1" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" letterSpacing="20" autoSize="none" text="染色"/>
+    <image id="n4_tdbp" name="n4" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="395,173" size="236,286" group="n16_qxa1"/>
+    <image id="n17_iaa2" name="n17" src="if77vle" fileName="Images/helmetcolor_color_frame.png" xy="430,179" group="n16_qxa1"/>
+    <component id="n5_tdbp" name="color_select_panel" src="qxa14" fileName="Components/color_select_panel.xml" xy="433,181" group="n16_qxa1"/>
+    <image id="n6_tdbp" name="n6" src="emvc5a" fileName="image/img_di_2.png" pkg="qa9a7rit" xy="400,370" size="68,25" group="n16_qxa1"/>
+    <text id="n7_tdbp" name="n7" xy="402,373" size="64,19" group="n16_qxa1" fontSize="12" color="#a3c161" align="center" letterSpacing="2" autoSize="none" text="强度调整"/>
+    <component id="n9_tdbp" name="slider_color" src="qxa12" fileName="Components/helmet_color_slider.xml" xy="471,371" size="154,22" group="n16_qxa1">
+      <Slider value="70" max="100"/>
+    </component>
+    <text id="n10_tdbp" name="text_tip" xy="482,370" size="140,24" group="n16_qxa1" fontSize="12" color="#f7f3c7" vAlign="middle" letterSpacing="2" autoSize="none" text="请选择你的颜色"/>
+    <component id="n11_tdbp" name="btn_no" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="417,423" size="86,26" group="n16_qxa1">
+      <Button title="取消" titleFontSize="12"/>
+    </component>
+    <component id="n12_tdbp" name="btn_ok" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="523,423" size="86,26" group="n16_qxa1">
+      <Button title="确定" titleFontSize="12"/>
+    </component>
+    <graph id="n13_tdbp" name="model_root" xy="270,437" size="10,10" group="n16_qxa1" type="rect"/>
+    <component id="n14_tdbp" name="panel_touch" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="168,173" size="219,286" group="n16_qxa1"/>
+    <group id="n16_qxa1" name="n16" xy="158,130" size="483,339" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n1_tdbp" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="627,150">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

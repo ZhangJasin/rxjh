@@ -13,6 +13,7 @@ local PACKAGE_NAME = "Notice"
 
 function NoticePanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
+    FGUIFunction:AdaptNotch(self.component)
     local IsPC = SL:GetValue("IS_PC_OPER_MODE")
     PACKAGE_NAME = IsPC and "Notice_pc" or "Notice"
 
@@ -78,21 +79,6 @@ end
 
 function NoticePanel:Enter()
 	self:RegisterEvent()
-
-    -- TEST
-    -- FGUI:setOnClickEvent(self._ui.btn_Test, function()
-    --     self:OnShowServerNotice({Msg="XXXXXXXXXXXXXXXXXXXX", BColor = 249})
-    --     self:OnShowServerEventNotice({Type=11, Msg="XXXXXXXXXXXXXXXXXXXX", BColor = 249})
-    --     self:OnShowSystemTips("1=========================================1")
-    --     self:OnShowSystemNotice({Msg="XXXXXXXXXXXXXXXXXXXX==============================", BColor = 249})
-    --     self:OnShowSystemScaleNotice({Msg="XXXXXXXXXXXXXXXXXXXX==============================", Count = 5, BColor = 249})
-    --     self:OnShowSystemXYNotice({X = 100, Y = 100, Msg="XXXXXXXXXXXXXXXXXXXX==============================", BColor = 249})
-    --     self:OnShowTimerNotice({Msg="================%s================", BColor = 249})
-    --     self:OnShowTimerXYNotice({X = 200, Y = 200, Count = 5, Msg = "XXXXXXXXXXXXXXXXXXX", BColor = 249})
-    --     self:OnShowItemTips("获得 物品 XXXX", "#FF0000")
-    --     -- self:TestAddAttr()
-    --     self:OnShowItemDropNotice({Msg = "XXXXXXXXXXXXX", FColor = 12, BColor = 249})
-    -- end)
 end
 
 function NoticePanel:Exit(isRemovedEvent)
@@ -311,10 +297,8 @@ function NoticePanel:OnShowSystemNotice(data)
     data.BColor         = data.BColor or 255
     data.Ext            = data.Ext or nil
     data.fSize          = data.fSize or fontSize
-    -- local isXml = true
     local shout = false
     if data.Ext then
-        -- isXml = data.Ext.Xml or true
         shout = data.Ext.Shout or false
     end
 
@@ -670,8 +654,6 @@ function NoticePanel:OnShowTimerXYNotice(data)
 
     local screenWidth = SL:GetValue("SCREEN_WIDTH")
     local screenHeight = SL:GetValue("SCREEN_HEIGHT")
-    -- local capacityW = screenWidth * 0.6
-    -- local capacityH = 45
 
     FGUI:RemoveAllChildren(self._rootTimerTipsXY)
 
@@ -784,10 +766,6 @@ function NoticePanel:CheckItemTip()
     if self._itemWait then return end
     local t = self._itemTipsData:pop()
     if not t then return end
-    -- if self._itemTipsCells:size() >= 3 then 
-    --     self:RecycleItemTipsNode(self._itemTipsCells:pop())
-    --     -- return 
-    -- end
 
     local ui = self:GetItemTip()
     local label = ui.nativeUI
@@ -977,13 +955,9 @@ function NoticePanel:OnShowItemDropNotice(data)
     local label = FGUI:CreateObject(self._rootDropTips, PACKAGE_NAME, "LabelItemDropNotice")
     local Graph_bg = FGUI:GetChild(label, "Graph_bg")
 
-    -- if BColorRGB and (data.BColor and data.BColor ~= -1) then
-        FGUI:setVisible(Graph_bg, true)
-        FGUI:setAlpha(Graph_bg, opacity / 255)
-        FGUI:GGraph_setColor(Graph_bg, BColorRGB)
-    -- else
-    --     FGUI:setVisible(Graph_bg, false)
-    -- end
+    FGUI:setVisible(Graph_bg, true)
+    FGUI:setAlpha(Graph_bg, opacity / 255)
+    FGUI:GGraph_setColor(Graph_bg, BColorRGB)
 
     FGUI:GLabel_setTitle(label, data.Msg)
     FGUI:GLabel_setTitleColor(label, FColorHEX)
@@ -1046,40 +1020,8 @@ function NoticePanel:OnAddTopTip(tipComponent, tipTag)
     tipTag = tipTag or ""
     self._topTips[gid] = tipTag
     FGUI:AddChild(self._rootTopTips, tipComponent)
-    --计算包围盒出界,进行自动偏移
-    local minX, minY, maxX, maxY
     local x, y = FGUI:getPosition(tipComponent)
-    local w, h = FGUI:getSize(tipComponent)
-    local asAnchor = FGUI:getAsAnchor(tipComponent)
-    if asAnchor then
-        local anchorX, anchorY = FGUI:getAnchorPoint(tipComponent)
-        minX = x - anchorX * w
-        minY = y - anchorY * h
-    else
-        minX, minY = x, y
-    end
-    maxX = minX + w
-    maxY = minY + h
-    local screenW = SL:GetValue("SCREEN_WIDTH")
-    local screenH = SL:GetValue("SCREEN_HEIGHT")
-    local offset = false
-    if minX < 0 then
-        x = x - minX
-        offset = true
-    elseif maxX > screenW then
-        x = x - (maxX - screenW)
-        offset = true
-    end
-    if minY < 0 then
-        y = y - minY
-        offset = true
-    elseif maxY > screenH then
-        y = y - (maxY - screenH)
-        offset = true
-    end
-    if offset then
-        FGUI:setPosition(tipComponent, x, y)
-    end
+    FGUIFunction:SetSafePosition(tipComponent, x, y)
 end
 
 function NoticePanel:OnRemoveTopTip(tipComponent, tipTag)
@@ -1088,8 +1030,6 @@ function NoticePanel:OnRemoveTopTip(tipComponent, tipTag)
     local tag = self._topTips[gid]
     if tipTag and tag ~= tipTag then return end
     self._topTips[gid] = nil
-    -- local parent = FGUI:GetParent(tipComponent)
-    -- if parent ~= self._rootTopTips then return end
     FGUI:RemoveFromParent(tipComponent, false)
 end
 
@@ -1108,7 +1048,6 @@ function NoticePanel:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_NOTICE_TIMER_XY, "NoticePanel", handler(self, self.OnShowTimerXYNotice))
     SL:RegisterLUAEvent(LUA_EVENT_NOTICE_DELETE_TIMER_XY, "NoticePanel", handler(self, self.OnDeleteTimerXYNotice))
     SL:RegisterLUAEvent(LUA_EVENT_NOTICE_ITEM_TIPS, "NoticePanel", handler(self, self.OnShowItemTips))
-    -- SL:RegisterLUAEvent(LUA_EVENT_NOTICE_EXP, "NoticePanel", handler(self, self.OnShowPlayerEXPNotice))
     SL:RegisterLUAEvent(LUA_EVENT_NOTICE_DROP, "NoticePanel", handler(self, self.OnShowItemDropNotice))
     SL:RegisterLUAEvent(LUA_EVENT_SCREEN_EFFECT_PLAY, "NoticePanel", handler(self, self.OnPlayScreenEffect))
     SL:RegisterLUAEvent(LUA_EVENT_SCREEN_EFFECT_REMOVE, "NoticePanel", handler(self, self.OnRemoveScreenEffect))
@@ -1130,7 +1069,6 @@ function NoticePanel:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_NOTICE_TIMER_XY, "NoticePanel")
     SL:UnRegisterLUAEvent(LUA_EVENT_NOTICE_DELETE_TIMER_XY, "NoticePanel")
     SL:UnRegisterLUAEvent(LUA_EVENT_NOTICE_ITEM_TIPS, "NoticePanel")
-    -- SL:UnRegisterLUAEvent(LUA_EVENT_NOTICE_EXP, "NoticePanel")
     SL:UnRegisterLUAEvent(LUA_EVENT_NOTICE_DROP, "NoticePanel")
     SL:UnRegisterLUAEvent(LUA_EVENT_SCREEN_EFFECT_PLAY, "NoticePanel")
     SL:UnRegisterLUAEvent(LUA_EVENT_SCREEN_EFFECT_REMOVE, "NoticePanel")

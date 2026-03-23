@@ -13,11 +13,6 @@
     <image id="n4_s6ej" name="Lock" src="q9lsv5n" fileName="image/lock.png" pkg="st7dgeqq" xy="19,22">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <image id="n19_hgpp" name="n19" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="0,0" size="64,64" group="n21_hgpp"/>
-    <group id="n21_hgpp" name="RecycleSelect" xy="0,0" size="64,64" advanced="true">
-      <relation target="" sidePair="width-width,height-height"/>
-    </group>
-    <image id="n20_hgpp" name="n20" src="r8pbvoq" fileName="Images/green_check.png" xy="4,4" size="55,55" group="n21_hgpp"/>
   </displayList>
   <Button mode="Radio"/>
 </component>

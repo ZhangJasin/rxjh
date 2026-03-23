@@ -6,7 +6,8 @@ local FuncDockUtil = requireFGUILayout("FuncDock_pc/FuncDockUtil")
 function PCFuncDockTip:Create()
     self._ui = FGUI:ui_delegate(self.component)
     self.dialog_player_info = self._ui.dialog_player_info
-    FGUI:SetCloseUIWhenClickOutside(self)
+	self.bg = FGUI:GetChild(self.component,"bg")
+	FGUIFunction:setWindowDrag(self.component, self.bg)
     self:GetAllFGuiData()
     self:InitGridLayout()
     self:InitOnClickEvent()
@@ -14,7 +15,6 @@ end
 
 -- 获取所有需要用到的组件和controller
 function PCFuncDockTip:GetAllFGuiData()
-    self.mask = self._ui.mask
     self.btn_close = FGUI:GetChild(self.dialog_player_info,"btn_close")
     self.text_player_name = FGUI:GetChild(self.dialog_player_info,"text_player_name")
     self.text_player_level = FGUI:GetChild(self.dialog_player_info,"text_player_level")
@@ -25,7 +25,6 @@ function PCFuncDockTip:GetAllFGuiData()
 end
 
 function PCFuncDockTip:InitOnClickEvent()
-    FGUI:setOnClickEvent(self.mask,handler(self,self.OnClose))
     FGUI:setOnClickEvent(self.btn_close,handler(self,self.OnClose))
 end
 

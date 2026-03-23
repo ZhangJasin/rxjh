@@ -6,7 +6,7 @@ local MAX_MAIL_COUNT = 100
 
 function MailPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+	FGUIFunction:SetCloseUIWhenClickOutside(self)
 	
 	self:InitData()
 	self:InitEvent()
@@ -29,6 +29,7 @@ function MailPanel:OnClose()
 end
 
 function MailPanel:InitData()
+	self._mailList = {}
     self._curMailID = 0
 end
 
@@ -48,19 +49,28 @@ function MailPanel:InitEvent()
 	FGUI:setOnClickEvent(self._ui.btn_resure, handler(self, self.OnClickReSure))
 end
 
-function MailPanel:OnClickTakeAll(context)
-	FGUI:delayTouchEnabled(context.sender, 0.5)
+function MailPanel:OnClickTakeAll(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	local mailList = SL:GetValue("MAIL_LIST")
 	if not mailList or not next(mailList) then
 		SL:ShowSystemTips(GET_STRING(50000017))
 		return 
 	end 
+
+	local isEnough = self:CheckBagEnough()
+	if not isEnough then 
+		SL:ShowSystemTips(GET_STRING(60003001))
+		return 
+	end 
+
 	SL:RequestGetAllMailReward()
 	SL:RequestMailList()
 end
 
-function MailPanel:OnClickDeleteAll(context)
-	FGUI:delayTouchEnabled(context.sender, 0.5)
+function MailPanel:OnClickDeleteAll(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	if self:CheckAbleDeleteAllReadMail() then
 		SL:RequestDelReadMail()
 	else
@@ -73,8 +83,15 @@ function MailPanel:OnClickDeleteAll(context)
 	end
 end
 
-function MailPanel:OnClickTakeOne(context)
-	FGUI:delayTouchEnabled(context.sender, 0.5)
+function MailPanel:OnClickTakeOne(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+	local isEnough = self:CheckBagEnough(self._curMailID)
+	if not isEnough then 
+		SL:ShowSystemTips(GET_STRING(60003001))
+		return 
+	end
+
 	if self:CheckAbleTakeRewardMailByID(self._curMailID) then 
 		SL:RequestGetMailRewardByID(self._curMailID)
 	else         
@@ -112,8 +129,9 @@ function MailPanel:OnClickReSure(context)
 	end
 end
 
-function MailPanel:OnClickDeleteOne(context)
-	FGUI:delayTouchEnabled(context.sender, 0.5)
+function MailPanel:OnClickDeleteOne(eventData)
+	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
 	if self._curMailID > 0 then 
 		if self:CheckAbleDeleteReadMailByID(self._curMailID) then
 			SL:RequestDelMail(self._curMailID)
@@ -134,11 +152,11 @@ end
 
 -- 刷新邮件列表
 function MailPanel:OnUpdateMailList()
-	self._mailList = {}
-    self._mailList = SL:GetValue("MAIL_SORT_LIST") or {}
+	table.clear(self._mailList)
+    self._mailList = self:GetSortMailList()
 	local color = #self._mailList > 0 and "#00ff00" or "#ff0000"
 	FGUI:GTextField_setText(self._ui.text_count, string.format(GET_STRING(50000020),color, #self._mailList, MAX_MAIL_COUNT))
-	FGUI:setVisible(self._ui.text_nothing, #self._mailList <= 0)
+	FGUI:setVisible(self._ui.panel_nothing, #self._mailList <= 0)
 
     FGUI:GList_setNumItems(self._ui.list_mail, #self._mailList)
 
@@ -276,8 +294,10 @@ function MailPanel:RefreshMailInfo()
 					FGUI:setVisible(self._ui.btn_take, true)
                     FGUI:setVisible(self._ui.btn_delete, true)
 				end
-			end	
+			end
+
 			FGUI:GList_itemRenderer(self._ui.list_items, function (idx, item)
+				FGUI:setSize(item,64,64)
 				local index = idx + 1
 				local data = mail.sItem[index]
 				if not data then 
@@ -302,7 +322,7 @@ function MailPanel:RefreshMailInfo()
 					ItemUtil:AddItemClick(item, itemData)
 				end 
 
-				FGUI:setSize(item,64,64)
+
 			end)
 			FGUI:GList_setNumItems(self._ui.list_items, #mail.sItem)
 		end
@@ -353,6 +373,73 @@ function MailPanel:CheckMailRedPoint(mailID)
 	end
 
 	return mail.btRecvFlag == 0 and bHaveItems
+end
+
+function MailPanel:GetMailRewardCount(mail)
+	local count = 0
+	if not mail then  
+		return 0
+	end 
+
+	if type(mail.sItem) == "string" and (mail.btType == 9999 or mail.btType == 9998 or mail.btType == 9997) then --交易行和摆摊的附件
+		count = 1
+	else 
+		count = #mail.sItem
+	end
+
+	return count
+end
+
+function MailPanel:CheckBagEnough(mailID)
+	local rewardCount = 0
+
+	if mailID then 
+		local mail = SL:GetValue("MAIL_BY_ID", mailID)
+		if not mail then
+			return false
+		end
+
+		if self:CheckAbleTakeRewardMailByID(mailID) then 
+			rewardCount = self:GetMailRewardCount(mail)
+		end
+	else 
+		local mailList = SL:GetValue("MAIL_LIST")
+		if not mailList or not next(mailList) then
+			return 
+		end
+
+		for id, mail in pairs(mailList) do 
+			if self:CheckAbleTakeRewardMailByID(id) then 
+				rewardCount = rewardCount + self:GetMailRewardCount(mail)
+			end
+		end 
+	end 
+
+	local itemCount = SL:GetValue("BAG_DATA_COUNT")
+	local openCount = SL:GetValue("BAG_OPEN_SIZE")
+	if rewardCount + itemCount > openCount then 
+		return false
+	end 
+
+	return true
+end 
+
+-- 邮件列表排序
+-- 邮件分为三类并排序，未读>已读未领取>已读已领取
+-- 每个分类里再按时间进行排序，时间越近的排在越上方
+function MailPanel:GetSortMailList()
+	local mails = SL:GetValue("MAIL_LIST") or {}
+	local list = SL:HashToSortArray(mails, function(a, b)
+		if a.btReadFlag ~= b.btReadFlag then     
+			return a.btReadFlag < b.btReadFlag
+		elseif a.btRecvFlag ~= b.btRecvFlag then     
+			return a.btRecvFlag < b.btRecvFlag
+		else     
+			return a.index < b.index
+		end 
+	end)
+
+	return list
 end
 
 function MailPanel:OnDeleteAllRead()

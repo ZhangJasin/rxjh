@@ -6,7 +6,7 @@ local FuncDockUtil = requireFGUILayout("FuncDock/FuncDockUtil")
 function FuncDockTip:Create()
     self._ui = FGUI:ui_delegate(self.component)
     self.dialog_player_info = self._ui.dialog_player_info
-    FGUI:SetCloseUIWhenClickOutside(self)
+    FGUIFunction:SetCloseUIWhenClickOutside(self)
     self:GetAllFGuiData()
     self:InitGridLayout()
     self:InitOnClickEvent()
@@ -32,7 +32,7 @@ end
 function FuncDockTip:InitGridLayout()
     FGUI:GList_itemRenderer(self.grid_layout_btn,handler(self,self.ListViewCellsItemRenderer))
     self.LineGap = FGUI:GList_getLineGap(self.grid_layout_btn)
-    self.itemHeight = 53
+    self.itemHeight = 50
 end
 
 function FuncDockTip:ListViewCellsItemRenderer(idx,item)
@@ -115,7 +115,6 @@ function FuncDockTip:OnClose()
 end
 
 function FuncDockTip:OnResponsePlayerData()
-    -- FGUI:Open("Bag", "LookPlayerPanel", 1)
 end
 
 -----------------------------------注册事件--------------------------------------

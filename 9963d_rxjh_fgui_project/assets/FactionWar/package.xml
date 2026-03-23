@@ -53,5 +53,5 @@
     <image id="r1x31h" name="04(1).png" path="/Images/" exported="true"/>
     <image id="r1x31i" name="分割线.png" path="/Images/" exported="true"/>
   </resources>
-  <publish name="" path="E:\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\FactionWar" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>

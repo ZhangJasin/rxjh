@@ -16,7 +16,8 @@ HudConfig.HPConfig = {
 HudConfig.HUDType = {
     Name = 1,
     HP = 2,
-    Title = 3
+    Title = 3,
+    HPLabel = 4,
 }
 
 HudConfig.HUDNode = {
@@ -27,7 +28,8 @@ HudConfig.HUDNode = {
     attachTitle         = "Attach_title",
     guild               = "guildLabel",
     stall               = "stallLabel",  
-    stallOwner          = "stallOwnerLabel" 
+    stallOwner          = "stallOwnerLabel", 
+    hpLabel             = "hpLabel",
 }
 
 HudConfig.KuaFuType = {

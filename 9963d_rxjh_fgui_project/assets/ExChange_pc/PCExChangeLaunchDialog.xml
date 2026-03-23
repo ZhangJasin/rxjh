@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600">
+  <controller name="isShowMoneyMoreList" pages="0,显示,1,不显示" selected="0"/>
+  <displayList>
+    <component id="n0_qop5" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="258,110" size="283,380">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n1_qop5" name="text_title" xy="366,118" size="68,24" font="ui://st7dgeqq9kdgkvpj" fontSize="16" color="#9aafbb" singleLine="true" text="上架物品">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n30_qop5" name="iconCurSelBg" src="fts217" fileName="Images/img_item_kuang.png" xy="369,168" size="61,70" group="n134_uj97" aspect="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n50_qop5" name="node_curSelected" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="377,179" size="44,44" group="n134_uj97">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n37_qop5" name="text_item_name" xy="311,245" size="177,19" group="n134_uj97" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" autoClearText="true" text="道具名字七个字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n134_uj97" name="n134" xy="311,168" size="177,96"/>
+    <text id="n52_qop5" name="label_money" xy="291,270" size="31,19" fontSize="12" color="#b0c9b6" vAlign="middle" strokeColor="#000000" singleLine="true" text="货币:">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n54_qop5" name="btn_launch" src="fts2y" fileName="Components/btn_JingJia.xml" xy="358,449" size="84,28" controller="buttonKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="上架" titleColor="#fced00" titleFontSize="12"/>
+    </component>
+    <text id="n62_qop5" name="text_tip" xy="328,423" size="144,19" fontSize="12" color="#b0c9b6" strokeColor="#000000" singleLine="true" text="扣除总价的N%作为手续费">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n116_t2gw" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="525,130">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n123_uf3f" name="money1" src="fts2i" fileName="Components/Buy/checkBoxText.xml" xy="342,263" size="42,33" controller="isSelected,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label title="金币 " titleColor="#b0c9b6" titleFontSize="12"/>
+    </component>
+    <component id="n127_uf3f" name="money2" src="fts2i" fileName="Components/Buy/checkBoxText.xml" xy="404,263" size="42,33" controller="isSelected,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label title="元宝 " titleColor="#b0c9b6" titleFontSize="12"/>
+    </component>
+    <graph id="n133_uf3f" name="bglist" xy="539,270" size="81,99" type="rect" lineSize="0" fillColor="#e6000000">
+      <gearDisplay controller="isShowMoneyMoreList" pages="0"/>
+      <relation target="n131_uf3f" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </graph>
+    <list id="n131_uf3f" name="moneyMoreList" xy="538,270" size="81,99" overflow="scroll" scrollBarFlags="128" margin="2,7,0,0" lineGap="5" defaultItem="ui://08g55xx7fts2i" autoClearItems="true">
+      <gearDisplay controller="isShowMoneyMoreList" pages="0"/>
+      <relation target="n0_qop5" sidePair="left-right,top-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n132_uf3f" name="btn_moneyMore" src="fts2j" fileName="Components/Buy/btn_moneyMore.xml" xy="450,265" size="86,26">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="更多货币" titleColor="#ff9933" titleFontSize="12"/>
+    </component>
+    <component id="n138_uj97" name="com_last_deal_price" src="uj971j" fileName="Components/Launch/label_com.xml" xy="273,299" size="254,20" group="n144_ojtn" controller="mode,1">
+      <Label title="最新成交单价:" titleColor="#b0c9b6" titleFontSize="12"/>
+    </component>
+    <component id="n140_ojtn" name="com_min_single_price" src="uj971j" fileName="Components/Launch/label_com.xml" xy="273,324" size="254,20" group="n144_ojtn" controller="mode,1">
+      <Label title="挂单最低限价:" titleColor="#b0c9b6" titleFontSize="12"/>
+    </component>
+    <component id="n141_ojtn" name="com_total_price" src="uj971j" fileName="Components/Launch/label_com.xml" xy="273,349" size="254,20" group="n144_ojtn" controller="mode,1">
+      <Label title="总价:" titleColor="#b0c9b6" titleFontSize="12"/>
+    </component>
+    <component id="n142_ojtn" name="com_single_price" src="uj971j" fileName="Components/Launch/label_com.xml" xy="273,375" size="254,20" group="n144_ojtn" controller="mode,0">
+      <Label title="单价:" titleColor="#b0c9b6" titleFontSize="12"/>
+    </component>
+    <component id="n143_ojtn" name="com_count" src="uj971j" fileName="Components/Launch/label_com.xml" xy="273,401" size="254,20" group="n144_ojtn" controller="mode,0">
+      <Label title="数量:" titleColor="#b0c9b6" titleFontSize="12"/>
+    </component>
+    <group id="n144_ojtn" name="group_com" xy="273,299" size="254,122" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>
