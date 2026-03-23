@@ -195,9 +195,9 @@ function EquipDuanZao.fuyu(actor, data)
     local nextlv = fylv + 1
     local falselv = 0
 
-    -- 强化等级上限判断
-    if nextlv > #EquipFYTab[posindex]['sucjl_arr'] - 5 then
-        sendmsg(actor, 9, "已达到当前强化等级上限！")
+    -- 赋予等级上限判断
+    if nextlv > #EquipFYTab[posindex]['sucjl_arr'] then
+        sendmsg(actor, 9, "已达到当前赋予等级上限！")
         return
     end
 
