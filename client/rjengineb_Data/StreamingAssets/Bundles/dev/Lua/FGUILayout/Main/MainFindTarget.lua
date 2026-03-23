@@ -58,7 +58,6 @@ function MainFindTarget:Create()
     FGUI:GList_itemRenderer(self._ui.ListTarget, handler(self, self.OnListTargetRenderer))
     FGUI:GList_addOnClickItemEvent(self._ui.ListTarget, handler(self, self.OnClickListTarget))
 
-    FGUIFunction:AdaptNotch(self.component)
     self:UpdateButtonType()
     self:UpdateSortButton()
 end
@@ -66,6 +65,7 @@ end
 function MainFindTarget:Enter()
 	self:RegisterEvent()
 
+    self:InitAdapt()
     self:InitActors(true)
     self:InitShowType()
 end
@@ -82,6 +82,14 @@ function MainFindTarget:Destroy()
 end
 
 -----------------------------------------------------------------------------
+
+function MainFindTarget:InitAdapt()
+    local screenW = SL:GetValue("SCREEN_WIDTH")
+    local screenH = SL:GetValue("SCREEN_HEIGHT")
+    local safeL, safeR, safeB, safeT = SL:GetValue("SCREEN_SAFE_AREA_RATIO")
+    FGUI:setSize(self.component, screenW - safeR - safeL, screenH - safeB - safeT)
+    FGUI:setPosition(self.component, safeL, safeT)
+end
 
 function MainFindTarget:InitShowType()
     if self._showIndex == SHOW_ATTACKER then
@@ -185,12 +193,17 @@ function MainFindTarget:OnListTargetRenderer(index, item)
         FGUI:GLoader_setUrl(itemUI("Head", "Image_head"), data.icon, nil, true)
         FGUI:GLoader_setUrl(itemUI("Head", "Image_headFrame"), "")
     end
+    -- if self._showIndex == SHOW_ATTACKER then
+    --     FGUI:GTextField_setText(itemUI.Text_value, data.damage)
+    -- else
+    --     FGUI:GTextField_setText(itemUI.Text_value, "")
+    -- end
     
     FGUI:GTextField_setText(itemUI.Text_level, data.level)
     local hp = data.hp or SL:GetValue("ACTOR_HP", actorId)
     local maxHp = data.maxHp or SL:GetValue("ACTOR_MAXHP", actorId)
     FGUI:GProgressBar_setValue(itemUI.ProgressBar_hp, hp / maxHp * 100)
-    FGUI:GTextField_setText(itemUI.Text_name, data.name)
+    FGUIFunction:ScrollText_setString(itemUI.Label_name, data.name, 1, 0)
 end
 
 function MainFindTarget:OnShowActors(showType)
@@ -284,7 +297,7 @@ function MainFindTarget:OnClickListTarget(context)
 
     -- 目标为玩家时,主玩家或目标有一人在安全区,就不开启自动战斗
     if not (SL:GetValue("ACTOR_IS_PLAYER", actorId) and 
-        (SL:GetValue("ACTOR_IN_SAFE_ZONE", self._myUID) or 
+        (SL:GetValue("ACTOR_IN_SAFE_ZONE", actorId) or 
         SL:GetValue("ACTOR_IN_SAFE_ZONE", actorId))) then
 
         local isAFK = SL:GetValue("BATTLE_IS_AFK")

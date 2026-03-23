@@ -10,6 +10,7 @@ function BagPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
 	self.packageItemViewCache = {}
 	self.cdMaskCache = {}
+	self.bagRecycleViewModel = requireFGUILayout("Bag/BagRecycleViewModel")
 	self.bagViewModel = requireFGUILayout("Bag/BagViewModel")
 	self:InitView()
 

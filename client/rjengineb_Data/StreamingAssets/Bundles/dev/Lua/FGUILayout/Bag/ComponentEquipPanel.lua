@@ -4,7 +4,7 @@ local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 local ItemFrom = SL:GetValue("ITEMFROMUI_ENUM")
 local MMO = global.MMO
 -- 如果是弓手的话多一格弓箭装备
-local EQUIP_POS_COUNT = 13
+local EQUIP_POS_COUNT = 26
 local TITLE_SCALE = 0.5
 local MODEL_SCALE = 1.2
 -- 装备属性页面
@@ -23,8 +23,7 @@ function ComponentEquipPanel:SwitchCtlisShowTitile(isShow)
     self.ctl_isShowTitile.selectedIndex = isShow and 0 or 1
 end
 
-function ComponentEquipPanel:btnCloakSwitchClicked(eventData)
-    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+function ComponentEquipPanel:btnCloakSwitchClicked(data)
     SL:RequestOperateIsOpenFashion(not SL:GetValue("SETTING_GET_IS_SHOW_FASHION"))
 end
 
@@ -35,7 +34,6 @@ function ComponentEquipPanel:GetAllFGuiData()
     self.movie_node = self._ui.movie_node
     self.exPosGongjian = self._ui.exPosGongjian
     self.pos12 = self._ui.pos12 -- 弓箭手专有装备格
-    self.pos1 = self._ui.pos1
     self.btn_cloak_switch = self._ui.btn_cloak_switch
     self.btn_scheme_switch = self._ui.btn_scheme_switch
     self.btn_cloth_1 = self._ui.btn_cloth_1
@@ -49,8 +47,6 @@ function ComponentEquipPanel:GetAllFGuiData()
     self.ani_openSwitchCloth = FGUI:GetTransition(self.component,"openSwitchCloth")
     self.ctl_titleType = FGUI:getController(self.component,"titleType")
     self.ctl_isShowTitile = FGUI:getController(self.component,"isShowTitle")
-    -- 获取武器槽位的控制器
-    self.ctrl_equipPosDI = FGUI:getController(self.pos1,"equipPosDI")
 end
 
 function ComponentEquipPanel:InitData()
@@ -148,8 +144,6 @@ function ComponentEquipPanel:RefreshRole()
     extData.chestFxId = featureData.chestFxID
     extData.headFxId = featureData.headFxID
     extData.wingFxId = featureData.wingFxID
-	
-    extData.helmetColor = featureData.helmetColor
 
     FGUI:UIModel_setObjectEulerAngles(self.model_root, nil, 0, 0, 0)
 
@@ -192,9 +186,6 @@ function ComponentEquipPanel:RefreshRole()
 		FGUI:UIModel_setCharacterFx(self.model_root, self._modelIndex, extData.headFxId,
 			FGUI.CHARACTER_EFFECT_TYPE.MODEL_EFFECT_HEAD)
 		
-		FGUI:UIModel_setCharacterFx(self.model_root, self._modelIndex, extData.helmetColor,
-			FGUI.CHARACTER_EFFECT_TYPE.MODEL_EFFECT_HELMET_COLOR)
-		
 		FGUI:UIModel_apply(self.model_root, self._modelIndex)
     end
 end
@@ -217,12 +208,9 @@ function ComponentEquipPanel:RefreshScheme()
     self:RefreshTip()
 end
 
-
+-- 弓手职业才显示
 function ComponentEquipPanel:RefreshEquipCheck()
-    -- 弓手职业才显示
     FGUI:setVisible(self.pos12,SL:GetValue("JOB") == MMO.ACTOR_PLAYER_JOB_1)
-    -- 查看fgui控制器equipPosDI设置(图标对应职业)
-    FGUI:Controller_setSelectedIndex(self.ctrl_equipPosDI,11 + SL:GetValue("JOB"))
 end
 
 function ComponentEquipPanel:RefreshEquipItemByPosAndEquipData(equipData)
@@ -236,6 +224,7 @@ function ComponentEquipPanel:RefreshEquipItemByPosAndEquipData(equipData)
     end
 
     local parent = self.equipMentSlots[pos]
+    -- print("pos--------------------",pos)
     if parent then
         self.equipMentObjList[pos] = ItemUtil:ItemShow_Create(equipData,parent,
         {
@@ -251,6 +240,7 @@ end
 -- 刷新方案周边的装备
 function ComponentEquipPanel:RefreshEquipByPos()
     local bodyEquips = SL:GetValue("EQUIP_POS_DATAS")
+    -- SL:print_t(bodyEquips)
     for pos, makeindex in pairs(bodyEquips) do
         local equipData = SL:GetValue("EQUIP_DATA_BY_MAKEINDEX", makeindex)
         if equipData then

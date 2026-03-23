@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-field
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local PCComponentPropertyPanel = class("PCComponentPropertyPanel", BaseFGUILayout)
 
@@ -105,7 +106,6 @@ function PCComponentPropertyPanel:RefreshPropertyPage()
         FGUI:GList_setNumItems(list_attr,table.count(self.attrDymicLoadTable))
         FGUI:setVisible(self._pageList[4],table.count(self.attrDymicLoadTable) > 0)
     end
-	
     if self._tradingIndex == 2 then--九九交易行使用 下拉到list底部截图
         FGUI:GList_scrollToView(self.list_property, 4, false, false)
     end

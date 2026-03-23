@@ -11,20 +11,15 @@ function PCBagPanel:Create()
 	self.packageItemViewCache = {}
 	self.cdMaskCache = {}
 	-- 鼠标是否进入父界面
-	self.bagViewModel = FGUIFunction:BindClass(self,"Bag_pc/PCBagViewModel")
+	self.bagRecycleViewModel = requireFGUILayout("Bag_pc/PCBagRecycleViewModel")
+	self.bagViewModel = requireFGUILayout("Bag_pc/PCBagViewModel")
 	self:InitView()
 end
 
 function PCBagPanel:Enter(data)
-	if not data then
-		self.bagViewModel:Enter({bindParentView = FGUIDefine.BindParentView.PCBagPanel})
-	else
-		if not data.bindParentView then
-			data.bindParentView = FGUIDefine.BindParentView.PCBagPanel
-		end
-		self.bagViewModel:Enter(data)
-	end
-
+	self.bagViewModel:Bind(self)
+	self.bagViewModel:Enter(data)
+	-- FGUI:ScrollPane_scrollTop(FGUI:GetScrollPane(self._ui.List_Cell), false)
 	SL:ComponentAttach(SLDefine.SUIComponentTable.PlayerInfoBag, self._ui.Node_attach)
 	FGUIFunction:RegisterGuideData(FGUIDefine.GuideDataKey.BagGuideFunc,handler(self,self.GetGuideItem))
 end
@@ -32,6 +27,7 @@ end
 function PCBagPanel:Exit()
 	SL:ComponentDetach(SLDefine.SUIComponentTable.PlayerInfoBag)
 	self.bagViewModel:Exit()
+	self.bagViewModel:UnBind(self)
 	FGUIFunction:UnRegisterGuideData(FGUIDefine.GuideDataKey.BagGuideFunc)
 end
 
@@ -113,12 +109,12 @@ function PCBagPanel:onCellDropEvent(itemView,eventData)
 	local childIdx = FGUI:GetChildIndex(self._ui.List_Cell, itemView)
 	local endPos = FGUI:GList_childIndexToItemIndex(self._ui.List_Cell, childIdx)
 	-- 左键
-	if FGUI:InputEvent_getButton(eventData) == 0 and
+	if eventData.inputEvent.button == 0 and
         eventData.data and 
         eventData.data.makeIndex then
 		-- 在第一个页签里换位置
 		if eventData.data.from and eventData.data.from == ItemFrom.BAG then
-			if eventData.data.dragStartSelectPage
+			if eventData.data.dragStartSelectPage 
 				and eventData.data.dragStartSelectPage == 1 -- 开始拖拽的页签
 				and self.bagViewModel.selectType == 1 then	-- 结束拖拽的页签(保证数据都在第一个页签里,防止滚轮操作)
 				self.bagViewModel:ExChangeTwoPos(eventData.data.makeIndex,endPos + 1)
@@ -217,6 +213,20 @@ function PCBagPanel:UpdateCellView(itemView,bagData)
 	self.packageItemViewCache[id] = itemContentView	
 	local childIdx = FGUI:GetChildIndex(self._ui.List_Cell, itemView)
 	local index = FGUI:GList_childIndexToItemIndex(self._ui.List_Cell, childIdx)
+	
+	FGUI:setOnRollOverEvent(itemContentView.component, function()
+		if FGUI:DragDropManager_getDragging() then
+			return
+		end
+		self:RollOverEvent(index)
+	end)
+
+    FGUI:setOnRollOutEvent(itemContentView.component, function()
+		if FGUI:DragDropManager_getDragging() then
+			return
+		end
+		self:RollOutEvent(index)
+	end)
 
 	FGUI:setOnClickEvent(itemContentView.component, function(eventData)
 		if self.clickDelay then return end
@@ -234,7 +244,8 @@ function PCBagPanel:UpdateCellView(itemView,bagData)
 		FGUI:DragDropManager_startDrag(itemContentView.component,"ui://public_pc/CommonItem",data,touchId,FGUIFunction.CloseBagCheckDragView)
 		FGUIFunction:OpenBagCheckDragView()
 		local commmonItem = FGUI:GLoader_getComponent(FGUI:DragDropManager_getDragAgent())
-		ItemUtil:RefreshItemUIByData(commmonItem,itemData)
+		ItemUtil:SetItemIconByItemID(commmonItem,itemData.Index)
+		ItemUtil:UpdateItemGradeByItemID(commmonItem,itemData.Index)
 	end)
 
 	FGUI:setOnRightClickEvent(itemContentView.component,function(eventData)
@@ -302,6 +313,20 @@ function PCBagPanel:RightClickEvent(idx)
 	end
 end
 
+function PCBagPanel:RollOverEvent(idx)
+	local bagData = self:GetCurShowBagCellData(idx + 1)
+	if bagData then
+		bagData:RollOverCell()
+	end
+end
+
+function PCBagPanel:RollOutEvent(idx)
+	local bagData = self:GetCurShowBagCellData(idx + 1)
+	if bagData then
+		bagData:RollOutCell()
+	end
+end
+
 function PCBagPanel:SetClickCellCallBack(callback)
 	self.clickCellCB = callback
 end
@@ -338,7 +363,7 @@ function PCBagPanel:ResetFilter(index)
 end
 
 function PCBagPanel:RefreshCurPageBagCell()
-	local showCnt = self.bagViewModel:CalculateShowCount(6)
+	local showCnt = self.bagViewModel:CalculateShowCount()
 	FGUI:GList_setNumItems(self._ui.List_Cell, showCnt)
 end
 

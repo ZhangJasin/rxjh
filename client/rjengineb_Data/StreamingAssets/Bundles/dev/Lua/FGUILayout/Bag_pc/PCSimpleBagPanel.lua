@@ -12,15 +12,7 @@ function PCSimpleBagPanel:Create()
 end
 
 function PCSimpleBagPanel:Enter(data)
-	local enterData = {}
-	enterData.itemUse = false
-	if data.componentName == "StallProduct" then
-		enterData.bindParentView = FGUIDefine.BindParentView.PCStallMain
-	elseif data.componentName == "TradeMain" then
-		enterData.bindParentView = FGUIDefine.BindParentView.PCTradeMain
-	end
-	
-	self._bagPanel:Enter(enterData)
+	self._bagPanel:Enter({itemUse = false})
 	self._data = data
 	FGUIFunction:ShowTopCurrency(SL:GetValue("GAME_DATA", "BagMoneyList"))
 end

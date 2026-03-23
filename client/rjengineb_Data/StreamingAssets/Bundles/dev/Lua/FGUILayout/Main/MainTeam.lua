@@ -34,6 +34,7 @@ end
 
 function MainTeam:UpdateTeamMember()
     local memberList = SL:GetValue("TEAM_MEMBER_LIST")
+    -- local isLeader = SL:GetValue("TEAM_IS_LEADER")
     local memberCount = #memberList
     local haveTeam = memberCount > 0
     FGUI:setVisible(self._ui.Group_noTeam, not haveTeam)

@@ -28,6 +28,7 @@ function MainSkill:Create()
         FGUI:setVisible(imgCd, false)  
     end
     FGUI:setOnTouchEvent(self._ui.Button_skillBase, handler(self, self.OnSkillBaseTouchBegin), nil, handler(self, self.OnSkillBaseTouchEnd))
+    -- FGUI:setOnClickEvent(self._ui.Button_skillBase, handler(self, self.OnSkill0))
     FGUI:setVisible(self._ui.Button_skill0, false)
 
     FGUI:setTouchEnabled(self._ui.TouchArea_monster, false)
@@ -58,7 +59,7 @@ end
 --------------------------------------索敌----------------------------------------
 
 function MainSkill:OnFindTarget()
-    FGUIFunction:SwitchPanel("Main","MainFindTarget", nil, FGUI_LAYER.BG)
+    FGUI:Open("Main","MainFindTarget", nil, FGUI_LAYER.BG)
 end
 
 
@@ -188,17 +189,14 @@ end
 
 function MainSkill:InitSkills()
     local skills = SL:GetValue("SKILL_ALL_DATA")
-    local scheme = SL:GetValue("SETTING_FIGHT_JOB_SKILL_SCHEME_SELECT")
     for id, data in pairs(skills) do
         local isNormal = SL:GetValue("SKILL_CHECK_IS_ATTACK", data.SkillId)
         if isNormal then
             self._normalID = data.SkillId
             self:CheckNormalSkill()
         end
-        
-        local skillKey = data.Key and data.Key[scheme] 
-        if skillKey and skillKey >= MIN_SLOT and skillKey <= MAX_SLOT then 
-            self:UpdateSkill(skillKey, id)
+        if data.Key and data.Key >= MIN_SLOT and data.Key <= MAX_SLOT then
+            self:UpdateSkill(data.Key, id)
         end
     end
 end

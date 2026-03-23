@@ -3,7 +3,7 @@ local ChatSetting = class("ChatSetting", BaseFGUILayout)
 
 function ChatSetting:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    FGUIFunction:SetCloseUIWhenClickOutside(self)
+    FGUI:SetCloseUIWhenClickOutside(self)
     self:InitData()
     self:GetAllFGuiData()
     self:InitOnClickEvent()
@@ -32,6 +32,9 @@ function ChatSetting:InitData()
             self._receiveChannelList[v.id] = res
         end
     end
+    -- print("self._receiveChannelList")
+    -- SL:print_t(self._receiveChannelList)
+    -- SL:print_t(self._channels)
 end
 
 function ChatSetting:GetAllFGuiData()

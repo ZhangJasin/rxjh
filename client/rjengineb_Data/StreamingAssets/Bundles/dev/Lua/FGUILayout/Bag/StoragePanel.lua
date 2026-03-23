@@ -6,7 +6,7 @@ SL:RequireFile("FGUILayout/Bag/BagCell")
 
 function StoragePanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUIFunction:SetCloseUIWhenClickOutside(self)
+	FGUI:SetCloseUIWhenClickOutside(self)
 	self.firstEnter = true
 	self._disableCellDoubleClick = true
 
@@ -416,21 +416,21 @@ function StoragePanel:BagCellClickEvent(bagItem)
 end
 --------------------------- 注册事件 -----------------------------
 function StoragePanel:RegisterEvent()
-	SL:RegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_UPDATE_LIST, "StoragePanel",  handler(self,self.UpdateStoragePosition))
-	SL:RegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_ADD, "StoragePanel",  handler(self,self.AddStorageItem))
-	SL:RegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_DEL, "StoragePanel",  handler(self,self.DeleteStorageItem))
-	SL:RegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_UPDATE, "StoragePanel",  handler(self,self.OnUpdateStorageItem))
-	SL:RegisterLUAEvent(LUA_EVENT_STORAGE_CELL_UNLOCK, "StoragePanel",  handler(self,self.UpdateStorageSize))
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_CELL_CLICK, "StoragePanel",  handler(self,self.BagCellClickEvent))
+	SL:RegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_UPDATE_LIST, "Storage",  handler(self,self.UpdateStoragePosition))
+	SL:RegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_ADD, "Storage",  handler(self,self.AddStorageItem))
+	SL:RegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_DEL, "Storage",  handler(self,self.DeleteStorageItem))
+	SL:RegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_UPDATE, "Storage",  handler(self,self.OnUpdateStorageItem))
+	SL:RegisterLUAEvent(LUA_EVENT_STORAGE_CELL_UNLOCK, "Storage",  handler(self,self.UpdateStorageSize))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_CELL_CLICK, "Storage",  handler(self,self.BagCellClickEvent))
 end
 
 function StoragePanel:UnRegisterEvent()
-	SL:UnRegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_UPDATE_LIST, "StoragePanel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_ADD, "StoragePanel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_DEL, "StoragePanel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_UPDATE, "StoragePanel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_STORAGE_CELL_UNLOCK, "StoragePanel")
-	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_CELL_CLICK, "StoragePanel")
+	SL:UnRegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_UPDATE_LIST, "Storage")
+	SL:UnRegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_ADD, "Storage")
+	SL:UnRegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_DEL, "Storage")
+	SL:UnRegisterLUAEvent(LUA_EVENT_STORAGE_ITEM_UPDATE, "Storage")
+	SL:UnRegisterLUAEvent(LUA_EVENT_STORAGE_CELL_UNLOCK, "Storage")
+	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_CELL_CLICK, "Storage")
 end
 
 

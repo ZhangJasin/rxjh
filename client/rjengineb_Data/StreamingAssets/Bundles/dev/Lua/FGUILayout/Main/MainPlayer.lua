@@ -1,6 +1,7 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local MainPlayer = class("MainPlayer", BaseFGUILayout)
-
+local SysConstant = require("game_config/cfgcsv/SysConstant")
+local MainPlayerData = require("FGUILayout/Main/MainPlayerData")      -- 主玩家数据层
 function MainPlayer:Create()
 	self._ui = FGUI:ui_delegate(self.component)
     FGUI:setSortingOrder(self.component, FGUIDefine.MainOrder.Main)
@@ -34,12 +35,17 @@ function MainPlayer:Create()
 
     FGUI:GProgressBar_setValue(self._ui.ProgressBar_anger, self._angerProV)
 
-    FGUIFunction:AdaptNotch(self.component)
+    -- 订阅数据层事件
+    self._subscriptions = {}
+    self._subscriptions.data_petResurrec = MainPlayerData:Subscribe("data_petResurrec", handler(self, self.petResurrec))
+    self._subscriptions.data_showPetPro = MainPlayerData:Subscribe("data_showPetPro", handler(self, self.showPetPro)) 
+    self._subscriptions.data_setPetInfo = MainPlayerData:Subscribe("data_setPetInfo", handler(self, self.setPetInfo)) 
 end
 
 function MainPlayer:Enter()
 	self:RegisterEvent()
 
+    self:InitAdapt()
     self:UpdatePropertys()
     self._ctrl_isShowBufList.selectedIndex = 1
     self:UpdateMyBuffs()
@@ -48,7 +54,7 @@ end
 
 function MainPlayer:Exit()
 	self:RemoveEvent()
-
+    
     self._angerProV = 0
     FGUI:UIModel_clear(self._ui.Graph_angerEffect)
 end
@@ -56,9 +62,94 @@ end
 function MainPlayer:Destroy()
     self:CleanSchedule()
     self._ui = nil
+    -- 取消订阅
+    if self._subscriptions then
+        for _, token in pairs(self._subscriptions) do
+            MainPlayerData:Unsubscribe(token)
+        end
+        self._subscriptions = nil
+    end
+end
+
+function MainPlayer:setPetInfo(data)
+    local petIcon = FGUI:GetChild(self._ui.petPro,"petIcon")
+    if data.icon then
+        FGUI:setVisible(self._ui.petPro,true)
+        FGUI:GLoader_setUrl(petIcon,"ui://Main/"..data.icon)
+    else
+        FGUI:setVisible(self._ui.petPro,false)
+    end
+    
+    self:showPetPro(data)
+end
+
+function MainPlayer:showPetPro(data)
+    if data.type=="red" then
+        --50%以上
+        local one = FGUI:GetChild(self._ui.petPro,"one") 
+        --50%以下
+        local two = FGUI:GetChild(self._ui.petPro,"two") 
+        local per = data.now * 100 / data.max
+        if per >= 50 then
+            FGUI:GImage_setFillAmount(one, (per / 50) - 1 )
+            FGUI:GImage_setFillAmount(two, 1)
+        else
+            FGUI:GImage_setFillAmount(one, 0)
+            FGUI:GImage_setFillAmount(two, (per/50))
+        end
+    end 
+end
+
+function MainPlayer:petResurrec(data)
+    -- print('MainPlayer:petResurrec======================',data)
+    local fhtextbg = FGUI:GetChild(self._ui.petPro,"n10")
+    local fhtext = FGUI:GetChild(self._ui.petPro,"n11")
+    local fhtext2 = FGUI:GetChild(self._ui.petPro,"n12")
+    if data > 0 then
+        if self.dsqfh then
+            SL:UnSchedule(self.dsqfh)
+            self.dsqfh = nil
+        end
+        self.time = data
+        local function realivedjs()
+            local times =  SL:GetValue("SERVER_TIME")*1000 - self.time
+            local min = tonumber(SysConstant["PET_Resurre_CD"].Value) - math.floor(times/1000)
+            if min > 0  then
+                FGUI:GTextField_setText(fhtext, min.."s")
+                FGUI:setVisible(fhtextbg,true)
+                FGUI:setVisible(fhtext,true)
+                FGUI:setVisible(fhtext2,true)
+            else
+                SL:UnSchedule(self.dsqfh)
+                self.dsqfh = nil
+                FGUI:GTextField_setText(fhtext, min.."s")
+                FGUI:setVisible(fhtextbg,false)
+                FGUI:setVisible(fhtext,false)
+                FGUI:setVisible(fhtext2,false)
+                ssrMessage:sendmsgEx("mountMain", "fhpet")
+            end
+        end
+        self.dsqfh = SL:Schedule(realivedjs,1)
+    else
+        if self.dsqfh then
+            SL:UnSchedule(self.dsqfh)
+            self.dsqfh = nil
+        end
+        FGUI:setVisible(fhtextbg,false)
+        FGUI:setVisible(fhtext,false)
+        FGUI:setVisible(fhtext2,false)
+    end
 end
 
 --------------------------------------------------------
+
+function MainPlayer:InitAdapt()
+    local screenW = SL:GetValue("SCREEN_WIDTH")
+    local screenH = SL:GetValue("SCREEN_HEIGHT")
+    local safeL, safeR, safeB, safeT = SL:GetValue("SCREEN_SAFE_AREA_RATIO")
+    FGUI:setSize(self.component, screenW - safeR - safeL, screenH - safeB - safeT)
+    FGUI:setPosition(self.component, safeL, safeT)
+end
 
 function MainPlayer:InitModeDatas()
     self._modes = {}
@@ -268,12 +359,13 @@ function MainPlayer:ListBuffItemRender(idx,cell)
     local comp = FGUI:GetChild(cell,"buff_icon")
     local gloader_buff_icon = FGUI:GetChild(comp,"buffIcon_loader")
     local curBuffData = self._myBuffDatas[countTotal-index]
+    FGUI:GTextField_setUBBEnabled(text_buff_tip, true)
 
     if curBuffData.id then
         local iconPath = SL:GetValue("BUFF_ICON_PATH_BY_ID",curBuffData.id)
         FGUI:GLoader_setUrl(gloader_buff_icon,iconPath,nil,true)
     end
-    
+
     if curBuffData.config.Name then
         FGUIFunction:ScrollText_setString(text_buff_name, curBuffData.config.Name,1, 0)
     else

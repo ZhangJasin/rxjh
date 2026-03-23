@@ -23,7 +23,6 @@ function ComponentTitlePanel:GetAllFGuiData()
     self.text_titleGet = self._ui.text_titleGet
     self.list_title = self._ui.list_title
     self.ctrl_ModeWho = FGUI:getController(self.component,"ModeWho")
-    self.ctrl_isHaveTitle = FGUI:getController(self.component,"isHaveTitle")
 end
 
 function ComponentTitlePanel:CleanSchedule()
@@ -38,6 +37,7 @@ end
 function ComponentTitlePanel:InitUI()
     self.ctrl_ModeWho.selectedIndex = 0
     FGUI:GList_itemRenderer(self.list_title,handler(self,self.TitleItemRender))
+    -- FGUI:GList_addOnClickItemEvent(self.list_title,handler(self,self.TitleItemClicked))
     FGUI:GList_setVirtual(self.list_title)
 end
 
@@ -126,8 +126,7 @@ end
 
 function ComponentTitlePanel:RefreshTitleList()
     self.titleData = SL:GetValue("TITLE_SHOW_LIST") or {}
-    FGUI:Controller_setSelectedIndex(self.ctrl_isHaveTitle,table.nums(self.titleData) > 0 and 1 or 0)
-    FGUI:GList_setNumItems(self.list_title,table.nums(self.titleData))
+    FGUI:GList_setNumItems(self.list_title,table.nums(self.titleData or {}))
     self:RefreshButton()
     self:RefreshTitleGetCount()
 end
@@ -141,6 +140,12 @@ function ComponentTitlePanel:RefreshTitleGetCount()
     end
 
     FGUI:GTextField_setText(self.text_titleGet,GET_STRING(30000114) .. activeCount .. "/"..table.nums(self.titleData or {}))
+end
+
+function ComponentTitlePanel:TitleItemClicked(eventData)
+    -- local childIdx = FGUI:GetChildIndex(self.list_title, eventData.data)
+    -- local idx = FGUI:GList_childIndexToItemIndex(self.list_title, childIdx)
+    -- self:SwitchSelected(idx,eventData.data)
 end
 
 function ComponentTitlePanel:SwitchSelected(idx,cell)

@@ -151,6 +151,7 @@ function MainBigTarget:UpdateHP(numPro)
     local num = math.floor(numPro)
     local per = numPro - num
     self._hpPer = per
+    -- if per <= 0 then num = num - 1 end
     FGUI:GLoader_setFillAmount(self._ui.Loader_hp, per)
     if self._hpNum ~= num then
         self._hpNum = num
@@ -192,7 +193,7 @@ function MainBigTarget:UpdateTargetNameInfo()
     end
     FGUI:GLoader_setUrl(self._ui.Loader_head, icon, nil, true)
     FGUI:GTextField_setText(self._ui.Text_level, "Lv:" .. level)
-    FGUI:GTextField_setText(self._ui.Text_name, name)
+    FGUIFunction:ScrollText_setString(self._ui.Label_name, name, 1, 0)
 end
 
 function MainBigTarget:UpdateTargetOwner()

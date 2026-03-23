@@ -20,7 +20,7 @@ function PCBagOnDragDropPanel:onDropEvent(eventData)
         return
     end
 
-    if FGUI:InputEvent_getButton(eventData) == 0 and
+    if eventData.inputEvent.button == 0 and 
         eventData.data and 
         eventData.data.makeIndex then
         -- 从背包拖出的才触发丢弃页面

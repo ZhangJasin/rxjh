@@ -15,7 +15,6 @@ function MainMiniChat:Create()
     self._checkAll = false
     self._selectChannel = CHANNEL.Common
     self._itemDatas = {}
-    self._chatCache = {}
 
     self._receiveChannelList = {}
     local cacheReceiveList = self:GetReceiveList()
@@ -109,10 +108,6 @@ function MainMiniChat:ListViewChatItemRenderer(idx, item)
     end
     local data = msgList[index]
     if not data then return end
-    local itemId = FGUI:GetID(item)
-    local curData = self._chatCache[itemId]
-    if curData == data then return end
-    self._chatCache[itemId] = data
     self:RefreshMessageItem(data, item)
 end
 
@@ -144,6 +139,20 @@ function MainMiniChat:UpdateChatList()
     FGUI:GList_setNumItems(self._ui.List_chat, math.min(self._maxChatCount, #datas))
     FGUI:ScrollPane_scrollBottom(self.scrollPanel, false)
 end
+
+-- function MainMiniChat:OnAddPrivateChatItem(data)
+--     if not data then return end
+--     local msgList = self._chatData
+--     --table.insert(msgList,data)
+--     local  isFriend = SL:GetValue("SOCIAL_IS_FRIEND", data.UserID)
+--     if not isFriend then
+--         return
+--     end
+--     if (self._selectChannel == CHANNEL.Common or self._selectChannel == CHANNEL.Private) and data then
+--         FGUI:GList_setNumItems(self._ui.List_chat, #msgList)
+--         FGUI:ScrollPane_scrollBottom(self.scrollPanel, false)
+--     end
+-- end
 
 function MainMiniChat:OnAddChatMsg(data)
     if not data then return end
@@ -221,12 +230,7 @@ function MainMiniChat:RefreshPlayerMessageItem(data,item)
 		local mapY = mapData.mapY
 		local route = mapData.route or 1
 		local posRGB = SL:GetColorByStyleId(218)
-        local msg
-        if route == 0 then--此地图无分线
-			msg = string.format("%s：[U][color=%s][url=][%s %s,%s][/url][/color][/U]", FGUIFunction:GetServerName(data.UserName), posRGB, mapName, mapX, mapY)
-		else
-			msg = string.format("%s：[U][color=%s][url=][%s-%s %s,%s][/url][/color][/U]", FGUIFunction:GetServerName(data.UserName), posRGB, mapName, route, mapX, mapY)
-		end
+		local msg = string.format("%s：[U][color=%s][url=][%s-%s %s,%s][/url][/color][/U]", FGUIFunction:GetServerName(data.UserName), posRGB, mapName, route, mapX, mapY)
         msg = self:AddChannelToMsg(data,msg)
         FGUI:GRichTextField_setText(title, msg)
         FGUI:GRichTextField_setOnLinkClickEvent(title, self._handlerMsgLinkEvent)
@@ -239,7 +243,12 @@ function MainMiniChat:RefreshPlayerMessageItem(data,item)
         FGUI:GRichTextField_setText(title, msg)
         FGUI:GRichTextField_setOnLinkClickEvent(title, self._handlerMsgLinkEvent)
     elseif data.MT == MSGTYPE.Trade then
-        local shopName = data.Msg.shopName or ""     
+        local shopName = ""
+        if type(data.Msg) == "string" then
+            shopName = data.Msg
+        else
+            shopName = data.Msg and data.Msg.shopName or ""
+        end  
         local shopStr = SL:GetValue("I18N_STRING", 90010031)
         local msg = string.format(shopStr, shopName)
         msg = self:AddChannelToMsg(data, msg)
@@ -276,7 +285,6 @@ function MainMiniChat:MsgLinkEvent(context)
         local route = mapData.route or 1
 		local mapX = mapData.mapX
 		local mapY = mapData.mapY
-        if route == 0 then route = 1 end
 		FGUIFunction:AutoMove(mapId, mapX, mapY, route)
     elseif data.MT == MSGTYPE.Equip then
         local itemData = data.Msg
@@ -294,8 +302,13 @@ function MainMiniChat:MsgLinkEvent(context)
             local userId = data.Msg.userId or ""
 		    SL:RequestOpenShopByUserId(userId)
         else
-            local shopName = data.Msg.shopName or ""
-		    SL:RequestOpenShop(shopName)
+            local shopName = ""
+            if type(data.Msg) == "string" then
+                shopName = data.Msg
+            else
+                shopName = data.Msg and data.Msg.shopName or ""
+            end
+            SL:RequestOpenShop(shopName)
         end
        
     else
@@ -429,12 +442,15 @@ end
 function MainMiniChat:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_CHAT_ADD_MSG, "MainMiniChat", handler(self, self.OnAddChatMsg))
     SL:RegisterLUAEvent(LUA_EVENT_CHAT_ADD_NOTICE, "MainMiniChat", handler(self,self.OnAddExNotice))
+    -- SL:RegisterLUAEvent(LUA_EVENT_CHAT_ADD_PRIVATE_ITEM, "MainMiniChat", handler(self, self.OnAddPrivateChatItem))
     SL:RegisterLUAEvent(LUA_EVENT_CHAT_SETTING_UPDATE, "MainMiniChat", handler(self,self.OnChatSettingUpdate))
+
 end
 
 function MainMiniChat:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_CHAT_ADD_MSG, "MainMiniChat")
     SL:UnRegisterLUAEvent(LUA_EVENT_CHAT_ADD_NOTICE, "MainMiniChat")
+    -- SL:UnRegisterLUAEvent(LUA_EVENT_CHAT_ADD_PRIVATE_ITEM, "MainMiniChat")
     SL:UnRegisterLUAEvent(LUA_EVENT_CHAT_SETTING_UPDATE, "MainMiniChat")
 end
 

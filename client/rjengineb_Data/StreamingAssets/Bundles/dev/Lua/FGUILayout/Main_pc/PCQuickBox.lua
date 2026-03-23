@@ -2,9 +2,8 @@ local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 local PCQuickBox = class("PCQuickBox")
 
 
-function PCQuickBox:Create(main, index)
+function PCQuickBox:Create(index)
 	self._ui = FGUI:ui_delegate(self.component)
-    self.main = main
     self.index = index
 
     self.type = nil
@@ -13,21 +12,9 @@ function PCQuickBox:Create(main, index)
     self.makeIndex = nil
 
     self.skillId = nil
-    self.skillAuto = false
-    self.isWuGong = false
 
     self.cdEndTime = nil
     self.keyType = SettingKey.Type.QUICK1 + index - 1
-
-    self.autoMovieClip = nil
-
-    self.maskVisible = FGUI:getVisible(self._ui.Progress_mask)
-
-    FGUI:setOnRollOverEvent(self.component, handler(self, self.OnRollOver))
-    FGUI:setOnRollOutEvent(self.component, handler(self, self.OnRollOut))
-    FGUI:setOnDropEvent(self.component, handler(self, self.OnDragDrop))
-    FGUI:setOnClickEvent(self._ui.Loader_icon, handler(self, self.OnClickIcon))
-    FGUI:setOnRightClickEvent(self._ui.Loader_icon, handler(self, self.OnRightClickIcon))
 end
 
 function PCQuickBox:Enter()
@@ -37,8 +24,6 @@ end
 
 function PCQuickBox:Exit()
 	self:RemoveEvent()
-    self:RemoveItemEvent()
-    self:RemoveSkillEvent()
 end
 
 function PCQuickBox:Destroy()
@@ -47,6 +32,18 @@ end
 
 
 --------------------------------------------------------------------------------
+
+function PCQuickBox:Clear()
+    self.type = nil
+    self.skillId = nil
+    self.makeIndex = nil
+    self.itemIndex = nil
+    FGUI:GLoader_setUrl(self._ui.Loader_icon, "")
+    FGUI:setVisible(self._ui.Text_count, false)
+    self:ClearCD()
+    self:RemoveItemEvent()
+    self:RemoveSkillEvent()
+end
 
 function PCQuickBox:UpdateKeysStr()
     local keysStr = ""
@@ -62,141 +59,34 @@ function PCQuickBox:OnKeyChange(type)
     self:UpdateKeysStr()
 end
 
-function PCQuickBox:OnRollOver()
-    self.showAutoSet = true
-    self:UpdateShowAutoSet()
-    if self.type == FGUIDefine.PCQuickType.Skill then
-        local level = SL:GetValue("SKILL_LEVEL_BY_ID", self.skillId)
-        local posX, posY = FGUI:getWorldPosition(self.component)
-        local w, h = FGUI:getSize(self.component)
-        if self.isWuGong then posY = posY - 34 end--减去一个自动释放勾选框的高度
-        local ext = {posX = posX + w / 2, posY = posY, anchorX = 0.5, anchorY = 1}
-        FGUIFunction:ShowSkillTip(self.skillId, level, ext)
-    elseif self.type == FGUIDefine.PCQuickType.Item then
-        local itemData = SL:GetValue("BAG_DATA_BY_MAKEINDEX", self.makeIndex) or
-                        SL:GetValue("ITEM_DATA", self.itemIndex)
-        if itemData then
-            FGUIFunction:OpenItemTips({itemData = itemData})
-        end
-    end
-end
-
-function PCQuickBox:OnRollOut()
-    self.showAutoSet = false
-    self:UpdateShowAutoSet()
-    if self.type == FGUIDefine.PCQuickType.Skill then
-        FGUIFunction:HideSkillTip()
-    elseif self.type == FGUIDefine.PCQuickType.Item then
-        FGUIFunction:CloseItemTips()
-    end
-end
-
-function PCQuickBox:OnDragDrop(eventData)
-    if not self.main then return end
-    self.main:DragDrop(self.index, eventData)
-end
-
-
-function PCQuickBox:UpdateShowAutoSet()
-    if not self.main then return end
-    local show = self.isWuGong and self.showAutoSet
-    if show then
-        self.main:ShowSkillAutoSet(self.index)
-    else
-        self.main:HideSkillAutoSet(self.index)
-    end
-end
-
-function PCQuickBox:OnClickIcon(eventData)
-    if not self.main then return end
-    self.main:DragQuickItem(self.index, eventData)
-end
-
-function PCQuickBox:OnRightClickIcon(eventData)
-    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
-    if self.main and self.main.delayClick then return end
-    self:Use()
-end
-
----------------------------------------------------------------------------------
-
-function PCQuickBox:SetEmpty()
-    self:SetType(nil)
-    FGUI:GLoader_setUrl(self._ui.Loader_icon, "")
-    FGUI:setVisible(self._ui.Text_count, false)
-    self:ClearCD()
-    self:UpdateAutoMovieClip()
-end
-
-function PCQuickBox:SetType(type)
-    if type == self.type then return end
-    self.type = type
-
-    self.skillId = nil
-    self.skillAuto = nil
-    self:SetIsWuGong(false)
-    self.makeIndex = nil
-    self.itemIndex = nil
-    if self.type == FGUIDefine.PCQuickType.Skill then
-        self:RemoveItemEvent()
-        self:RegisterSkillEvent()
-        FGUI:setVisible(self._ui.Text_count, false)
-    elseif self.type == FGUIDefine.PCQuickType.Item then
-        self:RemoveSkillEvent()
-        self:RegisterItemEvent()
-        FGUI:setVisible(self._ui.Text_count, true)
-    else
-        self:RemoveItemEvent()
-        self:RemoveSkillEvent()
-        FGUI:setVisible(self._ui.Text_count, false)
-    end
-end
-
-function PCQuickBox:SetIsWuGong(value)
-    if self.isWuGong == value then return end
-    self.isWuGong = value
-    self:UpdateShowAutoSet()
-end
-
 -------------------------------------Skill---------------------------------------
 
-function PCQuickBox:SetSkill(skillId, auto)
-    local changeId = self.skillId ~= skillId
-    self:SetType(FGUIDefine.PCQuickType.Skill)
-    self.skillId = skillId
-    self.skillAuto = auto
-    self:SetIsWuGong(SL:GetValue("SKILL_CHECK_IS_WUGONG_TYPE", self.skillId, 1))
-    if changeId then
-        self:ClearCD()
-        FGUI:GLoader_setUrl(self._ui.Loader_icon, SL:GetValue("SKILL_SQUARE_ICON_PATH_BY_ID", skillId))
+function PCQuickBox:SetSkill(skillId)
+    if self.type == FGUIDefine.PCQuickType.Skill and self.skillId == skillId then return end
+    if self.type ~= FGUIDefine.PCQuickType.Skill then
+        self:Clear()
     end
-    self:UpdateAutoMovieClip()
+    self.type = FGUIDefine.PCQuickType.Skill
+    self.skillId = skillId
+    self.makeIndex = nil
+    self.itemIndex = nil
+    self.maskVisible = FGUI:getVisible(self._ui.Progress_mask)
+    self:ClearCD()
+    FGUI:GLoader_setUrl(self._ui.Loader_icon, SL:GetValue("SKILL_SQUARE_ICON_PATH_BY_ID", skillId))
+    FGUI:setVisible(self._ui.Text_count, false)
+    self:RegisterSkillEvent()
 end
 
-function PCQuickBox:UpdateAutoMovieClip(isAFK)
-    local show = self.skillAuto
-    if show then
-        isAFK = isAFK == nil and SL:GetValue("BATTLE_IS_AFK") or isAFK
-        show = show and isAFK
-    end
-    if show then
-        if not self.autoMovieClip then
-            self.autoMovieClip = FGUI:GMovieClip_create(self.component, "6683")
-            FGUI:setAnchorPoint(self.autoMovieClip, 0.5, 0.5, true)
-            local w, h = FGUI:getSize(self.component)
-            FGUI:setPosition(self.autoMovieClip, w / 2, h / 2)
-            FGUI:setScale(self.autoMovieClip, 0.5, 0.5)
-        else
-            FGUI:setVisible(self.autoMovieClip, true)
-        end
-        FGUI:GMovieClip_setPlaySettings(self.autoMovieClip, 0, -1, 0, -1)
-        FGUI:GMovieClip_setPlaying(self.autoMovieClip, true)
-    else
-        if self.autoMovieClip then
-            FGUI:setVisible(self.autoMovieClip, false)
-            FGUI:GMovieClip_setPlaying(self.autoMovieClip, false)
-        end
-    end
+function PCQuickBox:OnSkillAdd(data)
+    if not data then return end
+    if not data.SkillId then return end
+
+end
+
+function PCQuickBox:OnSkillDel(data)
+    if not data then return end
+    if not data.SkillId then return end
+
 end
 
 function PCQuickBox:OnSkillCDTimeChange(data)
@@ -214,27 +104,25 @@ function PCQuickBox:OnSkillCDTimeChange(data)
     end
 end
 
-function PCQuickBox:OnAFKBegin()
-    self:UpdateAutoMovieClip(true)
-end
-
-function PCQuickBox:OnAFKEnd()
-    self:UpdateAutoMovieClip(false)
-end
-
 -------------------------------------Item---------------------------------------
 
 function PCQuickBox:SetItem(makeIndex, index)
-    self:SetType(FGUIDefine.PCQuickType.Item)
+    if self.type == FGUIDefine.PCQuickType.Item and self.makeIndex == makeIndex then return end
+    if self.type ~= FGUIDefine.PCQuickType.Item then
+        self:Clear()
+    end
+    self.type = FGUIDefine.PCQuickType.Item
     self.makeIndex = makeIndex
     self.itemIndex = index
+    self.skillId = nil
     if not makeIndex then return end
     if not index then return end
     local path = ItemUtil:GetIconResPathByItemID(index)
     FGUI:GLoader_setUrl(self._ui.Loader_icon, path)
+    FGUI:setVisible(self._ui.Text_count, true)
     self:UpdateItemCount()
     self:UpdateItemCD()
-    self:UpdateAutoMovieClip()
+    self:RegisterItemEvent()
 end
 
 function PCQuickBox:UpdateItemCount()
@@ -244,9 +132,20 @@ function PCQuickBox:UpdateItemCount()
     if bagData then
         count = bagData.OverLap
     end
-
+    -- local count = SL:GetValue("ITEM_COUNT", self.makeIndex)
     count = SL:GetSimpleNumber(count, 2)
     FGUI:GTextField_setText(self._ui.Text_count, count)
+
+    -- if not self.itemId then return end
+    -- SL:GetValue("ITEM_COUNT", self.makeIndex)
+    -- local count = self:GetItemCount(self.itemId)
+    -- -- if count <= 0 then
+    -- --     --取消id绑定
+    -- --     self:SetItem(nil)
+    -- --     return
+    -- -- end
+    -- -- local countStr = SL:GetSimpleNumber(count, 2)
+    -- FGUI:GTextField_setText(self._ui.Text_count, count)
 end
 
 function PCQuickBox:OnItemInit()
@@ -308,8 +207,8 @@ end
 
 function PCQuickBox:SetMaskVisible(visible)
     if visible == self.maskVisible then return end
-    self.maskVisible = visible
     FGUI:setVisible(self._ui.Progress_mask, visible)
+    self.maskVisible = visible
 end
 
 function PCQuickBox:ClearCD()
@@ -322,7 +221,12 @@ end
 function PCQuickBox:Use()
     if self.type == FGUIDefine.PCQuickType.Item then
         local itemData = SL:GetValue("BAG_DATA_BY_MAKEINDEX", self.makeIndex)
+        -- local isEquip = SL:GetValue("BAG_ITEM_IS_EQUIP")
+        -- if isEquip then
         SL:RequestUseItem(itemData)
+        -- else
+        --     SL:RequestSendUseItem(itemData, 1)
+        -- end
     elseif self.type == FGUIDefine.PCQuickType.Skill then
         FGUIFunction:LaunchSkill(self.skillId)
     end
@@ -366,18 +270,18 @@ function PCQuickBox:RegisterSkillEvent()
     if self.isRegisterSkillEvent then return end
     self.isRegisterSkillEvent = true
     local tag = "PCQuickBox" .. self.index
+    SL:RegisterLUAEvent(LUA_EVENT_SKILL_ADD, tag, handler(self, self.OnSkillAdd))
+    SL:RegisterLUAEvent(LUA_EVENT_SKILL_DEL, tag, handler(self, self.OnSkillDel))
     SL:RegisterLUAEvent(LUA_EVENT_SKILL_TIME_CHANGE, tag, handler(self, self.OnSkillCDTimeChange))
-    SL:RegisterLUAEvent(LUA_EVENT_AFK_BEGIN, tag, handler(self, self.OnAFKBegin))
-    SL:RegisterLUAEvent(LUA_EVENT_AFK_END, tag, handler(self, self.OnAFKEnd))
 end
 
 function PCQuickBox:RemoveSkillEvent()
     if not self.isRegisterSkillEvent then return end
     self.isRegisterSkillEvent = false
     local tag = "PCQuickBox" .. self.index
+    SL:UnRegisterLUAEvent(LUA_EVENT_SKILL_ADD, tag)
+    SL:UnRegisterLUAEvent(LUA_EVENT_SKILL_DEL, tag)
     SL:UnRegisterLUAEvent(LUA_EVENT_SKILL_TIME_CHANGE, tag)
-    SL:UnRegisterLUAEvent(LUA_EVENT_AFK_BEGIN, tag)
-    SL:UnRegisterLUAEvent(LUA_EVENT_AFK_END, tag)
 end
 
 

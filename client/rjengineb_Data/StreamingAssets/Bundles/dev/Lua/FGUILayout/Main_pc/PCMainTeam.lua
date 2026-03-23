@@ -81,6 +81,12 @@ end
 function PCMainTeam:SetShow(v)
     if v == self._show then return end
     self._show = v
+    -- local assist = PCGameMain.assist
+    -- if assist then
+    --     if assist.OnTeamShowChange then
+    --         assist:OnTeamShowChange(self._show)
+    --     end
+    -- end
 end
 
 function PCMainTeam:SetVisible(v)
@@ -157,6 +163,7 @@ end
 
 function PCMainTeam:UpdateTeamMember()
     local memberList = SL:GetValue("TEAM_MEMBER_LIST")
+    -- local isLeader = SL:GetValue("TEAM_IS_LEADER")
     local memberCount = #memberList
     local haveTeam = memberCount > 0
 

@@ -12,9 +12,6 @@ function Bag.main()
     -- 背包物品删除
     SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_DEL, "Bag", function(item)
         -- 关闭 背包满提醒文本
-        if SL:GetValue("BAG_IS_FULL",true) then
-            return
-        end
         SL:DelBubbleTips(global.MMO.BUBBLE_TIPS_BAG_FULL)
     end)
 end

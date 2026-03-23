@@ -1,11 +1,17 @@
+local SettingKeyFunc = require("FGUILayout/Setting_pc/SettingKeyFunc")
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
-local PCMainQuick = class("PCMainQuick")
-local PCGameMain = PCGameMain
 
-local MAX_QUICK_MAX_PAGE = PCGameMain.MAX_QUICK_MAX_PAGE
+local PCMainQuick = class("PCMainQuick")
+
+local MAX_QUICK_DATA = 3
 
 function PCMainQuick:Create()
 	self._ui = FGUI:ui_delegate(self.component)
+
+    self.saveKeys = {}
+    for i = 1, MAX_QUICK_DATA do
+        self.saveKeys[i] = "PCMainQuick" .. i .. "_" .. SL:GetValue("USER_ID")
+    end
 
     self._quicks = {
         self._ui.QuickBox1,
@@ -20,27 +26,30 @@ function PCMainQuick:Create()
         self._ui.QuickBox10,
     }
     self._quickBoxs = {}
-    self._page = nil
-    self._autoSetIndex = nil
 
+    self._index = 1
+    self._datas = {}
+    self._data = nil
+
+    self:InitQuickData()
+    
     for index, quick in pairs(self._quicks) do
         local quickBox = FGUIFunction:BindClass(quick, "Main_pc/PCQuickBox")
-        quickBox:Create(self, index)
+        quickBox:Create(index)
+        FGUI:setOnDropEvent(quick, handler(self, self.OnDragDrop, index))
+        FGUI:setOnClickEvent(quick, handler(self, self.OnClickQuick, index))
+        FGUI:setOnRightClickEvent(quick, handler(self, self.OnRightClickQuick, index))
         self._quickBoxs[index] = quickBox
     end
 
     FGUI:setOnClickEvent(self._ui.Button_quickUp, handler(self, self.OnUp))
     FGUI:setOnClickEvent(self._ui.Button_quickDown, handler(self, self.OnDown))
-    FGUI:setOnClickEvent(self._ui("SkillAutoSet", "Button_auto"), handler(self, self.OnChangeAuto))
 
-    FGUI:GButton_setChangeStateOnClick(self._ui("SkillAutoSet", "Button_auto"), false)
-    FGUI:setVisible(self._ui.SkillAutoSet, false)
+    FGUI:GTextField_setText(self._ui.Text_quickIndex, self._index)
 end
 
 function PCMainQuick:Enter()
 	self:RegisterEvent()
-    self._page = PCGameMain.GetQuickPage()
-    self:UpdatePage()
     for index, quickBox in pairs(self._quickBoxs) do
         quickBox:Enter()
         self:UpdateQuickBox(index)
@@ -64,39 +73,48 @@ end
 
 ----------------------------------------------------------------------------
 
-function PCMainQuick:UpdatePage()
-    FGUI:GTextField_setText(self._ui.Text_quickIndex, self._page)
+function PCMainQuick:InitQuickData()
+    for i = 1, MAX_QUICK_DATA do
+        local saveKey = self.saveKeys[i]
+        local saveStr = SL:GetLocalString(saveKey) or ""
+        local data = {}
+	    if saveStr and saveStr ~= "" then
+	    	data = SL:JsonDecode(saveStr)
+	    end
+        self._datas[i] = data
+    end
+    self._data = self._datas[self._index]
+end
+
+function PCMainQuick:SaveQuickData(index)
+    local saveKey = self.saveKeys[index]
+    if not saveKey then return end
+    local data = self._datas[index]
+    if not data then return end
+    local str = SL:JsonEncode(data)
+    SL:SetLocalString(saveKey, str)
 end
 
 function PCMainQuick:UpdateQuickBox(index)
     local quickBox = self._quickBoxs[index]
     if not quickBox then return end
-    local data = PCGameMain.GetQuickData(self._page, index)
+    local data = self._data[index]
     if not data then
-        quickBox:SetEmpty()
+        quickBox:Clear()
     else
         if data.type == FGUIDefine.PCQuickType.Item then
             quickBox:SetItem(data.makeIndex, data.itemIndex)
         elseif data.type == FGUIDefine.PCQuickType.Skill then
-            quickBox:SetSkill(data.id, data.auto)
+            quickBox:SetSkill(data.id)
         end
     end
-end
-
-function PCMainQuick:SetSkillAuto(index, auto)
-    local data = PCGameMain.GetQuickData(self._page, index)
-    if not data then return end
-    if data.type ~= FGUIDefine.PCQuickType.Skill then return end
-    if data.auto == auto then return end
-    data.auto = auto
-    PCGameMain.SetQuickData(self._page, index, data)
 end
 
 function PCMainQuick:OnDelayClickEnd()
     self.delayClick = false
 end
 
-function PCMainQuick:DragDrop(index, eventData)
+function PCMainQuick:OnDragDrop(index, eventData)
     self.delayClick = true
     SL:ScheduleOnce(handler(self, self.OnDelayClickEnd, nil, true), 0.1)
     local sender = eventData.sender
@@ -108,50 +126,74 @@ function PCMainQuick:DragDrop(index, eventData)
         --交互数据位置
         local index1 = sourceData.index
         local index2 = index
-        local data1 = PCGameMain.GetQuickData(self._page, index1)
-        local data2 = PCGameMain.GetQuickData(self._page, index2)
-        PCGameMain.SetQuickData(self._page, index1, data2)
-        PCGameMain.SetQuickData(self._page, index2, data1)
+        local data1 = self._data[index1]
+        local data2 = self._data[index2]
+        self._data[index1] = data2
+        self._data[index2] = data1
+        self:UpdateQuickBox(index1)
+        self:UpdateQuickBox(index2)
+        self:SaveQuickData(self._index)
     else
         if sourceData.type == FGUIDefine.PCQuickType.Item then
+            --去重
+            for k, v in pairs(self._data) do
+                if v.makeIndex == sourceData.makeIndex then
+                    self._data[k] = nil
+                    self:UpdateQuickBox(k)
+                end
+            end
             data = {
                 type = sourceData.type,
                 itemIndex = sourceData.itemIndex,
                 makeIndex = sourceData.makeIndex,
             }
         elseif sourceData.type == FGUIDefine.PCQuickType.Skill then
+            --去重
+            for k, v in pairs(self._data) do
+                if v.id == sourceData.id then
+                    self._data[k] = nil
+                    self:UpdateQuickBox(k)
+                end
+            end
             data = {
                 type = sourceData.type,
                 id = sourceData.id,
-                auto = false
             }
         end
-        PCGameMain.SetQuickData(self._page, index, data)
+        self._data[index] = data
+        self:UpdateQuickBox(index)
+        self:SaveQuickData(self._index)
     end
 end
 
 function PCMainQuick:OnUp()
-    local page = self._page
-    page = page - 1
-    if page < 1 then
-        page = MAX_QUICK_MAX_PAGE
+    self._index = self._index - 1
+    if self._index < 1 then
+        self._index = MAX_QUICK_DATA
     end
-    PCGameMain.SetQuickPage(page)
+    self._data = self._datas[self._index]
+    for index, quick in pairs(self._quicks) do
+        self:UpdateQuickBox(index)
+    end
+    FGUI:GTextField_setText(self._ui.Text_quickIndex, self._index)
 end
 
 function PCMainQuick:OnDown()
-    local page = self._page
-    page = page + 1
-    if page > MAX_QUICK_MAX_PAGE then
-        page = 1
+    self._index = self._index + 1
+    if self._index > MAX_QUICK_DATA then
+        self._index = 1
     end
-    PCGameMain.SetQuickPage(page)
+    self._data = self._datas[self._index]
+    for index, quick in pairs(self._quicks) do
+        self:UpdateQuickBox(index)
+    end
+    FGUI:GTextField_setText(self._ui.Text_quickIndex, self._index)
 end
 
-function PCMainQuick:DragQuickItem(index, eventData)
+function PCMainQuick:OnClickQuick(index, eventData)
     if self.delayClick then return end
     local touchId = FGUI:InputEvent_getTouchId(eventData)
-    local data = PCGameMain.GetQuickData(self._page, index)
+    local data = self._data[index]
     if not data then return end
     local sourceData = {index = index}
     local quick = self._quicks[index]
@@ -164,57 +206,26 @@ function PCMainQuick:DragQuickItem(index, eventData)
         return
     end
     self.isDragging = true
+    -- FGUI:setAlpha(quick, 0)
     FGUI:DragDropManager_startDrag(quick, "ui://Main_pc/QuickDragBox", sourceData, touchId, handler(self, self.OnDropEnd, index, true))
     local dragIcon = FGUI:DragDropManager_getDragAgent()
     local label = FGUI:GLoader_getComponent(dragIcon)
     FGUI:GLabel_setIcon(label, icon)
 end
 
-function PCMainQuick:OnChangeAuto()
-    if not self._autoSetIndex then return end
-    local isSelect = FGUI:GButton_getSelected(self._ui("SkillAutoSet", "Button_auto"))
-    self:SetSkillAuto(self._autoSetIndex, not isSelect)
-end
-
-function PCMainQuick:ShowSkillAutoSet(index)
-    if self._autoSetIndex == index then return end
-    self._autoSetIndex = index
-    local quick = self._quicks[index]
-    if not quick then return end
-    local data = PCGameMain.GetQuickData(self._page, index)
-    if not data then return end
-    FGUI:AddChild(quick, self._ui.SkillAutoSet)
-    local w, h = FGUI:getSize(quick)
-    FGUIFunction:SetSafePosition(self._ui.SkillAutoSet, w / 2, 0)
-    self:UpdateSkillAuto()
-end
-
-function PCMainQuick:HideSkillAutoSet(index)
-    if self._autoSetIndex ~= index then return end
-    self._autoSetIndex = nil
-    self:UpdateSkillAuto()
-end
-
-function PCMainQuick:UpdateSkillAuto()
-    local show = self._autoSetIndex ~= nil
-    if show then
-        local data = PCGameMain.GetQuickData(self._page, self._autoSetIndex)
-        if (not data) or 
-            data.type ~= FGUIDefine.PCQuickType.Skill or
-            (not SL:GetValue("SKILL_CHECK_IS_WUGONG_TYPE", data.id, 1)) then
-            show = false
-        else
-            FGUI:GButton_setSelected(self._ui("SkillAutoSet", "Button_auto"), data.auto or false)
-        end
-    end
-    FGUI:setVisible(self._ui.SkillAutoSet, show)
-end
-
 function PCMainQuick:OnDropEnd(index, obj)
     if not obj then
-        PCGameMain.SetQuickData(self._page, index, nil)
+        self._data[index] = nil
         self:UpdateQuickBox(index)
+        self:SaveQuickData(self._index)
     end
+end
+
+
+function PCMainQuick:OnRightClickQuick(index, eventData)
+    if self.delayClick then return end
+    local quickBox = self._quickBoxs[index]
+    quickBox:Use()
 end
 
 function PCMainQuick:OnKeyUse(index)
@@ -223,30 +234,14 @@ function PCMainQuick:OnKeyUse(index)
     quickBox:Use()
 end
 
-function PCMainQuick:OnQuickDataChange(page, index, data)
-    self:UpdateQuickBox(index)
-    self:UpdateSkillAuto()
-end
-
-function PCMainQuick:OnPageChange(page)
-    if page == self._page then return end
-    self._page = page
-    self:UpdatePage()
-    for index, quick in pairs(self._quicks) do
-        self:UpdateQuickBox(index)
-    end
-    self:UpdateSkillAuto()
-end
 
 -----------------------------------注册事件--------------------------------------
 function PCMainQuick:RegisterEvent()
-    SL:RegisterLUAEvent(LUA_EVENT_PC_QUICK_PAGE_CHANGE, "PCMainQuick", handler(self, self.OnPageChange))
-    SL:RegisterLUAEvent(LUA_EVENT_PC_QUICK_DATA_CHANGE, "PCMainQuick", handler(self, self.OnQuickDataChange))
+
 end
 
 function PCMainQuick:RemoveEvent()
-    SL:UnRegisterLUAEvent(LUA_EVENT_PC_QUICK_PAGE_CHANGE, "PCMainQuick")
-    SL:UnRegisterLUAEvent(LUA_EVENT_PC_QUICK_DATA_CHANGE, "PCMainQuick")
+
 end
 
 

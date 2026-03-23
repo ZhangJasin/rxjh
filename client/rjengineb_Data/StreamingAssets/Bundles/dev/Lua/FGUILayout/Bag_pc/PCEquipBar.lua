@@ -7,7 +7,6 @@ local ItemFrom = SL:GetValue("ITEMFROMUI_ENUM")
 function PCEquipBar:Create()
     self._ui = FGUI:ui_delegate(self.component)
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
-	self.bagViewModel = FGUIFunction:BindClass(self,"Bag_pc/PCBagViewModel")
     self:GetAllFGuiData()
     self:InitOnClickEvent()
     self:InitData()
@@ -18,15 +17,9 @@ function PCEquipBar:GetAllFGuiData()
     self.btn_close = self._ui.btn_close
     self.btn_cloakSwitch = self._ui.btn_cloakSwitch
     self.btn_sort = self._ui.btn_sort
-	self.btn_storage = self._ui.btn_storage
     self.list_bag = self._ui.list_bag
-
+    self.ctl_clothKind = FGUI:getController(self.btn_cloakSwitch,"clothKind")
     self.pos12 = self._ui.pos12 -- 弓箭手专有装备格
-	self.pos1 = self._ui.pos1
-
-	self.ctl_clothKind = FGUI:getController(self.btn_cloakSwitch,"clothKind")
-	-- 获取武器槽位的控制器
-    self.ctrl_equipPosDI = FGUI:getController(self.pos1,"equipPosDI")
 end
 
 function PCEquipBar:InitData()
@@ -40,10 +33,11 @@ function PCEquipBar:InitData()
     self.equipMentObjList = {}
     self.packageItemViewCache = {}
 	self.cdMaskCache = {}
+    self.bagViewModel = requireFGUILayout("Bag_pc/PCBagViewModel")
 end
 
 function PCEquipBar:RefreshCurPageBagCell()
-	local showCnt = self.bagViewModel:CalculateShowCount(8)
+	local showCnt = self.bagViewModel:CalculateShowCount()
 	FGUI:GList_setNumItems(self._ui.list_bag, showCnt)
 end
 
@@ -147,6 +141,14 @@ function PCEquipBar:UpdateCellView(itemView,bagData)
 	local childIdx = FGUI:GetChildIndex(self.list_bag, itemView)
 	local index = FGUI:GList_childIndexToItemIndex(self.list_bag, childIdx)
 	
+	FGUI:setOnRollOverEvent(self.packageItemViewCache[id].component, function()
+		self:RollOverEvent(index)
+	end)
+
+    FGUI:setOnRollOutEvent(self.packageItemViewCache[id].component, function()
+		self:RollOutEvent(index)
+	end)
+
 	FGUI:setOnClickEvent(self.packageItemViewCache[id].component, function(eventData)
 		if self.clickDelay then return end
 		local touchId = FGUI:InputEvent_getTouchId(eventData)
@@ -161,7 +163,8 @@ function PCEquipBar:UpdateCellView(itemView,bagData)
 		FGUI:DragDropManager_startDrag(itemContentView.component,"ui://public_pc/CommonItem", data, touchId,FGUIFunction.CloseBagCheckDragView)
 		FGUIFunction:OpenBagCheckDragView()
 		local commmonItem = FGUI:GLoader_getComponent(FGUI:DragDropManager_getDragAgent())
-		ItemUtil:RefreshItemUIByData(commmonItem,itemData)
+		ItemUtil:SetItemIconByItemID(commmonItem,itemData.Index)
+		ItemUtil:UpdateItemGradeByItemID(commmonItem,itemData.Index)
 	end)
 
 	FGUI:setOnRightClickEvent(self.packageItemViewCache[id].component,function(eventData)
@@ -196,7 +199,7 @@ function PCEquipBar:onCellDropEvent(itemView,eventData)
 	SL:ScheduleOnce(handler(self, self.OnDelayClickEnd, nil, true), 0.1)
 	local childIdx = FGUI:GetChildIndex(self.list_bag, itemView)
 	local endPos = FGUI:GList_childIndexToItemIndex(self.list_bag, childIdx)
-	if FGUI:InputEvent_getButton(eventData) == 0 and
+	if eventData.inputEvent.button == 0 and
         eventData.data and 
         eventData.data.makeIndex then
 		-- 在第一个页签里换位置
@@ -235,6 +238,8 @@ function PCEquipBar:onCellDropEvent(itemView,eventData)
 			end
 			return
 		end
+
+
 	end
 end
 
@@ -249,21 +254,11 @@ function PCEquipBar:InitOnClickEvent()
     FGUI:setOnClickEvent(self.btn_cloakSwitch,handler(self,self.BtnCloakSwitchClicked))
     FGUI:setOnClickEvent(self.btn_close,handler(self,self.OnClose))
     FGUI:setOnClickEvent(self.btn_sort,handler(self,self.BtnSortClicked))
-	FGUI:setOnClickEvent(self.btn_storage,handler(self,self.BtnStorageClicked))
 end
 
 function PCEquipBar:BtnSortClicked()
-    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
-
 	SL:RequestRefreshBagPos()
 end
-
-function PCEquipBar:BtnStorageClicked(eventData)
-    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
-
-	FGUI:Open("Bag_pc","PCStorageBar")
-end
-
 
 function PCEquipBar:Refresh()
     self:RefreshCurPageBagCell()
@@ -292,9 +287,7 @@ function PCEquipBar:GetCurShowBagCellData(index)
 	return bagData
 end
 
-function PCEquipBar:BtnCloakSwitchClicked(eventData)
-    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
-
+function PCEquipBar:BtnCloakSwitchClicked(data)
     SL:RequestOperateIsOpenFashion(not SL:GetValue("SETTING_GET_IS_SHOW_FASHION"))
 end
 
@@ -316,10 +309,7 @@ end
 
 -- 弓手职业才显示
 function PCEquipBar:RefreshEquipCheck()
-    -- 弓手职业才显示
     FGUI:setVisible(self.pos12,SL:GetValue("JOB") == global.MMO.ACTOR_PLAYER_JOB_1)
-    -- 查看fgui控制器equipPosDI设置(图标对应职业)
-    FGUI:Controller_setSelectedIndex(self.ctrl_equipPosDI,11 + SL:GetValue("JOB"))
 end
 
 -- 刷新方案周边的装备
@@ -348,6 +338,14 @@ function PCEquipBar:RefreshEquipByPos()
 						if self.isDraging then return end
 						SL:TakeOffPlayerEquip(equipData)
 					end)
+					
+					-- tips
+					FGUI:setOnRollOverEvent(currentItem.component,function()
+						FGUIFunction:OpenItemTips({itemData = equipData,hideButtons = true})
+					end)
+					FGUI:setOnRollOutEvent(currentItem.component,function()
+						FGUIFunction:CloseItemTips()
+					end)
 
 					FGUI:setOnClickEvent(currentItem.component, function(eventData)
 						if self.clickDelay then return end
@@ -362,7 +360,8 @@ function PCEquipBar:RefreshEquipByPos()
 						FGUI:DragDropManager_startDrag(currentItem.component,"ui://public_pc/CommonItem", data, touchId,FGUIFunction.CloseBagCheckDragView)
 						FGUIFunction:OpenBagCheckDragView()
 						local commmonItem = FGUI:GLoader_getComponent(FGUI:DragDropManager_getDragAgent())
-						ItemUtil:RefreshItemUIByData(commmonItem,equipData)
+						ItemUtil:SetItemIconByItemID(commmonItem,equipData.Index)
+						ItemUtil:UpdateItemGradeByItemID(commmonItem,equipData.Index)
 	        		end)
 				end
             end
@@ -376,7 +375,6 @@ end
 
 function PCEquipBar:OnClose()
     self.super.Close(self)
-	FGUI:Close("Bag_pc","PCStorageBar")
 end
 
 function PCEquipBar:UpdateSetting(param1)
@@ -388,10 +386,12 @@ function PCEquipBar:UpdateSetting(param1)
 end
 
 function PCEquipBar:Enter()
-	local width = SL:GetValue("SCREEN_WIDTH")
-	local height = SL:GetValue("SCREEN_HEIGHT")
-	FGUI:setPosition(self.component,width/2,height/2)
-	self.bagViewModel:Enter({bindParentView = FGUIDefine.BindParentView.PCEquipBar})
+    local pCEquipBar_w,pcEquipBar_h = FGUI:getSize(self.component) 
+    local x = math.floor(SL:GetValue("SCREEN_WIDTH")/2)
+    local y = math.floor(SL:GetValue("SCREEN_HEIGHT")/2 - pcEquipBar_h/2)
+    FGUI:setPosition(self.component,x,y)
+    self.bagViewModel:Bind(self)
+	self.bagViewModel:Enter()
     self:RegisterEvent()  
     FGUIFunction:ShowTopCurrency(SL:GetValue("GAME_DATA","BagMoneyList"))
     self:RefreshScheme()
@@ -399,6 +399,7 @@ end
 
 function PCEquipBar:Exit()
     self.bagViewModel:Exit()
+	self.bagViewModel:UnBind(self)
     self:RemoveEvent()
     self:CleanItemViewCache()
     FGUIFunction:HideTopCurrency()
@@ -414,6 +415,21 @@ function PCEquipBar:RightClickEvent(idx)
 		self.clickCellCB(bagData)
 	end
 end
+
+function PCEquipBar:RollOverEvent(idx)
+	local bagData = self:GetCurShowBagCellData(idx + 1)
+	if bagData then
+		bagData:RollOverCell()
+	end
+end
+
+function PCEquipBar:RollOutEvent(idx)
+	local bagData = self:GetCurShowBagCellData(idx + 1)
+	if bagData then
+		bagData:RollOutCell()
+	end
+end
+
 
 function PCEquipBar:Destroy()
 end

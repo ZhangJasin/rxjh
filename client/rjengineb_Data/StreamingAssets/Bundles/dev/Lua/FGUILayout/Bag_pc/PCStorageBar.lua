@@ -12,17 +12,16 @@ function PCStorageBar:Create()
 end
 
 function PCStorageBar:Enter()
+	-- PCEquipBar的大小 fgui中获得
+	local pCEquipBar_w,pcEquipBar_h = 349,516
+	local pcStorageBar_w,pcStorageBar_h = FGUI:getSize(self.component)
 	-- PCEquipBar居中放
-	local width = SL:GetValue("SCREEN_WIDTH")
-	local height = SL:GetValue("SCREEN_HEIGHT")
-	local pcStorageBar_w = 272
-	local pcEquipBar_W = 349
-
-
-	FGUI:setPosition(self.component,width/2 - (pcStorageBar_w + pcEquipBar_W)/2,height/2)
+	local x = math.floor(SL:GetValue("SCREEN_WIDTH")/2  - pcStorageBar_w)
+	local y = math.floor(SL:GetValue("SCREEN_HEIGHT")/2 - pcEquipBar_h/2)
+	FGUI:setPosition(self.component,x,y)
     self:RegisterEvent()
     self:RefreshData()
-	FGUI:Open("Bag_pc","PCEquipBar",nil,FGUI_LAYER.NORMAL,{fullScreen = false})
+	FGUI:Open("Bag_pc","PCEquipBar",nil,nil,{fullScreen = false})
 end
 
 function PCStorageBar:Exit()
@@ -49,8 +48,7 @@ function PCStorageBar:InitView()
 	FGUI:GList_setVirtual(self._ui.list_storage)
 
 	self.cacheStorageCell = PCBagCell.new(0,nil,true)
-	FGUI:setOnClickEvent(self._ui.btn_sort,function (eventData)
-    	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+	FGUI:setOnClickEvent(self._ui.btn_sort,function ()
 		SL:RequestRefreshStoragePos(self._selectGroup)
 	end)
 
@@ -59,9 +57,7 @@ function PCStorageBar:InitView()
     FGUI:setOnClickEvent(self._ui.btn_next,handler(self,self.PageNextClicked))
 end
 
-function PCStorageBar:PagePrevClicked(eventData)
-    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
-
+function PCStorageBar:PagePrevClicked()
     if self._selectGroup == 1 then
         return
     end
@@ -70,9 +66,7 @@ function PCStorageBar:PagePrevClicked(eventData)
     self:SelectPage(self._selectGroup)
 end
 
-function PCStorageBar:PageNextClicked(eventData)
-    FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
-
+function PCStorageBar:PageNextClicked()
     if self._selectGroup == self._totalPage then
         return
     end
@@ -160,7 +154,8 @@ function PCStorageBar:UpdateCellView(itemView,bagData)
 		FGUI:DragDropManager_startDrag(itemContentView.component,"ui://public_pc/CommonItem", data, touchId,FGUIFunction.CloseBagCheckDragView)
 		FGUIFunction:OpenBagCheckDragView()
 		local commmonItem = FGUI:GLoader_getComponent(FGUI:DragDropManager_getDragAgent())
-		ItemUtil:RefreshItemUIByData(commmonItem,itemData)
+		ItemUtil:SetItemIconByItemID(commmonItem,itemData.Index)
+		ItemUtil:UpdateItemGradeByItemID(commmonItem,itemData.Index)
 	end)
 end
 
@@ -169,7 +164,7 @@ function PCStorageBar:onCellDropEvent(itemView,eventData)
 	SL:ScheduleOnce(handler(self, self.OnDelayClickEnd, nil, true), 0.1)
 	local childIdx = FGUI:GetChildIndex(self._ui.list_storage, itemView)
 	local endPos = FGUI:GList_childIndexToItemIndex(self._ui.list_storage, childIdx)
-	if FGUI:InputEvent_getButton(eventData) == 0 and
+	if eventData.inputEvent.button == 0 and
 		eventData.data and 
 		eventData.data.makeIndex then
 		-- 来源仓库
@@ -188,8 +183,6 @@ function PCStorageBar:onCellDropEvent(itemView,eventData)
 				end
 
 				SL:SetValue("STORAGE_EXCHANGE_TWO_POS",startIndex,endIndex)
-				self:UpdateCellViewByViewIdAndStorageData(startIndex,self:GetCurShowStorageCellData(startIndex))
-				self:UpdateCellViewByViewIdAndStorageData(endIndex,self:GetCurShowStorageCellData(endIndex))
 			end
 			return
 		end

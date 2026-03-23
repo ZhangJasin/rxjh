@@ -8,7 +8,7 @@ local IDX_TITLE = 3 -- 称号
 
 function PlayerInfoPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
-    FGUIFunction:SetCloseUIWhenClickOutside(self)
+    FGUI:SetCloseUIWhenClickOutside(self)
 
     self._tradingData = {}
     
@@ -51,6 +51,7 @@ function PlayerInfoPanel:GetAllFGuiData()
     self.btn_bag_recycle = self._ui.btn_bag_recycle
     self.btn_bag_extra = self._ui.btn_bag_extra
     self.btn_bag_shared = self._ui.btn_bag_shared
+    self.btn_bag_wareShop = self._ui.btn_bag_wareShop
     self.controller = FGUI:getController(self.component,"PageKind")
 end
 
@@ -105,8 +106,20 @@ function PlayerInfoPanel:InitOnClickEvent()
     FGUI:setOnClickEvent(self.btn_tab_3,handler(self,self.BtnTab3Clicked))
     FGUI:setOnClickEvent(self.btn_bag_sort,handler(self,self.BtnBagSortClicked))
     FGUI:setOnClickEvent(self.btn_bag_warehouse,handler(self,self.BtnBagWareHouseClicked))
+    FGUI:setOnClickEvent(self.btn_bag_recycle,handler(self,self.BtnBagRecycleClicked))
     FGUI:setOnClickEvent(self.btn_bag_extra,handler(self,self.BtnExtraBagClicked))
     FGUI:setOnClickEvent(self.btn_bag_shared,handler(self,self.BtnSharedClicked))
+    FGUI:setOnClickEvent(self.btn_bag_wareShop,handler(self,self.BtnBagWareShopClicked))
+    FGUI:GButton_setTitle(self.btn_bag_recycle, "回收")
+
+end
+function PlayerInfoPanel:BtnBagWareShopClicked()
+    self.super.Close(self)
+    ssrMessage:sendmsgEx("bag","openWareShop")
+end
+function PlayerInfoPanel:BtnBagRecycleClicked()
+    FGUI:Close("Bag","PlayerInfoPanel")
+    FGUI:Open("Bag", "BagRecyclePanel",{fromPanel = 1})
 end
 
 function PlayerInfoPanel:BtnBagWareHouseClicked()
@@ -116,6 +129,7 @@ end
 
 function PlayerInfoPanel:BtnExtraBagClicked()
     FGUI:Close("Bag","PlayerInfoPanel")
+    --FGUI:Open("Bag", "OneFilterBagPanel",{title = GET_STRING(60003002) ,filterType = 3})
     FGUI:Open("Bag", "StorageExPanel", 1)
 end
 

@@ -19,7 +19,6 @@ function MainBottom:Create()
     self._isAutoMove = false
 
     self._skillAutoModeNames = {}
-    self._qiGongAutoModeNames = {}
 
     self._ctrl_cameraMode = FGUI:getController(self._ui.Btn_cameraMode, "cameraMode")
     FGUI:UIModel_addFx(self._ui.Graph_autoFight, 1001010, true, nil, nil, Vector3(0.3, 0.3, 0.3))
@@ -42,13 +41,13 @@ function MainBottom:Create()
 
     FGUI:setVisible(self._ui.ProgressBar_preLoad, false)
 
-    self:InitAdapt()
 end
 
 function MainBottom:Enter()
     self._miniChat:Enter()
 	self:RegisterEvent()
 
+    self:InitAdapt()
 	self:OnRefreshPropertyShow()
 	self:OnRefreshNetShow()
     self:UpdateAutoButton()
@@ -62,6 +61,7 @@ function MainBottom:Enter()
     self:UpdateAutoModeTouchEnable()
     self:UpdateAutoMode1Datas()
     self:UpdateAutoMode2Datas()
+    self:UpdateAutoMode2()
 
     -- debug
     self:InitDebugInfo()
@@ -135,6 +135,7 @@ end
 
 function MainBottom:UpdateTime()
 	local date = os.date("*t", SL:GetValue("SERVER_TIME"))
+	-- local timeStr = string.format("%02d:%02d:%02d", date.hour, date.min, date.sec)
 	local timeStr = string.format("%02d:%02d", date.hour, date.min)
 	FGUI:GTextField_setText(self._ui.Text_time, timeStr)
 
@@ -222,6 +223,7 @@ end
 function MainBottom:OnSettingInit()
     self:UpdateAutoModeTouchEnable()
     self:UpdateAutoMode1Datas()
+    self:UpdateAutoMode2Datas() 
 end
 
 function MainBottom:OnSettingChange(id, value)
@@ -233,31 +235,6 @@ function MainBottom:OnSettingChange(id, value)
         self:UpdateAutoMode1Datas()
     end
 end
-
-function MainBottom:OnQiGongSchemeInit()
-    self:UpdateAutoMode2Datas()
-end
-
-function MainBottom:OnQiGongSchemeUpdate()
-    self:UpdateAutoMode2Datas()
-end
-
-function MainBottom:OnQiGongSchemeChange()
-    self:UpdateAutoMode2()
-end
-
-function MainBottom:OnQiGongSchemeNameUpdate(idx, name)
-    if self._qiGongAutoModeNames[idx+1] then 
-        self._qiGongAutoModeNames[idx+1] = name
-        FGUI:GComboBox_setItems(self._ui.ComboBox_autoMode2, self._qiGongAutoModeNames)
-    end 
-
-    local scheme = SL:GetValue("SKILL_QIGONG_SEL_SCHEME")
-    if idx == scheme then     
-        self:UpdateAutoMode2()
-    end 
-end
-
 
 -------------------------------自动战斗模式----------------------------------
 
@@ -276,16 +253,11 @@ function MainBottom:UpdateAutoMode1Datas()
 end
 
 function MainBottom:UpdateAutoMode2Datas()
-    local count = SL:GetValue("SKILL_QIGONG_SCHEME_COUNT")
-    if count == 0 then 
-        local defaultName = SL:GetValue("GET_QIONG_SCHEME_NAME", 0)
-        self._qiGongAutoModeNames[1] = defaultName
-    else 
-        for i = 1, count do
-            self._qiGongAutoModeNames[i] = SL:GetValue("GET_QIONG_SCHEME_NAME", i - 1)
-        end
-    end 
-    FGUI:GComboBox_setItems(self._ui.ComboBox_autoMode2, self._qiGongAutoModeNames)
+    self._mode2Datas = {
+        "气功方案1",
+        "气功方案2",
+    }
+    FGUI:GComboBox_setItems(self._ui.ComboBox_autoMode2, self._mode2Datas)
     self:UpdateAutoMode2()
 end
 
@@ -295,8 +267,11 @@ function MainBottom:UpdateAutoMode1()
 end
 
 function MainBottom:UpdateAutoMode2()
-    local scheme = SL:GetValue("SKILL_QIGONG_SEL_SCHEME")
-    FGUI:GTextField_setText(self._ui.Text_autoMode2, self._qiGongAutoModeNames[scheme + 1] or "")
+    -- local mode = SL:GetValue("SETTING_AUTO_FIGHT_RANGE_ENABLE")
+    -- if not mode then return end
+    -- local mode1Name = self._mode1Datas[mode + 1]
+    -- FGUI:GTextField_setText(self._ui.Text_autoMode1, mode1Name)
+    -- FGUI:GTextField_setText(self._ui.Text_autoMode2, self._mode2Datas[1])
 end
 
 function MainBottom:UpdateAutoModeTouchEnable()
@@ -316,7 +291,8 @@ end
 function MainBottom:OnAutoMode2Change(context)
     local idx = FGUI:GComboBox_getSelectedIndex(self._ui.ComboBox_autoMode2)
     if idx == -1 then return end
-    SL:RequestQiGongSchemeChange(idx)
+    local data = self._mode2Datas[idx + 1]
+    FGUI:GTextField_setText(self._ui.Text_autoMode2, data)
 end
 
 
@@ -434,6 +410,15 @@ function MainBottom:CreateBubbleTipsCell(data)
     return cell
 end
 
+-- 获取气泡按钮方法
+-- function MainBottom:GetBubbleButtonByID(id)
+--     for i, cell in pairs(self._bubbleTipsCells) do
+--         if cell.id == id then
+--             return cell.cell
+--         end
+--     end
+--     return nil
+-- end
 -----------------------------------Auto------------------------------------
 function MainBottom:OnAutoMoveBegin(data)
     self:UpdateAutoState(nil, true)
@@ -458,11 +443,12 @@ function MainBottom:UpdateAutoState(isAutoFight, isAutoMove)
     if self._isAutoFight ~= isAutoFight then
         self._isAutoFight = isAutoFight
         if isAutoFight then
+            FGUI:setVisible(self._ui.Graph_autoFight, true)
             FGUI:UIModel_resume(self._ui.Graph_autoFight)
         else
             FGUI:UIModel_pause(self._ui.Graph_autoFight)
+            FGUI:setVisible(self._ui.Graph_autoFight, false)
         end
-        FGUI:setVisible(self._ui.Graph_autoFight, isAutoFight)
     end
     if isAutoFight then isAutoMove = false end
     if isAutoMove == nil then
@@ -619,10 +605,6 @@ function MainBottom:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_AFK_END, "MainBottom", handler(self, self.OnAFKEnd))
     SL:RegisterLUAEvent(LUA_EVENT_SETTING_INIT, "MainBottom", handler(self, self.OnSettingInit))
     SL:RegisterLUAEvent(LUA_EVENT_SETTING_CAHNGE, "MainBottom", handler(self, self.OnSettingChange))
-    SL:RegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_INIT, "MainBottom", handler(self, self.OnQiGongSchemeInit))
-    SL:RegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_SCHEME_ADD, "MainBottom", handler(self, self.OnQiGongSchemeUpdate))
-    SL:RegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_SCHEME_CHANGE, "MainBottom", handler(self, self.OnQiGongSchemeChange))
-    SL:RegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_SCHEME_NAME_CHANGE, "MainBottom", handler(self, self.OnQiGongSchemeNameUpdate))
 end
 
 function MainBottom:RemoveEvent()
@@ -643,10 +625,6 @@ function MainBottom:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_AFK_END, "MainBottom")
     SL:UnRegisterLUAEvent(LUA_EVENT_SETTING_INIT, "MainBottom")
     SL:UnRegisterLUAEvent(LUA_EVENT_SETTING_CAHNGE, "MainBottom")
-    SL:UnRegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_INIT, "MainBottom")
-    SL:UnRegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_SCHEME_ADD, "MainBottom")
-    SL:UnRegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_SCHEME_CHANGE, "MainBottom")
-    SL:UnRegisterLUAEvent(LUA_EVENT_SKILL_QIGONG_SCHEME_NAME_CHANGE, "MainBottom")
 end
 
 

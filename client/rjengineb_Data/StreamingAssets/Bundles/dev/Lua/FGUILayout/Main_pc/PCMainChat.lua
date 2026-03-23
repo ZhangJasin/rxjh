@@ -26,7 +26,7 @@ function PCMainChat:Create()
 	self._channels = FGUIFunction:GetShowChannels()
     self._channelMap = {}
     self._receiveChannelList = {}
-
+    self.__emojiCfgs = {}
     local cacheReceiveList = self:GetReceiveList()
 
     self.CommonIndex = nil        --用于筛选列表频闭综合选项
@@ -47,7 +47,6 @@ function PCMainChat:Create()
     self._chatData = nil            --所有聊天记录
     self._curChatLen = 0
     self._curChatData = {}          --显示聊天记录
-    self._chatCache = {}
 
     self._dragOffsetY = 0           --拖拽起始触摸点的偏移量
     self._dragPercY = 0             --拖拽起始聊天滑动条进度
@@ -332,10 +331,6 @@ function PCMainChat:OnItemRendererListChat(idx, item)
     local index =  idx + 1
     local data = self._curChatData[index]
     if not data then return end
-    local itemId = FGUI:GetID(item)
-    local curData = self._chatCache[itemId]
-    if curData == data then return end
-    self._chatCache[itemId] = data
     self:RefreshMessageItem(data, item)
 end
 
@@ -457,7 +452,12 @@ function PCMainChat:RefreshPlayerMessageItem(data, item)
         FGUI:GRichTextField_setText(title, msg)
         FGUI:GRichTextField_setOnLinkClickEvent(title, self._handlerMsgLinkEvent)
     elseif data.MT == MSGTYPE.Trade then
-		local shopName = data.Msg.shopName or ""
+        local shopName = ""
+        if type(data.Msg) == "string" then
+            shopName = data.Msg
+        else
+            shopName = data.Msg and data.Msg.shopName or ""
+        end
 		local shopStr = SL:GetValue("I18N_STRING", 90010031)
         local msg = string.format(shopStr, shopName)
         if data.UserName and data.UserName ~= "" then
@@ -508,13 +508,19 @@ function PCMainChat:MsgLinkEvent(context)
             local itemData =  SL:GetValue("ITEM_DATA", itemData.Index)
 			FGUIFunction:OpenItemTips({itemData = itemData, hideButtons = true})
         end
+		-- FGUIFunction:OpenItemTips({itemData = cItem,hideButtons = true })
     elseif data.MT == MSGTYPE.Trade then
 		if SL:GetValue("STALL_IS_NEW_QUERY_TYPE") then
             local userId = data.Msg.userId or ""
 		    SL:RequestOpenShopByUserId(userId)
         else
-            local shopName = data.Msg.shopName or ""
-		    SL:RequestOpenShop(shopName)
+            local shopName = ""
+            if type(data.Msg) == "string" then
+                shopName = data.Msg
+			else
+                shopName = data.Msg and data.Msg.shopName or ""
+            end
+            SL:RequestOpenShop(shopName)
         end
     else
         local param = data.param

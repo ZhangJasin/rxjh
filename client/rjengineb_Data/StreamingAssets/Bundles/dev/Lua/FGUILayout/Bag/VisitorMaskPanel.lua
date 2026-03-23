@@ -16,7 +16,8 @@ function VisitorMaskPanel:InitOnClickEvent()
     FGUI:setOnClickEvent(self.btn_box,handler(self,self.BtnBoxClicked))--返回盒子
     FGUI:setOnClickEvent(self.btn_back_box,handler(self,self.BtnTradingClicked))--返回交易行
 
-    if SL:GetValue("BOX_TRADING_VISITOR") then
+    local shiwan = global.L_GameEnvManager:GetEnvDataByKey("shiwan")
+    if shiwan and tonumber(shiwan) == 1 then
         FGUI:setVisible(self.btn_box, true)
         FGUI:setVisible(self.btn_back_box, false)
     else

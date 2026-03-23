@@ -109,7 +109,13 @@ function PCPlayerInfoPanel:InitOnClickEvent()
     FGUI:setOnClickEvent(self.btn_tab_3,handler(self,self.BtnTab3Clicked))
     FGUI:setOnClickEvent(self.btn_bag_sort,handler(self,self.BtnBagSortClicked))
     FGUI:setOnClickEvent(self.btn_bag_warehouse,handler(self,self.BtnBagWareHouseClicked))
+    FGUI:setOnClickEvent(self.btn_bag_recycle,handler(self,self.BtnBagRecycleClicked))
     FGUI:setOnClickEvent(self.btn_bag_extra,handler(self,self.BtnExtraBagClicked))
+end
+
+function PCPlayerInfoPanel:BtnBagRecycleClicked()
+    FGUI:Close("Bag_pc","PCPlayerInfoPanel")
+    FGUI:Open("Bag_pc", "BagRecyclePanel",{fromPanel = 1})
 end
 
 function PCPlayerInfoPanel:BtnBagWareHouseClicked()
@@ -119,6 +125,7 @@ end
 
 function PCPlayerInfoPanel:BtnExtraBagClicked()
     FGUI:Close("Bag_pc","PCPlayerInfoPanel")
+    --FGUI:Open("Bag_pc", "OneFilterBagPanel",{title = GET_STRING(60003002) ,filterType = 3})
     FGUI:Open("Bag_pc", "PCStorageExPanel", 1)
 end
 

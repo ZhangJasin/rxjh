@@ -1,6 +1,7 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local PCMainPlayer = class("PCMainPlayer", BaseFGUILayout)
-
+local SysConstant = require("game_config/cfgcsv/SysConstant")
+local PCMainPlayerData = require("FGUILayout/Main_pc/PCMainPlayerData")      -- 主玩家数据层
 function PCMainPlayer:Create()
 	self._ui = FGUI:ui_delegate(self.component)
     self._opUI = FGUI:ui_delegate(self._ui.TeamOperation)
@@ -27,14 +28,19 @@ function PCMainPlayer:Create()
     FGUI:setOnTouchEvent(self._opUI.Mask, nil, nil, handler(self, self.OnHideTeamOperation))
     FGUI:setOnClickEvent(self._opUI.Button_createTeam, handler(self, self.OnCreateTeam))
     FGUI:setOnClickEvent(self._opUI.Button_joinTeam, handler(self, self.OnJoinTeam))
+    -- 订阅数据层事件
+    self._subscriptions = {}
+    self._subscriptions.data_petResurrec = PCMainPlayerData:Subscribe("data_petResurrec", handler(self, self.petResurrec))
+    self._subscriptions.data_showPetPro = PCMainPlayerData:Subscribe("data_showPetPro", handler(self, self.showPetPro)) 
+    self._subscriptions.data_setPetInfo = PCMainPlayerData:Subscribe("data_setPetInfo", handler(self, self.setPetInfo)) 
 end
 
 function PCMainPlayer:Enter()
 	self:RegisterEvent()
 
-    FGUIFunction:AdaptNotch(self.component)
+    self:InitAdapt()
     self:UpdatePropertys()
-
+    
     FGUI:setVisible(self._ui.TeamOperation, false)
 end
 
@@ -49,10 +55,94 @@ end
 function PCMainPlayer:Destroy()
     self._ui = nil
     self._opUI = nil
+    -- 取消订阅
+    if self._subscriptions then
+        for _, token in pairs(self._subscriptions) do
+            PCMainPlayerData:Unsubscribe(token)
+        end
+        self._subscriptions = nil
+    end
 end
 
 --------------------------------------------------------
 
+function PCMainPlayer:setPetInfo(data)
+    local petIcon = FGUI:GetChild(self._ui.petPro,"petIcon")
+    if data.icon then
+        FGUI:setVisible(self._ui.petPro,true)
+        FGUI:GLoader_setUrl(petIcon,"ui://Main/"..data.icon)
+    else
+        FGUI:setVisible(self._ui.petPro,false)
+    end
+    
+    self:showPetPro(data)
+end
+
+function PCMainPlayer:showPetPro(data)
+    if data.type=="red" then
+        --50%以上
+        local one = FGUI:GetChild(self._ui.petPro,"one") 
+        --50%以下
+        local two = FGUI:GetChild(self._ui.petPro,"two") 
+        local per = data.now * 100 / data.max
+        if per >= 50 then
+            FGUI:GImage_setFillAmount(one, (per / 50) - 1 )
+            FGUI:GImage_setFillAmount(two, 1)
+        else
+            FGUI:GImage_setFillAmount(one, 0)
+            FGUI:GImage_setFillAmount(two, (per/50))
+        end
+    end 
+end
+
+function PCMainPlayer:petResurrec(data)
+    if data > 0 then
+        local fhtextbg = FGUI:GetChild(self._ui.petPro,"n10")
+        local fhtext = FGUI:GetChild(self._ui.petPro,"n11")
+        local fhtext2 = FGUI:GetChild(self._ui.petPro,"n12")
+        FGUI:GTextField_setText(fhtext, tonumber(SysConstant["PET_Resurre_CD"].Value).."s")
+        FGUI:setVisible(fhtextbg,true)
+        FGUI:setVisible(fhtext,true)
+        FGUI:setVisible(fhtext2,true)
+        if self.dsqfh then
+            SL:UnSchedule(self.dsqfh)
+            self.dsqfh = nil
+        end
+        self.time = data
+        local function realivedjs()
+            local times =  SL:GetValue("SERVER_TIME")*1000 - self.time
+            local min = tonumber(SysConstant["PET_Resurre_CD"].Value) - math.floor(times/1000)
+            if min > 0  then
+                FGUI:GTextField_setText(fhtext, min.."s")
+                FGUI:setVisible(fhtextbg,true)
+                FGUI:setVisible(fhtext,true)
+                FGUI:setVisible(fhtext2,true)
+            else
+                SL:UnSchedule(self.dsqfh)
+                self.dsqfh = nil
+                FGUI:GTextField_setText(fhtext, min.."s")
+                FGUI:setVisible(fhtextbg,false)
+                FGUI:setVisible(fhtext,false)
+                FGUI:setVisible(fhtext2,false)
+                ssrMessage:sendmsgEx("mountMain", "fhpet")
+            end
+        end
+        self.dsqfh = SL:Schedule(realivedjs,1)
+    else
+        if self.dsqfh then
+            SL:UnSchedule(self.dsqfh)
+            self.dsqfh = nil
+        end
+    end
+end
+
+function PCMainPlayer:InitAdapt()
+    local screenW = SL:GetValue("SCREEN_WIDTH")
+    local screenH = SL:GetValue("SCREEN_HEIGHT")
+    local safeL, safeR, safeB, safeT = SL:GetValue("SCREEN_SAFE_AREA_RATIO")
+    FGUI:setSize(self.component, screenW - safeR - safeL, screenH - safeB - safeT)
+    FGUI:setPosition(self.component, safeL, safeT)
+end
 
 function PCMainPlayer:InitComboId()
     local isCK = SL:GetValue("JOB") == 3
@@ -229,6 +319,13 @@ end
 
 function PCMainPlayer:OnHideTeamOperation()
     FGUI:setVisible(self._ui.TeamOperation, false)
+end
+
+function PCMainPlayer:OnListTeamAllotRender(index, item)
+    local idx = index + 1
+    local data = PICK_DATA[idx]
+    if not data then return end
+    FGUI:GButton_setTitle(item, data.name)
 end
 
 function PCMainPlayer:OnCreateTeam()

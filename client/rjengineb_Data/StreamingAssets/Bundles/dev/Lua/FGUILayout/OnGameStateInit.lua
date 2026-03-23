@@ -26,5 +26,12 @@ function OnGameStateInit()
     local packageName = SL:GetValue("IS_PC_OPER_MODE") and "public_pc" or "public"
     Pool.RegisterClass(packageName, "CommonEquip", "FGUILayout/Item/ItemEquipShow")
     Pool.RegisterClass(packageName, "CommonItem", "FGUILayout/Item/ItemShow")
+
+    
+    ssrGameEvent      = SL:RequireFile("FGUILayout/GameEvent")
+    
+    -- 网络
+    ssrNetMsgCfg      = SL:RequireFile("FGUILayout/NetMsgCfg")
+    ssrMessage = SL:RequireFile("FGUILayout/Message"):Register()
 end
 OnGameStateInit()

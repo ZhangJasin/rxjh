@@ -1,4 +1,5 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
+-- local MainMiniMapEx = require("FGUILayer/Main/MainMiniMapEx")
 local MainMiniMap = class("MainMiniMap", BaseFGUILayout)
 
 local ACTOR_POS_Z_DEFAULT = 0
@@ -42,12 +43,11 @@ function MainMiniMap:Create()
     FGUI:setOnClickEvent(self._ui.Btn_route, handler(self, self.OnOpenMapRoute))
     FGUI:setOnClickEvent(self._ui.Btn_rank, handler(self, self.OnOpenRank))
     FGUI:setOnClickEvent(self._ui.Btn_setting, handler(self, self.OnOpenSetting))
-
-    FGUIFunction:AdaptNotch(self.component)
 end
 
 function MainMiniMap:Enter()
 	self:RegisterEvent()
+    self:InitAdapt()
 
     self:UpdateMapData()
 
@@ -107,6 +107,14 @@ function MainMiniMap:UpdateMapData()
     self._mapAble = SL:GetValue("MINIMAP_ABLE")
     FGUI:setVisible(self._ui.Comp_Map, self._mapAble)
     self:UpdatePointsTimer()
+end
+
+function MainMiniMap:InitAdapt()
+    local screenW = SL:GetValue("SCREEN_WIDTH")
+    local screenH = SL:GetValue("SCREEN_HEIGHT")
+    local safeL, safeR, safeB, safeT = SL:GetValue("SCREEN_SAFE_AREA_RATIO")
+    FGUI:setSize(self.component, screenW - safeR - safeL, screenH - safeB - safeT)
+    FGUI:setPosition(self.component, safeL, safeT)
 end
 
 function MainMiniMap:UpdateMapState()
@@ -566,6 +574,8 @@ function MainMiniMap:ShowFindPathLine()
     local playerX, playerZ = SL:GetValue("MAP_PLAYER_POS")
     local pathIdx = SL:GetValue("MAP_CURRENT_PATH_INDEX")
 	if size >= 1 then
+	-- local dis = math.abs(points[1].x - playerX) + math.abs(points[1].z - playerZ)
+	-- if size > 1 or dis > 1 then
 		local t = {}
         local len = 0
         local x = 0
@@ -602,7 +612,11 @@ end
 ---------------------------------------------------
 
 function MainMiniMap:OnOpenMiniMap()
-    FGUI:Open("MiniMap", "MiniMapPanel")
+    if SL:GetValue("IS_PC_OPER_MODE") then
+        FGUI:Open("MiniMap_pc", "MiniMapPanel", nil, nil, {classPath = "FGUILayout/MiniMap/MiniMapPanel"})
+    else
+        FGUI:Open("MiniMap", "MiniMapPanel")
+    end
 end
 
 function MainMiniMap:OnOpenMapRoute()

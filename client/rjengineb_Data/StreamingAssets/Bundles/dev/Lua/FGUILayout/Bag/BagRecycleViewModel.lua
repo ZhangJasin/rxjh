@@ -169,7 +169,7 @@ function BagRecycleViewModel:RefreshSelectItemsByConditions()
 
 				local otherSelect = self:CheckConditions(itemCfg,self.checkOtherConditionGroups)
 				local finalSelect = itemSelect or otherSelect
-				SL:onLUAEvent(LUA_EVENT_BAG_RECYCLE_SELECT, {isSelect = finalSelect ,selectList= { {MakeIndex = v.MakeIndex,pos = k,ID =v.Index,cnt = v.OverLap or 1}},updateMoney = false } )
+				SL:onLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY, {isSelect = finalSelect ,selectList= { {MakeIndex = v.MakeIndex,pos = k,ID =v.Index,cnt = v.OverLap or 1}},updateMoney = false } )
 			end
 		end
 	end
@@ -317,21 +317,21 @@ function BagRecycleViewModel:BagCellClickEvent(bagItem)
 			end
 		end
 
-		SL:onLUAEvent(LUA_EVENT_BAG_RECYCLE_SELECT, {isSelect = not bagItem.recycleSelect ,selectList= { {MakeIndex = bagItem._itemData.MakeIndex,pos = bagItem._index,ID = bagItem._itemData.Index,cnt = bagItem._itemData.OverLap or 1}} ,updateMoney = true} )
+		SL:onLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY, {isSelect = not bagItem.recycleSelect ,selectList= { {MakeIndex = bagItem._itemData.MakeIndex,pos = bagItem._index,ID = bagItem._itemData.Index,cnt = bagItem._itemData.OverLap or 1}} ,updateMoney = true} )
 	end
 end
 
 
 
 function BagRecycleViewModel:RegisterEvent()
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_RECYCLE_SELECT, "BagRecycleViewModel",  handler(self,self.RecycleSelectCell))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY, "BagRecycleViewModel",  handler(self,self.RecycleSelectCell))
 	SL:RegisterLUAEvent(LUA_EVENT_BAG_RECOVERY_UPDATE, "BagRecycleViewModel",  handler(self,self.RefreshSelectItemsByConditions))
 	SL:RegisterLUAEvent(LUA_EVENT_BAG_CELL_CLICK, "BagRecycleViewModel",  handler(self,self.BagCellClickEvent))
 end
 
 
 function BagRecycleViewModel:UnRegisterEvent()
-	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_RECYCLE_SELECT, "BagRecycleViewModel")
+	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY, "BagRecycleViewModel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_RECOVERY_UPDATE, "BagRecycleViewModel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_CELL_CLICK, "BagRecycleViewModel")
 end

@@ -18,6 +18,8 @@ function PCStorageExPanel:Create()
 	self.handler_storageItemRenderer = handler(self, self.ListViewStorageCellRenderer)
 	self.handler_bagItemRenderer = handler(self, self.OnBagListItemRenderer)
 	self.handler_storageItemClick = handler(self, self.TakeOutItemFromStorage)
+	self.handler_onCellRollOver = handler(self, self.OnRollOver)
+	self.handler_onCellRollOut = handler(self, self.OnRollOut)
 	FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 	FGUI:setOnClickEvent(self._ui.BtnClose, handler(self, self.Close))
 	-- 仓库列表显示
@@ -298,6 +300,11 @@ function PCStorageExPanel:UpdateCellView(itemView, bagData, itemFrom, index)
 	local content = FGUI:GetChild(itemView,"ContentItem")
 	local itemContentView =ItemUtil:ItemShow_Create(itemData,content,{disableClick = true})
 	packageItemViewCache[id] = itemContentView
+
+	FGUI:setOnRollOverEvent(itemContentView.component, handler(self, self.handler_onCellRollOver, bagData))
+
+    FGUI:setOnRollOutEvent(itemContentView.component, handler(self, self.handler_onCellRollOut, bagData))
+
 	FGUI:setOnClickEvent(itemContentView.component, function(eventData)
 		if self.clickDelay then return end
 		FGUIFunction:CloseItemTips()
@@ -313,9 +320,26 @@ function PCStorageExPanel:UpdateCellView(itemView, bagData, itemFrom, index)
 		FGUI:DragDropManager_startDrag(itemContentView.component,"ui://public_pc/CommonItem", data, touchId)
 		FGUIFunction:OpenBagCheckDragView()
 		local commmonItem = FGUI:GLoader_getComponent(FGUI:DragDropManager_getDragAgent())
-		ItemUtil:RefreshItemUIByData(commmonItem,itemData)
+		ItemUtil:SetItemIconByItemID(commmonItem,itemData.Index)
+		ItemUtil:UpdateItemGradeByItemID(commmonItem,itemData.Index)
 	end)
 end
+
+
+function PCStorageExPanel:OnRollOver(obj, bagData)
+	if FGUI:DragDropManager_getDragging() then
+		return
+	end
+	bagData:RollOverCell()
+end
+
+function PCStorageExPanel:OnRollOut(obj, bagData)
+	if FGUI:DragDropManager_getDragging() then
+		return
+	end
+	bagData:RollOutCell()
+end
+
 
 -- 更新整个仓库页面
 function PCStorageExPanel:OnRefreshStorageExData(classify)
@@ -334,14 +358,19 @@ function PCStorageExPanel:OnRefreshStorageExData(classify)
 	end
 
 	local openCount = SL:GetValue("STORAGE_EX_OPEN_SIZE", self._storageId)
+	local totalCount = SL:GetValue("STORAGE_EX_TOTAL_SIZE", self._storageId)
 
-	for i = 1, openCount do
+	for i = 1, totalCount do
 		local cell = self._storageCells[i]
 		if not cell then
-			self._storageCells[i] = PCBagCell.new(i,nil,false,ItemFrom.STORAGE_EX)
+			if i <= openCount then
+				self._storageCells[i] = PCBagCell.new(i,nil,false,ItemFrom.STORAGE_EX)
+			else
+				self._storageCells[i] = PCBagCell.new(i,nil,true,ItemFrom.STORAGE_EX)
+			end
 		end
 	end
-	FGUI:GList_setNumItems(self._ui.List_Cell, openCount)
+	FGUI:GList_setNumItems(self._ui.List_Cell, totalCount)
 end
 
 -- 将槽位信息转化为道具信息用于显示

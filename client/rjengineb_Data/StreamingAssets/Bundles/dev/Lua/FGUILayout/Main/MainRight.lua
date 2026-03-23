@@ -26,10 +26,10 @@ function MainRight:Create()
 
     local posX, posY = FGUI:getPosition(self._ui.Button_bag)
     FGUIFunction:SetPickItemFxUIEndPos(posX, posY)
-    FGUIFunction:AdaptNotch(self.component)
 end
 
 function MainRight:Enter()
+    self:InitAdapt()
     self._sklll:Enter()
     self._quickUse:Enter()
     self._rightFunc:Enter()
@@ -52,6 +52,14 @@ function MainRight:Destroy()
     self._rightFunc:Destroy()
 
     self._ui = nil
+end
+
+function MainRight:InitAdapt()
+    local screenW = SL:GetValue("SCREEN_WIDTH")
+    local screenH = SL:GetValue("SCREEN_HEIGHT")
+    local safeL, safeR, safeB, safeT = SL:GetValue("SCREEN_SAFE_AREA_RATIO")
+    FGUI:setSize(self.component, screenW - safeR - safeL, screenH - safeB - safeT)
+    FGUI:setPosition(self.component, safeL, safeT)
 end
 
 function MainRight:OnBag()

@@ -109,6 +109,8 @@ function MainQuickUse:InitSaveData()
         local box = self._boxs[i]
         box:SetItem(id)
     end
+    -- dump(self.quickBarIds, "quickBarIds")
+    ssrMessage:sendmsgEx("quickItem", "AttrData",self.quickBarIds)
 end
 
 function MainQuickUse:ShowSelect(index, x, y)
@@ -117,6 +119,12 @@ function MainQuickUse:ShowSelect(index, x, y)
     table.clear(self.selectItemDatas)
     local idMap = self.idMaps[index]
     local bagData = SL:GetValue("BAG_DATA")
+    -- 道具数量不叠加
+    -- for k, data in pairs(bagData) do
+    --     if idMap[data.Index] then
+    --         table.insert(self.selectItemDatas, data)
+    --     end
+    -- end
     -- 道具数量叠加
     local itemMap = {}
     local isCopyMap = {}
@@ -198,10 +206,14 @@ function MainQuickUse:OnItemRenderListQuick(index, item)
         local selectIndex = self.selectIndex
         self:OnHideSelect()
         if not selectIndex then return end
-        self:SetItemIndex(selectIndex, data.Index)
+        local itemIndex = nil
+        if self.quickBarIds[selectIndex] ~= data.Index then
+            itemIndex = data.Index
+        end  
+        self:SetItemIndex(selectIndex, itemIndex)
         local box = self._boxs[selectIndex]
         if box then
-            box:SetItem(data.Index)
+            box:SetItem(itemIndex)
         end
     end})
     ItemUtil:SetLongPressOrClick(itemShow.component, nil, function()
@@ -222,6 +234,8 @@ function MainQuickUse:SaveQuickIds()
         str = str .. (self.quickBarIds[i] or "") .. "|"
     end
     SL:SetLocalString(SAVE_KEY, str)
+    -- dump(self.quickBarIds, "quickBarIds2")
+    ssrMessage:sendmsgEx("quickItem", "AttrData",self.quickBarIds)
 end
 
 function MainQuickUse:OnItemInit()
