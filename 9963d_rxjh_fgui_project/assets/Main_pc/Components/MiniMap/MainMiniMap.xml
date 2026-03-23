@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="166,184" opaque="false" designImage="ui://xwp5ackomjoj1" designImageOffsetX="-858">
-  <controller name="size" homePageType="specific" homePage="1" pages="0,,1,,2," selected="0">
+  <controller name="size" homePageType="specific" homePage="1" pages="0,,1,,2," selected="1">
     <remark page="0" value="无"/>
     <remark page="1" value="小"/>
     <remark page="2" value="大"/>
@@ -37,17 +37,13 @@
     <component id="n29_s977" name="Btn_help" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="-458,2" size="16,18" visible="false">
       <Button icon="ui://xwp5ackos97716"/>
     </component>
-    <component id="n33_9v0n" name="Btn_auto" src="9v0nv8g" fileName="Components/MiniMap/MiniMapAutoButton.xml" xy="120,24">
+    <component id="n33_9v0n" name="Btn_auto" src="9v0nv8g" fileName="Components/MiniMap/MiniMapAutoButton.xml" xy="120,184">
       <gearXY controller="size" pages="0,1" values="120,24|120,184" default="120,477"/>
     </component>
-    <component id="n12_r075" name="Btn_route" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="3,-57" size="47,25">
+    <component id="n12_r075" name="Btn_route" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="2,158" size="47,25">
       <gearDisplay controller="size" pages="1,2"/>
       <gearXY controller="size" pages="0,1,2" values="3,-57|2,158|-288,452"/>
       <Button icon="ui://xwp5ackonc8au"/>
-    </component>
-    <component id="n34_aevy" name="Btn_recharge" src="9v0nv8g" fileName="Components/MiniMap/MiniMapAutoButton.xml" xy="74,24">
-      <gearXY controller="size" pages="0,1,2" values="74,24|74,184|74,477"/>
-      <Button title="充值"/>
     </component>
     <text id="n6_ke93" name="Text_mapName" xy="21,1" size="107,22" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="shrink" strokeColor="#000000" autoClearText="true" text="地图名字"/>
     <text id="n7_ke93" name="Text_pos" xy="4,23" size="56,22" fontSize="14" color="#ffffff" vAlign="middle" strokeColor="#000000" autoClearText="true" text="999,999">

@@ -13,13 +13,13 @@
     <text id="n87_q8ir" name="text_count" xy="320,10" size="32,19" fontSize="12" color="#f1ffeb" align="center" singleLine="true" autoClearText="true" text="9999">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n88_q8ir" name="text_status" xy="409,11" size="52,19" fontSize="12" color="#ffff00" align="center" singleLine="true" autoClearText="true" text="上架成功">
+    <text id="n88_q8ir" name="text_status" xy="402,8" size="64,23" fontSize="15" color="#ffff00" align="center" singleLine="true" autoClearText="true" text="上架成功">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
     <text id="n86_q8ir" name="text_price" xy="569,10" size="39,19" group="n92_kc3n" fontSize="12" color="#f1ffeb" vAlign="middle" singleLine="true" autoClearText="true" text="11111">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n91_d2d6" name="icon_money" src="emvc3" fileName="Icons/CommonItem.xml" pkg="qa9a7rit" xy="537,4" size="32,32" group="n92_kc3n">
+    <component id="n91_d2d6" name="icon_money" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="537,4" size="32,32" group="n92_kc3n">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <group id="n92_kc3n" name="n92" xy="537,4" size="71,32"/>

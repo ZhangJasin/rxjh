@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1000,600" pivot="0.5,0.5" anchor="true" designImage="ui://5i0v372fcvcm28" designImageOffsetX="-167" designImageOffsetY="-313" designImageAlpha="0">
-  <controller name="isHaveShangJia" pages="0,没有上架,1,有上架" selected="0"/>
   <displayList>
     <image id="n46_q8ir" name="bg_right_list" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="12,14" size="976,516">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -17,11 +16,6 @@
       <item/>
       <item/>
     </list>
-    <component id="n73_iwlb" name="noItemtip" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="314,158">
-      <gearDisplay controller="isHaveShangJia" pages="0"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Label title="暂无上架"/>
-    </component>
     <component id="n52_q8ir" name="btn_consignment" src="r8pb1q" fileName="Components/btn_JingJia.xml" xy="499,565" pivot="0.5,0.5" anchor="true" size="136,42">
       <relation target="" sidePair="center-center,middle-middle"/>
       <Button title="寄售物品" titleColor="#fff000" titleFontSize="22"/>
@@ -38,16 +32,25 @@
     <image id="n38_q8ir" name="di_top" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="15,19" size="970,50" group="n71_q4kt">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <image id="n39_q8ir" name="fengexian1" src="nojsd" fileName="Images/split.png" xy="277,22" size="2,42" group="n71_q4kt">
+    <image id="n39_q8ir" name="fengexian1" src="nojsd" fileName="Images/split.png" xy="304,22" size="2,42" group="n71_q4kt">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n67_q8ir" name="fengexian3" src="nojsd" fileName="Images/split.png" xy="471,22" size="2,42" group="n71_q4kt">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <image id="n50_q8ir" name="fengexian4" src="nojsd" fileName="Images/split.png" xy="809,22" size="2,42" group="n71_q4kt">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <image id="n49_q8ir" name="fengexian5" src="nojsd" fileName="Images/split.png" xy="625,22" size="2,42" group="n71_q4kt">
+    <image id="n49_q8ir" name="fengexian5" src="nojsd" fileName="Images/split.png" xy="627,22" size="2,42" group="n71_q4kt">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <text id="n47_q8ir" name="label_name" xy="104,27" size="48,32" group="n71_q4kt" fontSize="22" color="#d9f9d5" text="商品">
+    <text id="n47_q8ir" name="label_name" xy="167,27" size="48,32" group="n71_q4kt" fontSize="22" color="#d9f9d5" text="商品">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n41_q8ir" name="label_price_jp" xy="355,27" size="92,32" group="n71_q4kt" fontSize="22" color="#d9f9d5" text="竞拍价格">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n43_q8ir" name="label_price_once" xy="524,27" size="70,32" group="n71_q4kt" fontSize="22" color="#d9f9d5" text="一口价">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
     <text id="n42_q8ir" name="label_left_time" xy="670,27" size="92,32" group="n71_q4kt" fontSize="22" color="#d9f9d5" text="剩余时间">
@@ -56,7 +59,6 @@
     <text id="n48_q8ir" name="label_operator" xy="869,27" size="48,32" group="n71_q4kt" fontSize="22" color="#d9f9d5" text="操作">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n72_mcsk" name="label_price" xy="439,27" size="48,32" group="n71_q4kt" fontSize="22" color="#d9f9d5" strokeColor="#000000" singleLine="true" text="价格"/>
     <group id="n71_q4kt" name="n71" xy="15,19" size="970,50"/>
   </displayList>
 </component>

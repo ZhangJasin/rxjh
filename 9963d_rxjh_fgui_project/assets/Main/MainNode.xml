@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" opaque="false" designImage="ui://zj419n3ddpxov3f">
   <displayList>
-    <component id="n35_s2wa" name="Node_lt" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0">
+    <component id="n35_s2wa" name="Node_lt" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0">
       <relation target="" sidePair="left-left,top-top"/>
     </component>
-    <component id="n36_s2wa" name="Node_rt" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="1334,0" size="0,0">
+    <component id="n36_s2wa" name="Node_rt" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="1334,0" size="0,0">
       <relation target="" sidePair="right-right,top-top"/>
     </component>
-    <component id="n37_s2wa" name="Node_lb" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,750" size="0,0">
+    <component id="n37_s2wa" name="Node_lb" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="0,750" size="0,0">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
-    <component id="n38_s2wa" name="Node_rb" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="1334,750" size="0,0">
+    <component id="n38_s2wa" name="Node_rb" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="1334,750" size="0,0">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n39_s2wa" name="Node_lm" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,375" size="0,0">
+    <component id="n39_s2wa" name="Node_lm" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="0,375" size="0,0">
       <relation target="" sidePair="middle-middle,left-left"/>
     </component>
-    <component id="n40_s2wa" name="Node_tm" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="667,0" size="0,0">
+    <component id="n40_s2wa" name="Node_tm" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="667,0" size="0,0">
       <relation target="" sidePair="center-center,top-top"/>
     </component>
-    <component id="n41_s2wa" name="Node_rm" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="1334,375" size="0,0">
+    <component id="n41_s2wa" name="Node_rm" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="1334,375" size="0,0">
       <relation target="" sidePair="middle-middle,right-right"/>
     </component>
-    <component id="n42_s2wa" name="Node_sui_bm" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="667,750" size="0,0">
+    <component id="n42_s2wa" name="Node_sui_bm" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="667,750" size="0,0">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n43_s2wa" name="Node_mm" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="667,375" size="0,0">
+    <component id="n43_s2wa" name="Node_mm" src="ilk5vnm" fileName="common/Node.xml" pkg="o8ixb2zy" xy="667,375" size="0,0">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <loader id="n50_s2wa" name="urlNode" xy="0,0" pivot="0.5,0.5" anchor="true" size="50,50" touchable="false" align="center" vAlign="middle"/>
-    <component id="n52_xgon" name="tradingbutton" src="t2g5kvp7" fileName="StateButton.xml" pkg="o8ixb2zy" xy="0,0" pivot="0.5,0.5" anchor="true" size="60,60" touchable="false"/>
+    <component id="n51_mrwp" name="tradingbutton" src="mrwpfvcb" fileName="Components/Trading/TradingButton.xml" xy="0,0" pivot="0.5,0.5" anchor="true" touchable="false"/>
   </displayList>
   <transition name="Hide" frameRate="60"/>
 </component>

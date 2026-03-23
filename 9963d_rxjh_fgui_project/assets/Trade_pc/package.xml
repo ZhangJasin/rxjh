@@ -5,8 +5,8 @@
     <component id="vdot1" name="btn_textinput.xml" path="/Components/"/>
     <image id="vdot2" name="textinput_bg.png" path="/Images/" scale="9grid" scale9grid="6,6,3,2"/>
     <component id="vdot3" name="item_trade.xml" path="/Components/" exported="true"/>
+    <image id="vdot4" name="bg.png" path="/Images/" scale="9grid" scale9grid="10,7,20,14"/>
     <component id="vdot6" name="PCTradeMain.xml" path="/" exported="true"/>
-    <image id="ehxm7" name="btn_edit_money.png" path="/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

@@ -15,32 +15,40 @@
     <component id="w0rgh" name="btn_study.xml" path="/Components/" exported="true"/>
     <component id="fe3nj" name="item_icon.xml" path="/Components/" exported="true"/>
     <image id="o14pk" name="skill_book.png" path="/Images/" exported="true"/>
-    <image id="as7kl" name="skill_item_bg_9.png" path="/Images/" scale="9grid" scale9grid="23,32,2,50"/>
+    <image id="as7kl" name="skill_item_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="23,32,2,50"/>
     <image id="as7km" name="skill_title_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="36,0,2,39"/>
-    <image id="7uson" name="skill_icon_attack.png" path="/Images/"/>
+    <image id="7uson" name="skill_icon_attack.png" path="/Images/" exported="true"/>
     <component id="j47so" name="SkillStudyPanel.xml" path="/" exported="true"/>
     <component id="j47su" name="item_qigong.xml" path="/Components/" exported="true"/>
+    <component id="hhwjv" name="SkillTipsPanel.xml" path="/" exported="true"/>
+    <component id="hhwjw" name="btn_config.xml" path="/Components/" exported="true"/>
+    <component id="hhwjx" name="btn_practice.xml" path="/Components/" exported="true"/>
+    <component id="nd1wy" name="item_cost.xml" path="/Components/" exported="true"/>
     <component id="awj8z" name="btn_cz.xml" path="/Components/" exported="true"/>
     <component id="awj810" name="btn_czAll.xml" path="/Components/" exported="true"/>
-    <image id="mh2i12" name="skill_icon_frame.png" path="/Images/"/>
-    <image id="mh2i13" name="skill_icon_lock.png" path="/Images/"/>
-    <image id="ee0a14" name="skill_black_9.png" path="/Images/"/>
-    <image id="ee0a15" name="skill_line.png" path="/Images/" scale="9grid" scale9grid="95,0,190,0"/>
-    <image id="hcvo17" name="武功尺寸_spec.png" path="/Images/"/>
-    <image id="hcvo18" name="气功尺寸_spec.png" path="/Images/"/>
+    <component id="apr011" name="btn_upgrade.xml" path="/Components/" exported="true"/>
+    <image id="mh2i12" name="skill_icon_frame.png" path="/Images/" exported="true"/>
+    <image id="mh2i13" name="skill_icon_lock.png" path="/Images/" exported="true"/>
+    <image id="ee0a14" name="skill_black_9.png" path="/Images/" exported="true"/>
+    <image id="ee0a15" name="skill_line.png" path="/Images/" exported="true" scale="9grid" scale9grid="95,0,190,0"/>
+    <image id="hcvo17" name="武功尺寸_spec.png" path="/Images/" exported="true"/>
+    <image id="hcvo18" name="气功尺寸_spec.png" path="/Images/" exported="true"/>
     <component id="w6j41c" name="btn_sel_launch.xml" path="/Components/" exported="true"/>
-    <image id="jh3v1d" name="skill_arrow2.png" path="/Images/"/>
+    <image id="jh3v1d" name="skill_arrow2.png" path="/Images/" exported="true"/>
     <component id="jh3v1e" name="item_desc.xml" path="/Components/" exported="true"/>
     <component id="kelz1f" name="btn_edit.xml" path="/Components/" exported="true"/>
     <image id="kelz1g" name="icon_edit.png" path="/Images/" exported="true"/>
     <component id="kelz1h" name="item_cmbox.xml" path="/Components/" exported="true"/>
     <component id="kelz1j" name="btn_combox.xml" path="/Components/" exported="true"/>
     <component id="kelz1l" name="btn_addScheme.xml" path="/Components/" exported="true"/>
-    <image id="kelz1n" name="skill_add.png" path="/Images/"/>
+    <image id="kelz1n" name="skill_add.png" path="/Images/" exported="true"/>
     <component id="eyqz1o" name="check_set.xml" path="/Components/" exported="true"/>
-    <component id="kei11f" name="VisitorSkillFramePanel.xml" path="/" exported="true"/>
-    <component id="kei11g" name="VisitorSkillPracticePanel.xml" path="/" exported="true"/>
-    <component id="kei11h" name="VisitorSkillStudyPanel.xml" path="/" exported="true"/>
+    <image id="qug11p" name="tuijian.png" path="/Images/" exported="true"/>
+    <component id="qug11q" name="btn_Recommend.xml" path="/Components/" exported="true"/>
+    <component id="k9rf1r" name="SkillSettingPanel.xml" path="/"/>
+    <component id="k9rf1s" name="ComboBox_launch.xml" path="/Components/"/>
+    <component id="k9rf1t" name="ComboBox_launch_item.xml" path="/Components/"/>
+    <component id="k9rf1u" name="ComboBox_launch_popup.xml" path="/Components/"/>
   </resources>
-  <publish name=""/>
+  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Skill" packageCount="2"/>
 </packageDescription>

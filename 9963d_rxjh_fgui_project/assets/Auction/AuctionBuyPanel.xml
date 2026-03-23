@@ -3,8 +3,6 @@
   <controller name="isShowPage" pages="0,显示,1,不显示" selected="0"/>
   <controller name="isSearchByKeyWord" pages="0,开启,1,关闭" selected="0"/>
   <controller name="isShowloading" pages="0,显示,1,不显示" selected="0"/>
-  <controller name="isSelectItem" pages="0,有选中的item,1,无选中的item" selected="0"/>
-  <controller name="isHaveStore" pages="0,没有商品,1,有商品" selected="0"/>
   <displayList>
     <image id="n33_mqpj" name="bg_left_list" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="17,63" size="186,527">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -23,7 +21,7 @@
     <image id="n21_nojs" name="bg_right_list" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="205,63" size="783,468">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <list id="n22_nojs" name="list_PaiMai" xy="207,123" size="782,401" group="n50_owd7" layout="flow_hz" overflow="scroll" lineGap="2" defaultItem="ui://5i0v372fnojsf" align="center">
+    <list id="n22_nojs" name="list_PaiMai" xy="206,123" size="782,401" group="n50_owd7" layout="flow_hz" overflow="scroll" lineGap="2" defaultItem="ui://5i0v372fnojsf" align="center">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
       <item/>
@@ -34,31 +32,26 @@
       <item/>
       <item/>
     </list>
-    <component id="n56_iwlb" name="noItemtip" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="412,183" group="n50_owd7">
-      <gearDisplay controller="isHaveStore" pages="0"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Label title="暂无商品"/>
-    </component>
     <image id="n15_nojs" name="di_top" src="owd71w" fileName="Images/di_3.png" xy="210,69" size="774,50" group="n52_q4kt">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <image id="n16_nojs" name="fengexian1" src="nojsd" fileName="Images/split.png" xy="471,72" size="1,42" group="n52_q4kt">
+    <image id="n16_nojs" name="fengexian1" src="nojsd" fileName="Images/split.png" xy="496,72" size="1,42" group="n52_q4kt">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <image id="n17_nojs" name="fengexian2" src="nojsd" fileName="Images/split.png" xy="677,73" size="1,42" group="n52_q4kt">
+    <image id="n17_nojs" name="fengexian2" src="nojsd" fileName="Images/split.png" xy="701,73" size="1,42" group="n52_q4kt">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <text id="n20_nojs" name="label_Goods" xy="325,78" size="48,32" group="n52_q4kt" fontSize="22" color="#d9f9d5" text="商品">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n18_nojs" name="label_LeftTime" xy="540,78" size="92,32" group="n52_q4kt" fontSize="22" color="#d9f9d5" text="剩余时间">
+    <text id="n18_nojs" name="label_LeftTime" xy="556,78" size="92,32" group="n52_q4kt" fontSize="22" color="#d9f9d5" text="剩余时间">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n19_nojs" name="label_Price" xy="823,78" size="48,32" group="n52_q4kt" fontSize="22" color="#d9f9d5" text="价格">
+    <text id="n19_nojs" name="label_Price" xy="801,78" size="92,32" group="n52_q4kt" fontSize="22" color="#d9f9d5" text="竞拍价格">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
     <group id="n52_q4kt" name="n52" xy="210,69" size="774,50" group="n50_owd7"/>
-    <group id="n50_owd7" name="rightPanel" xy="207,69" size="782,455" advanced="true"/>
+    <group id="n50_owd7" name="rightPanel" xy="206,69" size="782,455" advanced="true"/>
     <component id="n12_nojs" name="cbx_allCamp" src="nojsa" fileName="Components/Buy/cbx.xml" xy="20,12" size="136,42">
       <relation target="" sidePair="center-center,middle-middle"/>
       <ComboBox title="所有阵营" titleColor="#fced00" visibleItemCount="3" direction="down">
@@ -114,39 +107,29 @@
     <component id="n43_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="-28,600" size="0,0">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
-    <image id="n24_nojs" name="bg_text_currentPage" src="7c35voz" fileName="image/img_info_di.png" pkg="st7dgeqq" xy="392,542" size="144,41" group="n51_owd7">
+    <image id="n24_nojs" name="bg_text_currentPage" src="7c35voz" fileName="image/img_info_di.png" pkg="st7dgeqq" xy="515,542" size="144,41" group="n51_owd7">
       <relation target="n35_mqpj" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </image>
-    <text id="n35_mqpj" name="text_currentPage" xy="393,544" size="138,37" group="n51_owd7" fontSize="22" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="1/2">
+    <text id="n35_mqpj" name="text_currentPage" xy="516,544" size="138,37" group="n51_owd7" fontSize="22" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="1/2">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n27_nojs" name="btn_next_fast" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="589,544" size="36,36" group="n51_owd7" aspect="true" rotation="90">
+    <component id="n27_nojs" name="btn_next_fast" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="712,544" size="36,36" group="n51_owd7" aspect="true" rotation="90">
       <Button icon="ui://5i0v372fnojs1"/>
     </component>
-    <component id="n44_d2d6" name="btn_next" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="541,544" size="36,36" group="n51_owd7" aspect="true">
+    <component id="n44_d2d6" name="btn_next" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="664,544" size="36,36" group="n51_owd7" aspect="true">
       <Button icon="ui://5i0v372fnojs2"/>
     </component>
-    <component id="n45_d2d6" name="btn_prev" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="348,544" size="36,36" group="n51_owd7" aspect="true" rotation="180">
+    <component id="n45_d2d6" name="btn_prev" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="471,544" size="36,36" group="n51_owd7" aspect="true" rotation="180">
       <Button icon="ui://5i0v372fnojs2"/>
     </component>
-    <component id="n30_nojs" name="btn_prev_fast" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="300,544" size="36,36" group="n51_owd7" aspect="true" rotation="-90">
+    <component id="n30_nojs" name="btn_prev_fast" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="423,544" size="36,36" group="n51_owd7" aspect="true" rotation="-90">
       <Button icon="ui://5i0v372fnojs1"/>
     </component>
-    <group id="n51_owd7" name="numGroup" xy="300,542" size="325,41"/>
+    <group id="n51_owd7" name="numGroup" xy="423,542" size="325,41"/>
     <image id="n53_iqqn" name="loading" src="iqqn25" fileName="Images/img_loading.png" xy="597,296" pivot="0.5,0.5" anchor="true">
       <gearDisplay controller="isShowloading" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <component id="n54_aipb" name="btn_jingjia" src="r8pb1q" fileName="Components/btn_JingJia.xml" xy="711,543" size="110,38" controller="buttonKind,1">
-      <gearLook controller="isSelectItem" pages="1" values="1,0,1,1" default="1,0,0,1"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Button title="竞 价" titleColor="#fff000" titleFontSize="22"/>
-    </component>
-    <component id="n55_aipb" name="btn_buy" src="r8pb1q" fileName="Components/btn_JingJia.xml" xy="841,543" size="110,38">
-      <gearLook controller="isSelectItem" pages="1" values="1,0,1,1" default="1,0,0,1"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Button title="购 买" titleColor="#fff000" titleFontSize="22"/>
-    </component>
   </displayList>
   <transition name="loading">
     <item time="0" type="Rotation" target="n53_iqqn" value="0"/>

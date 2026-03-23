@@ -76,7 +76,7 @@
     <image id="mwrfkvqf" name="progress_fill_yellow.png" path="/Images/" scale="9grid" scale9grid="5,0,370,20"/>
     <component id="cougkvqg" name="ComboBox_Min_popup_up.xml" path="/Components/"/>
     <component id="cougkvqh" name="ComboBox_Min_up.xml" path="/Components/" exported="true"/>
-    <component id="ll07kvqj" name="btn_raw_size.xml" path="/Components/" exported="true"/>
+    <component id="ll07kvqi" name="btn_second_red.xml" path="/Components/" exported="true"/>
   </resources>
-  <publish name=""/>
+  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Setting" packageCount="2"/>
 </packageDescription>

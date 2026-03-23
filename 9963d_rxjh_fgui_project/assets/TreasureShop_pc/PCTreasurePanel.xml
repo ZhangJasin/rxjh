@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1024,768" opaque="false" designImage="ui://qy7g0oycemvc1b" designImageAlpha="97">
-  <controller name="isHaveStore" pages="0,没有商品,1,有商品" selected="0"/>
   <displayList>
     <component id="n324_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -53,11 +52,6 @@
       <item/>
       <item/>
     </list>
-    <component id="n328_iwlb" name="noItemtip" src="iwlbkvq9" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="447,311">
-      <gearDisplay controller="isHaveStore" pages="0"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Label title="暂无商品"/>
-    </component>
     <text id="n313_seb1" name="title" xy="516,187" pivot="0.5,0.5" anchor="true" size="52,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" singleLine="true" text="百宝阁">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>

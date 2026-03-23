@@ -5,26 +5,15 @@
   <controller name="isTimer" pages="0,开启,1,关闭" selected="0"/>
   <controller name="isPin" pages="0,置顶,1,未置顶" selected="0"/>
   <controller name="isShowPin" pages="0,显示,1,不显示" selected="0"/>
-  <controller name="titleType" pages="0,Type = 1 特效,1,Type = 2 文本,2,Type = 3 序列帧" selected="1">
-    <remark page="0" value="对应titleIcon中Type字段"/>
-    <remark page="1" value="对应titleIcon中Type字段"/>
-    <remark page="2" value="对应titleIcon中Type字段"/>
-  </controller>
   <displayList>
     <image id="n0_9qta" name="bgdi" src="n0552q" fileName="Images/Chenghao/bg_cell.png" xy="0,0" size="150,80" grayed="true">
       <gearLook controller="titleState" pages="0" values="1,0,1,0" default="1,0,0,0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <loader id="n6_9qta" name="gloader_title" xy="0,0" size="150,80" touchable="false" grayed="true" url="ui://q18xgg759qta8" fill="scale" clearOnPublish="true">
-      <gearDisplay controller="titleType" pages="0,2"/>
+    <loader id="n6_9qta" name="gloader_title" xy="1,0" size="145,79" touchable="false" grayed="true" url="ui://q18xgg759qta8" fill="scale" clearOnPublish="true">
       <gearLook controller="titleState" pages="0" values="1,0,1,0" default="1,0,0,1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <text id="n11_awdt" name="text_title" xy="45,29" size="60,22" font="ui://qa9a7ritbekykvpi" fontSize="14" color="#cccccc" strokeColor="#000000" singleLine="true" autoClearText="true" text="哈哈哈哈">
-      <gearDisplay controller="titleType" pages="1"/>
-      <gearColor controller="titleState" pages="0" values="#cccccc,#000000" default="#ffffff,#000000"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
     <image id="n3_9qta" name="n3" src="n0552r" fileName="Images/Chenghao/tag_Get.png" xy="0,0" size="40,37">
       <gearDisplay controller="titleState" pages="2"/>
       <relation target="" sidePair="left-left,top-top"/>

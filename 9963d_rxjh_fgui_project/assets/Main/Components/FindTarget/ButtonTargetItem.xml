@@ -5,14 +5,16 @@
     <component id="n19_ey1d" name="Head" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="7,7" size="65,65" aspect="true">
       <relation target="" sidePair="left-left,top-top"/>
     </component>
+    <image id="n18_8by8" name="Image_Select" src="k5e7v9b" fileName="Images/FindTarget/main_find_target_select_frame.png" xy="0,0" size="250,80"/>
     <image id="n20_9c3p" name="n20" src="k5e7v9i" fileName="Images/Target/main_target_hp_bg_9.png" xy="77,45" size="164,16"/>
     <component id="n14_8by8" name="ProgressBar_hp" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="77,45" size="165,16" touchable="false">
       <ProgressBar value="100" max="100"/>
       <property target="bar" propertyId="1" value="ui://zj419n3dk5e7v9h"/>
     </component>
     <image id="n21_fyl5" name="n21" src="mxa7v4n" fileName="Images/Player/main_player_lv_bg.png" xy="11,54"/>
-    <image id="n18_8by8" name="Image_Select" src="k5e7v9b" fileName="Images/FindTarget/main_find_target_select_frame.png" xy="0,0" size="250,80"/>
+    <component id="n23_qer2" name="Label_name" src="ftt5vo7" fileName="ScrollRText.xml" pkg="o8ixb2zy" xy="77,12" size="170,29" touchable="false">
+      <Label titleColor="#ffffff" titleFontSize="18"/>
+    </component>
     <text id="n22_fyl5" name="Text_level" xy="25,61" pivot="0.5,0.5" anchor="true" size="31,24" fontSize="16" color="#ffffff" align="center" text="000"/>
-    <text id="n24_and1" name="Text_name" xy="77,13" size="170,26" customData="2#2#1#1" fontSize="18" color="#ffffff" autoSize="none" singleLine="true" autoClearText="true" text="滚动名字"/>
   </displayList>
 </component>

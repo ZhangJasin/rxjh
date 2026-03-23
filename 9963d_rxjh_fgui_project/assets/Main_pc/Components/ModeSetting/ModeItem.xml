@@ -10,9 +10,7 @@
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <loader id="n1_zn3d" name="Loader_icon" xy="26,8" size="28,14" url="ui://xwp5ackozn3dv8h" fill="scaleFree"/>
-    <text id="n2_zn3d" name="Text_desc" xy="81,15" pivot="0,0.5" anchor="true" size="156,19" fontSize="12" color="#ffffff" leading="0" autoSize="none" autoClearText="true" text="可以攻击任何人">
-      <relation target="" sidePair="middle-middle"/>
-    </text>
+    <text id="n2_zn3d" name="Text_desc" xy="87,5" size="88,19" fontSize="12" color="#ffffff" text="可以攻击任何人"/>
   </displayList>
   <Button mode="Radio"/>
 </component>

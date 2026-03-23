@@ -18,5 +18,5 @@
     <image id="v75j17" name="rank_item_bg.png" path="/Images/" exported="true"/>
     <image id="jhgj19" name="P-排行榜-(2)_10_spec.png" path="/Images/"/>
   </resources>
-  <publish name=""/>
+  <publish name="" path="..\Assets\Res\game\FGUIExport\{publish_file_name}" packageCount="2"/>
 </packageDescription>

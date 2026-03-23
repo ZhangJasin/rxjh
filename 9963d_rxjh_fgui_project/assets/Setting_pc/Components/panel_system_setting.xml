@@ -3,6 +3,7 @@
   <displayList>
     <graph id="n97_knkx" name="n97" xy="7,7" size="269,110" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
     <graph id="n102_uipt" name="n102" xy="7,142" size="269,187" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
+    <graph id="n103_uipt" name="n103" xy="7,344" size="269,39" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
     <component id="n21_sdtg" name="player_frame" src="emvc7" fileName="common/CommonPlayerFrame.xml" pkg="qa9a7rit" xy="41,41" size="48,48" group="n99_knkx"/>
     <text id="n22_sdtg" name="name_title" xy="70,23" size="40,19" group="n99_knkx" fontSize="12" color="#ffffff" text="名称："/>
     <text id="n23_sdtg" name="name_value" xy="107,23" size="108,19" group="n99_knkx" fontSize="12" color="#ffffff" autoSize="none" text="郝雪人宝宝"/>
@@ -40,9 +41,11 @@
       <Button title="注销账号" titleColor="#fced00" titleFontSize="12" icon="ui://qa9a7ritemvc3h"/>
     </component>
     <group id="n100_knkx" name="n100" xy="23,171" size="236,102"/>
-    <graph id="n103_uipt" name="n103" xy="7,344" size="269,39" group="n101_knkx" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
-    <richtext id="n48_93yi" name="icp_desc" xy="56,354" pivot="0.5,0.5" size="172,19" group="n101_knkx" fontSize="12" color="#ffffff" ubb="true" text="沪ICP备12024575号-10A  &lt;a href=&apos;openICP&apos;&gt;[color=#ffff00]查询[/color]&lt;/a&gt;"/>
-    <group id="n101_knkx" name="n101" xy="7,344" size="269,39"/>
+    <richtext id="n48_93yi" name="icp_desc" xy="18,354" pivot="1,0" size="142,19" group="n101_knkx" fontSize="12" color="#ffffff" text="沪ICP备12024575号-10A"/>
+    <component id="n49_93yi" name="btnICP" src="ll076j" fileName="Components/ScaleButtonText.xml" xy="209,363" pivot="0.5,0.5" anchor="true" size="84,28" group="n101_knkx">
+      <Button title="查  询" icon="ui://qa9a7ritemvc3f"/>
+    </component>
+    <group id="n101_knkx" name="n101" xy="18,349" size="233,28"/>
     <component id="n43_sdtg" name="btnSwitchCharacter" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="435,345" size="108,36">
       <Button title="切换角色" titleColor="#fced00" titleFontSize="12" icon="ui://qa9a7rituxamkvpn"/>
     </component>

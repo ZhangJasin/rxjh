@@ -2,7 +2,7 @@
 <component size="1024,768">
   <displayList>
     <component id="n44_qzpn" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="357,257" size="310,254" group="n45_hfk8"/>
-    <text id="n23_tgh8" name="title" xy="506,275" pivot="0.5,0.5" anchor="true" size="102,24" group="n45_hfk8" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="出售记录"/>
+    <text id="n23_tgh8" name="title" xy="506,275" pivot="0.5,0.5" anchor="true" size="36,24" group="n45_hfk8" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="购买"/>
     <image id="n47_kusz" name="n47" src="hfk8a" fileName="Images/bg_black.png" xy="367,299" size="291,204" group="n45_hfk8"/>
     <list id="n48_kusz" name="list_history" xy="370,298" size="286,202" group="n45_hfk8" overflow="scroll" defaultItem="ui://3wc7qwagkuszkvpg" autoClearItems="true">
       <item/>
@@ -11,9 +11,7 @@
       <item/>
       <item/>
     </list>
-    <component id="n49_kusz" name="text_empty" src="iwlbkvq9" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="385,303" size="253,190" group="n45_hfk8">
-      <Label title="暂无出售记录"/>
-    </component>
+    <text id="n49_kusz" name="text_empty" xy="374,359" size="263,58" group="n45_hfk8" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="暂无出售记录"/>
     <group id="n45_hfk8" name="n45" xy="357,257" size="310,254" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

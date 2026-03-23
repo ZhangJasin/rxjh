@@ -103,5 +103,5 @@
     <image id="boje3q" name="main_player_exp_9.png" path="/images/" exported="true" scale="9grid" scale9grid="2,3,-1,6" duplicatePadding="true"/>
     <image id="k9rf3r" name="下拉箭头-心.png" path="/images/"/>
   </resources>
-  <publish name=""/>
+  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Marriage" packageCount="2"/>
 </packageDescription>

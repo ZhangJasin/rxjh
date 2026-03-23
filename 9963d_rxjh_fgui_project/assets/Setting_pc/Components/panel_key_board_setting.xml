@@ -19,11 +19,9 @@
       <item/>
     </list>
     <component id="n9_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="174,696" size="0,0"/>
-    <graph id="n14_gsii" name="n14" xy="7,344" size="463,30" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
-    <component id="n7_uapu" name="Btn_reset" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="516,345" pivot="0.5,0.5">
+    <component id="n7_uapu" name="Btn_reset" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="280,339">
       <relation target="" sidePair="center-center,middle-middle"/>
       <Button title="重 置" titleColor="#fced00" titleFontSize="12"/>
     </component>
-    <text id="n15_gsii" name="tips" xy="27,349" size="324,19" fontSize="12" color="#ffffff" ubb="true" autoClearText="true" text="设置[color=#00ff00]开始自动奔跑[/color]的快捷键，或则按[color=#ffff00]Escape/Backspace[/color]清除"/>
   </displayList>
 </component>

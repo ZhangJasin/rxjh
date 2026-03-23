@@ -36,17 +36,11 @@
       <item/>
     </list>
     <component id="n37_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="510,384" size="0,0" group="n42_qbyp"/>
-    <list id="n40_qbyp" name="list_filter" xy="439,264" size="291,25" group="n42_qbyp" layout="flow_hz" overflow="scroll" colGap="39" defaultItem="ui://3wc7qwagqbypkvph" align="center" vAlign="middle">
+    <list id="n40_qbyp" name="list_filter" xy="439,264" size="203,25" group="n42_qbyp" layout="flow_hz" overflow="scroll" defaultItem="ui://3wc7qwagqbypkvph" vAlign="middle">
       <item title="搜索商品名"/>
       <item title="搜索摊位名"/>
     </list>
-    <component id="n41_qbyp" name="btn_filter_collect" src="qbypkvpi" fileName="Components/btn_filter_multi.xml" xy="615,218" size="91,22" group="n42_qbyp">
-      <Button title="我的收藏"/>
-    </component>
-    <component id="n43_wms0" name="btn_shopping" src="my1vkvpx" fileName="Components/btn_cart.xml" xy="720,218" size="106,24" group="n42_qbyp"/>
-    <component id="n44_a6t0" name="text_empty_tip" src="iwlbkvq9" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="385,321" size="253,190" group="n42_qbyp">
-      <Label title="暂无摊位"/>
-    </component>
+    <component id="n41_qbyp" name="btn_filter_collect" src="qbypkvpi" fileName="Components/btn_filter_multi.xml" xy="651,264" group="n42_qbyp"/>
     <group id="n42_qbyp" name="n42" xy="174,168" size="676,432" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

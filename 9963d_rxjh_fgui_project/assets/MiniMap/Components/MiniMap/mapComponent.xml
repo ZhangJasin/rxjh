@@ -3,20 +3,20 @@
   <displayList>
     <loader id="n18_gxj9" name="map_loader" xy="0,0" size="555,529" url="ui://6p8aggdde3sx17" fill="scaleFree" clearOnPublish="true"/>
     <component id="n25_av1i" name="graph_line" src="av1i2h" fileName="Components/MiniMap/line_component.xml" xy="0,0" size="555,529">
-      <relation target="n18_gxj9" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="width-width%,height-height%,center-center%,middle-middle%"/>
     </component>
     <component id="n19_gxj9" name="node_point" src="b3bq1c" fileName="Components/MiniMap/map_point_node.xml" xy="0,0" size="555,529">
-      <relation target="n18_gxj9" sidePair="width-width,height-height"/>
+      <relation target="n18_gxj9" sidePair="width-width%,height-height%,center-center%,middle-middle%"/>
     </component>
     <component id="n20_gxj9" name="node_info" src="b3bq1c" fileName="Components/MiniMap/map_point_node.xml" xy="0,0" size="555,529">
-      <relation target="n18_gxj9" sidePair="width-width,height-height"/>
+      <relation target="n18_gxj9" sidePair="width-width%,height-height%,center-center%,middle-middle%"/>
     </component>
     <component id="n24_o15x" name="targetPoint" src="o15x2a" fileName="Components/MiniMap/targetPoint.xml" xy="81,30"/>
     <component id="n22_gxj9" name="node_player" src="b3bq1c" fileName="Components/MiniMap/map_point_node.xml" xy="0,0" size="555,529">
-      <relation target="n18_gxj9" sidePair="width-width,height-height"/>
+      <relation target="n18_gxj9" sidePair="width-width%,height-height%,center-center%,middle-middle%"/>
     </component>
     <component id="n27_pzjg" name="node_tracePoint" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="555,529" touchable="false">
-      <relation target="n18_gxj9" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="width-width,height-height"/>
     </component>
   </displayList>
 </component>

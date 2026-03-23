@@ -3,21 +3,15 @@
   <controller name="curSelectedTitleState" pages="0,未激活,1,未使用,2,使用中" selected="0"/>
   <controller name="isHaveSelected" pages="0,有,1,无" selected="0"/>
   <controller name="isTimer" pages="0,开启,1,关闭" selected="0"/>
-  <controller name="isHaveTitle" pages="0,没有称号,1,有称号" selected="0"/>
   <displayList>
     <image id="n0_oxr7" name="img_list_bg" src="sna94t" fileName="Images/heiDI.png" xy="5,115" size="324,301">
-      <relation target="n1_oxr7" sidePair="center-center,middle-middle"/>
+      <relation target="n1_oxr7" sidePair="width-width,height-height,center-center,middle-middle"/>
     </image>
-    <image id="n2_oxr7" name="img_Node_bg" src="sna94t" fileName="Images/heiDI.png" xy="5,15" size="324,66">
-      <relation target="n3_oxr7" sidePair="center-center,middle-middle"/>
+    <image id="n2_oxr7" name="img_Node_bg" src="sna94t" fileName="Images/heiDI.png" xy="7,15" size="324,66">
+      <relation target="n3_oxr7" sidePair="width-width,height-height,center-center,middle-middle"/>
     </image>
     <component id="n3_oxr7" name="cell_Node" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="5,15" size="324,66">
       <relation target="" sidePair="center-center,middle-middle"/>
-    </component>
-    <component id="n24_iwlb" name="n24" src="iwlbkvq9" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="40,173">
-      <gearDisplay controller="isHaveTitle" pages="0"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Label title="暂无称号"/>
     </component>
     <list id="n1_oxr7" name="title_list" xy="5,115" size="324,301" overflow="scroll" defaultItem="ui://brz7yunlqmm24z">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -36,9 +30,9 @@
       <Button title="使 用" titleColor="#fced00" titleFontSize="12" icon="ui://qa9a7ritemvc3f"/>
     </component>
     <image id="n6_qmm2" name="icon_left" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="87,92" group="n9_qmm2"/>
-    <text id="n8_qmm2" name="label_ch" xy="133,88" size="68,24" group="n9_qmm2" fontSize="16" color="#ffff00" strokeColor="#000000" singleLine="true" text="称号名称"/>
+    <text id="n8_qmm2" name="label_ch" xy="133,90" size="68,24" group="n9_qmm2" fontSize="16" color="#ffff00" singleLine="true" text="称号名称"/>
     <image id="n7_qmm2" name="icon_right" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="223,92" group="n9_qmm2" flip="hz"/>
-    <group id="n9_qmm2" name="label" xy="87,88" size="160,24" advanced="true" layout="hz" colGap="22" excludeInvisibles="true">
+    <group id="n9_qmm2" name="label" xy="87,90" size="160,24" advanced="true" layout="hz" colGap="22" excludeInvisibles="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <image id="n22_la9j" name="icon_di" src="emvc3r" fileName="image/icon_item1.png" pkg="qa9a7rit" xy="16,19" size="58,58" group="n23_la9j" aspect="true">

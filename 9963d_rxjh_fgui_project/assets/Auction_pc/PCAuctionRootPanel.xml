@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1024,768" opaque="false" designImage="ui://1e928y1xoxr71p" designImageOffsetX="15" designImageOffsetY="-9" designImageAlpha="0" remark="所有阵营&#xA;">
   <displayList>
-    <component id="n73_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="174,168" size="676,432">
+    <component id="n73_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="173,168" size="676,432">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n2_nojs" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">

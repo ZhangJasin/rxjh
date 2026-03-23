@@ -191,5 +191,5 @@
     <image id="gxww64" name="pet_006.png" path="/Images/touxiang/" exported="true"/>
     <image id="gxww65" name="pet_007.png" path="/Images/touxiang/" exported="true"/>
   </resources>
-  <publish name=""/>
+  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\BPetSystem" packageCount="2"/>
 </packageDescription>

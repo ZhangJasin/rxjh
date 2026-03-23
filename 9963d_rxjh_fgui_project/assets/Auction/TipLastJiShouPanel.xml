@@ -10,7 +10,7 @@
     <text id="n1_usy1" name="title" xy="641,186" size="52,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="提示">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <image id="n9_usy1" name="bg_di" src="7c351n" fileName="Images/img_dlg_di.png" xy="432,239" size="469,246">
+    <image id="n9_usy1" name="bg_di" src="7c351n" fileName="Images/img_dlg_di.png" xy="451,233" size="432,252">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <text id="n2_usy1" name="text_content" xy="500,280" size="334,32" fontSize="22" color="#f1ffeb" align="center" ubb="true" singleLine="true" autoClearText="true" text="是否填入[color=#FFFF00]【枪碎片】[/color]的上次出价？">
@@ -28,22 +28,32 @@
     <group id="n16_owd7" name="n16" xy="516,501" size="302,43" advanced="true" layout="hz" colGap="30" excludeInvisibles="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <text id="n6_usy1" name="label_jiShouCount" xy="527,331" size="121,29" group="n17_yp8h" fontSize="20" color="#33cc00" autoSize="none" singleLine="true" text="寄售数量："/>
-    <text id="n7_usy1" name="label_jiShouDiJia" xy="528,370" size="120,29" group="n17_yp8h" fontSize="20" color="#33cc00" autoSize="none" singleLine="true" text="寄售底价："/>
-    <text id="n8_usy1" name="label_once_price" xy="526,409" size="124,29" group="n17_yp8h" fontSize="20" color="#33cc00" align="center" letterSpacing="8" autoSize="none" singleLine="true" text="一口价：&#xA;"/>
-    <text id="n3_usy1" name="text_jishou_count" xy="693,331" size="106,29" group="n17_yp8h" fontSize="20" color="#ffffff" autoSize="none" singleLine="true" text="111"/>
-    <component id="n13_usy1" name="icon_money_1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="682,369" size="32,32" group="n18_yp8h"/>
-    <component id="n4_usy1" name="text_jiShoudiJia" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="714,370" size="90,29" group="n18_yp8h">
-      <Label titleColor="#ffffff" titleFontSize="20"/>
-    </component>
-    <group id="n18_yp8h" name="n18" xy="682,369" size="122,32" group="n17_yp8h" advanced="true" layout="hz" excludeInvisibles="true"/>
-    <component id="n14_usy1" name="icon_money_2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="682,408" size="32,32" group="n19_yp8h"/>
-    <component id="n5_usy1" name="text_price_once" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="714,409" size="93,29" group="n19_yp8h">
-      <Label titleColor="#ffffff" titleFontSize="20"/>
-    </component>
-    <group id="n19_yp8h" name="n19" xy="682,408" size="125,32" group="n17_yp8h" advanced="true" layout="hz" excludeInvisibles="true"/>
-    <group id="n17_yp8h" name="n17" xy="526,331" size="281,109" advanced="true">
+    <text id="n6_usy1" name="label_jiShouCount" xy="577,331" size="104,29" group="n17_yp8h" fontSize="20" color="#ffffff" singleLine="true" text="寄售数量：">
       <relation target="" sidePair="center-center,middle-middle"/>
-    </group>
+    </text>
+    <text id="n7_usy1" name="label_jiShouDiJia" xy="577,370" size="104,29" group="n17_yp8h" fontSize="20" color="#ffffff" singleLine="true" text="寄售底价：">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n8_usy1" name="label_once_price" xy="575,409" size="108,29" group="n17_yp8h" fontSize="20" color="#ffffff" align="center" letterSpacing="8" singleLine="true" text="一口价：&#xA;">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n3_usy1" name="text_jishou_count" xy="725,331" size="37,29" group="n17_yp8h" fontSize="20" color="#ffffff" singleLine="true" text="111">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n13_usy1" name="icon_money_1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="714,369" size="32,32" group="n18_yp8h">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n4_usy1" name="text_jiShoudiJia" xy="746,370" size="26,29" group="n18_yp8h" fontSize="20" color="#ffffff" singleLine="true" text="11">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n18_yp8h" name="n18" xy="714,369" size="58,32" group="n17_yp8h" advanced="true" layout="hz" excludeInvisibles="true"/>
+    <component id="n14_usy1" name="icon_money_2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="714,408" size="32,32" group="n19_yp8h">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <text id="n5_usy1" name="text_price_once" xy="746,409" size="26,29" group="n19_yp8h" fontSize="20" color="#ffffff" singleLine="true" text="11">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n19_yp8h" name="n19" xy="714,408" size="58,32" group="n17_yp8h" advanced="true" layout="hz" excludeInvisibles="true"/>
+    <group id="n17_yp8h" name="n17" xy="575,331" size="197,109" advanced="true"/>
   </displayList>
 </component>

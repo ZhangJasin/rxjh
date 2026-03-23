@@ -2,7 +2,7 @@
 <component size="100,50" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <loader id="n4_r0s1" name="n0" xy="0,0" size="100,50" fill="scaleFree">
+    <loader id="n4_r0s1" name="n0" xy="0,0" size="100,50" autoSize="true">
       <gearDisplay controller="button" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>

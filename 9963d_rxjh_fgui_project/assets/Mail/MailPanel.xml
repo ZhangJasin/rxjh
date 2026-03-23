@@ -89,11 +89,6 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <group id="n34_mw6c" name="panel_items" xy="600,550" size="545,64" advanced="true"/>
-    <image id="n54_i00u" name="img_nothing" src="iwlbkvpz" fileName="image/img.png" pkg="st7dgeqq" xy="199,215" group="n56_i00u"/>
-    <text id="n55_i00u" name="text_nothing" xy="384,472" pivot="0.5,0.5" anchor="true" size="200,34" group="n56_i00u" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="暂无邮件"/>
-    <group id="n56_i00u" name="panel_nothing" xy="199,215" size="371,280" visible="false" advanced="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </group>
     <component id="n35_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="172,698" size="0,0">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>

@@ -30,8 +30,8 @@
     <image id="10e45vor" name="icon_class4.png" path="/Images/" exported="true"/>
     <image id="10e45vos" name="icon_class5.png" path="/Images/" exported="true"/>
     <image id="10e45vot" name="icon_class6.png" path="/Images/" exported="true"/>
-    <component id="10e45vou" name="titleAttributeCell.xml" path="/Components/"/>
-    <component id="10e45vov" name="componentTitleTip.xml" path="/Components/"/>
+    <component id="10e45vou" name="titleAttributeCell.xml" path="/Components/" exported="true"/>
+    <component id="10e45vov" name="componentTitleTip.xml" path="/Components/" exported="true"/>
     <image id="yp8h5vow" name="02.png" path="/Images/"/>
     <image id="yp8h5vox" name="bg_title.png" path="/Images/" scale="9grid" scale9grid="3,3,2,23"/>
     <image id="kcff5voy" name="bg_grade_0.png" path="/Images/" exported="true" scale="9grid" scale9grid="83,24,163,43"/>
@@ -44,15 +44,15 @@
     <image id="kcff5vp5" name="title_left.png" path="/Images/" exported="true"/>
     <image id="kcff5vp6" name="title_right.png" path="/Images/" exported="true"/>
     <component id="kcff5vp7" name="TipTopListLabel.xml" path="/"/>
-    <component id="kcff5vp9" name="TipImgTitleLabel.xml" path="/Components/"/>
-    <component id="ttxf5vpa" name="TipPreviewModel.xml" path="/Components/"/>
+    <component id="kcff5vp9" name="TipImgTitleLabel.xml" path="/Components/" exported="true"/>
+    <component id="ttxf5vpa" name="TipPreviewModel.xml" path="/Components/" exported="true"/>
     <image id="ttxf5vpb" name="bg01.png" path="/Images/" exported="true"/>
-    <component id="qtq95vpc" name="TipItemPurchasePop.xml" path="/Components/"/>
+    <component id="qtq95vpc" name="TipItemPurchasePop.xml" path="/Components/" exported="true"/>
     <component id="qtq95vpd" name="commonCostCell.xml" path="/Components/" exported="true"/>
-    <component id="hhwjv" name="SkillTip.xml" path="/" exported="true"/>
-    <component id="hhwjw" name="btn_skill_tip.xml" path="/Components/"/>
-    <component id="nd1wy" name="SkillTip_item_cost.xml" path="/Components/"/>
-    <component id="m16h5vpe" name="EquipComparePreviewTips.xml" path="/" exported="true"/>
+    <component id="wodv5vpe" name="obtainItem.xml" path="/" exported="true"/>
+    <component id="wodv5vpf" name="ScaleButtonText.xml" path="/Components/" exported="true"/>
+    <component id="z28d5vpg" name="suiteInfo.xml" path="/Components/" exported="true"/>
+    <component id="z28d5vph" name="ObtainList.xml" path="/Components/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

@@ -30,16 +30,13 @@
       <relation target="n14_qbyp" sidePair="left-right"/>
       <Button icon="ui://3wc7qwagqbyp17"/>
     </component>
-    <component id="n16_qbyp" name="btn_share" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="655,201" size="30,27" group="n24_qbyp">
+    <component id="n16_qbyp" name="btn_share" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="687,201" size="30,27" group="n24_qbyp">
       <Button icon="ui://3wc7qwagqbyp12"/>
     </component>
-    <component id="n17_qbyp" name="btn_edit" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="616,201" size="30,27" group="n24_qbyp">
+    <component id="n17_qbyp" name="btn_edit" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="648,201" size="30,27" group="n24_qbyp">
       <Button icon="ui://3wc7qwagqbyp13"/>
     </component>
-    <component id="n25_q030" name="btn_cart" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="694,200" size="30,27" group="n24_qbyp">
-      <Button icon="ui://3wc7qwagq030kvpw"/>
-    </component>
-    <component id="n18_qbyp" name="btn_sell_history" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="547,569" group="n24_qbyp" visible="false">
+    <component id="n18_qbyp" name="btn_sell_history" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="547,568" group="n24_qbyp" visible="false">
       <Button title="售卖记录" titleFontSize="12"/>
     </component>
     <component id="n19_qbyp" name="btn_star" src="qbypkvpg" fileName="Components/btn_star.xml" xy="660,571" group="n21_qbyp"/>
@@ -51,9 +48,8 @@
     <component id="n23_qbyp" name="btn_prev" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="260,362" size="22,36" group="n24_qbyp" scale="-1,1">
       <Button icon="ui://3wc7qwagqbypkvpj"/>
     </component>
-    <text id="n27_q030" name="text_cart_count" xy="695,191" size="33,22" group="n24_qbyp" fontSize="12" color="#ff0000" align="right" vAlign="middle" autoSize="none" text="10"/>
     <group id="n24_qbyp" name="Root" xy="260,153" size="503,461" advanced="true">
-      <relation target="" sidePair="middle-middle,left-left"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
   <transition name="left">

@@ -30,6 +30,9 @@
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
     </list>
+    <text id="n20_leye" name="text_nothing" xy="572,382" pivot="0.5,0.5" anchor="true" size="400,29" font="ui://st7dgeqqje63v37" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
     <component id="n33_leye" name="btn_refresh" src="f0so1n" fileName="Components/btn_refresh.xml" xy="765,575" pivot="0.5,0.5" anchor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
@@ -45,10 +48,5 @@
     <component id="n41_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <image id="n56_i00u" name="img_nothing" src="iwlbkvq8" fileName="image/img.png" pkg="qa9a7rit" xy="446,287" group="n58_i00u"/>
-    <text id="n57_i00u" name="text_nothing" xy="572,461" pivot="0.5,0.5" anchor="true" size="200,26" group="n58_i00u" font="ui://qa9a7ritrqwtkvph" fontSize="18" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="暂无队伍"/>
-    <group id="n58_i00u" name="panel_nothing" xy="446,287" size="253,190" visible="false" advanced="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </group>
   </displayList>
 </component>

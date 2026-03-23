@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="662,250" opaque="false">
+<component size="662,250">
   <controller name="grade" pages="0,白,1,绿,2,蓝,3,紫,4,橙,5,红" selected="0"/>
   <displayList>
-    <component id="n33_ttxf" name="PreviewModel" src="ttxf5vpa" fileName="Components/TipPreviewModel.xml" xy="0,2" group="n34_ttxf" touchable="false"/>
-    <image id="n32_kcff" name="bg" src="kcff5vp4" fileName="Images/tips_bg.png" xy="324,0" size="338,250" group="n11_l6xy">
+    <component id="n33_ttxf" name="PreviewModel" src="ttxf5vpa" fileName="Components/TipPreviewModel.xml" xy="-7,2" group="n34_ttxf" touchable="false"/>
+    <image id="n32_kcff" name="bg" src="kcff5vp4" fileName="Images/tips_bg.png" xy="317,0" size="338,250" group="n11_l6xy">
       <relation target="n27_xm9x" sidePair="width-width,height-height"/>
     </image>
-    <loader id="n28_kcff" name="TopBg" xy="327,6" size="334,98" group="n11_l6xy" touchable="false" url="ui://zu7kdgtskcff5voy" fill="scaleFree">
+    <loader id="n28_kcff" name="TopBg" xy="320,6" size="334,98" group="n11_l6xy" touchable="false" url="ui://zu7kdgtskcff5voy" fill="scaleFree">
       <gearDisplay controller="grade" pages="0,1,2,3,4,5"/>
       <gearIcon controller="grade" pages="1,2,3,4,5" values="ui://zu7kdgtskcff5voz|ui://zu7kdgtskcff5vp0|ui://zu7kdgtskcff5vp1|ui://zu7kdgtskcff5vp2|ui://zu7kdgtskcff5vp3" default="ui://zu7kdgtskcff5voy"/>
       <relation target="n27_xm9x" sidePair="width-width"/>
     </loader>
-    <component id="n30_kcff" name="CommonEquip" src="u13q1" fileName="Icons/CommonEquip.xml" pkg="st7dgeqq" xy="345,20" size="64,64" group="n11_l6xy" touchable="false">
+    <component id="n30_kcff" name="CommonEquip" src="u13q1" fileName="Icons/CommonEquip.xml" pkg="st7dgeqq" xy="338,20" size="64,64" group="n11_l6xy" touchable="false">
       <relation target="n28_kcff" sidePair="middle-middle,left-left"/>
     </component>
-    <text id="n5_l6xy" name="Name" xy="655,20" pivot="1,0" anchor="true" size="236,29" group="n11_l6xy" fontSize="20" color="#f2fbff" vAlign="middle" autoSize="none" strokeColor="#000000" autoClearText="true" text=""/>
-    <list id="n31_kcff" name="TopContent" xy="419,45" size="236,47" group="n11_l6xy" touchable="false" layout="flow_vt" overflow="hidden" colGap="4" lineItemCount="2" scrollItemToViewOnClick="false" foldInvisibleItems="true">
+    <text id="n5_l6xy" name="Name" xy="648,20" pivot="1,0" anchor="true" size="236,29" group="n11_l6xy" fontSize="20" color="#f2fbff" vAlign="middle" autoSize="none" strokeColor="#000000" autoClearText="true" text=""/>
+    <list id="n31_kcff" name="TopContent" xy="412,45" size="236,47" group="n11_l6xy" touchable="false" layout="flow_vt" overflow="hidden" colGap="4" lineItemCount="2" scrollItemToViewOnClick="false" foldInvisibleItems="true">
       <relation target="n28_kcff" sidePair="rightext-right"/>
       <item url="ui://zu7kdgtskcff5vp7" name="Level"/>
       <item url="ui://zu7kdgtskcff5vp7" name="Zy"/>
@@ -24,7 +24,7 @@
       <item url="ui://zu7kdgtskcff5vp7" name="Sex"/>
       <item url="ui://zu7kdgtskcff5vp7" name="EquipType"/>
     </list>
-    <list id="n27_xm9x" name="Content" xy="332,102" size="324,140" group="n11_l6xy" selectionMode="none" overflow="scroll" scrollBarFlags="32" margin="3,0,0,0" lineGap="2" align="center" scrollItemToViewOnClick="false" foldInvisibleItems="true">
+    <list id="n27_xm9x" name="Content" xy="325,102" size="324,140" group="n11_l6xy" selectionMode="none" overflow="scroll" scrollBarFlags="32" margin="3,0,0,0" lineGap="2" align="center" scrollItemToViewOnClick="false" foldInvisibleItems="true">
       <item url="ui://zu7kdgtsxm9xv63" name="Quality"/>
       <item url="ui://zu7kdgtsxm9xv63" name="QigongLv"/>
       <item url="ui://zu7kdgtsxm9xv63" name="Condition"/>
@@ -37,22 +37,24 @@
       <item url="ui://zu7kdgtsxm9xv63" name="Suitex"/>
       <item url="ui://zu7kdgtskcff5vp9" name="CustomAttrTitle"/>
       <item url="ui://zu7kdgtsxm9xv63" name="CustomAttr"/>
-      <item url="ui://zu7kdgtsxm9xv63" name="CurNum"/>
-      <item url="ui://zu7kdgtsxm9xv63" name="LimitTime"/>
+      <item url="ui://zu7kdgtsxm9xv63" name="Obtain"/>
     </list>
-    <image id="n23_fl5s" name="TextEquip" src="kr0wvom" fileName="Images/text_equip_big.png" xy="321,83" group="n11_l6xy" visible="false">
+    <image id="n23_fl5s" name="TextEquip" src="kr0wvom" fileName="Images/text_equip_big.png" xy="314,83" group="n11_l6xy" visible="false">
       <relation target="n32_kcff" sidePair="left-left,top-top"/>
     </image>
-    <component id="n35_w2ob" name="checkBox_auto" src="yj7kvo1" fileName="common/checkbox_multi.xml" pkg="st7dgeqq" xy="327,249" group="n37_w2ob"/>
-    <text id="n36_w2ob" name="text_tip" xy="363,253" size="130,26" group="n37_w2ob" fontSize="18" color="#e3e3e3" strokeColor="#000000" text="此道具不再提示"/>
-    <group id="n37_w2ob" name="panel_auto_switch" xy="327,249" size="166,32" group="n11_l6xy" advanced="true">
+    <component id="n35_w2ob" name="checkBox_auto" src="yj7kvo1" fileName="common/checkbox_multi.xml" pkg="st7dgeqq" xy="320,249" group="n37_w2ob"/>
+    <text id="n36_w2ob" name="text_tip" xy="356,253" size="130,26" group="n37_w2ob" fontSize="18" color="#e3e3e3" strokeColor="#000000" text="此道具不再提示"/>
+    <group id="n37_w2ob" name="panel_auto_switch" xy="320,249" size="166,32" group="n11_l6xy" advanced="true">
       <relation target="n32_kcff" sidePair="left-left,bottom-bottom"/>
     </group>
-    <group id="n11_l6xy" name="Pop" xy="321,0" size="341,281" group="n34_ttxf" advanced="true"/>
-    <component id="n38_qtq9" name="panel_purchase" src="qtq95vpc" fileName="Components/TipItemPurchasePop.xml" xy="657,60" group="n34_ttxf" visible="false">
+    <group id="n11_l6xy" name="Pop" xy="314,0" size="341,281" group="n34_ttxf" advanced="true"/>
+    <component id="n38_qtq9" name="panel_purchase" src="qtq95vpc" fileName="Components/TipItemPurchasePop.xml" xy="650,60" group="n34_ttxf" visible="false">
       <relation target="n32_kcff" sidePair="left-right,bottom-bottom"/>
     </component>
-    <group id="n34_ttxf" name="PopE" xy="0,0" size="662,426" advanced="true" layout="hz" colGap="-5" excludeInvisibles="true"/>
+    <component id="n49_z28d" name="ObtainList" src="z28d5vph" fileName="Components/ObtainList.xml" xy="651,0" size="220,250" group="n34_ttxf" visible="false">
+      <relation target="n32_kcff" sidePair="height-height,left-right,bottom-bottom"/>
+    </component>
+    <group id="n34_ttxf" name="PopE" xy="-7,0" size="662,426" advanced="true" layout="hz" colGap="-5" excludeInvisibles="true"/>
   </displayList>
   <relation target="n34_ttxf" sidePair="width-width"/>
   <relation target="n32_kcff" sidePair="height-height"/>

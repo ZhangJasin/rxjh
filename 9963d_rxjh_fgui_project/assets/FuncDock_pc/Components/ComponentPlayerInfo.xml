@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="255,241" opaque="false" designImage="ui://q0jqxcw9se4svl1" designImageOffsetY="-329">
+<component size="255,241" designImage="ui://q0jqxcw9se4svl1" designImageOffsetY="-329">
   <controller name="typeDialog" pages="0,选中玩家,1," selected="0"/>
   <displayList>
+    <image id="n28_wi45" name="di_role_info" src="emvc55" fileName="image/di.png" pkg="qa9a7rit" xy="0,0" size="255,241">
+      <relation target="n26_w092" sidePair="center-center,bottomext-bottom"/>
+    </image>
     <component id="n12_w092" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="234,-3" pivot="0.5,0.5">
       <relation target="" sidePair="right-right,top-top"/>
     </component>
@@ -21,5 +24,5 @@
     <text id="n17_w092" name="text_player_sect" xy="118,71" size="88,19" group="n36_iqa5" fontSize="12" color="#14ffed" vAlign="middle" ubb="true" autoClearText="true" text="门派：落日战歌"/>
     <group id="n36_iqa5" name="n36" xy="43,25" size="163,67" advanced="true"/>
   </displayList>
-  <relation target="n26_w092" sidePair="bottomext-bottom"/>
+  <relation target="n28_wi45" sidePair="height-height"/>
 </component>

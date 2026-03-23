@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750">
-  <controller name="dialogType" pages="0,单按钮,1,双按钮" selected="1"/>
+  <controller name="dialogType" pages="0,单按钮,1,双按钮" selected="0"/>
   <displayList>
     <graph id="n0_bf0g" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
@@ -11,11 +11,11 @@
     <component id="n2_bf0g" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="895,202">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n4_bf0g" name="btn_first" src="bf0gv5t" fileName="Components/btn_CancelOrUse.xml" xy="565,526" pivot="0.5,0.5" anchor="true" controller="btnKind,1">
+    <component id="n4_bf0g" name="btn_first" src="bf0gv5t" fileName="Components/btn_CancelOrUse.xml" xy="565,526" pivot="0.5,0.5" anchor="true">
       <gearDisplay controller="dialogType" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n5_bf0g" name="btn_second" src="bf0gv5t" fileName="Components/btn_CancelOrUse.xml" xy="778,526" pivot="0.5,0.5" anchor="true">
+    <component id="n5_bf0g" name="btn_second" src="bf0gv5t" fileName="Components/btn_CancelOrUse.xml" xy="778,525" pivot="0.5,0.5" anchor="true">
       <gearDisplay controller="dialogType" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>

@@ -9,7 +9,7 @@
       <gearDisplay controller="button" pages="1"/>
     </image>
     <loader id="n1_r075" name="Loader_icon" xy="72,30" pivot="0.5,0.5" anchor="true" size="42,20" url="ui://zj419n3dgcudfvck" autoSize="true" clearOnPublish="true"/>
-    <text id="n2_r075" name="Text_desc" xy="142,30" pivot="0,0.5" anchor="true" size="299,29" fontSize="20" color="#ffffff" autoSize="height" autoClearText="true" text="模式描述">
+    <text id="n2_r075" name="Text_desc" xy="142,30" pivot="0,0.5" anchor="true" size="299,29" fontSize="20" color="#ffffff" autoSize="none" text="模式描述">
       <relation target="" sidePair="middle-middle"/>
     </text>
   </displayList>

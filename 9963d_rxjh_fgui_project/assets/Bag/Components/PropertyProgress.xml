@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="352,33">
-  <controller name="propertyProgress" exported="true" pages="0,生命值,1,经验值,2,内力值,3,怒气值" selected="0"/>
+  <controller name="propertyProgress" exported="true" pages="0,生命值,1,经验值,2,内力值,3,怒气值" selected="1"/>
   <controller name="isHideBg" exported="true" pages="0,是,1,否" selected="0"/>
   <displayList>
     <image id="n0_g4sv" name="bg_progrss" src="qjli13" fileName="Images/img_text_di.png" xy="0,0" size="355,33" aspect="true">
@@ -23,7 +23,8 @@
       <gearDisplay controller="propertyProgress" pages="3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n2_g4sv" name="text_progress" xy="176,17" pivot="0.5,0.5" anchor="true" size="10,26" fontSize="18" color="#ffffff" align="center" vAlign="middle" strokeColor="#000000" singleLine="true" autoClearText="true" text="">
+    <text id="n2_g4sv" name="text_progress" xy="176,17" pivot="0.5,0.5" anchor="true" size="76,29" fontSize="20" color="#ffffff" align="center" vAlign="middle" text="100/100">
+      <relation target="" sidePair="center-center,middle-middle"/>
       <relation target="n0_g4sv" sidePair="center-center,middle-middle"/>
     </text>
   </displayList>

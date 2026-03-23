@@ -15,7 +15,7 @@
     <image id="nojse" name="ditu2.png" path="/Images/" scale="9grid" scale9grid="4,4,1,1" duplicatePadding="true"/>
     <component id="nojsf" name="item_paiMai.xml" path="/Components/Buy/"/>
     <component id="nojsg" name="Item_paiMai_Item_root.xml" path="/Components/Buy/"/>
-    <component id="mqpjh" name="item_listleft_child.xml" path="/Components/Buy/" exported="true"/>
+    <component id="mqpjh" name="Item_listlift_child.xml" path="/Components/Buy/" exported="true"/>
     <component id="mqpji" name="AuctionBuyPanel.xml" path="/" exported="true"/>
     <component id="rxpmj" name="item_listleft_parent.xml" path="/Components/Buy/" exported="true"/>
     <component id="q8irn" name="item_list_consignment.xml" path="/Components/Consignment/"/>
@@ -57,7 +57,7 @@
     <image id="owd71w" name="di_3.png" path="/Images/" scale="9grid" scale9grid="4,4,8,8"/>
     <image id="owd722" name="bg.png" path="/Images/"/>
     <image id="owd723" name="kuang.png" path="/Images/"/>
-    <image id="owd724" name="itemSelect.png" path="/Images/" scale="9grid" scale9grid="9,11,11,7"/>
+    <image id="owd724" name="itemSelect.png" path="/Images/" scale="9grid" scale9grid="8,8,16,16"/>
     <image id="iqqn25" name="img_loading.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>

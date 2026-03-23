@@ -6,17 +6,15 @@
     </graph>
     <component id="n58_kpju" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="437,173" size="462,404"/>
     <component id="n59_kpju" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="874,201"/>
-    <text id="n60_kpju" name="n60" xy="667,200" pivot="0.5,0.5" anchor="true" size="152,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="出售记录"/>
+    <text id="n60_kpju" name="n60" xy="667,200" pivot="0.5,0.5" anchor="true" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" autoSize="none" text="出售记录"/>
     <image id="n61_kpju" name="n61" src="qzpnvny" fileName="Images/bg_black.png" xy="451,235" size="431,328"/>
-    <list id="n62_kpju" name="list_history" xy="457,243" size="429,317" overflow="scroll" lineGap="12" defaultItem="ui://aakcgg80kpjuvod" autoClearItems="true">
+    <list id="n62_kpju" name="list_history" xy="457,243" size="429,326" overflow="scroll" lineGap="12" defaultItem="ui://aakcgg80kpjuvod" autoClearItems="true">
       <item/>
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <component id="n63_gfpl" name="text_empty" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="481,258" size="371,280">
-      <Label title="暂无出售记录"/>
-    </component>
+    <text id="n63_gfpl" name="text_empty" xy="512,333" size="310,105" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="暂无出售记录"/>
   </displayList>
 </component>

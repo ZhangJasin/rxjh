@@ -24,11 +24,12 @@
     </component>
     <text id="n19_mxa7" name="Text_hp" xy="83,44" size="313,27" fontSize="18" color="#ffffff" align="center" autoSize="none" strokeColor="#681616" autoClearText="true" text="0/0"/>
     <text id="n52_ne4j" name="Text_level" xy="83,18" size="58,26" fontSize="18" color="#ffffff" text="Lv.999"/>
-    <text id="n74_and1" name="Text_name" xy="141,18" size="126,26" customData="2#2#1#1" fontSize="18" color="#ffffff" autoSize="none" singleLine="true" autoClearText="true" text="名字名字名字名字名字">
+    <text id="n71_r075" name="Text_belong" xy="268,18" size="131,26" fontSize="18" color="#ffffff" align="right" leading="0" autoSize="shrink" autoClearText="true" text="名字一共几个字"/>
+    <component id="n73_qer2" name="Label_name" src="ftt5vo7" fileName="ScrollRText.xml" pkg="o8ixb2zy" xy="141,18" size="126,26" touchable="false">
+      <gearSize controller="type" pages="0" values="126,26,1,1" default="257,26,1,1"/>
       <relation target="n52_ne4j" sidePair="leftext-right"/>
-      <relation target="n71_r075" sidePair="rightext-left"/>
-    </text>
-    <text id="n71_r075" name="Text_belong" xy="268,18" pivot="1,0" size="130,26" restrictSize="0,130,0,0" customData="2#2#1#1" fontSize="18" color="#ffffff" align="right" leading="0" singleLine="true" autoClearText="true" text="名字一共几个字"/>
+      <Label title="名字名字名字名字名字" titleColor="#ffffff" titleFontSize="18"/>
+    </component>
     <component id="n45_yd58" name="Button_close" src="rrqifvds" fileName="Components/Target/TargetClose.xml" xy="380,-3"/>
   </displayList>
 </component>

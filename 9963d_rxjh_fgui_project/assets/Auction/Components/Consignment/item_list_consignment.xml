@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="966,100">
+<component size="966,62">
   <displayList>
-    <image id="n68_tmr6" name="img_bg" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,0" size="966,100">
-      <relation target="" sidePair="width-width,height-height"/>
+    <image id="n68_tmr6" name="img_bg" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,0" size="966,62">
+      <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <text id="n59_q8ir" name="text_item_name" xy="83,34" size="158,32" fontSize="22" color="#f1ffeb" singleLine="true" text="卓越的帕西的黑"/>
-    <component id="n67_q8ir" name="btn_down" src="r8pb1q" fileName="Components/btn_JingJia.xml" xy="799,30" size="130,40">
+    <text id="n59_q8ir" name="text_item_name" xy="83,16" size="158,32" fontSize="22" color="#f1ffeb" singleLine="true" text="卓越的帕西的黑"/>
+    <text id="n63_q8ir" name="text_price_jp" xy="355,16" size="52,32" fontSize="22" color="#f1ffeb" singleLine="true" text="9999"/>
+    <text id="n64_q8ir" name="text_price_once" xy="519,16" size="52,32" fontSize="22" color="#f1ffeb" singleLine="true" text="9999"/>
+    <text id="n65_q8ir" name="status_jp" xy="651,0" size="92,32" fontSize="18" color="#979797" align="center" vAlign="middle" autoSize="none" singleLine="true" text="无人竞拍">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n66_q8ir" name="text_time" xy="653,29" size="88,32" fontSize="22" color="#ffff00" align="center" singleLine="true" autoClearText="true" text="23:26:52">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n67_q8ir" name="btn_down" src="r8pb1q" fileName="Components/btn_JingJia.xml" xy="805,11" size="130,40">
       <relation target="" sidePair="center-center,middle-middle"/>
       <Button title="下 架" titleColor="#fced00" titleFontSize="22"/>
     </component>
-    <component id="n72_usy1" name="item_node" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="21,22" size="55,55">
+    <component id="n69_usy1" name="item_money1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="326,15" size="34,34">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <text id="n65_q8ir" name="status_jp" xy="651,19" size="92,32" group="n73_hyt2" fontSize="18" color="#979797" align="center" vAlign="middle" autoSize="none" singleLine="true" text="无人竞拍">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <text id="n66_q8ir" name="text_time" xy="653,48" size="88,32" group="n73_hyt2" fontSize="22" color="#ffff00" align="center" singleLine="true" autoClearText="true" text="23:26:52">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <group id="n73_hyt2" name="n73" xy="651,19" size="92,61"/>
-    <text id="n63_q8ir" name="text_price_jp" xy="400,17" size="207,32" group="n76_hyt2" fontSize="18" color="#f1ffeb" autoSize="none" singleLine="true" autoClearText="true" text="9999"/>
-    <text id="n64_q8ir" name="text_price_once" xy="399,51" size="206,32" group="n76_hyt2" fontSize="18" color="#f1ffeb" autoSize="none" singleLine="true" text="9999111111111111111111111111111111111111111111"/>
-    <component id="n69_usy1" name="item_money1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="366,16" size="34,34" group="n76_hyt2">
+    <component id="n70_usy1" name="item_money2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="491,15" size="34,34">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n70_usy1" name="item_money2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="366,50" size="34,34" group="n76_hyt2">
+    <component id="n72_usy1" name="item_node" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="21,2" size="55,55">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <text id="n74_hyt2" name="n74" xy="276,20" size="81,26" group="n76_hyt2" fontSize="18" color="#00ff00" singleLine="true" text="竞拍价格:"/>
-    <text id="n75_hyt2" name="n75" xy="294,54" size="63,26" group="n76_hyt2" fontSize="18" color="#ffff00" singleLine="true" text="一口价:"/>
-    <group id="n76_hyt2" name="n76" xy="276,16" size="331,68"/>
   </displayList>
 </component>

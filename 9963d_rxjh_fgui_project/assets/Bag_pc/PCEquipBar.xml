@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="349,516" pivot="0.5,0.5" anchor="true" opaque="false" designImage="ui://brz7yunlxisl4p" designImageOffsetX="-343" designImageOffsetY="-132" designImageAlpha="0">
+<component size="349,516" opaque="false" designImage="ui://brz7yunlxisl4p" designImageOffsetX="-343" designImageOffsetY="-132" designImageAlpha="0">
   <displayList>
     <component id="n0_xisl" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="0,0" size="349,516" group="n33_7hol"/>
     <image id="n4_xisl" name="n4" src="emvcp" fileName="Images/PCEquipBar/img_logo.png" xy="7,37" group="n33_7hol"/>
     <image id="n3_xisl" name="n3" src="emvcq" fileName="Images/PCEquipBar/img_di.png" xy="90,51" group="n33_7hol"/>
     <text id="n1_xisl" name="text_title" xy="148,8" size="52,24" group="n33_7hol" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" autoSize="none" singleLine="true" text="装备"/>
     <component id="n2_xisl" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="332,19" group="n33_7hol"/>
-    <component id="n34_xwe2" name="btn_storage" src="xisl4r" fileName="Components/btn_sort.xml" xy="166,479" group="n33_7hol">
-      <Button title="仓 库" titleColor="#fced00" titleFontSize="12"/>
-    </component>
-    <component id="n6_xisl" name="btn_sort" src="xisl4r" fileName="Components/btn_sort.xml" xy="253,479" group="n33_7hol">
+    <component id="n6_xisl" name="btn_sort" src="xisl4r" fileName="Components/btn_sort.xml" xy="254,479" group="n33_7hol">
       <Button title="整  理" titleColor="#fced00" titleFontSize="12"/>
     </component>
-    <image id="n32_d2im" name="split_line" src="d2im5y" fileName="Images/PCEquipBar/split_line.png" xy="4,248" group="n33_7hol"/>
+    <image id="n32_d2im" name="split_line" src="d2im5y" fileName="Images/PCEquipBar/split_line.png" xy="3,248" group="n33_7hol"/>
     <component id="n10_p8nb" name="btn_cloakSwitch" src="p8nb5v" fileName="Components/btnCloakSwitch.xml" xy="9,176" group="n33_7hol"/>
-    <image id="n35_cpup" name="n35" src="sna94t" fileName="Images/heiDI.png" xy="6,255" size="336,219" group="n33_7hol"/>
-    <list id="n7_xisl" name="list_bag" xy="6,260" size="336,210" group="n33_7hol" layout="flow_hz" overflow="scroll" lineItemCount="8" defaultItem="ui://brz7yunled395z" align="center" vAlign="middle">
+    <list id="n7_xisl" name="list_bag" xy="7,260" size="336,210" group="n33_7hol" layout="flow_hz" overflow="scroll" lineItemCount="8" defaultItem="ui://brz7yunled395z" align="center" vAlign="middle">
       <item/>
       <item/>
       <item/>
@@ -81,10 +77,10 @@
     <component id="n25_p8nb" name="pos5" src="emvch" fileName="common/ComponentPos.xml" pkg="qa9a7rit" xy="99,170" size="41,41" group="n33_7hol" aspect="true" controller="equipPosDI,10,diKuangKind,1"/>
     <component id="n26_p8nb" name="pos7" src="emvch" fileName="common/ComponentPos.xml" pkg="qa9a7rit" xy="154,170" size="41,41" group="n33_7hol" aspect="true" controller="equipPosDI,4,diKuangKind,1"/>
     <component id="n27_p8nb" name="pos4" src="emvch" fileName="common/ComponentPos.xml" pkg="qa9a7rit" xy="99,115" size="41,41" group="n33_7hol" aspect="true" controller="equipPosDI,2,diKuangKind,1"/>
-    <component id="n28_p8nb" name="pos14" src="emvch" fileName="common/ComponentPos.xml" pkg="qa9a7rit" xy="39,179" size="41,41" group="n33_7hol" aspect="true" controller="equipPosDI,22,diKuangKind,0"/>
-    <component id="n29_p8nb" name="pos6" src="emvch" fileName="common/ComponentPos.xml" pkg="qa9a7rit" xy="28,114" size="41,41" group="n33_7hol" aspect="true" controller="equipPosDI,20,diKuangKind,0"/>
-    <component id="n30_p8nb" name="pos12" src="emvch" fileName="common/ComponentPos.xml" pkg="qa9a7rit" xy="266,52" size="41,41" group="n33_7hol" aspect="true" controller="equipPosDI,21,diKuangKind,0"/>
-    <component id="n31_p8nb" name="pos13" src="emvch" fileName="common/ComponentPos.xml" pkg="qa9a7rit" xy="275,114" size="41,41" group="n33_7hol" aspect="true" controller="equipPosDI,19,diKuangKind,0"/>
+    <component id="n28_p8nb" name="pos14" src="emvch" fileName="common/ComponentPos.xml" pkg="qa9a7rit" xy="39,179" size="41,41" group="n33_7hol" aspect="true" controller="equipPosDI,8,diKuangKind,0"/>
+    <component id="n29_p8nb" name="pos6" src="emvch" fileName="common/ComponentPos.xml" pkg="qa9a7rit" xy="28,114" size="41,41" group="n33_7hol" aspect="true" controller="equipPosDI,8,diKuangKind,0"/>
+    <component id="n30_p8nb" name="pos12" src="emvch" fileName="common/ComponentPos.xml" pkg="qa9a7rit" xy="266,52" size="41,41" group="n33_7hol" aspect="true" controller="equipPosDI,11,diKuangKind,0"/>
+    <component id="n31_p8nb" name="pos13" src="emvch" fileName="common/ComponentPos.xml" pkg="qa9a7rit" xy="275,114" size="41,41" group="n33_7hol" aspect="true" controller="equipPosDI,8,diKuangKind,0"/>
     <group id="n33_7hol" name="n33" xy="0,0" size="349,516" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

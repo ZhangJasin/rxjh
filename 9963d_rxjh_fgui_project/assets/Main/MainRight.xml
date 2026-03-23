@@ -1,95 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" opaque="false" designImage="ui://zj419n3ddpxov3f">
   <displayList>
-    <loader id="n143_ik1c" name="Loader_nearPlayer" xy="1304,561" pivot="0.9,0.04" anchor="true" size="53,48" group="n29_wuex" url="ui://gl10xlnrik1cfvc2"/>
-    <loader id="n142_ik1c" name="Loader_nearMonster" xy="1190,687" pivot="0.1,0.95" anchor="true" size="53,48" group="n29_wuex" url="ui://gl10xlnrik1cfvc0"/>
-    <component id="n58_yd58" name="Button_skill0" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1247,624" size="106,106" group="n29_wuex" aspect="true">
+    <loader id="n143_ik1c" name="Loader_nearPlayer" xy="1304,566" pivot="0.9,0.04" anchor="true" size="53,48" group="n29_wuex" url="ui://gl10xlnrik1cfvc2"/>
+    <loader id="n142_ik1c" name="Loader_nearMonster" xy="1190,692" pivot="0.1,0.95" anchor="true" size="53,48" group="n29_wuex" url="ui://gl10xlnrik1cfvc0"/>
+    <component id="n58_yd58" name="Button_skill0" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1247,629" size="106,106" group="n29_wuex" aspect="true">
       <Button sound=""/>
     </component>
-    <component id="n48_yd58" name="Button_skillBase" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="1246,623" pivot="0.5,0.5" anchor="true" size="100,100" group="n29_wuex">
+    <component id="n48_yd58" name="Button_skillBase" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="1246,628" pivot="0.5,0.5" anchor="true" size="100,100" group="n29_wuex">
       <Button icon="ui://gl10xlnrlq547n" sound=""/>
     </component>
-    <component id="n59_yd58" name="Button_skill1" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1151,682" size="68,68" group="n29_wuex">
+    <component id="n59_yd58" name="Button_skill1" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1151,687" size="68,68" group="n29_wuex">
       <Button sound=""/>
     </component>
-    <component id="n60_yd58" name="Button_skill2" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1159,592" size="68,68" group="n29_wuex">
+    <component id="n60_yd58" name="Button_skill2" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1159,597" size="68,68" group="n29_wuex">
       <Button sound=""/>
     </component>
-    <component id="n61_yd58" name="Button_skill3" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1216,529" size="68,68" group="n29_wuex">
+    <component id="n61_yd58" name="Button_skill3" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1216,534" size="68,68" group="n29_wuex">
       <Button sound=""/>
     </component>
-    <component id="n62_yd58" name="Button_skill4" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1300,509" size="68,68" group="n29_wuex">
+    <component id="n62_yd58" name="Button_skill4" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1300,514" size="68,68" group="n29_wuex">
       <Button sound=""/>
     </component>
-    <component id="n63_yd58" name="Button_skill5" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1078,627" size="68,68" group="n29_wuex">
+    <component id="n63_yd58" name="Button_skill5" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1078,632" size="68,68" group="n29_wuex">
       <Button sound=""/>
     </component>
-    <component id="n64_yd58" name="Button_skill6" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1139,516" size="68,68" group="n29_wuex">
+    <component id="n64_yd58" name="Button_skill6" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1139,521" size="68,68" group="n29_wuex">
       <Button sound=""/>
     </component>
-    <component id="n65_yd58" name="Button_skill7" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1243,454" size="68,68" group="n29_wuex">
+    <component id="n65_yd58" name="Button_skill7" src="yd58v7c" fileName="Components/Skill/ButtonSkill.xml" xy="1243,459" size="68,68" group="n29_wuex">
       <Button sound=""/>
     </component>
-    <text id="n102_j47s" name="Skill_key0" xy="1246,649" pivot="0.5,0.5" anchor="true" size="40,29" group="n29_wuex" visible="false" fontSize="20" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
-    <text id="n103_j47s" name="Skill_key1" xy="1150,696" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
-    <text id="n104_j47s" name="Skill_key2" xy="1158,606" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
-    <text id="n105_j47s" name="Skill_key3" xy="1216,543" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
-    <text id="n106_j47s" name="Skill_key4" xy="1300,523" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
-    <text id="n107_j47s" name="Skill_key5" xy="1077,641" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
-    <text id="n108_j47s" name="Skill_key6" xy="1138,530" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
-    <text id="n109_j47s" name="Skill_key7" xy="1242,468" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
-    <component id="n8_wuex" name="Button_target" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="1046,471" size="49,49" group="n29_wuex">
+    <text id="n102_j47s" name="Skill_key0" xy="1246,654" pivot="0.5,0.5" anchor="true" size="40,29" group="n29_wuex" visible="false" fontSize="20" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
+    <text id="n103_j47s" name="Skill_key1" xy="1150,701" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
+    <text id="n104_j47s" name="Skill_key2" xy="1158,611" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
+    <text id="n105_j47s" name="Skill_key3" xy="1216,548" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
+    <text id="n106_j47s" name="Skill_key4" xy="1300,528" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
+    <text id="n107_j47s" name="Skill_key5" xy="1077,646" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
+    <text id="n108_j47s" name="Skill_key6" xy="1138,535" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
+    <text id="n109_j47s" name="Skill_key7" xy="1242,473" pivot="0.5,0.5" anchor="true" size="36,26" group="n29_wuex" visible="false" fontSize="18" color="#00ff00" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#000000" text=""/>
+    <component id="n8_wuex" name="Button_target" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="1046,476" size="49,49" group="n29_wuex">
       <Button icon="ui://zj419n3dke93v6j"/>
     </component>
-    <component id="n148_ik1c" name="TouchArea_monster" src="ik1cfvc4" fileName="Components/Skill/TouchAreaMonster.xml" xy="1188,642" group="n29_wuex"/>
-    <component id="n150_ik1c" name="TouchArea_player" src="ik1cfvc5" fileName="Components/Skill/TouchAreaPlayer.xml" xy="1255,558" group="n29_wuex"/>
-    <group id="n29_wuex" name="Group_skill" xy="1044,420" size="290,296" advanced="true">
+    <component id="n148_ik1c" name="TouchArea_monster" src="ik1cfvc4" fileName="Components/Skill/TouchAreaMonster.xml" xy="1188,647" group="n29_wuex"/>
+    <component id="n150_ik1c" name="TouchArea_player" src="ik1cfvc5" fileName="Components/Skill/TouchAreaPlayer.xml" xy="1255,563" group="n29_wuex"/>
+    <group id="n29_wuex" name="Group_skill" xy="1044,425" size="290,296" advanced="true">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
-    <component id="n154_rqm5" name="Button_FuBen" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1518,413" size="64,70" group="n32_wuex">
-      <Button icon="ui://zj419n3dwuexv6z"/>
+    <component id="n158_rqm5" name="Button_WuGong" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1685,501" size="64,70" group="n32_wuex">
+      <Button icon="ui://zj419n3dvzjdfvey"/>
     </component>
-    <component id="n155_rqm5" name="Button_HuTi" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1588,492" size="64,70" group="n32_wuex">
-      <Button icon="ui://zj419n3dwuexv71"/>
+    <component id="n159_rqm5" name="Button_WuXun" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1685,578" size="64,70" group="n32_wuex">
+      <Button icon="ui://zj419n3dvzjdfvfj"/>
     </component>
-    <component id="n157_rqm5" name="Button_QiangHua" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1588,413" size="64,70" group="n32_wuex">
-      <Button icon="ui://zj419n3dwuexv73"/>
+    <component id="n160_rqm5" name="Button_fashion" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1612,501" size="64,70" group="n32_wuex">
+      <Button icon="ui://zj419n3dvzjdfvf4"/>
     </component>
-    <component id="n158_rqm5" name="Button_WuGong" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1518,570" size="64,70" group="n32_wuex">
-      <Button icon="ui://zj419n3dwuexv74"/>
+    <component id="n162_rqm5" name="Button_guild" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1612,427" size="64,70" group="n32_wuex">
+      <Button icon="ui://zj419n3dvzjdfvgd"/>
     </component>
-    <component id="n159_rqm5" name="Button_WuXun" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1518,492" size="64,70" group="n32_wuex">
-      <Button icon="ui://zj419n3dwuexv75"/>
-    </component>
-    <component id="n160_rqm5" name="Button_fashion" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1588,570" size="64,70" group="n32_wuex">
-      <Button icon="ui://zj419n3dwuexv6y"/>
-    </component>
-    <component id="n161_rqm5" name="Button_forge" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1518,647" size="64,70" group="n32_wuex">
-      <Button icon="ui://zj419n3dkxj1v40"/>
-    </component>
-    <component id="n162_rqm5" name="Button_guild" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1447,647" size="64,70" group="n32_wuex">
-      <Button icon="ui://zj419n3dwuexv70"/>
-    </component>
-    <component id="n163_rqm5" name="Button_transfer" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1447,571" size="64,70" group="n32_wuex">
-      <Button icon="ui://zj419n3dwuexv76"/>
-    </component>
-    <component id="n165_rqm5" name="Button_role" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1447,492" size="64,70" group="n32_wuex">
+    <component id="n165_rqm5" name="Button_role" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1685,426" size="64,70" group="n32_wuex">
       <Button icon="ui://zj419n3dkxj1v3w"/>
     </component>
-    <component id="n83_w2v6" name="Button_BBG" src="wuexv78" fileName="Components/ButtonFunc.xml" xy="1443,412" size="70,80" group="n32_wuex">
-      <Button icon="ui://zj419n3dw2v6va4"/>
+    <component id="n114_p70y" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="1342,744" size="139,0" group="n32_wuex"/>
+    <component id="n167_boje" name="Button_ZuoQi" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1612,579" size="64,70" group="n32_wuex">
+      <Button icon="ui://zj419n3dvzjdfvf8"/>
     </component>
-    <component id="n111_ps8c" name="Button_test1" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="1378,564" size="64,40" group="n32_wuex">
-      <Button title="清除阵营" titleColor="#ffffff" titleFontSize="15" icon="ui://st7dgeqqm2wevky"/>
+    <component id="n170_boje" name="Button_st" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1685,655" size="64,70" group="n32_wuex">
+      <Button icon="ui://zj419n3dvzjdfvf0"/>
     </component>
-    <component id="n112_ps8c" name="Button_test2" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="1378,620" size="64,40" group="n32_wuex">
-      <Button title="转正派" titleColor="#ffffff" titleFontSize="15" icon="ui://st7dgeqqm2wevky"/>
-    </component>
-    <component id="n113_ps8c" name="Button_test3" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="1378,672" size="64,40" group="n32_wuex">
-      <Button title="转邪派" titleColor="#ffffff" titleFontSize="15" icon="ui://st7dgeqqm2wevky"/>
-    </component>
-    <component id="n114_p70y" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="1378,730" size="0,0" group="n32_wuex"/>
-    <group id="n32_wuex" name="Group_func" xy="1378,412" size="274,318" visible="false" advanced="true">
+    <group id="n32_wuex" name="Group_func" xy="1342,426" size="407,318" visible="false" advanced="true">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
     <component id="n30_wuex" name="Button_change" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="1294,295" pivot="0.5,0.5" anchor="true" size="62,62">
@@ -115,8 +94,8 @@
     <item time="0" type="Rotation" target="n30_wuex" tween="true" startValue="0" endValue="90" duration="12"/>
     <item time="0" type="Visible" target="n29_wuex" value="false"/>
     <item time="0" type="Visible" target="n32_wuex" value="true"/>
-    <item time="0" type="XY" target="n29_wuex" tween="true" startValue="1394,-" endValue="1044,-" duration="12"/>
-    <item time="0" type="XY" target="n32_wuex" tween="true" startValue="1056.999,-" endValue="1385,-" duration="12"/>
+    <item time="0" type="XY" target="n29_wuex" tween="true" startValue="1394,425.5" endValue="1044,425.5" duration="12"/>
+    <item time="0" type="XY" target="n32_wuex" tween="true" startValue="918.999,425.5" endValue="1336,425.5" duration="12"/>
     <item time="1" type="Visible" target="n29_wuex" value="true"/>
     <item time="11" type="Visible" target="n32_wuex" value="true"/>
     <item time="12" type="Visible" target="n29_wuex" value="true"/>

@@ -6,10 +6,10 @@
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <text id="n1_tgh8" name="text_name" xy="59,6" size="46,22" group="n12_ws4h" fontSize="14" color="#ffffff" vAlign="middle" singleLine="true" autoClearText="true" text="寒玉石"/>
-    <text id="n3_tgh8" name="t1" xy="191,6" size="18,22" group="n12_ws4h" fontSize="14" color="#ffffff" align="right" vAlign="middle" ubb="true" singleLine="true" text="个">
+    <text id="n3_tgh8" name="t1" xy="174,6" size="18,22" group="n12_ws4h" fontSize="14" color="#ffffff" align="right" vAlign="middle" ubb="true" singleLine="true" text="个">
       <relation target="n0_tgh8" sidePair="right-right,top-top"/>
     </text>
-    <text id="n4_tgh8" name="text_count" xy="136,6" size="52,22" group="n12_ws4h" fontSize="14" color="#85e963" align="right" vAlign="middle" ubb="true" singleLine="true" autoClearText="true" text="111111">
+    <text id="n4_tgh8" name="text_count" xy="119,6" size="52,22" group="n12_ws4h" fontSize="14" color="#85e963" align="right" vAlign="middle" ubb="true" singleLine="true" autoClearText="true" text="111111">
       <relation target="n3_tgh8" sidePair="middle-middle,right-right"/>
     </text>
     <text id="n5_tgh8" name="n5" xy="60,34" size="31,19" group="n9_tgh8" fontSize="12" color="#ffffff" text="单价:"/>

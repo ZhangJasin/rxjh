@@ -10,6 +10,9 @@
     <text id="n37_mp8v" name="text_title" xy="512,252" pivot="0.5,0.5" anchor="true" size="68,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" text="入队审批">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
+    <text id="n20_leye" name="text_nothing" xy="512,394" pivot="0.5,0.5" anchor="true" size="300,29" font="ui://st7dgeqqje63v37" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
     <image id="n48_hcvo" name="bg3" src="emvc57" fileName="image/img_info_di.png" pkg="qa9a7rit" xy="512,290" pivot="0.5,0.5" anchor="true" size="395,34" group="n31_l7f0">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
@@ -35,11 +38,6 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <group id="n31_l7f0" name="top" xy="314,273" size="395,34"/>
-    <image id="n54_gqkz" name="img_nothing" src="iwlbkvq8" fileName="image/img.png" pkg="qa9a7rit" xy="511,393" pivot="0.5,0.5" anchor="true" size="253,190" group="n56_gqkz" scale="0.8,0.8"/>
-    <text id="n55_gqkz" name="text_nothing" xy="511,458" pivot="0.5,0.5" anchor="true" size="200,26" group="n56_gqkz" font="ui://qa9a7ritrqwtkvph" fontSize="18" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="暂无队伍"/>
-    <group id="n56_gqkz" name="panel_nothing" xy="385,298" size="253,190" visible="false" advanced="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </group>
     <list id="n9_vjv7" name="list_apply" xy="317,313" size="390,160" selectionMode="none" overflow="scroll" lineGap="4" defaultItem="ui://y890q37sf0so1p" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>

@@ -31,8 +31,6 @@
     <component id="n20_pohx" name="Node_item" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="990,550" pivot="0.5,0.5" anchor="true" size="72,72" group="n21_ezgo">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <group id="n21_ezgo" name="panel" xy="890,460" size="211,258" advanced="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </group>
+    <group id="n21_ezgo" name="panel" xy="890,460" size="211,258"/>
   </displayList>
 </component>

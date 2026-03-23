@@ -6,7 +6,7 @@
     <component id="hfk82" name="btn_stall_common.xml" path="/Components/"/>
     <image id="hfk83" name="btn_stall_9.png" path="/Images/" scale="9grid" scale9grid="5,0,2,28"/>
     <component id="hfk84" name="btn_input_edit.xml" path="/Components/"/>
-    <image id="hfk85" name="inputField_bg_9.png" path="/Images/" scale="9grid" scale9grid="11,11,12,8"/>
+    <image id="hfk85" name="inputField_bg_9.png" path="/Images/" scale="9grid" scale9grid="5,12,18,7"/>
     <component id="hfk86" name="toggle_menu.xml" path="/Components/"/>
     <component id="hfk87" name="toggle_item_menu.xml" path="/Components/"/>
     <component id="hfk88" name="toggle_item_menu_sub.xml" path="/Components/"/>
@@ -23,6 +23,7 @@
     <image id="hfk8j" name="comboBox_select_9.png" path="/Images/" scale="9grid" scale9grid="25,17,14,12"/>
     <image id="hfk8k" name="cell_bg_9.png" path="/Images/" exported="true" scale="9grid" scale9grid="17,37,9,5"/>
     <image id="hfk8l" name="img_item_frame.png" path="/Images/"/>
+    <component id="hfk8m" name="PCStallBuy.xml" path="/" exported="true"/>
     <component id="hfk8n" name="PCStallCreatePanel.xml" path="/" exported="true"/>
     <component id="hfk8o" name="PCStallMain.xml" path="/" exported="true"/>
     <component id="hfk8q" name="PCStallShelf.xml" path="/" exported="true"/>
@@ -36,22 +37,15 @@
     <component id="qbypkvpi" name="btn_filter_multi.xml" path="/Components/"/>
     <image id="qbyp12" name="icon_share.png" path="/Images/"/>
     <image id="qbyp13" name="icon_edit.png" path="/Images/"/>
-    <image id="qbyp15" name="product_shopping_0.png" path="/Images/"/>
-    <image id="qbyp16" name="product_shopping_1.png" path="/Images/"/>
+    <image id="qbyp15" name="05.png" path="/Images/"/>
+    <image id="qbyp16" name="06.png" path="/Images/"/>
     <image id="qbyp17" name="icon_owner_info.png" path="/Images/"/>
     <image id="qbypkvpj" name="arrow.png" path="/Images/"/>
     <component id="kuszkvpk" name="PCStallHistory.xml" path="/" exported="true"/>
     <component id="kuszkvpg" name="list_item_history.xml" path="/Components/"/>
-    <component id="swfdkvpo" name="PCStallShoppingCart.xml" path="/" exported="true"/>
-    <component id="swfdkvps" name="shopping_item.xml" path="/Components/"/>
-    <image id="swfdkvpq" name="shopping_bg.png" path="/Images/"/>
-    <image id="swfdkvpr" name="shopping_select_0.png" path="/Images/"/>
-    <image id="swfdkvpt" name="shopping_select_1.png" path="/Images/"/>
-    <image id="swfdkvpu" name="shopping_close.png" path="/Images/"/>
-    <component id="wms0kvpv" name="shopping_money_item.xml" path="/Components/"/>
-    <component id="wms0kvps" name="btn_add_del_shopping.xml" path="/Components/"/>
-    <image id="q030kvpw" name="icon_cart.png" path="/Images/"/>
-    <component id="my1vkvpx" name="btn_cart.xml" path="/Components/"/>
+    <image id="kuszkvpl" name="btn_count_edit.png" path="/"/>
+    <image id="kuszkvpm" name="btn_price_edit.png" path="/"/>
+    <image id="kuszkvpn" name="btn_input_edit.png" path="/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

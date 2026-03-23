@@ -2,18 +2,12 @@
 <component size="310,376" opaque="false">
   <controller name="titleState" pages="0,未激活,1,未使用,2,使用中" selected="0"/>
   <controller name="ModeWho" pages="0,MainPlayer,1,OtherPlayer" selected="0"/>
-  <controller name="isHaveTitle" pages="0,没有称号,1,有称号" selected="0"/>
   <displayList>
     <image id="n10_9qta" name="n10" src="n0551w" fileName="Images/img_input_di.png" xy="0,0" size="310,336">
       <gearXY controller="ModeWho" pages="0,1" values="0,0|0,20"/>
       <gearSize controller="ModeWho" pages="0,1" values="310,336,1,1|310,376,1,1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <component id="n11_iwlb" name="n11" src="iwlbkvq9" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="28,72">
-      <gearDisplay controller="isHaveTitle" pages="0"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Label title="暂无称号"/>
-    </component>
     <list id="n6_9qta" name="list_title" xy="1,0" size="308,333" layout="flow_hz" overflow="scroll" scrollBarFlags="2048" margin="2,2,2,2" lineGap="2" colGap="2" lineItemCount="2" defaultItem="ui://brz7yunln0552p" align="center" autoClearItems="true">
       <gearXY controller="ModeWho" pages="0,1" values="1,0|1,20"/>
       <gearSize controller="ModeWho" pages="0,1" values="308,333,1,1|310,374,1,1"/>

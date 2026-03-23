@@ -2,10 +2,10 @@
 <component size="339,27">
   <controller name="progressType" pages="" selected="-1"/>
   <displayList>
-    <component id="n30_j9jd" name="comName" src="j9jd4" fileName="Components/comName.xml" xy="0,2" size="54,25">
+    <component id="n30_j9jd" name="comName" src="j9jd4" fileName="Components/comName.xml" xy="0,2">
       <relation target="" sidePair="height-height,left-left"/>
     </component>
-    <component id="n31_j9jd" name="comProgress" src="j9jdf" fileName="Components/comProgress.xml" xy="56,0" size="283,27">
+    <component id="n31_j9jd" name="comProgress" src="j9jdf" fileName="Components/comProgress.xml" xy="48,0" size="291,27">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
   </displayList>

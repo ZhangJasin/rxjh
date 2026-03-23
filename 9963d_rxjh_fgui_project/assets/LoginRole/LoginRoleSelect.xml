@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" designImage="ui://4op6gwol108rv1">
   <displayList>
-    <component id="n0_108rv" name="btn_delete_role" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="100,620" size="156,42">
+    <component id="n0_108rv" name="btn_delete_role" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="100,645" size="156,42">
       <relation target="" sidePair="left-left,bottom-bottom"/>
       <Button title="删除角色"/>
     </component>
@@ -11,7 +11,7 @@
     <component id="n3_108rv" name="btn_back" src="108rv9" fileName="Components/Select/btn_back.xml" xy="19,11">
       <relation target="" sidePair="left-left,top-top"/>
     </component>
-    <list id="n6_108rv" name="list_role" xy="941,0" size="393,530" overflow="scroll" scrollBarFlags="128" margin="5,0,0,0" lineGap="10" defaultItem="ui://4op6gwol108rvb" align="right" autoClearItems="true">
+    <list id="n6_108rv" name="list_role" xy="941,0" size="393,458" overflow="scroll" scrollBarFlags="128" margin="28,0,1,0" lineGap="31" defaultItem="ui://4op6gwol108rvb" align="right" autoClearItems="true">
       <relation target="" sidePair="right-right,top-top"/>
       <item/>
       <item/>
@@ -26,14 +26,6 @@
     </component>
     <component id="n13_gxjd" name="Node_lock" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="0,0" size="0,0" touchable="false">
       <relation target="" sidePair="center-center,middle-middle"/>
-    </component>
-    <component id="n14_o621" name="btn_retrieve_role" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="585,0" size="156,42" visible="false">
-      <relation target="" sidePair="center-center,top-top"/>
-      <Button title="取回角色"/>
-    </component>
-    <component id="n15_mrrv" name="btn_restore_role" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="100,672" size="156,42">
-      <relation target="" sidePair="left-left,bottom-bottom"/>
-      <Button title="找回角色"/>
     </component>
   </displayList>
 </component>

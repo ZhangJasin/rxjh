@@ -38,6 +38,7 @@
     <group id="n24_mxa7" name="n24" xy="-1,1" size="225,64" advanced="true">
       <relation target="" sidePair="left-left,top-top"/>
     </group>
+    <component id="n69_qug1" name="petPro" src="qug1fvf0" fileName="Components/newmain/petProgress.xml" xy="228,3" visible="false"/>
     <component id="n62_g11o" name="TeamOperation" src="g11o4g" fileName="Components/Player/TeamOperation.xml" xy="230,0" visible="false">
       <relation target="" sidePair="left-left,top-top"/>
     </component>

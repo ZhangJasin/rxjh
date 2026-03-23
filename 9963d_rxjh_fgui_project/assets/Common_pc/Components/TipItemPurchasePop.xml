@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="200,130" opaque="false">
-  <controller name="btn_pos" pages="0,居中,1,靠右" selected="0"/>
   <displayList>
     <image id="n21_pxu7" name="n0" src="r1aj5x" fileName="Images/tips_bg.png" xy="0,0" size="200,130"/>
     <image id="n19_qtq9" name="bg_input" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="101,21" pivot="0.5,0.5" anchor="true" size="84,24">
@@ -9,7 +8,7 @@
     <text id="n20_qtq9" name="input_count" xy="101,21" pivot="0.5,0.5" anchor="true" size="84,24" fontSize="15" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="12312412" input="true" prompt="请输入数字" keyboardType="4">
       <relation target="n21_pxu7" sidePair="center-center,top-top"/>
     </text>
-    <component id="n22_pxu7" name="btn_sub" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="34,9" size="23,24" controller="btnkInd,1">
+    <component id="n22_pxu7" name="btn_sub" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="33,9" size="23,24" controller="btnkInd,1">
       <relation target="n21_pxu7" sidePair="left-left,top-top"/>
     </component>
     <component id="n23_pxu7" name="btn_add" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="144,9" size="23,24" controller="btnkInd,0">
@@ -30,9 +29,7 @@
     <component id="n27_pxu7" name="have_cell" src="pxu767" fileName="Components/commonCostCell.xml" xy="192,74" pivot="1,0" anchor="true" touchable="false">
       <relation target="n21_pxu7" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n29_i6y9" name="btn_custom" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="13,109" pivot="0,0.5" anchor="true" size="74,28" visible="false"/>
     <component id="n28_pxu7" name="btn_purchase" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="63,95" size="74,28">
-      <gearXY controller="btn_pos" pages="1" values="113,95" default="63,95"/>
       <Button title="购买"/>
     </component>
   </displayList>

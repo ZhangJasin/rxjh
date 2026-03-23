@@ -14,7 +14,6 @@
     <component id="t2g5kvp8" name="StateButtonText.xml" path="/" exported="true" favorite="true"/>
     <component id="t2g5kvp9" name="StateRawButton.xml" path="/" exported="true" favorite="true"/>
     <component id="t2g5kvpa" name="StateRawButtonText.xml" path="/" exported="true" favorite="true"/>
-    <component id="f511kvpd" name="Layout.xml" path="/" exported="true" favorite="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

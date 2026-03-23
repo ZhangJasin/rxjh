@@ -10,10 +10,9 @@
       <gearDisplay controller="button" pages="1,3"/>
       <relation target="" sidePair="width-width%,height-height%,center-center%,middle-middle%"/>
     </image>
-    <component id="n4_nouy" name="name" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="4,26" pivot="0,0.5" anchor="true" size="140,26">
+    <richtext id="n4_nouy" name="title" xy="4,26" pivot="0,0.5" anchor="true" size="140,26" fontSize="18" color="#ffffff" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="传送门传送门">
       <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
-      <Label titleColor="#ffffff" titleFontSize="18"/>
-    </component>
+    </richtext>
     <richtext id="n5_oot3" name="level" xy="140,26" pivot="0,0.5" anchor="true" size="50,26" fontSize="18" color="#ffda60" align="right" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="Lv.56">
       <relation target="" sidePair="right-right"/>
     </richtext>

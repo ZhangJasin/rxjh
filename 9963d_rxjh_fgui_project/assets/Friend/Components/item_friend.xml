@@ -15,6 +15,7 @@
     <text id="n6_qpwo" name="text_guild" xy="100,60" size="200,29" fontSize="20" color="#ffda60" autoSize="none" text="门派：无"/>
     <component id="n16_jpvx" name="btn_info" src="jpvx12" fileName="Components/btn_info.xml" xy="345,75" pivot="0.5,0.5" anchor="true"/>
     <component id="n17_tg96" name="btn_delete" src="tg9618" fileName="Components/btn_delete.xml" xy="384,10" size="40,40"/>
+    <component id="n20_vzjd" name="btn_xin" src="boje28" fileName="Components/newcom/btn_xin2.xml" xy="287,36"/>
   </displayList>
   <Button mode="Radio"/>
 </component>

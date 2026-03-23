@@ -54,7 +54,10 @@
     <image id="m9rdvp8" name="top_enum_select.png" path="/Images/"/>
     <image id="m9rdvp9" name="textinput_bg.png" path="/Images/" scale="9grid" scale9grid="6,5,2,4"/>
     <image id="r8pbvpa" name="normal_item_frame.png" path="/Images/"/>
-    <component id="t5g1vpb" name="GuildEventPanel.xml" path="/" exported="true"/>
+    <component id="vzjdvpb" name="iconItem.xml" path="/Components/"/>
+    <component id="vzjdvpc" name="shop_item.xml" path="/Components/"/>
+    <image id="vzjdvpd" name="shop_item_bg.png" path="/Images/"/>
+    <component id="vzjdvpf" name="CommonDialog.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

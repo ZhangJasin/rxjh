@@ -2,29 +2,23 @@
   {
     "name": "PC",
     "pkgs": [
-      "8kmmve26",
       "1e928y1x",
       "brz7yunl",
       "ja5fet7s",
-      "08g55xx7",
       "hxz346vp",
       "2u7b1t52",
       "0xwve836",
-      "frgqv9kr",
       "88oqthnq",
       "hh3kj4xu",
       "xwp5acko",
       "0cnnwo4y",
       "3tndc27q",
-      "dizl41lo",
       "vccyhmfw",
       "0z7sfqs8",
       "o9dt5fs4",
       "0vpx0897",
       "3wc7qwag",
       "y890q37s",
-      "oc3trviu",
-      "t0bnyv1i",
       "tnpzvt56",
       "qy7g0oyc",
       "o8ixb2zy",
@@ -34,7 +28,6 @@
   {
     "name": "MOBILE",
     "pkgs": [
-      "ngfdjf8p",
       "5i0v372f",
       "un65xjnn",
       "dak5wnw9",
@@ -82,17 +75,9 @@
       "rxwfe61p",
       "a4d4nzsc",
       "p8mjxubr",
+      "7x083ui2",
       "o8ixb2zy",
       "st7dgeqq"
-    ]
-  },
-  {
-    "name": "Test",
-    "pkgs": [
-      "ja5fet7s",
-      "08g55xx7",
-      "o8ixb2zy",
-      "qa9a7rit"
     ]
   }
 ]

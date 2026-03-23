@@ -11,8 +11,8 @@
     <text id="n1_unh6" name="text_title" xy="620,208" size="100,34" group="n7_unh6" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" text="断线重连">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n4_unh6" name="btn_return_login" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="503,441" group="n7_unh6">
-      <gearXY controller="curStage" pages="0,2" values="503,441|592,441" default="504,442"/>
+    <component id="n4_unh6" name="btn_return_login" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="502,441" group="n7_unh6">
+      <gearXY controller="curStage" pages="0,2" values="502,441|592,441" default="504,442"/>
       <relation target="" sidePair="center-center,middle-middle"/>
       <Button title="返回登录"/>
     </component>

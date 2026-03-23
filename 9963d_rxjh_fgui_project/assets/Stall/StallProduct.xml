@@ -32,16 +32,12 @@
       <Button icon="ui://aakcgg80dm7kvo1"/>
     </component>
     <component id="n10_r1h5" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="648,684" size="0,0" group="n21_kpju"/>
-    <component id="n14_kpju" name="btn_share" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="887,111" size="44,40" group="n21_kpju">
+    <component id="n14_kpju" name="btn_share" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="951,111" size="44,40" group="n21_kpju">
       <Button icon="ui://aakcgg80kpjukvpe"/>
     </component>
-    <component id="n15_kpju" name="btn_edit" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="825,111" size="44,40" group="n21_kpju">
+    <component id="n15_kpju" name="btn_edit" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="889,111" size="44,40" group="n21_kpju">
       <Button icon="ui://aakcgg80kpjukvpd"/>
     </component>
-    <component id="n23_q030" name="btn_cart" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="949,111" size="44,40" group="n21_kpju">
-      <Button icon="ui://aakcgg80q030kvpt"/>
-    </component>
-    <text id="n24_q030" name="text_cart_count" xy="950,100" size="46,29" group="n21_kpju" fontSize="20" color="#ff0000" align="right" vAlign="middle" autoSize="none" text="12"/>
     <component id="n17_kpju" name="btn_star" src="kpjuvo5" fileName="Components/btn_star.xml" xy="905,660" pivot="0.5,0.5" anchor="true" group="n19_kpju"/>
     <text id="n18_kpju" name="text_star" xy="960,660" pivot="0.5,0.5" anchor="true" size="64,29" group="n19_kpju" fontSize="20" color="#ffffff" text="已收藏"/>
     <group id="n19_kpju" name="node_star" xy="886,642" size="106,35" group="n21_kpju" advanced="true"/>
@@ -53,13 +49,13 @@
       <Button title="售卖记录"/>
     </component>
     <group id="n21_kpju" name="Root" xy="305,50" size="724,650" advanced="true">
-      <relation target="" sidePair="middle-middle,left-left"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
   <transition name="left">
-    <item time="0" type="XY" target="n21_kpju" tween="true" startValue="266,-,0.199,0.057" endValue="24,-,0.018,0.067" duration="9"/>
+    <item time="0" type="XY" target="n21_kpju" tween="true" startValue="260,-,0.195,0.067" endValue="24,-,0.018,0.067" duration="9"/>
   </transition>
   <transition name="center">
-    <item time="0" type="XY" target="n21_kpju" tween="true" startValue="24,-,0.018,0.067" endValue="305,-,0.229,0.067" duration="9"/>
+    <item time="0" type="XY" target="n21_kpju" tween="true" startValue="24,50,0.018,0.067" endValue="305,-,0.229,0.067" duration="9"/>
   </transition>
 </component>

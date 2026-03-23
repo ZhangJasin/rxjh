@@ -19,7 +19,7 @@
     <component id="n173_rmnb" name="pet_mp" src="bk1i69" fileName="Components/mapItemAutoUse.xml" xy="14,254" group="n175_rmnb"/>
     <component id="n174_rmnb" name="pet_fast_mp" src="bk1i69" fileName="Components/mapItemAutoUse.xml" xy="14,280" group="n175_rmnb"/>
     <component id="n176_rmnb" name="pet_favor" src="bk1i69" fileName="Components/mapItemAutoUse.xml" xy="14,311" group="n175_rmnb"/>
-    <group id="n175_rmnb" name="pet" xy="8,162" size="463,179"/>
+    <group id="n175_rmnb" name="pet" xy="8,162" size="463,179" visible="false" advanced="true"/>
     <component id="n223_fskg" name="help_title" src="f2ul4r" fileName="Components/title_label.xml" xy="494,8" size="146,23" group="n182_rmnb">
       <Label title="辅助武功" titleColor="#fced00" titleFontSize="12"/>
     </component>

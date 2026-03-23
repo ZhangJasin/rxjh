@@ -9,7 +9,7 @@
       <gearDisplay controller="button" pages="1,2,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n11_kelz" name="input_title" xy="90,20" pivot="0.5,0.5" anchor="true" size="160,32" fontSize="22" color="#bdf5e8" align="center" vAlign="middle" autoSize="none" singleLine="true" text="我我我我我我我" input="true" prompt="请输入名字..." maxLength="7"/>
+    <text id="n11_kelz" name="input_title" xy="90,20" pivot="0.5,0.5" anchor="true" size="160,32" fontSize="22" color="#bdf5e8" align="center" vAlign="middle" autoSize="none" text="我我我我我我我" input="true" prompt="请输入名字..." maxLength="7"/>
     <loader id="n10_kelz" name="select" xy="0,0" size="200,40">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>

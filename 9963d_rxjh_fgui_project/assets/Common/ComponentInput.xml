@@ -4,7 +4,7 @@
     <image id="n9_bf0g" name="bg_input" src="lxrgv56" fileName="image/checkbox_bg.png" pkg="st7dgeqq" xy="50,18" pivot="0.5,0.5" anchor="true" size="100,35">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n10_bf0g" name="text_count" xy="50,17" pivot="0.5,0.5" anchor="true" size="100,35" fontSize="20" color="#fff8db" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="12312412">
+    <text id="n10_bf0g" name="input_count" xy="50,17" pivot="0.5,0.5" anchor="true" size="100,35" fontSize="20" color="#fff8db" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="12312412" input="true" prompt="请输入数字" keyboardType="4">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
   </displayList>

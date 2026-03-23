@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="454,224" opaque="false">
+<component size="454,224">
   <controller name="grade" pages="0,白,1,绿,2,蓝,3,紫,4,橙,5,红" selected="0"/>
   <displayList>
     <component id="n37_w2ob" name="PreviewModel" src="w2ob64" fileName="Components/TipPreviewModel.xml" xy="0,1" group="n38_w2ob"/>
@@ -39,8 +39,7 @@
       <item url="ui://ja5fet7s10e45i" name="Suitex"/>
       <item url="ui://ja5fet7sr1aj63" name="CustomAttrTitle"/>
       <item url="ui://ja5fet7s10e45i" name="CustomAttr"/>
-      <item url="ui://ja5fet7s10e45i" name="CurNum"/>
-      <item url="ui://ja5fet7s10e45i" name="LimitTime"/>
+      <item url="ui://ja5fet7s10e45i" name="Obtain"/>
     </list>
     <image id="n23_fl5s" name="TextEquip" src="10e456" fileName="Images/text_equip_big.png" xy="218,67" size="17,59" group="n11_l6xy" visible="false">
       <relation target="n33_r1aj" sidePair="left-left,top-top"/>
@@ -54,6 +53,23 @@
     <component id="n39_pxu7" name="panel_purchase" src="pxu766" fileName="Components/TipItemPurchasePop.xml" xy="450,93" group="n38_w2ob" visible="false">
       <relation target="n33_r1aj" sidePair="left-right,bottom-bottom"/>
     </component>
+    <image id="n40_wodv" name="bg1" src="kcff5vp4" fileName="Images/tips_bg.png" pkg="zu7kdgts" xy="450,-1" size="151,299" group="n43_wodv">
+      <relation target="n42_wodv" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n41_wodv" name="obtainName" xy="564,2" pivot="1,0" anchor="true" size="84,29" group="n43_wodv" fontSize="16" color="#f2fbff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" autoClearText="true" text="获取途径">
+      <relation target="n40_wodv" sidePair="center-center,top-top"/>
+    </text>
+    <list id="n42_wodv" name="list" xy="472,40" size="109,243" group="n43_wodv" selectionMode="none" overflow="scroll" margin="3,0,0,0" lineGap="2" defaultItem="ui://zu7kdgtswodv5vpe" align="center" autoClearItems="true">
+      <relation target="n40_wodv" sidePair="width-width,height-height,center-center"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n43_wodv" name="ObtainList" xy="450,-1" size="151,299" group="n38_w2ob" visible="false" advanced="true"/>
     <group id="n38_w2ob" name="PopE" xy="0,-1" size="454,292" advanced="true" layout="hz" colGap="-4" excludeInvisibles="true"/>
   </displayList>
   <relation target="n33_r1aj" sidePair="height-height"/>

@@ -1,45 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="774,76">
-  <controller name="isSelect" pages="0,选中,1,不选中" selected="1"/>
   <displayList>
     <image id="n0_nojs" name="n0" src="7c35vp1" fileName="image/img_di3.png" pkg="st7dgeqq" xy="0,0" size="774,76">
-      <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <image id="n17_aipb" name="bg_selected" src="fbc0v4y" fileName="image/icon_item_select.png" pkg="st7dgeqq" xy="0,0" size="774,76">
-      <gearDisplay controller="isSelect" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <component id="n1_nojs" name="itemRoot" src="nojsg" fileName="Components/Buy/Item_paiMai_Item_root.xml" xy="26,7" size="60,60">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <text id="n3_nojs" name="text_time" xy="306,38" size="130,29" fontSize="20" color="#ff0000" align="center" vAlign="middle" singleLine="true" autoClearText="true" text="10时30分55秒">
+    <text id="n3_nojs" name="text_time" xy="323,38" size="130,29" fontSize="20" color="#ff0000" align="center" vAlign="middle" singleLine="true" autoClearText="true" text="10时30分55秒">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n2_nojs" name="text_name" xy="95,23" size="144,29" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="height" singleLine="true" text="商品名称七个字">
+    <text id="n2_nojs" name="text_name" xy="96,23" size="144,29" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="height" singleLine="true" text="商品名称七个字">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n4_nojs" name="text_status" xy="329,7" size="84,29" fontSize="20" color="#f1ffeb" align="center" singleLine="true" text="无人竞拍">
+    <text id="n4_nojs" name="text_status" xy="346,7" size="84,29" fontSize="20" color="#f1ffeb" align="center" singleLine="true" text="无人竞拍">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n12_8mfo" name="iconMoney1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="582,5" size="33,32">
+    <text id="n5_nojs" name="text_price_jingJia" xy="589,2" size="93,29" fontSize="20" color="#f1ffeb" autoSize="none" singleLine="true" text="99999">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n8_nojs" name="btn_jingjia" src="r8pb1q" fileName="Components/btn_JingJia.xml" xy="521,33" size="110,38" controller="buttonKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="竞 价" titleColor="#28e52d" titleFontSize="22"/>
+    </component>
+    <component id="n9_nojs" name="btn_buy" src="r8pb1q" fileName="Components/btn_JingJia.xml" xy="648,33" size="110,38" controller="buttonKind,1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="购 买" titleColor="#fff000" titleFontSize="22"/>
+    </component>
+    <text id="n10_nojs" name="text_price_once" xy="716,2" size="56,29" fontSize="20" color="#f1ffeb" autoSize="none" singleLine="true" text="99999">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n12_8mfo" name="iconMoney1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="554,0" size="33,32">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n13_8mfo" name="iconMoney2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="582,40" size="33,32">
+    <component id="n13_8mfo" name="iconMoney2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="688,0" size="33,32">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n5_nojs" name="text_price_jingJia" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="618,7" size="147,29">
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Label titleColor="#ffffff" titleFontSize="20"/>
-    </component>
-    <component id="n10_nojs" name="text_price_once" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="618,41" pivot="0,0.5" size="147,29">
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Label titleColor="#ffffff" titleFontSize="20"/>
-    </component>
-    <text id="n15_aipb" name="n15" xy="474,6" size="105,32" fontSize="20" color="#00ff00" align="right" autoSize="none" singleLine="true" text="竞拍价格:">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <text id="n16_aipb" name="n16" xy="474,40" size="105,32" fontSize="20" color="#ffff00" align="right" autoSize="none" singleLine="true" text="一口价:">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
   </displayList>
 </component>

@@ -11,14 +11,14 @@
     <component id="n2_bf0g" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="649,268">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n6_bf0g" name="btn_single" src="10e450" fileName="Components/btn_CancelOrUse.xml" xy="511,478" pivot="0.5,0.5" anchor="true">
+    <component id="n6_bf0g" name="btn_single" src="10e450" fileName="Components/btn_CancelOrUse.xml" xy="511,480" pivot="0.5,0.5" anchor="true">
       <gearDisplay controller="dialogType" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <text id="n17_bf0g" name="text_title" xy="473,255" pivot="0.5,0.5" size="76,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" letterSpacing="-2" autoClearText="true" text="哈哈哈哈哈">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n23_usy1" name="text_tip" xy="361,424" size="301,19" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#fffadc" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" autoClearText="true" text="哈哈哈哈哈哈哈">
+    <text id="n23_usy1" name="text_tip" xy="360,422" size="303,23" font="ui://qa9a7ritbekykvpi" fontSize="15" color="#fffadc" align="center" ubb="true" autoSize="none" singleLine="true" autoClearText="true" text="哈哈哈哈哈哈哈">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
     <text id="n15_bf0g" name="text_name" xy="510,369" pivot="0.5,0.5" anchor="true" size="16,19" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#fffadc" autoClearText="true" text="22">
@@ -30,25 +30,26 @@
     <text id="n14_bf0g" name="label_count" xy="407,391" size="34,23" font="ui://qa9a7ritbekykvpi" fontSize="15" color="#fffadc" text="数量">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n19_g0ii" name="btn_minus" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="444,391" size="23,24" pageController="dialogType" controller="btnkInd,1">
+    <component id="n19_g0ii" name="btn_minus" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="444,391" pageController="dialogType" controller="btnkInd,1">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n9_bf0g" name="input_count" src="10e45c" fileName="ComponentInput.xml" xy="511,403" pivot="0.5,0.5" anchor="true" size="80,24">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n18_g0ii" name="btn_add" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="554,391" size="23,24" pageController="dialogType" controller="btnkInd,0">
+    <component id="n18_g0ii" name="btn_add" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="554,391" pageController="dialogType" controller="btnkInd,0">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n20_g0ii" name="btn_max" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="585,391" size="39,24" controller="btnkInd,2">
+    <component id="n20_g0ii" name="btn_max" src="emvcb" fileName="common/btn_AddOrMinus.xml" pkg="qa9a7rit" xy="585,391" size="40,24" controller="btnkInd,2">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n4_bf0g" name="btn_first" src="10e450" fileName="Components/btn_CancelOrUse.xml" xy="453,478" pivot="0.5,0.5" anchor="true" controller="btnKind,1">
+    <component id="n4_bf0g" name="btn_first" src="10e450" fileName="Components/btn_CancelOrUse.xml" xy="464,480" pivot="0.5,0.5" anchor="true" group="n30_tw0l">
       <gearDisplay controller="dialogType" pages="1"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n5_bf0g" name="btn_second" src="10e450" fileName="Components/btn_CancelOrUse.xml" xy="570,478" pivot="0.5,0.5" anchor="true">
+    <component id="n5_bf0g" name="btn_second" src="10e450" fileName="Components/btn_CancelOrUse.xml" xy="559,480" pivot="0.5,0.5" anchor="true" group="n30_tw0l">
       <gearDisplay controller="dialogType" pages="1"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
     </component>
+    <group id="n30_tw0l" name="n30" xy="421,468" size="181,24" advanced="true" layout="hz" colGap="9" excludeInvisibles="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>

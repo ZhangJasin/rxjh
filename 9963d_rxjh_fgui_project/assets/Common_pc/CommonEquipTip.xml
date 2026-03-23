@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1024,768" opaque="false" designImage="ui://st7dgeqqfl5sv5p" designImageOffsetY="64">
   <displayList>
-    <graph id="n10_l6xy" name="Mask" xy="0,0" size="1024,768" visible="false" alpha="0.6" touchable="false" type="rect" fillColor="#ff000000">
+    <graph id="n10_l6xy" name="Mask" xy="1,0" size="1024,768" visible="false" alpha="0.6" touchable="false" type="rect" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
     <component id="n29_svai" name="Pop3" src="10e45j" fileName="EquipTipNode.xml" xy="566,274" pivot="1,0" anchor="true" group="n25_fl5s" visible="false" touchable="false"/>

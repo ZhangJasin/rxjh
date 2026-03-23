@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="800,600">
-  <controller name="ctrl_job" pages="0,弓,1,枪,2,刺客,3,医生,4,刀,5,剑" selected="0"/>
+  <controller name="ctrl_job" pages="0,弓,1,枪,2,刺客,3,医生,4,刀,5,剑" selected="5"/>
   <displayList>
-    <loader id="n7_hvnk" name="bg_left_texture" xy="164,156" size="217,286" group="n8_hvnk" url="ui://2u7b1t52hvnkvl3" fill="scaleFree"/>
-    <loader id="n5_hvnk" name="bg_left_kuang" xy="162,154" size="222,290" group="n8_hvnk" url="ui://qa9a7ritpf15kvpp" fill="scaleFree"/>
-    <group id="n8_hvnk" name="left" xy="162,154" size="222,290" group="n20_b8ue" advanced="true"/>
-    <loader id="n3_hvnk" name="bg_right_texture" xy="387,159" size="226,281" group="n6_hvnk" url="ui://qa9a7ritemvc4w" fill="scaleFree"/>
-    <loader id="n4_hvnk" name="bg_right_kuang" xy="385,154" size="231,290" group="n6_hvnk" url="ui://qa9a7ritpf15kvpp" fill="scaleFree"/>
-    <group id="n6_hvnk" name="right" xy="385,154" size="231,290" group="n20_b8ue"/>
-    <image id="n21_mi87" name="n21" src="us1mvl2" fileName="Images/black_bg.png" xy="390,252" size="220,181" group="n20_b8ue"/>
-    <list id="n9_bzs6" name="grid_layout_btn" xy="394,248" size="216,179" group="n20_b8ue" layout="flow_hz" overflow="scroll" margin="4,0,0,0" lineGap="4" colGap="4" lineItemCount="2" defaultItem="ui://2u7b1t52m2wev5x" align="center" autoClearItems="true">
+    <loader id="n7_hvnk" name="bg_left_texture" xy="164,157" size="217,286" group="n8_hvnk" url="ui://2u7b1t52hvnkvl3" fill="scaleFree"/>
+    <loader id="n5_hvnk" name="bg_left_kuang" xy="162,155" size="222,290" group="n8_hvnk" url="ui://2u7b1t52hvnkvl4" fill="scaleFree"/>
+    <group id="n8_hvnk" name="left" xy="162,155" size="222,290" group="n20_b8ue" advanced="true"/>
+    <loader id="n3_hvnk" name="bg_right_texture" xy="387,160" size="226,281" group="n6_hvnk" url="ui://qa9a7ritemvc4w" fill="scaleFree"/>
+    <loader id="n4_hvnk" name="bg_right_kuang" xy="385,155" size="231,290" group="n6_hvnk" url="ui://2u7b1t52hvnkvl4" fill="scaleFree"/>
+    <group id="n6_hvnk" name="right" xy="385,155" size="231,290" group="n20_b8ue"/>
+    <image id="n21_mi87" name="n21" src="us1mvl2" fileName="Images/black_bg.png" xy="390,253" size="220,181" group="n20_b8ue"/>
+    <list id="n9_bzs6" name="grid_layout_btn" xy="394,249" size="216,179" group="n20_b8ue" layout="flow_hz" overflow="scroll" margin="4,0,0,0" lineGap="4" colGap="4" lineItemCount="2" defaultItem="ui://2u7b1t52m2wev5x" align="center" autoClearItems="true">
       <item/>
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <component id="n17_bzs6" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="611,160" group="n20_b8ue"/>
-    <graph id="n18_b8ue" name="model_root" xy="273,424" pivot="0.5,0.5" anchor="true" size="1,1" group="n20_b8ue" blend="screen" lineSize="0" lineColor="#00000000" fillColor="#00ffffff"/>
-    <component id="n19_b8ue" name="panel_touch" src="n05525" fileName="Components/panel_Touch.xml" pkg="brz7yunl" xy="166,156" size="212,267" group="n20_b8ue"/>
-    <component id="n10_bzs6" name="com_playerIcon" src="emvc7" fileName="common/CommonPlayerFrame.xml" pkg="qa9a7rit" xy="428,211" size="67,67" group="n24_mi87" aspect="true"/>
-    <text id="n11_bzs6" name="text_player_name" xy="467,179" size="88,19" group="n24_mi87" fontSize="12" color="#ffffff" vAlign="middle" ubb="true" autoClearText="true" text="玩家名字七个字"/>
-    <text id="n12_bzs6" name="text_player_level" xy="467,201" size="54,19" group="n24_mi87" fontSize="12" color="#ffda60" vAlign="middle" autoClearText="true" text="等级：44"/>
-    <text id="n13_bzs6" name="text_player_guild" xy="467,223" size="88,19" group="n24_mi87" fontSize="12" color="#14ffed" vAlign="middle" ubb="true" autoClearText="true" text="门派：落日战歌"/>
-    <loader id="n22_mi87" name="job" xy="579,173" size="50,50" group="n24_mi87" scale="0.5,0.5" url="ui://2u7b1t52mi87vl7" align="center" fill="scaleFree">
+    <component id="n17_bzs6" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="611,161" group="n20_b8ue"/>
+    <graph id="n18_b8ue" name="model_root" xy="273,425" pivot="0.5,0.5" anchor="true" size="1,1" group="n20_b8ue" blend="screen" lineSize="0" lineColor="#00000000" fillColor="#00ffffff"/>
+    <component id="n19_b8ue" name="panel_touch" src="n05525" fileName="Components/panel_Touch.xml" pkg="brz7yunl" xy="166,157" size="212,267" group="n20_b8ue"/>
+    <component id="n10_bzs6" name="com_playerIcon" src="emvc7" fileName="common/CommonPlayerFrame.xml" pkg="qa9a7rit" xy="428,212" size="67,67" group="n24_mi87" aspect="true"/>
+    <text id="n11_bzs6" name="text_player_name" xy="467,180" size="88,19" group="n24_mi87" fontSize="12" color="#ffffff" vAlign="middle" ubb="true" autoClearText="true" text="玩家名字七个字"/>
+    <text id="n12_bzs6" name="text_player_level" xy="467,202" size="54,19" group="n24_mi87" fontSize="12" color="#ffda60" vAlign="middle" autoClearText="true" text="等级：44"/>
+    <text id="n13_bzs6" name="text_player_guild" xy="467,224" size="88,19" group="n24_mi87" fontSize="12" color="#14ffed" vAlign="middle" ubb="true" autoClearText="true" text="门派：落日战歌"/>
+    <loader id="n22_mi87" name="job" xy="579,174" size="50,50" group="n24_mi87" scale="0.5,0.5" url="ui://2u7b1t52mi87vlc" align="center" fill="scaleFree">
       <gearIcon controller="ctrl_job" pages="0,2,3,4,5" values="ui://2u7b1t52mi87vl7|ui://2u7b1t52mi87vl9|ui://2u7b1t52mi87vla|ui://2u7b1t52mi87vlb|ui://2u7b1t52mi87vlc" default="ui://2u7b1t52mi87vl8"/>
     </loader>
-    <text id="n16_bzs6" name="text_camp" xy="578,201" size="29,19" group="n24_mi87" fontSize="12" color="#ffda60" align="center" autoSize="none" singleLine="true" autoClearText="true" text="正"/>
-    <group id="n24_mi87" name="n24" xy="394,173" size="234,71" group="n20_b8ue" advanced="true"/>
-    <group id="n20_b8ue" name="n20" xy="162,145" size="467,299" advanced="true">
+    <text id="n16_bzs6" name="text_camp" xy="578,202" size="29,19" group="n24_mi87" fontSize="12" color="#ffda60" align="center" autoSize="none" singleLine="true" autoClearText="true" text="正"/>
+    <group id="n24_mi87" name="n24" xy="395,174" size="234,72" group="n20_b8ue" advanced="true"/>
+    <group id="n20_b8ue" name="n20" xy="162,146" size="467,299" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

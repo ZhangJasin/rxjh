@@ -46,26 +46,26 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <group id="n56_hb5x" name="panel_pad" xy="780,200" size="350,481"/>
-    <component id="n91_eyqz" name="check_main" src="eyqz1o" fileName="Components/check_set.xml" xy="750,120"/>
+    <component id="n91_eyqz" name="check_main" src="eyqz1o" fileName="Components/check_set.xml" xy="950,160"/>
     <graph id="n90_kelz" name="mask" xy="667,375" pivot="0.5,0.5" anchor="true" size="1334,750" alpha="0" type="rect" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <image id="n80_kelz" name="bg_release" src="11iqkvp0" fileName="image/comobox_frame.png" pkg="st7dgeqq" xy="1050,175" pivot="0.5,0.5" anchor="true" size="200,36" group="n84_kelz">
+    <image id="n80_kelz" name="bg_release" src="11iqkvp0" fileName="image/comobox_frame.png" pkg="st7dgeqq" xy="840,135" pivot="0.5,0.5" anchor="true" size="200,36" group="n84_kelz">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <text id="n81_kelz" name="text_release" xy="1040,175" pivot="0.5,0.5" anchor="true" size="160,32" group="n84_kelz" fontSize="22" color="#7cc3b3" align="center" vAlign="middle" autoSize="none" singleLine="true" text="循环释放">
+    <text id="n81_kelz" name="text_release" xy="830,135" pivot="0.5,0.5" anchor="true" size="160,32" group="n84_kelz" fontSize="22" color="#7cc3b3" align="center" vAlign="middle" autoSize="none" singleLine="true" text="循环释放">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n82_kelz" name="btn_release" src="kelz1j" fileName="Components/btn_combox.xml" xy="1130,175" pivot="0.5,0.5" anchor="true" group="n84_kelz">
+    <component id="n82_kelz" name="btn_release" src="kelz1j" fileName="Components/btn_combox.xml" xy="920,135" pivot="0.5,0.5" anchor="true" group="n84_kelz">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <list id="n83_kelz" name="list_release" xy="1050,195" pivot="0.5,0" anchor="true" size="200,200" group="n84_kelz" visible="false" overflow="scroll" defaultItem="ui://qvb3eryhkelz1h">
+    <list id="n83_kelz" name="list_release" xy="840,155" pivot="0.5,0" anchor="true" size="200,200" group="n84_kelz" visible="false" overflow="scroll" defaultItem="ui://qvb3eryhkelz1h">
       <relation target="" sidePair="center-center,top-top"/>
       <item/>
       <item/>
       <item/>
     </list>
-    <group id="n84_kelz" name="panel_release" xy="950,150" size="205,245"/>
+    <group id="n84_kelz" name="panel_release" xy="740,110" size="205,245"/>
     <image id="n85_kelz" name="bg_scheme" src="11iqkvp0" fileName="image/comobox_frame.png" pkg="st7dgeqq" xy="1050,135" pivot="0.5,0.5" anchor="true" size="200,36" group="n89_kelz">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
@@ -82,5 +82,8 @@
       <item/>
     </list>
     <group id="n89_kelz" name="panel_scheme" xy="950,110" size="205,245"/>
+    <component id="n57_hhwj" name="skill_tips" src="hhwjv" fileName="SkillTipsPanel.xml" xy="0,0" size="1334,750" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
   </displayList>
 </component>

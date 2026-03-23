@@ -15,16 +15,13 @@
       <item/>
       <item/>
     </list>
-    <richtext id="n62_spth" name="text_myScore" xy="512,620" pivot="0.5,0.5" anchor="true" size="150,24" fontSize="12" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="剩余历练：10000">
+    <richtext id="n62_spth" name="text_myScore" xy="512,619" pivot="0.5,0.5" anchor="true" size="150,24" fontSize="12" color="#f1ffeb" align="center" vAlign="bottom" autoSize="none" strokeColor="#000000" text="剩余历练：10000">
       <relation target="" sidePair="center-center,middle-middle"/>
     </richtext>
-    <richtext id="n66_oh64" name="text_info" xy="350,620" pivot="0.5,0.5" anchor="true" size="60,24" visible="false" fontSize="12" color="#ff0000" align="center" vAlign="middle" autoSize="none" text="挂机设置">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </richtext>
-    <component id="n54_hb5x" name="btn_reset" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="660,620" pivot="0.5,0.5" anchor="true" visible="false">
+    <component id="n54_hb5x" name="btn_reset" src="emvc4" fileName="common/btn_first_red.xml" pkg="qa9a7rit" xy="651,618" pivot="0.5,0.5" anchor="true" visible="false">
       <relation target="" sidePair="center-center,middle-middle"/>
       <Button title="重置键位" titleColor="#fced00" titleFontSize="12"/>
     </component>
-    <component id="n64_oh64" name="btn_switch" src="oh641h" fileName="Components/btn_switch.xml" xy="420,620" pivot="0.5,0.5" anchor="true" visible="false"/>
+    <component id="n63_cki1" name="skill_tips" src="hhwjv" fileName="PCSkillTipsPanel.xml" xy="130,240"/>
   </displayList>
 </component>

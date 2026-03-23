@@ -17,22 +17,22 @@
     <image id="n72_7ug3" name="Image_leftBg" src="7ug3fvec" fileName="Images/Bottom/main_bottom_bg.png" xy="163,720" pivot="1,0" anchor="true" size="163,30">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </image>
-    <image id="n73_7ug3" name="Image_rightBg" src="7ug3fvec" fileName="Images/Bottom/main_bottom_bg.png" xy="1087,720" size="247,30" flip="hz">
+    <image id="n73_7ug3" name="Image_rightBg" src="7ug3fvec" fileName="Images/Bottom/main_bottom_bg.png" xy="1174,720" size="160,30" flip="hz">
       <relation target="" sidePair="bottom-bottom"/>
       <relation target="n1_kxj1" sidePair="left-right"/>
     </image>
-    <image id="n1_kxj1" name="n1" src="kxj1v3q" fileName="Images/Bottom/main_exp_Bg.png" xy="162,733" size="926,17">
+    <image id="n1_kxj1" name="n1" src="kxj1v3q" fileName="Images/Bottom/main_exp_Bg.png" xy="162,733" size="1013,17">
       <relation target="" sidePair="width-width,left-left,right-right,bottom-bottom"/>
     </image>
-    <component id="n74_7ug3" name="ComboBox_autoMode1" src="7ug3fvef" fileName="Components/Bottom/AutoModeComboBox.xml" xy="1102,723">
+    <component id="n74_7ug3" name="ComboBox_autoMode1" src="7ug3fvef" fileName="Components/Bottom/AutoModeComboBox.xml" xy="1202,723">
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <ComboBox visibleItemCount="10" direction="up"/>
     </component>
-    <component id="n75_7ug3" name="ComboBox_autoMode2" src="7ug3fvef" fileName="Components/Bottom/AutoModeComboBox.xml" xy="1220,723">
+    <component id="n75_7ug3" name="ComboBox_autoMode2" src="7ug3fvef" fileName="Components/Bottom/AutoModeComboBox.xml" xy="1222,723" visible="false">
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <ComboBox visibleItemCount="10" direction="up"/>
     </component>
-    <component id="n29_o3hv" name="ProgressBar_exp" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="169,737" size="910,10">
+    <component id="n29_o3hv" name="ProgressBar_exp" src="o6ikv5o" fileName="ProgressBar.xml" pkg="o8ixb2zy" xy="169,737" size="998,10">
       <relation target="" sidePair="width-width,left-left,right-right,bottom-bottom"/>
       <ProgressBar value="100" max="100"/>
       <property target="bar" propertyId="1" value="ui://zj419n3dk5e7v8x"/>
@@ -47,8 +47,8 @@
       <gearSize controller="chat" pages="1" values="382,200,1,1" default="382,98,1,1"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </image>
-    <image id="n38_99g1" name="Image_autoMove" src="brvzv7s" fileName="Images/Bottom/main_state_auto_move.png" xy="667,547" pivot="0.5,0.5" anchor="true" visible="false">
-      <gearXY controller="chat" pages="0,1" values="667,547|667,445"/>
+    <image id="n38_99g1" name="Image_autoMove" src="brvzv7s" fileName="Images/Bottom/main_state_auto_move.png" xy="667,607" pivot="0.5,0.5" anchor="true" visible="false">
+      <gearXY controller="chat" pages="0,1" values="667,607|667,445"/>
       <relation target="" sidePair="center-center,top-bottom"/>
     </image>
     <component id="n15_kxj1" name="Btn_friend" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="415,637" size="60,48">
@@ -97,10 +97,10 @@
       <item/>
       <item/>
     </list>
-    <text id="n64_fyl5" name="Text_autoMode1" xy="1146,735" pivot="0.5,0.5" anchor="true" size="84,24" fontSize="16" color="#7cc3b3" align="center" vAlign="middle" autoSize="shrink" autoClearText="true" text="循环释放0">
+    <text id="n64_fyl5" name="Text_autoMode1" xy="1246,735" pivot="0.5,0.5" anchor="true" size="84,24" fontSize="16" color="#7cc3b3" align="center" vAlign="middle" autoSize="shrink" autoClearText="true" text="循环释放0">
       <relation target="n74_7ug3" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n68_fyl5" name="Text_autoMode2" xy="1264,735" pivot="0.5,0.5" anchor="true" size="84,24" fontSize="16" color="#7cc3b3" align="center" vAlign="middle" autoSize="shrink" autoClearText="true" text="技能方案">
+    <text id="n68_fyl5" name="Text_autoMode2" xy="1266,735" pivot="0.5,0.5" anchor="true" size="84,24" visible="false" fontSize="16" color="#7cc3b3" align="center" vAlign="middle" autoSize="shrink" autoClearText="true" text="技能方案">
       <relation target="n75_7ug3" sidePair="center-center,middle-middle"/>
     </text>
     <text id="n5_kxj1" name="Text_time" xy="66,736" pivot="0.5,0.5" anchor="true" size="67,26" scale="0.7,0.7" font="ui://zj419n3dik1cfvbg" fontSize="20" color="#ffffff" align="center" leading="0" text="16:37">
@@ -123,8 +123,8 @@
       <gearXY controller="chat" pages="0,1" values="476,637|476,535"/>
       <relation target="" sidePair="center-center,top-bottom"/>
     </list>
-    <graph id="n39_99g1" name="Graph_autoFight" xy="667,549" pivot="0.5,0.5" anchor="true" size="57,24" visible="false" touchable="false" type="rect" lineSize="0" fillColor="#00ffffff">
-      <gearXY controller="chat" pages="0,1" values="667,549|667,447"/>
+    <graph id="n39_99g1" name="Graph_autoFight" xy="667,606" pivot="0.5,0.5" anchor="true" size="57,24" visible="false" touchable="false" type="rect" lineSize="0" fillColor="#00ffffff">
+      <gearXY controller="chat" pages="0,1" values="667,606|667,447"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </graph>
   </displayList>

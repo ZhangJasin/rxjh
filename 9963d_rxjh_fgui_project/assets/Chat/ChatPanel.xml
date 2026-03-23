@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" initName="ChatPanel" designImage="ui://8pthu2lwm0wqkvp6">
-  <controller name="ShowChatEx" pages="1,hide,0,showChatEx" selected="0"/>
+  <controller name="ShowChatEx" pages="1,hide,0,showChatEx,3,showShout" selected="0"/>
   <displayList>
     <graph id="n48_my96" name="Mask" xy="0,0" size="1334,750" type="rect" lineSize="0" fillColor="#00ffffff">
       <relation target="" sidePair="width-width,height-height"/>
@@ -26,25 +26,25 @@
     <image id="n19_dssq" name="n19" src="dssq17" fileName="Images/btn_chat_hide.png" xy="584,311" size="53,134" group="n8_vgb0">
       <relation target="" sidePair="middle-middle"/>
     </image>
-    <image id="n40_wi45" name="n40" src="wi45v7w" fileName="Images/chat_input_9.png" xy="19,688" size="230,47" group="n7_vgb0"/>
-    <component id="n17_dssq" name="Button_emoji" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="256,688" size="55,46" group="n7_vgb0">
+    <image id="n39_wi45" name="n39" src="wi45v7v" fileName="Images/btn_chat_bg_9.png" xy="446,688" size="136,46" group="n7_vgb0"/>
+    <image id="n40_wi45" name="n40" src="wi45v7w" fileName="Images/chat_input_9.png" xy="90,688" size="161,47" group="n7_vgb0"/>
+    <component id="n17_dssq" name="Button_emoji" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="262,688" size="55,46" group="n7_vgb0">
       <Button icon="ui://8pthu2lwdssq13"/>
     </component>
-    <component id="n16_dssq" name="Button_bag" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="316,688" size="55,46" group="n7_vgb0">
+    <component id="n16_dssq" name="Button_bag" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="322,688" size="55,46" group="n7_vgb0">
       <Button icon="ui://8pthu2lwdssq15"/>
     </component>
-    <component id="n18_dssq" name="Button_pos" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="376,688" size="55,46" group="n7_vgb0">
+    <component id="n18_dssq" name="Button_pos" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="382,688" size="55,46" group="n7_vgb0">
       <Button icon="ui://8pthu2lwdssq14"/>
     </component>
-    <component id="n20_dssq" name="Button_send" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="438,688" size="136,46" group="n7_vgb0">
-      <Button icon="ui://8pthu2lwwi45v7v"/>
-    </component>
-    <text id="n21_dssq" name="Button_sendText" xy="479,695" pivot="0.5,0.5" size="54,32" group="n7_vgb0" fontSize="22" color="#fff000" align="center" vAlign="middle" strokeColor="#000000" text="发 送"/>
-    <text id="n29_iaot" name="TextField_input" xy="22,690" pivot="0,0.5" size="225,43" group="n7_vgb0" fontSize="20" color="#5f795d" vAlign="middle" leading="5" autoSize="none" singleLine="true" text="" input="true" prompt="请点击输入" maxLength="50"/>
-    <group id="n7_vgb0" name="Layout_send" xy="19,688" size="555,47" group="n8_vgb0" advanced="true">
+    <component id="n20_dssq" name="Button_send" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="446,688" size="136,42" group="n7_vgb0"/>
+    <text id="n38_q9ls" name="Text_shout" xy="48,712" pivot="0.5,0.5" anchor="true" size="52,34" group="n7_vgb0" fontSize="24" color="#ffffff" align="center" underline="true" text="本服"/>
+    <text id="n21_dssq" name="Button_sendText" xy="488,695" pivot="0.5,0.5" size="54,32" group="n7_vgb0" fontSize="22" color="#fff000" align="center" vAlign="middle" strokeColor="#000000" text="发 送"/>
+    <text id="n29_iaot" name="TextField_input" xy="93,690" pivot="0,0.5" size="155,43" group="n7_vgb0" fontSize="20" color="#5f795d" vAlign="middle" leading="5" autoSize="none" singleLine="true" text="" input="true" prompt="请点击输入" maxLength="50"/>
+    <group id="n7_vgb0" name="Layout_send" xy="22,688" size="560,47" group="n8_vgb0" advanced="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
-    <text id="n4_vgb0" name="Node_forbid" xy="220,698" size="144,29" group="n8_vgb0" fontSize="20" color="#ffffff" strokeColor="#000000" text="本频道无法发言">
+    <text id="n4_vgb0" name="Node_forbid" xy="232,698" size="144,29" group="n8_vgb0" fontSize="20" color="#ffffff" strokeColor="#000000" text="本频道无法发言">
       <relation target="" sidePair="bottom-bottom"/>
     </text>
     <list id="n9_vgb0" name="ListView_receive" xy="5,14" size="112,649" group="n8_vgb0" overflow="scroll" scrollBarFlags="134" scrollBar="hidden" margin="4,0,0,0" lineGap="7" defaultItem="ui://8pthu2lwvgb0w" autoItemSize="false" align="center" autoClearItems="true" scrollItemToViewOnClick="false">
@@ -85,6 +85,12 @@
       <item/>
       <item/>
     </list>
+    <list id="n37_u13q" name="ListView_shout" xy="293,354" pivot="0,1" size="358,302" group="n53_my96" overflow="scroll" scrollBarFlags="128" scrollBar="hidden" margin="8,0,0,0" lineGap="10" colGap="40" defaultItem="ui://8pthu2lwq9lsv7n" align="center" autoClearItems="true">
+      <gearDisplay controller="ShowChatEx" pages="3"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
     <group id="n53_my96" name="n53" xy="286,346" size="372,318" group="n34_giai" advanced="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
@@ -100,6 +106,7 @@
   </transition>
   <transition name="OpenChatContentEx">
     <item time="0" type="Scale" target="n32_giai" tween="true" startValue="0,0" endValue="1,1" duration="6"/>
+    <item time="0" type="Scale" target="n37_u13q" tween="true" startValue="0,0" endValue="1,1" duration="6"/>
     <item time="0" type="Scale" target="n47_m0wq" tween="true" startValue="0,0" endValue="1,1" duration="6"/>
   </transition>
 </component>

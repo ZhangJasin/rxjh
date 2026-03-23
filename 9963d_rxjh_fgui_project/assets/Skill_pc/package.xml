@@ -20,8 +20,10 @@
     <image id="7uson" name="skill_icon_attack.png" path="/Images/"/>
     <component id="j47so" name="PCSkillStudyPanel.xml" path="/" exported="true"/>
     <component id="j47su" name="item_qigong.xml" path="/Components/" exported="true"/>
+    <component id="hhwjv" name="PCSkillTipsPanel.xml" path="/" exported="true"/>
     <component id="hhwjw" name="btn_config.xml" path="/Components/" exported="true"/>
     <component id="hhwjx" name="btn_practice.xml" path="/Components/" exported="true"/>
+    <component id="nd1wy" name="item_cost.xml" path="/Components/" exported="true"/>
     <component id="awj8z" name="btn_cz.xml" path="/Components/" exported="true"/>
     <component id="awj810" name="btn_czAll.xml" path="/Components/" exported="true"/>
     <component id="apr011" name="btn_upgrade.xml" path="/Components/" exported="true"/>
@@ -35,15 +37,6 @@
     <image id="omcq1e" name="img_lv_bg.png" path="/Images/" scale="9grid" scale9grid="4,4,8,8"/>
     <component id="omcq1f" name="btn_add.xml" path="/Components/" exported="true"/>
     <component id="fg491g" name="panel_qigong_tips.xml" path="/Components/" exported="true"/>
-    <component id="oh641h" name="btn_switch.xml" path="/Components/" exported="true"/>
-    <image id="oh641i" name="progress_bg.png" path="/Images/" scale="9grid" scale9grid="13,13,2,2"/>
-    <image id="oh641j" name="tog_handler.png" path="/Images/"/>
-    <component id="keg71k" name="drag_skill.xml" path="/Components/" exported="true"/>
-    <component id="fvar1l" name="btn_combox.xml" path="/Components/" exported="true"/>
-    <component id="fvar1m" name="item_cmbox.xml" path="/Components/" exported="true"/>
-    <image id="fvar1n" name="skill_add.png" path="/Images/"/>
-    <component id="fvar1o" name="btn_edit.xml" path="/Components/" exported="true"/>
-    <image id="fvar1p" name="icon_edit.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

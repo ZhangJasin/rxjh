@@ -13,11 +13,9 @@
     <text id="n37_mp8v" name="text_title" xy="667,178" pivot="0.5,0.5" anchor="true" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="入队审批">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <image id="n48_gqkz" name="img_nothing" src="iwlbkvpz" fileName="image/img.png" pkg="st7dgeqq" xy="666,400" pivot="0.5,0.5" anchor="true" group="n50_gqkz" scale="0.8,0.8"/>
-    <text id="n49_gqkz" name="text_nothing" xy="666,496" pivot="0.5,0.5" anchor="true" size="200,34" group="n50_gqkz" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#fff7d1" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="暂无队伍"/>
-    <group id="n50_gqkz" name="panel_nothing" xy="481,260" size="371,280" visible="false" advanced="true">
+    <text id="n20_leye" name="text_nothing" xy="667,410" pivot="0.5,0.5" anchor="true" size="600,90" font="ui://st7dgeqqje63v37" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
       <relation target="" sidePair="center-center,middle-middle"/>
-    </group>
+    </text>
     <image id="n44_gpvo" name="bg3" src="7c35voz" fileName="image/img_info_di.png" pkg="st7dgeqq" xy="342,220" size="650,50" group="n31_l7f0">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>

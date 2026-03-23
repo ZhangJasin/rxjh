@@ -139,12 +139,12 @@
     <image id="wi458" name="loading_bar_9.png" path="/image/" exported="true" scale="9grid" scale9grid="4,5,8,10"/>
     <image id="wi457" name="loading_bar_bg_9.png" path="/image/" exported="true" scale="9grid" scale9grid="33,8,0,16"/>
     <component id="mzzl1w" name="ComponentPos.xml" path="/common/" exported="true"/>
-    <image id="mzzl1o" name="bg_erhuan.png" path="/EquipIconBg/" exported="true"/>
-    <image id="mzzl1p" name="bg_hubi.png" path="/EquipIconBg/" exported="true"/>
-    <image id="mzzl1q" name="bg_jiezhi.png" path="/EquipIconBg/" exported="true"/>
-    <image id="mzzl1s" name="bg_xianglian.png" path="/EquipIconBg/" exported="true"/>
-    <image id="mzzl1t" name="bg_xiezi.png" path="/EquipIconBg/" exported="true"/>
-    <image id="mzzl1u" name="bg_yifu.png" path="/EquipIconBg/" exported="true"/>
+    <image id="mzzl1o" name="bg_erhuan.png" path="/image/" exported="true"/>
+    <image id="mzzl1p" name="bg_hubi.png" path="/image/" exported="true"/>
+    <image id="mzzl1q" name="bg_jiezhi.png" path="/image/" exported="true"/>
+    <image id="mzzl1s" name="bg_xianglian.png" path="/image/" exported="true"/>
+    <image id="mzzl1t" name="bg_xiezi.png" path="/image/" exported="true"/>
+    <image id="mzzl1u" name="bg_yifu.png" path="/image/" exported="true"/>
     <image id="qjli12" name="img_equip_ex_di.png" path="/image/" exported="true"/>
     <image id="iwe6vnw" name="pull_content_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="28,20,56,40"/>
     <image id="k5e7v6a" name="img_d2_9.png" path="/image/" exported="true" scale="9grid" scale9grid="6,15,-1,2" gridTile="12" qualityOption="source" smoothing="false" duplicatePadding="true" disableTrim="true"/>
@@ -154,7 +154,7 @@
     <image id="orj1vo3" name="di_1.png" path="/image/" exported="true" scale="9grid" scale9grid="6,5,3,1"/>
     <image id="orj1vo4" name="di_2.png" path="/image/" exported="true" scale="9grid" scale9grid="5,3,1,2" duplicatePadding="true"/>
     <image id="tgkjvoa" name="content_fill_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="16,18,9,5"/>
-    <image id="dxatvob" name="bg_wep.png" path="/EquipIconBg/" exported="true"/>
+    <image id="dxatvob" name="bg_wep.png" path="/image/" exported="true"/>
     <component id="ld2evod" name="CdMask.xml" path="/common/" exported="true"/>
     <image id="ld2evof" name="mask_black.png" path="/image/" exported="true"/>
     <image id="ld2evog" name="mask_circle.png" path="/image/" exported="true"/>
@@ -196,22 +196,9 @@
     <image id="c4dfkvpf" name="dropdown_normal.png" path="/image/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
     <image id="c4dfkvpg" name="dropdown_selected.png" path="/image/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
     <image id="ttxfkvpi" name="bg_pre.png" path="/image/" exported="true" scale="9grid" scale9grid="42,36,11,9"/>
-    <font id="9kdgkvpj" name="FZBWKSK.ttf" path="/" exported="true" renderMode="" samplePointSize="16"/>
+    <font id="9kdgkvpj" name="FZBWKSK.ttf" path="/" renderMode="" samplePointSize="16"/>
     <image id="pxu7kvpk" name="m_max.png" path="/image/" exported="true"/>
     <image id="pxu7kvpl" name="m_min.png" path="/image/" exported="true"/>
-    <image id="aipbkvpo" name="clock.png" path="/image/"/>
-    <image id="raxukvpp" name="bg_arrow.png" path="/EquipIconBg/" exported="true"/>
-    <image id="raxukvpq" name="bg_menjia.png" path="/EquipIconBg/" exported="true"/>
-    <image id="raxukvpr" name="bg_neijia.png" path="/EquipIconBg/" exported="true"/>
-    <image id="raxukvps" name="bg_shouzhuo.png" path="/EquipIconBg/" exported="true"/>
-    <image id="raxukvpt" name="bg_pifeng.png" path="/EquipIconBg/" exported="true"/>
-    <image id="e5w7kvpu" name="bg_bishou.png" path="/EquipIconBg/" exported="true"/>
-    <image id="e5w7kvpv" name="bg_dao.png" path="/EquipIconBg/" exported="true"/>
-    <image id="e5w7kvpw" name="bg_fazhang.png" path="/EquipIconBg/" exported="true"/>
-    <image id="e5w7kvpx" name="bg_gongjian.png" path="/EquipIconBg/" exported="true"/>
-    <image id="e5w7kvpy" name="bg_qiang.png" path="/EquipIconBg/" exported="true"/>
-    <image id="iwlbkvpz" name="img.png" path="/image/" exported="true"/>
-    <component id="iwlbkvq1" name="iconNotingCom.xml" path="/common/" exported="true"/>
   </resources>
-  <publish name=""/>
+  <publish name="" path="..\Assets\Res\game\FGUIExport\{publish_file_name}" packageCount="2" branchPath="..\Assets\Res\game\FGUIExport\{publish_file_name}_{branch_name}"/>
 </packageDescription>
