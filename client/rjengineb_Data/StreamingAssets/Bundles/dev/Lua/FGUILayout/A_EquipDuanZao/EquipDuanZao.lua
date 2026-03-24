@@ -420,10 +420,10 @@ function EquipDuanZao:baglist()
                 -- 正常的装备选择逻辑
                 self.selectEquipStdMode = bagequiplist[index].StdMode
                 self.qhequipMakeIndex = bagequiplist[index].MakeIndex
-                self.selectEquipQHTabIndex = SL:GetValue("ITEM_DATA",bagequiplist[index].Index).EquipQHTabId
+                local itemData= SL:GetValue("ITEM_DATA", bagequiplist[index].Index)
+                self.selectEquipQHTabIndex = itemData.EquipQHTabId
                 -- 合成页面需要重新获取bagitemlist数据
                 if self.pageControlle.selectedIndex == 0 then
-                    local itemData= SL:GetValue("ITEM_DATA", bagequiplist[index].Index)
                     self.selectEquipLv = itemData.NeedLevel
                     self:GetPageData()
                 end
@@ -464,10 +464,11 @@ function EquipDuanZao:equiplist()
                 -- 正常的装备选择逻辑
                 self.selectEquipStdMode = equipposlist[index].StdMode
                 self.qhequipMakeIndex = equipposlist[index].MakeIndex
-                self.selectEquipQHTabIndex = SL:GetValue("ITEM_DATA",equipposlist[index].Index).EquipQHTabId
+
+                local itemData= SL:GetValue("ITEM_DATA", equipposlist[index].Index)
+                self.selectEquipQHTabIndex = itemData.EquipQHTabId
                 -- 合成页面需要重新获取bagitemlist数据
-                if self.pageControlle.selectedIndex == 0 then
-                    local itemData= SL:GetValue("ITEM_DATA", bagequiplist[index].Index)
+                if self.pageControlle.selectedIndex == 0 then                    
                     self.selectEquipLv = itemData.NeedLevel
                     self:GetPageData()
                 end
