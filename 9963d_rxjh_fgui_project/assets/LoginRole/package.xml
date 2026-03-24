@@ -50,5 +50,5 @@
     <component id="gxjdvh" name="RoleLockText.xml" path="/" exported="true"/>
     <component id="fsrpvi" name="btn_select_role_fill.xml" path="/Components/Select/"/>
   </resources>
-  <publish name="" path="..\Assets\Res\game\FGUIExport\LoginRole" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>
