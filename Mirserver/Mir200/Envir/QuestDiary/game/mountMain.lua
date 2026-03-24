@@ -20,6 +20,7 @@ local PetExtraRate = {attrRate = 0.03}
 
 -- 灵兽buff配置
 local PetBuffId = 110044
+local BattlePetBuffId = 110045
 
 -- 经验加成属性ID(万分比,10000=100%)
 local ExpAttrId = 12
@@ -136,10 +137,10 @@ function mountMain.getSinglePetAttr(petData, level)
     return result
 end
 
---应用灵兽出战技能
---根据灵兽等级(1级、30级、70级)应用技能一(属性附加)和技能二(技能ID)
+-- 应用灵兽出战技能
+-- 根据灵兽等级(1级、30级、70级)应用技能一(属性附加)和技能二(技能ID)
 function mountMain.applyPetBattleSkills(actor, petId, petLevel)
-    --查找灵兽数据
+    -- 查找灵兽数据
     local petData = nil
     for k, v in pairs(SpiritualBeast) do
         if v.ID == petId then
@@ -148,11 +149,9 @@ function mountMain.applyPetBattleSkills(actor, petId, petLevel)
         end
     end
 
-    if not petData then
-        return
-    end
+    if not petData then return end
 
-    --确定技能等级
+    -- 确定技能等级
     local skillLevel = 0
     if petLevel >= 70 then
         skillLevel = 3
@@ -162,11 +161,9 @@ function mountMain.applyPetBattleSkills(actor, petId, petLevel)
         skillLevel = 1
     end
 
-    if skillLevel == 0 then
-        return
-    end
+    if skillLevel == 0 then return end
 
-    --应用技能一:属性附加(出战即附加给人物)
+    -- 应用技能一:属性附加(出战即附加给人物)
     local attrTypeField = "BattleSkill1_Level" .. skillLevel .. "_AttrType"
     local attrValueField = "BattleSkill1_Level" .. skillLevel .. "_AttrValue"
 
@@ -174,34 +171,41 @@ function mountMain.applyPetBattleSkills(actor, petId, petLevel)
         local attrTypes = petData[attrTypeField]
         local attrValues = petData[attrValueField]
 
+        -- 处理可能是字符串或表格的情况
+        if type(attrTypes) == "string" then attrTypes = {attrTypes} end
+        if type(attrValues) == "string" then attrValues = {attrValues} end
+
         for i = 1, #attrTypes do
             local attrId = tonumber(attrTypes[i])
             local attrValue = tonumber(attrValues[i])
             if attrId and attrValue then
-                --通过110044 buff附加属性
-                setbuffabil(actor, PetBuffId, attrId, "=", attrValue)
+                -- 通过110045 buff附加属性
+                -- print("attrId", attrId)
+                -- print("attrValue", attrValue)
+                setbuffabil(actor, BattlePetBuffId, attrId, "=", attrValue)
             end
         end
     end
 
-    --应用技能二:技能ID给人物
+    -- 应用技能二:技能ID给人物
     local skillIdField = "BattleSkill2_Level" .. skillLevel .. "_ID"
     if petData[skillIdField] and petData[skillIdField] ~= "" then
         local skillId = petData[skillIdField]
-        --TODO: 这里需要根据实际系统实现技能ID的应用方式
-        --例如: addskill(actor, skillId) 或其他技能系统API
-        --临时方案: 可以将技能ID存储到玩家变量中,由技能系统读取
-        --sethumvar(actor, "U_PetBattleSkillID", skillId)
+        -- TODO: 这里需要根据实际系统实现技能ID的应用方式
+        -- 例如: addskill(actor, skillId) 或其他技能系统API
+        -- 临时方案: 可以将技能ID存储到玩家变量中,由技能系统读取
+        -- sethumvar(actor, "U_PetBattleSkillID", skillId)
     end
 end
 
---清除灵兽出战技能效果
+-- 清除灵兽出战技能效果
 function mountMain.clearPetBattleSkills(actor)
-    --清除技能ID
-    --sethumvar(actor, "U_PetBattleSkillID", "")
+    -- 清除技能ID
+    -- sethumvar(actor, "U_PetBattleSkillID", "")
 
-    --技能一的属性通过110044 buff管理,在updatePetAttrBuff中会重新计算
-    --这里不需要单独清除,因为收回时会重新计算buff
+    -- 技能一的属性通过110044 buff管理,在updatePetAttrBuff中会重新计算
+    -- 这里不需要单独清除,因为收回时会重新计算buff
+    delbuff(actor, BattlePetBuffId)
 end
 
 function mountMain.openshow(actor, data)
@@ -699,11 +703,16 @@ function mountMain.recallpet(actor, data, isNow, isLoginZH)
             -- 更新灵兽属性buff(出战灵兽有额外加成)
             mountMain.updatePetAttrBuff(actor)
 
+            -- 清除旧宠物的出战技能效果
+            mountMain.clearPetBattleSkills(actor)
+
             -- 应用灵兽出战技能
             local allPets = json2tbl(gethumvar(actor, VarCfg.T_Pets))
             local petId = tonumber(data.btid)
-            if allPets and allPets[petId] then
-                local petLevel = tonumber(allPets[petId]) or 0
+            if allPets and SpiritualBeast[petId] then
+                local petName = SpiritualBeast[petId].Pet_Name
+                local petLevel = tonumber(allPets[petName]) or 0
+                -- print("petName==", petName, "petLevel==", petLevel)
                 mountMain.applyPetBattleSkills(actor, petId, petLevel)
             end
 
