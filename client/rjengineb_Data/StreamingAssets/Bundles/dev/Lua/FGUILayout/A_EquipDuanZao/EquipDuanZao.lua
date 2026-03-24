@@ -597,7 +597,7 @@ function EquipDuanZao:ListViewCellsxyfitem(idx, item)
         local att = FGUI:GetChild(item, "att")
         local num = FGUI:GetChild(item, "num")
         FGUI:GTextField_setText(name, "" .. itemname)
-        FGUIFunction:ScrollText_setString2(att, EquipQHItemTab[xyfitemlist[idx + 1]]['TIPS'] or "", 3.5, 0)
+        FGUIFunction:ScrollText_setString(att, EquipQHItemTab[xyfitemlist[idx + 1]]['TIPS'] or "", 3.5, 0)
         FGUI:GTextField_setText(num, "" .. itemnum)
     end
 end
@@ -1280,7 +1280,7 @@ function EquipDuanZao:ListadditemRender(idx, item)
             end
         end
         -- dump(attrstr)
-        FGUIFunction:ScrollText_setString2(att, attrstr, 3.5, 0)
+        FGUIFunction:ScrollText_setString(att, attrstr, 3.5, 0)
     end
 end
 
