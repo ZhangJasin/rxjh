@@ -787,5 +787,18 @@ local config = {
 		Attribute=0,
 		Floating=0,
 	},
+	[128] = { 
+		Idx=128,
+		Name="忽视防御",
+		Type=1,
+		Trends=0,
+		View=1,
+		Desc="攻击时无视目标防御的百分比（单位：万分比）",
+		Isshow=1,
+		Color=146,
+		Sort=36,
+		Attribute=0,
+		Floating=0,
+	},
 }
 return config
