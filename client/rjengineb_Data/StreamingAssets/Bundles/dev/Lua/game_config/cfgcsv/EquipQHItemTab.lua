@@ -6,7 +6,7 @@ local config = {
 		TIPS="升级物品成功率+5%，可用于装备强化/合成/加工、属性石赋予",
 		level_arr = {
 			[1] = 0,
-			[2] = 29,
+			[2] = 14,
 		},
 		addsuccess=5,
 	},
@@ -17,7 +17,7 @@ local config = {
 		TIPS="升级物品成功率+10%，可用于装备强化/合成/加工、属性石赋予",
 		level_arr = {
 			[1] = 0,
-			[2] = 29,
+			[2] = 14,
 		},
 		addsuccess=10,
 	},
@@ -28,7 +28,7 @@ local config = {
 		TIPS="升级物品成功率+15%，可用于装备强化/合成/加工、属性石赋予",
 		level_arr = {
 			[1] = 0,
-			[2] = 29,
+			[2] = 14,
 		},
 		addsuccess=15,
 	},
@@ -39,7 +39,7 @@ local config = {
 		TIPS="升级物品成功率+20%，可用于装备强化/合成/加工、属性石赋予",
 		level_arr = {
 			[1] = 0,
-			[2] = 29,
+			[2] = 14,
 		},
 		addsuccess=20,
 	},
@@ -50,7 +50,7 @@ local config = {
 		TIPS="升级物品成功率+25%，可用于装备强化/合成/加工、属性石赋予",
 		level_arr = {
 			[1] = 0,
-			[2] = 29,
+			[2] = 14,
 		},
 		addsuccess=25,
 	},
@@ -61,7 +61,7 @@ local config = {
 		TIPS="强化武器/防具、加工首饰时使用，<font color='#00FF00'>失败武器/防具/首饰不会破碎消失，改为强化等级降低1级</font>赋予属性时使用，失败不会掉至0级，改为降低1级</font>",
 		level_arr = {
 			[1] = 0,
-			[2] = 29,
+			[2] = 14,
 		},
 		limitlv=1,
 		dellv=1,
@@ -73,7 +73,7 @@ local config = {
 		TIPS="强化武器/防具、加工首饰时使用<font color='#00FF00'>失败武器/防具/首饰不会破碎消失，但强化/加工等级掉至0级</font>",
 		level_arr = {
 			[1] = 0,
-			[2] = 29,
+			[2] = 14,
 		},
 		limitlv=0,
 		dellv=1,
@@ -86,7 +86,7 @@ local config = {
 		equipMaxLv=79,
 		level_arr = {
 			[1] = 0,
-			[2] = 7,
+			[2] = 15,
 		},
 	},
 	[1308] = { 
@@ -97,7 +97,7 @@ local config = {
 		equipMaxLv=79,
 		level_arr = {
 			[1] = 0,
-			[2] = 7,
+			[2] = 15,
 		},
 	},
 	[1309] = { 
@@ -108,7 +108,7 @@ local config = {
 		equipMaxLv=79,
 		level_arr = {
 			[1] = 0,
-			[2] = 7,
+			[2] = 15,
 		},
 	},
 	[1310] = { 
@@ -119,7 +119,7 @@ local config = {
 		equipMaxLv=79,
 		level_arr = {
 			[1] = 0,
-			[2] = 7,
+			[2] = 15,
 		},
 	},
 	[1311] = { 
@@ -130,7 +130,7 @@ local config = {
 		equipMaxLv=79,
 		level_arr = {
 			[1] = 0,
-			[2] = 7,
+			[2] = 15,
 		},
 	},
 	[1312] = { 
@@ -140,7 +140,7 @@ local config = {
 		equipMaxLv=79,
 		level_arr = {
 			[1] = 0,
-			[2] = 7,
+			[2] = 15,
 		},
 	},
 	[1313] = { 
@@ -150,7 +150,7 @@ local config = {
 		equipMaxLv=79,
 		level_arr = {
 			[1] = 0,
-			[2] = 7,
+			[2] = 15,
 		},
 	},
 	[1314] = { 
@@ -160,7 +160,7 @@ local config = {
 		equipMaxLv=79,
 		level_arr = {
 			[1] = 0,
-			[2] = 7,
+			[2] = 15,
 		},
 	},
 	[1315] = { 
@@ -170,7 +170,7 @@ local config = {
 		equipMaxLv=79,
 		level_arr = {
 			[1] = 0,
-			[2] = 7,
+			[2] = 15,
 		},
 	},
 	[1316] = { 
@@ -180,7 +180,7 @@ local config = {
 		equipMaxLv=79,
 		level_arr = {
 			[1] = 0,
-			[2] = 7,
+			[2] = 15,
 		},
 	},
 	[2003] = { 
