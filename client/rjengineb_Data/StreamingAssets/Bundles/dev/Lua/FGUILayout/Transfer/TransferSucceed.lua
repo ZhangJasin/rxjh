@@ -37,7 +37,7 @@ function TransferSucceed:UpdateUI()
     FGUI:GTextField_setText(self._ui.txt_job_next, nextName)
     FGUI:GTextField_setText(self._ui.txt_job_next, nextName)
     FGUI:GList_setNumItems(self._ui.list_prop, #self._nextCfg.TransferAS)
-    --FGUI:GList_setNumItems(self._ui.list_skill, #self._nextCfg.UnlockSkills)
+    -- FGUI:GList_setNumItems(self._ui.list_skill, #self._nextCfg.UnlockSkills)
     FGUI:GList_setNumItems(self._ui.list_reward, #self._nextCfg.Reward)
 end
 

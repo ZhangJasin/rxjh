@@ -1,15 +1,15 @@
 -- 右上角面板数据层：网络消息监听 + 缓存 + 事件发布
 local righttoppanlData = {
     _state = {
-        cityitemlist = {},      -- 回城符集合
-        xunlutab = {},         -- 自动寻路参数表
+        cityitemlist = {}, -- 回城符集合
+        xunlutab = {},     -- 自动寻路参数表
     },
     _listeners = {},       -- { eventName = { [token] = callback } }
     _tokenSeed = 0,
 }
 
 -- 回城符列表定义
-local cityitemtab = {127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140}
+local cityitemtab = { 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140 }
 
 
 function righttoppanlData.Get()
@@ -48,12 +48,14 @@ end
 function righttoppanlData:RequestBackCity(param)
     ssrMessage:sendmsgEx("moveItem", "BackCity", param)
 end
+
 -- 使用传送符道具
 function righttoppanlData:RequestMove(param)
     ssrMessage:sendmsgEx("moveItem", "move", param)
     -- SL:RequestUseTransfer(param[1][1], param[1][2], param[1][3])
     SL:RegisterLUAEvent(LUA_EVENT_CHANGE_SCENE, "righttoppanlData", handler(self, self.OnReceiveUseTransfer))
 end
+
 -- 使用道具弹窗
 function righttoppanlData:RequestUseItem(data)
     ssrMessage:sendmsgEx(data.param1, data.param2, { data.param3, data.param4 })
@@ -97,14 +99,13 @@ end
 
 -- 等级改变
 function righttoppanlData:OnRefreshPropertyShow(curlv)
-    self:_Emit("level_change", {lv = curlv or SL:GetValue("LEVEL")})
+    self:_Emit("level_change", { lv = curlv or SL:GetValue("LEVEL") })
 end
 
 -- 使用道具确认处理
 function righttoppanlData:useItem(data)
     self:_Emit("use_item", data)
 end
-
 
 -- 注册全局事件
 function righttoppanlData:RegisterEvent()
@@ -113,7 +114,6 @@ function righttoppanlData:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_TARGET_CAHNGE, "righttoppanlData", handler(self, self.onTargerChange))
     SL:RegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "righttoppanlData", handler(self, self.OnRefreshPropertyShow))
     SL:RegisterLUAEvent(LUA_EVENT_ROLE_PROPERTY_INITED, "righttoppanlData", handler(self, self.OnRefreshPropertyShow))
-    
 end
 
 -- 移除全局事件
@@ -123,22 +123,25 @@ function righttoppanlData:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_TARGET_CAHNGE, "righttoppanlData")
     SL:UnRegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "righttoppanlData")
     SL:UnRegisterLUAEvent(LUA_EVENT_ROLE_PROPERTY_INITED, "righttoppanlData")
-
 end
 
 function righttoppanlData:OnReceiveUseTransfer()
     SL:UnRegisterLUAEvent(LUA_EVENT_CHANGE_SCENE, "righttoppanlData")
-	SL:SetValue("BATTLE_AUTO_MOVE_END")
-	SL:SetValue("BATTLE_AFK_END")
-	
-	-- 检查当前任务的task_turntype是否为1，如果是则开启自动挂机
-	local taskID = taskDeliverData:GetTaskID()
-	if taskID then
-		local Task_cfg = require("game_config/cfgcsv/Task")
-		local taskTurnType = Task_cfg[taskID]['task_turntype']
-		if taskTurnType and taskTurnType == 1 then
-			SL:SetValue("BATTLE_AFK_BEGIN")
-		end
-	end
+    SL:SetValue("BATTLE_AFK_END")
+    SL:SetValue("BATTLE_AUTO_MOVE_END")
+    -- 检查当前任务的task_turntype是否为1，如果是则开启自动挂机
+    local taskID = taskDeliverData:GetTaskID()
+
+    if taskID then
+        local Task_cfg = require("game_config/cfgcsv/Task")
+        local taskTurnType = Task_cfg[taskID]['task_turntype']
+        local md = MainMissionData:GetTaskProgressList()
+        if md and md[tostring(taskID)] then
+            if taskTurnType and taskTurnType == 1 and md[tostring(taskID)]["state"] == 1 then
+                SL:SetValue("BATTLE_AFK_BEGIN")
+            end
+        end
+    end
 end
+
 return righttoppanlData

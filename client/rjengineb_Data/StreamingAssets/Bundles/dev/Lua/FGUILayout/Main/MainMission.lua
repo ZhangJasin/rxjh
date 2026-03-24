@@ -302,6 +302,8 @@ end
 function MainMission:onTransferComplete()  -- 完成转职
     local curCfg = MainMissionData.data.transfer_cur
     local nextCfg = MainMissionData.data.transfer_next
+    SL:dump(curCfg, "当前转职配置")
+    SL:dump(nextCfg, "下一个转职配置")
     FGUI:Open("Transfer", "TransferSucceed", { curCfg = curCfg, nextCfg = nextCfg })
     -- 发送转职完成消息
     SL:SendNetMsg(9998,12, nil, nil, nil)
