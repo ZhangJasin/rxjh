@@ -260,5 +260,100 @@ local config = {
 		},
 		fyattrid=6,
 	},
+	[3905] = { 
+		idx=3905,
+		itemname="混元金刚石（攻击）",
+		itemtype=1,
+		limitpos=5,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3906] = { 
+		idx=3906,
+		itemname="混元金刚石（追伤）",
+		itemtype=1,
+		limitpos=5,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3907] = { 
+		idx=3907,
+		itemname="混元金刚石（武功）",
+		itemtype=1,
+		limitpos=5,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3908] = { 
+		idx=3908,
+		itemname="混元金刚石（气功）",
+		itemtype=1,
+		limitpos=5,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3909] = { 
+		idx=3909,
+		itemname="混元金刚石（命中）",
+		itemtype=1,
+		limitpos=5,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3910] = { 
+		idx=3910,
+		itemname="冰魄寒玉石（防御）",
+		itemtype=1,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3911] = { 
+		idx=3911,
+		itemname="冰魄寒玉石（武防）",
+		itemtype=1,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3912] = { 
+		idx=3912,
+		itemname="冰魄寒玉石（生命）",
+		itemtype=1,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3913] = { 
+		idx=3913,
+		itemname="冰魄寒玉石（闪避）",
+		itemtype=1,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3914] = { 
+		idx=3914,
+		itemname="冰魄寒玉石（内功）",
+		itemtype=1,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
 }
 return config
