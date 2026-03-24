@@ -260,7 +260,9 @@ function BagRecycleViewModel:RecycleSelectItems()
 		end
 		-- print(cnt)
 	-- end
-	BagRecycleViewModelUI.CCUI = self
+	if BagRecycleViewModelUI then
+		BagRecycleViewModelUI.CCUI = self	
+	end
 	ssrMessage:sendmsgEx("bag", "sellAll",recycItemList) 
 	-- SL:RequestRecycleItems(self.SelectMakeIndexToPos)
 end
