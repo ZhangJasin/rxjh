@@ -511,7 +511,7 @@ function WuXunPanl:ListWXCLEquipRenderer(idx,item)      -- 武勋装备展示
         local Rtitle = FGUI:GetChild(att, "Rtitle")
         FGUI:GRichTextField_setColor(Rtitle, "#30ff00")
         local curjs = self.WuXun_ChuiLianList[""..wuxun_level_data[1]['WuXun_EquipPos'][idx+1]] or 0
-        FGUIFunction:ScrollText_setString2(att,"锤炼等级 +"..curjs.."", 3.5, 0)
+        FGUIFunction:ScrollText_setString(att,"锤炼等级 +"..curjs.."", 3.5, 0)
 
     end
 end
@@ -814,7 +814,7 @@ function WuXunPanl:ListWXZJEquipRenderer(idx,item)      -- 武勋装备展示
         local att = FGUI:GetChild(item, "att")
         local Rtitle = FGUI:GetChild(att, "Rtitle")
         FGUI:GRichTextField_setColor(Rtitle, "#30ff00")
-        FGUIFunction:ScrollText_setString2(att,"铸阶等级 "..zjLv.."阶", 3.5, 0)
+        FGUIFunction:ScrollText_setString(att,"铸阶等级 "..zjLv.."阶", 3.5, 0)
     end
 end
 -- 武勋铸阶属性展示 当前等级
@@ -1262,7 +1262,7 @@ function WuXunPanl:ListWXZYEquipRenderer(idx,item)      -- 武勋装备展示
         end
         local Rtitle = FGUI:GetChild(att, "Rtitle")
         FGUI:GRichTextField_setColor(Rtitle, "#00ff00")
-        FGUIFunction:ScrollText_setString2(att,str, 3.5, 0)
+        FGUIFunction:ScrollText_setString(att,str, 3.5, 0)
     end
 end
 -- 消耗武勋装备展示  右侧列表
@@ -1302,7 +1302,7 @@ function WuXunPanl:ListWXZYXHEquipRenderer(idx,item)
                 attrstr = ""..name..value
             end
         end
-        FGUIFunction:ScrollText_setString2(att,attrstr, 3.5, 0)
+        FGUIFunction:ScrollText_setString(att,attrstr, 3.5, 0)
     end
 end
 -- 武勋转印更新
