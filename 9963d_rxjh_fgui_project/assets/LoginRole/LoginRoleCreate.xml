@@ -3,9 +3,8 @@
   <controller name="page" alias="测试" exported="true" pages="0,,1,,2," selected="0"/>
   <controller name="c1" pages="0,,1," selected="0"/>
   <displayList>
-    <list id="n18_flj6" name="list_job_select" xy="80,43" size="223,610" layout="flow_vt" overflow="scroll" scrollBarFlags="128" lineGap="19" defaultItem="ui://4op6gwolflj61g" autoClearItems="true">
+    <list id="n18_flj6" name="list_job_select" xy="66,88" size="223,511" layout="flow_vt" overflow="scroll" scrollBarFlags="128" lineGap="19" defaultItem="ui://4op6gwolflj61g" autoClearItems="true">
       <relation target="" sidePair="middle-middle,left-left"/>
-      <item/>
       <item/>
       <item/>
       <item/>

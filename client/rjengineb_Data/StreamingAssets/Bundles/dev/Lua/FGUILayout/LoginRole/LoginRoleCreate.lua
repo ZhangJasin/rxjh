@@ -13,7 +13,7 @@ local roleAttrRadarMap = {
 	[3] = {0.51,0.38,0.5,0.8,0.46},     -- 刺客
 }
 
-local classCount = 6
+local classCount = 5
 
 -- 职业排序顺序：刀客(5)、剑客(6)、枪客(2)、弓手(1)、医生(4)、刺客(3)
 local JOB_SORT_ORDER = {5, 6, 2, 1, 4, 3}
