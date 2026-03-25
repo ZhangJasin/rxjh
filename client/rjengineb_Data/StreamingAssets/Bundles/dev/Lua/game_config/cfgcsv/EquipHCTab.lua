@@ -127,6 +127,24 @@ local config = {
 	},
 	[8] = { 
 		idx=8,
+		stdmode=66,
+		addsucc_arr = {
+			[1] = 50,
+			[2] = 5,
+		},
+		EquipHCCost_arr = {
+			[1] = 1,
+			[2] = 5000,
+		},
+		EquipHCRatio_arr = {
+			[1] = 10000,
+			[2] = 5000,
+			[3] = 2000,
+			[4] = 1000,
+		},
+	},
+	[9] = { 
+		idx=9,
 		stdmode=53,
 		addsucc_arr = {
 			[1] = 50,
