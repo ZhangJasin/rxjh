@@ -749,13 +749,13 @@ end
 
 --寻路失败提示 该区域不可达
 function FGUIFunction:FindPathFailTips()
-    if FGUIFunction._findPathFailTipsSchedule then 
-        return 
-    end
-    SL:ShowSystemTips(SL:GetValue("I18N_STRING", 20000000))    
-    FGUIFunction._findPathFailTipsSchedule = SL:ScheduleOnce(function()
-        FGUIFunction._findPathFailTipsSchedule = nil
-    end, 3)
+    -- if FGUIFunction._findPathFailTipsSchedule then 
+    --     return 
+    -- end
+    -- SL:ShowSystemTips(SL:GetValue("I18N_STRING", 20000000))    
+    -- FGUIFunction._findPathFailTipsSchedule = SL:ScheduleOnce(function()
+    --     FGUIFunction._findPathFailTipsSchedule = nil
+    -- end, 3)
 end
 
 --检查物品限时 超时
