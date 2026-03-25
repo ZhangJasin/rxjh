@@ -124,18 +124,118 @@
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
       <Button title="幻化"/>
     </component>
-    <component id="n77_v5h4" name="lingshou" src="v5h42q" fileName="Components/lingshou.xml" xy="172,75">
-      <gearDisplay controller="rightTabs" pages="0"/>
-    </component>
     <text id="n76_v5h4" name="n76" xy="664,51" pivot="0.5,0.5" anchor="true" size="139,34" fontSize="24" color="#9aafbb" align="center" autoSize="none" text="灵兽">
       <gearDisplay controller="rightTabs" pages="0"/>
       <relation target="n2_o0nq" sidePair=""/>
     </text>
-    <list id="n79_v5h4" name="petsList" xy="171,75" size="210,640" overflow="scroll" margin="10,10,5,5" lineGap="4" defaultItem="ui://vslix2m2v5h42w" autoClearItems="true">
+    <image id="n79_v5h4" name="n79" src="o0nqb" fileName="image/zqbg.png" xy="171,75" size="988,640">
       <gearDisplay controller="rightTabs" pages="0"/>
+    </image>
+    <image id="n80_v5h4" name="n80" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="1094,140">
+      <gearDisplay controller="rightTabs" pages="0"/>
+    </image>
+    <image id="n81_v5h4" name="n81" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="916,140" flip="hz">
+      <gearDisplay controller="rightTabs" pages="0"/>
+    </image>
+    <image id="n82_v5h4" name="n82" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="915,381" flip="hz">
+      <gearDisplay controller="topTabs" pages="0"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </image>
+    <image id="n83_v5h4" name="n83" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="1094,380">
+      <gearDisplay controller="topTabs" pages="0"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </image>
+    <list id="n84_v5h4" name="petTopTabList" xy="175,74" size="313,47" pageController="topTabs" layout="row" margin="4,2,6,0" colGap="5" defaultItem="ui://vslix2m2o0nq9" selectionController="topTabs">
+      <gearDisplay controller="rightTabs" pages="0"/>
+      <relation target="" sidePair=""/>
+      <item title="灵兽" name="灵兽" selectedTitle="灵兽"/>
+      <item title="幻化" name="幻化" selectedTitle="幻化"/>
+    </list>
+    <text id="n85_v5h4" name="n85" xy="971,135" size="125,32" fontSize="22" color="#ffff00" leading="0" autoSize="none" text="当前属性：">
+      <gearDisplay controller="topTabs" pages="0"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </text>
+    <text id="n86_v5h4" name="n86" xy="971,376" size="125,32" fontSize="22" color="#ffff00" leading="0" autoSize="none" text="下级属性：">
+      <gearDisplay controller="topTabs" pages="0"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </text>
+    <component id="n87_v5h4" name="petNowAttr" src="o0nqo" fileName="Components/nowAttr.xml" xy="903,175">
+      <gearDisplay controller="topTabs" pages="0"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </component>
+    <component id="n88_v5h4" name="petNextAttr" src="o0nqo" fileName="Components/nowAttr.xml" xy="903,415">
+      <gearDisplay controller="topTabs" pages="0"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </component>
+    <component id="n89_v5h4" name="petJieshu" src="o0nqg" fileName="Components/jieshu.xml" xy="274,150">
+      <gearDisplay controller="topTabs" pages="0"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </component>
+    <component id="n90_v5h4" name="shengjilingshou" src="o0nqr" fileName="Components/saveBtn.xml" xy="969,661">
+      <gearDisplay controller="topTabs" pages="0"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </component>
+    <list id="n91_v5h4" name="petxxshu" xy="372,212" size="451,38" layout="row" selectionMode="multipleSingleClick" overflow="scroll" colGap="3" defaultItem="ui://vslix2m2o0nq1v">
+      <gearDisplay controller="topTabs" pages="0"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
       <item/>
       <item/>
       <item/>
     </list>
+    <image id="n92_v5h4" name="n92" src="o0nq16" fileName="image/titleBg.png" xy="430,150" size="230,50">
+      <gearDisplay controller="rightTabs" pages="0"/>
+    </image>
+    <text id="n93_v5h4" name="petName" xy="430,150" size="230,50" fontSize="28" color="#f6cd2b" align="center" vAlign="middle" leading="0" autoSize="none" text="龙猫">
+      <gearDisplay controller="rightTabs" pages="0"/>
+    </text>
+    <component id="n94_v5h4" name="petQhbtn" src="o0nq17" fileName="Components/tybtn1.xml" xy="468,660">
+      <gearDisplay controller="topTabs" pages="0"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+      <Button title="出战"/>
+    </component>
+    <text id="n95_v5h4" name="n95" xy="971,135" size="125,32" fontSize="22" color="#ffff00" leading="0" autoSize="none" text="人物属性:">
+      <gearDisplay controller="topTabs" pages="1"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </text>
+    <component id="n96_v5h4" name="petActiveBtn" src="o0nq1c" fileName="Components/activeBtn.xml" xy="969,661">
+      <gearDisplay controller="topTabs" pages="1"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </component>
+    <component id="n97_v5h4" name="petHuanhuaAttr" src="o0nq1d" fileName="Components/hhAttr.xml" xy="902,175">
+      <gearDisplay controller="topTabs" pages="1"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </component>
+    <graph id="n99_v5h4" name="petBody" xy="541,594" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen" lineColor="#00000000" fillColor="#00ffffff">
+      <gearDisplay controller="rightTabs" pages="0"/>
+    </graph>
+    <list id="n98_v5h4" name="petLeftList" xy="175,150" size="76,509" overflow="scroll" margin="4,2,6,0" lineGap="10" defaultItem="ui://vslix2m2o0nq1e" selectionController="isselected" autoClearItems="true">
+      <gearDisplay controller="topTabs" pages="1"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n100_v5h4" name="petModel" src="vorr1x" fileName="Components/mountModel.xml" xy="399,255" size="300,377">
+      <gearDisplay controller="rightTabs" pages="0"/>
+    </component>
+    <component id="n101_v5h4" name="petXhcl" src="vorr21" fileName="Components/xhcl.xml" xy="1024,619">
+      <gearDisplay controller="rightTabs" pages="0"/>
+    </component>
+    <component id="n102_v5h4" name="petHuanhua" src="o0nq17" fileName="Components/tybtn1.xml" xy="468,660">
+      <gearDisplay controller="topTabs" pages="1"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+      <Button title="幻化"/>
+    </component>
+    <text id="n104_cb9c" name="n104" xy="962,625" size="70,32" fontSize="22" color="#fcf1bf" text="消耗：">
+      <gearDisplay controller="rightTabs" pages="0"/>
+    </text>
   </displayList>
 </component>
