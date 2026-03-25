@@ -288,6 +288,21 @@ local config = {
 		Condition="<$RANDOM_6> == 1",
 		ConditionShow="六分之一概率",
 	},
+	[51001] = { 
+		ID=51001,
+		Condition="<$RANDOM_100> <= 96",
+		ConditionShow="100分之96概率",
+	},
+	[51002] = { 
+		ID=51002,
+		Condition="<$RANDOM_100> <= 3",
+		ConditionShow="100分之3概率",
+	},
+	[51003] = { 
+		ID=51003,
+		Condition="<$RANDOM_100> == 1",
+		ConditionShow="100分之1概率",
+	},
 	[61000] = { 
 		ID=61000,
 		Condition="<$JOB> == 1",
