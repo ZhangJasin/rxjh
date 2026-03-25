@@ -9,6 +9,7 @@ local PAGE_DATA = {
 
 function PCSkillStudyPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
+    self._uiTips = FGUI:ui_delegate(FGUI:GetChild(self.component, "skill_tips"))
     self:InitEvent()
 end 
 
@@ -34,6 +35,7 @@ function PCSkillStudyPanel:InitData()
     self._selSkillID = nil
     self._selSkillLevel = nil
     self._skillCells = {}
+    self._costList = {}
     self._skills = {}
 end
 
@@ -43,6 +45,7 @@ function PCSkillStudyPanel:CleanData()
     self._selSkillID = nil
     self._selSkillLevel = nil
     self._skillCells = {}
+    self._costList = {}
     self._skills = {}
 end
 
@@ -54,11 +57,6 @@ end
 function PCSkillStudyPanel:InitEvent()
     -- 重置键位
 	FGUI:setOnClickEvent(self._ui.btn_reset, handler(self, self.SkillResetKey))
-
-    -- 自动施法开关
-	FGUI:setOnClickEvent(self._ui.btn_switch, handler(self, self.OnClickAutoSwitch))
-    local switch = SL:GetValue("SETTING_AUTO_SKILL_SHOW")
-    FGUI:GButton_setSelected(self._ui.btn_switch, switch)
 
 	FGUI:GList_itemRenderer(self._ui.list_page, handler(self, self.ItemRendererPage))
     FGUI:GList_setNumItems(self._ui.list_page, #PAGE_DATA)
@@ -85,7 +83,7 @@ end
 
 function PCSkillStudyPanel:SelectPage(index)
 	FGUI:GList_setSelectedIndex(self._ui.list_page, index - 1)
-    FGUIFunction:HideSkillTip()
+    FGUI:setVisible(self._ui.skill_tips, false)
     self:CleanData()
 
 	self._selPage = index
@@ -203,6 +201,80 @@ function PCSkillStudyPanel:SkillGroupRenderer(idx, item)
     FGUI:setOnRollOutEvent(ui_icon, handler(self, self.OnTouchSkillIconOut, SkillID))
 end
 
+function PCSkillStudyPanel:ShowSkillTips(SkillID, SkillLevel)
+    if not SkillID and SkillLevel then 
+        return
+    end 
+
+    FGUI:setVisible(self._ui.skill_tips, true)
+
+    local skillConfig = SL:GetValue("SKILL_UPGRADE_CONFIG_BY_ID_LEVEL", SkillID, SkillLevel)
+
+    -- icon 
+    local path = SL:GetValue("SKILL_SQUARE_ICON_PATH_BY_ID", SkillID)
+    FGUI:GLoader_setUrl(self._uiTips.skill_icon, path, nil, true) 
+
+    -- name
+    local name = SL:GetValue("SKILL_UP_NAME_BY_ID", SkillID, SkillLevel)
+    FGUI:GTextField_setText(self._uiTips.text_name, name)
+
+    -- condition 
+    local sTips = SL:GetValue("CONDITION_TIPS", skillConfig.ConditionId)
+    FGUI:GRichTextField_setText(self._uiTips.text_condition, sTips)
+
+    -- cost
+    if skillConfig.Cost then 
+        table.clear(self._costList)
+        local sp = string.split(skillConfig.Cost, "|")
+        for i = 1, #sp do 
+            local data = {}
+            local sp2 = string.split(sp[i], "#")
+            data.id = tonumber(sp2[1])
+            data.count = tonumber(sp2[2])
+            table.insert(self._costList, data)
+        end 
+        FGUI:GList_itemRenderer(self._uiTips.list_cost, function(idx, item)
+            local index = idx + 1
+            local data = self._costList[index]
+            if not data then 
+                return 
+            end  
+
+            local text_cost = FGUI:GetChild(item, "text_cost")
+            local itemName = SL:GetValue("ITEM_NAME", data.id)
+            local myCount = SL:GetValue("ITEM_COUNT", data.id)
+            local needCount = data.count   
+            local color = myCount >= needCount and "#00FF00" or "#FF0000"
+            FGUI:GTextField_setText(text_cost, string.format(GET_STRING(60012007), itemName, color, needCount))
+        end)
+        FGUI:GList_setNumItems(self._uiTips.list_cost, #self._costList)
+    end
+
+    -- desc
+    local desc = SL:GetValue("SKILL_UP_DESC_BY_ID", SkillID, SkillLevel)
+    FGUI:GRichTextField_setText(self._uiTips.text_desc, desc)
+
+    -- weili
+    FGUI:GTextField_setText(self._uiTips.text_weili, string.format(GET_STRING(60012004), skillConfig.Power or 0))
+
+    -- att   
+    local skillcost = skillConfig.SkillCost
+    if skillcost then 
+        if tonumber(skillcost[1]) == 0 then 
+            local attData = SL:GetValue("ATTR_CONFIG", tonumber(skillcost[2]))
+            if attData then 
+                FGUI:GTextField_setText(self._uiTips.text_neili, string.format(GET_STRING(60012005), attData.Name, tonumber(skillcost[3])))
+            end 
+        end 
+    end
+
+    -- cd
+    local skillCfg = SL:GetValue("SKILL_CONFIG_BY_SKILL_ID", SkillID)
+    if skillCfg then 
+        FGUI:GTextField_setText(self._uiTips.text_cd, string.format(GET_STRING(60012006), skillCfg.CD * 0.001 or 0))
+    end
+end
+
 function PCSkillStudyPanel:UpdatePlayerInfo()
     local itemID = 7
     local itemName = SL:GetValue("ITEM_NAME", itemID)
@@ -272,29 +344,23 @@ function PCSkillStudyPanel:OnClickSkillIcon(context)
             type = FGUIDefine.PCQuickType.Skill,
             id = selID,
         }
-        FGUI:DragDropManager_startDrag(icon_skill, "ui://Skill_pc/drag_skill", data, touchId)
-        local drag = FGUI:GLoader_getComponent(FGUI:DragDropManager_getDragAgent())
-        local icon = FGUI:GetChild(drag, "icon")
-        local iconPath = SL:GetValue("SKILL_SQUARE_ICON_PATH_BY_ID", selID)
-        FGUI:GLoader_setUrl(icon, iconPath)
+        FGUI:DragDropManager_startDrag(icon_skill, SL:GetValue("SKILL_SQUARE_ICON_PATH_BY_ID", selID), data, touchId)
     end 
 end
 
 -- touch over 
-function PCSkillStudyPanel:OnTouchSkillIconOver(skillID, eventData)
-    local posX, posY = FGUI:getWorldPosition(eventData.sender)
-    local skillData = self._skillCells[skillID]
-    FGUIFunction:ShowSkillTip(skillData.id, skillData.level, {posX = posX, posY = posY})
+function PCSkillStudyPanel:OnTouchSkillIconOver(skillID)
+    self:ShowSkillTips(self._skillCells[skillID].id, self._skillCells[skillID].level)
 end
 
 -- touch out
 function PCSkillStudyPanel:OnTouchSkillIconOut(skillID)
-    FGUIFunction:HideSkillTip()
+    FGUI:setVisible(self._ui.skill_tips, false)
 end
 
 
 function PCSkillStudyPanel:OnClickStudy(context)
-    FGUIFunction:HideSkillTip()
+    FGUI:setVisible(self._ui.skill_tips, false)
 
     local skillID = FGUI:GetIntData(context.sender)
     local isStudy = self:CheckSkillStudy(skillID, true)
@@ -306,7 +372,7 @@ function PCSkillStudyPanel:OnClickStudy(context)
 end
 
 function PCSkillStudyPanel:OnClickUpgrade(context)
-    FGUIFunction:HideSkillTip()
+    FGUI:setVisible(self._ui.skill_tips, false)
 
     if not self._selSkillID then 
         return 
@@ -346,13 +412,6 @@ function PCSkillStudyPanel:SkillResetKey()
 
     self:CleanSelSkill()
     SL:RequestSaveSkillKeys()
-end
-
--- 自动施法开关
-function PCSkillStudyPanel:OnClickAutoSwitch(context)
-    local bSelected = FGUI:GButton_getSelected(context.sender)
-    SL:SetValue("SETTING_AUTO_SKILL_SHOW", bSelected)
-    SL:onLUAEvent(LUA_EVENT_PC_AUTO_SKILL_SWITCH, bSelected)
 end
 
 -- 改变键位
@@ -405,7 +464,7 @@ function PCSkillStudyPanel:SkillDeleteKey(skillId, skillKey)
 end
 
 function PCSkillStudyPanel:OnWuGongStudy()
-    FGUIFunction:HideSkillTip()
+    FGUI:setVisible(self._ui.skill_tips, false)
     self._skillWuGong = SL:GetValue("SKILL_WUGONG_TYPE_BY_GOODEVIL", self._myJob, self._selPage, self._myGoodEvil)
     self:UpdateSkillList()
     self:UpdatePlayerInfo()

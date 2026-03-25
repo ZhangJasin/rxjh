@@ -11,7 +11,7 @@ function ItemAutoUse.main()
         end
 
         -- 装备位置检测
-        if SL:GetValue("EQUIP_DATA_BY_POS",11) then
+        if SL:GetValue("EQUIP_DATA_BY_POS", 11) then
             return
         end
 
@@ -20,17 +20,17 @@ function ItemAutoUse.main()
             -- 获取设置页面装配的箭矢优先级
             local arrowIDs = SL:GetValue("SETTING_AUTO_ASSEMBLE_ARROW_VALUE")
             if arrowIDs and next(arrowIDs) then
-                for index = 1,table.count(arrowIDs),1 do
-                    local item = SL:GetValue("BAG_DATA_BY_INDEX",arrowIDs[index])
+                for index = 1, table.count(arrowIDs), 1 do
+                    local item = SL:GetValue("BAG_DATA_BY_INDEX", arrowIDs[index])
                     if item and SL:CheckItemUseNeed(item) then
                         SL:RequestUseItem(item)
                         isArrowEquipSuc = true
                         break
                     end
                 end
-            end 
+            end
         end
-        
+
         if not isArrowEquipSuc and isNeedTip then
             local data = {}
             data.str = GET_STRING(30000100)
@@ -40,12 +40,11 @@ function ItemAutoUse.main()
     end)
 
     -- 玩家升级 quickuse 检测
-    SL:RegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "ItemAutoUse", function(data)
-        FGUIFunction:CheckBagQuickUse()
+    SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_ADD, "ItemAutoUse", function(data)
+        -- SL:dump(data, "背包物品增加")
+        if data then
+            FGUIFunction:CheckBagQuickUse(data)    
+        end
     end)
-
-    -- 玩家登录 quickuse 检测
-    SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_INIT, "ItemAutoUse", function(data)
-        FGUIFunction:CheckBagQuickUse()
-    end)
+ 
 end

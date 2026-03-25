@@ -50,5 +50,5 @@
     <component id="k9rf1t" name="ComboBox_launch_item.xml" path="/Components/"/>
     <component id="k9rf1u" name="ComboBox_launch_popup.xml" path="/Components/"/>
   </resources>
-  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Skill" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>

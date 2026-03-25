@@ -23,6 +23,7 @@ local MAX_SCHEME_COUNT = 10
 
 function SkillStudyPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
+    self._uiTips = FGUI:ui_delegate(FGUI:GetChild(self.component, "skill_tips"))
 
     self:InitData()
     self:InitEvent()
@@ -37,14 +38,11 @@ function SkillStudyPanel:Enter()
     self:SelectPage(tradingIndex and 2 or 1)
     self:UpdateAutoSkillSetting()
     self:UpdateSkillPad()
-
-    FGUIFunction:RegisterGuideData(FGUIDefine.GuideDataKey.SkillGuideFunc,handler(self,self.GetSkillGuideIcon))
 end
 
 function SkillStudyPanel:Exit()
 	self:RemoveEvent()
     self:CleanData()
-    FGUIFunction:UnRegisterGuideData(FGUIDefine.GuideDataKey.SkillGuideFunc)
 end
 
 function SkillStudyPanel:InitData()
@@ -89,6 +87,9 @@ function SkillStudyPanel:InitEvent()
 	FGUI:setOnClickEvent(self._ui.mask, handler(self, self.OnClickSchemeMask))
     FGUI:setVisible(self._ui.mask, false)
 
+    -- Tips点击空白
+	FGUI:setOnClickEvent(self._uiTips.mask, handler(self, self.OnClickMask))
+
     -- 重置键位
 	FGUI:setOnClickEvent(self._ui.btn_reset, handler(self, self.OnClickResetKey))
 
@@ -129,7 +130,7 @@ end
 
 function SkillStudyPanel:SelectPage(index)
 	FGUI:GList_setSelectedIndex(self._ui.list_page, index - 1)
-    FGUIFunction:HideSkillTip()
+    FGUI:setVisible(self._ui.skill_tips, false)
 
 	self._selPage = PAGE_DATA[index].page
     self._skillWuGong = SL:GetValue("SKILL_WUGONG_TYPE_BY_GOODEVIL", self._myJob, self._selPage, self._myGoodEvil)
@@ -227,8 +228,9 @@ function SkillStudyPanel:SkillGroupRenderer(idx, item)
         if isCondition and isCost then 
             sTips = GET_STRING(60012018)
         end
+    else 
+        FGUI:GRichTextField_setColor(ui_condition, "#00ff00")
     end 
-    FGUI:GRichTextField_setColor(ui_condition, isLearned and "#00ff00" or "#ff0000")
     FGUI:GRichTextField_setText(ui_condition, sTips)
 
     -- skill select 
@@ -256,10 +258,8 @@ function SkillStudyPanel:OnClickSkillIcon(context)
     else 
         self:CleanSelSkill()
     end 
-    local skillData = self._skillCells[selID]
-    local skillID = skillData.id
-    local skillLevel = skillData.level
-    FGUIFunction:ShowSkillTip(skillID, skillLevel, {callBack = handler(self, self.OnTipCallBack), showBtn = true})
+    
+    self:ShowSkillTips(self._skillCells[selID].id, self._skillCells[selID].level)
     self:RefreshPadLight(false)
 end
 ---------------------------------技能列表---------------------------------end
@@ -608,7 +608,7 @@ function SkillStudyPanel:OnClickBtnScheme()
     if not self:CheckInputing() then 
         return
     end 
-
+    local show = not FGUI:getVisible(self._ui.list_scheme)
     FGUI:setVisible(self._ui.list_scheme, not FGUI:getVisible(self._ui.list_scheme))
     FGUI:setVisible(self._ui.list_release, false)
     FGUI:setVisible(self._ui.mask, FGUI:getVisible(self._ui.list_scheme))
@@ -703,19 +703,137 @@ function SkillStudyPanel:ChangeScheme(scheme)
 end
 ---------------------------------技能设置---------------------------------end
 
-function SkillStudyPanel:OnTipCallBack(op, skillId, skillLevel)
-    if FGUIDefine.SkillTipOp.Set == op then
-        self:RefreshPadLight(true)
-    elseif FGUIDefine.SkillTipOp.Study == op then
-        self:OnPractice(skillId, skillLevel)
-    elseif FGUIDefine.SkillTipOp.Upgrade == op then
-        self:OnUpgrade(skillId, skillLevel)
-    elseif FGUIDefine.SkillTipOp.Close == op then
-        self:CleanSelSkill()
+
+---------------------------------技能tips---------------------------------start
+function SkillStudyPanel:ShowSkillTips(SkillID, SkillLevel)
+    if not SkillID and SkillLevel then 
+        return
+    end 
+
+    local skillConfig = SL:GetValue("SKILL_UPGRADE_CONFIG_BY_ID_LEVEL", SkillID, SkillLevel)
+
+    FGUI:setVisible(self._ui.skill_tips, true)
+    FGUI:setVisible(self._uiTips.btn_config, self._selSkillID)
+    FGUI:setVisible(self._uiTips.btn_upgrade, self._selSkillID and skillConfig.TipsBtn)
+    FGUI:setVisible(self._uiTips.btn_practice, not self._selSkillID)
+
+    -- icon 
+    local path = SL:GetValue("SKILL_SQUARE_ICON_PATH_BY_ID", SkillID)
+    FGUI:GLoader_setUrl(self._uiTips.skill_icon, path, nil, true) 
+
+    -- name
+    local name = SL:GetValue("SKILL_UP_SHOWNAME_BY_ID", SkillID, SkillLevel)
+    FGUI:GTextField_setText(self._uiTips.text_name, name)
+
+    -- range type
+    local rangeType = SL:GetValue("SKILL_RANGE_CATEGORY", SkillID)
+    local rangeName = RANGE_TYPE_NAME[rangeType] or ""
+    FGUI:GRichTextField_setText(self._uiTips.text_condition, rangeName)
+
+    -- cost
+    if skillConfig.Cost then 
+        table.clear(self._costList)
+        local sp = string.split(skillConfig.Cost, "|")
+        for i = 1, #sp do 
+            local data = {}
+            local sp2 = string.split(sp[i], "#")
+            data.id = tonumber(sp2[1])
+            data.count = tonumber(sp2[2])
+            table.insert(self._costList, data)
+        end 
+        FGUI:GList_itemRenderer(self._uiTips.list_cost, function(idx, item)
+            local index = idx + 1
+            local data = self._costList[index]
+            if not data then 
+                return 
+            end  
+
+            local text_cost = FGUI:GetChild(item, "text_cost")
+            local itemName = SL:GetValue("ITEM_NAME", data.id)
+            local myCount = SL:GetValue("ITEM_COUNT", data.id)
+            local needCount = data.count   
+            local color = myCount >= needCount and "#00FF00" or "#FF0000"
+            FGUI:GTextField_setText(text_cost, string.format(GET_STRING(60012007), itemName, color, needCount))
+        end)
+        FGUI:GList_setNumItems(self._uiTips.list_cost, #self._costList)
     end
+
+    -- desc
+    local desc = SL:GetValue("SKILL_UP_DESC_BY_ID", SkillID, SkillLevel)
+    FGUI:GRichTextField_setText(self._uiTips.text_desc, desc)
+
+    -- weili
+    FGUI:GTextField_setText(self._uiTips.text_weili, string.format(GET_STRING(60012004), skillConfig.Power or 0))
+
+    -- att   
+    local skillcost = skillConfig.SkillCost
+    if skillcost then 
+        if tonumber(skillcost[1]) == 0 then 
+            local attData = SL:GetValue("ATTR_CONFIG", tonumber(skillcost[2]))
+            if attData then 
+                FGUI:GTextField_setText(self._uiTips.text_neili, string.format(GET_STRING(60012005), attData.Name, tonumber(skillcost[3])))
+            end 
+        end 
+    end
+
+    -- cd
+    local skillCfg = SL:GetValue("SKILL_CONFIG_BY_SKILL_ID", SkillID)
+    if skillCfg then 
+        FGUI:GTextField_setText(self._uiTips.text_cd, string.format(GET_STRING(60012006), skillCfg.CD * 0.001 or 0))
+    end
+
+
+	FGUI:setOnClickEvent(self._uiTips.btn_config, handler(self, self.OnClickConfig))
+	FGUI:setOnClickEvent(self._uiTips.btn_upgrade, handler(self, self.OnClickUpgrade))
+	FGUI:setOnClickEvent(self._uiTips.btn_practice, handler(self, self.OnClickPractice))
+    FGUI:SetIntData(self._uiTips.btn_practice, SkillID)
 end
 
-function SkillStudyPanel:OnPractice(skillID, skillLevel)
+function SkillStudyPanel:OnClickConfig(context)
+    if not self._selSkillID then 
+        return 
+    end 
+
+    self:RefreshPadLight(true)
+    FGUI:setVisible(self._ui.skill_tips, false)
+end
+
+function SkillStudyPanel:OnClickUpgrade(context)
+    FGUI:setVisible(self._ui.skill_tips, false)
+
+    if not self._selSkillID then 
+        return 
+    end 
+
+    if not self._selSkillLevel then 
+        return 
+    end 
+
+    local skillConfig = SL:GetValue("SKILL_UPGRADE_CONFIG_BY_ID_LEVEL", self._selSkillID, self._selSkillLevel)
+    if not skillConfig then 
+        return 
+    end 
+
+    if not skillConfig.TipsBtn then 
+        return 
+    end 
+
+    local data = string.split(skillConfig.TipsBtn, "#")
+    if not data or not next(data) then 
+        return 
+    end 
+
+    local iType = tonumber(data[1]) 
+    local ID = tonumber(data[2])
+    local name = tostring(data[3])
+
+    SL:RequestTipsBtnClick(iType, ID, name)
+end
+
+function SkillStudyPanel:OnClickPractice(context)
+    FGUI:setVisible(self._ui.skill_tips, false)
+
+    local skillID = FGUI:GetIntData(context.sender)
     local isLearned = self._skillCells[skillID].isLearned
     local isCondition = self._skillCells[skillID].isCondition
     if not isLearned and not isCondition then 
@@ -728,27 +846,14 @@ function SkillStudyPanel:OnPractice(skillID, skillLevel)
         SL:ShowSystemTips(GET_STRING(60012019))
         return 
     end 
+
     SL:RequestWuGongStudy(skillID)
 end
 
-function SkillStudyPanel:OnUpgrade(skillID, skillLevel)
-    if not skillID then return end 
-    if not skillLevel then return end 
-
-    local skillConfig = SL:GetValue("SKILL_UPGRADE_CONFIG_BY_ID_LEVEL", self._selSkillID, self._selSkillLevel)
-    if not skillConfig then return end 
-    if not skillConfig.TipsBtn then return end 
-
-    local data = string.split(skillConfig.TipsBtn, "#")
-    if not data or not next(data) then return end 
-
-    local iType = tonumber(data[1]) 
-    local ID = tonumber(data[2])
-    local name = tostring(data[3])
-
-    SL:RequestTipsBtnClick(iType, ID, name)
+function SkillStudyPanel:OnClickMask(context)
+    self:CleanSelSkill()
+    FGUI:setVisible(self._ui.skill_tips, false)
 end
-
 ---------------------------------技能tips---------------------------------end
 
 
@@ -782,31 +887,9 @@ function SkillStudyPanel:CheckSkillCost(skillID, showTips)
     return true
 end
 
--- 引导返回节点
-function SkillStudyPanel:GetSkillGuideIcon(skillParam)
-    local param = string.split(skillParam, "#")
-    local group = tonumber(param[1])
-    if not group or group ~= 1 then 
-        return 
-    end 
-
-    local skillID = tonumber(param[2])
-    if not skillID then 
-        return 
-    end 
-
-    local page = tonumber(param[3])
-    if not page then 
-        return 
-    end 
-
-    if self._skillCells[skillID] then     
-        return self._skillCells[skillID].item
-    end 
-end
 
 function SkillStudyPanel:OnWuGongStudy(skillID)
-    FGUIFunction:HideSkillTip()
+    FGUI:setVisible(self._ui.skill_tips, false)
     self._skillWuGong = SL:GetValue("SKILL_WUGONG_TYPE_BY_GOODEVIL", self._myJob, self._selPage, self._myGoodEvil)
 
     local skill = SL:GetValue("SKILL_DATA_BY_ID", skillID)

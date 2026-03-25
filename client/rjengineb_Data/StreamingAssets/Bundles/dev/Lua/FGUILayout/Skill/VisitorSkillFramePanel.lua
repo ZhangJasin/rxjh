@@ -8,7 +8,7 @@ local PAGE_DATA = {
 
 function VisitorSkillFramePanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUIFunction:SetCloseUIWhenClickOutside(self)
+	FGUI:SetCloseUIWhenClickOutside(self)
 
 	self:InitData()
 	self:InitEvent()

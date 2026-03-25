@@ -9,14 +9,14 @@ local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 function FGUIFunction:BindClass(component, classPath)
     classPath = "FGUILayout/" .. classPath
     local ok, mod = pcall(require, classPath)
-	if not ok then
-		release_log(string.format("[FGUI Error] require %s Fail", classPath))
-		return
-	else
-		local classObj = mod.new(component)
+    if not ok then
+        release_log(string.format("[FGUI Error] require %s Fail", classPath))
+        return
+    else
+        local classObj = mod.new(component)
         classObj.component = component
-		return classObj
-	end
+        return classObj
+    end
 end
 
 --- 设置点击空白区域关闭界面
@@ -39,27 +39,27 @@ end
 -- 触发 与身上装备比较
 function FGUIFunction:CompareEquipOnBody(equipData, autoUse)
     -- 装备数据
-    if not equipData then 
+    if not equipData then
         return false
-    end 
+    end
 
     -- 是否装备类型
     local isEquip = SL:GetValue("ITEMTYPE", equipData) == SL:GetValue("ITEMTYPE_ENUM").Equip
-    if not isEquip then 
+    if not isEquip then
         return false
     end
 
     -- 能否穿戴
     local canUse = SL:CheckItemUseNeed(equipData)
-    if not canUse then 
+    if not canUse then
         return false
-    end 
+    end
 
     -- 通过stdmode 获取装备位
-    local posList = SL:GetValue("EQUIP_POSLIST_BY_STDMODE", equipData.StdMode) 
-    if not posList or next(posList) == nil then 
+    local posList = SL:GetValue("EQUIP_POSLIST_BY_STDMODE", equipData.StdMode)
+    if not posList or next(posList) == nil then
         return false
-    end 
+    end
 
     local myPower = FGUIFunction:GetEquipPower(equipData) -- 当前装备战力
 
@@ -69,18 +69,18 @@ function FGUIFunction:CompareEquipOnBody(equipData, autoUse)
     local targetMinPos = nil -- 身上穿戴最小战力位置
     for i, pos in ipairs(posList) do
         targetData = SL:GetValue("EQUIP_DATA_BY_POS", pos)
-        if not targetData then  
-            return true, pos  -- 身上没有穿戴（优先对比左手）
+        if not targetData then
+            return true, pos -- 身上没有穿戴（优先对比左手）
         end
 
-        local targetPower = FGUIFunction:GetEquipPower(targetData) -- 身上装备战力
+        local targetPower = FGUIFunction:GetEquipPower(targetData)  -- 身上装备战力
         if targetMinPower == 0 or targetPower < targetMinPower then -- 拿到身上穿戴最小战力
             targetMinPower = targetPower
             targetMinPos = pos
         end
-    end 
+    end
 
-    if targetMinPower < myPower then 
+    if targetMinPower < myPower then
         return true, targetMinPos
     end
 
@@ -101,13 +101,13 @@ end
 ]]
 function FGUIFunction:CompareEquipUpShowOnBody(equipData)
     -- 装备数据
-    if not equipData then 
+    if not equipData then
         return false
-    end 
+    end
 
     -- 是否装备类型
     local isEquip = SL:GetValue("ITEMTYPE", equipData) == SL:GetValue("ITEMTYPE_ENUM").Equip
-    if not isEquip then 
+    if not isEquip then
         return false
     end
 
@@ -121,71 +121,71 @@ function FGUIFunction:CompareEquipUpShowOnBody(equipData)
     local canEquip = SL:CheckItemUseNeed(equipData)
 
     -- 通过stdmode 获取装备位
-    local posList = SL:GetValue("EQUIP_POSLIST_BY_STDMODE", equipData.StdMode) 
-    if not posList or next(posList) == nil then 
+    local posList = SL:GetValue("EQUIP_POSLIST_BY_STDMODE", equipData.StdMode)
+    if not posList or next(posList) == nil then
         return false
-    end 
+    end
 
-    local myPower = FGUIFunction:GetEquipPower(equipData) -- 当前装备战力
+    local myPower = FGUIFunction:GetEquipPower(equipData)     -- 当前装备战力
     local myDefense = FGUIFunction:GetEquipDefense(equipData) -- 当前装备防御力
 
     -- 满足所有穿戴条件, 对比全战力和防御力
     if canEquip then
         -- 比较身上装备
         local targetData = nil
-        local targetMinPower = 0 -- 身上穿戴最小战力
+        local targetMinPower = 0   -- 身上穿戴最小战力
         local targetMinDefense = 0 -- 身上穿戴最小防御力
         for i, pos in ipairs(posList) do
             targetData = SL:GetValue("EQUIP_DATA_BY_POS", pos)
-            if not targetData then  -- 身上没有穿戴
+            if not targetData then -- 身上没有穿戴
                 return true
             end
 
-            local targetPower = FGUIFunction:GetEquipPower(targetData) -- 身上装备战力
+            local targetPower = FGUIFunction:GetEquipPower(targetData)     -- 身上装备战力
             local targetDefense = FGUIFunction:GetEquipDefense(targetData) -- 身上装备防御力
-            
-            if targetMinPower == 0 or targetPower < targetMinPower then -- 拿到身上穿戴最小战力
+
+            if targetMinPower == 0 or targetPower < targetMinPower then    -- 拿到身上穿戴最小战力
                 targetMinPower = targetPower
             end
-            
+
             if targetMinDefense == 0 or targetDefense < targetMinDefense then -- 拿到身上穿戴最小防御力
                 targetMinDefense = targetDefense
             end
-        end 
+        end
 
         -- 如果新装备的战力或防御力高于身上装备，显示提升箭头
-        if targetMinPower < myPower or targetMinDefense < myDefense then 
+        if targetMinPower < myPower or targetMinDefense < myDefense then
             return true
         end
     end
 
-    myPower = FGUIFunction:GetEquipBasePower(equipData) -- 当前装备基础战力
+    myPower = FGUIFunction:GetEquipBasePower(equipData)               -- 当前装备基础战力
     local myBaseDefense = FGUIFunction:GetEquipBaseDefense(equipData) -- 当前装备基础防御力
 
     -- 比较身上装备基础战力和基础防御力
     local targetData = nil
-    local targetMinPower = 0 -- 身上穿戴最小基础战力
+    local targetMinPower = 0   -- 身上穿戴最小基础战力
     local targetMinDefense = 0 -- 身上穿戴最小基础防御力
     for i, pos in ipairs(posList) do
         targetData = SL:GetValue("EQUIP_DATA_BY_POS", pos)
-        if not targetData then  -- 身上没有穿戴
+        if not targetData then -- 身上没有穿戴
             return false, canEquip, canEquipBase
         end
 
-        local targetPower = FGUIFunction:GetEquipBasePower(targetData) -- 身上装备基础战力
+        local targetPower = FGUIFunction:GetEquipBasePower(targetData)     -- 身上装备基础战力
         local targetDefense = FGUIFunction:GetEquipBaseDefense(targetData) -- 身上装备基础防御力
-        
-        if targetMinPower == 0 or targetPower < targetMinPower then -- 拿到身上穿戴最小基础战力
+
+        if targetMinPower == 0 or targetPower < targetMinPower then        -- 拿到身上穿戴最小基础战力
             targetMinPower = targetPower
         end
-        
+
         if targetMinDefense == 0 or targetDefense < targetMinDefense then -- 拿到身上穿戴最小基础防御力
             targetMinDefense = targetDefense
         end
     end
 
     -- 如果新装备的基础战力或基础防御力高于身上装备，显示对应箭头
-    if targetMinPower < myPower or targetMinDefense < myBaseDefense then 
+    if targetMinPower < myPower or targetMinDefense < myBaseDefense then
         return false, canEquip, canEquipBase
     end
 
@@ -262,10 +262,10 @@ function FGUIFunction:GetEquipCombineAttList(item, job, needAllAttr)
         for p, d in pairs(exAbil.abil or {}) do
             local group = d.i or 0
             for _, v in ipairs(d.v or {}) do
-                local color     = v[1] or 0
-                local attId     = v[2] or 0     -- 属性ID 绑定表
-                local value     = v[3] or 0     -- 属性值
-                local percent   = v[4] or 0
+                local color   = v[1] or 0
+                local attId   = v[2] or 0   -- 属性ID 绑定表
+                local value   = v[3] or 0   -- 属性值
+                local percent = v[4] or 0
                 if value > 0 then
                     if not newList[attId] then
                         newList[attId] = value
@@ -284,7 +284,7 @@ function FGUIFunction:GetEquipCombineAttList(item, job, needAllAttr)
             local exAddValue = param.v
             if itemId and itemId > 0 then
                 local itemCfg = SL:GetValue("ITEM_DATA", itemId)
-                if itemCfg then 
+                if itemCfg then
                     local itemAttList = SL:Split(itemCfg.Attribute or "", "|")
                     for i = 1, #itemAttList do
                         if itemAttList[i] and string.len(itemAttList[i]) > 0 then
@@ -304,7 +304,6 @@ function FGUIFunction:GetEquipCombineAttList(item, job, needAllAttr)
                 end
             end
         end
-
     end
 
     for k, v in pairs(newList) do
@@ -333,19 +332,19 @@ function FGUIFunction:GetAttShowData(data, job, extraParam)
     end
     extraParam = extraParam or {}
 
-    if type(data) == "string" then      -- 表配置属性
+    if type(data) == "string" then    -- 表配置属性
         attList = FGUIFunction:ParseItemBaseAtt(data, job)
-    elseif type(data) == "table" then   -- 装备数据
+    elseif type(data) == "table" then -- 装备数据
         attList = FGUIFunction:GetEquipCombineAttList(data, job)
     end
-    
+
     local newList = {}
-    for i, att in ipairs(attList) do 
+    for i, att in ipairs(attList) do
         local attId = att.id
         local attValue = att.value
         local exAdd = att.exAdd
         local config = SL:GetValue("ATTR_CONFIG", att.id)
-        if config then 
+        if config then
             local showAttId = attId
             local isMinAtt = false
             local mergeAtts = FGUIDefine.MergeAttConfig[attId]
@@ -366,35 +365,35 @@ function FGUIFunction:GetAttShowData(data, job, extraParam)
             if extraParam.multiple and extraParam.multiple > 0 then
                 attValue = attValue * extraParam.multiple
             end
-            if config.Type == 1 then    -- 万分比除100
+            if config.Type == 1 then -- 万分比除100
                 attValue = string.format("%.1f", attValue / 100) * 10 / 10
                 if extraParam.extraAdd and extraParam.extraAdd > 0 then
                     extraParam.extraAdd = string.format("%.2f", extraParam.extraAdd / 100) * 10 / 10
                 end
                 percent = 1
             end
-            
+
             if not newList[showAttId] then
-                newList[showAttId]      = {}
-                newList[showAttId].id   = showAttId
-                newList[showAttId].min  = isMinAtt and attValue or 0
-                newList[showAttId].max  = not isMinAtt and attValue or 0
-                newList[showAttId].name = config.Name
+                newList[showAttId]       = {}
+                newList[showAttId].id    = showAttId
+                newList[showAttId].min   = isMinAtt and attValue or 0
+                newList[showAttId].max   = not isMinAtt and attValue or 0
+                newList[showAttId].name  = config.Name
                 newList[showAttId].color = showColor
-                newList[showAttId].sort = config.Sort
-            else 
-                newList[showAttId].min  = (isMinAtt and attValue or 0) + newList[showAttId].min
-                newList[showAttId].max  = (not isMinAtt and attValue or 0) + newList[showAttId].max
+                newList[showAttId].sort  = config.Sort
+            else
+                newList[showAttId].min = (isMinAtt and attValue or 0) + newList[showAttId].min
+                newList[showAttId].max = (not isMinAtt and attValue or 0) + newList[showAttId].max
             end
             if isMinAtt then
                 newList[showAttId].isMerge = true
             end
             local value = ""
-            if newList[showAttId].isMerge then 
+            if newList[showAttId].isMerge then
                 value = string.format("%s-%s", newList[showAttId].min, newList[showAttId].max)
-            else 
+            else
                 value = newList[showAttId].max
-            end 
+            end
             if extraParam.extraAdd and extraParam.extraAdd > 0 then
                 value = string.format("%s+%s", value, extraParam.extraAdd)
             end
@@ -410,10 +409,10 @@ function FGUIFunction:GetAttShowData(data, job, extraParam)
 
     table.sort(baseAttrShow, function(a, b)
         if a.sort and b.sort then
-			return a.sort < b.sort
+            return a.sort < b.sort
         else
             return a.id < b.id
-		end
+        end
     end)
 
     return baseAttrShow
@@ -424,7 +423,7 @@ function FGUIFunction:GetEquipPower(item)
     if not item then
         return 0
     end
-    
+
     local power = 0
 
     local job = SL:GetValue("JOB")
@@ -448,23 +447,23 @@ function FGUIFunction:GetEquipDefense(item)
     if not item then
         return 0
     end
-    
+
     local defense = 0
 
     local job = SL:GetValue("JOB")
     local allAttList = FGUIFunction:GetEquipCombineAttList(item, job, true)
-    
+
     -- 防御相关属性ID：52(防御), 54(武功防御), 56(对怪防御), 69(对怪武防)
-    local defenseAttIds = {52, 54, 56, 69}
+    local defenseAttIds = { 52, 54, 56, 69 }
     local defenseAttMap = {}
     for _, attId in ipairs(defenseAttIds) do
         defenseAttMap[attId] = true
     end
-    
+
     for i, data in ipairs(allAttList) do
         local id = data.id
         local value = data.value
-        
+
         -- 如果是防御属性，直接累加数值
         if defenseAttMap[id] then
             defense = defense + value
@@ -479,7 +478,7 @@ function FGUIFunction:GetEquipBasePower(item)
     if not item then
         return 0
     end
-    
+
     local attList = {}
     local myJob = SL:GetValue("JOB")
     local power = 0
@@ -519,7 +518,7 @@ function FGUIFunction:GetEquipBaseDefense(item)
     if not item then
         return 0
     end
-    
+
     local attList = {}
     local myJob = SL:GetValue("JOB")
     local defense = 0
@@ -541,16 +540,16 @@ function FGUIFunction:GetEquipBaseDefense(item)
     end
 
     -- 防御相关属性ID：52(防御), 54(武功防御), 56(对怪防御), 69(对怪武防)
-    local defenseAttIds = {52, 54, 56, 69}
+    local defenseAttIds = { 52, 54, 56, 69 }
     local defenseAttMap = {}
     for _, attId in ipairs(defenseAttIds) do
         defenseAttMap[attId] = true
     end
-    
+
     for i, data in ipairs(attList) do
         local id = data.id
         local value = data.value
-        
+
         -- 如果是防御属性，直接累加数值
         if defenseAttMap[id] then
             defense = defense + value
@@ -574,6 +573,7 @@ function FGUIFunction:GetDiffEquip(itemData)
     end
     return equipList
 end
+
 ------------------------------------------------------------------------------------------------------------
 -- 更换loading背景图路径
 function FGUIFunction:GetLoadingBackGroundByKey(key)
@@ -584,29 +584,29 @@ function FGUIFunction:GetLoadingBackGroundByKey(key)
     local bgPath = "ImageBG/%s"
 
     local sData = SL:GetValue("GAME_DATA", key)
-    if sData and string.len(sData) > 0 then 
+    if sData and string.len(sData) > 0 then
         local tData = ssplit(sData, "|")
         local isRandom = tonumber(tData[2]) or 0
         local tName = ssplit(tData[1], "#")
-        if tName and next(tName) then 
+        if tName and next(tName) then
             bgName = tName[1]
-            if isRandom == 1 then 
+            if isRandom == 1 then
                 local random = math.random(1, #tName)
                 bgName = tName[random]
-            end 
-        end 
+            end
+        end
         bgPath = string.format(bgPath, bgName)
-    end 
+    end
 
-    if not SL:IsFileExist(bgPath) then 
+    if not SL:IsFileExist(bgPath) then
         bgPath = "ImageBG/login_1"
-        if screenW < screenH then 
+        if screenW < screenH then
             bgPath = "ImageBG/login_1_p"
-        end 
+        end
     end
 
     return bgPath
-end 
+end
 
 -- 更换切换地图场景背景图路径
 function FGUIFunction:GetMapSceneBackGroud(data)
@@ -615,41 +615,41 @@ function FGUIFunction:GetMapSceneBackGroud(data)
     local bgPath = string.format("ImageBG/%s", bgName)
     local screenW = SL:GetValue("SCREEN_WIDTH")
     local screenH = SL:GetValue("SCREEN_HEIGHT")
-    if screenW < screenH then 
+    if screenW < screenH then
         bgPath = string.format("ImageBG/%s_p", bgName)
-    end 
-    
-    if not SL:IsFileExist(bgPath) then 
+    end
+
+    if not SL:IsFileExist(bgPath) then
         bgPath = FGUIFunction:GetLoadingBackGroundByKey("loadingScene")
-    end  
+    end
 
     return bgPath
-end 
+end
 
 -- 获取背景图文本提示(对应权重 LoadingTips表里配置)
 function FGUIFunction:GetRadomLoadingTips()
     local sum = 0
     local tRandom = {}
     local config = SL:GetValue("LOADING_TIPS_CONFIG")
-    for i, cfg in ipairs(config) do 
+    for i, cfg in ipairs(config) do
         local id = cfg.ID
-        local weight = cfg.Weight 
+        local weight = cfg.Weight
         sum = sum + weight
-        tRandom[id] = sum   
-    end 
+        tRandom[id] = sum
+    end
 
     local num = math.random(1, sum)
-    for id, random in ipairs(tRandom) do 
-        if num <= random then 
+    for id, random in ipairs(tRandom) do
+        if num <= random then
             local config = SL:GetValue("LOADING_TIPS_CONFIG_BY_ID", id)
-            if config then 
+            if config then
                 return config.Tips
-            end  
-        end 
-    end 
+            end
+        end
+    end
 
     return ""
-end 
+end
 
 -- 技能蓝耗是否足够
 function FGUIFunction:CheckSkillEnoughMP(skillID)
@@ -679,7 +679,7 @@ function FGUIFunction:CheckAbleToLaunch(skillID)
     end
 
     -- 蓝耗
-    if not FGUIFunction:CheckSkillEnoughMP(skillID) then 
+    if not FGUIFunction:CheckSkillEnoughMP(skillID) then
         return -3
     end
 
@@ -704,20 +704,20 @@ end
 --是否穿戴武器
 function FGUIFunction:CheckSkillWearWeapon(skillID)
     local isNormalAttack = SL:GetValue("SKILL_CHECK_IS_ATTACK", skillID)
-    if not isNormalAttack then 
+    if not isNormalAttack then
         local isNeedWeapon = SL:GetValue("SKILL_CHECK_IS_NEED_WEAPON", skillID)
-        if isNeedWeapon then 
+        if isNeedWeapon then
             local pos = 0
             local equipData = SL:GetValue("EQUIP_DATA_BY_POS", pos)
-            if equipData then 
+            if equipData then
                 return true
             else
-                return false 
+                return false
             end
-        else 
+        else
             return true
         end
-    else 
+    else
         return true
     end
 end
@@ -725,34 +725,34 @@ end
 --是否有足够的箭头
 function FGUIFunction:CheckSkillEnoughArrow(skillID)
     local cost = SL:GetValue("SKILL_ARROW_COST_BY_ID", skillID)
-    if cost and cost > 0 then 
-        local pos = SL:GetValue("GAME_DATA","Arrow_equipment") or 11
+    if cost and cost > 0 then
+        local pos = SL:GetValue("GAME_DATA", "Arrow_equipment") or 11
         local equipData = SL:GetValue("EQUIP_DATA_BY_POS", pos)
-        if not equipData then 
+        if not equipData then
             return false
-        else 
+        else
             return equipData.OverLap >= cost
         end
-    else 
+    else
         return true
     end
 end
 
 --鼠标移动触发
 function FGUIFunction:MouseMove(pos)
-    if pos then 
-        SL:SetValue("USER_INPUT_MOVE",pos.x, pos.z)
-    else 
+    if pos then
+        SL:SetValue("USER_INPUT_MOVE", pos.x, pos.z)
+    else
         FGUIFunction:FindPathFailTips()
     end
 end
 
 --寻路失败提示 该区域不可达
 function FGUIFunction:FindPathFailTips()
-    -- if FGUIFunction._findPathFailTipsSchedule then 
-    --     return 
+    -- if FGUIFunction._findPathFailTipsSchedule then
+    --     return
     -- end
-    -- SL:ShowSystemTips(SL:GetValue("I18N_STRING", 20000000))    
+    -- SL:ShowSystemTips(SL:GetValue("I18N_STRING", 20000000))
     -- FGUIFunction._findPathFailTipsSchedule = SL:ScheduleOnce(function()
     --     FGUIFunction._findPathFailTipsSchedule = nil
     -- end, 3)
@@ -762,14 +762,14 @@ end
 function FGUIFunction:CheckItemLimitTime(item)
     local startTime = item.startTime
     local totalTime = item.totalTime
-    if not startTime or not totalTime then 
+    if not startTime or not totalTime then
         return false
-    end 
+    end
 
     local isLimit = false
 
     local leftTime = totalTime - (SL:GetValue("SERVER_TIME") - startTime)
-    if leftTime <= 0 then 
+    if leftTime <= 0 then
         local function jumpToBuy(iType)
             if iType == 1 then
                 SL:OpenNPCStoreUI(1, 1, false)
@@ -779,11 +779,11 @@ function FGUIFunction:CheckItemLimitTime(item)
         isLimit = true
         local data = {}
         data.str = string.format(GET_STRING(80000312), "#ff0000", item.Name)
-        data.btnDesc = {GET_STRING(1002), GET_STRING(1000)}
+        data.btnDesc = { GET_STRING(1002), GET_STRING(1000) }
         data.callback = jumpToBuy
         SL:OpenCommonDialog(data)
     end
-    
+
     return isLimit
 end
 
@@ -791,18 +791,18 @@ function FGUIFunction:OpenBag(page)
     if not page then
         page = 1
     end
-    
+
     if SL:GetValue("IS_PC_OPER_MODE") then
-        FGUI:Open("Bag_pc","PCPlayerInfoPanel",page)
+        FGUI:Open("Bag_pc", "PCPlayerInfoPanel", page)
     else
-        FGUI:Open("Bag","PlayerInfoPanel",page)
+        FGUI:Open("Bag", "PlayerInfoPanel", page)
     end
 end
 
 -- page:1:属性栏,2:称号栏
 function FGUIFunction:OpenPCBarRoot(page)
     if SL:GetValue("IS_PC_OPER_MODE") then
-        FGUI:Open("Bag_pc","PCBarRootPanel",page)
+        FGUI:Open("Bag_pc", "PCBarRootPanel", page)
     else
         print("非pc环境调用pc方法")
     end
@@ -811,18 +811,19 @@ end
 -- 显示tips
 -- parent:参照父节点
 -- showText:显示的文本
-function FGUIFunction:OpenAttrTips(showText,parent)
+function FGUIFunction:OpenAttrTips(showText, parent)
     local data = {}
     data.showText = showText
     data.parent = parent
-    FGUI:Open("Common","CommonAttrTip",data)
+    FGUI:Open("Common", "CommonAttrTip", data)
 end
+
 -- 背包排序方法 (需要 返回数组)
 function FGUIFunction:GetBagSortFunction(a, b)
-    local itemClassA=a.ItemType or 9999
-    local itemClassB=b.ItemType or 9999
+    local itemClassA = a.ItemType or 9999
+    local itemClassB = b.ItemType or 9999
     if itemClassA == itemClassB then
-        if a.Index == b. Index then
+        if a.Index == b.Index then
             return a.OverLap > b.OverLap
         end
         return a.Index < b.Index
@@ -832,10 +833,10 @@ end
 
 -- 仓库排序方法 (需要 返回数组)
 function FGUIFunction:GetStorageSortFunction(a, b)
-    local itemClassA=a.ItemType or 9999
-    local itemClassB=b.ItemType or 9999
+    local itemClassA = a.ItemType or 9999
+    local itemClassB = b.ItemType or 9999
     if itemClassA == itemClassB then
-        if a.Index == b. Index then
+        if a.Index == b.Index then
             return a.OverLap > b.OverLap
         else
             return a.Index < b.Index
@@ -843,7 +844,6 @@ function FGUIFunction:GetStorageSortFunction(a, b)
     else
         return itemClassA < itemClassB
     end
-
 end
 
 -- 请求仓库存储,
@@ -852,9 +852,9 @@ end
 -- from{ITEMFROMUI_ENUM,index} 请求取出界面和位置索引，
 -- to{ITEMFROMUI_ENUM,index} 存放界面和位置索引
 -- ]]
-function FGUIFunction:RequestSaveItemToNpcStorageInCurPage(data,posData)
+function FGUIFunction:RequestSaveItemToNpcStorageInCurPage(data, posData)
     data.selectPage = SL:GetValue("STORAGE_SELECT_PAGE") or 0
-    SL:RequestSaveItemToNpcStorage(data,posData)
+    SL:RequestSaveItemToNpcStorage(data, posData)
 end
 
 -- 获取头像资源路径
@@ -867,7 +867,7 @@ function FGUIFunction:GetAvatarUrl(avatar, job, sex)
     if not avatar or avatar == 0 then
         if not job then job = SL:GetValue("JOB") end
         if not sex then sex = SL:GetValue("SEX") end
-        return string.format("ui://PlayerIcon/main_avatar%s_%s", job,sex)
+        return string.format("ui://PlayerIcon/main_avatar%s_%s", job, sex)
     end
 
     -- 自定义头像
@@ -876,7 +876,7 @@ end
 
 -- 获取头像框资源路径
 function FGUIFunction:GetAvatarFrameUrl(avatarFrame)
-    return "ui://AvatarFrame/frame_"..(avatarFrame or 0)
+    return "ui://AvatarFrame/frame_" .. (avatarFrame or 0)
 end
 
 -- 获取称号icon路径
@@ -884,12 +884,12 @@ function FGUIFunction:GetTitleIconURL(icon)
     if string.isNullOrEmpty(icon) then
         return ""
     end
-    return "ui://TitleIcon/"..icon
+    return "ui://TitleIcon/" .. icon
 end
 
 -- 获取聊天框气泡资源路径
 function FGUIFunction:GetChatFrameUrl(chatFrame)
-    if not chatFrame  then
+    if not chatFrame then
         chatFrame = 0
     end
     return string.format("ui://public/ChatFrame_%s", chatFrame)
@@ -900,7 +900,7 @@ function FGUIFunction:GetJobUrl(job)
     if not job or job == 0 then
         return ""
     end
-    return string.format("%savatarjob_%s",global.MMO.PATH_RES_PLAYER_ICON, job)
+    return string.format("%savatarjob_%s", global.MMO.PATH_RES_PLAYER_ICON, job)
 end
 
 -- 检测掉落物自动拾取
@@ -908,66 +908,64 @@ function FGUIFunction:CheckDropItemAutoPick(actorID)
     local mainPlayerID = SL:GetValue("USER_ID")
 
     --丢弃者是自己
-    if SL:GetValue("DROPITEM_DISCARDER_ID", actorID) == mainPlayerID then 
+    if SL:GetValue("DROPITEM_DISCARDER_ID", actorID) == mainPlayerID then
         return false
     end
 
     --不拾取别人丢弃的
-    if SL:GetValue("BATTLE_IS_AFK") then 
+    if SL:GetValue("BATTLE_IS_AFK") then
         if SL:GetValue("SETTING_IGNORE_DROP_BY_PLAYER") then
             local discarderID = SL:GetValue("DROPITEM_DISCARDER_ID", actorID)
-            if discarderID then 
+            if discarderID then
                 return false
             end
         end
     end
-    
+
     --背包满 非金币
-    if SL:GetValue("BAG_IS_FULL", false) and SL:GetValue("ITEM_INDEX_BY_ACTOR_ID", actorID) ~= 0 then 
+    if SL:GetValue("BAG_IS_FULL", false) and SL:GetValue("ITEM_INDEX_BY_ACTOR_ID", actorID) ~= 0 then
         return false
     end
 
     --是否可拾取道具
-    if not SL:GetValue("ACTOR_IS_PICK_ITEM", actorID)  then
+    if not SL:GetValue("ACTOR_IS_PICK_ITEM", actorID) then
         return false
     end
 
     --自动拾取开关是否打开
-    local typeIndex = SL:GetValue("ACTOR_TYPE_INDEX", actorID) 
+    local typeIndex = SL:GetValue("ACTOR_TYPE_INDEX", actorID)
     if not SL:GetValue("ITEM_CAN_AUTO_PICK", typeIndex) then
         return false
     end
-    
-    --掉落类型
-    local ownerID = SL:GetValue("ACTOR_OWNER_ID", actorID) 
-    local dropType = SL:GetValue("DROPITEM_DROPTYPE", actorID)
-    if dropType == SLDefine.DROP_TYPE.DEFAULT 
-        or dropType == SLDefine.DROP_TYPE.FREEDOM 
-        or dropType == SLDefine.DROP_TYPE.PERSONAL then
 
-        if ownerID and ownerID ~= mainPlayerID then 
+    --掉落类型
+    local ownerID = SL:GetValue("ACTOR_OWNER_ID", actorID)
+    local dropType = SL:GetValue("DROPITEM_DROPTYPE", actorID)
+    if dropType == SLDefine.DROP_TYPE.DEFAULT
+        or dropType == SLDefine.DROP_TYPE.FREEDOM
+        or dropType == SLDefine.DROP_TYPE.PERSONAL then
+        if ownerID and ownerID ~= mainPlayerID then
             return false
         end
     elseif dropType == SLDefine.DROP_TYPE.TEAM then
-        local teamID = SL:GetValue("TEAM_ID") 
-        if ownerID and ownerID ~= teamID then 
+        local teamID = SL:GetValue("TEAM_ID")
+        if ownerID and ownerID ~= teamID then
             return false
         end
     elseif dropType == SLDefine.DROP_TYPE.GUILD then
-        local guildID = SL:GetValue("GUILD_ID") 
-        if ownerID and ownerID ~= guildID then 
+        local guildID = SL:GetValue("GUILD_ID")
+        if ownerID and ownerID ~= guildID then
             return false
         end
     end
     return true
 end
 
-
 -- 检测掉落物手动拾取
 function FGUIFunction:CheckDropItemPick(actorID)
     --背包满 非金币
-    if SL:GetValue("BAG_IS_FULL", true) then 
-        if SL:GetValue("ITEM_INDEX_BY_ACTOR_ID", actorID) ~= 0 then 
+    if SL:GetValue("BAG_IS_FULL", true) then
+        if SL:GetValue("ITEM_INDEX_BY_ACTOR_ID", actorID) ~= 0 then
             return false, SLDefine.PICKUP_FAIL_TYPE.BAG_FULL
         end
     end
@@ -984,27 +982,26 @@ end
 function FGUIFunction:OnSkillLaunch(launcherID, skillID, targetID, dir, dstX, dstY, dstZ)
 end
 
-
 local allChannelList = nil
 -- 获取显示的频道, 传入需额外隐藏的频道
 function FGUIFunction:GetShowChannels(...)
     if not allChannelList then
-        local CHANNEL = SLDefine.CHAT_CHANNEL
-        local allChannel = {}
-        allChannel[CHANNEL.Common]      = {id = CHANNEL.Common,     str = SL:GetValue("I18N_STRING", 40000001)}
-        allChannel[CHANNEL.World]       = {id = CHANNEL.World,      str = SL:GetValue("I18N_STRING", 40000013)}
-        allChannel[CHANNEL.ServerAll]   = {id = CHANNEL.ServerAll,  str = SL:GetValue("I18N_STRING", 40000014)}
-        allChannel[CHANNEL.Near]        = {id = CHANNEL.Near,       str = SL:GetValue("I18N_STRING", 40000007)}
-        allChannel[CHANNEL.System]      = {id = CHANNEL.System,     str = SL:GetValue("I18N_STRING", 40000002)}
-        allChannel[CHANNEL.Team]        = {id = CHANNEL.Team,       str = SL:GetValue("I18N_STRING", 40000006)}
-        allChannel[CHANNEL.Guild]       = {id = CHANNEL.Guild,      str = SL:GetValue("I18N_STRING", 40000005)}
-        allChannel[CHANNEL.Server]      = {id = CHANNEL.Server,     str = SL:GetValue("I18N_STRING", 40000011)}
-        allChannel[CHANNEL.ServerGroup] = {id = CHANNEL.ServerGroup,str = SL:GetValue("I18N_STRING", 40000012)}
-        allChannel[CHANNEL.Trade]       = {id = CHANNEL.Trade,      str = SL:GetValue("I18N_STRING", 40000015)}
-        
+        local CHANNEL                   = SLDefine.CHAT_CHANNEL
+        local allChannel                = {}
+        allChannel[CHANNEL.Common]      = { id = CHANNEL.Common, str = SL:GetValue("I18N_STRING", 40000001) }
+        allChannel[CHANNEL.World]       = { id = CHANNEL.World, str = SL:GetValue("I18N_STRING", 40000013) }
+        allChannel[CHANNEL.ServerAll]   = { id = CHANNEL.ServerAll, str = SL:GetValue("I18N_STRING", 40000014) }
+        allChannel[CHANNEL.Near]        = { id = CHANNEL.Near, str = SL:GetValue("I18N_STRING", 40000007) }
+        allChannel[CHANNEL.System]      = { id = CHANNEL.System, str = SL:GetValue("I18N_STRING", 40000002) }
+        allChannel[CHANNEL.Team]        = { id = CHANNEL.Team, str = SL:GetValue("I18N_STRING", 40000006) }
+        allChannel[CHANNEL.Guild]       = { id = CHANNEL.Guild, str = SL:GetValue("I18N_STRING", 40000005) }
+        allChannel[CHANNEL.Server]      = { id = CHANNEL.Server, str = SL:GetValue("I18N_STRING", 40000011) }
+        allChannel[CHANNEL.ServerGroup] = { id = CHANNEL.ServerGroup, str = SL:GetValue("I18N_STRING", 40000012) }
+        allChannel[CHANNEL.Trade]       = { id = CHANNEL.Trade, str = SL:GetValue("I18N_STRING", 40000015) }
+
         --移除不显示的频道
-        local showChannelData = SL:GetValue("GAME_DATA","MobileChannelShow")
-        local showList = {}
+        local showChannelData           = SL:GetValue("GAME_DATA", "MobileChannelShow")
+        local showList                  = {}
         if showChannelData then
             local list = ssplit(showChannelData, "#")
             for i, idStr in ipairs(list) do
@@ -1019,7 +1016,7 @@ function FGUIFunction:GetShowChannels(...)
     local len = select("#", ...)
     if len <= 0 then return allChannelList end
     local list = {}
-    local hideChannels = {...}
+    local hideChannels = { ... }
     local hideMap = {}
     for k, v in pairs(hideChannels) do
         hideMap[v] = true
@@ -1065,17 +1062,17 @@ end
 -- 玩家头像路径 "ui://PlayerIcon/main_avatar[job]_[sex].png"
 -- 玩家自定义头像路径 "ui://PlayerIcon/avatar_[AvatarID].png"
 --]]
-function FGUIFunction:SetCommonPlayerFrame(component,data,clickCallBack)
+function FGUIFunction:SetCommonPlayerFrame(component, data, clickCallBack)
     if not component then
         return
     end
 
-    local Image_head = FGUI:GetChild(component,"Image_head")
+    local Image_head = FGUI:GetChild(component, "Image_head")
     if not Image_head then
-        return 
+        return
     end
 
-    local Image_headFrame = FGUI:GetChild(component,"Image_headFrame")
+    local Image_headFrame = FGUI:GetChild(component, "Image_headFrame")
     if not Image_headFrame then
         return
     end
@@ -1085,7 +1082,7 @@ function FGUIFunction:SetCommonPlayerFrame(component,data,clickCallBack)
 
     -- 添加点击事件
     if clickCallBack then
-        FGUI:setOnClickEvent(Image_head,function()
+        FGUI:setOnClickEvent(Image_head, function()
             clickCallBack()
         end)
     end
@@ -1095,7 +1092,7 @@ end
 
 -- 临时用创建Item对象
 function FGUIFunction:ItemShow_Create(callBack)
-    FGUI:CreateObjectAsync("public","CommonItem",callBack)
+    FGUI:CreateObjectAsync("public", "CommonItem", callBack)
 end
 
 -- 滚动文本Label 设置内容
@@ -1116,21 +1113,21 @@ function FGUIFunction:ScrollText_setString(scrollText, str, speed, defaultAlign,
         -- 滚动
         FGUI:setPositionX(title, 0)
         local time = dis / 20 * (speed or 1)
-        FGUI:runAction(title, 
+        FGUI:runAction(title,
             FGUI:ActionRepeatForever(
                 FGUI:ActionSequence(
                     FGUI:ActionDelayTime(1),
                     FGUI:ActionMoveBy(time, -dis, 0),
                     FGUI:ActionDelayTime(1),
                     FGUI:ActionMoveTo(0, 0, 0)
-        )))
+                )))
     else
         --不滚动
-        if defaultAlign == 2 then--右对齐
+        if defaultAlign == 2 then     --右对齐
             FGUI:setPositionX(title, -dis)
-        elseif defaultAlign == 1 then--居中
+        elseif defaultAlign == 1 then --居中
             FGUI:setPositionX(title, -dis / 2)
-        else--左对齐
+        else                          --左对齐
             FGUI:setPositionX(title, 0)
         end
     end
@@ -1138,29 +1135,29 @@ function FGUIFunction:ScrollText_setString(scrollText, str, speed, defaultAlign,
     if extData then
         if extData.strokeColor and extData.strokeSize then
             FGUI:GTextField_setStrokeColor(title, extData.strokeColor)
-            FGUI:GTextField_setStroke(title,extData.strokeSize)
+            FGUI:GTextField_setStroke(title, extData.strokeSize)
         end
     end
 end
 
-function FGUIFunction:PosIsInRectWidget(widget,eventData)
+function FGUIFunction:PosIsInRectWidget(widget, eventData)
     if not widget then
         SL:PrintEx("[Error] widget is nil")
         return false
     end
 
     if not eventData then
-        SL:PrintEx ("[Error] eventData is nil")
+        SL:PrintEx("[Error] eventData is nil")
         return false
     end
 
 
-    local posX,posY = FGUI:getTouchPosition(eventData)
-    local width,height = FGUI:getSize(widget)
-    local widgetX,widgetY = FGUI:getWorldPosition(widget)
-    if posX >= widgetX and posX <= widgetX +  width
-            and posY >= widgetY and posY <= widgetY + height then
-                return true
+    local posX, posY = FGUI:getTouchPosition(eventData)
+    local width, height = FGUI:getSize(widget)
+    local widgetX, widgetY = FGUI:getWorldPosition(widget)
+    if posX >= widgetX and posX <= widgetX + width
+        and posY >= widgetY and posY <= widgetY + height then
+        return true
     end
 
     return false
@@ -1173,6 +1170,7 @@ function FGUIFunction:AdaptNotch(component)
     FGUI:setSize(component, screenW - safeR - safeL, screenH - safeB - safeT)
     FGUI:setPosition(component, safeL, safeT)
 end
+
 ----------------------------------------------------------------------------------------------------------
 -- 打开行会
 function FGUIFunction:OpenGuildAutoUI()
@@ -1183,7 +1181,7 @@ function FGUIFunction:OpenGuildAutoUI()
             FGUI:Open("Guild_pc", "PCGuildJoinList")
         else
             FGUI:Open("Guild", "GuildJoinList")
-        end     
+        end
     end
 end
 
@@ -1216,7 +1214,7 @@ function FGUIFunction:OpenGuildMainFrameUI(page)
         FGUI:Open("Guild_pc", "PCGuildMainPanel", page)
     else
         FGUI:Open("Guild", "GuildMainPanel", page)
-    end    
+    end
 end
 
 -- 打开玩家信息查看弹窗
@@ -1229,9 +1227,8 @@ function FGUIFunction:OpenFuncDockTips(data)
         FGUI:Open("FuncDock_pc", "PCFuncDockTip", data)
     else
         FGUI:Open("FuncDock", "FuncDockTip", data)
-    end   
+    end
 end
-
 
 -- 打开登录创角
 function FGUIFunction:OpenLoginRoleUI()
@@ -1239,14 +1236,14 @@ function FGUIFunction:OpenLoginRoleUI()
     if #roleData > 0 then
         -- 进入选角
         if SL:GetValue("IS_PC_OPER_MODE") then
-            FGUI:Open("LoginRole_pc", "LoginRoleSelect", nil, nil, {classPath = "FGUILayout/LoginRole/LoginRoleSelect"})
+            FGUI:Open("LoginRole_pc", "LoginRoleSelect", nil, nil, { classPath = "FGUILayout/LoginRole/LoginRoleSelect" })
         else
             FGUI:Open("LoginRole", "LoginRoleSelect")
         end
     else
         -- 进入创角
         if SL:GetValue("IS_PC_OPER_MODE") then
-            FGUI:Open("LoginRole_pc", "LoginRoleCreate", nil, nil, {classPath = "FGUILayout/LoginRole/LoginRoleCreate"})
+            FGUI:Open("LoginRole_pc", "LoginRoleCreate", nil, nil, { classPath = "FGUILayout/LoginRole/LoginRoleCreate" })
         else
             FGUI:Open("LoginRole", "LoginRoleCreate")
         end
@@ -1255,20 +1252,19 @@ function FGUIFunction:OpenLoginRoleUI()
     DataTrackProxy:OnEnterCreateRolePage()
 end
 
-
 -- 打开摆摊商品浏览界面
 function FGUIFunction:OpenStallProductUI(data)
-	local isSelf = tostring(SL:GetValue("USER_ID")) == data.Userid
+    local isSelf = tostring(SL:GetValue("USER_ID")) == data.Userid
     -- 背包需在商品界面之前打开
-	if isSelf then
+    if isSelf then
         FGUIFunction:OpenSimpleBagUI("Stall", "StallProduct")
     else
         if FGUI:CheckOpen("Bag_pc", "PCSimpleBagPanel") then
-            FGUI:Close("Bag_pc", "PCSimpleBagPanel") 
+            FGUI:Close("Bag_pc", "PCSimpleBagPanel")
         end
 
         if FGUI:CheckOpen("Bag", "SimpleBagPanel") then
-            FGUI:Close("Bag", "SimpleBagPanel") 
+            FGUI:Close("Bag", "SimpleBagPanel")
         end
     end
     data.isSelf = isSelf
@@ -1287,20 +1283,20 @@ function FGUIFunction:OpenSimpleBagUI(sourcePackageName, sourceComponentName)
         data.componentName = sourceComponentName
     end
     if SL:GetValue("IS_PC_OPER_MODE") then
-        FGUI:Open("Bag_pc","PCSimpleBagPanel", data)
+        FGUI:Open("Bag_pc", "PCSimpleBagPanel", data)
     else
-        FGUI:Open("Bag","SimpleBagPanel", data)
-    end 
+        FGUI:Open("Bag", "SimpleBagPanel", data)
+    end
 end
 
 --组队
 function FGUIFunction:OpenTeamFrameUI(page)
     local isPC = SL:GetValue("IS_PC_OPER_MODE")
-    if isPC then 
+    if isPC then
         FGUI:Open("Team", "PCTeamPanel", page)
-    else 
+    else
         FGUI:Open("Team", "TeamPanel", page)
-    end 
+    end
 end
 
 -- 智能组队界面
@@ -1344,13 +1340,14 @@ end
 	data.itemData		--物品数据
     data.hideCompare    --如果是装备，判断否隐藏装备比较
     data.hideButtons    --如果是道具，判断否隐藏使用拆分等按钮
-    data.buyParam       -- 购买框参数 table 
+    data.buyParam       -- 购买框参数 table
 ]]
 -- 道具装备tips
 function FGUIFunction:OpenItemTips(data)
     SL:RequireFile("FGUILayout/Common/ItemTips")
     ItemTips.ShowTip(data)
 end
+
 function FGUIFunction:CloseItemTips()
     if ItemTips then
         ItemTips.CloseItemTips()
@@ -1358,7 +1355,7 @@ function FGUIFunction:CloseItemTips()
 end
 
 function FGUIFunction:OpenGuideUI(task)
-    FGUI:Open("Guide", "GuideLayer",task,  FGUI_LAYER.NOTICE)
+    FGUI:Open("Guide", "GuideLayer", task, FGUI_LAYER.NOTICE)
 end
 
 function FGUIFunction:HideGuideUI()
@@ -1377,7 +1374,6 @@ function FGUIFunction:OpenCommonNumberInputPanel(data)
     else
         FGUI:Open("Common", "CommonNumberInput", data)
     end
-    
 end
 
 function FGUIFunction:OpenCommonItemSplitDialog(data)
@@ -1387,9 +1383,9 @@ function FGUIFunction:OpenCommonItemSplitDialog(data)
     end
 
     if SL:GetValue("IS_PC_OPER_MODE") then
-        FGUI:Open("Common_pc","PCCommonItemSplitDialog",data)
+        FGUI:Open("Common_pc", "PCCommonItemSplitDialog", data)
     else
-        FGUI:Open("Common","CommonItemSplitDialog",data)
+        FGUI:Open("Common", "CommonItemSplitDialog", data)
     end
 end
 
@@ -1397,9 +1393,9 @@ end
 function FGUIFunction:OpenItemSplitPop(itemData)
     local BagProxy = global.Facade:retrieveProxy(global.ProxyTable.BagProxy)
     local isFull = BagProxy:CheckIsOverload()
-    if isFull then 
+    if isFull then
         SL:onLUAEvent(LUA_EVENT_BAG_IS_FULL)
-        return 
+        return
     end
     FGUIFunction:OpenCommonItemSplitDialog(itemData)
 end
@@ -1408,13 +1404,12 @@ function FGUIFunction:DropItem(itemData)
     local data = {}
     data.title = GET_STRING(1003)
     data.str = string.format(GET_STRING(60005006), itemData.Name)
-    data.btnDesc = {GET_STRING(1001),GET_STRING(1000)}
+    data.btnDesc = { GET_STRING(1001), GET_STRING(1000) }
     data.title = GET_STRING(1003)
     data.callback = function(btn)
         if btn == 1 then
-            SL:RequestDropItem(itemData,itemData.OverLap and itemData.OverLap or 1)
+            SL:RequestDropItem(itemData, itemData.OverLap and itemData.OverLap or 1)
         end
-
     end
     SL:OpenCommonDialog(data)
 end
@@ -1422,7 +1417,7 @@ end
 --是否友方
 function FGUIFunction:CheckIsFriendByID(targetID)
     -- player & monster, only!!!!
-    if false == SL:GetValue("ACTOR_IS_PLAYER", targetID)  
+    if false == SL:GetValue("ACTOR_IS_PLAYER", targetID)
         and false == SL:GetValue("ACTOR_IS_MONSTER", targetID) then
         return false
     end
@@ -1438,10 +1433,10 @@ function FGUIFunction:CheckIsFriendByID(targetID)
     end
 
     -- 采集物
-    if SL:GetValue("ACTOR_IS_COLLECTION", targetID)then
+    if SL:GetValue("ACTOR_IS_COLLECTION", targetID) then
         return false
     end
-    
+
     -- 是敌人
     if SL:GetValue("ACTOR_IS_ENEMY", targetID) then
         return false
@@ -1459,7 +1454,7 @@ function FGUIFunction:FindAutoLaunchSkill()
     if mode == 1 then --1:冷却释放
         self._lastScheme = nil
         self._autoSkillIndex = nil
-        for i,v in ipairs(skills) do
+        for i, v in ipairs(skills) do
             if v ~= -1 and FGUIFunction:CheckAbleToLaunch(v) == 1 then
                 skillID = v
                 break
@@ -1482,13 +1477,13 @@ function FGUIFunction:FindAutoLaunchSkill()
             if index > #skills then
                 index = 1
             end
-            if skillID ~= -1 then 
+            if skillID ~= -1 then
                 self._autoSkillIndex = index
                 break
             end
         end
     end
-    
+
     if skillID == -1 then
         local baseSkillID = FGUIFunction:AutoGetRandomBaseSkillID()
         if FGUIFunction:CheckAbleToLaunch(baseSkillID) == 1 then
@@ -1496,10 +1491,10 @@ function FGUIFunction:FindAutoLaunchSkill()
         end
     end
 
-    --替换脚本技能 
-    if skillID ~= -1 then 
+    --替换脚本技能
+    if skillID ~= -1 then
         local scriptSkillID = SL:GetValue("SKILL_SCRIPT_REPLACE_ID", skillID)
-        if scriptSkillID then 
+        if scriptSkillID then
             if FGUIFunction:CheckAbleToLaunch(scriptSkillID) == 1 then
                 skillID = scriptSkillID
             end
@@ -1513,7 +1508,7 @@ function FGUIFunction:FindRobotRestoreSkill()
     local targetID = nil
     --恢复类
     local selfSkillID = SL:GetValue("SETTING_LHA_RELEASE_SKILL_ID")
-    if selfSkillID and selfSkillID > 0 then 
+    if selfSkillID and selfSkillID > 0 then
         local restoreValue = SL:GetValue("SETTING_LHA_RELEASE_SKILL_LIMIT")
         local hp = SL:GetValue("HP")
         local maxhp = SL:GetValue("MAXHP")
@@ -1522,11 +1517,11 @@ function FGUIFunction:FindRobotRestoreSkill()
             curSkillID = selfSkillID
         end
     end
-    if not targetID then 
+    if not targetID then
         local teamSkillID = SL:GetValue("SETTING_TLHA_RELEASE_SKILL_ID")
-        local teamID =  SL:GetValue("TEAM_ID") 
-        if teamSkillID and teamSkillID > 0 and teamID > 0 then 
-            local restoreValue = SL:GetValue("SETTING_TLHA_RELEASE_SKILL_LIMIT") 
+        local teamID = SL:GetValue("TEAM_ID")
+        if teamSkillID and teamSkillID > 0 and teamID > 0 then
+            local restoreValue = SL:GetValue("SETTING_TLHA_RELEASE_SKILL_LIMIT")
             local members = SL:GetValue("TEAM_MEMBER_LIST")
             for _, member in ipairs(members) do
                 local actorID = member.UserID
@@ -1540,8 +1535,8 @@ function FGUIFunction:FindRobotRestoreSkill()
                 end
             end
         end
-    end  
-        
+    end
+
     return curSkillID, targetID
 end
 
@@ -1552,34 +1547,34 @@ function FGUIFunction:FindRobotAddStateSkill()
     local helpSkills = SL:GetValue("SETTING_FIGHT_HELP_SKILL_NORMALIZED")
     for _, skillID in ipairs(helpSkills) do
         if skillID ~= -1 then
-            if FGUIFunction:CheckAbleToLaunch(skillID) == 1 
+            if FGUIFunction:CheckAbleToLaunch(skillID) == 1
                 and SL:GetValue("SKILL_CHECK_IS_BUFF_MAGIC", skillID) then
                 local buffIDS = SL:GetValue("SKILL_BUFFID_BY_ID", skillID)
-                if buffIDS and #buffIDS > 0 then 
+                if buffIDS and #buffIDS > 0 then
                     for _, buffID in ipairs(buffIDS) do
-                        if not SL:GetValue("ACTOR_HAS_ONE_BUFF",targetID, buffID) then 
+                        if not SL:GetValue("ACTOR_HAS_ONE_BUFF", targetID, buffID) then
                             curSkillID = skillID
                             break
                         end
                     end
 
                     --给队友加
-                    if not curSkillID 
-                    and SL:GetValue("ACTOR_TEAM_STATE", targetID)
-                    and SL:GetValue("SKILL_CHECK_IS_FIND_FRIEND", skillID) then 
+                    if not curSkillID
+                        and SL:GetValue("ACTOR_TEAM_STATE", targetID)
+                        and SL:GetValue("SKILL_CHECK_IS_FIND_FRIEND", skillID) then
                         local member = SL:GetValue("TEAM_MEMBER_LIST", targetID)
                         for k, v in pairs(member) do
                             if v.UserID and v.UserID ~= targetID then
                                 for _, buffID in ipairs(buffIDS) do
-                                    if SL:GetValue("ACTOR_IN_VIEW", v.UserID) 
-                                    and not SL:GetValue("ACTOR_HAS_ONE_BUFF",v.UserID, buffID) then 
+                                    if SL:GetValue("ACTOR_IN_VIEW", v.UserID)
+                                        and not SL:GetValue("ACTOR_HAS_ONE_BUFF", v.UserID, buffID) then
                                         curSkillID = skillID
                                         targetID = v.UserID
                                         break
                                     end
                                 end
                             end
-                            if curSkillID then 
+                            if curSkillID then
                                 break
                             end
                         end
@@ -1587,7 +1582,7 @@ function FGUIFunction:FindRobotAddStateSkill()
                 end
             end
         end
-        if curSkillID then 
+        if curSkillID then
             break
         end
     end
@@ -1597,19 +1592,19 @@ end
 function FGUIFunction:FindRobotLaunchSkill()
     local skillID, targetID
     repeat
-        --恢复 
+        --恢复
         skillID, targetID = FGUIFunction:FindRobotRestoreSkill()
-        if skillID and targetID then 
+        if skillID and targetID then
             break
         end
-        
+
         --buff
         skillID, targetID = FGUIFunction:FindRobotAddStateSkill()
-        if skillID and targetID then 
+        if skillID and targetID then
             break
         end
     until true
-    
+
     local RJFirendAttackMode = SL:GetValue("GAME_DATA", "RJFirendAttackMode")
     if RJFirendAttackMode == 0 then
         if targetID and not FGUIFunction:CheckIsFriendByID(targetID) then
@@ -1627,7 +1622,7 @@ end
 
 --根据有无武器获取随机普攻技能id
 function FGUIFunction:AutoGetRandomBaseSkillID()
-    local equipPos = SL:GetValue("EQUIP_POS_BY_STDMODE", SLDefine.STDMODE_TYPE.WEAPON) 
+    local equipPos = SL:GetValue("EQUIP_POS_BY_STDMODE", SLDefine.STDMODE_TYPE.WEAPON)
     local equipData = SL:GetValue("EQUIP_DATA_BY_POS", equipPos)
     local skills = nil
     if equipData then
@@ -1635,7 +1630,7 @@ function FGUIFunction:AutoGetRandomBaseSkillID()
     else
         skills = SL:GetValue("SKILL_NONE_WEAPON_BASIC")
     end
-    
+
     return skills[math.random(#skills)]
 end
 
@@ -1658,6 +1653,7 @@ function FGUIFunction:ShowTopCurrency(idStr)
     if not TopCurrency then return end
     TopCurrency.Show(idStr)
 end
+
 -- 关闭顶部货币列表
 function FGUIFunction:HideTopCurrency()
     if not TopCurrency then return end
@@ -1700,26 +1696,26 @@ end
 --随机移动
 function FGUIFunction:GetRandomMovePos()
     -- 找一个随机位置
-    local range = 0
-    local sX = mFloor(SL:GetValue("ACTOR_MAP_X"))
-    local sY = mFloor(SL:GetValue("ACTOR_MAP_Y"))
-    local sZ = mFloor(SL:GetValue("ACTOR_MAP_Z")) 
+    local range       = 0
+    local sX          = mFloor(SL:GetValue("ACTOR_MAP_X"))
+    local sY          = mFloor(SL:GetValue("ACTOR_MAP_Y"))
+    local sZ          = mFloor(SL:GetValue("ACTOR_MAP_Z"))
 
-    local mapWidth  = SL:GetValue("MAP_WIDTH") 
-    local mapHeight = SL:GetValue("MAP_HEIGHT")
-    local minR  = math.ceil(math.min(mapWidth, mapHeight) / 2) --取地图较小边的一半 防止地图过小 傻太久
-    range = math.min(50, minR)
+    local mapWidth    = SL:GetValue("MAP_WIDTH")
+    local mapHeight   = SL:GetValue("MAP_HEIGHT")
+    local minR        = math.ceil(math.min(mapWidth, mapHeight) / 2) --取地图较小边的一半 防止地图过小 傻太久
+    range             = math.min(50, minR)
 
     local randomCount = 5
     for i = 1, randomCount do
-        local dX  = mRandom(mFloor(sX-range), mFloor(sX+range)) 
-        local dZ  = mRandom(mFloor(sZ-range), mFloor(sZ+range))
-        local dY  = SL:GetValue("MAP_Y", dX, dZ) 
-        if dY > sY + 2 then 
+        local dX = mRandom(mFloor(sX - range), mFloor(sX + range))
+        local dZ = mRandom(mFloor(sZ - range), mFloor(sZ + range))
+        local dY = SL:GetValue("MAP_Y", dX, dZ)
+        if dY > sY + 2 then
             dY = sY
         end
-        if (mAbs(dX-sX) >= 7 or mAbs(dZ-sZ) >= 7) then
-            local isBlock = SL:GetValue("MAP_IS_BLOCK",dX, dY, dZ)
+        if (mAbs(dX - sX) >= 7 or mAbs(dZ - sZ) >= 7) then
+            local isBlock = SL:GetValue("MAP_IS_BLOCK", dX, dY, dZ)
             if not isBlock then
                 return dX, dY, dZ
             end
@@ -1728,7 +1724,7 @@ function FGUIFunction:GetRandomMovePos()
     return nil
 end
 
-function FGUIFunction:GetFaceIDBySex(sex,classConfig)
+function FGUIFunction:GetFaceIDBySex(sex, classConfig)
     if not sex or not classConfig then
         SL:printEx("参数为空")
         return
@@ -1740,24 +1736,23 @@ function FGUIFunction:GetFaceIDBySex(sex,classConfig)
     end
 
     return (sex == global.MMO.ACTOR_PLAYER_SEX_M) and classConfig.InitModel[4] or classConfig.InitModel[5]
-
 end
 
--- 施法前 目标检测和选择  返回值是否检测通过 
+-- 施法前 目标检测和选择  返回值是否检测通过
 function FGUIFunction:CheckOrFindTarget(skillID, launchType)
-    local userRange     = SL:GetValue("SKILL_FIND_TARGET_DISTANCE", skillID)
-    local systemRange   = SL:GetValue("GAME_DATA", "LAUNCH_TARGET_RANGE_SYSTEM")
-    local findRange     = launchType == SLDefine.LAUNCH_TYPE.USER and userRange or systemRange
+    local userRange   = SL:GetValue("SKILL_FIND_TARGET_DISTANCE", skillID)
+    local systemRange = SL:GetValue("GAME_DATA", "LAUNCH_TARGET_RANGE_SYSTEM")
+    local findRange   = launchType == SLDefine.LAUNCH_TYPE.USER and userRange or systemRange
 
     if SL:GetValue("SKILL_IS_NEED_FIND_TARGET", skillID) then
         local isFriendSkill = SL:GetValue("SKILL_CHECK_IS_FIND_FRIEND", skillID)
         -- auto select monster
         if not SL:GetValue("SELECT_TARGET_ID") then
-            if isFriendSkill then 
+            if isFriendSkill then
                 local selfID = SL:GetValue("USER_ID")
                 SL:SetValue("SELECT_TARGET_ID", selfID, SLDefine.SELECT_TARGET.SYSTEM)
             else
-                AutoFindTarget:FindTarget(findRange, isFriendSkill) 
+                AutoFindTarget:FindTarget(findRange, isFriendSkill)
                 -- auto select player
                 if not SL:GetValue("SELECT_TARGET_ID") then
                     SL:ChangeSelectTarget(global.MMO.ACTOR_PLAYER, findRange, false, false)
@@ -1767,33 +1762,33 @@ function FGUIFunction:CheckOrFindTarget(skillID, launchType)
                     return false
                 end
             end
-        else 
+        else
             if isFriendSkill then
                 local pkMode = SL:GetValue("PKMODE")
                 if pkMode == SLDefine.PKMODE.ALL then --全体
                     --全体不管敌方友方
-                else 
+                else
                     local RJFirendAttackMode = SL:GetValue("GAME_DATA", "RJFirendAttackMode")
                     if RJFirendAttackMode == 0 then
                         if not FGUIFunction:CheckIsFriendByID(SL:GetValue("SELECT_TARGET_ID")) then
                             SL:ShowSystemTips(SL:GetValue("I18N_STRING", 10002005))
                             return false
                         end
-                    else 
+                    else
                         return true
                     end
                 end
             else
                 -- 不可攻击
-                local canAttack, errCode = SL:GetValue("TARGET_ATTACK_ENABLE", SL:GetValue("SELECT_TARGET_ID")) 
+                local canAttack, errCode = SL:GetValue("TARGET_ATTACK_ENABLE", SL:GetValue("SELECT_TARGET_ID"))
                 if not canAttack then
-                    if errCode == SLDefine.ATTACK_TARGET_ERROR_CODE.IN_SAFE_ZONE then 
+                    if errCode == SLDefine.ATTACK_TARGET_ERROR_CODE.IN_SAFE_ZONE then
                         SL:ShowSystemTips(SL:GetValue("I18N_STRING", 10002007))
                     elseif errCode == SLDefine.ATTACK_TARGET_ERROR_CODE.NOT_ENEMY then
                         local pkMode = SL:GetValue("PKMODE")
                         if pkMode == SLDefine.PKMODE.PEACE then --和平
                             SL:ShowSystemTips(SL:GetValue("I18N_STRING", 10002008))
-                        else--友方不可攻击
+                        else                                    --友方不可攻击
                             SL:ShowSystemTips(SL:GetValue("I18N_STRING", 10002009))
                         end
                     elseif errCode == global.MMO.ATTACK_TARGET_FIND_TARGET_MODE_ERROR then --选目标模式错误
@@ -1804,8 +1799,8 @@ function FGUIFunction:CheckOrFindTarget(skillID, launchType)
             end
             -- 距离太远
             local targetID = SL:GetValue("SELECT_TARGET_ID")
-            if targetID and findRange then 
-                if SL:GetValue("TARGET_DISTANCE_FROM_ME", targetID) > findRange then 
+            if targetID and findRange then
+                if SL:GetValue("TARGET_DISTANCE_FROM_ME", targetID) > findRange then
                     SL:ShowSystemTips(SL:GetValue("I18N_STRING", 10002006))
                     return false
                 end
@@ -1831,7 +1826,7 @@ function FGUIFunction:AutoMove(mapID, x, y, route)
             end
         end)
     end
-    SL:SetValue("BATTLE_AUTO_MOVE_BEGIN",  mapID, x, y)
+    SL:SetValue("BATTLE_AUTO_MOVE_BEGIN", mapID, x, y)
 end
 
 local _guideData = {}
@@ -1839,30 +1834,31 @@ local _guideData = {}
 function FGUIFunction:RegisterGuideData(key, data)
     _guideData[key] = data
 end
+
 function FGUIFunction:UnRegisterGuideData(key)
     _guideData[key] = nil
 end
+
 function FGUIFunction:GetGuideData(key)
     return _guideData[key]
 end
 
-
 function FGUIFunction:LaunchSkill(skillId)
-    if not skillId then return end 
+    if not skillId then return end
     local isNormal = SL:GetValue("SKILL_CHECK_IS_ATTACK", skillId)
-    if isNormal then 
+    if isNormal then
         skillId = FGUIFunction:AutoGetRandomBaseSkillID()
-    end 
-    
+    end
+
     local scriptSkillID = SL:GetValue("SKILL_SCRIPT_REPLACE_ID", skillId)
-    if scriptSkillID then 
-        if self:CheckLaunchSkill(scriptSkillID, false) then 
+    if scriptSkillID then
+        if self:CheckLaunchSkill(scriptSkillID, false) then
             skillId = scriptSkillID
         end
     end
-    
-    if not self:CheckLaunchSkill(skillId, true) then 
-        return 
+
+    if not self:CheckLaunchSkill(skillId, true) then
+        return
     end
     SL:RequestLaunchSkill(skillId)
 end
@@ -1881,18 +1877,18 @@ local function clearSkillTipCD3()
     skillTipTimer3 = nil
 end
 function FGUIFunction:CheckLaunchSkill(skillId, tips)
-    if not FGUIFunction:CheckSkillWearWeapon(skillId) then 
-        if tips then 
+    if not FGUIFunction:CheckSkillWearWeapon(skillId) then
+        if tips then
             if not skillTipTimer1 then
                 SL:AddChatMsg(SLDefine.CHAT_CHANNEL.System, SL:GetValue("I18N_STRING", 10002011))
                 skillTipTimer1 = SL:ScheduleOnce(clearSkillTipCD1, 3)
             end
         end
         return false
-    end 
+    end
 
-    if not FGUIFunction:CheckSkillEnoughArrow(skillId) then 
-        if tips then 
+    if not FGUIFunction:CheckSkillEnoughArrow(skillId) then
+        if tips then
             if not skillTipTimer2 then
                 SL:AddChatMsg(SLDefine.CHAT_CHANNEL.System, SL:GetValue("I18N_STRING", 10002010))
                 skillTipTimer2 = SL:ScheduleOnce(clearSkillTipCD2, 3)
@@ -1901,15 +1897,15 @@ function FGUIFunction:CheckLaunchSkill(skillId, tips)
         return false
     end
 
-    if not FGUIFunction:CheckSkillEnoughMP(skillId) then 
-        if tips then 
+    if not FGUIFunction:CheckSkillEnoughMP(skillId) then
+        if tips then
             if not skillTipTimer3 then
                 SL:AddChatMsg(SLDefine.CHAT_CHANNEL.System, SL:GetValue("I18N_STRING", 10002002))
                 skillTipTimer3 = SL:ScheduleOnce(clearSkillTipCD3, 3)
             end
         end
         return false
-    end 
+    end
     return true
 end
 
@@ -1940,8 +1936,8 @@ end
 function FGUIFunction:SwitchPanel(packageName, componentName, initData, layer, ext)
     if FGUI:CheckOpen(packageName, componentName) then
         FGUI:Close(packageName, componentName)
-    else 
-        FGUI:Open(packageName, componentName, initData, layer, ext) 
+    else
+        FGUI:Open(packageName, componentName, initData, layer, ext)
     end
 end
 
@@ -1995,11 +1991,10 @@ function FGUIFunction:GetServerName(serverNameStr, nameColor)
     end
 end
 
-
 -- 通过服务器名字kxxx_name/狂牛(kxxx_name)获取区服名字和前缀用于hud 返回 名字， 类型 ，前缀/图标， 颜色/偏移x ，偏移Y
 local hudType, hudKuaFuName, hudKuaFuColor, hudKuaFuIconOffsetX, hudKuaFuIconOffsetY = nil, nil, nil, nil, nil
 function FGUIFunction:GetHudServerName(serverNameStr, actorID)
---1类型是前缀  2 图片
+    --1类型是前缀  2 图片
     if not hudType then
         local KuafuPrefix = SL:GetValue("GAME_DATA", "KuafuPrefix")
         if KuafuPrefix and KuafuPrefix ~= "" then
@@ -2007,8 +2002,8 @@ function FGUIFunction:GetHudServerName(serverNameStr, actorID)
             hudType = strs[1]
             hudKuaFuName = strs[2]
             if hudType == "" then hudType = "1" end
-            if hudType == "1" then 
-                local hudKuaFuColorHex = "#"..(strs[3] or "FFFFFF")
+            if hudType == "1" then
+                local hudKuaFuColorHex = "#" .. (strs[3] or "FFFFFF")
                 hudKuaFuColor = SL:ConvertHexStrToColor(hudKuaFuColorHex)
             end
             if hudKuaFuName == "" then hudKuaFuName = nil end
@@ -2026,23 +2021,23 @@ function FGUIFunction:GetHudServerName(serverNameStr, actorID)
     local mainPlayerMainServerID = SL:GetValue("ACTOR_MAIN_SERVER_ID")
     local actorMainServerID = SL:GetValue("ACTOR_MAIN_SERVER_ID", actorID)
     local isSameMainServer = false
-    if mainPlayerMainServerID == actorMainServerID then 
+    if mainPlayerMainServerID == actorMainServerID then
         isSameMainServer = true
     end
     local getKuaFuParam = function(serverStr, name)
-        if isSameMainServer then 
+        if isSameMainServer then
             --同主服不显示前缀
             return name
         end
         local param3 = hudType == "2" and hudKuaFuIconOffsetX or (hudKuaFuColor or Color.white)
         return name, tonumber(hudType) or 1, hudKuaFuName or serverStr, param3, hudKuaFuIconOffsetY
     end
-    if hudType then--有配置
-        local name1 , serverStr, name3 = string.match(serverNameStr,"(.*%()(.*)_(.*)")
-        if name1 then 
+    if hudType then --有配置
+        local name1, serverStr, name3 = string.match(serverNameStr, "(.*%()(.*)_(.*)")
+        if name1 then
             local name = name1 .. name3
             return getKuaFuParam(serverStr, name)
-        else 
+        else
             local serverNames = string.split(serverNameStr, "_")
             local nameStr2 = serverNames[2]
             if nameStr2 then
@@ -2053,13 +2048,13 @@ function FGUIFunction:GetHudServerName(serverNameStr, actorID)
                 return serverNameStr
             end
         end
-    else--无配置
-        if isSameMainServer then 
-            local name1 , serverStr, name3 = string.match(serverNameStr,"(.*%()(.*)_(.*)")
-            if name1 then 
+    else --无配置
+        if isSameMainServer then
+            local name1, serverStr, name3 = string.match(serverNameStr, "(.*%()(.*)_(.*)")
+            if name1 then
                 local name = name1 .. name3
                 return name
-            else 
+            else
                 local serverNames = string.split(serverNameStr, "_")
                 local nameStr2 = serverNames[2]
                 if nameStr2 then
@@ -2068,7 +2063,7 @@ function FGUIFunction:GetHudServerName(serverNameStr, actorID)
                     return serverNameStr
                 end
             end
-        else 
+        else
             return serverNameStr
         end
     end
@@ -2090,7 +2085,7 @@ function FGUIFunction:FormatFeatureAndCustomStr(serverStr)
         feathure[index] = tonumber(tData[k])
         index = index + 1
     end
-    
+
     index = 0
     tData = string.split(tFeathure[2], ",")
     for k = 1, #tData do
@@ -2101,8 +2096,8 @@ function FGUIFunction:FormatFeatureAndCustomStr(serverStr)
         index = 0
         tData = string.split(tFeathure[3], ",")
         customFeathure.chatFrame = tonumber(tData[1] or "0")
-        customFeathure.avatar = tonumber(tData[2]or "0")
-        customFeathure.avatarFrame= tonumber(tData[3]or "0")
+        customFeathure.avatar = tonumber(tData[2] or "0")
+        customFeathure.avatarFrame = tonumber(tData[3] or "0")
     end
 
     local function ZeroToNil(num)
@@ -2123,16 +2118,16 @@ function FGUIFunction:FormatFeatureAndCustomStr(serverStr)
     res.chestFxId = ZeroToNil(tonumber(extFeathure[global.MMO.EXT_APPEAR_TYPE_CHEST_FX]))
     res.headFxId = ZeroToNil(tonumber(extFeathure[global.MMO.EXT_APPEAR_TYPE_HEAD_FX]))
     res.wingFxId = ZeroToNil(tonumber(extFeathure[global.MMO.EXT_APPEAR_TYPE_WING_FX]))
-	
+
     res.helmetColor = ZeroToNil(tonumber(extFeathure[global.MMO.EXT_APPEAR_TYPE_HELMET_COLOR]))
     return res
 end
 
 function FGUIFunction:LookRankPlayerInfo(data)
     if SL:GetValue("IS_PC_OPER_MODE") then
-        FGUI:Open("FuncDock_pc","PCFuncDockNewTip",data)
+        FGUI:Open("FuncDock_pc", "PCFuncDockNewTip", data)
     else
-        FGUI:Open("FuncDock","FuncDockNewTip",data)
+        FGUI:Open("FuncDock", "FuncDockNewTip", data)
     end
     FuncDock.setOpenData(nil)
 end
@@ -2150,43 +2145,44 @@ end
 
 -- 快捷使用Tips
 function FGUIFunction:OpenQuickUseTips(data)
-    local isOpen = SL:GetValue("GAME_DATA","QuickUseTipsShow") == 1
-    if not isOpen then 
-        return 
-    end 
+    local isOpen = SL:GetValue("GAME_DATA", "QuickUseTipsShow") == 1
+
+    if not isOpen then
+        return
+    end
 
     -- 总开关 所有重复显示
     local repeatSwitch = SL:GetValue("SETTING_QUICKWINDOW_NOT_REPEATED_SHOW")
-    if repeatSwitch then 
+    if repeatSwitch then
         local isSaved = FGUIFunction:GetAllQuickUseItemShow(data.ID)
-        if isSaved then 
-            return 
-        end 
+        if isSaved then
+            return
+        end
         FGUIFunction:SetAllQuickUseItemShow(data.ID, true)
-    else 
+    else
         -- 开关 单个物品重复显示
         local isSaved = FGUIFunction:GetQuickUseItemShow(data.ID)
-        if isSaved then 
-            return 
-        end 
-    end 
+        if isSaved then
+            return
+        end
+    end
 
     local ItemUseProxy = global.Facade:retrieveProxy(global.ProxyTable.ItemUseProxy)
     local isUseCd = ItemUseProxy:CheckIsCD(data.Index)
-    if isUseCd then 
+    if isUseCd then
         return
-    end 
+    end
 
     local BuffProxy = global.Facade:retrieveProxy(global.ProxyTable.BuffProxy)
     local isForbidUse = BuffProxy:CheckForbidUseItem(data.Index)
     if isForbidUse then
         return
     end
-    
+
     local itemConfig = SL:GetValue("ITEM_DATA", data.Index)
-    if not itemConfig then 
-        return 
-    end 
+    if not itemConfig then
+        return
+    end
 
     if itemConfig.ConditionId then
         if not FGUIFunction:CheckSimpleCondition(itemConfig.ConditionId) then
@@ -2198,46 +2194,52 @@ function FGUIFunction:OpenQuickUseTips(data)
 
     -- 是否装备类型
     local isEquip = SL:GetValue("ITEMTYPE", data) == SL:GetValue("ITEMTYPE_ENUM").Equip
-    if not isEquip then 
+    if not isEquip then
         local canUse = ItemUtil:CheckItemCanUse(data)
-        if not canUse then 
-            return 
-        end 
+        if not canUse then
+            return
+        end
         local config = SL:GetValue("ITEM_DATA", data.Index)
         if config.QuickUse == 1 then
-            if isPC then 
+            if isPC then
                 FGUI:Open("QuickUseTips_pc", "PCQuickUseTips", data, FGUI_LAYER.NORMAL)
-            else 
+            else
                 FGUI:Open("QuickUseTips", "QuickUseTips", data, FGUI_LAYER.NORMAL)
             end
-        end 
-    else 
+        end
+    else
         local isGood = FGUIFunction:CompareEquipOnBody(data)
-        if isGood then 
-            if isPC then 
+        if isGood then
+            if isPC then
                 FGUI:Open("QuickUseTips_pc", "PCQuickUseTips", data, FGUI_LAYER.NORMAL)
-            else 
+            else
                 FGUI:Open("QuickUseTips", "QuickUseTips", data, FGUI_LAYER.NORMAL)
-            end 
-        end 
+            end
+        end
     end
 end
 
 -- 快捷使用 检测背包
-function FGUIFunction:CheckBagQuickUse()
-    local bagData = SL:GetValue("BAG_DATA")
-    for _, data in pairs(bagData) do 
-        local param1,param2,param3 = FGUIFunction:CompareEquipUpShowOnBody(data)
-        if param1 == true then -- 变绿色 才检测
-            FGUIFunction:OpenQuickUseTips(data)
-        end 
-    end 
+function FGUIFunction:CheckBagQuickUse(data)
+    local param1, param2, param3 = FGUIFunction:CompareEquipUpShowOnBody(data)
+    -- print("检测背包", param1, param2, param3)
+    if param1 == true then     -- 变绿色 才检测
+        FGUIFunction:OpenQuickUseTips(data)
+    end
+    -- local bagData = SL:GetValue("BAG_DATA")
+    -- for _, data in pairs(bagData) do
+    --     SL:dump(data, "背包数据")
+    --     local param1,param2,param3 = FGUIFunction:CompareEquipUpShowOnBody(data)
+    --     if param1 == true then -- 变绿色 才检测
+    --         FGUIFunction:OpenQuickUseTips(data)
+    --     end
+    -- end
 end
 
 -- 单个物品 不再重复
 local itemShow = {}
 function FGUIFunction:SetQuickUseItemShow(itemID, bShow)
-    if not itemID then return end 
+    if not itemID then return end
     itemShow[tostring(itemID)] = bShow
     SET_CLOUD_STORAGE_DATA("QUICK_USE_ITEMS_SHOW", itemShow)
 end
@@ -2245,17 +2247,17 @@ end
 function FGUIFunction:GetQuickUseItemShow(itemID)
     if not itemID then return end
     local items = GET_CLOUD_STORAGE_DATA("QUICK_USE_ITEMS_SHOW")
-    if items and items[tostring(itemID)] then 
+    if items and items[tostring(itemID)] then
         return true
     end
-    
+
     return false
 end
 
 -- 所有物品 不再重复
 local itemAllShow = {}
 function FGUIFunction:SetAllQuickUseItemShow(itemID, bShow)
-    if not itemID then return end 
+    if not itemID then return end
     itemAllShow[tostring(itemID)] = bShow
     SET_CLOUD_STORAGE_DATA("ALL_QUICK_USE_ITEMS_SHOW", itemAllShow)
 end
@@ -2263,25 +2265,27 @@ end
 function FGUIFunction:GetAllQuickUseItemShow(itemID)
     if not itemID then return end
     local items = GET_CLOUD_STORAGE_DATA("ALL_QUICK_USE_ITEMS_SHOW")
-    if items and items[tostring(itemID)] then 
+    if items and items[tostring(itemID)] then
         return true
     end
-    
+
     return false
 end
 
 --打开技能提示
 -- ext:扩展参数 (posX=nil, posY=nil, anchorX=0, anchorY=0, callBack=nil, showBtn=false)
 function FGUIFunction:ShowSkillTip(SkillID, SkillLevel, ext)
-    local data = ext or {} 
+    local data = ext or {}
     data.id = SkillID
     data.level = SkillLevel
     if SL:GetValue("IS_PC_OPER_MODE") then
-        FGUI:Open("Common_pc", "PCSkillTip", data, FGUI_LAYER.NOTICE, {classPath = "FGUILayout/Common/SkillTip", fullScreen = false})
+        FGUI:Open("Common_pc", "PCSkillTip", data, FGUI_LAYER.NOTICE,
+            { classPath = "FGUILayout/Common/SkillTip", fullScreen = false })
     else
         FGUI:Open("Common", "SkillTip", data)
     end
 end
+
 --关闭技能提示
 function FGUIFunction:HideSkillTip()
     if SL:GetValue("IS_PC_OPER_MODE") then
@@ -2343,14 +2347,14 @@ function FGUIFunction:ShowDropItemFlyAnimation(itemID, masterID, func)
     local durZ = z - itemZ
     local flyActionTime = 0
     local flyAction = nil
-    flyAction = SL:Schedule(function(dt) 
+    flyAction = SL:Schedule(function(dt)
         flyActionTime = flyActionTime + dt
-        if flyActionTime <= 0.3 then 
+        if flyActionTime <= 0.3 then
             local scale = 1 + flyActionTime
             SL:SetValue("DROPITEM_SCALE", itemID, scale, scale, scale)
-        elseif flyActionTime <= 0.8 then 
-        elseif flyActionTime <= 1.3 then 
-            local percent = (flyActionTime - 0.8)/0.5
+        elseif flyActionTime <= 0.8 then
+        elseif flyActionTime <= 1.3 then
+            local percent = (flyActionTime - 0.8) / 0.5
             local scale = 1.3 - percent * 1.2
             SL:SetValue("DROPITEM_SCALE", itemID, scale, scale, scale)
             local xx = itemX + durX * percent
@@ -2361,5 +2365,5 @@ function FGUIFunction:ShowDropItemFlyAnimation(itemID, masterID, func)
             func(itemID)
             SL:UnSchedule(flyAction)
         end
-    end,0)
+    end, 0)
 end

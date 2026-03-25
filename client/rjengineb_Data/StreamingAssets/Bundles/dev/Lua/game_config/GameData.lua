@@ -671,5 +671,9 @@ local config = {
 		k="MainPlayerSufferClearTime",
 		value=30,
 	},
+	["QuickUseTipsShow"] = { 
+		k="QuickUseTipsShow",
+		value=1,
+	},
 }
 return config

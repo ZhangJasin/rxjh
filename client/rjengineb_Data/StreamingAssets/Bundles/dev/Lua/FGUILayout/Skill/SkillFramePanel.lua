@@ -4,11 +4,12 @@ local SkillFramePanel = class("SkillFramePanel", BaseFGUILayout)
 local PAGE_DATA = {
 	[1] = {name = "武功", componentName = "SkillStudyPanel", obj = nil},
 	[2] = {name = "气功", componentName = "SkillPracticePanel", obj = nil},
+	-- [3] = {name = "设置", componentName = "SkillSettingPanel", obj = nil},
 }
 
 function SkillFramePanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUIFunction:SetCloseUIWhenClickOutside(self)
+	FGUI:SetCloseUIWhenClickOutside(self)
 
 	self:InitData()
 	self:InitEvent()
