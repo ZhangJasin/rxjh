@@ -218,6 +218,9 @@ end
 
 
 function BagRecycleViewModel:RecycleSelectCell(data)
+	if not data then
+		return
+	end
 	local isSelect = data.isSelect
 	local selectList = data.selectList
 
