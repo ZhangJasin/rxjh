@@ -641,7 +641,7 @@ function EquipDuanZao:GetPageData()
             end
         else
             if EquipQHItemTab[data.ID] then
-                if page == 1 and EquipQHItemTab[data.ID].itemtype == 1 and self.selectEquipLv then
+                if page == 1 and EquipQHItemTab[data.ID].itemtype == 1 and self.selectEquipLv and self.selectEquipStdMode then
                     --需增加等级限制
                     local minLv = EquipQHItemTab[data.ID]['equipMinLv']
                     local maxLv = EquipQHItemTab[data.ID]['equipMaxLv']
@@ -652,9 +652,14 @@ function EquipDuanZao:GetPageData()
                     if maxLv and self.selectEquipLv > maxLv then
                         canAdd = false
                     end
-                    if canAdd then
+                    if canAdd then                        
                         if EquipQHItemTab[data.ID]['limitpos'] == 5 then  -- 武器
                             table.insert(bagitemlist[1], data)
+                        elseif EquipQHItemTab[data.ID]['limitpos'] == 53 then --热血石转用于 门甲、头饰、幻化武器衣服
+                            if self.selectEquipStdMode == 53 or self.selectEquipStdMode == 54 or
+                               self.selectEquipStdMode == 65 or self.selectEquipStdMode == 66 then
+                                table.insert(bagitemlist[2], data)
+                            end
                         else
                             table.insert(bagitemlist[2], data)
                         end
