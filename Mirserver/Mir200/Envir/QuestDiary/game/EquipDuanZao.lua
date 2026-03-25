@@ -11,7 +11,7 @@ local EquipQHEffectShow   = require("Envir/QuestDiary/game_config/cfgcsv/EquipQH
 local ItemEquip           = require("Envir/QuestDiary/game_config/ItemEquip.lua")
 
 -- 装备位置映射
-local equippos2 = { [5]=1, [3]=2, [8]=3, [9]=4, [51]=5, [15]=6, [19]=7, [22]=8 ,[53]=9}
+local equippos2 = { [5]=1, [3]=2, [8]=3, [9]=4, [51]=5, [15]=6, [19]=7, [22]=8 ,[53]=9,[54]=6,[65]=7,[66]=8}
 
 local qhGroupId = 0 --强化加工使用 自定义属性组0
 local fyGroupId = 1 --赋予使用 自定义属性组1
@@ -23,6 +23,10 @@ local isPercentAttr ={
     [107]= 1,
     [108]= 1,
     [127]= 1,
+    [164]= 1,
+    [12]= 1,
+    [13]= 1,
+    [14]= 1,
 } --万分比属性
 
 -- 打开锻造界面
@@ -715,6 +719,7 @@ GameEvent.add(EventCfg.onTakeOffEx, function(actor, itemObj, pos, itemname, item
 end, EquipDuanZao)
 -- 装备穿戴事件
 GameEvent.add(EventCfg.onTakeOnEx, function(actor, itemObj, pos, itemname, itemid)
+    print("装备位信息：",itemname,itemid,pos)
     EquipDuanZao.showWeaponEffect(actor, itemObj)
 end, EquipDuanZao)
 -- 登录更新
