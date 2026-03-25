@@ -365,5 +365,405 @@ local config = {
 			[2] = 15,
 		},
 	},
+	[3918] = { 
+		idx=3918,
+		itemname="热血石（百变神行）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3919] = { 
+		idx=3919,
+		itemname="热血石（护身罡气）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3920] = { 
+		idx=3920,
+		itemname="热血石（移花接木）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3921] = { 
+		idx=3921,
+		itemname="热血石（回柳身法）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3922] = { 
+		idx=3922,
+		itemname="热血石（怒海狂澜）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3923] = { 
+		idx=3923,
+		itemname="热血石（冲冠一怒）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3924] = { 
+		idx=3924,
+		itemname="热血石（摄魂一击）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3925] = { 
+		idx=3925,
+		itemname="热血石（四两千斤）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3926] = { 
+		idx=3926,
+		itemname="热血石（霸气破甲）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3927] = { 
+		idx=3927,
+		itemname="热血石（真武绝击）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3928] = { 
+		idx=3928,
+		itemname="热血石（暗影绝杀）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3929] = { 
+		idx=3929,
+		itemname="热血石（稳如泰山）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3930] = { 
+		idx=3930,
+		itemname="热血石（金钟罡气）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3931] = { 
+		idx=3931,
+		itemname="热血石（运气疗伤）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3932] = { 
+		idx=3932,
+		itemname="热血石（横练太保）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3933] = { 
+		idx=3933,
+		itemname="热血石（乾坤挪移）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3934] = { 
+		idx=3934,
+		itemname="热血石（狂神赋体）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3935] = { 
+		idx=3935,
+		itemname="热血石（以攻为守）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3936] = { 
+		idx=3936,
+		itemname="热血石（百步穿杨）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3937] = { 
+		idx=3937,
+		itemname="热血石（猎鹰之眼）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3938] = { 
+		idx=3938,
+		itemname="热血石（正本培源）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3939] = { 
+		idx=3939,
+		itemname="热血石（心神凝聚）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3940] = { 
+		idx=3940,
+		itemname="热血石（流星三矢）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3941] = { 
+		idx=3941,
+		itemname="热血石（运气行心）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3942] = { 
+		idx=3942,
+		itemname="热血石（太极心法）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3943] = { 
+		idx=3943,
+		itemname="热血石（体血倍增）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3944] = { 
+		idx=3944,
+		itemname="热血石（洗髓易筋）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3945] = { 
+		idx=3945,
+		itemname="热血石（妙手回春）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3946] = { 
+		idx=3946,
+		itemname="热血石（长功击力）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3947] = { 
+		idx=3947,
+		itemname="热血石（吸星大法）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3948] = { 
+		idx=3948,
+		itemname="热血石（神佑之气）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3949] = { 
+		idx=3949,
+		itemname="热血石（九天真气）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3950] = { 
+		idx=3950,
+		itemname="热血石（狂风万破）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3951] = { 
+		idx=3951,
+		itemname="热血石（连环飞舞）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3952] = { 
+		idx=3952,
+		itemname="热血石（货币增加10%）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3953] = { 
+		idx=3953,
+		itemname="热血石（经验增加5%）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3954] = { 
+		idx=3954,
+		itemname="热血石（历练增加5%）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3955] = { 
+		idx=3955,
+		itemname="热血石（合成概率增加1%）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3956] = { 
+		idx=3956,
+		itemname="热血石（气功等级加1）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
+	[3957] = { 
+		idx=3957,
+		itemname="热血石（灵甲护身）",
+		itemtype=1,
+		limitpos=53,
+		level_arr = {
+			[1] = 0,
+			[2] = 15,
+		},
+	},
 }
 return config

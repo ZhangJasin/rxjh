@@ -18670,5 +18670,22 @@ local config = {
 		TipsGroupId=7,
 		sBack="9#100",
 	},
+	[3957] = { 
+		ID=3957,
+		Name="热血石（灵甲护身）",
+		StdMode=1,
+		SubType=7,
+		Attribute="0#23#5",
+		Looks=2021,
+		Price="0#1#1000",
+		Color=242,
+		OverLap=0,
+		Droplooks=200020,
+		Grade=4,
+		nPaimaiStall=1,
+		ItemType=3,
+		TipsGroupId=7,
+		sBack="9#100",
+	},
 }
 return config
