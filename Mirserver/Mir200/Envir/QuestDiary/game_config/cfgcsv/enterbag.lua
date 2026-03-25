@@ -1049,7 +1049,7 @@ local config = {
 	},
 	[3952] = { 
 		idx=3952,
-		itemname="热血石（心神凝聚）",
+		itemname="热血石（货币增加10%）",
 		attrid=1,
 		AttScoreStageList = {
 			[1] = 1,
@@ -1061,7 +1061,7 @@ local config = {
 	},
 	[3953] = { 
 		idx=3953,
-		itemname="热血石（货币增加10%）",
+		itemname="热血石（经验增加5%）",
 		attrid=1,
 		AttScoreStageList = {
 			[1] = 1,
@@ -1073,7 +1073,7 @@ local config = {
 	},
 	[3954] = { 
 		idx=3954,
-		itemname="热血石（经验增加5%）",
+		itemname="热血石（历练增加5%）",
 		attrid=1,
 		AttScoreStageList = {
 			[1] = 1,
@@ -1085,7 +1085,7 @@ local config = {
 	},
 	[3955] = { 
 		idx=3955,
-		itemname="热血石（历练增加5%）",
+		itemname="热血石（合成概率增加1%）",
 		attrid=1,
 		AttScoreStageList = {
 			[1] = 1,
@@ -1097,18 +1097,6 @@ local config = {
 	},
 	[3956] = { 
 		idx=3956,
-		itemname="热血石（合成概率增加1%）",
-		attrid=1,
-		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
-		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
-		RightSubscript=1,
-	},
-	[3957] = { 
-		idx=3957,
 		itemname="热血石（气功等级加1）",
 		attrid=1,
 		AttScoreStageList = {
