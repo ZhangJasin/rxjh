@@ -4,6 +4,7 @@ local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 
 function ItemEquipShow:ctor(component,data)
     self.super:ctor(component)
+
     self.ctrl_arrowType = FGUI:getController(component,"arrowType")
     self:SetArrowByIndex(3)
     if data then
@@ -26,14 +27,8 @@ function ItemEquipShow:UpdateUI(extData)
     self:UpdateItemCounts()
     self:UpdateItemClick(extData)
     self:UpdateSubscript()
-    self:UpdateItemStar()
-    self:SetCountTextFontColor()
-    self:SetCountTextOutLine()
-    self:SetBgVisbleByExtDataConfig()
     self:CheckArrowIsShow()
     self:UpdateIsShowLock()
-    self:AddEffectToItem()
-    self:UpdateItemTipInAndOut()
 end
 
 function ItemEquipShow:UpdateUIByData(data,extData)

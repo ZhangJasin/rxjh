@@ -8,6 +8,13 @@ local MODEL_SCALE = SL:GetValue("IS_PC_OPER_MODE") and 0.8 or  1.2
 
 local ItemFrom = SL:GetValue("ITEMFROMUI_ENUM")
 
+local attrConfigs = SL:GetValue("ATTR_CONFIGS")
+local wuxun_jianding_attr      =  require("game_config/cfgcsv/wuxun_jianding_attr")        -- 武勋属性数据
+local wuxun_skill_data         =  require("game_config/cfgcsv/wuxun_skill_data")           -- 武勋技能数据
+local wuxun_level_data         =  require("game_config/cfgcsv/wuxun_level_data")           -- 武勋等级数据
+local wuxun_zhujie_data        =  require("game_config/cfgcsv/wuxun_zhujie_data")          -- 武勋铸阶数据
+local ObtainListData           =  require("game_config/cfgcsv/Obtain")          --获取来源
+
 function EquipTipViewModel:ctor(index, itemInstanceData, extData)
     self._index = index
     self._maxContentWid = 0
@@ -26,6 +33,7 @@ function EquipTipViewModel:SetItem(itemInstanceData)
     end
     self.itemConfig= SL:GetValue("ITEM_DATA", self._itemId)
     self._itemData = itemInstanceData
+    -- dump(self._itemData)
     self._lookPlayer = false    -- todo
 end
 
@@ -37,26 +45,22 @@ function EquipTipViewModel:InitAutoSwitchPanel(isShow)
     if SL:GetValue("IS_PC_OPER_MODE") then
 		isShow = false
 	end
-	local repeatSwitch = SL:GetValue("SETTING_QUICKWINDOW_NOT_REPEATED_SHOW")
-    if isShow and repeatSwitch then
-        isShow = false
-    end
 	FGUI:setVisible(self._autoSwitchPanel, isShow)
 	if isShow and self._itemId then
 		local autoCheckBox = FGUI:GetChild(self._autoSwitchPanel, "checkBox_auto")
-		FGUI:GButton_setSelected(autoCheckBox, FGUIFunction:GetQuickUseItemShow(self._itemId))
+		FGUI:GButton_setSelected(autoCheckBox, SL:GetQuickUseItemShow(self._itemId))
 		FGUI:setOnClickEvent(autoCheckBox, self.onChangeAutoSwitchHandler)
 	end
 end
 
 function EquipTipViewModel:OnChangeAutoSwitchEvent()
 	local isSelected = FGUI:GButton_getSelected(self._ui.checkBox_auto)
-	FGUIFunction:SetQuickUseItemShow(self._itemId, isSelected)
+	SL:SetQuickUseItemShow(self._itemId, isSelected)
 end
 
 function EquipTipViewModel:InitItemPurchasePanel(buyParam)
 	local isShow = false
-	if buyParam and next(buyParam) and (buyParam.storeId or buyParam.customBuy) then
+	if buyParam and next(buyParam) then
 		buyParam.itemID = self._itemId
 		isShow = true
 	end
@@ -70,17 +74,9 @@ function EquipTipViewModel:InitItemPurchasePanel(buyParam)
 	FGUI:setVisible(self._ui.panel_purchase, isShow)
 end
 
-function EquipTipViewModel:InitEquipPreviewPanel()
-    self._previewPanel = FGUIFunction:BindClass(self._ui.PreviewModel, "Common/TipPreviewModel")
-	self._previewPanel:Create()
-	self._previewPanel:Enter(self._itemData)
-
-    FGUI:setVisible(self._ui.PreviewModel, false)
-end
-
-function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPreviewPanel)
+function EquipTipViewModel:UpdateCellView(itemView, originListSize)
     self._ui = FGUI:ui_delegate(itemView)
-
+    
     self._itemData.isShowCount = false
 	ItemUtil:RefreshItemUIByData(self._ui.CommonEquip, self._itemData)
     ItemUtil:SetEquipArrowType(self._ui.CommonEquip, 3)
@@ -88,7 +84,8 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPrevie
     self:InitAutoSwitchPanel(self._extData and self._extData.from == ItemFrom.BAG or false)
     self:UpdateGradeShow(FGUI:getController(itemView, "grade"))
 
-    self:InitEquipPreviewPanel()
+    self._previewPanel = self._ui.PreviewModel
+    FGUI:setVisible(self._previewPanel, false)
 
     self:InitItemPurchasePanel(self._extData and self._extData.buyParam)
 
@@ -100,17 +97,17 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPrevie
     self.textList[3] = FGUI:GetChild(self._content, "CustomAttr")
     self.textList[4] = FGUI:GetChild(self._content, "Suitex")
     self.textList[11] = FGUI:GetChild(self._content, "Condition")
+    self.textList[14] = FGUI:GetChild(self._content, "Obtain")    -- 获取
     self.textList[18] = FGUI:GetChild(self._content, "Quality")
     self.textList[23] = FGUI:GetChild(self._content, "InlaysAttr")
     self.textList[27] = FGUI:GetChild(self._content, "QigongLv")
-    self.textList[28] = FGUI:GetChild(self._content, "CurNum")
-    self.textList[29] = FGUI:GetChild(self._content, "LimitTime")
 
+    self.textList[101] = FGUI:GetChild(self._content, "CustomAttr")  -- 武勋改
     self.titleLabelList[2] = FGUI:GetChild(self._content, "BaseAttrTitle")
     self.titleLabelList[3] = FGUI:GetChild(self._content, "CustomAttrTitle")
     self.titleLabelList[4] = FGUI:GetChild(self._content, "SuitexTitle")
     self.titleLabelList[23] = FGUI:GetChild(self._content, "InlaysAttrTitle")
-
+    
     -- Top
 	self._topContent = self._ui.TopContent
     self.textList[15] = FGUI:GetChild(self._topContent, "Job")
@@ -120,11 +117,15 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPrevie
     self.textList[22] = FGUI:GetChild(self._topContent, "Sex")
     self.textList[24] = FGUI:GetChild(self._topContent, "EquipType")
 
+    -- 清除武勋添加组件
+    self:ClearWuXunAttr(itemView)
+    self:ClearWuXunSkill(itemView)
+    -- FGUI:setVisible(self._ui.ObtainList,false)
     -- 还原初始大小
     if originListSize then
+        -- dump("每次重置了")
         FGUI:setSize(self._content, originListSize[1], originListSize[2])
     end
-
     local equipped = FGUI:GetChild(itemView, "TextEquip")
     if equipped then
         FGUI:setVisible(equipped, self._index > 1)
@@ -137,8 +138,8 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPrevie
 
     local groupId = itemData.TipsGroupId or 7
     local groupCfg = SL:GetValue("ITEMTIPS_GROUP_CONFIG", groupId)
-    if groupCfg.Preview and groupCfg.Preview == 1 and not forbidPreviewPanel then
-        self:UpdatePreviewModel()
+    if groupCfg.Preview and groupCfg.Preview == 1 then
+        self:UpdatePreViewModel()
     end
 
     for k, v in pairs(self.textList) do
@@ -149,7 +150,9 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPrevie
     end
 
     local maxContentWid = FGUI:getSize(self._content)
+    -- FGUI:setWidth(itemView, originListSize[1])
     local showTexts = {}
+    FGUI:setVisible(self._ui.ObtainList,false)
     for i, module in ipairs(groupCfg.Module) do
         local moduleCfg = SL:GetValue("ITEMTIPS_MODULE_CONFIG", module)
         local showModuleName = moduleCfg and moduleCfg.NameShow == 1
@@ -157,6 +160,7 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPrevie
         local titleLabel = self.titleLabelList[module]
         local conditionData = {}
         if textContent then
+            
             FGUI:setVisible(textContent, true)
             if module == 1 then										--描述
                 local desc = itemData.Desc
@@ -179,7 +183,7 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPrevie
                     FGUI:setVisible(textContent, false)
                 end
             end
-
+  
             if module == 3 then                                     -- 自定义属性
                 local desc = self:GetCustomAttrStr()
                 if desc and string.len(desc) > 0 then
@@ -241,7 +245,7 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPrevie
                 conditionData.TransferLV = conditionData.TransferLV or 0
 
                 local color = ItemUtil:CheckTransferLV(itemData) and "#FFFFFF" or "#FF0000"
-                local desc = conditionData.TransferName
+                local desc = string.format("%s%s", conditionData.TransferName, string.format(SL:GetValue("I18N_STRING", 70000101), SL:GetValue("I18N_STRING", 5000 + conditionData.TransferLV)))
                 FGUI:GTextField_setText(textContent, string.format("[color=%s]%s[/color]", color, showModuleName and string.format("%s%s", moduleCfg.Name, desc) or desc))
             end
 
@@ -267,7 +271,7 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPrevie
                     FGUI:setVisible(textContent, false)
                 end
             end
-
+            
             if module == 19 then									 --阵营
                 if not conditionData.TransferZy then
                     conditionData = self:GetTransferData(itemData)
@@ -291,11 +295,11 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPrevie
                 local sexStr = ""
                 local sexTypeStr = ""
                 local color = "#FFFFFF"
-                if sex and sex >= 0 and sex <= 1 then
+                if sex and sex >= 0 then
                     color = sex == mySex and "#FFFFFF" or "#FF0000"
                     sexTypeStr = SL:GetValue("I18N_STRING", 60003004 + sex)
-                elseif sex == 2 then    -- 通用
-                    sexTypeStr = SL:GetValue("I18N_STRING", 70000104)
+                else
+                    sexTypeStr = ""
                 end
                 sexStr = string.format("[color=%s]%s[/color]", color, showModuleName and string.format("%s%s", moduleCfg.Name, sexTypeStr) or sexTypeStr)
                 FGUI:GTextField_setText(textContent,sexStr)
@@ -328,28 +332,20 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPrevie
                 end
             end
 
-            if module == 28 then                                    -- 数量显示
-                local num = SL:GetThousandSepString(SL:GetValue("ITEM_COUNT", self._itemId))
-                local desc = showModuleName and string.format("%s%s", moduleCfg.Name, num) or num
-                FGUI:GTextField_setText(textContent, desc)
+            ---- 101  武勋属性
+            if module == 101 then                                     -- 武勋属性
+                -- 武勋鉴定
+                local attrstr = self:GetWuXunAttrStr(textContent,itemView,originListSize)
+                FGUI:GRichTextField_setText(textContent, attrstr)
             end
-
-            if module == 29 then
-                local desc, needCountDown = self:GetLimitTimeStr()
-                if desc and string.len(desc) > 0 then
-                    FGUI:GTextField_setText(textContent, showModuleName and string.format("%s%s", moduleCfg.Name, desc) or desc)
-                    if needCountDown then
-						FGUI:stopAllActions(textContent)
-						SL:schedule(textContent, function()
-							local desc = self:GetLimitTimeStr()
-                    		FGUI:GTextField_setText(textContent, showModuleName and string.format("%s%s", moduleCfg.Name, desc) or desc)
-						end, 1)
-					end
-                else
-                    FGUI:setVisible(textContent, false)
-                end
+             if module == 14 then                                     -- 获取
+                local textTitle = FGUI:GetChild(textContent, "title")
+                FGUI:GRichTextField_setAlign(textTitle, 2)
+                FGUI:GRichTextField_setText(textContent, string.format("[color=%s]%s[/color]", "#FFFF00", "获取    "))
+                FGUI:setOnClickEvent(textContent,function() 
+                    self:getObtainList(itemView,tWid, tHei)
+                end)
             end
-
             if titleLabel and FGUI:getVisible(titleLabel) and self:CheckNotInTopView(module) then
                 -- 自行计算
                 local labelWid = FGUI:getSize(FGUI:GetChild(titleLabel, "title")) + 2 * FGUI:getSize(FGUI:GetChild(titleLabel, "n1")) + 2 * 10
@@ -364,37 +360,53 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize, forbidPrevie
         end
 
     end
-
     self._maxContentWid = maxContentWid
-
-    self:ReorderContentList(groupCfg.Module)
+    -- for i = 1, #showTexts do
+    --     local tWid, tHei = FGUI:getSize(showTexts[i])
+    --     FGUI:setSize(showTexts[i], self._maxContentWid, tHei)
+    -- end
 end
 
--- 重新排序子控件
-function EquipTipViewModel:ReorderContentList(orderList)
-	if not orderList or #orderList <= 0 then
-		return
+function EquipTipViewModel:getObtainList(itemView,tWid, tHei)
+    if FGUI:getVisible(self._ui.ObtainList) then
+		FGUI:setVisible(self._ui.ObtainList,false)
+        return 
+	else
+		FGUI:setVisible(self._ui.ObtainList,true)
 	end
-    local contentList = self._ui.Content
-
-	local orderIndex = 0
-    for i = 1, #orderList do
-		local moduleId = orderList[i]
-        local titleChild = self.titleLabelList[moduleId]
-        if titleChild then
-            FGUI:SetChildIndex(contentList, titleChild, orderIndex)
-			orderIndex = orderIndex + 1
-        end
-        local child = self.textList[moduleId]
-		local childIndex = child and FGUI:GetChildIndex(contentList, child)
-		local childValid = childIndex and childIndex ~= -1
-        if childValid then
-            FGUI:SetChildIndex(contentList, child, orderIndex)
-			orderIndex = orderIndex + 1
+    local dataconfig = SL:GetValue("ITEM_DATA",tonumber(self._itemData.ID))
+    local getWayInfoList = SL:Split(dataconfig.GetWayInfo, "|")
+    local obtainList = {}
+    for i=1,#ObtainListData do
+        local data = ObtainListData[i]
+        for w=1,#getWayInfoList do
+            if tonumber(getWayInfoList[w]) == tonumber(data.ID) then
+                table.insert(obtainList,data)
+            end
         end
     end
-end
+    local obtainNameTxt =  FGUI:GetChild(self._ui.ObtainList, "obtainName")
+    FGUI:GTextField_setText(obtainNameTxt, "获取途径")
+    local list = FGUI:GetChild(self._ui.ObtainList,"list")
+    FGUI:GList_itemRenderer(list, function(idx,item)
+        local text = FGUI:GetChild(item,"text")
+        local data = obtainList[idx+1]
+        FGUI:GTextField_setText(text,data.Desc)
+        -- print(isOpen,isTradeOpen,isStorageExOpen,isTipOpen)
+        FGUI:setOnClickEvent(item,function() 
+            --关掉tip
+            FGUI:Close("Common", "CommonEquipTip")
+            -- FGUI:CloseTop(FGUI_LAYER.NORMAL)
 
+            if data.Func=="Open" then
+                FGUI:Open(data.PackageName,data.ComponentName)
+            elseif data.Func == "RequestGroupData" then
+                SL:RequestGroupData(0)
+            end  
+        end)
+    end)
+    FGUI:GList_setNumItems(list, #obtainList)
+end
 function EquipTipViewModel:UpdateGradeShow(gradeController)
     if not self.itemConfig or not self.itemConfig.Grade then
         return
@@ -407,11 +419,83 @@ function EquipTipViewModel:UpdateGradeShow(gradeController)
     gradeController.selectedIndex = self.itemConfig.Grade
 end
 
-function EquipTipViewModel:UpdatePreviewModel()
-    local showModel = self._previewPanel:UpdatePreviewModel()
-    if showModel then
-        FGUI:setVisible(self._ui.PreviewModel, showModel)
+function EquipTipViewModel:UpdatePreViewModel()
+    self._previewModelRoot = FGUI:GetChild(self._previewPanel, "model_root")
+    FGUI:UIModel_clear(self._previewModelRoot)
+
+    local featureData = SL:GetValue("FEATURE")
+    local modelID = self._itemData and self._itemData.Model
+    if not featureData or not modelID then
+        return
     end
+
+    local pos = SL:GetValue("EQUIP_POS_BY_STDMODE", self._itemData.StdMode)
+    if not pos then
+        return
+    end
+
+    local appearPos = SL:GetValue("APPEAR_POS_BY_EQUIP_POS", pos)
+    if not appearPos or appearPos == -1 then
+        return
+    end
+    
+    local sex = SL:GetValue("SEX")
+    local job = SL:GetValue("JOB")
+
+    local cSex = self._itemData and self._itemData.Gender or 0
+    -- 性别不同不显示预览
+    if sex ~= cSex then
+        return
+    end
+
+    local bodyId = nil
+    local weaponId = nil
+    local helmetId = nil
+	local faceId = nil
+    local classConfig = SL:GetValue("ROLE_CLASS_CONFIG", job)
+    if classConfig then
+        bodyId = classConfig.InitModel[1]
+        helmetId = classConfig.InitModel[2]
+        weaponId = classConfig.InitModel[3]
+		faceId = FGUIFunction:GetFaceIDBySex(sex, classConfig)
+    end
+
+    local extData = {}
+    extData.sex = sex
+    extData.job = job
+    extData.bodyId = featureData.clothID or bodyId
+    extData.weaponId = featureData.weaponID or weaponId
+    extData.faceId = featureData.faceID or faceId
+    extData.wingId = featureData.wingID
+    extData.helmetId = featureData.helmetID or helmetId
+	
+    extData.leftFxId = featureData.leftFxID
+    extData.rightFxId = featureData.rightFxID
+    extData.chestFxId = featureData.chestFxID
+    extData.headFxId = featureData.headFxID
+    extData.wingFxId = featureData.wingFxID
+
+    if appearPos == 0 then  -- 衣服
+        extData.bodyId = modelID
+    elseif appearPos == 2 then  -- 武器
+        extData.weaponId = modelID
+    elseif appearPos == 3 then  -- 翅膀
+        extData.wingId = modelID
+    elseif appearPos == 4 then  -- 头饰
+        extData.helmetId = modelID
+    elseif appearPos == 5 then  -- 坐骑 
+    end
+
+    FGUI:setVisible(self._previewPanel, true)
+    FGUI:UIModel_setObjectEulerAngles(self._previewModelRoot, nil, 0, 0, 0)
+
+    if not self._modelIndex then
+        self._modelIndex = FGUI:UIModel_addCharacterModel(self._previewModelRoot, extData, Vector3.New(0,0,0), nil, Vector3.New(MODEL_SCALE,MODEL_SCALE,MODEL_SCALE))
+        FGUI:UIModel_setModelCallback(self._previewModelRoot, function(index)
+            FGUI:UIModel_playAnimation(self._previewModelRoot, index, global.MMO.ANIM_IDLE, nil, 0)
+        end)
+    end
+
 end
 
 function EquipTipViewModel:CheckNotInTopView(module)
@@ -440,7 +524,11 @@ function EquipTipViewModel:GetShowAttStr(data, extraParam)
         if addNewLine == 1 then
             showAttStr = showAttStr.. '\n'
         end
-        showAttStr = string.format("%s[color=%s]%s：%s[/color]", showAttStr, SL:GetColorByStyleId(att.color or 255), name, value)
+        if name == "气功等级" then
+			showAttStr = string.format("%s[color=%s]%s+%s[/color]", showAttStr, SL:GetColorByStyleId(att.color or 255), name, value)
+		else
+			showAttStr = string.format("%s[color=%s]%s：%s[/color]", showAttStr, SL:GetColorByStyleId(att.color or 255), name, value)
+		end
         addNewLine = 1
     end
 
@@ -497,7 +585,85 @@ function EquipTipViewModel:GetGemInlaysAttStr(itemData)
             end
         end
     else
-        for i = 1, stoneNum do
+        local itemConfig = self._itemData.ExAbil
+        local yhcnum = 0
+        if itemConfig and itemConfig.abil[3] then
+            local title = itemConfig.abil[3]['t']
+            local attList = itemConfig.abil[3]['v']
+            yhcnum = #attList
+            local pos = 0
+            local suitStr = ""
+            if title ~= "" then
+                title = ""
+                -- if suitStr ~= "" then
+                --     suitStr = suitStr.."\n"
+                -- end
+                -- suitStr = suitStr..string.format("[color=#FDF2DC]%s[/color]", ""..title.."")
+                local group = itemConfig.abil[3].i or 0
+                local attList = {}
+                for _, v in ipairs(itemConfig.abil[3].v or {}) do
+                    local color     = v[1] or 0
+                    local attId     = v[2] or 0     -- 属性ID 绑定表
+                    local value     = v[3] or 0     -- 属性值
+                    local percent   = v[4] or 0
+                    local customId  = v[5]
+                    local pos       = v[6]          -- 自定义显示位置
+                    if value and value > 0 then    
+                        attList[pos] = attList[pos] or {}
+                        table.insert(
+                            attList[pos],
+                            {color = color, attId = attId, value = value, percent = percent, pos = pos, customId = customId}
+                        )
+                    end
+                end
+                attList = SL:HashToSortArray(attList, function(a, b)
+                    return a[1].pos < b[1].pos
+                end)
+                for k, v in ipairs(attList or {}) do
+                    local customId = v[1] and v[1].customId or 0
+                    local customDesc = SL:GetMetaValue("ITEMTIPS_CUSTOM_DESC", customId)
+                    local color = 0
+                    local attr = ""
+                    for i, a in ipairs(v) do
+                        local attConfig = SL:GetMetaValue("ATTR_CONFIG", a.attId)
+                        if not attConfig then
+                            attConfig = {}
+                        end
+                        local value = a.value
+                        local color = a.color
+                        local percent = a.percent
+                        local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
+                        if attConfig.Type == 1 then -- 万分比除100
+                            value = string.format("%.1f", value / 100) * 10 / 10
+                            percent = 1
+                        end
+                        if customDesc then
+                            local desc = value .. (percent > 0 and "%%" or "")
+                            customDesc = string.gsub(customDesc, "%%s", desc, 1)
+                            if colorHex then
+                                if string.find(customDesc, "%[color=(.-)%]") then
+                                    customDesc = string.gsub(customDesc, "%[color=(.-)%]", string.format("[color=%s]", colorHex))
+                                else
+                                    customDesc = string.format("[color=%s]%s[/color]", colorHex, customDesc)
+                                end
+                            end
+                        else
+                            local name = attConfig.Name
+                            local attColor = attConfig.Color and SL:GetValue("COLOR_BY_ID", attConfig.Color)
+                            local showColor = colorHex or attColor or "#FFFFFF"
+                            local lineStr = string.len(attr) > 0 and "\n" or ""
+                            attr = string.format("%s%s[color=%s]%s：+%s%s[/color]", attr, lineStr, showColor, name, value, percent > 0 and "%" or "")
+                        end
+                    end
+                    attr = customDesc or attr
+                    if attr and attr ~= "" then
+                        suitStr = string.format("%s%s%s", suitStr, suitStr ~= "" and "\n" or "", attr)
+                    end
+                end
+                str = suitStr..str
+            end
+        end
+        for i = yhcnum+1, stoneNum do
             local attrStr = "[color=#666666][合成石]：可合成[/color]"
             local param = attrList[i] or {}
             attrStr = self:GetShowAttStrByInlayParam(param) or attrStr
@@ -787,7 +953,12 @@ function EquipTipViewModel:GetSuitDescStr(id, needEquipShow, lowMeetEquipNameMap
                     showStr = showColorStr .. showStr
                     local color, nameStr = getShowColorAndStr(showStr, meet and 2 or 1)
                     local colorHex = SL:GetValue("COLOR_BY_ID", color)
-                    local showStrFormat = string.format("[color=%s]%s[/color]\n", colorHex, nameStr)
+                    local showStrFormat = ""
+                    if #showEquipStrList % 3  == 0 then
+                        showStrFormat = string.format("[color=%s]%s[/color]\n", colorHex, nameStr)
+                    else
+                        showStrFormat = string.format("[color=%s]%s[/color]   ", colorHex, nameStr)
+                    end
                     table.insert(showEquipStrList, showStrFormat)
                     lastEquipPos = pos
                     lastEquipShowStr = equipShowStr
@@ -895,21 +1066,204 @@ function EquipTipViewModel:GetCustomAttrStr()
 
     local customStr = ""
     for p, d in pairs(exAbil.abil or {}) do
-        local isShowTitle = true
-        if (not d.t or d.t == "") then
-            isShowTitle = false
+        if d.t and not string.find(d.t,"合成石") then  -- 合成石特殊处理  不在这里显示
+            local isShowTitle = true
+            if (not d.t or d.t == "") then
+                isShowTitle = false
+            end
+
+            if isShowTitle then
+                local title = d.t
+                local color = d.c
+                local colorHex = color and color > 0 and SL:GetValue("COLOR_BY_ID", color)
+                customStr = string.format("%s%s%s", customStr, customStr ~= "" and "\n" or "", colorHex and string.format("[color=%s]%s[/color]", colorHex, title) or title)
+            end
+        
+            local group = d.i or 0
+            local attList = {}
+            for _, v in ipairs(d.v or {}) do
+                local color     = v[1] or 0
+                local attId     = v[2] or 0     -- 属性ID 绑定表
+                local value     = v[3] or 0     -- 属性值
+                local percent   = v[4] or 0
+                local customId  = v[5]
+                local pos       = v[6]          -- 自定义显示位置
+                if value and value > 0 then    
+                    attList[pos] = attList[pos] or {}
+                    table.insert(
+                        attList[pos],
+                        {color = color, attId = attId, value = value, percent = percent, pos = pos, customId = customId}
+                    )
+                end
+            end
+            attList = SL:HashToSortArray(attList, function(a, b)
+                return a[1].pos < b[1].pos
+            end)
+        
+            for k, v in ipairs(attList or {}) do
+                local customId = v[1] and v[1].customId or 0
+                local customDesc = SL:GetMetaValue("ITEMTIPS_CUSTOM_DESC", customId)
+                local color = 0
+                local attr = ""
+                for i, a in ipairs(v) do
+                    local attConfig = SL:GetMetaValue("ATTR_CONFIG", a.attId)
+                    if not attConfig then
+                        attConfig = {}
+                    end
+                    local value = a.value
+                    local color = a.color
+                    local percent = a.percent
+                    local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
+                    if attConfig.Type == 1 then -- 万分比除100
+                        value = string.format("%.1f", value / 100) * 10 / 10
+                        percent = 1
+                    end
+                    if customDesc then
+                        local desc = value .. (percent > 0 and "%%" or "")
+                        customDesc = string.gsub(customDesc, "%%s", desc, 1)
+                        if colorHex then
+                            if string.find(customDesc, "%[color=(.-)%]") then
+                                customDesc = string.gsub(customDesc, "%[color=(.-)%]", string.format("[color=%s]", colorHex))
+                            else
+                                customDesc = string.format("[color=%s]%s[/color]", colorHex, customDesc)
+                            end
+                        end
+                    else
+                        local name = attConfig.Name
+                        local attColor = attConfig.Color and SL:GetValue("COLOR_BY_ID", attConfig.Color)
+                        local showColor = colorHex or attColor or "#FFFFFF"
+                        local lineStr = string.len(attr) > 0 and "\n" or ""
+                        attr = string.format("%s%s[color=%s]%s：+%s%s[/color]", attr, lineStr, showColor, name, value, percent > 0 and "%" or "")
+                    end
+                end
+
+                attr = customDesc or attr
+                if attr and attr ~= "" then
+                    customStr = string.format("%s%s%s", customStr, customStr ~= "" and "\n" or "", attr)
+                end
+            end
         end
-    
-        if isShowTitle then
-            local title = d.t
-            local color = d.c
-            local colorHex = color and color > 0 and SL:GetValue("COLOR_BY_ID", color)
-            customStr = string.format("%s%s%s", customStr, customStr ~= "" and "\n" or "", colorHex and string.format("[color=%s]%s[/color]", colorHex, title) or title)
+    end
+
+    return customStr
+end
+
+-- 清除武勋范围按钮对象
+function EquipTipViewModel:ClearWuXunAttr(itemView)
+    if not WuXunOBJ_cfg[itemView] then
+        WuXunOBJ_cfg[itemView] = {}
+    end
+    -- dump(itemView)
+    -- 武勋属性范围界面
+    if WuXunOBJ_cfg[itemView] and WuXunOBJ_cfg[itemView][1] then
+        FGUI:RemoveFromParent(WuXunOBJ_cfg[itemView][1], true)
+        WuXunOBJ_cfg[itemView][1] = nil
+    end
+    if WuXunOBJ_cfg[itemView] and WuXunOBJ_cfg[itemView][2] then
+        FGUI:RemoveFromParent(WuXunOBJ_cfg[itemView][2], true)
+        WuXunOBJ_cfg[itemView][2] = nil
+    end
+end
+
+-- 清除武勋技能按钮对象
+function EquipTipViewModel:ClearWuXunSkill(itemView)
+    if not WuXunOBJ_cfg[itemView] then
+        WuXunOBJ_cfg[itemView] = {}
+    end
+    if WuXunOBJ_cfg[itemView] and WuXunOBJ_cfg[itemView][3] then
+        for i=1,#WuXunOBJ_cfg[itemView][3] do
+            FGUI:RemoveFromParent(WuXunOBJ_cfg[itemView][3][i], true)
         end
+        WuXunOBJ_cfg[itemView][3] = nil
+    end
+    WuXunOBJ_cfg[itemView][3] = {}
+end
+
+-- 武勋属性
+function EquipTipViewModel:GetWuXunAttrStr(textContent,itemView,originListSize)
+    self:ClearWuXunAttr(itemView)
+    -- 武勋属性范围面板
+    -- if self.btnWuXunAttrPanl then
+	--     FGUI:RemoveFromParent(self.btnWuXunAttrPanl, true)
+	-- end
+    self.btnWuXunAttrPanl =  FGUI:CreateObject(itemView, "A_Right", "wuxun_tips_attr",false)
+	FGUI:setPositionX(self.btnWuXunAttrPanl,150)
+	FGUI:setPositionY(self.btnWuXunAttrPanl, 0)
+    FGUI:setVisible(self.btnWuXunAttrPanl, false)
+
+    -- 武勋属性范围按钮
+    -- if self.btnWuXunAttr then
+	--     FGUI:RemoveFromParent(self.btnWuXunAttr, true)
+	-- end
+    self.btnWuXunAttr =  FGUI:CreateObject(textContent, "A_Right", "btn_wxattr",false)
+	FGUI:setPositionX(self.btnWuXunAttr,270)
+	FGUI:setPositionY(self.btnWuXunAttr, 0)
+    FGUI:setOnClickEvent(self.btnWuXunAttr, function ()
+        if FGUI:getVisible(self.btnWuXunAttrPanl) then
+            FGUI:setVisible(self.btnWuXunAttrPanl, false)
+        else
+            FGUI:setVisible(self.btnWuXunAttrPanl, true)
+        end
+    end)
+    WuXunOBJ_cfg[itemView][1] = self.btnWuXunAttrPanl
+    WuXunOBJ_cfg[itemView][2] = self.btnWuXunAttr
+    -- 武勋属性范围列表
+    self.wxpanlattrList = FGUI:GetChild(self.btnWuXunAttrPanl, "attrlist")
+    FGUI:GList_itemRenderer(self.wxpanlattrList, handler(self, self.Listwxpanlattr))
+    FGUI:GList_setDefaultItem(self.wxpanlattrList, "ui://h3jungk0rg4i1j")
+    FGUI:GList_setVirtual(self.wxpanlattrList)
+    FGUI:GList_setNumItems(self.wxpanlattrList,  #wuxun_jianding_attr[self._itemData.ID])
+
+    -- 武勋属性
+    local attrAtr = ""
+    -- 武勋鉴定属性
+    local wxjdAttr = self:WuXunJianDingAttr()
+    -- 武勋转印属性
+    local wxzyAttr = self:WuXunZhuanYinAttr()
+    -- 武勋技能
+    local wxskillAttr = self:WuXunSkillData(textContent,itemView,originListSize)
+    if wxjdAttr ~= "" then
+        attrAtr = attrAtr..wxjdAttr.."\n"
+    end
+    if wxzyAttr ~= "" then
+        attrAtr = attrAtr..wxzyAttr.."\n"
+    end
+    if wxskillAttr ~= "" then
+        attrAtr = attrAtr..wxskillAttr.."\n"
+    end
+    return attrAtr
+end
+-- 武勋属性范围列表
+function EquipTipViewModel:Listwxpanlattr(idx,item)      
+    local minValue = wuxun_jianding_attr[self._itemData.ID][idx+1]['AttScoreStageList'][1][1]
+    local maxValue = wuxun_jianding_attr[self._itemData.ID][idx+1]['AttScoreStageList'][#wuxun_jianding_attr[self._itemData.ID][idx+1]['AttScoreStageList']][2]
+    local attrid = wuxun_jianding_attr[self._itemData.ID][idx+1]['attrid']
+    local name = attrConfigs[attrid]['Name']..""
+    local type = attrConfigs[attrid]['Type'] or 0 -- 0 数值 1 万分比
+    if type == 1 then
+        minValue = string.format("%.1f", minValue / 100) * 10 / 10 .. "%"
+        maxValue = string.format("%.1f", maxValue / 100) * 10 / 10 .. "%"
+    end
+    local value = minValue .. " - " .. maxValue
+    local n0 = FGUI:GetChild(item,"n0")
+    local n4 = FGUI:GetChild(item,"n4")
+    FGUI:GTextField_setText(n0, name)
+    FGUI:GTextField_setText(n4, value)
+end
+-- 武勋鉴定属性
+function EquipTipViewModel:WuXunJianDingAttr()
+    local exAbil = self._itemData and self._itemData.ExAbil
+    -- 武勋鉴定
+    local itemConfig = self._itemData.ExAbil
+    local str = string.format("[color=#FDF2DC]%s[/color]", "[武勋附加属性]").."\n"
     
-        local group = d.i or 0
+    if itemConfig and itemConfig.abil[1] then
+        local attList = itemConfig.abil[1]['v']
+        local pos = 0
+        local suitStr = ""
+        local group = itemConfig.abil[1].i or 0
         local attList = {}
-        for _, v in ipairs(d.v or {}) do
+        for _, v in ipairs(itemConfig.abil[1].v or {}) do
             local color     = v[1] or 0
             local attId     = v[2] or 0     -- 属性ID 绑定表
             local value     = v[3] or 0     -- 属性值
@@ -927,7 +1281,6 @@ function EquipTipViewModel:GetCustomAttrStr()
         attList = SL:HashToSortArray(attList, function(a, b)
             return a[1].pos < b[1].pos
         end)
-    
         for k, v in ipairs(attList or {}) do
             local customId = v[1] and v[1].customId or 0
             local customDesc = SL:GetMetaValue("ITEMTIPS_CUSTOM_DESC", customId)
@@ -964,18 +1317,321 @@ function EquipTipViewModel:GetCustomAttrStr()
                     attr = string.format("%s%s[color=%s]%s：+%s%s[/color]", attr, lineStr, showColor, name, value, percent > 0 and "%" or "")
                 end
             end
-
             attr = customDesc or attr
             if attr and attr ~= "" then
-                customStr = string.format("%s%s%s", customStr, customStr ~= "" and "\n" or "", attr)
+                suitStr = string.format("%s%s%s", suitStr, suitStr ~= "" and "\n" or "", attr)
             end
-    
         end
+        str = str..suitStr
+    else
+        str = str .. "[color=#ff0000]未鉴定[/color]"
     end
 
-    return customStr
+    return str
 end
 
+-- 武勋转印属性
+function EquipTipViewModel:WuXunZhuanYinAttr()
+    local exAbil = self._itemData and self._itemData.ExAbil
+    -- 武勋铸阶等级 武勋转印等级
+    self.zjLv = 0
+    if self._itemData.Values then
+        for j = 1, #self._itemData.Values do
+            if self._itemData.Values[j]['Id'] == 2 then  
+                self.zjLv = self._itemData.Values[j]['Value']
+            end 
+        end
+    end
+    -- 当前铸阶等级可转印条数
+    self.limitZyNum = wuxun_zhujie_data[self._itemData.ID][self.zjLv] and (wuxun_zhujie_data[self._itemData.ID][self.zjLv]['zhuanyin'] or 0) or 0  
+    -- print("武勋铸阶等级", self.zjLv, "可转印条数", self.limitZyNum," 物品id",self._itemData.ID)
+    -- 武勋转印
+    local itemConfig = self._itemData.ExAbil
+    local str = ""
+    local attStrList = {}
+    if itemConfig and itemConfig.abil[2] then
+        local attList = itemConfig.abil[2]['v']
+        local pos = 0
+        local suitStr = ""
+        local group = itemConfig.abil[2].i or 0
+        -- dump(attList,"attList1")
+        local attList = {}
+        for _, v in ipairs(itemConfig.abil[2].v or {}) do
+            local color     = v[1] or 0
+            local attId     = v[2] or 0     -- 属性ID 绑定表
+            local value     = v[3] or 0     -- 属性值
+            local percent   = v[4] or 0
+            local customId  = v[5]
+            local pos       = v[7]          -- 自定义显示位置
+            if value and value > 0 then    
+                attList[pos] = attList[pos] or {}
+                table.insert(
+                    attList[pos],
+                    {color = color, attId = attId, value = value, percent = percent, pos = pos, customId = customId}
+                )
+            end
+        end
+        attList = SL:HashToSortArray(attList, function(a, b)
+            return a[1].pos < b[1].pos
+        end)
+        -- dump(attList,"attList2")
+        for i=1,self.limitZyNum do
+            attStrList[i] = "[color=#00ff00]可转印[/color]"
+        end
+        for k, v in ipairs(attList or {}) do
+            local customId = v[1] and v[1].customId or 0
+            local customDesc = SL:GetMetaValue("ITEMTIPS_CUSTOM_DESC", customId)
+            local color = 0
+            local indexpos = 0
+            local attr = ""
+            for i, a in ipairs(v) do
+                local attConfig = SL:GetMetaValue("ATTR_CONFIG", a.attId)
+                if not attConfig then
+                    attConfig = {}
+                end
+                local value = a.value
+                local color = a.color
+                local percent = a.percent
+                indexpos = a.pos
+                local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
+                if attConfig.Type == 1 then -- 万分比除100
+                    value = string.format("%.1f", value / 100) * 10 / 10
+                    percent = 1
+                end
+                if customDesc then
+                    local desc = value .. (percent > 0 and "%%" or "")
+                    customDesc = string.gsub(customDesc, "%%s", desc, 1)
+                    if colorHex then
+                        if string.find(customDesc, "%[color=(.-)%]") then
+                            customDesc = string.gsub(customDesc, "%[color=(.-)%]", string.format("[color=%s]", colorHex))
+                        else
+                            customDesc = string.format("[color=%s]%s[/color]", colorHex, customDesc)
+                        end
+                    end
+                else
+                    local name = attConfig.Name
+                    local attColor = attConfig.Color and SL:GetValue("COLOR_BY_ID", attConfig.Color)
+                    local showColor = colorHex or attColor or "#FFFFFF"
+                    local lineStr = string.len(attr) > 0 and "\n" or ""
+                    attr = string.format("%s%s[color=%s]%s：+%s%s[/color]", attr, lineStr, showColor, name, value, percent > 0 and "%" or "")
+                end
+            end
+            attr = customDesc or attr
+             if indexpos <= self.limitZyNum then
+                attStrList[indexpos] = attr
+             end
+        end
+    end
+    for i=1,#attStrList do
+        str = (str ~= "" and str.."\n" or "") .. attStrList[i]
+    end
+    return str
+end
+
+
+
+-- 武勋技能
+function EquipTipViewModel:WuXunSkillData(textContent,itemView,originListSize)
+    self:ClearWuXunSkill(itemView)
+    -- 武勋鉴定
+    local itemConfig = self._itemData.ExAbil
+    local str = string.format("[color=#FDF2DC]%s[/color]", "[武勋技能]").."\n\n\n\n"
+
+    -- 获取武勋装备铸阶等级列表
+    self:GetWuXunEquipLevel()
+    local isPC = SL:GetValue("IS_PC_OPER_MODE") or false    
+    for i=1,#wuxun_skill_data do
+        self['btnWXSkill'..i] =  FGUI:CreateObject(textContent, "A_Right", "btn_wuxun_skill",false)
+	    
+        
+        if isPC then 
+            FGUI:setPositionX(self['btnWXSkill'..i],-54+59*i)
+	        FGUI:setPositionY(self['btnWXSkill'..i], 54+self.limitZyNum*17)
+            FGUI:setScale(self['btnWXSkill'..i], 0.6,0.6)
+        else
+            FGUI:setPositionX(self['btnWXSkill'..i],-64+79*i)
+	        FGUI:setPositionY(self['btnWXSkill'..i], 93+self.limitZyNum*31)
+        end 
+        WuXunOBJ_cfg[itemView][3][i] = self['btnWXSkill'..i]
+        -- 武勋技能名
+        local name = FGUI:GetChild(self['btnWXSkill'..i], "n2")
+        FGUI:GTextField_setText(name, wuxun_skill_data[i]['SkillName'])
+        -- 武勋技能图标
+        local icon = FGUI:GetChild(self['btnWXSkill'..i], "Image_icon")
+        local skillicon = wuxun_skill_data[i] and wuxun_skill_data[i]['SkillIcon'] or 0
+        FGUI:GLoader_setUrl(icon,"ui://A_Right/"..skillicon)
+        -- 武勋技能组件
+        local needJS = wuxun_skill_data[i]['needlv'] or 0       -- 需求铸阶等级 全套装备最低铸阶等级
+        local curJSNum =  0       
+        for k , v in pairs(self.WuXunZhuJieTab) do              -- 当前达到铸阶等级的装备数量
+            if k >= needJS then
+                curJSNum = curJSNum + v
+            end
+        end
+        -- 武勋技能条件展示 图标置灰
+        local jsfont = FGUI:GetChild(self['btnWXSkill'..i], "n6")
+        if curJSNum >= #wuxun_skill_data then
+            FGUI:setGrey(icon, false)
+            FGUI:setVisible(jsfont, false)
+        else
+            FGUI:setGrey(icon, true)
+            FGUI:setVisible(jsfont, true)
+            FGUI:GRichTextField_setText(jsfont, needJS.."阶\n("..curJSNum.."/"..#wuxun_skill_data..")")
+        end
+        -- 武勋组件点击切换时间
+        FGUI:setOnClickEvent(self['btnWXSkill'..i],function()
+            -- print("武勋组件点击切换时间")
+            -- 重构技能描述相关
+            self.CurSelectWXSkill = i
+            -- self:UpdateCellView(itemView, originListSize)
+            local attrAtr = ""
+            -- 武勋鉴定属性
+            local wxjdAttr = self:WuXunJianDingAttr()
+            -- 武勋转印属性
+            local wxzyAttr = self:WuXunZhuanYinAttr()
+            -- 武勋技能
+            local wxskillAttr = self:WuXunSkillData(textContent,itemView,originListSize)
+            if wxjdAttr ~= "" then
+                attrAtr = attrAtr..wxjdAttr.."\n"
+            end
+            if wxzyAttr ~= "" then
+                attrAtr = attrAtr..wxzyAttr.."\n"
+            end
+            if wxskillAttr ~= "" then
+                attrAtr = attrAtr..wxskillAttr.."\n"
+            end
+            FGUI:GRichTextField_setText(textContent, attrAtr)
+            -- 选中框
+            for j = 1,#WuXunOBJ_cfg[itemView][3] do
+                local Contro = FGUI:getController(WuXunOBJ_cfg[itemView][3][j],"suo")
+                if self['btnWXSkill'..i] == WuXunOBJ_cfg[itemView][3][j] then
+                    FGUI:Controller_setSelectedIndex(Contro,1)
+                else
+                    FGUI:Controller_setSelectedIndex(Contro,0)
+                end
+            end
+        end)
+        -- 默认展示第一个
+        if i == 1 then
+            local Contro = FGUI:getController(self['btnWXSkill'..i],"suo")
+            FGUI:Controller_setSelectedIndex(Contro,1)
+        end
+    end
+    
+    -- 武勋技能描述
+    str = str .. wuxun_skill_data[self.CurSelectWXSkill or 1]['SkillDesc']
+
+    return str
+end
+-- 获取武勋装备铸阶等级
+function EquipTipViewModel:GetWuXunEquipLevel()
+    self.WuXunZhuJieTab = {}
+    local equippos =  wuxun_level_data[1]['WuXun_EquipPos'] or {}
+    for i = 1, #equippos do
+        local equipData = SL:GetValue("EQUIP_DATA_BY_POS", equippos[i])
+        if equipData then
+            local zjLv = 0
+            for j = 1, #equipData.Values do
+                if equipData.Values[j]['Id'] == 2 then  
+                    zjLv = equipData.Values[j]['Value']
+                    self.WuXunZhuJieTab[zjLv] = (self.WuXunZhuJieTab[zjLv] or 0) + 1
+                end 
+            end
+        end
+    end
+end
+
+
+--自定义属性
+-- function EquipTipViewModel:GetZDYData(itemConfig)
+--     --dump(itemConfig)
+--     --for i=1,#itemConfig.abil do
+--     --    print(itemConfig.abil[i]['i'])
+--     --    print(itemConfig.abil[i]['v'])
+--     --    dump(itemConfig.abil[i]['v'])
+--     --end
+--     --装备强化
+--     local suitStr = ""
+--     if itemConfig.abil[1] then
+--         local title = itemConfig.abil[1]['t']
+--         local qhtab = itemConfig.abil[1]['v']
+--         local pos = 0
+--         if title ~= "" then
+--             suitStr = suitStr..string.format("\n[color=#ff0000]%s[/color]", "["..title.."]")
+--             -- dump(attrConfigs)
+--             -- dump(qhtab)
+--             for i=1,#qhtab do
+--                 --print(qhtab[i][2].."  "..qhtab[i][3])
+--                 local name = attrConfigs[qhtab[i][2]]['Name'].."："
+--                 suitStr = suitStr..string.format("\n[color=#00ff00]%s[/color]%s", name, qhtab[i][3])
+--             end
+--         end
+--     end
+--     --装备赋予
+--     if itemConfig.abil[2] then
+--         local title = itemConfig.abil[2]['t']
+--         local qhtab = itemConfig.abil[2]['v']
+--         local pos = 0
+--         if title ~= "" then
+--             suitStr = suitStr..string.format("\n[color=#ff0000]%s[/color]", "["..title.."]")
+--             for i=1,#qhtab do
+--                 local name = attrConfigs[qhtab[i][2]]['Name'].."："
+--                 suitStr = suitStr..string.format("\n[color=#00ff00]%s[/color]%s", name, qhtab[i][3])
+--             end
+--         end
+--     end
+--     --装备觉醒
+--     if itemConfig.abil[4] then
+--         local title = itemConfig.abil[4]['t']
+--         local qhtab = itemConfig.abil[4]['v']
+--         local pos = 0
+--         if title ~= "" then
+--             suitStr = suitStr..string.format("\n[color=#ff0000]%s[/color]", "["..title.."]")
+--             for i=1,#qhtab do
+--                 local name = attrConfigs[qhtab[i][2]]['Name'].."："
+--                 suitStr = suitStr..string.format("\n[color=#00ff00]%s[/color]%s", name, qhtab[i][3])
+--             end
+--         end
+--     end
+--     --装备附魂
+--     dump(itemConfig)
+--     if itemConfig.abil[5] then
+--         local title = itemConfig.abil[5]['t']
+--         local qhtab = itemConfig.abil[5]['v']
+--         local pos = 0
+--         if title ~= "" then
+--             suitStr = suitStr..string.format("\n[color=#ff0000]%s[/color]", "["..title.."]")
+--             for i=1,#qhtab do
+--                 local name = attrConfigs[qhtab[i][2]]['Name'].."："
+--                 suitStr = suitStr..string.format("\n[color=#00ff00]%s[/color]%s", name, qhtab[i][3])
+--             end
+--         end
+--     end
+--     --dump(suitStr)
+--     return suitStr
+--     -- if suitids and string.len(suitids) > 0 then
+--     --     local suitArry = string.split(suitids, "#")
+--     --     local pos = 0
+--     --     local suitStr = ""
+--     --     for k, v in ipairs(suitArry) do
+--     --         local id = v and tonumber(v)
+--     --         local tSuitStr = id and self:GetSuitDesc(id)
+--     --         if tSuitStr then
+--     --             pos = pos + 1
+--     --             tSuitStr = string.gsub(tSuitStr, "\n$", "")
+--     --             suitStr = string.format("%s%s%s", suitStr, pos ~= 1 and "\n" or "", tSuitStr)
+--     --         end
+--     --     end
+--     --     if string.len(suitStr) > 0 then
+--     --         local titleName = string.format("%s：", moduleName or "套装属性")
+--     --         local titleColor = SL:GetValue("COLOR_BY_ID", 154)
+--     --         suitStr = string.format("[color=%s]%s[/color]\n%s", titleColor, titleName, suitStr)
+--     --     end
+
+--     --     return suitStr
+--     -- end
+-- end
+---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
 -- 条件 &
 function EquipTipViewModel:GetConditionStrByID(conditionId)
@@ -1034,57 +1690,4 @@ function EquipTipViewModel:GetQigongLvStr(itemData, moduleName)
         desc = string.format("[color=%s]%s[/color]", "#A4E0F5", moduleName and string.format("%s%s", moduleName, desc) or desc)
     end
     return desc
-end
-
----------------------------------------------------------------------------
--- 限时时间显示
-function EquipTipViewModel:GetLimitTimeStr()
-    local str = ""
-    if not self._itemData then
-        return str
-    end
-    local limitType = self._itemData.CutDownType
-    if not limitType then
-        return str
-    end
-    
-    local startTime = self._itemData.startTime
-    local totalTime = self._itemData.totalTime
-    if startTime == 0 and totalTime == 0 then
-        return str
-    end
-
-    local needCountDown = false
-    if limitType == 1 then  -- 获得后开始计时(离线也计算时间)
-        local endTime = startTime + totalTime
-        local date = os.date("*t", endTime)
-        str = string.format("[color=#fd392f]%d/%02d/%02d %02d:%02d:%02d到期[/color]", date.year, date.month, date.day, date.hour, date.min, date.sec)
-    
-    elseif limitType == 2 then -- 获得后开始计时(离线不会计算时间)
-        local remainTime = math.max(totalTime - (SL:GetValue("SERVER_TIME") - startTime), 0)
-        str = string.format("[color=#fabf33]%s[/color]", SL:SecondToHMS(remainTime, true))
-        needCountDown = true
-    
-    elseif limitType == 4 then -- 穿戴后开始计时
-        local isEquip = self._itemData.MakeIndex and SL:GetValue("EQUIP_DATA_BY_MAKEINDEX", self._itemData.MakeIndex)
-        local remainTime = totalTime
-        if isEquip then
-            remainTime = math.max(totalTime - (SL:GetValue("SERVER_TIME") - startTime), 0)
-            needCountDown = true
-        end
-        str = string.format("[color=#fabf33]%s[/color]", SL:SecondToHMS(remainTime, true))
-    end
-
-    -- 手机端字号20
-    if str and string.len(str) > 0 and not SL:GetValue("IS_PC_OPER_MODE") then
-        str = string.format("[size=20]%s[/size]", str)
-    end
-
-    return str, needCountDown
-end
-
-function EquipTipViewModel:StopLimitTimeCountDown()
-    if self.textList and self.textList[29] then
-        FGUI:stopAllActions(self.textList[29])
-    end
 end

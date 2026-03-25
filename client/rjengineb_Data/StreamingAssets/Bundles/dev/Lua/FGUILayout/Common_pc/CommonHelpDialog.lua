@@ -12,7 +12,7 @@ function CommonHelpDialog:Create()
         self._packageName = "Common"
     end
 	self._ui = FGUI:ui_delegate(self.component)
-	FGUIFunction:SetCloseUIWhenClickOutside(self)
+	FGUI:SetCloseUIWhenClickOutside(self)
 	self._strArr = {}
 	self._strArrLen = 0
 	self._handler_OnRichTextRenderer = handler(self, self.OnRichTextRenderer)

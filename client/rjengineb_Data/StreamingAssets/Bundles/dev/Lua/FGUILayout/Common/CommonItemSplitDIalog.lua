@@ -2,38 +2,36 @@ local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local CommonItemSplitDialog = class("CommonItemSplitDialog", BaseFGUILayout)
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 -- 使用方法
--- [[
-	-- local data = {}
-	-- data.itemData = {
-	--     Grade = 3,
-	--     isShowCount = 100,
-	--     OverLap = 10,
-	--     Looks = 3535,
-	--     Name = "道具"
-	-- }
-	
-	-- data.dialogType = 0  单按钮 1 双按钮
-	
-	--    isOk = 0 单按钮回调
-	--    isOk = 0 isOK = 1 双按钮回调
-	--    isOk = 2 关闭按钮回调
-	-- data.btnClicked = function(isOK,num)
-	--     if isOK == 0 then
-	--     elseif isOK == 1 then
-	--         FGUI:Close("Common", "CommonItemSplitDialog")
-	--     elseif isOk == 2 then    -- 关闭按钮
-	--         FGUI:Close("Common", "CommonItemSplitDialog")
-	--     end
-	
-	--     print("当前数量 =============" .. num)
-	-- end
-	
-	
-	-- data.maxNum = 100
-	-- data.title = "装备拆分"
-	-- data.minNum = 10
-	-- SL:OpenCommonItemSplitDialog(data)
---]]
+-- local data = {}
+-- data.itemData = {
+--     Grade = 3,
+--     isShowCount = 100,
+--     OverLap = 10,
+--     Looks = 3535,
+--     Name = "道具"
+-- }
+
+-- data.dialogType = 0  单按钮 1 双按钮
+
+--    isOk = 0 单按钮回调
+--    isOk = 0 isOK = 1 双按钮回调
+--    isOk = 2 关闭按钮回调
+-- data.btnClicked = function(isOK,num)
+--     if isOK == 0 then
+--     elseif isOK == 1 then
+--         FGUI:Close("Common", "CommonItemSplitDialog")
+--     elseif isOk == 2 then    -- 关闭按钮
+--         FGUI:Close("Common", "CommonItemSplitDialog")
+--     end
+
+--     print("当前数量 =============" .. num)
+-- end
+
+
+-- data.maxNum = 100
+-- data.title = "装备拆分"
+-- data.minNum = 10
+-- SL:OpenCommonItemSplitDialog(data)
 
 
 -- 角色方案面板
@@ -59,8 +57,7 @@ function CommonItemSplitDialog:GetAllFGuiData()
     self.text_tip = self._ui.text_tip
     self.mask = self._ui.mask
     self.iconNode = self._ui.iconNode
-    self.input_count = self._ui.input_count
-    self.text_count = FGUI:GetChild(self.input_count,"text_count")
+    self.inputCount = FGUI:GetChild(self._ui.input_count,"input_count")
 end
 
 function CommonItemSplitDialog:InitUI()
@@ -72,13 +69,12 @@ function CommonItemSplitDialog:InitUI()
     FGUI:setOnClickEvent(self.btn_first,handler(self,self.onBtnFirstClicked))
     FGUI:setOnClickEvent(self.btn_second,handler(self,self.onBtnSecondClicked))
     FGUI:setOnClickEvent(self.btn_single,handler(self,self.onBtnSingleClicked))
-    FGUI:setOnClickEvent(self.btn_single,handler(self,self.onBtnSingleClicked))
-    FGUI:setOnClickEvent(self._ui.input_count,handler(self,self.textCountClicked))
+    FGUI:setOnFocusIn(self.inputCount,handler(self,self.InputCountClicked))
 
     self.dialogTypeController = FGUI:getController(self.component,"dialogType")
 end
 
-function CommonItemSplitDialog:textCountClicked()
+function CommonItemSplitDialog:InputCountClicked()
     local data = {}
     data.title = GET_STRING(90010006)
     data.maxNum = self.maxNum
@@ -173,7 +169,7 @@ end
 
 -- 刷新数量
 function CommonItemSplitDialog:RefreshCount()
-    FGUI:GTextField_setText(self.text_count,self.num)
+    FGUI:GTextInput_setText(self.inputCount,self.num)
     self:RefreshTotalPriceShow()
 end
 
@@ -222,21 +218,11 @@ end
 -- 刷新总价显示
 function CommonItemSplitDialog:RefreshTotalPriceShow()
     -- 是否显示文字
-    if self._data and not string.isNullOrEmpty(self._data.costType) then
-		local totalPrice = self.num * self._data.Nowprice
-        local isMoneyEnough,costType,currentMoney,costList = SL:GetValue("NPC_STORE_GET_ENOUGH_COSTTYPE",self._data.costType,totalPrice)
-        if isMoneyEnough then
-			FGUI:GTextField_setText(self.text_tip,string.format(GET_STRING(30000063),"[color=#00FF00]"..self._data.singlePrice * self.num.. "[/color]"..self._data.costName))
-		else
-			FGUI:GTextField_setText(self.text_tip,string.format(GET_STRING(30000063),"[color=#FF0000]"..self._data.singlePrice * self.num.. "[/color]"..self._data.costName))
-		end
-					
-		FGUI:setVisible(self.text_tip,true)
-    else
-        FGUI:setVisible(self.text_tip,false)
+    if self._data.singlePrice and self._data.costName then
+        FGUI:GTextField_setText(self.text_tip,string.format(GET_STRING(30000063),self._data.costName .. self._data.singlePrice * self.num))
+        FGUI:setVisible(self.text_tip,self._data.singlePrice and self._data.costName)
     end
 
-    -- NPC商店物品卖出
     if self._data.multPrice  and next(self._data.multPrice) then
         local str = ""
         local count = 1
@@ -253,9 +239,10 @@ function CommonItemSplitDialog:RefreshTotalPriceShow()
                 count = count + 1
             end
         end
-        FGUI:GTextField_setText(self.text_tip,string.format(GET_STRING(30000063),str))
-        FGUI:setVisible(self.text_tip,self._data.multPrice and next(self._data.multPrice))
+        FGUI:GTextField_setText(self.text_tip,str)
+        FGUI:setVisible(self.text_tip,self._data.multPrice  and next(self._data.multPrice))
     end
+
 end
 
 function CommonItemSplitDialog:Destory()

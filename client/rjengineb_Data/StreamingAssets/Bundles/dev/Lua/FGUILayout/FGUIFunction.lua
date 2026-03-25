@@ -127,12 +127,14 @@ function FGUIFunction:CompareEquipUpShowOnBody(equipData)
     end 
 
     local myPower = FGUIFunction:GetEquipPower(equipData) -- 当前装备战力
+    local myDefense = FGUIFunction:GetEquipDefense(equipData) -- 当前装备防御力
 
-    -- 满足所有穿戴条件, 对比全战力
+    -- 满足所有穿戴条件, 对比全战力和防御力
     if canEquip then
         -- 比较身上装备
         local targetData = nil
         local targetMinPower = 0 -- 身上穿戴最小战力
+        local targetMinDefense = 0 -- 身上穿戴最小防御力
         for i, pos in ipairs(posList) do
             targetData = SL:GetValue("EQUIP_DATA_BY_POS", pos)
             if not targetData then  -- 身上没有穿戴
@@ -140,21 +142,30 @@ function FGUIFunction:CompareEquipUpShowOnBody(equipData)
             end
 
             local targetPower = FGUIFunction:GetEquipPower(targetData) -- 身上装备战力
+            local targetDefense = FGUIFunction:GetEquipDefense(targetData) -- 身上装备防御力
+            
             if targetMinPower == 0 or targetPower < targetMinPower then -- 拿到身上穿戴最小战力
                 targetMinPower = targetPower
             end
+            
+            if targetMinDefense == 0 or targetDefense < targetMinDefense then -- 拿到身上穿戴最小防御力
+                targetMinDefense = targetDefense
+            end
         end 
 
-        if targetMinPower < myPower then 
+        -- 如果新装备的战力或防御力高于身上装备，显示提升箭头
+        if targetMinPower < myPower or targetMinDefense < myDefense then 
             return true
         end
     end
 
     myPower = FGUIFunction:GetEquipBasePower(equipData) -- 当前装备基础战力
+    local myBaseDefense = FGUIFunction:GetEquipBaseDefense(equipData) -- 当前装备基础防御力
 
-    -- 比较身上装备基础战力
+    -- 比较身上装备基础战力和基础防御力
     local targetData = nil
     local targetMinPower = 0 -- 身上穿戴最小基础战力
+    local targetMinDefense = 0 -- 身上穿戴最小基础防御力
     for i, pos in ipairs(posList) do
         targetData = SL:GetValue("EQUIP_DATA_BY_POS", pos)
         if not targetData then  -- 身上没有穿戴
@@ -162,12 +173,19 @@ function FGUIFunction:CompareEquipUpShowOnBody(equipData)
         end
 
         local targetPower = FGUIFunction:GetEquipBasePower(targetData) -- 身上装备基础战力
+        local targetDefense = FGUIFunction:GetEquipBaseDefense(targetData) -- 身上装备基础防御力
+        
         if targetMinPower == 0 or targetPower < targetMinPower then -- 拿到身上穿戴最小基础战力
             targetMinPower = targetPower
         end
+        
+        if targetMinDefense == 0 or targetDefense < targetMinDefense then -- 拿到身上穿戴最小基础防御力
+            targetMinDefense = targetDefense
+        end
     end
 
-    if targetMinPower < myPower then 
+    -- 如果新装备的基础战力或基础防御力高于身上装备，显示对应箭头
+    if targetMinPower < myPower or targetMinDefense < myBaseDefense then 
         return false, canEquip, canEquipBase
     end
 
@@ -425,6 +443,37 @@ function FGUIFunction:GetEquipPower(item)
     return power
 end
 
+-- 获取防御力
+function FGUIFunction:GetEquipDefense(item)
+    if not item then
+        return 0
+    end
+    
+    local defense = 0
+
+    local job = SL:GetValue("JOB")
+    local allAttList = FGUIFunction:GetEquipCombineAttList(item, job, true)
+    
+    -- 防御相关属性ID：52(防御), 54(武功防御), 56(对怪防御), 69(对怪武防)
+    local defenseAttIds = {52, 54, 56, 69}
+    local defenseAttMap = {}
+    for _, attId in ipairs(defenseAttIds) do
+        defenseAttMap[attId] = true
+    end
+    
+    for i, data in ipairs(allAttList) do
+        local id = data.id
+        local value = data.value
+        
+        -- 如果是防御属性，直接累加数值
+        if defenseAttMap[id] then
+            defense = defense + value
+        end
+    end
+
+    return defense
+end
+
 -- 获取基础战力
 function FGUIFunction:GetEquipBasePower(item)
     if not item then
@@ -463,6 +512,52 @@ function FGUIFunction:GetEquipBasePower(item)
     end
 
     return power
+end
+
+-- 获取基础防御力
+function FGUIFunction:GetEquipBaseDefense(item)
+    if not item then
+        return 0
+    end
+    
+    local attList = {}
+    local myJob = SL:GetValue("JOB")
+    local defense = 0
+
+    local tbaseAttList = SL:Split(item.Attribute or "", "|")
+    for i = 1, #tbaseAttList do
+        if tbaseAttList[i] and string.len(tbaseAttList[i]) > 0 then
+            local dataTab = SL:Split(tbaseAttList[i], "#")
+            local needJob = tonumber(dataTab[1])
+            local attId = tonumber(dataTab[2])
+            local attValue = tonumber(dataTab[3])
+            if (needJob == 0 or needJob == myJob) and attId and attValue then
+                table.insert(attList, {
+                    id = attId,
+                    value = attValue
+                })
+            end
+        end
+    end
+
+    -- 防御相关属性ID：52(防御), 54(武功防御), 56(对怪防御), 69(对怪武防)
+    local defenseAttIds = {52, 54, 56, 69}
+    local defenseAttMap = {}
+    for _, attId in ipairs(defenseAttIds) do
+        defenseAttMap[attId] = true
+    end
+    
+    for i, data in ipairs(attList) do
+        local id = data.id
+        local value = data.value
+        
+        -- 如果是防御属性，直接累加数值
+        if defenseAttMap[id] then
+            defense = defense + value
+        end
+    end
+
+    return defense
 end
 
 -- Tips获取不同装备对比

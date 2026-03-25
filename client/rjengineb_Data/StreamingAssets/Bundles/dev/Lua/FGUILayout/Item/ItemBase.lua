@@ -1,22 +1,20 @@
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 local ItemBase = class("ItemBase")
-
+local _PetEquipPos = {           -- 宠物装备位置
+    ["灵兽利爪"]  = 0,    
+    ["灵兽护具"]  = 1,    
+    ["灵兽系带"]  = 2,    
+    ["灵兽兽环"]  = 3,    
+}
 local DOUBLE_CLICK_INTERVAL = 0.2
 function ItemBase:ctor(component)
     self:Init(component)
     self:CleanData()
 end
 
--- 清楚特效节点，dispose资源
-function ItemBase:CleanEffect()
-    local guid = FGUI:GetID(self._component)
-    ItemUtil:ClearDictEffectByItemComponent(guid)
-end
-
 function ItemBase:Init(component)
     self._component  = component
 end
-
 -- 处理数据
 function ItemBase:CleanData()
     self._hideTip                                           = false
@@ -29,7 +27,6 @@ function ItemBase:CleanData()
     self._bgVisible                                         = true
     self._itemCount                                         = 1
     self._isShowCount                                       = false
-    self._isShowEffect                                      = false
 end
 
 -- 清理定时器
@@ -46,10 +43,6 @@ function ItemBase:CleanClickCallBack()
     FGUI:setOnRightClickEvent(self._component,nil)
     FGUI:setOnRollOverEvent(self._component,nil)
     FGUI:setOnRollOutEvent(self._component,nil)
-    if SL:GetValue("IS_PC_OPER_MODE") then
-        FGUI:setOnRollOutEvent(self._component,nil)
-        FGUI:setOnRollOverEvent(self._component,nil)
-    end
 end
 
 -- 回池操作初始化
@@ -57,10 +50,8 @@ function ItemBase:Clean()
     self:CleanData()
     self:CleanSchedule()
     self:CleanClickCallBack()
-    self:CleanEffect()
 end
 
---[[
 --extData参数
 --extData.hideTip 是否隐藏默认的Tip
 --extData.itemTipData table类型，对应ItemTips.ShowTip传入的参数
@@ -70,7 +61,6 @@ end
 --extData.CountOutlineColor 数量字体描边
 --extData.bgVisible 背景隐藏
 --extData.OverLap 道具数量
---]]
 function ItemBase:UpdateItemConfig(extData)
     if not extData then
         return
@@ -110,6 +100,13 @@ function ItemBase:RefreshItemUIByData()
     self:UpdateItemGrade()
     self:UpdateItemCounts()
     self:SetItemSubScriptByItemID()
+    local isequip = SL:GetValue("BAG_ITEM_IS_EQUIP", self._itemData, itemData.ID)
+    if isequip or _PetEquipPos[self._itemData.StdName] then
+        ItemUtil:SetEquipQHByItemData(self._component,self._itemData)  --装备强化
+    else
+        -- 清理合成点显示
+        ItemUtil:ClearHCDShow(self._component)
+    end
 end
 
 -- 是否显示数量
@@ -140,6 +137,14 @@ end
 -- 显示Subscript文本内容
 function ItemBase:UpdateSubscript()
     ItemUtil:SetItemSubScriptByItemID(self._component,self._itemData.ID)
+    local isequip = SL:GetValue("BAG_ITEM_IS_EQUIP", self._itemData, self._itemData.ID)
+    if isequip or _PetEquipPos[self._itemData.StdName] then
+        ItemUtil:SetEquipQHByItemData(self._component,self._itemData)
+    else
+        -- 清理合成点显示
+        ItemUtil:ClearHCDShow(self._component)
+    end
+    
 end
 
 function ItemBase:UpdateItemStar()
@@ -159,20 +164,6 @@ function ItemBase:ShowTips()
     local tipData = self._itemTipData or {}
     tipData.itemData = self._itemData
     FGUIFunction:OpenItemTips(tipData)
-end
-
-function ItemBase:UpdateItemTipInAndOut()
-    if SL:GetValue("IS_PC_OPER_MODE") then
-        FGUI:setOnRollOverEvent(self._component,function()
-            if not self._hideTip then
-                self:ShowTips()
-            end
-        end)
-
-        FGUI:setOnRollOutEvent(self._component,function()
-            FGUIFunction:CloseItemTips()
-        end)
-    end
 end
 
 function ItemBase:OnClickEvent(context)
@@ -226,13 +217,6 @@ function ItemBase:SetIconGray(isGray)
     ItemUtil:SetIconGray(self._component,isGray)
 end
 
-function ItemBase:AddEffectToItem()
-    ItemUtil:SetEffectByItemID(self._component,self._itemData.ID,false)
-end
-
-function ItemBase:RemoveEffectOnItem()
-	ItemUtil:RemoveAllEffectOnItem(self._component)
-end
 
 -- 设置数量字体的颜色
 function ItemBase:SetCountTextFontColor()
