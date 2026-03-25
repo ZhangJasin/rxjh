@@ -67,22 +67,22 @@ function mountMainData:Init()
     if _dataForMount.hhlistsj == 0 then _dataForMount.hhlistsj = {} end
     _dataForMount.hhSortList = self:setHHListSort()
 
-    -- 灵兽相关数据
-    _dataForPet.petHHid = SL:GetValue("U", 59)
-    _dataForPet.modelId = SL:GetValue("U", 60) > 0 and SL:GetValue("U", 60) or
+    -- 灵兽相关数据（使用新变量）
+    _dataForPet.petHHid = SL:GetValue("U", 107) -- U_Pet_Take_Id
+    _dataForPet.modelId = SL:GetValue("U", 108) > 0 and SL:GetValue("U", 108) or -- U_Pet_Base_ID
                               (Pet[1] and Pet[1].Model) or 800001
-    _dataForPet.isPetChuzhan = SL:GetValue("U", 62)
-    _dataForPet.isPetJh = SL:GetValue("U", 63) -- 是否已激活
-    _dataForPet.allJieshu = SL:GetValue("U", 61)
+    _dataForPet.isPetChuzhan = SL:GetValue("U", 62) -- 保持旧的出战状态变量
+    _dataForPet.isPetJh = SL:GetValue("U", 110) -- U_Pet_IS_SET 是否已激活
+    _dataForPet.allJieshu = SL:GetValue("U", 106) -- U_All_Pet_star 灵兽总星级
 
-    local t9 = SL:GetValue("T", 9)
-    if t9 and t9 ~= "" then _dataForPet.allPetsActive = SL:JsonDecode(t9) end
+    local t119 = SL:GetValue("T", 119) -- T_PetHuanHua 灵兽幻化激活对象
+    if t119 and t119 ~= "" then _dataForPet.allPetsActive = SL:JsonDecode(t119) end
 
-    local t17 = SL:GetValue("T", 17)
-    if t17 and t17 ~= "" then _dataForPet.allPetsToModel = SL:JsonDecode(t17) end
+    local t119 = SL:GetValue("T", 119) -- T_PetHuanHua 灵兽幻化激活对象
+    if t119 and t119 ~= "" then _dataForPet.allPetsToModel = SL:JsonDecode(t119) end
 
-    _dataForPet.showPetModelId = SL:GetValue("U", 57) -- 当前显示模型id
-    _dataForPet.selectViewPetId = SL:GetValue("U", 58) -- 当前选择的主体id
+    _dataForPet.showPetModelId = SL:GetValue("U", 57) -- 保持旧的显示模型id
+    _dataForPet.selectViewPetId = SL:GetValue("U", 58) -- 保持旧的选中主体id
     if _dataForPet.allPetsActive == 0 then _dataForPet.allPetsActive = {} end
     if _dataForPet.hhlistsj == 0 then _dataForPet.hhlistsj = {} end
     -- 灵兽列表排序
@@ -489,13 +489,22 @@ end
 
 -- 灵兽升级后更新灵兽数据
 function mountMainData:updatePetZQ(data)
+    print("=== 客户端收到灵兽升级消息 ===")
+    print("等级:", data.lv, "基础模型:", data.petBaseId)
     if data.lv == 1 then
         -- 首次激活
+        print("首次激活灵兽")
         _dataForPet.isPetJh = 1
         _dataForPet.hhlistsj = {}
     end
     -- 更新阶数和视图
     _dataForPet.allJieshu = tonumber(data.lv)
+    -- 更新模型ID
+    _dataForPet.modelId = tonumber(data.petBaseId)
+    -- 更新基础模型ID（保存到变量但不显示）
+    _dataForPet.petBaseId = tonumber(data.petBaseId)
+    print("更新灵兽等级:", _dataForPet.allJieshu, "模型ID:", _dataForPet.modelId)
+    print("发布petLevelUp事件")
     self:Publish("petLevelUp", self:GetDataForPet())
 end
 

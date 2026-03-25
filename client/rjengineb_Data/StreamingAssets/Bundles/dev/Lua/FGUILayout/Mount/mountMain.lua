@@ -104,7 +104,30 @@ function mountMain:subscribeEvents()
         self._subscriptions.mountUpdateBtn = self._data:Subscribe("mountUpdateBtn", function(state)
             self._dataForMount = state
             local title = FGUI:GetChild(self._ui.qhbtn, "title")
-            if self._dataForMount.ischuzhan == STATUS.FIGHT then 
+            if self._dataForMount.ischuzhan == STATUS.FIGHT then
+                FGUI:GTextField_setText(title, "出战")
+            else
+                FGUI:GTextField_setText(title, "休息")
+            end
+        end)
+        -- 灵兽升级事件
+        self._subscriptions.petLevelUp = self._data:Subscribe("petLevelUp", function(state)
+            print("=== 客户端收到petLevelUp事件 ===")
+            self._dataForPet = state
+            print("灵兽等级:", state.allJieshu, "是否激活:", state.isPetJh)
+            self:InitPetData()
+            self:setPetBtPetBtn()
+        end)
+        -- 灵兽幻化事件
+        self._subscriptions.petUpdateHHResult = self._data:Subscribe("petUpdateHHResult", function(state)
+            self._dataForPet = state._dataForPet
+            self:initPetHuanhuaTab()
+        end)
+        -- 灵兽出战/休息事件
+        self._subscriptions.petUpdateBtn = self._data:Subscribe("petUpdateBtn", function(state)
+            self._dataForPet = state
+            local title = FGUI:GetChild(self._ui.petQhbtn, "title")
+            if self._dataForPet.isPetChuzhan == STATUS.FIGHT then
                 FGUI:GTextField_setText(title, "出战")
             else
                 FGUI:GTextField_setText(title, "休息")
@@ -306,6 +329,31 @@ function mountMain:bindEvents()
         end
     end)
 
+    -- 右侧标签切换事件（灵兽/坐骑）
+    FGUI:GList_addOnClickItemEvent(self._ui.rightTabList, function(context)
+        local index = FGUI:GList_getSelectedIndex(self._ui.rightTabList)
+        print("=== 右侧标签切换 ===")
+        print("切换到:", index == 0 and "灵兽" or "坐骑")
+        if index == 0 then
+            -- 切换到灵兽
+            self:InitPetData()
+        else
+            -- 切换到坐骑
+            self:InitData()
+        end
+    end)
+
+    -- 坐骑出战按钮事件
+    FGUI:setOnClickEvent(self._ui.qhbtn, function()
+        self._data:chuzhan()
+    end)
+
+    -- 坐骑升级按钮事件
+    FGUI:setOnClickEvent(self._ui.shengjizuoqi, function()
+        print("升级坐骑")
+        self._data:shengji()
+    end)
+
     -- 灵兽顶部标签切换事件
     FGUI:GList_addOnClickItemEvent(self._ui.petTopTabList, function(context)
         local index = FGUI:GList_getSelectedIndex(self._ui.petTopTabList)
@@ -327,7 +375,7 @@ function mountMain:setPetInfo()
     local stars = self._dataForPet.allJieshu
     -- 设置名称
     local petData = Pet[stars] or Pet[0]
-    --FGUI:GTextField_setText(self._ui.petName, petData.Name or "龙猫")
+    FGUI:GTextField_setText(self._ui.petName, petData.Name or "龙猫")
     -- 设置阶数
     local jieshu = math.floor(stars / 10)
     local liang = stars % 10
@@ -339,7 +387,7 @@ function mountMain:setPetInfo()
     FGUI:GTextField_setText(self.petJieshuName["bigLevel"], NUMBER_TO_CHINESE[jieshu + 1])
     -- 设置出战按钮文字
     local title = FGUI:GetChild(self._ui.petQhbtn, "title")
-    if self._dataForPet.isPetChuzhan == STATUS.FIGHT then 
+    if self._dataForPet.isPetChuzhan == STATUS.FIGHT then
         FGUI:GTextField_setText(title, "休息")
     else
         FGUI:GTextField_setText(title, "出战")
@@ -512,6 +560,9 @@ end
 
 -- 设置宠物消耗材料
 function mountMain:setPetXhcl()
+    print("=== setPetXhcl 开始 ===")
+    print("当前等级:", self._dataForPet.allJieshu, "标签页:", self.petTopTab)
+    
     local num = 1
     local costs = {}
     local iconItem = FGUI:GetChild(self._ui.petXhcl, "iconItem")
@@ -525,6 +576,7 @@ function mountMain:setPetXhcl()
     if self._dataForPet.allJieshu == #Pet and self.petTopTab == 0 then
         FGUI:setVisible(self._ui.n85, false)
         FGUI:setVisible(self._ui.petXhcl, false)
+        print("已满级")
         return
     end
     -- 获取消耗材料
@@ -535,12 +587,14 @@ function mountMain:setPetXhcl()
             wz = 0
         end
         costs = Pet[wz].Cost
+        print("消耗材料配置索引:", wz, "Cost:", costs and costs[1], costs[2])
     else
         -- 幻化消耗材料
         -- 安全检查：确保 hhSortList 不为空
         if not self._dataForPet.hhSortList or #self._dataForPet.hhSortList == 0 then
             FGUI:setVisible(self._ui.n85, false)
             FGUI:setVisible(self._ui.petXhcl, false)
+            print("幻化列表为空")
             return
         end
         
@@ -571,6 +625,7 @@ function mountMain:setPetXhcl()
             FGUI:setVisible(self._ui.petXhcl, false)
             nowGrade = self._dataForPet.hhlistsj[nowName]
             if not nowGrade then
+                print("幻化等级配置无效")
                 return
             end
         end
@@ -578,7 +633,8 @@ function mountMain:setPetXhcl()
     end
     -- 设置数量和图标
     num = costs[2]
-    local itemData = SL:GetValue("ITEM_DATA", tonumber(costs[1])) 
+    local itemData = SL:GetValue("ITEM_DATA", tonumber(costs[1]))
+    print("物品ID:", costs[1], "需要数量:", num, "物品数据:", itemData)
     -- 创建物品显示
     local extData = {}
     extData.hideTip = false -- 是否隐藏默认的Tip
@@ -599,6 +655,7 @@ function mountMain:setPetXhcl()
         FGUI:GTextField_setColor(itemNum, "#ff0000")
         FGUI:GTextField_setColor(fuhao, "#ff0000")
     end
+    print("=== setPetXhcl 完成 ===")
 end
 
 -- 设置宠物选中状态（暂未使用，UI中不存在petsList）
@@ -637,21 +694,31 @@ function mountMain:bindPetButtonsEvents()
 
     -- 激活/升阶按钮事件
     FGUI:setOnClickEvent(self._ui.shengjilingshou, function()
+        print("升级灵兽")
         if self.petTopTab == 0 then
             -- 灵兽本体
             if self._dataForPet.isPetJh == 0 then
                 -- 首次激活
-                if Pet[1] and Pet[1].ACTIVE then
-                    self._data:lsjihuo({itemId = Pet[1].ACTIVE})
+                print("首次激活灵兽")
+                if Pet[1] and Pet[1].Cost then
+                    self._data:lsjihuo({itemId = Pet[1].Cost[1]})
+                else
+                    print("Pet[1]配置不存在或缺少Cost字段")
                 end
             else
                 -- 已激活，进行升阶
-                self._data:levelUp({
-                    name = Pet[self._dataForPet.allJieshu].Name,
-                    maxLv = #Pet,
-                    num = 1,
-                    itemId = Pet[self._dataForPet.allJieshu + 1] and Pet[self._dataForPet.allJieshu + 1].Cost[1] or 0
-                })
+                print("灵兽升阶,当前等级:", self._dataForPet.allJieshu)
+                local nextLevel = self._dataForPet.allJieshu + 1
+                if Pet[nextLevel] and Pet[nextLevel].Cost then
+                    self._data:levelUp({
+                        name = Pet[nextLevel].Name or "灵兽",
+                        maxLv = #Pet,
+                        num = Pet[nextLevel].Cost[2] or 1,
+                        itemId = Pet[nextLevel].Cost[1] or 0
+                    })
+                else
+                    print("下一级配置不存在或已达到最高级")
+                end
             end
         else
             -- 灵兽幻化
@@ -674,6 +741,10 @@ end
 
 -- 初始化灵兽标签
 function mountMain:initPetTab()
+    print("=== initPetTab 开始 ===")
+    print("是否激活:", self._dataForPet.isPetJh)
+    print("当前等级:", self._dataForPet.allJieshu)
+
     local title = FGUI:GetChild(self._ui.shengjilingshou, "n1")
     -- 判断是否已激活
     if self._dataForPet.isPetJh == 0 then
@@ -684,21 +755,27 @@ function mountMain:initPetTab()
         -- 已激活状态
         FGUI:setVisible(self._ui.petQhbtn, true)
         FGUI:GTextField_setText(title, "升阶")
+        local petQhbtnTitle = FGUI:GetChild(self._ui.petQhbtn, "title")
         if self._dataForPet.isPetChuzhan == STATUS.FIGHT then
-            FGUI:GTextField_setText(self._ui.petQhbtn.title, "出战")
+            FGUI:GTextField_setText(petQhbtnTitle, "出战")
         else
-            FGUI:GTextField_setText(self._ui.petQhbtn.title, "休息")
+            FGUI:GTextField_setText(petQhbtnTitle, "休息")
         end
     end
     -- 设置模型ID
     self.modelId = Pet[self._dataForPet.allJieshu] and Pet[self._dataForPet.allJieshu].Model or Pet[0].Model
+    print("模型ID:", self.modelId, "Pet数据:", Pet[self._dataForPet.allJieshu] and Pet[self._dataForPet.allJieshu])
     -- 更新模型
     if self.modelId then
         self:setPetModel(self.modelId, 0, 1.1)
+        print("模型设置完成")
     end
     -- 加载视图
     self:setPetDQZQSx(self._dataForPet.allJieshu)
     self:setPetXJZQSx(self._dataForPet.allJieshu)
+    -- 设置灵兽名称和阶数
+    self:setPetInfo()
+    print("=== initPetTab 完成 ===")
 end
 
 -- 初始化灵兽幻化标签
@@ -986,14 +1063,6 @@ function mountMain:initMountTab()
     self:updateView()
     self:setMountDQZQSx(self._dataForMount.allJieshu)
     self:setMountXJZQSx(self._dataForMount.allJieshu)
-    -- 绑定出战按钮事件
-    FGUI:setOnClickEvent(self._ui.qhbtn, function() 
-        self._data:chuzhan()
-    end)
-    -- 绑定升级按钮事件
-    FGUI:setOnClickEvent(self._ui.shengjizuoqi, function() 
-        self._data:shengji()
-    end)
     -- 更新主标题
     self:updateMainTitle()
 end

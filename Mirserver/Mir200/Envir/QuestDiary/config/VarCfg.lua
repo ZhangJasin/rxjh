@@ -89,10 +89,11 @@ VarCfg.U_MarryIntimacyLevel              = "U55"         -- 侠侣亲密度等级
 VarCfg.U_MarryIntimacyExp                = "U56"         -- 侠侣亲密度经验
 
 
-VarCfg.U_PETS_NOW_MODEL                  = "U57" -- 当前出战宠物外型
-VarCfg.U_PETS_Take_Base                  = "U58" -- 当前出战宠物id
-VarCfg.U_PETS_Index                      = "U59" -- 切换模型位置 0 本体 0以上 幻化
-VarCfg.U_PETS_DIE_TIME                   = "U60" -- 宠物死亡倒计时
+-- ===== 旧的灵兽U变量（已废弃，使用新灵兽系统）=====
+-- VarCfg.U_PETS_NOW_MODEL                  = "U57" -- 当前出战宠物外型（已废弃）
+-- VarCfg.U_PETS_Take_Base                  = "U58" -- 当前出战宠物id（已废弃）
+-- VarCfg.U_PETS_Index                      = "U59" -- 切换模型位置 0 本体 0以上 幻化（已废弃）
+-- VarCfg.U_PETS_DIE_TIME                   = "U60" -- 宠物死亡倒计时（已废弃）
 
 VarCfg.U_SLBYCD                          = "U61" -- 神龙庇佑CD
 VarCfg.U_YZWCD                           = "U62" -- 影之舞CD
@@ -133,10 +134,18 @@ VarCfg.U_Join_Num                        = "U98" --师徒副本邀请发起时间
 VarCfg.U_TeQuan_fuhuo_count              = "U101" -- 特权可复活次数
 VarCfg.U_TeQuan_yifuhuo_count            = "U102" -- 特权已复活次数
 
-VarCfg.U_UserItemLSHH                   = "U103" -- 用灵兽幻化符道具怪物表ID
+-- VarCfg.U_UserItemLSHH                     = "U103" -- 用灵兽幻化符道具怪物表ID（已废弃）
 
-VarCfg.U_VIP_Level                   = "U104" -- 用灵兽幻化符道具怪物表ID
-VarCfg.U_VIP_killMon_Num                   = "U105" -- 用灵兽幻化符道具怪物表ID
+VarCfg.U_VIP_Level                   = "U104" -- VIP等级
+VarCfg.U_VIP_killMon_Num             = "U105" -- VIP击杀怪物数量
+
+-- ===== 新的灵兽变量（与坐骑结构一致）=====
+VarCfg.U_All_Pet_star                = "U106" -- 灵兽总星级/阶数
+VarCfg.U_Pet_Take_Id                 = "U107" -- 当前使用的灵兽模型ID
+VarCfg.U_Pet_Base_ID                 = "U108" -- 灵兽基础模型ID
+VarCfg.U_Pet_IS_HH                   = "U109" -- 是否使用灵兽幻化模型
+VarCfg.U_Pet_IS_SET                  = "U110" -- 是否激活灵兽
+VarCfg.U_Pet_Passive                 = "U111" -- 灵兽被动技能ID
 
 ---------------------------------------↓↓↓ T变量 ↓↓↓---------------------------------------
 -- 个人字符变量，下线保存
@@ -149,8 +158,9 @@ VarCfg.T_roleTFList                       = "T5"   -- 已加点获取天赋
 VarCfg.T_roleTFDNum                       = "T6"   -- 天赋点数量
 VarCfg.T_MountHuanHua                     = "T7"   -- 坐骑幻化激活对象
 VarCfg.T_Reward_Task_List                 = "T8"   -- 今日悬赏任务列表
-VarCfg.T_Pets                             = "T9"   -- 当前灵兽激活情况
-VarCfg.T_TAKE_PET                         = "T10"  -- 当前角色添加宠物数据
+-- ===== 旧的灵兽T变量（已废弃，使用新灵兽系统）=====
+-- VarCfg.T_Pets                             = "T9"   -- 当前灵兽激活情况（已废弃）
+-- VarCfg.T_TAKE_PET                         = "T10"  -- 当前角色添加宠物数据（已废弃）
 
 VarCfg.T_TaskComplete_data                = "T11"  -- 已完成任务id {[已完成任务id]=1,........}
 VarCfg.T_TaskProgress_data                = "T12"  -- 已接取任务进度 {[任务id]=1，[任务id]=1....}
@@ -159,8 +169,8 @@ VarCfg.T_MarryApplyList                   = "T14"  -- 当前被申请结缘列表
 VarCfg.T_MarryIntimacyList                = "T15"  -- 玩家亲密度等级列表
 VarCfg.T_MarryApplyInfo                   = "T16"  -- 玩家已申请玩家列表
 
-VarCfg.T_PETS_Take_Id                     = "T17"  -- 已激活的本体
-VarCfg.T_PET_MARK                         = "T18"  --当前召唤的宠物标记
+-- VarCfg.T_PETS_Take_Id                     = "T17"  -- 已激活的本体（已废弃）
+-- VarCfg.T_PET_MARK                         = "T18"  --当前召唤的宠物标记（已废弃）
 VarCfg.T_AUTO_SELL_IDS                    = "T19"  --回收界面勾选的ids
 
 VarCfg.T_MarryAllInfo                     = "T20"  -- 玩家侠侣关系 {结缘时间,侠侣名字,侠侣等级,侠侣亲密度等级}
@@ -183,8 +193,8 @@ VarCfg.T_KuaFu_FactionWar_PlayData        = "T34"  -- 跨服势力战前五玩家外显数据
 VarCfg.T_ExpHarmList                      = "T35"  -- 当前玩家伤害获取经验列表
 VarCfg.T_KuaFu_Play_List                  = "T36"  -- 跨服势力战报名列表
 
-VarCfg.T_PetPay_MARK                      = "T37"  -- 当前召唤的氪金版宠物标记
-VarCfg.T_PetPay_Data                      = "T38"  -- 当前角色添加氪金版宠物数据
+-- VarCfg.T_PetPay_MARK                      = "T37"  -- 当前召唤的氪金版宠物标记（已废弃）
+-- VarCfg.T_PetPay_Data                      = "T38"  -- 当前角色添加氪金版宠物数据（已废弃）
 
 
 VarCfg.T_MentorShipShopBuyTime            = "T40"  -- 当前师徒商店限购
@@ -200,15 +210,18 @@ VarCfg.T_Skilll_BL                        = "T95"  -- 师傅给的技能的倍率
 VarCfg.T_MyMentorShip_fuben               = "T96" -- 师徒每日副本挑战情况
 
 
-VarCfg.T_PERSON_FUBEN_FINISH              = "T100" -- 个人副本解锁情况{1=1,2=1,3=1} 副本类型 1 经验 2灵兽 3 坐骑   评分达到S解锁下一级
+-- VarCfg.T_PERSON_FUBEN_FINISH              = "T100" -- 个人副本解锁情况{1=1,2=1,3=1} 副本类型 1 经验 2灵兽 3 坐骑   评分达到S解锁下一级（已废弃）
 VarCfg.T_ToDayFuBenData                   = "T101" -- 每日副本挑战情况
 
 VarCfg.T_personWarInfo                    = "T110" -- 个人本次门派战数据
 
-VarCfg.T_UserItemLSHHMark                 = "T115" -- 用灵兽幻化符道具宠物标识
+-- VarCfg.T_UserItemLSHHMark                 = "T115" -- 用灵兽幻化符道具宠物标识（已废弃）
 
 
 VarCfg.T_Modul_Change                     = "T118" -- 化形信息  模型改变
+
+-- ===== 新的灵兽T变量（与坐骑结构一致）=====
+VarCfg.T_PetHuanHua                        = "T119"  -- 灵兽幻化激活对象
 
 ---------------------------------------↓↓↓ S变量 ↓↓↓---------------------------------------
 -- 个人字符变量，下线不保存
