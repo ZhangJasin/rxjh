@@ -11,7 +11,7 @@ function MainRightFunc:Create()
     FGUI:setOnClickEvent(self._ui.Button_WuXun,handler(self,self.ObOpenWuXun))
     FGUI:setOnClickEvent(self._ui.Button_fashion, handler(self, self.OnOpenFashion))
     FGUI:setOnClickEvent(self._ui.Button_st, handler(self, self.OnOpenShiTu))
-    --FGUI:setOnClickEvent(self._ui.Button_ZuoQi, handler(self, self.OnOpenZuoQI))
+    FGUI:setOnClickEvent(self._ui.Button_ZuoQi, handler(self, self.OnOpenZuoQI))
 
     self:InitFuncBtnsShow()
 end
