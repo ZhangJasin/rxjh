@@ -20224,7 +20224,7 @@ local config = {
 	},
 	[3925] = { 
 		ID=3925,
-		Name="热血石（四两千斤）",
+		Name="热血石（四两千金）",
 		ShowName="热血石",
 		StdMode=1,
 		SubType=7,
@@ -20413,7 +20413,7 @@ local config = {
 	},
 	[3934] = { 
 		ID=3934,
-		Name="热血石（狂神赋体）",
+		Name="热血石（狂神降世）",
 		ShowName="热血石",
 		StdMode=1,
 		SubType=7,
@@ -20434,7 +20434,7 @@ local config = {
 	},
 	[3935] = { 
 		ID=3935,
-		Name="热血石（以攻为守）",
+		Name="热血石（转攻为守）",
 		ShowName="热血石",
 		StdMode=1,
 		SubType=7,

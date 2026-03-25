@@ -527,7 +527,7 @@ local config = {
 	},
 	[3934] = { 
 		idx=3934,
-		itemname="热血石（狂神赋体）",
+		itemname="热血石（狂神降世）",
 		itemtype=1,
 		limitpos=53,
 		level_arr = {
@@ -537,7 +537,7 @@ local config = {
 	},
 	[3935] = { 
 		idx=3935,
-		itemname="热血石（以攻为守）",
+		itemname="热血石（转攻为守）",
 		itemtype=1,
 		limitpos=53,
 		level_arr = {
@@ -658,16 +658,6 @@ local config = {
 	[3947] = { 
 		idx=3947,
 		itemname="热血石（吸星大法）",
-		itemtype=1,
-		limitpos=53,
-		level_arr = {
-			[1] = 0,
-			[2] = 15,
-		},
-	},
-	[3948] = { 
-		idx=3948,
-		itemname="热血石（神佑之气）",
 		itemtype=1,
 		limitpos=53,
 		level_arr = {
