@@ -360,6 +360,10 @@ function EquipDuanZao.hecheng(actor, data)
 
     local sum = math.random(1,10000)
     local basesuc = EquipHCTab[posindex]['EquipHCRatio_arr'][nextlv]
+    local hcAttrVal = abil(actor, 164) or 0
+    if hcAttrVal > 0 then
+        basesuc = basesuc + math.floor(basesuc*hcAttrVal/10000)
+    end
     if gxybxh == 1 then
         local ybnum = getItemNum(actor,"Ôª±¦")
         local needyb = EquipHCTab[posindex]['addsucc_arr'][1]
