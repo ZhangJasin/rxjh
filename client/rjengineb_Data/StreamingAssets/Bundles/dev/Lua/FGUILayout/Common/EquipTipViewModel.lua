@@ -48,7 +48,7 @@ function EquipTipViewModel:InitAutoSwitchPanel(isShow)
 	FGUI:setVisible(self._autoSwitchPanel, isShow)
 	if isShow and self._itemId then
 		local autoCheckBox = FGUI:GetChild(self._autoSwitchPanel, "checkBox_auto")
-		FGUI:GButton_setSelected(autoCheckBox, SL:GetQuickUseItemShow(self._itemId))
+		FGUI:GButton_setSelected(autoCheckBox, FGUIFunction:GetQuickUseItemShow(self._itemId))
 		FGUI:setOnClickEvent(autoCheckBox, self.onChangeAutoSwitchHandler)
 	end
 end

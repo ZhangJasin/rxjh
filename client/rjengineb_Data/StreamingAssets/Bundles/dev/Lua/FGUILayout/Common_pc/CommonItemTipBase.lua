@@ -47,7 +47,7 @@ function CommonItemTipBase:InitAutoSwitchPanel(isShow)
 	FGUI:setVisible(self._ui.panel_auto_switch, isShow)
 	if isShow and self._curItemID then
 		local autoCheckBox = FGUI:GetChild(self._ui.panel_auto_switch, "checkBox_auto")
-		FGUI:GButton_setSelected(autoCheckBox, SL:GetQuickUseItemShow(self._curItemID))
+		FGUI:GButton_setSelected(autoCheckBox, FGUIFunction:GetQuickUseItemShow(self._curItemID))
 		FGUI:setOnClickEvent(autoCheckBox, self.onChangeAutoSwitchHandler)
 	end
 end
