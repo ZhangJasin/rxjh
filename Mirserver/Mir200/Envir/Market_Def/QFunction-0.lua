@@ -524,17 +524,27 @@ end
 
 -- 气功等级属性改变触发  AttScore表添加
 function qigongattr(actor, attrid, curvalue)
-    print("qigongattr", attrid, curvalue)
-    if attrid == 126 then
-        -- 126 气功等级属性改变触发
-        local qigonglevelAttr = curvalue
-        -- print("属性ID 126 的值是: ", qigonglevelAttr)
+    local qiId = ConstCfg.QiGongExtAttr[attrid]
+    if qiId then
         local qigongtab = getallqigong(actor, 2) -- 获取所有气功 面板学习的等级
-        for i, v in pairs(qigongtab) do
-            if v > 0 then
-                updateqigong(actor, i, qigonglevelAttr, "=", 1) -- 脚本加气功ID
-            else
-                updateqigong(actor, i, 0, "=", 1)              -- 脚本加气功ID
+        if attrid == 126 then
+            for i, v in pairs(qigongtab) do
+                if v > 0 then
+                    local qigonglevelAttr = curvalue
+                    local qiAttrId = ConstCfg.QiGongAttrId[i]
+                    if qiAttrId then
+                        qigonglevelAttr = qigonglevelAttr + (abil(actor, qiAttrId) or 0)
+                    end
+                    updateqigong(actor, i, qigonglevelAttr, "=", 1) -- 脚本加气功等级
+                else
+                    updateqigong(actor, i, 0, "=", 1)              -- 脚本加气功等级
+                end
+            end
+        else
+            local qigonglevelAttr = curvalue + (abil(actor, 126) or 0)
+            local currentLv = qigongtab[qiId] or 0
+            if currentLv > 0 then
+                updateqigong(actor, qiId, qigonglevelAttr, "=", 1) -- 脚本加气功等级
             end
         end
     end
@@ -548,8 +558,12 @@ end
 -- 客户端操作气功修炼成功触发
 function clientupqigongsuccess(actor, qiId, maxlv, clientLv, scripLv, equipLv)
     local qigonglevelAttr = abil(actor, 126)              -- 获取属性ID 126的值
+    local qiAttrId = ConstCfg.QiGongAttrId[qiId]
+    if qiAttrId then
+        qigonglevelAttr = qigonglevelAttr + (abil(actor, qiAttrId) or 0)
+    end
     if qigonglevelAttr > 0 then
-        updateqigong(actor, qiId, qigonglevelAttr, "=", 1) -- 脚本加气功ID
+        updateqigong(actor, qiId, qigonglevelAttr, "=", 1) -- 脚本加气功等级
     end
 end
 
