@@ -415,7 +415,7 @@ function EquipDuanZao.hecheng(actor, data)
     changecustomitemabil(actor, -1, 2, hclv, hcattrid, hcattrvalue+addValue)
     changeitemaddvalue(actor, -1, 3+hclv, "=", hcattrvalue) --存储合成石基础属性
     updateitemtoclient(actor,-1)  -- 将修改后的属性刷新到客户端
-
+    
     if nextlv == hccnum then
         Message.sendmsgEx(actor, "EquipDuanZao","UpdataHC",{param1=1})
     else
@@ -529,6 +529,9 @@ function EquipDuanZao.transfer(actor, data)
             end
         end
     end
+    -- 更新客户端显示
+    updateitemtoclient(actor, -1)
+
     
 
     -- 更新源装备属性以及强化等级（清空后）
