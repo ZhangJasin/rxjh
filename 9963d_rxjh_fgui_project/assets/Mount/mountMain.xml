@@ -3,6 +3,7 @@
   <controller name="rightTabs" pages="0,灵兽,1,坐骑" selected="0"/>
   <controller name="topTabs" pages="0,坐骑,1,幻化" selected="0"/>
   <controller name="isselected" pages="0,未选择,1,选择" selected="0"/>
+  <controller name="tips" pages="0,,1," selected="0"/>
   <displayList>
     <component id="n2_o0nq" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,369" pivot="0.5,0.5" anchor="true" size="1000,695"/>
     <text id="n3_o0nq" name="n3" xy="664,51" pivot="0.5,0.5" anchor="true" size="139,34" fontSize="24" color="#9aafbb" align="center" autoSize="none" text="坐骑">
@@ -237,5 +238,29 @@
     <text id="n104_cb9c" name="n104" xy="962,625" size="70,32" fontSize="22" color="#fcf1bf" text="消耗：">
       <gearDisplay controller="rightTabs" pages="0"/>
     </text>
+    <text id="n107_cb9c" name="n107" xy="913,592" size="234,34" fontSize="17" color="#cccccc" ubb="true" autoSize="none" text="出战灵兽3%的属性转化给人物">
+      <gearDisplay controller="rightTabs" pages="0"/>
+      <gearDisplay2 controller="topTabs" pages="0" condition="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n110_cb9c" name="n110" src="cb9c45" fileName="Components/btn_help.xml" xy="863,147">
+      <gearDisplay controller="rightTabs" pages="0"/>
+      <gearDisplay2 controller="topTabs" pages="0" condition="0"/>
+    </component>
+    <component id="n111_cb9c" name="n111" src="cb9c45" fileName="Components/btn_help.xml" xy="863,147">
+      <gearDisplay controller="rightTabs" pages="0"/>
+      <gearDisplay2 controller="topTabs" pages="1" condition="0"/>
+    </component>
+    <component id="n112_cb9c" name="n112" src="cb9c45" fileName="Components/btn_help.xml" xy="863,147">
+      <gearDisplay controller="rightTabs" pages="1"/>
+      <gearDisplay2 controller="topTabs" pages="0" condition="0"/>
+    </component>
+    <component id="n113_cb9c" name="n113" src="cb9c45" fileName="Components/btn_help.xml" xy="863,147">
+      <gearDisplay controller="rightTabs" pages="1"/>
+      <gearDisplay2 controller="topTabs" pages="1" condition="0"/>
+    </component>
+    <component id="n114_cb9c" name="n114" src="cb9c46" fileName="Components/tips.xml" xy="0,0">
+      <gearDisplay controller="tips" pages="1"/>
+    </component>
   </displayList>
 </component>

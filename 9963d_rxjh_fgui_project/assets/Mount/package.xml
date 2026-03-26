@@ -78,6 +78,12 @@
     <image id="xkmz41" name="pet_006.png" path="/image/" exported="true"/>
     <image id="xkmz42" name="pet_007.png" path="/image/" exported="true"/>
     <image id="xkmz43" name="pet_008.png" path="/image/" exported="true"/>
+    <component id="cb9c45" name="btn_help.xml" path="/Components/" exported="true"/>
+    <component id="cb9c46" name="tips.xml" path="/Components/"/>
+    <component id="cb9c47" name="kongbg.xml" path="/Components/"/>
+    <component id="cb9c48" name="closebtn_yuan(1).xml" path="/Components/"/>
+    <image id="cb9c49" name="close_yuan.png" path="/Components/"/>
+    <component id="cb9c4a" name="infoScro.xml" path="/Components/"/>
   </resources>
   <publish name="">
     <atlas name="mount" index="0"/>

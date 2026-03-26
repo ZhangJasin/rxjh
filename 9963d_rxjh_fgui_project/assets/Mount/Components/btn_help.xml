@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="30,30" pivot="0.5,0.5" anchor="true" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n1_fbc0" name="btn" src="fbc0v4q" fileName="image/btn_help.png" xy="0,0" pkg="st7dgeqq">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button downEffect="scale" downEffectValue=".8"/>
+</component>

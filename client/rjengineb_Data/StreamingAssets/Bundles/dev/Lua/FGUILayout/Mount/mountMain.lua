@@ -15,6 +15,12 @@ local Pet = require("game_config/cfgcsv/Pet")
 local PetHuanhua = require("game_config/cfgcsv/PetHuanhua")
 local mountMainData = SL:RequireFile("FGUILayout/Mount/mountMainData")
 
+-- 为配置表添加tips字段
+Mount.Tips = "坐骑可以提供移动速度和属性加成。\n通过升级坐骑可以提升属性效果。\n出战坐骑可增强人物战斗力。"
+MountHuanhua.Tips = "激活坐骑幻化可以改变坐骑外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果，\n让你的坐骑更加炫酷。"
+Pet.Tips = "灵兽可以跟随出战，提供额外属性加成。\n出战灵兽3%的属性转化给人物。"
+PetHuanhua.Tips = "激活灵兽幻化可以改变灵兽外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果。"
+
 -- 数字转中文大写
 local NUMBER_TO_CHINESE = {"零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"}
 
@@ -287,7 +293,7 @@ function mountMain:initVariables()
     self.currentMountAttr = FGUI:ui_delegate(self._ui.nowAttr)  -- 坐骑当前属性
     self.nextMountAttr = FGUI:ui_delegate(self._ui.nextAttr)    -- 坐骑下级属性
     self.huanhuaAttr = FGUI:ui_delegate(self._ui.huanhuaAttr)   -- 坐骑幻化属性
-    
+
     -- 灵兽UI元素引用（与坐骑结构一致）
     self.petTopTabList = FGUI:ui_delegate(self._ui.petTopTabList)   -- 灵兽顶部标签列表
     self.petBody = FGUI:UIModel_Bind(self._ui.petBody) -- 灵兽模型
@@ -298,9 +304,12 @@ function mountMain:initVariables()
     self.currentPetAttr = FGUI:ui_delegate(self._ui.petNowAttr)  -- 灵兽当前属性
     self.nextPetAttr = FGUI:ui_delegate(self._ui.petNextAttr)    -- 灵兽下级属性
     self.petHuanhuaAttr = FGUI:ui_delegate(self._ui.petHuanhuaAttr)   -- 灵兽幻化属性
-    
+
     -- 初始化索引变量
     self.nowPetHHIndex = 0  -- 灵兽幻化当前选中索引
+
+    ---- 以下为tips界面
+    self.tipsControlle = FGUI:getController(self.component,"tips")
 end
 -- 初始化标签和列表
 function mountMain:initTabsAndLists()
@@ -369,6 +378,79 @@ function mountMain:bindEvents()
             self.petTopTab = index
             self:InitPetData()
         end
+    end)
+
+    ---- 以下为tips界面
+    -- 灵兽页面tips按钮 (n110: rightTabs=0, topTabs=0)
+    FGUI:setOnClickEvent(self._ui.n110,function()
+        local tipsbg = FGUI:ui_delegate(self._ui.n114)
+        local tipinfoScro = FGUI:ui_delegate(tipsbg.infoScro)
+        FGUI:GTextField_setText(tipsbg.title, "灵兽页面功能说明")
+        FGUI:GRichTextField_setText(tipinfoScro['n3'], Pet.Tips)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle,1)
+
+        -- 绑定关闭按钮事件
+        FGUI:setOnClickEvent(tipsbg.closetips,function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        end)
+        FGUI:setOnClickEvent(tipsbg.bg,function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        end)
+    end)
+
+    -- 灵兽幻化页面tips按钮 (n111: rightTabs=0, topTabs=1)
+    FGUI:setOnClickEvent(self._ui.n111,function()
+        local tipsbg = FGUI:ui_delegate(self._ui.n114)
+        local tipinfoScro = FGUI:ui_delegate(tipsbg.infoScro)
+        FGUI:GTextField_setText(tipsbg.title, "灵兽幻化功能说明")
+        FGUI:GRichTextField_setText(tipinfoScro['n3'], PetHuanhua.Tips)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle,1)
+
+        -- 绑定关闭按钮事件
+        FGUI:setOnClickEvent(tipsbg.closetips,function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        end)
+        FGUI:setOnClickEvent(tipsbg.bg,function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        end)
+    end)
+
+    -- 坐骑页面tips按钮 (n112: rightTabs=1, topTabs=0)
+    FGUI:setOnClickEvent(self._ui.n112,function()
+        local tipsbg = FGUI:ui_delegate(self._ui.n114)
+        local tipinfoScro = FGUI:ui_delegate(tipsbg.infoScro)
+        FGUI:GTextField_setText(tipsbg.title, "坐骑页面功能说明")
+        FGUI:GRichTextField_setText(tipinfoScro['n3'], Mount.Tips)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle,1)
+
+        -- 绑定关闭按钮事件
+        FGUI:setOnClickEvent(tipsbg.closetips,function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        end)
+        FGUI:setOnClickEvent(tipsbg.bg,function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        end)
+    end)
+
+    -- 坐骑幻化页面tips按钮 (n113: rightTabs=1, topTabs=1)
+    FGUI:setOnClickEvent(self._ui.n113,function()
+        local tipsbg = FGUI:ui_delegate(self._ui.n114)
+        local tipinfoScro = FGUI:ui_delegate(tipsbg.infoScro)
+        FGUI:GTextField_setText(tipsbg.title, "坐骑幻化功能说明")
+        FGUI:GRichTextField_setText(tipinfoScro['n3'], MountHuanhua.Tips)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle,1)
+
+        -- 绑定关闭按钮事件
+        FGUI:setOnClickEvent(tipsbg.closetips,function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        end)
+        FGUI:setOnClickEvent(tipsbg.bg,function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        end)
     end)
 end
 
@@ -915,7 +997,14 @@ function mountMain:setupPetHuanhuaList()
             FGUI:Controller_setSelectedIndex(controller2, 1)
         end
         FGUI:setOnClickEvent(item, function()
+            print("=== 点击灵兽幻化列表项 ===")
+            print("索引:", idx, "名称:", itemData.Name)
             self.nowPetHHIndex = idx
+            -- 更新模型ID
+            self.modelId = itemData.Model
+            print("新模型ID:", self.modelId)
+            -- 更新模型显示
+            self:setPetModel(self.modelId, 0, 1.1)
             -- 更新名称和属性
             FGUI:GTextField_setText(self._ui.petName, itemData.Name)
             self:setPetHHSx()
@@ -1556,5 +1645,7 @@ function mountMain:setXHCL()
         FGUI:GTextField_setColor(fuhao, "#ff0000")
     end
 end
+
+
 
 return mountMain
