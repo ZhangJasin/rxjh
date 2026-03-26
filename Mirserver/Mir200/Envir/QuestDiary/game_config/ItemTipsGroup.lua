@@ -94,5 +94,10 @@ local config = {
 		Desc="有属性道具",
 		Module={1,2,14},
 	},
+	[20] = { 
+		ID=20,
+		Desc="披风、头饰、幻武装备TIPS",
+		Module={18,17,2,3,5,27,23},
+	},
 }
 return config
