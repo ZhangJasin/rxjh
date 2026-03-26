@@ -85,8 +85,6 @@ function mountMainData:Init()
     _dataForPet.selectViewPetId = SL:GetValue("U", 58) -- 保持旧的选中主体id
     if _dataForPet.allPetsActive == 0 then _dataForPet.allPetsActive = {} end
     if _dataForPet.hhlistsj == 0 then _dataForPet.hhlistsj = {} end
-    -- 灵兽列表排序
-    self:initPetData()
     -- 灵兽幻化列表排序
     _dataForPet.hhSortList = self:setPetHHListSort()
 end
@@ -149,52 +147,68 @@ function mountMainData:Publish(event, data)
     end
 end
 -- 灵兽相关事件
--- 灵兽初始化数据
+-- 灵兽初始化数据（空函数，已废弃）
 function mountMainData:initPetData()
-    -- 分类灵兽和幻化
-    _dataForPet.allPets = {}
-    _dataForPet.allPetsHH = {}
-    for i, v in pairs(PetHuanhua) do
-        if tonumber(v.grade) == 1 then
-            -- 灵兽本体（grade=1为本体，>1为幻化）
-            local obj = v
-            -- 设置排序位置
-            if _dataForPet.allPetsActive[v.Name] then
-                obj.weizhi = 1
-            else
-                obj.weizhi = 2
-            end
-            -- 不隐藏的加入列表
-            if v.Is_Hide ~= 1 then
-                table.insert(_dataForPet.allPets, obj)
-            end
-        else
-            -- 灵兽幻化（grade>1）
-            if v.Is_Hide ~= 1 then
-                table.insert(_dataForPet.allPetsHH, v)
-            end
+    print("=== initPetData 已废弃 ===")
+end
+
+-- 设置灵兽主标题
+function mountMainData:setPetMainTitle()
+    local nowName = "龙猫"
+    if _dataForPet.allJieshu > 0 then
+        local petData = Pet[_dataForPet.allJieshu]
+        if petData then
+            nowName = petData.Name
         end
     end
-    -- 排序：已激活 > 未激活
-    table.sort(_dataForPet.allPets, function(a, b)
-        if a.weizhi == b.weizhi then
-            return a.ID < b.ID
-        else
-            return a.weizhi < b.weizhi
+    return nowName
+end
+
+-- 设置坐骑主标题
+function mountMainData:setMountMainTitle()
+    local nowName = "乌龙驹"
+    if _dataForMount.allJieshu > 0 then
+        local mountData = Mount[_dataForMount.allJieshu]
+        if mountData then
+            nowName = mountData.Name
         end
-    end)
+    end
+    return nowName
 end
 -- 灵兽本体排序
 function mountMainData:initPetDataSort()
-    local index = 1
-    for i = 1, #_dataForPet.allPets do
-        local item = _dataForPet.allPets[i]
-        if _dataForPet.allPetsActive[item.Pet_Name] then
-            _dataForPet.allPets[i].weizhi = 1
-        else
-            _dataForPet.allPets[i].weizhi = 2
+    print("=== initPetDataSort 开始 ===")
+    print("allPets 数量:", #_dataForPet.allPets)
+    print("allPetsActive:", _dataForPet.allPetsActive)
+    
+    -- 如果 allPets 为空，从 Pet 配表初始化
+    if #_dataForPet.allPets == 0 then
+        print("从 Pet 配表初始化 allPets")
+        for i = 1, #Pet do
+            if Pet[i] and Pet[i].Name then
+                local obj = Pet[i]
+                -- 设置排序位置
+                if _dataForPet.allPetsActive[Pet[i].Name] then
+                    obj.weizhi = 1
+                else
+                    obj.weizhi = 2
+                end
+                table.insert(_dataForPet.allPets, obj)
+            end
+        end
+    else
+        print("使用现有 allPets 进行排序")
+        local index = 1
+        for i = 1, #_dataForPet.allPets do
+            local item = _dataForPet.allPets[i]
+            if _dataForPet.allPetsActive[item.Name] then
+                _dataForPet.allPets[i].weizhi = 1
+            else
+                _dataForPet.allPets[i].weizhi = 2
+            end
         end
     end
+    
     -- 排序：已激活 > 未激活
     table.sort(_dataForPet.allPets, function(a, b)
         if a.weizhi == b.weizhi then
@@ -203,33 +217,51 @@ function mountMainData:initPetDataSort()
             return a.weizhi < b.weizhi
         end
     end)
+    
+    print("=== initPetDataSort 完成, 排序后数量:", #_dataForPet.allPets, "===")
 end
 -- 设置灵兽幻化列表排序
 function mountMainData:setPetHHListSort()
+    print("=== setPetHHListSort 开始 ===")
+    print("PetHuanhua 配表条目数:", #PetHuanhua)
+    print("hhlistsj:", _dataForPet.hhlistsj)
+    
     local names = {}
     local results = {}
-    for i = 1, #_dataForPet.allPetsHH do
-        if not names[_dataForPet.allPetsHH[i].Name] then
-            if _dataForPet.hhlistsj[_dataForPet.allPetsHH[i].Name] then
-                -- 已激活
-                names[_dataForPet.allPetsHH[i].Name] = 1
-                local obj = _dataForPet.allPetsHH[i]
-                obj.weizhi = 2
-                if self:getPetNameByModel(_dataForPet.petHHid) ==
-                    _dataForPet.allPetsHH[i].Name then obj.weizhi = 1 end
-                table.insert(results, obj)
-            else
-                -- 未激活但满足条件
-                if (not names[_dataForPet.allPetsHH[i].Name]) and _dataForPet.allPetsHH[i].grade ==
-                    1 and SL:GetValue(CONDITION, _dataForPet.allPetsHH[i].Condition) then
-                    names[_dataForPet.allPetsHH[i].Name] = 1
-                    local obj = _dataForPet.allPetsHH[i]
-                    obj.weizhi = 3
+    
+    for i = 1, #PetHuanhua do
+        local hhItem = PetHuanhua[i]
+        -- 跳过非幻化数据（灵兽本体在Pet配表，不是PetHuanhua）
+        if hhItem.grade and tonumber(hhItem.grade) > 0 then
+            if not names[hhItem.Name] then
+                -- 检查是否已激活
+                if _dataForPet.hhlistsj[hhItem.Name] then
+                    -- 已激活
+                    names[hhItem.Name] = 1
+                    local obj = hhItem
+                    obj.weizhi = 2
+                    -- 检查是否当前幻化
+                    if self:getPetNameByModel(_dataForPet.petHHid) == hhItem.Name then
+                        obj.weizhi = 1
+                    end
                     table.insert(results, obj)
+                    print("添加已激活幻化:", hhItem.Name, "weizhi:", obj.weizhi)
+                else
+                    -- 未激活但满足条件（grade=1表示该幻化的第一级）
+                    if hhItem.grade == 1 and SL:GetValue(CONDITION, hhItem.Condition) then
+                        names[hhItem.Name] = 1
+                        local obj = hhItem
+                        obj.weizhi = 3
+                        table.insert(results, obj)
+                        print("添加未激活幻化:", hhItem.Name, "weizhi:", obj.weizhi)
+                    else
+                        print("跳过未激活幻化:", hhItem.Name, "grade:", hhItem.grade, "Condition:", hhItem.Condition)
+                    end
                 end
             end
         end
     end
+    
     -- 排序：已幻化 > 已激活 > 未激活
     table.sort(results, function(a, b)
         if a.weizhi == b.weizhi then
@@ -238,6 +270,8 @@ function mountMainData:setPetHHListSort()
             return a.weizhi < b.weizhi
         end
     end)
+    
+    print("=== setPetHHListSort 完成, 结果数量:", #results, "===")
     return results
 end
 
@@ -392,12 +426,15 @@ end
 
 -- 根据模型获取灵兽名字
 function mountMainData:getPetNameByModel(model)
+    print("=== getPetNameByModel 开始, model:", model, "===")
     local name = ""
-    for i = 1, #_dataForPet.allPetsHH do
-        if _dataForPet.allPetsHH[i].Model == tonumber(model) then
-            name = _dataForPet.allPetsHH[i].Name
+    for i = 1, #PetHuanhua do
+        if PetHuanhua[i].Model == tonumber(model) then
+            name = PetHuanhua[i].Name
+            print("找到匹配的灵兽:", name, "Model:", PetHuanhua[i].Model)
         end
     end
+    print("=== getPetNameByModel 完成, 返回:", name, "===")
     return name
 end
 --  idx = 幻化id

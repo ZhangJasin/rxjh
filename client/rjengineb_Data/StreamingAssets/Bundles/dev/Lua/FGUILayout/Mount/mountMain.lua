@@ -155,8 +155,8 @@ function mountMain:initDisplayData()
     -- 从数据管理器获取数据或使用默认值
     self._dataForMount = self._data:GetDataForMount()
     self._dataForPet = self._data:GetDataForPet()
-    self.topTab = 0
-    self.petTopTab = 0
+    self.topTab = TAB_TYPE.MOUNT  -- 默认坐骑标签
+    self.petTopTab = 0  -- 默认灵兽升阶标签
     self.nowPetHHIndex = 0  -- 初始化灵兽幻化索引
     --默认显示灵兽页面
     self.selectPetIndex = 1 --灵兽默认选择
@@ -207,7 +207,7 @@ function mountMain:initDisplayData()
     self:setPetBtPetBtn()
     self:setPetXhcl()
     -- self:setPetSelect() -- UI中不存在petsList，暂时注释
-    -- 只初始化灵兽页面
+    -- 只初始化灵兽页面（确保显示灵兽升阶标签）
     self:initPetTab()
 end
 function mountMain:Enter(data)
@@ -335,10 +335,14 @@ function mountMain:bindEvents()
         print("=== 右侧标签切换 ===")
         print("切换到:", index == 0 and "灵兽" or "坐骑")
         if index == 0 then
-            -- 切换到灵兽
+            -- 切换到灵兽：固定到灵兽升阶标签
+            self.petTopTab = 0
+            FGUI:GList_setSelectedIndex(self._ui.petTopTabList, 0)
             self:InitPetData()
         else
-            -- 切换到坐骑
+            -- 切换到坐骑：固定到坐骑升阶标签
+            self.topTab = TAB_TYPE.MOUNT
+            FGUI:GList_setSelectedIndex(self._ui.topTabList, TAB_TYPE.MOUNT)
             self:InitData()
         end
     end)
@@ -562,7 +566,7 @@ end
 function mountMain:setPetXhcl()
     print("=== setPetXhcl 开始 ===")
     print("当前等级:", self._dataForPet.allJieshu, "标签页:", self.petTopTab)
-    
+
     local num = 1
     local costs = {}
     local iconItem = FGUI:GetChild(self._ui.petXhcl, "iconItem")
@@ -597,7 +601,7 @@ function mountMain:setPetXhcl()
             print("幻化列表为空")
             return
         end
-        
+
         -- 确保 nowPetHHIndex 在有效范围内
         if self.nowPetHHIndex < 0 then
             self.nowPetHHIndex = 0
@@ -605,19 +609,22 @@ function mountMain:setPetXhcl()
         if self.nowPetHHIndex >= #self._dataForPet.hhSortList then
             self.nowPetHHIndex = #self._dataForPet.hhSortList - 1
         end
-        
+
         local results = {}
         local nowName = self._dataForPet.hhSortList[self.nowPetHHIndex + 1].Name
+        print("当前幻化名称:", nowName)
         -- 收集同名的幻化配置
         for i = 1, #PetHuanhua do
             if PetHuanhua[i].Name == nowName then
                 results[#results + 1] = PetHuanhua[i]
             end
         end
+        print("收集到", #results, "个同名幻化配置")
         -- 计算当前等级
         local nowGrade = 1
         if self._dataForPet.hhlistsj[nowName] then
             nowGrade = self._dataForPet.hhlistsj[nowName] + 1
+            print("已激活等级:", self._dataForPet.hhlistsj[nowName], "下一等级:", nowGrade)
         end
         -- 防止越界
         if #results < nowGrade or #results == 0 then
@@ -628,8 +635,11 @@ function mountMain:setPetXhcl()
                 print("幻化等级配置无效")
                 return
             end
+            costs = results[nowGrade].Cost
+        else
+            costs = results[nowGrade].Cost
+            print("使用配置等级:", nowGrade, "Cost:", costs[1], costs[2])
         end
-        costs = results[nowGrade].Cost
     end
     -- 设置数量和图标
     num = costs[2]
@@ -780,14 +790,17 @@ end
 
 -- 初始化灵兽幻化标签
 function mountMain:initPetHuanhuaTab()
+    print("=== initPetHuanhuaTab 开始 ===")
     self.nowPetHHIndex = FGUI:GList_getSelectedIndex(self._ui.petLeftList)
     if self.nowPetHHIndex < 0 then
         self.nowPetHHIndex = 0
     end
     self:updatePetMainTitle()
     -- 获取排序后的幻化列表
+    print("幻化列表数量:", self._dataForPet.hhSortList and #self._dataForPet.hhSortList or 0)
     if self._dataForPet.hhSortList and #self._dataForPet.hhSortList > 0 then
         self.modelId = self._dataForPet.hhSortList[self.nowPetHHIndex + 1].Model
+        print("当前选中模型ID:", self.modelId)
     end
     -- 设置幻化属性
     self:setPetHHSx()
@@ -800,10 +813,13 @@ function mountMain:initPetHuanhuaTab()
     -- 更新模型和按钮状态
     if self.modelId then
         self:setPetModel(self.modelId, 0, 1.1)
+        print("幻化模型设置完成")
     end
     self:setPetHHAddBtn()
     self:UpdatePetHHBtnName()
     self:setPetXhcl()
+    -- 注意：不调用setPetInfo，因为幻化标签的名字由updatePetMainTitle处理
+    print("=== initPetHuanhuaTab 完成 ===")
 end
 
 -- 更新灵兽主标题
@@ -854,8 +870,8 @@ function mountMain:setPetHHSx()
     -- 设置BUFF描述
     local hhbuffTextHeight = 26 * #sx + 5
     local buffText = ""
-    if allNamesObj[nowGrade].BUFF_DESC then
-        buffText = allNamesObj[nowGrade].BUFF_DESC
+    if allNamesObj[nowGrade].BuffDesc then
+        buffText = allNamesObj[nowGrade].BuffDesc
     end
     FGUI:GTextField_setAutoSize(self.petHuanhuaAttr.buffText, 2)
     FGUI:setPosition(self.petHuanhuaAttr.buffText, 15, hhbuffTextHeight)
@@ -898,7 +914,7 @@ function mountMain:setupPetHuanhuaList()
             self.nowPetHHIndex = idx
             -- 更新名称和属性
             FGUI:GTextField_setText(self._ui.petName, itemData.Name)
-            self:setPetHHAtta()
+            self:setPetHHSx()
             self:UpdatePetHHBtnName()
             self:setPetXhcl()
             self:setPetHHAddBtn()
@@ -907,6 +923,10 @@ function mountMain:setupPetHuanhuaList()
     if self._dataForPet.hhSortList then
         FGUI:GList_setNumItems(self._ui.petLeftList, #self._dataForPet.hhSortList)
     end
+    -- 绑定激活/升级按钮事件
+    FGUI:setOnClickEvent(self._ui.petActiveBtn, function()
+        self:onPetHuanhuaActivateOrUpgrade()
+    end)
 end
 
 -- 灵兽幻化激活或升级
@@ -1072,21 +1092,62 @@ function mountMain:updateMainTitle()
     local nowName = "乌龙驹"
     -- 判断当前标签类型
     if self.topTab == TAB_TYPE.MOUNT_HH then
-        nowName = self._dataForMount.hhSortList[self.nowIndex + 1].Name
+        -- 安全检查:确保幻化列表不为空且索引有效
+        if self._dataForMount.hhSortList and #self._dataForMount.hhSortList > 0 then
+            local idx = self.nowIndex + 1
+            if idx >= 1 and idx <= #self._dataForMount.hhSortList then
+                nowName = self._dataForMount.hhSortList[idx].Name
+            end
+        else
+            nowName = "暂无幻化"
+        end
     end
     FGUI:GTextField_setText(self._ui.mountName, nowName)
 end
 
 -- 初始化幻化标签
 function mountMain:initHuanhuaTab()
+    print("=== initHuanhuaTab 开始 ===")
+    
+    -- 从数据管理器重新获取最新数据,确保切换标签时有正确数据
+    self._dataForMount = self._data:GetDataForMount()
+    
+    print("坐骑幻化列表数量:", self._dataForMount.hhSortList and #self._dataForMount.hhSortList or 0)
+    
     self.leftList = self._ui.leftList
     self.nowIndex = FGUI:GList_getSelectedIndex(self.leftList)
     if self.nowIndex < 0 then
         self.nowIndex = 0
     end
+    
+    -- 检查幻化列表是否为空
+    if not self._dataForMount.hhSortList or #self._dataForMount.hhSortList == 0 then
+        print("坐骑幻化列表为空，不更新显示")
+        -- 隐藏幻化相关的UI
+        FGUI:setVisible(self._ui.huanhuaAttr, false)
+        FGUI:setVisible(self._ui.huanhua, false)
+        FGUI:setVisible(self._ui.n60, false)
+        FGUI:GTextField_setText(self._ui.mountName, "暂无幻化")
+        print("=== initHuanhuaTab 完成（无数据） ===")
+        return
+    end
+    
+    -- 显示幻化相关UI
+    FGUI:setVisible(self._ui.huanhuaAttr, true)
+    FGUI:setVisible(self._ui.huanhua, true)
+    FGUI:setVisible(self._ui.n60, true)
+    
+    -- 确保索引在有效范围内
+    if self.nowIndex >= #self._dataForMount.hhSortList then
+        self.nowIndex = 0
+    end
+    
+    print("当前索引:", self.nowIndex)
+    
     self:updateMainTitle()
     -- 获取排序后的幻化列表
     self.modelId = self._dataForMount.hhSortList[self.nowIndex + 1].Model
+    print("模型ID:", self.modelId)
     -- 设置幻化属性
     self:setMountHHSx()
     -- 设置列表渲染
@@ -1099,6 +1160,8 @@ function mountMain:initHuanhuaTab()
     self:updateModel()
     self:setHHAddBtn()
     self:UpdateHHBtnName()
+    
+    print("=== initHuanhuaTab 完成 ===")
 end
 
 -- 设置幻化激活/升级按钮
