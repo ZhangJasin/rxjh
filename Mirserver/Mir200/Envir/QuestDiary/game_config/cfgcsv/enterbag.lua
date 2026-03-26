@@ -644,11 +644,20 @@ local config = {
 		itemname="热血石（百变神行）",
 		attrid=129,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3919] = { 
@@ -656,11 +665,20 @@ local config = {
 		itemname="热血石（护身罡气）",
 		attrid=130,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3920] = { 
@@ -668,11 +686,20 @@ local config = {
 		itemname="热血石（移花接木）",
 		attrid=131,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3921] = { 
@@ -680,11 +707,20 @@ local config = {
 		itemname="热血石（回柳身法）",
 		attrid=132,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3922] = { 
@@ -692,11 +728,20 @@ local config = {
 		itemname="热血石（怒海狂澜）",
 		attrid=133,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3923] = { 
@@ -704,11 +749,20 @@ local config = {
 		itemname="热血石（冲冠一怒）",
 		attrid=134,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3924] = { 
@@ -716,11 +770,20 @@ local config = {
 		itemname="热血石（摄魂一击）",
 		attrid=135,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3925] = { 
@@ -728,11 +791,20 @@ local config = {
 		itemname="热血石（四两千斤）",
 		attrid=136,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3926] = { 
@@ -740,11 +812,20 @@ local config = {
 		itemname="热血石（霸气破甲）",
 		attrid=137,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3927] = { 
@@ -752,11 +833,20 @@ local config = {
 		itemname="热血石（真武绝击）",
 		attrid=138,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3928] = { 
@@ -764,11 +854,20 @@ local config = {
 		itemname="热血石（暗影绝杀）",
 		attrid=139,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3929] = { 
@@ -776,11 +875,20 @@ local config = {
 		itemname="热血石（稳如泰山）",
 		attrid=163,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3930] = { 
@@ -788,11 +896,20 @@ local config = {
 		itemname="热血石（金钟罡气）",
 		attrid=162,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3931] = { 
@@ -800,11 +917,20 @@ local config = {
 		itemname="热血石（运气疗伤）",
 		attrid=161,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3932] = { 
@@ -812,11 +938,20 @@ local config = {
 		itemname="热血石（横练太保）",
 		attrid=160,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3933] = { 
@@ -824,11 +959,20 @@ local config = {
 		itemname="热血石（乾坤挪移）",
 		attrid=159,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3934] = { 
@@ -836,11 +980,20 @@ local config = {
 		itemname="热血石（狂神赋体）",
 		attrid=157,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3935] = { 
@@ -848,11 +1001,20 @@ local config = {
 		itemname="热血石（以攻为守）",
 		attrid=156,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3936] = { 
@@ -860,11 +1022,20 @@ local config = {
 		itemname="热血石（百步穿杨）",
 		attrid=155,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3937] = { 
@@ -872,11 +1043,20 @@ local config = {
 		itemname="热血石（猎鹰之眼）",
 		attrid=154,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3938] = { 
@@ -884,11 +1064,20 @@ local config = {
 		itemname="热血石（正本培源）",
 		attrid=153,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3939] = { 
@@ -896,11 +1085,20 @@ local config = {
 		itemname="热血石（心神凝聚）",
 		attrid=140,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3940] = { 
@@ -908,11 +1106,20 @@ local config = {
 		itemname="热血石（流星三矢）",
 		attrid=152,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3941] = { 
@@ -920,11 +1127,20 @@ local config = {
 		itemname="热血石（运气行心）",
 		attrid=151,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3942] = { 
@@ -932,11 +1148,20 @@ local config = {
 		itemname="热血石（太极心法）",
 		attrid=150,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3943] = { 
@@ -944,11 +1169,20 @@ local config = {
 		itemname="热血石（体血倍增）",
 		attrid=149,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3944] = { 
@@ -956,11 +1190,20 @@ local config = {
 		itemname="热血石（洗髓易筋）",
 		attrid=148,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3945] = { 
@@ -968,11 +1211,20 @@ local config = {
 		itemname="热血石（妙手回春）",
 		attrid=147,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3946] = { 
@@ -980,11 +1232,20 @@ local config = {
 		itemname="热血石（长功击力）",
 		attrid=146,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3947] = { 
@@ -992,11 +1253,20 @@ local config = {
 		itemname="热血石（吸星大法）",
 		attrid=145,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3948] = { 
@@ -1004,11 +1274,20 @@ local config = {
 		itemname="热血石（神佑之气）",
 		attrid=144,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3949] = { 
@@ -1016,11 +1295,20 @@ local config = {
 		itemname="热血石（九天真气）",
 		attrid=143,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3950] = { 
@@ -1028,11 +1316,20 @@ local config = {
 		itemname="热血石（狂风万破）",
 		attrid=142,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3951] = { 
@@ -1040,11 +1337,20 @@ local config = {
 		itemname="热血石（连环飞舞）",
 		attrid=141,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3952] = { 
@@ -1052,11 +1358,20 @@ local config = {
 		itemname="热血石（货币增加10%）",
 		attrid=14,
 		AttScoreStageList = {
-			[1] = 1000,
-			[2] = 1000,
+			[1] = {
+				[1] = 1000,
+				[2] = 1000,
+			},
+			[2] = {
+				[1] = 1000,
+				[2] = 1000,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3953] = { 
@@ -1064,11 +1379,20 @@ local config = {
 		itemname="热血石（经验增加5%）",
 		attrid=12,
 		AttScoreStageList = {
-			[1] = 500,
-			[2] = 500,
+			[1] = {
+				[1] = 500,
+				[2] = 500,
+			},
+			[2] = {
+				[1] = 500,
+				[2] = 500,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3954] = { 
@@ -1076,11 +1400,20 @@ local config = {
 		itemname="热血石（历练增加5%）",
 		attrid=13,
 		AttScoreStageList = {
-			[1] = 500,
-			[2] = 500,
+			[1] = {
+				[1] = 500,
+				[2] = 500,
+			},
+			[2] = {
+				[1] = 500,
+				[2] = 500,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3955] = { 
@@ -1088,11 +1421,20 @@ local config = {
 		itemname="热血石（合成概率增加1%）",
 		attrid=163,
 		AttScoreStageList = {
-			[1] = 100,
-			[2] = 100,
+			[1] = {
+				[1] = 100,
+				[2] = 100,
+			},
+			[2] = {
+				[1] = 100,
+				[2] = 100,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3956] = { 
@@ -1100,11 +1442,20 @@ local config = {
 		itemname="热血石（气功等级加1）",
 		attrid=126,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 	[3957] = { 
@@ -1112,11 +1463,20 @@ local config = {
 		itemname="热血石（灵甲护身）",
 		attrid=158,
 		AttScoreStageList = {
-			[1] = 1,
-			[2] = 1,
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 1,
+				[2] = 1,
+			},
 		},
-		AttScoreRatio_arr="10000",
-		RatioAll=10000,
+		AttScoreRatio_arr = {
+			[1] = 50,
+			[2] = 50,
+		},
+		RatioAll=100,
 		RightSubscript=1,
 	},
 }
