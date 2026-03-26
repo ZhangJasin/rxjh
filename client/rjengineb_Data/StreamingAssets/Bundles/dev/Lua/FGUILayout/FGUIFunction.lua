@@ -418,28 +418,96 @@ function FGUIFunction:GetAttShowData(data, job, extraParam)
     return baseAttrShow
 end
 
--- 获取战力
+-- 获取战力（综合判断AttScore中的属性，按优先级计算）
 function FGUIFunction:GetEquipPower(item)
     if not item then
         return 0
     end
-
-    local power = 0
-
+    
+    local totalPower = 0
     local job = SL:GetValue("JOB")
     local allAttList = FGUIFunction:GetEquipCombineAttList(item, job, true)
+    
+    -- 存储各个属性的值，用于综合计算
+    local attValues = {}
+    
+    -- 先收集所有属性值
     for i, data in ipairs(allAttList) do
         local id = data.id
         local value = data.value
-        local config = id and SL:GetMetaValue("ITEM_ATTR_POWER_CONFIG", id)
-        if config then
-            local powerKey = string.format("power%s", job)
-            local powerValue = config[powerKey] and (math.floor(value / config.value) * config[powerKey]) or 0
-            power = power + powerValue
-        end
+        attValues[id] = (attValues[id] or 0) + value
     end
-
-    return power
+    
+    -- 根据AttScore表中的属性优先级进行综合计算
+    -- 优先判断的属性：攻速(5)、命中(50)、攻击力(23)
+    -- 其次判断的属性：最小攻击力(21)、最大攻击力(22)、武功攻击力(53)
+    -- 其他攻击相关属性：会心几率(57)、会心伤害(58)、忽视防御(62)等
+    
+    -- 1. 攻击力 (ID: 23) - 最重要的攻击属性
+    local attackPower = attValues[23] or 0
+    if attackPower > 0 then
+        -- 攻击力权重最高，直接乘以权重系数
+        totalPower = totalPower + attackPower * 1.5
+    end
+    
+    -- 2. 命中 (ID: 50) - 第二重要的属性
+    local hitPower = attValues[50] or 0
+    if hitPower > 0 then
+        -- 命中权重较高
+        totalPower = totalPower + hitPower * 1.2
+    end
+    
+    -- 3. 攻速 (ID: 5) - 重要属性
+    local attackSpeedPower = attValues[5] or 0
+    if attackSpeedPower > 0 then
+        -- 攻速通常以百分比形式存在，需要特殊处理
+        -- 假设攻速每1%增加0.5战力
+        totalPower = totalPower + attackPower * 0.5
+    end
+    
+    -- 4. 武功攻击力 (ID: 53) - 武功相关攻击属性
+    local skillAttackPower = attValues[53] or 0
+    if skillAttackPower > 0 then
+        -- 武功攻击力权重为1.0
+        totalPower = totalPower + skillAttackPower * 1.0
+    end
+    
+    -- 5. 最小攻击力 (ID: 21) 和 最大攻击力 (ID: 22)
+    local minAttackPower = attValues[21] or 0
+    local maxAttackPower = attValues[22] or 0
+    
+    if minAttackPower > 0 or maxAttackPower > 0 then
+        -- 取平均值作为攻击力参考，权重为1.0
+        local avgAttackPower = (minAttackPower + maxAttackPower) / 2
+        totalPower = totalPower + avgAttackPower * 1.0
+    end
+    
+    -- 6. 其他攻击相关属性（按重要性递减顺序）
+    -- 会心几率 (ID: 57)
+    local critChancePower = attValues[57] or 0
+    if critChancePower > 0 then
+        -- 会心几率每1%增加0.3战力
+        totalPower = totalPower + critChancePower * 0.3
+    end
+    
+    -- 会心伤害 (ID: 58)
+    local critDamagePower = attValues[58] or 0
+    if critDamagePower > 0 then
+        -- 会心伤害每1%增加0.4战力
+        totalPower = totalPower + critDamagePower * 0.4
+    end
+    
+    -- 忽视防御 (ID: 62)
+    local ignoreDefensePower = attValues[62] or 0
+    if ignoreDefensePower > 0 then
+        -- 忽视防御每1%增加0.6战力
+        totalPower = totalPower + ignoreDefensePower * 0.6
+    end
+    
+    -- 将总战力四舍五入到整数
+    totalPower = math.floor(totalPower + 0.5)
+    
+    return totalPower
 end
 
 -- 获取防御力

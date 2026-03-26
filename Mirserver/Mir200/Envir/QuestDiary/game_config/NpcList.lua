@@ -55,9 +55,8 @@ local config = {
 		NpcTalk="npc_talk_400004",
 		Function_Button = {
 			[1] = 1,
-			[2] = 2,
-			[3] = 5,
-			[4] = 4,
+			[2] = 5,
+			[3] = 4,
 		},
 		Npc_Store=2,
 	},
@@ -170,7 +169,7 @@ local config = {
 		Dir=180,
 		Name="柳正关关主 柳絮",
 		MapRightName="柳正关关主 柳絮",
-		NpcTalk="npc_talk_400012",
+		NpcTalk="npc_talk_400011",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -184,12 +183,10 @@ local config = {
 		Dir=180,
 		Name="萧春水",
 		MapRightName="萧春水",
-		NpcTalk="npc_talk_400013",
+		NpcTalk="npc_talk_400012",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=4,
 	},
 	[15] = { 
 		ID=15,
@@ -199,10 +196,12 @@ local config = {
 		Y=102,
 		Name="红凤凰",
 		MapRightName="红凤凰",
-		NpcTalk="npc_talk_400014",
+		NpcTalk="npc_talk_400013",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=4,
 	},
 	[16] = { 
 		ID=16,
@@ -212,7 +211,7 @@ local config = {
 		Y=103,
 		Name="南宫柳",
 		MapRightName="南宫柳",
-		NpcTalk="npc_talk_400015",
+		NpcTalk="npc_talk_400014",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -226,7 +225,7 @@ local config = {
 		Dir=180,
 		Name="楚留情",
 		MapRightName="楚留情",
-		NpcTalk="npc_talk_400016",
+		NpcTalk="npc_talk_400015",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -240,7 +239,7 @@ local config = {
 		Dir=180,
 		Name="韦白白白",
 		MapRightName="韦白白白",
-		NpcTalk="npc_talk_400017",
+		NpcTalk="npc_talk_400016",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -253,12 +252,10 @@ local config = {
 		Y=57,
 		Name="慕容光",
 		MapRightName="慕容光",
-		NpcTalk="npc_talk_400018",
+		NpcTalk="npc_talk_400017",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=9,
 	},
 	[20] = { 
 		ID=20,
@@ -269,12 +266,12 @@ local config = {
 		Dir=270,
 		Name="谢晓风",
 		MapRightName="谢晓风",
-		NpcTalk="npc_talk_400019",
+		NpcTalk="npc_talk_400018",
 		Function_Button = {
 			[1] = 5,
 			[2] = 4,
 		},
-		Npc_Store=8,
+		Npc_Store=9,
 	},
 	[21] = { 
 		ID=21,
@@ -285,10 +282,12 @@ local config = {
 		Dir=180,
 		Name="掌财长老 石成金",
 		MapRightName="掌财长老 石成金",
-		NpcTalk="npc_talk_400020",
+		NpcTalk="npc_talk_400019",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=8,
 	},
 	[22] = { 
 		ID=22,
@@ -299,7 +298,7 @@ local config = {
 		Dir=180,
 		Name="执法长老 严世镜",
 		MapRightName="执法长老 严世镜",
-		NpcTalk="npc_talk_400021",
+		NpcTalk="npc_talk_400020",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -313,7 +312,7 @@ local config = {
 		Dir=180,
 		Name="神武门主车敬墨",
 		MapRightName="神武门主车敬墨",
-		NpcTalk="npc_talk_400022",
+		NpcTalk="npc_talk_400021",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -327,7 +326,7 @@ local config = {
 		Dir=180,
 		Name="神武门副门主闻四海",
 		MapRightName="神武门副门主闻四海",
-		NpcTalk="npc_talk_400023",
+		NpcTalk="npc_talk_400022",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -341,12 +340,10 @@ local config = {
 		Dir=90,
 		Name="令狐二中",
 		MapRightName="令狐二中",
-		NpcTalk="npc_talk_400024",
+		NpcTalk="npc_talk_400023",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=7,
 	},
 	[26] = { 
 		ID=26,
@@ -357,10 +354,12 @@ local config = {
 		Dir=180,
 		Name="传功长老 上官音",
 		MapRightName="传功长老 上官音",
-		NpcTalk="npc_talk_400025",
+		NpcTalk="npc_talk_400024",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=7,
 	},
 	[27] = { 
 		ID=27,
@@ -371,7 +370,7 @@ local config = {
 		Dir=180,
 		Name="授戒长老 上官玄",
 		MapRightName="授戒长老 上官玄",
-		NpcTalk="npc_talk_400026",
+		NpcTalk="npc_talk_400025",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -384,12 +383,10 @@ local config = {
 		Y=61,
 		Name="杨不凡",
 		MapRightName="杨不凡",
-		NpcTalk="npc_talk_400027",
+		NpcTalk="npc_talk_400026",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=6,
 	},
 	[29] = { 
 		ID=29,
@@ -400,10 +397,12 @@ local config = {
 		Dir=180,
 		Name="北海村长",
 		MapRightName="北海村长",
-		NpcTalk="npc_talk_400028",
+		NpcTalk="npc_talk_400027",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=6,
 	},
 	[30] = { 
 		ID=30,
@@ -414,7 +413,7 @@ local config = {
 		Dir=270,
 		Name="光之使者",
 		MapRightName="光之使者",
-		NpcTalk="npc_talk_400029",
+		NpcTalk="npc_talk_400028",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -428,7 +427,7 @@ local config = {
 		Dir=180,
 		Name="莫彦君",
 		MapRightName="莫彦君",
-		NpcTalk="npc_talk_400030",
+		NpcTalk="npc_talk_400029",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -442,7 +441,7 @@ local config = {
 		Dir=270,
 		Name="花牡丹",
 		MapRightName="花牡丹",
-		NpcTalk="npc_talk_400031",
+		NpcTalk="npc_talk_400030",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -456,7 +455,7 @@ local config = {
 		Dir=270,
 		Name="金十龄",
 		MapRightName="金十龄",
-		NpcTalk="npc_talk_400032",
+		NpcTalk="npc_talk_400031",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -470,7 +469,7 @@ local config = {
 		Dir=270,
 		Name="王语然",
 		MapRightName="王语然",
-		NpcTalk="npc_talk_400033",
+		NpcTalk="npc_talk_400032",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -483,7 +482,7 @@ local config = {
 		Y=138,
 		Name="乞丐老人",
 		MapRightName="乞丐老人",
-		NpcTalk="npc_talk_400034",
+		NpcTalk="npc_talk_400033",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -497,12 +496,10 @@ local config = {
 		Dir=90,
 		Name="司空揽月",
 		MapRightName="司空揽月",
-		NpcTalk="npc_talk_400035",
+		NpcTalk="npc_talk_400034",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=22,
 	},
 	[37] = { 
 		ID=37,
@@ -513,12 +510,12 @@ local config = {
 		Dir=90,
 		Name="金蓉蓉",
 		MapRightName="金蓉蓉",
-		NpcTalk="npc_talk_400036",
+		NpcTalk="npc_talk_400035",
 		Function_Button = {
 			[1] = 5,
 			[2] = 4,
 		},
-		Npc_Store=23,
+		Npc_Store=22,
 	},
 	[38] = { 
 		ID=38,
@@ -529,10 +526,12 @@ local config = {
 		Dir=270,
 		Name="肖铁钧",
 		MapRightName="肖铁钧",
-		NpcTalk="npc_talk_400037",
+		NpcTalk="npc_talk_400036",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=23,
 	},
 	[39] = { 
 		ID=39,
@@ -543,12 +542,10 @@ local config = {
 		Dir=90,
 		Name="吕孤城",
 		MapRightName="吕孤城",
-		NpcTalk="npc_talk_400038",
+		NpcTalk="npc_talk_400037",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=21,
 	},
 	[40] = { 
 		ID=40,
@@ -559,10 +556,12 @@ local config = {
 		Dir=90,
 		Name="暗之使者",
 		MapRightName="暗之使者",
-		NpcTalk="npc_talk_400039",
+		NpcTalk="npc_talk_400038",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=21,
 	},
 	[42] = { 
 		ID=42,
@@ -573,7 +572,7 @@ local config = {
 		Dir=180,
 		Name="石惊天",
 		MapRightName="石惊天",
-		NpcTalk="npc_talk_400040",
+		NpcTalk="npc_talk_400039",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -587,7 +586,7 @@ local config = {
 		Dir=180,
 		Name="余琳琅",
 		MapRightName="余琳琅",
-		NpcTalk="npc_talk_400041",
+		NpcTalk="npc_talk_400040",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -601,7 +600,7 @@ local config = {
 		Dir=270,
 		Name="木心兰",
 		MapRightName="木心兰",
-		NpcTalk="npc_talk_400042",
+		NpcTalk="npc_talk_400041",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -615,12 +614,10 @@ local config = {
 		Dir=90,
 		Name="上官清风",
 		MapRightName="上官清风",
-		NpcTalk="npc_talk_400043",
+		NpcTalk="npc_talk_400042",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=15,
 	},
 	[46] = { 
 		ID=46,
@@ -631,12 +628,12 @@ local config = {
 		Dir=180,
 		Name="段天明",
 		MapRightName="段天明",
-		NpcTalk="npc_talk_400044",
+		NpcTalk="npc_talk_400043",
 		Function_Button = {
 			[1] = 5,
 			[2] = 4,
 		},
-		Npc_Store=14,
+		Npc_Store=15,
 	},
 	[47] = { 
 		ID=47,
@@ -647,10 +644,12 @@ local config = {
 		Dir=180,
 		Name="关少峰",
 		MapRightName="关少峰",
-		NpcTalk="npc_talk_400045",
+		NpcTalk="npc_talk_400044",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=14,
 	},
 	[48] = { 
 		ID=48,
@@ -661,7 +660,7 @@ local config = {
 		Dir=180,
 		Name="黄剑宇",
 		MapRightName="黄剑宇",
-		NpcTalk="npc_talk_400046",
+		NpcTalk="npc_talk_400045",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -675,7 +674,7 @@ local config = {
 		Dir=180,
 		Name="黄浩虎",
 		MapRightName="黄浩虎",
-		NpcTalk="npc_talk_400047",
+		NpcTalk="npc_talk_400046",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -689,12 +688,10 @@ local config = {
 		Dir=180,
 		Name="艺花兰",
 		MapRightName="艺花兰",
-		NpcTalk="npc_talk_400048",
+		NpcTalk="npc_talk_400047",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=18,
 	},
 	[51] = { 
 		ID=51,
@@ -704,10 +701,12 @@ local config = {
 		Y=187.3,
 		Name="月宫姮娥",
 		MapRightName="月宫姮娥",
-		NpcTalk="npc_talk_400049",
+		NpcTalk="npc_talk_400048",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=18,
 	},
 	[52] = { 
 		ID=52,
@@ -718,7 +717,7 @@ local config = {
 		Dir=120,
 		Name="仙渺阁主",
 		MapRightName="仙渺阁主",
-		NpcTalk="npc_talk_400050",
+		NpcTalk="npc_talk_400049",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -732,12 +731,10 @@ local config = {
 		Dir=270,
 		Name="宋景琳",
 		MapRightName="宋景琳",
-		NpcTalk="npc_talk_400051",
+		NpcTalk="npc_talk_400050",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=20,
 	},
 	[54] = { 
 		ID=54,
@@ -748,12 +745,12 @@ local config = {
 		Dir=270,
 		Name="吴霸武",
 		MapRightName="吴霸武",
-		NpcTalk="npc_talk_400052",
+		NpcTalk="npc_talk_400051",
 		Function_Button = {
 			[1] = 5,
 			[2] = 4,
 		},
-		Npc_Store=19,
+		Npc_Store=20,
 	},
 	[55] = { 
 		ID=55,
@@ -764,10 +761,12 @@ local config = {
 		Dir=240,
 		Name="徐晓兰",
 		MapRightName="徐晓兰",
-		NpcTalk="npc_talk_400053",
+		NpcTalk="npc_talk_400052",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=19,
 	},
 	[56] = { 
 		ID=56,
@@ -778,7 +777,7 @@ local config = {
 		Dir=90,
 		Name="梅红",
 		MapRightName="梅红",
-		NpcTalk="npc_talk_400054",
+		NpcTalk="npc_talk_400053",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -792,7 +791,7 @@ local config = {
 		Dir=180,
 		Name="三邪关关主翅娟",
 		MapRightName="三邪关关主翅娟",
-		NpcTalk="npc_talk_400055",
+		NpcTalk="npc_talk_400054",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -806,7 +805,7 @@ local config = {
 		Dir=90,
 		Name="周叔通",
 		MapRightName="周叔通",
-		NpcTalk="npc_talk_400056",
+		NpcTalk="npc_talk_400055",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -819,12 +818,10 @@ local config = {
 		Y=63.1,
 		Name="陆小凰",
 		MapRightName="陆小凰",
-		NpcTalk="npc_talk_400057",
+		NpcTalk="npc_talk_400056",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=5,
 	},
 	[60] = { 
 		ID=60,
@@ -834,10 +831,12 @@ local config = {
 		Y=64.5,
 		Name="南宫絮",
 		MapRightName="南宫絮",
-		NpcTalk="npc_talk_400058",
+		NpcTalk="npc_talk_400057",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=5,
 	},
 	[61] = { 
 		ID=61,
@@ -848,7 +847,7 @@ local config = {
 		Dir=180,
 		Name="裘千米",
 		MapRightName="裘千米",
-		NpcTalk="npc_talk_400059",
+		NpcTalk="npc_talk_400058",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -862,7 +861,7 @@ local config = {
 		Dir=90,
 		Name="千晓生",
 		MapRightName="千晓生",
-		NpcTalk="npc_talk_400060",
+		NpcTalk="npc_talk_400059",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -876,7 +875,7 @@ local config = {
 		Dir=90,
 		Name="柳善提督府府主施薇",
 		MapRightName="柳善提督府府主施薇",
-		NpcTalk="npc_talk_400061",
+		NpcTalk="npc_talk_400060",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -890,7 +889,7 @@ local config = {
 		Dir=90,
 		Name="柳善府二府主段雨",
 		MapRightName="柳善府二府主段雨",
-		NpcTalk="npc_talk_400062",
+		NpcTalk="npc_talk_400061",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -904,10 +903,9 @@ local config = {
 		Dir=180,
 		Name="慕容明",
 		MapRightName="慕容明",
-		NpcTalk="npc_talk_400063",
+		NpcTalk="npc_talk_400062",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
 	},
 	[66] = { 
@@ -919,9 +917,10 @@ local config = {
 		Dir=90,
 		Name="金木天王 南宫木",
 		MapRightName="金木天王 南宫木",
-		NpcTalk="npc_talk_400064",
+		NpcTalk="npc_talk_400063",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
 	},
 	[67] = { 
@@ -933,7 +932,7 @@ local config = {
 		Dir=90,
 		Name="玉水天王 项秋水",
 		MapRightName="玉水天王 项秋水",
-		NpcTalk="npc_talk_400065",
+		NpcTalk="npc_talk_400064",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -947,7 +946,7 @@ local config = {
 		Dir=90,
 		Name="飓风天王 风清飘",
 		MapRightName="飓风天王 风清飘",
-		NpcTalk="npc_talk_400066",
+		NpcTalk="npc_talk_400065",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -961,7 +960,7 @@ local config = {
 		Dir=90,
 		Name="烈焰天王 慕容火",
 		MapRightName="烈焰天王 慕容火",
-		NpcTalk="npc_talk_400067",
+		NpcTalk="npc_talk_400066",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -975,12 +974,10 @@ local config = {
 		Dir=90,
 		Name="萧十二郎",
 		MapRightName="萧十二郎",
-		NpcTalk="npc_talk_400068",
+		NpcTalk="npc_talk_400067",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=11,
 	},
 	[71] = { 
 		ID=71,
@@ -991,10 +988,12 @@ local config = {
 		Dir=90,
 		Name="轩辕二光",
 		MapRightName="轩辕二光",
-		NpcTalk="npc_talk_400069",
+		NpcTalk="npc_talk_400068",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=11,
 	},
 	[72] = { 
 		ID=72,
@@ -1005,12 +1004,10 @@ local config = {
 		Dir=90,
 		Name="上官晓仙",
 		MapRightName="上官晓仙",
-		NpcTalk="npc_talk_400070",
+		NpcTalk="npc_talk_400069",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=12,
 	},
 	[73] = { 
 		ID=73,
@@ -1021,12 +1018,12 @@ local config = {
 		Dir=180,
 		Name="丁冬夏",
 		MapRightName="丁冬夏",
-		NpcTalk="npc_talk_400071",
+		NpcTalk="npc_talk_400070",
 		Function_Button = {
 			[1] = 5,
 			[2] = 4,
 		},
-		Npc_Store=10,
+		Npc_Store=12,
 	},
 	[74] = { 
 		ID=74,
@@ -1037,10 +1034,12 @@ local config = {
 		Dir=90,
 		Name="季时雨",
 		MapRightName="季时雨",
-		NpcTalk="npc_talk_400072",
+		NpcTalk="npc_talk_400071",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=10,
 	},
 	[75] = { 
 		ID=75,
@@ -1051,7 +1050,7 @@ local config = {
 		Dir=90,
 		Name="郭晋玄",
 		MapRightName="郭晋玄",
-		NpcTalk="npc_talk_400073",
+		NpcTalk="npc_talk_400072",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -1065,12 +1064,10 @@ local config = {
 		Dir=90,
 		Name="美琳",
 		MapRightName="美琳",
-		NpcTalk="npc_talk_400074",
+		NpcTalk="npc_talk_400073",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=27,
 	},
 	[77] = { 
 		ID=77,
@@ -1081,12 +1078,12 @@ local config = {
 		Dir=90,
 		Name="白震宇",
 		MapRightName="白震宇",
-		NpcTalk="npc_talk_400075",
+		NpcTalk="npc_talk_400074",
 		Function_Button = {
 			[1] = 5,
 			[2] = 4,
 		},
-		Npc_Store=26,
+		Npc_Store=27,
 	},
 	[78] = { 
 		ID=78,
@@ -1097,10 +1094,12 @@ local config = {
 		Dir=180,
 		Name="文星竹",
 		MapRightName="文星竹",
-		NpcTalk="npc_talk_400076",
+		NpcTalk="npc_talk_400075",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=26,
 	},
 	[79] = { 
 		ID=79,
@@ -1111,12 +1110,10 @@ local config = {
 		Dir=180,
 		Name="姜大壮",
 		MapRightName="姜大壮",
-		NpcTalk="npc_talk_400077",
+		NpcTalk="npc_talk_400076",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=25,
 	},
 	[80] = { 
 		ID=80,
@@ -1126,10 +1123,12 @@ local config = {
 		Y=51.5,
 		Name="薛妍芝",
 		MapRightName="薛妍芝",
-		NpcTalk="npc_talk_400078",
+		NpcTalk="npc_talk_400077",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=25,
 	},
 	[81] = { 
 		ID=81,
@@ -1140,12 +1139,10 @@ local config = {
 		Dir=90,
 		Name="江云鹤",
 		MapRightName="江云鹤",
-		NpcTalk="npc_talk_400079",
+		NpcTalk="npc_talk_400078",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=24,
 	},
 	[82] = { 
 		ID=82,
@@ -1155,10 +1152,12 @@ local config = {
 		Y=45.4,
 		Name="白锦堂",
 		MapRightName="白锦堂",
-		NpcTalk="npc_talk_400080",
+		NpcTalk="npc_talk_400079",
 		Function_Button = {
-			[1] = 4,
+			[1] = 5,
+			[2] = 4,
 		},
+		Npc_Store=24,
 	},
 	[83] = { 
 		ID=83,
@@ -1169,7 +1168,7 @@ local config = {
 		Dir=180,
 		Name="程咬银",
 		MapRightName="程咬银",
-		NpcTalk="npc_talk_400081",
+		NpcTalk="npc_talk_400080",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -1183,7 +1182,7 @@ local config = {
 		Dir=180,
 		Name="彩玉",
 		MapRightName="彩玉",
-		NpcTalk="npc_talk_400082",
+		NpcTalk="npc_talk_400081",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -1196,7 +1195,7 @@ local config = {
 		Y=140.3,
 		Name="木平之",
 		MapRightName="木平之",
-		NpcTalk="npc_talk_400083",
+		NpcTalk="npc_talk_400082",
 		Function_Button = {
 			[1] = 4,
 		},
@@ -1210,12 +1209,10 @@ local config = {
 		Dir=270,
 		Name="风三娘",
 		MapRightName="风三娘",
-		NpcTalk="npc_talk_400084",
+		NpcTalk="npc_talk_400083",
 		Function_Button = {
-			[1] = 5,
-			[2] = 4,
+			[1] = 4,
 		},
-		Npc_Store=16,
 	},
 	[87] = { 
 		ID=87,
@@ -1226,12 +1223,12 @@ local config = {
 		Dir=180,
 		Name="上官明月",
 		MapRightName="上官明月",
-		NpcTalk="npc_talk_400085",
+		NpcTalk="npc_talk_400084",
 		Function_Button = {
 			[1] = 5,
 			[2] = 4,
 		},
-		Npc_Store=17,
+		Npc_Store=16,
 	},
 }
 return config
