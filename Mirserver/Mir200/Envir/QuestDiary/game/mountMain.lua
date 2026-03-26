@@ -134,13 +134,25 @@ function mountMain.petShengji(actor)
 end
 
 -- 灵兽幻化激活（与坐骑幻化相同的结构）
-function mountMain.petHuanhuaJihuo(actor, postData)
-    local name = postData.idx
+function mountMain.petHuanhuajihuo(actor, postData)
+    print("=== 灵兽幻化激活 ===")
+    print("客户端数据:", type(postData), postData)
+    
+    if not postData then
+        print("postData 为空！")
+        return
+    end
+    
+    local name = postData.Name  -- 应该使用 Name 字段，而不是 idx
     local grade = postData.grade
     local data = nil
+    print("查找: Name=" .. name .. ", grade=" .. grade)
+    print("petHHlist 总数:", #petHHlist)
+    
     for i = 1, #petHHlist do
         if petHHlist[i].Name == name and tonumber(petHHlist[i].grade) == tonumber(grade) then
             data = petHHlist[i]
+            print("找到匹配数据:", data)
             break
         end
     end
@@ -150,6 +162,8 @@ function mountMain.petHuanhuaJihuo(actor, postData)
         local costs = data.Cost -- 消耗
         local itemId = tonumber(costs[1])
         local num = tonumber(costs[2])
+
+        print("材料ID:", itemId, "需要数量:", num, "拥有数量:", getItemNum(actor, itemId))
 
         if getItemNum(actor, itemId) < num then
             sendmsg(actor, 9, "激活材料不足" .. num .. "个")
@@ -209,14 +223,16 @@ function mountMain.petHuanhuaJihuo(actor, postData)
             end
 
             -- 更新前端
-            Message.sendmsgEx(actor, "mountMain", "updateHHmodel", {
+            Message.sendmsgEx(actor, "mountMain", "updatePetHHmodel", {
                 ycList = ycList,
                 name = name,
                 grade = grade,
-                mountHHid = petHHid
+                petHHid = petHHid
             })
+            print("灵兽幻化激活成功")
         end
     else
+        print("未找到匹配的灵兽幻化数据")
         sendmsg(actor, 9, "激活失败")
     end
 end
@@ -290,12 +306,21 @@ function mountMain.setPetModel(actor, data)
     end
 
     mountMain.setPetHHBuff(actor, oldbuffList, newBuffList, isCancel)
-    -- PassiveManager:onVarChanged(actor, "U33") -- 根据实际情况调整
     sethumvar(actor, VarCfg.U_Pet_Take_Id, petTakeId)
-    -- changeappear(actor, 5, petTakeId) -- 根据实际情况调整
-
-    Message.sendmsgEx(actor, "mountMain", "UpdateHHBtnName", {
-        mountHHid = petTakeId,
+    -- 获取所有已激活的灵兽幻化数据
+    local allPetsHHData = {}
+    for k, v in pairs(allhhList) do
+        for i = 1, #petHHlist do
+            if petHHlist[i].Name == k and petHHlist[i].grade == v then
+                allPetsHHData[petHHlist[i].Model] = petHHlist[i]
+            end
+        end
+    end
+    
+    Message.sendmsgEx(actor, "mountMain", "updatePetModelResult", {
+        allPetsHHData = allPetsHHData,
+        showPetModelId = petTakeId,
+        petHHid = petTakeId,
         isCancel = isCancel,
         oldModelId = oldPetTakeId
     })

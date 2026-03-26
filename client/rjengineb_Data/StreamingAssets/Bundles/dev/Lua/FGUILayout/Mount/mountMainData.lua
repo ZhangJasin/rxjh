@@ -387,6 +387,12 @@ function mountMainData:unrecallpetResult()
     self:Publish("ls_unrecallpet", self:GetDataForPet())
 end
 
+-- 灵兽幻化模型切换
+-- {mountId = 选择的灵兽幻化模型id}
+function mountMainData:setPetModel(data)
+    ssrMessage:sendmsgEx("mountMain", "setPetModel", data)
+end
+
 -- 坐骑
 -- {mountId = 选择的模型id}
 function mountMainData:setModel(data)

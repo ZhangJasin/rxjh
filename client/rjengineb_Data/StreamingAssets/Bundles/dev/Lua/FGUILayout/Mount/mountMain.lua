@@ -391,10 +391,11 @@ function mountMain:setPetInfo()
     FGUI:GTextField_setText(self.petJieshuName["bigLevel"], NUMBER_TO_CHINESE[jieshu + 1])
     -- 设置出战按钮文字
     local title = FGUI:GetChild(self._ui.petQhbtn, "title")
+    -- 显示出战或召回状态
     if self._dataForPet.isPetChuzhan == STATUS.FIGHT then
-        FGUI:GTextField_setText(title, "休息")
-    else
         FGUI:GTextField_setText(title, "出战")
+    else
+        FGUI:GTextField_setText(title, "召回")
     end
 end
 
@@ -554,10 +555,11 @@ function mountMain:setPetBtPetBtn()
     else
         -- 已激活
         FGUI:setVisible(self._ui.petQhbtn, true)
+        -- 显示出战或召回状态
         if self._dataForPet.isPetChuzhan == STATUS.FIGHT then
-            FGUI:GTextField_setText(title, "休息")
-        else
             FGUI:GTextField_setText(title, "出战")
+        else
+            FGUI:GTextField_setText(title, "召回")
         end
     end
 end
@@ -754,6 +756,7 @@ function mountMain:initPetTab()
     print("=== initPetTab 开始 ===")
     print("是否激活:", self._dataForPet.isPetJh)
     print("当前等级:", self._dataForPet.allJieshu)
+    print("出战状态:", self._dataForPet.isPetChuzhan)
 
     local title = FGUI:GetChild(self._ui.shengjilingshou, "n1")
     -- 判断是否已激活
@@ -766,10 +769,11 @@ function mountMain:initPetTab()
         FGUI:setVisible(self._ui.petQhbtn, true)
         FGUI:GTextField_setText(title, "升阶")
         local petQhbtnTitle = FGUI:GetChild(self._ui.petQhbtn, "title")
+        -- 显示出战或召回状态
         if self._dataForPet.isPetChuzhan == STATUS.FIGHT then
             FGUI:GTextField_setText(petQhbtnTitle, "出战")
         else
-            FGUI:GTextField_setText(petQhbtnTitle, "休息")
+            FGUI:GTextField_setText(petQhbtnTitle, "召回")
         end
     end
     -- 设置模型ID
