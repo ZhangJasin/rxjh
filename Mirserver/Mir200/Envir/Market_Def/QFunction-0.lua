@@ -40,6 +40,7 @@ local _, errinfo = pcall(function()
     Class             = require("Envir/QuestDiary/game_config/Class.lua")
     Recycle_cfg       = require("Envir/QuestDiary/game_config/Recycle.lua")
     Transfer_cfg      = require("Envir/QuestDiary/game_config/Transfer.lua") --人物转职信息
+    TransferInfo      = require("Envir/QuestDiary/game/transfer/TransferInfo.lua") --人物转职信息(新)
     Item_cfg          = require("Envir/QuestDiary/game_config/Item.lua")
     ItemEquip_cfg     = require("Envir/QuestDiary/game_config/ItemEquip.lua")
     itemReplace       = require("Envir/QuestDiary/game/itemReplace.lua") -- 物品替换

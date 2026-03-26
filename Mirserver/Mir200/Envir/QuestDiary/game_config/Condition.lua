@@ -176,15 +176,6 @@ local config = {
 	[50006] = { 
 		Condition="<$RANDOM_6> == 1",
 	},
-	[51001] = { 
-		Condition="<$RANDOM_100> <= 96",
-	},
-	[51002] = { 
-		Condition="<$RANDOM_100> <= 3",
-	},
-	[51003] = { 
-		Condition="<$RANDOM_100> == 1",
-	},
 	[61000] = { 
 		Condition="<$JOB> == 1",
 	},

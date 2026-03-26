@@ -296,10 +296,12 @@ function MainMissionData:InitTaskProgress()
     self:NotifySubscribers()
 end
 
--- 请求转职数据
-function MainMissionData:RequestTransfer()
-    SL:RequestTransfer()
+function MainMissionData:TransferComplete()  -- 网络请求
+    self.data.transfer_cur = SL:GetMetaValue("TRANSFER_MAINPLAYER_CONFIG")
+    self.data.transfer_next = SL:GetMetaValue("TRANSFER_MAINPLAYER_NEXT_CONFIG")
+    FGUI:Open("Transfer", "TransferSucceed", { curCfg = self.data.transfer_cur, nextCfg = self.data.transfer_next })
 end
+
 
 -- 转职数据
 function MainMissionData:SetTransferData()

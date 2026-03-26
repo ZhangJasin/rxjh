@@ -4,14 +4,17 @@ local dispatch_handler = {}
 -- 示例：假设 ssrMessage.lua 在 network 目录下
 local function _dispatchex(msgID, arg1, arg2, arg3, msgData)
     --print("110")
+    -- print("收到消息：msgID="..msgID, "arg1="..tostring(arg1), "arg2="..tostring(arg2), "arg3="..tostring(arg3), "msgData="..tostring(msgData))
     local module, method
     if msgID == ssrNetMsgCfg.USER_MESSAGE_ID then
         module, method = msgData.moduleName,msgData.methodName
         assert(module or method,"error message module or method")
         local targetTab = dispatch_handler[module]
+        -- SL:dump(targetTab,"消息组"..method.."的注册对象")
         if targetTab then
             for k,target in ipairs(targetTab) do
                 if target[method] then
+                    -- print("调用自定义消息：module="..module.." method="..method)
                     target[method](target,msgData.msgData or {})
                 end
             end
@@ -29,6 +32,7 @@ local function _dispatchex(msgID, arg1, arg2, arg3, msgData)
         if targetTab then
             for k,target in ipairs(targetTab) do
                 if target[method] then
+                    -- print("调用消息：module="..module.." method="..method)
                     target[method](target, arg1, arg2, arg3, msgData)
                 end
             end
@@ -56,7 +60,7 @@ local function _dispatch(msgID, arg1, arg2, arg3, jsonstr)
             end
         end
     else
-        --print("444")
+        -- print("msgID="..msgID, "arg1="..tostring(arg1), "arg2="..tostring(arg2), "arg3="..tostring(arg3), "jsonstr="..tostring(jsonstr))
         _dispatchex(msgID, arg1, arg2, arg3, msgData)
     end
 end

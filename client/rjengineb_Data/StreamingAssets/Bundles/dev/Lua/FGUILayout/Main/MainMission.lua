@@ -302,14 +302,13 @@ end
 function MainMission:onTransferComplete()  -- 完成转职
     local curCfg = MainMissionData.data.transfer_cur
     local nextCfg = MainMissionData.data.transfer_next
-    SL:dump(curCfg, "当前转职配置")
-    SL:dump(nextCfg, "下一个转职配置")
     FGUI:Open("Transfer", "TransferSucceed", { curCfg = curCfg, nextCfg = nextCfg })
     -- 发送转职完成消息
     SL:SendNetMsg(9998,12, nil, nil, nil)
     MainMissionData:SetTransferData()
     ssrMessage:sendmsgEx("Task", "onTransfer")
 end
+
 function MainMission:onAddSkill()  -- 新增技能
     ssrMessage:sendmsgEx("Task", "onStudySkill")
 end
@@ -430,7 +429,7 @@ function MainMission:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_ASSIST_MISSION_SHOW, "MainMission", handler(self, self.onMissionShow))
     SL:RegisterLUAEvent(LUA_EVENT_AUTO_MOVE_BEGIN, "MainMission", handler(self, self.onXunlunBegin))               -- 自动寻路开始     
     SL:RegisterLUAEvent(LUA_EVENT_AUTO_MOVE_END, "MainMission", handler(self, self.onXunlunEnd))                   -- 自动寻路结束
-    SL:RegisterLUAEvent(LUA_EVENT_TRANSFER_SUCCEED, "MainMission", handler(self, self.onTransferComplete))         -- 完成转职
+    -- SL:RegisterLUAEvent(LUA_EVENT_TRANSFER_SUCCEED, "MainMission", handler(self, self.onTransferComplete))         -- 完成转职
     SL:RegisterLUAEvent(LUA_EVENT_SKILL_ADD, "MainMission", handler(self, self.onAddSkill))                        -- 新增技能
     SL:RegisterLUAEvent(LUA_EVENT_CHANGE_SCENE, "MainMission", handler(self, self.OnPlayerPosChange))   -- 切换地图
     SL:RegisterLUAEvent(LUA_EVENT_PLAYER_ACTION_BEGIN, "MainMission", handler(self, self.OnPlayerPosChange))   -- 玩家位置改变
@@ -447,7 +446,7 @@ function MainMission:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_ASSIST_MISSION_SHOW, "MainMission")
     SL:UnRegisterLUAEvent(LUA_EVENT_AUTO_MOVE_BEGIN, "MainMission")
     SL:UnRegisterLUAEvent(LUA_EVENT_AUTO_MOVE_END, "MainMission")
-    SL:UnRegisterLUAEvent(LUA_EVENT_TRANSFER_SUCCEED, "MainMission")
+    -- SL:UnRegisterLUAEvent(LUA_EVENT_TRANSFER_SUCCEED, "MainMission")
     SL:UnRegisterLUAEvent(LUA_EVENT_SKILL_ADD, "MainMission")
     SL:UnRegisterLUAEvent(LUA_EVENT_CHANGE_SCENE, "MainMission")
     SL:UnRegisterLUAEvent(LUA_EVENT_PLAYER_ACTION_BEGIN, "MainMission")

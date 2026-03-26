@@ -22,6 +22,7 @@ function TransferSucceed:Enter(data)
     -- self._nextCfg = XlsTransfer[tempTransferID + 1]
     self._curCfg = data.curCfg
     self._nextCfg = data.nextCfg
+    print("TransferSucceed:Enter", self._curCfg.ID, self._nextCfg.ID)
     self:RegisterEvent()
     self:UpdateUI()
 end

@@ -348,7 +348,7 @@ local config = {
 	},
 	["GuildMsgFColor"] = { 
 		k="GuildMsgFColor",
-		value=219,
+		value=254,
 		sName="行会频道文字颜色",
 		Group=5,
 		GroupName="信息控制(1)",
@@ -393,7 +393,7 @@ local config = {
 	},
 	["GreenMsgFColor"] = { 
 		k="GreenMsgFColor",
-		value=219,
+		value=254,
 		sName="SENDMSG类型6颜色",
 		Group=5,
 		GroupName="信息控制(1)",
@@ -465,7 +465,7 @@ local config = {
 	},
 	["KillByMonstDropUseItem"] = { 
 		k="KillByMonstDropUseItem",
-		value=1,
+		value=0,
 		sName="启用怪物杀死掉装备",
 		Group=7,
 		GroupName="死亡选项",
@@ -475,7 +475,7 @@ local config = {
 	},
 	["KillByHumanDropUseItem"] = { 
 		k="KillByHumanDropUseItem",
-		value=1,
+		value=0,
 		sName="启用人物杀死掉装备",
 		Group=7,
 		GroupName="死亡选项",
@@ -485,7 +485,7 @@ local config = {
 	},
 	["DropPlayLevel"] = { 
 		k="DropPlayLevel",
-		value=1,
+		value=42,
 		sName="多少级以下玩家死亡不掉装备",
 		Group=7,
 		GroupName="死亡选项",
@@ -551,7 +551,7 @@ local config = {
 	},
 	["InSafeDisableDrop"] = { 
 		k="InSafeDisableDrop",
-		value=0,
+		value=1,
 		sName="启用安全区禁止扔",
 		Group=8,
 		GroupName="物品选项",
@@ -598,7 +598,7 @@ local config = {
 	},
 	["BagAddSendMail"] = { 
 		k="BagAddSendMail",
-		value=1,
+		value=0,
 		sName="背包满获得物品发邮件",
 		Group=8,
 		GroupName="物品选项",
@@ -662,7 +662,7 @@ local config = {
 	},
 	["guild_Rank"] = { 
 		k="guild_Rank",
-		value="0#帮主#1#127&1#副帮主#2#111&2#长老#200#15&3#精英#200#0&4#成员#200#0",
+		value="0#帮主#1&1#副帮主#2&2#长老#200&3#精英#200&4#成员#200",
 		sName="职位编号#职位名称#职位数量#权限权限0无权限1同意申请2踢人4任命8邀请16修改门派名称32修改门派公告64入会设置",
 		Group=9,
 		GroupName="功能控制",
@@ -870,7 +870,7 @@ local config = {
 	},
 	["AutoChangeGuildMasterTime"] = { 
 		k="AutoChangeGuildMasterTime",
-		value=1,
+		value=72,
 		sName="会长离线超过xx小时，系统自动转让会长，转让规则悬停查看",
 		Group=11,
 		GroupName="功能控制(2)",
@@ -898,7 +898,7 @@ local config = {
 	},
 	["SaveLuaInstance"] = { 
 		k="SaveLuaInstance",
-		value=0,
+		value=1,
 		sName="保留Lua虚拟机",
 		Group=12,
 		GroupName="系统参数",
@@ -916,7 +916,7 @@ local config = {
 	},
 	["NewKfDay"] = { 
 		k="NewKfDay",
-		value=0,
+		value=1,
 		sName="勾选=按自然天数计算，不勾选按运行24小时计算",
 		Group=12,
 		GroupName="系统参数",
@@ -1416,6 +1416,11 @@ local config = {
 		sName="目标功能中攻击者停手一定时间后移出列表（主玩家承伤清理cd）",
 		GroupName="客户端使用",
 		IsServer=0,
+	},
+	["QuickUseTipsShow"] = { 
+		k="QuickUseTipsShow",
+		value=1,
+		sName="自动穿装备提示",
 	},
 }
 return config

@@ -613,7 +613,9 @@ function Task.getReward(actor, data)
         -- print("taskid",taskid)
         -- dump(Task_cfg[taskid]['transfer_lasttask'])
         if Task_cfg[taskid]['transfer_lasttask'] then
-            Message.sendmsgEx(actor, "MainMission","RequestTransfer")
+            TransferInfo.doTransfer(actor)
+            -- settargetinfo(actor,"RELEVEL",8)
+            -- Message.sendmsgEx(actor, "MainMissionData","RequestTransfer")
         end
     end
 end

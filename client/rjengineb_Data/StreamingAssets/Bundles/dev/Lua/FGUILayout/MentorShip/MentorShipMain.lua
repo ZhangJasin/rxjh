@@ -837,10 +837,10 @@ function MentorShipMain:addApplyBubble()
 end
 -----------------------------------注册事件--------------------------------------
 function MentorShipMain:RegisterEvent()
-    SL:RegisterLUAEvent(LUA_EVENT_TRANSFER_SUCCEED, "MentorShipMain", handler(self, self.onTransferComplete))
+    -- SL:RegisterLUAEvent(LUA_EVENT_TRANSFER_SUCCEED, "MentorShipMain", handler(self, self.onTransferComplete))
 end
 
 function MentorShipMain:RemoveEvent()
-    SL:UnRegisterLUAEvent(LUA_EVENT_TRANSFER_SUCCEED, "MentorShipMain")
+    -- SL:UnRegisterLUAEvent(LUA_EVENT_TRANSFER_SUCCEED, "MentorShipMain")
 end
 return MentorShipMain
