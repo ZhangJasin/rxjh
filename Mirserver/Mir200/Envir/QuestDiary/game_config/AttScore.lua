@@ -7,6 +7,7 @@ local config = {
 		Recharge=1,
 		View=2,
 		Isshow=1,
+		Color=146,
 	},
 	[1] = { 
 		Idx=1,
@@ -124,6 +125,7 @@ local config = {
 		View=1,
 		Desc="调整有效攻击距离",
 		Isshow=0,
+		Color=146,
 	},
 	[12] = { 
 		Idx=12,
@@ -133,6 +135,7 @@ local config = {
 		View=1,
 		Desc="经验倍率",
 		Isshow=0,
+		Color=146,
 	},
 	[13] = { 
 		Idx=13,
@@ -142,6 +145,7 @@ local config = {
 		View=1,
 		Desc="历练倍率",
 		Isshow=0,
+		Color=146,
 	},
 	[14] = { 
 		Idx=14,
@@ -151,6 +155,7 @@ local config = {
 		View=1,
 		Desc="银两倍率",
 		Isshow=0,
+		Color=146,
 	},
 	[21] = { 
 		Idx=21,
@@ -160,6 +165,7 @@ local config = {
 		View=0,
 		AssociationAtt="23#1#5000",
 		Desc="最小攻击力(属性21,22在客户端tips显示为23号属性名，如 攻击力：50-100)",
+		Color=146,
 	},
 	[22] = { 
 		Idx=22,
@@ -169,6 +175,7 @@ local config = {
 		View=0,
 		AssociationAtt="23#1#5000",
 		Desc="最大攻击力(属性21,22在客户端tips显示为23号属性名，如 攻击力：50-100)",
+		Color=146,
 	},
 	[23] = { 
 		Idx=23,
@@ -365,6 +372,7 @@ local config = {
 		View=1,
 		Desc="示例：对玩家目标的伤害减免",
 		Isshow=0,
+		Color=146,
 		Sort=18,
 	},
 	[67] = { 
@@ -375,6 +383,7 @@ local config = {
 		View=1,
 		Desc="示例：在PVP环境中对输出的统一加成",
 		Isshow=0,
+		Color=146,
 		Sort=19,
 	},
 	[68] = { 
@@ -385,6 +394,7 @@ local config = {
 		View=1,
 		Desc="示例：在PVP环境中对所受伤害的统一减免",
 		Isshow=0,
+		Color=146,
 		Sort=20,
 	},
 	[69] = { 
@@ -395,6 +405,7 @@ local config = {
 		View=1,
 		Desc="示例：对怪物的武功防御加成",
 		Isshow=0,
+		Color=146,
 		Sort=21,
 	},
 	[70] = { 
