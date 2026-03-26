@@ -20093,7 +20093,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#百变",
+		Subscript="0#00FF00#13#百变神行",
 		sBack="9#100",
 	},
 	[3919] = { 
@@ -20114,7 +20114,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#护身",
+		Subscript="0#00FF00#13#护身罡气",
 		sBack="9#100",
 	},
 	[3920] = { 
@@ -20135,7 +20135,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#移花",
+		Subscript="0#00FF00#13#移花接木",
 		sBack="9#100",
 	},
 	[3921] = { 
@@ -20156,7 +20156,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#回柳",
+		Subscript="0#00FF00#13#回柳身法",
 		sBack="9#100",
 	},
 	[3922] = { 
@@ -20177,7 +20177,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#怒海",
+		Subscript="0#00FF00#13#怒海狂澜",
 		sBack="9#100",
 	},
 	[3923] = { 
@@ -20198,7 +20198,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#冲冠",
+		Subscript="0#00FF00#13#冲冠一怒",
 		sBack="9#100",
 	},
 	[3924] = { 
@@ -20219,7 +20219,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#摄魂",
+		Subscript="0#00FF00#13#摄魂一击",
 		sBack="9#100",
 	},
 	[3925] = { 
@@ -20240,7 +20240,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#四两",
+		Subscript="0#00FF00#13#四两千金",
 		sBack="9#100",
 	},
 	[3926] = { 
@@ -20261,7 +20261,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#霸气",
+		Subscript="0#00FF00#13#霸气破甲",
 		sBack="9#100",
 	},
 	[3927] = { 
@@ -20282,7 +20282,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#真武",
+		Subscript="0#00FF00#13#真武绝击",
 		sBack="9#100",
 	},
 	[3928] = { 
@@ -20303,7 +20303,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#暗影",
+		Subscript="0#00FF00#13#暗影绝杀",
 		sBack="9#100",
 	},
 	[3929] = { 
@@ -20324,7 +20324,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#稳如",
+		Subscript="0#00FF00#13#稳如泰山",
 		sBack="9#100",
 	},
 	[3930] = { 
@@ -20345,7 +20345,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#金钟",
+		Subscript="0#00FF00#13#金钟罡气",
 		sBack="9#100",
 	},
 	[3931] = { 
@@ -20366,7 +20366,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#运气",
+		Subscript="0#00FF00#13#运气疗伤",
 		sBack="9#100",
 	},
 	[3932] = { 
@@ -20387,7 +20387,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#横练",
+		Subscript="0#00FF00#13#横练太保",
 		sBack="9#100",
 	},
 	[3933] = { 
@@ -20408,7 +20408,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#乾坤",
+		Subscript="0#00FF00#13#乾坤挪移",
 		sBack="9#100",
 	},
 	[3934] = { 
@@ -20429,7 +20429,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#狂神",
+		Subscript="0#00FF00#13#狂神降世",
 		sBack="9#100",
 	},
 	[3935] = { 
@@ -20450,7 +20450,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#转攻",
+		Subscript="0#00FF00#13#转攻为守",
 		sBack="9#100",
 	},
 	[3936] = { 
@@ -20471,7 +20471,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#百步",
+		Subscript="0#00FF00#13#百步穿杨",
 		sBack="9#100",
 	},
 	[3937] = { 
@@ -20492,7 +20492,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#猎鹰",
+		Subscript="0#00FF00#13#猎鹰之眼",
 		sBack="9#100",
 	},
 	[3938] = { 
@@ -20513,7 +20513,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#正本",
+		Subscript="0#00FF00#13#正本培源",
 		sBack="9#100",
 	},
 	[3939] = { 
@@ -20534,7 +20534,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#心神",
+		Subscript="0#00FF00#13#心神凝聚",
 		sBack="9#100",
 	},
 	[3940] = { 
@@ -20555,7 +20555,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#流星",
+		Subscript="0#00FF00#13#流星三矢",
 		sBack="9#100",
 	},
 	[3941] = { 
@@ -20576,7 +20576,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#运气",
+		Subscript="0#00FF00#13#运气行心",
 		sBack="9#100",
 	},
 	[3942] = { 
@@ -20597,7 +20597,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#太极",
+		Subscript="0#00FF00#13#太极心法",
 		sBack="9#100",
 	},
 	[3943] = { 
@@ -20618,7 +20618,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#体血",
+		Subscript="0#00FF00#13#体血倍增",
 		sBack="9#100",
 	},
 	[3944] = { 
@@ -20639,7 +20639,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#洗髓",
+		Subscript="0#00FF00#13#洗髓易筋",
 		sBack="9#100",
 	},
 	[3945] = { 
@@ -20660,7 +20660,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#妙手",
+		Subscript="0#00FF00#13#妙手回春",
 		sBack="9#100",
 	},
 	[3946] = { 
@@ -20681,7 +20681,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#长功",
+		Subscript="0#00FF00#13#长功击力",
 		sBack="9#100",
 	},
 	[3947] = { 
@@ -20702,7 +20702,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#吸星",
+		Subscript="0#00FF00#13#吸星大法",
 		sBack="9#100",
 	},
 	[3949] = { 
@@ -20723,7 +20723,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#九天",
+		Subscript="0#00FF00#13#九天真气",
 		sBack="9#100",
 	},
 	[3950] = { 
@@ -20744,7 +20744,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#狂风",
+		Subscript="0#00FF00#13#狂风万破",
 		sBack="9#100",
 	},
 	[3951] = { 
@@ -20765,7 +20765,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#连环",
+		Subscript="0#00FF00#13#连环飞舞",
 		sBack="9#100",
 	},
 	[3952] = { 
@@ -20891,7 +20891,7 @@ local config = {
 		ItemType=3,
 		ItemClass=6,
 		TipsGroupId=7,
-		Subscript="0#00FF00#13#灵甲",
+		Subscript="0#00FF00#13#灵甲护身",
 		sBack="9#100",
 	},
 }
