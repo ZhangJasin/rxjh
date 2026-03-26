@@ -422,8 +422,8 @@ function EquipDuanZao:baglist()
                 self.qhequipMakeIndex = bagequiplist[index].MakeIndex
                 local itemData= SL:GetValue("ITEM_DATA", bagequiplist[index].Index)
                 self.selectEquipQHTabIndex = itemData.EquipQHTabId
-                -- 合成页面需要重新获取bagitemlist数据
-                if self.pageControlle.selectedIndex == 0 then
+                -- 除转移外页面需要重新获取bagitemlist数据
+                if self.pageControlle.selectedIndex ~= 2 then
                     self.selectEquipLv = itemData.NeedLevel
                     self:GetPageData()
                 end
@@ -467,8 +467,8 @@ function EquipDuanZao:equiplist()
 
                 local itemData= SL:GetValue("ITEM_DATA", equipposlist[index].Index)
                 self.selectEquipQHTabIndex = itemData.EquipQHTabId
-                -- 合成页面需要重新获取bagitemlist数据
-                if self.pageControlle.selectedIndex == 0 then                    
+                -- 除转移外页面需要重新获取bagitemlist数据
+                if self.pageControlle.selectedIndex ~= 2 then                    
                     self.selectEquipLv = itemData.NeedLevel
                     self:GetPageData()
                 end
@@ -670,11 +670,15 @@ function EquipDuanZao:GetPageData()
     end
     for k, v in pairs(EquipQHItemTab) do
         local data = SL:GetValue("ITEM_DATA", k)
-        if v.itemtype == 2 and (page == 2 or page == 4 or page == 5) then
+        if v.itemtype == 2 and (page == 2 or page == 4 or page == 5) then           
             if v['limitpos'] == 5 then
                 table.insert(bagitemlist[1], data)
             else
-                table.insert(bagitemlist[2], data)
+                if self.selectEquipStdMode == 5 then
+                    table.insert(bagitemlist[1], data)
+                else 
+                    table.insert(bagitemlist[2], data)
+                end
             end
         elseif page == 5 and v['itemtype'] == 4 then
             if v['limitpos'] == 5 then
@@ -761,10 +765,10 @@ function EquipDuanZao:GetAddItem()
         self:xyfjiaohao()
         self:itemtsjiaohao()
     elseif page == 3 then
-        self.additemshowlist0 = bagitemlist[1]    
+        self.additemshowlist0 = bagitemlist[2]    
         self:itemsxjiaohao()
     elseif page == 4 then
-        self.additemshowlist0 = bagitemlist[1]
+        self.additemshowlist0 = bagitemlist[2]
         self:xyfjiaohao()
         self:itemtsjiaohao()
     elseif page == 5 then
