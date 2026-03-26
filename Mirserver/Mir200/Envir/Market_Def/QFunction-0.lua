@@ -42,6 +42,8 @@ local _, errinfo = pcall(function()
     Transfer_cfg      = require("Envir/QuestDiary/game_config/Transfer.lua") --人物转职信息
     Item_cfg          = require("Envir/QuestDiary/game_config/Item.lua")
     ItemEquip_cfg     = require("Envir/QuestDiary/game_config/ItemEquip.lua")
+    itemReplace       = require("Envir/QuestDiary/game/itemReplace.lua") -- 物品替换
+
     ----初始化个人模块
     require("Envir/QuestDiary/game/init.lua")
 end)
@@ -427,6 +429,12 @@ end
 
 --物品进背包前触发
 function beforeaddbag(actor, itemObj, itemid, count)
+    local newItemId, newCount = itemReplace.getRandomItem(itemid)
+    if newItemId and newCount then
+        delitembymakeindex(actor, getiteminfo(itemObj, "MAKEINDEX"))
+        giveitem(actor, newItemId .. "#" .. newCount)
+        return false
+    end
     if enterbag[itemid] then
         local jdattrid = custitemattinfo(actor, itemObj .. "_0_1_ID") or 0
         if jdattrid == 0 then
