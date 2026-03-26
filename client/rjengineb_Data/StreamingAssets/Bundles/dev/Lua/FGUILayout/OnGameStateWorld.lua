@@ -72,6 +72,10 @@ SL:RequireFile("FGUILayout/FuncDock/FuncDock")
 FuncDock.main()
 
 -----------------------------------------------------------------------------
+-- 称号
+SL:RequireFile("FGUILayout/Bag/TitleCheck")
+TitleCheck.main()
+
 -- 行会
 SL:RequireFile("FGUILayout/Guild/Guild")
 Guild.main()

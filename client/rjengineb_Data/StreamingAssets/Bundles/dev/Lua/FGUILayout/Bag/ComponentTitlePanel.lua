@@ -125,6 +125,7 @@ function ComponentTitlePanel:TitleItemRender(idx,item)
 end
 
 function ComponentTitlePanel:RefreshTitleList()
+    -- SL:PrintMetaKey()
     self.titleData = SL:GetValue("TITLE_SHOW_LIST") or {}
     FGUI:GList_setNumItems(self.list_title,table.nums(self.titleData or {}))
     self:RefreshButton()
