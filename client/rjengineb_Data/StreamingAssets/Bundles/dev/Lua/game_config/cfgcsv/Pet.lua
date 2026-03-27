@@ -6,7 +6,6 @@ local config = {
 			[2] = 1,
 		},
 		Model=900001,
-		MonsterID=80001,  -- 灵兽怪物ID
 	},
 	[1] = { 
 		Level=1,
