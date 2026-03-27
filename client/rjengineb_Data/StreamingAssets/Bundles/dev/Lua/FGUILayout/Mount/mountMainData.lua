@@ -367,10 +367,14 @@ function mountMainData:level(data)
     self:Publish("ls_level_result", self:GetDataForPet())
 end
 function mountMainData:updatePetModelResult(data)
+    print("=== 客户端收到updatePetModelResult ===")
+    print("data:", data)
+    print("showPetModelId:", data.showPetModelId)
     _dataForPet.allPetsToModel = data.allPetsHHData
     _dataForPet.showPetModelId = data.showPetModelId
     _dataForPet.petHHid = data.petHHid or 0
     _dataForPet.hhSortList = self:setPetHHListSort()
+    print("发布ls_update_model, showPetModelId:", _dataForPet.showPetModelId)
     self:Publish("ls_update_model", self:GetDataForPet())
 end
 

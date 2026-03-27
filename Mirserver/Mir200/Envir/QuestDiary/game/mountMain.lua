@@ -219,6 +219,8 @@ function mountMain.petShengji(actor)
         sethumvar(actor, VarCfg.U_All_Pet_star, 1)
         -- 设置为休息状态（1表示休息/未出战，0表示出战）
         sethumvar(actor, VarCfg.U_Pet_IS_SET, 1)
+        -- 初始化幻化状态为0（未幻化）
+        sethumvar(actor, VarCfg.U_Pet_IS_HH, 0)
         print("设置激活状态完成")
     end
 
@@ -290,11 +292,16 @@ function mountMain.petHuanhuajihuo(actor, postData)
     local name = postData.Name  -- 应该使用 Name 字段，而不是 idx
     local grade = postData.grade
     local data = nil
-    print("查找: Name=" .. name .. ", grade=" .. grade)
+    print("查找: Name=" .. tostring(name) .. "(" .. type(name) .. "), grade=" .. tostring(grade) .. "(" .. type(grade) .. ")")
     print("petHHlist 总数:", #petHHlist)
     
+    -- 打印第一个petHHlist的内容用于调试
+    print("petHHlist[1].Name:", tostring(petHHlist[1].Name), "type:", type(petHHlist[1].Name))
+    print("petHHlist[1].grade:", tostring(petHHlist[1].grade), "type:", type(petHHlist[1].grade))
+    
     for i = 1, #petHHlist do
-        if petHHlist[i].Name == name and tonumber(petHHlist[i].grade) == tonumber(grade) then
+        print("检查 petHHlist[" .. i .. "]: Name=" .. tostring(petHHlist[i].Name) .. ", grade=" .. tostring(petHHlist[i].grade))
+        if tostring(petHHlist[i].Name) == tostring(name) and tonumber(petHHlist[i].grade) == tonumber(grade) then
             data = petHHlist[i]
             print("找到匹配数据:", data)
             break
@@ -392,18 +399,23 @@ end
 
 -- 灵兽设置模型（与坐骑相同的结构）
 function mountMain.setPetModel(actor, data)
+    print("=== setPetModel 被调用 ===")
+    print("data:", type(data), data)
     -- {"幻化名字"=幻化品阶}
     local allhhList = {}
     local basePetId = gethumvar(actor, VarCfg.U_Pet_Base_ID)
     local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
+    print("basePetId:", basePetId, "petTakeId:", petTakeId)
     local oldPetTakeId = petTakeId
     local bdid = 0
     local isCancel = 0
     local oldbuffList = {}
     local newBuffList = {}
 
+    print("判断: petTakeId:", petTakeId, "== data.mountId:", data.mountId, "?", petTakeId == data.mountId)
     if petTakeId == data.mountId then
         -- 取消幻化
+        print("执行取消幻化")
         isCancel = 1
         petTakeId = basePetId
         allhhList = json2tbl(gethumvar(actor, VarCfg.T_PetHuanHua))
@@ -419,6 +431,7 @@ function mountMain.setPetModel(actor, data)
         sethumvar(actor, VarCfg.U_Pet_Passive, 0)
     else
         -- 幻化
+        print("执行幻化")
         allhhList = json2tbl(gethumvar(actor, VarCfg.T_PetHuanHua))
         if gethumvar(actor, VarCfg.U_Pet_IS_HH) == 1 then
             -- 原来已经有幻化了
@@ -449,8 +462,23 @@ function mountMain.setPetModel(actor, data)
 
     mountMain.setPetHHBuff(actor, oldbuffList, newBuffList, isCancel)
     sethumvar(actor, VarCfg.U_Pet_Take_Id, petTakeId)
-    -- 更新灵兽外观显示
-    changeappear(actor, 5, petTakeId)
+    -- 设置当前显示的模型ID
+    sethumvar(actor, VarCfg.U_Pet_Now_Model, petTakeId)
+    
+    -- 如果灵兽已经出战，需要召回再重新召唤（与旧系统对齐）
+    local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
+    if petMark and petMark ~= "" then
+        print("幻化时灵兽已出战，召回并重新召唤")
+        -- 彻底删除旧宠物并重新添加
+        unrecallpet(actor, petMark)
+        delpet(actor, petMark)
+        -- 清除旧的mark
+        sethumvar(actor, VarCfg.T_Pet_Mark, "")
+        -- 强制使用新模型ID重新召唤
+        sethumvar(actor, VarCfg.U_Pet_Take_Id, petTakeId)
+        -- 重新召唤
+        mountMain.recallpet(actor)
+    end
     -- 重新计算并应用所有灵兽属性
     mountMain.updatePetAttrBuff(actor)
     -- 获取所有已激活的灵兽幻化数据
@@ -470,6 +498,8 @@ function mountMain.setPetModel(actor, data)
         isCancel = isCancel,
         oldModelId = oldPetTakeId
     })
+    print("=== setPetModel 完成 ===")
+    print("petTakeId:", petTakeId, "isCancel:", isCancel)
 end
 
 -- ===== 坐骑功能（保留原有功能）=====
@@ -744,14 +774,17 @@ function mountMain.lsJihuo(actor) sendmsg(actor, 9, "请先激活灵兽") end
 
 -- 灵兽激活/升级接口（与旧系统对齐）
 function mountMain.lsjihuo(actor, data)
+    print("=== lsjihuo 被调用 ===")
     -- data.itemId = 激活材料ID
     local nowlv = gethumvar(actor, VarCfg.U_All_Pet_star)
+    print("nowlv:", nowlv)
 
     if nowlv > 0 then
         return sendmsg(actor, 9, "已激活")
     end
 
     mountMain.petShengji(actor)
+    print("=== lsjihuo 完成 ===")
 end
 
 -- function mountMain.getPetAttr(actor, modelId)
@@ -809,6 +842,7 @@ function mountMain.recallpet(actor)
     
     local petBaseId = gethumvar(actor, VarCfg.U_Pet_Base_ID)
     local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
+    local petLevel = gethumvar(actor, VarCfg.U_All_Pet_star) or 1
 
     if not petBaseId or petBaseId == 0 then
         -- 如果没有设置基础ID，使用默认模型
@@ -819,7 +853,34 @@ function mountMain.recallpet(actor)
         petTakeId = petBaseId
     end
 
-    print("召唤灵兽，BaseId:", petBaseId, "TakeId:", petTakeId)
+    -- 获取灵兽怪物ID
+    -- 优先从PetHuanhua配置表中查找（幻化后的模型有独立的Monster_ID）
+    -- 如果没有找到，则使用Pet配置表中的Monster_ID
+    local monsterId = 80001  -- 默认怪物ID
+    
+    -- 检查是否是幻化形态（从PetHuanhua配置中查找）
+    local isHuanhua = false
+    local petTakeIdNum = tonumber(petTakeId)
+    if petTakeIdNum and petTakeIdNum > 0 then
+        for _, hhData in pairs(petHHlist) do
+            if tonumber(hhData.Model) == petTakeIdNum and hhData.Monster_ID then
+                monsterId = hhData.Monster_ID
+                isHuanhua = true
+                print("幻化形态，使用幻化Monster_ID:", monsterId, "Model:", hhData.Model)
+                break
+            end
+        end
+    end
+    
+    -- 如果不是幻化形态，从Pet配置表中获取
+    if not isHuanhua and petlist[petLevel] and petlist[petLevel].Monster_ID then
+        monsterId = petlist[petLevel].Monster_ID
+    end
+
+    print("召唤灵兽，BaseId:", petBaseId, "TakeId:", petTakeId, "MonsterId:", monsterId)
+
+    -- 确保显示模型ID被正确设置
+    sethumvar(actor, VarCfg.U_Pet_Now_Model, petTakeId)
 
     -- 检查是否已有宠物mark，如果没有则先添加宠物
     local existingMark = gethumvar(actor, VarCfg.T_Pet_Mark)
@@ -832,7 +893,7 @@ function mountMain.recallpet(actor)
     elseif not mark or mark == "" then
         -- 先添加宠物
         print("添加灵兽到列表")
-        mark = addpet(actor, 80001)
+        mark = addpet(actor, monsterId)
         if not mark or mark == "" then
             print("添加灵兽失败")
             sendmsg(actor, 9, "添加灵兽失败")

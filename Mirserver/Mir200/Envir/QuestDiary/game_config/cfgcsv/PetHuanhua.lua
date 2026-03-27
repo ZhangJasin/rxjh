@@ -9,6 +9,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900003,
+		Monster_ID=80101,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -39,6 +40,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900004,
+		Monster_ID=80102,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -70,6 +72,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900007,
+		Monster_ID=80201,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -101,6 +104,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900010,
+		Monster_ID=80202,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -134,6 +138,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900013,
+		Monster_ID=80301,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -160,6 +165,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900015,
+		Monster_ID=80302,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -196,6 +202,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900018,
+		Monster_ID=80401,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -226,6 +233,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900021,
+		Monster_ID=80402,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -256,6 +264,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900024,
+		Monster_ID=80501,
 		ClassID = {
 			[1] = {
 				[1] = 1,

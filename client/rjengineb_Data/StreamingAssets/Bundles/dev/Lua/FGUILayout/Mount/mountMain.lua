@@ -593,6 +593,13 @@ end
 
 -- 设置灵兽模型
 function mountMain:setPetModel(modelId, offsetY, scale)
+    print("=== setPetModel 函数被调用 ===")
+    print("modelId:", modelId, "offsetY:", offsetY, "scale:", scale)
+    print("petBody:", self.petBody)
+    if not self.petBody then
+        print("错误: petBody 为空!")
+        return
+    end
     FGUI:UIModel_clear(self.petBody)
     self._petModelIndex = FGUI:UIModel_addLegoModel(
         self.petBody, 
@@ -602,6 +609,7 @@ function mountMain:setPetModel(modelId, offsetY, scale)
         {x = scale or 1, y = scale or 1, z = scale or 1}, 
         false
     )
+    print("模型添加完成, index:", self._petModelIndex)
     FGUI:UIModel_setObjectEulerAngles(self.petBody, 0, 0, 0, 0)
     -- 设置模型回调
     FGUI:UIModel_setModelCallback(self.petBody, function(index)
@@ -782,6 +790,14 @@ end
 
 -- 更新灵兽视图
 function mountMain:updatePetView()
+    print("=== updatePetView 被调用 ===")
+    print("showPetModelId:", self._dataForPet.showPetModelId)
+    -- 优先使用服务端返回的showPetModelId（幻化后的模型）
+    if self._dataForPet.showPetModelId and self._dataForPet.showPetModelId > 0 then
+        self.modelId = self._dataForPet.showPetModelId
+        print("updatePetView: 使用服务端模型ID:", self.modelId)
+        self:setPetModel(self.modelId, 0, 1.1)
+    end
     self:setPetInfo()
     self:setPetAtta()
     self:setPetXhcl()

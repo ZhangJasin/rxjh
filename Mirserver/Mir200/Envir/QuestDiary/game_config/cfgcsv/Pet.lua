@@ -6,6 +6,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900001,
+		Monster_ID=80001,
 	},
 	[1] = { 
 		Level=1,
@@ -36,6 +37,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80001,
 	},
 	[2] = { 
 		Level=2,
