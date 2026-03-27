@@ -8,7 +8,7 @@ local config = {
 			[1] = 2701,
 			[2] = 1,
 		},
-		Model=900001,
+		Model=900003,
 		ClassID = {
 			[1] = {
 				[1] = 1,
