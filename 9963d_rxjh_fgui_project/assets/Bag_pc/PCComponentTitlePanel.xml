@@ -2,6 +2,7 @@
 <component size="310,376" opaque="false">
   <controller name="titleState" pages="0,未激活,1,未使用,2,使用中" selected="0"/>
   <controller name="ModeWho" pages="0,MainPlayer,1,OtherPlayer" selected="0"/>
+  <controller name="titleType" pages="0,无,1,特效,2,文本,3,序列帧" selected="0"/>
   <displayList>
     <image id="n10_9qta" name="n10" src="n0551w" fileName="Images/img_input_di.png" xy="0,0" size="310,336">
       <gearXY controller="ModeWho" pages="0,1" values="0,0|0,20"/>
