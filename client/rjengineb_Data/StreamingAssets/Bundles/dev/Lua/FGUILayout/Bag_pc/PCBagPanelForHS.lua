@@ -20,7 +20,7 @@ end
 function PCBagPanelForHS:Enter(data)
 	self.bagViewModel:Bind(self)
 	self.bagViewModel:Enter(data)
-	-- FGUI:ScrollPane_scrollTop(FGUI:GetScrollPane(self._ui.List_Cell), false)
+	FGUI:ScrollPane_scrollTop(FGUI:GetScrollPane(self._ui.List_Cell), false)
 	SL:ComponentAttach(SLDefine.SUIComponentTable.PlayerInfoBag, self._ui.Node_attach)
 	FGUIFunction:RegisterGuideData(FGUIDefine.GuideDataKey.BagGuideFunc,handler(self,self.GetGuideItem))
 end
@@ -47,6 +47,12 @@ function PCBagPanelForHS:InitView()
 
 	FGUI:GList_itemRenderer(self._ui.List_Cell, handler(self, self.ListViewBagCellRenderer))
 	FGUI:GList_setVirtual(self._ui.List_Cell)
+	-- 添加List_Cell点击事件注册，与移动端保持一致
+	FGUI:GList_addOnClickItemEvent(self._ui.List_Cell, function(context)
+		local childIdx = FGUI:GetChildIndex(self._ui.List_Cell, context.data)
+		local index = FGUI:GList_childIndexToItemIndex(self._ui.List_Cell, childIdx)
+		self:ClickCellEvent(index)
+	end)
 	FGUI:GList_itemRenderer(self._ui.List_Filter, handler(self, self.ListViewFilterRenderer))
 	FGUI:GList_addOnClickItemEvent(self._ui.List_Filter, function(context)
 		local index = FGUI:GetChildIndex(self._ui.List_Filter, context.data) + 1
@@ -237,6 +243,14 @@ function PCBagPanelForHS:RollOutEvent(idx)
 	local bagData = self:GetCurShowBagCellData(idx + 1)
 	if bagData then
 		bagData:RollOutCell()
+	end
+end
+
+-- 添加ClickCellEvent函数，与移动端保持一致
+function PCBagPanelForHS:ClickCellEvent(idx)
+	local bagData = self:GetCurShowBagCellData(idx + 1)
+	if bagData then
+		bagData:ClickCellEvent()
 	end
 end
 

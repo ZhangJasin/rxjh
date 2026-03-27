@@ -97,7 +97,11 @@ end
 
 -- 右键点击cell
 function PCBagCellForHS:RightClickCell()
-    dump("右键点击回收cell")
+    if  FGUI:CheckOpen("Bag_pc", "BagRecyclePanel") then
+        return SL:onLUAEvent(LUA_EVENT_BAG_CELL_CLICK, self)
+	end
+end
+function PCBagCellForHS:ClickCellEvent()
     if  FGUI:CheckOpen("Bag_pc", "BagRecyclePanel") then
         return SL:onLUAEvent(LUA_EVENT_BAG_CELL_CLICK, self)
 	end

@@ -11,7 +11,7 @@ function PCBagPanel:Create()
 	self.packageItemViewCache = {}
 	self.cdMaskCache = {}
 	-- 鼠标是否进入父界面
-	self.bagRecycleViewModel = requireFGUILayout("Bag_pc/PCBagRecycleViewModel")
+	self.bagRecycleViewModel = requireFGUILayout("Bag_pc/BagRecycleViewModel")
 	self.bagViewModel = requireFGUILayout("Bag_pc/PCBagViewModel")
 	self:InitView()
 end
