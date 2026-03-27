@@ -738,22 +738,22 @@ function b_die(actor, killer)
     local mastertId = targetinfo(actor, "MASTERID")
     local isPc = clientflag(mastertId) == 1
     local methodName = isPc and "PCMainPlayer" or "MainPlayer"
-    for _, v in pairs(SpiritualBeast) do
-        if v.Monster_ID == monId then
-            --宠物列表
-            local allPets = json2tbl(gethumvar(mastertId, VarCfg.T_TAKE_PET)) or {}
-            for i = 1, #allPets do
-                if tonumber(allPets[i].modelId) == tonumber(v.Pet_Lego) then
-                    allPets[i].isDie = true
-                    allPets[i].dieTime = utcint64now()
-                end
-            end
-            -- dump(allPets)
-            sethumvar(mastertId, VarCfg.T_TAKE_PET, tbl2json(allPets))
-            local dieCd = utcint64now()
-            sethumvar(mastertId, VarCfg.U_PETS_DIE_TIME, tonumber(SysConstant['PET_Resurre_CD'].Value))
-            Message.sendmsgEx(mastertId, methodName, "petResurrec", dieCd)
-            break
+    
+    -- 检查是否是新系统灵兽
+    local petBaseId = gethumvar(mastertId, VarCfg.U_Pet_Base_ID)
+    local petMark = gethumvar(mastertId, VarCfg.T_Pet_Mark)
+    
+    -- 如果是新系统灵兽（通过mark判断是否是当前出战的灵兽）
+    if petBaseId and petBaseId > 0 and petMark and petMark ~= "" then
+        local petIdx = getpetidx(mastertId, petMark)
+        if petIdx and petIdx == actor then
+            -- 这是新系统灵兽，设置死亡倒计时
+            local dieCd = tonumber(SysConstant['PET_Resurre_CD']['Value']) or 60
+            sethumvar(mastertId, VarCfg.U_PETS_DIE_TIME, dieCd)
+            -- 启动定时器
+            addtimerex(mastertId, 49, 1000, dieCd, "@g_ontimer49", "")
+            print("新系统灵兽死亡，启动复活倒计时:", dieCd)
+            Message.sendmsgEx(mastertId, methodName, "petResurrec", utcint64now())
         end
     end
 

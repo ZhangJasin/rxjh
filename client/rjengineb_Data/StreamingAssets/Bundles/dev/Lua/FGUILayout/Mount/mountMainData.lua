@@ -68,11 +68,11 @@ function mountMainData:Init()
     _dataForMount.hhSortList = self:setHHListSort()
 
     -- 灵兽相关数据（使用新变量）
-    _dataForPet.petHHid = SL:GetValue("U", 107) -- U_Pet_Take_Id
+    _dataForPet.petHHid = SL:GetValue("U", 107) -- U_Pet_Take_Id 灵兽幻化ID
     _dataForPet.modelId = SL:GetValue("U", 108) > 0 and SL:GetValue("U", 108) or -- U_Pet_Base_ID
                               (Pet[1] and Pet[1].Model) or 800001
-    _dataForPet.isPetChuzhan = SL:GetValue("U", 62) -- 保持旧的出战状态变量
-    _dataForPet.isPetJh = SL:GetValue("U", 110) -- U_Pet_IS_SET 是否已激活
+    _dataForPet.isPetChuzhan = SL:GetValue("U", 110) -- U_Pet_IS_SET 是否出战 (0=出战,1=休息)
+    _dataForPet.isPetJh = SL:GetValue("U", 106) > 0 and 1 or 0 -- U_All_Pet_star 是否已激活 (0=未激活,1=已激活)
     _dataForPet.allJieshu = SL:GetValue("U", 106) -- U_All_Pet_star 灵兽总星级
 
     local t119 = SL:GetValue("T", 119) -- T_PetHuanHua 灵兽幻化激活对象
@@ -81,8 +81,8 @@ function mountMainData:Init()
     local t119 = SL:GetValue("T", 119) -- T_PetHuanHua 灵兽幻化激活对象
     if t119 and t119 ~= "" then _dataForPet.allPetsToModel = SL:JsonDecode(t119) end
 
-    _dataForPet.showPetModelId = SL:GetValue("U", 57) -- 保持旧的显示模型id
-    _dataForPet.selectViewPetId = SL:GetValue("U", 58) -- 保持旧的选中主体id
+    _dataForPet.showPetModelId = SL:GetValue("U", 108) -- U_Pet_Base_ID 显示模型id
+    _dataForPet.selectViewPetId = SL:GetValue("U", 108) -- U_Pet_Base_ID 选中主体id
     if _dataForPet.allPetsActive == 0 then _dataForPet.allPetsActive = {} end
     if _dataForPet.hhlistsj == 0 then _dataForPet.hhlistsj = {} end
     -- 灵兽幻化列表排序
@@ -375,16 +375,21 @@ function mountMainData:updatePetModelResult(data)
 end
 
 function mountMainData:recallpetResult(data)
+    print("=== 客户端收到recallpetResult消息 ===")
     _dataForPet.showPetModelId = data.showPetModelId
     _dataForPet.selectViewPetId = data.selectViewPetId
+    _dataForPet.isPetChuzhan = 0  -- 出战状态
     self:Publish("ls_update_model", self:GetDataForPet())
+    self:Publish("petUpdateBtn", self:GetDataForPet())  -- 额外发布按钮更新事件
 end
 
 function mountMainData:unrecallpetResult()
+    print("=== 客户端收到unrecallpetResult消息 ===")
     _dataForPet.showPetModelId = 0
     _dataForPet.selectViewPetId = 0
-    _dataForPet.isPetChuzhan = STATUS.REST
+    _dataForPet.isPetChuzhan = STATUS.REST  -- 休息状态
     self:Publish("ls_unrecallpet", self:GetDataForPet())
+    self:Publish("petUpdateBtn", self:GetDataForPet())  -- 额外发布按钮更新事件
 end
 
 -- 灵兽幻化模型切换
@@ -539,6 +544,10 @@ function mountMainData:updatePetZQ(data)
         print("首次激活灵兽")
         _dataForPet.isPetJh = 1
         _dataForPet.hhlistsj = {}
+        -- 激活后默认为休息状态（1=休息，显示"出战"按钮）
+        _dataForPet.isPetChuzhan = 1
+        -- 发布按钮更新事件
+        self:Publish("petUpdateBtn", self:GetDataForPet())
     end
     -- 更新阶数和视图
     _dataForPet.allJieshu = tonumber(data.lv)
@@ -551,10 +560,23 @@ function mountMainData:updatePetZQ(data)
     self:Publish("petLevelUp", self:GetDataForPet())
 end
 
--- 灵兽出战休息后
-function mountMainData:updatePetBtnName(data)
-    _dataForPet.isPetChuzhan = data.status
+-- 灵兽出战休息后（服务端消息 petUpdateBtn 回调）
+function mountMainData:petUpdateBtn(data)
+    print("=== 客户端收到petUpdateBtn消息 ===")
+    print("data:", data)
+    print("isPetChuzhan:", data.isPetChuzhan)
+    -- 接收服务端返回的数据并更新内存
+    if data.isPetChuzhan ~= nil then
+        _dataForPet.isPetChuzhan = data.isPetChuzhan
+    end
+    if data.isPetJh ~= nil then
+        _dataForPet.isPetJh = data.isPetJh
+    end
+    if data.allJieshu ~= nil then
+        _dataForPet.allJieshu = data.allJieshu
+    end
     self:Publish("petUpdateBtn", self:GetDataForPet())
+    print("petUpdateBtn事件已发布")
 end
 
 return mountMainData

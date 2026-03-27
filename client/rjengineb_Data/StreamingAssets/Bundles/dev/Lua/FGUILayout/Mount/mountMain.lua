@@ -131,13 +131,24 @@ function mountMain:subscribeEvents()
         end)
         -- 灵兽出战/休息事件
         self._subscriptions.petUpdateBtn = self._data:Subscribe("petUpdateBtn", function(state)
-            self._dataForPet = state
+            print("=== 收到petUpdateBtn事件 ===")
+            print("isPetChuzhan:", state.isPetChuzhan, "isPetJh:", state.isPetJh)
+            -- 更新内存数据（注意：Lua中0是falsy，需用nil判断）
+            if state.isPetChuzhan ~= nil then self._dataForPet.isPetChuzhan = state.isPetChuzhan end
+            if state.isPetJh ~= nil then self._dataForPet.isPetJh = state.isPetJh end
+            if state.allJieshu ~= nil then self._dataForPet.allJieshu = state.allJieshu end
+            
+            -- 刷新按钮状态
+            -- isPetChuzhan: 0=出战(显示召回), 1=休息(显示出战)
             local title = FGUI:GetChild(self._ui.petQhbtn, "title")
-            if self._dataForPet.isPetChuzhan == STATUS.FIGHT then
-                FGUI:GTextField_setText(title, "出战")
-            else
-                FGUI:GTextField_setText(title, "休息")
+            if title then
+                if self._dataForPet.isPetChuzhan == 0 then
+                    FGUI:GTextField_setText(title, "召回")
+                else
+                    FGUI:GTextField_setText(title, "出战")
+                end
             end
+            print("按钮状态更新完成")
         end)
     end
     -- 初始化显示数据
@@ -638,10 +649,12 @@ function mountMain:setPetBtPetBtn()
         -- 已激活
         FGUI:setVisible(self._ui.petQhbtn, true)
         -- 显示出战或召回状态
-        if self._dataForPet.isPetChuzhan == STATUS.FIGHT then
-            FGUI:GTextField_setText(title, "出战")
-        else
+        -- 服务端逻辑：isPetChuzhan=0表示出战，isPetChuzhan=1表示休息
+        -- 出战状态显示"召回"按钮，休息状态显示"出战"按钮
+        if self._dataForPet.isPetChuzhan == 0 then
             FGUI:GTextField_setText(title, "召回")
+        else
+            FGUI:GTextField_setText(title, "出战")
         end
     end
 end
@@ -778,6 +791,8 @@ end
 function mountMain:bindPetButtonsEvents()
     -- 出战按钮事件
     FGUI:setOnClickEvent(self._ui.petQhbtn, function()
+        print("点击出战/召回按钮")
+        -- 发送服务端请求，由服务端返回消息更新UI
         self._data:petChuzhan()
     end)
 
