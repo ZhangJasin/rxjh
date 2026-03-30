@@ -218,7 +218,7 @@ function BagRecyclePanel:UpdateMoney()
 end
 
 function BagRecyclePanel:ClickBtnSellEvent()
-	-- self.bagRecycleViewModel:RecycleSelectItems()
+	self.bagRecycleViewModel:RecycleSelectItems()
 end
 function BagRecyclePanel:ClickAutoSellEvent()
 	local cSelect =  FGUI:getController(self._ui.AutoSell,"isSelect")
