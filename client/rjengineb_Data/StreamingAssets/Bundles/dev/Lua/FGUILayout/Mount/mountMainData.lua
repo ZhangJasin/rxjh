@@ -485,7 +485,10 @@ function mountMainData:updateZQ(data)
     if data.lv == 1 then
         -- 首次激活
         _dataForMount.isJh = 1
-        _dataForMount.hhlistsj = {}
+        -- 只有当幻化列表为空时才初始化，避免覆盖已激活的幻化数据
+        if not _dataForMount.hhlistsj or next(_dataForMount.hhlistsj) == nil then
+            _dataForMount.hhlistsj = {}
+        end
     end
     -- 更新阶数和视图
     _dataForMount.allJieshu = tonumber(data.lv)
@@ -548,7 +551,10 @@ function mountMainData:updatePetZQ(data)
         -- 首次激活
         print("首次激活灵兽")
         _dataForPet.isPetJh = 1
-        _dataForPet.hhlistsj = {}
+        -- 只有当幻化列表为空时才初始化，避免覆盖已激活的幻化数据
+        if not _dataForPet.hhlistsj or next(_dataForPet.hhlistsj) == nil then
+            _dataForPet.hhlistsj = {}
+        end
         -- 激活后默认为休息状态（1=休息，显示"出战"按钮）
         _dataForPet.isPetChuzhan = 1
         -- 发布按钮更新事件

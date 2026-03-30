@@ -243,6 +243,36 @@ function mountMain.petShengji(actor)
         -- 初始化幻化状态为0（未幻化）
         sethumvar(actor, VarCfg.U_Pet_IS_HH, 0)
         print("设置激活状态完成")
+        
+        -- 首次激活时，自动激活第一个幻化（免费）
+        local firstHH = petHHlist[1]
+        if firstHH then
+            local ycList = {}
+            ycList[firstHH.Name] = firstHH.grade
+            sethumvar(actor, VarCfg.T_PetHuanHua, tbl2json(ycList))
+            -- 设置幻化外观
+            sethumvar(actor, VarCfg.U_Pet_Take_Id, firstHH.Model)
+            sethumvar(actor, VarCfg.U_Pet_IS_HH, 1)
+            changeappear(actor, 5, firstHH.Model)
+            -- 添加幻化属性
+            if firstHH.ClassID then
+                for b = 1, #firstHH.ClassID do
+                    setbuffabil(actor, 110026, tonumber(firstHH.ClassID[b][1]), "=", tonumber(firstHH.ClassID[b][2]))
+                end
+            end
+            -- 添加幻化buff
+            if firstHH.buffID then
+                for b = 1, #firstHH.buffID do
+                    addbuff(actor, firstHH.buffID[b])
+                end
+            end
+            Message.sendmsgEx(actor, "mountMain", "updatePetHHmodel", {
+                ycList = ycList,
+                name = firstHH.Name,
+                grade = firstHH.grade,
+                petHHid = firstHH.Model
+            })
+        end
     end
 
     delItemNum(actor, itemId, num)
@@ -631,6 +661,36 @@ function mountMain.shengji(actor)
             sethumvar(actor, VarCfg.T_MountHuanHua, tbl2json({}))
             sethumvar(actor, VarCfg.U_All_Mount_star, 1)
             sethumvar(actor, VarCfg.U_Mount_IS_SET, 1)
+            
+            -- 首次激活时，自动激活第一个幻化（免费）
+            local firstHH = mountHHlist[1]
+            if firstHH then
+                local ycList = {}
+                ycList[firstHH.Name] = firstHH.grade
+                sethumvar(actor, VarCfg.T_MountHuanHua, tbl2json(ycList))
+                -- 设置幻化外观
+                sethumvar(actor, VarCfg.U_Mount_Take_Id, firstHH.Model)
+                sethumvar(actor, VarCfg.U_Mount_IS_HH, 1)
+                changeappear(actor, 5, firstHH.Model)
+                -- 添加幻化属性
+                if firstHH.ClassID then
+                    for b = 1, #firstHH.ClassID do
+                        setbuffabil(actor, 110016, tonumber(firstHH.ClassID[b][1]), "=", tonumber(firstHH.ClassID[b][2]))
+                    end
+                end
+                -- 添加幻化buff
+                if firstHH.buffID then
+                    for b = 1, #firstHH.buffID do
+                        addbuff(actor, firstHH.buffID[b])
+                    end
+                end
+                Message.sendmsgEx(actor, "mountMain", "updateHHmodel", {
+                    ycList = ycList,
+                    name = firstHH.Name,
+                    grade = firstHH.grade,
+                    mountHHid = firstHH.Model
+                })
+            end
         end
         for b = 1, #classIds do
             setbuffabil(actor, 110015, tonumber(classIds[b][1]), "=",
