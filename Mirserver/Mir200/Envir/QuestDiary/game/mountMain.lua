@@ -295,14 +295,8 @@ function mountMain.petShengji(actor)
     sethumvar(actor, VarCfg.U_Pet_Base_ID, petBaseId)
     print("设置灵兽基础模型:", petBaseId)
 
-    -- 激活时设置灵兽外观
-    if nowlv == 0 then
-        local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
-        if petTakeId and petTakeId > 0 then
-            changeappear(actor, 5, petTakeId)
-            print("激活时设置灵兽外观:", petTakeId)
-        end
-    end
+    -- 注意：灵兽激活不应该改变人物外观！
+    -- 人物外观只由坐骑控制，与旧系统一致
 
     -- 触发灵兽升级事件（与旧系统对齐）
     local allPets = {pet = nextlv}
@@ -1006,7 +1000,8 @@ function mountMain.recallpet(actor)
     if not isHuanhua and petBaseId then
         local petBaseIdNum = tonumber(petBaseId)
         print("petBaseId类型转换:", petBaseId, "->", petBaseIdNum)
-        for i = 0, #petlist do
+        print("petlist长度:", #petlist)
+        for i = 0, 10 do  -- 改为固定循环次数，确保能遍历到索引0
             if petlist[i] and petlist[i].Model and tonumber(petlist[i].Model) == petBaseIdNum then
                 monsterId = tonumber(petlist[i].Monster_ID) or 80001
                 print("找到对应配置，Model:", petBaseIdNum, "Monster_ID:", monsterId)
@@ -1025,13 +1020,15 @@ function mountMain.recallpet(actor)
     local mark = existingMark
     
     -- 检查宠物是否已经在场上（通过getpetidx检查）
+    print("recallpet: existingMark =", existingMark, "monsterId =", monsterId)
     if mark and mark ~= "" and getpetidx(actor, mark) then
         -- 宠物已经在场上，不需要再次添加
         print("灵兽已在场上，跳过添加")
     elseif not mark or mark == "" then
         -- 先添加宠物
-        print("添加灵兽到列表")
+        print("添加灵兽到列表，monsterId =", monsterId)
         mark = addpet(actor, monsterId)
+        print("addpet返回结果:", mark, "type:", type(mark))
         if not mark or mark == "" then
             print("添加灵兽失败")
             sendmsg(actor, 9, "添加灵兽失败")
@@ -1063,8 +1060,8 @@ function mountMain.recallpet(actor)
     -- 更新人物属性buff（出战状态下给予10%属性）
     mountMain.updatePetAttrBuff(actor)
 
-    -- 更新灵兽外观显示
-    changeappear(actor, 5, petTakeId)
+    -- 注意：灵兽出战不应该改变人物外观！
+    -- 人物外观只由坐骑控制，灵兽只是跟随的宠物（与旧系统一致）
 
     -- 发送召回结果消息给客户端
     Message.sendmsgEx(actor, "mountMain", "recallpetResult", {
@@ -1314,7 +1311,7 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
             setpetrelax(actor, mark, 2)
             mountMain.setPetAttr(actor)
             mountMain.updatePetAttrBuff(actor)
-            changeappear(actor, 5, petTakeId)
+            -- 注意：登录自动召唤灵兽不应该改变人物外观！
             
             -- 发送setPetInfo消息更新顶部灵兽图标
             local isPc = clientflag(actor) == 1

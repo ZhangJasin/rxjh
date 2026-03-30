@@ -818,11 +818,18 @@ end
 function mountMain:updatePetView()
     print("=== updatePetView 被调用 ===")
     print("showPetModelId:", self._dataForPet.showPetModelId)
-    -- 优先使用服务端返回的showPetModelId（幻化后的模型）
-    if self._dataForPet.showPetModelId and self._dataForPet.showPetModelId > 0 then
-        self.modelId = self._dataForPet.showPetModelId
-        print("updatePetView: 使用服务端模型ID:", self.modelId)
-        self:setPetModel(self.modelId, 0, 1.1)
+    -- 只有坐骑休息时才更新灵兽模型，避免冲突
+    local mountChuzhan = self._dataForMount.ischuzhan
+    print("坐骑出战状态:", mountChuzhan)
+    if not mountChuzhan or mountChuzhan ~= 0 then
+        -- 优先使用服务端返回的showPetModelId（幻化后的模型）
+        if self._dataForPet.showPetModelId and self._dataForPet.showPetModelId > 0 then
+            self.modelId = self._dataForPet.showPetModelId
+            print("updatePetView: 使用服务端模型ID:", self.modelId)
+            self:setPetModel(self.modelId, 0, 1.1)
+        end
+    else
+        print("坐骑已出战，跳过灵兽模型更新")
     end
     self:setPetInfo()
     self:setPetAtta()
