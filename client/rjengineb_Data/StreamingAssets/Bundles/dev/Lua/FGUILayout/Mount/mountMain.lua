@@ -136,7 +136,15 @@ function mountMain:subscribeEvents()
         -- 灵兽幻化事件
         self._subscriptions.petUpdateHHResult = self._data:Subscribe("petUpdateHHResult", function(state)
             self._dataForPet = state._dataForPet
-            self:initPetHuanhuaTab()
+            -- 保持当前选中的索引（与坐骑一致）
+            self.nowPetHHIndex = state.selectHHIndex - 1
+            FGUI:GList_setNumItems(self._ui.petLeftList, #self._dataForPet.hhSortList)
+            -- 刷新当前选中项的视图（与坐骑一致）
+            self:setPetHHSx()
+            self:setPetXhcl()
+            self:setPetHHAddBtn()
+            self:setPetModel(self.modelId, 0, 1.1)
+            self:UpdatePetHHBtnName()
         end)
         -- 灵兽出战/休息事件
         self._subscriptions.petUpdateBtn = self._data:Subscribe("petUpdateBtn", function(state)
@@ -586,12 +594,21 @@ function mountMain:setPetXJZQSx(stars)
 end
 
 -- 设置灵兽星星显示
-function mountMain:setPetStars(lv)
+function mountMain:setPetStars(stars)
+    -- 计算阶数和星星数量（与坐骑一致）
+    local jieshu = math.floor(stars / 10)
+    local liang = stars % 10
+    -- 特殊情况处理：10星进1阶
+    if liang == 0 and jieshu > 0 then
+        liang = 10
+        jieshu = jieshu - 1
+    end
+    -- 设置星星显示（与坐骑一致：i <= liang - 1 亮起）
     for i = 0, 9 do
         local item = FGUI:GetChildAt(self._ui.petxxshu, i)
         if item then
             local controller = FGUI:getController(item, "checked")
-            if i < lv then
+            if i <= liang - 1 then
                 FGUI:Controller_setSelectedIndex(controller, 1)
             else
                 FGUI:Controller_setSelectedIndex(controller, 0)
@@ -1048,6 +1065,7 @@ function mountMain:setupPetHuanhuaList()
             -- 更新名称和属性
             FGUI:GTextField_setText(self._ui.petName, itemData.Name)
             self:setPetHHSx()
+            self:SelectedPetHH()
             self:UpdatePetHHBtnName()
             self:setPetXhcl()
             self:setPetHHAddBtn()
@@ -1161,6 +1179,21 @@ function mountMain:UpdatePetHHBtnName()
     else
         FGUI:GTextField_setText(title, "幻化")
     end
+end
+
+-- 选择灵兽幻化项
+function mountMain:SelectedPetHH()
+    -- 重置所有选中状态
+    local itemList = FGUI:GetChildren(self._ui.petLeftList)
+    for i = 1, #itemList do
+        local controller = FGUI:getController(itemList[i], "checked")
+        FGUI:Controller_setSelectedIndex(controller, 0)
+        if self.nowPetHHIndex == i-1 then
+            FGUI:Controller_setSelectedIndex(controller, 1)
+        end
+    end
+    -- 更新模型
+    self:setPetModel(self.modelId, 0, 1.1)
 end
 
 -- ==================== 坐骑相关功能 ====================

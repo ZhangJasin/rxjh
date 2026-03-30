@@ -76,15 +76,16 @@ function mountMainData:Init()
     _dataForPet.allJieshu = SL:GetValue("U", 106) -- U_All_Pet_star 灵兽总星级
 
     local t119 = SL:GetValue("T", 119) -- T_PetHuanHua 灵兽幻化激活对象
-    if t119 and t119 ~= "" then _dataForPet.allPetsActive = SL:JsonDecode(t119) end
-
-    local t119 = SL:GetValue("T", 119) -- T_PetHuanHua 灵兽幻化激活对象
-    if t119 and t119 ~= "" then _dataForPet.allPetsToModel = SL:JsonDecode(t119) end
+    if t119 and t119 ~= "" then 
+        _dataForPet.hhlistsj = SL:JsonDecode(t119) 
+    end
 
     _dataForPet.showPetModelId = SL:GetValue("U", 108) -- U_Pet_Base_ID 显示模型id
     _dataForPet.selectViewPetId = SL:GetValue("U", 108) -- U_Pet_Base_ID 选中主体id
-    if _dataForPet.allPetsActive == 0 then _dataForPet.allPetsActive = {} end
-    if _dataForPet.hhlistsj == 0 then _dataForPet.hhlistsj = {} end
+    if not _dataForPet.hhlistsj or _dataForPet.hhlistsj == 0 then _dataForPet.hhlistsj = {} end
+    -- 兼容旧字段
+    _dataForPet.allPetsActive = _dataForPet.hhlistsj
+    _dataForPet.allPetsToModel = _dataForPet.hhlistsj
     -- 灵兽幻化列表排序
     _dataForPet.hhSortList = self:setPetHHListSort()
 end

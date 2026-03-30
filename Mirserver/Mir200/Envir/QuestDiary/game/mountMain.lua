@@ -186,16 +186,19 @@ function mountMain.petShengji(actor)
     print("当前等级:", nowlv, "下一等级:", nextlv, "最高等级:", #petlist)
     if nextlv > #petlist then
         print("已达到最高等级")
+        sendmsg(actor, 9, "已达到最高等级")
         return
     end
 
     if not petlist[nextlv] or not petlist[nextlv].ClassID then
         print("petShengji: 下一级配置不存在, nextlv:", nextlv)
+        sendmsg(actor, 9, "配置错误")
         return
     end
 
     if not petlist[nowlv] or not petlist[nowlv].Cost then
         print("petShengji: 当前级配置不存在, nowlv:", nowlv)
+        sendmsg(actor, 9, "配置错误")
         return
     end
 
@@ -211,8 +214,26 @@ function mountMain.petShengji(actor)
         sendmsg(actor, 9, "材料不足" .. num .. "个")
         return
     end
-
+    
     print("材料充足,开始升级/激活")
+    
+    -- 判断是否升阶
+    -- 0阶9星(Level=9) → 0阶10星(Level=10)：正常升星
+    -- 0阶10星(Level=10) → 1阶1星(Level=11)：跨阶，重置星星为1
+    local nowLevel = 0
+    local nextLevel = 0
+    if petlist[nowlv] and petlist[nowlv].Level then
+        nowLevel = petlist[nowlv].Level
+    end
+    if petlist[nextlv] and petlist[nextlv].Level then
+        nextLevel = petlist[nextlv].Level
+    end
+    
+    -- 跨阶条件：Level=10, 20, 30... 即 nextLevel % 10 == 1 时跨阶（10→11, 20→21...）
+    -- 当前等级是10的倍数时，下一次升级才跨阶
+    local isShengjie = (nowLevel % 10 == 0 and nextLevel == nowLevel + 1)
+    print("升阶判断：nowLevel=", nowLevel, "nextLevel=", nextLevel, "isShengjie=", isShengjie)
+    
     if nowlv == 0 then -- 激活
         print("首次激活灵兽")
         sethumvar(actor, VarCfg.T_PetHuanHua, tbl2json({}))
@@ -225,7 +246,10 @@ function mountMain.petShengji(actor)
     end
 
     delItemNum(actor, itemId, num)
+    
+    -- 与坐骑逻辑一致：直接存储完整的等级，客户端通过计算显示阶数和星星
     sethumvar(actor, VarCfg.U_All_Pet_star, nextlv)
+    print("设置灵兽等级:", nextlv)
 
     -- 设置灵兽本身的属性（将配表属性赋予灵兽，并设置人物属性）
     mountMain.setPetAttr(actor)
@@ -255,6 +279,7 @@ function mountMain.petShengji(actor)
     GameEvent.push(EventCfg.onPetLevel, actor, allPets)
 
     -- 更新前端显示（发送updateLSView消息与旧系统对齐）
+    -- 与坐骑一致：发送完整的等级
     print("发送升级消息到客户端,等级:", nextlv)
     Message.sendmsgEx(actor, "mountMain", "updateLSView", {
         lv = nextlv,
@@ -279,6 +304,33 @@ function mountMain.petShengji(actor)
         isPetChuzhan = isPetChuzhan,
         isPetJh = isPetJh
     })
+
+    -- 升级后更新顶部灵兽图标（只在升级时更新，激活时不更新）
+    -- 修复：使用 v.ID 查找（与登录时保持一致）
+    -- 注意：只在已出战状态下才更新图标
+    local serverChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
+    if serverChuzhan == 1 then  -- 只有出战状态才更新图标
+        local isPc = clientflag(actor) == 1
+        local methodName = isPc and "PCMainPlayer" or "MainPlayer"
+        local icon = "pet_000"
+        local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
+        if petTakeId and petTakeId > 0 then
+            for _, v in pairs(petHHlist) do
+                if v.ID == petTakeId and v.mount_icon then
+                    icon = v.mount_icon
+                    print("升级更新图标，找到icon:", icon)
+                    break
+                end
+            end
+        end
+        print("升级发送setPetInfo，icon:", icon)
+        Message.sendmsgEx(actor, methodName, "setPetInfo", {
+            type = "red",
+            max = 10000,
+            now = 10000,
+            icon = icon
+        })
+    end
     
     print("升级完成")
 end
@@ -890,8 +942,17 @@ function mountMain.recallpet(actor)
     end
     
     -- 如果不是幻化形态，从Pet配置表中获取
-    if not isHuanhua and petlist[petLevel] and petlist[petLevel].Monster_ID then
-        monsterId = petlist[petLevel].Monster_ID
+    -- 使用petBaseId查找对应的配置，而不是用petLevel（因为升阶后星星会重置）
+    if not isHuanhua and petBaseId then
+        local petBaseIdNum = tonumber(petBaseId)
+        print("petBaseId类型转换:", petBaseId, "->", petBaseIdNum)
+        for i = 0, #petlist do
+            if petlist[i] and petlist[i].Model and tonumber(petlist[i].Model) == petBaseIdNum then
+                monsterId = tonumber(petlist[i].Monster_ID) or 80001
+                print("找到对应配置，Model:", petBaseIdNum, "Monster_ID:", monsterId)
+                break
+            end
+        end
     end
 
     print("召唤灵兽，BaseId:", petBaseId, "TakeId:", petTakeId, "MonsterId:", monsterId)
