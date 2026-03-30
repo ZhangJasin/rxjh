@@ -71,7 +71,7 @@
     <image id="emvc3b" name="icon_coin.png" path="/Images/"/>
     <component id="emvc3c" name="PCBuyPanel.xml" path="/" exported="true"/>
     <component id="emvc3d" name="NPCStorePanel.xml" path="/" exported="true"/>
-    <component id="emvc3e" name="PCNpcStoreNewPanel.xml" path="/" exported="true"/>
+    <component id="emvc3e" name="PCNPCStoreNewPanel.xml" path="/" exported="true"/>
     <component id="emvc3f" name="PCRecyclePanel.xml" path="/" exported="true"/>
     <component id="emvc3g" name="PCSellPanel.xml" path="/" exported="true"/>
     <component id="emvc3h" name="PCTreasurePanel.xml" path="/" exported="true"/>
@@ -81,5 +81,5 @@
     <image id="baex5m" name="comboxDi.png" path="/Images/" scale="9grid" scale9grid="4,8,1,16"/>
     <image id="baex5n" name="icon_item1.png" path="/Images/"/>
   </resources>
-  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\TreasureShop_pc" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>

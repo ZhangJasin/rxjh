@@ -1,5 +1,5 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
-local PCNpcStoreNewPanel = class("PCNpcStoreNewPanel", BaseFGUILayout)
+local PCNPCStoreNewPanel = class("PCNPCStoreNewPanel", BaseFGUILayout)
 
 local IDX_NULL                                  = 0
 local IDX_BUY                                   = 1     -- 购买
@@ -7,7 +7,7 @@ local IDX_SELL                                  = 2     -- 卖出
 local IDX_RECYCLE                               = 3     -- 回收
 local PACKAGE_NAME                              = "TreasureShop_pc"
 
-function PCNpcStoreNewPanel:Create()
+function PCNPCStoreNewPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
@@ -35,14 +35,14 @@ function PCNpcStoreNewPanel:Create()
     self:InitOnClickEvent()
 end
 
-function PCNpcStoreNewPanel:GetAllFGuiData()
+function PCNPCStoreNewPanel:GetAllFGuiData()
     self.btn_close = self._ui.btn_close
     self.list_tab = self._ui.list_tab
     self.node_root = self._ui.node_root
     self.text_title = self._ui.text_title
 end
 
-function PCNpcStoreNewPanel:TabItemRender(idx, item)
+function PCNPCStoreNewPanel:TabItemRender(idx, item)
     local data = self._ViewData[idx + 1]
     if data then
         local btn_name = FGUI:GetChild(item,"btn_name")
@@ -50,14 +50,14 @@ function PCNpcStoreNewPanel:TabItemRender(idx, item)
     end
 end
 
-function PCNpcStoreNewPanel:TabItemClicked(eventData)
+function PCNPCStoreNewPanel:TabItemClicked(eventData)
     FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 
     local idx = FGUI:GetChildIndex(self.list_tab,eventData.data)
     self:PageTo(idx + 1)
 end
 
-function PCNpcStoreNewPanel:PageClose()
+function PCNPCStoreNewPanel:PageClose()
     local pageData = self._ViewData[self._index]
     if not pageData then return true end
     local pageObj = pageData.obj
@@ -71,7 +71,7 @@ function PCNpcStoreNewPanel:PageClose()
     return true
 end
 
-function PCNpcStoreNewPanel:PageTo(index)
+function PCNPCStoreNewPanel:PageTo(index)
     if not index then return end
     if self._index  == index then return end
     self:PageClose()
@@ -79,7 +79,7 @@ function PCNpcStoreNewPanel:PageTo(index)
     self:RefreshSelected(index)
 end
 
-function PCNpcStoreNewPanel:RefreshSelected(index)
+function PCNPCStoreNewPanel:RefreshSelected(index)
     local count = FGUI:GetChildCount(self.list_tab)
     if count < index then
        return
@@ -95,7 +95,7 @@ function PCNpcStoreNewPanel:RefreshSelected(index)
 end
 
 
-function PCNpcStoreNewPanel:PageOpen(index)
+function PCNPCStoreNewPanel:PageOpen(index)
     if self._index == index then return end
     self._index = index
     local pageData = self._ViewData[self._index]
@@ -126,15 +126,15 @@ function PCNpcStoreNewPanel:PageOpen(index)
 end
 
 
-function PCNpcStoreNewPanel:InitOnClickEvent()
+function PCNPCStoreNewPanel:InitOnClickEvent()
     FGUI:setOnClickEvent(self.btn_close,handler(self,self.OnClose))
 end
 
-function PCNpcStoreNewPanel:OnClose()
+function PCNPCStoreNewPanel:OnClose()
     self.super.Close(self)
 end
 
-function PCNpcStoreNewPanel:Destroy()
+function PCNPCStoreNewPanel:Destroy()
     if self._ViewData[IDX_BUY] and self._ViewData[IDX_BUY].obj then
         self._ViewData[IDX_BUY].obj:CleanItemCache()
     end
@@ -149,13 +149,13 @@ function PCNpcStoreNewPanel:Destroy()
 end
 
 
-function PCNpcStoreNewPanel:Refresh()
+function PCNPCStoreNewPanel:Refresh()
     FGUI:GList_itemRenderer(self.list_tab,handler(self,self.TabItemRender))
     FGUI:GList_addOnClickItemEvent(self.list_tab,handler(self,self.TabItemClicked))
     FGUI:GList_setNumItems(self.list_tab,table.nums(self._ViewData))
 end
 
-function PCNpcStoreNewPanel:Enter(data)
+function PCNPCStoreNewPanel:Enter(data)
     if not data then
        return
     end
@@ -201,9 +201,9 @@ function PCNpcStoreNewPanel:Enter(data)
     self:PageTo(1)
 end
 
-function PCNpcStoreNewPanel:Exit()
+function PCNPCStoreNewPanel:Exit()
     FGUIFunction:HideTopCurrency()
     self:PageClose()
 end
 
-return PCNpcStoreNewPanel
+return PCNPCStoreNewPanel

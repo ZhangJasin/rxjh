@@ -1,5 +1,5 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
-local NpcStoreNewPanel = class("NpcStoreNewPanel", BaseFGUILayout)
+local NPCStoreNewPanel = class("NPCStoreNewPanel", BaseFGUILayout)
 
 local IDX_NULL                                  = 0
 local IDX_BUY                                   = 1     -- 购买
@@ -7,7 +7,7 @@ local IDX_SELL                                  = 2     -- 卖出
 local IDX_RECYCLE                               = 3     -- 回收
 local PACKAGE_NAME                              = "TreasureShop"
 
-function NpcStoreNewPanel:Create()
+function NPCStoreNewPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
     FGUIFunction:SetCloseUIWhenClickOutside(self)
 
@@ -35,14 +35,14 @@ function NpcStoreNewPanel:Create()
     self:InitOnClickEvent()
 end
 
-function NpcStoreNewPanel:GetAllFGuiData()
+function NPCStoreNewPanel:GetAllFGuiData()
     self.btn_close = self._ui.btn_close
     self.list_tab = self._ui.list_tab
     self.node_root = self._ui.node_root
     self.text_title = self._ui.text_title
 end
 
-function NpcStoreNewPanel:TabItemRender(idx, item)
+function NPCStoreNewPanel:TabItemRender(idx, item)
     local data = self._ViewData[idx + 1]
     if data then
         local btn_name = FGUI:GetChild(item,"btn_name")
@@ -50,14 +50,14 @@ function NpcStoreNewPanel:TabItemRender(idx, item)
     end
 end
 
-function NpcStoreNewPanel:TabItemClicked(eventData)
+function NPCStoreNewPanel:TabItemClicked(eventData)
     FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 
     local idx = FGUI:GetChildIndex(self.list_tab,eventData.data)
     self:PageTo(idx + 1)
 end
 
-function NpcStoreNewPanel:PageClose()
+function NPCStoreNewPanel:PageClose()
     local pageData = self._ViewData[self._index]
     if not pageData then return true end
     local pageObj = pageData.obj
@@ -71,7 +71,7 @@ function NpcStoreNewPanel:PageClose()
     return true
 end
 
-function NpcStoreNewPanel:PageTo(index)
+function NPCStoreNewPanel:PageTo(index)
     if not index then return end
     if self._index  == index then return end
     self:PageClose()
@@ -79,7 +79,7 @@ function NpcStoreNewPanel:PageTo(index)
     self:RefreshSelected(index)
 end
 
-function NpcStoreNewPanel:RefreshSelected(index)
+function NPCStoreNewPanel:RefreshSelected(index)
     local count = FGUI:GetChildCount(self.list_tab)
     if count < index then
        return
@@ -95,7 +95,7 @@ function NpcStoreNewPanel:RefreshSelected(index)
 end
 
 
-function NpcStoreNewPanel:PageOpen(index)
+function NPCStoreNewPanel:PageOpen(index)
     if self._index == index then return end
     self._index = index
     local pageData = self._ViewData[self._index]
@@ -126,15 +126,15 @@ function NpcStoreNewPanel:PageOpen(index)
 end
 
 
-function NpcStoreNewPanel:InitOnClickEvent()
+function NPCStoreNewPanel:InitOnClickEvent()
     FGUI:setOnClickEvent(self.btn_close,handler(self,self.OnClose))
 end
 
-function NpcStoreNewPanel:OnClose()
+function NPCStoreNewPanel:OnClose()
     self.super.Close(self)
 end
 
-function NpcStoreNewPanel:Destroy()
+function NPCStoreNewPanel:Destroy()
     if self._ViewData[IDX_BUY] and self._ViewData[IDX_BUY].obj then
         self._ViewData[IDX_BUY].obj:CleanItemCache()
     end
@@ -149,13 +149,13 @@ function NpcStoreNewPanel:Destroy()
 end
 
 
-function NpcStoreNewPanel:Refresh()
+function NPCStoreNewPanel:Refresh()
     FGUI:GList_itemRenderer(self.list_tab,handler(self,self.TabItemRender))
     FGUI:GList_addOnClickItemEvent(self.list_tab,handler(self,self.TabItemClicked))
     FGUI:GList_setNumItems(self.list_tab,table.nums(self._ViewData))
 end
 
-function NpcStoreNewPanel:Enter(data)
+function NPCStoreNewPanel:Enter(data)
     if not data then
        return
     end
@@ -201,9 +201,9 @@ function NpcStoreNewPanel:Enter(data)
     self:PageTo(1)
 end
 
-function NpcStoreNewPanel:Exit()
+function NPCStoreNewPanel:Exit()
     FGUIFunction:HideTopCurrency()
     self:PageClose()
 end
 
-return NpcStoreNewPanel
+return NPCStoreNewPanel
