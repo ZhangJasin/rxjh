@@ -217,8 +217,8 @@ function mountMain.petShengji(actor)
         print("首次激活灵兽")
         sethumvar(actor, VarCfg.T_PetHuanHua, tbl2json({}))
         sethumvar(actor, VarCfg.U_All_Pet_star, 1)
-        -- 设置为休息状态（1表示休息/未出战，0表示出战）
-        sethumvar(actor, VarCfg.U_Pet_IS_SET, 1)
+        -- 设置为休息状态（0表示休息/未出战，1表示出战）
+        sethumvar(actor, VarCfg.U_Pet_IS_SET, 0)
         -- 初始化幻化状态为0（未幻化）
         sethumvar(actor, VarCfg.U_Pet_IS_HH, 0)
         print("设置激活状态完成")
@@ -268,9 +268,13 @@ function mountMain.petShengji(actor)
     })
     
     -- 发送petUpdateBtn消息更新按钮状态（激活后为休息状态，显示"出战"）
-    local isPetChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET)
+    -- 服务端：U_Pet_IS_SET = 0 表示休息，1 表示出战
+    -- 客户端：isPetChuzhan = 0 表示已召唤（显示召回），1 表示未召唤（显示出战）
+    -- 需要转换：客户端值 = 1 - 服务端值
+    local serverChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
+    local isPetChuzhan = 1 - serverChuzhan
     local isPetJh = gethumvar(actor, VarCfg.U_All_Pet_star)
-    print("发送petUpdateBtn消息：isPetChuzhan=", isPetChuzhan, "isPetJh=", isPetJh)
+    print("发送petUpdateBtn消息：serverChuzhan=", serverChuzhan, "client isPetChuzhan=", isPetChuzhan, "isPetJh=", isPetJh)
     Message.sendmsgEx(actor, "mountMain", "petUpdateBtn", {
         isPetChuzhan = isPetChuzhan,
         isPetJh = isPetJh
@@ -506,6 +510,19 @@ end
 
 function mountMain.openshow(actor, data)
     Message.sendmsgEx(actor, "mountMain", "Open", {})
+    
+    -- 发送petUpdateBtn消息更新按钮状态
+    -- 服务端：U_Pet_IS_SET = 1 表示出战，0 表示休息
+    -- 客户端：isPetChuzhan = 0 表示已召唤（显示召回），1 表示未召唤（显示出战）
+    -- 需要转换：客户端值 = 1 - 服务端值
+    local serverChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
+    local isPetChuzhan = 1 - serverChuzhan  -- 转换
+    local isPetJh = gethumvar(actor, VarCfg.U_All_Pet_star) or 0
+    Message.sendmsgEx(actor, "mountMain", "petUpdateBtn", {
+        isPetChuzhan = isPetChuzhan,
+        isPetJh = isPetJh > 0 and 1 or 0,
+        allJieshu = isPetJh
+    })
 end
 
 -- 更新坐骑增加属性
