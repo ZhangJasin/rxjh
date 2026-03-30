@@ -84,7 +84,7 @@
     <component id="cb9c48" name="closebtn_yuan(1).xml" path="/Components/"/>
     <image id="cb9c49" name="close_yuan.png" path="/Components/"/>
     <component id="cb9c4a" name="infoScro.xml" path="/Components/"/>
-    <image id="qsw54b" name="zuoji_000.png" path="/image/"/>
+    <image id="qsw54b" name="zuoji_000.png" path="/image/" exported="true"/>
   </resources>
   <publish name="">
     <atlas name="mount" index="0"/>
