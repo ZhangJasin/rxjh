@@ -819,11 +819,13 @@ function Task.updateTaskInfo(actor,TaskProgress_data)
             if type(targetTab) == "string" then
                 targetType = tonumber(targetTab)
             elseif type(targetTab) == "table" then
-                targetType = targetTab[1]
+                targetType = tonumber(targetTab[1])
             end
+            -- print("taskid="..taskid.."  targetType="..targetType,"_studySkill:".._taskMB4data._studySkill)
             if targetType == _taskMB4data._studySkill then   --学习武功数量
                 local skillTab = getallskillid(actor)
                 local yxxnum = 0
+                -- dump(skillTab,"================")
                 for i=1,#skillTab do
                     local skillid = tonumber(skillTab[i])
                     if SkillUpgrade[skillid] then

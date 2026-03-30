@@ -310,6 +310,7 @@ function MainMission:onTransferComplete()  -- 完成转职
 end
 
 function MainMission:onAddSkill()  -- 新增技能
+    print("========================","新增技能")
     ssrMessage:sendmsgEx("Task", "onStudySkill")
 end
 -- 等级变化
