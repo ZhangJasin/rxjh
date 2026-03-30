@@ -24,6 +24,8 @@ local config = {
 				[2] = 20,
 			},
 		},
+		Condition=1,
+		tips="激活灵兽幻化可以改变灵兽外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果。",
 	},
 	[2] = { 
 		ID=2,
@@ -50,6 +52,7 @@ local config = {
 				[2] = 10,
 			},
 		},
+		Condition=1,
 	},
 	[3] = { 
 		ID=3,
@@ -76,6 +79,7 @@ local config = {
 				[2] = 10,
 			},
 		},
+		Condition=1,
 	},
 	[4] = { 
 		ID=4,
@@ -102,6 +106,7 @@ local config = {
 				[2] = 10,
 			},
 		},
+		Condition=1,
 	},
 	[5] = { 
 		ID=5,
@@ -128,6 +133,7 @@ local config = {
 				[2] = 10,
 			},
 		},
+		Condition=1,
 	},
 	[6] = { 
 		ID=6,
@@ -154,6 +160,7 @@ local config = {
 				[2] = 10,
 			},
 		},
+		Condition=1,
 	},
 	[7] = { 
 		ID=7,
@@ -184,6 +191,7 @@ local config = {
 				[2] = 30,
 			},
 		},
+		Condition=1,
 	},
 	[8] = { 
 		ID=8,
@@ -214,6 +222,7 @@ local config = {
 				[2] = 18,
 			},
 		},
+		Condition=1,
 	},
 	[9] = { 
 		ID=9,
@@ -244,6 +253,7 @@ local config = {
 				[2] = 58,
 			},
 		},
+		Condition=1,
 	},
 	[10] = { 
 		ID=10,

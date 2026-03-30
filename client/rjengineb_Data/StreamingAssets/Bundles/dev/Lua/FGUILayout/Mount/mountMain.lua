@@ -15,11 +15,20 @@ local Pet = require("game_config/cfgcsv/Pet")
 local PetHuanhua = require("game_config/cfgcsv/PetHuanhua")
 local mountMainData = SL:RequireFile("FGUILayout/Mount/mountMainData")
 
--- 为配置表添加tips字段
-Mount.Tips = "坐骑可以提供移动速度和属性加成。\n通过升级坐骑可以提升属性效果。\n出战坐骑可增强人物战斗力。"
-MountHuanhua.Tips = "激活坐骑幻化可以改变坐骑外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果，\n让你的坐骑更加炫酷。"
-Pet.Tips = "灵兽可以跟随出战，提供额外属性加成。\n出战灵兽3%的属性转化给人物。"
-PetHuanhua.Tips = "激活灵兽幻化可以改变灵兽外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果。"
+-- 从配置表读取tips字段
+local function getTipsFromConfig(config)
+    if not config then return "" end
+    for _, v in pairs(config) do
+        if v.tips and v.tips ~= "" then
+            return v.tips
+        end
+    end
+    return ""
+end
+Mount.Tips = getTipsFromConfig(Mount)
+MountHuanhua.Tips = getTipsFromConfig(MountHuanhua)
+Pet.Tips = getTipsFromConfig(Pet)
+PetHuanhua.Tips = getTipsFromConfig(PetHuanhua)
 
 -- 数字转中文大写
 local NUMBER_TO_CHINESE = {"零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"}

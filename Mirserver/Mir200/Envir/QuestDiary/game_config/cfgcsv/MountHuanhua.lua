@@ -28,6 +28,7 @@ local config = {
 		},
 		BuffDesc="风驰Lv.1：永久提升角色移动速度<font color='#00FF00'>5%</font>",
 		Condition=1,
+		tips="激活坐骑幻化可以改变坐骑外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果，\n让你的坐骑更加炫酷",
 	},
 	[2] = { 
 		ID=2,
