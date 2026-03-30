@@ -6,6 +6,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[1] = { 
 		Level=1,
@@ -36,6 +37,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[2] = { 
 		Level=2,
@@ -66,6 +68,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[3] = { 
 		Level=3,
@@ -96,6 +99,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[4] = { 
 		Level=4,
@@ -126,6 +130,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[5] = { 
 		Level=5,
@@ -156,6 +161,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[6] = { 
 		Level=6,
@@ -186,6 +192,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[7] = { 
 		Level=7,
@@ -216,6 +223,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[8] = { 
 		Level=8,
@@ -246,6 +254,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[9] = { 
 		Level=9,
@@ -276,6 +285,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[10] = { 
 		Level=10,
@@ -306,6 +316,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[11] = { 
 		Level=11,
@@ -336,6 +347,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[12] = { 
 		Level=12,
@@ -366,6 +378,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[13] = { 
 		Level=13,
@@ -396,6 +409,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[14] = { 
 		Level=14,
@@ -426,6 +440,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[15] = { 
 		Level=15,
@@ -456,6 +471,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[16] = { 
 		Level=16,
@@ -486,6 +502,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[17] = { 
 		Level=17,
@@ -516,6 +533,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[18] = { 
 		Level=18,
@@ -546,6 +564,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[19] = { 
 		Level=19,
@@ -576,6 +595,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[20] = { 
 		Level=20,
@@ -606,6 +626,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[21] = { 
 		Level=21,
@@ -636,6 +657,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[22] = { 
 		Level=22,
@@ -666,6 +688,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[23] = { 
 		Level=23,
@@ -696,6 +719,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[24] = { 
 		Level=24,
@@ -726,6 +750,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[25] = { 
 		Level=25,
@@ -756,6 +781,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[26] = { 
 		Level=26,
@@ -786,6 +812,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[27] = { 
 		Level=27,
@@ -816,6 +843,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[28] = { 
 		Level=28,
@@ -846,6 +874,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[29] = { 
 		Level=29,
@@ -876,6 +905,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[30] = { 
 		Level=30,
@@ -906,6 +936,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[31] = { 
 		Level=31,
@@ -936,6 +967,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[32] = { 
 		Level=32,
@@ -966,6 +998,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[33] = { 
 		Level=33,
@@ -996,6 +1029,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[34] = { 
 		Level=34,
@@ -1026,6 +1060,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[35] = { 
 		Level=35,
@@ -1056,6 +1091,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[36] = { 
 		Level=36,
@@ -1086,6 +1122,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[37] = { 
 		Level=37,
@@ -1116,6 +1153,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[38] = { 
 		Level=38,
@@ -1146,6 +1184,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[39] = { 
 		Level=39,
@@ -1176,6 +1215,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[40] = { 
 		Level=40,
@@ -1206,6 +1246,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[41] = { 
 		Level=41,
@@ -1236,6 +1277,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[42] = { 
 		Level=42,
@@ -1266,6 +1308,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[43] = { 
 		Level=43,
@@ -1296,6 +1339,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[44] = { 
 		Level=44,
@@ -1326,6 +1370,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[45] = { 
 		Level=45,
@@ -1356,6 +1401,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[46] = { 
 		Level=46,
@@ -1386,6 +1432,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[47] = { 
 		Level=47,
@@ -1416,6 +1463,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[48] = { 
 		Level=48,
@@ -1446,6 +1494,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[49] = { 
 		Level=49,
@@ -1476,6 +1525,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[50] = { 
 		Level=50,
@@ -1506,6 +1556,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[51] = { 
 		Level=51,
@@ -1536,6 +1587,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[52] = { 
 		Level=52,
@@ -1566,6 +1618,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[53] = { 
 		Level=53,
@@ -1596,6 +1649,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[54] = { 
 		Level=54,
@@ -1626,6 +1680,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[55] = { 
 		Level=55,
@@ -1656,6 +1711,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[56] = { 
 		Level=56,
@@ -1686,6 +1742,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[57] = { 
 		Level=57,
@@ -1716,6 +1773,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[58] = { 
 		Level=58,
@@ -1746,6 +1804,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[59] = { 
 		Level=59,
@@ -1776,6 +1835,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[60] = { 
 		Level=60,
@@ -1806,6 +1866,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[61] = { 
 		Level=61,
@@ -1836,6 +1897,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[62] = { 
 		Level=62,
@@ -1866,6 +1928,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[63] = { 
 		Level=63,
@@ -1896,6 +1959,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[64] = { 
 		Level=64,
@@ -1926,6 +1990,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[65] = { 
 		Level=65,
@@ -1956,6 +2021,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[66] = { 
 		Level=66,
@@ -1986,6 +2052,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[67] = { 
 		Level=67,
@@ -2016,6 +2083,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[68] = { 
 		Level=68,
@@ -2046,6 +2114,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[69] = { 
 		Level=69,
@@ -2076,6 +2145,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[70] = { 
 		Level=70,
@@ -2106,6 +2176,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[71] = { 
 		Level=71,
@@ -2136,6 +2207,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[72] = { 
 		Level=72,
@@ -2166,6 +2238,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[73] = { 
 		Level=73,
@@ -2196,6 +2269,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[74] = { 
 		Level=74,
@@ -2226,6 +2300,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[75] = { 
 		Level=75,
@@ -2256,6 +2331,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[76] = { 
 		Level=76,
@@ -2286,6 +2362,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[77] = { 
 		Level=77,
@@ -2316,6 +2393,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[78] = { 
 		Level=78,
@@ -2346,6 +2424,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[79] = { 
 		Level=79,
@@ -2376,6 +2455,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[80] = { 
 		Level=80,
@@ -2406,6 +2486,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[81] = { 
 		Level=81,
@@ -2436,6 +2517,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[82] = { 
 		Level=82,
@@ -2466,6 +2548,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[83] = { 
 		Level=83,
@@ -2496,6 +2579,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[84] = { 
 		Level=84,
@@ -2526,6 +2610,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[85] = { 
 		Level=85,
@@ -2556,6 +2641,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[86] = { 
 		Level=86,
@@ -2586,6 +2672,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[87] = { 
 		Level=87,
@@ -2616,6 +2703,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[88] = { 
 		Level=88,
@@ -2646,6 +2734,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[89] = { 
 		Level=89,
@@ -2676,6 +2765,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 	[90] = { 
 		Level=90,
@@ -2706,6 +2796,7 @@ local config = {
 			},
 		},
 		Model=900001,
+		Monster_ID=80101,
 	},
 }
 return config
