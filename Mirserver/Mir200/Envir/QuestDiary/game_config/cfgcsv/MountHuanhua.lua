@@ -1,6 +1,37 @@
 local config = { 
 	[1] = { 
 		ID=1,
+		Name="乌龙驹",
+		grade=1,
+		mount_icon="zuoji_000",
+		Cost = {
+			[1] = 2401,
+			[2] = 1,
+		},
+		Model=800001,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+			[3] = {
+				[1] = 115,
+				[2] = 20,
+			},
+		},
+		buffID = {
+			[1] = 110017,
+		},
+		BuffDesc="风驰Lv.1：永久提升角色移动速度<font color='#00FF00'>5%</font>",
+		Condition=1,
+		tips="激活坐骑幻化可以改变坐骑外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果，\n让你的坐骑更加炫酷",
+	},
+	[2] = { 
+		ID=2,
 		Name="追风豹",
 		grade=1,
 		mount_icon="zuoji_001",
@@ -28,10 +59,9 @@ local config = {
 		},
 		BuffDesc="风驰Lv.1：永久提升角色移动速度<font color='#00FF00'>5%</font>",
 		Condition=1,
-		tips="激活坐骑幻化可以改变坐骑外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果，\n让你的坐骑更加炫酷",
 	},
-	[2] = { 
-		ID=2,
+	[3] = { 
+		ID=3,
 		Name="铁甲犀牛",
 		grade=1,
 		mount_icon="zuoji_002",
@@ -61,8 +91,8 @@ local config = {
 		BaseProb="80",
 		Param2="110020",
 	},
-	[3] = { 
-		ID=3,
+	[4] = { 
+		ID=4,
 		Name="黑豹",
 		grade=1,
 		mount_icon="zuoji_003",
@@ -92,8 +122,8 @@ local config = {
 		Param1="6",
 		Param2="0.05",
 	},
-	[4] = { 
-		ID=4,
+	[5] = { 
+		ID=5,
 		Name="雪豹",
 		grade=1,
 		mount_icon="zuoji_004",
@@ -125,8 +155,8 @@ local config = {
 		PassiveName="收割Lv1",
 		Param2="1#500|2#500",
 	},
-	[5] = { 
-		ID=5,
+	[6] = { 
+		ID=6,
 		Name="霸天虎",
 		grade=1,
 		mount_icon="zuoji_005",
@@ -151,8 +181,8 @@ local config = {
 		},
 		Condition=1,
 	},
-	[6] = { 
-		ID=6,
+	[7] = { 
+		ID=7,
 		Name="烈焰狮",
 		grade=1,
 		mount_icon="zuoji_006",
@@ -187,8 +217,8 @@ local config = {
 		Param3="60",
 		Param4="2",
 	},
-	[7] = { 
-		ID=7,
+	[8] = { 
+		ID=8,
 		Name="飓风狂狼",
 		grade=1,
 		mount_icon="zuoji_007",
@@ -217,8 +247,8 @@ local config = {
 		},
 		Condition=1,
 	},
-	[8] = { 
-		ID=8,
+	[9] = { 
+		ID=9,
 		Name="松狮犬",
 		grade=1,
 		mount_icon="zuoji_008",
@@ -247,8 +277,8 @@ local config = {
 		},
 		Condition=1,
 	},
-	[9] = { 
-		ID=9,
+	[10] = { 
+		ID=10,
 		Name="青木神龙",
 		grade=1,
 		mount_icon="zuoji_009",
@@ -287,8 +317,33 @@ local config = {
 		Param3="90",
 		Param4="3",
 	},
-	[10] = { 
-		ID=10,
+	[11] = { 
+		ID=11,
+		Name="乌龙驹",
+		grade=2,
+		mount_icon="zuoji_000",
+		Cost = {
+			[1] = 2401,
+			[2] = 1,
+		},
+		Model=800001,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+			[3] = {
+				[1] = 115,
+				[2] = 20,
+			},
+		},
+	},
+	[12] = { 
+		ID=12,
 		Name="追风豹",
 		grade=2,
 		mount_icon="zuoji_001",
@@ -312,8 +367,8 @@ local config = {
 			},
 		},
 	},
-	[11] = { 
-		ID=11,
+	[13] = { 
+		ID=13,
 		Name="铁甲犀牛",
 		grade=2,
 		mount_icon="zuoji_002",
@@ -337,8 +392,8 @@ local config = {
 			},
 		},
 	},
-	[12] = { 
-		ID=12,
+	[14] = { 
+		ID=14,
 		Name="黑豹",
 		grade=2,
 		mount_icon="zuoji_003",
@@ -362,8 +417,8 @@ local config = {
 			},
 		},
 	},
-	[13] = { 
-		ID=13,
+	[15] = { 
+		ID=15,
 		Name="雪豹",
 		grade=2,
 		mount_icon="zuoji_004",
@@ -387,8 +442,8 @@ local config = {
 			},
 		},
 	},
-	[14] = { 
-		ID=14,
+	[16] = { 
+		ID=16,
 		Name="霸天虎",
 		grade=2,
 		mount_icon="zuoji_005",
@@ -412,8 +467,8 @@ local config = {
 			},
 		},
 	},
-	[15] = { 
-		ID=15,
+	[17] = { 
+		ID=17,
 		Name="烈焰狮",
 		grade=2,
 		mount_icon="zuoji_006",
@@ -437,8 +492,8 @@ local config = {
 			},
 		},
 	},
-	[16] = { 
-		ID=16,
+	[18] = { 
+		ID=18,
 		Name="青木神龙",
 		grade=2,
 		mount_icon="zuoji_009",
@@ -466,8 +521,33 @@ local config = {
 			},
 		},
 	},
-	[17] = { 
-		ID=17,
+	[19] = { 
+		ID=19,
+		Name="乌龙驹",
+		grade=3,
+		mount_icon="zuoji_000",
+		Cost = {
+			[1] = 2401,
+			[2] = 1,
+		},
+		Model=800001,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+			[3] = {
+				[1] = 115,
+				[2] = 20,
+			},
+		},
+	},
+	[20] = { 
+		ID=20,
 		Name="追风豹",
 		grade=3,
 		mount_icon="zuoji_001",
@@ -491,8 +571,8 @@ local config = {
 			},
 		},
 	},
-	[18] = { 
-		ID=18,
+	[21] = { 
+		ID=21,
 		Name="铁甲犀牛",
 		grade=3,
 		mount_icon="zuoji_002",
@@ -512,112 +592,112 @@ local config = {
 			},
 			[3] = {
 				[1] = 69,
-				[2] = 30,
-			},
-		},
-	},
-	[19] = { 
-		ID=19,
-		Name="黑豹",
-		grade=3,
-		mount_icon="zuoji_003",
-		Cost = {
-			[1] = 2404,
-			[2] = 1,
-		},
-		Model=800024,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 150,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 30,
-			},
-		},
-	},
-	[20] = { 
-		ID=20,
-		Name="雪豹",
-		grade=3,
-		mount_icon="zuoji_004",
-		Cost = {
-			[1] = 2405,
-			[2] = 1,
-		},
-		Model=800025,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 150,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 30,
-			},
-		},
-	},
-	[21] = { 
-		ID=21,
-		Name="霸天虎",
-		grade=3,
-		mount_icon="zuoji_005",
-		Cost = {
-			[1] = 2406,
-			[2] = 1,
-		},
-		Model=800026,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 100,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 100,
-			},
-			[3] = {
-				[1] = 115,
 				[2] = 30,
 			},
 		},
 	},
 	[22] = { 
 		ID=22,
-		Name="烈焰狮",
+		Name="黑豹",
 		grade=3,
-		mount_icon="zuoji_006",
+		mount_icon="zuoji_003",
 		Cost = {
-			[1] = 2407,
+			[1] = 2404,
 			[2] = 1,
 		},
-		Model=800027,
+		Model=800024,
 		ClassID = {
 			[1] = {
 				[1] = 1,
-				[2] = 100,
+				[2] = 150,
 			},
 			[2] = {
 				[1] = 2,
-				[2] = 100,
+				[2] = 150,
 			},
 			[3] = {
-				[1] = 115,
+				[1] = 69,
 				[2] = 30,
 			},
 		},
 	},
 	[23] = { 
 		ID=23,
+		Name="雪豹",
+		grade=3,
+		mount_icon="zuoji_004",
+		Cost = {
+			[1] = 2405,
+			[2] = 1,
+		},
+		Model=800025,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 150,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 150,
+			},
+			[3] = {
+				[1] = 23,
+				[2] = 30,
+			},
+		},
+	},
+	[24] = { 
+		ID=24,
+		Name="霸天虎",
+		grade=3,
+		mount_icon="zuoji_005",
+		Cost = {
+			[1] = 2406,
+			[2] = 1,
+		},
+		Model=800026,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 100,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 100,
+			},
+			[3] = {
+				[1] = 115,
+				[2] = 30,
+			},
+		},
+	},
+	[25] = { 
+		ID=25,
+		Name="烈焰狮",
+		grade=3,
+		mount_icon="zuoji_006",
+		Cost = {
+			[1] = 2407,
+			[2] = 1,
+		},
+		Model=800027,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 100,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 100,
+			},
+			[3] = {
+				[1] = 115,
+				[2] = 30,
+			},
+		},
+	},
+	[26] = { 
+		ID=26,
 		Name="青木神龙",
 		grade=3,
 		mount_icon="zuoji_009",
@@ -645,8 +725,33 @@ local config = {
 			},
 		},
 	},
-	[24] = { 
-		ID=24,
+	[27] = { 
+		ID=27,
+		Name="乌龙驹",
+		grade=4,
+		mount_icon="zuoji_000",
+		Cost = {
+			[1] = 2401,
+			[2] = 1,
+		},
+		Model=800001,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+			[3] = {
+				[1] = 115,
+				[2] = 20,
+			},
+		},
+	},
+	[28] = { 
+		ID=28,
 		Name="追风豹",
 		grade=4,
 		mount_icon="zuoji_001",
@@ -670,8 +775,8 @@ local config = {
 			},
 		},
 	},
-	[25] = { 
-		ID=25,
+	[29] = { 
+		ID=29,
 		Name="铁甲犀牛",
 		grade=4,
 		mount_icon="zuoji_002",
@@ -695,8 +800,8 @@ local config = {
 			},
 		},
 	},
-	[26] = { 
-		ID=26,
+	[30] = { 
+		ID=30,
 		Name="黑豹",
 		grade=4,
 		mount_icon="zuoji_003",
@@ -720,8 +825,8 @@ local config = {
 			},
 		},
 	},
-	[27] = { 
-		ID=27,
+	[31] = { 
+		ID=31,
 		Name="雪豹",
 		grade=4,
 		mount_icon="zuoji_004",
@@ -745,8 +850,8 @@ local config = {
 			},
 		},
 	},
-	[28] = { 
-		ID=28,
+	[32] = { 
+		ID=32,
 		Name="霸天虎",
 		grade=4,
 		mount_icon="zuoji_005",
@@ -770,8 +875,8 @@ local config = {
 			},
 		},
 	},
-	[29] = { 
-		ID=29,
+	[33] = { 
+		ID=33,
 		Name="烈焰狮",
 		grade=4,
 		mount_icon="zuoji_006",
@@ -795,8 +900,8 @@ local config = {
 			},
 		},
 	},
-	[30] = { 
-		ID=30,
+	[34] = { 
+		ID=34,
 		Name="青木神龙",
 		grade=4,
 		mount_icon="zuoji_009",
@@ -824,8 +929,33 @@ local config = {
 			},
 		},
 	},
-	[31] = { 
-		ID=31,
+	[35] = { 
+		ID=35,
+		Name="乌龙驹",
+		grade=5,
+		mount_icon="zuoji_000",
+		Cost = {
+			[1] = 2401,
+			[2] = 1,
+		},
+		Model=800001,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+			[3] = {
+				[1] = 115,
+				[2] = 20,
+			},
+		},
+	},
+	[36] = { 
+		ID=36,
 		Name="追风豹",
 		grade=5,
 		mount_icon="zuoji_001",
@@ -849,8 +979,8 @@ local config = {
 			},
 		},
 	},
-	[32] = { 
-		ID=32,
+	[37] = { 
+		ID=37,
 		Name="铁甲犀牛",
 		grade=5,
 		mount_icon="zuoji_002",
@@ -874,8 +1004,8 @@ local config = {
 			},
 		},
 	},
-	[33] = { 
-		ID=33,
+	[38] = { 
+		ID=38,
 		Name="黑豹",
 		grade=5,
 		mount_icon="zuoji_003",
@@ -899,8 +1029,8 @@ local config = {
 			},
 		},
 	},
-	[34] = { 
-		ID=34,
+	[39] = { 
+		ID=39,
 		Name="雪豹",
 		grade=5,
 		mount_icon="zuoji_004",
@@ -924,8 +1054,8 @@ local config = {
 			},
 		},
 	},
-	[35] = { 
-		ID=35,
+	[40] = { 
+		ID=40,
 		Name="霸天虎",
 		grade=5,
 		mount_icon="zuoji_005",
@@ -949,8 +1079,8 @@ local config = {
 			},
 		},
 	},
-	[36] = { 
-		ID=36,
+	[41] = { 
+		ID=41,
 		Name="烈焰狮",
 		grade=5,
 		mount_icon="zuoji_006",
@@ -974,8 +1104,8 @@ local config = {
 			},
 		},
 	},
-	[37] = { 
-		ID=37,
+	[42] = { 
+		ID=42,
 		Name="青木神龙",
 		grade=5,
 		mount_icon="zuoji_009",
