@@ -5,7 +5,7 @@
     <image id="n0_10pmd" name="n0" src="baex5m" fileName="Images/comboxDi.png" xy="0,0" size="35,25">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n1_10pmd" name="title" xy="3,3" size="10,19" fontSize="11" color="#7cc3b3" vAlign="middle" ubb="true" autoSize="none" strokeColor="#000000" singleLine="true" text="">
+    <text id="n1_10pmd" name="title" xy="3,3" size="10,19" fontSize="12" color="#7cc3b3" vAlign="middle" ubb="true" autoSize="none" strokeColor="#000000" singleLine="true" text="">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
     <image id="n3_kra4" name="n3" src="emvc3a" fileName="Images/arrowdi.png" xy="13,3" size="19,19" aspect="true">

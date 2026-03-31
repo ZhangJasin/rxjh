@@ -12,14 +12,14 @@
     </image>
     <component id="n15_10pmd" name="s_text_name" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="123,13" size="130,29">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Label titleColor="#ffffff" titleFontSize="20"/>
+      <Label titleColor="#f6cd2b" titleFontSize="20"/>
     </component>
-    <text id="n14_10pmd" name="text_cost_count" xy="152,46" size="96,29" fontSize="20" color="#83f274" autoSize="none" singleLine="true" text="100000">
+    <text id="n14_10pmd" name="text_cost_count" xy="152,47" size="96,29" fontSize="20" color="#83f274" autoSize="none" singleLine="true" text="100000">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n16_10pmd" name="s_text_des" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="123,83" size="137,29">
+    <component id="n16_10pmd" name="s_text_des" src="ftt5vo7" fileName="ScrollRText.xml" pkg="o8ixb2zy" xy="123,82" size="137,29">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Label titleColor="#ffffff" titleFontSize="20"/>
+      <Label titleFontSize="18"/>
     </component>
     <component id="n17_10pmd" name="node_item" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="31,32" size="60,60">
       <relation target="" sidePair="center-center,middle-middle"/>

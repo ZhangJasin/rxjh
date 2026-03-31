@@ -2,16 +2,12 @@
 <component size="127,147">
   <controller name="isXianGou" pages="0,是,1,否" selected="0"/>
   <displayList>
-    <image id="n270_yh61" name="n274" src="emvc32" fileName="Images/di.png" xy="0,0" size="127,147">
+    <image id="n270_yh61" name="n270" src="emvc32" fileName="Images/di.png" xy="0,0" size="127,147">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n275_qug1" name="n270" src="emvc36" fileName="Images/icon_item_select.png" xy="0,0" size="127,147" visible="false"/>
     <component id="n269_jo9b" name="commonItem" src="emvc3" fileName="Icons/CommonItem.xml" pkg="qa9a7rit" xy="42,52" size="43,43" aspect="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <text id="n251_cym7" name="text_name" xy="63,14" pivot="0.5,0.5" anchor="true" size="116,20" fontSize="13" color="#f6cd2b" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="回城符（柳善府）">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
     <text id="n254_cym7" name="text_xiangou" xy="25,101" size="76,20" fontSize="13" color="#ffffff" align="center" vAlign="middle" text="今日限购3次">
       <gearDisplay controller="isXianGou" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -22,6 +18,10 @@
     </image>
     <component id="n274_tibb" name="com_money" src="emvc1y" fileName="Components/com_money.xml" xy="36,121">
       <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n275_tqs0" name="text_name" src="zwd8vnu" fileName="ScrollText.xml" pkg="o8ixb2zy" xy="5,4" size="116,20">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label titleColor="#f6cd2b" titleFontSize="12"/>
     </component>
   </displayList>
 </component>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="789,565">
+  <controller name="isHaveStore" pages="0,没有商品,1,有商品" selected="0"/>
   <displayList>
     <image id="n9_10pmd" name="bg" src="q9lsv5j" fileName="image/icon_money_bg.png" pkg="st7dgeqq" xy="-2,0" size="794,571">
       <relation target="n7_10pmd" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
@@ -18,5 +19,10 @@
       <item/>
       <item/>
     </list>
+    <component id="n10_iwlb" name="noItemtip" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="209,142">
+      <gearDisplay controller="isHaveStore" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label title="暂无商品"/>
+    </component>
   </displayList>
 </component>

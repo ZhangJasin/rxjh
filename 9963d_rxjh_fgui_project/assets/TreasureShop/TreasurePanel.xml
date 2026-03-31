@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" designImage="ui://p8mjxubrowd7dv7o" designImageOffsetX="-2" designImageAlpha="100">
+  <controller name="isHaveStore" pages="0,没有商品,1,有商品" selected="0"/>
   <displayList>
     <graph id="n328_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
@@ -38,23 +39,12 @@
     </list>
     <list id="n311_seb1" name="storeList" xy="360,168" size="784,513" layout="flow_hz" overflow="scroll" margin="4,4,4,4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://p8mjxubrcym74q" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
     </list>
+    <component id="n329_iwlb" name="noItemtip" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="564,271">
+      <gearDisplay controller="isHaveStore" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label title="暂无商品"/>
+    </component>
     <text id="n313_seb1" name="title" xy="667,78" pivot="0.5,0.5" anchor="true" size="76,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" singleLine="true" text="百宝阁">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
