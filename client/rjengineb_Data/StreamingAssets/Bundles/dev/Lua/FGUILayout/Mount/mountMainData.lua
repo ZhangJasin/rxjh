@@ -71,7 +71,10 @@ function mountMainData:Init()
     _dataForPet.petHHid = SL:GetValue("U", 107) -- U_Pet_Take_Id 灵兽幻化ID
     _dataForPet.modelId = SL:GetValue("U", 108) > 0 and SL:GetValue("U", 108) or -- U_Pet_Base_ID
                               (Pet[1] and Pet[1].Model) or 800001
-    _dataForPet.isPetChuzhan = SL:GetValue("U", 110) -- U_Pet_IS_SET 是否出战 (0=出战,1=休息)
+    -- U_Pet_IS_SET: 0=休息, 1=出战
+    -- 客户端 isPetChuzhan: 0=休息(显示"召回"), 1=出战(显示"出战")
+    -- 直接读取，不需要转换
+    _dataForPet.isPetChuzhan = SL:GetValue("U", 110) or 0
     _dataForPet.isPetJh = SL:GetValue("U", 106) > 0 and 1 or 0 -- U_All_Pet_star 是否已激活 (0=未激活,1=已激活)
     _dataForPet.allJieshu = SL:GetValue("U", 106) -- U_All_Pet_star 灵兽总星级
 
@@ -80,7 +83,20 @@ function mountMainData:Init()
         _dataForPet.hhlistsj = SL:JsonDecode(t119) 
     end
 
-    _dataForPet.showPetModelId = SL:GetValue("U", 108) -- U_Pet_Base_ID 显示模型id
+    -- 修复：showPetModelId应该使用U_Pet_Take_Id(107)作为显示模型，U_Pet_Base_ID(108)是基础模型
+    -- 判断是否有幻化：有幻化时petHHid有值且U_Pet_IS_HH(U109)为1，否则显示基础模型
+    local petISHH = tonumber(SL:GetValue("U", 109)) -- U_Pet_IS_HH 是否幻化 (0=未幻化,1=已幻化)
+    print("=== Init 读取灵兽数据 ===")
+    print("petHHid (U107):", _dataForPet.petHHid)
+    print("petISHH (U109):", petISHH)
+    print("modelId (U108):", SL:GetValue("U", 108))
+    if petISHH == 1 and _dataForPet.petHHid and tonumber(_dataForPet.petHHid) > 0 then
+        _dataForPet.showPetModelId = tonumber(_dataForPet.petHHid) -- 使用幻化模型ID
+        print("使用幻化模型ID:", _dataForPet.showPetModelId)
+    else
+        _dataForPet.showPetModelId = SL:GetValue("U", 108) -- 使用基础模型ID
+        print("使用基础模型ID:", _dataForPet.showPetModelId)
+    end
     _dataForPet.selectViewPetId = SL:GetValue("U", 108) -- U_Pet_Base_ID 选中主体id
     if not _dataForPet.hhlistsj or _dataForPet.hhlistsj == 0 then _dataForPet.hhlistsj = {} end
     -- 兼容旧字段
@@ -344,26 +360,23 @@ end
 function mountMainData:petChuzhan()
     ssrMessage:sendmsgEx("mountMain", "petChuzhan")
 end
--- 网络消息
--- {id = 本体id, modelid = 新外型Model, btmodelId = 本体外型Model }
+-- 网络消息 - 单灵兽系统：激活灵兽
+-- {lv = 灵兽等级, name = "pet"}
 function mountMainData:updateLSView(data)
-    _dataForPet.allPetsActive = data.allPets
-    self:initPetDataSort()
-    local selectPetIndex = 1
-    for i = 1, #_dataForPet.allPets do
-        if _dataForPet.allPets[i].Name == data.name then
-            selectPetIndex = i
-        end
-    end
+    -- 单灵兽系统：直接更新灵兽激活状态
+    _dataForPet.isPetJh = data.lv > 0 and 1 or 0
+    _dataForPet.allJieshu = data.lv
+    print("=== updateLSView 单灵兽激活 === lv:", data.lv)
     self:Publish("ls_list_update", {
         _dataForPet = self:GetDataForPet(),
-        selectPetIndex = selectPetIndex
+        selectPetIndex = 1
     })
 end
--- {lv = hasPet[data.name], Name = data.name}
+-- {lv = 灵兽等级, Name = "pet"}
 function mountMainData:level(data)
-    _dataForPet.allPetsActive[data.Name] = data.lv
-    self:initPetDataSort()
+    -- 单灵兽系统：直接更新灵兽等级
+    _dataForPet.allJieshu = data.lv
+    print("=== level 单灵兽升级 === lv:", data.lv)
     -- 更新视图
     self:Publish("ls_level_result", self:GetDataForPet())
 end
@@ -510,6 +523,10 @@ end
 function mountMainData:updatePetHHmodel(data)
     _dataForPet.hhlistsj = data.ycList
     _dataForPet.petHHid = data.petHHid
+    -- 同步更新showPetModelId，确保灵兽升阶页面显示幻化模型
+    if data.petHHid and data.petHHid > 0 then
+        _dataForPet.showPetModelId = tonumber(data.petHHid)
+    end
     _dataForPet.hhSortList = self:setPetHHListSort()
     local selectHHIndex = 0
     for i = 1, #_dataForPet.hhSortList do

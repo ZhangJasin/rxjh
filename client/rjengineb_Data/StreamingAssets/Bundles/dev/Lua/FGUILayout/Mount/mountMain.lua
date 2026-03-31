@@ -80,6 +80,8 @@ function mountMain:subscribeEvents()
             self:setPetAtta()
             self:setPetBtPetBtn()
             self:setPetXhcl()
+            -- 刷新模型显示
+            self:refreshPetModel()
         end)
         self._subscriptions.lsLevelResult = self._data:Subscribe("ls_level_result", function(state)
             self._dataForPet = state
@@ -88,6 +90,8 @@ function mountMain:subscribeEvents()
             self:setPetAtta()
             self:setPetBtPetBtn()
             self:setPetXhcl()
+            -- 刷新模型显示
+            self:refreshPetModel()
         end)
         self._subscriptions.lsUpdateModel = self._data:Subscribe("ls_update_model", function(state)
             self._dataForPet = state
@@ -171,10 +175,10 @@ function mountMain:subscribeEvents()
             if state.allJieshu ~= nil then self._dataForPet.allJieshu = state.allJieshu end
             
             -- 刷新按钮状态
-            -- isPetChuzhan: 0=出战(显示召回), 1=休息(显示出战)
+            -- isPetChuzhan: 0=休息(显示"出战"按钮), 1=出战(显示"召回"按钮)
             local title = FGUI:GetChild(self._ui.petQhbtn, "title")
             if title then
-                if self._dataForPet.isPetChuzhan == 0 then
+                if self._dataForPet.isPetChuzhan == 1 then
                     FGUI:GTextField_setText(title, "召回")
                 else
                     FGUI:GTextField_setText(title, "出战")
@@ -698,9 +702,8 @@ function mountMain:setPetBtPetBtn()
         -- 已激活
         FGUI:setVisible(self._ui.petQhbtn, true)
         -- 显示出战或召回状态
-        -- 服务端逻辑：isPetChuzhan=0表示出战，isPetChuzhan=1表示休息
-        -- 出战状态显示"召回"按钮，休息状态显示"出战"按钮
-        if self._dataForPet.isPetChuzhan == 0 then
+        -- isPetChuzhan: 0=休息(显示"出战"按钮), 1=出战(显示"召回"按钮)
+        if self._dataForPet.isPetChuzhan == 1 then
             FGUI:GTextField_setText(title, "召回")
         else
             FGUI:GTextField_setText(title, "出战")
@@ -931,10 +934,11 @@ function mountMain:initPetTab()
         FGUI:GTextField_setText(title, "升阶")
         local petQhbtnTitle = FGUI:GetChild(self._ui.petQhbtn, "title")
         -- 显示出战或召回状态
-        if self._dataForPet.isPetChuzhan == STATUS.FIGHT then
-            FGUI:GTextField_setText(petQhbtnTitle, "出战")
-        else
+        -- isPetChuzhan: 0=休息(显示"出战"按钮), 1=出战(显示"召回"按钮)
+        if self._dataForPet.isPetChuzhan == 1 then
             FGUI:GTextField_setText(petQhbtnTitle, "召回")
+        else
+            FGUI:GTextField_setText(petQhbtnTitle, "出战")
         end
     end
     -- 设置模型ID：如果有幻化模型ID则使用幻化模型，否则使用基础模型
@@ -955,6 +959,27 @@ function mountMain:initPetTab()
     -- 设置灵兽名称和阶数
     self:setPetInfo()
     print("=== initPetTab 完成 ===")
+end
+
+-- 刷新灵兽模型显示
+function mountMain:refreshPetModel()
+    print("=== refreshPetModel 开始 ===")
+    print("showPetModelId:", self._dataForPet.showPetModelId)
+    print("petHHid:", self._dataForPet.petHHid)
+    -- 根据showPetModelId设置模型ID
+    if self._dataForPet.showPetModelId and self._dataForPet.showPetModelId > 0 then
+        self.modelId = self._dataForPet.showPetModelId
+        print("使用幻化模型ID:", self.modelId)
+    else
+        -- 使用基础模型
+        self.modelId = Pet[self._dataForPet.allJieshu] and Pet[self._dataForPet.allJieshu].Model or Pet[1].Model
+        print("使用基础模型ID:", self.modelId)
+    end
+    -- 更新模型显示
+    if self.modelId and self.petBody then
+        self:setPetModel(self.modelId, 0, 1.1)
+    end
+    print("=== refreshPetModel 完成 ===")
 end
 
 -- 初始化灵兽幻化标签

@@ -451,14 +451,13 @@ function mountMain.petShengji(actor)
         showPetModelId = showPetModelId
     })
     
-    -- 发送petUpdateBtn消息更新按钮状态（激活后为休息状态，显示"出战"）
+    -- 发送petUpdateBtn消息更新按钮状态
     -- 服务端：U_Pet_IS_SET = 0 表示休息，1 表示出战
-    -- 客户端：isPetChuzhan = 0 表示已召唤（显示召回），1 表示未召唤（显示出战）
-    -- 需要转换：客户端值 = 1 - 服务端值
-    local serverChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
-    local isPetChuzhan = 1 - serverChuzhan
+    -- 客户端：isPetChuzhan = 0 表示休息（显示"出战"按钮），1 表示出战（显示"召回"按钮）
+    -- 直接传递服务端值，不需要转换
+    local isPetChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
     local isPetJh = gethumvar(actor, VarCfg.U_All_Pet_star)
-    print("发送petUpdateBtn消息：serverChuzhan=", serverChuzhan, "client isPetChuzhan=", isPetChuzhan, "isPetJh=", isPetJh)
+    print("发送petUpdateBtn消息：U_Pet_IS_SET=", isPetChuzhan, "isPetJh=", isPetJh)
     Message.sendmsgEx(actor, "mountMain", "petUpdateBtn", {
         isPetChuzhan = isPetChuzhan,
         isPetJh = isPetJh
@@ -594,6 +593,9 @@ function mountMain.petHuanhuajihuo(actor, postData)
             mountMain.updatePetBattleSkillBuff(actor)
 
             -- 更新前端
+            -- 确保U_Pet_IS_HH设置为1（表示已幻化）
+            sethumvar(actor, VarCfg.U_Pet_IS_HH, 1)
+            print("petHuanhuajihuo: 设置U_Pet_IS_HH=1, petHHid=", petHHid)
             Message.sendmsgEx(actor, "mountMain", "updatePetHHmodel", {
                 ycList = ycList,
                 name = name,
@@ -1066,6 +1068,18 @@ function mountMain.lsjihuo(actor, data)
     end
 
     mountMain.petShengji(actor)
+    
+    -- 发送updateLSView和level消息
+    local newLv = gethumvar(actor, VarCfg.U_All_Pet_star)
+    print("=== lsjihuo 发送消息, newLv:", newLv)
+    Message.sendmsgEx(actor, "mountMain", "updateLSView", {
+        name = "pet",
+        lv = newLv
+    })
+    Message.sendmsgEx(actor, "mountMain", "level", {
+        lv = newLv,
+        Name = "pet"
+    })
     print("=== lsjihuo 完成 ===")
 end
 
