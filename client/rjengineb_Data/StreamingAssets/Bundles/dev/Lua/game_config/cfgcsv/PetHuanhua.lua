@@ -26,6 +26,8 @@ local config = {
 		},
 		Condition=1,
 		tips="激活灵兽幻化可以改变灵兽外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果。",
+		BattleSkill_Type="1",
+		BattleSkill_Value="50",
 	},
 	[2] = { 
 		ID=2,
@@ -53,6 +55,8 @@ local config = {
 			},
 		},
 		Condition=1,
+		BattleSkill_Type="115",
+		BattleSkill_Value="1000",
 	},
 	[3] = { 
 		ID=3,
@@ -80,6 +84,14 @@ local config = {
 			},
 		},
 		Condition=1,
+		BattleSkill_Type = {
+			[1] = 104,
+			[2] = 105,
+		},
+		BattleSkill_Value = {
+			[1] = 200,
+			[2] = 200,
+		},
 	},
 	[4] = { 
 		ID=4,
@@ -107,6 +119,8 @@ local config = {
 			},
 		},
 		Condition=1,
+		BattleSkill_Type="116",
+		BattleSkill_Value="1000",
 	},
 	[5] = { 
 		ID=5,
@@ -134,6 +148,11 @@ local config = {
 			},
 		},
 		Condition=1,
+		BattleSkill_Type = {
+			[1] = 99,
+			[2] = 100,
+		},
+		BattleSkill_Value="500",
 	},
 	[6] = { 
 		ID=6,
@@ -161,6 +180,8 @@ local config = {
 			},
 		},
 		Condition=1,
+		BattleSkill_Type="126",
+		BattleSkill_Value="1",
 	},
 	[7] = { 
 		ID=7,
@@ -192,6 +213,8 @@ local config = {
 			},
 		},
 		Condition=1,
+		BattleSkill_Type="9",
+		BattleSkill_Value="500",
 	},
 	[8] = { 
 		ID=8,
@@ -223,6 +246,8 @@ local config = {
 			},
 		},
 		Condition=1,
+		BattleSkill_Type="103",
+		BattleSkill_Value="200",
 	},
 	[9] = { 
 		ID=9,
@@ -254,6 +279,8 @@ local config = {
 			},
 		},
 		Condition=1,
+		BattleSkill_Type="107",
+		BattleSkill_Value="300",
 	},
 	[10] = { 
 		ID=10,
@@ -280,6 +307,8 @@ local config = {
 				[2] = 20,
 			},
 		},
+		BattleSkill_Type="1",
+		BattleSkill_Value="200",
 	},
 	[11] = { 
 		ID=11,
@@ -306,6 +335,8 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type="115",
+		BattleSkill_Value="2000",
 	},
 	[12] = { 
 		ID=12,
@@ -331,6 +362,14 @@ local config = {
 				[1] = 69,
 				[2] = 10,
 			},
+		},
+		BattleSkill_Type = {
+			[1] = 104,
+			[2] = 105,
+		},
+		BattleSkill_Value = {
+			[1] = 400,
+			[2] = 400,
 		},
 	},
 	[13] = { 
@@ -358,6 +397,8 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type="116",
+		BattleSkill_Value="2000",
 	},
 	[14] = { 
 		ID=14,
@@ -384,6 +425,11 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type = {
+			[1] = 99,
+			[2] = 100,
+		},
+		BattleSkill_Value="1000",
 	},
 	[15] = { 
 		ID=15,
@@ -410,6 +456,8 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type="126",
+		BattleSkill_Value="1",
 	},
 	[16] = { 
 		ID=16,
@@ -440,6 +488,8 @@ local config = {
 				[2] = 30,
 			},
 		},
+		BattleSkill_Type="9",
+		BattleSkill_Value="800",
 	},
 	[17] = { 
 		ID=17,
@@ -470,6 +520,8 @@ local config = {
 				[2] = 18,
 			},
 		},
+		BattleSkill_Type="103",
+		BattleSkill_Value="400",
 	},
 	[18] = { 
 		ID=18,
@@ -500,6 +552,8 @@ local config = {
 				[2] = 58,
 			},
 		},
+		BattleSkill_Type="107",
+		BattleSkill_Value="600",
 	},
 	[19] = { 
 		ID=19,
@@ -526,6 +580,8 @@ local config = {
 				[2] = 20,
 			},
 		},
+		BattleSkill_Type="1",
+		BattleSkill_Value="500",
 	},
 	[20] = { 
 		ID=20,
@@ -552,6 +608,8 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type="115",
+		BattleSkill_Value="5000",
 	},
 	[21] = { 
 		ID=21,
@@ -577,6 +635,14 @@ local config = {
 				[1] = 69,
 				[2] = 10,
 			},
+		},
+		BattleSkill_Type = {
+			[1] = 104,
+			[2] = 105,
+		},
+		BattleSkill_Value = {
+			[1] = 800,
+			[2] = 800,
 		},
 	},
 	[22] = { 
@@ -604,6 +670,8 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type="116",
+		BattleSkill_Value="5000",
 	},
 	[23] = { 
 		ID=23,
@@ -630,6 +698,11 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type = {
+			[1] = 99,
+			[2] = 100,
+		},
+		BattleSkill_Value="1500",
 	},
 	[24] = { 
 		ID=24,
@@ -656,6 +729,8 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type="126",
+		BattleSkill_Value="2",
 	},
 	[25] = { 
 		ID=25,
@@ -686,6 +761,8 @@ local config = {
 				[2] = 30,
 			},
 		},
+		BattleSkill_Type="9",
+		BattleSkill_Value="1200",
 	},
 	[26] = { 
 		ID=26,
@@ -716,6 +793,8 @@ local config = {
 				[2] = 18,
 			},
 		},
+		BattleSkill_Type="103",
+		BattleSkill_Value="600",
 	},
 	[27] = { 
 		ID=27,
@@ -746,6 +825,8 @@ local config = {
 				[2] = 58,
 			},
 		},
+		BattleSkill_Type="107",
+		BattleSkill_Value="1000",
 	},
 	[28] = { 
 		ID=28,
@@ -772,6 +853,8 @@ local config = {
 				[2] = 20,
 			},
 		},
+		BattleSkill_Type="1",
+		BattleSkill_Value="500",
 	},
 	[29] = { 
 		ID=29,
@@ -798,6 +881,8 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type="115",
+		BattleSkill_Value="5000",
 	},
 	[30] = { 
 		ID=30,
@@ -823,6 +908,14 @@ local config = {
 				[1] = 69,
 				[2] = 10,
 			},
+		},
+		BattleSkill_Type = {
+			[1] = 104,
+			[2] = 105,
+		},
+		BattleSkill_Value = {
+			[1] = 800,
+			[2] = 800,
 		},
 	},
 	[31] = { 
@@ -850,6 +943,8 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type="116",
+		BattleSkill_Value="5000",
 	},
 	[32] = { 
 		ID=32,
@@ -876,6 +971,11 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type = {
+			[1] = 99,
+			[2] = 100,
+		},
+		BattleSkill_Value="1500",
 	},
 	[33] = { 
 		ID=33,
@@ -902,6 +1002,8 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type="126",
+		BattleSkill_Value="2",
 	},
 	[34] = { 
 		ID=34,
@@ -932,6 +1034,8 @@ local config = {
 				[2] = 30,
 			},
 		},
+		BattleSkill_Type="9",
+		BattleSkill_Value="1200",
 	},
 	[35] = { 
 		ID=35,
@@ -962,6 +1066,8 @@ local config = {
 				[2] = 18,
 			},
 		},
+		BattleSkill_Type="103",
+		BattleSkill_Value="600",
 	},
 	[36] = { 
 		ID=36,
@@ -992,6 +1098,8 @@ local config = {
 				[2] = 58,
 			},
 		},
+		BattleSkill_Type="107",
+		BattleSkill_Value="1000",
 	},
 	[37] = { 
 		ID=37,
@@ -1018,6 +1126,8 @@ local config = {
 				[2] = 20,
 			},
 		},
+		BattleSkill_Type="1",
+		BattleSkill_Value="500",
 	},
 	[38] = { 
 		ID=38,
@@ -1044,6 +1154,8 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type="115",
+		BattleSkill_Value="5000",
 	},
 	[39] = { 
 		ID=39,
@@ -1069,6 +1181,14 @@ local config = {
 				[1] = 69,
 				[2] = 10,
 			},
+		},
+		BattleSkill_Type = {
+			[1] = 104,
+			[2] = 105,
+		},
+		BattleSkill_Value = {
+			[1] = 800,
+			[2] = 800,
 		},
 	},
 	[40] = { 
@@ -1096,6 +1216,8 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type="116",
+		BattleSkill_Value="5000",
 	},
 	[41] = { 
 		ID=41,
@@ -1122,6 +1244,11 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type = {
+			[1] = 99,
+			[2] = 100,
+		},
+		BattleSkill_Value="1500",
 	},
 	[42] = { 
 		ID=42,
@@ -1148,6 +1275,8 @@ local config = {
 				[2] = 10,
 			},
 		},
+		BattleSkill_Type="126",
+		BattleSkill_Value="2",
 	},
 	[43] = { 
 		ID=43,
@@ -1178,6 +1307,8 @@ local config = {
 				[2] = 30,
 			},
 		},
+		BattleSkill_Type="9",
+		BattleSkill_Value="1200",
 	},
 	[44] = { 
 		ID=44,
@@ -1208,6 +1339,8 @@ local config = {
 				[2] = 18,
 			},
 		},
+		BattleSkill_Type="103",
+		BattleSkill_Value="600",
 	},
 	[45] = { 
 		ID=45,
@@ -1238,6 +1371,8 @@ local config = {
 				[2] = 58,
 			},
 		},
+		BattleSkill_Type="107",
+		BattleSkill_Value="1000",
 	},
 }
 return config

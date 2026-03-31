@@ -1339,6 +1339,23 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
     end
 end, mountMain)
 
+GameEvent.add(EventCfg.onNewHuman, function(actor)
+    giveitem(actor, "ÁéÊŞÕÙ»½·û£¨ÎÚÁú¾Ô£©#999")
+    giveitem(actor, "ÁéÊŞÕÙ»½·û£¨×··ç±ª£©#999")
+    giveitem(actor, "ÁéÊŞÕÙ»½·û£¨Ìú¼×Ï¬Å££©#999")
+    giveitem(actor, "ÁéÊŞÕÙ»½·û£¨ºÚ±ª£©#999")
+    giveitem(actor, "ÁéÊŞÕÙ»½·û£¨Ñ©±ª£©#999")
+    giveitem(actor, "ÁéÊŞÕÙ»½·û£¨°ÔÌì»¢£©#999")
+    giveitem(actor, "ÁéÊŞÕÙ»½·û£¨ÁÒÑæÊ¨£©#999")
+    giveitem(actor, "ÁéÊŞÕÙ»½·û£¨ì«·ç¿ñÀÇ£©#999")
+    giveitem(actor, "ÁéÊŞÕÙ»½·û£¨ËÉÊ¨È®£©#999")
+    giveitem(actor, "ÁéÊŞÕÙ»½·û£¨ÇàÄ¾ÉñÁú£©#999")
+    giveitem(actor, "ÁúÃ¨#10")
+    giveitem(actor, "°×Ã¨#10")
+    giveitem(actor, "×øÆïÉıĞÇÊ¯#9999")
+    giveitem(actor, "Áé³èÉı¼¶²Êµ°#9999")
+end, mountMain)
+
 Message.RegisterNetMsg(ssrNetMsgCfg.mountMain, mountMain)
 
 return mountMain
