@@ -774,6 +774,7 @@ local config = {
 		BossSign=3,
 		Drop="30级BOSS",
 		DropType=6,
+		Icon="MOB11056",
 		DieAnimation={0,0,2000},
 		HidePoint=0,
 		DieSound=9148,
