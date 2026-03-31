@@ -1021,6 +1021,17 @@ function mountMain.setModel(actor, data)
     })
 end
 function mountMain.chuzhan(actor, data)
+    -- 坐骑出战限制：需要达到一阶才能出战
+    local mountStar = gethumvar(actor, VarCfg.U_All_Mount_star)
+    if not mountStar or mountStar == 0 then
+        sendmsg(actor, 9, "请先激活坐骑")
+        return
+    end
+    if mountStar < 11 then
+        sendmsg(actor, 9, "坐骑未达一阶，无法上阵出战")
+        return
+    end
+
     local nowStatus = horsestate(actor)
     local mountId = gethumvar(actor, VarCfg.U_Mount_Take_Id)
     changeappear(actor, 5, mountId)
@@ -1090,6 +1101,12 @@ function mountMain.petChuzhan(actor)
     local isActivated = gethumvar(actor, VarCfg.U_All_Pet_star)
     if not isActivated or isActivated == 0 then
         sendmsg(actor, 9, "请先激活灵兽")
+        return
+    end
+
+    -- 灵兽出战限制：需要达到一阶才能出战
+    if isActivated < 11 then
+        sendmsg(actor, 9, "灵兽未达一阶，无法上阵出战")
         return
     end
 
