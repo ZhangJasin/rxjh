@@ -97,6 +97,8 @@ function mountMain:subscribeEvents()
             self._dataForPet = state
             --灵兽
             self:updatePetView()
+            -- 刷新模型显示，确保幻化模型正确显示
+            self:refreshPetModel()
         end)
         self._subscriptions.lsUnrecallpet = self._data:Subscribe("ls_unrecallpet", function(state)
             self._dataForPet = state
@@ -836,18 +838,22 @@ end
 function mountMain:updatePetView()
     print("=== updatePetView 被调用 ===")
     print("showPetModelId:", self._dataForPet.showPetModelId)
-    -- 只有坐骑休息时才更新灵兽模型，避免冲突
-    local mountChuzhan = self._dataForMount.ischuzhan
-    print("坐骑出战状态:", mountChuzhan)
-    if not mountChuzhan or mountChuzhan ~= 0 then
-        -- 优先使用服务端返回的showPetModelId（幻化后的模型）
-        if self._dataForPet.showPetModelId and self._dataForPet.showPetModelId > 0 then
-            self.modelId = self._dataForPet.showPetModelId
-            print("updatePetView: 使用服务端模型ID:", self.modelId)
-            self:setPetModel(self.modelId, 0, 1.1)
-        end
+    print("allJieshu:", self._dataForPet.allJieshu)
+    print("modelId:", self._dataForPet.modelId)
+    print("isPetChuzhan:", self._dataForPet.isPetChuzhan)
+    
+    -- 灵兽模型独立更新，不受坐骑出战状态影响
+    -- 优先使用服务端返回的showPetModelId（幻化后的模型）
+    if self._dataForPet.showPetModelId and self._dataForPet.showPetModelId > 0 then
+        self.modelId = self._dataForPet.showPetModelId
+        print("updatePetView: 使用幻化模型ID:", self.modelId)
     else
-        print("坐骑已出战，跳过灵兽模型更新")
+        -- 使用基础模型
+        self.modelId = self._dataForPet.modelId or (Pet[self._dataForPet.allJieshu] and Pet[self._dataForPet.allJieshu].Model) or 800001
+        print("updatePetView: 使用基础模型ID:", self.modelId)
+    end
+    if self.modelId then
+        self:setPetModel(self.modelId, 0, 1.1)
     end
     self:setPetInfo()
     self:setPetAtta()

@@ -396,18 +396,31 @@ end
 
 function mountMainData:recallpetResult(data)
     print("=== 客户端收到recallpetResult消息 ===")
+    print("data:", data)
     _dataForPet.showPetModelId = data.showPetModelId
     _dataForPet.selectViewPetId = data.selectViewPetId
-    _dataForPet.isPetChuzhan = 0  -- 出战状态
+    -- 使用服务端传递的 isPetChuzhan 值：0=休息(显示"出战"), 1=出战(显示"召回")
+    if data.isPetChuzhan ~= nil then
+        _dataForPet.isPetChuzhan = data.isPetChuzhan
+    else
+        _dataForPet.isPetChuzhan = 1  -- 默认出战状态
+    end
+    print("recallpetResult: isPetChuzhan=", _dataForPet.isPetChuzhan)
     self:Publish("ls_update_model", self:GetDataForPet())
     self:Publish("petUpdateBtn", self:GetDataForPet())  -- 额外发布按钮更新事件
 end
 
-function mountMainData:unrecallpetResult()
+function mountMainData:unrecallpetResult(data)
     print("=== 客户端收到unrecallpetResult消息 ===")
     _dataForPet.showPetModelId = 0
     _dataForPet.selectViewPetId = 0
-    _dataForPet.isPetChuzhan = STATUS.REST  -- 休息状态
+    -- 使用服务端传递的 isPetChuzhan 值：0=休息(显示"出战"), 1=出战(显示"召回")
+    if data and data.isPetChuzhan ~= nil then
+        _dataForPet.isPetChuzhan = data.isPetChuzhan
+    else
+        _dataForPet.isPetChuzhan = 0  -- 默认休息状态
+    end
+    print("unrecallpetResult: isPetChuzhan=", _dataForPet.isPetChuzhan)
     self:Publish("ls_unrecallpet", self:GetDataForPet())
     self:Publish("petUpdateBtn", self:GetDataForPet())  -- 额外发布按钮更新事件
 end

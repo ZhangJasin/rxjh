@@ -1245,9 +1245,13 @@ function mountMain.recallpet(actor)
     -- 人物外观只由坐骑控制，灵兽只是跟随的宠物（与旧系统一致）
 
     -- 发送召回结果消息给客户端
+    -- isPetChuzhan: 0=休息(显示"出战"), 1=出战(显示"召回")
+    local isPetChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
+    print("recallpetResult: isPetChuzhan=", isPetChuzhan)
     Message.sendmsgEx(actor, "mountMain", "recallpetResult", {
         showPetModelId = petTakeId,
-        selectViewPetId = petBaseId
+        selectViewPetId = petBaseId,
+        isPetChuzhan = isPetChuzhan
     })
     
     -- 发送setPetInfo消息更新顶部灵兽图标（与旧系统对齐）
@@ -1274,9 +1278,11 @@ function mountMain.recallpet(actor)
     })
 
     -- 发送petUpdateBtn消息更新按钮状态
-    print("发送petUpdateBtn消息: isPetChuzhan=0")
+    -- isPetChuzhan: 0=休息(显示"出战"), 1=出战(显示"召回")
+    local isPetChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
+    print("发送petUpdateBtn消息: isPetChuzhan=", isPetChuzhan)
     Message.sendmsgEx(actor, "mountMain", "petUpdateBtn", {
-        isPetChuzhan = 0,  -- 0=出战状态
+        isPetChuzhan = isPetChuzhan,
         isPetJh = gethumvar(actor, VarCfg.U_All_Pet_star) > 0 and 1 or 0,
         allJieshu = gethumvar(actor, VarCfg.U_All_Pet_star)
     })
@@ -1325,9 +1331,11 @@ function mountMain.unrecallpet(actor, petMark)
     })
 
     -- 发送petUpdateBtn消息更新按钮状态
-    print("发送petUpdateBtn消息: isPetChuzhan=1")
+    -- isPetChuzhan: 0=休息(显示"出战"), 1=出战(显示"召回")
+    local isPetChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
+    print("发送petUpdateBtn消息: isPetChuzhan=", isPetChuzhan)
     Message.sendmsgEx(actor, "mountMain", "petUpdateBtn", {
-        isPetChuzhan = 1,  -- 1=休息状态
+        isPetChuzhan = isPetChuzhan,
         isPetJh = gethumvar(actor, VarCfg.U_All_Pet_star) > 0 and 1 or 0,
         allJieshu = gethumvar(actor, VarCfg.U_All_Pet_star)
     })
