@@ -2738,7 +2738,7 @@ local config = {
 		task_pro = {
 			[1] = 103013,
 		},
-		task_targettype=3,
+		task_targettype=1,
 		task_target_param = {
 			[1] = 15013,
 			[2] = 50,
