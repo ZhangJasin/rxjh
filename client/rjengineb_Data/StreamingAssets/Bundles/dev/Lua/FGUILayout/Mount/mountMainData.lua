@@ -564,8 +564,13 @@ function mountMainData:updatePetZQ(data)
     end
     -- 更新阶数和视图
     _dataForPet.allJieshu = tonumber(data.lv)
-    -- 更新模型ID
-    _dataForPet.modelId = tonumber(data.petBaseId)
+    -- 更新模型ID：如果有幻化模型ID则使用幻化模型，否则使用基础模型
+    if data.showPetModelId and data.showPetModelId > 0 then
+        _dataForPet.modelId = tonumber(data.showPetModelId)
+        _dataForPet.showPetModelId = tonumber(data.showPetModelId)
+    else
+        _dataForPet.modelId = tonumber(data.petBaseId)
+    end
     -- 更新基础模型ID（保存到变量但不显示）
     _dataForPet.petBaseId = tonumber(data.petBaseId)
     print("更新灵兽等级:", _dataForPet.allJieshu, "模型ID:", _dataForPet.modelId)

@@ -937,8 +937,12 @@ function mountMain:initPetTab()
             FGUI:GTextField_setText(petQhbtnTitle, "召回")
         end
     end
-    -- 设置模型ID
-    self.modelId = Pet[self._dataForPet.allJieshu] and Pet[self._dataForPet.allJieshu].Model or Pet[0].Model
+    -- 设置模型ID：如果有幻化模型ID则使用幻化模型，否则使用基础模型
+    if self._dataForPet.showPetModelId and self._dataForPet.showPetModelId > 0 then
+        self.modelId = self._dataForPet.showPetModelId
+    else
+        self.modelId = Pet[self._dataForPet.allJieshu] and Pet[self._dataForPet.allJieshu].Model or Pet[0].Model
+    end
     print("模型ID:", self.modelId, "Pet数据:", Pet[self._dataForPet.allJieshu] and Pet[self._dataForPet.allJieshu])
     -- 更新模型
     if self.modelId then

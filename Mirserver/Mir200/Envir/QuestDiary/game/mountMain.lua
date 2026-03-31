@@ -19,6 +19,9 @@ local PetExtraRate = {attrRate = 0.1}
 local PetBuffId = 110044
 local BattlePetBuffId = 110045
 
+-- 坐骑幻化战斗技能buff配置
+local MountBattleSkillBuffId = 110046
+
 -- 经验加成属性ID(万分比,10000=100%)
 local ExpAttrId = 12
 
@@ -126,6 +129,62 @@ function mountMain.updatePetBattleSkillBuff(actor)
         -- 再设置属性
         for attrId, attrValue in pairs(battleAttr) do
             setbuffabil(actor, BattlePetBuffId, tonumber(attrId), "=", tonumber(attrValue))
+        end
+    end
+end
+
+-- 获取坐骑幻化的战斗技能属性（BattleSkill_Type和BattleSkill_Value）
+function mountMain.getMountBattleSkillAttr(actor)
+    local mountTakeId = gethumvar(actor, VarCfg.U_Mount_Take_Id)
+    if not mountTakeId or mountTakeId == 0 then
+        return {}
+    end
+    
+    local battleAttr = {}
+    -- 查找当前幻化模型对应的配表数据
+    for i = 1, #mountHHlist do
+        if mountHHlist[i].Model == mountTakeId then
+            local skillType = mountHHlist[i].BattleSkill_Type
+            local skillValue = mountHHlist[i].BattleSkill_Value
+            
+            if skillType and skillValue then
+                -- 处理数组格式
+                if type(skillType) == "table" then
+                    for idx = 1, #skillType do
+                        local attrId = tonumber(skillType[idx])
+                        local attrValue = tonumber(skillValue[idx])
+                        if attrId and attrValue then
+                            battleAttr[attrId] = attrValue
+                        end
+                    end
+                else
+                    -- 处理单一值格式
+                    local attrId = tonumber(skillType)
+                    local attrValue = tonumber(skillValue)
+                    if attrId and attrValue then
+                        battleAttr[attrId] = attrValue
+                    end
+                end
+            end
+            break
+        end
+    end
+    return battleAttr
+end
+
+-- 设置/更新坐骑幻化战斗技能buff
+function mountMain.updateMountBattleSkillBuff(actor)
+    -- 先清除旧的battle skill buff
+    delbuff(actor, MountBattleSkillBuffId)
+    
+    local battleAttr = mountMain.getMountBattleSkillAttr(actor)
+
+    if next(battleAttr) then
+        -- 先添加buff
+        addbuff(actor, MountBattleSkillBuffId)
+        -- 再设置属性
+        for attrId, attrValue in pairs(battleAttr) do
+            setbuffabil(actor, MountBattleSkillBuffId, tonumber(attrId), "=", tonumber(attrValue))
         end
     end
 end
@@ -371,15 +430,25 @@ function mountMain.petShengji(actor)
     -- 更新前端显示（发送updateLSView消息与旧系统对齐）
     -- 与坐骑一致：发送完整的等级
     print("发送升级消息到客户端,等级:", nextlv)
+    
+    -- 检查灵兽是否有幻化，如果有则发送幻化模型ID
+    local showPetModelId = 0
+    local isPetHH = gethumvar(actor, VarCfg.U_Pet_IS_HH)
+    if isPetHH and isPetHH == 1 then
+        showPetModelId = gethumvar(actor, VarCfg.U_Pet_Take_Id) or 0
+    end
+    
     Message.sendmsgEx(actor, "mountMain", "updateLSView", {
         lv = nextlv,
         petBaseId = petBaseId,
-        name = "pet"
+        name = "pet",
+        showPetModelId = showPetModelId
     })
     -- 同时发送updatePetZQ消息保持兼容性
     Message.sendmsgEx(actor, "mountMain", "updatePetZQ", {
         lv = nextlv,
-        petBaseId = petBaseId
+        petBaseId = petBaseId,
+        showPetModelId = showPetModelId
     })
     
     -- 发送petUpdateBtn消息更新按钮状态（激活后为休息状态，显示"出战"）
@@ -512,6 +581,11 @@ function mountMain.petHuanhuajihuo(actor, postData)
                         end
                     end
                 end
+            end
+
+            -- 设置幻化ClassID属性到人物身上（与坐骑幻化激活一致）
+            for g, h in pairs(hhsxListStr) do
+                setbuffabil(actor, 110047, tonumber(g), "=", tonumber(h))
             end
 
             -- 重新计算并应用所有灵兽属性（与旧系统对齐）
@@ -772,6 +846,8 @@ function mountMain.shengji(actor)
         Message.sendmsgEx(actor, "mountMain", "updateZQ",
                           {lv = nextlv, mountBaseId = mountBaseId})
         MentorShipChangTask(actor, 6, 1, nextlv)
+        -- 更新坐骑幻化战斗技能buff
+        mountMain.updateMountBattleSkillBuff(actor)
     end
 end
 
@@ -936,6 +1012,8 @@ function mountMain.setModel(actor, data)
     PassiveManager:onVarChanged(actor, "U33")
     sethumvar(actor, VarCfg.U_Mount_Take_Id, mountTakeId)
     changeappear(actor, 5, mountTakeId)
+    -- 更新坐骑幻化战斗技能buff
+    mountMain.updateMountBattleSkillBuff(actor)
     Message.sendmsgEx(actor, "mountMain", "UpdateHHBtnName", {
         mountHHid = mountTakeId,
         isCancel = isCancel,
@@ -1351,6 +1429,8 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
     mountMain.updatePetAttrBuff(actor)
     -- 更新灵兽幻化战斗技能buff
     mountMain.updatePetBattleSkillBuff(actor)
+    -- 更新坐骑幻化战斗技能buff
+    mountMain.updateMountBattleSkillBuff(actor)
     
     -- 检查是否需要自动召唤灵兽
     local isActivated = gethumvar(actor, VarCfg.U_All_Pet_star)
