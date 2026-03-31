@@ -2038,5 +2038,11 @@ local config = {
 		Name="出战坐骑属性",
 		ListenTrigger=7,
 	},
+	[110047] = { 
+		ID=110047,
+		BuffType=0,
+		Name="灵兽幻化总属性",
+		ListenTrigger=7,
+	},
 }
 return config
