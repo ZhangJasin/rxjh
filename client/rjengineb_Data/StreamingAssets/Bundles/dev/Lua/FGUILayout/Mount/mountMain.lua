@@ -146,6 +146,21 @@ function mountMain:subscribeEvents()
             self:setPetModel(self.modelId, 0, 1.1)
             self:UpdatePetHHBtnName()
         end)
+        -- 灵兽幻化切换结果（服务端返回）
+        self._subscriptions.petUpdateModelResult = self._data:Subscribe("updatePetModelResult", function(state)
+            print("=== 收到updatePetModelResult事件 ===")
+            self._dataForPet.showPetModelId = state.showPetModelId
+            self._dataForPet.petHHid = state.petHHid
+            self._dataForPet.hhSortList = self._data:setPetHHListSort()
+            -- 刷新列表
+            FGUI:GList_setNumItems(self._ui.petLeftList, #self._dataForPet.hhSortList)
+            -- 刷新视图
+            self:setPetHHSx()
+            self:setPetXhcl()
+            self:setPetHHAddBtn()
+            self:setPetModel(state.showPetModelId, 0, 1.1)
+            self:UpdatePetHHBtnName()
+        end)
         -- 灵兽出战/休息事件
         self._subscriptions.petUpdateBtn = self._data:Subscribe("petUpdateBtn", function(state)
             print("=== 收到petUpdateBtn事件 ===")

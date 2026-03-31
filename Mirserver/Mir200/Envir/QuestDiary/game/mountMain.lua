@@ -66,6 +66,70 @@ function mountMain.getPetHHAttr(actor)
     return hhsxListStr
 end
 
+-- 获取灵兽幻化的战斗技能属性（BattleSkill_Type和BattleSkill_Value）
+function mountMain.getPetBattleSkillAttr(actor)
+    local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
+    print("getPetBattleSkillAttr: petTakeId =", petTakeId)
+    if not petTakeId or petTakeId == 0 then
+        print("getPetBattleSkillAttr: petTakeId为空或0，返回空")
+        return {}
+    end
+    
+    local battleAttr = {}
+    -- 查找当前幻化模型对应的配表数据
+    for i = 1, #petHHlist do
+        print("getPetBattleSkillAttr: 检查 petHHlist[" .. i .. "].Model =", petHHlist[i].Model, "petTakeId =", petTakeId)
+        if petHHlist[i].Model == petTakeId then
+            local skillType = petHHlist[i].BattleSkill_Type
+            local skillValue = petHHlist[i].BattleSkill_Value
+            print("getPetBattleSkillAttr: 找到匹配，skillType =", skillType, "skillValue =", skillValue)
+            
+            if skillType and skillValue then
+                -- 处理数组格式 {Type = {1, 2}, Value = {100, 200}}
+                if type(skillType) == "table" then
+                    for idx = 1, #skillType do
+                        local attrId = tonumber(skillType[idx])
+                        local attrValue = tonumber(skillValue[idx])
+                        if attrId and attrValue then
+                            battleAttr[attrId] = attrValue
+                        end
+                    end
+                else
+                    -- 处理单一值格式 "Type" = "1", "Value" = "50"
+                    local attrId = tonumber(skillType)
+                    local attrValue = tonumber(skillValue)
+                    print("getPetBattleSkillAttr: attrId =", attrId, "attrValue =", attrValue)
+                    if attrId and attrValue then
+                        battleAttr[attrId] = attrValue
+                    end
+                end
+            end
+            break
+        end
+    end
+    print("getPetBattleSkillAttr: 返回 battleAttr =", battleAttr)
+    return battleAttr
+end
+
+-- 设置/更新灵兽幻化战斗技能buff
+function mountMain.updatePetBattleSkillBuff(actor)
+    -- 先清除旧的battle skill buff
+    delbuff(actor, BattlePetBuffId)
+    
+    -- 获取当前幻化的战斗技能属性
+    local battleAttr = mountMain.getPetBattleSkillAttr(actor)
+    
+    -- 如果有战斗技能属性，先添加buff再设置属性
+    if next(battleAttr) then
+        -- 先添加buff
+        addbuff(actor, BattlePetBuffId)
+        -- 再设置属性
+        for attrId, attrValue in pairs(battleAttr) do
+            setbuffabil(actor, BattlePetBuffId, tonumber(attrId), "=", tonumber(attrValue))
+        end
+    end
+end
+
 -- 设置灵兽本身的属性（将配表属性赋予灵兽宠物）
 function mountMain.setPetAttr(actor)
     local allstar = gethumvar(actor, VarCfg.U_All_Pet_star)
@@ -283,6 +347,8 @@ function mountMain.petShengji(actor)
 
     -- 设置灵兽本身的属性（将配表属性赋予灵兽，并设置人物属性）
     mountMain.setPetAttr(actor)
+    -- 更新灵兽幻化战斗技能buff
+    mountMain.updatePetBattleSkillBuff(actor)
 
     local petBaseId = petlist[nextlv].Model
     print("灵兽基础模型ID:", petBaseId)
@@ -450,6 +516,8 @@ function mountMain.petHuanhuajihuo(actor, postData)
 
             -- 重新计算并应用所有灵兽属性（与旧系统对齐）
             mountMain.updatePetAttrBuff(actor)
+            -- 更新灵兽幻化战斗技能buff
+            mountMain.updatePetBattleSkillBuff(actor)
 
             -- 更新前端
             Message.sendmsgEx(actor, "mountMain", "updatePetHHmodel", {
@@ -561,6 +629,8 @@ function mountMain.setPetModel(actor, data)
     end
     -- 重新计算并应用所有灵兽属性
     mountMain.updatePetAttrBuff(actor)
+    -- 更新灵兽幻化战斗技能buff
+    mountMain.updatePetBattleSkillBuff(actor)
     -- 获取所有已激活的灵兽幻化数据
     local allPetsHHData = {}
     for k, v in pairs(allhhList) do
@@ -1059,6 +1129,8 @@ function mountMain.recallpet(actor)
 
     -- 更新人物属性buff（出战状态下给予10%属性）
     mountMain.updatePetAttrBuff(actor)
+    -- 更新灵兽幻化战斗技能buff
+    mountMain.updatePetBattleSkillBuff(actor)
 
     -- 注意：灵兽出战不应该改变人物外观！
     -- 人物外观只由坐骑控制，灵兽只是跟随的宠物（与旧系统一致）
@@ -1277,6 +1349,8 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
     print("=== 登录完成处理灵兽 ===")
     -- 更新灵兽属性buff
     mountMain.updatePetAttrBuff(actor)
+    -- 更新灵兽幻化战斗技能buff
+    mountMain.updatePetBattleSkillBuff(actor)
     
     -- 检查是否需要自动召唤灵兽
     local isActivated = gethumvar(actor, VarCfg.U_All_Pet_star)
@@ -1300,7 +1374,19 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
         end
         
         -- 添加宠物并召唤
-        local mark = addpet(actor, 80001)
+        -- 优先从PetHuanhua配置表中查找幻化模型的Monster_ID
+        local monsterId = 80001  -- 默认怪物ID
+        local petTakeIdNum = tonumber(petTakeId)
+        if petTakeIdNum and petTakeIdNum > 0 then
+            for _, hhData in pairs(petHHlist) do
+                if tonumber(hhData.Model) == petTakeIdNum and hhData.Monster_ID then
+                    monsterId = hhData.Monster_ID
+                    print("登录自动召唤：幻化形态，使用幻化Monster_ID:", monsterId, "Model:", hhData.Model)
+                    break
+                end
+            end
+        end
+        local mark = addpet(actor, monsterId)
         if mark and mark ~= "" then
             print("登录自动召唤灵兽成功，mark:", mark)
             sethumvar(actor, VarCfg.T_Pet_Mark, mark)
@@ -1311,7 +1397,13 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
             setpetrelax(actor, mark, 2)
             mountMain.setPetAttr(actor)
             mountMain.updatePetAttrBuff(actor)
-            -- 注意：登录自动召唤灵兽不应该改变人物外观！
+            mountMain.updatePetBattleSkillBuff(actor)
+            -- 如果灵兽有幻化，改变人物外观
+            local isPetHH = gethumvar(actor, VarCfg.U_Pet_IS_HH)
+            if isPetHH and isPetHH == 1 and petTakeId and petTakeId > 0 then
+                changeappear(actor, 5, petTakeId)
+                print("登录自动召唤：灵兽幻化外观已设置, petTakeId:", petTakeId)
+            end
             
             -- 发送setPetInfo消息更新顶部灵兽图标
             local isPc = clientflag(actor) == 1

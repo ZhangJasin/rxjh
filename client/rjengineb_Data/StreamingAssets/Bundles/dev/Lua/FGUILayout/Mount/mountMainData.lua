@@ -377,6 +377,8 @@ function mountMainData:updatePetModelResult(data)
     _dataForPet.hhSortList = self:setPetHHListSort()
     print("发布ls_update_model, showPetModelId:", _dataForPet.showPetModelId)
     self:Publish("ls_update_model", self:GetDataForPet())
+    -- 发布幻化切换结果事件，刷新页面
+    self:Publish("updatePetModelResult", data)
 end
 
 function mountMainData:recallpetResult(data)
