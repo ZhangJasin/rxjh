@@ -201,7 +201,7 @@ local config = {
 	},
 	["Name_Task_103012"] = { 
 		idx="Name_Task_103012",
-		Dec="提升至50级",
+		Dec="利爪山魅",
 	},
 	["Name_Task_103102"] = { 
 		idx="Name_Task_103102",
@@ -245,7 +245,7 @@ local config = {
 	},
 	["Name_Task_103112"] = { 
 		idx="Name_Task_103112",
-		Dec="提升至50级",
+		Dec="狼人武士",
 	},
 	["Name_Task_200001"] = { 
 		idx="Name_Task_200001",
@@ -1245,7 +1245,7 @@ local config = {
 	},
 	["TargetDec_Task_103012"] = { 
 		idx="TargetDec_Task_103012",
-		Dec="将等级提升至<font color='#00FF00'>50级</font>",
+		Dec="击败<font color='#00FF00'>利爪山魅</font>",
 	},
 	["TargetDec_Task_103102"] = { 
 		idx="TargetDec_Task_103102",
@@ -1282,14 +1282,6 @@ local config = {
 	["TargetDec_Task_103110"] = { 
 		idx="TargetDec_Task_103110",
 		Dec="将等级提升至<font color='#00FF00'>45级</font>",
-	},
-	["TargetDec_Task_103111"] = { 
-		idx="TargetDec_Task_103111",
-		Dec="击败<font color='#00FF00'>赏金女猎人</font>",
-	},
-	["TargetDec_Task_103112"] = { 
-		idx="TargetDec_Task_103112",
-		Dec="将等级提升至<font color='#00FF00'>50级</font>",
 	},
 	["TargetDec_Task_200001"] = { 
 		idx="TargetDec_Task_200001",
@@ -4038,6 +4030,642 @@ local config = {
 	["EvilDec_JoinZhenYing"] = { 
 		idx="EvilDec_JoinZhenYing",
 		Dec="<font color='#00FF00'>唯我独尊，邪道通天</font>；崇尚个人实力，以黑暗手段达成目的",
+	},
+	["TargetDec_Task_103013"] = { 
+		idx="TargetDec_Task_103013",
+		Dec="击败<font color='#00FF00'>异域恶僧</font>",
+	},
+	["TargetDec_Task_103014"] = { 
+		idx="TargetDec_Task_103014",
+		Dec="击败<font color='#00FF00'>赤发火贼</font>",
+	},
+	["TargetDec_Task_103015"] = { 
+		idx="TargetDec_Task_103015",
+		Dec="拜访<font color='#00FF00'>柳正关关主柳絮</font>",
+	},
+	["TargetDec_Task_103016"] = { 
+		idx="TargetDec_Task_103016",
+		Dec="将等级<font color='#00FF00'>提升至50级</font>",
+	},
+	["TargetDec_Task_103017"] = { 
+		idx="TargetDec_Task_103017",
+		Dec="击败<font color='#00FF00'>独眼火贼</font>",
+	},
+	["TargetDec_Task_103018"] = { 
+		idx="TargetDec_Task_103018",
+		Dec="击败<font color='#00FF00'>颂武门短刀弟子获得短刀</font>",
+	},
+	["TargetDec_Task_103019"] = { 
+		idx="TargetDec_Task_103019",
+		Dec="击败<font color='#00FF00'>颂武门短斧弟子</font>",
+	},
+	["TargetDec_Task_103020"] = { 
+		idx="TargetDec_Task_103020",
+		Dec="击败<font color='#00FF00'>颂武门新丁</font>",
+	},
+	["TargetDec_Task_103021"] = { 
+		idx="TargetDec_Task_103021",
+		Dec="击败<font color='#00FF00'>颂武门恶霸</font>",
+	},
+	["TargetDec_Task_103022"] = { 
+		idx="TargetDec_Task_103022",
+		Dec="拜访<font color='#00FF00'>柳正关关主柳絮</font>",
+	},
+	["TargetDec_Task_103023"] = { 
+		idx="TargetDec_Task_103023",
+		Dec="将等级<font color='#00FF00'>提升至55级</font>",
+	},
+	["TargetDec_Task_103024"] = { 
+		idx="TargetDec_Task_103024",
+		Dec="拜访<font color='#00FF00'>柳正关关主柳絮</font>",
+	},
+	["TargetDec_Task_103025"] = { 
+		idx="TargetDec_Task_103025",
+		Dec="击败<font color='#00FF00'>颂武门链锤弟子</font>",
+	},
+	["TargetDec_Task_103026"] = { 
+		idx="TargetDec_Task_103026",
+		Dec="击败<font color='#00FF00'>颂武门长矛弟子</font>",
+	},
+	["TargetDec_Task_103027"] = { 
+		idx="TargetDec_Task_103027",
+		Dec="击败<font color='#00FF00'>颂武门狂刀弟子</font>",
+	},
+	["TargetDec_Task_103028"] = { 
+		idx="TargetDec_Task_103028",
+		Dec="击败<font color='#00FF00'>金碑人遥剑</font>",
+	},
+	["TargetDec_Task_103029"] = { 
+		idx="TargetDec_Task_103029",
+		Dec="击败<font color='#00FF00'>颂武门快剑韩士</font>",
+	},
+	["TargetDec_Task_103030"] = { 
+		idx="TargetDec_Task_103030",
+		Dec="拜访<font color='#00FF00'>柳正关关主柳絮</font>",
+	},
+	["TargetDec_Task_103031"] = { 
+		idx="TargetDec_Task_103031",
+		Dec="拜访<font color='#00FF00'>柳正关关主柳絮</font>",
+	},
+	["TargetDec_Task_103032"] = { 
+		idx="TargetDec_Task_103032",
+		Dec="击败<font color='#00FF00'>竹林小魔仙</font>",
+	},
+	["TargetDec_Task_103033"] = { 
+		idx="TargetDec_Task_103033",
+		Dec="击败<font color='#00FF00'>竹林盗伐者</font>",
+	},
+	["TargetDec_Task_103034"] = { 
+		idx="TargetDec_Task_103034",
+		Dec="击败<font color='#00FF00'>竹林双剑</font>",
+	},
+	["TargetDec_Task_103035"] = { 
+		idx="TargetDec_Task_103035",
+		Dec="击败<font color='#00FF00'>独眼恶贼</font>",
+	},
+	["TargetDec_Task_103036"] = { 
+		idx="TargetDec_Task_103036",
+		Dec="拜访<font color='#00FF00'>柳正关关主柳絮</font>",
+	},
+	["TargetDec_Task_103037"] = { 
+		idx="TargetDec_Task_103037",
+		Dec="将等级<font color='#00FF00'>提升至60级</font>",
+	},
+	["TargetDec_Task_103038"] = { 
+		idx="TargetDec_Task_103038",
+		Dec="拜访<font color='#00FF00'>神武门主车敬墨</font>",
+	},
+	["TargetDec_Task_103039"] = { 
+		idx="TargetDec_Task_103039",
+		Dec="完成<font color='#00FF00'>第三次转职</font>",
+	},
+	["TargetDec_Task_103040"] = { 
+		idx="TargetDec_Task_103040",
+		Dec="寻找<font color='#00FF00'>刀剑笑打听首饰加工</font>",
+	},
+	["TargetDec_Task_103041"] = { 
+		idx="TargetDec_Task_103041",
+		Dec="完成<font color='#00FF00'>首饰加工3次</font>",
+	},
+	["TargetDec_Task_103042"] = { 
+		idx="TargetDec_Task_103042",
+		Dec="击败<font color='#00FF00'>赤云虎</font>",
+	},
+	["TargetDec_Task_103043"] = { 
+		idx="TargetDec_Task_103043",
+		Dec="击败<font color='#00FF00'>剑齿恶虎</font>",
+	},
+	["TargetDec_Task_103044"] = { 
+		idx="TargetDec_Task_103044",
+		Dec="击败<font color='#00FF00'>驼背飞虎贼</font>",
+	},
+	["TargetDec_Task_103045"] = { 
+		idx="TargetDec_Task_103045",
+		Dec="将等级<font color='#00FF00'>提升至65级</font>",
+	},
+	["TargetDec_Task_103046"] = { 
+		idx="TargetDec_Task_103046",
+		Dec="击败<font color='#00FF00'>吝啬鬼</font>",
+	},
+	["TargetDec_Task_103047"] = { 
+		idx="TargetDec_Task_103047",
+		Dec="击败<font color='#00FF00'>神掌飞虎贼</font>",
+	},
+	["TargetDec_Task_103048"] = { 
+		idx="TargetDec_Task_103048",
+		Dec="击败<font color='#00FF00'>赏猎女刺客</font>",
+	},
+	["TargetDec_Task_103049"] = { 
+		idx="TargetDec_Task_103049",
+		Dec="击败<font color='#00FF00'>赏猎刀疤勇士</font>",
+	},
+	["TargetDec_Task_103050"] = { 
+		idx="TargetDec_Task_103050",
+		Dec="击败<font color='#00FF00'>铁甲卫士</font>",
+	},
+	["TargetDec_Task_103051"] = { 
+		idx="TargetDec_Task_103051",
+		Dec="击败<font color='#00FF00'>鬼面武士</font>",
+	},
+	["TargetDec_Task_103052"] = { 
+		idx="TargetDec_Task_103052",
+		Dec="将等级<font color='#00FF00'>提升至70级</font>",
+	},
+	["TargetDec_Task_103112"] = { 
+		idx="TargetDec_Task_103112",
+		Dec="击败<font color='#00FF00'>狼人武士</font>",
+	},
+	["TargetDec_Task_103113"] = { 
+		idx="TargetDec_Task_103113",
+		Dec="击败<font color='#00FF00'>绿林山贼</font>",
+	},
+	["TargetDec_Task_103114"] = { 
+		idx="TargetDec_Task_103114",
+		Dec="拜访<font color='#00FF00'>三邪关关主翅娟</font>",
+	},
+	["TargetDec_Task_103115"] = { 
+		idx="TargetDec_Task_103115",
+		Dec="将等级<font color='#00FF00'>提升至50级（0/1）</font>",
+	},
+	["TargetDec_Task_103116"] = { 
+		idx="TargetDec_Task_103116",
+		Dec="击败<font color='#00FF00'>越狱山贼</font>",
+	},
+	["TargetDec_Task_103117"] = { 
+		idx="TargetDec_Task_103117",
+		Dec="击败<font color='#00FF00'>长棍毛贼获得长棍</font>",
+	},
+	["TargetDec_Task_103118"] = { 
+		idx="TargetDec_Task_103118",
+		Dec="击败<font color='#00FF00'>琥珀盗贼</font>",
+	},
+	["TargetDec_Task_103119"] = { 
+		idx="TargetDec_Task_103119",
+		Dec="击败<font color='#00FF00'>黑面盗贼</font>",
+	},
+	["TargetDec_Task_103120"] = { 
+		idx="TargetDec_Task_103120",
+		Dec="击败<font color='#00FF00'>盗贼小头目</font>",
+	},
+	["TargetDec_Task_103121"] = { 
+		idx="TargetDec_Task_103121",
+		Dec="拜访<font color='#00FF00'>三邪关关主翅娟</font>",
+	},
+	["TargetDec_Task_103122"] = { 
+		idx="TargetDec_Task_103122",
+		Dec="将等级<font color='#00FF00'>提升至55级（0/1）</font>",
+	},
+	["TargetDec_Task_103123"] = { 
+		idx="TargetDec_Task_103123",
+		Dec="拜访<font color='#00FF00'>三邪关关主翅娟</font>",
+	},
+	["TargetDec_Task_103124"] = { 
+		idx="TargetDec_Task_103124",
+		Dec="击败<font color='#00FF00'>流星锤强盗</font>",
+	},
+	["TargetDec_Task_103125"] = { 
+		idx="TargetDec_Task_103125",
+		Dec="击败<font color='#00FF00'>驯狼盗贼</font>",
+	},
+	["TargetDec_Task_103126"] = { 
+		idx="TargetDec_Task_103126",
+		Dec="击败<font color='#00FF00'>胡子大盗</font>",
+	},
+	["TargetDec_Task_103127"] = { 
+		idx="TargetDec_Task_103127",
+		Dec="击败<font color='#00FF00'>环眼大盗</font>",
+	},
+	["TargetDec_Task_103128"] = { 
+		idx="TargetDec_Task_103128",
+		Dec="击败<font color='#00FF00'>刀疤大盗</font>",
+	},
+	["TargetDec_Task_103129"] = { 
+		idx="TargetDec_Task_103129",
+		Dec="拜访<font color='#00FF00'>三邪关关主翅娟</font>",
+	},
+	["TargetDec_Task_103130"] = { 
+		idx="TargetDec_Task_103130",
+		Dec="拜访<font color='#00FF00'>三邪关关主翅娟</font>",
+	},
+	["TargetDec_Task_103131"] = { 
+		idx="TargetDec_Task_103131",
+		Dec="击败<font color='#00FF00'>竹神侍女</font>",
+	},
+	["TargetDec_Task_103132"] = { 
+		idx="TargetDec_Task_103132",
+		Dec="击败<font color='#00FF00'>竹枪武士</font>",
+	},
+	["TargetDec_Task_103133"] = { 
+		idx="TargetDec_Task_103133",
+		Dec="击败<font color='#00FF00'>独眼恶贼</font>",
+	},
+	["TargetDec_Task_103134"] = { 
+		idx="TargetDec_Task_103134",
+		Dec="击败<font color='#00FF00'>竹林剑士</font>",
+	},
+	["TargetDec_Task_103135"] = { 
+		idx="TargetDec_Task_103135",
+		Dec="拜访<font color='#00FF00'>三邪关关主翅娟</font>",
+	},
+	["TargetDec_Task_103136"] = { 
+		idx="TargetDec_Task_103136",
+		Dec="将等级<font color='#00FF00'>提升至60级（0/1）</font>",
+	},
+	["TargetDec_Task_103137"] = { 
+		idx="TargetDec_Task_103137",
+		Dec="拜访<font color='#00FF00'>柳善提督府府主</font>",
+	},
+	["TargetDec_Task_103138"] = { 
+		idx="TargetDec_Task_103138",
+		Dec="完成<font color='#00FF00'>第三次转职</font>",
+	},
+	["TargetDec_Task_103139"] = { 
+		idx="TargetDec_Task_103139",
+		Dec="寻找<font color='#00FF00'>刀剑笑打听首饰加工</font>",
+	},
+	["TargetDec_Task_103140"] = { 
+		idx="TargetDec_Task_103140",
+		Dec="完成<font color='#00FF00'>首饰加工3次</font>",
+	},
+	["TargetDec_Task_103141"] = { 
+		idx="TargetDec_Task_103141",
+		Dec="击败<font color='#00FF00'>珊瑚蛇</font>",
+	},
+	["TargetDec_Task_103142"] = { 
+		idx="TargetDec_Task_103142",
+		Dec="击败<font color='#00FF00'>黑松巡路贼</font>",
+	},
+	["TargetDec_Task_103143"] = { 
+		idx="TargetDec_Task_103143",
+		Dec="击败<font color='#00FF00'>黑松红眼盗贼</font>",
+	},
+	["TargetDec_Task_103144"] = { 
+		idx="TargetDec_Task_103144",
+		Dec="将等级<font color='#00FF00'>提升至65级（0/1）</font>",
+	},
+	["TargetDec_Task_103145"] = { 
+		idx="TargetDec_Task_103145",
+		Dec="击败<font color='#00FF00'>黑松鬼面盗贼</font>",
+	},
+	["TargetDec_Task_103146"] = { 
+		idx="TargetDec_Task_103146",
+		Dec="击败<font color='#00FF00'>暴力走私商</font>",
+	},
+	["TargetDec_Task_103147"] = { 
+		idx="TargetDec_Task_103147",
+		Dec="击败<font color='#00FF00'>直眉禁药商人</font>",
+	},
+	["TargetDec_Task_103148"] = { 
+		idx="TargetDec_Task_103148",
+		Dec="击败<font color='#00FF00'>蒙面大盗</font>",
+	},
+	["TargetDec_Task_103149"] = { 
+		idx="TargetDec_Task_103149",
+		Dec="击败<font color='#00FF00'>飞天女盗</font>",
+	},
+	["TargetDec_Task_103150"] = { 
+		idx="TargetDec_Task_103150",
+		Dec="击败<font color='#00FF00'>金铃蛇</font>",
+	},
+	["TargetDec_Task_103151"] = { 
+		idx="TargetDec_Task_103151",
+		Dec="将等级<font color='#00FF00'>提升至70级（0/1）</font>",
+	},
+	["Name_Task_103013"] = { 
+		idx="Name_Task_103013",
+		Dec="异域恶僧",
+	},
+	["Name_Task_103014"] = { 
+		idx="Name_Task_103014",
+		Dec="赤发火贼",
+	},
+	["Name_Task_103015"] = { 
+		idx="Name_Task_103015",
+		Dec="回复关主",
+	},
+	["Name_Task_103016"] = { 
+		idx="Name_Task_103016",
+		Dec="提升至50级",
+	},
+	["Name_Task_103017"] = { 
+		idx="Name_Task_103017",
+		Dec="新的威胁",
+	},
+	["Name_Task_103018"] = { 
+		idx="Name_Task_103018",
+		Dec="颂武门短刀弟子",
+	},
+	["Name_Task_103019"] = { 
+		idx="Name_Task_103019",
+		Dec="颂武门短斧弟子",
+	},
+	["Name_Task_103020"] = { 
+		idx="Name_Task_103020",
+		Dec="颂武门新丁",
+	},
+	["Name_Task_103021"] = { 
+		idx="Name_Task_103021",
+		Dec="颂武门恶霸",
+	},
+	["Name_Task_103022"] = { 
+		idx="Name_Task_103022",
+		Dec="请教关主",
+	},
+	["Name_Task_103023"] = { 
+		idx="Name_Task_103023",
+		Dec="等级提升到55级",
+	},
+	["Name_Task_103024"] = { 
+		idx="Name_Task_103024",
+		Dec="围剿万寿阁",
+	},
+	["Name_Task_103025"] = { 
+		idx="Name_Task_103025",
+		Dec="颂武门链锤弟子",
+	},
+	["Name_Task_103026"] = { 
+		idx="Name_Task_103026",
+		Dec="颂武门长矛弟子",
+	},
+	["Name_Task_103027"] = { 
+		idx="Name_Task_103027",
+		Dec="颂武门狂刀弟子",
+	},
+	["Name_Task_103028"] = { 
+		idx="Name_Task_103028",
+		Dec="金碑人遥剑",
+	},
+	["Name_Task_103029"] = { 
+		idx="Name_Task_103029",
+		Dec="颂武门快剑韩士",
+	},
+	["Name_Task_103030"] = { 
+		idx="Name_Task_103030",
+		Dec="获得胜利",
+	},
+	["Name_Task_103031"] = { 
+		idx="Name_Task_103031",
+		Dec="围剿渊竹林",
+	},
+	["Name_Task_103032"] = { 
+		idx="Name_Task_103032",
+		Dec="竹林小魔仙",
+	},
+	["Name_Task_103033"] = { 
+		idx="Name_Task_103033",
+		Dec="竹林盗伐者",
+	},
+	["Name_Task_103034"] = { 
+		idx="Name_Task_103034",
+		Dec="竹林双剑",
+	},
+	["Name_Task_103035"] = { 
+		idx="Name_Task_103035",
+		Dec="独眼恶贼",
+	},
+	["Name_Task_103036"] = { 
+		idx="Name_Task_103036",
+		Dec="围剿成功",
+	},
+	["Name_Task_103037"] = { 
+		idx="Name_Task_103037",
+		Dec="等级提升到60级",
+	},
+	["Name_Task_103038"] = { 
+		idx="Name_Task_103038",
+		Dec="拜访神武门门主",
+	},
+	["Name_Task_103039"] = { 
+		idx="Name_Task_103039",
+		Dec="完成第三次转职",
+	},
+	["Name_Task_103040"] = { 
+		idx="Name_Task_103040",
+		Dec="打听首饰加工",
+	},
+	["Name_Task_103041"] = { 
+		idx="Name_Task_103041",
+		Dec="进行首饰加工",
+	},
+	["Name_Task_103042"] = { 
+		idx="Name_Task_103042",
+		Dec="赤云虎",
+	},
+	["Name_Task_103043"] = { 
+		idx="Name_Task_103043",
+		Dec="剑齿恶虎",
+	},
+	["Name_Task_103044"] = { 
+		idx="Name_Task_103044",
+		Dec="驼背飞虎贼",
+	},
+	["Name_Task_103045"] = { 
+		idx="Name_Task_103045",
+		Dec="等级提升到65级",
+	},
+	["Name_Task_103046"] = { 
+		idx="Name_Task_103046",
+		Dec="吝啬鬼",
+	},
+	["Name_Task_103047"] = { 
+		idx="Name_Task_103047",
+		Dec="神掌飞虎贼",
+	},
+	["Name_Task_103048"] = { 
+		idx="Name_Task_103048",
+		Dec="赏猎女刺客",
+	},
+	["Name_Task_103049"] = { 
+		idx="Name_Task_103049",
+		Dec="赏猎刀疤勇士",
+	},
+	["Name_Task_103050"] = { 
+		idx="Name_Task_103050",
+		Dec="铁甲卫士",
+	},
+	["Name_Task_103051"] = { 
+		idx="Name_Task_103051",
+		Dec="鬼面武士",
+	},
+	["Name_Task_103052"] = { 
+		idx="Name_Task_103052",
+		Dec="等级提升到70级",
+	},
+	["Name_Task_103113"] = { 
+		idx="Name_Task_103113",
+		Dec="绿林山贼",
+	},
+	["Name_Task_103114"] = { 
+		idx="Name_Task_103114",
+		Dec="回复关主",
+	},
+	["Name_Task_103115"] = { 
+		idx="Name_Task_103115",
+		Dec="提升至50级",
+	},
+	["Name_Task_103116"] = { 
+		idx="Name_Task_103116",
+		Dec="新的威胁",
+	},
+	["Name_Task_103117"] = { 
+		idx="Name_Task_103117",
+		Dec="长棍毛贼",
+	},
+	["Name_Task_103118"] = { 
+		idx="Name_Task_103118",
+		Dec="琥珀盗贼",
+	},
+	["Name_Task_103119"] = { 
+		idx="Name_Task_103119",
+		Dec="黑面盗贼",
+	},
+	["Name_Task_103120"] = { 
+		idx="Name_Task_103120",
+		Dec="盗贼小头目",
+	},
+	["Name_Task_103121"] = { 
+		idx="Name_Task_103121",
+		Dec="请教关主",
+	},
+	["Name_Task_103122"] = { 
+		idx="Name_Task_103122",
+		Dec="等级提升到55级",
+	},
+	["Name_Task_103123"] = { 
+		idx="Name_Task_103123",
+		Dec="围剿无天阁",
+	},
+	["Name_Task_103124"] = { 
+		idx="Name_Task_103124",
+		Dec="流星锤强盗",
+	},
+	["Name_Task_103125"] = { 
+		idx="Name_Task_103125",
+		Dec="驯狼盗贼",
+	},
+	["Name_Task_103126"] = { 
+		idx="Name_Task_103126",
+		Dec="胡子大盗",
+	},
+	["Name_Task_103127"] = { 
+		idx="Name_Task_103127",
+		Dec="环眼大盗",
+	},
+	["Name_Task_103128"] = { 
+		idx="Name_Task_103128",
+		Dec="刀疤大盗",
+	},
+	["Name_Task_103129"] = { 
+		idx="Name_Task_103129",
+		Dec="获得胜利",
+	},
+	["Name_Task_103130"] = { 
+		idx="Name_Task_103130",
+		Dec="围剿竹火林",
+	},
+	["Name_Task_103131"] = { 
+		idx="Name_Task_103131",
+		Dec="竹神侍女",
+	},
+	["Name_Task_103132"] = { 
+		idx="Name_Task_103132",
+		Dec="竹枪武士",
+	},
+	["Name_Task_103133"] = { 
+		idx="Name_Task_103133",
+		Dec="独眼恶贼",
+	},
+	["Name_Task_103134"] = { 
+		idx="Name_Task_103134",
+		Dec="竹林剑士",
+	},
+	["Name_Task_103135"] = { 
+		idx="Name_Task_103135",
+		Dec="围剿成功",
+	},
+	["Name_Task_103136"] = { 
+		idx="Name_Task_103136",
+		Dec="等级提升到60级",
+	},
+	["Name_Task_103137"] = { 
+		idx="Name_Task_103137",
+		Dec="拜访柳善提督府府主",
+	},
+	["Name_Task_103138"] = { 
+		idx="Name_Task_103138",
+		Dec="完成第三次转职",
+	},
+	["Name_Task_103139"] = { 
+		idx="Name_Task_103139",
+		Dec="打听首饰加工",
+	},
+	["Name_Task_103140"] = { 
+		idx="Name_Task_103140",
+		Dec="进行首饰加工",
+	},
+	["Name_Task_103141"] = { 
+		idx="Name_Task_103141",
+		Dec="珊瑚蛇",
+	},
+	["Name_Task_103142"] = { 
+		idx="Name_Task_103142",
+		Dec="黑松巡路贼",
+	},
+	["Name_Task_103143"] = { 
+		idx="Name_Task_103143",
+		Dec="黑松红眼盗贼",
+	},
+	["Name_Task_103144"] = { 
+		idx="Name_Task_103144",
+		Dec="等级提升到65级",
+	},
+	["Name_Task_103145"] = { 
+		idx="Name_Task_103145",
+		Dec="黑松鬼面盗贼",
+	},
+	["Name_Task_103146"] = { 
+		idx="Name_Task_103146",
+		Dec="暴力走私商",
+	},
+	["Name_Task_103147"] = { 
+		idx="Name_Task_103147",
+		Dec="直眉禁药商人",
+	},
+	["Name_Task_103148"] = { 
+		idx="Name_Task_103148",
+		Dec="蒙面大盗",
+	},
+	["Name_Task_103149"] = { 
+		idx="Name_Task_103149",
+		Dec="飞天女盗",
+	},
+	["Name_Task_103150"] = { 
+		idx="Name_Task_103150",
+		Dec="金铃蛇",
+	},
+	["Name_Task_103151"] = { 
+		idx="Name_Task_103151",
+		Dec="等级提升到70级",
 	},
 }
 return config
