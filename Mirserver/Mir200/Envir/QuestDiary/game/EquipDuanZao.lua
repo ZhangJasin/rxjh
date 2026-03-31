@@ -532,7 +532,7 @@ function EquipDuanZao.transfer(actor, data)
     -- 更新客户端显示
     updateitemtoclient(actor, -1)
 
-    
+
 
     -- 更新源装备属性以及强化等级（清空后）
     linkitembymakeindex(actor, sourceMakeIndex)
@@ -722,7 +722,6 @@ GameEvent.add(EventCfg.onTakeOffEx, function(actor, itemObj, pos, itemname, item
 end, EquipDuanZao)
 -- 装备穿戴事件
 GameEvent.add(EventCfg.onTakeOnEx, function(actor, itemObj, pos, itemname, itemid)
-    print("装备位信息：",itemname,itemid,pos)
     EquipDuanZao.showWeaponEffect(actor, itemObj)
 end, EquipDuanZao)
 -- 登录更新
