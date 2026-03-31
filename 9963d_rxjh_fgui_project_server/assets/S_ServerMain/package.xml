@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="7ue9gt2r">
+  <resources>
+    <image id="kkqn0" name="icon_announcement.png" path="/Images/"/>
+    <image id="kkqn1" name="bg_server_select.png" path="/Images/"/>
+    <image id="kkqn2" name="icon_back_login.png" path="/Images/"/>
+    <image id="kkqn3" name="icon_repair.png" path="/Images/"/>
+    <component id="kkqna" name="S_ServerMain.xml" path="/" exported="true"/>
+    <image id="kkqnb" name="icon_red.png" path="/Images/" exported="true"/>
+    <image id="kkqnc" name="icon_green.png" path="/Images/" exported="true"/>
+    <image id="kkqnd" name="icon_grey.png" path="/Images/" exported="true"/>
+    <component id="kkqne" name="btn_change_server.xml" path="/Components/"/>
+    <component id="kkqnf" name="btn_back_login.xml" path="/Components/"/>
+    <component id="kkqni" name="btn_repair.xml" path="/Components/"/>
+    <component id="kkqnk" name="btn_announcement.xml" path="/Components/"/>
+    <image id="px3em" name="img_g.png" path="/Images/"/>
+    <image id="px3en" name="img_k.png" path="/Images/"/>
+    <component id="px3ep" name="CheckBox_agreement.xml" path="/Components/"/>
+    <component id="g5jer" name="TipItem_pc.xml" path="/Components/"/>
+    <image id="g5jes" name="old.png" path="/Images/" exported="true"/>
+    <component id="i4xuc" name="btn_module_select.xml" path="/Components/" exported="true"/>
+    <component id="k2cxt" name="btn_white_list.xml" path="/Components/"/>
+    <component id="apl9v" name="S_ServerMain_PC.xml" path="/" exported="true"/>
+    <component id="otfhw" name="TipItem.xml" path="/Components/"/>
+    <component id="i1m7x" name="btn_server_name.xml" path="/Components/"/>
+    <image id="i1m7y" name="01.png" path="/Images/"/>
+    <image id="ykzz10" name="icon_new.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

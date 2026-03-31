@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="j5qsclsz">
+  <resources>
+    <image id="rwk71" name="icon_server_red.png" path="/Images/" exported="true"/>
+    <image id="rwk72" name="icon_server_green.png" path="/Images/" exported="true"/>
+    <image id="rwk74" name="icon_server_grey.png" path="/Images/" exported="true"/>
+    <component id="rwk75" name="S_SelectServer.xml" path="/" exported="true"/>
+    <image id="rwk77" name="btn_server_bg.png" path="/Images/" scale="9grid" scale9grid="12,12,25,25"/>
+    <component id="rwk78" name="item_select_server.xml" path="/Components/" exported="true"/>
+    <image id="rwk79" name="btn_title.png" path="/Images/" scale="9grid" scale9grid="86,0,62,56"/>
+    <component id="rwk7b" name="item_select_title.xml" path="/Components/" exported="true"/>
+    <image id="82gd10" name="frame_0.png" path="/Images/"/>
+    <image id="pckm12" name="icon_refresh.png" path="/Images/"/>
+    <component id="apl913" name="Main.xml" path="/Components/" exported="true"/>
+    <image id="jj9m14" name="btn_title_select.png" path="/Images/" scale="9grid" scale9grid="58,0,17,55"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

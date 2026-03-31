@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="k3nwnwyc">
+  <resources>
+    <component id="108rv0" name="S_SystemTips.xml" path="/" exported="true"/>
+    <image id="r375v3" name="bg_notice_tips_9.png" path="/Images/" scale="9grid" scale9grid="45,8,9,8"/>
+    <component id="r375v4" name="Node.xml" path="/Components/"/>
+    <component id="r375v5" name="LabelSystemTip.xml" path="/Components/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

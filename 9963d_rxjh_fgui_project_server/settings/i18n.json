@@ -1,0 +1,14 @@
+{
+  "langFiles": [
+    {
+      "name": "cn",
+      "path": "..\\Assets\\Res\\server\\Translate\\cn.xml",
+      "fontName": ""
+    },
+    {
+      "name": "en",
+      "path": "..\\Assets\\Res\\server\\Translate\\en.xml",
+      "fontName": ""
+    }
+  ]
+}

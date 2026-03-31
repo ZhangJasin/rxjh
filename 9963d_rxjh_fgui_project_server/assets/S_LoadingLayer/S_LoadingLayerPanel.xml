@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <image id="n0_i4xu" name="n0" src="sinov4" fileName="image/LOADING.jpg" pkg="q9qo8um0" xy="0,0" size="1334,750">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n4_i4xu" name="title" xy="185,677" size="953,39" fontSize="28" color="#e3e3e3" align="center" autoSize="none" text="加载中...">
+      <relation target="" sidePair="width-width%,center-center%,bottom-bottom"/>
+    </text>
+    <component id="n5_108rv" name="progress" src="108rv3" fileName="Components/ProgressBar1.xml" xy="26,639" size="1286,35" aspect="true">
+      <relation target="" sidePair="width-width%,center-center%,bottom-bottom"/>
+      <ProgressBar value="100" max="100"/>
+    </component>
+  </displayList>
+</component>

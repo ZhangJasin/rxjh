@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1005,538">
+  <displayList>
+    <component id="n0_px3e" name="n0" src="koyz3" fileName="common/bg.xml" pkg="q9qo8um0" xy="0,0" size="1005,538" group="n22_apl9"/>
+    <image id="n20_sino" name="n20" src="sinov1j" fileName="image/bg_1.png" pkg="q9qo8um0" xy="22,61" size="965,464" group="n22_apl9" alpha="0.7"/>
+    <text id="n5_px3e" name="n5" xy="441,7" size="126,42" group="n22_apl9" fontSize="25" color="#d8c24d" align="center" vAlign="middle" autoSize="none" text="公告"/>
+    <list id="n6_px3e" name="List_select_btns" xy="24,76" size="210,440" group="n22_apl9" overflow="scroll" scrollBarFlags="2048" margin="0,0,6,2" lineGap="5" defaultItem="ui://hndaj42htaqt1d" autoItemSize="false" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n9_g5je" name="TextScrollComponent" src="taqt2" fileName="Components/TextScrollComponent.xml" xy="254,78" size="728,422" group="n22_apl9"/>
+    <component id="n11_sino" name="btn_close" src="rwk718" fileName="common/btn_close_1.xml" pkg="q9qo8um0" xy="958,2" group="n22_apl9"/>
+    <image id="n21_sino" name="n21" src="sinov1i" fileName="image/line.png" pkg="q9qo8um0" xy="234,64" size="4,458" group="n22_apl9"/>
+    <group id="n22_apl9" name="Root" xy="0,0" size="1005,538" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

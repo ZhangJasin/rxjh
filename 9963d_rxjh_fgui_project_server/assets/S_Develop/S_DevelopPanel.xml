@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n0_an8f" name="bg" src="koyz3" fileName="common/bg.xml" pkg="q9qo8um0" xy="167,53" size="1000,650">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n1_an8f" name="btn_close" src="rwk718" fileName="common/btn_close_1.xml" pkg="q9qo8um0" xy="1120,58">
+      <relation target="n0_an8f" sidePair="right-right,top-top"/>
+    </component>
+    <text id="n2_an8f" name="n2" xy="227,134" size="148,34" group="n8_an8f" fontSize="24" color="#fcf1bf" text="调整分辨率："/>
+    <component id="n5_an8f" name="ComboBox_resolution" src="an8f6" fileName="Components/ComboBox1.xml" xy="388,123" group="n8_an8f">
+      <ComboBox title="默认" visibleItemCount="10">
+        <item title="默认"/>
+        <item title="1334X750"/>
+        <item title="1600X900"/>
+        <item title="1920X1080"/>
+      </ComboBox>
+    </component>
+    <text id="n6_an8f" name="n6" xy="694,133" size="172,34" group="n8_an8f" fontSize="24" color="#fcf1bf" text="调整开发模式："/>
+    <component id="n7_an8f" name="ComboBox_mode" src="an8f6" fileName="Components/ComboBox1.xml" xy="868,122" group="n8_an8f">
+      <ComboBox title="电脑端" visibleItemCount="10">
+        <item title="手机端"/>
+        <item title="电脑端"/>
+      </ComboBox>
+    </component>
+    <component id="n11_an8f" name="btn_sure" src="rwk71c" fileName="common/btn_second_green.xml" pkg="q9qo8um0" xy="599,562" group="n8_an8f">
+      <Button title="保存"/>
+    </component>
+    <group id="n8_an8f" name="contentPanel" xy="227,122" size="800,493" advanced="true">
+      <relation target="n0_an8f" sidePair="center-center,top-top"/>
+    </group>
+  </displayList>
+</component>

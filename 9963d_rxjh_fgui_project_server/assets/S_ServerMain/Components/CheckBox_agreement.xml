@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="52,52" extention="Button">
+  <Button mode="Check"/>
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver"/>
+  <displayList>
+    <image id="n0_px3e" src="px3en" name="n0" xy="0,0">
+      <relation target="" sidePair="width,height"/>
+    </image>
+    <loader id="n1_px3e" name="icon" xy="0,0" size="52,52" align="center" vAlign="middle">
+      <relation target="" sidePair="width,height"/>
+    </loader>
+  </displayList>
+</component>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="994,637">
+  <displayList>
+    <component id="n29_koyz" name="bg" src="koyz3" fileName="common/bg.xml" pkg="q9qo8um0" xy="1,1" size="994,637" group="n22_rwk7">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n23_rwk7" name="title_bg" src="sinov1j" fileName="image/bg_1.png" pkg="q9qo8um0" xy="16,60" size="274,563" group="n22_rwk7">
+      <relation target="n29_koyz" sidePair="left-left,bottom-bottom"/>
+    </image>
+    <image id="n24_rwk7" name="title_bg_1" src="sinov1j" fileName="image/bg_1.png" pkg="q9qo8um0" xy="301,98" size="680,526" group="n22_rwk7">
+      <relation target="n29_koyz" sidePair="right-right,bottom-bottom"/>
+    </image>
+    <group id="n22_rwk7" name="n22" xy="1,1" size="994,637"/>
+    <component id="n8_rwk7" name="btn_close" src="rwk718" fileName="common/btn_close_1.xml" pkg="q9qo8um0" xy="949,3">
+      <relation target="n29_koyz" sidePair="right-right,top-top"/>
+    </component>
+    <text id="n20_rwk7" name="n20" xy="419,11" size="155,34" fontSize="24" color="#ffffff" align="center" autoSize="none" text="区服列表">
+      <relation target="n29_koyz" sidePair="center-center,top-top"/>
+    </text>
+    <list id="n25_rwk7" name="list_left" xy="20,61" size="266,562" overflow="scroll" scrollBarFlags="2048" lineGap="3" defaultItem="ui://j5qsclszrwk7b" autoItemSize="false" autoClearItems="true">
+      <relation target="n29_koyz" sidePair="left-left,bottom-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n26_rwk7" name="list_right" xy="303,99" size="679,526" layout="flow_hz" overflow="scroll" margin="9,9,5,0" lineGap="11" colGap="9" defaultItem="ui://j5qsclszrwk78" autoClearItems="true">
+      <relation target="n29_koyz" sidePair="right-right,bottom-bottom"/>
+      <item/>
+    </list>
+    <text id="n9_rwk7" name="n9" xy="342,58" size="52,34" group="n10_rwk7" fontSize="24" color="#fffac7" text="流畅"/>
+    <image id="n5_rwk7" name="n5" src="rwk72" fileName="Images/icon_server_green.png" xy="302,59" group="n10_rwk7"/>
+    <group id="n10_rwk7" name="n10" xy="302,58" size="92,36" group="n30_wvnr"/>
+    <text id="n14_rwk7" name="n14" xy="524,59" size="52,34" group="n16_rwk7" fontSize="24" color="#fffac7" text="繁忙"/>
+    <image id="n15_rwk7" name="n15" src="rwk71" fileName="Images/icon_server_red.png" xy="484,60" size="37,35" group="n16_rwk7"/>
+    <group id="n16_rwk7" name="n16" xy="484,59" size="92,36" group="n30_wvnr" advanced="true">
+      <relation target="n9_rwk7" sidePair="middle-middle,left-right"/>
+    </group>
+    <text id="n17_rwk7" name="n17" xy="706,60" size="52,34" group="n19_rwk7" fontSize="24" color="#fffac7" text="维护"/>
+    <image id="n18_rwk7" name="n18" src="rwk74" fileName="Images/icon_server_grey.png" xy="666,61" size="37,35" group="n19_rwk7"/>
+    <group id="n19_rwk7" name="n19" xy="666,60" size="92,36" group="n30_wvnr" advanced="true">
+      <relation target="n14_rwk7" sidePair="middle-middle,left-right"/>
+    </group>
+    <group id="n30_wvnr" name="n30" xy="302,58" size="456,38" advanced="true">
+      <relation target="n26_rwk7" sidePair="left-left,bottom-top"/>
+    </group>
+    <component id="n32_pckm" name="btn_refresh" src="pckmv1l" fileName="common/Button.xml" pkg="q9qo8um0" xy="864,60" size="40,36">
+      <relation target="n26_rwk7" sidePair="right-right,bottom-top"/>
+      <Button icon="ui://j5qsclszpckm12"/>
+    </component>
+  </displayList>
+</component>

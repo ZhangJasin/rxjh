@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="7eknc53r">
+  <resources>
+    <component id="kkqn0" name="S_LoginAccountPanel.xml" path="/" exported="true"/>
+    <image id="kkqn4" name="login_popup.png" path="/Images/" exported="true"/>
+    <component id="kkqn17" name="btn.xml" path="/Components/"/>
+    <component id="apl919" name="S_LoginAccountPanel_PC.xml" path="/" exported="true"/>
+    <image id="apl91a" name="login_popup_pc.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="263,56" extention="Button">
+  <controller name="selected" pages="0,normal,1,selected" selected="0"/>
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_rwk7" name="n0" src="rwk79" fileName="Images/btn_title.png" xy="0,0" size="263,56">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_rwk7" name="n3" src="jj9m14" fileName="Images/btn_title_select.png" xy="0,0" size="263,56">
+      <gearDisplay controller="button" pages="1,2,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_rwk7" name="title" xy="1,0" size="263,55" fontSize="26" color="#dddddd" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="我的服务器">
+      <gearColor controller="button" pages="0,2" values="#dddddd,#000000|#ffffff,#000000" default="#ffffff,#000000"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

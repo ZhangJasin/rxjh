@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="j5ney3za">
+  <resources>
+    <component id="an8f0" name="S_DevelopPanel.xml" path="/" exported="true"/>
+    <component id="an8f4" name="ComboBox1_item.xml" path="/Components/"/>
+    <component id="an8f5" name="ComboBox1_popup.xml" path="/Components/"/>
+    <component id="an8f6" name="ComboBox1.xml" path="/Components/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

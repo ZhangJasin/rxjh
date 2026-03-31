@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="159,53" extention="ComboBox">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_an8f" name="n0" src="rwk71a" fileName="image/btn_second_green.png" pkg="q9qo8um0" xy="0,0">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_an8f" name="n1" src="rwk719" fileName="image/btn_second_red.png" pkg="q9qo8um0" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_an8f" name="n2" src="rwk719" fileName="image/btn_second_red.png" pkg="q9qo8um0" xy="0,0">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_an8f" name="n3" src="rwk719" fileName="image/btn_second_red.png" pkg="q9qo8um0" xy="0,0">
+      <gearDisplay controller="button" pages="3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n4_an8f" name="title" xy="0,0" size="162,53" fontSize="22" color="#fac800" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <ComboBox dropdown="ui://j5ney3zaan8f5"/>
+</component>

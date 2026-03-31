@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <image id="n8_rrl3" name="bg" src="rrl3v1h" fileName="image/big_second_panel.png" pkg="q9qo8um0" xy="667,375" pivot="0.5,0.5" anchor="true" size="600,400">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n1_g5je" name="Text_title" xy="667,175" pivot="0.5,0" anchor="true" size="227,49" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="温馨提示">
+      <relation target="n8_rrl3" sidePair="center-center,top-top"/>
+    </text>
+    <text id="n2_g5je" name="Text_content" xy="417,260" size="500,220" fontSize="26" color="#cccccc" autoSize="none" text="温馨提示">
+      <relation target="n8_rrl3" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </text>
+    <component id="n9_rrl3" name="Button_1" src="rwk71b" fileName="common/btn_second_red.xml" pkg="q9qo8um0" xy="470,490">
+      <relation target="n8_rrl3" sidePair="center-center,middle-middle"/>
+      <Button title="取消"/>
+    </component>
+    <component id="n10_rrl3" name="Button_2" src="rwk71c" fileName="common/btn_second_green.xml" pkg="q9qo8um0" xy="700,490">
+      <relation target="n8_rrl3" sidePair="center-center,middle-middle"/>
+      <Button title="确定"/>
+    </component>
+  </displayList>
+</component>

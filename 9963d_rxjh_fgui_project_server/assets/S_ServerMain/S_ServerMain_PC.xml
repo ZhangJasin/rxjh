@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600">
+  <displayList>
+    <component id="n2_kkqn" name="Button_logout" src="kkqnf" fileName="Components/btn_back_login.xml" xy="693,51" size="64,64">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n5_kkqn" name="Button_fix" src="kkqni" fileName="Components/btn_repair.xml" xy="693,134" size="64,64">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n7_kkqn" name="Button_announce" src="kkqnk" fileName="Components/btn_announcement.xml" xy="693,218" size="64,64">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <text id="n12_px3e" name="Text_version" xy="60,577" size="53,22" fontSize="14" color="#ffffff" vAlign="middle" strokeColor="#000000" text="version">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </text>
+    <component id="n14_px3e" name="CheckBox_agreement" src="px3ep" fileName="Components/CheckBox_agreement.xml" xy="245,436" size="32,32" group="n16_g5je">
+      <Button selectedIcon="ui://7ue9gt2rpx3em"/>
+    </component>
+    <richtext id="n15_g5je" name="RichText_agreement" xy="295,436" size="84,29" group="n16_g5je" fontSize="20" color="#ffffff" align="center" vAlign="middle" ubb="true" strokeColor="#000000" text="我已详细"/>
+    <group id="n16_g5je" name="Agreement" xy="245,436" size="133,32" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <loader id="n22_jle5" name="Image_logo" xy="338,64" pivot="0.5,0.5" size="123,123" autoSize="true">
+      <relation target="" sidePair="center-center,top-top"/>
+    </loader>
+    <loader id="n23_jle5" name="Image_logo_mini" xy="193,98" pivot="0.5,0.5" size="50,50" autoSize="true">
+      <relation target="" sidePair="center-center,top-top"/>
+    </loader>
+    <loader id="n30_e54f" name="Image_age_tips" xy="691,374" pivot="0.5,0.5" size="71,90" url="ui://7ue9gt2rg5jes" autoSize="true" clearOnPublish="true">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </loader>
+    <list id="n17_g5je" name="List_tips" xy="2,481" size="796,104" overflow="scroll" scrollBarFlags="128" defaultItem="ui://7ue9gt2rg5jer">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <item title="版号第一行" name="RichText_copyright1"/>
+      <item title="版号第二行" name="RichText_copyright2"/>
+      <item title="抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活" name="RichText_health_tips"/>
+      <item title="适龄提示：适合16岁以上使用。" name="RichText_age_tips"/>
+      <item title="禁止私下交易，租借账号，一经发现封号处理。" name="RichText_auth_tips"/>
+    </list>
+    <list id="n21_i4xu" name="ListView_modules" xy="3,58" size="190,184" scale="0.72,0.72" overflow="scroll" scrollBarFlags="128" lineGap="13" defaultItem="ui://7ue9gt2ri4xuc" autoClearItems="true">
+      <item/>
+      <item/>
+    </list>
+    <component id="n32_k2cx" name="btn_white_list" src="k2cxt" fileName="Components/btn_white_list.xml" xy="561,1" size="238,51" alpha="0">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n34_nvd3" name="btn_develop" src="rwk71b" fileName="common/btn_second_red.xml" pkg="q9qo8um0" xy="0,1" size="120,54">
+      <relation target="" sidePair="left-left,top-top"/>
+      <Button title="开发工具"/>
+    </component>
+    <component id="n36_i1m7" name="node_server_name" src="i1m7x" fileName="Components/btn_server_name.xml" xy="400,237" pivot="0.5,0" anchor="true" group="n35_apl9"/>
+    <component id="n0_kkqn" name="Btn_change_server" src="kkqne" fileName="Components/btn_change_server.xml" xy="400,319" pivot="0.5,0.5" anchor="true" group="n35_apl9"/>
+    <component id="n31_gxpt" name="Button_launch" src="rwk71b" fileName="common/btn_second_red.xml" pkg="q9qo8um0" xy="399,379" pivot="0.5,0.5" anchor="true" size="149,47" group="n35_apl9">
+      <Button title="启  动" titleColor="#fff000" titleFontSize="24"/>
+    </component>
+    <group id="n35_apl9" name="Layout_server" xy="265,237" size="270,165" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

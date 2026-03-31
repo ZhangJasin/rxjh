@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="hndaj42h">
+  <resources>
+    <component id="px3e0" name="S_Announce.xml" path="/" exported="true"/>
+    <component id="taqt1d" name="list_select_item.xml" path="/Components/" exported="true"/>
+    <component id="taqt2" name="TextScrollComponent.xml" path="/Components/" exported="true"/>
+    <component id="apl91g" name="Announce.xml" path="/Components/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

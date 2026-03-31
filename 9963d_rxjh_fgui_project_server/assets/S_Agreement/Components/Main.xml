@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1005,538">
+  <displayList>
+    <component id="n13_k2bg" name="n13" src="koyz3" fileName="common/bg.xml" pkg="q9qo8um0" xy="0,0" size="1005,538">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n8_sino" name="Button_agree" src="rwk71c" fileName="common/btn_second_green.xml" pkg="q9qo8um0" xy="646,466">
+      <relation target="n13_k2bg" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <component id="n9_sino" name="Button_sure" src="rwk71b" fileName="common/btn_second_red.xml" pkg="q9qo8um0" xy="422,466">
+      <relation target="n13_k2bg" sidePair="center-center,bottom-bottom"/>
+      <Button title="我知道了"/>
+    </component>
+    <component id="n7_sino" name="Button_refuse" src="rwk71b" fileName="common/btn_second_red.xml" pkg="q9qo8um0" xy="196,466">
+      <relation target="n13_k2bg" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <list id="n5_ptx1" name="List_Content" xy="53,58" pivot="0.5,0" size="900,389" overflow="scroll" scrollBarFlags="128" defaultItem="ui://3ftxdpdckbhs2" autoItemSize="false" autoClearItems="true">
+      <relation target="n13_k2bg" sidePair="center-center,middle-middle"/>
+      <item title="内容"/>
+    </list>
+    <text id="n10_sino" name="title" xy="502,29" pivot="0.5,0.5" anchor="true" size="104,35" fontSize="25" color="#cab649" align="center" vAlign="middle" text="适龄提示">
+      <relation target="n13_k2bg" sidePair="center-center,top-top"/>
+    </text>
+    <component id="n11_sino" name="btn_close" src="rwk718" fileName="common/btn_close_1.xml" pkg="q9qo8um0" xy="957,2">
+      <relation target="n13_k2bg" sidePair="right-right,top-top"/>
+    </component>
+  </displayList>
+</component>

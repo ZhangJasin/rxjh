@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="t0a59x2l">
+  <resources>
+    <component id="i4xu3" name="S_LoadingBarPanel.xml" path="/" exported="true"/>
+    <image id="su6z4" name="loading_img.png" path="/Images/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

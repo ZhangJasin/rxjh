@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="tt8x4rmp">
+  <resources>
+    <component id="i4xu0" name="S_LoadingLayerPanel.xml" path="/" exported="true"/>
+    <component id="108rv3" name="ProgressBar1.xml" path="/Components/"/>
+    <image id="sinov5" name="loading_bar.png" path="/Images/" scale="9grid" scale9grid="82,0,1004,7"/>
+    <image id="u7b9v8" name="loading_bar_9.png" path="/Images/" scale="9grid" scale9grid="7,7,3,5"/>
+    <image id="u7b9v9" name="loading_bar_bg_9.png" path="/Images/" scale="9grid" scale9grid="30,0,3,35"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

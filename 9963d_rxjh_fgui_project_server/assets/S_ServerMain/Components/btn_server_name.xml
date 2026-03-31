@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="270,44" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_kkqn" name="n0" src="i1m7y" fileName="Images/01.png" xy="0,0" size="270,44">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n4_kkqn" name="title" xy="0,0" pivot="0.5,0.5" size="270,44" fontSize="20" color="#fcf1bf" align="center" vAlign="middle" ubb="true" autoSize="none" strokeColor="#000000" singleLine="true" text="区服名称">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <text id="n5_ykzz" name="n5" xy="-93,5" size="74,36" fontSize="20" color="#fcf1bf" align="right" vAlign="middle" autoSize="none" strokeColor="#000000" text="区服"/>
+    <text id="n6_ykzz" name="n6" xy="-93,65" size="74,36" fontSize="20" color="#fcf1bf" align="right" vAlign="middle" autoSize="none" strokeColor="#000000" text="线路"/>
+  </displayList>
+  <Button/>
+</component>

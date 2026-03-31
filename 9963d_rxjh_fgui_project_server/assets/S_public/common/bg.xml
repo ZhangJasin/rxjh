@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="983,599">
+  <displayList>
+    <image id="n1_apl9" name="n1" src="apl9v1n" fileName="image/caizhi.png" xy="6,52" size="971,544">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n0_kbhs" name="n0" xy="0,0" size="983,599" url="ui://q9qo8um0108rv1g" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="330,89" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_rwk7" name="n0" src="rwk77" fileName="Images/btn_server_bg.png" xy="0,0" size="330,89">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_rwk7" name="title" xy="119,8" pivot="0,0.5" size="349,72" fontSize="24" color="#fcf1bf" vAlign="middle" ubb="true" autoSize="none" text="A401.安夏安"/>
+    <loader id="n2_rwk7" name="icon" xy="64,27" size="35,35" url="ui://j5qsclszrwk71" align="center" vAlign="middle" autoSize="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <Button/>
+</component>

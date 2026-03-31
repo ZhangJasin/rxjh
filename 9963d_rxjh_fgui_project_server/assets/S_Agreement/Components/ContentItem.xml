@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="900,34" extention="Label">
+  <displayList>
+    <richtext id="n1_ptx1" name="title" xy="0,0" size="900,66" fontSize="24" color="#d5c14d" ubb="true" autoSize="height" text="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"/>
+  </displayList>
+</component>

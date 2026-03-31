@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImage="ui://7ue9gt2rua3wz">
+  <displayList>
+    <component id="n2_kkqn" name="Button_logout" src="kkqnf" fileName="Components/btn_back_login.xml" xy="1176,62">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n5_kkqn" name="Button_fix" src="kkqni" fileName="Components/btn_repair.xml" xy="1176,156">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n7_kkqn" name="Button_announce" src="kkqnk" fileName="Components/btn_announcement.xml" xy="1176,250">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n37_i1m7" name="node_server_name" src="i1m7x" fileName="Components/btn_server_name.xml" xy="667,339" pivot="0.5,0" anchor="true" group="n10_kkqn">
+      <Button title="A401.安夏" titleFontSize="20"/>
+    </component>
+    <component id="n0_kkqn" name="Btn_change_server" src="kkqne" fileName="Components/btn_change_server.xml" xy="667,421" pivot="0.5,0.5" anchor="true" group="n10_kkqn"/>
+    <group id="n10_kkqn" name="Layout_server" xy="532,339" size="270,184" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n31_gxpt" name="Button_launch" src="rwk71b" fileName="common/btn_second_red.xml" pkg="q9qo8um0" xy="666,497" pivot="0.5,0.5" anchor="true" group="n10_kkqn">
+      <Button title="启  动" titleColor="#fff000"/>
+    </component>
+    <text id="n12_px3e" name="Text_version" xy="60,715" size="60,24" fontSize="16" color="#ffffff" vAlign="middle" strokeColor="#000000" text="version">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </text>
+    <component id="n14_px3e" name="CheckBox_agreement" src="px3ep" fileName="Components/CheckBox_agreement.xml" xy="581,573" size="32,32" group="n16_g5je">
+      <relation target="n15_g5je" sidePair="middle-middle,right-left"/>
+      <Button selectedIcon="ui://7ue9gt2rpx3em"/>
+    </component>
+    <richtext id="n15_g5je" name="RichText_agreement" xy="616,573" size="100,34" group="n16_g5je" fontSize="24" color="#ffffff" align="center" vAlign="middle" ubb="true" strokeColor="#000000" text="用户协议">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <group id="n16_g5je" name="Agreement" xy="581,573" size="135,34"/>
+    <loader id="n22_jle5" name="Image_logo" xy="581,40" pivot="0.5,0.5" size="172,172" autoSize="true">
+      <relation target="" sidePair="center-center,top-top"/>
+    </loader>
+    <loader id="n23_jle5" name="Image_logo_mini" xy="373,101" pivot="0.5,0.5" size="50,50" autoSize="true">
+      <relation target="" sidePair="center-center,top-top"/>
+    </loader>
+    <loader id="n30_e54f" name="Image_age_tips" xy="1181,545" pivot="0.5,0.5" size="71,90" url="ui://7ue9gt2rg5jes" autoSize="true" clearOnPublish="true">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </loader>
+    <list id="n17_g5je" name="List_tips" xy="66,613" size="1200,129" overflow="scroll" scrollBarFlags="128" defaultItem="ui://7ue9gt2rotfhw">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <item title="版号第一行" name="RichText_copyright1"/>
+      <item title="版号第二行" name="RichText_copyright2"/>
+      <item title="抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活" name="RichText_health_tips"/>
+      <item title="适龄提示：适合16岁以上使用。" name="RichText_age_tips"/>
+      <item title="禁止私下交易，租借账号，一经发现封号处理。" name="RichText_auth_tips"/>
+    </list>
+    <list id="n21_i4xu" name="ListView_modules" xy="50,50" size="190,184" overflow="scroll" scrollBarFlags="128" lineGap="13" defaultItem="ui://7ue9gt2ri4xuc" autoClearItems="true">
+      <item/>
+      <item/>
+    </list>
+    <component id="n32_k2cx" name="btn_white_list" src="k2cxt" fileName="Components/btn_white_list.xml" xy="1095,1" size="238,51" alpha="0">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n34_nvd3" name="btn_develop" src="rwk71b" fileName="common/btn_second_red.xml" pkg="q9qo8um0" xy="0,1" size="120,54">
+      <relation target="" sidePair="left-left,top-top"/>
+      <Button title="开发工具"/>
+    </component>
+  </displayList>
+</component>

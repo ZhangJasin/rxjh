@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="q9qo8um0">
+  <resources>
+    <image id="82gdy" name="bag_selected.png" path="/image/" exported="true"/>
+    <component id="c5d215" name="block.xml" path="/" exported="true"/>
+    <font id="c5d216" name="HT.ttf" path="/" renderMode="" samplePointSize="16"/>
+    <image id="rwk717" name="btn_close_1.png" path="/image/" exported="true"/>
+    <component id="rwk718" name="btn_close_1.xml" path="/common/" exported="true"/>
+    <image id="rwk719" name="btn_second_red.png" path="/image/" exported="true" scale="9grid" scale9grid="20,13,124,26"/>
+    <image id="rwk71a" name="btn_second_green.png" path="/image/" exported="true" scale="9grid" scale9grid="39,13,78,26"/>
+    <component id="rwk71b" name="btn_second_red.xml" path="/common/" exported="true"/>
+    <component id="rwk71c" name="btn_second_green.xml" path="/common/" exported="true"/>
+    <image id="flj61e" name="btn_first_red.png" path="/image/" exported="true"/>
+    <component id="flj61f" name="btn_first_red.xml" path="/common/" exported="true"/>
+    <image id="108rv1g" name="bg_first_panel.png" path="/image/" exported="true" scale="9grid" scale9grid="75,79,24,22"/>
+    <image id="rrl3v1h" name="big_second_panel.png" path="/image/" exported="true" scale="9grid" scale9grid="67,70,34,28"/>
+    <image id="sinov1i" name="line.png" path="/image/" exported="true"/>
+    <image id="sinov1j" name="bg_1.png" path="/image/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <component id="koyz3" name="bg.xml" path="/common/" exported="true"/>
+    <image id="sinov4" name="LOADING.jpg" path="/image/" exported="true"/>
+    <component id="pckmv1l" name="Button.xml" path="/common/" exported="true"/>
+    <image id="apl9v1n" name="caizhi.png" path="/image/" exported="true" scale="tile" scale9grid="15,15,30,30"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

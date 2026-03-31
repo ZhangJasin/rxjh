@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,26" pivot="0.5,0.5" anchor="true" extention="Label">
+  <displayList>
+    <image id="n1_r375" name="icon" src="r375v3" fileName="Images/bg_notice_tips_9.png" xy="150,0" pivot="0.5,0" anchor="true" size="154,26">
+      <relation target="n2_r375" sidePair="width-width"/>
+    </image>
+    <text id="n2_r375" name="title" xy="150,13" pivot="0.5,0.5" anchor="true" size="114,32" fontSize="22" color="#ffffff" text="1234567890"/>
+  </displayList>
+</component>
