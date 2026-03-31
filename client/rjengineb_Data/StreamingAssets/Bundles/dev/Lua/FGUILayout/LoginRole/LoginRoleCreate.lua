@@ -14,7 +14,6 @@ local roleAttrRadarMap = {
 }
 
 local classCount = 5
-
 -- 职业排序顺序：刀客(5)、剑客(6)、枪客(2)、弓手(1)、医生(4)、刺客(3)
 local JOB_SORT_ORDER = {5, 6, 2, 1, 4, 3}
 function LoginRoleCreate:Create()
@@ -121,7 +120,8 @@ end
 -- 选择职业
 function LoginRoleCreate:SelectRoleItem(jobIdx)
 	self._createJob = jobIdx
-	-- 根据jobIdx在JOB_SORT_ORDER中找到对应的列表索引
+	local itemIndex = - 1
+		-- 根据jobIdx在JOB_SORT_ORDER中找到对应的列表索引
 	local itemIndex = -1
 	for i, v in ipairs(JOB_SORT_ORDER) do
 		if v == jobIdx then
@@ -132,22 +132,6 @@ function LoginRoleCreate:SelectRoleItem(jobIdx)
 	self._lastSelectIndex = self._curSelectIndex
 	self._curSelectIndex = itemIndex
 	FGUI:GList_setSelectedIndex(self._ui.list_job_select, 	self._curSelectIndex)
-	-- -- 刷新原来选中item显示
-	-- if self._lastSelectIndex then
-	-- 	local lastItem = FGUI:GetChildAt(self._ui.list_job_select, self._lastSelectIndex)
-	-- 	if lastItem then
-	-- 		self:RefreshRoleItemDisplay(self._lastSelectIndex, lastItem)
-	-- 	end
-	-- end
-
-	-- -- 刷新当前选中item显示
-	-- if self._curSelectIndex then
-	-- 	local selectItem = FGUI:GetChildAt(self._ui.list_job_select, 	self._curSelectIndex)
-	-- 	if selectItem then
-	-- 		self:RefreshRoleItemDisplay(self._curSelectIndex, selectItem)
-	-- 	end
-	-- end	
-
 	local sex = (self._createSex == nil) and (roleConfig[jobIdx].DefaultGender or 0) or self._createSex
 	self:SelectSex(sex)
 	FGUI:GLoader_setUrl(self._ui.loader_job, string.format(self.jobTextPath, jobIdx))
@@ -207,14 +191,6 @@ end
 
 -- 刷新角色选择item的显示样式
 function LoginRoleCreate:RefreshRoleItemDisplay(itemIndex, item)
-	-- local jobIdx = itemIndex + 1
-	-- if self._curSelectIndex == itemIndex then
-	-- 	FGUI:GButton_setIcon(item, string.format(self.jobSelectPath, jobIdx))
-	-- 	FGUI:GButton_setTitleColor(item, "#ffeda6")
-	-- else
-	-- 	FGUI:GButton_setIcon(item, string.format(self.jobSelectPath, jobIdx))
-	-- 	FGUI:GButton_setTitleColor(item, "#ffffff")
-	-- end
 end
 
 -- 点击创建角色

@@ -47,6 +47,12 @@
     <component id="vdne19" name="LoginRoleSelect.xml" path="/" exported="true"/>
     <component id="vdne1a" name="RoleLockText.xml" path="/" exported="true"/>
     <component id="fsrp1f" name="btn_select_role_fill.xml" path="/Components/Select/"/>
+    <image id="hfgivm" name="02.png" path="/Images/Restore/"/>
+    <image id="hfgivn" name="D-登录PC.jpg" path="/Images/Restore/"/>
+    <image id="hfgivo" name="D-登录PC.jpg01.jpg" path="/Images/Restore/"/>
+    <component id="mrrvvu" name="LoginRoleRestore.xml" path="/" exported="true"/>
+    <component id="mrrv1g" name="recover_btn.xml" path="/Components/Restore/"/>
+    <component id="ec6qvx" name="recover_list_item.xml" path="/Components/Restore/"/>
   </resources>
   <publish name=""/>
 </packageDescription>
