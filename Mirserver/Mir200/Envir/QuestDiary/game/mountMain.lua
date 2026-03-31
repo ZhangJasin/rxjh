@@ -724,6 +724,37 @@ function mountMain.setPetModel(actor, data)
         isCancel = isCancel,
         oldModelId = oldPetTakeId
     })
+    
+    -- 如果灵兽已出战，发送setPetInfo消息更新顶部灵兽图标
+    local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
+    if petMark and petMark ~= "" then
+        local isPc = clientflag(actor) == 1
+        local methodName = isPc and "PCMainPlayer" or "MainPlayer"
+        -- 如果是取消幻化(isCancel=1)或没有新的幻化，使用默认图标
+        local icon = "pet_000"
+        -- 检查是否有有效幻化
+        if isCancel == 0 and petTakeId and petTakeId > 0 then
+            local petBaseId = gethumvar(actor, VarCfg.U_Pet_Base_ID)
+            if petTakeId ~= petBaseId then
+                for _, v in pairs(petHHlist) do
+                    if v.Model == petTakeId and v.mount_icon then
+                        icon = v.mount_icon
+                        print("幻化切换后更新顶部图标(幻化):", icon)
+                        break
+                    end
+                end
+            end
+        else
+            print("幻化切换后更新顶部图标(默认)")
+        end
+        Message.sendmsgEx(actor, methodName, "setPetInfo", {
+            type = "red",
+            max = 10000,
+            now = 10000,
+            icon = icon
+        })
+    end
+    
     print("=== setPetModel 完成 ===")
     print("petTakeId:", petTakeId, "isCancel:", isCancel)
 end
@@ -745,6 +776,34 @@ function mountMain.openshow(actor, data)
         isPetJh = isPetJh > 0 and 1 or 0,
         allJieshu = isPetJh
     })
+    
+    -- 如果灵兽已出战，发送setPetInfo消息更新顶部灵兽图标
+    if serverChuzhan == 1 then
+        local isPc = clientflag(actor) == 1
+        local methodName = isPc and "PCMainPlayer" or "MainPlayer"
+        -- 如果有幻化则使用幻化图标，否则使用默认图标
+        local icon = "pet_000"
+        local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
+        local petBaseId = gethumvar(actor, VarCfg.U_Pet_Base_ID)
+        if petTakeId and petTakeId > 0 and petTakeId ~= petBaseId then
+            for _, v in pairs(petHHlist) do
+                -- 使用 Model 字段匹配（U_Pet_Take_Id 存储的是 Model 值）
+                if v.Model == petTakeId and v.mount_icon then
+                    icon = v.mount_icon
+                    print("上线恢复灵兽顶部图标(幻化):", icon)
+                    break
+                end
+            end
+        else
+            print("上线恢复灵兽顶部图标(默认)")
+        end
+        Message.sendmsgEx(actor, methodName, "setPetInfo", {
+            type = "red",
+            max = 10000,
+            now = 10000,
+            icon = icon
+        })
+    end
 end
 
 -- 更新坐骑增加属性
@@ -1259,16 +1318,22 @@ function mountMain.recallpet(actor)
     local methodName = isPc and "PCMainPlayer" or "MainPlayer"
     local max = 10000
     local now = 10000
-    -- 从petHHlist配表获取icon，如果没有幻化则用默认图标
+    -- 从petHHlist配表获取幻化图标，如果有幻化则使用幻化图标，否则使用默认图标
     local icon = "pet_000"
     local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
-    if petTakeId and petTakeId > 0 then
+    local petBaseId = gethumvar(actor, VarCfg.U_Pet_Base_ID)
+    -- 检查是否有幻化（petTakeId != petBaseId 表示有幻化）
+    if petTakeId and petTakeId > 0 and petTakeId ~= petBaseId then
         for _, v in pairs(petHHlist) do
-            if v.ID == petTakeId and v.mount_icon then
+            if v.Model == petTakeId and v.mount_icon then
                 icon = v.mount_icon
+                print("出战灵兽使用幻化图标:", icon)
                 break
             end
         end
+    else
+        -- 没有幻化，使用默认图标
+        print("出战灵兽使用默认图标")
     end
     Message.sendmsgEx(actor, methodName, "setPetInfo", {
         type = "red",
@@ -1321,9 +1386,11 @@ function mountMain.unrecallpet(actor, petMark)
     -- 发送收回结果消息给客户端
     Message.sendmsgEx(actor, "mountMain", "unrecallpetResult")
 
-    -- 发送setPetInfo消息清除顶部灵兽图标（与旧系统对齐）
+    -- 发送setPetInfo消息隐藏顶部灵兽图标（召回时隐藏）
     local isPc = clientflag(actor) == 1
     local methodName = isPc and "PCMainPlayer" or "MainPlayer"
+    print("灵兽召回，隐藏顶部图标")
+    -- 不发送icon字段，客户端会隐藏图标
     Message.sendmsgEx(actor, methodName, "setPetInfo", {
         type = "red",
         max = 1,
