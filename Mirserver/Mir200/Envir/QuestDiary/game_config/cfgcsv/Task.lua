@@ -2899,6 +2899,12 @@ local config = {
 			[3] = 113,
 			[4] = 1,
 		},
+		task_finpos = {
+			[1] = 301,
+			[2] = 107,
+			[3] = 113,
+			[4] = 1,
+		},
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -3222,6 +3228,12 @@ local config = {
 		},
 		task_fintype=2,
 		task_finnpc=13,
+		task_finpos = {
+			[1] = 301,
+			[2] = 107,
+			[3] = 113,
+			[4] = 1,
+		},
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -3297,6 +3309,12 @@ local config = {
 		},
 		task_fintype=2,
 		task_finnpc=13,
+		task_finpos = {
+			[1] = 301,
+			[2] = 107,
+			[3] = 113,
+			[4] = 1,
+		},
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -5279,12 +5297,6 @@ local config = {
 		},
 		task_fintype=2,
 		task_finnpc=57,
-		task_pos = {
-			[1] = 2101,
-			[2] = 102,
-			[3] = 90,
-			[4] = 1,
-		},
 		task_finpos = {
 			[1] = 2101,
 			[2] = 102,
