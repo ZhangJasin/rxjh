@@ -1283,6 +1283,10 @@ local config = {
 		idx="TargetDec_Task_103110",
 		Dec="将等级提升至<font color='#00FF00'>45级</font>",
 	},
+	["TargetDec_Task_103111"] = { 
+		idx="TargetDec_Task_103111",
+		Dec="击败<font color='#00FF00'>赏金女猎人</font>",
+	},
 	["TargetDec_Task_200001"] = { 
 		idx="TargetDec_Task_200001",
 		Dec="寻找<font color='#00FF00'>泫勃派门主</font>打听第一次转职",

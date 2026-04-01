@@ -5148,7 +5148,7 @@ local config = {
 			[2] = 50,
 			[3] = 1,
 		},
-		task_progress=45,
+		task_progress=50,
 		task_turntype=1,
 		task_turn_param=15033,
 		task_fintype=1,
@@ -5199,7 +5199,7 @@ local config = {
 			[2] = 50,
 			[3] = 1,
 		},
-		task_progress=45,
+		task_progress=50,
 		task_turntype=1,
 		task_turn_param=15021,
 		task_fintype=1,
@@ -5250,7 +5250,7 @@ local config = {
 			[2] = 50,
 			[3] = 1,
 		},
-		task_progress=45,
+		task_progress=50,
 		task_turntype=1,
 		task_turn_param=15029,
 		task_fintype=1,
@@ -13358,6 +13358,37 @@ local config = {
 			},
 		},
 		task_findial="FinishDec_Task_300005",
+	},
+	[300006] = { 
+		idx=300006,
+		task_type=3,
+		task_weight=4006,
+		task_receivetype=1,
+		task_level=5,
+		task_pre = {
+			[1] = 100008,
+		},
+	},
+	[300007] = { 
+		idx=300007,
+	},
+	[300008] = { 
+		idx=300008,
+	},
+	[300009] = { 
+		idx=300009,
+	},
+	[300010] = { 
+		idx=300010,
+	},
+	[300011] = { 
+		idx=300011,
+	},
+	[300012] = { 
+		idx=300012,
+	},
+	[300013] = { 
+		idx=300013,
 	},
 }
 return config
