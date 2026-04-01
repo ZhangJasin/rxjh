@@ -6412,7 +6412,7 @@ local config = {
 		task_pro = {
 			[1] = 103137,
 		},
-		task_targettype=1,
+		task_targettype=3,
 		task_target_param="60",
 		task_progress=60,
 		task_fintype=1,
