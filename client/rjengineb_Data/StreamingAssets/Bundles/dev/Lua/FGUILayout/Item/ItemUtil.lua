@@ -467,7 +467,8 @@ function ItemUtil:SetItemStarByItemData(commonItem, itemData)
         else
             FGUI:GTextField_setText(starText, string.format("+%s", itemData.Star))
         end
-        FGUI:GTextField_setColor(starText, "#00ff00") 
+        FGUI:GTextField_setColor(starText, "#00ff00")
+        FGUI:GTextField_setFontSize(starText,13)
     end
     FGUI:setVisible(starText, itemData.Star and itemData.Star > 0 and true or false)
 end

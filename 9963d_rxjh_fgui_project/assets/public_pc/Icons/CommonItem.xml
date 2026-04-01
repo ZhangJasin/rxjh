@@ -24,7 +24,7 @@
     <text id="n13_idb7" name="Text_Subscript" xy="-1,-1" size="46,46" aspect="true" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" leading="0" autoSize="none" strokeColor="#000000" autoClearText="true" text="">
       <relation target="n5_u13q" sidePair="width-width%,height-height%"/>
     </text>
-    <text id="n14_tb4y" name="Text_star" xy="17,-2" pivot="1,0" size="28,19" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="right" strokeColor="#000000" autoClearText="true" text="0000">
+    <text id="n14_tb4y" name="Text_star" xy="17,-1" pivot="1,0" size="28,19" font="ui://qa9a7ritbekykvpi" fontSize="12" color="#ffffff" align="right" strokeColor="#000000" autoClearText="true" text="0000">
       <relation target="" sidePair="right-right,top-top,rightext-left,leftext-left"/>
     </text>
   </displayList>
