@@ -145,7 +145,9 @@ end
 -- 获取坐骑幻化的战斗技能属性（BattleSkill_Type和BattleSkill_Value）
 function mountMain.getMountBattleSkillAttr(actor)
     local mountTakeId = gethumvar(actor, VarCfg.U_Mount_Take_Id)
+    print("getMountBattleSkillAttr: mountTakeId =", mountTakeId)
     if not mountTakeId or mountTakeId == 0 then
+        print("getMountBattleSkillAttr: mountTakeId为空或0，返回空")
         return {}
     end
     
@@ -833,7 +835,9 @@ end
 -- 2. buff 110016 - 坐骑幻化属性（配表 ClassID 固定值）
 -- 3. buff 110046 - 坐骑出战幻化（配表 BattleSkill 固定值，由 updateMountBattleSkillBuff 管理）
 function mountMain.updateMountAttrBuff(actor)
+    print("updateMountAttrBuff: 函数被调用")
     local allstar = gethumvar(actor, VarCfg.U_All_Mount_star)
+    print("updateMountAttrBuff: allstar =", allstar)
     if not allstar or allstar == 0 then
         -- 未激活坐骑，删除相关buff
         delbuff(actor, MountBuffId)
@@ -843,6 +847,7 @@ function mountMain.updateMountAttrBuff(actor)
 
     -- 检查坐骑是否已激活
     local isMountActive = gethumvar(actor, VarCfg.U_Mount_IS_SET)
+    print("updateMountAttrBuff: isMountActive =", isMountActive)
     
     if not isMountActive or isMountActive == 0 then
         -- 坐骑未激活
@@ -871,31 +876,34 @@ function mountMain.updateMountAttrBuff(actor)
     -- 万分比，1000 = 10%
     setbuffabil(actor, MountBuffId, 140, "+", 1000)
 
-    -- 3. 设置坐骑幻化属性到 buff 110016
-    local ycList = json2tbl(gethumvar(actor, VarCfg.T_MountHuanHua))
+    -- 3. 设置坐骑幻化属性到 buff 110016（累加多个幻化的属性）
+    local ycListJson = gethumvar(actor, VarCfg.T_MountHuanHua)
+    local ycList = json2tbl(ycListJson)
+    
+    -- 先收集所有幻化属性到临时表
+    local totalAttr = {}
     for l, v in pairs(ycList) do
-        if l then
-            local jhhhlist = {}
-            for e = 1, #mountHHlist do
-                if mountHHlist[e].Name == l and mountHHlist[e].grade == v then
-                    jhhhlist[#jhhhlist + 1] = mountHHlist[e]
-                end
-            end
-            for r = 1, #jhhhlist do
-                local classIds = jhhhlist[r].ClassID
-                for b = 1, #classIds do
-                    local attrId = tonumber(classIds[b][1])
-                    local attrValue = tonumber(classIds[b][2])
-                    if attrValue then
-                        -- 累加幻化属性
-                        local currentValue = getbuffabil(actor, MountHuanhuaBuffId, attrId) or 0
-                        setbuffabil(actor, MountHuanhuaBuffId, attrId, "=", currentValue + attrValue)
+        for e = 1, #mountHHlist do
+            if mountHHlist[e].Name == l and mountHHlist[e].grade == v then
+                local classIds = mountHHlist[e].ClassID
+                if classIds then
+                    for b = 1, #classIds do
+                        local attrId = tonumber(classIds[b][1])
+                        local attrValue = tonumber(classIds[b][2])
+                        if attrId and attrValue then
+                            totalAttr[attrId] = (totalAttr[attrId] or 0) + attrValue
+                        end
                     end
                 end
             end
         end
     end
-    print("updateMountAttrBuff: 坐骑属性更新完成")
+    
+    -- 然后一次性设置所有属性
+    for attrId, attrValue in pairs(totalAttr) do
+        setbuffabil(actor, MountHuanhuaBuffId, attrId, "=", attrValue)
+    end
+    print("updateMountAttrBuff: 幻化属性设置完成, 属性数量 =", #totalAttr)
 end
 
 -- 兼容旧函数
@@ -955,6 +963,7 @@ function mountMain.shengji(actor)
         Message.sendmsgEx(actor, "mountMain", "updateZQ",
                           {lv = nextlv, mountBaseId = mountBaseId})
         MentorShipChangTask(actor, 6, 1, nextlv)
+        print("shengji: nowlv =", nowlv, "nextlv =", nextlv)
         -- 统一更新坐骑属性buff
         mountMain.updateMountAttrBuff(actor)
         -- 更新坐骑幻化战斗技能buff
@@ -1128,6 +1137,8 @@ function mountMain.setModel(actor, data)
     PassiveManager:onVarChanged(actor, "U33")
     sethumvar(actor, VarCfg.U_Mount_Take_Id, mountTakeId)
     changeappear(actor, 5, mountTakeId)
+    -- 统一更新坐骑属性buff（包括幻化属性）
+    mountMain.updateMountAttrBuff(actor)
     -- 更新坐骑幻化战斗技能buff
     mountMain.updateMountBattleSkillBuff(actor)
     -- 同步更新灵兽属性buff（确保不影响灵兽属性）
