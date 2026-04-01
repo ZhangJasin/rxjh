@@ -3,7 +3,7 @@
   <resources>
     <component id="je63v39" name="block.xml" path="/" exported="true"/>
     <image id="je63v3b" name="btn_close_1.png" path="/image/" exported="true"/>
-    <image id="je63v3c" name="btn_first_red.png" path="/image/" exported="true" scale9grid="25,0,4,53"/>
+    <image id="je63v3c" name="btn_first_red.png" path="/image/" exported="true" scale9grid="25,0,4,40"/>
     <image id="je63v3d" name="btn_second_green.png" path="/image/" exported="true" scale="9grid" scale9grid="13,12,11,27"/>
     <image id="je63v3e" name="btn_second_red.png" path="/image/" exported="true" scale="9grid" scale9grid="11,12,12,27"/>
     <component id="je630" name="btn_first_red.xml" path="/common/" exported="true"/>
@@ -200,5 +200,5 @@
     <image id="pxu7kvpk" name="m_max.png" path="/image/" exported="true"/>
     <image id="pxu7kvpl" name="m_min.png" path="/image/" exported="true"/>
   </resources>
-  <publish name="" path="..\Assets\Res\game\FGUIExport\{publish_file_name}" packageCount="2" branchPath="..\Assets\Res\game\FGUIExport\{publish_file_name}_{branch_name}"/>
+  <publish name=""/>
 </packageDescription>
