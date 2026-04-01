@@ -3226,6 +3226,7 @@ local config = {
 		task_pro = {
 			[1] = 103023,
 		},
+		task_progress=50,
 		task_fintype=2,
 		task_finnpc=13,
 		task_finpos = {
