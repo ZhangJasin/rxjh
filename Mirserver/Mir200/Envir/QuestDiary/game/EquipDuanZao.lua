@@ -18,17 +18,6 @@ local fyGroupId = 1 --赋予使用 自定义属性组1
 local hcGroupId = 2 --合成使用 自定义属性组2
 local hcBaseValue ={3,4,5,6}  --合成使用 合成石1-4对应的基础属性值存储
 
-local isPercentAttr ={
-    [104] = 1,
-    [107]= 1,
-    [108]= 1,
-    [127]= 1,
-    [164]= 1,
-    [12]= 1,
-    [13]= 1,
-    [14]= 1,
-} --万分比属性
-
 -- 打开锻造界面
 function EquipDuanZao.openshow(actor, page)
     page = tonumber(page) or 1
@@ -409,7 +398,7 @@ function EquipDuanZao.hecheng(actor, data)
             addValue = qhlv - 7
         end
     end
-    if addValue > 0 and isPercentAttr[hcattrid] then
+    if addValue > 0 and ConstCfg.isPercentAttr[hcattrid] then
         addValue = addValue * 100 --万分比
     end
     changecustomitemabil(actor, -1, 2, hclv, hcattrid, hcattrvalue+addValue)
@@ -701,7 +690,7 @@ function EquipDuanZao.updateEquipAttrsByQHLv(actor, equipmakeIndex, qhlv)
                     addValue = qhlv - 7
                 end
 
-                if addValue > 0 and isPercentAttr[attrid] then
+                if addValue > 0 and ConstCfg.isPercentAttr[attrid] then
                     addValue = addValue * 100 --万分比
                 end
 

@@ -450,8 +450,13 @@ function beforeaddbag(actor, itemObj, itemid, count)
             end
             local value = math.random(enterbag[itemid]['AttScoreStageList'][index][1],
                 enterbag[itemid]['AttScoreStageList'][index][2])
+                
+            local attrid = enterbag[itemid]['attrid']
+            if ConstCfg.isPercentAttr[attrid] then
+                value = value*100  --万分比属性 需X100
+            end
             changecustomitemtext(actor, itemObj, 0, "[鉴定属性]")
-            changecustomitemabil(actor, itemObj, 0, 1, enterbag[itemid]['attrid'], value)
+            changecustomitemabil(actor, itemObj, 0, 1, attrid, value)
             updateitemtoclient(actor, itemObj) -- 将修改后的属性刷新到客户端
         end
     end
