@@ -3192,6 +3192,12 @@ local config = {
 		task_turn_param=15054,
 		task_fintype=1,
 		task_finnpc=13,
+		task_pos = {
+			[1] = 2071,
+			[2] = 71,
+			[3] = 83,
+			[4] = 3,
+		},
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -3228,6 +3234,12 @@ local config = {
 		},
 		task_fintype=2,
 		task_finnpc=13,
+		task_pos = {
+			[1] = 301,
+			[2] = 107,
+			[3] = 113,
+			[4] = 1,
+		},
 		task_finpos = {
 			[1] = 301,
 			[2] = 107,
