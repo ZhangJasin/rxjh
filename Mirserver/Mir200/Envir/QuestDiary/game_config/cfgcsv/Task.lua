@@ -4057,6 +4057,7 @@ local config = {
 			[1] = 103040,
 		},
 		task_targettype=6,
+		task_target_param="200209",
 		task_fintype=1,
 		task_drop = {
 			[1] = {
@@ -6512,6 +6513,7 @@ local config = {
 			[1] = 103139,
 		},
 		task_targettype=6,
+		task_target_param="200309",
 		task_fintype=1,
 		task_finnpc=63,
 		task_drop = {
