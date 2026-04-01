@@ -2394,15 +2394,15 @@ local config = {
 	[110044] = { 
 		ID=110044,
 		BuffType=0,
-		Name="灵兽属性",
-		Tips="灵兽总属性",
+		Name="出战灵兽属性",
+		Tips="出战灵兽总属性",
 		ListenTrigger=7,
 	},
 	[110045] = { 
 		ID=110045,
 		BuffType=0,
-		Name="出战灵兽属性",
-		Tips="出战灵兽属性",
+		Name="出战灵兽幻化属性",
+		Tips="出战灵兽幻化属性",
 		ListenTrigger=7,
 	},
 	[110046] = { 
@@ -2417,6 +2417,13 @@ local config = {
 		BuffType=0,
 		Name="灵兽幻化总属性",
 		Tips="灵兽幻化总属性",
+		ListenTrigger=7,
+	},
+	[110048] = { 
+		ID=110048,
+		BuffType=0,
+		Name="出战坐骑幻化属性",
+		Tips="出战坐骑幻化属性",
 		ListenTrigger=7,
 	},
 }
