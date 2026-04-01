@@ -498,7 +498,7 @@ function FGUIFunction:GetEquipPower(item)
     end
     
     -- 忽视防御 (ID: 62)
-    local ignoreDefensePower = attValues[62] or 0
+    local ignoreDefensePower = attValues[62] or 0 + (attValues[128] or 0)/100
     if ignoreDefensePower > 0 then
         -- 忽视防御每1%增加0.6战力
         totalPower = totalPower + ignoreDefensePower * 0.6
