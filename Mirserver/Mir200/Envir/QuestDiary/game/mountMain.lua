@@ -464,7 +464,6 @@ function mountMain.petShengji(actor)
     })
 
     -- 升级后更新顶部灵兽图标（只在升级时更新，激活时不更新）
-    -- 修复：使用 v.ID 查找（与登录时保持一致）
     -- 注意：只在已出战状态下才更新图标
     local serverChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
     if serverChuzhan == 1 then  -- 只有出战状态才更新图标
@@ -472,9 +471,11 @@ function mountMain.petShengji(actor)
         local methodName = isPc and "PCMainPlayer" or "MainPlayer"
         local icon = "pet_000"
         local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
+        local petBaseId = gethumvar(actor, VarCfg.U_Pet_Base_ID)
+        -- 使用 v.Model 查找（与登录时保持一致）
         if petTakeId and petTakeId > 0 then
             for _, v in pairs(petHHlist) do
-                if v.ID == petTakeId and v.mount_icon then
+                if v.Model == petTakeId and v.mount_icon then
                     icon = v.mount_icon
                     print("升级更新图标，找到icon:", icon)
                     break
@@ -1572,48 +1573,68 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
                 end
             end
         end
-        local mark = addpet(actor, monsterId)
-        if mark and mark ~= "" then
-            print("登录自动召唤灵兽成功，mark:", mark)
-            sethumvar(actor, VarCfg.T_Pet_Mark, mark)
-            sethumvar(actor, VarCfg.U_Pet_IS_SET, 1)
-            -- 清除灵兽死亡复活定时器
-            disabletimer(actor, 49)
-            recallpet(actor, mark)
-            setpetrelax(actor, mark, 2)
-            mountMain.setPetAttr(actor)
-            mountMain.updatePetAttrBuff(actor)
-            mountMain.updatePetBattleSkillBuff(actor)
-            -- 如果灵兽有幻化，改变人物外观
-            local isPetHH = gethumvar(actor, VarCfg.U_Pet_IS_HH)
-            if isPetHH and isPetHH == 1 and petTakeId and petTakeId > 0 then
-                changeappear(actor, 5, petTakeId)
-                print("登录自动召唤：灵兽幻化外观已设置, petTakeId:", petTakeId)
+        
+        -- 检查之前的mark是否还有效
+        local oldMark = gethumvar(actor, VarCfg.T_Pet_Mark)
+        local mark = oldMark
+        if oldMark and oldMark ~= "" and getpetidx(actor, oldMark) then
+            -- mark有效，灵兽在场
+            print("登录自动召唤：灵兽已在场，mark:", oldMark)
+        else
+            -- mark无效或灵兽不在场，重新添加
+            print("登录自动召唤：重新添加灵兽")
+            mark = addpet(actor, monsterId)
+            if mark and mark ~= "" then
+                print("登录添加灵兽成功，mark:", mark)
+                sethumvar(actor, VarCfg.T_Pet_Mark, mark)
+            else
+                print("登录添加灵兽失败")
+                return
             end
-            
-            -- 发送setPetInfo消息更新顶部灵兽图标
-            local isPc = clientflag(actor) == 1
-            local methodName = isPc and "PCMainPlayer" or "MainPlayer"
-            local icon = "pet_000"
-            if petTakeId and petTakeId > 0 then
-                for _, v in pairs(petHHlist) do
-                    if v.ID == petTakeId and v.mount_icon then
-                        icon = v.mount_icon
-                        break
-                    end
+        end
+        
+        -- 清除灵兽死亡复活定时器
+        disabletimer(actor, 49)
+        -- 执行召唤
+        recallpet(actor, mark)
+        setpetrelax(actor, mark, 2)
+        -- 设置灵兽属性
+        mountMain.setPetAttr(actor)
+        mountMain.updatePetAttrBuff(actor)
+        mountMain.updatePetBattleSkillBuff(actor)
+        -- 如果灵兽有幻化，改变人物外观
+        local isPetHH = gethumvar(actor, VarCfg.U_Pet_IS_HH)
+        if isPetHH and isPetHH == 1 and petTakeId and petTakeId > 0 then
+            changeappear(actor, 5, petTakeId)
+            print("登录自动召唤：灵兽幻化外观已设置, petTakeId:", petTakeId)
+        end
+        
+        -- 发送setPetInfo消息更新顶部灵兽图标
+        local isPc = clientflag(actor) == 1
+        local methodName = isPc and "PCMainPlayer" or "MainPlayer"
+        local icon = "pet_000"
+        if petTakeId and petTakeId > 0 and petTakeId ~= petBaseId then
+            for _, v in pairs(petHHlist) do
+                if v.Model == petTakeId and v.mount_icon then
+                    icon = v.mount_icon
+                    print("登录自动召唤：使用幻化图标:", icon)
+                    break
                 end
             end
-            Message.sendmsgEx(actor, methodName, "setPetInfo", {
-                type = "red",
-                max = 10000,
-                now = 10000,
-                icon = icon
-            })
-            
-            print("登录自动召唤灵兽完成")
-        else
-            print("登录自动召唤灵兽失败")
         end
+        Message.sendmsgEx(actor, methodName, "setPetInfo", {
+            type = "red",
+            max = 10000,
+            now = 10000,
+            icon = icon
+        })
+        -- 发送recallpetResult消息更新客户端界面状态
+        Message.sendmsgEx(actor, "mountMain", "recallpetResult", {
+            showPetModelId = petTakeId,
+            selectViewPetId = petBaseId,
+            isPetChuzhan = 1
+        })
+        print("登录自动召唤灵兽完成")
     end
 end, mountMain)
 
