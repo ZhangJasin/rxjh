@@ -480,10 +480,10 @@ function CommonItemTipBase:GetZDYData(itemID,itemConfig)
                 local name = attrConfigs[attId]['Name']..""
 				local color     = attrConfigs[attId]['Color'] or 0  -- 属性颜色
 				local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
-				local percent   = attrConfigs[attId]['Type'] or 0   -- 是否是百分比
-				if percent == 1 then
-					value = string.format("%.1f", value / 100) * 10 / 10   .. "%"
-				end
+			local percent   = attrConfigs[attId]['Type'] or 0   -- 是否是百分比
+			if percent == 1 then
+				value = string.format("%.0f", value / 100)   .. "%"
+			end
 				if name == "气功等级" then
 					suitStr = suitStr..string.format("[color="..colorHex.."]%s+%s[/color]", name, value)
 				else
@@ -509,7 +509,7 @@ function CommonItemTipBase:GetZDYDesc(itemData)
 		local percent   = attrConfigs[attId]['Type'] or 0   -- 是否是百分比
 		value = itemData.ExAbil.abil[1]['v'][1][3]
 		if percent == 1 then
-			value = string.format("%.1f", value / 100) * 10 / 10
+			value = string.format("%.0f", value / 100)
 		end
         
     end

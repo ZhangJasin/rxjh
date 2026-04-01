@@ -363,7 +363,7 @@ function FashionSystemPanl:ListCurAttrRenderer(idx,item)
         local value = tab[2]
         local type = attrConfigs[tab[1]]['Type'] or 0 -- 0 数值 1 万分比
         if type == 1 then
-            value = string.format("%.1f", value / 100) * 10 / 10 .. "%"
+            value = string.format("%.0f", value / 100) .. "%"
         end
         str = str.."<font color='#fff5da'>"..name.."</font><font color='#fff5da'>+"..value.."</font>"
         FGUI:GRichTextField_setText(font,str)
@@ -382,7 +382,7 @@ function FashionSystemPanl:ListNextAttrRenderer(idx,item)
         local value = tab[2]
         local type = attrConfigs[tab[1]]['Type'] or 0 -- 0 数值 1 万分比
         if type == 1 then
-            value = string.format("%.1f", value / 100) * 10 / 10 .. "%"
+            value = string.format("%.0f", value / 100) .. "%"
         end
         str = str.."<font color='#fff5da'>"..name.."</font><font color='#00ff00'>+"..value.."</font>"
         FGUI:GRichTextField_setText(font,str)
@@ -484,14 +484,14 @@ function FashionSystemPanl:UpdateRightAttr()                      -- 更新右�
     local str = "<font color='#fff5da'>魅力值：</font><font color='#7dc6b3'>+"..JHCharm.."</font>"
     FGUI:GTextField_setText(self.LeftTopCharm.value, "+"..JHCharm)
     for i=1,#jhAttrTab do
-        local name = attrConfigs[jhAttrTab[i][1]]['Name'].."："
+        local name = attrConfigs[jhAttrTab[i][1]]['Name'].."：" 
         local value = jhAttrTab[i][2]
         local type = attrConfigs[jhAttrTab[i][1]]['Type'] or 0 -- 0 数值 1 万分比
         if type == 1 then
-            value = string.format("%.1f", value / 100) * 10 / 10 .. "%"
+            value = string.format("%.0f", value / 100) .. "%"
         end
         str = str.."<br><font color='#fff5da'>"..name.."</font><font color='#7dc6b3'>+"..value.."</font>"
-    end  
+    end
     FGUI:GRichTextField_setText(self.attr1_font.font,str)
     -- 穿戴属性 大于5条属性用 attr2_panl
     self.attr2_panl = FGUI:ui_delegate(self._ui.attr2_panl)       -- 激活属性组件

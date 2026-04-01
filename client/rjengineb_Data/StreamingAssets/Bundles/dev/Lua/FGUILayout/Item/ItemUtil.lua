@@ -455,7 +455,7 @@ function ItemUtil:SetItemStarByItemData(commonItem, itemData)
 		local percent   = AttScore_cfg[attId]['Type'] or 0   -- 是否是百分比
 		local value     = itemData.ExAbil.abil[1]['v'][1][3]
 		if percent == 1 then
-			value = string.format("%.1f", value / 100) * 10 / 10
+			value = string.format("%.0f", value / 100)
             isPercent = true
 		end
         itemData.Star = value
@@ -469,7 +469,7 @@ function ItemUtil:SetItemStarByItemData(commonItem, itemData)
         end
         FGUI:GTextField_setColor(starText, "#00ff00") 
     end
-    FGUI:setVisible(starText, itemData.Star and itemData.Star > 0 and true or false)
+    FGUI:setVisible(starText, itemData.Star and tonumber(itemData.Star) > 0 and true or false)
 end
 
 -- 设置commonItem组件下的Icon

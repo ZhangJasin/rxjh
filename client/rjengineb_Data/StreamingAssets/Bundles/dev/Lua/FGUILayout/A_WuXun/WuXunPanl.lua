@@ -367,8 +367,8 @@ function WuXunPanl:ListAttrItemRenderer(idx,item)         -- 武勋等级属性�
         local curFont = self.curattrlist[idx+1] and self.curattrlist[idx+1][2] or 0
         local nextFont = self.nextattrlist[idx+1] and self.nextattrlist[idx+1][2] or 0
         if type == 1 then
-            curFont = string.format("%.1f", curFont / 100) * 10 / 10 .. "%"
-            nextFont = string.format("%.1f", nextFont / 100) * 10 / 10 .. "%"
+            curFont = string.format("%.0f", curFont / 100) .. "%"
+            nextFont = string.format("%.0f", nextFont / 100) .. "%"
         end
         local n0 = FGUI:GetChild(item,"n0")
         local n1 = FGUI:GetChild(item,"n1")
@@ -403,7 +403,7 @@ function WuXunPanl:ListWXEquipAttrRenderer(idx,item)      -- 武勋装备属性�
         local type = attrConfigs[attrid]['Type'] or 0 -- 0 数值 1 万分比
         local value = self.EquipBaseAttrTab[idx+1][2]
         if type == 1 then
-            value = string.format("%.1f", value / 100) * 10 / 10 .. "%"
+            value = string.format("%.0f", value / 100) .. "%"
         end
         local n0 = FGUI:GetChild(item,"n0")
         local n4 = FGUI:GetChild(item,"n4")
@@ -618,8 +618,8 @@ function WuXunPanl:ListWXCLAttr1Renderer(idx,item)
         end
         local type = attrConfigs[attrid]['Type'] or 0 -- 0 数值 1 万分比
         if type == 1 then
-            value = string.format("%.1f", value / 100) * 10 / 10 .. "%"
-            nextValur = string.format("%.1f", nextValur / 100) * 10 / 10 .. "%"
+            value = string.format("%.0f", value / 100) .. "%"
+            nextValur = string.format("%.0f", nextValur / 100) .. "%"
         end
         local n0 = FGUI:GetChild(item,"n0")
         local n1 = FGUI:GetChild(item,"n1")
@@ -657,7 +657,7 @@ function WuXunPanl:ListWXCLAttr2Renderer(idx,item)
         end
         local type = attrConfigs[attrid]['Type'] or 0 -- 0 数值 1 万分比
         if type == 1 then
-            value = string.format("%.1f", value / 100) * 10 / 10 .. "%"
+            value = string.format("%.0f", value / 100) .. "%"
         end
         local n0 = FGUI:GetChild(item,"n0")
         local n4 = FGUI:GetChild(item,"n4")
@@ -845,7 +845,7 @@ function WuXunPanl:ListWXZJAttr1Renderer(idx,item)
         end
         local type = attrConfigs[attrid]['Type'] or 0 -- 0 数值 1 万分比
         if type == 1 then
-            value = string.format("%.1f", value / 100) * 10 / 10 .. "%"
+            value = string.format("%.0f", value / 100) .. "%"
         end
         local n0 = FGUI:GetChild(item,"n0")
         local n4 = FGUI:GetChild(item,"n4")
@@ -882,7 +882,7 @@ function WuXunPanl:ListWXZJAttr2Renderer(idx,item)
         end
         local type = attrConfigs[attrid]['Type'] or 0 -- 0 数值 1 万分比
         if type == 1 then
-            value = string.format("%.1f", value / 100) * 10 / 10 .. "%"
+            value = string.format("%.0f", value / 100) .. "%"
         end
         local n0 = FGUI:GetChild(item,"n0")
         local n4 = FGUI:GetChild(item,"n4")
@@ -1297,7 +1297,7 @@ function WuXunPanl:ListWXZYXHEquipRenderer(idx,item)
 		        local percent   = attrConfigs[attId]['Type'] or 0   -- 是否是百分比
 		        local value     = tab[1][3] or 0  -- 属性值
 		        if percent == 1 then
-		        	value = string.format("%.1f", value / 100) * 10 / 10 .. "%"  
+		        	value = string.format("%.0f", value / 100) .. "%"  
 		        end
                 attrstr = ""..name..value
             end
@@ -1428,10 +1428,10 @@ function WuXunPanl:GetSelectZYEquipAttrList(equipData,zjLv)
         if tab then
             local attId     = tab[1][2] or 0     -- 属性ID 绑定表
             local name = attrConfigs[attId]['Name'].."："
-	        local percent   = attrConfigs[attId]['Type'] or 0   -- 是否是百分比
+            local percent   = attrConfigs[attId]['Type'] or 0   -- 是否是百分比
 	        local value     = tab[1][3] or 0  -- 属性值
 	        if percent == 1 then
-	        	value = string.format("%.1f", value / 100) * 10 / 10 .. "%"  
+	        	value = string.format("%.0f", value / 100) .. "%"  
 	        end
             attrstr = ""..name..value
             attrlist[1] = {attId,name,value}
@@ -1464,7 +1464,7 @@ function WuXunPanl:GetSelectZYEquipAttrList(equipData,zjLv)
 		    local value     = tab[i][3] or 0  -- 属性值
             local index     = tab[i][7] or 0     -- 属性索引
 		    if percent == 1 then
-		    	value = string.format("%.1f", value / 100) * 10 / 10 .. "%"  
+		    	value = string.format("%.0f", value / 100) .. "%"  
 		    end
             attrlist[index+1] = {attId,name,value}
         end

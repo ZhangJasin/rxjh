@@ -366,9 +366,9 @@ function FGUIFunction:GetAttShowData(data, job, extraParam)
                 attValue = attValue * extraParam.multiple
             end
             if config.Type == 1 then -- 万分比除100
-                attValue = string.format("%.1f", attValue / 100) * 10 / 10
+                attValue = string.format("%.0f", attValue / 100)
                 if extraParam.extraAdd and extraParam.extraAdd > 0 then
-                    extraParam.extraAdd = string.format("%.2f", extraParam.extraAdd / 100) * 10 / 10
+                    extraParam.extraAdd = string.format("%.0f", extraParam.extraAdd / 100)
                 end
                 percent = 1
             end
@@ -394,7 +394,7 @@ function FGUIFunction:GetAttShowData(data, job, extraParam)
             else
                 value = newList[showAttId].max
             end
-            if extraParam.extraAdd and extraParam.extraAdd > 0 then
+            if extraParam.extraAdd and tonumber(extraParam.extraAdd) > 0 then
                 value = string.format("%s+%s", value, extraParam.extraAdd)
             end
             newList[showAttId].value = value .. (percent > 0 and "%" or "")
