@@ -4667,5 +4667,321 @@ local config = {
 		idx="Name_Task_103151",
 		Dec="等级提升到70级",
 	},
+	["FinishDec_Task_103013"] = { 
+		idx="FinishDec_Task_103013",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103014"] = { 
+		idx="FinishDec_Task_103014",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103015"] = { 
+		idx="FinishDec_Task_103015",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103016"] = { 
+		idx="FinishDec_Task_103016",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103017"] = { 
+		idx="FinishDec_Task_103017",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103018"] = { 
+		idx="FinishDec_Task_103018",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103019"] = { 
+		idx="FinishDec_Task_103019",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103020"] = { 
+		idx="FinishDec_Task_103020",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103021"] = { 
+		idx="FinishDec_Task_103021",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103022"] = { 
+		idx="FinishDec_Task_103022",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103023"] = { 
+		idx="FinishDec_Task_103023",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103024"] = { 
+		idx="FinishDec_Task_103024",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103025"] = { 
+		idx="FinishDec_Task_103025",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103026"] = { 
+		idx="FinishDec_Task_103026",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103027"] = { 
+		idx="FinishDec_Task_103027",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103028"] = { 
+		idx="FinishDec_Task_103028",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103029"] = { 
+		idx="FinishDec_Task_103029",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103030"] = { 
+		idx="FinishDec_Task_103030",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103031"] = { 
+		idx="FinishDec_Task_103031",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103032"] = { 
+		idx="FinishDec_Task_103032",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103033"] = { 
+		idx="FinishDec_Task_103033",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103034"] = { 
+		idx="FinishDec_Task_103034",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103035"] = { 
+		idx="FinishDec_Task_103035",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103036"] = { 
+		idx="FinishDec_Task_103036",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103037"] = { 
+		idx="FinishDec_Task_103037",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103038"] = { 
+		idx="FinishDec_Task_103038",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103039"] = { 
+		idx="FinishDec_Task_103039",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103040"] = { 
+		idx="FinishDec_Task_103040",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103041"] = { 
+		idx="FinishDec_Task_103041",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103042"] = { 
+		idx="FinishDec_Task_103042",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103043"] = { 
+		idx="FinishDec_Task_103043",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103044"] = { 
+		idx="FinishDec_Task_103044",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103045"] = { 
+		idx="FinishDec_Task_103045",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103046"] = { 
+		idx="FinishDec_Task_103046",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103047"] = { 
+		idx="FinishDec_Task_103047",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103048"] = { 
+		idx="FinishDec_Task_103048",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103049"] = { 
+		idx="FinishDec_Task_103049",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103050"] = { 
+		idx="FinishDec_Task_103050",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103051"] = { 
+		idx="FinishDec_Task_103051",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103052"] = { 
+		idx="FinishDec_Task_103052",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103113"] = { 
+		idx="FinishDec_Task_103113",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103114"] = { 
+		idx="FinishDec_Task_103114",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103115"] = { 
+		idx="FinishDec_Task_103115",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103116"] = { 
+		idx="FinishDec_Task_103116",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103117"] = { 
+		idx="FinishDec_Task_103117",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103118"] = { 
+		idx="FinishDec_Task_103118",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103119"] = { 
+		idx="FinishDec_Task_103119",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103120"] = { 
+		idx="FinishDec_Task_103120",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103121"] = { 
+		idx="FinishDec_Task_103121",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103122"] = { 
+		idx="FinishDec_Task_103122",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103123"] = { 
+		idx="FinishDec_Task_103123",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103124"] = { 
+		idx="FinishDec_Task_103124",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103125"] = { 
+		idx="FinishDec_Task_103125",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103126"] = { 
+		idx="FinishDec_Task_103126",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103127"] = { 
+		idx="FinishDec_Task_103127",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103128"] = { 
+		idx="FinishDec_Task_103128",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103129"] = { 
+		idx="FinishDec_Task_103129",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103130"] = { 
+		idx="FinishDec_Task_103130",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103131"] = { 
+		idx="FinishDec_Task_103131",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103132"] = { 
+		idx="FinishDec_Task_103132",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103133"] = { 
+		idx="FinishDec_Task_103133",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103134"] = { 
+		idx="FinishDec_Task_103134",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103135"] = { 
+		idx="FinishDec_Task_103135",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103136"] = { 
+		idx="FinishDec_Task_103136",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103137"] = { 
+		idx="FinishDec_Task_103137",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103138"] = { 
+		idx="FinishDec_Task_103138",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103139"] = { 
+		idx="FinishDec_Task_103139",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103140"] = { 
+		idx="FinishDec_Task_103140",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103141"] = { 
+		idx="FinishDec_Task_103141",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103142"] = { 
+		idx="FinishDec_Task_103142",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103143"] = { 
+		idx="FinishDec_Task_103143",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103144"] = { 
+		idx="FinishDec_Task_103144",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103145"] = { 
+		idx="FinishDec_Task_103145",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103146"] = { 
+		idx="FinishDec_Task_103146",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103147"] = { 
+		idx="FinishDec_Task_103147",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103148"] = { 
+		idx="FinishDec_Task_103148",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103149"] = { 
+		idx="FinishDec_Task_103149",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103150"] = { 
+		idx="FinishDec_Task_103150",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_103151"] = { 
+		idx="FinishDec_Task_103151",
+		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
+	},
 }
 return config
