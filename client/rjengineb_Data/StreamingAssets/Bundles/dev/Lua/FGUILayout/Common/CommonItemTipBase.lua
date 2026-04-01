@@ -509,7 +509,7 @@ function CommonItemTipBase:GetZDYDesc(itemData)
 		local percent   = attrConfigs[attId]['Type'] or 0   -- 是否是百分比
 		value = itemData.ExAbil.abil[1]['v'][1][3]
 		if percent == 1 then
-			value = string.format("%.0f", value / 100)
+			value = tonumber(string.format("%.0f", value / 100))
 		end
         
     end

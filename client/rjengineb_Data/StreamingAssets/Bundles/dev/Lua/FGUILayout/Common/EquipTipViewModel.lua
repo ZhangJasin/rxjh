@@ -634,7 +634,7 @@ function EquipTipViewModel:GetGemInlaysAttStr(itemData)
                         local percent = a.percent
                         local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
                         if attConfig.Type == 1 then -- 万分比除100
-                            value = string.format("%.0f", value / 100)
+                            value = tonumber(string.format("%.0f", value / 100))
                             percent = 1
                         end
                         if customDesc then
@@ -1115,7 +1115,7 @@ function EquipTipViewModel:GetCustomAttrStr()
                     local percent = a.percent
                     local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
                     if attConfig.Type == 1 then -- 万分比除100
-                        value = string.format("%.0f", value / 100)
+                        value = tonumber(string.format("%.0f", value / 100))
                         percent = 1
                     end
                     if customDesc then
@@ -1296,7 +1296,7 @@ function EquipTipViewModel:WuXunJianDingAttr()
                 local percent = a.percent
                 local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
                 if attConfig.Type == 1 then -- 万分比除100
-                    value = string.format("%.0f", value / 100)
+                    value = tonumber(string.format("%.0f", value / 100))
                     percent = 1
                 end
                 if customDesc then
@@ -1395,7 +1395,7 @@ function EquipTipViewModel:WuXunZhuanYinAttr()
                 indexpos = a.pos
                 local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
                 if attConfig.Type == 1 then -- 万分比除100
-                    value = string.format("%.0f", value / 100)
+                    value = tonumber(string.format("%.0f", value / 100))
                     percent = 1
                 end
                 if customDesc then

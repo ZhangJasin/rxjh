@@ -757,7 +757,7 @@ function EquipTipViewModel:GetCustomAttrStr()
                 local percent = a.percent
                 local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
                 if attConfig.Type == 1 then -- 万分比除100
-                    value = string.format("%.0f", value / 100)
+                    value = tonumber(string.format("%.0f", value / 100))
                     percent = 1
                 end
                 if customDesc then
