@@ -16,10 +16,19 @@ local petHHlist = require("Envir/QuestDiary/game_config/cfgcsv/PetHuanhua.lua")
 local PetExtraRate = {attrRate = 0.1}
 
 -- 灵兽buff配置
+-- 110044: 灵兽出战属性（灵兽基础属性×10%）
+-- 110045: 灵兽幻化战斗技能（配表 BattleSkill_Value 固定值）
+-- 110047: 灵兽幻化属性（配表 ClassID 固定值）
 local PetBuffId = 110044
-local BattlePetBuffId = 110045
+local PetSkillBuffId = 110045
+local HuanhuaBuffId = 110047
 
--- 坐骑幻化战斗技能buff配置
+-- 坐骑buff配置
+-- 110015: 坐骑激活/升级属性（配表固定值）+ 出战属性（移动速度+10%）
+-- 110016: 坐骑幻化属性（配表 ClassID 固定值）
+-- 110046: 坐骑出战幻化（配表 BattleSkill 固定值）
+local MountBuffId = 110015
+local MountHuanhuaBuffId = 110016
 local MountBattleSkillBuffId = 110046
 
 -- 经验加成属性ID(万分比,10000=100%)
@@ -117,7 +126,7 @@ end
 -- 设置/更新灵兽幻化战斗技能buff
 function mountMain.updatePetBattleSkillBuff(actor)
     -- 先清除旧的battle skill buff
-    delbuff(actor, BattlePetBuffId)
+    delbuff(actor, PetSkillBuffId)
     
     -- 获取当前幻化的战斗技能属性
     local battleAttr = mountMain.getPetBattleSkillAttr(actor)
@@ -125,10 +134,10 @@ function mountMain.updatePetBattleSkillBuff(actor)
     -- 如果有战斗技能属性，先添加buff再设置属性
     if next(battleAttr) then
         -- 先添加buff
-        addbuff(actor, BattlePetBuffId)
+        addbuff(actor, PetSkillBuffId)
         -- 再设置属性
         for attrId, attrValue in pairs(battleAttr) do
-            setbuffabil(actor, BattlePetBuffId, tonumber(attrId), "=", tonumber(attrValue))
+            setbuffabil(actor, PetSkillBuffId, tonumber(attrId), "=", tonumber(attrValue))
         end
     end
 end
@@ -255,50 +264,68 @@ function mountMain.setPetAttr(actor)
     print("setPetAttr: 灵兽属性设置完成")
 end
 
--- 更新灵兽属性加成到人物（仅在灵兽出战状态下，给予灵兽10%属性）
+-- 更新灵兽属性加成到人物
+-- 计算规则：
+-- 1. buff 110044 - 灵兽出战属性 = 灵兽基础属性 × 10%
+-- 2. buff 110047 - 灵兽幻化属性 = 配表 ClassID 固定值（休息时也有）
+-- 注意：110045 由 updatePetBattleSkillBuff 设置（配表 BattleSkill_Value 固定值）
 function mountMain.updatePetAttrBuff(actor)
     local allstar = gethumvar(actor, VarCfg.U_All_Pet_star)
     if not allstar or allstar == 0 then
+        -- 未激活灵兽，删除相关buff
         delbuff(actor, PetBuffId)
+        delbuff(actor, HuanhuaBuffId)
         return
     end
 
-    -- 检查灵兽是否出战（U_Pet_IS_SET 或检查宠物mark）
+    -- 检查灵兽是否出战
     local isBattle = gethumvar(actor, VarCfg.U_Pet_IS_SET)
     local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
     
-    -- 如果没有召唤灵兽，则不给予人物属性
+    -- 获取幻化属性
+    local hhAttr = mountMain.getPetHHAttr(actor)
+    
+    -- 如果没有召唤灵兽（休息状态）
     if not isBattle or isBattle == 0 or not petMark or petMark == "" then
         delbuff(actor, PetBuffId)
-        print("updatePetAttrBuff: 灵兽未出战，不给予人物属性")
+        -- 休息时只设置幻化属性到 buff 110047
+        if next(hhAttr) then
+            delbuff(actor, HuanhuaBuffId)
+            addbuff(actor, HuanhuaBuffId)
+            for attrId, attrValue in pairs(hhAttr) do
+                setbuffabil(actor, HuanhuaBuffId, tonumber(attrId), "=", tonumber(attrValue))
+            end
+            print("updatePetAttrBuff: 灵兽休息，设置幻化属性到 buff", HuanhuaBuffId)
+        else
+            delbuff(actor, HuanhuaBuffId)
+        end
         return
     end
 
-    -- 先清除buff再添加
+    -- 出战状态：设置所有属性
+    
+    -- 设置灵兽基础属性×10%到 buff 110044
     delbuff(actor, PetBuffId)
     addbuff(actor, PetBuffId)
-
-    -- 获取灵兽等级属性
     local petAttr = mountMain.getPetAttrByLevel(allstar)
-    
-    -- 获取幻化属性并累加
-    local hhAttr = mountMain.getPetHHAttr(actor)
-    for attrId, attrValue in pairs(hhAttr) do
-        if petAttr[attrId] then
-            petAttr[attrId] = petAttr[attrId] + attrValue
-        else
-            petAttr[attrId] = attrValue
-        end
-    end
-
-    -- 应用灵兽10%属性到人物（仅在出战状态下）
     local attrRate = PetExtraRate.attrRate
     for attrId, attrValue in pairs(petAttr) do
         local finalValue = math.ceil(attrValue * attrRate)
         setbuffabil(actor, PetBuffId, tonumber(attrId), "=", finalValue)
     end
     
-    print("updatePetAttrBuff: 灵兽已出战，给予人物" .. (attrRate * 100) .. "%属性")
+    -- 出战时也保留幻化属性到 buff 110047
+    if next(hhAttr) then
+        delbuff(actor, HuanhuaBuffId)
+        addbuff(actor, HuanhuaBuffId)
+        for attrId, attrValue in pairs(hhAttr) do
+            setbuffabil(actor, HuanhuaBuffId, tonumber(attrId), "=", tonumber(attrValue))
+        end
+        print("updatePetAttrBuff: 灵兽出战，设置灵兽×10%到 buff", PetBuffId, "，幻化属性到 buff", HuanhuaBuffId)
+    else
+        delbuff(actor, HuanhuaBuffId)
+    end
+    -- 注意：110045 幻化战斗技能由 updatePetBattleSkillBuff 单独管理
 end
 
 -- 灵兽升级（与坐骑升级相同的结构）
@@ -377,12 +404,7 @@ function mountMain.petShengji(actor)
             sethumvar(actor, VarCfg.U_Pet_Take_Id, firstHH.Model)
             sethumvar(actor, VarCfg.U_Pet_IS_HH, 1)
             changeappear(actor, 5, firstHH.Model)
-            -- 添加幻化属性
-            if firstHH.ClassID then
-                for b = 1, #firstHH.ClassID do
-                    setbuffabil(actor, 110026, tonumber(firstHH.ClassID[b][1]), "=", tonumber(firstHH.ClassID[b][2]))
-                end
-            end
+            -- 注意：幻化属性由 updatePetAttrBuff 统一管理，这里不需要单独设置
             -- 添加幻化buff
             if firstHH.buffID then
                 for b = 1, #firstHH.buffID do
@@ -408,6 +430,8 @@ function mountMain.petShengji(actor)
     mountMain.setPetAttr(actor)
     -- 更新灵兽幻化战斗技能buff
     mountMain.updatePetBattleSkillBuff(actor)
+    -- 更新灵兽属性buff（休息时设置幻化属性到 buff 110047）
+    mountMain.updatePetAttrBuff(actor)
 
     local petBaseId = petlist[nextlv].Model
     print("灵兽基础模型ID:", petBaseId)
@@ -583,11 +607,7 @@ function mountMain.petHuanhuajihuo(actor, postData)
                 end
             end
 
-            -- 设置幻化ClassID属性到人物身上（与坐骑幻化激活一致）
-            for g, h in pairs(hhsxListStr) do
-                setbuffabil(actor, 110047, tonumber(g), "=", tonumber(h))
-            end
-
+            -- 注意：幻化属性由 updatePetAttrBuff 统一管理，不需要单独设置 buff
             -- 重新计算并应用所有灵兽属性（与旧系统对齐）
             mountMain.updatePetAttrBuff(actor)
             -- 更新灵兽幻化战斗技能buff
@@ -808,18 +828,51 @@ function mountMain.openshow(actor, data)
 end
 
 -- 更新坐骑增加属性
-function mountMain.addsx(actor)
-    -- 坐骑星星属性
+-- 计算规则：
+-- 1. buff 110015 - 坐骑激活/升级属性（配表固定值）+ 出战属性（移动速度+10%）
+-- 2. buff 110016 - 坐骑幻化属性（配表 ClassID 固定值）
+-- 3. buff 110046 - 坐骑出战幻化（配表 BattleSkill 固定值，由 updateMountBattleSkillBuff 管理）
+function mountMain.updateMountAttrBuff(actor)
     local allstar = gethumvar(actor, VarCfg.U_All_Mount_star)
-    local zqzsz = {}
-    local classIds = mountlist[allstar].ClassID
-    for b = 1, #classIds do
-        setbuffabil(actor, 110015, tonumber(classIds[b][1]), "=",
-                    tonumber(classIds[b][2]))
+    if not allstar or allstar == 0 then
+        -- 未激活坐骑，删除相关buff
+        delbuff(actor, MountBuffId)
+        delbuff(actor, MountHuanhuaBuffId)
+        return
     end
-    -- 坐骑幻化属性
+
+    -- 检查坐骑是否已激活
+    local isMountActive = gethumvar(actor, VarCfg.U_Mount_IS_SET)
+    
+    if not isMountActive or isMountActive == 0 then
+        -- 坐骑未激活
+        delbuff(actor, MountBuffId)
+        delbuff(actor, MountHuanhuaBuffId)
+        return
+    end
+
+    -- 清除旧buff
+    delbuff(actor, MountBuffId)
+    delbuff(actor, MountHuanhuaBuffId)
+
+    -- 添加buff
+    addbuff(actor, MountBuffId)
+    addbuff(actor, MountHuanhuaBuffId)
+
+    -- 1. 设置坐骑激活/升级属性到 buff 110015
+    if mountlist[allstar] and mountlist[allstar].ClassID then
+        local classIds = mountlist[allstar].ClassID
+        for b = 1, #classIds do
+            setbuffabil(actor, MountBuffId, tonumber(classIds[b][1]), "=", tonumber(classIds[b][2]))
+        end
+    end
+
+    -- 2. 设置出战属性（移动速度+10%，属性ID 140）
+    -- 万分比，1000 = 10%
+    setbuffabil(actor, MountBuffId, 140, "+", 1000)
+
+    -- 3. 设置坐骑幻化属性到 buff 110016
     local ycList = json2tbl(gethumvar(actor, VarCfg.T_MountHuanHua))
-    local hhsxListStr = {}
     for l, v in pairs(ycList) do
         if l then
             local jhhhlist = {}
@@ -831,19 +884,23 @@ function mountMain.addsx(actor)
             for r = 1, #jhhhlist do
                 local classIds = jhhhlist[r].ClassID
                 for b = 1, #classIds do
-                    if hhsxListStr[classIds[b][1]] then
-                        hhsxListStr[classIds[b][1]] =
-                            hhsxListStr[classIds[b][1]] + classIds[b][2]
-                    else
-                        hhsxListStr[classIds[b][1]] = classIds[b][2]
+                    local attrId = tonumber(classIds[b][1])
+                    local attrValue = tonumber(classIds[b][2])
+                    if attrValue then
+                        -- 累加幻化属性
+                        local currentValue = getbuffabil(actor, MountHuanhuaBuffId, attrId) or 0
+                        setbuffabil(actor, MountHuanhuaBuffId, attrId, "=", currentValue + attrValue)
                     end
                 end
             end
         end
     end
-    for g, h in pairs(hhsxListStr) do
-        setbuffabil(actor, 110016, tonumber(g), "=", tonumber(h))
-    end
+    print("updateMountAttrBuff: 坐骑属性更新完成")
+end
+
+-- 兼容旧函数
+function mountMain.addsx(actor)
+    mountMain.updateMountAttrBuff(actor)
 end
 
 function mountMain.shengji(actor)
@@ -872,12 +929,6 @@ function mountMain.shengji(actor)
                 sethumvar(actor, VarCfg.U_Mount_Take_Id, firstHH.Model)
                 sethumvar(actor, VarCfg.U_Mount_IS_HH, 1)
                 changeappear(actor, 5, firstHH.Model)
-                -- 添加幻化属性
-                if firstHH.ClassID then
-                    for b = 1, #firstHH.ClassID do
-                        setbuffabil(actor, 110016, tonumber(firstHH.ClassID[b][1]), "=", tonumber(firstHH.ClassID[b][2]))
-                    end
-                end
                 -- 添加幻化buff
                 if firstHH.buffID then
                     for b = 1, #firstHH.buffID do
@@ -892,10 +943,6 @@ function mountMain.shengji(actor)
                 })
             end
         end
-        for b = 1, #classIds do
-            setbuffabil(actor, 110015, tonumber(classIds[b][1]), "=",
-                        tonumber(classIds[b][2]))
-        end
         delItemNum(actor, itemId, num)
         sethumvar(actor, VarCfg.U_All_Mount_star, nextlv)
         local mountBaseId = mountlist[nextlv].Model
@@ -908,8 +955,13 @@ function mountMain.shengji(actor)
         Message.sendmsgEx(actor, "mountMain", "updateZQ",
                           {lv = nextlv, mountBaseId = mountBaseId})
         MentorShipChangTask(actor, 6, 1, nextlv)
+        -- 统一更新坐骑属性buff
+        mountMain.updateMountAttrBuff(actor)
         -- 更新坐骑幻化战斗技能buff
         mountMain.updateMountBattleSkillBuff(actor)
+        -- 同步更新灵兽属性buff（确保不影响灵兽属性）
+        mountMain.updatePetAttrBuff(actor)
+        mountMain.updatePetBattleSkillBuff(actor)
     end
 end
 
@@ -989,9 +1041,11 @@ function mountMain.huanhuajihuo(actor, postData)
                     end
                 end
             end
-            for g, h in pairs(hhsxListStr) do
-                setbuffabil(actor, 110016, tonumber(g), "=", tonumber(h))
-            end
+            -- 统一更新坐骑属性buff
+            mountMain.updateMountAttrBuff(actor)
+            -- 同步更新灵兽属性buff（确保不影响灵兽属性）
+            mountMain.updatePetAttrBuff(actor)
+            mountMain.updatePetBattleSkillBuff(actor)
             Message.sendmsgEx(actor, "mountMain", "updateHHmodel", {
                 ycList = ycList,
                 name = name,
@@ -1076,6 +1130,9 @@ function mountMain.setModel(actor, data)
     changeappear(actor, 5, mountTakeId)
     -- 更新坐骑幻化战斗技能buff
     mountMain.updateMountBattleSkillBuff(actor)
+    -- 同步更新灵兽属性buff（确保不影响灵兽属性）
+    mountMain.updatePetAttrBuff(actor)
+    mountMain.updatePetBattleSkillBuff(actor)
     Message.sendmsgEx(actor, "mountMain", "UpdateHHBtnName", {
         mountHHid = mountTakeId,
         isCancel = isCancel,
@@ -1105,6 +1162,9 @@ function mountMain.chuzhan(actor, data)
         setscriptabilvalue(actor, 9, "=", baseSpeed + 5000)
     end
     sethumvar(actor, VarCfg.U_Mount_Status, horsestate(actor))
+    -- 同步更新灵兽属性buff（确保不影响灵兽属性）
+    mountMain.updatePetAttrBuff(actor)
+    mountMain.updatePetBattleSkillBuff(actor)
     Message.sendmsgEx(actor, "mountMain", "updateBtnName",
                       {status = horsestate(actor)})
 end
@@ -1381,8 +1441,10 @@ function mountMain.unrecallpet(actor, petMark)
     -- 设置休息状态
     sethumvar(actor, VarCfg.U_Pet_IS_SET, 0)
 
-    -- 清除人物属性buff
-    delbuff(actor, PetBuffId)
+    -- 更新人物属性buff（休息状态下只设置幻化属性到 buff 110047）
+    mountMain.updatePetAttrBuff(actor)
+    -- 更新灵兽幻化战斗技能buff
+    mountMain.updatePetBattleSkillBuff(actor)
 
     -- 发送收回结果消息给客户端
     Message.sendmsgEx(actor, "mountMain", "unrecallpetResult")
