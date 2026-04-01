@@ -1602,9 +1602,47 @@ GameEvent.add(EventCfg.onPlayRealive, function(actor)
     end
 end, mountMain)
 
--- 角色登录完成时处理灵兽
+-- 角色登录完成时处理坐骑和灵兽
 GameEvent.add(EventCfg.onLoginEnd, function(actor)
-    print("=== 登录完成处理灵兽 ===")
+    print("=== 登录完成处理坐骑和灵兽 ===")
+    
+    -- 先处理坐骑出战状态恢复（确保在灵兽之前设置外观）
+    local mountIsSet = tonumber(gethumvar(actor, VarCfg.U_Mount_IS_SET))
+    local mountStatus = tonumber(gethumvar(actor, VarCfg.U_Mount_Status))
+    local mountTakeId = gethumvar(actor, VarCfg.U_Mount_Take_Id)
+    local mountTakeIdNum = tonumber(mountTakeId)
+    local currentHorseState = horsestate(actor)
+    
+    print("登录坐骑检查：mountIsSet=", mountIsSet, "mountStatus=", mountStatus, "mountTakeId=", mountTakeId, "currentHorseState=", currentHorseState)
+    
+    -- 如果坐骑已激活且之前处于出战状态，自动恢复坐骑外观和状态
+    if mountIsSet and mountIsSet == 1 and mountStatus == 1 and mountTakeIdNum and mountTakeIdNum > 0 then
+        print("坐骑之前处于出战状态，登录自动恢复坐骑外观")
+        -- 设置坐骑外观
+        changeappear(actor, 5, mountTakeIdNum)
+        
+        -- 检查当前状态，只在需要时切换
+        if currentHorseState == 0 then
+            print("当前下马状态，需要上马")
+            updownhorser(actor)
+        end
+        
+        -- 恢复速度加成
+        local baseSpeed = scriptabil(actor, 9)
+        if horsestate(actor) == 0 then
+            setscriptabilvalue(actor, 9, "=", baseSpeed - 5000)
+        else
+            setscriptabilvalue(actor, 9, "=", baseSpeed + 5000)
+        end
+        -- 更新坐骑属性buff
+        mountMain.updateMountAttrBuff(actor)
+        mountMain.updateMountBattleSkillBuff(actor)
+        -- 同步更新灵兽属性buff（确保不影响灵兽属性）
+        mountMain.updatePetAttrBuff(actor)
+        mountMain.updatePetBattleSkillBuff(actor)
+        print("登录恢复坐骑出战完成, horsestate=", horsestate(actor))
+    end
+    
     -- 更新灵兽属性buff
     mountMain.updatePetAttrBuff(actor)
     -- 更新灵兽幻化战斗技能buff
@@ -1675,11 +1713,20 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
         mountMain.setPetAttr(actor)
         mountMain.updatePetAttrBuff(actor)
         mountMain.updatePetBattleSkillBuff(actor)
+        
         -- 如果灵兽有幻化，改变人物外观
+        -- 但是如果坐骑也在出战状态，则不设置灵兽外观（坐骑外观优先级更高）
         local isPetHH = gethumvar(actor, VarCfg.U_Pet_IS_HH)
+        local mountStatusNow = tonumber(gethumvar(actor, VarCfg.U_Mount_Status))
         if isPetHH and isPetHH == 1 and petTakeId and petTakeId > 0 then
-            changeappear(actor, 5, petTakeId)
-            print("登录自动召唤：灵兽幻化外观已设置, petTakeId:", petTakeId)
+            if mountStatusNow == 1 then
+                -- 坐骑也出战，跳过灵兽外观设置（坐骑外观已设置）
+                print("登录自动召唤：坐骑已出战，跳过灵兽外观设置, petTakeId:", petTakeId)
+            else
+                -- 坐骑未出战，设置灵兽外观
+                changeappear(actor, 5, petTakeId)
+                print("登录自动召唤：灵兽幻化外观已设置, petTakeId:", petTakeId)
+            end
         end
         
         -- 发送setPetInfo消息更新顶部灵兽图标
