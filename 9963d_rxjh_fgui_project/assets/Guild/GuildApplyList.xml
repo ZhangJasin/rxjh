@@ -39,6 +39,9 @@
     <text id="n102_jjgk" name="n102" xy="251,642" size="66,40" group="n103_jjgk" fontSize="20" color="#ffffff" autoSize="none" text="全选"/>
     <group id="n103_jjgk" name="n103" xy="212,642" size="105,40" group="n114_whi9" advanced="true"/>
     <component id="n111_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="172,698" size="0,0" group="n114_whi9"/>
+    <component id="n116_a6t0" name="text_empty_tip" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="481,262" size="371,280" group="n114_whi9">
+      <Label title="暂无人申请"/>
+    </component>
     <group id="n114_whi9" name="n114" xy="167,50" size="1000,650" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
