@@ -129,10 +129,9 @@ function EquipDuanZao.qianghua(actor, data)
         end
     end
 
-    -- 强化次数事件触发
-    if posindex <= 5 then
-        GameEvent.push(EventCfg.onQiangHua, actor, sum > basesuc)
-    end
+    -- 强化加工次数事件触发
+    GameEvent.push(EventCfg.onQiangHua, actor, sum > basesuc)
+
     -- basesuc = 100
     -- 强化结果判定
     if sum > basesuc then

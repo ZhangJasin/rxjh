@@ -206,7 +206,7 @@ local function _onQiangHua(actor,flag)
                     if TaskProgress_data[k]['count'] >= neednum then
                         TaskProgress_data[k]['state'] = _taskState.finish
                     end
-                elseif qhtype == _QiangHuaStdModeLevel then  --强化部位指定等级
+                elseif qhType == _QiangHuaStdModeLevel then  --强化部位指定等级
                     local equipmakeIndex = bodyiteminfo(actor, equippostab[targetTab[3]]..'_MakeIndex')
                     if equipmakeIndex and equipmakeIndex ~= "" then
                         linkitembymakeindex(actor, equipmakeIndex)
