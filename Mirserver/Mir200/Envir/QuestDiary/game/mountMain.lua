@@ -1269,16 +1269,13 @@ end
 
 -- 召唤灵兽（出战）
 function mountMain.recallpet(actor)
-    print("=== 召唤灵兽 ===")
     -- 清除灵兽死亡复活定时器
     disabletimer(actor, 49)
     
     local petBaseId = gethumvar(actor, VarCfg.U_Pet_Base_ID)
     local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
-    local petLevel = gethumvar(actor, VarCfg.U_All_Pet_star) or 1
 
     if not petBaseId or petBaseId == 0 then
-        -- 如果没有设置基础ID，使用默认模型
         petBaseId = 900001
     end
 
@@ -1287,11 +1284,9 @@ function mountMain.recallpet(actor)
     end
 
     -- 获取灵兽怪物ID
-    -- 优先从PetHuanhua配置表中查找（幻化后的模型有独立的Monster_ID）
-    -- 如果没有找到，则使用Pet配置表中的Monster_ID
-    local monsterId = 80001  -- 默认怪物ID
+    local monsterId = 80001
     
-    -- 检查是否是幻化形态（从PetHuanhua配置中查找）
+    -- 检查是否是幻化形态
     local isHuanhua = false
     local petTakeIdNum = tonumber(petTakeId)
     if petTakeIdNum and petTakeIdNum > 0 then
@@ -1299,28 +1294,21 @@ function mountMain.recallpet(actor)
             if tonumber(hhData.Model) == petTakeIdNum and hhData.Monster_ID then
                 monsterId = hhData.Monster_ID
                 isHuanhua = true
-                print("幻化形态，使用幻化Monster_ID:", monsterId, "Model:", hhData.Model)
                 break
             end
         end
     end
     
     -- 如果不是幻化形态，从Pet配置表中获取
-    -- 使用petBaseId查找对应的配置，而不是用petLevel（因为升阶后星星会重置）
     if not isHuanhua and petBaseId then
         local petBaseIdNum = tonumber(petBaseId)
-        print("petBaseId类型转换:", petBaseId, "->", petBaseIdNum)
-        print("petlist长度:", #petlist)
-        for i = 0, 10 do  -- 改为固定循环次数，确保能遍历到索引0
+        for i = 0, 10 do
             if petlist[i] and petlist[i].Model and tonumber(petlist[i].Model) == petBaseIdNum then
                 monsterId = tonumber(petlist[i].Monster_ID) or 80001
-                print("找到对应配置，Model:", petBaseIdNum, "Monster_ID:", monsterId)
                 break
             end
         end
     end
-
-    print("召唤灵兽，BaseId:", petBaseId, "TakeId:", petTakeId, "MonsterId:", monsterId)
 
     -- 确保显示模型ID被正确设置
     sethumvar(actor, VarCfg.U_Pet_Now_Model, petTakeId)
@@ -1329,35 +1317,27 @@ function mountMain.recallpet(actor)
     local existingMark = gethumvar(actor, VarCfg.T_Pet_Mark)
     local mark = existingMark
     
-    -- 检查宠物是否已经在场上（通过getpetidx检查）
-    print("recallpet: existingMark =", existingMark, "monsterId =", monsterId)
-    if mark and mark ~= "" and getpetidx(actor, mark) then
+    -- 检查宠物是否已经在场上
+    local petIdx = getpetidx(actor, mark)
+    
+    if mark and mark ~= "" and petIdx then
         -- 宠物已经在场上，不需要再次添加
-        print("灵兽已在场上，跳过添加")
-    elseif not mark or mark == "" then
-        -- 先添加宠物
-        print("添加灵兽到列表，monsterId =", monsterId)
+    else
+        -- mark不存在或宠物已不在场上，需要重新添加
         mark = addpet(actor, monsterId)
-        print("addpet返回结果:", mark, "type:", type(mark))
         if not mark or mark == "" then
-            print("添加灵兽失败")
             sendmsg(actor, 9, "添加灵兽失败")
             return
         end
-        print("添加灵兽成功, mark:", mark)
-        
         -- 保存宠物信息到 T_Pet_Mark
         sethumvar(actor, VarCfg.T_Pet_Mark, mark)
     end
 
     -- 从变量中获取mark确保有效
     mark = gethumvar(actor, VarCfg.T_Pet_Mark)
-    print("使用本地mark:", mark)
 
     -- 召唤灵兽
-    print("调用系统recallpet...")
     recallpet(actor, mark)
-    print("系统recallpet执行完成")
     -- 设置出战状态
     sethumvar(actor, VarCfg.U_Pet_IS_SET, 1)
 
@@ -1367,77 +1347,56 @@ function mountMain.recallpet(actor)
     -- 设置灵兽属性
     mountMain.setPetAttr(actor)
 
-    -- 更新人物属性buff（出战状态下给予10%属性）
+    -- 更新人物属性buff
     mountMain.updatePetAttrBuff(actor)
     -- 更新灵兽幻化战斗技能buff
     mountMain.updatePetBattleSkillBuff(actor)
 
-    -- 注意：灵兽出战不应该改变人物外观！
-    -- 人物外观只由坐骑控制，灵兽只是跟随的宠物（与旧系统一致）
-
     -- 发送召回结果消息给客户端
-    -- isPetChuzhan: 0=休息(显示"出战"), 1=出战(显示"召回")
     local isPetChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
-    print("recallpetResult: isPetChuzhan=", isPetChuzhan)
     Message.sendmsgEx(actor, "mountMain", "recallpetResult", {
         showPetModelId = petTakeId,
         selectViewPetId = petBaseId,
         isPetChuzhan = isPetChuzhan
     })
     
-    -- 发送setPetInfo消息更新顶部灵兽图标（与旧系统对齐）
+    -- 发送setPetInfo消息更新顶部灵兽图标
     local isPc = clientflag(actor) == 1
     local methodName = isPc and "PCMainPlayer" or "MainPlayer"
-    local max = 10000
-    local now = 10000
-    -- 从petHHlist配表获取幻化图标，如果有幻化则使用幻化图标，否则使用默认图标
     local icon = "pet_000"
     local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
     local petBaseId = gethumvar(actor, VarCfg.U_Pet_Base_ID)
-    -- 检查是否有幻化（petTakeId != petBaseId 表示有幻化）
     if petTakeId and petTakeId > 0 and petTakeId ~= petBaseId then
         for _, v in pairs(petHHlist) do
             if v.Model == petTakeId and v.mount_icon then
                 icon = v.mount_icon
-                print("出战灵兽使用幻化图标:", icon)
                 break
             end
         end
-    else
-        -- 没有幻化，使用默认图标
-        print("出战灵兽使用默认图标")
     end
     Message.sendmsgEx(actor, methodName, "setPetInfo", {
         type = "red",
-        max = max,
-        now = now,
+        max = 10000,
+        now = 10000,
         icon = icon
     })
 
     -- 发送petUpdateBtn消息更新按钮状态
-    -- isPetChuzhan: 0=休息(显示"出战"), 1=出战(显示"召回")
-    local isPetChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
-    print("发送petUpdateBtn消息: isPetChuzhan=", isPetChuzhan)
     Message.sendmsgEx(actor, "mountMain", "petUpdateBtn", {
         isPetChuzhan = isPetChuzhan,
         isPetJh = gethumvar(actor, VarCfg.U_All_Pet_star) > 0 and 1 or 0,
         allJieshu = gethumvar(actor, VarCfg.U_All_Pet_star)
     })
-    print("petUpdateBtn消息已发送")
-
-    print("召唤灵兽完成")
 end
 
 -- 收回灵兽
 function mountMain.unrecallpet(actor, petMark)
-    print("=== 收回灵兽 ===")
     -- 如果没有传入petMark，则从变量获取
     if not petMark then
         petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
     end
 
     if not petMark or petMark == "" then
-        print("没有出战的灵兽")
         return
     end
 
@@ -1452,7 +1411,7 @@ function mountMain.unrecallpet(actor, petMark)
     -- 设置休息状态
     sethumvar(actor, VarCfg.U_Pet_IS_SET, 0)
 
-    -- 更新人物属性buff（休息状态下只设置幻化属性到 buff 110047）
+    -- 更新人物属性buff
     mountMain.updatePetAttrBuff(actor)
     -- 更新灵兽幻化战斗技能buff
     mountMain.updatePetBattleSkillBuff(actor)
@@ -1460,11 +1419,9 @@ function mountMain.unrecallpet(actor, petMark)
     -- 发送收回结果消息给客户端
     Message.sendmsgEx(actor, "mountMain", "unrecallpetResult")
 
-    -- 发送setPetInfo消息隐藏顶部灵兽图标（召回时隐藏）
+    -- 发送setPetInfo消息隐藏顶部灵兽图标
     local isPc = clientflag(actor) == 1
     local methodName = isPc and "PCMainPlayer" or "MainPlayer"
-    print("灵兽召回，隐藏顶部图标")
-    -- 不发送icon字段，客户端会隐藏图标
     Message.sendmsgEx(actor, methodName, "setPetInfo", {
         type = "red",
         max = 1,
@@ -1472,26 +1429,18 @@ function mountMain.unrecallpet(actor, petMark)
     })
 
     -- 发送petUpdateBtn消息更新按钮状态
-    -- isPetChuzhan: 0=休息(显示"出战"), 1=出战(显示"召回")
-    local isPetChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
-    print("发送petUpdateBtn消息: isPetChuzhan=", isPetChuzhan)
     Message.sendmsgEx(actor, "mountMain", "petUpdateBtn", {
-        isPetChuzhan = isPetChuzhan,
+        isPetChuzhan = 0,
         isPetJh = gethumvar(actor, VarCfg.U_All_Pet_star) > 0 and 1 or 0,
         allJieshu = gethumvar(actor, VarCfg.U_All_Pet_star)
     })
-    print("petUpdateBtn消息已发送")
-
-    print("收回灵兽完成")
 end
 
 -- 灵兽复活
 function mountMain.resurre(actor)
-    print("=== 灵兽复活 ===")
     local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
     
     if not petMark or petMark == "" then
-        print("没有灵兽需要复活")
         return
     end
     
@@ -1499,14 +1448,42 @@ function mountMain.resurre(actor)
     realivepet(actor, petMark)
     
     -- 重新召唤灵兽
-    recallpet(actor, petMark)
-    setpetrelax(actor, petMark, 2)
+    mountMain.recallpet(actor)
+    
+    -- 确保设置出战状态
+    sethumvar(actor, VarCfg.U_Pet_IS_SET, 1)
     
     -- 设置属性
     mountMain.setPetAttr(actor)
     mountMain.updatePetAttrBuff(actor)
     
-    print("灵兽复活完成")
+    -- 发送setPetInfo消息更新顶部灵兽图标
+    local isPc = clientflag(actor) == 1
+    local methodName = isPc and "PCMainPlayer" or "MainPlayer"
+    local icon = "pet_000"
+    local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
+    local petBaseId = gethumvar(actor, VarCfg.U_Pet_Base_ID)
+    if petTakeId and petTakeId > 0 and petTakeId ~= petBaseId then
+        for _, v in pairs(petHHlist) do
+            if v.Model == petTakeId and v.mount_icon then
+                icon = v.mount_icon
+                break
+            end
+        end
+    end
+    Message.sendmsgEx(actor, methodName, "setPetInfo", {
+        type = "red",
+        max = 10000,
+        now = 10000,
+        icon = icon
+    })
+    
+    -- 发送petUpdateBtn消息更新按钮状态
+    Message.sendmsgEx(actor, "mountMain", "petUpdateBtn", {
+        isPetChuzhan = 1,
+        isPetJh = gethumvar(actor, VarCfg.U_All_Pet_star) > 0 and 1 or 0,
+        allJieshu = gethumvar(actor, VarCfg.U_All_Pet_star)
+    })
 end
 
 -- 灵兽升级接口（与旧系统对齐）

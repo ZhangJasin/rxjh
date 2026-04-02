@@ -754,10 +754,9 @@ function b_die(actor, killer)
         if petIdx and petIdx == actor then
             -- 这是新系统灵兽，设置死亡倒计时
             local dieCd = tonumber(SysConstant['PET_Resurre_CD']['Value']) or 60
-            sethumvar(mastertId, VarCfg.U_PETS_DIE_TIME, dieCd)
+            sethumvar(mastertId, VarCfg.U_Pet_Die_Time, dieCd)
             -- 启动定时器
-            addtimerex(mastertId, 49, 1000, dieCd, "@g_ontimer49", "")
-            print("新系统灵兽死亡，启动复活倒计时:", dieCd)
+            addtimerex(mastertId, 49, 1000, dieCd, "@ontimer49", "")
             Message.sendmsgEx(mastertId, methodName, "petResurrec", utcint64now())
         end
     end
@@ -1020,16 +1019,15 @@ function g_ontimer48(obj, actor, id)
 end
 
 function g_ontimer49(obj, actor, id)
-    local time = gethumvar(actor, VarCfg.U_PETS_DIE_TIME)
-    -- print("倒计时",time)
+    local time = gethumvar(actor, VarCfg.U_Pet_Die_Time)
     if time > 1 then
         time = time - 1
+        sethumvar(actor, VarCfg.U_Pet_Die_Time, time)
     else
         disabletimer(actor, 49)
         --复活出战宠物
         mountMain.resurre(actor)
     end
-    sethumvar(actor, VarCfg.U_PETS_DIE_TIME, time)
 end
 
 ---新伤害流程
