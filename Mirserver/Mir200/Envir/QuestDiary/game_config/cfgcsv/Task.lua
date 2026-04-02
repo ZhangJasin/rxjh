@@ -4141,8 +4141,9 @@ local config = {
 		task_pro = {
 			[1] = 103042,
 		},
+		task_targettype=4,
 		task_target_param = {
-			[1] = 8,
+			[1] = 10,
 			[2] = 2,
 			[3] = 15,
 			[4] = 1,
@@ -6584,8 +6585,9 @@ local config = {
 		task_pro = {
 			[1] = 103141,
 		},
+		task_targettype=4,
 		task_target_param = {
-			[1] = 8,
+			[1] = 10,
 			[2] = 2,
 			[3] = 15,
 			[4] = 1,
