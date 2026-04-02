@@ -4490,13 +4490,13 @@ local config = {
 		},
 		task_progress=50,
 		task_turntype=1,
-		task_turn_param=15066,
+		task_turn_param=15067,
 		task_fintype=1,
 		task_finnpc=23,
 		task_pos = {
 			[1] = 502,
-			[2] = 100,
-			[3] = 149,
+			[2] = 147,
+			[3] = 157,
 			[4] = 3,
 		},
 		task_drop = {
@@ -4541,13 +4541,13 @@ local config = {
 		},
 		task_progress=50,
 		task_turntype=1,
-		task_turn_param=15067,
+		task_turn_param=15066,
 		task_fintype=1,
 		task_finnpc=23,
 		task_pos = {
 			[1] = 502,
-			[2] = 147,
-			[3] = 157,
+			[2] = 100,
+			[3] = 149,
 			[4] = 3,
 		},
 		task_drop = {
