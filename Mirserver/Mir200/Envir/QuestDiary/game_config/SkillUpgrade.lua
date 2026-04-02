@@ -24839,5 +24839,75 @@ local config = {
 			SkillLevel=1,
 		},
 	},
+	[1580010] = { 
+		[1] = { 
+			ID=1580010,
+			SkillID=1580010,
+			SkillLevel=1,
+		},
+	},
+	[1580011] = { 
+		[1] = { 
+			ID=1580011,
+			SkillID=1580011,
+			SkillLevel=1,
+		},
+	},
+	[1580012] = { 
+		[1] = { 
+			ID=1580012,
+			SkillID=1580012,
+			SkillLevel=1,
+		},
+	},
+	[1580013] = { 
+		[1] = { 
+			ID=1580013,
+			SkillID=1580013,
+			SkillLevel=1,
+		},
+	},
+	[1580014] = { 
+		[1] = { 
+			ID=1580014,
+			SkillID=1580014,
+			SkillLevel=1,
+		},
+	},
+	[1580015] = { 
+		[1] = { 
+			ID=1580015,
+			SkillID=1580015,
+			SkillLevel=1,
+		},
+	},
+	[1580016] = { 
+		[1] = { 
+			ID=1580016,
+			SkillID=1580016,
+			SkillLevel=1,
+		},
+	},
+	[1580017] = { 
+		[1] = { 
+			ID=1580017,
+			SkillID=1580017,
+			SkillLevel=1,
+		},
+	},
+	[1580018] = { 
+		[1] = { 
+			ID=1580018,
+			SkillID=1580018,
+			SkillLevel=1,
+		},
+	},
+	[1580019] = { 
+		[1] = { 
+			ID=1580019,
+			SkillID=1580019,
+			SkillLevel=1,
+		},
+	},
 }
 return config
