@@ -125,7 +125,7 @@
     <image id="bbev5i" name="main_assist_select_btn_9.png" path="/Images/Assist/" scale="9grid" scale9grid="8,9,4,6" duplicatePadding="true"/>
     <image id="bbev5n" name="main_black_bg.png" path="/Images/Assist/" scale="9grid" scale9grid="5,5,6,6"/>
     <component id="bbev5p" name="PCMainMission.xml" path="/" exported="true"/>
-    <component id="bbev5q" name="MissionItem.xml" path="/Components/Assist/"/>
+    <component id="bbev5q" name="MissionItem.xml" path="/Components/Assist/" exported="true"/>
     <image id="bbev5t" name="main_btn.png" path="/Images/Assist/" scale="9grid" scale9grid="11,11,9,8"/>
     <component id="bbev5u" name="MemberItem.xml" path="/Components/Assist/"/>
     <image id="bbev5v" name="main_team_member_bg.png" path="/Images/Assist/" scale9grid="100,13,60,28" duplicatePadding="true"/>
@@ -248,6 +248,7 @@
     <image id="k9rffvgt" name="main_team_point_unselect.png" path="/Images/Team/"/>
     <image id="k9rffvgu" name="main_team_word_di.png" path="/Images/Team/"/>
     <image id="k9rffvgv" name="main_team_word_select_di.png" path="/Images/Team/"/>
+    <component id="cn2tfvgw" name="itemRoot.xml" path="/Components/Assist/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

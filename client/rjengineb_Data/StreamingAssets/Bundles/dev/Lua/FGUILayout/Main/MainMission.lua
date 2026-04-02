@@ -4,6 +4,7 @@ local MainMissionData = require("FGUILayout/Main/MainMissionData")
 local taskDeliverData = require("FGUILayout/A_TaskDeliver/taskDeliverData")
 local Task_cfg = require("game_config/cfgcsv/Task")
 local Language_cfg = require("game_config/cfgcsv/Language")
+local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 
 function MainMission:Create()
 	self._ui = FGUI:ui_delegate(self.component)
@@ -96,6 +97,27 @@ function MainMission:InitMissions()
     MainMissionData:InitTaskProgress()
 end
 
+-- 根据职业筛选奖励
+function MainMission:FilterRewardsByJob(tab)
+    if not tab then return {} end
+    
+    local myJob = SL:GetValue("JOB")
+    local mySex = SL:GetValue("SEX")
+    local myZy = SL:GetValue("GOODEVILID") or 0
+    local filteredRewards = {}
+    local index = 0
+    
+    for _, v in pairs(tab) do
+        local needjob,needsex,needzy = v[1],v[4] or 0,v[5] or 0 
+        if (needjob == myJob or needjob == 9) and (needsex == mySex or needsex == 0) and (needzy == myZy or needzy == 0) then
+            index = index + 1
+            filteredRewards[index] = v
+        end
+    end
+    
+    return filteredRewards
+end
+
 function MainMission:OnItemRendererMission(index, item)
     local data = self._missionDatas[index + 1]
     if not data then return end
@@ -115,12 +137,49 @@ function MainMission:OnItemRendererMission(index, item)
     
     -- content
     local richContent = FGUI:GetChild(item, "RichText_content")
-    if needlevel > playlevel then   
-        FGUI:GRichTextField_setText(richContent, "接取所需等级："..playlevel.."/"..needlevel)  
+    if needlevel > playlevel then
+        FGUI:GRichTextField_setText(richContent, "接取所需等级："..playlevel.."/"..needlevel)
     else
-        FGUI:GRichTextField_setText(richContent, Language_cfg[Task_cfg[data.taskid]['task_targetdec']]['Dec'])  
+        FGUI:GRichTextField_setText(richContent, Language_cfg[Task_cfg[data.taskid]['task_targetdec']]['Dec'])
     end
-    
+
+    -- 显示任务奖励（使用道具框）
+    local taskDrop = MainMission:FilterRewardsByJob(Task_cfg[data.taskid] and Task_cfg[data.taskid]['task_drop'])
+    local award1 = FGUI:GetChild(item, "award1")
+    if FGUI:GetChildCount(award1) > 0 then
+        FGUI:RemoveChildAt(award1, 0, true)
+    end
+    local reward1 = taskDrop[1] 
+    if reward1 then
+        local itemData = SL:GetValue("ITEM_DATA", reward1[2])
+        local extData = {
+            hideTip = false,
+            itemTipData = itemData,
+            clickCallback = false,
+            doubleClickCallback = true,
+            bgVisible = true,
+            OverLap = reward1[3]
+        }
+        ItemUtil:ItemShow_Create(itemData, award1, extData)
+    end
+    local award2 = FGUI:GetChild(item, "award2")
+    if FGUI:GetChildCount(award2) > 0 then
+        FGUI:RemoveChildAt(award2, 0, true)
+    end
+    local reward2 = taskDrop[2] 
+    if reward2 then
+        local itemData = SL:GetValue("ITEM_DATA", reward2[2])
+        local extData = {
+            hideTip = false,
+            itemTipData = itemData,
+            clickCallback = false,
+            doubleClickCallback = true,
+            bgVisible = true,
+            OverLap = reward2[3]
+        }
+        ItemUtil:ItemShow_Create(itemData, award2, extData)
+    end
+
     local jindu = Task_cfg[data.taskid]['task_progress'] or 1
     local taskProgressList = MainMissionData:GetTaskProgressList()
     
