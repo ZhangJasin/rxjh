@@ -24909,5 +24909,32 @@ local config = {
 			SkillLevel=1,
 		},
 	},
+	[1580020] = { 
+		[1] = { 
+			ID=1580020,
+			SkillID=1580020,
+			SkillLevel=1,
+			Power=50,
+			Param1={t=101},
+		},
+	},
+	[1580021] = { 
+		[1] = { 
+			ID=1580021,
+			SkillID=1580021,
+			SkillLevel=1,
+			Power=100,
+			Param1={t=101},
+		},
+	},
+	[1580022] = { 
+		[1] = { 
+			ID=1580022,
+			SkillID=1580022,
+			SkillLevel=1,
+			Power=150,
+			Param1={t=101},
+		},
+	},
 }
 return config
