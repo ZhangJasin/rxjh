@@ -955,6 +955,46 @@ local config = {
 		idx="Name_Task_300005",
 		Dec="宠物激活",
 	},
+	["Name_Task_300006"] = { 
+		idx="Name_Task_300006",
+		Dec="查看仓库",
+	},
+	["Name_Task_300007"] = { 
+		idx="Name_Task_300007",
+		Dec="拜师",
+	},
+	["Name_Task_300008"] = { 
+		idx="Name_Task_300008",
+		Dec="收徒",
+	},
+	["Name_Task_300009"] = { 
+		idx="Name_Task_300009",
+		Dec="门派任务",
+	},
+	["Name_Task_300010"] = { 
+		idx="Name_Task_300010",
+		Dec="门派捐赠",
+	},
+	["Name_Task_300011"] = { 
+		idx="Name_Task_300011",
+		Dec="宠物激活",
+	},
+	["Name_Task_300012"] = { 
+		idx="Name_Task_300012",
+		Dec="坐骑激活",
+	},
+	["Name_Task_300013"] = { 
+		idx="Name_Task_300013",
+		Dec="坐骑培养",
+	},
+	["Name_Task_300014"] = { 
+		idx="Name_Task_300014",
+		Dec="属性赋予",
+	},
+	["Name_Task_300015"] = { 
+		idx="Name_Task_300015",
+		Dec="江湖录",
+	},
 	["Name_Task_400000"] = { 
 		idx="Name_Task_400000",
 		Dec="悬赏任务",
@@ -1993,7 +2033,47 @@ local config = {
 	},
 	["TargetDec_Task_300005"] = { 
 		idx="TargetDec_Task_300005",
-		Dec="激活<font color='#00FF00'>1个宠物</font>",
+		Dec="升阶<font color='#00FF00'>1次宠物</font>",
+	},
+	["TargetDec_Task_300006"] = { 
+		idx="TargetDec_Task_300006",
+		Dec="查看<font color='#00FF00'>仓库</font>",
+	},
+	["TargetDec_Task_300007"] = { 
+		idx="TargetDec_Task_300007",
+		Dec="进行<font color='#00FF00'>拜师</font>",
+	},
+	["TargetDec_Task_300008"] = { 
+		idx="TargetDec_Task_300008",
+		Dec="收获<font color='#00FF00'>一个徒弟</font>",
+	},
+	["TargetDec_Task_300009"] = { 
+		idx="TargetDec_Task_300009",
+		Dec="完成<font color='#00FF00'>一次门派任务</font>",
+	},
+	["TargetDec_Task_300010"] = { 
+		idx="TargetDec_Task_300010",
+		Dec="进行<font color='#00FF00'>一次门派捐赠</font>",
+	},
+	["TargetDec_Task_300011"] = { 
+		idx="TargetDec_Task_300011",
+		Dec="激活<font color='#00FF00'>宠物</font>",
+	},
+	["TargetDec_Task_300012"] = { 
+		idx="TargetDec_Task_300012",
+		Dec="激活<font color='#00FF00'>坐骑</font>",
+	},
+	["TargetDec_Task_300013"] = { 
+		idx="TargetDec_Task_300013",
+		Dec="升阶<font color='#00FF00'>1次坐骑</font>",
+	},
+	["TargetDec_Task_300014"] = { 
+		idx="TargetDec_Task_300014",
+		Dec="赋予<font color='#00FF00'>装备一次属性石</font>",
+	},
+	["TargetDec_Task_300015"] = { 
+		idx="TargetDec_Task_300015",
+		Dec="查看<font color='#00FF00'>江湖录</font>",
 	},
 	["TargetDec_Task_400000"] = { 
 		idx="TargetDec_Task_400000",
@@ -3677,6 +3757,46 @@ local config = {
 	},
 	["FinishDec_Task_300005"] = { 
 		idx="FinishDec_Task_300005",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_300006"] = { 
+		idx="FinishDec_Task_300006",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_300007"] = { 
+		idx="FinishDec_Task_300007",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_300008"] = { 
+		idx="FinishDec_Task_300008",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_300009"] = { 
+		idx="FinishDec_Task_300009",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_300010"] = { 
+		idx="FinishDec_Task_300010",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_300011"] = { 
+		idx="FinishDec_Task_300011",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_300012"] = { 
+		idx="FinishDec_Task_300012",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_300013"] = { 
+		idx="FinishDec_Task_300013",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_300014"] = { 
+		idx="FinishDec_Task_300014",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_300015"] = { 
+		idx="FinishDec_Task_300015",
 		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
 	},
 	["FinishDec_Task_600000"] = { 
