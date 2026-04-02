@@ -4149,7 +4149,7 @@ local config = {
 	},
 	["TargetDec_Task_103041"] = { 
 		idx="TargetDec_Task_103041",
-		Dec="完成<font color='#00FF00'>首饰加工3次</font>",
+		Dec="完成<font color='#00FF00'>加工项链1次</font>",
 	},
 	["TargetDec_Task_103042"] = { 
 		idx="TargetDec_Task_103042",
@@ -4309,7 +4309,7 @@ local config = {
 	},
 	["TargetDec_Task_103140"] = { 
 		idx="TargetDec_Task_103140",
-		Dec="完成<font color='#00FF00'>首饰加工3次</font>",
+		Dec="完成<font color='#00FF00'>加工项链1次</font>",
 	},
 	["TargetDec_Task_103141"] = { 
 		idx="TargetDec_Task_103141",
@@ -4469,7 +4469,7 @@ local config = {
 	},
 	["Name_Task_103041"] = { 
 		idx="Name_Task_103041",
-		Dec="进行首饰加工",
+		Dec="加工项链1次",
 	},
 	["Name_Task_103042"] = { 
 		idx="Name_Task_103042",
@@ -4625,7 +4625,7 @@ local config = {
 	},
 	["Name_Task_103140"] = { 
 		idx="Name_Task_103140",
-		Dec="进行首饰加工",
+		Dec="加工项链1次",
 	},
 	["Name_Task_103141"] = { 
 		idx="Name_Task_103141",
