@@ -599,7 +599,7 @@ local config = {
 			[13] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 1400,
+				[3] = 1600,
 			},
 			[14] = {
 				[1] = 9,
@@ -746,7 +746,7 @@ local config = {
 			[2] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 2600,
+				[3] = 3000,
 			},
 			[3] = {
 				[1] = 9,
@@ -794,7 +794,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 3500,
+				[3] = 4500,
 			},
 			[2] = {
 				[1] = 9,
@@ -846,7 +846,7 @@ local config = {
 			[2] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 4500,
+				[3] = 5500,
 			},
 			[3] = {
 				[1] = 9,
@@ -898,7 +898,7 @@ local config = {
 			[2] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 6500,
+				[3] = 7500,
 			},
 			[3] = {
 				[1] = 9,
@@ -945,7 +945,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 8000,
+				[3] = 12000,
 			},
 			[2] = {
 				[1] = 9,
@@ -995,7 +995,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 9000,
+				[3] = 13000,
 			},
 			[2] = {
 				[1] = 9,
@@ -1045,7 +1045,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 10000,
+				[3] = 15000,
 			},
 			[2] = {
 				[1] = 9,
@@ -1100,7 +1100,7 @@ local config = {
 			[2] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 12500,
+				[3] = 16000,
 			},
 			[3] = {
 				[1] = 9,
@@ -1155,7 +1155,7 @@ local config = {
 			[2] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 15000,
+				[3] = 19000,
 			},
 			[3] = {
 				[1] = 9,
@@ -1205,7 +1205,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 16000,
+				[3] = 20000,
 			},
 			[2] = {
 				[1] = 9,
@@ -1257,7 +1257,7 @@ local config = {
 			[2] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 18000,
+				[3] = 23000,
 			},
 			[3] = {
 				[1] = 9,
@@ -1318,7 +1318,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 10000,
+				[3] = 16000,
 			},
 			[2] = {
 				[1] = 9,
@@ -1375,7 +1375,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 10000,
+				[3] = 16000,
 			},
 			[2] = {
 				[1] = 9,
@@ -1422,7 +1422,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 12500,
+				[3] = 17000,
 			},
 			[2] = {
 				[1] = 9,
@@ -1482,7 +1482,7 @@ local config = {
 			[2] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 13000,
+				[3] = 18000,
 			},
 			[3] = {
 				[1] = 9,
@@ -1539,7 +1539,7 @@ local config = {
 			[2] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 12000,
+				[3] = 20000,
 			},
 			[3] = {
 				[1] = 9,
@@ -1589,7 +1589,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 13500,
+				[3] = 25000,
 			},
 			[2] = {
 				[1] = 9,
@@ -1639,7 +1639,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 14500,
+				[3] = 27000,
 			},
 			[2] = {
 				[1] = 9,
@@ -1689,7 +1689,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 15500,
+				[3] = 29000,
 			},
 			[2] = {
 				[1] = 9,
@@ -1739,7 +1739,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 16580,
+				[3] = 35000,
 			},
 			[2] = {
 				[1] = 9,
@@ -1789,7 +1789,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 27238,
+				[3] = 45000,
 			},
 			[2] = {
 				[1] = 9,
@@ -1841,7 +1841,7 @@ local config = {
 			[2] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 30000,
+				[3] = 65000,
 			},
 			[3] = {
 				[1] = 9,
@@ -1905,7 +1905,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 37000,
+				[3] = 80000,
 			},
 			[2] = {
 				[1] = 9,
@@ -1955,7 +1955,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 45000,
+				[3] = 100000,
 			},
 			[2] = {
 				[1] = 9,
@@ -2005,7 +2005,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 60000,
+				[3] = 120000,
 			},
 			[2] = {
 				[1] = 9,
@@ -2055,7 +2055,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 65000,
+				[3] = 150000,
 			},
 			[2] = {
 				[1] = 9,
@@ -2105,7 +2105,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 85000,
+				[3] = 180000,
 			},
 			[2] = {
 				[1] = 9,
@@ -2152,7 +2152,7 @@ local config = {
 			[1] = {
 				[1] = 9,
 				[2] = 3,
-				[3] = 120000,
+				[3] = 210000,
 			},
 			[2] = {
 				[1] = 9,
@@ -13748,81 +13748,1011 @@ local config = {
 	},
 	[400001] = { 
 		idx=400001,
+		task_type=5,
+		task_weight=5001,
+		task_receivetype=1,
 	},
 	[400002] = { 
 		idx=400002,
+		task_type=5,
+		task_weight=5002,
+		task_receivetype=1,
 	},
 	[400003] = { 
 		idx=400003,
+		task_type=5,
+		task_weight=5003,
+		task_receivetype=1,
 	},
 	[400004] = { 
 		idx=400004,
+		task_type=5,
+		task_weight=5004,
+		task_receivetype=1,
 	},
 	[400005] = { 
 		idx=400005,
+		task_type=5,
+		task_weight=5005,
+		task_receivetype=1,
 	},
 	[400006] = { 
 		idx=400006,
+		task_type=5,
+		task_weight=5006,
+		task_receivetype=1,
 	},
 	[400007] = { 
 		idx=400007,
+		task_type=5,
+		task_weight=5007,
+		task_receivetype=1,
 	},
 	[400008] = { 
 		idx=400008,
+		task_type=5,
+		task_weight=5008,
+		task_receivetype=1,
 	},
 	[400009] = { 
 		idx=400009,
+		task_type=5,
+		task_weight=5009,
+		task_receivetype=1,
 	},
 	[400010] = { 
 		idx=400010,
+		task_type=5,
+		task_weight=5010,
+		task_receivetype=1,
 	},
 	[400011] = { 
 		idx=400011,
+		task_type=5,
+		task_weight=5011,
+		task_receivetype=1,
 	},
 	[400012] = { 
 		idx=400012,
+		task_type=5,
+		task_weight=5012,
+		task_receivetype=1,
 	},
 	[400013] = { 
 		idx=400013,
+		task_type=5,
+		task_weight=5013,
+		task_receivetype=1,
 	},
 	[400014] = { 
 		idx=400014,
+		task_type=5,
+		task_weight=5014,
+		task_receivetype=1,
 	},
 	[400015] = { 
 		idx=400015,
+		task_type=5,
+		task_weight=5015,
+		task_receivetype=1,
 	},
 	[400016] = { 
 		idx=400016,
+		task_type=5,
+		task_weight=5016,
+		task_receivetype=1,
 	},
 	[400017] = { 
 		idx=400017,
+		task_type=5,
+		task_weight=5017,
+		task_receivetype=1,
 	},
 	[400018] = { 
 		idx=400018,
+		task_type=5,
+		task_weight=5018,
+		task_receivetype=1,
 	},
 	[400019] = { 
 		idx=400019,
+		task_type=5,
+		task_weight=5019,
+		task_receivetype=1,
 	},
 	[400020] = { 
 		idx=400020,
+		task_type=5,
+		task_weight=5020,
+		task_receivetype=1,
 	},
 	[400021] = { 
 		idx=400021,
+		task_type=5,
+		task_weight=5021,
+		task_receivetype=1,
 	},
 	[400022] = { 
 		idx=400022,
+		task_type=5,
+		task_weight=5022,
+		task_receivetype=1,
 	},
 	[400023] = { 
 		idx=400023,
+		task_type=5,
+		task_weight=5023,
+		task_receivetype=1,
 	},
 	[400024] = { 
 		idx=400024,
+		task_type=5,
+		task_weight=5024,
+		task_receivetype=1,
 	},
 	[400025] = { 
 		idx=400025,
+		task_type=5,
+		task_weight=5025,
+		task_receivetype=1,
 	},
 	[400026] = { 
 		idx=400026,
+		task_type=5,
+		task_weight=5026,
+		task_receivetype=1,
+	},
+	[400027] = { 
+		idx=400027,
+		task_type=5,
+		task_weight=5027,
+		task_receivetype=1,
+	},
+	[400028] = { 
+		idx=400028,
+		task_type=5,
+		task_weight=5028,
+		task_receivetype=1,
+	},
+	[400029] = { 
+		idx=400029,
+		task_type=5,
+		task_weight=5029,
+		task_receivetype=1,
+	},
+	[400030] = { 
+		idx=400030,
+		task_type=5,
+		task_weight=5030,
+		task_receivetype=1,
+	},
+	[400031] = { 
+		idx=400031,
+		task_type=5,
+		task_weight=5031,
+		task_receivetype=1,
+	},
+	[400032] = { 
+		idx=400032,
+		task_type=5,
+		task_weight=5032,
+		task_receivetype=1,
+	},
+	[400033] = { 
+		idx=400033,
+		task_type=5,
+		task_weight=5033,
+		task_receivetype=1,
+	},
+	[400034] = { 
+		idx=400034,
+		task_type=5,
+		task_weight=5034,
+		task_receivetype=1,
+	},
+	[400035] = { 
+		idx=400035,
+		task_type=5,
+		task_weight=5035,
+		task_receivetype=1,
+	},
+	[400036] = { 
+		idx=400036,
+		task_type=5,
+		task_weight=5036,
+		task_receivetype=1,
+	},
+	[400037] = { 
+		idx=400037,
+		task_type=5,
+		task_weight=5037,
+		task_receivetype=1,
+	},
+	[400038] = { 
+		idx=400038,
+		task_type=5,
+		task_weight=5038,
+		task_receivetype=1,
+	},
+	[400039] = { 
+		idx=400039,
+		task_type=5,
+		task_weight=5039,
+		task_receivetype=1,
+	},
+	[400040] = { 
+		idx=400040,
+		task_type=5,
+		task_weight=5040,
+		task_receivetype=1,
+	},
+	[400041] = { 
+		idx=400041,
+		task_type=5,
+		task_weight=5041,
+		task_receivetype=1,
+	},
+	[400042] = { 
+		idx=400042,
+		task_type=5,
+		task_weight=5042,
+		task_receivetype=1,
+	},
+	[400043] = { 
+		idx=400043,
+		task_type=5,
+		task_weight=5043,
+		task_receivetype=1,
+	},
+	[400044] = { 
+		idx=400044,
+		task_type=5,
+		task_weight=5044,
+		task_receivetype=1,
+	},
+	[400045] = { 
+		idx=400045,
+		task_type=5,
+		task_weight=5045,
+		task_receivetype=1,
+	},
+	[400046] = { 
+		idx=400046,
+		task_type=5,
+		task_weight=5046,
+		task_receivetype=1,
+	},
+	[400047] = { 
+		idx=400047,
+		task_type=5,
+		task_weight=5047,
+		task_receivetype=1,
+	},
+	[400048] = { 
+		idx=400048,
+		task_type=5,
+		task_weight=5048,
+		task_receivetype=1,
+	},
+	[400049] = { 
+		idx=400049,
+		task_type=5,
+		task_weight=5049,
+		task_receivetype=1,
+	},
+	[400050] = { 
+		idx=400050,
+		task_type=5,
+		task_weight=5050,
+		task_receivetype=1,
+	},
+	[400051] = { 
+		idx=400051,
+		task_type=5,
+		task_weight=5051,
+		task_receivetype=1,
+	},
+	[400052] = { 
+		idx=400052,
+		task_type=5,
+		task_weight=5052,
+		task_receivetype=1,
+	},
+	[400053] = { 
+		idx=400053,
+		task_type=5,
+		task_weight=5053,
+		task_receivetype=1,
+	},
+	[400054] = { 
+		idx=400054,
+		task_type=5,
+		task_weight=5054,
+		task_receivetype=1,
+	},
+	[400055] = { 
+		idx=400055,
+		task_type=5,
+		task_weight=5055,
+		task_receivetype=1,
+	},
+	[400056] = { 
+		idx=400056,
+		task_type=5,
+		task_weight=5056,
+		task_receivetype=1,
+	},
+	[400057] = { 
+		idx=400057,
+		task_type=5,
+		task_weight=5057,
+		task_receivetype=1,
+	},
+	[400058] = { 
+		idx=400058,
+		task_type=5,
+		task_weight=5058,
+		task_receivetype=1,
+	},
+	[400059] = { 
+		idx=400059,
+		task_type=5,
+		task_weight=5059,
+		task_receivetype=1,
+	},
+	[400060] = { 
+		idx=400060,
+		task_type=5,
+		task_weight=5060,
+		task_receivetype=1,
+	},
+	[400061] = { 
+		idx=400061,
+		task_type=5,
+		task_weight=5061,
+		task_receivetype=1,
+	},
+	[400062] = { 
+		idx=400062,
+		task_type=5,
+		task_weight=5062,
+		task_receivetype=1,
+	},
+	[400063] = { 
+		idx=400063,
+		task_type=5,
+		task_weight=5063,
+		task_receivetype=1,
+	},
+	[400064] = { 
+		idx=400064,
+		task_type=5,
+		task_weight=5064,
+		task_receivetype=1,
+	},
+	[400065] = { 
+		idx=400065,
+		task_type=5,
+		task_weight=5065,
+		task_receivetype=1,
+	},
+	[400066] = { 
+		idx=400066,
+		task_type=5,
+		task_weight=5066,
+		task_receivetype=1,
+	},
+	[400067] = { 
+		idx=400067,
+		task_type=5,
+		task_weight=5067,
+		task_receivetype=1,
+	},
+	[400068] = { 
+		idx=400068,
+		task_type=5,
+		task_weight=5068,
+		task_receivetype=1,
+	},
+	[400069] = { 
+		idx=400069,
+		task_type=5,
+		task_weight=5069,
+		task_receivetype=1,
+	},
+	[400070] = { 
+		idx=400070,
+		task_type=5,
+		task_weight=5070,
+		task_receivetype=1,
+	},
+	[400071] = { 
+		idx=400071,
+		task_type=5,
+		task_weight=5071,
+		task_receivetype=1,
+	},
+	[400072] = { 
+		idx=400072,
+		task_type=5,
+		task_weight=5072,
+		task_receivetype=1,
+	},
+	[400073] = { 
+		idx=400073,
+		task_type=5,
+		task_weight=5073,
+		task_receivetype=1,
+	},
+	[400074] = { 
+		idx=400074,
+		task_type=5,
+		task_weight=5074,
+		task_receivetype=1,
+	},
+	[400075] = { 
+		idx=400075,
+		task_type=5,
+		task_weight=5075,
+		task_receivetype=1,
+	},
+	[400076] = { 
+		idx=400076,
+		task_type=5,
+		task_weight=5076,
+		task_receivetype=1,
+	},
+	[400077] = { 
+		idx=400077,
+		task_type=5,
+		task_weight=5077,
+		task_receivetype=1,
+	},
+	[400078] = { 
+		idx=400078,
+		task_type=5,
+		task_weight=5078,
+		task_receivetype=1,
+	},
+	[400079] = { 
+		idx=400079,
+		task_type=5,
+		task_weight=5079,
+		task_receivetype=1,
+	},
+	[400080] = { 
+		idx=400080,
+		task_type=5,
+		task_weight=5080,
+		task_receivetype=1,
+	},
+	[400081] = { 
+		idx=400081,
+		task_type=5,
+		task_weight=5081,
+		task_receivetype=1,
+	},
+	[400082] = { 
+		idx=400082,
+		task_type=5,
+		task_weight=5082,
+		task_receivetype=1,
+	},
+	[400083] = { 
+		idx=400083,
+		task_type=5,
+		task_weight=5083,
+		task_receivetype=1,
+	},
+	[400084] = { 
+		idx=400084,
+		task_type=5,
+		task_weight=5084,
+		task_receivetype=1,
+	},
+	[400085] = { 
+		idx=400085,
+		task_type=5,
+		task_weight=5085,
+		task_receivetype=1,
+	},
+	[400086] = { 
+		idx=400086,
+		task_type=5,
+		task_weight=5086,
+		task_receivetype=1,
+	},
+	[400087] = { 
+		idx=400087,
+		task_type=5,
+		task_weight=5087,
+		task_receivetype=1,
+	},
+	[400088] = { 
+		idx=400088,
+		task_type=5,
+		task_weight=5088,
+		task_receivetype=1,
+	},
+	[400089] = { 
+		idx=400089,
+		task_type=5,
+		task_weight=5089,
+		task_receivetype=1,
+	},
+	[400090] = { 
+		idx=400090,
+		task_type=5,
+		task_weight=5090,
+		task_receivetype=1,
+	},
+	[400091] = { 
+		idx=400091,
+		task_type=5,
+		task_weight=5091,
+		task_receivetype=1,
+	},
+	[400092] = { 
+		idx=400092,
+		task_type=5,
+		task_weight=5092,
+		task_receivetype=1,
+	},
+	[400093] = { 
+		idx=400093,
+		task_type=5,
+		task_weight=5093,
+		task_receivetype=1,
+	},
+	[400094] = { 
+		idx=400094,
+		task_type=5,
+		task_weight=5094,
+		task_receivetype=1,
+	},
+	[400095] = { 
+		idx=400095,
+		task_type=5,
+		task_weight=5095,
+		task_receivetype=1,
+	},
+	[400096] = { 
+		idx=400096,
+		task_type=5,
+		task_weight=5096,
+		task_receivetype=1,
+	},
+	[400097] = { 
+		idx=400097,
+		task_type=5,
+		task_weight=5097,
+		task_receivetype=1,
+	},
+	[400098] = { 
+		idx=400098,
+		task_type=5,
+		task_weight=5098,
+		task_receivetype=1,
+	},
+	[400099] = { 
+		idx=400099,
+		task_type=5,
+		task_weight=5099,
+		task_receivetype=1,
+	},
+	[400100] = { 
+		idx=400100,
+		task_type=5,
+		task_weight=5100,
+		task_receivetype=1,
+	},
+	[400101] = { 
+		idx=400101,
+		task_type=5,
+		task_weight=5101,
+		task_receivetype=1,
+	},
+	[400102] = { 
+		idx=400102,
+		task_type=5,
+		task_weight=5102,
+		task_receivetype=1,
+	},
+	[400103] = { 
+		idx=400103,
+		task_type=5,
+		task_weight=5103,
+		task_receivetype=1,
+	},
+	[400104] = { 
+		idx=400104,
+		task_type=5,
+		task_weight=5104,
+		task_receivetype=1,
+	},
+	[400105] = { 
+		idx=400105,
+		task_type=5,
+		task_weight=5105,
+		task_receivetype=1,
+	},
+	[400106] = { 
+		idx=400106,
+		task_type=5,
+		task_weight=5106,
+		task_receivetype=1,
+	},
+	[400107] = { 
+		idx=400107,
+		task_type=5,
+		task_weight=5107,
+		task_receivetype=1,
+	},
+	[400108] = { 
+		idx=400108,
+		task_type=5,
+		task_weight=5108,
+		task_receivetype=1,
+	},
+	[400109] = { 
+		idx=400109,
+		task_type=5,
+		task_weight=5109,
+		task_receivetype=1,
+	},
+	[400110] = { 
+		idx=400110,
+		task_type=5,
+		task_weight=5110,
+		task_receivetype=1,
+	},
+	[400111] = { 
+		idx=400111,
+		task_type=5,
+		task_weight=5111,
+		task_receivetype=1,
+	},
+	[400112] = { 
+		idx=400112,
+		task_type=5,
+		task_weight=5112,
+		task_receivetype=1,
+	},
+	[400113] = { 
+		idx=400113,
+		task_type=5,
+		task_weight=5113,
+		task_receivetype=1,
+	},
+	[400114] = { 
+		idx=400114,
+		task_type=5,
+		task_weight=5114,
+		task_receivetype=1,
+	},
+	[400115] = { 
+		idx=400115,
+		task_type=5,
+		task_weight=5115,
+		task_receivetype=1,
+	},
+	[400116] = { 
+		idx=400116,
+		task_type=5,
+		task_weight=5116,
+		task_receivetype=1,
+	},
+	[400117] = { 
+		idx=400117,
+		task_type=5,
+		task_weight=5117,
+		task_receivetype=1,
+	},
+	[400118] = { 
+		idx=400118,
+		task_type=5,
+		task_weight=5118,
+		task_receivetype=1,
+	},
+	[400119] = { 
+		idx=400119,
+		task_type=5,
+		task_weight=5119,
+		task_receivetype=1,
+	},
+	[400120] = { 
+		idx=400120,
+		task_type=5,
+		task_weight=5120,
+		task_receivetype=1,
+	},
+	[400121] = { 
+		idx=400121,
+		task_type=5,
+		task_weight=5121,
+		task_receivetype=1,
+	},
+	[400122] = { 
+		idx=400122,
+		task_type=5,
+		task_weight=5122,
+		task_receivetype=1,
+	},
+	[400123] = { 
+		idx=400123,
+		task_type=5,
+		task_weight=5123,
+		task_receivetype=1,
+	},
+	[400124] = { 
+		idx=400124,
+		task_type=5,
+		task_weight=5124,
+		task_receivetype=1,
+	},
+	[400125] = { 
+		idx=400125,
+		task_type=5,
+		task_weight=5125,
+		task_receivetype=1,
+	},
+	[400126] = { 
+		idx=400126,
+		task_type=5,
+		task_weight=5126,
+		task_receivetype=1,
+	},
+	[400127] = { 
+		idx=400127,
+		task_type=5,
+		task_weight=5127,
+		task_receivetype=1,
+	},
+	[400128] = { 
+		idx=400128,
+		task_type=5,
+		task_weight=5128,
+		task_receivetype=1,
+	},
+	[400129] = { 
+		idx=400129,
+		task_type=5,
+		task_weight=5129,
+		task_receivetype=1,
+	},
+	[400130] = { 
+		idx=400130,
+		task_type=5,
+		task_weight=5130,
+		task_receivetype=1,
+	},
+	[400131] = { 
+		idx=400131,
+		task_type=5,
+		task_weight=5131,
+		task_receivetype=1,
+	},
+	[400132] = { 
+		idx=400132,
+		task_type=5,
+		task_weight=5132,
+		task_receivetype=1,
+	},
+	[400133] = { 
+		idx=400133,
+		task_type=5,
+		task_weight=5133,
+		task_receivetype=1,
+	},
+	[400134] = { 
+		idx=400134,
+		task_type=5,
+		task_weight=5134,
+		task_receivetype=1,
+	},
+	[400135] = { 
+		idx=400135,
+		task_type=5,
+		task_weight=5135,
+		task_receivetype=1,
+	},
+	[400136] = { 
+		idx=400136,
+		task_type=5,
+		task_weight=5136,
+		task_receivetype=1,
+	},
+	[400137] = { 
+		idx=400137,
+		task_type=5,
+		task_weight=5137,
+		task_receivetype=1,
+	},
+	[400138] = { 
+		idx=400138,
+		task_type=5,
+		task_weight=5138,
+		task_receivetype=1,
+	},
+	[400139] = { 
+		idx=400139,
+		task_type=5,
+		task_weight=5139,
+		task_receivetype=1,
+	},
+	[400140] = { 
+		idx=400140,
+		task_type=5,
+		task_weight=5140,
+		task_receivetype=1,
+	},
+	[400141] = { 
+		idx=400141,
+		task_type=5,
+		task_weight=5141,
+		task_receivetype=1,
+	},
+	[400142] = { 
+		idx=400142,
+		task_type=5,
+		task_weight=5142,
+		task_receivetype=1,
+	},
+	[400143] = { 
+		idx=400143,
+		task_type=5,
+		task_weight=5143,
+		task_receivetype=1,
+	},
+	[400144] = { 
+		idx=400144,
+		task_type=5,
+		task_weight=5144,
+		task_receivetype=1,
+	},
+	[400145] = { 
+		idx=400145,
+		task_type=5,
+		task_weight=5145,
+		task_receivetype=1,
+	},
+	[400146] = { 
+		idx=400146,
+		task_type=5,
+		task_weight=5146,
+		task_receivetype=1,
+	},
+	[400147] = { 
+		idx=400147,
+		task_type=5,
+		task_weight=5147,
+		task_receivetype=1,
+	},
+	[400148] = { 
+		idx=400148,
+		task_type=5,
+		task_weight=5148,
+		task_receivetype=1,
+	},
+	[400149] = { 
+		idx=400149,
+		task_type=5,
+		task_weight=5149,
+		task_receivetype=1,
+	},
+	[400150] = { 
+		idx=400150,
+		task_type=5,
+		task_weight=5150,
+		task_receivetype=1,
+	},
+	[400151] = { 
+		idx=400151,
+		task_type=5,
+		task_weight=5151,
+		task_receivetype=1,
+	},
+	[400152] = { 
+		idx=400152,
+		task_type=5,
+		task_weight=5152,
+		task_receivetype=1,
+	},
+	[400153] = { 
+		idx=400153,
+		task_type=5,
+		task_weight=5153,
+		task_receivetype=1,
+	},
+	[400154] = { 
+		idx=400154,
+		task_type=5,
+		task_weight=5154,
+		task_receivetype=1,
+	},
+	[400155] = { 
+		idx=400155,
+		task_type=5,
+		task_weight=5155,
+		task_receivetype=1,
+	},
+	[400156] = { 
+		idx=400156,
+		task_type=5,
+		task_weight=5156,
+		task_receivetype=1,
+	},
+	[400157] = { 
+		idx=400157,
+		task_type=5,
+		task_weight=5157,
+		task_receivetype=1,
+	},
+	[400158] = { 
+		idx=400158,
+		task_type=5,
+		task_weight=5158,
+		task_receivetype=1,
+	},
+	[400159] = { 
+		idx=400159,
+		task_type=5,
+		task_weight=5159,
+		task_receivetype=1,
+	},
+	[400160] = { 
+		idx=400160,
+		task_type=5,
+		task_weight=5160,
+		task_receivetype=1,
+	},
+	[400161] = { 
+		idx=400161,
+		task_type=5,
+		task_weight=5161,
+		task_receivetype=1,
+	},
+	[400162] = { 
+		idx=400162,
+		task_type=5,
+		task_weight=5162,
+		task_receivetype=1,
+	},
+	[400163] = { 
+		idx=400163,
+		task_type=5,
+		task_weight=5163,
+		task_receivetype=1,
+	},
+	[400164] = { 
+		idx=400164,
+		task_type=5,
+		task_weight=5164,
+		task_receivetype=1,
+	},
+	[400165] = { 
+		idx=400165,
+		task_type=5,
+		task_weight=5165,
+		task_receivetype=1,
+	},
+	[400166] = { 
+		idx=400166,
+		task_type=5,
+		task_weight=5166,
+		task_receivetype=1,
+	},
+	[400167] = { 
+		idx=400167,
+		task_type=5,
+		task_weight=5167,
+		task_receivetype=1,
+	},
+	[400168] = { 
+		idx=400168,
+		task_type=5,
+		task_weight=5168,
+		task_receivetype=1,
 	},
 }
 return config
