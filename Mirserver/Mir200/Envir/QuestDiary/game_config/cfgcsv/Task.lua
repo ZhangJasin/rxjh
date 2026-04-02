@@ -4143,14 +4143,14 @@ local config = {
 		},
 		task_targettype=4,
 		task_target_param = {
-			[1] = 10,
+			[1] = 8,
 			[2] = 2,
 			[3] = 15,
 			[4] = 1,
 		},
 		task_progress=1,
 		task_turntype=2,
-		task_turn_param=5,
+		task_turn_param=11,
 		task_fintype=1,
 		task_finnpc=4,
 		task_drop = {
@@ -6587,14 +6587,14 @@ local config = {
 		},
 		task_targettype=4,
 		task_target_param = {
-			[1] = 10,
+			[1] = 8,
 			[2] = 2,
 			[3] = 15,
 			[4] = 1,
 		},
 		task_progress=1,
 		task_turntype=2,
-		task_turn_param=5,
+		task_turn_param=11,
 		task_fintype=2,
 		task_finnpc=4,
 		task_pos = {
