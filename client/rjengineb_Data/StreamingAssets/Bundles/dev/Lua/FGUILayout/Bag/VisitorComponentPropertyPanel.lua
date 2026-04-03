@@ -145,8 +145,18 @@ function VisitorComponentPropertyPanel:SetValueInText(component,attrName,attValu
 end
 
 function VisitorComponentPropertyPanel:AttrItemRender(idx, item)
-    local attrData = self.attrDymicLoadTable[idx+1] 
-    self:SetValueInText(item,attrData.data.Name,attrData.value,attrData.data.Desc)
+    local attrData = self.attrDymicLoadTable[idx+1]
+    local value = attrData.value
+
+    -- Type==1为百分比类型，去掉小数点（如 "0.0%" -> "0%"）
+    if attrData.data.Type == 1 and value then
+        value = string.match(value, "^([0-9]+)%.?.*")
+        if value then
+            value = value .. "%"
+        end
+    end
+
+    self:SetValueInText(item,attrData.data.Name,value,attrData.data.Desc)
 end
 
 -- 进度条设置数值和进度
