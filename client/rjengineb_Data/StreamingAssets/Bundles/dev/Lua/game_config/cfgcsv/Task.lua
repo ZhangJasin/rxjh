@@ -13674,6 +13674,7 @@ local config = {
 		task_receivetype=1,
 		task_level=60,
 		task_targettype=5,
+		task_progress=1,
 		task_turntype=2,
 		task_fintype=1,
 		task_finnpc=1,
