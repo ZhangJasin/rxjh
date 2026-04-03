@@ -609,7 +609,7 @@ function MentorShipTeach:RefreshView()
 				data.Desc = cfg.Desc
 				data.ShowValue = data.maxValue
 				if cfg.Type == 1 then
-					data.ShowValue = data.maxValue * 0.01 .. "%"
+					data.ShowValue = string.format("%.0f%%", data.maxValue / 100)
 				elseif cfg.Type == 0 then
 				else
 					SL:PrintEx("未知属性ID = "..v.id.."属性Type" .. cfg.Type)
