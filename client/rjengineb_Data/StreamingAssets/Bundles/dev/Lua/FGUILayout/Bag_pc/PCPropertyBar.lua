@@ -106,6 +106,7 @@ end
 
 function PCPropertyBar:AttrItemRender(idx, item)
     local attrData = self.attrDymicLoadTable[idx+1]
+    local value = attrData.value
     -- Type==1为百分比类型，去掉小数点（如 "0.0%" -> "0%"）
     if attrData.data.Type == 1 and value then
         value = string.match(value, "^([0-9]+)%.?.*")
