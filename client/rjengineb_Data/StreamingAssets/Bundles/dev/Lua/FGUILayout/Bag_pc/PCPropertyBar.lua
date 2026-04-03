@@ -114,7 +114,7 @@ function PCPropertyBar:AttrItemRender(idx, item)
             value = value .. "%"
         end
     end
-    self:SetValueInText(item,attrData.data.Name,attrData.value)
+    self:SetValueInText(item,attrData.data.Name,value)
 end
 
 function PCPropertyBar:SetValueInProgress(comp,name,currentValue,maxValue,mode,ctrlValue)
