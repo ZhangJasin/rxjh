@@ -359,6 +359,27 @@ function mountMain:initVariables()
 
     ---- 以下为tips界面
     self.tipsControlle = FGUI:getController(self.component,"tips")
+
+    --适配pc端UI
+    local isPC = SL:GetValue("IS_PC_OPER_MODE")
+    local screenW = SL:GetValue("SCREEN_WIDTH")
+    local screenH = SL:GetValue("SCREEN_HEIGHT")
+    if isPC then 
+        FGUI:setScale(self.component, 0.75, 0.75)
+        FGUI:setPosition(self.component, screenW / 2, screenH / 2)
+        FGUI:setAnchorPoint(self.component, 0.5, 0.5, true)
+        -- PC端动态调整rightTabList位置，确保在屏幕内
+        local listX, listY = FGUI:getPosition(self._ui.rightTabList)
+        local listW, listH = FGUI:getSize(self._ui.rightTabList)
+        local scaledRightEdge = (listX + listW) * 0.75
+        if scaledRightEdge > screenW then
+            local offset = scaledRightEdge - screenW
+            local newX = listX - offset - 10
+            FGUI:setPosition(self._ui.rightTabList, newX, listY)
+            --print("PC端调整rightTabList位置: 原X=" .. listX .. ", 新X=" .. newX)
+        end
+    end
+
 end
 -- 初始化标签和列表
 function mountMain:initTabsAndLists()

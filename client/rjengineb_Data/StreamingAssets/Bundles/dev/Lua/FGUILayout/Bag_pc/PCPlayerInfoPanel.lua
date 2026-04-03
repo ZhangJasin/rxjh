@@ -5,6 +5,8 @@ local IDX_NULL = 0
 local IDX_EQUIP   = 1
 local IDX_STATEMENT = 2
 local IDX_TITLE = 3 -- 称号
+local IDX_PET = 4 -- 灵兽
+local IDX_REBIRTH = 5 -- 转生
 
 function PCPlayerInfoPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
@@ -28,6 +30,16 @@ function PCPlayerInfoPanel:Create()
             objName = "PCComponentTitlePanel",
             obj = nil,
             tabName = 30000110,--称号栏
+        },
+        [IDX_PET] = {
+            objName = "PCComponentPetPanel",
+            obj = nil,
+            tabName = 1000001,--灵兽栏
+        },
+        [IDX_REBIRTH] = {
+            objName = "PCComponentRebirthPanel",
+            obj = nil,
+            tabName = 1000002,--转生栏
         }
     }
 
@@ -46,6 +58,8 @@ function PCPlayerInfoPanel:GetAllFGuiData()
     self.btn_tab_1 = self._ui.btn_tab_1
     self.btn_tab_2 = self._ui.btn_tab_2
     self.btn_tab_3 = self._ui.btn_tab_3
+    self.btn_tab_4 = self._ui.btn_tab_4
+    self.btn_tab_5 = self._ui.btn_tab_5
     self.btn_bag_sort = self._ui.btn_bag_sort
     self.btn_bag_warehouse = self._ui.btn_bag_warehouse
     self.btn_bag_recycle = self._ui.btn_bag_recycle
@@ -107,6 +121,8 @@ function PCPlayerInfoPanel:InitOnClickEvent()
     FGUI:setOnClickEvent(self.btn_tab_1,handler(self,self.BtnTab1Clicked))
     FGUI:setOnClickEvent(self.btn_tab_2,handler(self,self.BtnTab2Clicked))
     FGUI:setOnClickEvent(self.btn_tab_3,handler(self,self.BtnTab3Clicked))
+    FGUI:setOnClickEvent(self.btn_tab_4,handler(self,self.BtnTab4Clicked))
+    FGUI:setOnClickEvent(self.btn_tab_5,handler(self,self.BtnTab5Clicked))
     FGUI:setOnClickEvent(self.btn_bag_sort,handler(self,self.BtnBagSortClicked))
     FGUI:setOnClickEvent(self.btn_bag_warehouse,handler(self,self.BtnBagWareHouseClicked))
     FGUI:setOnClickEvent(self.btn_bag_recycle,handler(self,self.BtnBagRecycleClicked))
@@ -143,6 +159,14 @@ end
 
 function PCPlayerInfoPanel:BtnTab3Clicked()
     self:PageTo(IDX_TITLE)
+end
+
+function PCPlayerInfoPanel:BtnTab4Clicked()
+    FGUI:Open("Mount", "mountMain")
+end
+
+function PCPlayerInfoPanel:BtnTab5Clicked()
+    --self:PageTo(IDX_REBIRTH)
 end
 
 function PCPlayerInfoPanel:InitData()

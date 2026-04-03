@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1344,750">
-  <controller name="rightTabs" pages="0,灵兽,1,坐骑" selected="1"/>
+  <controller name="rightTabs" pages="0,灵兽,1,坐骑" selected="0"/>
   <controller name="topTabs" pages="0,坐骑,1,幻化" selected="0"/>
   <controller name="isselected" pages="0,未选择,1,选择" selected="0"/>
   <controller name="tips" pages="0,,1," selected="0"/>
@@ -32,7 +32,7 @@
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </component>
     <list id="n23_o0nq" name="rightTabList" xy="1155,67" size="51,182" pageController="rightTabs" margin="4,2,6,0" colGap="2" defaultItem="ui://vslix2m2o0nqh" selectionController="rightTabs">
-      <relation target="" sidePair="center-center,middle-middle"/>
+      <relation target="n2_o0nq" sidePair="right-right,top-top"/>
       <item title="灵兽"/>
       <item title="坐骑"/>
     </list>
@@ -238,7 +238,7 @@
     <text id="n104_cb9c" name="n104" xy="962,625" size="70,32" fontSize="22" color="#fcf1bf" text="消耗：">
       <gearDisplay controller="rightTabs" pages="0"/>
     </text>
-    <text id="n107_cb9c" name="n107" xy="913,592" size="234,34" fontSize="17" color="#cccccc" ubb="true" autoSize="none" text="出战时提升坐骑移动速度[color=#00ff00]10%[/color]">
+    <text id="n107_cb9c" name="n107" xy="913,592" size="234,34" fontSize="17" color="#cccccc" ubb="true" autoSize="none" text="出战灵兽[color=#00ff00]3%[/color]的属性转化给人物">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearText controller="rightTabs" pages="1" values="出战时提升坐骑移动速度[color=#00ff00]10%[/color]" default="出战灵兽[color=#00ff00]3%[/color]的属性转化给人物"/>
       <relation target="" sidePair="center-center,middle-middle"/>
