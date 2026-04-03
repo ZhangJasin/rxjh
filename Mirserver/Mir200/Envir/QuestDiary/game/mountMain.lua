@@ -1289,7 +1289,41 @@ function mountMain.recallpet(actor)
     -- 检查是否是幻化形态
     local isHuanhua = false
     local petTakeIdNum = tonumber(petTakeId)
+    local petBaseIdNum = tonumber(petBaseId)
+    
+    -- 从 petTakeId 匹配 PetHuanhua 获取灵兽名称
+    local petName = nil
     if petTakeIdNum and petTakeIdNum > 0 then
+        for _, hhData in pairs(petHHlist) do
+            if tonumber(hhData.Model) == petTakeIdNum then
+                petName = hhData.Name
+                break
+            end
+        end
+    end
+    
+    -- 获取当前幻化等级
+    local currentHHGrade = 0
+    if petName then
+        local ycList = json2tbl(gethumvar(actor, VarCfg.T_PetHuanHua))
+        if ycList and ycList[petName] then
+            currentHHGrade = tonumber(ycList[petName]) or 0
+        end
+    end
+    
+    -- 优先用 Name + grade 匹配，获取对应等级的怪物ID
+    if petName and currentHHGrade > 0 then
+        for _, hhData in pairs(petHHlist) do
+            if hhData.Name == petName and tonumber(hhData.grade) == currentHHGrade then
+                monsterId = hhData.Monster_ID
+                isHuanhua = true
+                break
+            end
+        end
+    end
+    
+    -- 如果没匹配到，用 petTakeId 降级匹配 Model
+    if not isHuanhua and petTakeIdNum and petTakeIdNum > 0 then
         for _, hhData in pairs(petHHlist) do
             if tonumber(hhData.Model) == petTakeIdNum and hhData.Monster_ID then
                 monsterId = hhData.Monster_ID
@@ -1301,7 +1335,6 @@ function mountMain.recallpet(actor)
     
     -- 如果不是幻化形态，从Pet配置表中获取
     if not isHuanhua and petBaseId then
-        local petBaseIdNum = tonumber(petBaseId)
         for i = 0, 10 do
             if petlist[i] and petlist[i].Model and tonumber(petlist[i].Model) == petBaseIdNum then
                 monsterId = tonumber(petlist[i].Monster_ID) or 80001
@@ -1309,6 +1342,10 @@ function mountMain.recallpet(actor)
             end
         end
     end
+    
+    print("=== 灵兽出战 ===")
+    print("petBaseId:", petBaseId, "petTakeId:", petTakeId, "petName:", petName)
+    print("currentHHGrade:", currentHHGrade, "isHuanhua:", isHuanhua, "monsterId:", monsterId)
 
     -- 确保显示模型ID被正确设置
     sethumvar(actor, VarCfg.U_Pet_Now_Model, petTakeId)
