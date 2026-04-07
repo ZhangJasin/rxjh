@@ -80,18 +80,25 @@ function MainMission:RefreshUI()
     if self._isRefreshing then
         return
     end
-
-    -- 获取第一个可见子项的索引（0开始）
-    local firstIndex = -1
-    
+ 
 
     self._isRefreshing = true
     FGUI:GList_setNumItems(self._ui.List_mission, #self._missionDatas)
     self:UpDateSize()
 
-    -- 滚动到第一个可见子项
-    if firstIndex >= 0 and firstIndex < #self._missionDatas then
-        FGUI:GList_scrollToView(self._ui.List_mission, firstIndex, false, true)
+    -- 滚动到点击的任务处
+    local taskID = MainMissionData:GetTaskID()
+    if taskID then
+        local index = nil
+        for k, v in pairs(self._missionDatas) do
+            if v.taskid == taskID then
+                index = k
+                break
+            end
+        end
+        if index then 
+            FGUI:GList_scrollToView(self._ui.List_mission, index-1, false, false)
+        end
     end
 
     self._isRefreshing = false
