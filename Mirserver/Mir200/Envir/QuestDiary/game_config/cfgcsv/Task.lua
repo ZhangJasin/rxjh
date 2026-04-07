@@ -2254,15 +2254,20 @@ local config = {
 		task_drop = {
 			[1] = {
 				[1] = 9,
+				[2] = 2401,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
 				[2] = 3,
 				[3] = 371646,
 			},
-			[2] = {
+			[3] = {
 				[1] = 9,
 				[2] = 7,
 				[3] = 100,
 			},
-			[3] = {
+			[4] = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 3000,
@@ -13558,6 +13563,7 @@ local config = {
 		},
 		task_targettype=5,
 		task_turntype=2,
+		task_turn_param=7,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {
@@ -13590,6 +13596,7 @@ local config = {
 		},
 		task_targettype=5,
 		task_turntype=2,
+		task_turn_param=7,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {
@@ -13646,9 +13653,13 @@ local config = {
 		task_type=3,
 		task_weight=4012,
 		task_receivetype=1,
-		task_level=60,
+		task_level=35,
+		task_pre = {
+			[1] = 103001,
+		},
 		task_targettype=5,
 		task_turntype=2,
+		task_turn_param=8,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {
@@ -13662,6 +13673,11 @@ local config = {
 				[2] = 1,
 				[3] = 300,
 			},
+			[3] = {
+				[1] = 9,
+				[2] = 2417,
+				[3] = 10,
+			},
 		},
 		task_findial="FinishDec_Task_300012",
 	},
@@ -13672,10 +13688,17 @@ local config = {
 		task_type=3,
 		task_weight=4013,
 		task_receivetype=1,
-		task_level=60,
-		task_targettype=5,
+		task_level=35,
+		task_pre = {
+			[1] = 300013,
+		},
+		task_pro = {
+			[1] = 300013,
+		},
+		task_targettype=4,
 		task_progress=1,
 		task_turntype=2,
+		task_turn_param=8,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {
@@ -13702,6 +13725,7 @@ local config = {
 		task_level=40,
 		task_targettype=4,
 		task_turntype=2,
+		task_turn_param=5,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {
