@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="244,110">
+<component size="244,108">
   <controller name="img" pages="0,,1,,2,,3,,4,,5," selected="0">
     <remark page="0" value="主"/>
     <remark page="1" value="转"/>
@@ -9,11 +9,11 @@
     <remark page="5" value="跑环"/>
   </controller>
   <displayList>
-    <image id="n16_k5e7" name="n16" src="k5e7v8m" fileName="Images/Assist/main_assist_mission_bg_9.png" xy="0,0" size="244,110">
+    <image id="n16_k5e7" name="n16" src="k5e7v8m" fileName="Images/Assist/main_assist_mission_bg_9.png" xy="0,0" size="244,108">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <richtext id="n13_o3hv" name="RichText_title" xy="46,3" size="196,29" fontSize="20" color="#ffff00" leading="0" ubb="true" autoSize="ellipsis" autoClearText="true" text="任务标题任务标题任务标题任务标题"/>
-    <richtext id="n14_o3hv" name="RichText_content" xy="2,39" size="240,26" fontSize="18" color="#ffffff" leading="0" ubb="true" autoSize="height" autoClearText="true" text="任务内容任务内容任务内容"/>
+    <richtext id="n14_o3hv" name="RichText_content" xy="2,39" size="240,24" fontSize="16" color="#ffffff" leading="0" ubb="true" autoSize="height" autoClearText="true" text="任务内容任务内容任务内容"/>
     <richtext id="n17_qug1" name="RichText_progress" xy="139,4" size="105,24" visible="false" fontSize="16" color="#ffffff" align="right" vAlign="middle" leading="0" ubb="true" autoSize="none" autoClearText="true" text="任务内容任务内容任务内容"/>
     <image id="n18_qug1" name="n18" src="vzjdfveu" fileName="Images/newmain/06.png" xy="1,0">
       <gearDisplay controller="img" pages="4"/>
