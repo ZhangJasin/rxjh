@@ -44,11 +44,21 @@ function LoginRoleRestore:RoleItemRenderer(index, item)
 	FGUI:GTextField_setText(playerName, data.uname)
 	FGUI:GTextField_setText(playerLevel, data.ulevel)
 
-    -- FGUI:GImage_setTexture(playerFram, data.uicon)
-    local cData = roleConfig[job]
-    if cData then
-        FGUI:GTextField_setText(cData.ClassName, data.ujob)
-    end
+	local avatarJob = data.ujob or 0
+	local avatarSex = data.usex or data.sex or 0
+	local avatarPath = FGUIFunction:GetAvatarUrl(0, avatarJob, avatarSex)
+
+	-- 设置头像
+	local imageHead = FGUI:GetChild(playerFram, "Image_head")
+	if imageHead then
+		FGUI:GLoader_setFill(imageHead, 1)
+		FGUI:GLoader_setUrl(imageHead, avatarPath, nil, true)
+	end
+
+	local classConfig = roleConfig[avatarJob]
+	if classConfig then
+		FGUI:GTextField_setText(job, classConfig.ClassName)
+	end
 end
 
 function LoginRoleRestore:OnClickRoleItem(context)

@@ -17,7 +17,7 @@
     <component id="n98_jjgk" name="btn_reset" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="580,486" size="136,42" group="n124_pzej">
       <Button title="重 置"/>
     </component>
-    <component id="n112_lbe5" name="btn_save" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="786,486" size="136,42" group="n124_pzej">
+    <component id="n112_lbe5" name="btn_save" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="786,486" size="136,42" group="n124_pzej">
       <Button title="保 存"/>
     </component>
     <component id="n111_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="666,375" size="0,0" group="n124_pzej"/>

@@ -70,13 +70,13 @@
     <component id="n75_zah9" name="btn_quit_guild" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="1019,639" size="124,40" group="n77_zah9">
       <Button title="退出门派" titleFontSize="18"/>
     </component>
-    <component id="n171_t5g1" name="btn_event" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="880,639" size="124,40" group="n77_zah9">
+    <component id="n171_t5g1" name="btn_event" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="880,639" size="124,40" group="n77_zah9">
       <Button title="门派事件" titleFontSize="18"/>
     </component>
     <component id="n95_jjgk" name="btn_apply_list" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="741,639" size="124,40" group="n77_zah9">
       <Button title="申请列表" titleFontSize="18"/>
     </component>
-    <component id="n166_lbe5" name="btn_permission" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="602,639" size="124,40" group="n77_zah9">
+    <component id="n166_lbe5" name="btn_permission" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="602,639" size="124,40" group="n77_zah9">
       <Button title="权限设置" titleFontSize="18"/>
     </component>
     <image id="n76_zah9" name="n76" src="wi4520" fileName="Images/inputField_bg_9.png" xy="196,639" size="262,41" group="n72_zah9"/>

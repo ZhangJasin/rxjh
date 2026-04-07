@@ -6,13 +6,13 @@
     </graph>
     <component id="n53_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,50" group="n54_whi9"/>
     <text id="n25_k2u1" name="text_title" xy="668,78" pivot="0.5,0.5" anchor="true" size="439,34" group="n54_whi9" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" text="门派申请"/>
-    <component id="n1_zah9" name="btn_quick_join" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="570,660" pivot="0.5,0.5" anchor="true" group="n54_whi9">
+    <component id="n1_zah9" name="btn_quick_join" src="t63akvpm" fileName="common/btn_first_gray.xml" pkg="st7dgeqq" xy="570,660" pivot="0.5,0.5" anchor="true" group="n54_whi9">
       <Button title="自动加入"/>
     </component>
-    <component id="n2_zah9" name="btn_refresh" src="zah9v4d" fileName="common/btn_second_red.xml" pkg="st7dgeqq" xy="720,660" pivot="0.5,0.5" anchor="true" group="n54_whi9">
+    <component id="n2_zah9" name="btn_refresh" src="t63akvpm" fileName="common/btn_first_gray.xml" pkg="st7dgeqq" xy="720,660" pivot="0.5,0.5" anchor="true" group="n54_whi9">
       <Button title="刷 新"/>
     </component>
-    <component id="n42_u0jf" name="btn_join" src="ighbkvp6" fileName="common/btn_first_green.xml" pkg="st7dgeqq" xy="830,638" size="136,42" group="n54_whi9">
+    <component id="n42_u0jf" name="btn_join" src="ighbkvp6" fileName="common/btn_first_green.xml" pkg="st7dgeqq" xy="830,636" size="136,42" group="n54_whi9">
       <Button title="申请加入" titleColor="#f5e700" titleFontSize="22"/>
     </component>
     <component id="n3_zah9" name="btn_create" src="ighbkvp6" fileName="common/btn_first_green.xml" pkg="st7dgeqq" xy="989,638" size="136,42" group="n54_whi9">
@@ -56,9 +56,7 @@
       <item/>
       <item/>
     </list>
-    <component id="n26_xdur" name="text_no_guild" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="292,235" size="371,280" group="n17_zah9">
-      <Label title="暂无门派"/>
-    </component>
+    <component id="n26_xdur" name="text_no_guild" pkg="st7dgeqq" src="iwlbkvq1" fileName="common/iconNotingCom.xml" xy="292,235" size="371,280" group="n17_zah9"/>
     <image id="n33_u0jf" name="n33" src="m9rdvou" fileName="Images/join_list_title_bg.png" xy="185,118" size="601,50" group="n17_zah9"/>
     <text id="n34_u0jf" name="n34" xy="237,125" pivot="0.5,0.5" size="92,32" group="n17_zah9" fontSize="22" color="#ddfdd9" align="center" vAlign="middle" singleLine="true" text="门派名称"/>
     <text id="n35_u0jf" name="n35" xy="413,125" pivot="0.5,0.5" size="48,32" group="n17_zah9" fontSize="22" color="#ddfdd9" align="center" vAlign="middle" singleLine="true" text="等级"/>
