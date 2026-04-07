@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" designImage="ui://4op6gwol108rv1">
   <displayList>
-    <component id="n0_108rv" name="btn_delete_role" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="100,620" size="156,42">
+    <component id="n0_108rv" name="btn_delete_role" src="t63akvpm" fileName="common/btn_first_gray.xml" pkg="st7dgeqq" xy="100,620" size="156,42">
       <relation target="" sidePair="left-left,bottom-bottom"/>
       <Button title="删除角色"/>
     </component>

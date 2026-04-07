@@ -41,9 +41,10 @@ function LoginRoleRestore:RoleItemRenderer(index, item)
 	local playerName = FGUI:GetChild(item,"playerName")
 	local job = FGUI:GetChild(item,"job")
 	local playerLevel = FGUI:GetChild(item,"playerLevel")
-	
 	FGUI:GTextField_setText(playerName, data.uname)
 	FGUI:GTextField_setText(playerLevel, data.ulevel)
+
+    -- FGUI:GImage_setTexture(playerFram, data.uicon)
     local cData = roleConfig[job]
     if cData then
         FGUI:GTextField_setText(cData.ClassName, data.ujob)
