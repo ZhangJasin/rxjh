@@ -80,10 +80,20 @@ function MainMission:RefreshUI()
     if self._isRefreshing then
         return
     end
+
+    -- 获取第一个可见子项的索引（0开始）
+    local firstIndex = -1
     
+
     self._isRefreshing = true
     FGUI:GList_setNumItems(self._ui.List_mission, #self._missionDatas)
     self:UpDateSize()
+
+    -- 滚动到第一个可见子项
+    if firstIndex >= 0 and firstIndex < #self._missionDatas then
+        FGUI:GList_scrollToView(self._ui.List_mission, firstIndex, false, true)
+    end
+
     self._isRefreshing = false
 end
 
@@ -149,35 +159,53 @@ function MainMission:OnItemRendererMission(index, item)
     if FGUI:GetChildCount(award1) > 0 then
         FGUI:RemoveChildAt(award1, 0, true)
     end
-    local reward1 = taskDrop[1] 
+    local reward1 = taskDrop[1]
     if reward1 then
         local itemData = SL:GetValue("ITEM_DATA", reward1[2])
         local extData = {
-            hideTip = false,
+            hideTip = true,
             itemTipData = itemData,
             clickCallback = false,
-            doubleClickCallback = true,
+            doubleClickCallback = false,
             bgVisible = true,
             OverLap = reward1[3]
         }
-        ItemUtil:ItemShow_Create(itemData, award1, extData)
+        local item = ItemUtil:ItemShow_Create(itemData, award1, extData)
+        -- 设置数量字体大小为13
+        if item and item._component then
+            local text_count = FGUI:GetChild(item._component, "Text_count")
+            if text_count then
+                local curPosX =  FGUI:getPositionX(text_count)
+                FGUI:setPositionX(text_count, curPosX + (SL:GetValue("IS_PC_OPER_MODE") and 5 or 8))
+                FGUI:GTextField_setFontSize(text_count, 13)
+            end
+        end
     end
     local award2 = FGUI:GetChild(item, "award2")
     if FGUI:GetChildCount(award2) > 0 then
         FGUI:RemoveChildAt(award2, 0, true)
     end
-    local reward2 = taskDrop[2] 
+    local reward2 = taskDrop[2]
     if reward2 then
         local itemData = SL:GetValue("ITEM_DATA", reward2[2])
         local extData = {
-            hideTip = false,
+            hideTip = true,
             itemTipData = itemData,
             clickCallback = false,
-            doubleClickCallback = true,
+            doubleClickCallback = false,
             bgVisible = true,
             OverLap = reward2[3]
         }
-        ItemUtil:ItemShow_Create(itemData, award2, extData)
+        local item = ItemUtil:ItemShow_Create(itemData, award2, extData)
+        -- 设置数量字体大小为13
+        if item and item._component then
+            local text_count = FGUI:GetChild(item._component, "Text_count")
+            if text_count then
+                local curPosX =  FGUI:getPositionX(text_count)
+                FGUI:setPositionX(text_count, curPosX+(SL:GetValue("IS_PC_OPER_MODE") and 5 or 8))
+                FGUI:GTextField_setFontSize(text_count, 13)
+            end
+        end
     end
 
     local jindu = Task_cfg[data.taskid]['task_progress'] or 1

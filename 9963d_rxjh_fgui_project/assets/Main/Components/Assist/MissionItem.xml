@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="244,120">
+<component size="244,110">
   <controller name="img" pages="0,,1,,2,,3,,4,,5," selected="0">
     <remark page="0" value="主"/>
     <remark page="1" value="转"/>
@@ -9,7 +9,7 @@
     <remark page="5" value="跑环"/>
   </controller>
   <displayList>
-    <image id="n16_k5e7" name="n16" src="k5e7v8m" fileName="Images/Assist/main_assist_mission_bg_9.png" xy="0,0" size="244,120">
+    <image id="n16_k5e7" name="n16" src="k5e7v8m" fileName="Images/Assist/main_assist_mission_bg_9.png" xy="0,0" size="244,110">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <richtext id="n13_o3hv" name="RichText_title" xy="46,3" size="196,29" fontSize="20" color="#ffff00" leading="0" ubb="true" autoSize="ellipsis" autoClearText="true" text="任务标题任务标题任务标题任务标题"/>
@@ -35,7 +35,7 @@
       <gearDisplay controller="img" pages="0"/>
     </image>
     <component id="n25_cn2t" name="award1" src="cn2tfvh9" fileName="Components/Assist/itemRoot.xml" xy="9,67"/>
-    <component id="n26_cn2t" name="award2" src="cn2tfvh9" fileName="Components/Assist/itemRoot.xml" xy="74,67"/>
+    <component id="n26_cn2t" name="award2" src="cn2tfvh9" fileName="Components/Assist/itemRoot.xml" xy="61,67"/>
   </displayList>
   <relation target="n14_o3hv" sidePair="height-height"/>
 </component>
