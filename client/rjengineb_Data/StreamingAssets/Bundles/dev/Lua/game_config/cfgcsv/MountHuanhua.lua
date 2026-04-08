@@ -12,60 +12,19 @@ local config = {
 		ClassID = {
 			[1] = {
 				[1] = 1,
-				[2] = 50,
+				[2] = 10,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 50,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 20,
+				[1] = 56,
+				[2] = 2,
 			},
 		},
-		buffID = {
-			[1] = 110017,
-		},
-		BuffDesc="风驰Lv.1：永久提升角色移动速度<font color='#00FF00'>5%</font>",
-		Condition=1,
 		tips="激活坐骑幻化可以改变坐骑外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果，\n让你的坐骑更加炫酷",
 		BattleSkill_Type="1",
 		BattleSkill_Value="50",
 	},
 	[2] = { 
 		ID=2,
-		Name="追风豹",
-		grade=1,
-		mount_icon="zuoji_001",
-		Cost = {
-			[1] = 2402,
-			[2] = 1,
-		},
-		Model=800002,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 50,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 50,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 20,
-			},
-		},
-		buffID = {
-			[1] = 110017,
-		},
-		BuffDesc="风驰Lv.1：永久提升角色移动速度<font color='#00FF00'>5%</font>",
-		Condition=1,
-		BattleSkill_Type="115",
-		BattleSkill_Value="1000",
-	},
-	[3] = { 
-		ID=3,
 		Name="铁甲犀牛",
 		grade=1,
 		mount_icon="zuoji_002",
@@ -76,21 +35,14 @@ local config = {
 		Model=800003,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 50,
+				[1] = 52,
+				[2] = 4,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 50,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 10,
+				[1] = 54,
+				[2] = 8,
 			},
 		},
-		BuffDesc="庇佑Lv.1：角色受到攻击时几率触发庇佑，提升<font color='#00FF00'>3%</font>防御力，持续10秒",
-		Condition=1,
-		PassiveAttachCond=301,
 		BattleSkill_Type = {
 			[1] = 104,
 			[2] = 105,
@@ -100,74 +52,31 @@ local config = {
 			[2] = 200,
 		},
 	},
-	[4] = { 
-		ID=4,
-		Name="黑豹",
+	[3] = { 
+		ID=3,
+		Name="追风豹",
 		grade=1,
-		mount_icon="zuoji_003",
+		mount_icon="zuoji_001",
 		Cost = {
-			[1] = 2404,
+			[1] = 2402,
 			[2] = 1,
 		},
-		Model=800004,
+		Model=800002,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 50,
+				[1] = 23,
+				[2] = 4,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 50,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 10,
+				[1] = 9,
+				[2] = 200,
 			},
 		},
-		BuffDesc="治愈Lv.1：永久提升角色药品恢复效果<font color='#00FF00'>5%</font>",
-		Condition=1,
-		PassiveAttachCond=201,
-		BattleSkill_Type="116",
+		BattleSkill_Type="115",
 		BattleSkill_Value="1000",
 	},
-	[5] = { 
-		ID=5,
-		Name="雪豹",
-		grade=1,
-		mount_icon="zuoji_004",
-		Cost = {
-			[1] = 2405,
-			[2] = 1,
-		},
-		Model=800005,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 50,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 50,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 10,
-			},
-		},
-		buffID = {
-			[1] = 110026,
-		},
-		BuffDesc="收割Lv.1：永久提升角色最大生命值<font color='#00FF00'>5%</font>，每击杀一只怪物回复角色<font color='#00FF00'>5%</font>生命值与内力值",
-		Condition=1,
-		PassiveAttachCond=1,
-		BattleSkill_Type = {
-			[1] = 99,
-			[2] = 100,
-		},
-		BattleSkill_Value="500",
-	},
-	[6] = { 
-		ID=6,
+	[4] = { 
+		ID=4,
 		Name="霸天虎",
 		grade=1,
 		mount_icon="zuoji_005",
@@ -178,121 +87,19 @@ local config = {
 		Model=800006,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 30,
+				[1] = 23,
+				[2] = 4,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 30,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 10,
+				[1] = 109,
+				[2] = 4,
 			},
 		},
-		Condition=1,
 		BattleSkill_Type="126",
 		BattleSkill_Value="1",
 	},
-	[7] = { 
-		ID=7,
-		Name="烈焰狮",
-		grade=1,
-		mount_icon="zuoji_006",
-		Cost = {
-			[1] = 2407,
-			[2] = 1,
-		},
-		Model=800007,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 30,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 30,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 10,
-			},
-		},
-		buffID = {
-			[1] = 110038,
-		},
-		BuffDesc="影之舞Lv.1：永久提升角色会心伤害减免<font color='#00FF00'>6%</font>，血量低于50%</font>时触发影之舞，武功闪避提升<font color='#00FF00'>100%</font>，持续2秒，冷却60秒",
-		Condition=1,
-		PassiveAttachCond=501,
-		BattleSkill_Type="9",
-		BattleSkill_Value="500",
-	},
-	[8] = { 
-		ID=8,
-		Name="飓风狂狼",
-		grade=1,
-		mount_icon="zuoji_007",
-		Cost = {
-			[1] = 2408,
-			[2] = 1,
-		},
-		Model=800008,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 100,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 100,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 20,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 30,
-			},
-		},
-		Condition=1,
-		BattleSkill_Type="103",
-		BattleSkill_Value="200",
-	},
-	[9] = { 
-		ID=9,
-		Name="松狮犬",
-		grade=1,
-		mount_icon="zuoji_008",
-		Cost = {
-			[1] = 2409,
-			[2] = 1,
-		},
-		Model=800009,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 88,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 88,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 18,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 18,
-			},
-		},
-		Condition=1,
-		BattleSkill_Type="107",
-		BattleSkill_Value="300",
-	},
-	[10] = { 
-		ID=10,
+	[5] = { 
+		ID=5,
 		Name="青木神龙",
 		grade=1,
 		mount_icon="zuoji_009",
@@ -303,33 +110,19 @@ local config = {
 		Model=800010,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 108,
+				[1] = 107,
+				[2] = 500,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 108,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 28,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 58,
+				[1] = 57,
+				[2] = 100,
 			},
 		},
-		buffID = {
-			[1] = 110032,
-		},
-		BuffDesc="神龙庇佑Lv.1：永久提升角色会心伤害<font color='#00FF00'>8%</font>，血量低于25%时触发神龙庇佑，无敌3秒，冷却90秒",
-		Condition=1,
-		PassiveAttachCond=401,
 		BattleSkill_Type="1",
 		BattleSkill_Value="200",
 	},
-	[11] = { 
-		ID=11,
+	[6] = { 
+		ID=6,
 		Name="乌龙驹",
 		grade=2,
 		mount_icon="zuoji_000",
@@ -341,22 +134,41 @@ local config = {
 		ClassID = {
 			[1] = {
 				[1] = 1,
-				[2] = 50,
+				[2] = 30,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 50,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 20,
+				[1] = 56,
+				[2] = 5,
 			},
 		},
 		BattleSkill_Type="115",
 		BattleSkill_Value="2000",
 	},
-	[12] = { 
-		ID=12,
+	[7] = { 
+		ID=7,
+		Name="铁甲犀牛",
+		grade=2,
+		mount_icon="zuoji_002",
+		Cost = {
+			[1] = 2403,
+			[2] = 1,
+		},
+		Model=800013,
+		ClassID = {
+			[1] = {
+				[1] = 52,
+				[2] = 8,
+			},
+			[2] = {
+				[1] = 54,
+				[2] = 16,
+			},
+		},
+		BattleSkill_Type="116",
+		BattleSkill_Value="2000",
+	},
+	[8] = { 
+		ID=8,
 		Name="追风豹",
 		grade=2,
 		mount_icon="zuoji_001",
@@ -364,19 +176,15 @@ local config = {
 			[1] = 2402,
 			[2] = 1,
 		},
-		Model=800012,
+		Model=800002,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 100,
+				[1] = 23,
+				[2] = 8,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 100,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 40,
+				[1] = 9,
+				[2] = 400,
 			},
 		},
 		BattleSkill_Type = {
@@ -388,94 +196,131 @@ local config = {
 			[2] = 400,
 		},
 	},
-	[13] = { 
-		ID=13,
-		Name="铁甲犀牛",
+	[9] = { 
+		ID=9,
+		Name="霸天虎",
 		grade=2,
+		mount_icon="zuoji_005",
+		Cost = {
+			[1] = 2406,
+			[2] = 1,
+		},
+		Model=800006,
+		ClassID = {
+			[1] = {
+				[1] = 23,
+				[2] = 8,
+			},
+			[2] = {
+				[1] = 109,
+				[2] = 8,
+			},
+		},
+		BattleSkill_Type="9",
+		BattleSkill_Value="800",
+	},
+	[10] = { 
+		ID=10,
+		Name="青木神龙",
+		grade=2,
+		mount_icon="zuoji_009",
+		Cost = {
+			[1] = 2410,
+			[2] = 1,
+		},
+		Model=800010,
+		ClassID = {
+			[1] = {
+				[1] = 107,
+				[2] = 800,
+			},
+			[2] = {
+				[1] = 57,
+				[2] = 200,
+			},
+		},
+		BattleSkill_Type="107",
+		BattleSkill_Value="600",
+	},
+	[11] = { 
+		ID=11,
+		Name="乌龙驹",
+		grade=3,
+		mount_icon="zuoji_000",
+		Cost = {
+			[1] = 2401,
+			[2] = 1,
+		},
+		Model=800011,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 56,
+				[2] = 8,
+			},
+		},
+		BattleSkill_Type="1",
+		BattleSkill_Value="500",
+	},
+	[12] = { 
+		ID=12,
+		Name="铁甲犀牛",
+		grade=3,
 		mount_icon="zuoji_002",
 		Cost = {
 			[1] = 2403,
 			[2] = 1,
 		},
-		Model=800013,
+		Model=800023,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 100,
+				[1] = 52,
+				[2] = 15,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 100,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 20,
-			},
-		},
-		BattleSkill_Type="116",
-		BattleSkill_Value="2000",
-	},
-	[14] = { 
-		ID=14,
-		Name="黑豹",
-		grade=2,
-		mount_icon="zuoji_003",
-		Cost = {
-			[1] = 2404,
-			[2] = 1,
-		},
-		Model=800014,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 100,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 100,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 20,
+				[1] = 54,
+				[2] = 25,
 			},
 		},
 		BattleSkill_Type = {
-			[1] = 99,
-			[2] = 100,
+			[1] = 104,
+			[2] = 105,
 		},
-		BattleSkill_Value="1000",
+		BattleSkill_Value = {
+			[1] = 800,
+			[2] = 800,
+		},
 	},
-	[15] = { 
-		ID=15,
-		Name="雪豹",
-		grade=2,
-		mount_icon="zuoji_004",
+	[13] = { 
+		ID=13,
+		Name="追风豹",
+		grade=3,
+		mount_icon="zuoji_001",
 		Cost = {
-			[1] = 2405,
+			[1] = 2402,
 			[2] = 1,
 		},
-		Model=800015,
+		Model=800012,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 100,
+				[1] = 23,
+				[2] = 15,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 100,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 20,
+				[1] = 9,
+				[2] = 700,
 			},
 		},
-		BattleSkill_Type="126",
-		BattleSkill_Value="1",
+		BattleSkill_Type="115",
+		BattleSkill_Value="5000",
 	},
-	[16] = { 
-		ID=16,
+	[14] = { 
+		ID=14,
 		Name="霸天虎",
-		grade=2,
+		grade=3,
 		mount_icon="zuoji_005",
 		Cost = {
 			[1] = 2406,
@@ -484,52 +329,21 @@ local config = {
 		Model=800016,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 60,
+				[1] = 23,
+				[2] = 15,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 60,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 20,
+				[1] = 109,
+				[2] = 15,
 			},
 		},
-		BattleSkill_Type="9",
-		BattleSkill_Value="800",
+		BattleSkill_Type="126",
+		BattleSkill_Value="2",
 	},
-	[17] = { 
-		ID=17,
-		Name="烈焰狮",
-		grade=2,
-		mount_icon="zuoji_006",
-		Cost = {
-			[1] = 2407,
-			[2] = 1,
-		},
-		Model=800017,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 60,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 60,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 20,
-			},
-		},
-		BattleSkill_Type="103",
-		BattleSkill_Value="400",
-	},
-	[18] = { 
-		ID=18,
+	[15] = { 
+		ID=15,
 		Name="青木神龙",
-		grade=2,
+		grade=3,
 		mount_icon="zuoji_009",
 		Cost = {
 			[1] = 2410,
@@ -538,83 +352,44 @@ local config = {
 		Model=800020,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 258,
+				[1] = 107,
+				[2] = 1100,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 258,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 58,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 118,
+				[1] = 57,
+				[2] = 300,
 			},
 		},
-		BattleSkill_Type="107",
+		BattleSkill_Type="103",
 		BattleSkill_Value="600",
 	},
-	[19] = { 
-		ID=19,
+	[16] = { 
+		ID=16,
 		Name="乌龙驹",
-		grade=3,
+		grade=4,
 		mount_icon="zuoji_000",
 		Cost = {
 			[1] = 2401,
 			[2] = 1,
 		},
-		Model=800001,
+		Model=800011,
 		ClassID = {
 			[1] = {
 				[1] = 1,
-				[2] = 50,
+				[2] = 70,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 50,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 20,
+				[1] = 56,
+				[2] = 14,
 			},
 		},
-		BattleSkill_Type="1",
-		BattleSkill_Value="500",
+		BattleSkill_Type="107",
+		BattleSkill_Value="1000",
 	},
-	[20] = { 
-		ID=20,
-		Name="追风豹",
-		grade=3,
-		mount_icon="zuoji_001",
-		Cost = {
-			[1] = 2402,
-			[2] = 1,
-		},
-		Model=800022,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 150,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 60,
-			},
-		},
-		BattleSkill_Type="115",
-		BattleSkill_Value="5000",
-	},
-	[21] = { 
-		ID=21,
+	[17] = { 
+		ID=17,
 		Name="铁甲犀牛",
-		grade=3,
+		grade=4,
 		mount_icon="zuoji_002",
 		Cost = {
 			[1] = 2403,
@@ -623,76 +398,58 @@ local config = {
 		Model=800023,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 150,
+				[1] = 52,
+				[2] = 25,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 30,
+				[1] = 54,
+				[2] = 35,
 			},
 		},
-		BattleSkill_Type = {
-			[1] = 104,
-			[2] = 105,
-		},
-		BattleSkill_Value = {
-			[1] = 800,
-			[2] = 800,
-		},
-	},
-	[22] = { 
-		ID=22,
-		Name="黑豹",
-		grade=3,
-		mount_icon="zuoji_003",
-		Cost = {
-			[1] = 2404,
-			[2] = 1,
-		},
-		Model=800024,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 150,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 30,
-			},
-		},
-		BattleSkill_Type="116",
+		BattleSkill_Type="115",
 		BattleSkill_Value="5000",
 	},
-	[23] = { 
-		ID=23,
-		Name="雪豹",
-		grade=3,
-		mount_icon="zuoji_004",
+	[18] = { 
+		ID=18,
+		Name="追风豹",
+		grade=4,
+		mount_icon="zuoji_001",
 		Cost = {
-			[1] = 2405,
+			[1] = 2402,
 			[2] = 1,
 		},
-		Model=800025,
+		Model=800012,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 150,
+				[1] = 23,
+				[2] = 25,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 150,
+				[1] = 9,
+				[2] = 1000,
 			},
-			[3] = {
+		},
+		BattleSkill_Type="1",
+		BattleSkill_Value="500",
+	},
+	[19] = { 
+		ID=19,
+		Name="霸天虎",
+		grade=4,
+		mount_icon="zuoji_005",
+		Cost = {
+			[1] = 2406,
+			[2] = 1,
+		},
+		Model=800016,
+		ClassID = {
+			[1] = {
 				[1] = 23,
-				[2] = 30,
+				[2] = 25,
+			},
+			[2] = {
+				[1] = 109,
+				[2] = 25,
 			},
 		},
 		BattleSkill_Type = {
@@ -700,11 +457,103 @@ local config = {
 			[2] = 100,
 		},
 		BattleSkill_Value="1500",
+	},
+	[20] = { 
+		ID=20,
+		Name="青木神龙",
+		grade=4,
+		mount_icon="zuoji_009",
+		Cost = {
+			[1] = 2410,
+			[2] = 1,
+		},
+		Model=800020,
+		ClassID = {
+			[1] = {
+				[1] = 107,
+				[2] = 1500,
+			},
+			[2] = {
+				[1] = 57,
+				[2] = 400,
+			},
+		},
+		BattleSkill_Type="9",
+		BattleSkill_Value="1200",
+	},
+	[21] = { 
+		ID=21,
+		Name="乌龙驹",
+		grade=5,
+		mount_icon="zuoji_000",
+		Cost = {
+			[1] = 2401,
+			[2] = 1,
+		},
+		Model=800021,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 100,
+			},
+			[2] = {
+				[1] = 56,
+				[2] = 20,
+			},
+		},
+		BattleSkill_Type="103",
+		BattleSkill_Value="600",
+	},
+	[22] = { 
+		ID=22,
+		Name="铁甲犀牛",
+		grade=5,
+		mount_icon="zuoji_002",
+		Cost = {
+			[1] = 2403,
+			[2] = 1,
+		},
+		Model=800023,
+		ClassID = {
+			[1] = {
+				[1] = 52,
+				[2] = 40,
+			},
+			[2] = {
+				[1] = 54,
+				[2] = 50,
+			},
+		},
+		BattleSkill_Type="1",
+		BattleSkill_Value="500",
+	},
+	[23] = { 
+		ID=23,
+		Name="追风豹",
+		grade=5,
+		mount_icon="zuoji_001",
+		Cost = {
+			[1] = 2402,
+			[2] = 1,
+		},
+		Model=800022,
+		ClassID = {
+			[1] = {
+				[1] = 23,
+				[2] = 40,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 1500,
+			},
+		},
+		BattleSkill_Type="107",
+		BattleSkill_Value="1000",
 	},
 	[24] = { 
 		ID=24,
 		Name="霸天虎",
-		grade=3,
+		grade=5,
 		mount_icon="zuoji_005",
 		Cost = {
 			[1] = 2406,
@@ -713,508 +562,19 @@ local config = {
 		Model=800026,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 100,
+				[1] = 23,
+				[2] = 40,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 100,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 30,
+				[1] = 109,
+				[2] = 40,
 			},
 		},
-		BattleSkill_Type="126",
-		BattleSkill_Value="2",
+		BattleSkill_Type="116",
+		BattleSkill_Value="5000",
 	},
 	[25] = { 
 		ID=25,
-		Name="烈焰狮",
-		grade=3,
-		mount_icon="zuoji_006",
-		Cost = {
-			[1] = 2407,
-			[2] = 1,
-		},
-		Model=800027,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 100,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 100,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 30,
-			},
-		},
-		BattleSkill_Type="9",
-		BattleSkill_Value="1200",
-	},
-	[26] = { 
-		ID=26,
-		Name="青木神龙",
-		grade=3,
-		mount_icon="zuoji_009",
-		Cost = {
-			[1] = 2410,
-			[2] = 1,
-		},
-		Model=800030,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 388,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 388,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 88,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 188,
-			},
-		},
-		BattleSkill_Type="103",
-		BattleSkill_Value="600",
-	},
-	[27] = { 
-		ID=27,
-		Name="乌龙驹",
-		grade=4,
-		mount_icon="zuoji_000",
-		Cost = {
-			[1] = 2401,
-			[2] = 1,
-		},
-		Model=800001,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 50,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 50,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 20,
-			},
-		},
-		BattleSkill_Type="107",
-		BattleSkill_Value="1000",
-	},
-	[28] = { 
-		ID=28,
-		Name="追风豹",
-		grade=4,
-		mount_icon="zuoji_001",
-		Cost = {
-			[1] = 2402,
-			[2] = 1,
-		},
-		Model=800022,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 150,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 60,
-			},
-		},
-		BattleSkill_Type="1",
-		BattleSkill_Value="500",
-	},
-	[29] = { 
-		ID=29,
-		Name="铁甲犀牛",
-		grade=4,
-		mount_icon="zuoji_002",
-		Cost = {
-			[1] = 2403,
-			[2] = 1,
-		},
-		Model=800023,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 150,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 30,
-			},
-		},
-		BattleSkill_Type="115",
-		BattleSkill_Value="5000",
-	},
-	[30] = { 
-		ID=30,
-		Name="黑豹",
-		grade=4,
-		mount_icon="zuoji_003",
-		Cost = {
-			[1] = 2404,
-			[2] = 1,
-		},
-		Model=800024,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 150,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 30,
-			},
-		},
-		BattleSkill_Type = {
-			[1] = 104,
-			[2] = 105,
-		},
-		BattleSkill_Value = {
-			[1] = 800,
-			[2] = 800,
-		},
-	},
-	[31] = { 
-		ID=31,
-		Name="雪豹",
-		grade=4,
-		mount_icon="zuoji_004",
-		Cost = {
-			[1] = 2405,
-			[2] = 1,
-		},
-		Model=800025,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 150,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 30,
-			},
-		},
-		BattleSkill_Type="116",
-		BattleSkill_Value="5000",
-	},
-	[32] = { 
-		ID=32,
-		Name="霸天虎",
-		grade=4,
-		mount_icon="zuoji_005",
-		Cost = {
-			[1] = 2406,
-			[2] = 1,
-		},
-		Model=800026,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 100,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 100,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 30,
-			},
-		},
-		BattleSkill_Type = {
-			[1] = 99,
-			[2] = 100,
-		},
-		BattleSkill_Value="1500",
-	},
-	[33] = { 
-		ID=33,
-		Name="烈焰狮",
-		grade=4,
-		mount_icon="zuoji_006",
-		Cost = {
-			[1] = 2407,
-			[2] = 1,
-		},
-		Model=800027,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 100,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 100,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 30,
-			},
-		},
-		BattleSkill_Type="126",
-		BattleSkill_Value="2",
-	},
-	[34] = { 
-		ID=34,
-		Name="青木神龙",
-		grade=4,
-		mount_icon="zuoji_009",
-		Cost = {
-			[1] = 2410,
-			[2] = 1,
-		},
-		Model=800030,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 388,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 388,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 88,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 188,
-			},
-		},
-		BattleSkill_Type="9",
-		BattleSkill_Value="1200",
-	},
-	[35] = { 
-		ID=35,
-		Name="乌龙驹",
-		grade=5,
-		mount_icon="zuoji_000",
-		Cost = {
-			[1] = 2401,
-			[2] = 1,
-		},
-		Model=800001,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 50,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 50,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 20,
-			},
-		},
-		BattleSkill_Type="103",
-		BattleSkill_Value="600",
-	},
-	[36] = { 
-		ID=36,
-		Name="追风豹",
-		grade=5,
-		mount_icon="zuoji_001",
-		Cost = {
-			[1] = 2402,
-			[2] = 1,
-		},
-		Model=800022,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 150,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 60,
-			},
-		},
-		BattleSkill_Type="107",
-		BattleSkill_Value="1000",
-	},
-	[37] = { 
-		ID=37,
-		Name="铁甲犀牛",
-		grade=5,
-		mount_icon="zuoji_002",
-		Cost = {
-			[1] = 2403,
-			[2] = 1,
-		},
-		Model=800023,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 150,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 30,
-			},
-		},
-		BattleSkill_Type="1",
-		BattleSkill_Value="500",
-	},
-	[38] = { 
-		ID=38,
-		Name="黑豹",
-		grade=5,
-		mount_icon="zuoji_003",
-		Cost = {
-			[1] = 2404,
-			[2] = 1,
-		},
-		Model=800024,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 150,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 30,
-			},
-		},
-		BattleSkill_Type="115",
-		BattleSkill_Value="5000",
-	},
-	[39] = { 
-		ID=39,
-		Name="雪豹",
-		grade=5,
-		mount_icon="zuoji_004",
-		Cost = {
-			[1] = 2405,
-			[2] = 1,
-		},
-		Model=800025,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 150,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 150,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 30,
-			},
-		},
-		BattleSkill_Type = {
-			[1] = 104,
-			[2] = 105,
-		},
-		BattleSkill_Value = {
-			[1] = 800,
-			[2] = 800,
-		},
-	},
-	[40] = { 
-		ID=40,
-		Name="霸天虎",
-		grade=5,
-		mount_icon="zuoji_005",
-		Cost = {
-			[1] = 2406,
-			[2] = 1,
-		},
-		Model=800026,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 100,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 100,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 30,
-			},
-		},
-		BattleSkill_Type="116",
-		BattleSkill_Value="5000",
-	},
-	[41] = { 
-		ID=41,
-		Name="烈焰狮",
-		grade=5,
-		mount_icon="zuoji_006",
-		Cost = {
-			[1] = 2407,
-			[2] = 1,
-		},
-		Model=800027,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 100,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 100,
-			},
-			[3] = {
-				[1] = 115,
-				[2] = 30,
-			},
-		},
-		BattleSkill_Type = {
-			[1] = 99,
-			[2] = 100,
-		},
-		BattleSkill_Value="1500",
-	},
-	[42] = { 
-		ID=42,
 		Name="青木神龙",
 		grade=5,
 		mount_icon="zuoji_009",
@@ -1225,20 +585,12 @@ local config = {
 		Model=800030,
 		ClassID = {
 			[1] = {
-				[1] = 1,
-				[2] = 388,
+				[1] = 107,
+				[2] = 2000,
 			},
 			[2] = {
-				[1] = 2,
-				[2] = 388,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 88,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 188,
+				[1] = 57,
+				[2] = 500,
 			},
 		},
 		BattleSkill_Type="126",
