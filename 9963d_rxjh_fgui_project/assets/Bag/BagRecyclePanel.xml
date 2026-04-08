@@ -97,5 +97,81 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n55_p70y" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="172,698" size="0,0"/>
+    <text id="n74_zqih" name="n74" xy="524,473" size="108,19" fontSize="12" text="ShowBPHYSDetail"/>
+    <component id="n60_zqih" name="MaskLv1" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="0,1" size="1334,750" group="n66_zqih">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n61_zqih" name="n61" src="k5e7v6a" fileName="image/img_d2_9.png" pkg="st7dgeqq" xy="288,177" size="389,506" group="n66_zqih"/>
+    <text id="n62_zqih" name="n62" xy="359,202" size="52,34" group="n66_zqih" fontSize="24" color="#ffff00" text="类型"/>
+    <text id="n63_zqih" name="n63" xy="520,202" size="100,34" group="n66_zqih" fontSize="24" color="#ffff00" align="center" text="是否选中"/>
+    <component id="n64_zqih" name="BtnDetailClose1" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="644,161" group="n66_zqih">
+      <Button icon="ui://st7dgeqqje63v3b"/>
+    </component>
+    <list id="n65_zqih" name="List_JGSCheckBox" xy="323,248" size="321,383" group="n66_zqih" overflow="scroll" margin="0,0,-40,0" lineGap="22" defaultItem="ui://dak5wnw9hgppq" autoItemSize="false" autoClearItems="true">
+      <item/>
+    </list>
+    <group id="n66_zqih" name="JGSDetail" xy="0,1" size="1334,750" visible="false" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n67_zqih" name="MaskLv2" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="0,1" size="1334,750" group="n73_zqih">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n68_zqih" name="n68" src="k5e7v6a" fileName="image/img_d2_9.png" pkg="st7dgeqq" xy="288,177" size="389,506" group="n73_zqih"/>
+    <text id="n69_zqih" name="n69" xy="359,202" size="52,34" group="n73_zqih" fontSize="24" color="#ffff00" text="类型"/>
+    <text id="n70_zqih" name="n70" xy="520,202" size="100,34" group="n73_zqih" fontSize="24" color="#ffff00" align="center" text="是否选中"/>
+    <component id="n71_zqih" name="BtnDetailClose2" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="644,161" group="n73_zqih">
+      <Button icon="ui://st7dgeqqje63v3b"/>
+    </component>
+    <list id="n72_zqih" name="List_HYSCheckBox" xy="323,248" size="321,383" group="n73_zqih" overflow="scroll" margin="0,0,-40,0" lineGap="22" defaultItem="ui://dak5wnw9hgppq" autoItemSize="false" autoClearItems="true">
+      <item/>
+    </list>
+    <group id="n73_zqih" name="HYSDetail" xy="0,1" size="1334,750" visible="false" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n75_zqih" name="MaskLv3" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="0,1" size="1334,750" group="n81_zqih">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n76_zqih" name="n76" src="k5e7v6a" fileName="image/img_d2_9.png" pkg="st7dgeqq" xy="288,177" size="389,506" group="n81_zqih"/>
+    <text id="n77_zqih" name="n77" xy="359,202" size="52,34" group="n81_zqih" fontSize="24" color="#ffff00" text="类型"/>
+    <text id="n78_zqih" name="n78" xy="520,202" size="100,34" group="n81_zqih" fontSize="24" color="#ffff00" align="center" text="是否选中"/>
+    <component id="n79_zqih" name="BtnDetailClose3" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="644,161" group="n81_zqih">
+      <Button icon="ui://st7dgeqqje63v3b"/>
+    </component>
+    <list id="n80_zqih" name="List_RXSCheckBox" xy="323,248" size="321,383" group="n81_zqih" overflow="scroll" margin="0,0,-40,0" lineGap="22" defaultItem="ui://dak5wnw9hgppq" autoItemSize="false" autoClearItems="true">
+      <item/>
+    </list>
+    <group id="n81_zqih" name="RXSDetail" xy="0,1" size="1334,750" visible="false" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n82_zqih" name="MaskLv4" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="0,1" size="1334,750" group="n88_zqih">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n83_zqih" name="n83" src="k5e7v6a" fileName="image/img_d2_9.png" pkg="st7dgeqq" xy="288,177" size="389,506" group="n88_zqih"/>
+    <text id="n84_zqih" name="n84" xy="359,202" size="52,34" group="n88_zqih" fontSize="24" color="#ffff00" text="类型"/>
+    <text id="n85_zqih" name="n85" xy="520,202" size="100,34" group="n88_zqih" fontSize="24" color="#ffff00" align="center" text="是否选中"/>
+    <component id="n86_zqih" name="BtnDetailClose4" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="644,161" group="n88_zqih">
+      <Button icon="ui://st7dgeqqje63v3b"/>
+    </component>
+    <list id="n87_zqih" name="List_HYJGSCheckBox" xy="323,248" size="321,383" group="n88_zqih" overflow="scroll" margin="0,0,-40,0" lineGap="22" defaultItem="ui://dak5wnw9hgppq" autoItemSize="false" autoClearItems="true">
+      <item/>
+    </list>
+    <group id="n88_zqih" name="HYJGSDetail" xy="0,1" size="1334,750" visible="false" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n89_zqih" name="MaskLv5" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="0,1" size="1334,750" group="n95_zqih">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n90_zqih" name="n90" src="k5e7v6a" fileName="image/img_d2_9.png" pkg="st7dgeqq" xy="288,177" size="389,506" group="n95_zqih"/>
+    <text id="n91_zqih" name="n91" xy="359,202" size="52,34" group="n95_zqih" fontSize="24" color="#ffff00" text="类型"/>
+    <text id="n92_zqih" name="n92" xy="520,202" size="100,34" group="n95_zqih" fontSize="24" color="#ffff00" align="center" text="是否选中"/>
+    <component id="n93_zqih" name="BtnDetailClose5" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="644,161" group="n95_zqih">
+      <Button icon="ui://st7dgeqqje63v3b"/>
+    </component>
+    <list id="n94_zqih" name="List_BPHYSCheckBox" xy="323,248" size="321,383" group="n95_zqih" overflow="scroll" margin="0,0,-40,0" lineGap="22" defaultItem="ui://dak5wnw9hgppq" autoItemSize="false" autoClearItems="true">
+      <item/>
+    </list>
+    <group id="n95_zqih" name="BPHYSDetail" xy="0,1" size="1334,750" visible="false" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>

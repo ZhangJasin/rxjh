@@ -12,9 +12,26 @@ function BagRecycleViewModel:InitRecycleCondition()
 	self.checkEquipConditionGroups = {}
 	self.otherConditionModels = {}
 	self.checkOtherConditionGroups = {}
+
+	self.JGSConditionModels = {}
+	self.checkJGSConditionGroups = {}
+
+	self.HYSConditionModels = {}
+	self.checkHYSConditionGroups = {}
+
+	self.RXSConditionModels = {}
+	self.checkRXSConditionGroups = {}
+
+	self.HYJGSConditionModels = {}
+	self.checkHYJGSConditionGroups = {}
+
+	self.BPHYSConditionModels = {}
+	self.checkBPHYSConditionGroups = {}
+
+
 	local cacheData = self:GetBagRecycleData()
 	if not cacheData or #cacheData == 0 then
-		if SL:GetValue("U",8) == 1 then
+		if SL:GetValue("U", 8) == 1 then
 			self.checkLevel = true
 		else
 			self.checkLevel = false
@@ -24,7 +41,7 @@ function BagRecycleViewModel:InitRecycleCondition()
 	end
 
 	self.moneyResDic = {}
-	local  recycleCfg = requireGameConfig("Recycle")
+	local recycleCfg = requireGameConfig("Recycle")
 	local allSellIds = SL:GetValue("T", 19)
 	if allSellIds == 0 or allSellIds == "" then
 		allSellIds = {}
@@ -41,20 +58,38 @@ function BagRecycleViewModel:InitRecycleCondition()
 				model = BagRecycleConditionModel.new(v)
 				targetList = self.lvConditionModels
 				targetGroups = self.checkLvConditionGroups
-
 			elseif v.Type == 1 then
 				model = BagRecycleConditionModel.new(v)
 				targetList = self.equipConditionModels
 				targetGroups = self.checkEquipConditionGroups
-
 			elseif v.Type == 2 then
 				model = BagRecycleConditionModel.new(v)
 				targetList = self.otherConditionModels
 				targetGroups = self.checkOtherConditionGroups
+			elseif v.Type == 3 then
+				model = BagRecycleConditionModel.new(v)
+				targetList = self.JGSConditionModels
+				targetGroups = self.checkJGSConditionGroups
+			elseif v.Type == 4 then
+				model = BagRecycleConditionModel.new(v)
+				targetList = self.HYSConditionModels
+				targetGroups = self.checkHYSConditionGroups
+			elseif v.Type == 5 then
+				model = BagRecycleConditionModel.new(v)
+				targetList = self.RXSConditionModels
+				targetGroups = self.checkRXSConditionGroups
+			elseif v.Type == 6 then
+				model = BagRecycleConditionModel.new(v)
+				targetList = self.HYJGSConditionModels
+				targetGroups = self.checkHYJGSConditionGroups
+			elseif v.Type == 7 then
+				model = BagRecycleConditionModel.new(v)
+				targetList = self.BPHYSConditionModels
+				targetGroups = self.checkBPHYSConditionGroups
 			end
 
 			if targetList then
-				table.insert(targetList,model)
+				table.insert(targetList, model)
 			end
 
 			if targetGroups then
@@ -62,7 +97,7 @@ function BagRecycleViewModel:InitRecycleCondition()
 				if not groups then
 					groups = {}
 				end
-				table.insert(groups,model)
+				table.insert(groups, model)
 				targetGroups[v.ConditionType] = groups
 			end
 
@@ -81,9 +116,11 @@ end
 function BagRecycleViewModel:Bind(viewComponent)
 	self.viewComponent = viewComponent
 end
+
 function BagRecycleViewModel:UnBind()
 	self.viewComponent = nil
 end
+
 function BagRecycleViewModel:Enter()
 	self:RegisterEvent()
 	self:RefreshData()
@@ -93,7 +130,6 @@ function BagRecycleViewModel:Exit()
 	self:SaveBagRecycleData(self:GetJsonData())
 	self:UnRegisterEvent()
 end
-
 
 function BagRecycleViewModel:RefreshData()
 	self:RefreshSelectItemsByConditions()
@@ -119,7 +155,27 @@ function BagRecycleViewModel:GetLvCheckBoxModel()
 	return self.lvConditionModels
 end
 
-function BagRecycleViewModel:CheckConditions(itemCfg,conditionGroups)
+function BagRecycleViewModel:GetJGSCheckBoxModel()
+	return self.JGSConditionModels
+end
+
+function BagRecycleViewModel:GetHYSCheckBoxModel()
+	return self.HYSConditionModels
+end
+
+function BagRecycleViewModel:GetRXSCheckBoxModel()
+	return self.RXSConditionModels
+end
+
+function BagRecycleViewModel:GetHYJGSCheckBoxModel()
+	return self.HYJGSConditionModels
+end
+
+function BagRecycleViewModel:GetBPHYSCheckBoxModel()
+	return self.BPHYSConditionModels
+end
+
+function BagRecycleViewModel:CheckConditions(itemCfg, conditionGroups)
 	local existValid = false
 	for k, v in pairs(conditionGroups) do
 		if v then
@@ -136,7 +192,6 @@ function BagRecycleViewModel:CheckConditions(itemCfg,conditionGroups)
 					end
 				end
 			end
-
 		end
 	end
 	return false
@@ -148,16 +203,16 @@ function BagRecycleViewModel:RefreshSelectItemsByConditions()
 	self.moneyResDic = {}
 	for k, v in pairs(bagData) do
 		if k > 0 and v then
-			local itemCfg =  SL:GetValue("ITEM_DATA", v.Index or v.ID)
+			local itemCfg = SL:GetValue("ITEM_DATA", v.Index or v.ID)
 			if itemCfg and itemCfg.recycle and itemCfg.recycle ~= "" then
 				local itemSelect = false
 				-- 检查等级条件（如果开启）
 				if self.checkLevel then
-					itemSelect = self:CheckConditions(itemCfg,self.checkLvConditionGroups)
+					itemSelect = self:CheckConditions(itemCfg, self.checkLvConditionGroups)
 				end
 
 				-- 检查装备条件
-				local equipSelect = self:CheckConditions(itemCfg,self.checkEquipConditionGroups)
+				local equipSelect = self:CheckConditions(itemCfg, self.checkEquipConditionGroups)
 
 				-- 如果等级筛选开启，需要同时满足等级和装备条件
 				-- 如果等级筛选未开启，只需要满足装备条件
@@ -167,9 +222,10 @@ function BagRecycleViewModel:RefreshSelectItemsByConditions()
 					itemSelect = equipSelect
 				end
 
-				local otherSelect = self:CheckConditions(itemCfg,self.checkOtherConditionGroups)
+				local otherSelect = self:CheckConditions(itemCfg, self.checkOtherConditionGroups)
 				local finalSelect = itemSelect or otherSelect
-				SL:onLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY, {isSelect = finalSelect ,selectList= { {MakeIndex = v.MakeIndex,pos = k,ID =v.Index,cnt = v.OverLap or 1}},updateMoney = false } )
+				SL:onLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY,
+					{ isSelect = finalSelect, selectList = { { MakeIndex = v.MakeIndex, pos = k, ID = v.Index, cnt = v.OverLap or 1 } }, updateMoney = false })
 			end
 		end
 	end
@@ -183,17 +239,17 @@ function BagRecycleViewModel:GetJsonData()
 	data["checkLevel"] = self.checkLevel and 1 or 0
 	for i, v in ipairs(self.lvConditionModels) do
 		if v and v.cfg and v.cfg.ID then
-			data[v.cfg.ID] =  v.isSelect and 1 or 0
+			data[v.cfg.ID] = v.isSelect and 1 or 0
 		end
 	end
 	for i, v in ipairs(self.equipConditionModels) do
 		if v and v.cfg and v.cfg.ID then
-			data[v.cfg.ID] =  v.isSelect and 1 or 0
+			data[v.cfg.ID] = v.isSelect and 1 or 0
 		end
 	end
 	for i, v in ipairs(self.otherConditionModels) do
 		if v and v.cfg and v.cfg.ID then
-			data[v.cfg.ID] =  v.isSelect and 1 or 0
+			data[v.cfg.ID] = v.isSelect and 1 or 0
 		end
 	end
 
@@ -202,13 +258,12 @@ end
 
 function BagRecycleViewModel:SaveBagRecycleData(data)
 	local flag = SL:GetValue("USER_ID") or "errorName"
-	SL:SetLocalString("BagRecycle"..flag, data)
+	SL:SetLocalString("BagRecycle" .. flag, data)
 end
-
 
 function BagRecycleViewModel:GetBagRecycleData()
 	local flag = SL:GetValue("USER_ID") or "errorName"
-	local j = SL:GetLocalString("BagRecycle"..flag)
+	local j = SL:GetLocalString("BagRecycle" .. flag)
 	local data = {}
 
 	if j and j ~= "" then
@@ -216,7 +271,6 @@ function BagRecycleViewModel:GetBagRecycleData()
 	end
 	return data
 end
-
 
 function BagRecycleViewModel:RecycleSelectCell(data)
 	if not data then
@@ -227,7 +281,7 @@ function BagRecycleViewModel:RecycleSelectCell(data)
 
 	for i = 1, #selectList do
 		local selectData = selectList[i]
-		self:CalculateMoney(isSelect,selectData)
+		self:CalculateMoney(isSelect, selectData)
 		self.SelectMakeIndexToPos[selectData.MakeIndex] = isSelect and selectList[i] or nil
 	end
 	if data.updateMoney then
@@ -237,7 +291,7 @@ function BagRecycleViewModel:RecycleSelectCell(data)
 	end
 end
 
-function BagRecycleViewModel:BagRecycleNewCheckCond(itemCfg,conditionGroups)
+function BagRecycleViewModel:BagRecycleNewCheckCond(itemCfg, conditionGroups)
 	local existValid = false
 	for k, v in pairs(conditionGroups) do
 		if v then
@@ -251,26 +305,28 @@ function BagRecycleViewModel:BagRecycleNewCheckCond(itemCfg,conditionGroups)
 	end
 	return existValid
 end
+
 function BagRecycleViewModel:RecycleSelectItems()
 	local recycItemList = {}
 	-- if  SL._DEBUG then
-		local cnt = 0
-		for k, v in pairs(self.SelectMakeIndexToPos) do
-			-- print("RecycleSelectItems",k,SL:JsonEncode(v))
-			if k and v then
-				cnt = cnt +1
-				table.insert(recycItemList,{makeIndex = v.MakeIndex,itemId = v.ID})
-			end
+	local cnt = 0
+	for k, v in pairs(self.SelectMakeIndexToPos) do
+		-- print("RecycleSelectItems",k,SL:JsonEncode(v))
+		if k and v then
+			cnt = cnt + 1
+			table.insert(recycItemList, { makeIndex = v.MakeIndex, itemId = v.ID })
 		end
-		-- print(cnt)
+	end
+	-- print(cnt)
 	-- end
 	if BagRecycleViewModelUI then
-		BagRecycleViewModelUI.CCUI = self	
+		BagRecycleViewModelUI.CCUI = self
 	end
-	
-	ssrMessage:sendmsgEx("bag", "sellAll",recycItemList) 
+
+	ssrMessage:sendmsgEx("bag", "sellAll", recycItemList)
 	-- SL:RequestRecycleItems(self.SelectMakeIndexToPos)
 end
+
 function BagRecycleViewModel:updateView()
 	self = BagRecycleViewModelUI.CCUI
 	self:RefreshSelectItemsByConditions()
@@ -280,7 +336,8 @@ end
 function BagRecycleViewModel:GetMoneyResDic()
 	return self.moneyResDic
 end
-function BagRecycleViewModel:CalculateMoney(isSelect,selectData)
+
+function BagRecycleViewModel:CalculateMoney(isSelect, selectData)
 	if selectData then
 		local cfg = SL:GetValue("ITEM_DATA", selectData.ID)
 		if cfg and cfg.recycle then
@@ -289,18 +346,17 @@ function BagRecycleViewModel:CalculateMoney(isSelect,selectData)
 				for i = 1, #moneyStr do
 					local moneyData = string.split(moneyStr[i], "#")
 					if moneyData then
-
 						local moneyId = tonumber(moneyData[1])
 						local moneyNum = tonumber(moneyData[2])
 						local sum = self.moneyResDic[moneyId] or 0
 						local curSelectItemData = self.SelectMakeIndexToPos[selectData.MakeIndex]
 						if isSelect then
 							if not curSelectItemData then
-								sum = sum + moneyNum*selectData.cnt
+								sum = sum + moneyNum * selectData.cnt
 							end
 						else
-							if  curSelectItemData then
-								sum =  sum - moneyNum*selectData.cnt
+							if curSelectItemData then
+								sum = sum - moneyNum * selectData.cnt
 							end
 						end
 
@@ -313,7 +369,7 @@ function BagRecycleViewModel:CalculateMoney(isSelect,selectData)
 end
 
 function BagRecycleViewModel:BagCellClickEvent(bagItem)
-	if  FGUI:CheckOpen("Bag", "BagRecyclePanel")then
+	if FGUI:CheckOpen("Bag", "BagRecyclePanel") then
 		bagItem:SetTipEnable(false)
 		local itemCfg = SL:GetValue("ITEM_DATA", bagItem._itemData.Index)
 		if itemCfg then
@@ -323,18 +379,17 @@ function BagRecycleViewModel:BagCellClickEvent(bagItem)
 			end
 		end
 
-		SL:onLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY, {isSelect = not bagItem.recycleSelect ,selectList= { {MakeIndex = bagItem._itemData.MakeIndex,pos = bagItem._index,ID = bagItem._itemData.Index,cnt = bagItem._itemData.OverLap or 1}} ,updateMoney = true} )
+		SL:onLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY,
+			{ isSelect = not bagItem.recycleSelect, selectList = { { MakeIndex = bagItem._itemData.MakeIndex, pos = bagItem._index, ID = bagItem._itemData.Index, cnt = bagItem._itemData.OverLap or 1 } }, updateMoney = true })
 	end
 end
 
-
-
 function BagRecycleViewModel:RegisterEvent()
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY, "BagRecycleViewModel",  handler(self,self.RecycleSelectCell))
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_RECOVERY_UPDATE, "BagRecycleViewModel",  handler(self,self.RefreshSelectItemsByConditions))
-	SL:RegisterLUAEvent(LUA_EVENT_BAG_CELL_CLICK, "BagRecycleViewModel",  handler(self,self.BagCellClickEvent))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY, "BagRecycleViewModel", handler(self, self.RecycleSelectCell))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_RECOVERY_UPDATE, "BagRecycleViewModel",
+		handler(self, self.RefreshSelectItemsByConditions))
+	SL:RegisterLUAEvent(LUA_EVENT_BAG_CELL_CLICK, "BagRecycleViewModel", handler(self, self.BagCellClickEvent))
 end
-
 
 function BagRecycleViewModel:UnRegisterEvent()
 	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY, "BagRecycleViewModel")
@@ -342,4 +397,4 @@ function BagRecycleViewModel:UnRegisterEvent()
 	SL:UnRegisterLUAEvent(LUA_EVENT_BAG_CELL_CLICK, "BagRecycleViewModel")
 end
 
-return  BagRecycleViewModel.new()
+return BagRecycleViewModel.new()
