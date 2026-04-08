@@ -18670,5 +18670,21 @@ local config = {
 		TipsGroupId=7,
 		sBack="9#100",
 	},
+	[3958] = { 
+		ID=3958,
+		Name="血脉精华",
+		StdMode=1,
+		Looks=200595,
+		Price="0#1#1000",
+		Color=116,
+		OverLap=9999,
+		Desc="可用于灵宠进阶",
+		GetWayInfo="7",
+		Droplooks=200025,
+		Grade=4,
+		nPaimaiStall=0,
+		ItemType=1,
+		TipsGroupId=18,
+	},
 }
 return config
