@@ -8,7 +8,7 @@
     <image id="n53_gs4z" name="role_bg" src="gs4zv6r" fileName="Images/img_role_bg.png" xy="219,303" size="309,330" group="n49_gab2"/>
     <image id="n54_gs4z" name="line_1" src="gs4zv6s" fileName="Images/img_bg_1.png" xy="567,109" size="18,587" group="n49_gab2"/>
     <image id="n55_gs4z" name="img_k_bg" src="gs4zv6t" fileName="Images/img_kuang.png" xy="583,133" size="588,552" group="n49_gab2"/>
-    <list id="n60_gs4z" name="list_reward" xy="608,603" pivot="1,0" size="225,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://5rez3obxp51lv5j">
+    <list id="n60_gs4z" name="list_reward" xy="608,603" pivot="1,0" size="225,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://5rez3obxqtrmv6g">
       <item/>
       <item/>
       <item/>
