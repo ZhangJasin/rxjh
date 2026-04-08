@@ -202,5 +202,5 @@
     <component id="t63akvpm" name="btn_first_gray.xml" path="/common/" exported="true"/>
     <image id="t63akvpo" name="btn_first_gray.png" path="/image/"/>
   </resources>
-  <publish name="" genCode="true"/>
+  <publish name=""/>
 </packageDescription>
