@@ -14,10 +14,10 @@
     <image id="io7h17" name="sample_transfer_panel.png" path="/Images/"/>
     <image id="io7h19" name="img_arrow.png" path="/Images/"/>
     <component id="p51l1f" name="TransferSucceed.xml" path="/" exported="true"/>
-    <component id="p51lv5j" name="ItemIcon.xml" path="/Components/"/>
-    <component id="p51l1g" name="SkillIcon.xml" path="/Components/"/>
-    <component id="p51l1h" name="PropItem.xml" path="/Components/"/>
-    <component id="p51l1i" name="SucceedPropItem.xml" path="/Components/"/>
+    <component id="p51lv5j" name="ItemIcon.xml" path="/Components/" exported="true"/>
+    <component id="p51l1g" name="SkillIcon.xml" path="/Components/" exported="true"/>
+    <component id="p51l1h" name="PropItem.xml" path="/Components/" exported="true"/>
+    <component id="p51l1i" name="SucceedPropItem.xml" path="/Components/" exported="true"/>
     <image id="as7kv5k" name="img_prop_bg_9.png" path="/Images/" scale="9grid" scale9grid="20,21,2,2"/>
     <image id="ok5cv5l" name="img_reward.png" path="/Images/"/>
     <image id="ok5cv5m" name="btn_good_add.png" path="/Images/"/>
@@ -29,8 +29,8 @@
     <image id="ok5cv5s" name="img_goodevil_bg.png" path="/Images/"/>
     <image id="ok5cv5t" name="img_evil.png" path="/Images/"/>
     <image id="ok5cv5u" name="img_evil_icon.png" path="/Images/"/>
-    <component id="ok5cv5v" name="ChooseGoodEvilPanel.xml" path="/"/>
-    <component id="a72bv5w" name="panel_Touch.xml" path="/Components/"/>
+    <component id="ok5cv5v" name="ChooseGoodEvilPanel.xml" path="/" exported="true"/>
+    <component id="a72bv5w" name="panel_Touch.xml" path="/Components/" exported="true"/>
     <image id="s806v5y" name="img_succeed_title_bg.png" path="/Images/"/>
     <component id="qtrmv5z" name="campPanl.xml" path="/" exported="true"/>
     <image id="qtrmv60" name="jindutiao2.png" path="/Images/0tongyong/" scale="9grid" scale9grid="50,3,100,6"/>
@@ -45,17 +45,27 @@
     <image id="qtrmv69" name="邪 派.png" path="/Images/08camp/"/>
     <image id="qtrmv6a" name="奖励底.png" path="/Images/08camp/"/>
     <image id="qtrmv6b" name="任务奖励.png" path="/Images/08camp/"/>
-    <component id="qtrmv6c" name="fangbtn.xml" path="/Components/tongyong/"/>
+    <component id="qtrmv6c" name="fangbtn.xml" path="/Components/tongyong/" exported="true"/>
     <image id="qtrmv6d" name="btn_hong.png" path="/Images/0tongyong/" scale="9grid" scale9grid="16,13,32,26"/>
-    <component id="qtrmv6e" name="itemkuang2.xml" path="/Components/tongyong/"/>
+    <component id="qtrmv6e" name="itemkuang2.xml" path="/Components/tongyong/" exported="true"/>
     <image id="qtrmv6f" name="kuangdi2.png" path="/Images/04duanzao/" scale="9grid" scale9grid="8,8,16,16" duplicatePadding="true"/>
-    <component id="qtrmv6g" name="itemRoot.xml" path="/Components/tongyong/"/>
+    <component id="qtrmv6g" name="itemRoot.xml" path="/Components/tongyong/" exported="true"/>
     <component id="qtrmv6h" name="gxhdpanl2.xml" path="/Components/zhizhao/"/>
-    <component id="qtrmv6i" name="kongbg.xml" path="/Components/tongyong/"/>
+    <component id="qtrmv6i" name="kongbg.xml" path="/Components/tongyong/" exported="true"/>
     <image id="qtrmv6j" name="gxhddi.png" path="/Images/0tongyong/"/>
     <image id="qtrmv6k" name="gxhd.png" path="/Images/0tongyong/"/>
-    <component id="qtrmv6l" name="closebtn_yuan.xml" path="/Components/tongyong/"/>
+    <component id="qtrmv6l" name="closebtn_yuan.xml" path="/Components/tongyong/" exported="true"/>
     <image id="qtrmv6m" name="close_yuan.png" path="/Images/0tongyong/"/>
+    <image id="gs4zv6n" name="img_up.png" path="/Images/"/>
+    <image id="gs4zv6o" name="img_unlock_wg.png" path="/Images/"/>
+    <image id="gs4zv6p" name="img_unlock_qg.png" path="/Images/"/>
+    <image id="gs4zv6q" name="img_txt_bg.png" path="/Images/"/>
+    <image id="gs4zv6r" name="img_role_bg.png" path="/Images/"/>
+    <image id="gs4zv6s" name="img_bg_1.png" path="/Images/"/>
+    <image id="gs4zv6t" name="img_kuang.png" path="/Images/"/>
+    <image id="gs4zv6u" name="img_line.png" path="/Images/"/>
+    <component id="ok6ev6v" name="PropItem2.xml" path="/Components/" exported="true"/>
+    <image id="ok6ev6w" name="img_btn_blue.png" path="/Images/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

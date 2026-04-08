@@ -2,6 +2,7 @@
 <component size="150,33">
   <displayList>
     <image id="n2_gs4z" name="val_bg" src="gs4zv6q" fileName="Images/img_txt_bg.png" xy="0,0" size="150,33"/>
-    <text id="n3_gs4z" name="val" xy="11,4" size="24,26" fontSize="18" color="#fef5e4" text="40"/>
+    <text id="n3_gs4z" name="val" xy="11,4" size="24,26" fontSize="18" color="#fef5e4" text="10"/>
+    <image id="n4_ok6e" name="up_bg" src="gs4zv6n" fileName="Images/img_up.png" xy="157,4"/>
   </displayList>
 </component>

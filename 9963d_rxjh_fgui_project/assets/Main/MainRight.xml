@@ -68,6 +68,9 @@
     <component id="n170_boje" name="Button_st" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1685,655" size="64,70" group="n32_wuex">
       <Button icon="ui://zj419n3dvzjdfvf0"/>
     </component>
+    <component id="n171_ok6e" name="Button_zz" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1612,655" size="64,70" group="n32_wuex">
+      <Button icon="ui://zj419n3dwuexv76"/>
+    </component>
     <group id="n32_wuex" name="Group_func" xy="1342,426" size="407,318" visible="false" advanced="true">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>

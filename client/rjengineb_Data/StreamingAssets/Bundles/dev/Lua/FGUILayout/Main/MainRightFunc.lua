@@ -12,6 +12,7 @@ function MainRightFunc:Create()
     FGUI:setOnClickEvent(self._ui.Button_fashion, handler(self, self.OnOpenFashion))
     FGUI:setOnClickEvent(self._ui.Button_st, handler(self, self.OnOpenShiTu))
     FGUI:setOnClickEvent(self._ui.Button_ZuoQi, handler(self, self.OnOpenZuoQI))
+    FGUI:setOnClickEvent(self._ui.Button_zz, handler(self, self.OnOpenZhuanZhi))
 
     self:InitFuncBtnsShow()
 end
@@ -69,6 +70,9 @@ end
 
 function MainRightFunc:OnOpenRole()
     FGUI:Open("Bag","PlayerInfoPanel")
+end
+function MainRightFunc:OnOpenZhuanZhi()
+    FGUI:Open("Transfer", "TransferPanel", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
 
 

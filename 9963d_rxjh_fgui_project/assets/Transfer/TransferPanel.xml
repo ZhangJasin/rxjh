@@ -2,45 +2,60 @@
 <component size="1334,750" designImageLayer="1">
   <displayList>
     <component id="n50_s806" name="loader_bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="690,376" pivot="0.5,0.5" anchor="true" size="1000,650" group="n49_gab2"/>
-    <image id="n47_a72b" name="img_role_bg" src="qjli19" fileName="image/role_bg_di.png" pkg="st7dgeqq" xy="200,114" size="434,572" group="n49_gab2"/>
     <component id="n1_vjv7" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1165,78" group="n49_gab2"/>
-    <text id="n2_vjv7" name="text_title" xy="690,78" pivot="0.5,0.5" anchor="true" size="52,34" group="n49_gab2" fontSize="24" color="#9aafbb" text="转职"/>
-    <image id="n4_io7h" name="img_arrow" src="io7h19" fileName="Images/img_arrow.png" xy="899,164" group="n49_gab2" rotation="-90"/>
-    <text id="n6_io7h" name="txt_job_origin" xy="704,123" size="179,34" group="n49_gab2" fontSize="24" color="#ffff00" align="right" text="灭世刀 【四转】"/>
-    <text id="n7_io7h" name="txt_job_next" xy="978,124" size="155,34" group="n49_gab2" fontSize="24" color="#ffff00" text="刀魔 【五转】"/>
-    <image id="n21_p51l" name="img_prop_bg" src="as7kv5k" fileName="Images/img_prop_bg_9.png" xy="630,178" size="550,240" group="n49_gab2"/>
-    <image id="n22_p51l" name="img_skill_title" src="io7h2" fileName="Images/img_unlock_skill.png" xy="697,189" group="n49_gab2" visible="false"/>
-    <list id="n23_p51l" name="list_skill" xy="642,220" pivot="0.5,0.5" size="300,90" group="n49_gab2" visible="false" layout="row" selectionMode="none" overflow="hidden" colGap="12" defaultItem="ui://5rez3obxp51l1g" autoItemSize="false" align="center" vAlign="middle">
+    <text id="n2_vjv7" name="text_title" xy="690,78" pivot="0.5,0.5" anchor="true" size="59,34" group="n49_gab2" fontSize="24" color="#ffffff" text="转 职"/>
+    <graph id="n44_ok5c" name="graph_role" xy="373,607" pivot="0.5,0.5" anchor="true" size="100,100" group="n49_gab2" blend="screen"/>
+    <image id="n53_gs4z" name="role_bg" src="gs4zv6r" fileName="Images/img_role_bg.png" xy="219,303" size="309,330" group="n49_gab2"/>
+    <image id="n54_gs4z" name="line_1" src="gs4zv6s" fileName="Images/img_bg_1.png" xy="567,109" size="18,587" group="n49_gab2"/>
+    <image id="n55_gs4z" name="img_k_bg" src="gs4zv6t" fileName="Images/img_kuang.png" xy="582,133" size="588,552" group="n49_gab2"/>
+    <list id="n60_gs4z" name="list_reward" xy="608,603" pivot="1,0" size="225,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://5rez3obxp51lv5j">
       <item/>
       <item/>
       <item/>
     </list>
-    <image id="n24_p51l" name="img_prop_title" src="io7h5" fileName="Images/img_transfer_prop.png" xy="967,189" group="n49_gab2"/>
-    <list id="n42_p51l" name="list_prop" xy="955,215" size="200,175" group="n49_gab2" selectionMode="none" lineGap="2" defaultItem="ui://5rez3obxp51l1h">
+    <list id="n61_gs4z" name="list_prop" xy="663,184" size="151,140" group="n49_gab2" selectionMode="none" lineGap="2" defaultItem="ui://5rez3obxp51l1h">
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <image id="n33_p51l" name="img_equip_title" src="io7h3" fileName="Images/img_unlock_equip.png" xy="697,189" group="n49_gab2"/>
-    <text id="n34_p51l" name="txt_equip" xy="726,220" pivot="0.5,0.5" size="136,32" group="n49_gab2" fontSize="22" color="#ffffff" align="center" text="五转高级装备"/>
-    <image id="n35_p51l" name="img_condition_bg" src="as7kv5k" fileName="Images/img_prop_bg_9.png" xy="630,428" size="550,256" group="n49_gab2"/>
-    <text id="n36_p51l" name="txt_condition_title" xy="639,442" size="124,34" group="n49_gab2" fontSize="24" color="#ffffff" text="转职条件："/>
-    <text id="n37_p51l" name="txt_mission_title" xy="639,496" size="124,34" group="n49_gab2" fontSize="24" color="#ffffff" text="当前任务："/>
-    <text id="n38_p51l" name="txt_condition" xy="761,442" size="299,34" group="n49_gab2" fontSize="24" color="#00ff00" ubb="true" text="角色等级达到100级(99/100)"/>
-    <richtext id="n51_nymh" name="txt_mission" xy="760,496" size="380,34" group="n49_gab2" fontSize="24" color="#00ff00" autoSize="none" text=""/>
-    <image id="n40_p51l" name="img_reward" src="io7h4" fileName="Images/img_transfer_reward.png" xy="711,552" group="n49_gab2"/>
-    <list id="n17_p51l" name="list_reward" xy="647,595" pivot="1,0" size="305,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://5rez3obxp51lv5j">
+    <image id="n63_gs4z" name="img_reward" src="io7h4" fileName="Images/img_transfer_reward.png" xy="607,572" group="n49_gab2"/>
+    <richtext id="n64_gs4z" name="txt_mission" xy="694,525" size="336,25" group="n49_gab2" fontSize="17" color="#372a08" autoSize="none" text="已全部完成"/>
+    <text id="n66_gs4z" name="txt_condition_title" xy="603,492" size="89,25" group="n49_gab2" fontSize="17" color="#372a08" text="转职条件："/>
+    <text id="n67_gs4z" name="txt_mission_title" xy="603,525" size="89,25" group="n49_gab2" fontSize="17" color="#372a08" text="当前任务："/>
+    <richtext id="n68_gs4z" name="txt_job_cur" xy="632,146" size="144,30" group="n49_gab2" fontSize="20" color="#3a5c76" align="center" autoSize="none" text=""/>
+    <richtext id="n69_gs4z" name="txt_job_next" xy="980,146" size="144,30" group="n49_gab2" fontSize="20" color="#3a5c76" align="center" autoSize="none" text=""/>
+    <richtext id="n70_gs4z" name="txt_attr_1" xy="603,187" size="70,26" group="n49_gab2" fontSize="16" color="#372a08" autoSize="none" text="生命值："/>
+    <richtext id="n71_gs4z" name="txt_attr_2" xy="603,223" size="70,26" group="n49_gab2" fontSize="16" color="#372a08" autoSize="none" text="内力值："/>
+    <richtext id="n72_gs4z" name="txt_attr_3" xy="603,259" size="70,24" group="n49_gab2" fontSize="16" color="#372a08" autoSize="none" text="攻击力："/>
+    <richtext id="n73_gs4z" name="txt_attr_4" xy="603,293" size="70,26" group="n49_gab2" fontSize="16" color="#372a08" autoSize="none" text="防    御："/>
+    <list id="n74_gs4z" name="list_next_prop" xy="956,184" size="151,140" group="n49_gab2" selectionMode="none" lineGap="2" defaultItem="ui://5rez3obxok6ev6v">
+      <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <component id="n12_p51l" name="btn_complete" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="1000,613" group="n49_gab2">
-      <Button title="完成转职"/>
+    <component id="n76_ok6e" name="btn_comp" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="1006,618" size="148,48" group="n49_gab2">
+      <Button title="转 职"/>
     </component>
-    <graph id="n44_ok5c" name="graph_role" xy="415,607" pivot="0.5,0.5" anchor="true" size="100,100" group="n49_gab2" blend="screen"/>
-    <component id="n45_a72b" name="panel_Touch" src="a72bv5w" fileName="Components/panel_Touch.xml" xy="198,108" size="432,588" group="n49_gab2"/>
-    <component id="n48_path" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="196,697" size="0,0" group="n49_gab2"/>
+    <image id="n77_ok6e" name="line_bg" src="gs4zv6u" fileName="Images/img_line.png" xy="605,563" size="553,1" group="n49_gab2"/>
+    <image id="n75_ok6e" name="arrow_bg" src="io7h19" fileName="Images/img_arrow.png" xy="849,228" group="n49_gab2"/>
+    <image id="n79_ok6e" name="gq_bg" src="gs4zv6p" fileName="Images/img_unlock_qg.png" xy="955,347" group="n49_gab2"/>
+    <image id="n80_ok6e" name="wg_bg" src="gs4zv6o" fileName="Images/img_unlock_wg.png" xy="632,347" group="n49_gab2"/>
+    <list id="n81_ok6e" name="list_wg" xy="608,380" pivot="1,0" size="217,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://5rez3obxp51l1g">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n82_ok6e" name="list_qg" xy="908,380" pivot="1,0" size="217,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://5rez3obxp51l1g">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <richtext id="n83_ok6e" name="txt_condition" xy="694,492" size="212,25" group="n49_gab2" fontSize="17" color="#372a08" text="角色等级达到100级(99/100)"/>
+    <component id="n84_ok6e" name="n84" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="1052,521" size="102,32" group="n49_gab2">
+      <Button title="前 往"/>
+    </component>
     <group id="n49_gab2" name="node" xy="190,51" size="1000,650" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
