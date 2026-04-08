@@ -7,7 +7,7 @@
     <graph id="n44_ok5c" name="graph_role" xy="373,607" pivot="0.5,0.5" anchor="true" size="100,100" group="n49_gab2" blend="screen"/>
     <image id="n53_gs4z" name="role_bg" src="gs4zv6r" fileName="Images/img_role_bg.png" xy="219,303" size="309,330" group="n49_gab2"/>
     <image id="n54_gs4z" name="line_1" src="gs4zv6s" fileName="Images/img_bg_1.png" xy="567,109" size="18,587" group="n49_gab2"/>
-    <image id="n55_gs4z" name="img_k_bg" src="gs4zv6t" fileName="Images/img_kuang.png" xy="582,133" size="588,552" group="n49_gab2"/>
+    <image id="n55_gs4z" name="img_k_bg" src="gs4zv6t" fileName="Images/img_kuang.png" xy="583,133" size="588,552" group="n49_gab2"/>
     <list id="n60_gs4z" name="list_reward" xy="608,603" pivot="1,0" size="225,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://5rez3obxp51lv5j">
       <item/>
       <item/>
@@ -19,7 +19,7 @@
       <item/>
       <item/>
     </list>
-    <image id="n63_gs4z" name="img_reward" src="io7h4" fileName="Images/img_transfer_reward.png" xy="607,572" group="n49_gab2"/>
+    <image id="n63_gs4z" name="img_reward" src="io7h4" fileName="Images/img_transfer_reward.png" xy="607,572" size="146,24" group="n49_gab2"/>
     <richtext id="n64_gs4z" name="txt_mission" xy="694,525" size="336,25" group="n49_gab2" fontSize="17" color="#372a08" autoSize="none" text="已全部完成"/>
     <text id="n66_gs4z" name="txt_condition_title" xy="603,492" size="89,25" group="n49_gab2" fontSize="17" color="#372a08" text="转职条件："/>
     <text id="n67_gs4z" name="txt_mission_title" xy="603,525" size="89,25" group="n49_gab2" fontSize="17" color="#372a08" text="当前任务："/>
@@ -40,8 +40,8 @@
     </component>
     <image id="n77_ok6e" name="line_bg" src="gs4zv6u" fileName="Images/img_line.png" xy="605,563" size="553,1" group="n49_gab2"/>
     <image id="n75_ok6e" name="arrow_bg" src="io7h19" fileName="Images/img_arrow.png" xy="849,228" group="n49_gab2"/>
-    <image id="n79_ok6e" name="gq_bg" src="gs4zv6p" fileName="Images/img_unlock_qg.png" xy="955,347" group="n49_gab2"/>
-    <image id="n80_ok6e" name="wg_bg" src="gs4zv6o" fileName="Images/img_unlock_wg.png" xy="632,347" group="n49_gab2"/>
+    <image id="n79_ok6e" name="gq_bg" src="gs4zv6p" fileName="Images/img_unlock_qg.png" xy="955,347" size="146,24" group="n49_gab2"/>
+    <image id="n80_ok6e" name="wg_bg" src="gs4zv6o" fileName="Images/img_unlock_wg.png" xy="632,347" size="146,23" group="n49_gab2"/>
     <list id="n81_ok6e" name="list_wg" xy="608,380" pivot="1,0" size="217,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://5rez3obxp51l1g">
       <item/>
       <item/>

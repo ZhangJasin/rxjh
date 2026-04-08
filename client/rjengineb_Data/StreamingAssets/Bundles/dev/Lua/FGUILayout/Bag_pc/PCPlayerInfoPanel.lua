@@ -6,7 +6,7 @@ local IDX_EQUIP   = 1
 local IDX_STATEMENT = 2
 local IDX_TITLE = 3 -- 称号
 local IDX_PET = 4 -- 灵兽
-local IDX_REBIRTH = 5 -- 转生
+local IDX_REBIRTH = 5 -- 转职
 
 function PCPlayerInfoPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
@@ -39,7 +39,7 @@ function PCPlayerInfoPanel:Create()
         [IDX_REBIRTH] = {
             objName = "PCComponentRebirthPanel",
             obj = nil,
-            tabName = 1000002,--转生栏
+            tabName = 1000002,--转职栏
         }
     }
 
