@@ -342,7 +342,7 @@ function ItemUtil:UpdateItemCount(GTextField_count, count)
         return
     end
 
-    FGUI:GTextField_setText(GTextField_count, SL:GetSimpleNumber(count))
+    FGUI:GTextField_setText(GTextField_count, SL:GetSimpleNumber(count,0))
 end
 
 

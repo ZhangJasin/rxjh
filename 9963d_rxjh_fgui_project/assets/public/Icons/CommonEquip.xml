@@ -27,7 +27,7 @@
     <loader id="n12_ljsg" name="Image_bind" xy="4,95" size="25,22" visible="false" url="ui://st7dgeqqq9lsv5n" fill="scale" autoSize="true">
       <relation target="" sidePair="left-left%,bottom-bottom%,rightext-left%,leftext-left%"/>
     </loader>
-    <text id="n6_u13q" name="Text_count" xy="117,119" pivot="1,1" anchor="true" size="34,26" fontSize="18" color="#ffffff" align="right" strokeColor="#000000" text="222">
+    <text id="n6_u13q" name="Text_count" xy="121,122" pivot="1,1" anchor="true" size="25,19" fontSize="12" color="#ffffff" align="right" strokeColor="#000000" text="222">
       <relation target="" sidePair="right-right%,bottom-bottom%"/>
     </text>
     <text id="n13_idb7" name="Text_Subscript" xy="4,4" size="112,112" aspect="true" fontSize="12" color="#ffffff" vAlign="bottom" autoSize="none" strokeColor="#000000" autoClearText="true" text="">
