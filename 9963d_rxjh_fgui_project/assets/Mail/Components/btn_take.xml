@@ -2,10 +2,10 @@
 <component size="136,42" pivot="0.5,0.5" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n0_k4it" name="btn" src="je63v3c" fileName="image/btn_first_red.png" pkg="st7dgeqq" xy="0,0" size="136,42">
+    <component id="n0_k4it" name="btn" src="ighbkvp6" fileName="common/btn_first_green.xml" pkg="st7dgeqq" xy="0,0" size="136,42">
       <relation target="" sidePair="width-width,height-height"/>
-    </image>
+    </component>
     <text id="n1_k4it" name="text" xy="22,5" size="92,32" fontSize="22" color="#fced00" autoSize="none" strokeColor="#000000" text="领取附件"/>
   </displayList>
-  <Button downEffect="scale" downEffectValue=".8"/>
+  <Button downEffect="scale" downEffectValue="0.8"/>
 </component>

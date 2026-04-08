@@ -2,12 +2,12 @@
 <component size="136,42" pivot="0.5,0.5" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n0_j3vn" name="btn" src="je63v3c" fileName="image/btn_first_red.png" pkg="st7dgeqq" xy="0,0" size="136,42">
+    <component id="n0_j3vn" name="btn" src="ighbkvp6" fileName="common/btn_first_green.xml" pkg="st7dgeqq" xy="0,0" size="136,42">
       <relation target="" sidePair="width-width,height-height"/>
-    </image>
+    </component>
     <text id="n1_j3vn" name="text" xy="18,5" size="100,32" fontSize="22" color="#fced00" align="center" autoSize="none" strokeColor="#000000" text="一键领取">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
   </displayList>
-  <Button downEffect="scale" downEffectValue=".8"/>
+  <Button downEffect="scale" downEffectValue="0.8"/>
 </component>
