@@ -1,5 +1,5 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
-local CdMask = class("CdMask", BaseFGUILayout)
+local CdMask = class("CDMask", BaseFGUILayout)
 
 function CdMask:Create()
     self.super.Create(self)
