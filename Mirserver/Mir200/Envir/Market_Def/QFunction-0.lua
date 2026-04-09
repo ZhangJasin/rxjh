@@ -945,10 +945,11 @@ function stdmodefunc(actor, itemid, itemobj, useNumber, param1, param2)
 
     if itemReplace.canReplace(itemid) then
         local realUseCount = itemReplace.batchReplace(actor, itemid, useNumber)
-        if realUseCount > 0 then
+        if realUseCount < useNumber then
             changeiteminfo(actor, itemobj, 3, "-", realUseCount)
+            return false
         end
-        return false
+        return true
     end
     
     GameEvent.push(EventCfg.stdUseItem, actor, itemid, itemobj, useNumber, param1, param2)
