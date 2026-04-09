@@ -18743,5 +18743,23 @@ local config = {
 		ItemType=1,
 		TipsGroupId=18,
 	},
+	[3963] = { 
+		ID=3963,
+		Name="神秘热血石1",
+		StdMode=1,
+		SubType=7,
+		Shape=1,
+		Looks=2021,
+		Price="0#1#1000",
+		Color=116,
+		OverLap=1,
+		Desc="蕴含着神秘力量的热血石，属性随机，只有获得后才能看到。",
+		Droplooks=200020,
+		Grade=4,
+		nPaimaiStall=1,
+		ItemType=3,
+		TipsGroupId=7,
+		sBack="9#100",
+	},
 }
 return config
