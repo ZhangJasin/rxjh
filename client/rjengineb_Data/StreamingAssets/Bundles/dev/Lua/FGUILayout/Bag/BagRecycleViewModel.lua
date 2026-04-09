@@ -176,7 +176,7 @@ function BagRecycleViewModel:GetBPHYSCheckBoxModel()
 end
 
 function BagRecycleViewModel:CheckConditions(itemCfg, conditionGroups)
-	dump(conditionGroups)
+	--dump(conditionGroups)
 	local existValid = false
 	for k, v in pairs(conditionGroups) do
 		if v then
