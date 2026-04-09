@@ -97,7 +97,6 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n55_p70y" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="172,698" size="0,0"/>
-    <text id="n74_zqih" name="n74" xy="524,473" size="108,19" fontSize="12" text="ShowBPHYSDetail"/>
     <component id="n60_zqih" name="MaskLv1" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="0,1" size="1334,750" group="n66_zqih">
       <relation target="" sidePair="width-width,height-height"/>
     </component>

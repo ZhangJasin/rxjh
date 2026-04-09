@@ -8,7 +8,6 @@ end
 
 function BagRecycleConditionModel:Toggle()
     self.isSelect = not self.isSelect
-
 end
 
 function BagRecycleConditionModel:GetCheckBoxName()
@@ -41,6 +40,7 @@ function BagRecycleConditionModel:CheckItemValid(itemCfg)
     end
     return false
 end
+
 function BagRecycleConditionModel:CheckItemTypeValid(itemType)
     for i = 1, #self.cfg.Effect do
         if self.cfg.Effect[i] == itemType then
@@ -62,22 +62,35 @@ function BagRecycleConditionModel:CheckItemGradeValid(itemCfg)
 end
 
 function BagRecycleConditionModel:CheckItemJewelryValid(itemCfg)
-
     for i = 1, #self.cfg.Condition do
         if itemCfg.StdMode == self.cfg.Condition[i] then
             return true
         end
     end
 end
+
 function BagRecycleConditionModel:CheckUpperLvValid(itemCfg)
     return itemCfg.NeedLevel > SL:GetValue("LEVEL")
 end
+
 function BagRecycleConditionModel:CheckMedValid(itemCfg)
     for i = 1, #self.cfg.Condition do
         if itemCfg.ID == self.cfg.Condition[i] then
             return true
         end
     end
+end
+
+function BagRecycleConditionModel:CheckStoneValid(stoneId, bagDataCfg)
+    --self.cfg.Condition
+    if self.cfg.StoneId == stoneId then
+        if self.cfg.ConditionType == 8 then
+
+        elseif self.cfg.ConditionType == 9 then
+
+        end
+    end
+    return false
 end
 
 function BagRecycleConditionModel:GetItemType(itemCfg)
@@ -87,4 +100,5 @@ function BagRecycleConditionModel:GetItemType(itemCfg)
         return 2
     end
 end
-return  BagRecycleConditionModel
+
+return BagRecycleConditionModel

@@ -176,6 +176,7 @@ function BagRecycleViewModel:GetBPHYSCheckBoxModel()
 end
 
 function BagRecycleViewModel:CheckConditions(itemCfg, conditionGroups)
+	dump(conditionGroups)
 	local existValid = false
 	for k, v in pairs(conditionGroups) do
 		if v then
@@ -197,14 +198,44 @@ function BagRecycleViewModel:CheckConditions(itemCfg, conditionGroups)
 	return false
 end
 
+function BagRecycleViewModel:CheckStoneConditions(stoneId, bagDataCfg, conditionGroups)
+	local existValid = false
+	for k, v in pairs(conditionGroups) do
+		if v then
+			for i = 1, #v do
+				local conditionModel = v[i]
+				if conditionModel then
+					local valid = conditionModel:CheckStoneValid(stoneId, bagDataCfg)
+					if valid then
+						existValid = true
+						-- 只要物品符合任何一个被选中的条件，就返回true
+						if conditionModel.isSelect then
+							return true
+						end
+					end
+				end
+			end
+		end
+	end
+	return false
+end
+
 function BagRecycleViewModel:RefreshSelectItemsByConditions()
+	print("执行1")
 	local bagData = SL:GetValue("BAG_SORT_POS_DATA_DIC")
 	self.SelectMakeIndexToPos = {}
 	self.moneyResDic = {}
 	for k, v in pairs(bagData) do
 		if k > 0 and v then
 			local itemCfg = SL:GetValue("ITEM_DATA", v.Index or v.ID)
-			if itemCfg and itemCfg.recycle and itemCfg.recycle ~= "" then
+			local attrName = v and v.ExAbil and v.ExAbil.abil and v.ExAbil.abil[1] and v.ExAbil.abil[1].t
+			if itemCfg and ((itemCfg.recycle and itemCfg.recycle ~= "") or (attrName and attrName == "[鉴定属性]")) then
+				local attrId = v and v.ExAbil and v.ExAbil.abil and v.ExAbil.abil[1] and v.ExAbil.abil[1].v and
+					v.ExAbil.abil[1].v[1][2]
+				local attrValue = v and v.ExAbil and v.ExAbil.abil and v.ExAbil.abil[1] and v.ExAbil.abil[1].v and
+					v.ExAbil.abil[1].v[1][3]
+				print("执行2")
+				--dump(v.ExAbil.abil[1])
 				local itemSelect = false
 				-- 检查等级条件（如果开启）
 				if self.checkLevel then
@@ -214,6 +245,25 @@ function BagRecycleViewModel:RefreshSelectItemsByConditions()
 				-- 检查装备条件
 				local equipSelect = self:CheckConditions(itemCfg, self.checkEquipConditionGroups)
 
+				local JGSSelect, HYSSelect, RXSSelect, HYJGSSelect, BPHYSSelect
+				if attrName then
+					--检查金刚石条件
+					JGSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1], self
+						.checkJGSConditionGroups)
+					--检查寒玉石条件
+					HYSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1], self
+						.checkHYSConditionGroups)
+					--检查热血石条件
+					RXSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1], self
+						.checkRXSConditionGroups)
+					--检查混元金刚石条件
+					HYJGSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1],
+						self.checkHYJGSConditionGroups)
+					--检查冰魄寒玉石条件
+					BPHYSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1],
+						self.checkBPHYSConditionGroups)
+				end
+
 				-- 如果等级筛选开启，需要同时满足等级和装备条件
 				-- 如果等级筛选未开启，只需要满足装备条件
 				if self.checkLevel then
@@ -222,8 +272,12 @@ function BagRecycleViewModel:RefreshSelectItemsByConditions()
 					itemSelect = equipSelect
 				end
 
-				local otherSelect = self:CheckConditions(itemCfg, self.checkOtherConditionGroups)
-				local finalSelect = itemSelect or otherSelect
+				--检查其他类
+				--local otherSelect = self:CheckConditions(itemCfg, self.checkOtherConditionGroups)
+
+				local finalSelect = itemSelect or JGSSelect or HYSSelect or RXSSelect or HYJGSSelect or
+					BPHYSSelect
+
 				SL:onLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY,
 					{ isSelect = finalSelect, selectList = { { MakeIndex = v.MakeIndex, pos = k, ID = v.Index, cnt = v.OverLap or 1 } }, updateMoney = false })
 			end
