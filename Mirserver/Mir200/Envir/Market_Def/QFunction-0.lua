@@ -430,12 +430,16 @@ end
 
 --物品进背包前触发
 function beforeaddbag(actor, itemObj, itemid, count)
-    local newItemId, newCount = itemReplace.getRandomItem(itemid)
-    if newItemId and newCount then
-        delitembymakeindex(actor, getiteminfo(itemObj, "MAKEINDEX"))
-        giveitem(actor, newItemId .. "#" .. newCount)
-        return false
+    --神秘热血石进包处理
+    if itemid == 3917 or itemid == 3963 then
+        local newItemId, newCount = itemReplace.getRandomItem(itemid)
+        if newItemId and newCount then
+            delitembymakeindex(actor, getiteminfo(itemObj, "MAKEINDEX"))
+            giveitem(actor, newItemId .. "#" .. newCount)
+            return false
+        end
     end
+    
     if enterbag[itemid] then
         local jdattrid = custitemattinfo(actor, itemObj .. "_0_1_ID") or 0
         if jdattrid == 0 then
@@ -939,6 +943,18 @@ function stdmodefunc(actor, itemid, itemobj, useNumber, param1, param2)
         return false
     end
 
+    local newItemId, newCount = itemReplace.getRandomItem(itemid)
+    if newItemId and newCount then
+        local emptySlots = bagnilcount(actor)
+        if emptySlots and emptySlots > 0 then
+            giveitem(actor, newItemId .. "#" .. newCount)
+            return true
+        else
+            sendmsg(actor, 6, "无法获取背包空格子信息或背包空间不足")
+            return false
+        end       
+    end
+    
     GameEvent.push(EventCfg.stdUseItem, actor, itemid, itemobj, useNumber, param1, param2)
 end
 
