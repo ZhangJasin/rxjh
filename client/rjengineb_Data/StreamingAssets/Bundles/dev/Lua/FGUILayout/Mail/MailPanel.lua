@@ -156,7 +156,9 @@ function MailPanel:OnUpdateMailList()
     self._mailList = self:GetSortMailList()
 	local color = #self._mailList > 0 and "#00ff00" or "#ff0000"
 	FGUI:GTextField_setText(self._ui.text_count, string.format(GET_STRING(50000020),color, #self._mailList, MAX_MAIL_COUNT))
-	FGUI:setVisible(self._ui.panel_nothing, #self._mailList <= 0)
+	if self._ui.panel_nothing then
+		FGUI:setVisible(self._ui.panel_nothing, #self._mailList <= 0)
+	end
 
     FGUI:GList_setNumItems(self._ui.list_mail, #self._mailList)
 

@@ -16,7 +16,9 @@
     <image id="n19wc" name="store_select_cell.png" path="/Images/" exported="true" scale="9grid" scale9grid="20,21,40,42" smoothing="false"/>
     <image id="n19wd" name="store_text_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
     <component id="n19we" name="RechargePanel.xml" path="/" exported="true"/>
-    <image id="w08wg" name="充值-PC版_spec.png" path="/"/>
+    <component id="n19wf" name="PCRechargePanel.xml" path="/" exported="true"/>
+    <component id="n19wg" name="RechargeQRCodePanel.xml" path="/" exported="true"/>
+    <image id="w08wg" name="充值-PC 版_spec.png" path="/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

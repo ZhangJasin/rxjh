@@ -5,13 +5,13 @@
     <image id="kxj1v3m" name="main_img_wifi.png" path="/Images/Bottom/"/>
     <image id="kxj1v3o" name="main_img_battery.png" path="/Images/Bottom/"/>
     <image id="kxj1v3q" name="main_exp_Bg.png" path="/Images/Bottom/" scale="9grid" scale9grid="7,0,3,17"/>
-    <image id="kxj1v3v" name="main_btn_stall.png" path="/Images/Func/"/>
-    <image id="kxj1v3w" name="main_btn_role.png" path="/Images/Func/"/>
-    <image id="kxj1v3x" name="main_btn_mail.png" path="/Images/Func/"/>
+    <image id="kxj1v3v" name="main_btn_stall.png" path="/Images/Func/" exported="true"/>
+    <image id="kxj1v3w" name="main_btn_role.png" path="/Images/Func/" exported="true"/>
+    <image id="kxj1v3x" name="main_btn_mail.png" path="/Images/Func/" exported="true"/>
     <image id="kxj1v3y" name="main_btn_horse.png" path="/Images/Bottom/"/>
-    <image id="kxj1v3z" name="main_btn_friend.png" path="/Images/Func/"/>
-    <image id="kxj1v40" name="main_btn_forge.png" path="/Images/Func/"/>
-    <image id="kxj1v42" name="main_btn_bag.png" path="/Images/Func/"/>
+    <image id="kxj1v3z" name="main_btn_friend.png" path="/Images/Func/" exported="true"/>
+    <image id="kxj1v40" name="main_btn_forge.png" path="/Images/Func/" exported="true"/>
+    <image id="kxj1v42" name="main_btn_bag.png" path="/Images/Func/" exported="true"/>
     <image id="kxj1v43" name="main_btn_auto.png" path="/Images/Right/"/>
     <component id="u6gnv4g" name="MainJoystick.xml" path="/" exported="true"/>
     <component id="u6gnv4h" name="Main预览.xml" path="/"/>
@@ -42,17 +42,17 @@
     <image id="ke93v6p" name="point_link.png" path="/Images/MiniMap/"/>
     <image id="ke93v6q" name="point_monster.png" path="/Images/MiniMap/"/>
     <image id="ke93v6r" name="point_green.png" path="/Images/MiniMap/" exported="true"/>
-    <image id="wuexv6x" name="main_func_change.png" path="/Images/Func/"/>
-    <image id="wuexv6y" name="main_btn_fashion.png" path="/Images/Func/"/>
-    <image id="wuexv6z" name="main_btn_FuBen.png" path="/Images/Func/"/>
-    <image id="wuexv70" name="main_btn_guild.png" path="/Images/Func/"/>
-    <image id="wuexv71" name="main_btn_HuTi.png" path="/Images/Func/"/>
-    <image id="wuexv72" name="main_btn_pet.png" path="/Images/Func/"/>
-    <image id="wuexv73" name="main_btn_QiangHua.png" path="/Images/Func/"/>
-    <image id="wuexv74" name="main_btn_WuGong.png" path="/Images/Func/"/>
-    <image id="wuexv75" name="main_btn_WuXun.png" path="/Images/Func/"/>
-    <image id="wuexv76" name="main_btn_transfer.png" path="/Images/Func/"/>
-    <image id="wuexv77" name="main_btn_ZhuanZhi.png" path="/Images/Func/"/>
+    <image id="wuexv6x" name="main_func_change.png" path="/Images/Func/" exported="true"/>
+    <image id="wuexv6y" name="main_btn_fashion.png" path="/Images/Func/" exported="true"/>
+    <image id="wuexv6z" name="main_btn_FuBen.png" path="/Images/Func/" exported="true"/>
+    <image id="wuexv70" name="main_btn_guild.png" path="/Images/Func/" exported="true"/>
+    <image id="wuexv71" name="main_btn_HuTi.png" path="/Images/Func/" exported="true"/>
+    <image id="wuexv72" name="main_btn_pet.png" path="/Images/Func/" exported="true"/>
+    <image id="wuexv73" name="main_btn_QiangHua.png" path="/Images/Func/" exported="true"/>
+    <image id="wuexv74" name="main_btn_WuGong.png" path="/Images/Func/" exported="true"/>
+    <image id="wuexv75" name="main_btn_WuXun.png" path="/Images/Func/" exported="true"/>
+    <image id="wuexv76" name="main_btn_transfer.png" path="/Images/Func/" exported="true"/>
+    <image id="wuexv77" name="main_btn_ZhuanZhi.png" path="/Images/Func/" exported="true"/>
     <component id="wuexv78" name="ButtonFunc.xml" path="/Components/"/>
     <component id="wuexv79" name="MiniMapPoint.xml" path="/Components/MiniMap/" exported="true"/>
     <component id="yd58v7c" name="ButtonSkill.xml" path="/Components/Skill/"/>
@@ -93,7 +93,7 @@
     <image id="rv4nv9x" name="bubble_auction.png" path="/Images/Bottom/Bubble/"/>
     <image id="rv4nv9y" name="bubble_goCompose.png" path="/Images/Bottom/Bubble/"/>
     <image id="rv4nv9z" name="bubble_wolf.png" path="/Images/Bottom/Bubble/"/>
-    <image id="w2v6va4" name="main_btn_BBG.png" path="/Images/Func/"/>
+    <image id="w2v6va4" name="main_btn_BBG.png" path="/Images/Func/" exported="true"/>
     <component id="rd0bva5" name="MainFindTarget.xml" path="/" exported="true"/>
     <component id="8by8va8" name="RadioButton.xml" path="/Components/FindTarget/"/>
     <component id="8by8va9" name="ButtonTargetItem.xml" path="/Components/FindTarget/"/>
@@ -184,7 +184,7 @@
     <image id="grq3k" name="image_bigHp_10.png" path="/Images/BigTarget/" exported="true"/>
     <image id="grq3l" name="image_bigHp_bg.png" path="/Images/BigTarget/"/>
     <component id="nxjv0" name="MainBigTarget.xml" path="/" exported="true"/>
-    <image id="9c3pfvd5" name="main_func_change_word.png" path="/Images/Func/"/>
+    <image id="9c3pfvd5" name="main_func_change_word.png" path="/Images/Func/" exported="true"/>
     <image id="9c3pfvd6" name="main_target_player_bg_9.png" path="/Images/Target/" scale="9grid" scale9grid="105,17,210,34"/>
     <image id="9c3pfvd7" name="main_btn.png" path="/Images/Assist/" scale="9grid" scale9grid="11,11,9,8"/>
     <image id="cr66fvd8" name="img_icon_25d.png" path="/Images/Bottom/"/>
@@ -314,6 +314,7 @@
     <image id="k9rffvh6" name="tips_bg_9.png" path="/Images/FindTarget/"/>
     <image id="k9rffvh7" name="tips_content_bg_9.png" path="/Images/FindTarget/"/>
     <component id="cn2tfvh9" name="itemRoot.xml" path="/Components/Assist/" exported="true"/>
+    <image id="rkdefvha" name="main_btn_st.png" path="/Images/Func/"/>
   </resources>
   <publish name=""/>
 </packageDescription>
