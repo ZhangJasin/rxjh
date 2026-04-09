@@ -359,7 +359,7 @@ function TransferPanel:DoTransfer()
     end
 
     -- 发送转职请求
-    SL:SendNetMsg(9998, 11, {transferId = self._nextCfg.ID}, nil, nil)
+    ssrMessage:sendmsgEx("Transfer", "doTransfer")
 end
 
 -- 打开界面
