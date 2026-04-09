@@ -20,7 +20,7 @@ function TransferPanel:Create()
     end)
 
     -- 前往按钮
-    FGUI:setOnClickEvent(self._ui.n84, function()
+    FGUI:setOnClickEvent(self._ui.btn_pick, function()
         -- 前往任务
     end)
 
@@ -46,9 +46,11 @@ function TransferPanel:Create()
     FGUI:GList_setDefaultItem(self._ui.list_qg, "ui://5rez3obxp51l1g")
 
     -- 奖励列表渲染
-    --FGUI:GList_itemRenderer(self._ui.list_reward, handler(self, self.ListRewardShow))
+    FGUI:GList_itemRenderer(self._ui.list_reward, handler(self, self.ListRewardShow))
     FGUI:GList_setDefaultItem(self._ui.list_reward, "ui://5rez3obxp51lv5j")
 
+    -- 设置模型旋转
+    self:SetModelRotate(self._ui.panel_Touch)
 end
 
 function TransferPanel:Enter()
@@ -58,16 +60,89 @@ end
 function TransferPanel:Destroy()
 end
 function TransferPanel:Exit()
+    self:ClearModel()
 end
 
 -- 显示角色模型
 function TransferPanel:ShowRoleModel()
-    -- 获取角色模型数据并显示在 graph_role 上
-    -- local roleData = SL:GetValue("ROLE_DATA")
-    -- if roleData and roleData.ModelID then
-    --     local modelId = roleData.ModelID
-    --     -- 显示角色模型
-    -- end
+    self:ClearModel()
+
+    -- 绑定模型到 graph_role
+    self._TransferModel = self:UIModel_Bind(self._ui.graph_role)
+    FGUI:UIModel_setObjectEulerAngles(self._TransferModel, nil, 0, 0, 0)
+
+    local bodyId = nil
+    local helmetId = nil
+    local weaponId = nil
+    local faceId = nil
+    local Sex = SL:GetValue("SEX")
+    local Job = SL:GetValue("JOB")
+    if curCfg and curCfg.ModeId then
+        bodyId, helmetId = curCfg.ModeId[Sex][1], curCfg.ModeId[Sex][2]
+    end
+    local modelData = SL:GetValue("FEATURE")
+
+    if modelData then
+        local extData = {}
+        extData.sex = Sex
+        extData.job = Job
+        extData.bodyId = bodyId or modelData.clothID
+        extData.helmetId = helmetId or modelData.helmetID
+        extData.weaponId = modelData.weaponID == 0 and weaponId or modelData.weaponID
+        extData.faceId = modelData.faceID == 0 and faceId or modelData.faceID
+
+        self._TransferModelIndex = FGUI:UIModel_addCharacterModel(self._TransferModel, extData, nil, nil, Vector3.one * 1.3)
+    end
+
+    -- 设置模型点击回调
+    FGUI:UIModel_setModelCallback(self._TransferModel, function(index)
+        FGUI:UIModel_playAnimation(self._TransferModel, index, "FashionModel", nil, 0)
+        self:SetModelRotate(self._ui.panel_Touch)
+    end)
+end
+
+-- 清理模型
+function TransferPanel:ClearModel()
+    if self._TransferModel then
+        self:UIModel_Unbind(self._ui.graph_role)
+        self._TransferModel = nil
+        self._TransferModelIndex = nil
+    end
+end
+
+-- 设置模型旋转
+function TransferPanel:SetModelRotate(uiTouch)
+    local angleX = 0
+    local angleY = 0
+    local angleZ = 0
+    local beginX = nil
+
+    local beginFunc = function(eventData)
+        if not self._TransferModel then
+            return
+        end
+        beginX = eventData.inputEvent.x
+        angleX, angleY, angleZ = self._TransferModel:GetObjectEulerAngles(self._TransferModelIndex)
+        FGUI:EventContext_CaptureTouch(eventData)
+    end
+
+    local moveFunc = function(eventData)
+        if not self._TransferModel then
+            return
+        end
+        local distanceMax = 1000
+        local distance = eventData.inputEvent.x - (beginX or 0)
+        local angle = angleY - (distance * 360 / distanceMax)
+        self._TransferModel:SetObjectEulerAngles(0, angle, 0, self._TransferModelIndex)
+    end
+
+    local endFunc = function(eventData)
+        angleX = 0
+        angleY = 0
+        angleZ = 0
+    end
+
+    FGUI:setOnTouchEvent(uiTouch, beginFunc, moveFunc, endFunc)
 end
 
 -- 刷新界面数据
@@ -214,28 +289,28 @@ end
 
 -- 奖励列表渲染
 function TransferPanel:ListRewardShow(idx, item)
-    local itemRoot = FGUI:GetChild(item, "itemRoot")
-    if FGUI:GetChildCount(itemRoot) > 0 then
-        FGUI:RemoveChildAt(itemRoot, 0, true)
-    end
+    -- local itemRoot = FGUI:GetChild(item, "itemRoot")
+    -- if FGUI:GetChildCount(itemRoot) > 0 then
+    --     FGUI:RemoveChildAt(itemRoot, 0, true)
+    -- end
 
-    if self._nextCfg and self._nextCfg.Reward then
-        local reward = self._nextCfg.Reward[idx + 1]
-        if reward then
-            local itemData = SL:GetValue("ITEM_DATA", reward[1])
-            if itemData then
-                local extData = {
-                    hideTip = false,
-                    itemTipData = itemData,
-                    clickCallback = false,
-                    doubleClickCallback = true,
-                    bgVisible = true,
-                    OverLap = reward[2]
-                }
-                ItemUtil:ItemShow_Create(itemData, itemRoot, extData)
-            end
-        end
-    end
+    -- if self._nextCfg and self._nextCfg.Reward then
+    --     local reward = self._nextCfg.Reward[idx + 1]
+    --     if reward then
+    --         local itemData = SL:GetValue("ITEM_DATA", reward[1])
+    --         if itemData then
+    --             local extData = {
+    --                 hideTip = false,
+    --                 itemTipData = itemData,
+    --                 clickCallback = false,
+    --                 doubleClickCallback = true,
+    --                 bgVisible = true,
+    --                 OverLap = reward[2]
+    --             }
+    --             ItemUtil:ItemShow_Create(itemData, itemRoot, extData)
+    --         end
+    --     end
+    -- end
 end
 
 -- 执行转职
