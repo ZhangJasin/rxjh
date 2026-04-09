@@ -15,14 +15,14 @@ local leftpage = { {"装备", "#ffff00"}, {"背包", "#CCCCCC"} }
 local equippos = { 
     {0,1,4,5,6,7,12,13,25,26}, 
     {0,1,4,5,6,7,12},
-    {0,1,4,5,6,7,12}, --转移可不显示装备信息，也可和强化保持一致
+    --{0,1,4,5,6,7,12}, --转移可不显示装备信息，也可和强化保持一致
     {2,3,8,9,10}, 
     {0,1}, 
 }  -- 不同页签获得的身上装备位置 通过这个获取需要显示的装备
 local equippos2 = {  -- 不同页签获得的背包装备 通过这个获取需要显示的装备
     {[5]=1,[3]=1,[8]=1,[9]=1,[51]=1,[53]=1,[54]=1,[65]=1,[66]=1},
     {[5]=2,[3]=2,[8]=2,[9]=2,[51]=2,[53]=2},
-    {[5]=2,[3]=2,[8]=2,[9]=2,[51]=2,[53]=2}, --转移可不显示背包装备，也可和强化保持一致
+    --{[5]=2,[3]=2,[8]=2,[9]=2,[51]=2,[53]=2}, --转移可不显示背包装备，也可和强化保持一致
     {[15]=3,[19]=3,[22]=3},
     {[5]=4,[3]=4},
 }
@@ -93,18 +93,20 @@ function EquipDuanZao:Create()
         FGUI:Controller_setSelectedIndex(self.itemlistControlle, index)
         self.itemlistControlle.selectedIndex = index
         FGUI:Controller_setSelectedIndex(self.additemControlle, 0)
+        self:clearequip()
+        self:succfont()
 
         -- 强化转移页面切换时不清除选中数据
-        if self.pageControlle.selectedIndex ~= 2 then
-            self:clearequip()
-            self:succfont()
-        end
+        -- if self.pageControlle.selectedIndex ~= 2 then
+        --     self:clearequip()
+        --     self:succfont()
+        -- end
     end)
 
     self.pageControlle.selectedIndex = 0
     FGUI:GList_addOnClickItemEvent(self._ui.List_Page, function(context)
         local index = FGUI:GList_getSelectedIndex(self._ui.List_Page)
-        for i = 1, 4 do
+        for i = 1, 3 do
             local obj = FGUI:GetChildAt(self._ui.List_Page, i - 1)
             if index == i - 1 then
                 FGUI:GButton_setTitleColor(obj, "#ffff00")
@@ -237,18 +239,18 @@ end
 
 function EquipDuanZao:onUpdata()
     -- 如果是强化转移页面，需要刷新装备数据
-    if self.pageControlle.selectedIndex == 2 then
-        -- 强制刷新装备数据（包括身上装备）
-        self:GetPageData()
-        -- 刷新列表显示
-        self:RefrsList()
-        -- 清除选中装备
-        self:clearSourceEquip()
-        self:clearTargetEquip()
-        -- 刷新道具消耗显示
-        self:upitem2num_transfer()
-        return
-    end
+    -- if self.pageControlle.selectedIndex == 2 then
+    --     -- 强制刷新装备数据（包括身上装备）
+    --     self:GetPageData()
+    --     -- 刷新列表显示
+    --     self:RefrsList()
+    --     -- 清除选中装备
+    --     self:clearSourceEquip()
+    --     self:clearTargetEquip()
+    --     -- 刷新道具消耗显示
+    --     self:upitem2num_transfer()
+    --     return
+    -- end
     self:GetPageData()
     self:RefrsList()
     self:clearequip()
@@ -277,41 +279,41 @@ function EquipDuanZao:InitData()
     elseif self.pageControlle.selectedIndex == 1 then
         self.rightbg = FGUI:ui_delegate(self._ui.panl_qh)
         self.additemControlle = FGUI:getController(self._ui.panl_qh, "additem")
+    -- elseif self.pageControlle.selectedIndex == 2 then
+    --     -- 强化转移页面:使用独立的UI面板
+    --     self.rightbg = FGUI:ui_delegate(self._ui.panl_transfer)
+    --     self.additemControlle = FGUI:getController(self._ui.panl_transfer, "additem")
+    --     self.addlistshowControlle = FGUI:getController(self._ui.panl_transfer, "addlistshow")
+    --     -- 初始化强化转移相关变量
+    --     self.sourceEquipMakeIndex = 0
+    --     self.targetEquipMakeIndex = 0
+    --     self.sourceEquipLevel = 0
+    --     self.targetEquipLevel = 0
+        
+    --     -- 为转移页面的装备槽创建ui_delegate以便访问子组件
+    --     self.xzequip = FGUI:ui_delegate(self.rightbg.xzequip)
+    --     self.xzqhitem1 = FGUI:ui_delegate(self.rightbg.xzqhitem1)
+    --     if self.rightbg.xzqhitem2 then
+    --         self.xzqhitem2 = FGUI:ui_delegate(self.rightbg.xzqhitem2)
+    --     end
+        
+    --     -- 设置关闭按钮点击事件
+    --     FGUI:setOnClickEvent(self.xzequip.closeitembtn, function()
+    --         self:clearTargetEquip()
+    --     end)
+    --     FGUI:setOnClickEvent(self.xzqhitem1.closeitembtn, function()
+    --         self:clearSourceEquip()
+    --     end)
+        
+    --     -- 设置强化转移按钮点击事件
+    --     FGUI:setOnClickEvent(self.rightbg.qhbtn, handler(self, self.onTransferClicked))
+    --     -- 更新道具消耗显示
+    --     self:upitem2num_transfer()
+    --     return
     elseif self.pageControlle.selectedIndex == 2 then
-        -- 强化转移页面:使用独立的UI面板
-        self.rightbg = FGUI:ui_delegate(self._ui.panl_transfer)
-        self.additemControlle = FGUI:getController(self._ui.panl_transfer, "additem")
-        self.addlistshowControlle = FGUI:getController(self._ui.panl_transfer, "addlistshow")
-        -- 初始化强化转移相关变量
-        self.sourceEquipMakeIndex = 0
-        self.targetEquipMakeIndex = 0
-        self.sourceEquipLevel = 0
-        self.targetEquipLevel = 0
-        
-        -- 为转移页面的装备槽创建ui_delegate以便访问子组件
-        self.xzequip = FGUI:ui_delegate(self.rightbg.xzequip)
-        self.xzqhitem1 = FGUI:ui_delegate(self.rightbg.xzqhitem1)
-        if self.rightbg.xzqhitem2 then
-            self.xzqhitem2 = FGUI:ui_delegate(self.rightbg.xzqhitem2)
-        end
-        
-        -- 设置关闭按钮点击事件
-        FGUI:setOnClickEvent(self.xzequip.closeitembtn, function()
-            self:clearTargetEquip()
-        end)
-        FGUI:setOnClickEvent(self.xzqhitem1.closeitembtn, function()
-            self:clearSourceEquip()
-        end)
-        
-        -- 设置强化转移按钮点击事件
-        FGUI:setOnClickEvent(self.rightbg.qhbtn, handler(self, self.onTransferClicked))
-        -- 更新道具消耗显示
-        self:upitem2num_transfer()
-        return
-    elseif self.pageControlle.selectedIndex == 3 then
         self.rightbg = FGUI:ui_delegate(self._ui.panl_jg)
         self.additemControlle = FGUI:getController(self._ui.panl_jg, "additem")
-    elseif self.pageControlle.selectedIndex == 4 then
+    elseif self.pageControlle.selectedIndex == 3 then
         self.rightbg = FGUI:ui_delegate(self._ui.panl_fy)
         self.additemControlle = FGUI:getController(self._ui.panl_fy, "additem")
         FGUI:setOnClickEvent(self.rightbg.xzqhitem1, handler(self, self.btnSelectItemClicked3))
@@ -357,7 +359,7 @@ function EquipDuanZao:InitData()
                 self.qhequipMakeIndex, self.qhitem3Makeid, 
                 self.checkBoxIsSelected.selectedIndex, self.itemlistControlle.selectedIndex
             })
-        elseif self.pageControlle.selectedIndex == 4 then      -- 装备赋予
+        elseif self.pageControlle.selectedIndex == 3 then      -- 装备赋予
             EquipDuanZaoData:RequestFuYu({
                 self.qhitem1, self.qhitem2, self.qhitem3, 
                 self.qhequipMakeIndex, self.checkBoxIsSelected.selectedIndex, 
@@ -413,10 +415,10 @@ function EquipDuanZao:baglist()
         local selectedIndex = FGUI:GList_getSelectedIndex(self.ListBag)
         if bagequiplist[index] then
             -- 强化转移页面特殊处理
-            if self.pageControlle.selectedIndex == 2 then
-                -- 背包装备列表选中则更新xzqhitem1组件
-                self:updateTransferEquipDisplay(bagequiplist[index], true)
-            else
+            -- if self.pageControlle.selectedIndex == 2 then
+            --     -- 背包装备列表选中则更新xzqhitem1组件
+            --     self:updateTransferEquipDisplay(bagequiplist[index], true)
+            -- else
                 -- 正常的装备选择逻辑
                 self.selectEquipStdMode = bagequiplist[index].StdMode
                 self.qhequipMakeIndex = bagequiplist[index].MakeIndex
@@ -430,7 +432,7 @@ function EquipDuanZao:baglist()
                 self:GetAddItem()
                 self:upitem2num()
                 self:succfont()
-            end
+            --end
             self.page2selectindex = selectedIndex
         else
             if self.page2selectindex > 0 then
@@ -457,10 +459,10 @@ function EquipDuanZao:equiplist()
         local selectedIndex = FGUI:GList_getSelectedIndex(self.ListEquip)
         if equipposlist[index] then
             -- 强化转移页面特殊处理
-            if self.pageControlle.selectedIndex == 2 then
-                -- 装备列表选中则更新xzequip组件
-                self:updateTransferEquipDisplay(equipposlist[index], false)
-            else
+            -- if self.pageControlle.selectedIndex == 2 then
+            --     -- 装备列表选中则更新xzequip组件
+            --     self:updateTransferEquipDisplay(equipposlist[index], false)
+            -- else
                 -- 正常的装备选择逻辑
                 self.selectEquipStdMode = equipposlist[index].StdMode
                 self.qhequipMakeIndex = equipposlist[index].MakeIndex
@@ -475,7 +477,7 @@ function EquipDuanZao:equiplist()
                 self:GetAddItem()
                 self:upitem2num()
                 self:succfont()
-            end
+            --end
             self.page1selectindex = selectedIndex
         else
             if self.page1selectindex > 0 then
@@ -628,7 +630,7 @@ function EquipDuanZao:GetPageData()
                     end
                 end
                 if (page == 1 and (yhcnum < maxhcnum or maxhcnum == 0)) or page ~= 1 then
-                    if page == 4 then
+                    if page == 3 then
                         local itemData= SL:GetValue("ITEM_DATA", equipData.Index)
                         if itemData.NeedLevel >= 60 then
                             table.insert(bagequiplist, equipData)
@@ -670,7 +672,7 @@ function EquipDuanZao:GetPageData()
     end
     for k, v in pairs(EquipQHItemTab) do
         local data = SL:GetValue("ITEM_DATA", k)
-        if v.itemtype == 2 and (page == 2 or page == 4 or page == 5) then           
+        if v.itemtype == 2 and (page == 2 or page == 3 or page == 4) then           
             if v['limitpos'] == 5 then
                 table.insert(bagitemlist[1], data)
             else
@@ -680,13 +682,13 @@ function EquipDuanZao:GetPageData()
                     table.insert(bagitemlist[2], data)
                 end
             end
-        elseif page == 5 and v['itemtype'] == 4 then
+        elseif page == 4 and v['itemtype'] == 4 then
             if v['limitpos'] == 5 then
                 table.insert(bagitemlist[1], data)
             elseif v['limitpos'] == 3 then
                 table.insert(bagitemlist[2], data)
             end
-        elseif page == 5 and v['itemtype'] == 5 then
+        elseif page == 4 and v['itemtype'] == 5 then
             table.insert(bagitemlist[3], data)
         end
     end  
@@ -703,7 +705,7 @@ function EquipDuanZao:GetPageData()
                     end
                 end
                 if (page == 1 and (yhcnum < maxhcnum or maxhcnum == 0)) or page ~= 1 then
-                    if page == 4 then
+                    if page == 3 then
                         local itemData= SL:GetValue("ITEM_DATA", equipData.Index)
                         if itemData.NeedLevel >= 60 then
                             table.insert(equipposlist, equipData)
@@ -764,14 +766,14 @@ function EquipDuanZao:GetAddItem()
         end
         self:xyfjiaohao()
         self:itemtsjiaohao()
+    -- elseif page == 3 then
+    --     self.additemshowlist0 = bagitemlist[2]    
+    --     self:itemsxjiaohao()
     elseif page == 3 then
-        self.additemshowlist0 = bagitemlist[2]    
-        self:itemsxjiaohao()
-    elseif page == 4 then
         self.additemshowlist0 = bagitemlist[2]
         self:xyfjiaohao()
         self:itemtsjiaohao()
-    elseif page == 5 then
+    elseif page == 4 then
         if self.addlistshowControlle.selectedIndex <= 1 then
             if self.selectEquipStdMode == 5 then
                 self.additemshowlist0 = bagitemlist[1]
@@ -786,7 +788,7 @@ function EquipDuanZao:GetAddItem()
         self:itemsxjiaohao()
     end
     local copylist = SL:CopyData(self.additemshowlist0)
-    if #copylist > 0 and page ~= 3 then
+    if #copylist > 0 then
         for i = #copylist, 1, -1 do
             local itemid = copylist[i].ID
             local minlv = EquipQHItemTab[itemid]['level_arr'][1] or 0
@@ -802,7 +804,7 @@ function EquipDuanZao:GetAddItem()
     FGUI:setVisible(self.rightbg.xzequip, true)
     FGUI:setVisible(self.xzequip.closeitembtn, true)
 
-    if page == 5 and self.addlistshowControlle.selectedIndex == 2 then
+    if page == 4 and self.addlistshowControlle.selectedIndex == 2 then
         if self.qhequiplv > 0 then
             local itemData = {}
             if self.itemlistControlle.selectedIndex == 0 then
@@ -1008,7 +1010,7 @@ function EquipDuanZao:addequipshow()
                     break
                 end
             end
-        elseif self.pageControlle.selectedIndex == 4 and itemData then  -- 装备赋予
+        elseif self.pageControlle.selectedIndex == 3 and itemData then  -- 装备赋予
             for i = 1, #itemData.Values do
                 if itemData.Values[i]['Id'] == 1 then
                     self.qhequiplv = itemData.Values[i]['Value']
@@ -1057,7 +1059,7 @@ end
 --- upitem2num: 道具消耗更新（提升材料更新）
 -----------------------------------------------------------------------
 function EquipDuanZao:upitem2num()
-    if self.pageControlle.selectedIndex == 0 or self.pageControlle.selectedIndex == 4 then
+    if self.pageControlle.selectedIndex == 0 or self.pageControlle.selectedIndex == 3 then
         self:clearitem3()
         return
     end
@@ -1156,8 +1158,8 @@ function EquipDuanZao:succfont()
         FGUI:GTextField_setText(self.rightbg.costfont3, "成功率加成：" .. basesuc .. "%")
         FGUI:GTextField_setText(self.rightbg.costfont1, "使用" .. gxyb .. "元宝提升" .. gxcgl .. "%成功率")
     end
-    if self.qhequipMakeIndex ~= 0 and (self.pageControlle.selectedIndex == 1 or self.pageControlle.selectedIndex == 3) then
-        if self.pageControlle.selectedIndex == 3 then
+    if self.qhequipMakeIndex ~= 0 and (self.pageControlle.selectedIndex == 1 or self.pageControlle.selectedIndex == 2) then
+        if self.pageControlle.selectedIndex == 2 then
             if self.qhequiplv > 4 then
                 FGUI:GTextField_setText(self.rightbg.costfont4, "5-10级 加工失败后首饰破碎")
             else

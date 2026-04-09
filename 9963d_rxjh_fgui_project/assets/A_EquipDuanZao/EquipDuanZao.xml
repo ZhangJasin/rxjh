@@ -2,7 +2,7 @@
 <component size="1334,750">
   <controller name="itemlist" exported="true" pages="0,装备,1,背包" selected="0"/>
   <controller name="tips" exported="true" pages="0,关闭tips,1,打开tips" selected="0"/>
-  <controller name="page" exported="true" pages="4,合成,0,装备强化,2,强化转移,1,首饰加工,3,装备赋予" selected="0"/>
+  <controller name="page" exported="true" pages="0,合成,1,装备强化,2,首饰加工,3,装备赋予" selected="0"/>
   <displayList>
     <component id="n1_ler3" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="129,43" size="1076,640">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -111,24 +111,19 @@
       <relation target="" sidePair="center-center,middle-middle"/>
       <item title="合成"/>
       <item title="强化"/>
-      <item title="强化转移"/>
       <item title="加工"/>
       <item title="赋予"/>
     </list>
     <component id="n39_bmxb" name="panl_hc" src="oqrp1c" fileName="Components/duanzao/hecheng.xml" xy="692,96" size="498,580">
-      <gearDisplay controller="page" pages="4"/>
+      <gearDisplay controller="page" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n23_ger5" name="panl_qh" src="oqrpq" fileName="Components/duanzao/qianghua.xml" xy="692,96" size="498,580">
-      <gearDisplay2 controller="page" pages="0" condition="0"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </component>
-    <component id="n41_trans" name="panl_transfer" src="oqrp1j" fileName="Components/duanzao/transfer.xml" xy="692,96">
-      <gearDisplay controller="page" pages="2"/>
+      <gearDisplay controller="page" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n36_faep" name="panl_jg" src="oqrp1a" fileName="Components/duanzao/jiagong.xml" xy="692,96">
-      <gearDisplay controller="page" pages="1"/>
+      <gearDisplay controller="page" pages="2"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n37_faep" name="panl_fy" src="oqrp1b" fileName="Components/duanzao/fuyu.xml" xy="692,96">
