@@ -945,12 +945,12 @@ function stdmodefunc(actor, itemid, itemobj, useNumber, param1, param2)
 
     local newItemId, newCount = itemReplace.getRandomItem(itemid)
     if newItemId and newCount then
-        local emptySlots = bagnilcount(actor)
-        if emptySlots and emptySlots > 0 then
+        local emptySlots = bagnilcount(actor) or 0 
+        if emptySlots > 0 then
             giveitem(actor, newItemId .. "#" .. newCount)
             return true
         else
-            sendmsg(actor, 6, "无法获取背包空格子信息或背包空间不足")
+            sendmsg(actor, 6, "背包空间不足")
             return false
         end       
     end
