@@ -943,16 +943,12 @@ function stdmodefunc(actor, itemid, itemobj, useNumber, param1, param2)
         return false
     end
 
-    local newItemId, newCount = itemReplace.getRandomItem(itemid)
-    if newItemId and newCount then
-        local emptySlots = bagnilcount(actor) or 0 
-        if emptySlots > 0 then
-            giveitem(actor, newItemId .. "#" .. newCount)
-            return true
-        else
-            sendmsg(actor, 6, "±³°ü¿Õ¼ä²»×ã")
-            return false
-        end       
+    if itemReplace.canReplace(itemid) then
+        local realUseCount = itemReplace.batchReplace(actor, itemid, useNumber)
+        if realUseCount > 0 then
+            changeiteminfo(actor, itemobj, 3, "-", realUseCount)
+        end
+        return false
     end
     
     GameEvent.push(EventCfg.stdUseItem, actor, itemid, itemobj, useNumber, param1, param2)

@@ -133,8 +133,14 @@ function itemReplace.batchReplace(actor, itemId, count)
     for i = 1, count do
         local newId, newCount = itemReplace.getRandomItem(itemId)
         if newId then
-            giveitem(actor, newId .. "#" .. newCount)
-            successCount = successCount + 1
+            local emptySlots = bagnilcount(actor) or 0 
+            if emptySlots > 0 then
+                giveitem(actor, newId .. "#" .. newCount)
+                successCount = successCount + 1
+            else
+                sendmsg(actor, 9, "背包空间不足,停止使用")
+                break
+            end            
         end
     end
     
