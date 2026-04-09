@@ -150,6 +150,8 @@ function TransferPanel:RefreshUI()
     local curCfg, nextCfg = SL:GetValue("TRANSFER_MAINPLAYER_CONFIG"),SL:GetValue("TRANSFER_MAINPLAYER_NEXT_CONFIG")
     self._curCfg = curCfg
     self._nextCfg = nextCfg
+    SL:dump(curCfg,"当前转职信息")
+    SL:dump(nextCfg,"下级转职信息")
     
     -- 显示角色模型
     self:ShowRoleModel()
@@ -279,38 +281,75 @@ end
 
 -- 武功列表渲染
 function TransferPanel:ListWGShow(idx, item)
-    
+    if FGUI:GetChildCount(item) > 0 then
+        FGUI:RemoveChildAt(item, 0, true)
+    end
+
+    if self._nextCfg and self._nextCfg.WGId then
+        local itemid = self._nextCfg.WGId[idx + 1]
+        if itemid then
+            local itemData = SL:GetValue("ITEM_DATA", itemid)
+            if itemData then
+                local extData = {
+                    hideTip = false,
+                    itemTipData = itemData,
+                    clickCallback = false,
+                    doubleClickCallback = true,
+                    bgVisible = true,
+                }
+                ItemUtil:ItemShow_Create(itemData, item, extData)
+            end
+        end
+    end
 end
 
 -- 气功列表渲染
 function TransferPanel:ListQGShow(idx, item)
-  
+    if FGUI:GetChildCount(item) > 0 then
+        FGUI:RemoveChildAt(item, 0, true)
+    end
+
+    if self._nextCfg and self._nextCfg.QGId then
+        local itemid = self._nextCfg.QGId[idx + 1]
+        if itemid then
+            local itemData = SL:GetValue("ITEM_DATA", itemid)
+            if itemData then
+                local extData = {
+                    hideTip = false,
+                    itemTipData = itemData,
+                    clickCallback = false,
+                    doubleClickCallback = true,
+                    bgVisible = true,
+                }
+                ItemUtil:ItemShow_Create(itemData, item, extData)
+            end
+        end
+    end
 end
 
 -- 奖励列表渲染
-function TransferPanel:ListRewardShow(idx, item)
-    -- local itemRoot = FGUI:GetChild(item, "itemRoot")
-    -- if FGUI:GetChildCount(itemRoot) > 0 then
-    --     FGUI:RemoveChildAt(itemRoot, 0, true)
-    -- end
+function TransferPanel:ListRewardShow(idx, item)   
+    if FGUI:GetChildCount(item) > 0 then
+        FGUI:RemoveChildAt(item, 0, true)
+    end
 
-    -- if self._nextCfg and self._nextCfg.Reward then
-    --     local reward = self._nextCfg.Reward[idx + 1]
-    --     if reward then
-    --         local itemData = SL:GetValue("ITEM_DATA", reward[1])
-    --         if itemData then
-    --             local extData = {
-    --                 hideTip = false,
-    --                 itemTipData = itemData,
-    --                 clickCallback = false,
-    --                 doubleClickCallback = true,
-    --                 bgVisible = true,
-    --                 OverLap = reward[2]
-    --             }
-    --             ItemUtil:ItemShow_Create(itemData, itemRoot, extData)
-    --         end
-    --     end
-    -- end
+    if self._nextCfg and self._nextCfg.Reward then
+        local reward = self._nextCfg.Reward[idx + 1]
+        if reward then
+            local itemData = SL:GetValue("ITEM_DATA", reward[1])
+            if itemData then
+                local extData = {
+                    hideTip = false,
+                    itemTipData = itemData,
+                    clickCallback = false,
+                    doubleClickCallback = true,
+                    bgVisible = true,
+                    OverLap = reward[2]
+                }
+                ItemUtil:ItemShow_Create(itemData, item, extData)
+            end
+        end
+    end
 end
 
 -- 执行转职

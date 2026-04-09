@@ -291,7 +291,8 @@ function MainMission:OnListMissionItemClick(context)
         elseif task_turn_param == 2 then  --打开气功界面
             FGUI:Open("Skill", "SkillFramePanel", 2)
         elseif task_turn_param == 3 then  --打开转职界面
-            ssrMessage:sendmsgEx("Task", "onTransfer")
+            FGUI:Open("Transfer", "TransferPanel")
+            -- ssrMessage:sendmsgEx("Task", "onTransfer")
         elseif task_turn_param == 4 then  --打开阵营界面
             FGUI:Open("Transfer","campPanl")
         elseif task_turn_param == 5 then  --打开强化界面

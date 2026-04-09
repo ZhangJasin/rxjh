@@ -17,8 +17,10 @@ function TransferInfo.doTransfer(actor)
     local transfer = TransferInfo[jb] and TransferInfo[jb][zy]
     if transfer then
         settargetinfo(actor,"RELEVEL",transfer.TransferLV+1)
-        Message.sendmsgEx(actor, "MainMission","TransferComplete")
+        sendmsg(actor, 9, "转职成功")
     end
 end
 
+
+Message.RegisterNetMsg(ssrNetMsgCfg.Transfer, TransferInfo)
 return TransferInfo 

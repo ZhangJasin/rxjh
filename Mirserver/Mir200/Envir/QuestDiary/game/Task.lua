@@ -609,13 +609,9 @@ function Task.getReward(actor, data)
         if Task_cfg[taskid]['task_drop'] then
             Player.giveItemByJobTable(actor, Task_cfg[taskid]['task_drop'], 1, 1)
         end
-        -- 如果完成的是最后一个转职任务 则自动转职
-        -- print("taskid",taskid)
-        -- dump(Task_cfg[taskid]['transfer_lasttask'])
+        -- 如果完成的是最后一个转职任务 则标记完成状态       
         if Task_cfg[taskid]['transfer_lasttask'] then
-            TransferInfo.doTransfer(actor)
-            -- settargetinfo(actor,"RELEVEL",8)
-            -- Message.sendmsgEx(actor, "MainMissionData","RequestTransfer")
+           
         end
     end
 end
