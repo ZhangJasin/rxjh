@@ -31,7 +31,7 @@
       <relation target="" sidePair="center-center,top-top"/>
       <Button title="取回角色"/>
     </component>
-    <component id="n15_mrrv" name="btn_restore_role" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="100,672" size="156,42">
+    <component id="n15_mrrv" name="btn_restore_role" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="100,672" size="156,42">
       <relation target="" sidePair="left-left,bottom-bottom"/>
       <Button title="找回角色"/>
     </component>

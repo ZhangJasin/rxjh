@@ -11,7 +11,7 @@
       <item/>
       <item/>
     </list>
-    <component id="n19_flj6" name="btn_pre" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="242,663" size="176,50">
+    <component id="n19_flj6" name="btn_pre" src="t63akvpm" fileName="common/btn_first_gray.xml" pkg="st7dgeqq" xy="242,663" size="176,50">
       <relation target="" sidePair="center-center,bottom-bottom"/>
       <Button title="上一步"/>
     </component>
@@ -28,7 +28,7 @@
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
     <component id="n39_mhkn" name="panel_touch" src="mhknvc" fileName="Components/panel_touch.xml" xy="492,8" size="404,558"/>
-    <component id="n20_flj6" name="btn_create_role" src="je630" fileName="common/btn_first_red.xml" pkg="st7dgeqq" xy="928,664" size="176,50">
+    <component id="n20_flj6" name="btn_create_role" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="928,664" size="176,50">
       <relation target="" sidePair="center-center,bottom-bottom"/>
       <Button title="创建角色"/>
     </component>
