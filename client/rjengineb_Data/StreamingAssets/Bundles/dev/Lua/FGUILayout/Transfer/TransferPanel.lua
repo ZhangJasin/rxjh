@@ -20,7 +20,7 @@ function TransferPanel:Create()
     end)
 
     -- 前往按钮
-    FGUI:setOnClickEvent(self._ui.btn_pick, function()
+    FGUI:setOnClickEvent(self._ui.btn_go, function()
         -- 前往任务
     end)
 
@@ -150,8 +150,6 @@ function TransferPanel:RefreshUI()
     local curCfg, nextCfg = SL:GetValue("TRANSFER_MAINPLAYER_CONFIG"),SL:GetValue("TRANSFER_MAINPLAYER_NEXT_CONFIG")
     self._curCfg = curCfg
     self._nextCfg = nextCfg
-    SL:dump(curCfg,"当前转职信息")
-    SL:dump(nextCfg,"下级转职信息")
     
     -- 显示角色模型
     self:ShowRoleModel()
@@ -162,14 +160,6 @@ function TransferPanel:RefreshUI()
     else
         FGUI:GRichTextField_setText(self._ui.txt_job_cur, "初级职业")
     end
-
-    -- 显示下一级转职名称
-    if nextCfg and nextCfg.TransferName then
-        FGUI:GRichTextField_setText(self._ui.txt_job_next, nextCfg.TransferName)
-    else
-        FGUI:GRichTextField_setText(self._ui.txt_job_next, "")
-    end
-
     -- 显示当前属性
     if curCfg and curCfg.TransferAS then
         FGUI:GList_setNumItems(self._ui.list_prop, #curCfg.TransferAS)
@@ -177,49 +167,72 @@ function TransferPanel:RefreshUI()
         FGUI:GList_setNumItems(self._ui.list_prop, 4)
     end
 
-    -- 显示下一级属性
-    if nextCfg and nextCfg.TransferAS then
-        FGUI:GList_setNumItems(self._ui.list_next_prop, #nextCfg.TransferAS)
-    else
-        FGUI:GList_setNumItems(self._ui.list_next_prop, 0)
-    end
+    if nextCfg then
+        -- 显示下一级转职名称
+        if nextCfg.TransferName then
+            FGUI:GRichTextField_setText(self._ui.txt_job_next, nextCfg.TransferName)
+        else
+            FGUI:GRichTextField_setText(self._ui.txt_job_next, "")
+        end
 
-    -- 显示武功列表
-    if nextCfg and nextCfg.WGId then
-        FGUI:GList_setNumItems(self._ui.list_wg, #nextCfg.WGId)
-    else
-        FGUI:GList_setNumItems(self._ui.list_wg, 0)
-    end
+        -- 显示下一级属性
+        if nextCfg.TransferAS then
+            FGUI:GList_setNumItems(self._ui.list_next_prop, #nextCfg.TransferAS)
+        else
+            FGUI:GList_setNumItems(self._ui.list_next_prop, 0)
+        end
 
-    -- 显示气功列表
-    if nextCfg and nextCfg.QGId then
-        FGUI:GList_setNumItems(self._ui.list_qg, #nextCfg.QGId)
-    else
-        FGUI:GList_setNumItems(self._ui.list_qg, 0)
-    end
+        -- 显示武功列表
+        if nextCfg.WGId then
+            FGUI:GList_setNumItems(self._ui.list_wg, #nextCfg.WGId)
+            FGUI:setVisible(self._ui.wg_bg,true)
+        else
+            FGUI:GList_setNumItems(self._ui.list_wg, 0)
+        end
 
-    -- 显示转职条件
-    if nextCfg and nextCfg.ConditionID then
-        local condition = self:GetConditionText(nextCfg.ConditionID)
-        FGUI:GRichTextField_setText(self._ui.txt_condition, condition)
+        -- 显示气功列表
+        if nextCfg.QGId then
+            FGUI:GList_setNumItems(self._ui.list_qg, #nextCfg.QGId)
+            FGUI:setVisible(self._ui.qg_bg,true)
+        else
+            FGUI:GList_setNumItems(self._ui.list_qg, 0)
+        end
+
+        -- 显示转职条件
+        if nextCfg.ConditionID then
+            local condition = self:GetConditionText(nextCfg.ConditionID)
+            FGUI:GRichTextField_setText(self._ui.txt_condition, condition)
+        else
+            FGUI:GRichTextField_setText(self._ui.txt_condition, "")
+        end
+
+        -- 显示当前任务
+        if nextCfg.TaskId and #nextCfg.TaskId > 0 then
+            local taskInfo = self:GetTaskInfo(nextCfg.TaskId)
+            FGUI:GRichTextField_setText(self._ui.txt_mission, taskInfo)
+        else
+            FGUI:GRichTextField_setText(self._ui.txt_mission, "")
+        end
+
+        -- 显示奖励
+        if nextCfg.Reward then
+            FGUI:GList_setNumItems(self._ui.list_reward, #nextCfg.Reward)
+            FGUI:setVisible(self._ui.img_reward,true)
+        else
+            FGUI:GList_setNumItems(self._ui.list_reward, 0)
+        end    
     else
         FGUI:GRichTextField_setText(self._ui.txt_condition, "")
-    end
-
-    -- 显示当前任务
-    if nextCfg and nextCfg.TaskId and #nextCfg.TaskId > 0 then
-        local taskInfo = self:GetTaskInfo(nextCfg.TaskId)
-        FGUI:GRichTextField_setText(self._ui.txt_mission, taskInfo)
-    else
-        FGUI:GRichTextField_setText(self._ui.txt_mission, "已全部完成")
-    end
-
-    -- 显示奖励
-    if nextCfg and nextCfg.Reward then
-        FGUI:GList_setNumItems(self._ui.list_reward, #nextCfg.Reward)
-    else
+        FGUI:GRichTextField_setText(self._ui.txt_mission, "")
+        FGUI:setVisible(self._ui.arrow_bg,false)
+        FGUI:setVisible(self._ui.wg_bg,false)
+        FGUI:setVisible(self._ui.qg_bg,false)
+        FGUI:setVisible(self._ui.btn_go,false)
+        FGUI:setVisible(self._ui.btn_comp,false)
+        FGUI:setVisible(self._ui.img_reward,false)
         FGUI:GList_setNumItems(self._ui.list_reward, 0)
-    end    
+    end
+
 end
 
 -- 获取条件文本
@@ -230,7 +243,7 @@ function TransferPanel:GetConditionText(conditionId)
         needLv= tonumber(curCfg.ConditionShow or 1)
     end
     local level = SL:GetValue("LEVEL") or 1
-    return string.format("角色等级达到%d级<font color='%s'> (%d/%d)</font>", needLv, level >= level and "#00FF00" or "#FF0000",level, needLv)
+    return string.format("转职条件：角色等级达到%d级<font color='%s'> (%d/%d)</font>", needLv, level >= level and "#00FF00" or "#FF0000",level, needLv)
 end
 
 -- 获取任务信息
@@ -251,9 +264,9 @@ function TransferPanel:GetTaskInfo(taskIds)
     end
 
     if allComplete then
-        return "已全部完成"
+        return "转职任务：当前转职任务已全部完成，可前往转职"
     else
-        return "进行中" --当前任务信息
+        return "转职任务：进行中" --当前任务信息
     end
 end
 

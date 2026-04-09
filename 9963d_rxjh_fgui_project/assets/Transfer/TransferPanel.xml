@@ -19,9 +19,7 @@
       <item/>
     </list>
     <image id="n63_gs4z" name="img_reward" src="io7h4" fileName="Images/img_transfer_reward.png" xy="607,572" size="146,24" group="n49_gab2"/>
-    <richtext id="n64_gs4z" name="txt_mission" xy="694,525" size="336,25" group="n49_gab2" fontSize="17" color="#372a08" autoSize="none" text="已全部完成"/>
-    <text id="n66_gs4z" name="txt_condition_title" xy="603,492" size="89,25" group="n49_gab2" fontSize="17" color="#372a08" text="转职条件："/>
-    <text id="n67_gs4z" name="txt_mission_title" xy="603,525" size="89,25" group="n49_gab2" fontSize="17" color="#372a08" text="转职任务："/>
+    <richtext id="n64_gs4z" name="txt_mission" xy="603,525" size="433,25" group="n49_gab2" fontSize="17" color="#372a08" autoSize="none" text="已全部完成"/>
     <richtext id="n68_gs4z" name="txt_job_cur" xy="632,146" size="144,30" group="n49_gab2" fontSize="20" color="#3a5c76" align="center" autoSize="none" text=""/>
     <richtext id="n69_gs4z" name="txt_job_next" xy="980,146" size="144,30" group="n49_gab2" fontSize="20" color="#3a5c76" align="center" autoSize="none" text=""/>
     <richtext id="n70_gs4z" name="txt_attr_1" xy="603,187" size="70,26" group="n49_gab2" fontSize="16" color="#372a08" autoSize="none" text="生命值："/>
@@ -39,7 +37,7 @@
     </component>
     <image id="n77_ok6e" name="line_bg" src="gs4zv6u" fileName="Images/img_line.png" xy="605,563" size="553,1" group="n49_gab2"/>
     <image id="n75_ok6e" name="arrow_bg" src="io7h19" fileName="Images/img_arrow.png" xy="849,228" group="n49_gab2"/>
-    <image id="n79_ok6e" name="gq_bg" src="gs4zv6p" fileName="Images/img_unlock_qg.png" xy="955,351" size="146,24" group="n49_gab2"/>
+    <image id="n79_ok6e" name="qg_bg" src="gs4zv6p" fileName="Images/img_unlock_qg.png" xy="955,351" size="146,24" group="n49_gab2"/>
     <image id="n80_ok6e" name="wg_bg" src="gs4zv6o" fileName="Images/img_unlock_wg.png" xy="654,351" size="146,23" group="n49_gab2"/>
     <list id="n81_ok6e" name="list_wg" xy="608,384" pivot="1,0" size="217,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://5rez3obxqtrmv6g">
       <item/>
@@ -50,8 +48,8 @@
       <item/>
       <item/>
     </list>
-    <richtext id="n83_ok6e" name="txt_condition" xy="694,492" size="212,25" group="n49_gab2" fontSize="17" color="#372a08" text="角色等级达到100级(99/100)"/>
-    <component id="n84_ok6e" name="btn_pick" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="1052,521" size="102,32" group="n49_gab2">
+    <richtext id="n83_ok6e" name="txt_condition" xy="603,492" size="433,25" group="n49_gab2" fontSize="17" color="#372a08" autoSize="none" text="角色等级达到100级(99/100)"/>
+    <component id="n84_ok6e" name="btn_go" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="1052,521" size="102,32" group="n49_gab2">
       <Button title="前 往"/>
     </component>
     <component id="n85_ok6e" name="panel_Touch" src="a72bv5w" fileName="Components/panel_Touch.xml" xy="230,141" size="287,428" group="n49_gab2"/>
