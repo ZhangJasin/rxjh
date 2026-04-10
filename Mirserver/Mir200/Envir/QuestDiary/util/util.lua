@@ -973,7 +973,7 @@ function recycleEnterBag(actor, itemid, itemObj, itemCount)
         end
 
         -- 最终装备回收确认
-        if not ((a or b or c or d or e) and isEquip) then return end
+        if not (a and b and c and d and e and isEquip) then return end
     end
 
     -- 5. 执行回收结算
