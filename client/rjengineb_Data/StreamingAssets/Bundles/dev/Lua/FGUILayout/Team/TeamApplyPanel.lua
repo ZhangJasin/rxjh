@@ -52,10 +52,13 @@ function TeamApplyPanel:OnUpdateTeamApplyList()
 end
 
 function TeamApplyPanel:RefreshNothingInfo()
-    FGUI:setVisible(self._ui.panel_nothing, #self._applyList == 0)
-    if #self._applyList == 0 then 
+    -- Directly control text_nothing visibility since panel_nothing is removed
+    if #self._applyList == 0 then
+        FGUI:setVisible(self._ui.text_nothing, true)
         FGUI:GTextField_setText(self._ui.text_nothing, GET_STRING(40010035))
-    end 
+    else
+        FGUI:setVisible(self._ui.text_nothing, false)
+    end
 end
 
 function TeamApplyPanel:ApplyListRenderer(idx, item)

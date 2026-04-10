@@ -86,6 +86,7 @@ end
 -- auto
 function PCTeamCreatePanel:AutoApplyRenderer(idx, item)
     local index = idx + 1
+    -- 当 self._autoValue 为 -1 时，所有 checkbox 都不选中
 	FGUI:GButton_setSelected(item, idx == self._autoValue)
 
 	local text_name = FGUI:GetChild(item, "text_name")
@@ -93,8 +94,17 @@ function PCTeamCreatePanel:AutoApplyRenderer(idx, item)
 end
 
 function PCTeamCreatePanel:OnClickAuto(context)
-	local idx = FGUI:GetChildIndex(self._ui.list_auto, context.data) 
-	self._autoValue = idx
+	local idx = FGUI:GetChildIndex(self._ui.list_auto, context.data)
+	
+	-- 如果点击的是当前已选项，则取消选中（设置为 -1）
+	if idx == self._autoValue then
+		self._autoValue = -1
+	else
+		self._autoValue = idx
+	end
+	
+	-- 刷新列表显示
+	FGUI:GList_setNumItems(self._ui.list_auto, #APPLY_NAME)
 end
 
 function PCTeamCreatePanel:OnClickBtnSave()

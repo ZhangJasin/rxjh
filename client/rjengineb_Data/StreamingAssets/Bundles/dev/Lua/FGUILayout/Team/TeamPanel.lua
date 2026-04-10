@@ -167,9 +167,9 @@ function TeamPanel:OnProviderChat(idx)
 
     local isSelf = SL:GetValue("USER_ID") == data.UserID
     if isSelf then
-        return "ui://pnop7ha6scjwo3m"
+        return "ui://xh57ov19k9rf2"
     else
-        return "ui://pnop7ha6scjwo3l"   
+        return "ui://xh57ov19k9rf3"   
     end
 end
 

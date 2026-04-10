@@ -192,11 +192,14 @@ function PCTeamNearPanel:OnUpdateNearTeam()
 end
 
 function PCTeamNearPanel:RefreshNothingInfo()
-    FGUI:setVisible(self._ui.panel_nothing, #self._nearList == 0)
-    if #self._nearList == 0 then 
+    -- Directly control text_nothing visibility
+    if #self._nearList == 0 then
         local sNothing = PAGE_DATA[self._selPage].nothing
+        FGUI:setVisible(self._ui.text_nothing, true)
         FGUI:GTextField_setText(self._ui.text_nothing, sNothing)
-    end 
+    else
+        FGUI:setVisible(self._ui.text_nothing, false)
+    end
 end
 
 function PCTeamNearPanel:OnClickBtnJoin(eventData)

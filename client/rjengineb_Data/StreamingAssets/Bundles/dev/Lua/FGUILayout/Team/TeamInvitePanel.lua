@@ -161,11 +161,14 @@ function TeamInvitePanel:OnUpdateTeamMemberList(index)
 end
 
 function TeamInvitePanel:RefreshNothingInfo()
-    FGUI:setVisible(self._ui.panel_nothing, #self._members == 0)
-    if #self._members == 0 then 
+    -- Directly control text_nothing visibility since panel_nothing is removed
+    if #self._members == 0 then
         local sNothing = PAGE_DATA[self._selPage].nothing
+        FGUI:setVisible(self._ui.text_nothing, true)
         FGUI:GTextField_setText(self._ui.text_nothing, sNothing)
-    end 
+    else
+        FGUI:setVisible(self._ui.text_nothing, false)
+    end
 end
 
 local AVATOR_DATA = {}

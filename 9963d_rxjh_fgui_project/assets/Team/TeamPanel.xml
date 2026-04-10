@@ -19,7 +19,7 @@
     <text id="n7_vjv7" name="text_goal" xy="405,140" pivot="0.5,0.5" anchor="true" size="250,29" group="n28_npv4" fontSize="20" color="#7cc3b3" autoSize="none" text="哈哈哈哈哈哈哈">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n8_vjv7" name="btn_edit" src="vjv7l" fileName="Components/btn_edit.xml" xy="515,140" pivot="0.5,0.5" anchor="true" group="n28_npv4">
+    <component id="n8_vjv7" name="btn_edit" src="k9rf19" fileName="Components/btn_edit.xml" xy="515,140" pivot="0.5,0.5" anchor="true" group="n28_npv4">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <group id="n28_npv4" name="frame_top" xy="185,122" size="350,36" advanced="true"/>
@@ -32,26 +32,25 @@
     <text id="n22_w3wa" name="text_nobody" xy="875,395" pivot="0.5,0.5" anchor="true" size="500,90" font="ui://st7dgeqqje63v37" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n12_vjv7" name="btn_help" src="vjv7r" fileName="Components/btn_help.xml" xy="230,78" pivot="0.5,0.5" anchor="true">
+    <component id="n12_vjv7" name="btn_help" src="k9rf1b" fileName="Components/btn_help.xml" xy="230,78" pivot="0.5,0.5" anchor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n26_npv4" name="btn_close" src="vjv72" fileName="Components/btn_close.xml" xy="1144,78" pivot="0.5,0.5" anchor="true">
+    <component id="n26_npv4" name="btn_close" src="k9rf17" fileName="Components/btn_close.xml" xy="1144,78" pivot="0.5,0.5" anchor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n10_vjv7" name="btn_quit" src="vjv7o" fileName="Components/btn_quit.xml" xy="380,660" pivot="0.5,0.5" anchor="true">
+    <component id="n10_vjv7" name="btn_quit" src="k9rf1g" fileName="Components/btn_quit.xml" xy="380,660" pivot="0.5,0.5" anchor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n23_lmpz" name="btn_shout" src="lmpz2j" fileName="Components/btn_shout.xml" xy="1000,140" pivot="0.5,0.5" anchor="true" size="136,42">
+    <component id="n23_lmpz" name="btn_shout" src="k9rf1n" fileName="Components/btn_shout.xml" xy="1000,140" pivot="0.5,0.5" anchor="true" size="136,42">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n31_npv4" name="btn_apply" src="vjv7p" fileName="Components/btn_apply.xml" xy="820,140" pivot="0.5,0.5" anchor="true" size="136,42">
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Button title="单位的"/>
-    </component>
-    <component id="n32_npv4" name="btn_setting" src="l7f02a" fileName="Components/btn_setting.xml" xy="1120,140" pivot="0.5,0.5" anchor="true">
+    <component id="n31_npv4" name="btn_apply" src="k9rf15" fileName="Components/btn_apply.xml" xy="820,140" pivot="0.5,0.5" anchor="true" size="136,42">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <list id="n33_npv4" name="list_team" xy="185,175" size="400,450" overflow="scroll" lineGap="2" defaultItem="ui://pnop7ha6npv42r">
+    <component id="n32_npv4" name="btn_setting" src="k9rfv" fileName="Components/btn_setting.xml" xy="1120,140" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <list id="n33_npv4" name="list_team" xy="185,175" size="400,450" overflow="scroll" lineGap="2" defaultItem="ui://xh57ov19k9rfc">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
       <item/>
@@ -65,18 +64,18 @@
     <text id="n37_scjw" name="input_chat" xy="610,660" pivot="0,0.5" anchor="true" size="240,50" group="n52_scjw" fontSize="24" color="#5f795d" vAlign="middle" leading="0" autoSize="none" text="" input="true" prompt="请点击输入" maxLength="54">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <list id="n38_scjw" name="list_chat" xy="605,175" size="540,440" group="n52_scjw" selectionMode="none" overflow="scroll" defaultItem="ui://pnop7ha6scjwo3l" autoClearItems="true">
+    <list id="n38_scjw" name="list_chat" xy="605,175" size="540,440" group="n52_scjw" selectionMode="none" overflow="scroll" defaultItem="ui://xh57ov19k9rf2" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
-      <item url="ui://pnop7ha6scjwo3m"/>
+      <item url="ui://xh57ov19k9rf3"/>
     </list>
-    <component id="n50_scjw" name="btn_emoj" src="scjwo3h" fileName="Components/btn_emoj.xml" xy="890,660" pivot="0.5,0.5" anchor="true" size="51,47" group="n52_scjw">
+    <component id="n50_scjw" name="btn_emoj" src="k9rf1a" fileName="Components/btn_emoj.xml" xy="890,660" pivot="0.5,0.5" anchor="true" size="51,47" group="n52_scjw">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n49_scjw" name="btn_pos" src="scjwo3i" fileName="Components/btn_pos.xml" xy="950,660" pivot="0.5,0.5" anchor="true" size="51,47" group="n52_scjw">
+    <component id="n49_scjw" name="btn_pos" src="k9rf1f" fileName="Components/btn_pos.xml" xy="950,660" pivot="0.5,0.5" anchor="true" size="51,47" group="n52_scjw">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n51_scjw" name="btn_chat" src="scjwo3g" fileName="Components/btn_chat.xml" xy="1070,660" pivot="0.5,0.5" anchor="true" size="136,42" group="n52_scjw">
+    <component id="n51_scjw" name="btn_chat" src="k9rf16" fileName="Components/btn_chat.xml" xy="1070,660" pivot="0.5,0.5" anchor="true" size="136,42" group="n52_scjw">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <group id="n52_scjw" name="panel_chat" xy="600,175" size="545,510" advanced="true"/>

@@ -16,16 +16,16 @@
     <text id="n12_leye" name="text_nothing" xy="667,430" pivot="0.5,0.5" anchor="true" size="600,90" font="ui://st7dgeqqje63v37" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <list id="n32_mp8v" name="list_page" xy="345,220" size="600,50" layout="row" overflow="hidden" scroll="horizontal" defaultItem="ui://pnop7ha6vjv73" autoClearItems="true">
+    <list id="n32_mp8v" name="list_page" xy="345,220" size="600,50" layout="row" overflow="hidden" scroll="horizontal" defaultItem="ui://xh57ov19k9rf7" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
     </list>
-    <list id="n3_vjv7" name="list_player" xy="668,424" pivot="0.5,0.5" anchor="true" size="620,280" selectionMode="none" overflow="scroll" lineGap="10" defaultItem="ui://pnop7ha6f0so1g" autoClearItems="true">
+    <list id="n3_vjv7" name="list_player" xy="668,424" pivot="0.5,0.5" anchor="true" size="620,280" selectionMode="none" overflow="scroll" lineGap="10" defaultItem="ui://xh57ov19k9rf6" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
       <item/>
     </list>
-    <component id="n31_mp8v" name="btn_close" src="vjv72" fileName="Components/btn_close.xml" xy="993,178" pivot="0.5,0.5" anchor="true">
+    <component id="n31_mp8v" name="btn_close" src="k9rf17" fileName="Components/btn_close.xml" xy="993,178" pivot="0.5,0.5" anchor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
   </displayList>

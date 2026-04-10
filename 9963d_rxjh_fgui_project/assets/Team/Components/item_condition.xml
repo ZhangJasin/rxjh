@@ -5,6 +5,6 @@
     <text id="n4_f0so" name="text_name" xy="115,40" pivot="0.5,0.5" anchor="true" size="200,29" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="自由"/>
     <text id="n7_f0so" name="text_level" xy="290,40" pivot="0.5,0.5" anchor="true" size="150,29" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="等级"/>
     <text id="n14_l7f0" name="text_count" xy="420,40" pivot="0.5,0.5" anchor="true" size="100,29" fontSize="20" color="#f1ffeb" align="center" vAlign="middle" autoSize="none" text="不限"/>
-    <component id="n17_10pfo" name="btn_select" src="10pfo2w" fileName="Components/btn_select.xml" xy="544,40" pivot="0.5,0.5" anchor="true" size="116,42"/>
+    <component id="n17_10pfo" name="btn_select" src="k9rf1m" fileName="Components/btn_select.xml" xy="544,40" pivot="0.5,0.5" anchor="true" size="116,42"/>
   </displayList>
 </component>

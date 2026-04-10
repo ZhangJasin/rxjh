@@ -2,15 +2,15 @@
 <component size="400,100" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n33_gpvo" name="bg" src="npv42s" fileName="Images/team_item_bg.png" xy="0,0" size="400,100"/>
+    <image id="n33_gpvo" name="bg" src="k9rfq" fileName="Images/team_item_bg.png" xy="0,0" size="400,100"/>
     <image id="n11_wmgr" name="icon_bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="10,10" size="80,80" group="n23_npv4"/>
     <component id="n24_qwah" name="avator" src="dssq1a" fileName="common/CommonPlayerFrame.xml" pkg="st7dgeqq" xy="10,10" size="80,80" group="n23_npv4" touchable="false"/>
     <loader id="n17_npv4" name="img_job" xy="100,29" pivot="0,0.5" anchor="true" size="40,40" group="n23_npv4" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
     <text id="n5_qpwo" name="text_name" xy="150,15" size="200,29" group="n23_npv4" fontSize="20" color="#ffffff" ubb="true" autoSize="none" text="名字"/>
     <text id="n6_qpwo" name="text_level" xy="100,60" size="200,29" group="n23_npv4" fontSize="20" color="#ffda60" autoSize="none" text="Lv：100"/>
-    <image id="n18_npv4" name="img_leader" src="vjv7f" fileName="Images/team_flag.png" xy="350,0" group="n23_npv4"/>
+    <image id="n18_npv4" name="img_leader" src="k9rfp" fileName="Images/team_flag.png" xy="350,0" group="n23_npv4"/>
     <group id="n23_npv4" name="frame_team" xy="10,0" size="374,90" advanced="true"/>
-    <component id="n22_npv4" name="btn_add" src="vjv7s" fileName="Components/btn_add.xml" xy="172,22"/>
+    <component id="n22_npv4" name="btn_add" src="k9rf12" fileName="Components/btn_add.xml" xy="172,22"/>
   </displayList>
   <Button mode="Radio"/>
 </component>

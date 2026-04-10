@@ -34,16 +34,16 @@
     <text id="n19_l7f0" name="input_name" xy="575,170" pivot="0,0.5" anchor="true" size="300,32" fontSize="22" color="#ffffff" autoSize="none" singleLine="true" text="我爱小小罗罗罗的队伍" input="true" maxLength="10">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n36_l7f0" name="btn_save" src="l7f02i" fileName="Components/btn_save.xml" xy="667,630" pivot="0.5,0.5" anchor="true" size="136,42">
+    <component id="n36_l7f0" name="btn_save" src="k9rf1l" fileName="Components/btn_save.xml" xy="667,630" pivot="0.5,0.5" anchor="true" size="136,42">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n1_vjv7" name="btn_close" src="vjv72" fileName="Components/btn_close.xml" xy="895,78" pivot="0.5,0.5" anchor="true">
+    <component id="n1_vjv7" name="btn_close" src="k9rf17" fileName="Components/btn_close.xml" xy="895,78" pivot="0.5,0.5" anchor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n52_mp8v" name="btn_pick" src="mp8v2v" fileName="Components/btn_pick.xml" xy="806,250" pivot="0.5,0.5" anchor="true" size="50,50">
+    <component id="n52_mp8v" name="btn_pick" src="k9rf1e" fileName="Components/btn_pick.xml" xy="806,250" pivot="0.5,0.5" anchor="true" size="50,50">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <list id="n46_mp8v" name="list_auto" xy="575,314" size="200,180" layout="pagination" overflow="hidden" scroll="horizontal" lineGap="30" colGap="10" lineItemCount="1" lineItemCount2="3" defaultItem="ui://pnop7ha6npv42p" autoClearItems="true">
+    <list id="n46_mp8v" name="list_auto" xy="575,314" size="200,180" layout="pagination" overflow="hidden" scroll="horizontal" lineGap="30" colGap="10" lineItemCount="1" lineItemCount2="3" defaultItem="ui://xh57ov19k9rfb" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
       <item/>
@@ -52,7 +52,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n51_mp8v" name="list_pick" xy="700,396" pivot="0.5,0.5" anchor="true" size="250,240" visible="false" overflow="scroll" defaultItem="ui://pnop7ha6vjv71c">
+    <list id="n51_mp8v" name="list_pick" xy="700,396" pivot="0.5,0.5" anchor="true" size="250,240" visible="false" overflow="scroll" defaultItem="ui://xh57ov19k9rfa">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
       <item/>

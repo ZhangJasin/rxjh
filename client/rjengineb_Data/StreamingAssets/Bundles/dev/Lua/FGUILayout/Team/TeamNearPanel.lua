@@ -202,11 +202,17 @@ function TeamNearPanel:OnUpdateNearTeam()
 end
 
 function TeamNearPanel:RefreshNothingInfo()
-    FGUI:setVisible(self._ui.panel_nothing, #self._nearList == 0)
-    if #self._nearList == 0 then 
+    local txt = self._ui.text_nothing
+    -- If text_nothing is nil (e.g. resource hasn't been re-published with the fix), return safely to avoid crash.
+    if not txt then return end 
+
+    if #self._nearList == 0 then
         local sNothing = PAGE_DATA[self._selPage].nothing
-        FGUI:GTextField_setText(self._ui.text_nothing, sNothing)
-    end 
+        FGUI:setVisible(txt, true)
+        FGUI:GTextField_setText(txt, sNothing)
+    else
+        FGUI:setVisible(txt, false)
+    end
 end
 
 function TeamNearPanel:OnClickBtnJoin(eventData)

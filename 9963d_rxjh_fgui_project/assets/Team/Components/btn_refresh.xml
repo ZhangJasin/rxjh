@@ -2,12 +2,12 @@
 <component size="136,42" pivot="0.5,0.5" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n3_leye" name="btn" src="je63v3c" fileName="image/btn_first_red.png" pkg="st7dgeqq" xy="0,0" size="136,42">
+    <image id="n3_leye" name="btn" src="xd9tkvp2" fileName="image/btn_first_green.png" pkg="st7dgeqq" xy="0,0" size="136,42">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <text id="n1_f0so" name="text" xy="41,5" size="54,32" fontSize="22" color="#fced00" strokeColor="#000000" text="刷 新">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
   </displayList>
-  <Button downEffect="scale" downEffectValue=".8"/>
+  <Button downEffect="scale" downEffectValue="0.8"/>
 </component>
