@@ -325,22 +325,30 @@ end
 
 function BagRecycleViewModel:GetJsonData()
 	local data = {}
+	-- 保存等级过滤总开关状态
 	data["checkLevel"] = self.checkLevel and 1 or 0
-	for i, v in ipairs(self.lvConditionModels) do
-		if v and v.cfg and v.cfg.ID then
-			data[v.cfg.ID] = v.isSelect and 1 or 0
+
+	-- 辅助闭包：遍历模型列表并记录选中状态
+	local function collectSelectData(modelList)
+		if not modelList then return end
+		for i, v in ipairs(modelList) do
+			if v and v.cfg and v.cfg.ID then
+				data[tostring(v.cfg.ID)] = v.isSelect and 1 or 0
+			end
 		end
 	end
-	for i, v in ipairs(self.equipConditionModels) do
-		if v and v.cfg and v.cfg.ID then
-			data[v.cfg.ID] = v.isSelect and 1 or 0
-		end
-	end
-	for i, v in ipairs(self.otherConditionModels) do
-		if v and v.cfg and v.cfg.ID then
-			data[v.cfg.ID] = v.isSelect and 1 or 0
-		end
-	end
+
+	-- 1. 保存基础页签模型 (等级、装备、其他)
+	collectSelectData(self.lvConditionModels)
+	collectSelectData(self.equipConditionModels)
+	collectSelectData(self.otherConditionModels)
+
+	-- 2. 保存新增的石头类模型 (确保这部分数据下次打开也能还原)
+	collectSelectData(self.JGSConditionModels)
+	collectSelectData(self.HYSConditionModels)
+	collectSelectData(self.RXSConditionModels)
+	collectSelectData(self.HYJGSConditionModels)
+	collectSelectData(self.BPHYSConditionModels)
 
 	return SL:JsonEncode(data)
 end
