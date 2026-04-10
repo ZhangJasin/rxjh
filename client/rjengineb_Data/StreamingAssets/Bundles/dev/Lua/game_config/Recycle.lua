@@ -271,6 +271,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=1307,
 	},
 	[32] = { 
 		ID=32,
@@ -281,6 +282,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=1307,
 	},
 	[33] = { 
 		ID=33,
@@ -291,6 +293,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=1307,
 	},
 	[34] = { 
 		ID=34,
@@ -301,6 +304,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=1307,
 	},
 	[35] = { 
 		ID=35,
@@ -311,6 +315,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=1308,
 	},
 	[36] = { 
 		ID=36,
@@ -321,6 +326,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=1308,
 	},
 	[37] = { 
 		ID=37,
@@ -331,6 +337,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=1308,
 	},
 	[38] = { 
 		ID=38,
@@ -341,6 +348,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=1308,
 	},
 	[39] = { 
 		ID=39,
@@ -351,6 +359,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=1309,
 	},
 	[40] = { 
 		ID=40,
@@ -361,6 +370,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=1309,
 	},
 	[41] = { 
 		ID=41,
@@ -371,6 +381,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=1309,
 	},
 	[42] = { 
 		ID=42,
@@ -381,6 +392,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=1309,
 	},
 	[43] = { 
 		ID=43,
@@ -391,6 +403,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#3000",
+		StoneId=1309,
 	},
 	[44] = { 
 		ID=44,
@@ -401,6 +414,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=1311,
 	},
 	[45] = { 
 		ID=45,
@@ -411,6 +425,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=1311,
 	},
 	[46] = { 
 		ID=46,
@@ -421,6 +436,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=1311,
 	},
 	[47] = { 
 		ID=47,
@@ -431,6 +447,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=1311,
 	},
 	[48] = { 
 		ID=48,
@@ -441,6 +458,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=1310,
 	},
 	[49] = { 
 		ID=49,
@@ -451,6 +469,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=1310,
 	},
 	[50] = { 
 		ID=50,
@@ -461,6 +480,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=1312,
 	},
 	[51] = { 
 		ID=51,
@@ -471,6 +491,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=1312,
 	},
 	[52] = { 
 		ID=52,
@@ -481,6 +502,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=1312,
 	},
 	[53] = { 
 		ID=53,
@@ -491,6 +513,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=1312,
 	},
 	[54] = { 
 		ID=54,
@@ -501,6 +524,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=1313,
 	},
 	[55] = { 
 		ID=55,
@@ -511,6 +535,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=1313,
 	},
 	[56] = { 
 		ID=56,
@@ -521,6 +546,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=1313,
 	},
 	[57] = { 
 		ID=57,
@@ -531,6 +557,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=1313,
 	},
 	[58] = { 
 		ID=58,
@@ -541,6 +568,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#3000",
+		StoneId=1313,
 	},
 	[59] = { 
 		ID=59,
@@ -551,6 +579,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=1314,
 	},
 	[60] = { 
 		ID=60,
@@ -561,6 +590,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=1314,
 	},
 	[61] = { 
 		ID=61,
@@ -571,6 +601,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=1314,
 	},
 	[62] = { 
 		ID=62,
@@ -581,6 +612,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=1314,
 	},
 	[63] = { 
 		ID=63,
@@ -591,6 +623,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#3000",
+		StoneId=1314,
 	},
 	[64] = { 
 		ID=64,
@@ -601,6 +634,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=1315,
 	},
 	[65] = { 
 		ID=65,
@@ -611,6 +645,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=1315,
 	},
 	[66] = { 
 		ID=66,
@@ -621,6 +656,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=1315,
 	},
 	[67] = { 
 		ID=67,
@@ -631,6 +667,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=1315,
 	},
 	[68] = { 
 		ID=68,
@@ -641,6 +678,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=1316,
 	},
 	[69] = { 
 		ID=69,
@@ -651,6 +689,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=1316,
 	},
 	[70] = { 
 		ID=70,
@@ -661,6 +700,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=1316,
 	},
 	[71] = { 
 		ID=71,
@@ -671,6 +711,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=1316,
 	},
 	[72] = { 
 		ID=72,
@@ -681,6 +722,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#3000",
+		StoneId=1316,
 	},
 	[73] = { 
 		ID=73,
@@ -691,6 +733,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3918,
 	},
 	[74] = { 
 		ID=74,
@@ -701,6 +744,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3919,
 	},
 	[75] = { 
 		ID=75,
@@ -711,6 +755,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3920,
 	},
 	[76] = { 
 		ID=76,
@@ -721,6 +766,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3921,
 	},
 	[77] = { 
 		ID=77,
@@ -731,6 +777,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3922,
 	},
 	[78] = { 
 		ID=78,
@@ -741,6 +788,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3923,
 	},
 	[79] = { 
 		ID=79,
@@ -751,6 +799,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3924,
 	},
 	[80] = { 
 		ID=80,
@@ -761,6 +810,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3925,
 	},
 	[81] = { 
 		ID=81,
@@ -771,6 +821,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3926,
 	},
 	[82] = { 
 		ID=82,
@@ -781,6 +832,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3927,
 	},
 	[83] = { 
 		ID=83,
@@ -791,6 +843,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3928,
 	},
 	[84] = { 
 		ID=84,
@@ -801,6 +854,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3929,
 	},
 	[85] = { 
 		ID=85,
@@ -811,6 +865,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3930,
 	},
 	[86] = { 
 		ID=86,
@@ -821,6 +876,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3931,
 	},
 	[87] = { 
 		ID=87,
@@ -831,6 +887,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3932,
 	},
 	[88] = { 
 		ID=88,
@@ -841,6 +898,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3933,
 	},
 	[89] = { 
 		ID=89,
@@ -851,6 +909,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3934,
 	},
 	[90] = { 
 		ID=90,
@@ -861,6 +920,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3935,
 	},
 	[91] = { 
 		ID=91,
@@ -871,6 +931,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3936,
 	},
 	[92] = { 
 		ID=92,
@@ -881,6 +942,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3937,
 	},
 	[93] = { 
 		ID=93,
@@ -891,6 +953,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3938,
 	},
 	[94] = { 
 		ID=94,
@@ -901,6 +964,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3939,
 	},
 	[95] = { 
 		ID=95,
@@ -911,6 +975,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3940,
 	},
 	[96] = { 
 		ID=96,
@@ -921,6 +986,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3941,
 	},
 	[97] = { 
 		ID=97,
@@ -931,6 +997,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3942,
 	},
 	[98] = { 
 		ID=98,
@@ -941,6 +1008,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3943,
 	},
 	[99] = { 
 		ID=99,
@@ -951,6 +1019,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3944,
 	},
 	[100] = { 
 		ID=100,
@@ -961,6 +1030,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3945,
 	},
 	[101] = { 
 		ID=101,
@@ -971,6 +1041,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3946,
 	},
 	[102] = { 
 		ID=102,
@@ -981,6 +1052,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3947,
 	},
 	[103] = { 
 		ID=103,
@@ -1001,6 +1073,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3949,
 	},
 	[105] = { 
 		ID=105,
@@ -1011,6 +1084,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3950,
 	},
 	[106] = { 
 		ID=106,
@@ -1021,6 +1095,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3951,
 	},
 	[107] = { 
 		ID=107,
@@ -1031,6 +1106,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3952,
 	},
 	[108] = { 
 		ID=108,
@@ -1041,6 +1117,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3953,
 	},
 	[109] = { 
 		ID=109,
@@ -1051,6 +1128,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3954,
 	},
 	[110] = { 
 		ID=110,
@@ -1061,6 +1139,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3955,
 	},
 	[111] = { 
 		ID=111,
@@ -1071,6 +1150,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3956,
 	},
 	[112] = { 
 		ID=112,
@@ -1081,6 +1161,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3957,
 	},
 	[113] = { 
 		ID=113,
@@ -1091,6 +1172,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=3905,
 	},
 	[114] = { 
 		ID=114,
@@ -1101,6 +1183,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3905,
 	},
 	[115] = { 
 		ID=115,
@@ -1111,6 +1194,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=3905,
 	},
 	[116] = { 
 		ID=116,
@@ -1121,6 +1205,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=3905,
 	},
 	[117] = { 
 		ID=117,
@@ -1131,6 +1216,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=3906,
 	},
 	[118] = { 
 		ID=118,
@@ -1141,6 +1227,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3906,
 	},
 	[119] = { 
 		ID=119,
@@ -1151,6 +1238,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=3906,
 	},
 	[120] = { 
 		ID=120,
@@ -1161,6 +1249,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=3906,
 	},
 	[121] = { 
 		ID=121,
@@ -1171,6 +1260,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=3907,
 	},
 	[122] = { 
 		ID=122,
@@ -1181,6 +1271,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3907,
 	},
 	[123] = { 
 		ID=123,
@@ -1191,6 +1282,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=3907,
 	},
 	[124] = { 
 		ID=124,
@@ -1201,6 +1293,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=3907,
 	},
 	[125] = { 
 		ID=125,
@@ -1211,6 +1304,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#3000",
+		StoneId=3907,
 	},
 	[126] = { 
 		ID=126,
@@ -1221,6 +1315,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=3908,
 	},
 	[127] = { 
 		ID=127,
@@ -1231,6 +1326,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3908,
 	},
 	[128] = { 
 		ID=128,
@@ -1241,6 +1337,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=3909,
 	},
 	[129] = { 
 		ID=129,
@@ -1251,6 +1348,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3909,
 	},
 	[130] = { 
 		ID=130,
@@ -1261,6 +1359,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=3909,
 	},
 	[131] = { 
 		ID=131,
@@ -1271,6 +1370,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=3909,
 	},
 	[132] = { 
 		ID=132,
@@ -1281,6 +1381,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=3910,
 	},
 	[133] = { 
 		ID=133,
@@ -1291,6 +1392,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3910,
 	},
 	[134] = { 
 		ID=134,
@@ -1301,6 +1403,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=3910,
 	},
 	[135] = { 
 		ID=135,
@@ -1311,6 +1414,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=3910,
 	},
 	[136] = { 
 		ID=136,
@@ -1321,6 +1425,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=3911,
 	},
 	[137] = { 
 		ID=137,
@@ -1331,6 +1436,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3911,
 	},
 	[138] = { 
 		ID=138,
@@ -1341,6 +1447,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=3911,
 	},
 	[139] = { 
 		ID=139,
@@ -1351,6 +1458,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=3911,
 	},
 	[140] = { 
 		ID=140,
@@ -1361,6 +1469,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#3000",
+		StoneId=3911,
 	},
 	[141] = { 
 		ID=141,
@@ -1371,6 +1480,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=3912,
 	},
 	[142] = { 
 		ID=142,
@@ -1381,6 +1491,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3912,
 	},
 	[143] = { 
 		ID=143,
@@ -1391,6 +1502,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=3912,
 	},
 	[144] = { 
 		ID=144,
@@ -1401,6 +1513,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=3912,
 	},
 	[145] = { 
 		ID=145,
@@ -1411,6 +1524,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#3000",
+		StoneId=3912,
 	},
 	[146] = { 
 		ID=146,
@@ -1421,6 +1535,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=3913,
 	},
 	[147] = { 
 		ID=147,
@@ -1431,6 +1546,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3913,
 	},
 	[148] = { 
 		ID=148,
@@ -1441,6 +1557,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=3913,
 	},
 	[149] = { 
 		ID=149,
@@ -1451,6 +1568,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=3913,
 	},
 	[150] = { 
 		ID=150,
@@ -1461,6 +1579,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#500",
+		StoneId=3914,
 	},
 	[151] = { 
 		ID=151,
@@ -1471,6 +1590,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1000",
+		StoneId=3914,
 	},
 	[152] = { 
 		ID=152,
@@ -1481,6 +1601,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#1500",
+		StoneId=3914,
 	},
 	[153] = { 
 		ID=153,
@@ -1491,6 +1612,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#2000",
+		StoneId=3914,
 	},
 	[154] = { 
 		ID=154,
@@ -1501,6 +1623,7 @@ local config = {
 		Effect={2},
 		Default=0,
 		sell="1#3000",
+		StoneId=3914,
 	},
 }
 return config
