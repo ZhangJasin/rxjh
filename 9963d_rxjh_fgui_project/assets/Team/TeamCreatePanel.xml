@@ -43,7 +43,7 @@
     <component id="n52_mp8v" name="btn_pick" src="k9rf1e" fileName="Components/btn_pick.xml" xy="806,250" pivot="0.5,0.5" anchor="true" size="50,50">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <list id="n46_mp8v" name="list_auto" xy="575,314" size="200,180" layout="pagination" overflow="hidden" scroll="horizontal" lineGap="30" colGap="10" lineItemCount="1" lineItemCount2="3" defaultItem="ui://xh57ov19k9rfb" autoClearItems="true">
+    <list id="n46_mp8v" name="list_auto" xy="575,314" size="200,180" layout="pagination" selectionMode="none" overflow="hidden" scroll="horizontal" lineGap="30" colGap="10" lineItemCount="1" lineItemCount2="3" defaultItem="ui://xh57ov19k9rfs" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
       <item/>
@@ -52,7 +52,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n51_mp8v" name="list_pick" xy="700,396" pivot="0.5,0.5" anchor="true" size="250,240" visible="false" overflow="scroll" defaultItem="ui://xh57ov19k9rfa">
+    <list id="n51_mp8v" name="list_pick" xy="700,396" pivot="0.5,0.5" anchor="true" size="250,240" visible="false" touchable="false" overflow="scroll" defaultItem="ui://xh57ov19k9rfa">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
       <item/>

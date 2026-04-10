@@ -2,7 +2,7 @@
 <component size="110,40" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <component id="n13_npv4" name="checkbox" src="k9rfu" fileName="Components/checkbox_single.xml" xy="0,20" pivot="0,0.5" anchor="true" size="40,40">
+    <component id="n13_npv4" name="checkbox" src="k9rfu" fileName="Components/checkbox_single.xml" xy="0,20" pivot="0,0.5" anchor="true" size="40,40" touchable="false">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <text id="n14_npv4" name="text_name" xy="50,20" pivot="0,0.5" anchor="true" size="52,34" fontSize="24" color="#ffffff" text="刀客"/>

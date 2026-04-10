@@ -47458,7 +47458,7 @@ local config = {
 		WingFx={},
 		HeadFx={},
 		ChestFx={},
-		ModelSize=1.2,
+		ModelSize=2,
 		BodyEffect=0,
 	},
 	[900035] = { 
@@ -47477,7 +47477,7 @@ local config = {
 		WingFx={},
 		HeadFx={},
 		ChestFx={},
-		ModelSize=1.2,
+		ModelSize=2,
 		BodyEffect=0,
 	},
 	[900036] = { 
@@ -47496,7 +47496,7 @@ local config = {
 		WingFx={},
 		HeadFx={},
 		ChestFx={},
-		ModelSize=1.2,
+		ModelSize=2,
 		BodyEffect=0,
 	},
 	[900037] = { 
@@ -47743,7 +47743,7 @@ local config = {
 		WingFx={},
 		HeadFx={},
 		ChestFx={},
-		ModelSize=0.7,
+		ModelSize=1,
 		BodyEffect=0,
 	},
 	[900050] = { 
@@ -47762,7 +47762,7 @@ local config = {
 		WingFx={},
 		HeadFx={},
 		ChestFx={},
-		ModelSize=0.7,
+		ModelSize=1,
 		BodyEffect=0,
 	},
 	[900051] = { 
@@ -47781,7 +47781,7 @@ local config = {
 		WingFx={},
 		HeadFx={},
 		ChestFx={},
-		ModelSize=0.7,
+		ModelSize=1,
 		BodyEffect=0,
 	},
 	[900052] = { 
