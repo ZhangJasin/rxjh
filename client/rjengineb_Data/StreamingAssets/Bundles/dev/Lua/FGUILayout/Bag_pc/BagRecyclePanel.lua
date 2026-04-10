@@ -2,25 +2,24 @@ local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local BagRecyclePanel = class("BagRecyclePanel", BaseFGUILayout)
 local ItemMoney = SL:RequireFile("FGUILayout/Item/ItemMoney")
 
-local moneyId = {1,9}
+local moneyId = { 1, 9 }
 function BagRecyclePanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
 	FGUI:SetCloseUIWhenClickOutside(self)
 	self._bagPanel = FGUIFunction:BindClass(self._ui.BagPanel, "Bag_pc/PCBagPanelForHS")
 	self._bagPanel:Create()
 	self.bagRecycleViewModel = requireFGUILayout("Bag_pc/BagRecycleViewModel")
-	self.AutoPick = SL:GetValue("U",6)
-	self.AutoSell = SL:GetValue("U",7)
-	self.FiliterLv = SL:GetValue("U",8)
+	self.AutoPick = SL:GetValue("U", 6)
+	self.AutoSell = SL:GetValue("U", 7)
+	self.FiliterLv = SL:GetValue("U", 8)
 	self.bagRecycleViewModel:InitRecycleCondition()
 	self:InitData()
 	self:InitView()
 end
 
 function BagRecyclePanel:Enter()
-
 	self:RegisterEvent()
-	self._bagPanel:Enter({ disableCellDoubleClick = true} )
+	self._bagPanel:Enter({ disableCellDoubleClick = true })
 	self:RefreshData()
 	self.bagRecycleViewModel:Enter()
 	self:ShowLevelDetail(false)
@@ -44,7 +43,7 @@ function BagRecyclePanel:Destroy()
 end
 
 function BagRecyclePanel:InitView()
-	FGUI:setOnClickEvent(self._ui.BtnClose, function ()
+	FGUI:setOnClickEvent(self._ui.BtnClose, function()
 		self:CloseBagUI()
 	end)
 
@@ -58,32 +57,31 @@ function BagRecyclePanel:InitView()
 		self:ClickCheckBoxEvent(idx)
 	end)
 
-	FGUI:setOnClickEvent(self._ui.CheckBoxTotalLv, function ()
+	FGUI:setOnClickEvent(self._ui.CheckBoxTotalLv, function()
 		self:ClickCheckBoxTotalLvEvent()
 	end)
 
-	FGUI:setOnClickEvent(self._ui.Btn_LvDetail, function ()
+	FGUI:setOnClickEvent(self._ui.Btn_LvDetail, function()
 		self:ShowLevelDetail(true)
 	end)
 
-	FGUI:setOnClickEvent(self._ui.BtnDetailClose, function ()
+	FGUI:setOnClickEvent(self._ui.BtnDetailClose, function()
 		self:ShowLevelDetail(false)
 	end)
 
-	FGUI:setOnClickEvent(self._ui.MaskLv, function ()
+	FGUI:setOnClickEvent(self._ui.MaskLv, function()
 		self:ShowLevelDetail(false)
 	end)
 
-	FGUI:setOnClickEvent(self._ui.BtnSell, function ()
+	FGUI:setOnClickEvent(self._ui.BtnSell, function()
 		self:ClickBtnSellEvent()
-
 	end)
 
-	FGUI:setOnClickEvent(self._ui.AutoSell, function ()
+	FGUI:setOnClickEvent(self._ui.AutoSell, function()
 		self:ClickAutoSellEvent()
 	end)
 
-	FGUI:setOnClickEvent(self._ui.AutoPick, function ()
+	FGUI:setOnClickEvent(self._ui.AutoPick, function()
 		self:ClickAutoPickEvent()
 	end)
 
@@ -102,17 +100,17 @@ function BagRecyclePanel:InitView()
 	for i = 1, #moneyId do
 		local itemCfg = SL:GetValue("ITEM_DATA", moneyId[i])
 		if itemCfg then
-			ItemMoney.new(self._ui["MoneyIcon"..i],itemCfg)
+			ItemMoney.new(self._ui["MoneyIcon" .. i], itemCfg)
 		end
-		self.moneyComponents[i] = {textObj =self._ui["MoneyText"..i]}
+		self.moneyComponents[i] = { textObj = self._ui["MoneyText" .. i] }
 	end
-	local autoPick =  FGUI:getController(self._ui.AutoPick,"isSelect")
+	local autoPick = FGUI:getController(self._ui.AutoPick, "isSelect")
 	FGUI:Controller_setSelectedIndex(autoPick, self.AutoPick)
-	
-	local autoSell =  FGUI:getController(self._ui.AutoSell,"isSelect")
+
+	local autoSell = FGUI:getController(self._ui.AutoSell, "isSelect")
 	FGUI:Controller_setSelectedIndex(autoSell, self.AutoSell)
 
-	local cSelect =  FGUI:getController(self._ui.CheckBoxTotalLv,"isSelect")
+	local cSelect = FGUI:getController(self._ui.CheckBoxTotalLv, "isSelect")
 	FGUI:Controller_setSelectedIndex(cSelect, self.FiliterLv)
 	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
 end
@@ -120,10 +118,14 @@ end
 function BagRecyclePanel:ListCheckBoxRenderer(idx, item)
 	local cModel = self.selectCheckBoxes[idx + 1]
 	if cModel then
+		if self.selectTab == 1 then
+			cModel.isSelect = true
+		end
 		FGUI:GButton_setTitle(item, cModel:GetCheckBoxName())
-		local cSelect =  FGUI:getController(item,"isSelect")
+		local cSelect = FGUI:getController(item, "isSelect")
 		FGUI:Controller_setSelectedIndex(cSelect, cModel.isSelect and 1 or 0)
-		ssrMessage:sendmsgEx("bag", "setCheckBox", { boxName=cModel:GetCheckBoxName(),status = cModel.isSelect and 1 or 0}) 
+		ssrMessage:sendmsgEx("bag", "setCheckBox",
+			{ boxName = cModel:GetCheckBoxName(), status = cModel.isSelect and 1 or 0 })
 	end
 end
 
@@ -131,9 +133,10 @@ function BagRecyclePanel:ListLvCheckBoxRenderer(idx, item)
 	local cModel = self.selectLvCheckBoxes[idx + 1]
 	if cModel then
 		FGUI:GButton_setTitle(item, cModel:GetCheckBoxName())
-		local cSelect =  FGUI:getController(item,"isSelect")
+		local cSelect = FGUI:getController(item, "isSelect")
 		FGUI:Controller_setSelectedIndex(cSelect, cModel.isSelect and 1 or 0)
-		ssrMessage:sendmsgEx("bag", "setCheckBox", { boxName=cModel:GetCheckBoxName(),status = cModel.isSelect and 1 or 0}) 
+		ssrMessage:sendmsgEx("bag", "setCheckBox",
+			{ boxName = cModel:GetCheckBoxName(), status = cModel.isSelect and 1 or 0 })
 	end
 end
 
@@ -145,7 +148,7 @@ function BagRecyclePanel:InitData()
 end
 
 function BagRecyclePanel:RefreshData()
-	FGUI:GButton_FireClick(FGUI:GetChildAt(self._ui.List_Tab,0),false,true)
+	FGUI:GButton_FireClick(FGUI:GetChildAt(self._ui.List_Tab, 0), false, true)
 end
 
 function BagRecyclePanel:CloseBagUI()
@@ -163,7 +166,7 @@ function BagRecyclePanel:ClickCheckBoxEvent(idx)
 	if cModel then
 		cModel:Toggle()
 	end
-	self:ListCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_CheckBox,idx))
+	self:ListCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_CheckBox, idx))
 	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
 end
 
@@ -172,16 +175,15 @@ function BagRecyclePanel:ClickLvCheckBoxEvent(idx)
 	if cModel then
 		cModel:Toggle()
 	end
-	self:ListLvCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_LvCheckBox,idx))
+	self:ListLvCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_LvCheckBox, idx))
 	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
 end
 
-
 function BagRecyclePanel:ClickCheckBoxTotalLvEvent()
 	self.bagRecycleViewModel:ToggleAllLv()
-	local cSelect =  FGUI:getController(self._ui.CheckBoxTotalLv,"isSelect")
+	local cSelect = FGUI:getController(self._ui.CheckBoxTotalLv, "isSelect")
 	FGUI:Controller_setSelectedIndex(cSelect, self.bagRecycleViewModel.checkLevel and 1 or 0)
-	ssrMessage:sendmsgEx("bag", "setFilterLv", self.bagRecycleViewModel.checkLevel and 1 or 0) 
+	ssrMessage:sendmsgEx("bag", "setFilterLv", self.bagRecycleViewModel.checkLevel and 1 or 0)
 	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
 end
 
@@ -194,24 +196,22 @@ function BagRecyclePanel:ShowLevelDetail(state)
 end
 
 function BagRecyclePanel:UpdateMoney()
-
-	local data =  self.bagRecycleViewModel:GetMoneyResDic()
+	local data = self.bagRecycleViewModel:GetMoneyResDic()
 
 	if data then
 		for i = 1, #moneyId do
-
 			local mNum = data[moneyId[i]] or 0
 			if self.moneyComponents[i].textObj then
 				local playerData = SL:GetValue("LOGIN_SELECTED_ROLE")
-				local jc = SL:GetValue("ACTOR_MAX_ABIL_BY_ID",playerData.UserID,118)
+				local jc = SL:GetValue("ACTOR_MAX_ABIL_BY_ID", playerData.UserID, 118)
 				if not jc then
 					jc = 0
 				end
 				local newStr = mNum
 				if i == 1 then
-					newStr = mNum..'<font color="#00ff00">(+'..math.floor(tonumber( mNum * jc / 10000))..')</font>'
+					newStr = mNum .. '<font color="#00ff00">(+' .. math.floor(tonumber(mNum * jc / 10000)) .. ')</font>'
 				end
-				FGUI:GTextField_setText(self.moneyComponents[i].textObj,newStr)
+				FGUI:GTextField_setText(self.moneyComponents[i].textObj, newStr)
 			end
 		end
 	end
@@ -220,26 +220,29 @@ end
 function BagRecyclePanel:ClickBtnSellEvent()
 	self.bagRecycleViewModel:RecycleSelectItems()
 end
+
 function BagRecyclePanel:ClickAutoSellEvent()
-	local cSelect =  FGUI:getController(self._ui.AutoSell,"isSelect")
+	local cSelect = FGUI:getController(self._ui.AutoSell, "isSelect")
 	if self.AutoSell == 0 then
 		self.AutoSell = 1
 	else
 		self.AutoSell = 0
 	end
 	FGUI:Controller_setSelectedIndex(cSelect, self.AutoSell)
-	ssrMessage:sendmsgEx("bag", "setAutoSell", self.AutoSell) 
+	ssrMessage:sendmsgEx("bag", "setAutoSell", self.AutoSell)
 end
+
 function BagRecyclePanel:ClickAutoPickEvent()
-	local cSelect =  FGUI:getController(self._ui.AutoPick,"isSelect")
+	local cSelect = FGUI:getController(self._ui.AutoPick, "isSelect")
 	if self.AutoPick == 0 then
 		self.AutoPick = 1
 	else
 		self.AutoPick = 0
 	end
 	FGUI:Controller_setSelectedIndex(cSelect, self.AutoPick)
-	ssrMessage:sendmsgEx("bag", "setAutoPick", self.AutoPick) 
+	ssrMessage:sendmsgEx("bag", "setAutoPick", self.AutoPick)
 end
+
 --------------------------- 注册事件 -----------------------------
 function BagRecyclePanel:RegisterEvent()
 
@@ -248,6 +251,5 @@ end
 function BagRecyclePanel:UnRegisterEvent()
 
 end
-
 
 return BagRecyclePanel

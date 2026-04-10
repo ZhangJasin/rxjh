@@ -312,12 +312,14 @@ function BagRecyclePanel:ClickTabEvent(idx)
 end
 
 function BagRecyclePanel:ClickCheckBoxEvent(idx)
-	local cModel = self.selectCheckBoxes[idx + 1]
-	if cModel then
-		cModel:Toggle()
+	if self.selectTab == 0 then
+		local cModel = self.selectCheckBoxes[idx + 1]
+		if cModel then
+			cModel:Toggle()
+		end
+		self:ListCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_CheckBox, idx))
+		self.bagRecycleViewModel:RefreshSelectItemsByConditions()
 	end
-	self:ListCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_CheckBox, idx))
-	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
 end
 
 function BagRecyclePanel:ClickLvCheckBoxEvent(idx)

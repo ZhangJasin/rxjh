@@ -205,11 +205,15 @@ function BagRecycleViewModel:CheckStoneConditions(stoneId, bagDataCfg, condition
 			for i = 1, #v do
 				local conditionModel = v[i]
 				if conditionModel then
+					--print("conditionModel")
 					local valid = conditionModel:CheckStoneValid(stoneId, bagDataCfg)
+					--dump(valid)
 					if valid then
 						existValid = true
 						-- 只要物品符合任何一个被选中的条件，就返回true
 						if conditionModel.isSelect then
+							--dump(conditionModel.isSelect)
+							--print("stoneId", stoneId)
 							return true
 						end
 					end
@@ -221,7 +225,8 @@ function BagRecycleViewModel:CheckStoneConditions(stoneId, bagDataCfg, condition
 end
 
 function BagRecycleViewModel:RefreshSelectItemsByConditions()
-	print("执行1")
+	--dump(self.checkJGSConditionGroups)
+	--print("执行1")
 	local bagData = SL:GetValue("BAG_SORT_POS_DATA_DIC")
 	self.SelectMakeIndexToPos = {}
 	self.moneyResDic = {}
@@ -234,7 +239,7 @@ function BagRecycleViewModel:RefreshSelectItemsByConditions()
 					v.ExAbil.abil[1].v[1][2]
 				local attrValue = v and v.ExAbil and v.ExAbil.abil and v.ExAbil.abil[1] and v.ExAbil.abil[1].v and
 					v.ExAbil.abil[1].v[1][3]
-				print("执行2")
+				--print("执行2")
 				--dump(v.ExAbil.abil[1])
 				local itemSelect = false
 				-- 检查等级条件（如果开启）
@@ -248,19 +253,20 @@ function BagRecycleViewModel:RefreshSelectItemsByConditions()
 				local JGSSelect, HYSSelect, RXSSelect, HYJGSSelect, BPHYSSelect
 				if attrName then
 					--检查金刚石条件
-					JGSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1], self
+					--print(attrName)
+					JGSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1].v[1], self
 						.checkJGSConditionGroups)
 					--检查寒玉石条件
-					HYSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1], self
+					HYSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1].v[1], self
 						.checkHYSConditionGroups)
 					--检查热血石条件
-					RXSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1], self
+					RXSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1].v[1], self
 						.checkRXSConditionGroups)
 					--检查混元金刚石条件
-					HYJGSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1],
+					HYJGSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1].v[1],
 						self.checkHYJGSConditionGroups)
 					--检查冰魄寒玉石条件
-					BPHYSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1],
+					BPHYSSelect = self:CheckStoneConditions(v.Index or v.ID, v.ExAbil.abil[1].v[1],
 						self.checkBPHYSConditionGroups)
 				end
 
