@@ -47458,7 +47458,7 @@ local config = {
 		WingFx={},
 		HeadFx={},
 		ChestFx={},
-		ModelSize=1.2,
+		ModelSize=2,
 		BodyEffect=0,
 	},
 	[900035] = { 
@@ -47477,7 +47477,7 @@ local config = {
 		WingFx={},
 		HeadFx={},
 		ChestFx={},
-		ModelSize=1.2,
+		ModelSize=2,
 		BodyEffect=0,
 	},
 	[900036] = { 
@@ -47496,7 +47496,7 @@ local config = {
 		WingFx={},
 		HeadFx={},
 		ChestFx={},
-		ModelSize=1.2,
+		ModelSize=2,
 		BodyEffect=0,
 	},
 	[900037] = { 
