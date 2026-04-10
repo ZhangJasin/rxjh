@@ -1,4 +1,4 @@
-#CHILD 1/20 RANDOM
+#CHILD 1/40 RANDOM
 (
 1/1 ÏãÄ¾±¦ºÐ
 )

@@ -5,7 +5,7 @@
 )
 #CHILD 1/40 RANDOM
 (
-1/1 »Æ½ð±¦ºÐ
+1/1 °×Òø±¦ºÐ
 )
 #CHILD 1/40 RANDOM
 (
