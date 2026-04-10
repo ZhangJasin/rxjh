@@ -5,7 +5,7 @@ local config = {
 			[1] = 2701,
 			[2] = 1,
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 		tips="灵兽可以跟随出战，提供额外属性加成。\n出战灵兽3%的属性转化给人物。",
 	},
@@ -37,7 +37,7 @@ local config = {
 				[2] = 10,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[2] = { 
@@ -68,7 +68,7 @@ local config = {
 				[2] = 10,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[3] = { 
@@ -99,7 +99,7 @@ local config = {
 				[2] = 10,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[4] = { 
@@ -130,7 +130,7 @@ local config = {
 				[2] = 10,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[5] = { 
@@ -161,7 +161,7 @@ local config = {
 				[2] = 10,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[6] = { 
@@ -192,7 +192,7 @@ local config = {
 				[2] = 10,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[7] = { 
@@ -223,7 +223,7 @@ local config = {
 				[2] = 11,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[8] = { 
@@ -254,7 +254,7 @@ local config = {
 				[2] = 12,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[9] = { 
@@ -285,7 +285,7 @@ local config = {
 				[2] = 13,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[10] = { 
@@ -316,7 +316,7 @@ local config = {
 				[2] = 14,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[11] = { 
@@ -347,7 +347,7 @@ local config = {
 				[2] = 15,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[12] = { 
@@ -378,7 +378,7 @@ local config = {
 				[2] = 15,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[13] = { 
@@ -409,7 +409,7 @@ local config = {
 				[2] = 15,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[14] = { 
@@ -440,7 +440,7 @@ local config = {
 				[2] = 15,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[15] = { 
@@ -471,7 +471,7 @@ local config = {
 				[2] = 15,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[16] = { 
@@ -502,7 +502,7 @@ local config = {
 				[2] = 15,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[17] = { 
@@ -533,7 +533,7 @@ local config = {
 				[2] = 16,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[18] = { 
@@ -564,7 +564,7 @@ local config = {
 				[2] = 17,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[19] = { 
@@ -595,7 +595,7 @@ local config = {
 				[2] = 18,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[20] = { 
@@ -626,7 +626,7 @@ local config = {
 				[2] = 19,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[21] = { 
@@ -663,7 +663,7 @@ local config = {
 				[2] = 20,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[22] = { 
@@ -700,7 +700,7 @@ local config = {
 				[2] = 20,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[23] = { 
@@ -737,7 +737,7 @@ local config = {
 				[2] = 20,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[24] = { 
@@ -774,7 +774,7 @@ local config = {
 				[2] = 20,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[25] = { 
@@ -811,7 +811,7 @@ local config = {
 				[2] = 20,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[26] = { 
@@ -848,7 +848,7 @@ local config = {
 				[2] = 20,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[27] = { 
@@ -885,7 +885,7 @@ local config = {
 				[2] = 21,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[28] = { 
@@ -922,7 +922,7 @@ local config = {
 				[2] = 22,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[29] = { 
@@ -959,7 +959,7 @@ local config = {
 				[2] = 23,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[30] = { 
@@ -996,7 +996,7 @@ local config = {
 				[2] = 24,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[31] = { 
@@ -1033,7 +1033,7 @@ local config = {
 				[2] = 25,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[32] = { 
@@ -1070,7 +1070,7 @@ local config = {
 				[2] = 25,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[33] = { 
@@ -1107,7 +1107,7 @@ local config = {
 				[2] = 25,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[34] = { 
@@ -1144,7 +1144,7 @@ local config = {
 				[2] = 25,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[35] = { 
@@ -1181,7 +1181,7 @@ local config = {
 				[2] = 25,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[36] = { 
@@ -1218,7 +1218,7 @@ local config = {
 				[2] = 25,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[37] = { 
@@ -1255,7 +1255,7 @@ local config = {
 				[2] = 26,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[38] = { 
@@ -1292,7 +1292,7 @@ local config = {
 				[2] = 27,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[39] = { 
@@ -1329,7 +1329,7 @@ local config = {
 				[2] = 28,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[40] = { 
@@ -1366,7 +1366,7 @@ local config = {
 				[2] = 29,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[41] = { 
@@ -1403,7 +1403,7 @@ local config = {
 				[2] = 30,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[42] = { 
@@ -1440,7 +1440,7 @@ local config = {
 				[2] = 31,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[43] = { 
@@ -1477,7 +1477,7 @@ local config = {
 				[2] = 32,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[44] = { 
@@ -1514,7 +1514,7 @@ local config = {
 				[2] = 33,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[45] = { 
@@ -1551,7 +1551,7 @@ local config = {
 				[2] = 34,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[46] = { 
@@ -1588,7 +1588,7 @@ local config = {
 				[2] = 35,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[47] = { 
@@ -1625,7 +1625,7 @@ local config = {
 				[2] = 36,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[48] = { 
@@ -1662,7 +1662,7 @@ local config = {
 				[2] = 37,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[49] = { 
@@ -1699,7 +1699,7 @@ local config = {
 				[2] = 38,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[50] = { 
@@ -1736,7 +1736,7 @@ local config = {
 				[2] = 39,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[51] = { 
@@ -1773,7 +1773,7 @@ local config = {
 				[2] = 40,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[52] = { 
@@ -1810,7 +1810,7 @@ local config = {
 				[2] = 41,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[53] = { 
@@ -1847,7 +1847,7 @@ local config = {
 				[2] = 42,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[54] = { 
@@ -1884,7 +1884,7 @@ local config = {
 				[2] = 43,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[55] = { 
@@ -1921,7 +1921,7 @@ local config = {
 				[2] = 44,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[56] = { 
@@ -1958,7 +1958,7 @@ local config = {
 				[2] = 45,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[57] = { 
@@ -1995,7 +1995,7 @@ local config = {
 				[2] = 46,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[58] = { 
@@ -2032,7 +2032,7 @@ local config = {
 				[2] = 47,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[59] = { 
@@ -2069,7 +2069,7 @@ local config = {
 				[2] = 48,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[60] = { 
@@ -2106,7 +2106,7 @@ local config = {
 				[2] = 49,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[61] = { 
@@ -2143,7 +2143,7 @@ local config = {
 				[2] = 50,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[62] = { 
@@ -2180,7 +2180,7 @@ local config = {
 				[2] = 51,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[63] = { 
@@ -2217,7 +2217,7 @@ local config = {
 				[2] = 52,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[64] = { 
@@ -2254,7 +2254,7 @@ local config = {
 				[2] = 53,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[65] = { 
@@ -2291,7 +2291,7 @@ local config = {
 				[2] = 54,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[66] = { 
@@ -2328,7 +2328,7 @@ local config = {
 				[2] = 55,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[67] = { 
@@ -2365,7 +2365,7 @@ local config = {
 				[2] = 56,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[68] = { 
@@ -2402,7 +2402,7 @@ local config = {
 				[2] = 57,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[69] = { 
@@ -2439,7 +2439,7 @@ local config = {
 				[2] = 58,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[70] = { 
@@ -2476,7 +2476,7 @@ local config = {
 				[2] = 59,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[71] = { 
@@ -2513,7 +2513,7 @@ local config = {
 				[2] = 60,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[72] = { 
@@ -2550,7 +2550,7 @@ local config = {
 				[2] = 62,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[73] = { 
@@ -2587,7 +2587,7 @@ local config = {
 				[2] = 64,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[74] = { 
@@ -2624,7 +2624,7 @@ local config = {
 				[2] = 66,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[75] = { 
@@ -2661,7 +2661,7 @@ local config = {
 				[2] = 68,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[76] = { 
@@ -2698,7 +2698,7 @@ local config = {
 				[2] = 70,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[77] = { 
@@ -2735,7 +2735,7 @@ local config = {
 				[2] = 72,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[78] = { 
@@ -2772,7 +2772,7 @@ local config = {
 				[2] = 74,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[79] = { 
@@ -2809,7 +2809,7 @@ local config = {
 				[2] = 76,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[80] = { 
@@ -2846,7 +2846,7 @@ local config = {
 				[2] = 78,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[81] = { 
@@ -2883,7 +2883,7 @@ local config = {
 				[2] = 80,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[82] = { 
@@ -2920,7 +2920,7 @@ local config = {
 				[2] = 82,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[83] = { 
@@ -2957,7 +2957,7 @@ local config = {
 				[2] = 84,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[84] = { 
@@ -2994,7 +2994,7 @@ local config = {
 				[2] = 86,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[85] = { 
@@ -3031,7 +3031,7 @@ local config = {
 				[2] = 88,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[86] = { 
@@ -3068,7 +3068,7 @@ local config = {
 				[2] = 90,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[87] = { 
@@ -3105,7 +3105,7 @@ local config = {
 				[2] = 92,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[88] = { 
@@ -3142,7 +3142,7 @@ local config = {
 				[2] = 94,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[89] = { 
@@ -3179,7 +3179,7 @@ local config = {
 				[2] = 96,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[90] = { 
@@ -3216,7 +3216,7 @@ local config = {
 				[2] = 98,
 			},
 		},
-		Model=900001,
+		Model=900028,
 		Monster_ID=80001,
 	},
 	[91] = { 
@@ -3253,7 +3253,8 @@ local config = {
 				[2] = 100,
 			},
 		},
-		Model=900001,
+		Model=900028,
+		Monster_ID=80001,
 	},
 	[92] = { 
 		Level=92,
@@ -3289,7 +3290,8 @@ local config = {
 				[2] = 100,
 			},
 		},
-		Model=900001,
+		Model=900028,
+		Monster_ID=80001,
 	},
 	[93] = { 
 		Level=93,
@@ -3325,7 +3327,8 @@ local config = {
 				[2] = 100,
 			},
 		},
-		Model=900001,
+		Model=900028,
+		Monster_ID=80001,
 	},
 	[94] = { 
 		Level=94,
@@ -3361,7 +3364,8 @@ local config = {
 				[2] = 100,
 			},
 		},
-		Model=900001,
+		Model=900028,
+		Monster_ID=80001,
 	},
 	[95] = { 
 		Level=95,
@@ -3397,7 +3401,8 @@ local config = {
 				[2] = 100,
 			},
 		},
-		Model=900001,
+		Model=900028,
+		Monster_ID=80001,
 	},
 	[96] = { 
 		Level=96,
@@ -3433,7 +3438,8 @@ local config = {
 				[2] = 100,
 			},
 		},
-		Model=900001,
+		Model=900028,
+		Monster_ID=80001,
 	},
 	[97] = { 
 		Level=97,
@@ -3469,7 +3475,8 @@ local config = {
 				[2] = 100,
 			},
 		},
-		Model=900001,
+		Model=900028,
+		Monster_ID=80001,
 	},
 	[98] = { 
 		Level=98,
@@ -3505,7 +3512,8 @@ local config = {
 				[2] = 100,
 			},
 		},
-		Model=900001,
+		Model=900028,
+		Monster_ID=80001,
 	},
 	[99] = { 
 		Level=99,
@@ -3541,7 +3549,8 @@ local config = {
 				[2] = 100,
 			},
 		},
-		Model=900001,
+		Model=900028,
+		Monster_ID=80001,
 	},
 	[100] = { 
 		Level=100,
@@ -3577,7 +3586,8 @@ local config = {
 				[2] = 100,
 			},
 		},
-		Model=900001,
+		Model=900028,
+		Monster_ID=80001,
 	},
 }
 return config
