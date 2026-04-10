@@ -4,12 +4,12 @@ local config = {
 		Name="ÁúÃ¨",
 		grade=1,
 		mount_icon="pet_000",
-		Monster_ID=80101,
+		Monster_ID=80010,
 		Cost = {
 			[1] = 2701,
 			[2] = 1,
 		},
-		Model=900003,
+		Model=900028,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -34,12 +34,12 @@ local config = {
 		Name="Ñ©Òíµñ",
 		grade=1,
 		mount_icon="pet_001",
-		Monster_ID=80102,
+		Monster_ID=80013,
 		Cost = {
 			[1] = 2704,
 			[2] = 1,
 		},
-		Model=900004,
+		Model=900031,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -60,15 +60,15 @@ local config = {
 	},
 	[3] = { 
 		ID=3,
-		Name="°×Ã¨",
+		Name="Æó¶ì",
 		grade=1,
 		mount_icon="pet_002",
-		Monster_ID=80010,
+		Monster_ID=80016,
 		Cost = {
 			[1] = 2707,
 			[2] = 1,
 		},
-		Model=900007,
+		Model=900034,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -95,15 +95,15 @@ local config = {
 	},
 	[4] = { 
 		ID=4,
-		Name="±ùÒí",
+		Name="µ¾²ÝÈË",
 		grade=1,
 		mount_icon="pet_003",
-		Monster_ID=80013,
+		Monster_ID=80019,
 		Cost = {
 			[1] = 2710,
 			[2] = 1,
 		},
-		Model=900010,
+		Model=900037,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -127,12 +127,12 @@ local config = {
 		Name="Ð¡Å®Î×",
 		grade=1,
 		mount_icon="pet_004",
-		Monster_ID=80016,
+		Monster_ID=80022,
 		Cost = {
 			[1] = 2713,
 			[2] = 1,
 		},
-		Model=900013,
+		Model=900040,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -159,12 +159,12 @@ local config = {
 		Name="Ð¡°×ÍÃ",
 		grade=1,
 		mount_icon="pet_005",
-		Monster_ID=80019,
+		Monster_ID=80025,
 		Cost = {
 			[1] = 2715,
 			[2] = 1,
 		},
-		Model=900015,
+		Model=900043,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -185,15 +185,15 @@ local config = {
 	},
 	[7] = { 
 		ID=7,
-		Name="×··ç±ª",
+		Name="½©Ê¬±¦±¦",
 		grade=1,
 		mount_icon="pet_006",
-		Monster_ID=80022,
+		Monster_ID=80028,
 		Cost = {
 			[1] = 2718,
 			[2] = 1,
 		},
-		Model=900018,
+		Model=900046,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -218,15 +218,15 @@ local config = {
 	},
 	[8] = { 
 		ID=8,
-		Name="°ÔÌì»¢",
+		Name="ó´Áú",
 		grade=1,
-		mount_icon="pet_007",
-		Monster_ID=80025,
+		mount_icon="pet_008",
+		Monster_ID=80031,
 		Cost = {
 			[1] = 2721,
 			[2] = 1,
 		},
-		Model=900021,
+		Model=900049,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -251,48 +251,15 @@ local config = {
 	},
 	[9] = { 
 		ID=9,
-		Name="ÇàÁú",
-		grade=1,
-		mount_icon="pet_008",
-		Monster_ID=80028,
-		Cost = {
-			[1] = 2724,
-			[2] = 1,
-		},
-		Model=900024,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 108,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 108,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 28,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 58,
-			},
-		},
-		Condition=1,
-		BattleSkill_Type="107",
-		BattleSkill_Value="300",
-	},
-	[10] = { 
-		ID=10,
 		Name="ÁúÃ¨",
 		grade=2,
 		mount_icon="pet_000",
-		Monster_ID=80101,
+		Monster_ID=80010,
 		Cost = {
 			[1] = 2701,
 			[2] = 1,
 		},
-		Model=900003,
+		Model=900028,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -310,17 +277,17 @@ local config = {
 		BattleSkill_Type="1",
 		BattleSkill_Value="200",
 	},
-	[11] = { 
-		ID=11,
+	[10] = { 
+		ID=10,
 		Name="Ñ©Òíµñ",
 		grade=2,
 		mount_icon="pet_001",
-		Monster_ID=80102,
+		Monster_ID=80013,
 		Cost = {
 			[1] = 2704,
 			[2] = 1,
 		},
-		Model=900004,
+		Model=900031,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -338,17 +305,17 @@ local config = {
 		BattleSkill_Type="115",
 		BattleSkill_Value="2000",
 	},
-	[12] = { 
-		ID=12,
-		Name="°×Ã¨",
+	[11] = { 
+		ID=11,
+		Name="Æó¶ì",
 		grade=2,
 		mount_icon="pet_002",
-		Monster_ID=80010,
+		Monster_ID=80016,
 		Cost = {
 			[1] = 2707,
 			[2] = 1,
 		},
-		Model=900007,
+		Model=900034,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -372,17 +339,17 @@ local config = {
 			[2] = 400,
 		},
 	},
-	[13] = { 
-		ID=13,
-		Name="±ùÒí",
+	[12] = { 
+		ID=12,
+		Name="µ¾²ÝÈË",
 		grade=2,
 		mount_icon="pet_003",
-		Monster_ID=80013,
+		Monster_ID=80019,
 		Cost = {
 			[1] = 2710,
 			[2] = 1,
 		},
-		Model=900010,
+		Model=900037,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -400,17 +367,17 @@ local config = {
 		BattleSkill_Type="116",
 		BattleSkill_Value="2000",
 	},
-	[14] = { 
-		ID=14,
+	[13] = { 
+		ID=13,
 		Name="Ð¡Å®Î×",
 		grade=2,
 		mount_icon="pet_004",
-		Monster_ID=80016,
+		Monster_ID=80022,
 		Cost = {
 			[1] = 2713,
 			[2] = 1,
 		},
-		Model=900013,
+		Model=900040,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -431,17 +398,17 @@ local config = {
 		},
 		BattleSkill_Value="1000",
 	},
-	[15] = { 
-		ID=15,
+	[14] = { 
+		ID=14,
 		Name="Ð¡°×ÍÃ",
 		grade=2,
 		mount_icon="pet_005",
-		Monster_ID=80019,
+		Monster_ID=80025,
 		Cost = {
 			[1] = 2715,
 			[2] = 1,
 		},
-		Model=900015,
+		Model=900043,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -459,17 +426,17 @@ local config = {
 		BattleSkill_Type="126",
 		BattleSkill_Value="1",
 	},
-	[16] = { 
-		ID=16,
-		Name="×··ç±ª",
+	[15] = { 
+		ID=15,
+		Name="½©Ê¬±¦±¦",
 		grade=2,
 		mount_icon="pet_006",
-		Monster_ID=80022,
+		Monster_ID=80028,
 		Cost = {
 			[1] = 2718,
 			[2] = 1,
 		},
-		Model=900018,
+		Model=900046,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -491,17 +458,17 @@ local config = {
 		BattleSkill_Type="9",
 		BattleSkill_Value="800",
 	},
-	[17] = { 
-		ID=17,
-		Name="°ÔÌì»¢",
+	[16] = { 
+		ID=16,
+		Name="ó´Áú",
 		grade=2,
 		mount_icon="pet_007",
-		Monster_ID=80025,
+		Monster_ID=80031,
 		Cost = {
 			[1] = 2721,
 			[2] = 1,
 		},
-		Model=900021,
+		Model=900049,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -523,49 +490,17 @@ local config = {
 		BattleSkill_Type="103",
 		BattleSkill_Value="400",
 	},
-	[18] = { 
-		ID=18,
-		Name="ÇàÁú",
-		grade=2,
-		mount_icon="pet_008",
-		Monster_ID=80028,
-		Cost = {
-			[1] = 2724,
-			[2] = 1,
-		},
-		Model=900024,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 108,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 108,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 28,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 58,
-			},
-		},
-		BattleSkill_Type="107",
-		BattleSkill_Value="600",
-	},
-	[19] = { 
-		ID=19,
+	[17] = { 
+		ID=17,
 		Name="ÁúÃ¨",
 		grade=3,
 		mount_icon="pet_000",
-		Monster_ID=80101,
+		Monster_ID=80011,
 		Cost = {
 			[1] = 2701,
 			[2] = 1,
 		},
-		Model=900003,
+		Model=900029,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -583,17 +518,17 @@ local config = {
 		BattleSkill_Type="1",
 		BattleSkill_Value="500",
 	},
-	[20] = { 
-		ID=20,
+	[18] = { 
+		ID=18,
 		Name="Ñ©Òíµñ",
 		grade=3,
 		mount_icon="pet_001",
-		Monster_ID=80102,
+		Monster_ID=80014,
 		Cost = {
 			[1] = 2704,
 			[2] = 1,
 		},
-		Model=900004,
+		Model=900032,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -609,236 +544,294 @@ local config = {
 			},
 		},
 		BattleSkill_Type="115",
+		BattleSkill_Value="5000",
+	},
+	[19] = { 
+		ID=19,
+		Name="Æó¶ì",
+		grade=3,
+		mount_icon="pet_002",
+		Monster_ID=80017,
+		Cost = {
+			[1] = 2707,
+			[2] = 1,
+		},
+		Model=900035,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+			[3] = {
+				[1] = 69,
+				[2] = 10,
+			},
+		},
+		BattleSkill_Type = {
+			[1] = 104,
+			[2] = 105,
+		},
+		BattleSkill_Value = {
+			[1] = 800,
+			[2] = 800,
+		},
+	},
+	[20] = { 
+		ID=20,
+		Name="µ¾²ÝÈË",
+		grade=3,
+		mount_icon="pet_003",
+		Monster_ID=80020,
+		Cost = {
+			[1] = 2710,
+			[2] = 1,
+		},
+		Model=900038,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+			[3] = {
+				[1] = 23,
+				[2] = 10,
+			},
+		},
+		BattleSkill_Type="116",
 		BattleSkill_Value="5000",
 	},
 	[21] = { 
 		ID=21,
-		Name="°×Ã¨",
+		Name="Ð¡Å®Î×",
 		grade=3,
-		mount_icon="pet_002",
-		Monster_ID=80011,
+		mount_icon="pet_004",
+		Monster_ID=80023,
 		Cost = {
-			[1] = 2707,
+			[1] = 2713,
 			[2] = 1,
 		},
-		Model=900007,
+		Model=900041,
 		ClassID = {
 			[1] = {
 				[1] = 1,
-				[2] = 50,
+				[2] = 30,
 			},
 			[2] = {
 				[1] = 2,
-				[2] = 50,
+				[2] = 30,
 			},
 			[3] = {
-				[1] = 69,
+				[1] = 115,
 				[2] = 10,
 			},
 		},
 		BattleSkill_Type = {
-			[1] = 104,
-			[2] = 105,
+			[1] = 99,
+			[2] = 100,
 		},
-		BattleSkill_Value = {
-			[1] = 800,
-			[2] = 800,
-		},
+		BattleSkill_Value="1500",
 	},
 	[22] = { 
 		ID=22,
-		Name="±ùÒí",
+		Name="Ð¡°×ÍÃ",
 		grade=3,
-		mount_icon="pet_003",
-		Monster_ID=80014,
+		mount_icon="pet_005",
+		Monster_ID=80026,
 		Cost = {
-			[1] = 2710,
+			[1] = 2715,
 			[2] = 1,
 		},
-		Model=900010,
+		Model=900044,
 		ClassID = {
 			[1] = {
 				[1] = 1,
-				[2] = 50,
+				[2] = 30,
 			},
 			[2] = {
 				[1] = 2,
-				[2] = 50,
+				[2] = 30,
 			},
 			[3] = {
-				[1] = 23,
+				[1] = 115,
 				[2] = 10,
 			},
 		},
-		BattleSkill_Type="116",
-		BattleSkill_Value="5000",
+		BattleSkill_Type="126",
+		BattleSkill_Value="2",
 	},
 	[23] = { 
 		ID=23,
-		Name="Ð¡Å®Î×",
+		Name="½©Ê¬±¦±¦",
 		grade=3,
-		mount_icon="pet_004",
-		Monster_ID=80017,
+		mount_icon="pet_006",
+		Monster_ID=80029,
 		Cost = {
-			[1] = 2713,
+			[1] = 2718,
 			[2] = 1,
 		},
-		Model=900013,
+		Model=900047,
 		ClassID = {
 			[1] = {
 				[1] = 1,
-				[2] = 30,
+				[2] = 100,
 			},
 			[2] = {
 				[1] = 2,
-				[2] = 30,
+				[2] = 100,
 			},
 			[3] = {
+				[1] = 23,
+				[2] = 20,
+			},
+			[4] = {
 				[1] = 115,
-				[2] = 10,
+				[2] = 30,
 			},
 		},
-		BattleSkill_Type = {
-			[1] = 99,
-			[2] = 100,
-		},
-		BattleSkill_Value="1500",
+		BattleSkill_Type="9",
+		BattleSkill_Value="1200",
 	},
 	[24] = { 
 		ID=24,
-		Name="Ð¡°×ÍÃ",
+		Name="ó´Áú",
 		grade=3,
-		mount_icon="pet_005",
-		Monster_ID=80020,
+		mount_icon="pet_007",
+		Monster_ID=80032,
 		Cost = {
-			[1] = 2715,
+			[1] = 2721,
 			[2] = 1,
 		},
-		Model=900015,
+		Model=900050,
 		ClassID = {
 			[1] = {
 				[1] = 1,
-				[2] = 30,
+				[2] = 88,
 			},
 			[2] = {
 				[1] = 2,
-				[2] = 30,
+				[2] = 88,
 			},
 			[3] = {
+				[1] = 23,
+				[2] = 18,
+			},
+			[4] = {
 				[1] = 115,
-				[2] = 10,
+				[2] = 18,
 			},
 		},
-		BattleSkill_Type="126",
-		BattleSkill_Value="2",
+		BattleSkill_Type="103",
+		BattleSkill_Value="600",
 	},
 	[25] = { 
 		ID=25,
-		Name="×··ç±ª",
-		grade=3,
-		mount_icon="pet_006",
-		Monster_ID=80023,
+		Name="ÁúÃ¨",
+		grade=4,
+		mount_icon="pet_000",
+		Monster_ID=80011,
 		Cost = {
-			[1] = 2718,
+			[1] = 2701,
 			[2] = 1,
 		},
-		Model=900018,
+		Model=900029,
 		ClassID = {
 			[1] = {
 				[1] = 1,
-				[2] = 100,
+				[2] = 50,
 			},
 			[2] = {
 				[1] = 2,
-				[2] = 100,
+				[2] = 50,
 			},
 			[3] = {
-				[1] = 23,
+				[1] = 115,
 				[2] = 20,
 			},
-			[4] = {
-				[1] = 115,
-				[2] = 30,
-			},
 		},
-		BattleSkill_Type="9",
-		BattleSkill_Value="1200",
+		BattleSkill_Type="1",
+		BattleSkill_Value="500",
 	},
 	[26] = { 
 		ID=26,
-		Name="°ÔÌì»¢",
-		grade=3,
-		mount_icon="pet_007",
-		Monster_ID=80026,
+		Name="Ñ©Òíµñ",
+		grade=4,
+		mount_icon="pet_001",
+		Monster_ID=80014,
 		Cost = {
-			[1] = 2721,
+			[1] = 2704,
 			[2] = 1,
 		},
-		Model=900021,
+		Model=900032,
 		ClassID = {
 			[1] = {
 				[1] = 1,
-				[2] = 88,
+				[2] = 50,
 			},
 			[2] = {
 				[1] = 2,
-				[2] = 88,
+				[2] = 50,
 			},
 			[3] = {
-				[1] = 23,
-				[2] = 18,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 18,
+				[1] = 69,
+				[2] = 10,
 			},
 		},
-		BattleSkill_Type="103",
-		BattleSkill_Value="600",
+		BattleSkill_Type="115",
+		BattleSkill_Value="5000",
 	},
 	[27] = { 
 		ID=27,
-		Name="ÇàÁú",
-		grade=3,
-		mount_icon="pet_008",
-		Monster_ID=80029,
+		Name="Æó¶ì",
+		grade=4,
+		mount_icon="pet_002",
+		Monster_ID=80017,
 		Cost = {
-			[1] = 2724,
+			[1] = 2707,
 			[2] = 1,
 		},
-		Model=900024,
+		Model=900035,
 		ClassID = {
 			[1] = {
 				[1] = 1,
-				[2] = 108,
+				[2] = 50,
 			},
 			[2] = {
 				[1] = 2,
-				[2] = 108,
+				[2] = 50,
 			},
 			[3] = {
-				[1] = 23,
-				[2] = 28,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 58,
+				[1] = 69,
+				[2] = 10,
 			},
 		},
-		BattleSkill_Type="107",
-		BattleSkill_Value="1000",
+		BattleSkill_Type = {
+			[1] = 104,
+			[2] = 105,
+		},
+		BattleSkill_Value = {
+			[1] = 800,
+			[2] = 800,
+		},
 	},
 	[28] = { 
 		ID=28,
-		Name="ÁúÃ¨",
+		Name="µ¾²ÝÈË",
 		grade=4,
-		mount_icon="pet_000",
-		Monster_ID=80101,
+		mount_icon="pet_003",
+		Monster_ID=80020,
 		Cost = {
-			[1] = 2701,
+			[1] = 2710,
 			[2] = 1,
 		},
-		Model=900003,
+		Model=900038,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -849,114 +842,24 @@ local config = {
 				[2] = 50,
 			},
 			[3] = {
-				[1] = 115,
-				[2] = 20,
+				[1] = 23,
+				[2] = 10,
 			},
 		},
-		BattleSkill_Type="1",
-		BattleSkill_Value="500",
+		BattleSkill_Type="116",
+		BattleSkill_Value="5000",
 	},
 	[29] = { 
 		ID=29,
-		Name="Ñ©Òíµñ",
-		grade=4,
-		mount_icon="pet_001",
-		Monster_ID=80102,
-		Cost = {
-			[1] = 2704,
-			[2] = 1,
-		},
-		Model=900004,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 50,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 50,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 10,
-			},
-		},
-		BattleSkill_Type="115",
-		BattleSkill_Value="5000",
-	},
-	[30] = { 
-		ID=30,
-		Name="°×Ã¨",
-		grade=4,
-		mount_icon="pet_002",
-		Monster_ID=80011,
-		Cost = {
-			[1] = 2707,
-			[2] = 1,
-		},
-		Model=900007,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 50,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 50,
-			},
-			[3] = {
-				[1] = 69,
-				[2] = 10,
-			},
-		},
-		BattleSkill_Type = {
-			[1] = 104,
-			[2] = 105,
-		},
-		BattleSkill_Value = {
-			[1] = 800,
-			[2] = 800,
-		},
-	},
-	[31] = { 
-		ID=31,
-		Name="±ùÒí",
-		grade=4,
-		mount_icon="pet_003",
-		Monster_ID=80014,
-		Cost = {
-			[1] = 2710,
-			[2] = 1,
-		},
-		Model=900010,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 50,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 50,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 10,
-			},
-		},
-		BattleSkill_Type="116",
-		BattleSkill_Value="5000",
-	},
-	[32] = { 
-		ID=32,
 		Name="Ð¡Å®Î×",
 		grade=4,
 		mount_icon="pet_004",
-		Monster_ID=80017,
+		Monster_ID=80023,
 		Cost = {
 			[1] = 2713,
 			[2] = 1,
 		},
-		Model=900013,
+		Model=900041,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -977,17 +880,17 @@ local config = {
 		},
 		BattleSkill_Value="1500",
 	},
-	[33] = { 
-		ID=33,
+	[30] = { 
+		ID=30,
 		Name="Ð¡°×ÍÃ",
 		grade=4,
 		mount_icon="pet_005",
-		Monster_ID=80020,
+		Monster_ID=80026,
 		Cost = {
 			[1] = 2715,
 			[2] = 1,
 		},
-		Model=900015,
+		Model=900044,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -1005,17 +908,17 @@ local config = {
 		BattleSkill_Type="126",
 		BattleSkill_Value="2",
 	},
-	[34] = { 
-		ID=34,
-		Name="×··ç±ª",
+	[31] = { 
+		ID=31,
+		Name="½©Ê¬±¦±¦",
 		grade=4,
 		mount_icon="pet_006",
-		Monster_ID=80023,
+		Monster_ID=80029,
 		Cost = {
 			[1] = 2718,
 			[2] = 1,
 		},
-		Model=900018,
+		Model=900047,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -1037,17 +940,17 @@ local config = {
 		BattleSkill_Type="9",
 		BattleSkill_Value="1200",
 	},
-	[35] = { 
-		ID=35,
-		Name="°ÔÌì»¢",
+	[32] = { 
+		ID=32,
+		Name="ó´Áú",
 		grade=4,
 		mount_icon="pet_007",
-		Monster_ID=80026,
+		Monster_ID=80032,
 		Cost = {
 			[1] = 2721,
 			[2] = 1,
 		},
-		Model=900021,
+		Model=900050,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -1069,49 +972,17 @@ local config = {
 		BattleSkill_Type="103",
 		BattleSkill_Value="600",
 	},
-	[36] = { 
-		ID=36,
-		Name="ÇàÁú",
-		grade=4,
-		mount_icon="pet_008",
-		Monster_ID=80029,
-		Cost = {
-			[1] = 2724,
-			[2] = 1,
-		},
-		Model=900024,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 108,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 108,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 28,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 58,
-			},
-		},
-		BattleSkill_Type="107",
-		BattleSkill_Value="1000",
-	},
-	[37] = { 
-		ID=37,
+	[33] = { 
+		ID=33,
 		Name="ÁúÃ¨",
 		grade=5,
 		mount_icon="pet_000",
-		Monster_ID=80101,
+		Monster_ID=80012,
 		Cost = {
 			[1] = 2701,
 			[2] = 1,
 		},
-		Model=900003,
+		Model=900030,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -1129,17 +1000,17 @@ local config = {
 		BattleSkill_Type="1",
 		BattleSkill_Value="500",
 	},
-	[38] = { 
-		ID=38,
+	[34] = { 
+		ID=34,
 		Name="Ñ©Òíµñ",
 		grade=5,
 		mount_icon="pet_001",
-		Monster_ID=80102,
+		Monster_ID=80015,
 		Cost = {
 			[1] = 2704,
 			[2] = 1,
 		},
-		Model=900004,
+		Model=900033,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -1157,17 +1028,17 @@ local config = {
 		BattleSkill_Type="115",
 		BattleSkill_Value="5000",
 	},
-	[39] = { 
-		ID=39,
-		Name="°×Ã¨",
+	[35] = { 
+		ID=35,
+		Name="Æó¶ì",
 		grade=5,
 		mount_icon="pet_002",
-		Monster_ID=80012,
+		Monster_ID=80018,
 		Cost = {
 			[1] = 2707,
 			[2] = 1,
 		},
-		Model=900007,
+		Model=900036,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -1191,17 +1062,17 @@ local config = {
 			[2] = 800,
 		},
 	},
-	[40] = { 
-		ID=40,
-		Name="±ùÒí",
+	[36] = { 
+		ID=36,
+		Name="µ¾²ÝÈË",
 		grade=5,
 		mount_icon="pet_003",
-		Monster_ID=80015,
+		Monster_ID=80021,
 		Cost = {
 			[1] = 2710,
 			[2] = 1,
 		},
-		Model=900010,
+		Model=900039,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -1219,17 +1090,17 @@ local config = {
 		BattleSkill_Type="116",
 		BattleSkill_Value="5000",
 	},
-	[41] = { 
-		ID=41,
+	[37] = { 
+		ID=37,
 		Name="Ð¡Å®Î×",
 		grade=5,
 		mount_icon="pet_004",
-		Monster_ID=80018,
+		Monster_ID=80024,
 		Cost = {
 			[1] = 2713,
 			[2] = 1,
 		},
-		Model=900013,
+		Model=900042,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -1250,17 +1121,17 @@ local config = {
 		},
 		BattleSkill_Value="1500",
 	},
-	[42] = { 
-		ID=42,
+	[38] = { 
+		ID=38,
 		Name="Ð¡°×ÍÃ",
 		grade=5,
 		mount_icon="pet_005",
-		Monster_ID=80021,
+		Monster_ID=80027,
 		Cost = {
 			[1] = 2715,
 			[2] = 1,
 		},
-		Model=900015,
+		Model=900045,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -1278,17 +1149,17 @@ local config = {
 		BattleSkill_Type="126",
 		BattleSkill_Value="2",
 	},
-	[43] = { 
-		ID=43,
-		Name="×··ç±ª",
+	[39] = { 
+		ID=39,
+		Name="½©Ê¬±¦±¦",
 		grade=5,
 		mount_icon="pet_006",
-		Monster_ID=80024,
+		Monster_ID=80030,
 		Cost = {
 			[1] = 2718,
 			[2] = 1,
 		},
-		Model=900018,
+		Model=900048,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -1310,17 +1181,17 @@ local config = {
 		BattleSkill_Type="9",
 		BattleSkill_Value="1200",
 	},
-	[44] = { 
-		ID=44,
-		Name="°ÔÌì»¢",
+	[40] = { 
+		ID=40,
+		Name="ó´Áú",
 		grade=5,
 		mount_icon="pet_007",
-		Monster_ID=80027,
+		Monster_ID=80033,
 		Cost = {
 			[1] = 2721,
 			[2] = 1,
 		},
-		Model=900021,
+		Model=900051,
 		ClassID = {
 			[1] = {
 				[1] = 1,
@@ -1341,38 +1212,6 @@ local config = {
 		},
 		BattleSkill_Type="103",
 		BattleSkill_Value="600",
-	},
-	[45] = { 
-		ID=45,
-		Name="ÇàÁú",
-		grade=5,
-		mount_icon="pet_008",
-		Monster_ID=80030,
-		Cost = {
-			[1] = 2724,
-			[2] = 1,
-		},
-		Model=900024,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 108,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 108,
-			},
-			[3] = {
-				[1] = 23,
-				[2] = 28,
-			},
-			[4] = {
-				[1] = 115,
-				[2] = 58,
-			},
-		},
-		BattleSkill_Type="107",
-		BattleSkill_Value="1000",
 	},
 }
 return config
