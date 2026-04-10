@@ -308,7 +308,13 @@ end
 function BagRecyclePanel:ClickTabEvent(idx)
 	self.selectTab = idx
 	self.selectCheckBoxes = self.bagRecycleViewModel:GetTabCheckBoxModel(idx)
+	if idx == 1 then
+		for _, model in ipairs(self.selectCheckBoxes) do
+			model.isSelect = true
+		end
+	end
 	FGUI:GList_setNumItems(self._ui.List_CheckBox, #self.selectCheckBoxes)
+	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
 end
 
 function BagRecyclePanel:ClickCheckBoxEvent(idx)
