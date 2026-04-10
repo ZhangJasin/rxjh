@@ -19,7 +19,7 @@
       <item/>
     </list>
     <image id="n63_gs4z" name="img_reward" src="io7h4" fileName="Images/img_transfer_reward.png" xy="607,572" size="146,24" group="n49_gab2"/>
-    <richtext id="n64_gs4z" name="txt_mission" xy="603,525" size="433,25" group="n49_gab2" fontSize="17" color="#372a08" autoSize="none" text="已全部完成"/>
+    <richtext id="n64_gs4z" name="txt_mission" xy="603,525" size="433,25" group="n49_gab2" fontSize="17" color="#372a08" autoSize="none" text=""/>
     <richtext id="n68_gs4z" name="txt_job_cur" xy="632,146" size="144,30" group="n49_gab2" fontSize="20" color="#3a5c76" align="center" autoSize="none" text=""/>
     <richtext id="n69_gs4z" name="txt_job_next" xy="980,146" size="144,30" group="n49_gab2" fontSize="20" color="#3a5c76" align="center" autoSize="none" text=""/>
     <richtext id="n70_gs4z" name="txt_attr_1" xy="603,187" size="70,26" group="n49_gab2" fontSize="16" color="#372a08" autoSize="none" text="生命值："/>
@@ -48,7 +48,7 @@
       <item/>
       <item/>
     </list>
-    <richtext id="n83_ok6e" name="txt_condition" xy="603,492" size="433,25" group="n49_gab2" fontSize="17" color="#372a08" autoSize="none" text="角色等级达到100级(99/100)"/>
+    <richtext id="n83_ok6e" name="txt_condition" xy="603,492" size="433,25" group="n49_gab2" fontSize="17" color="#372a08" autoSize="none" text=""/>
     <component id="n84_ok6e" name="btn_go" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="1052,521" size="102,32" group="n49_gab2">
       <Button title="前 往"/>
     </component>

@@ -16,13 +16,19 @@ ssrNetMsgCfg.mountMain                     = "mountMain"                        
 ssrNetMsgCfg.npcDialog                     = "npcDialog"                                            -- NPC对话框
 ssrNetMsgCfg.bag                           = "bag"                                                  -- 背包
 ssrNetMsgCfg.MentorShip                    = "MentorShip"                                           -- 师徒
-ssrNetMsgCfg.TransferInfo                  = "TransferInfo"                                             -- 转职
+
 
 --Z_Jasin
 ssrNetMsgCfg.Changwan                      = "Changwan"                                                --畅玩特权
 
+
+
 --自定义消息ID
 ssrNetMsgCfg.USER_MESSAGE_ID  = 1000000
+
+ssrNetMsgCfg.TransferInfo                  = "TransferInfo"                                             -- 转职
+ssrNetMsgCfg.TransferInfo_RefreshTaskUI    = 1100000                                             
+ssrNetMsgCfg.TransferInfo_RefreshUI        = 1100001                                             
 
 local t = {}
 for msgName, msgID in pairs(ssrNetMsgCfg) do

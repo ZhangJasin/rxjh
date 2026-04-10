@@ -609,9 +609,9 @@ function Task.getReward(actor, data)
         if Task_cfg[taskid]['task_drop'] then
             Player.giveItemByJobTable(actor, Task_cfg[taskid]['task_drop'], 1, 1)
         end
-        -- 如果完成的是最后一个转职任务 则标记完成状态       
-        if Task_cfg[taskid]['transfer_lasttask'] then
-           
+        -- 转职任务 更新界面       
+        if Task_cfg[taskid]['task_type'] == 2 then
+            TransferInfo.getTaskState(actor)
         end
     end
 end

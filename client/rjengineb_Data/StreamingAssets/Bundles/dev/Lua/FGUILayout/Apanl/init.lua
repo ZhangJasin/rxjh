@@ -91,7 +91,3 @@ ssrMessage:RegisterNetMsg(ssrNetMsgCfg.MentorShipShop, MentorShipShopUI)
 
 BagRecycleViewModelUI = SL:RequireFile("FGUILayout/Bag/BagRecycleViewModel")   -- 引擎背包界面操作
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.BagRecycleViewModel, BagRecycleViewModelUI)
-
--- 转职相关 引擎界面
-TransferUI                = SL:RequireFile("FGUILayout/Transfer/TransferPanel")
-ssrMessage:RegisterNetMsg(ssrNetMsgCfg.TransferPanel, TransferUI)

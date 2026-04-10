@@ -306,7 +306,7 @@ function MainMission:OnListMissionItemClick(context)
         elseif task_turn_param == 9 then  --打开组队界面
             FGUI:Open("Team", "TeamPanel", 1)
         elseif task_turn_param == 11 then  --打开加工界面
-            FGUI:Open("A_EquipDuanZao", "EquipDuanZao",4,nil,{fullScreen = false,destroyTime = 1})
+            FGUI:Open("A_EquipDuanZao", "EquipDuanZao",3,nil,{fullScreen = false,destroyTime = 1})
         end
     elseif task_turntype == 3 then   --引导
         -- 引导逻辑

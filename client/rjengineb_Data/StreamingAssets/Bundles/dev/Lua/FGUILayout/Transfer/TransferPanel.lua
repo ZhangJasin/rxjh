@@ -5,6 +5,7 @@ local TransferPanel = class("TransferPanel", BaseFGUILayout)
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 local ItemShow = SL:RequireFile("FGUILayout/Item/ItemShow")
 local ItemFrom = SL:GetValue("ITEMFROMUI_ENUM")
+local Task_cfg = require("game_config/cfgcsv/Task")
 local Language = require("game_config/cfgcsv/Language")
 local Condition = require("game_config/Condition")
 
@@ -54,16 +55,20 @@ function TransferPanel:Create()
 end
 
 function TransferPanel:Enter()
+    -- 注册消息回调
+    SL:RegisterNetMsg(ssrNetMsgCfg.TransferInfo_RefreshTaskUI, handler(self, self.RefreshTaskUI))
+    SL:RegisterNetMsg(ssrNetMsgCfg.TransferInfo_RefreshUI,handler(self, self.RefreshUI))   
     self:RefreshUI()
 end
 
 function TransferPanel:Destroy()
 end
 function TransferPanel:Exit()
+    -- 注销消息回调
+    SL:UnRegisterNetMsg(ssrNetMsgCfg.TransferInfo_RefreshTaskUI)
+    SL:UnRegisterNetMsg(ssrNetMsgCfg.TransferInfo_RefreshUI)
     self:ClearModel()
 end
-
-
 
 -- 显示角色模型
 function TransferPanel:ShowRoleModel()
@@ -72,18 +77,17 @@ function TransferPanel:ShowRoleModel()
     -- 绑定模型到 graph_role
     self._TransferModel = self:UIModel_Bind(self._ui.graph_role)
     FGUI:UIModel_setObjectEulerAngles(self._TransferModel, nil, 0, 0, 0)
-
-    local bodyId = nil
-    local helmetId = nil
-    local weaponId = nil
-    local faceId = nil
-    local Sex = SL:GetValue("SEX")
-    local Job = SL:GetValue("JOB")
-    if curCfg and curCfg.ModeId then
-        bodyId, helmetId = curCfg.ModeId[Sex][1], curCfg.ModeId[Sex][2]
+    if not self._curCfg or not self._curCfg.ModeId then
+        return
     end
-    local modelData = SL:GetValue("FEATURE")
 
+    local Sex = SL:GetValue("SEX")
+    local bodyId,helmetId = self._curCfg.ModeId[Sex+1][1],self._curCfg.ModeId[Sex+1][2]
+
+    local modelData = SL:GetValue("FEATURE")
+    local weaponId = nil
+    local faceId = nil    
+    local Job = SL:GetValue("JOB")
     if modelData then
         local extData = {}
         extData.sex = Sex
@@ -152,7 +156,7 @@ function TransferPanel:RefreshUI()
     local curCfg, nextCfg = SL:GetValue("TRANSFER_MAINPLAYER_CONFIG"),SL:GetValue("TRANSFER_MAINPLAYER_NEXT_CONFIG")
     self._curCfg = curCfg
     self._nextCfg = nextCfg
-    SL:dump(self._nextCfg)
+    -- SL:dump(self._nextCfg)
     
     -- 显示角色模型
     self:ShowRoleModel()
@@ -207,9 +211,7 @@ function TransferPanel:RefreshUI()
             FGUI:GRichTextField_setText(self._ui.txt_condition, condition)
         else
             FGUI:GRichTextField_setText(self._ui.txt_condition, "")
-        end        
-        --请求转职任务信息
-        ssrMessage:sendmsgEx("TransferInfo", "getTaskState")
+        end    
         -- 显示奖励
         if nextCfg.Reward then
             FGUI:GList_setNumItems(self._ui.list_reward, #nextCfg.Reward)
@@ -217,6 +219,8 @@ function TransferPanel:RefreshUI()
         else
             FGUI:GList_setNumItems(self._ui.list_reward, 0)
         end    
+        --请求转职任务信息
+        ssrMessage:sendmsgEx("TransferInfo", "getTaskState")
     else
         FGUI:GRichTextField_setText(self._ui.txt_condition, "")
         FGUI:GRichTextField_setText(self._ui.txt_mission, "")
@@ -243,52 +247,33 @@ function TransferPanel:GetConditionText(conditionId)
     return string.format("转职条件：角色等级达到%d级<font color='%s'> (%d/%d)</font>", needLv, level >= level and "#00FF00" or "#FF0000",level, needLv)
 end
 
-function TransferPanel:RefreshTaskUI(data)
-    -- 显示当前任务
-    if data then
-        -- local taskInfo, hasTask, allComplete = self:GetTaskInfo(data)
-        -- FGUI:GRichTextField_setText(self._ui.txt_mission, taskInfo)
+function TransferPanel:RefreshTaskUI(_,_totalNum,_compNum,_curTaskId)   
+    if not self._ui then return end
+    -- 保存任务状态
+    self._totalNum = _totalNum
+    self._compNum = _compNum
+    self._curTaskId = _curTaskId
 
-        -- -- 根据任务状态显示按钮
-        -- if allComplete then
-        --     -- 任务全部完成，显示转职按钮
-        --     self:ShowTransferButton("转 职")
-        -- elseif hasTask then
-        --     -- 有进行中的任务，显示前往按钮
-        --     self:ShowGoButton()
-        -- else
-        --     -- 没有接取任务，显示接取任务按钮
-        --     self:ShowTransferButton("接取任务")
-        -- end
-    else
-        FGUI:GRichTextField_setText(self._ui.txt_mission, "")
-        -- 没有任务时显示转职按钮（直接转职）
-        --self:ShowTransferButton("转 职")
-    end
-end
-
--- 获取任务信息
-function TransferPanel:GetTaskInfo(taskIds)
-    -- 检查进行中任务完成状态
-    local taskProgressList = SL:GetValue("MISSION_ALL_DATA") or {}
-    SL:dump(taskProgressList,"任务详情====")
-    local allComplete = true
-    local hasTask = false
-
-    for _, taskId in ipairs(taskIds) do
-        if taskProgressList[tostring(taskId)] then
-            hasTask = true  -- 已有任务
-            if taskProgressList[tostring(taskId)].state ~= 2 then
-                allComplete = false
-                break
-            end
+    -- 显示任务进度文本
+    if self._totalNum > 0 then    
+        -- 根据任务状态显示按钮
+        if self._compNum >= self._totalNum then
+            -- 全部任务完成，显示转职按钮
+            FGUI:GRichTextField_setText(self._ui.txt_mission, "")
+            self:ShowTransferButton("转 职")
+        elseif self._curTaskId > 0 then
+            -- 有进行中任务，显示前往按钮
+            FGUI:GRichTextField_setText(self._ui.txt_mission, "转职任务：".. Language[Task_cfg[self._curTaskId]['task_targetdec']]['Dec'])
+            self:ShowGoButton()
+        else
+            -- 没有任务，显示接取任务按钮
+            FGUI:GRichTextField_setText(self._ui.txt_mission, "")
+            self:ShowTransferButton("接取任务")
         end
-    end
-
-    if allComplete then
-        return "转职任务：当前转职任务已全部完成，可前往转职", hasTask, allComplete
     else
-        return "转职任务：进行中", hasTask, allComplete  --当前任务信息
+        -- 没有转职任务
+       FGUI:GRichTextField_setText(self._ui.txt_mission, "转职任务：无可用任务")
+        self:ShowTransferButton("转 职")
     end
 end
 
@@ -305,13 +290,15 @@ end
 -- 显示前往按钮
 function TransferPanel:ShowGoButton()
     FGUI:setVisible(self._ui.btn_go, true)
+    FGUI:setVisible(self._ui.btn_comp, true)
 
-    --显示任务进度
+    -- 显示任务进度
     local title = FGUI:GetChild(self._ui.btn_comp, "title")
     if title then
-        FGUI:GTextField_setText(title, string.format("进度%s/%s"))
+        local compNum = self._compNum or 0
+        local totalNum = self._totalNum or 0
+        FGUI:GTextField_setText(title, string.format("任务%d/%d", compNum, totalNum))
     end
-    FGUI:setVisible(self._ui.btn_comp, true)
 end
 
 -- 按钮点击事件
@@ -333,19 +320,17 @@ end
 
 -- 接取转职任务
 function TransferPanel:AcceptTask()
-    if self._nextCfg and self._nextCfg.TaskId and #self._nextCfg.TaskId > 0 then
-        local taskId = self._nextCfg.TaskId[1]  -- 获取第一个任务ID
-        -- 发送接取任务请求
-        SL:SendNetMsg(9998, 10, {taskId = taskId}, nil, nil)
+    if self._nextCfg then
+        ssrMessage:sendmsgEx("TransferInfo", "pickTask")
     end
 end
 
 -- 前往任务
 function TransferPanel:GoToTask()
-    if self._nextCfg and self._nextCfg.TaskId and #self._nextCfg.TaskId > 0 then
-        local taskId = self._nextCfg.TaskId[1]  -- 获取第一个任务ID
+    if self._curTaskId and self._curTaskId > 0 then
         -- 发送寻路请求
-        ssrMessage:sendmsgEx("Task", "xunlu", {taskId})
+        ssrMessage:sendmsgEx("Task", "xunlu", {self._curTaskId})
+        FGUI:Close("Transfer", "TransferPanel")
     end
 end
 
@@ -452,7 +437,7 @@ function TransferPanel:DoTransfer()
     end
 
     -- 发送转职请求
-    ssrMessage:sendmsgEx("Transfer", "doTransfer")
+    ssrMessage:sendmsgEx("TransferInfo", "doTransfer")
 end
 
 -- 打开界面

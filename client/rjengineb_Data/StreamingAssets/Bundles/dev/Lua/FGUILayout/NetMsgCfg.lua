@@ -32,7 +32,6 @@ ssrNetMsgCfg.MentorShipMain                 =  "MentorShipMain"     --师徒主�
 ssrNetMsgCfg.MentorShipTeach                =  "MentorShipTeach"     --师徒传功界面 
 ssrNetMsgCfg.Invitation                     =  "Invitation"     --师徒副本
 ssrNetMsgCfg.BagRecycleViewModel            =  "BagRecycleViewModel"               --自动回收 
-ssrNetMsgCfg.TransferPanel                  =  "TransferPanel"               --转职
 
 --Z_Jasin
 ssrNetMsgCfg.Changwan                       = "Changwan"                   --畅玩特权
@@ -40,6 +39,10 @@ ssrNetMsgCfg.Changwan                       = "Changwan"                   --畅
 
 --自定义消息ID
 ssrNetMsgCfg.USER_MESSAGE_ID  = 1000000
+
+ssrNetMsgCfg.TransferInfo                  = "TransferInfo"                                             -- 转职
+ssrNetMsgCfg.TransferInfo_RefreshTaskUI    = 1100000                                             
+ssrNetMsgCfg.TransferInfo_RefreshUI        = 1100001
 
 local t                       = {}
 for msgName, msgID in pairs(ssrNetMsgCfg) do
