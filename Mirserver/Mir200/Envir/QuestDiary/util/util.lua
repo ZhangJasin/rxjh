@@ -873,150 +873,133 @@ function Attribute2Table(attribute)
 end
 
 function recycleEnterBag(actor, itemid, itemObj, itemCount)
-    -- print(itemid,itemObj)
+    -- 1. 获取玩家勾选配置
     local allSellIds = gethumvar(actor, VarCfg.T_AUTO_SELL_IDS)
     if allSellIds == "" or allSellIds == 0 then
         allSellIds = {}
     else
         allSellIds = json2tbl(allSellIds)
     end
-    --物品数据
+
+    -- 2. 物品数据获取
     local isEquip = false
-    local itemCfg = {}
-    if Item_cfg[itemid] then
-        itemCfg = Item_cfg[itemid]
-    end
+    local itemCfg = Item_cfg[itemid] or ItemEquip_cfg[itemid] or {}
     if ItemEquip_cfg[itemid] then
-        itemCfg = ItemEquip_cfg[itemid]
         isEquip = true
     end
-    if not itemCfg.recycle then
-        return
-    end
-    --品阶
-    local a = false
-    --是否通过本职业
-    local b = false
-    --高于等级回收
-    local c = false
-    --首饰
-    local d = false
-    --箭矢
-    local e = false
-    --其他回收 指定道具回收
-    local f = false
-    --回收配置
-    local canNext = false
-    --勾选等级回收
-    local needLevel = 0
-    if itemCfg.Need then
-        local needTab = StrSplit2(itemCfg.Need, "#")
-        needLevel = tonumber(needTab[1]) == 1 and tonumber(needTab[3]) or 0
-    end
-    -- print("勾选等级回收")
-    -- 勾选等级回收  品阶  其他
-    for _, obj in pairs(Recycle_cfg) do
-        if allSellIds[obj.Name] == 1 and obj.ConditionType == 1 then
-            -- print(obj.Condition[1],obj.Condition[2],needLevel)
-            if needLevel >= obj.Condition[1] and needLevel <= obj.Condition[2] then
-                canNext = true
-            end
-        elseif allSellIds[obj.Name] == 1 and obj.ConditionType == 2 then
-            --print(obj.Name,obj.Condition,itemCfg.Grade)
-            if itemCfg.Grade == obj.Condition then
-                a = true
-            end
-        elseif allSellIds[obj.Name] == 1 and obj.ConditionType == 6 then
-            for i = 1, #obj.Condition do
-                if obj.Condition[i] == itemid then
-                    f = true
-                    canNext = true
-                    break
-                end
-            end
-        end
-    end
-    if not canNext then
-        return
-    end
-    --是否本职业
-    if Transfer_cfg[itemCfg.TransferID] and Transfer_cfg[itemCfg.TransferID].ClassID > 0 then
-        if Transfer_cfg[itemCfg.TransferID].ClassID == job(actor) then
-            --是本职业
-            b = true
-        else
-            b = false
-        end
-        if allSellIds["非本职业装备"] == 1 then
-            --非本职业的也回收
-            b = true
-        end
-    else
-        --通用装备
-        b = true
-    end
-    --高于等级回收
-    if allSellIds["高于等级回收"] == 1 then
-        c = true
-    else
-        c = needLevel <= level(actor)
-    end
-    --首饰
-    for _, obj in pairs(Recycle_cfg) do
-        if obj.Name == "首饰" then
-            for k = 1, #obj.Condition do
-                if obj.Condition[k] == itemCfg.StdMode then
-                    --拾取的是首饰
-                    if allSellIds["首饰"] == 1 then
-                        d = true
-                    else
-                        d = false
-                    end
-                else
-                    d = true
-                end
-            end
-        end
-        if obj.Name == "箭矢" then
-            for p = 1, #obj.Condition do
-                if obj.Condition[p] == itemCfg.StdMode then
-                    if allSellIds["箭矢"] == 1 then
-                        e = true
-                    else
-                        e = false
-                    end
-                else
-                    e = true
-                end
+
+    -- 3. 石头判定准备
+    -- 获取物品的鉴定属性信息
+    linkitembymakeindex(actor, getiteminfo(itemObj, "MAKEINDEX"))
+    local attrData = {
+        id = custitemattinfo(actor, "-1_0_1_ID"),
+        value = custitemattinfo(actor, "-1_0_1_VALUE")
+    }
+
+    local matchedStonePrice = nil
+    local isStone = false
+
+    -- 遍历配置表寻找匹配的石头回收项
+    for _, recycleObj in pairs(Recycle_cfg) do
+        -- 判定是否为勾选的石头类 (Type >= 3)
+        if allSellIds[recycleObj.Name] == 1 and recycleObj.Type and recycleObj.Type >= 3 then
+            if CheckStoneValidServer(recycleObj, itemid, attrData) then
+                matchedStonePrice = recycleObj.sell
+                isStone = true
+                break
             end
         end
     end
 
-    -- print(a,b,c,d,e)
-    if (a and b and c and d and e and isEquip) or f then
-        -- print("回收这件"..itemCfg.Name)
-        local jiacheng = scriptabil(actor, 118)
-        -- print("加成的比例",jiacheng)
-        local recycleList = string.split(itemCfg.recycle, "|")
-        for m = 1, #recycleList do
-            local recycle = recycleList[1]
-            local priceObj = string.split(recycle, "#")
-            local priceId = priceObj[1]
-            local num = priceObj[2]
-            if priceId and num then
-                if jiacheng and priceId == 1 then
-                    num = tonumber(num) + math.floor(num * jiacheng / 10000)
-                end
-                -- print('priceId,num',priceId,num)
-                giveitem(actor, priceId .. "#" .. (tonumber(num) * itemCount))
-                if tonumber(priceId) == 1 then
-                    MentorShipChangTask(actor, 9, priceId, num)
+    -- 4. 基础装备回收判定逻辑 (如果不是石头，走原有的装备回收流程)
+    local canNext = false
+    if not isStone then
+        if not itemCfg.recycle then return end
+
+        local a, b, c, d, e = false, false, false, false, false
+        local needLevel = getEquipLvById(itemid)
+
+        for _, obj in pairs(Recycle_cfg) do
+            if allSellIds[obj.Name] == 1 then
+                if obj.ConditionType == 1 then -- 等级区间
+                    if needLevel >= obj.Condition[1] and needLevel <= obj.Condition[2] then
+                        canNext = true
+                    end
+                elseif obj.ConditionType == 2 then -- 品阶
+                    if itemCfg.Grade == obj.Condition then a = true end
+                elseif obj.ConditionType == 6 then -- 指定道具
+                    for i = 1, #obj.Condition do
+                        if obj.Condition[i] == itemid then
+                            canNext = true
+                            break
+                        end
+                    end
                 end
             end
         end
+
+        if not canNext then return end
+
+        -- 职业匹配
+        if Transfer_cfg[itemCfg.TransferID] and Transfer_cfg[itemCfg.TransferID].ClassID > 0 then
+            b = (Transfer_cfg[itemCfg.TransferID].ClassID == job(actor)) or (allSellIds["非本职业装备"] == 1)
+        else
+            b = true
+        end
+
+        -- 等级匹配
+        c = (allSellIds["高于等级回收"] == 1) or (needLevel <= level(actor))
+
+        -- 部位匹配 (首饰/箭矢)
+        for _, obj in pairs(Recycle_cfg) do
+            if obj.Name == "首饰" then
+                for k = 1, #obj.Condition do
+                    if obj.Condition[k] == itemCfg.StdMode then
+                        d = (allSellIds["首饰"] == 1)
+                        break
+                    end
+                    d = true
+                end
+            end
+            if obj.Name == "箭矢" then
+                for p = 1, #obj.Condition do
+                    if obj.Condition[p] == itemCfg.StdMode then
+                        e = (allSellIds["箭矢"] == 1)
+                        break
+                    end
+                    e = true
+                end
+            end
+        end
+
+        -- 最终装备回收确认
+        if not ((a or b or c or d or e) and isEquip) then return end
+    end
+
+    -- 5. 执行回收结算
+    local priceStr = isStone and matchedStonePrice or itemCfg.recycle
+
+    if priceStr and priceStr ~= "" then
+        local jiacheng = scriptabil(actor, 118) or 0
+        local recycleList = string.split(priceStr, "|")
+
+        for m = 1, #recycleList do
+            local priceObj = string.split(recycleList[m], "#")
+            local priceId = priceObj[1]
+            local num = tonumber(priceObj[2])
+
+            if priceId and num then
+                -- 收益加成 (仅金币)
+                if tonumber(priceId) == 1 then
+                    num = num + math.floor(num * jiacheng / 10000)
+                    MentorShipChangTask(actor, 9, priceId, num * itemCount)
+                end
+
+                giveitem(actor, priceId .. "#" .. (num * itemCount))
+            end
+        end
+        -- 销毁进入背包的物品
         delItemNum(actor, itemid, itemCount)
-    else
-        -- print("不回收这件")
     end
 end
 
