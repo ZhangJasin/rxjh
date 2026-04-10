@@ -32,7 +32,7 @@ ssrNetMsgCfg.MentorShipMain                 =  "MentorShipMain"     --师徒主�
 ssrNetMsgCfg.MentorShipTeach                =  "MentorShipTeach"     --师徒传功界面 
 ssrNetMsgCfg.Invitation                     =  "Invitation"     --师徒副本
 ssrNetMsgCfg.BagRecycleViewModel            =  "BagRecycleViewModel"               --自动回收 
-ssrNetMsgCfg.Transfer                       =  "Transfer"               --转职
+ssrNetMsgCfg.TransferPanel                  =  "TransferPanel"               --转职
 
 --Z_Jasin
 ssrNetMsgCfg.Changwan                       = "Changwan"                   --畅玩特权

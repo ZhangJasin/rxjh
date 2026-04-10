@@ -16,7 +16,7 @@ ssrNetMsgCfg.mountMain                     = "mountMain"                        
 ssrNetMsgCfg.npcDialog                     = "npcDialog"                                            -- NPC对话框
 ssrNetMsgCfg.bag                           = "bag"                                                  -- 背包
 ssrNetMsgCfg.MentorShip                    = "MentorShip"                                           -- 师徒
-ssrNetMsgCfg.Transfer                      = "Transfer"                                             -- 转职
+ssrNetMsgCfg.TransferInfo                  = "TransferInfo"                                             -- 转职
 
 --Z_Jasin
 ssrNetMsgCfg.Changwan                      = "Changwan"                                                --畅玩特权

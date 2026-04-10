@@ -94,4 +94,4 @@ ssrMessage:RegisterNetMsg(ssrNetMsgCfg.BagRecycleViewModel, BagRecycleViewModelU
 
 -- 转职相关 引擎界面
 TransferUI                = SL:RequireFile("FGUILayout/Transfer/TransferPanel")
-ssrMessage:RegisterNetMsg(ssrNetMsgCfg.Transfer, TransferUI)
+ssrMessage:RegisterNetMsg(ssrNetMsgCfg.TransferPanel, TransferUI)
