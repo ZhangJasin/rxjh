@@ -330,12 +330,14 @@ function mountMainData:setHHListSort()
 end
 -- 网络请求
 -- 灵兽激活
--- {itemId = 消耗道具id}
+-- {itemId = 消耗道具id} (单消耗)
+-- 或 {costs = 消耗数组} (多消耗)
 function mountMainData:lsjihuo(data)
     ssrMessage:sendmsgEx("mountMain", "lsjihuo", data)
 end
 -- 灵兽升级
 -- {name = 宠物名字, maxLv = 最高级别, num = 消耗数量, itemId = 升级材料id}
+-- 或 {name = 宠物名字, maxLv = 最高级别, costs = 消耗数组} (多消耗格式)
 function mountMainData:levelUp(data)
     ssrMessage:sendmsgEx("mountMain", "levelUp", data)
 end
