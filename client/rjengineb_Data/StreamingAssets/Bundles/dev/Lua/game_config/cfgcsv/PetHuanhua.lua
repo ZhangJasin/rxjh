@@ -65,7 +65,7 @@ local config = {
 		mount_icon="pet_000",
 		Monster_ID=80016,
 		Cost = {
-			[1] = 2707,
+			[1] = 3964,
 			[2] = 1,
 		},
 		Model=900034,
@@ -100,7 +100,7 @@ local config = {
 		mount_icon="pet_000",
 		Monster_ID=80019,
 		Cost = {
-			[1] = 2710,
+			[1] = 3965,
 			[2] = 1,
 		},
 		Model=900037,
@@ -190,7 +190,7 @@ local config = {
 		mount_icon="pet_005",
 		Monster_ID=80028,
 		Cost = {
-			[1] = 2718,
+			[1] = 3966,
 			[2] = 1,
 		},
 		Model=900046,
@@ -223,7 +223,7 @@ local config = {
 		mount_icon="pet_008",
 		Monster_ID=80031,
 		Cost = {
-			[1] = 2721,
+			[1] = 3967,
 			[2] = 1,
 		},
 		Model=900049,
@@ -312,7 +312,7 @@ local config = {
 		mount_icon="pet_000",
 		Monster_ID=80016,
 		Cost = {
-			[1] = 2707,
+			[1] = 3964,
 			[2] = 1,
 		},
 		Model=900034,
@@ -346,7 +346,7 @@ local config = {
 		mount_icon="pet_000",
 		Monster_ID=80019,
 		Cost = {
-			[1] = 2710,
+			[1] = 3965,
 			[2] = 1,
 		},
 		Model=900037,
@@ -433,7 +433,7 @@ local config = {
 		mount_icon="pet_005",
 		Monster_ID=80028,
 		Cost = {
-			[1] = 2718,
+			[1] = 3966,
 			[2] = 1,
 		},
 		Model=900046,
@@ -465,7 +465,7 @@ local config = {
 		mount_icon="pet_008",
 		Monster_ID=80031,
 		Cost = {
-			[1] = 2721,
+			[1] = 3967,
 			[2] = 1,
 		},
 		Model=900049,
@@ -553,7 +553,7 @@ local config = {
 		mount_icon="pet_000",
 		Monster_ID=80017,
 		Cost = {
-			[1] = 2707,
+			[1] = 3964,
 			[2] = 1,
 		},
 		Model=900035,
@@ -587,7 +587,7 @@ local config = {
 		mount_icon="pet_000",
 		Monster_ID=80020,
 		Cost = {
-			[1] = 2710,
+			[1] = 3965,
 			[2] = 1,
 		},
 		Model=900038,
@@ -674,7 +674,7 @@ local config = {
 		mount_icon="pet_005",
 		Monster_ID=80029,
 		Cost = {
-			[1] = 2718,
+			[1] = 3966,
 			[2] = 1,
 		},
 		Model=900047,
@@ -706,7 +706,7 @@ local config = {
 		mount_icon="pet_008",
 		Monster_ID=80032,
 		Cost = {
-			[1] = 2721,
+			[1] = 3967,
 			[2] = 1,
 		},
 		Model=900050,
@@ -794,7 +794,7 @@ local config = {
 		mount_icon="pet_000",
 		Monster_ID=80017,
 		Cost = {
-			[1] = 2707,
+			[1] = 3964,
 			[2] = 1,
 		},
 		Model=900035,
@@ -828,7 +828,7 @@ local config = {
 		mount_icon="pet_000",
 		Monster_ID=80020,
 		Cost = {
-			[1] = 2710,
+			[1] = 3965,
 			[2] = 1,
 		},
 		Model=900038,
@@ -915,7 +915,7 @@ local config = {
 		mount_icon="pet_005",
 		Monster_ID=80029,
 		Cost = {
-			[1] = 2718,
+			[1] = 3966,
 			[2] = 1,
 		},
 		Model=900047,
@@ -947,7 +947,7 @@ local config = {
 		mount_icon="pet_008",
 		Monster_ID=80032,
 		Cost = {
-			[1] = 2721,
+			[1] = 3967,
 			[2] = 1,
 		},
 		Model=900050,
@@ -1035,7 +1035,7 @@ local config = {
 		mount_icon="pet_000",
 		Monster_ID=80018,
 		Cost = {
-			[1] = 2707,
+			[1] = 3964,
 			[2] = 1,
 		},
 		Model=900036,
@@ -1069,7 +1069,7 @@ local config = {
 		mount_icon="pet_000",
 		Monster_ID=80021,
 		Cost = {
-			[1] = 2710,
+			[1] = 3965,
 			[2] = 1,
 		},
 		Model=900039,
@@ -1156,7 +1156,7 @@ local config = {
 		mount_icon="pet_005",
 		Monster_ID=80030,
 		Cost = {
-			[1] = 2718,
+			[1] = 3966,
 			[2] = 1,
 		},
 		Model=900048,
@@ -1188,7 +1188,7 @@ local config = {
 		mount_icon="pet_008",
 		Monster_ID=80033,
 		Cost = {
-			[1] = 2721,
+			[1] = 3967,
 			[2] = 1,
 		},
 		Model=900051,
