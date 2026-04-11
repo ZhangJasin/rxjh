@@ -459,10 +459,9 @@ local config = {
 		},
 		task_pro = {
 			[1] = 100010,
-			[2] = 200001,
-			[3] = 300001,
-			[4] = 300002,
-			[5] = 300003,
+			[2] = 300001,
+			[3] = 300002,
+			[4] = 300003,
 		},
 		task_targettype=1,
 		task_target_param = {
@@ -7419,10 +7418,6 @@ local config = {
 		task_pre = {
 			[1] = 200005,
 		},
-		task_pro = {
-			[1] = 200101,
-			[2] = 200121,
-		},
 		task_fintype=2,
 		task_finnpc=1,
 		task_pos = {
@@ -7906,9 +7901,6 @@ local config = {
 		task_level=35,
 		task_pre = {
 			[1] = 200110,
-		},
-		task_pro = {
-			[1] = 200301,
 		},
 		task_targettype=1,
 		task_target_param = {
@@ -8399,9 +8391,6 @@ local config = {
 		task_pre = {
 			[1] = 200130,
 		},
-		task_pro = {
-			[1] = 200201,
-		},
 		task_targettype=1,
 		task_target_param = {
 			[1] = 15219,
@@ -8712,9 +8701,6 @@ local config = {
 		task_pre = {
 			[1] = 200208,
 		},
-		task_pro = {
-			[1] = 200401,
-		},
 		task_targettype=1,
 		task_target_param = {
 			[1] = 20011,
@@ -9019,9 +9005,6 @@ local config = {
 		task_pre = {
 			[1] = 200308,
 		},
-		task_pro = {
-			[1] = 200501,
-		},
 		task_targettype=1,
 		task_target_param = {
 			[1] = 20011,
@@ -9319,9 +9302,6 @@ local config = {
 		task_level=80,
 		task_pre = {
 			[1] = 200408,
-		},
-		task_pro = {
-			[1] = 200601,
 		},
 		task_targettype=1,
 		task_target_param = {
@@ -9627,9 +9607,6 @@ local config = {
 		task_pre = {
 			[1] = 200508,
 		},
-		task_pro = {
-			[1] = 200701,
-		},
 		task_targettype=1,
 		task_target_param = {
 			[1] = 20011,
@@ -9927,9 +9904,6 @@ local config = {
 		task_level=100,
 		task_pre = {
 			[1] = 200608,
-		},
-		task_pro = {
-			[1] = 200801,
 		},
 		task_targettype=1,
 		task_target_param = {
@@ -10234,9 +10208,6 @@ local config = {
 		task_level=100,
 		task_pre = {
 			[1] = 200708,
-		},
-		task_pro = {
-			[1] = 200901,
 		},
 		task_targettype=1,
 		task_target_param = {
