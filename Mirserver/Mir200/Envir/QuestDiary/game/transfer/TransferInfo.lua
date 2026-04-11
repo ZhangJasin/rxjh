@@ -43,6 +43,17 @@ function TransferInfo.doTransfer(actor)
                 giveitem(actor, table.concat(parts, "&"),1)
             end
             settargetinfo(actor, "RELEVEL", curLv + 1)
+            
+            --添加转职属性            
+            local newAttrs ={}
+            for _, v in ipairs(nextCfg.TransferAS or {}) do
+                table.insert(newAttrs, v[1] .. "#" .. v[2])
+            end
+            if #newAttrs > 0 then
+                delattlist(actor,VarCfg.Attr_ZZ)
+                addattlist(actor,VarCfg.Attr_ZZ, "=",table.concat(newAttrs, "&"))
+            end
+
             sendmsg(actor, 9, "转职成功")
             Message.sendmsg(actor, ssrNetMsgCfg.TransferInfo_RefreshUI)
         else
@@ -104,6 +115,23 @@ function TransferInfo.getTaskState(actor)
     Message.sendmsg(actor, ssrNetMsgCfg.TransferInfo_RefreshTaskUI,  totalNum,compNum,curTaskId)
 end
 
+GameEvent.add(EventCfg.onLoginEnd, function (actor)
+    -- print("登录更新转职属性")
+    local cfg = TransferInfo.getCfg(actor)
+    local curLv = targetinfo(actor, "RELEVEL")
+    local curCfg = cfg and cfg[curLv] or nil
+    if curLv > 0 and curCfg and curCfg.TransferAS then
+        local newAttrs ={}
+        for _, v in ipairs(curCfg.TransferAS or {}) do
+            table.insert(newAttrs, v[1] .. "#" .. v[2])
+        end
+        if #newAttrs > 0 then
+            delattlist(actor,VarCfg.Attr_ZZ)
+            addattlist(actor, VarCfg.Attr_ZZ,"=",table.concat(newAttrs, "&"))
+        end        
+    end
+
+end, TransferInfo)
 
 Message.RegisterNetMsg(ssrNetMsgCfg.TransferInfo, TransferInfo)
 return TransferInfo

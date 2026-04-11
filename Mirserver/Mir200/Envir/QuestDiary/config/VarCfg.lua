@@ -270,6 +270,7 @@ VarCfg.Att_Partner_Assist                        = 12      -- 助战伙伴转化属性组
 
 VarCfg.Attr_Pet_Battle                           = 101     -- 已获得宠物转化属性组id
 VarCfg.Attr_QuickEquipItem                       = 102     -- 快捷装备道具转化属性组id
+VarCfg.Attr_ZZ                                   = 103     -- 转职属性
 
 
 
