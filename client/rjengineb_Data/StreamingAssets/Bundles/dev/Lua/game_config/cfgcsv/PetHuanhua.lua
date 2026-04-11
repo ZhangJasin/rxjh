@@ -10,6 +10,16 @@ local config = {
 			[2] = 1,
 		},
 		Model=900028,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
 		BuffDesc="出战时人物生命增加50",
 		Condition=1,
 		tips="激活灵兽幻化可以改变灵兽外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果。",
@@ -27,6 +37,16 @@ local config = {
 			[2] = 1,
 		},
 		Model=900031,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
 		BuffDesc="出战时人物对怪伤害增加10",
 		Condition=1,
 		BattleSkill_Type="115",
@@ -43,7 +63,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900034,
-		BuffDesc="出战时人物命中和闪避增加2%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物命中和闪避增加2%,30%几率攻击2个目标",
 		Condition=1,
 		BattleSkill_Type = {
 			[1] = 104,
@@ -65,7 +95,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900037,
-		BuffDesc="出战时人物受怪减伤增加5",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物受怪减伤增加5,20%几率攻击2个目标",
 		Condition=1,
 		BattleSkill_Type="116",
 		BattleSkill_Value="5",
@@ -81,7 +121,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900040,
-		BuffDesc="出战时人物生命和内力增加3%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物生命和内力增加3%,周期性为友方提供少量治疗",
 		Condition=1,
 		BattleSkill_Type = {
 			[1] = 99,
@@ -103,7 +153,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900043,
-		BuffDesc="出战时人物气功等级增加1级",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物气功等级增加1级,50%几率攻击3个目标",
 		Condition=1,
 		BattleSkill_Type="126",
 		BattleSkill_Value="1",
@@ -119,7 +179,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900046,
-		BuffDesc="出战时人物攻击力增加2%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物攻击力增加2%,40%几率攻击3个目标",
 		Condition=1,
 		BattleSkill_Type="103",
 		BattleSkill_Value="200",
@@ -135,7 +205,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900049,
-		BuffDesc="出战时人物武功攻击增加3%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物武功攻击增加3%,80%几率攻击4个目标",
 		Condition=1,
 		BattleSkill_Type="107",
 		BattleSkill_Value="300",
@@ -151,6 +231,16 @@ local config = {
 			[2] = 1,
 		},
 		Model=900028,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
 		BuffDesc="出战时人物生命增加100",
 		BattleSkill_Type="1",
 		BattleSkill_Value="100",
@@ -166,6 +256,16 @@ local config = {
 			[2] = 1,
 		},
 		Model=900031,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
 		BuffDesc="出战时人物对怪伤害增加20",
 		BattleSkill_Type="115",
 		BattleSkill_Value="20",
@@ -181,7 +281,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900034,
-		BuffDesc="出战时人物命中和闪避增加3%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物命中和闪避增加3%,30%几率攻击2个目标",
 		BattleSkill_Type = {
 			[1] = 104,
 			[2] = 105,
@@ -202,7 +312,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900037,
-		BuffDesc="出战时人物受怪减伤增加10",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物受怪减伤增加10,20%几率攻击2个目标",
 		BattleSkill_Type="116",
 		BattleSkill_Value="10",
 	},
@@ -217,7 +337,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900040,
-		BuffDesc="出战时人物生命和内力增加6%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物生命和内力增加6%,周期性为友方提供少量治疗",
 		BattleSkill_Type = {
 			[1] = 99,
 			[2] = 100,
@@ -238,7 +368,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900043,
-		BuffDesc="出战时人物气功等级增加1级",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物气功等级增加1级,50%几率攻击3个目标",
 		BattleSkill_Type="126",
 		BattleSkill_Value="1",
 	},
@@ -253,7 +393,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900046,
-		BuffDesc="出战时人物攻击力增加3%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物攻击力增加3%,40%几率攻击3个目标",
 		BattleSkill_Type="103",
 		BattleSkill_Value="300",
 	},
@@ -268,7 +418,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900049,
-		BuffDesc="出战时人物武功攻击增加5%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物武功攻击增加5%,80%几率攻击4个目标",
 		BattleSkill_Type="107",
 		BattleSkill_Value="500",
 	},
@@ -283,6 +443,16 @@ local config = {
 			[2] = 1,
 		},
 		Model=900029,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
 		BuffDesc="出战时人物生命增加200",
 		BattleSkill_Type="1",
 		BattleSkill_Value="200",
@@ -298,6 +468,16 @@ local config = {
 			[2] = 1,
 		},
 		Model=900032,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
 		BuffDesc="出战时人物对怪伤害增加40",
 		BattleSkill_Type="115",
 		BattleSkill_Value="40",
@@ -313,7 +493,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900035,
-		BuffDesc="出战时人物命中和闪避增加4%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物命中和闪避增加4%,40%几率攻击3个目标",
 		BattleSkill_Type = {
 			[1] = 104,
 			[2] = 105,
@@ -334,7 +524,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900038,
-		BuffDesc="出战时人物受怪减伤增加20",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物受怪减伤增加20,30%几率攻击2个目标",
 		BattleSkill_Type="116",
 		BattleSkill_Value="20",
 	},
@@ -349,7 +549,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900041,
-		BuffDesc="出战时人物生命和内力增加9%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物生命和内力增加9%,周期性为友方提供中量治疗",
 		BattleSkill_Type = {
 			[1] = 99,
 			[2] = 100,
@@ -370,7 +580,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900044,
-		BuffDesc="出战时人物气功等级增加1级",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物气功等级增加1级,70%几率攻击3个目标",
 		BattleSkill_Type="126",
 		BattleSkill_Value="1",
 	},
@@ -385,7 +605,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900047,
-		BuffDesc="出战时人物攻击力增加4%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物攻击力增加4%,60%几率攻击3个目标",
 		BattleSkill_Type="103",
 		BattleSkill_Value="400",
 	},
@@ -400,7 +630,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900050,
-		BuffDesc="出战时人物武功攻击增加7%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物武功攻击增加7%,80%几率攻击5个目标",
 		BattleSkill_Type="107",
 		BattleSkill_Value="700",
 	},
@@ -415,6 +655,16 @@ local config = {
 			[2] = 1,
 		},
 		Model=900029,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
 		BuffDesc="出战时人物生命增加350",
 		BattleSkill_Type="1",
 		BattleSkill_Value="350",
@@ -430,6 +680,16 @@ local config = {
 			[2] = 1,
 		},
 		Model=900032,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
 		BuffDesc="出战时人物对怪伤害增加60",
 		BattleSkill_Type="115",
 		BattleSkill_Value="60",
@@ -445,7 +705,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900035,
-		BuffDesc="出战时人物命中和闪避增加6%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物命中和闪避增加6%,40%几率攻击3个目标",
 		BattleSkill_Type = {
 			[1] = 104,
 			[2] = 105,
@@ -466,7 +736,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900038,
-		BuffDesc="出战时人物受怪减伤增加30",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物受怪减伤增加30,30%几率攻击2个目标",
 		BattleSkill_Type="116",
 		BattleSkill_Value="30",
 	},
@@ -481,7 +761,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900041,
-		BuffDesc="出战时人物生命和内力增加12%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物生命和内力增加12%,周期性为友方提供中量治疗",
 		BattleSkill_Type = {
 			[1] = 99,
 			[2] = 100,
@@ -502,7 +792,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900044,
-		BuffDesc="出战时人物气功等级增加2级",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物气功等级增加2级,70%几率攻击3个目标",
 		BattleSkill_Type="126",
 		BattleSkill_Value="2",
 	},
@@ -517,7 +817,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900047,
-		BuffDesc="出战时人物攻击力增加6%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物攻击力增加6%,60%几率攻击3个目标",
 		BattleSkill_Type="103",
 		BattleSkill_Value="600",
 	},
@@ -532,7 +842,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900050,
-		BuffDesc="出战时人物武功攻击增加9%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物武功攻击增加9%,80%几率攻击5个目标",
 		BattleSkill_Type="107",
 		BattleSkill_Value="900",
 	},
@@ -547,6 +867,16 @@ local config = {
 			[2] = 1,
 		},
 		Model=900030,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
 		BuffDesc="出战时人物生命增加500",
 		BattleSkill_Type="1",
 		BattleSkill_Value="500",
@@ -562,6 +892,16 @@ local config = {
 			[2] = 1,
 		},
 		Model=900033,
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
 		BuffDesc="出战时人物对怪伤害增加90",
 		BattleSkill_Type="115",
 		BattleSkill_Value="90",
@@ -577,7 +917,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900036,
-		BuffDesc="出战时人物命中和闪避增加8%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物命中和闪避增加8%,60%几率攻击4个目标",
 		BattleSkill_Type = {
 			[1] = 104,
 			[2] = 105,
@@ -598,7 +948,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900039,
-		BuffDesc="出战时人物受怪减伤增加50",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物受怪减伤增加50,40%几率攻击2个目标",
 		BattleSkill_Type="116",
 		BattleSkill_Value="50",
 	},
@@ -613,7 +973,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900042,
-		BuffDesc="出战时人物生命和内力增加15%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物生命和内力增加15%,周期性为友方提供大量治疗",
 		BattleSkill_Type = {
 			[1] = 99,
 			[2] = 100,
@@ -634,7 +1004,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900045,
-		BuffDesc="出战时人物气功等级增加3级",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物气功等级增加3级,90%几率攻击3个目标",
 		BattleSkill_Type="126",
 		BattleSkill_Value="3",
 	},
@@ -649,7 +1029,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900048,
-		BuffDesc="出战时人物攻击力增加8%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物攻击力增加8%,80%几率攻击4个目标",
 		BattleSkill_Type="103",
 		BattleSkill_Value="800",
 	},
@@ -664,7 +1054,17 @@ local config = {
 			[2] = 1,
 		},
 		Model=900051,
-		BuffDesc="出战时人物武功攻击增加12%",
+		ClassID = {
+			[1] = {
+				[1] = 1,
+				[2] = 50,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 50,
+			},
+		},
+		BuffDesc="出战时人物武功攻击增加12%,100%几率攻击6个目标",
 		BattleSkill_Type="107",
 		BattleSkill_Value="1200",
 	},
