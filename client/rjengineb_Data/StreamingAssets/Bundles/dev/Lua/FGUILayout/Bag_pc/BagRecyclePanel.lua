@@ -313,7 +313,7 @@ function BagRecyclePanel:ClickTabEvent(idx)
 		end
 	end
 	FGUI:GList_setNumItems(self._ui.List_CheckBox, #self.selectCheckBoxes)
-	bagRecycleViewModel:RefreshSelectItemsByConditions()
+	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
 end
 
 function BagRecyclePanel:ClickCheckBoxEvent(idx)
