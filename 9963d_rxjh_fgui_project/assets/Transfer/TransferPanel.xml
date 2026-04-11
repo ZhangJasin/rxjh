@@ -25,7 +25,7 @@
     <richtext id="n70_gs4z" name="txt_attr_1" xy="603,187" size="70,26" group="n49_gab2" fontSize="16" color="#372a08" autoSize="none" text="生命值："/>
     <richtext id="n71_gs4z" name="txt_attr_2" xy="603,223" size="70,26" group="n49_gab2" fontSize="16" color="#372a08" autoSize="none" text="内力值："/>
     <richtext id="n72_gs4z" name="txt_attr_3" xy="603,259" size="70,24" group="n49_gab2" fontSize="16" color="#372a08" autoSize="none" text="攻击力："/>
-    <richtext id="n73_gs4z" name="txt_attr_4" xy="603,293" size="70,26" group="n49_gab2" fontSize="16" color="#372a08" autoSize="none" text="防    御："/>
+    <richtext id="n73_gs4z" name="txt_attr_4" xy="603,293" size="70,26" group="n49_gab2" fontSize="16" color="#372a08" autoSize="none" text="防御值："/>
     <list id="n74_gs4z" name="list_next_prop" xy="956,184" size="151,140" group="n49_gab2" selectionMode="none" lineGap="2" defaultItem="ui://5rez3obxok6ev6v">
       <item/>
       <item/>

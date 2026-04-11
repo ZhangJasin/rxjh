@@ -166,7 +166,7 @@ function PCPlayerInfoPanel:BtnTab4Clicked()
 end
 
 function PCPlayerInfoPanel:BtnTab5Clicked()
-    --self:PageTo(IDX_REBIRTH)
+    FGUI:Open("Transfer", "TransferPanel")
 end
 
 function PCPlayerInfoPanel:InitData()
