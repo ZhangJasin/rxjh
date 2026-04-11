@@ -5107,5 +5107,17 @@ local config = {
 		idx="FinishDec_Task_103151",
 		Dec="感谢你能帮我这么大的忙，接下来就继续闯荡江湖吧。",
 	},
+	["Name_Task_103301"] = { 
+		idx="Name_Task_103301",
+		Dec="第二次转职",
+	},
+	["TargetDec_Task_103301"] = { 
+		idx="TargetDec_Task_103301",
+		Dec="完成<font color='#00FF00'>第二次转职</font>",
+	},
+	["FinishDec_Task_103301"] = { 
+		idx="FinishDec_Task_103301",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
 }
 return config

@@ -1311,5 +1311,9 @@ local config = {
 		ID=300015,
 		Name="江湖录",
 	},
+	[329] = { 
+		ID=103301,
+		Name="第二次转职",
+	},
 }
 return config
