@@ -8,7 +8,20 @@ local ItemFrom = SL:GetValue("ITEMFROMUI_ENUM")
 local Task_cfg = require("game_config/cfgcsv/Task")
 local Language = require("game_config/cfgcsv/Language")
 local Condition = require("game_config/Condition")
+local Transfer_cfg = require("game_config/Transfer")
 
+local Cfg = {}
+for _, v in pairs(Transfer_cfg) do
+    Cfg[v.ClassID] = Cfg[v.ClassID] or {}
+    Cfg[v.ClassID][v.Type] = Cfg[v.ClassID][v.Type] or {}
+    Cfg[v.ClassID][v.Type][v.TransferLV] = v
+end
+
+function TransferPanel.getCfg()
+    local jb = SL:GetValue("JOB")
+    local zy = SL:GetValue("GOODEVILID") or 0
+    return Cfg[jb] and Cfg[jb][zy] or {}
+end
 
 -- 创建界面并绑定所有UI事件
 function TransferPanel:Create()
@@ -57,7 +70,10 @@ end
 function TransferPanel:Enter()
     -- 注册消息回调
     SL:RegisterNetMsg(ssrNetMsgCfg.TransferInfo_RefreshTaskUI, handler(self, self.RefreshTaskUI))
-    SL:RegisterNetMsg(ssrNetMsgCfg.TransferInfo_RefreshUI,handler(self, self.RefreshUI))   
+    SL:RegisterNetMsg(ssrNetMsgCfg.TransferInfo_RefreshUI,handler(self, self.RefreshTransferUI))  
+    
+    self._curCfg = SL:GetValue("TRANSFER_MAINPLAYER_CONFIG")
+    self._nextCfg = SL:GetValue("TRANSFER_MAINPLAYER_NEXT_CONFIG")
     self:RefreshUI()
 end
 
@@ -67,6 +83,9 @@ function TransferPanel:Exit()
     -- 注销消息回调
     SL:UnRegisterNetMsg(ssrNetMsgCfg.TransferInfo_RefreshTaskUI)
     SL:UnRegisterNetMsg(ssrNetMsgCfg.TransferInfo_RefreshUI)
+
+    self._curCfg = nil
+    self._nextCfg = nil
     self:ClearModel()
 end
 
@@ -154,68 +173,63 @@ end
 -- 刷新界面数据
 function TransferPanel:RefreshUI()
     if not self._ui then return end
-    local curCfg, nextCfg = SL:GetValue("TRANSFER_MAINPLAYER_CONFIG"),SL:GetValue("TRANSFER_MAINPLAYER_NEXT_CONFIG")
-    self._curCfg = curCfg
-    self._nextCfg = nextCfg
-    -- SL:dump(self._nextCfg)
-    
     -- 显示角色模型
     self:ShowRoleModel()
 
     -- 显示当前转职名称
-    if curCfg and curCfg.TransferName then
-        FGUI:GRichTextField_setText(self._ui.txt_job_cur, curCfg.TransferName)
+    if self._curCfg and self._curCfg.TransferName then
+        FGUI:GRichTextField_setText(self._ui.txt_job_cur, self._curCfg.TransferName)
     else
         FGUI:GRichTextField_setText(self._ui.txt_job_cur, "初级职业")
     end
     -- 显示当前属性
-    if curCfg and curCfg.TransferAS then
-        FGUI:GList_setNumItems(self._ui.list_prop, #curCfg.TransferAS)
+    if self._curCfg and self._curCfg.TransferAS then
+        FGUI:GList_setNumItems(self._ui.list_prop, #self._curCfg.TransferAS)
     else
         FGUI:GList_setNumItems(self._ui.list_prop, 4)
     end
 
-    if nextCfg then
+    if self._nextCfg then
         -- 显示下一级转职名称
-        if nextCfg.TransferName then
-            FGUI:GRichTextField_setText(self._ui.txt_job_next, nextCfg.TransferName)
+        if self._nextCfg.TransferName then
+            FGUI:GRichTextField_setText(self._ui.txt_job_next, self._nextCfg.TransferName)
         else
             FGUI:GRichTextField_setText(self._ui.txt_job_next, "")
         end
 
         -- 显示下一级属性
-        if nextCfg.TransferAS then
-            FGUI:GList_setNumItems(self._ui.list_next_prop, #nextCfg.TransferAS)
+        if self._nextCfg.TransferAS then
+            FGUI:GList_setNumItems(self._ui.list_next_prop, #self._nextCfg.TransferAS)
         else
             FGUI:GList_setNumItems(self._ui.list_next_prop, 0)
         end
 
         -- 显示武功列表
-        if nextCfg.WGId then
-            FGUI:GList_setNumItems(self._ui.list_wg, #nextCfg.WGId)
+        if self._nextCfg.WGId then
+            FGUI:GList_setNumItems(self._ui.list_wg, #self._nextCfg.WGId)
             FGUI:setVisible(self._ui.wg_bg,true)
         else
             FGUI:GList_setNumItems(self._ui.list_wg, 0)
         end
 
         -- 显示气功列表
-        if nextCfg.QGId then
-            FGUI:GList_setNumItems(self._ui.list_qg, #nextCfg.QGId)
+        if self._nextCfg.QGId then
+            FGUI:GList_setNumItems(self._ui.list_qg, #self._nextCfg.QGId)
             FGUI:setVisible(self._ui.qg_bg,true)
         else
             FGUI:GList_setNumItems(self._ui.list_qg, 0)
         end
 
         -- 显示转职条件
-        if nextCfg.ConditionID then
-            local condition = self:GetConditionText(nextCfg.ConditionID)
+        if self._nextCfg.ConditionID then
+            local condition = self:GetConditionText(self._nextCfg.ConditionID)
             FGUI:GRichTextField_setText(self._ui.txt_condition, condition)
         else
             FGUI:GRichTextField_setText(self._ui.txt_condition, "")
         end    
         -- 显示奖励
-        if nextCfg.Reward then
-            FGUI:GList_setNumItems(self._ui.list_reward, #nextCfg.Reward)
+        if self._nextCfg.Reward then
+            FGUI:GList_setNumItems(self._ui.list_reward, #self._nextCfg.Reward)
             FGUI:setVisible(self._ui.img_reward,true)
         else
             FGUI:GList_setNumItems(self._ui.list_reward, 0)
@@ -246,6 +260,13 @@ function TransferPanel:GetConditionText(conditionId)
     end
     local level = SL:GetValue("LEVEL") or 1
     return string.format("转职条件：角色等级达到%d级<font color='%s'> (%d/%d)</font>", needLv, level >= needLv and "#00FF00" or "#FF0000",level, needLv)
+end
+
+function TransferPanel:RefreshTransferUI(_,newLv)
+    self._curCfg = self._nextCfg
+    local cfg = TransferPanel.getCfg()
+    self._nextCfg = cfg and cfg[newLv+1] or nil
+    self:RefreshUI() 
 end
 
 function TransferPanel:RefreshTaskUI(_,_totalNum,_compNum,_curTaskId)   

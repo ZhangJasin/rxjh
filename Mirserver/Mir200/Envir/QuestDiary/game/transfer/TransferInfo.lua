@@ -42,7 +42,8 @@ function TransferInfo.doTransfer(actor)
             if #parts > 0 then
                 giveitem(actor, table.concat(parts, "&"),1)
             end
-            settargetinfo(actor, "RELEVEL", curLv + 1)
+            local newLv = curLv + 1
+            settargetinfo(actor, "RELEVEL", newLv)
             
             --添加转职属性            
             local newAttrs ={}
@@ -55,7 +56,9 @@ function TransferInfo.doTransfer(actor)
             end
 
             sendmsg(actor, 9, "转职成功")
-            Message.sendmsg(actor, ssrNetMsgCfg.TransferInfo_RefreshUI)
+            
+            -- 发送当前和下一级转职配置给客户端
+            Message.sendmsg(actor, ssrNetMsgCfg.TransferInfo_RefreshUI, newLv)
         else
             sendmsg(actor, 9, "请先完成转职任务")
         end
