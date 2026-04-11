@@ -36,8 +36,13 @@
     <image id="n25_qug1" name="n25" src="qug1fvf2" fileName="Images/newmain/zhuxian.png" xy="-2,-4" scale="0.7,0.7">
       <gearDisplay controller="img" pages="0"/>
     </image>
-    <component id="n26_cn2t" name="award1" src="cn2tfvgw" fileName="Components/Assist/itemRoot.xml" xy="7,52"/>
-    <component id="n27_cn2t" name="award2" src="cn2tfvgw" fileName="Components/Assist/itemRoot.xml" xy="53,52"/>
+    <component id="n26_cn2t" name="award1" src="cn2tfvgw" fileName="Components/Assist/itemRoot.xml" xy="7,52">
+      <relation target="n14_o3hv" sidePair="bottom-bottom"/>
+    </component>
+    <component id="n27_cn2t" name="award2" src="cn2tfvgw" fileName="Components/Assist/itemRoot.xml" xy="53,52">
+      <relation target="n14_o3hv" sidePair="bottom-bottom"/>
+      <relation target="" sidePair="bottomext-top"/>
+    </component>
   </displayList>
   <relation target="n14_o3hv" sidePair="height-height"/>
 </component>

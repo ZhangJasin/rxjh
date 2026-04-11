@@ -26,10 +26,10 @@ function TransferInfo.doTransfer(actor)
     local nextCfg = cfg and cfg[curLv + 1] or nil
 
     if nextCfg and nextCfg.TaskId then      
-        local allComp = true
-        local TaskComplete_data = json2tbl(gethumvar(actor,VarCfg.T_TaskComplete_data) or "") or {}
+        local allComp = true       
+        local TaskComplete_data = Task.getFinishTask(actor)
         for _, taskId in ipairs(nextCfg.TaskId) do
-            if not TaskComplete_data[taskId] then
+            if not TaskComplete_data[""..taskId] then
                 allComp = false
                 break
             end
@@ -59,9 +59,9 @@ function TransferInfo.pickTask(actor)
         local taskID = nextCfg.TaskId[1]
         if Task.Condition(actor,taskID) then
             --是否已接取任务
-            local TaskProgress_data = json2tbl(gethumvar(actor, VarCfg.T_TaskProgress_data) or "") or {}        
-            local TaskComplete_data = json2tbl(gethumvar(actor,VarCfg.T_TaskComplete_data) or "") or {}
-            if TaskProgress_data[taskID] or TaskComplete_data[taskID] then
+            local TaskProgress_data = Task.getCurTask(actor)        
+            local TaskComplete_data = Task.getFinishTask(actor)
+            if TaskProgress_data[""..taskID] or TaskComplete_data[""..taskID] then
                 sendmsg(actor, 9, "已接取转职任务")
             else
                 TaskProgress_data[""..taskID] = {state = 1,count = 0}
@@ -89,13 +89,13 @@ function TransferInfo.getTaskState(actor)
     local totalNum,compNum,curTaskId = 0,0,0
     if nextCfg and nextCfg.TaskId then
         totalNum = #nextCfg.TaskId
-        local TaskProgress_data = json2tbl(gethumvar(actor, VarCfg.T_TaskProgress_data) or "") or {}        
-        local TaskComplete_data = json2tbl(gethumvar(actor,VarCfg.T_TaskComplete_data) or "") or {}
+        local TaskProgress_data = Task.getCurTask(actor) 
+        local TaskComplete_data = Task.getFinishTask(actor)
         for _, taskId in ipairs(nextCfg.TaskId) do
-            if TaskProgress_data[taskId] then
+            if TaskProgress_data[""..taskId] then
                 curTaskId = taskId
             end
-            if TaskComplete_data[taskId] then
+            if TaskComplete_data[""..taskId] then
                 compNum = compNum+1
             end
         end        

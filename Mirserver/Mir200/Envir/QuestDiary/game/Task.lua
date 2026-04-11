@@ -52,7 +52,7 @@ local equippostab = {
 }
 -------------------------------↓↓↓ 本地方法 ↓↓↓---------------------------------------
 -- 获取当前任务数据
-local function getCurTask(actor)
+function Task.getCurTask(actor)
     local TaskProgress_data = gethumvar(actor,VarCfg.T_TaskProgress_data) or "" 
     if TaskProgress_data ~= "" then
         TaskProgress_data = json2tbl(TaskProgress_data)
@@ -66,7 +66,7 @@ local function getCurTask(actor)
 end
 
 -- 获取已完成任务数据
-local function getFinishTask(actor)
+function Task.getFinishTask(actor)
     local TaskComplete_data = gethumvar(actor,VarCfg.T_TaskComplete_data) or ""   -- 已完成任务id {[已完成任务id]=1,........}
     if TaskComplete_data ~= "" then
         TaskComplete_data = json2tbl(TaskComplete_data)
@@ -79,14 +79,14 @@ end
 
 -- 完成某个指定任务
 local function _onCompleteOtherTask(actor)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     for k,v in pairs(TaskProgress_data) do
         local taskid = tonumber(k)
         local taskxq = Task.ConditionLv(actor, taskid)
         local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
         if task_targettype == _taskMBType._CompeleteTask and taskxq then  --完成指定任务
-            local TaskComplete_data = getFinishTask(actor)
+            local TaskComplete_data = Task.getFinishTask(actor)
             local needtaskid = tonumber(Task_cfg[taskid]['task_target_param'])
             if TaskComplete_data[""..needtaskid] then
                 TaskProgress_data[k]['count'] = 1
@@ -114,7 +114,7 @@ local function _onKillMon(actor, mon, mapid, monidx)
     if not isplayer(actor) then
         return
     end
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     local taskfinish = 0
     local isLoopTaskFinished = false --跑环是否完成
@@ -160,7 +160,7 @@ local function _onKillMon(actor, mon, mapid, monidx)
 end
 -- 升级任务
 local function _onLevelUp(actor, cur_level, before_level)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     local taskfinish = 0
     for k,v in pairs(TaskProgress_data) do
@@ -188,7 +188,7 @@ end
 
 -- 锻造强化次数  强化部位指定等级
 local function _onQiangHua(actor,flag)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     local taskfinish = 0
     for k,v in pairs(TaskProgress_data) do
@@ -234,7 +234,7 @@ local function _onQiangHua(actor,flag)
 end
 -- 切换地图类
 local function _onChangeMap(actor, cur_mapid)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskxq = Task.ConditionLv(actor, 102005)
     if tostring(cur_mapid) == "102" and TaskProgress_data['102005'] and taskxq then
         TaskProgress_data['102005']['count'] = 1
@@ -246,7 +246,7 @@ local function _onChangeMap(actor, cur_mapid)
 end
 -- 创建队伍 加入队伍
 local function _onCreatTeam(actor)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     local taskfinish = 0
     for k,v in pairs(TaskProgress_data) do
@@ -279,7 +279,7 @@ local function _onCreatTeam(actor)
 end
 -- 创建门派 加入门派
 local function _onCreateGuild(actor)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     local taskfinish = 0
     for k,v in pairs(TaskProgress_data) do
@@ -313,7 +313,7 @@ end
 
 -- 加入任意阵营
 local function _onJoinGOODEVILID(actor)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     local taskfinish = 0
     for k,v in pairs(TaskProgress_data) do
@@ -350,7 +350,7 @@ end
 
 -- 添加好友数
 local function _onAddFriend(actor)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     local taskfinish = 0
     for k,v in pairs(TaskProgress_data) do
@@ -390,7 +390,7 @@ end
 
 -- 气功点变化为0
 local function _onChangeQGD(actor)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     local taskfinish = 0
     for k,v in pairs(TaskProgress_data) do
@@ -430,7 +430,7 @@ end
 
 --- 升级宠物  暂无
 local function _onPetLevelinfo(actor,hasPet)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     local taskfinish = 0
     local allLevel = 0
@@ -478,7 +478,7 @@ end
 -------------------------------↓↓↓ 网络消息 ↓↓↓---------------------------------------
 -- 检测玩家当前位置附近是否有任务交付NPC
 function Task.checkNearbyTaskNpc(actor)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local playerX = targetinfo(actor, "X")
     local playerY = targetinfo(actor, "Y")
     local playerMap = targetinfo(actor, "NEWMAP")
@@ -519,7 +519,7 @@ end
 function Task.Clicknpc(actor, npcid)
 	-- print("接取任务npcid",npcid)
     local isopenpanl = false   -- 是否已打开界面
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     for k,v in pairs(TaskProgress_data) do
         local taskid = tonumber(k)
         local neednpc = Task_cfg[taskid]['task_finnpc'] or 0
@@ -569,8 +569,8 @@ end
 function Task.getReward(actor, data)
     local taskid = tonumber(data[1])
 	--print("领取奖励，完成任务",taskid)
-    local TaskProgress_data = getCurTask(actor)
-    local TaskComplete_data = getFinishTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
+    local TaskComplete_data = Task.getFinishTask(actor)
     --local jindu = Task_cfg[taskid]['task_progress'] or 1
     local state = TaskProgress_data[""..taskid]['state'] or 0
     --print("state",state)
@@ -595,7 +595,7 @@ function Task.getReward(actor, data)
         end
         --dump(TaskComplete_data)
         sethumvar(actor,VarCfg.T_TaskComplete_data,tbl2json(TaskComplete_data))  --已完成任务id {[已完成任务id]=1,........}
-    --     local TaskComplete_data = getFinishTask(actor)
+    --     local TaskComplete_data = Task.getFinishTask(actor)
     --     dump(TaskComplete_data)
     --     print("actor2="..actor)
         TaskProgress_data = Task.updateTaskInfo(actor,TaskProgress_data)   --判断接取新任务状态
@@ -620,7 +620,7 @@ end
 function Task.updateLoopTask(actor,data)
     -- print("更新跑环")
     local taskid = tonumber(data[1])
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local state =  0
     if TaskProgress_data[""..taskid] then
         state = TaskProgress_data[""..taskid]['state']
@@ -678,7 +678,7 @@ function Task.xunlu(actor, data)
     -- end
     sethumvar(actor,VarCfg.U_click_taskID,taskid)  --当前点击
 	-- print("寻路",taskid)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local jindu = Task_cfg[taskid]['task_progress'] or 1
     local state = TaskProgress_data[""..taskid]['state'] or 0
     local task_fintype = Task_cfg[taskid]['task_fintype']
@@ -759,9 +759,9 @@ function Task.GetAlltaskinfo(actor)
     -- print("任务登录开始")
 	local playzy = targetinfo(actor, "GOODEVILID")  --玩家阵营
     local playlevel = level(actor)                  --玩家等级
-    local TaskComplete_data = getFinishTask(actor)
+    local TaskComplete_data = Task.getFinishTask(actor)
     
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     _onCompleteOtherTask(actor)
 
     for k,v in pairs(TaskComplete_data) do
@@ -905,7 +905,7 @@ end
 
 -- 目前需客户端传消息 转职任务
 function Task.onTransfer(actor)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskfinish = 0  --任务是否完成
     local taskchange = 0  --任务是否有变化，有的话更新
     for k,v in pairs(TaskProgress_data) do
@@ -944,7 +944,7 @@ function Task.onTransfer(actor)
 end
 -- 学习武功数量
 function Task.onStudySkill(actor)
-    local TaskProgress_data = getCurTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     local taskfinish = 0  --任务是否完成
     for k,v in pairs(TaskProgress_data) do
@@ -998,7 +998,7 @@ end
 function Task.onNpc(actor,data)
     local taskid = tonumber(data[1])
     if not Task_cfg[taskid]['task_targettype'] and Task_cfg[taskid]['task_type'] <= 4 then
-        local TaskProgress_data = getCurTask(actor)
+        local TaskProgress_data = Task.getCurTask(actor)
         TaskProgress_data[""..taskid] = {state = _taskState.finish,count = 1}
         sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(TaskProgress_data))  -- 当前已接取任务列表
         Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})   -- 更新客户端任务进度变量
@@ -1008,7 +1008,7 @@ function Task.onNpc(actor,data)
     else
         -- print("导航到了")
         if Task_cfg[taskid]['task_fintype']== 2 then
-            local TaskProgress_data = getCurTask(actor)
+            local TaskProgress_data = Task.getCurTask(actor)
             TaskProgress_data[""..taskid] = {state = _taskState.finish,count = 1}
             sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(TaskProgress_data))  -- 当前已接取任务列表
             Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})   -- 更新客户端任务进度变量
@@ -1029,7 +1029,7 @@ end, Task)
 GameEvent.add(EventCfg.onPlayLevelUp, function (actor, cur_level, before_level)         -- 升级触发
     _onLevelUp(actor, cur_level, before_level)  
     Task.GetAlltaskinfo(actor)    -- 升级后判断是否有可以接取任务
-    -- local TaskProgress_data = getCurTask(actor)
+    -- local TaskProgress_data = Task.getCurTask(actor)
     -- Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})
 end, Task)
 GameEvent.add(EventCfg.onQiangHua, function (actor,flag)         -- 强化功能触发  强化次数要求

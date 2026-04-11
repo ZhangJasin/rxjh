@@ -153,6 +153,7 @@ end
 
 -- 刷新界面数据
 function TransferPanel:RefreshUI()
+    if not self._ui then return end
     local curCfg, nextCfg = SL:GetValue("TRANSFER_MAINPLAYER_CONFIG"),SL:GetValue("TRANSFER_MAINPLAYER_NEXT_CONFIG")
     self._curCfg = curCfg
     self._nextCfg = nextCfg
