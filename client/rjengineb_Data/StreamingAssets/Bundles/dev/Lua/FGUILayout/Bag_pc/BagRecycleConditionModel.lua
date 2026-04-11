@@ -80,6 +80,29 @@ function BagRecycleConditionModel:CheckMedValid(itemCfg)
     end
 end
 
+function BagRecycleConditionModel:CheckStoneValid(stoneId, bagDataCfg)
+    if self.cfg.StoneId == stoneId then
+        if self.cfg.ConditionType == 8 then
+            --dump(bagDataCfg)
+            for i, v in ipairs(self.cfg.Condition) do
+                if v and v[1] and bagDataCfg[2] and bagDataCfg[3] then
+                    if v[1] == bagDataCfg[2] and v[2] == bagDataCfg[3] then
+                        --print("找到", stoneId)
+                        --print(bagDataCfg[2])
+                        --print(bagDataCfg[3])
+                        return true
+                    end
+                end
+            end
+        elseif self.cfg.ConditionType == 9 then
+            if stoneId == self.cfg.Condition then
+                return true
+            end
+        end
+    end
+    return false
+end
+
 function BagRecycleConditionModel:GetItemType(itemCfg)
     if ItemUtil:IsEquip(itemCfg) then
         return 1

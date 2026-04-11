@@ -73,6 +73,46 @@ function BagRecyclePanel:InitView()
 		self:ShowLevelDetail(false)
 	end)
 
+	FGUI:setOnClickEvent(self._ui.BtnDetailClose1, function()
+		self:ShowJGSDetail(false)
+	end)
+
+	FGUI:setOnClickEvent(self._ui.MaskLv1, function()
+		self:ShowJGSDetail(false)
+	end)
+
+	FGUI:setOnClickEvent(self._ui.BtnDetailClose2, function()
+		self:ShowHYSDetail(false)
+	end)
+
+	FGUI:setOnClickEvent(self._ui.MaskLv2, function()
+		self:ShowHYSDetail(false)
+	end)
+
+	FGUI:setOnClickEvent(self._ui.BtnDetailClose3, function()
+		self:ShowRXSDetail(false)
+	end)
+
+	FGUI:setOnClickEvent(self._ui.MaskLv3, function()
+		self:ShowRXSDetail(false)
+	end)
+
+	FGUI:setOnClickEvent(self._ui.BtnDetailClose4, function()
+		self:ShowHYJGSDetail(false)
+	end)
+
+	FGUI:setOnClickEvent(self._ui.MaskLv4, function()
+		self:ShowHYJGSDetail(false)
+	end)
+
+	FGUI:setOnClickEvent(self._ui.BtnDetailClose5, function()
+		self:ShowBPHYSDetail(false)
+	end)
+
+	FGUI:setOnClickEvent(self._ui.MaskLv5, function()
+		self:ShowBPHYSDetail(false)
+	end)
+
 	FGUI:setOnClickEvent(self._ui.BtnSell, function()
 		self:ClickBtnSellEvent()
 	end)
@@ -95,6 +135,41 @@ function BagRecyclePanel:InitView()
 
 	FGUI:GList_setNumItems(self._ui.List_LvCheckBox, #self.selectLvCheckBoxes)
 
+	--金刚石
+	FGUI:GList_itemRenderer(self._ui.List_JGSCheckBox, handler(self, self.ListJGSCheckBoxRenderer))
+	FGUI:GList_setNumItems(self._ui.List_JGSCheckBox, #self.selectJGSCheckBoxes)
+	FGUI:GList_addOnClickItemEvent(self._ui.List_JGSCheckBox, function(context)
+		local idx = FGUI:GetChildIndex(self._ui.List_JGSCheckBox, context.data)
+		self:ClickJGSCheckBoxEvent(idx)
+	end)
+	--寒玉石
+	FGUI:GList_itemRenderer(self._ui.List_HYSCheckBox, handler(self, self.ListHYSCheckBoxRenderer))
+	FGUI:GList_setNumItems(self._ui.List_HYSCheckBox, #self.selectHYSCheckBoxes)
+	FGUI:GList_addOnClickItemEvent(self._ui.List_HYSCheckBox, function(context)
+		local idx = FGUI:GetChildIndex(self._ui.List_HYSCheckBox, context.data)
+		self:ClickHYSCheckBoxEvent(idx)
+	end)
+	--热血石
+	FGUI:GList_itemRenderer(self._ui.List_RXSCheckBox, handler(self, self.ListRXSCheckBoxRenderer))
+	FGUI:GList_setNumItems(self._ui.List_RXSCheckBox, #self.selectRXSCheckBoxes)
+	FGUI:GList_addOnClickItemEvent(self._ui.List_RXSCheckBox, function(context)
+		local idx = FGUI:GetChildIndex(self._ui.List_RXSCheckBox, context.data)
+		self:ClickRXSCheckBoxEvent(idx)
+	end)
+	--混元金刚石
+	FGUI:GList_itemRenderer(self._ui.List_HYJGSCheckBox, handler(self, self.ListHYJGSCheckBoxRenderer))
+	FGUI:GList_setNumItems(self._ui.List_HYJGSCheckBox, #self.selectHYJGSCheckBoxes)
+	FGUI:GList_addOnClickItemEvent(self._ui.List_HYJGSCheckBox, function(context)
+		local idx = FGUI:GetChildIndex(self._ui.List_HYJGSCheckBox, context.data)
+		self:ClickHYJGSCheckBoxEvent(idx)
+	end)
+	--冰魄寒玉石
+	FGUI:GList_itemRenderer(self._ui.List_BPHYSCheckBox, handler(self, self.ListBPHYSCheckBoxRenderer))
+	FGUI:GList_setNumItems(self._ui.List_BPHYSCheckBox, #self.selectBPHYSCheckBoxes)
+	FGUI:GList_addOnClickItemEvent(self._ui.List_BPHYSCheckBox, function(context)
+		local idx = FGUI:GetChildIndex(self._ui.List_BPHYSCheckBox, context.data)
+		self:ClickBPHYSCheckBoxEvent(idx)
+	end)
 
 	self.moneyComponents = {}
 	for i = 1, #moneyId do
@@ -118,8 +193,22 @@ end
 function BagRecyclePanel:ListCheckBoxRenderer(idx, item)
 	local cModel = self.selectCheckBoxes[idx + 1]
 	if cModel then
-		if self.selectTab == 1 then
-			cModel.isSelect = true
+		local textTitle = FGUI:GetChild(item, "title")
+		if textTitle then
+			FGUI:GTextField_setUnderline(textTitle, self.selectTab == 1)
+			FGUI:addOnClickEvent(textTitle, function()
+				if cModel:GetCheckBoxName() == "金刚石" then
+					self:ShowJGSDetail(true)
+				elseif cModel:GetCheckBoxName() == "寒玉石" then
+					self:ShowHYSDetail(true)
+				elseif cModel:GetCheckBoxName() == "热血石" then
+					self:ShowRXSDetail(true)
+				elseif cModel:GetCheckBoxName() == "混元金刚石" then
+					self:ShowHYJGSDetail(true)
+				elseif cModel:GetCheckBoxName() == "冰魄寒玉石" then
+					self:ShowBPHYSDetail(true)
+				end
+			end)
 		end
 		FGUI:GButton_setTitle(item, cModel:GetCheckBoxName())
 		local cSelect = FGUI:getController(item, "isSelect")
@@ -140,11 +229,71 @@ function BagRecyclePanel:ListLvCheckBoxRenderer(idx, item)
 	end
 end
 
+function BagRecyclePanel:ListJGSCheckBoxRenderer(idx, item)
+	local cModel = self.selectJGSCheckBoxes[idx + 1]
+	if cModel then
+		FGUI:GButton_setTitle(item, cModel:GetCheckBoxName())
+		local cSelect = FGUI:getController(item, "isSelect")
+		FGUI:Controller_setSelectedIndex(cSelect, cModel.isSelect and 1 or 0)
+		ssrMessage:sendmsgEx("bag", "setCheckBox",
+			{ boxName = cModel:GetCheckBoxName(), status = cModel.isSelect and 1 or 0 })
+	end
+end
+
+function BagRecyclePanel:ListHYSCheckBoxRenderer(idx, item)
+	local cModel = self.selectHYSCheckBoxes[idx + 1]
+	if cModel then
+		FGUI:GButton_setTitle(item, cModel:GetCheckBoxName())
+		local cSelect = FGUI:getController(item, "isSelect")
+		FGUI:Controller_setSelectedIndex(cSelect, cModel.isSelect and 1 or 0)
+		ssrMessage:sendmsgEx("bag", "setCheckBox",
+			{ boxName = cModel:GetCheckBoxName(), status = cModel.isSelect and 1 or 0 })
+	end
+end
+
+function BagRecyclePanel:ListRXSCheckBoxRenderer(idx, item)
+	local cModel = self.selectRXSCheckBoxes[idx + 1]
+	if cModel then
+		FGUI:GButton_setTitle(item, cModel:GetCheckBoxName())
+		local cSelect = FGUI:getController(item, "isSelect")
+		FGUI:Controller_setSelectedIndex(cSelect, cModel.isSelect and 1 or 0)
+		ssrMessage:sendmsgEx("bag", "setCheckBox",
+			{ boxName = cModel:GetCheckBoxName(), status = cModel.isSelect and 1 or 0 })
+	end
+end
+
+function BagRecyclePanel:ListHYJGSCheckBoxRenderer(idx, item)
+	local cModel = self.selectHYJGSCheckBoxes[idx + 1]
+	if cModel then
+		FGUI:GButton_setTitle(item, cModel:GetCheckBoxName())
+		local cSelect = FGUI:getController(item, "isSelect")
+		FGUI:Controller_setSelectedIndex(cSelect, cModel.isSelect and 1 or 0)
+		ssrMessage:sendmsgEx("bag", "setCheckBox",
+			{ boxName = cModel:GetCheckBoxName(), status = cModel.isSelect and 1 or 0 })
+	end
+end
+
+function BagRecyclePanel:ListBPHYSCheckBoxRenderer(idx, item)
+	local cModel = self.selectBPHYSCheckBoxes[idx + 1]
+	if cModel then
+		FGUI:GButton_setTitle(item, cModel:GetCheckBoxName())
+		local cSelect = FGUI:getController(item, "isSelect")
+		FGUI:Controller_setSelectedIndex(cSelect, cModel.isSelect and 1 or 0)
+		ssrMessage:sendmsgEx("bag", "setCheckBox",
+			{ boxName = cModel:GetCheckBoxName(), status = cModel.isSelect and 1 or 0 })
+	end
+end
+
 function BagRecyclePanel:InitData()
 	self.selectTab = 1
 	self.selectCheckBoxes = {}
 	self.bagRecycleViewModel:Bind(self)
 	self.selectLvCheckBoxes = self.bagRecycleViewModel:GetLvCheckBoxModel()
+	self.selectJGSCheckBoxes = self.bagRecycleViewModel:GetJGSCheckBoxModel()
+	self.selectHYSCheckBoxes = self.bagRecycleViewModel:GetHYSCheckBoxModel()
+	self.selectRXSCheckBoxes = self.bagRecycleViewModel:GetRXSCheckBoxModel()
+	self.selectHYJGSCheckBoxes = self.bagRecycleViewModel:GetHYJGSCheckBoxModel()
+	self.selectBPHYSCheckBoxes = self.bagRecycleViewModel:GetBPHYSCheckBoxModel()
 end
 
 function BagRecyclePanel:RefreshData()
@@ -158,16 +307,24 @@ end
 function BagRecyclePanel:ClickTabEvent(idx)
 	self.selectTab = idx
 	self.selectCheckBoxes = self.bagRecycleViewModel:GetTabCheckBoxModel(idx)
+	if idx == 1 then
+		for _, model in ipairs(self.selectCheckBoxes) do
+			model.isSelect = true
+		end
+	end
 	FGUI:GList_setNumItems(self._ui.List_CheckBox, #self.selectCheckBoxes)
+	bagRecycleViewModel:RefreshSelectItemsByConditions()
 end
 
 function BagRecyclePanel:ClickCheckBoxEvent(idx)
-	local cModel = self.selectCheckBoxes[idx + 1]
-	if cModel then
-		cModel:Toggle()
+	if self.selectTab == 0 then
+		local cModel = self.selectCheckBoxes[idx + 1]
+		if cModel then
+			cModel:Toggle()
+		end
+		self:ListCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_CheckBox, idx))
+		self.bagRecycleViewModel:RefreshSelectItemsByConditions()
 	end
-	self:ListCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_CheckBox, idx))
-	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
 end
 
 function BagRecyclePanel:ClickLvCheckBoxEvent(idx)
@@ -187,12 +344,73 @@ function BagRecyclePanel:ClickCheckBoxTotalLvEvent()
 	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
 end
 
-function BagRecyclePanel:ShowLevelDetail(state)
-	FGUI:setVisible(self._ui.LvDetail, state)
+function BagRecyclePanel:ClickJGSCheckBoxEvent(idx)
+	local cModel = self.selectJGSCheckBoxes[idx + 1]
+	if cModel then
+		cModel:Toggle()
+	end
+	self:ListJGSCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_JGSCheckBox, idx))
+	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
+end
+
+function BagRecyclePanel:ClickHYSCheckBoxEvent(idx)
+	local cModel = self.selectHYSCheckBoxes[idx + 1]
+	if cModel then
+		cModel:Toggle()
+	end
+	self:ListHYSCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_HYSCheckBox, idx))
+	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
+end
+
+function BagRecyclePanel:ClickRXSCheckBoxEvent(idx)
+	local cModel = self.selectRXSCheckBoxes[idx + 1]
+	if cModel then
+		cModel:Toggle()
+	end
+	self:ListRXSCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_RXSCheckBox, idx))
+	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
+end
+
+function BagRecyclePanel:ClickHYJGSCheckBoxEvent(idx)
+	local cModel = self.selectHYJGSCheckBoxes[idx + 1]
+	if cModel then
+		cModel:Toggle()
+	end
+	self:ListHYJGSCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_HYJGSCheckBox, idx))
+	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
+end
+
+function BagRecyclePanel:ClickBPHYSCheckBoxEvent(idx)
+	local cModel = self.selectBPHYSCheckBoxes[idx + 1]
+	if cModel then
+		cModel:Toggle()
+	end
+	self:ListBPHYSCheckBoxRenderer(idx, FGUI:GetChildAt(self._ui.List_BPHYSCheckBox, idx))
+	self.bagRecycleViewModel:RefreshSelectItemsByConditions()
 end
 
 function BagRecyclePanel:ShowLevelDetail(state)
 	FGUI:setVisible(self._ui.LvDetail, state)
+end
+
+function BagRecyclePanel:ShowJGSDetail(state)
+	FGUI:setVisible(self._ui.JGSDetail, state)
+end
+
+function BagRecyclePanel:ShowHYSDetail(state)
+	FGUI:setVisible(self._ui.HYSDetail, state)
+end
+
+function BagRecyclePanel:ShowRXSDetail(state)
+	FGUI:setVisible(self._ui.RXSDetail, state)
+end
+
+function BagRecyclePanel:ShowHYJGSDetail(state)
+	FGUI:setVisible(self._ui.HYJGSDetail, state)
+end
+
+function BagRecyclePanel:ShowBPHYSDetail(state)
+	FGUI:setVisible(self._ui.BPHYSDetail, state)
 end
 
 function BagRecyclePanel:UpdateMoney()

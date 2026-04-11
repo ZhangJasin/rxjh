@@ -28,7 +28,6 @@ function BagRecycleViewModel:InitRecycleCondition()
 	self.BPHYSConditionModels = {}
 	self.checkBPHYSConditionGroups = {}
 
-
 	local cacheData = self:GetBagRecycleData()
 	if not cacheData or #cacheData == 0 then
 		if SL:GetValue("U", 8) == 1 then

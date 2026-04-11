@@ -12,6 +12,22 @@ function BagRecycleViewModel:InitRecycleCondition()
 	self.checkEquipConditionGroups = {}
 	self.otherConditionModels = {}
 	self.checkOtherConditionGroups = {}
+
+	self.JGSConditionModels = {}
+	self.checkJGSConditionGroups = {}
+
+	self.HYSConditionModels = {}
+	self.checkHYSConditionGroups = {}
+
+	self.RXSConditionModels = {}
+	self.checkRXSConditionGroups = {}
+
+	self.HYJGSConditionModels = {}
+	self.checkHYJGSConditionGroups = {}
+
+	self.BPHYSConditionModels = {}
+	self.checkBPHYSConditionGroups = {}
+
 	local cacheData = self:GetBagRecycleData()
 	if not cacheData or #cacheData == 0 then
 		if SL:GetValue("U", 8) == 1 then
@@ -49,6 +65,26 @@ function BagRecycleViewModel:InitRecycleCondition()
 				model = BagRecycleConditionModel.new(v)
 				targetList = self.otherConditionModels
 				targetGroups = self.checkOtherConditionGroups
+			elseif v.Type == 3 then
+				model = BagRecycleConditionModel.new(v)
+				targetList = self.JGSConditionModels
+				targetGroups = self.checkJGSConditionGroups
+			elseif v.Type == 4 then
+				model = BagRecycleConditionModel.new(v)
+				targetList = self.HYSConditionModels
+				targetGroups = self.checkHYSConditionGroups
+			elseif v.Type == 5 then
+				model = BagRecycleConditionModel.new(v)
+				targetList = self.RXSConditionModels
+				targetGroups = self.checkRXSConditionGroups
+			elseif v.Type == 6 then
+				model = BagRecycleConditionModel.new(v)
+				targetList = self.HYJGSConditionModels
+				targetGroups = self.checkHYJGSConditionGroups
+			elseif v.Type == 7 then
+				model = BagRecycleConditionModel.new(v)
+				targetList = self.BPHYSConditionModels
+				targetGroups = self.checkBPHYSConditionGroups
 			end
 
 			if targetList then
@@ -118,6 +154,26 @@ function BagRecycleViewModel:GetLvCheckBoxModel()
 	return self.lvConditionModels
 end
 
+function BagRecycleViewModel:GetJGSCheckBoxModel()
+	return self.JGSConditionModels
+end
+
+function BagRecycleViewModel:GetHYSCheckBoxModel()
+	return self.HYSConditionModels
+end
+
+function BagRecycleViewModel:GetRXSCheckBoxModel()
+	return self.RXSConditionModels
+end
+
+function BagRecycleViewModel:GetHYJGSCheckBoxModel()
+	return self.HYJGSConditionModels
+end
+
+function BagRecycleViewModel:GetBPHYSCheckBoxModel()
+	return self.BPHYSConditionModels
+end
+
 function BagRecycleViewModel:CheckConditions(itemCfg, conditionGroups)
 	local existValid = false
 	for k, v in pairs(conditionGroups) do
@@ -140,61 +196,157 @@ function BagRecycleViewModel:CheckConditions(itemCfg, conditionGroups)
 	return false
 end
 
+function BagRecycleViewModel:CheckStoneConditions(stoneId, bagDataCfg, conditionGroups)
+	local existValid = false
+	for k, v in pairs(conditionGroups) do
+		if v then
+			for i = 1, #v do
+				local conditionModel = v[i]
+				if conditionModel then
+					--print("conditionModel")
+					local valid = conditionModel:CheckStoneValid(stoneId, bagDataCfg)
+					--dump(valid)
+					if valid then
+						existValid = true
+						-- 只要物品符合任何一个被选中的条件，就返回true
+						if conditionModel.isSelect then
+							--dump(conditionModel.isSelect)
+							--print("stoneId", stoneId)
+							return true
+						end
+					end
+				end
+			end
+		end
+	end
+	return false
+end
+
 function BagRecycleViewModel:RefreshSelectItemsByConditions()
 	local bagData = SL:GetValue("BAG_SORT_POS_DATA_DIC")
 	self.SelectMakeIndexToPos = {}
 	self.moneyResDic = {}
+
 	for k, v in pairs(bagData) do
 		if k > 0 and v then
 			local itemCfg = SL:GetValue("ITEM_DATA", v.Index or v.ID)
-			if itemCfg and itemCfg.recycle and itemCfg.recycle ~= "" then
+			-- 获取鉴定属性名称（用于判断是否为石头类道具）
+			local attrName = v and v.ExAbil and v.ExAbil.abil and v.ExAbil.abil[1] and v.ExAbil.abil[1].t
+
+			-- 判定准入：物品本身可回收 OR 带有鉴定属性的石头
+			if itemCfg and ((itemCfg.recycle and itemCfg.recycle ~= "") or (attrName and attrName == "[鉴定属性]")) then
 				local itemSelect = false
-				-- 检查等级条件（如果开启）
+				local matchedStoneModel = nil -- 用于记录匹配成功的石头模型
+
+				-- 1. 检查装备类条件（受 checkLevel 总开关影响）
+				local lvMatch = false
 				if self.checkLevel then
-					itemSelect = self:CheckConditions(itemCfg, self.checkLvConditionGroups)
+					lvMatch = self:CheckConditions(itemCfg, self.checkLvConditionGroups)
 				end
+				local equipMatch = self:CheckConditions(itemCfg, self.checkEquipConditionGroups)
 
-				-- 检查装备条件
-				local equipSelect = self:CheckConditions(itemCfg, self.checkEquipConditionGroups)
-
-				-- 如果等级筛选开启，需要同时满足等级和装备条件
-				-- 如果等级筛选未开启，只需要满足装备条件
 				if self.checkLevel then
-					itemSelect = itemSelect and equipSelect
+					itemSelect = lvMatch and equipMatch
 				else
-					itemSelect = equipSelect
+					itemSelect = equipMatch
 				end
 
-				local otherSelect = self:CheckConditions(itemCfg, self.checkOtherConditionGroups)
-				local finalSelect = itemSelect or otherSelect
-				SL:onLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY,
-					{ isSelect = finalSelect, selectList = { { MakeIndex = v.MakeIndex, pos = k, ID = v.Index, cnt = v.OverLap or 1 } }, updateMoney = false })
+				-- 2. 检查各类石头条件（金刚石、寒玉石等）
+				-- 只有带有鉴定属性的物品才进行石头判定
+				if attrName and v.ExAbil.abil[1].v and v.ExAbil.abil[1].v[1] then
+					local stoneId = v.Index or v.ID
+					local bagAttrData = v.ExAbil.abil[1].v[1]
+
+					-- 按优先级依次匹配各个石头组，并返回匹配到的 Model
+					matchedStoneModel = self:CheckStoneConditionsReturnModel(stoneId, bagAttrData,
+						self.checkJGSConditionGroups)
+					if not matchedStoneModel then
+						matchedStoneModel = self:CheckStoneConditionsReturnModel(stoneId, bagAttrData,
+							self.checkHYSConditionGroups)
+					end
+					if not matchedStoneModel then
+						matchedStoneModel = self:CheckStoneConditionsReturnModel(stoneId, bagAttrData,
+							self.checkRXSConditionGroups)
+					end
+					if not matchedStoneModel then
+						matchedStoneModel = self:CheckStoneConditionsReturnModel(stoneId, bagAttrData,
+							self.checkHYJGSConditionGroups)
+					end
+					if not matchedStoneModel then
+						matchedStoneModel = self:CheckStoneConditionsReturnModel(stoneId, bagAttrData,
+							self.checkBPHYSConditionGroups)
+					end
+				end
+
+				-- 3. 综合最终选中状态
+				-- 只要满足 (装备/等级) OR (匹配到已勾选的石头模型) 即可
+				local finalSelect = itemSelect or (matchedStoneModel ~= nil)
+
+				-- 4. 派发延迟改变事件，将 matchedStoneModel 传入 selectList 供 CalculateMoney 使用
+				SL:onLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY, {
+					isSelect = finalSelect,
+					selectList = { {
+						MakeIndex = v.MakeIndex,
+						pos = k,
+						ID = v.Index,
+						cnt = v.OverLap or 1,
+						stoneModel = matchedStoneModel -- 携带模型数据用于计算价格
+					} },
+					updateMoney = false
+				})
 			end
 		end
 	end
+
 	if self.viewComponent then
 		self.viewComponent:UpdateMoney()
 	end
 end
 
+-- 辅助函数：查找并返回匹配且已勾选的石头模型
+function BagRecycleViewModel:CheckStoneConditionsReturnModel(stoneId, bagDataCfg, conditionGroups)
+	for k, v in pairs(conditionGroups) do
+		if v then
+			for i = 1, #v do
+				local conditionModel = v[i]
+				-- 必须物理匹配且玩家在界面上勾选了该项
+				if conditionModel and conditionModel.isSelect then
+					if conditionModel:CheckStoneValid(stoneId, bagDataCfg) then
+						return conditionModel
+					end
+				end
+			end
+		end
+	end
+	return nil
+end
+
 function BagRecycleViewModel:GetJsonData()
 	local data = {}
+	-- 保存等级过滤总开关状态
 	data["checkLevel"] = self.checkLevel and 1 or 0
-	for i, v in ipairs(self.lvConditionModels) do
-		if v and v.cfg and v.cfg.ID then
-			data[v.cfg.ID] = v.isSelect and 1 or 0
+
+	-- 辅助闭包：遍历模型列表并记录选中状态
+	local function collectSelectData(modelList)
+		if not modelList then return end
+		for i, v in ipairs(modelList) do
+			if v and v.cfg and v.cfg.ID then
+				data[tostring(v.cfg.ID)] = v.isSelect and 1 or 0
+			end
 		end
 	end
-	for i, v in ipairs(self.equipConditionModels) do
-		if v and v.cfg and v.cfg.ID then
-			data[v.cfg.ID] = v.isSelect and 1 or 0
-		end
-	end
-	for i, v in ipairs(self.otherConditionModels) do
-		if v and v.cfg and v.cfg.ID then
-			data[v.cfg.ID] = v.isSelect and 1 or 0
-		end
-	end
+
+	-- 1. 保存基础页签模型 (等级、装备、其他)
+	collectSelectData(self.lvConditionModels)
+	collectSelectData(self.equipConditionModels)
+	collectSelectData(self.otherConditionModels)
+
+	-- 2. 保存新增的石头类模型 (确保这部分数据下次打开也能还原)
+	collectSelectData(self.JGSConditionModels)
+	collectSelectData(self.HYSConditionModels)
+	collectSelectData(self.RXSConditionModels)
+	collectSelectData(self.HYJGSConditionModels)
+	collectSelectData(self.BPHYSConditionModels)
 
 	return SL:JsonEncode(data)
 end
@@ -280,31 +432,39 @@ function BagRecycleViewModel:GetMoneyResDic()
 end
 
 function BagRecycleViewModel:CalculateMoney(isSelect, selectData)
-	if selectData then
-		local cfg = SL:GetValue("ITEM_DATA", selectData.ID)
-		if cfg and cfg.recycle then
-			local moneyStr = string.split(cfg.recycle, "|")
-			if moneyStr then
-				for i = 1, #moneyStr do
-					local moneyData = string.split(moneyStr[i], "#")
-					if moneyData then
-						local moneyId = tonumber(moneyData[1])
-						local moneyNum = tonumber(moneyData[2])
-						local sum = self.moneyResDic[moneyId] or 0
-						local curSelectItemData = self.SelectMakeIndexToPos[selectData.MakeIndex]
-						if isSelect then
-							if not curSelectItemData then
-								sum = sum + moneyNum * selectData.cnt
-							end
-						else
-							if curSelectItemData then
-								sum = sum - moneyNum * selectData.cnt
-							end
-						end
+	if not selectData then return end
 
-						self.moneyResDic[moneyId] = sum
+	local moneyStr = ""
+	local itemCfg = SL:GetValue("ITEM_DATA", selectData.ID)
+
+	-- 优先级 1：如果有匹配的石头模型，使用配置表 Recycle.lua 中的 sell 价格
+	if selectData.stoneModel and selectData.stoneModel.cfg and selectData.stoneModel.cfg.sell then
+		moneyStr = selectData.stoneModel.cfg.sell
+		-- 优先级 2：使用物品表 Item.lua 中的 recycle 价格
+	elseif itemCfg and itemCfg.recycle and itemCfg.recycle ~= "" then
+		moneyStr = itemCfg.recycle
+	end
+
+	if moneyStr ~= "" then
+		local moneyGroups = string.split(moneyStr, "|")
+		for i = 1, #moneyGroups do
+			local moneyData = string.split(moneyGroups[i], "#")
+			if #moneyData >= 2 then
+				local moneyId = tonumber(moneyData[1])
+				local moneyNum = tonumber(moneyData[2])
+				local sum = self.moneyResDic[moneyId] or 0
+
+				local curSelectItemData = self.SelectMakeIndexToPos[selectData.MakeIndex]
+				if isSelect then
+					if not curSelectItemData then
+						sum = sum + moneyNum * selectData.cnt
+					end
+				else
+					if curSelectItemData then
+						sum = sum - moneyNum * selectData.cnt
 					end
 				end
+				self.moneyResDic[moneyId] = sum
 			end
 		end
 	end
