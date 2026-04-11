@@ -227,7 +227,7 @@
     <component id="n100_v5h4" name="petModel" src="vorr1x" fileName="Components/mountModel.xml" xy="399,255" size="300,377">
       <gearDisplay controller="rightTabs" pages="0"/>
     </component>
-    <component id="n101_v5h4" name="petXhcl" src="vorr21" fileName="Components/xhcl.xml" xy="1024,619">
+    <component id="n101_v5h4" name="petXhcl" src="vorr21" fileName="Components/xhcl.xml" xy="973,619">
       <gearDisplay controller="rightTabs" pages="0"/>
     </component>
     <component id="n102_v5h4" name="petHuanhua" src="o0nq17" fileName="Components/tybtn1.xml" xy="468,660">
@@ -235,7 +235,7 @@
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
       <Button title="幻化"/>
     </component>
-    <text id="n104_cb9c" name="n104" xy="962,625" size="70,32" fontSize="22" color="#fcf1bf" text="消耗：">
+    <text id="n104_cb9c" name="n104" xy="913,625" size="70,32" fontSize="22" color="#fcf1bf" text="消耗：">
       <gearDisplay controller="rightTabs" pages="0"/>
     </text>
     <text id="n107_cb9c" name="n107" xy="913,592" size="234,34" fontSize="17" color="#cccccc" ubb="true" autoSize="none" text="出战灵兽[color=#00ff00]3%[/color]的属性转化给人物">

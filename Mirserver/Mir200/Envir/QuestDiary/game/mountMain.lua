@@ -356,20 +356,61 @@ function mountMain.petShengji(actor)
 
     local classIds = petlist[nextlv].ClassID
     local costs = petlist[nowlv].Cost
-    local itemId = tonumber(costs[1])
-    local num = tonumber(costs[2])
+    
+    -- 支持多消耗格式：2801^40|3958^5
+    -- 检查是否是多重消耗格式：costs[1] 是 table 而不是 number
+    local isMultiCost = (type(costs[1]) == "table")
+    
+    if isMultiCost then
+        -- 多重消耗格式：{[1] = {[1] = itemId, [2] = num}, [2] = {[1] = itemId, [2] = num}}
+        print("检测到多重消耗格式")
+        local allEnough = true
+        local lackItems = {}
+        for i = 1, #costs do
+            local itemId = tonumber(costs[i][1])
+            local num = tonumber(costs[i][2])
+            local haveCount = bagitemcount(actor, itemId)
+            print("材料" .. i .. " ID:", itemId, "需要:", num, "拥有:", haveCount)
+            if haveCount < num then
+                allEnough = false
+                table.insert(lackItems, {id = itemId, need = num, have = haveCount})
+            end
+        end
+        
+        if not allEnough then
+            print("多材料不足")
+            local msg = "材料不足"
+            if #lackItems > 0 then
+                msg = "材料不足"
+            end
+            sendmsg(actor, 9, msg)
+            return
+        end
+        
+        -- 扣除所有材料
+        print("材料充足,开始扣除所有材料")
+        for i = 1, #costs do
+            local itemId = tonumber(costs[i][1])
+            local num = tonumber(costs[i][2])
+            delItemNum(actor, itemId, num)
+            print("扣除材料" .. i .. " ID:", itemId, "数量:", num)
+        end
+    else
+        -- 单消耗格式（兼容旧数据）
+        local itemId = tonumber(costs[1])
+        local num = tonumber(costs[2])
 
-    print("材料ID:", itemId, "需要数量:", num, "拥有数量:", bagitemcount(actor, itemId))
+        print("材料ID:", itemId, "需要数量:", num, "拥有数量:", bagitemcount(actor, itemId))
 
-    if bagitemcount(actor, itemId) < num then
-        print("材料不足")
-        sendmsg(actor, 9, "材料不足" .. num .. "个")
-        return
+        if bagitemcount(actor, itemId) < num then
+            print("材料不足")
+            sendmsg(actor, 9, "材料不足" .. num .. "个")
+            return
+        end
+        
+        print("材料充足,开始升级/激活")
+        delItemNum(actor, itemId, num)
     end
-    
-    print("材料充足,开始升级/激活")
-    
-    -- 判断是否升阶
     -- 0阶9星(Level=9) → 0阶10星(Level=10)：正常升星
     -- 0阶10星(Level=10) → 1阶1星(Level=11)：跨阶，重置星星为1
     local nowLevel = 0
@@ -422,8 +463,6 @@ function mountMain.petShengji(actor)
         end
     end
 
-    delItemNum(actor, itemId, num)
-    
     -- 与坐骑逻辑一致：直接存储完整的等级，客户端通过计算显示阶数和星星
     sethumvar(actor, VarCfg.U_All_Pet_star, nextlv)
     print("设置灵兽等级:", nextlv)
@@ -1190,12 +1229,51 @@ function mountMain.lsJihuo(actor) sendmsg(actor, 9, "请先激活灵兽") end
 -- 灵兽激活/升级接口（与旧系统对齐）
 function mountMain.lsjihuo(actor, data)
     print("=== lsjihuo 被调用 ===")
-    -- data.itemId = 激活材料ID
+    -- data.itemId = 激活材料ID (单消耗)
+    -- 或 data.costs = 消耗数组 (多消耗)
     local nowlv = gethumvar(actor, VarCfg.U_All_Pet_star)
     print("nowlv:", nowlv)
 
     if nowlv > 0 then
         return sendmsg(actor, 9, "已激活")
+    end
+
+    -- 检查激活是否需要消耗（兼容多消耗格式）
+    local costs = petlist[0].Cost
+    if costs then
+        local isMultiCost = (type(costs[1]) == "table")
+        
+        if isMultiCost then
+            -- 多重消耗：检查所有材料是否足够
+            local allEnough = true
+            for i = 1, #costs do
+                local itemId = tonumber(costs[i][1])
+                local num = tonumber(costs[i][2])
+                if bagitemcount(actor, itemId) < num then
+                    allEnough = false
+                    break
+                end
+            end
+            
+            if not allEnough then
+                return sendmsg(actor, 9, "激活材料不足")
+            end
+            
+            -- 扣除所有材料
+            for i = 1, #costs do
+                local itemId = tonumber(costs[i][1])
+                local num = tonumber(costs[i][2])
+                delItemNum(actor, itemId, num)
+            end
+        else
+            -- 单消耗格式（兼容旧数据）
+            local itemId = tonumber(costs[1])
+            local num = tonumber(costs[2])
+            if bagitemcount(actor, itemId) < num then
+                return sendmsg(actor, 9, "激活材料不足" .. num .. "个")
+            end
+            delItemNum(actor, itemId, num)
+        end
     end
 
     mountMain.petShengji(actor)
@@ -1544,14 +1622,37 @@ function mountMain.levelUp(actor, data)
     end
 
     local costs = petlist[nowlv].Cost
-    local itemId = tonumber(costs[1])
-    local num = tonumber(costs[2])
+    
+    -- 支持多消耗格式：2801^40|3958^5
+    -- 检查是否是多重消耗格式：costs[1] 是 table 而不是 number
+    local isMultiCost = (type(costs[1]) == "table")
+    
+    if isMultiCost then
+        -- 多重消耗格式：{[1] = {[1] = itemId, [2] = num}, [2] = {[1] = itemId, [2] = num}}
+        local allEnough = true
+        for i = 1, #costs do
+            local itemId = tonumber(costs[i][1])
+            local num = tonumber(costs[i][2])
+            if bagitemcount(actor, itemId) < num then
+                allEnough = false
+                break
+            end
+        end
+        
+        if not allEnough then
+            return sendmsg(actor, 9, "材料不足")
+        end
+    else
+        -- 单消耗格式（兼容旧数据）
+        local itemId = tonumber(costs[1])
+        local num = tonumber(costs[2])
 
-    if bagitemcount(actor, itemId) < num then
-        return sendmsg(actor, 9, "材料不足" .. num .. "个")
+        if bagitemcount(actor, itemId) < num then
+            return sendmsg(actor, 9, "材料不足" .. num .. "个")
+        end
     end
 
-    -- 调用petShengji处理升级逻辑
+    -- 调用petShengji处理升级逻辑（petShengji内部会扣除材料）
     mountMain.petShengji(actor)
 
     -- 发送level消息与旧系统对齐
@@ -1773,29 +1874,30 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
 end, mountMain)
 
 GameEvent.add(EventCfg.onNewHuman, function(actor)
-    --giveitem(actor, "灵兽召唤符（乌龙驹）#999")
-    --giveitem(actor, "灵兽召唤符（追风豹）#999")
-    --giveitem(actor, "灵兽召唤符（铁甲犀牛）#999")
-    --giveitem(actor, "灵兽召唤符（黑豹）#999")
-    --giveitem(actor, "灵兽召唤符（雪豹）#999")
-    --giveitem(actor, "灵兽召唤符（霸天虎）#999")
-    --giveitem(actor, "灵兽召唤符（烈焰狮）#999")
-    --giveitem(actor, "灵兽召唤符（飓风狂狼）#999")
-    --giveitem(actor, "灵兽召唤符（松狮犬）#999")
-    --giveitem(actor, "灵兽召唤符（青木神龙）#999")
-    --giveitem(actor, "龙猫#10")
-    --giveitem(actor, "白猫#10")
-    --giveitem(actor, "坐骑升星石#9999")
-    --giveitem(actor, "灵宠升级彩蛋#9999")
-    giveitem(actor, "混元金刚石（攻击）#5")
-    giveitem(actor, "冰魄寒玉石（防御）#5")
-    giveitem(actor, "热血石（狂神降世）#1")
-    giveitem(actor, "热血石（转攻为守）#1")
-    giveitem(actor, "金刚石（攻击）#5")
-    giveitem(actor, "寒玉石（武防）#5")
-    giveitem(actor, "51003#2")
-    giveitem(actor, "51005#2")
-    giveitem(actor, "34001#2")
+    giveitem(actor, "灵兽召唤符（乌龙驹）#999")
+    giveitem(actor, "灵兽召唤符（追风豹）#999")
+    giveitem(actor, "灵兽召唤符（铁甲犀牛）#999")
+    giveitem(actor, "灵兽召唤符（黑豹）#999")
+    giveitem(actor, "灵兽召唤符（雪豹）#999")
+    giveitem(actor, "灵兽召唤符（霸天虎）#999")
+    giveitem(actor, "灵兽召唤符（烈焰狮）#999")
+    giveitem(actor, "灵兽召唤符（飓风狂狼）#999")
+    giveitem(actor, "灵兽召唤符（松狮犬）#999")
+    giveitem(actor, "灵兽召唤符（青木神龙）#999")
+    giveitem(actor, "龙猫#10")
+    giveitem(actor, "白猫#10")
+    giveitem(actor, "坐骑升星石#9999")
+    giveitem(actor, "灵宠升级彩蛋#9999")
+
+    --giveitem(actor, "混元金刚石（攻击）#5")
+    --giveitem(actor, "冰魄寒玉石（防御）#5")
+    --giveitem(actor, "热血石（狂神降世）#1")
+    --giveitem(actor, "热血石（转攻为守）#1")
+    --giveitem(actor, "金刚石（攻击）#5")
+    --giveitem(actor, "寒玉石（武防）#5")
+    --giveitem(actor, "51003#2")
+    --giveitem(actor, "51005#2")
+    --giveitem(actor, "34001#2")
 end, mountMain)
 
 Message.RegisterNetMsg(ssrNetMsgCfg.mountMain, mountMain)
