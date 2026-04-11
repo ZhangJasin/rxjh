@@ -59,6 +59,9 @@ function TransferInfo.doTransfer(actor)
             
             -- 发送当前和下一级转职配置给客户端
             Message.sendmsg(actor, ssrNetMsgCfg.TransferInfo_RefreshUI, newLv)
+
+            --更新任务
+            Task.GetAlltaskinfo(actor)
         else
             sendmsg(actor, 9, "请先完成转职任务")
         end
