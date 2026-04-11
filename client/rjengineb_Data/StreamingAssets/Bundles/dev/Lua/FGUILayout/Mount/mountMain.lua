@@ -761,12 +761,11 @@ function mountMain:setPetXhcl()
     -- 获取消耗材料
     if self.petTopTab == 0 then
         -- 灵兽升星石
-        local wz = self._dataForPet.allJieshu + 1
-        if wz == 1 then
-            wz = 0
-        end
+        -- allJieshu = 0 表示未激活，显示 Pet[0].Cost (激活消耗)
+        -- allJieshu >= 1 表示已激活，显示 Pet[allJieshu].Cost (当前等级升下一级的消耗)
+        local wz = self._dataForPet.allJieshu
         costs = Pet[wz].Cost
-        print("消耗材料配置索引:", wz, "Cost:", costs)
+        print("消耗材料配置索引:", wz, "当前等级:", self._dataForPet.allJieshu, "Cost:", costs)
     else
         -- 幻化消耗材料
         -- 安全检查：确保 hhSortList 不为空
