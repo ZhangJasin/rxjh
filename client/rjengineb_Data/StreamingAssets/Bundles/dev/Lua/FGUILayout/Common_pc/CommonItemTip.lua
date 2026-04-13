@@ -2,6 +2,19 @@ local CommonItemTipBase = requireFGUILayout("Common/CommonItemTipBase")
 local CommonItemTip = class("CommonItemTip", CommonItemTipBase)
 local ItemFrom = SL:GetValue("ITEMFROMUI_ENUM")
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
+
+-- 回城符道具ID列表
+local BACK_CITY_ITEM_IDS = { 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140 }
+
+-- 检查是否为回城符
+function CommonItemTip:CheckIsBackCityItem(itemID)
+    for i = 1, #BACK_CITY_ITEM_IDS do
+        if BACK_CITY_ITEM_IDS[i] == itemID then
+            return true
+        end
+    end
+    return false
+end
 --[[
 	data.from           --从哪个界面打开Tip,用于逻辑判断SL:GetValue("ITEMFROMUI_ENUM")
 	data.itemData		--物品数据
@@ -72,6 +85,10 @@ function CommonItemTip:RefreshBtnState(data)
 	local canUse = SL:CheckItemUseNeed(itemData)
 	local addBtnMap = {}
 	local  showSplit = SL:GetValue("GAME_DATA","ItemSplit") == 1
+	
+	-- 检查是否为回城符
+	local isBackCityItem = self:CheckIsBackCityItem(itemData.ID)
+	
 	for i = 1, #self._buttons do
 		local btnCfgType = -1
 		if not hideBtn then
@@ -104,8 +121,8 @@ function CommonItemTip:RefreshBtnState(data)
 				end
 			else
 
-				-- 使用道具
-				if data and data.from == ItemFrom.BAG  and canUse  then
+				-- 使用道具(回城符除外)
+				if data and data.from == ItemFrom.BAG  and canUse and not isBackCityItem then
 					if isEquip  then
 						if not addBtnMap[2] then
 							btnCfgType = 2

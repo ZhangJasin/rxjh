@@ -48,6 +48,21 @@ local BtnCfg = {
     [1] = {
         btnName     = "使用",
         func = function (data)
+            -- 检查是否为回城符,如果是则直接调用回城接口
+            local BACK_CITY_ITEM_IDS = { 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140 }
+            local isBackCityItem = false
+            for i = 1, #BACK_CITY_ITEM_IDS do
+                if BACK_CITY_ITEM_IDS[i] == data.ID then
+                    isBackCityItem = true
+                    break
+                end
+            end
+            
+            if isBackCityItem then
+                local righttoppanlData = requireFGUILayout("A_Right/righttoppanlData")
+                righttoppanlData:Get():RequestBackCity({ data.ID })
+                return
+            end
             SL:RequestUseItem(data)
         end
     },

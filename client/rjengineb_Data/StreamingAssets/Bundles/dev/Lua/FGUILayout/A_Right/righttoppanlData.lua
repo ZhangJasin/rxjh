@@ -11,6 +11,15 @@ local righttoppanlData = {
 -- 回城符列表定义
 local cityitemtab = { 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140 }
 
+-- 检查道具是否为回城符
+function righttoppanlData:IsBackCityItem(itemID)
+    for i = 1, #cityitemtab do
+        if cityitemtab[i] == itemID then
+            return true
+        end
+    end
+    return false
+end
 
 function righttoppanlData.Get()
     return righttoppanlData
