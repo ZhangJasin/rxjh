@@ -97,6 +97,8 @@
     <image id="rg4i2m" name="WuXun_15023.png" path="/Images/url/" exported="true"/>
     <image id="rg4i2n" name="WuXun_15024.png" path="/Images/url/" exported="true"/>
     <image id="rg4i2o" name="WuXun_15025.png" path="/Images/url/" exported="true"/>
+    <image id="jy2f2p" name="300005.png" path="/Images/url/" exported="true"/>
+    <image id="jy2f2q" name="300004.png" path="/Images/url/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
