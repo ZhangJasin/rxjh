@@ -951,66 +951,108 @@ function mountMain.addsx(actor)
 end
 
 function mountMain.shengji(actor)
-    local nowlv = gethumvar(actor, VarCfg.U_All_Mount_star)
+    local nowlv = gethumvar(actor, VarCfg.U_All_Mount_star) or 0
     local nextlv = nowlv + 1
     if nextlv > #mountlist then return end
+    if not mountlist[nextlv] or not mountlist[nextlv].ClassID then
+        print("shengji: 下一级配置不存在, nextlv:", nextlv)
+        return
+    end
+    if not mountlist[nowlv] or not mountlist[nowlv].Cost then
+        print("shengji: 当前级配置不存在, nowlv:", nowlv)
+        return
+    end
     local classIds = mountlist[nextlv].ClassID
     local costs = mountlist[nowlv].Cost
-    local itemId = tonumber(costs[1])
-    local num = tonumber(costs[2])
-    if bagitemcount(actor, itemId) < num then
-        sendmsg(actor, 9, "材料不足" .. num .. "个")
-    else
-        if nowlv == 0 then -- 激活
-            sethumvar(actor, VarCfg.T_MountHuanHua, tbl2json({}))
-            sethumvar(actor, VarCfg.U_All_Mount_star, 1)
-            sethumvar(actor, VarCfg.U_Mount_IS_SET, 1)
-            
-            -- 首次激活时，自动激活第一个幻化（免费）
-            local firstHH = mountHHlist[1]
-            if firstHH then
-                local ycList = {}
-                ycList[firstHH.Name] = firstHH.grade
-                sethumvar(actor, VarCfg.T_MountHuanHua, tbl2json(ycList))
-                -- 设置幻化外观
-                sethumvar(actor, VarCfg.U_Mount_Take_Id, firstHH.Model)
-                sethumvar(actor, VarCfg.U_Mount_IS_HH, 1)
-                changeappear(actor, 5, firstHH.Model)
-                -- 添加幻化buff
-                if firstHH.buffID then
-                    for b = 1, #firstHH.buffID do
-                        addbuff(actor, firstHH.buffID[b])
-                    end
-                end
-                Message.sendmsgEx(actor, "mountMain", "updateHHmodel", {
-                    ycList = ycList,
-                    name = firstHH.Name,
-                    grade = firstHH.grade,
-                    mountHHid = firstHH.Model
-                })
+    
+    -- 支持多消耗格式：itemId^num|itemId2^num2
+    -- 检查是否是多重消耗格式：costs[1] 是 table 而不是 number
+    local isMultiCost = (type(costs[1]) == "table")
+    
+    if isMultiCost then
+        -- 多重消耗格式
+        local allEnough = true
+        for i = 1, #costs do
+            local itemId = tonumber(costs[i][1])
+            local num = tonumber(costs[i][2])
+            if bagitemcount(actor, itemId) < num then
+                allEnough = false
+                break
             end
         end
-        delItemNum(actor, itemId, num)
-        sethumvar(actor, VarCfg.U_All_Mount_star, nextlv)
-        local mountBaseId = mountlist[nextlv].Model
-        -- 当前模型是否幻化
-        if gethumvar(actor, VarCfg.U_Mount_IS_HH) == 0 then
-            changeappear(actor, 5, mountBaseId)
-            sethumvar(actor, VarCfg.U_Mount_Take_Id, mountBaseId)
+        
+        if not allEnough then
+            sendmsg(actor, 9, "材料不足")
+            return
         end
-        sethumvar(actor, VarCfg.U_Mount_Base_ID, mountBaseId)
-        Message.sendmsgEx(actor, "mountMain", "updateZQ",
-                          {lv = nextlv, mountBaseId = mountBaseId})
-        MentorShipChangTask(actor, 6, 1, nextlv)
-        print("shengji: nowlv =", nowlv, "nextlv =", nextlv)
-        -- 统一更新坐骑属性buff
-        mountMain.updateMountAttrBuff(actor)
-        -- 更新坐骑幻化战斗技能buff
-        mountMain.updateMountBattleSkillBuff(actor)
-        -- 同步更新灵兽属性buff（确保不影响灵兽属性）
-        mountMain.updatePetAttrBuff(actor)
-        mountMain.updatePetBattleSkillBuff(actor)
+        
+        -- 扣除所有材料
+        for i = 1, #costs do
+            local itemId = tonumber(costs[i][1])
+            local num = tonumber(costs[i][2])
+            delItemNum(actor, itemId, num)
+            print("坐骑升级扣除材料" .. i .. " ID:", itemId, "数量:", num)
+        end
+    else
+        -- 单消耗格式（兼容旧数据）
+        local itemId = tonumber(costs[1])
+        local num = tonumber(costs[2])
+        if bagitemcount(actor, itemId) < num then
+            sendmsg(actor, 9, "材料不足" .. num .. "个")
+            return
+        end
+        delItemNum(actor, itemId, num)
     end
+    
+    if nowlv == 0 then -- 激活
+        sethumvar(actor, VarCfg.T_MountHuanHua, tbl2json({}))
+        sethumvar(actor, VarCfg.U_All_Mount_star, 1)
+        sethumvar(actor, VarCfg.U_Mount_IS_SET, 1)
+        
+        -- 首次激活时，自动激活第一个幻化（免费）
+        local firstHH = mountHHlist[1]
+        if firstHH then
+            local ycList = {}
+            ycList[firstHH.Name] = firstHH.grade
+            sethumvar(actor, VarCfg.T_MountHuanHua, tbl2json(ycList))
+            -- 设置幻化外观
+            sethumvar(actor, VarCfg.U_Mount_Take_Id, firstHH.Model)
+            sethumvar(actor, VarCfg.U_Mount_IS_HH, 1)
+            changeappear(actor, 5, firstHH.Model)
+            -- 添加幻化buff
+            if firstHH.buffID then
+                for b = 1, #firstHH.buffID do
+                    addbuff(actor, firstHH.buffID[b])
+                end
+            end
+            Message.sendmsgEx(actor, "mountMain", "updateHHmodel", {
+                ycList = ycList,
+                name = firstHH.Name,
+                grade = firstHH.grade,
+                mountHHid = firstHH.Model
+            })
+        end
+    end
+    
+    sethumvar(actor, VarCfg.U_All_Mount_star, nextlv)
+    local mountBaseId = mountlist[nextlv].Model
+    -- 当前模型是否幻化
+    if gethumvar(actor, VarCfg.U_Mount_IS_HH) == 0 then
+        changeappear(actor, 5, mountBaseId)
+        sethumvar(actor, VarCfg.U_Mount_Take_Id, mountBaseId)
+    end
+    sethumvar(actor, VarCfg.U_Mount_Base_ID, mountBaseId)
+    Message.sendmsgEx(actor, "mountMain", "updateZQ",
+                      {lv = nextlv, mountBaseId = mountBaseId})
+    MentorShipChangTask(actor, 6, 1, nextlv)
+    print("shengji: nowlv =", nowlv, "nextlv =", nextlv)
+    -- 统一更新坐骑属性buff
+    mountMain.updateMountAttrBuff(actor)
+    -- 更新坐骑幻化战斗技能buff
+    mountMain.updateMountBattleSkillBuff(actor)
+    -- 同步更新灵兽属性buff（确保不影响灵兽属性）
+    mountMain.updatePetAttrBuff(actor)
+    mountMain.updatePetBattleSkillBuff(actor)
 end
 
 function getHHData(idx, grade)
@@ -1033,74 +1075,105 @@ function mountMain.huanhuajihuo(actor, postData)
         local classid = data.ClassID -- 属性
         local costs = data.Cost -- 消耗
         local grade = data.grade -- 激活的阶数
-        local itemId = tonumber(costs[1])
-        local num = tonumber(costs[2])
-        if getItemNum(actor, itemId) < num then
-            sendmsg(actor, 9, "激活材料不足" .. num .. "个")
+        
+        -- 支持多消耗格式
+        local isMultiCost = (type(costs[1]) == "table")
+        
+        if isMultiCost then
+            -- 多重消耗格式
+            local allEnough = true
+            for i = 1, #costs do
+                local itemId = tonumber(costs[i][1])
+                local num = tonumber(costs[i][2])
+                if getItemNum(actor, itemId) < num then
+                    allEnough = false
+                    break
+                end
+            end
+            
+            if not allEnough then
+                sendmsg(actor, 9, "激活材料不足")
+                return
+            end
+            
+            -- 扣除所有材料
+            for i = 1, #costs do
+                local itemId = tonumber(costs[i][1])
+                local num = tonumber(costs[i][2])
+                delItemNum(actor, itemId, num)
+            end
         else
-            local ycList = json2tbl(gethumvar(actor, VarCfg.T_MountHuanHua))
+            -- 单消耗格式（兼容旧数据）
+            local itemId = tonumber(costs[1])
+            local num = tonumber(costs[2])
+            if getItemNum(actor, itemId) < num then
+                sendmsg(actor, 9, "激活材料不足" .. num .. "个")
+                return
+            end
             delItemNum(actor, itemId, num)
-            ycList[data.Name] = grade
-            sethumvar(actor, VarCfg.T_MountHuanHua, tbl2json(ycList))
-            local hhsxListStr = {}
-            local mountHHid = gethumvar(actor, VarCfg.U_Mount_Take_Id)
-            -- 升级前的幻化模型id
-            if gethumvar(actor, VarCfg.U_Mount_IS_HH) == 1 then
-                -- 当前已经幻化了
-                -- 升级幻化之前外型是否当前外型
-                local oldHHModelId = 0
-                local newHHModelId = 0
-                for i = 1, #mountHHlist do
-                    if mountHHlist[i].Name == name and mountHHlist[i].grade ==
-                        grade - 1 then
-                        oldHHModelId = mountHHlist[i].Model
-                    end
-                    if mountHHlist[i].Name == name and mountHHlist[i].grade ==
-                        grade then
-                        newHHModelId = mountHHlist[i].Model
-                    end
-                end
-                if tonumber(oldHHModelId) == mountHHid then
-                    -- 是
-                    mountHHid = newHHModelId
-                    sethumvar(actor, VarCfg.U_Mount_Take_Id, newHHModelId)
-                    changeappear(actor, 5, newHHModelId)
-                end
-            end
-            for l, v in pairs(ycList) do
-                if l then
-                    local jhhhlist = {}
-                    for e = 1, #mountHHlist do
-                        if mountHHlist[e].Name == l and mountHHlist[e].grade ==
-                            v then
-                            jhhhlist[#jhhhlist + 1] = mountHHlist[e]
-                        end
-                    end
-                    for r = 1, #jhhhlist do
-                        local classIds = jhhhlist[r].ClassID
-                        for b = 1, #classIds do
-                            if hhsxListStr[classIds[b][1]] then
-                                hhsxListStr[classIds[b][1]] =
-                                    hhsxListStr[classIds[b][1]] + classIds[b][2]
-                            else
-                                hhsxListStr[classIds[b][1]] = classIds[b][2]
-                            end
-                        end
-                    end
-                end
-            end
-            -- 统一更新坐骑属性buff
-            mountMain.updateMountAttrBuff(actor)
-            -- 同步更新灵兽属性buff（确保不影响灵兽属性）
-            mountMain.updatePetAttrBuff(actor)
-            mountMain.updatePetBattleSkillBuff(actor)
-            Message.sendmsgEx(actor, "mountMain", "updateHHmodel", {
-                ycList = ycList,
-                name = name,
-                grade = grade,
-                mountHHid = mountHHid
-            })
         end
+        
+        local ycList = json2tbl(gethumvar(actor, VarCfg.T_MountHuanHua))
+        ycList[data.Name] = grade
+        sethumvar(actor, VarCfg.T_MountHuanHua, tbl2json(ycList))
+        local hhsxListStr = {}
+        local mountHHid = gethumvar(actor, VarCfg.U_Mount_Take_Id)
+        -- 升级前的幻化模型id
+        if gethumvar(actor, VarCfg.U_Mount_IS_HH) == 1 then
+            -- 当前已经幻化了
+            -- 升级幻化之前外型是否当前外型
+            local oldHHModelId = 0
+            local newHHModelId = 0
+            for i = 1, #mountHHlist do
+                if mountHHlist[i].Name == name and mountHHlist[i].grade ==
+                    grade - 1 then
+                    oldHHModelId = mountHHlist[i].Model
+                end
+                if mountHHlist[i].Name == name and mountHHlist[i].grade ==
+                    grade then
+                    newHHModelId = mountHHlist[i].Model
+                end
+            end
+            if tonumber(oldHHModelId) == mountHHid then
+                -- 是
+                mountHHid = newHHModelId
+                sethumvar(actor, VarCfg.U_Mount_Take_Id, newHHModelId)
+                changeappear(actor, 5, newHHModelId)
+            end
+        end
+        for l, v in pairs(ycList) do
+            if l then
+                local jhhhlist = {}
+                for e = 1, #mountHHlist do
+                    if mountHHlist[e].Name == l and mountHHlist[e].grade ==
+                        v then
+                        jhhhlist[#jhhhlist + 1] = mountHHlist[e]
+                    end
+                end
+                for r = 1, #jhhhlist do
+                    local classIds = jhhhlist[r].ClassID
+                    for b = 1, #classIds do
+                        if hhsxListStr[classIds[b][1]] then
+                            hhsxListStr[classIds[b][1]] =
+                                hhsxListStr[classIds[b][1]] + classIds[b][2]
+                        else
+                            hhsxListStr[classIds[b][1]] = classIds[b][2]
+                        end
+                    end
+                end
+            end
+        end
+        -- 统一更新坐骑属性buff
+        mountMain.updateMountAttrBuff(actor)
+        -- 同步更新灵兽属性buff（确保不影响灵兽属性）
+        mountMain.updatePetAttrBuff(actor)
+        mountMain.updatePetBattleSkillBuff(actor)
+        Message.sendmsgEx(actor, "mountMain", "updateHHmodel", {
+            ycList = ycList,
+            name = name,
+            grade = grade,
+            mountHHid = mountHHid
+        })
     else
         sendmsg(actor, 9, "激活失败")
     end

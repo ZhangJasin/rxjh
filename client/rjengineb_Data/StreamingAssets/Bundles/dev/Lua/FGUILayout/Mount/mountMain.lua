@@ -1833,16 +1833,19 @@ function mountMain:SetModelRotate()
     FGUI:setOnTouchEvent(self.uiTouch, beginFunc, moveFunc, endFunc)
 end
 
--- 设置消耗材料显示
+-- 设置消耗材料显示（对齐灵兽，支持多消耗）
 function mountMain:setXHCL()
-    local num = 1
     local costs = {}
     local iconItem = FGUI:GetChild(self._ui.xhcl, "iconItem")
+    local iconItem2 = FGUI:GetChild(self._ui.xhcl, "iconItem2")  -- 第二个消耗图标
     FGUI:setVisible(self._ui.n34, true)
     FGUI:setVisible(self._ui.xhcl, true)
     -- 清除旧图标
     if FGUI:GetChildCount(iconItem) > 0 then
         FGUI:RemoveChildAt(iconItem, 0, true)
+    end
+    if iconItem2 and FGUI:GetChildCount(iconItem2) > 0 then
+        FGUI:RemoveChildAt(iconItem2, 0, true)
     end
     -- 已满级处理
     if self._dataForMount.allJieshu == #Mount and self.topTab == TAB_TYPE.MOUNT then
@@ -1853,11 +1856,11 @@ function mountMain:setXHCL()
     -- 获取消耗材料
     if self.topTab == TAB_TYPE.MOUNT then
         -- 坐骑升星石
-        local wz = self._dataForMount.allJieshu + 1
-        if wz == 1 then
-            wz = 0
-        end
+        -- allJieshu = 0 表示未激活，显示 Mount[0].Cost (激活消耗)
+        -- allJieshu >= 1 表示已激活，显示 Mount[allJieshu].Cost (当前等级升下一级的消耗)
+        local wz = self._dataForMount.allJieshu
         costs = Mount[wz].Cost
+        print("坐骑消耗材料配置索引:", wz, "当前等级:", self._dataForMount.allJieshu, "Cost:", costs)
     else
         -- 幻化消耗材料
         local results = {}
@@ -1881,28 +1884,114 @@ function mountMain:setXHCL()
         end
         costs = results[nowGrade].Cost
     end
-    -- 设置数量和图标
-    num = costs[2]
-    local itemData = SL:GetValue("ITEM_DATA", tonumber(costs[1])) 
-    -- 创建物品显示
-    local extData = {}
-    extData.hideTip = false -- 是否隐藏默认的Tip
-    extData.itemTipData = itemData -- table类型，对应ItemTips.ShowTip传入的参数
-    extData.clickCallback = false -- 单击事件回调
-    extData.doubleClickCallback = false -- 双击事件回调
-    extData.bgVisible = true -- 背景隐藏
-    ItemUtil:ItemShow_Create(itemData, iconItem, extData)
-    -- 设置数量显示和颜色
-    local itemNum = FGUI:GetChild(self._ui.xhcl, "n2")
-    local fuhao = FGUI:GetChild(self._ui.xhcl, "n1")
-    local haveNum = SL:GetValue(TITEMCOUNT, tonumber(costs[1]))
-    FGUI:GTextField_setText(itemNum, num)
-    if haveNum >= tonumber(num) then
-        FGUI:GTextField_setColor(itemNum, "#00FF00")
-        FGUI:GTextField_setColor(fuhao, "#00FF00")
+    
+    -- 检查是否是多重消耗格式
+    local isMultiCost = (type(costs[1]) == "table")
+    
+    if isMultiCost then
+        -- 多重消耗格式：{[1] = {[1] = itemId, [2] = num}, [2] = {[1] = itemId, [2] = num}}
+        print("检测到坐骑多重消耗，共", #costs, "个材料")
+        
+        -- 显示第二个消耗（如果存在）
+        if #costs >= 2 and iconItem2 then
+            local cost2 = costs[2]
+            local itemId2 = tonumber(cost2[1])
+            local num2 = tonumber(cost2[2])
+            local itemData2 = SL:GetValue("ITEM_DATA", itemId2)
+            print("坐骑第二个物品ID:", itemId2, "需要数量:", num2, "物品数据:", itemData2)
+            
+            -- 创建物品显示
+            local extData2 = {}
+            extData2.hideTip = false
+            extData2.itemTipData = itemData2
+            extData2.clickCallback = false
+            extData2.doubleClickCallback = false
+            extData2.bgVisible = true
+            ItemUtil:ItemShow_Create(itemData2, iconItem2, extData2)
+            
+            -- 设置数量显示和颜色
+            local itemNum2 = FGUI:GetChild(self._ui.xhcl, "n4")  -- 第二个消耗数量
+            local fuhao2 = FGUI:GetChild(self._ui.xhcl, "n3")   -- 第二个消耗符号
+            if itemNum2 then
+                local haveNum2 = SL:GetValue(TITEMCOUNT, itemId2)
+                FGUI:GTextField_setText(itemNum2, num2)
+                if haveNum2 >= num2 then
+                    FGUI:GTextField_setColor(itemNum2, "#00FF00")
+                    if fuhao2 then FGUI:GTextField_setColor(fuhao2, "#00FF00") end
+                else
+                    FGUI:GTextField_setColor(itemNum2, "#ff0000")
+                    if fuhao2 then FGUI:GTextField_setColor(fuhao2, "#ff0000") end
+                end
+                FGUI:setVisible(itemNum2, true)
+                if fuhao2 then FGUI:setVisible(fuhao2, true) end
+            end
+            FGUI:setVisible(iconItem2, true)
+        end
+        
+        -- 设置第一个消耗
+        local cost1 = costs[1]
+        local itemId1 = tonumber(cost1[1])
+        local num1 = tonumber(cost1[2])
+        local itemData1 = SL:GetValue("ITEM_DATA", itemId1)
+        print("坐骑第一个物品ID:", itemId1, "需要数量:", num1, "物品数据:", itemData1)
+        
+        -- 创建物品显示
+        local extData1 = {}
+        extData1.hideTip = false
+        extData1.itemTipData = itemData1
+        extData1.clickCallback = false
+        extData1.doubleClickCallback = false
+        extData1.bgVisible = true
+        ItemUtil:ItemShow_Create(itemData1, iconItem, extData1)
+        
+        -- 设置数量显示和颜色
+        local itemNum = FGUI:GetChild(self._ui.xhcl, "n2")
+        local fuhao = FGUI:GetChild(self._ui.xhcl, "n1")
+        local haveNum = SL:GetValue(TITEMCOUNT, itemId1)
+        FGUI:GTextField_setText(itemNum, num1)
+        if haveNum >= num1 then
+            FGUI:GTextField_setColor(itemNum, "#00FF00")
+            FGUI:GTextField_setColor(fuhao, "#00FF00")
+        else
+            FGUI:GTextField_setColor(itemNum, "#ff0000")
+            FGUI:GTextField_setColor(fuhao, "#ff0000")
+        end
     else
-        FGUI:GTextField_setColor(itemNum, "#ff0000")
-        FGUI:GTextField_setColor(fuhao, "#ff0000")
+        -- 单消耗格式（兼容旧数据）
+        -- 隐藏第二个消耗
+        if iconItem2 then FGUI:setVisible(iconItem2, false) end
+        local itemNum2 = FGUI:GetChild(self._ui.xhcl, "n4")
+        local fuhao2 = FGUI:GetChild(self._ui.xhcl, "n3")
+        if itemNum2 then FGUI:setVisible(itemNum2, false) end
+        if fuhao2 then FGUI:setVisible(fuhao2, false) end
+        
+        -- 设置第一个消耗
+        local num = costs[2]
+        local itemId = tonumber(costs[1])
+        local itemData = SL:GetValue("ITEM_DATA", itemId)
+        print("坐骑物品ID:", itemId, "需要数量:", num, "物品数据:", itemData)
+        
+        -- 创建物品显示
+        local extData = {}
+        extData.hideTip = false
+        extData.itemTipData = itemData
+        extData.clickCallback = false
+        extData.doubleClickCallback = false
+        extData.bgVisible = true
+        ItemUtil:ItemShow_Create(itemData, iconItem, extData)
+        
+        -- 设置数量显示和颜色
+        local itemNum = FGUI:GetChild(self._ui.xhcl, "n2")
+        local fuhao = FGUI:GetChild(self._ui.xhcl, "n1")
+        local haveNum = SL:GetValue(TITEMCOUNT, itemId)
+        FGUI:GTextField_setText(itemNum, num)
+        if haveNum >= tonumber(num) then
+            FGUI:GTextField_setColor(itemNum, "#00FF00")
+            FGUI:GTextField_setColor(fuhao, "#00FF00")
+        else
+            FGUI:GTextField_setColor(itemNum, "#ff0000")
+            FGUI:GTextField_setColor(fuhao, "#ff0000")
+        end
     end
 end
 

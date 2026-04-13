@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1344,750">
-  <controller name="rightTabs" pages="0,灵兽,1,坐骑" selected="0"/>
+  <controller name="rightTabs" pages="0,灵兽,1,坐骑" selected="1"/>
   <controller name="topTabs" pages="0,坐骑,1,幻化" selected="0"/>
   <controller name="isselected" pages="0,未选择,1,选择" selected="0"/>
   <controller name="tips" pages="0,,1," selected="0"/>
@@ -58,7 +58,7 @@
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </component>
-    <text id="n34_o0nq" name="n34" xy="962,625" size="70,32" fontSize="22" color="#fcf1bf" text="消耗：">
+    <text id="n34_o0nq" name="n34" xy="913,625" size="70,32" fontSize="22" color="#fcf1bf" text="消耗：">
       <gearDisplay controller="rightTabs" pages="1"/>
     </text>
     <component id="n38_o0nq" name="shengjizuoqi" src="o0nqr" fileName="Components/saveBtn.xml" xy="969,661">
@@ -117,7 +117,7 @@
     <component id="n71_vorr" name="mountModel" src="vorr1x" fileName="Components/mountModel.xml" xy="399,255" size="300,377">
       <gearDisplay controller="rightTabs" pages="1"/>
     </component>
-    <component id="n74_vorr" name="xhcl" src="vorr21" fileName="Components/xhcl.xml" xy="1024,619">
+    <component id="n74_vorr" name="xhcl" src="vorr21" fileName="Components/xhcl.xml" xy="973,619">
       <gearDisplay controller="rightTabs" pages="1"/>
     </component>
     <component id="n75_vorr" name="huanhua" src="o0nq17" fileName="Components/tybtn1.xml" xy="468,660">
@@ -238,7 +238,7 @@
     <text id="n104_cb9c" name="n104" xy="913,625" size="70,32" fontSize="22" color="#fcf1bf" text="消耗：">
       <gearDisplay controller="rightTabs" pages="0"/>
     </text>
-    <text id="n107_cb9c" name="n107" xy="913,592" size="234,34" fontSize="17" color="#cccccc" ubb="true" autoSize="none" text="出战灵兽[color=#00ff00]3%[/color]的属性转化给人物">
+    <text id="n107_cb9c" name="n107" xy="913,592" size="234,34" fontSize="17" color="#cccccc" ubb="true" autoSize="none" text="出战时提升坐骑移动速度[color=#00ff00]10%[/color]">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearText controller="rightTabs" pages="1" values="出战时提升坐骑移动速度[color=#00ff00]10%[/color]" default="出战灵兽[color=#00ff00]3%[/color]的属性转化给人物"/>
       <relation target="" sidePair="center-center,middle-middle"/>
