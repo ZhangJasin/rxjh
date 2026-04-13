@@ -289,9 +289,9 @@ function WuXunPanl:WuXunShow()
     self.expPro = FGUI:ui_delegate(self.back.n33)     -- 武勋界面  
     local maxExp = wuxun_level_data[self.WuXun_Level] and wuxun_level_data[self.WuXun_Level]['WuXunExp'][2] or wuxun_level_data[1]['WuXunExp'][2]
     local minExp = wuxun_level_data[self.WuXun_Level] and wuxun_level_data[self.WuXun_Level]['WuXunExp'][1] or wuxun_level_data[1]['WuXunExp'][1]
-    if self.WuXun_Level >= #wuxun_level_data then
-        maxExp = minExp
-    end
+    -- if self.WuXun_Level >= #wuxun_level_data then
+    --     maxExp = minExp
+    -- end
     FGUI:GProgressBar_setValue(self.back.n33, (self.WuXun_curExp - minExp)/(maxExp - minExp) * 100)
     -- 经验文字显示
     FGUI:GTextField_setText(self.expPro.n2, self.WuXun_curExp.."/"..maxExp)
