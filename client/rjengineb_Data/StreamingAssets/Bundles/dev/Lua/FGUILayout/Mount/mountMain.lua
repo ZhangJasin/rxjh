@@ -1198,24 +1198,30 @@ function mountMain:setPetHHSx()
     local sx = allNamesObj[nowGrade].ClassID
     self.modelId = allNamesObj[nowGrade].Model
     -- 设置BUFF描述
-    local hhbuffTextHeight = 26 * #sx + 5
     local buffText = ""
     if allNamesObj[nowGrade].BuffDesc then
         buffText = allNamesObj[nowGrade].BuffDesc
     end
-    FGUI:GTextField_setAutoSize(self.petHuanhuaAttr.buffText, 2)
-    FGUI:setPosition(self.petHuanhuaAttr.buffText, 15, hhbuffTextHeight)
     FGUI:GTextField_setText(self.petHuanhuaAttr.buffText, buffText)
-    -- 渲染属性列表
-    FGUI:GList_itemRenderer(self.petHuanhuaAttr["sxlist"], function(index, item)
-        local label = AttScoreNames[sx[index + 1][1]].Name .. ":"
-        local value = sx[index + 1][2]
-        local itemLabel = FGUI:GetChild(item, "label")
-        local itemValue = FGUI:GetChild(item, "zhi")
-        FGUI:GTextField_setText(itemLabel, label)
-        FGUI:GTextField_setText(itemValue, value)
-    end)
-    FGUI:GList_setNumItems(self.petHuanhuaAttr["sxlist"], #sx)
+    -- 支持ClassID为空时不显示属性列表
+    if sx and #sx > 0 then
+        local hhbuffTextHeight = 26 * #sx + 5
+        FGUI:GTextField_setAutoSize(self.petHuanhuaAttr.buffText, 2)
+        FGUI:setPosition(self.petHuanhuaAttr.buffText, 15, hhbuffTextHeight)
+        -- 渲染属性列表
+        FGUI:GList_itemRenderer(self.petHuanhuaAttr["sxlist"], function(index, item)
+            local label = AttScoreNames[sx[index + 1][1]].Name .. ":"
+            local value = sx[index + 1][2]
+            local itemLabel = FGUI:GetChild(item, "label")
+            local itemValue = FGUI:GetChild(item, "zhi")
+            FGUI:GTextField_setText(itemLabel, label)
+            FGUI:GTextField_setText(itemValue, value)
+        end)
+        FGUI:GList_setNumItems(self.petHuanhuaAttr["sxlist"], #sx)
+    else
+        -- ClassID为空时不显示属性列表
+        FGUI:GList_setNumItems(self.petHuanhuaAttr["sxlist"], 0)
+    end
 end
 
 -- 设置灵兽幻化列表渲染
