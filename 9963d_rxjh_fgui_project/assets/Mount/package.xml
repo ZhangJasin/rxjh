@@ -85,6 +85,10 @@
     <image id="cb9c49" name="close_yuan.png" path="/Components/"/>
     <component id="cb9c4a" name="infoScro.xml" path="/Components/"/>
     <image id="qsw54b" name="zuoji_000.png" path="/image/" exported="true"/>
+    <image id="m8x54c" name="pet_011.png" path="/image/" exported="true"/>
+    <image id="m8x54d" name="pet_012.png" path="/image/" exported="true"/>
+    <image id="m8x54e" name="pet_009.png" path="/image/" exported="true"/>
+    <image id="m8x54f" name="pet_010.png" path="/image/" exported="true"/>
   </resources>
   <publish name="">
     <atlas name="mount" index="0"/>
