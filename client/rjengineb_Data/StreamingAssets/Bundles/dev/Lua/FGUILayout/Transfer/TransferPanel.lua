@@ -391,48 +391,38 @@ end
 
 -- 武功列表渲染
 function TransferPanel:ListWGShow(idx, item)
-    if FGUI:GetChildCount(item) > 0 then
-        FGUI:RemoveChildAt(item, 0, true)
-    end
-
     if self._nextCfg and self._nextCfg.WGId then
-        local itemid = self._nextCfg.WGId[idx + 1]
-        if itemid then
-            local itemData = SL:GetValue("ITEM_DATA", itemid)
-            if itemData then
-                local extData = {
-                    hideTip = false,
-                    itemTipData = itemData,
-                    clickCallback = false,
-                    doubleClickCallback = true,
-                    bgVisible = true,
-                }
-                ItemUtil:ItemShow_Create(itemData, item, extData)
+        local skillId = self._nextCfg.WGId[idx + 1]
+        if skillId then
+            local img_icon = FGUI:GetChild(item, "img_icon")
+            if img_icon then
+                local path = SL:GetValue("SKILL_SQUARE_ICON_PATH_BY_ID", skillId)
+                FGUI:GLoader_setUrl(img_icon, path, nil, true)                
             end
+            local txt_name = FGUI:GetChild(item, "txt_name")
+            if txt_name then
+                local name = SL:GetValue("SKILL_UP_SHOWNAME_BY_ID", skillId, 1)
+                FGUI:GTextField_setText(txt_name, name)            
+            end            
         end
     end
 end
 
 -- 气功列表渲染
 function TransferPanel:ListQGShow(idx, item)
-    if FGUI:GetChildCount(item) > 0 then
-        FGUI:RemoveChildAt(item, 0, true)
-    end
-
     if self._nextCfg and self._nextCfg.QGId then
-        local itemid = self._nextCfg.QGId[idx + 1]
-        if itemid then
-            local itemData = SL:GetValue("ITEM_DATA", itemid)
-            if itemData then
-                local extData = {
-                    hideTip = false,
-                    itemTipData = itemData,
-                    clickCallback = false,
-                    doubleClickCallback = true,
-                    bgVisible = true,
-                }
-                ItemUtil:ItemShow_Create(itemData, item, extData)
+        local qgId = self._nextCfg.QGId[idx + 1]
+        if qgId then
+            local img_icon = FGUI:GetChild(item, "img_icon")
+            if img_icon then
+                local path = SL:GetValue("SKILL_QIGONG_SQUARE_ICON_BY_ID", qgId)
+                FGUI:GLoader_setUrl(img_icon, path, nil, true)                
             end
+            local txt_name = FGUI:GetChild(item, "txt_name")
+            if txt_name then
+                local name = SL:GetValue("SKILL_QIGONG_NAME_BY_ID", qgId)
+                FGUI:GTextField_setText(txt_name, name)            
+            end            
         end
     end
 end

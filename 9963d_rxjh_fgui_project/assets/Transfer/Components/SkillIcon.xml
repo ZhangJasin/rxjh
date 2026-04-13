@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="90,90">
+<component size="90,103">
   <displayList>
-    <loader id="n1_vxse" name="img_icon" xy="0,0" size="90,90" align="center" vAlign="middle" fill="scaleFree" useResize="true"/>
+    <image id="n4_qsid" name="bg" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="45,40" pivot="0.5,0.5" anchor="true" size="75,75"/>
+    <loader id="n5_qsid" name="img_icon" xy="45,40" pivot="0.5,0.5" anchor="true" size="75,75" aspect="true" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n6_qxx4" name="txt_name" xy="45,90" pivot="0.5,0.5" anchor="true" size="86,23" fontSize="13" color="#372a08" align="center" vAlign="middle" autoSize="none" text=""/>
   </displayList>
 </component>

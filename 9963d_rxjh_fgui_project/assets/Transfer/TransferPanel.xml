@@ -37,14 +37,14 @@
     </component>
     <image id="n77_ok6e" name="line_bg" src="gs4zv6u" fileName="Images/img_line.png" xy="605,563" size="553,1" group="n49_gab2"/>
     <image id="n75_ok6e" name="arrow_bg" src="io7h19" fileName="Images/img_arrow.png" xy="849,228" group="n49_gab2"/>
-    <image id="n79_ok6e" name="qg_bg" src="gs4zv6p" fileName="Images/img_unlock_qg.png" xy="955,351" size="146,24" group="n49_gab2"/>
+    <image id="n79_ok6e" name="qg_bg" src="gs4zv6p" fileName="Images/img_unlock_qg.png" xy="969,351" size="146,24" group="n49_gab2"/>
     <image id="n80_ok6e" name="wg_bg" src="gs4zv6o" fileName="Images/img_unlock_wg.png" xy="654,351" size="146,23" group="n49_gab2"/>
-    <list id="n81_ok6e" name="list_wg" xy="608,384" pivot="1,0" size="217,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://5rez3obxqtrmv6g">
+    <list id="n81_ok6e" name="list_wg" xy="594,381" pivot="1,0" size="275,104" group="n49_gab2" layout="row" selectionMode="none" colGap="2" defaultItem="ui://5rez3obxp51l1g">
       <item/>
       <item/>
       <item/>
     </list>
-    <list id="n82_ok6e" name="list_qg" xy="954,384" pivot="1,0" size="163,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://5rez3obxqtrmv6g">
+    <list id="n82_ok6e" name="list_qg" xy="954,381" pivot="1,0" size="183,104" group="n49_gab2" layout="row" selectionMode="none" colGap="2" defaultItem="ui://5rez3obxp51l1g">
       <item/>
       <item/>
     </list>
