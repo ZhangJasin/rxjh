@@ -268,6 +268,24 @@ function PlayerInfoPanel:Exit()
 end
 
 function PlayerInfoPanel:BagCellDoubleClickEvent(bagItem)
+    -- 检查是否为回城符,如果是则直接调用回城接口
+    local BACK_CITY_ITEM_IDS = { 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140 }
+    local isBackCityItem = false
+    if bagItem._itemData then
+        for i = 1, #BACK_CITY_ITEM_IDS do
+            if BACK_CITY_ITEM_IDS[i] == bagItem._itemData.ID then
+                isBackCityItem = true
+                break
+            end
+        end
+    end
+    
+    if isBackCityItem then
+        local righttoppanlData = requireFGUILayout("A_Right/righttoppanlData")
+        righttoppanlData:Get():RequestBackCity({ bagItem._itemData.ID })
+        return
+    end
+    
     SL:RequestUseItem(bagItem._itemData)
 end
 

@@ -83,19 +83,11 @@ function mountMainData:Init()
         _dataForPet.hhlistsj = SL:JsonDecode(t119) 
     end
 
-    -- 修复：showPetModelId应该使用U_Pet_Take_Id(107)作为显示模型，U_Pet_Base_ID(108)是基础模型
-    -- 判断是否有幻化：有幻化时petHHid有值且U_Pet_IS_HH(U109)为1，否则显示基础模型
-    local petISHH = tonumber(SL:GetValue("U", 109)) -- U_Pet_IS_HH 是否幻化 (0=未幻化,1=已幻化)
-    print("=== Init 读取灵兽数据 ===")
-    print("petHHid (U107):", _dataForPet.petHHid)
-    print("petISHH (U109):", petISHH)
-    print("modelId (U108):", SL:GetValue("U", 108))
+    local petISHH = tonumber(SL:GetValue("U", 109))
     if petISHH == 1 and _dataForPet.petHHid and tonumber(_dataForPet.petHHid) > 0 then
-        _dataForPet.showPetModelId = tonumber(_dataForPet.petHHid) -- 使用幻化模型ID
-        print("使用幻化模型ID:", _dataForPet.showPetModelId)
+        _dataForPet.showPetModelId = tonumber(_dataForPet.petHHid)
     else
-        _dataForPet.showPetModelId = SL:GetValue("U", 108) -- 使用基础模型ID
-        print("使用基础模型ID:", _dataForPet.showPetModelId)
+        _dataForPet.showPetModelId = SL:GetValue("U", 108)
     end
     _dataForPet.selectViewPetId = SL:GetValue("U", 108) -- U_Pet_Base_ID 选中主体id
     if not _dataForPet.hhlistsj or _dataForPet.hhlistsj == 0 then _dataForPet.hhlistsj = {} end
@@ -163,10 +155,8 @@ function mountMainData:Publish(event, data)
         end
     end
 end
--- 灵兽相关事件
--- 灵兽初始化数据（空函数，已废弃）
+-- 灵兽初始化数据
 function mountMainData:initPetData()
-    print("=== initPetData 已废弃 ===")
 end
 
 -- 设置灵兽主标题
@@ -194,17 +184,10 @@ function mountMainData:setMountMainTitle()
 end
 -- 灵兽本体排序
 function mountMainData:initPetDataSort()
-    print("=== initPetDataSort 开始 ===")
-    print("allPets 数量:", #_dataForPet.allPets)
-    print("allPetsActive:", _dataForPet.allPetsActive)
-    
-    -- 如果 allPets 为空，从 Pet 配表初始化
     if #_dataForPet.allPets == 0 then
-        print("从 Pet 配表初始化 allPets")
         for i = 1, #Pet do
             if Pet[i] and Pet[i].Name then
                 local obj = Pet[i]
-                -- 设置排序位置
                 if _dataForPet.allPetsActive[Pet[i].Name] then
                     obj.weizhi = 1
                 else
@@ -214,7 +197,6 @@ function mountMainData:initPetDataSort()
             end
         end
     else
-        print("使用现有 allPets 进行排序")
         local index = 1
         for i = 1, #_dataForPet.allPets do
             local item = _dataForPet.allPets[i]
@@ -226,7 +208,6 @@ function mountMainData:initPetDataSort()
         end
     end
     
-    -- 排序：已激活 > 未激活
     table.sort(_dataForPet.allPets, function(a, b)
         if a.weizhi == b.weizhi then
             return a.ID < b.ID
@@ -234,52 +215,40 @@ function mountMainData:initPetDataSort()
             return a.weizhi < b.weizhi
         end
     end)
-    
-    print("=== initPetDataSort 完成, 排序后数量:", #_dataForPet.allPets, "===")
 end
 -- 设置灵兽幻化列表排序
 function mountMainData:setPetHHListSort()
-    print("=== setPetHHListSort 开始 ===")
-    print("PetHuanhua 配表条目数:", #PetHuanhua)
-    print("hhlistsj:", _dataForPet.hhlistsj)
+    if not _dataForPet.hhlistsj then
+        _dataForPet.hhlistsj = {}
+    end
     
     local names = {}
     local results = {}
     
     for i = 1, #PetHuanhua do
         local hhItem = PetHuanhua[i]
-        -- 跳过非幻化数据（灵兽本体在Pet配表，不是PetHuanhua）
         if hhItem.grade and tonumber(hhItem.grade) > 0 then
             if not names[hhItem.Name] then
-                -- 检查是否已激活
                 if _dataForPet.hhlistsj[hhItem.Name] then
-                    -- 已激活
                     names[hhItem.Name] = 1
                     local obj = hhItem
                     obj.weizhi = 2
-                    -- 检查是否当前幻化
                     if self:getPetNameByModel(_dataForPet.petHHid) == hhItem.Name then
                         obj.weizhi = 1
                     end
                     table.insert(results, obj)
-                    print("添加已激活幻化:", hhItem.Name, "weizhi:", obj.weizhi)
                 else
-                    -- 未激活但满足条件（grade=1表示该幻化的第一级）
                     if hhItem.grade == 1 and SL:GetValue(CONDITION, hhItem.Condition) then
                         names[hhItem.Name] = 1
                         local obj = hhItem
                         obj.weizhi = 3
                         table.insert(results, obj)
-                        print("添加未激活幻化:", hhItem.Name, "weizhi:", obj.weizhi)
-                    else
-                        print("跳过未激活幻化:", hhItem.Name, "grade:", hhItem.grade, "Condition:", hhItem.Condition)
                     end
                 end
             end
         end
     end
     
-    -- 排序：已幻化 > 已激活 > 未激活
     table.sort(results, function(a, b)
         if a.weizhi == b.weizhi then
             return a.ID < b.ID
@@ -288,7 +257,6 @@ function mountMainData:setPetHHListSort()
         end
     end)
     
-    print("=== setPetHHListSort 完成, 结果数量:", #results, "===")
     return results
 end
 
@@ -363,12 +331,9 @@ function mountMainData:petChuzhan()
     ssrMessage:sendmsgEx("mountMain", "petChuzhan")
 end
 -- 网络消息 - 单灵兽系统：激活灵兽
--- {lv = 灵兽等级, name = "pet"}
 function mountMainData:updateLSView(data)
-    -- 单灵兽系统：直接更新灵兽激活状态
     _dataForPet.isPetJh = data.lv > 0 and 1 or 0
     _dataForPet.allJieshu = data.lv
-    print("=== updateLSView 单灵兽激活 === lv:", data.lv)
     self:Publish("ls_list_update", {
         _dataForPet = self:GetDataForPet(),
         selectPetIndex = 1
@@ -376,10 +341,7 @@ function mountMainData:updateLSView(data)
 end
 -- {lv = 灵兽等级, Name = "pet"}
 function mountMainData:level(data)
-    -- 单灵兽系统：直接更新灵兽等级
     _dataForPet.allJieshu = data.lv
-    print("=== level 单灵兽升级 === lv:", data.lv)
-    -- 更新视图
     self:Publish("ls_level_result", self:GetDataForPet())
 end
 function mountMainData:updatePetModelResult(data)
@@ -536,6 +498,11 @@ end
 -- 灵兽幻化升级激活结果
 -- name = name,grade=grade,ycList=ycList,petHHid=petHHid
 function mountMainData:updatePetHHmodel(data)
+    print("=== updatePetHHmodel 被调用 ===")
+    print("data.ycList:", data.ycList)
+    print("data.petHHid:", data.petHHid)
+    print("data.name:", data.name)
+    
     _dataForPet.hhlistsj = data.ycList
     _dataForPet.petHHid = data.petHHid
     -- 同步更新showPetModelId，确保灵兽升阶页面显示幻化模型
@@ -549,6 +516,7 @@ function mountMainData:updatePetHHmodel(data)
             selectHHIndex = i
         end
     end
+    print("=== updatePetHHmodel 发布 petUpdateHHResult 事件 ===")
     self:Publish("petUpdateHHResult", {
         _dataForPet = self:GetDataForPet(),
         selectHHIndex = selectHHIndex
@@ -610,12 +578,8 @@ function mountMainData:updatePetZQ(data)
     self:Publish("petLevelUp", self:GetDataForPet())
 end
 
--- 灵兽出战休息后（服务端消息 petUpdateBtn 回调）
+-- 灵兽出战休息后
 function mountMainData:petUpdateBtn(data)
-    print("=== 客户端收到petUpdateBtn消息 ===")
-    print("data:", data)
-    print("isPetChuzhan:", data.isPetChuzhan)
-    -- 接收服务端返回的数据并更新内存
     if data.isPetChuzhan ~= nil then
         _dataForPet.isPetChuzhan = data.isPetChuzhan
     end
@@ -626,7 +590,6 @@ function mountMainData:petUpdateBtn(data)
         _dataForPet.allJieshu = data.allJieshu
     end
     self:Publish("petUpdateBtn", self:GetDataForPet())
-    print("petUpdateBtn事件已发布")
 end
 
 return mountMainData

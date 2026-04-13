@@ -2,6 +2,19 @@ PCBagCell = class("PCBagCell")
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 local ItemFrom = SL:GetValue("ITEMFROMUI_ENUM")
 local DOUBLE_CLICK_INTERVAL = 0.2
+
+-- 回城符道具ID列表
+local BACK_CITY_ITEM_IDS = { 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140 }
+
+-- 检查是否为回城符
+local function IsBackCityItem(itemID)
+    for i = 1, #BACK_CITY_ITEM_IDS do
+        if BACK_CITY_ITEM_IDS[i] == itemID then
+            return true
+        end
+    end
+    return false
+end
 function PCBagCell.UpdateCellView(itemView,bagData)
     FGUI:setVisible(FGUI:GetChild(itemView, "Lock"), bagData._isLock)
     if FGUI:CheckOpen("Bag_pc", "BagRecyclePanel") then
@@ -103,6 +116,12 @@ function PCBagCell:RightClickCell()
 
     if self.useItem then
         if self._itemData then
+            -- 检查是否为回城符,如果是则直接调用回城接口
+            if IsBackCityItem(self._itemData.ID) then
+                local righttoppanlData = requireFGUILayout("A_Right/righttoppanlData")
+                righttoppanlData:Get():RequestBackCity({ self._itemData.ID })
+                return
+            end
             SL:RequestUseItem(self._itemData)
         end
     end
