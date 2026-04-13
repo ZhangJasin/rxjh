@@ -94,7 +94,8 @@ function login(actor)
     end
     --≥ËŒÔ
     -- print (gethumvar(actor,VarCfg.U_PETS_Take_Base),type(gethumvar(actor,VarCfg.U_PETS_Take_Base)),gethumvar(actor,VarCfg.U_PETS_Take_Base)>0)
-    if gethumvar(actor, VarCfg.U_PETS_Take_Base) > 0 then
+    local ptb = gethumvar(actor, VarCfg.U_PETS_Take_Base) or 0
+    if  ptb > 0 then
         -- print("’ŸªΩ≥ËŒÔ")
         local btid = gethumvar(actor, VarCfg.U_PETS_Take_Base)
         mountMain.recallpet(actor, { btid = btid }, nil, 1)
