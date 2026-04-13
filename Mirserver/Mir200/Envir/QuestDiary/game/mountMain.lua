@@ -2,18 +2,18 @@ mountMain = {}
 local filname = "mountMain"
 local mountlist = require("Envir/QuestDiary/game_config/cfgcsv/Mount.lua")
 local mountHHlist = require(
-                        "Envir/QuestDiary/game_config/cfgcsv/MountHuanHua.lua")
+    "Envir/QuestDiary/game_config/cfgcsv/MountHuanHua.lua")
 local SpiritualBeast = require(
-                           "Envir/QuestDiary/game_config/cfgcsv/SpiritualBeast.lua")
+    "Envir/QuestDiary/game_config/cfgcsv/SpiritualBeast.lua")
 local SysConstant = require(
-                        "Envir/QuestDiary/game_config/cfgcsv/SysConstant.lua")
+    "Envir/QuestDiary/game_config/cfgcsv/SysConstant.lua")
 
 -- 灵兽配置表（与坐骑结构一致）
 local petlist = require("Envir/QuestDiary/game_config/cfgcsv/Pet.lua")
 local petHHlist = require("Envir/QuestDiary/game_config/cfgcsv/PetHuanhua.lua")
 
 -- 灵兽额外加成比例(出战灵兽给予人物10%属性)
-local PetExtraRate = {attrRate = 0.1}
+local PetExtraRate = { attrRate = 0.1 }
 
 -- 灵兽buff配置
 -- 110044: 灵兽出战属性（灵兽基础属性×10%）
@@ -54,22 +54,32 @@ end
 function mountMain.getPetHHAttr(actor)
     local ycList = json2tbl(gethumvar(actor, VarCfg.T_PetHuanHua))
     local hhsxListStr = {}
+    -- 判空处理：ycList 为空直接返回
+    if not ycList or not next(ycList) then
+        print("getPetHHAttr: ycList 为空，直接返回空表")
+        return hhsxListStr
+    end
     for l, v in pairs(ycList) do
         if l then
             local jhhhlist = {}
             for e = 1, #petHHlist do
-                if petHHlist[e].Name == l and petHHlist[e].grade == v then
+                if petHHlist[e] and petHHlist[e].Name == l and petHHlist[e].grade == v then
                     jhhhlist[#jhhhlist + 1] = petHHlist[e]
                 end
             end
             for r = 1, #jhhhlist do
                 local classIds = jhhhlist[r].ClassID
-                for b = 1, #classIds do
-                    if hhsxListStr[classIds[b][1]] then
-                        hhsxListStr[classIds[b][1]] =
-                            hhsxListStr[classIds[b][1]] + classIds[b][2]
-                    else
-                        hhsxListStr[classIds[b][1]] = classIds[b][2]
+                -- 判空处理：ClassID 为空跳过
+                if classIds then
+                    for b = 1, #classIds do
+                        if classIds[b] then
+                            if hhsxListStr[classIds[b][1]] then
+                                hhsxListStr[classIds[b][1]] =
+                                    hhsxListStr[classIds[b][1]] + classIds[b][2]
+                            else
+                                hhsxListStr[classIds[b][1]] = classIds[b][2]
+                            end
+                        end
                     end
                 end
             end
@@ -86,7 +96,7 @@ function mountMain.getPetBattleSkillAttr(actor)
         print("getPetBattleSkillAttr: petTakeId为空或0，返回空")
         return {}
     end
-    
+
     local battleAttr = {}
     -- 查找当前幻化模型对应的配表数据
     for i = 1, #petHHlist do
@@ -95,7 +105,7 @@ function mountMain.getPetBattleSkillAttr(actor)
             local skillType = petHHlist[i].BattleSkill_Type
             local skillValue = petHHlist[i].BattleSkill_Value
             print("getPetBattleSkillAttr: 找到匹配，skillType =", skillType, "skillValue =", skillValue)
-            
+
             if skillType and skillValue then
                 -- 处理数组格式 {Type = {1, 2}, Value = {100, 200}}
                 if type(skillType) == "table" then
@@ -127,10 +137,11 @@ end
 function mountMain.updatePetBattleSkillBuff(actor)
     -- 先清除旧的battle skill buff
     delbuff(actor, PetSkillBuffId)
-    
+
     -- 获取当前幻化的战斗技能属性
     local battleAttr = mountMain.getPetBattleSkillAttr(actor)
-    
+    dump(battleAttr)
+
     -- 如果有战斗技能属性，先添加buff再设置属性
     if next(battleAttr) then
         -- 先添加buff
@@ -139,6 +150,7 @@ function mountMain.updatePetBattleSkillBuff(actor)
         for attrId, attrValue in pairs(battleAttr) do
             setbuffabil(actor, PetSkillBuffId, tonumber(attrId), "=", tonumber(attrValue))
         end
+        print("加上灵兽幻化属性")
     end
 end
 
@@ -150,14 +162,14 @@ function mountMain.getMountBattleSkillAttr(actor)
         print("getMountBattleSkillAttr: mountTakeId为空或0，返回空")
         return {}
     end
-    
+
     local battleAttr = {}
     -- 查找当前幻化模型对应的配表数据
     for i = 1, #mountHHlist do
         if mountHHlist[i].Model == mountTakeId then
             local skillType = mountHHlist[i].BattleSkill_Type
             local skillValue = mountHHlist[i].BattleSkill_Value
-            
+
             if skillType and skillValue then
                 -- 处理数组格式
                 if type(skillType) == "table" then
@@ -187,7 +199,7 @@ end
 function mountMain.updateMountBattleSkillBuff(actor)
     -- 先清除旧的battle skill buff
     delbuff(actor, MountBattleSkillBuffId)
-    
+
     local battleAttr = mountMain.getMountBattleSkillAttr(actor)
 
     if next(battleAttr) then
@@ -207,28 +219,30 @@ function mountMain.setPetAttr(actor)
         print("setPetAttr: 灵兽未激活")
         return
     end
-    
+
     local mark = gethumvar(actor, VarCfg.T_Pet_Mark)
     if not mark or mark == "" then
         print("setPetAttr: 没有召唤灵兽，仅设置人物属性")
+        print("灵兽升级定点排查1111")
         -- 即使没有召唤灵兽，仍然更新人物属性
         mountMain.updatePetAttrBuff(actor)
         return
     end
-    
+
     local petidx = getpetidx(actor, mark)
     if not petidx then
         print("setPetAttr: 灵兽不存在，仅设置人物属性")
+        print("灵兽升级定点排查2222")
         mountMain.updatePetAttrBuff(actor)
         return
     end
-    
+
     -- 获取灵兽等级属性
     local petAttr = mountMain.getPetAttrByLevel(allstar)
-    
+
     -- 获取幻化属性
     local hhAttr = mountMain.getPetHHAttr(actor)
-    
+
     -- 合并属性（灵兽属性 + 幻化属性）
     for attrId, attrValue in pairs(hhAttr) do
         if petAttr[attrId] then
@@ -237,7 +251,7 @@ function mountMain.setPetAttr(actor)
             petAttr[attrId] = attrValue
         end
     end
-    
+
     -- 设置属性到灵兽宠物
     local max = 0
     local now = 0
@@ -250,7 +264,7 @@ function mountMain.setPetAttr(actor)
             now = x
         end
     end
-    
+
     -- 发送消息更新客户端显示
     local isPc = clientflag(actor) == 1
     local methodName = isPc and "PCMainPlayer" or "MainPlayer"
@@ -260,7 +274,7 @@ function mountMain.setPetAttr(actor)
         now = now,
         icon = 0
     })
-    
+
     -- 设置人物属性
     mountMain.updatePetAttrBuff(actor)
     print("setPetAttr: 灵兽属性设置完成")
@@ -272,26 +286,35 @@ end
 -- 2. buff 110047 - 灵兽幻化属性 = 配表 ClassID 固定值（休息时也有）
 -- 注意：110045 由 updatePetBattleSkillBuff 设置（配表 BattleSkill_Value 固定值）
 function mountMain.updatePetAttrBuff(actor)
+    print("mountMain.updatePetAttrBuff")
     local allstar = gethumvar(actor, VarCfg.U_All_Pet_star)
+    print("allstar", allstar)
     if not allstar or allstar == 0 then
         -- 未激活灵兽，删除相关buff
         delbuff(actor, PetBuffId)
         delbuff(actor, HuanhuaBuffId)
         return
     end
+    print("updatePetAttrBuff: 开始执行")
 
     -- 检查灵兽是否出战
     local isBattle = gethumvar(actor, VarCfg.U_Pet_IS_SET)
     local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
-    
+    dump(isBattle)
+    dump(petMark)
+
     -- 获取幻化属性
     local hhAttr = mountMain.getPetHHAttr(actor)
-    
+    print("获取幻化属性")
+    dump(hhAttr)
+
     -- 如果没有召唤灵兽（休息状态）
     if not isBattle or isBattle == 0 or not petMark or petMark == "" then
         delbuff(actor, PetBuffId)
+        print("灵兽休息状态")
         -- 休息时只设置幻化属性到 buff 110047
         if next(hhAttr) then
+            print("next(hhAttr)")
             delbuff(actor, HuanhuaBuffId)
             addbuff(actor, HuanhuaBuffId)
             for attrId, attrValue in pairs(hhAttr) do
@@ -305,7 +328,7 @@ function mountMain.updatePetAttrBuff(actor)
     end
 
     -- 出战状态：设置所有属性
-    
+
     -- 设置灵兽基础属性×10%到 buff 110044
     delbuff(actor, PetBuffId)
     addbuff(actor, PetBuffId)
@@ -315,7 +338,7 @@ function mountMain.updatePetAttrBuff(actor)
         local finalValue = math.ceil(attrValue * attrRate)
         setbuffabil(actor, PetBuffId, tonumber(attrId), "=", finalValue)
     end
-    
+
     -- 出战时也保留幻化属性到 buff 110047
     if next(hhAttr) then
         delbuff(actor, HuanhuaBuffId)
@@ -356,11 +379,11 @@ function mountMain.petShengji(actor)
 
     local classIds = petlist[nextlv].ClassID
     local costs = petlist[nowlv].Cost
-    
+
     -- 支持多消耗格式：2801^40|3958^5
     -- 检查是否是多重消耗格式：costs[1] 是 table 而不是 number
     local isMultiCost = (type(costs[1]) == "table")
-    
+
     if isMultiCost then
         -- 多重消耗格式：{[1] = {[1] = itemId, [2] = num}, [2] = {[1] = itemId, [2] = num}}
         print("检测到多重消耗格式")
@@ -373,10 +396,10 @@ function mountMain.petShengji(actor)
             print("材料" .. i .. " ID:", itemId, "需要:", num, "拥有:", haveCount)
             if haveCount < num then
                 allEnough = false
-                table.insert(lackItems, {id = itemId, need = num, have = haveCount})
+                table.insert(lackItems, { id = itemId, need = num, have = haveCount })
             end
         end
-        
+
         if not allEnough then
             print("多材料不足")
             local msg = "材料不足"
@@ -386,7 +409,7 @@ function mountMain.petShengji(actor)
             sendmsg(actor, 9, msg)
             return
         end
-        
+
         -- 扣除所有材料
         print("材料充足,开始扣除所有材料")
         for i = 1, #costs do
@@ -407,7 +430,7 @@ function mountMain.petShengji(actor)
             sendmsg(actor, 9, "材料不足" .. num .. "个")
             return
         end
-        
+
         print("材料充足,开始升级/激活")
         delItemNum(actor, itemId, num)
     end
@@ -421,12 +444,12 @@ function mountMain.petShengji(actor)
     if petlist[nextlv] and petlist[nextlv].Level then
         nextLevel = petlist[nextlv].Level
     end
-    
+
     -- 跨阶条件：Level=10, 20, 30... 即 nextLevel % 10 == 1 时跨阶（10→11, 20→21...）
     -- 当前等级是10的倍数时，下一次升级才跨阶
     local isShengjie = (nowLevel % 10 == 0 and nextLevel == nowLevel + 1)
     print("升阶判断：nowLevel=", nowLevel, "nextLevel=", nextLevel, "isShengjie=", isShengjie)
-    
+
     if nowlv == 0 then -- 激活
         print("首次激活灵兽")
         sethumvar(actor, VarCfg.T_PetHuanHua, tbl2json({}))
@@ -436,7 +459,7 @@ function mountMain.petShengji(actor)
         -- 初始化幻化状态为0（未幻化）
         sethumvar(actor, VarCfg.U_Pet_IS_HH, 0)
         print("设置激活状态完成")
-        
+
         -- 首次激活时，自动激活第一个幻化（免费）
         local firstHH = petHHlist[1]
         if firstHH then
@@ -489,20 +512,20 @@ function mountMain.petShengji(actor)
     -- 人物外观只由坐骑控制，与旧系统一致
 
     -- 触发灵兽升级事件（与旧系统对齐）
-    local allPets = {pet = nextlv}
+    local allPets = { pet = nextlv }
     GameEvent.push(EventCfg.onPetLevel, actor, allPets)
 
     -- 更新前端显示（发送updateLSView消息与旧系统对齐）
     -- 与坐骑一致：发送完整的等级
     print("发送升级消息到客户端,等级:", nextlv)
-    
+
     -- 检查灵兽是否有幻化，如果有则发送幻化模型ID
     local showPetModelId = 0
     local isPetHH = gethumvar(actor, VarCfg.U_Pet_IS_HH)
     if isPetHH and isPetHH == 1 then
         showPetModelId = gethumvar(actor, VarCfg.U_Pet_Take_Id) or 0
     end
-    
+
     Message.sendmsgEx(actor, "mountMain", "updateLSView", {
         lv = nextlv,
         petBaseId = petBaseId,
@@ -515,7 +538,7 @@ function mountMain.petShengji(actor)
         petBaseId = petBaseId,
         showPetModelId = showPetModelId
     })
-    
+
     -- 发送petUpdateBtn消息更新按钮状态
     -- 服务端：U_Pet_IS_SET = 0 表示休息，1 表示出战
     -- 客户端：isPetChuzhan = 0 表示休息（显示"出战"按钮），1 表示出战（显示"召回"按钮）
@@ -531,7 +554,7 @@ function mountMain.petShengji(actor)
     -- 升级后更新顶部灵兽图标（只在升级时更新，激活时不更新）
     -- 注意：只在已出战状态下才更新图标
     local serverChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
-    if serverChuzhan == 1 then  -- 只有出战状态才更新图标
+    if serverChuzhan == 1 then -- 只有出战状态才更新图标
         local isPc = clientflag(actor) == 1
         local methodName = isPc and "PCMainPlayer" or "MainPlayer"
         local icon = "pet_000"
@@ -555,7 +578,7 @@ function mountMain.petShengji(actor)
             icon = icon
         })
     end
-    
+
     print("升级完成")
 end
 
@@ -563,24 +586,26 @@ end
 function mountMain.petHuanhuajihuo(actor, postData)
     print("=== 灵兽幻化激活 ===")
     print("客户端数据:", type(postData), postData)
-    
+
     if not postData then
         print("postData 为空！")
         return
     end
-    
-    local name = postData.Name  -- 应该使用 Name 字段，而不是 idx
+
+    local name = postData.Name -- 应该使用 Name 字段，而不是 idx
     local grade = postData.grade
     local data = nil
-    print("查找: Name=" .. tostring(name) .. "(" .. type(name) .. "), grade=" .. tostring(grade) .. "(" .. type(grade) .. ")")
+    print("查找: Name=" ..
+        tostring(name) .. "(" .. type(name) .. "), grade=" .. tostring(grade) .. "(" .. type(grade) .. ")")
     print("petHHlist 总数:", #petHHlist)
-    
+
     -- 打印第一个petHHlist的内容用于调试
     print("petHHlist[1].Name:", tostring(petHHlist[1].Name), "type:", type(petHHlist[1].Name))
     print("petHHlist[1].grade:", tostring(petHHlist[1].grade), "type:", type(petHHlist[1].grade))
-    
+
     for i = 1, #petHHlist do
-        print("检查 petHHlist[" .. i .. "]: Name=" .. tostring(petHHlist[i].Name) .. ", grade=" .. tostring(petHHlist[i].grade))
+        print("检查 petHHlist[" ..
+            i .. "]: Name=" .. tostring(petHHlist[i].Name) .. ", grade=" .. tostring(petHHlist[i].grade))
         if tostring(petHHlist[i].Name) == tostring(name) and tonumber(petHHlist[i].grade) == tonumber(grade) then
             data = petHHlist[i]
             print("找到匹配数据:", data)
@@ -590,7 +615,7 @@ function mountMain.petHuanhuajihuo(actor, postData)
 
     if data then
         local classid = data.ClassID -- 属性
-        local costs = data.Cost -- 消耗
+        local costs = data.Cost      -- 消耗
         local itemId = tonumber(costs[1])
         local num = tonumber(costs[2])
 
@@ -750,7 +775,7 @@ function mountMain.setPetModel(actor, data)
     sethumvar(actor, VarCfg.U_Pet_Take_Id, petTakeId)
     -- 设置当前显示的模型ID
     sethumvar(actor, VarCfg.U_Pet_Now_Model, petTakeId)
-    
+
     -- 如果灵兽已经出战，需要召回再重新召唤（与旧系统对齐）
     local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
     if petMark and petMark ~= "" then
@@ -778,7 +803,7 @@ function mountMain.setPetModel(actor, data)
             end
         end
     end
-    
+
     Message.sendmsgEx(actor, "mountMain", "updatePetModelResult", {
         allPetsHHData = allPetsHHData,
         showPetModelId = petTakeId,
@@ -786,7 +811,7 @@ function mountMain.setPetModel(actor, data)
         isCancel = isCancel,
         oldModelId = oldPetTakeId
     })
-    
+
     -- 如果灵兽已出战，发送setPetInfo消息更新顶部灵兽图标
     local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
     if petMark and petMark ~= "" then
@@ -816,7 +841,7 @@ function mountMain.setPetModel(actor, data)
             icon = icon
         })
     end
-    
+
     print("=== setPetModel 完成 ===")
     print("petTakeId:", petTakeId, "isCancel:", isCancel)
 end
@@ -825,20 +850,20 @@ end
 
 function mountMain.openshow(actor, data)
     Message.sendmsgEx(actor, "mountMain", "Open", {})
-    
+
     -- 发送petUpdateBtn消息更新按钮状态
     -- 服务端：U_Pet_IS_SET = 1 表示出战，0 表示休息
     -- 客户端：isPetChuzhan = 0 表示已召唤（显示召回），1 表示未召唤（显示出战）
     -- 需要转换：客户端值 = 1 - 服务端值
     local serverChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
-    local isPetChuzhan = 1 - serverChuzhan  -- 转换
+    local isPetChuzhan = 1 - serverChuzhan -- 转换
     local isPetJh = gethumvar(actor, VarCfg.U_All_Pet_star) or 0
     Message.sendmsgEx(actor, "mountMain", "petUpdateBtn", {
         isPetChuzhan = isPetChuzhan,
         isPetJh = isPetJh > 0 and 1 or 0,
         allJieshu = isPetJh
     })
-    
+
     -- 如果灵兽已出战，发送setPetInfo消息更新顶部灵兽图标
     if serverChuzhan == 1 then
         local isPc = clientflag(actor) == 1
@@ -887,7 +912,7 @@ function mountMain.updateMountAttrBuff(actor)
     -- 检查坐骑是否已激活
     local isMountActive = gethumvar(actor, VarCfg.U_Mount_IS_SET)
     print("updateMountAttrBuff: isMountActive =", isMountActive)
-    
+
     if not isMountActive or isMountActive == 0 then
         -- 坐骑未激活
         delbuff(actor, MountBuffId)
@@ -918,7 +943,7 @@ function mountMain.updateMountAttrBuff(actor)
     -- 3. 设置坐骑幻化属性到 buff 110016（累加多个幻化的属性）
     local ycListJson = gethumvar(actor, VarCfg.T_MountHuanHua)
     local ycList = json2tbl(ycListJson)
-    
+
     -- 先收集所有幻化属性到临时表
     local totalAttr = {}
     for l, v in pairs(ycList) do
@@ -937,7 +962,7 @@ function mountMain.updateMountAttrBuff(actor)
             end
         end
     end
-    
+
     -- 然后一次性设置所有属性
     for attrId, attrValue in pairs(totalAttr) do
         setbuffabil(actor, MountHuanhuaBuffId, attrId, "=", attrValue)
@@ -964,11 +989,11 @@ function mountMain.shengji(actor)
     end
     local classIds = mountlist[nextlv].ClassID
     local costs = mountlist[nowlv].Cost
-    
+
     -- 支持多消耗格式：itemId^num|itemId2^num2
     -- 检查是否是多重消耗格式：costs[1] 是 table 而不是 number
     local isMultiCost = (type(costs[1]) == "table")
-    
+
     if isMultiCost then
         -- 多重消耗格式
         local allEnough = true
@@ -980,12 +1005,12 @@ function mountMain.shengji(actor)
                 break
             end
         end
-        
+
         if not allEnough then
             sendmsg(actor, 9, "材料不足")
             return
         end
-        
+
         -- 扣除所有材料
         for i = 1, #costs do
             local itemId = tonumber(costs[i][1])
@@ -1003,12 +1028,12 @@ function mountMain.shengji(actor)
         end
         delItemNum(actor, itemId, num)
     end
-    
+
     if nowlv == 0 then -- 激活
         sethumvar(actor, VarCfg.T_MountHuanHua, tbl2json({}))
         sethumvar(actor, VarCfg.U_All_Mount_star, 1)
         sethumvar(actor, VarCfg.U_Mount_IS_SET, 1)
-        
+
         -- 首次激活时，自动激活第一个幻化（免费）
         local firstHH = mountHHlist[1]
         if firstHH then
@@ -1033,7 +1058,7 @@ function mountMain.shengji(actor)
             })
         end
     end
-    
+
     sethumvar(actor, VarCfg.U_All_Mount_star, nextlv)
     local mountBaseId = mountlist[nextlv].Model
     -- 当前模型是否幻化
@@ -1043,7 +1068,7 @@ function mountMain.shengji(actor)
     end
     sethumvar(actor, VarCfg.U_Mount_Base_ID, mountBaseId)
     Message.sendmsgEx(actor, "mountMain", "updateZQ",
-                      {lv = nextlv, mountBaseId = mountBaseId})
+        { lv = nextlv, mountBaseId = mountBaseId })
     MentorShipChangTask(actor, 6, 1, nextlv)
     print("shengji: nowlv =", nowlv, "nextlv =", nextlv)
     -- 统一更新坐骑属性buff
@@ -1071,14 +1096,14 @@ end
 function mountMain.huanhuajihuo(actor, postData)
     local data = getHHData(postData.idx, postData.grade)
     if data then
-        local name = data.Name -- 名字
+        local name = data.Name       -- 名字
         local classid = data.ClassID -- 属性
-        local costs = data.Cost -- 消耗
-        local grade = data.grade -- 激活的阶数
-        
+        local costs = data.Cost      -- 消耗
+        local grade = data.grade     -- 激活的阶数
+
         -- 支持多消耗格式
         local isMultiCost = (type(costs[1]) == "table")
-        
+
         if isMultiCost then
             -- 多重消耗格式
             local allEnough = true
@@ -1090,12 +1115,12 @@ function mountMain.huanhuajihuo(actor, postData)
                     break
                 end
             end
-            
+
             if not allEnough then
                 sendmsg(actor, 9, "激活材料不足")
                 return
             end
-            
+
             -- 扣除所有材料
             for i = 1, #costs do
                 local itemId = tonumber(costs[i][1])
@@ -1112,7 +1137,7 @@ function mountMain.huanhuajihuo(actor, postData)
             end
             delItemNum(actor, itemId, num)
         end
-        
+
         local ycList = json2tbl(gethumvar(actor, VarCfg.T_MountHuanHua))
         ycList[data.Name] = grade
         sethumvar(actor, VarCfg.T_MountHuanHua, tbl2json(ycList))
@@ -1189,6 +1214,7 @@ function mountMain.setMountHHBuff(actor, oldbuffList, newBuffList, isCancel)
         for b = 1, #oldbuffList do delbuff(actor, oldbuffList[b]) end
     end
 end
+
 function mountMain.setModel(actor, data)
     -- {"幻化名字"=幻化品阶}
     local allhhList = {}
@@ -1210,7 +1236,6 @@ function mountMain.setModel(actor, data)
                 if mountHHlist[i].buffID then
                     oldbuffList = mountHHlist[i].buffID
                 end
-
             end
         end
         sethumvar(actor, VarCfg.U_Mount_IS_HH, 0)
@@ -1262,6 +1287,7 @@ function mountMain.setModel(actor, data)
         oldModelId = oldMountTakeId
     })
 end
+
 function mountMain.chuzhan(actor, data)
     -- 坐骑出战限制：需要达到一阶才能出战
     local mountStar = gethumvar(actor, VarCfg.U_All_Mount_star)
@@ -1289,9 +1315,11 @@ function mountMain.chuzhan(actor, data)
     mountMain.updatePetAttrBuff(actor)
     mountMain.updatePetBattleSkillBuff(actor)
     Message.sendmsgEx(actor, "mountMain", "updateBtnName",
-                      {status = horsestate(actor)})
+        { status = horsestate(actor) })
 end
+
 function mountMain.jihuo(actor) sendmsg(actor, 9, "请先激活坐骑") end
+
 function mountMain.lsJihuo(actor) sendmsg(actor, 9, "请先激活灵兽") end
 
 -- ===== 旧灵兽功能已废弃，以下函数已由新结构替代 =====
@@ -1315,7 +1343,7 @@ function mountMain.lsjihuo(actor, data)
     local costs = petlist[0].Cost
     if costs then
         local isMultiCost = (type(costs[1]) == "table")
-        
+
         if isMultiCost then
             -- 多重消耗：检查所有材料是否足够
             local allEnough = true
@@ -1327,11 +1355,11 @@ function mountMain.lsjihuo(actor, data)
                     break
                 end
             end
-            
+
             if not allEnough then
                 return sendmsg(actor, 9, "激活材料不足")
             end
-            
+
             -- 扣除所有材料
             for i = 1, #costs do
                 local itemId = tonumber(costs[i][1])
@@ -1350,7 +1378,7 @@ function mountMain.lsjihuo(actor, data)
     end
 
     mountMain.petShengji(actor)
-    
+
     -- 发送updateLSView和level消息
     local newLv = gethumvar(actor, VarCfg.U_All_Pet_star)
     print("=== lsjihuo 发送消息, newLv:", newLv)
@@ -1422,7 +1450,7 @@ end
 function mountMain.recallpet(actor)
     -- 清除灵兽死亡复活定时器
     disabletimer(actor, 49)
-    
+
     local petBaseId = gethumvar(actor, VarCfg.U_Pet_Base_ID)
     local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
 
@@ -1436,12 +1464,12 @@ function mountMain.recallpet(actor)
 
     -- 获取灵兽怪物ID
     local monsterId = 80001
-    
+
     -- 检查是否是幻化形态
     local isHuanhua = false
     local petTakeIdNum = tonumber(petTakeId)
     local petBaseIdNum = tonumber(petBaseId)
-    
+
     -- 从 petTakeId 匹配 PetHuanhua 获取灵兽名称
     local petName = nil
     if petTakeIdNum and petTakeIdNum > 0 then
@@ -1452,7 +1480,7 @@ function mountMain.recallpet(actor)
             end
         end
     end
-    
+
     -- 获取当前幻化等级
     local currentHHGrade = 0
     if petName then
@@ -1461,7 +1489,7 @@ function mountMain.recallpet(actor)
             currentHHGrade = tonumber(ycList[petName]) or 0
         end
     end
-    
+
     -- 优先用 Name + grade 匹配，获取对应等级的怪物ID
     if petName and currentHHGrade > 0 then
         for _, hhData in pairs(petHHlist) do
@@ -1472,7 +1500,7 @@ function mountMain.recallpet(actor)
             end
         end
     end
-    
+
     -- 如果没匹配到，用 petTakeId 降级匹配 Model
     if not isHuanhua and petTakeIdNum and petTakeIdNum > 0 then
         for _, hhData in pairs(petHHlist) do
@@ -1483,7 +1511,7 @@ function mountMain.recallpet(actor)
             end
         end
     end
-    
+
     -- 如果不是幻化形态，从Pet配置表中获取
     if not isHuanhua and petBaseId then
         for i = 0, 10 do
@@ -1493,7 +1521,7 @@ function mountMain.recallpet(actor)
             end
         end
     end
-    
+
     print("=== 灵兽出战 ===")
     print("petBaseId:", petBaseId, "petTakeId:", petTakeId, "petName:", petName)
     print("currentHHGrade:", currentHHGrade, "isHuanhua:", isHuanhua, "monsterId:", monsterId)
@@ -1504,10 +1532,10 @@ function mountMain.recallpet(actor)
     -- 检查是否已有宠物mark，如果没有则先添加宠物
     local existingMark = gethumvar(actor, VarCfg.T_Pet_Mark)
     local mark = existingMark
-    
+
     -- 检查宠物是否已经在场上
     local petIdx = getpetidx(actor, mark)
-    
+
     if mark and mark ~= "" and petIdx then
         -- 宠物已经在场上，不需要再次添加
     else
@@ -1547,7 +1575,7 @@ function mountMain.recallpet(actor)
         selectViewPetId = petBaseId,
         isPetChuzhan = isPetChuzhan
     })
-    
+
     -- 发送setPetInfo消息更新顶部灵兽图标
     local isPc = clientflag(actor) == 1
     local methodName = isPc and "PCMainPlayer" or "MainPlayer"
@@ -1590,7 +1618,7 @@ function mountMain.unrecallpet(actor, petMark)
 
     -- 禁用灵兽复活定时器
     disabletimer(actor, 49)
-    
+
     -- 收回灵兽
     unrecallpet(actor, petMark)
 
@@ -1627,24 +1655,24 @@ end
 -- 灵兽复活
 function mountMain.resurre(actor)
     local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
-    
+
     if not petMark or petMark == "" then
         return
     end
-    
+
     -- 复活宠物
     realivepet(actor, petMark)
-    
+
     -- 重新召唤灵兽
     mountMain.recallpet(actor)
-    
+
     -- 确保设置出战状态
     sethumvar(actor, VarCfg.U_Pet_IS_SET, 1)
-    
+
     -- 设置属性
     mountMain.setPetAttr(actor)
     mountMain.updatePetAttrBuff(actor)
-    
+
     -- 发送setPetInfo消息更新顶部灵兽图标
     local isPc = clientflag(actor) == 1
     local methodName = isPc and "PCMainPlayer" or "MainPlayer"
@@ -1665,7 +1693,7 @@ function mountMain.resurre(actor)
         now = 10000,
         icon = icon
     })
-    
+
     -- 发送petUpdateBtn消息更新按钮状态
     Message.sendmsgEx(actor, "mountMain", "petUpdateBtn", {
         isPetChuzhan = 1,
@@ -1678,11 +1706,11 @@ end
 function mountMain.levelUp(actor, data)
     -- data.name = 灵兽名字, data.maxLv = 最大等级, data.itemId = 材料ID
     local nowlv = gethumvar(actor, VarCfg.U_All_Pet_star)
-    
+
     if not nowlv or nowlv == 0 then
         return sendmsg(actor, 9, "请先激活灵兽")
     end
-    
+
     local nextlv = nowlv + 1
 
     if nextlv > #petlist then
@@ -1695,11 +1723,11 @@ function mountMain.levelUp(actor, data)
     end
 
     local costs = petlist[nowlv].Cost
-    
+
     -- 支持多消耗格式：2801^40|3958^5
     -- 检查是否是多重消耗格式：costs[1] 是 table 而不是 number
     local isMultiCost = (type(costs[1]) == "table")
-    
+
     if isMultiCost then
         -- 多重消耗格式：{[1] = {[1] = itemId, [2] = num}, [2] = {[1] = itemId, [2] = num}}
         local allEnough = true
@@ -1711,7 +1739,7 @@ function mountMain.levelUp(actor, data)
                 break
             end
         end
-        
+
         if not allEnough then
             return sendmsg(actor, 9, "材料不足")
         end
@@ -1731,7 +1759,7 @@ function mountMain.levelUp(actor, data)
     -- 发送level消息与旧系统对齐
     local newLv = gethumvar(actor, VarCfg.U_All_Pet_star)
     -- 先发送updateLSView初始化allPetsActive表
-    local allPets = {["pet"] = newLv}
+    local allPets = { ["pet"] = newLv }
     Message.sendmsgEx(actor, "mountMain", "updateLSView", {
         allPets = allPets,
         name = "pet",
@@ -1780,9 +1808,9 @@ GameEvent.add(EventCfg.onPlayRealive, function(actor)
     -- 检查灵兽是否已激活
     local isActivated = gethumvar(actor, VarCfg.U_All_Pet_star)
     local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
-    
+
     print("复活检查：isActivated=", isActivated, "petMark=", petMark)
-    
+
     -- 如果灵兽已激活且不在场上，则自动召唤
     if isActivated and isActivated > 0 and (not petMark or petMark == "") then
         print("灵兽已激活，自动召唤")
@@ -1793,28 +1821,29 @@ end, mountMain)
 -- 角色登录完成时处理坐骑和灵兽
 GameEvent.add(EventCfg.onLoginEnd, function(actor)
     print("=== 登录完成处理坐骑和灵兽 ===")
-    
+
     -- 先处理坐骑出战状态恢复（确保在灵兽之前设置外观）
     local mountIsSet = tonumber(gethumvar(actor, VarCfg.U_Mount_IS_SET))
     local mountStatus = tonumber(gethumvar(actor, VarCfg.U_Mount_Status))
     local mountTakeId = gethumvar(actor, VarCfg.U_Mount_Take_Id)
     local mountTakeIdNum = tonumber(mountTakeId)
     local currentHorseState = horsestate(actor)
-    
-    print("登录坐骑检查：mountIsSet=", mountIsSet, "mountStatus=", mountStatus, "mountTakeId=", mountTakeId, "currentHorseState=", currentHorseState)
-    
+
+    print("登录坐骑检查：mountIsSet=", mountIsSet, "mountStatus=", mountStatus, "mountTakeId=", mountTakeId,
+        "currentHorseState=", currentHorseState)
+
     -- 如果坐骑已激活且之前处于出战状态，自动恢复坐骑外观和状态
     if mountIsSet and mountIsSet == 1 and mountStatus == 1 and mountTakeIdNum and mountTakeIdNum > 0 then
         print("坐骑之前处于出战状态，登录自动恢复坐骑外观")
         -- 设置坐骑外观
         changeappear(actor, 5, mountTakeIdNum)
-        
+
         -- 检查当前状态，只在需要时切换
         if currentHorseState == 0 then
             print("当前下马状态，需要上马")
             updownhorser(actor)
         end
-        
+
         -- 恢复速度加成
         local baseSpeed = scriptabil(actor, 9)
         if horsestate(actor) == 0 then
@@ -1830,38 +1859,38 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
         mountMain.updatePetBattleSkillBuff(actor)
         print("登录恢复坐骑出战完成, horsestate=", horsestate(actor))
     end
-    
+
     -- 更新灵兽属性buff
     mountMain.updatePetAttrBuff(actor)
     -- 更新灵兽幻化战斗技能buff
     mountMain.updatePetBattleSkillBuff(actor)
     -- 更新坐骑幻化战斗技能buff
     mountMain.updateMountBattleSkillBuff(actor)
-    
+
     -- 检查是否需要自动召唤灵兽
     local isActivated = gethumvar(actor, VarCfg.U_All_Pet_star)
     local isChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET)
     local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
-    
+
     print("登录检查：isActivated=", isActivated, "isChuzhan=", isChuzhan, "petMark=", petMark)
-    
+
     -- 如果灵兽已激活且之前处于出战状态（isChuzhan=1），则自动召唤
     if isActivated and isActivated > 0 and isChuzhan == 1 then
         print("灵兽之前处于出战状态，登录自动召唤")
         -- 自动召唤灵兽
         local petBaseId = gethumvar(actor, VarCfg.U_Pet_Base_ID)
         local petTakeId = gethumvar(actor, VarCfg.U_Pet_Take_Id)
-        
+
         if not petBaseId or petBaseId == 0 then
             petBaseId = 900001
         end
         if not petTakeId or petTakeId == 0 then
             petTakeId = petBaseId
         end
-        
+
         -- 添加宠物并召唤
         -- 优先从PetHuanhua配置表中查找幻化模型的Monster_ID
-        local monsterId = 80001  -- 默认怪物ID
+        local monsterId = 80001 -- 默认怪物ID
         local petTakeIdNum = tonumber(petTakeId)
         if petTakeIdNum and petTakeIdNum > 0 then
             for _, hhData in pairs(petHHlist) do
@@ -1872,7 +1901,7 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
                 end
             end
         end
-        
+
         -- 检查之前的mark是否还有效
         local oldMark = gethumvar(actor, VarCfg.T_Pet_Mark)
         local mark = oldMark
@@ -1891,7 +1920,7 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
                 return
             end
         end
-        
+
         -- 清除灵兽死亡复活定时器
         disabletimer(actor, 49)
         -- 执行召唤
@@ -1901,7 +1930,7 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
         mountMain.setPetAttr(actor)
         mountMain.updatePetAttrBuff(actor)
         mountMain.updatePetBattleSkillBuff(actor)
-        
+
         -- 如果灵兽有幻化，改变人物外观
         -- 但是如果坐骑也在出战状态，则不设置灵兽外观（坐骑外观优先级更高）
         local isPetHH = gethumvar(actor, VarCfg.U_Pet_IS_HH)
@@ -1916,7 +1945,7 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
                 print("登录自动召唤：灵兽幻化外观已设置, petTakeId:", petTakeId)
             end
         end
-        
+
         -- 发送setPetInfo消息更新顶部灵兽图标
         local isPc = clientflag(actor) == 1
         local methodName = isPc and "PCMainPlayer" or "MainPlayer"
