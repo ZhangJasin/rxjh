@@ -9,20 +9,16 @@ local config = {
 			[2] = 1,
 		},
 		Model=800001,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 10,
-			},
-			[2] = {
-				[1] = 56,
-				[2] = 2,
-			},
-		},
 		Condition=1,
 		tips="激活坐骑幻化可以改变坐骑外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果，\n让你的坐骑更加炫酷",
-		BattleSkill_Type="1",
-		BattleSkill_Value="50",
+		BattleSkill_Type = {
+			[1] = 1,
+			[2] = 56,
+		},
+		BattleSkill_Value = {
+			[1] = 10,
+			[2] = 2,
+		},
 	},
 	[2] = { 
 		ID=2,
@@ -34,24 +30,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800003,
-		ClassID = {
-			[1] = {
-				[1] = 52,
-				[2] = 4,
-			},
-			[2] = {
-				[1] = 54,
-				[2] = 8,
-			},
-		},
 		Condition=1,
 		BattleSkill_Type = {
-			[1] = 104,
-			[2] = 105,
+			[1] = 52,
+			[2] = 54,
 		},
 		BattleSkill_Value = {
-			[1] = 200,
-			[2] = 200,
+			[1] = 4,
+			[2] = 8,
 		},
 	},
 	[3] = { 
@@ -64,19 +50,15 @@ local config = {
 			[2] = 1,
 		},
 		Model=800002,
-		ClassID = {
-			[1] = {
-				[1] = 23,
-				[2] = 4,
-			},
-			[2] = {
-				[1] = 9,
-				[2] = 200,
-			},
-		},
 		Condition=1,
-		BattleSkill_Type="115",
-		BattleSkill_Value="1000",
+		BattleSkill_Type = {
+			[1] = 23,
+			[2] = 9,
+		},
+		BattleSkill_Value = {
+			[1] = 4,
+			[2] = 200,
+		},
 	},
 	[4] = { 
 		ID=4,
@@ -88,19 +70,15 @@ local config = {
 			[2] = 1,
 		},
 		Model=800006,
-		ClassID = {
-			[1] = {
-				[1] = 23,
-				[2] = 4,
-			},
-			[2] = {
-				[1] = 109,
-				[2] = 4,
-			},
-		},
 		Condition=1,
-		BattleSkill_Type="126",
-		BattleSkill_Value="1",
+		BattleSkill_Type = {
+			[1] = 23,
+			[2] = 109,
+		},
+		BattleSkill_Value = {
+			[1] = 4,
+			[2] = 4,
+		},
 	},
 	[5] = { 
 		ID=5,
@@ -112,19 +90,15 @@ local config = {
 			[2] = 1,
 		},
 		Model=800010,
-		ClassID = {
-			[1] = {
-				[1] = 107,
-				[2] = 500,
-			},
-			[2] = {
-				[1] = 57,
-				[2] = 100,
-			},
-		},
 		Condition=1,
-		BattleSkill_Type="1",
-		BattleSkill_Value="200",
+		BattleSkill_Type = {
+			[1] = 107,
+			[2] = 57,
+		},
+		BattleSkill_Value = {
+			[1] = 500,
+			[2] = 100,
+		},
 	},
 	[6] = { 
 		ID=6,
@@ -136,18 +110,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800001,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 30,
-			},
-			[2] = {
-				[1] = 56,
-				[2] = 5,
-			},
+		BattleSkill_Type = {
+			[1] = 1,
+			[2] = 56,
 		},
-		BattleSkill_Type="115",
-		BattleSkill_Value="2000",
+		BattleSkill_Value = {
+			[1] = 30,
+			[2] = 5,
+		},
 	},
 	[7] = { 
 		ID=7,
@@ -159,18 +129,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800013,
-		ClassID = {
-			[1] = {
-				[1] = 52,
-				[2] = 8,
-			},
-			[2] = {
-				[1] = 54,
-				[2] = 16,
-			},
+		BattleSkill_Type = {
+			[1] = 52,
+			[2] = 54,
 		},
-		BattleSkill_Type="116",
-		BattleSkill_Value="2000",
+		BattleSkill_Value = {
+			[1] = 8,
+			[2] = 16,
+		},
 	},
 	[8] = { 
 		ID=8,
@@ -182,22 +148,12 @@ local config = {
 			[2] = 1,
 		},
 		Model=800002,
-		ClassID = {
-			[1] = {
-				[1] = 23,
-				[2] = 8,
-			},
-			[2] = {
-				[1] = 9,
-				[2] = 400,
-			},
-		},
 		BattleSkill_Type = {
-			[1] = 104,
-			[2] = 105,
+			[1] = 23,
+			[2] = 9,
 		},
 		BattleSkill_Value = {
-			[1] = 400,
+			[1] = 8,
 			[2] = 400,
 		},
 	},
@@ -211,18 +167,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800006,
-		ClassID = {
-			[1] = {
-				[1] = 23,
-				[2] = 8,
-			},
-			[2] = {
-				[1] = 109,
-				[2] = 8,
-			},
+		BattleSkill_Type = {
+			[1] = 23,
+			[2] = 109,
 		},
-		BattleSkill_Type="9",
-		BattleSkill_Value="800",
+		BattleSkill_Value = {
+			[1] = 8,
+			[2] = 8,
+		},
 	},
 	[10] = { 
 		ID=10,
@@ -234,18 +186,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800010,
-		ClassID = {
-			[1] = {
-				[1] = 107,
-				[2] = 800,
-			},
-			[2] = {
-				[1] = 57,
-				[2] = 200,
-			},
+		BattleSkill_Type = {
+			[1] = 107,
+			[2] = 60,
 		},
-		BattleSkill_Type="107",
-		BattleSkill_Value="600",
+		BattleSkill_Value = {
+			[1] = 800,
+			[2] = 200,
+		},
 	},
 	[11] = { 
 		ID=11,
@@ -257,18 +205,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800011,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 50,
-			},
-			[2] = {
-				[1] = 56,
-				[2] = 8,
-			},
+		BattleSkill_Type = {
+			[1] = 1,
+			[2] = 56,
 		},
-		BattleSkill_Type="1",
-		BattleSkill_Value="500",
+		BattleSkill_Value = {
+			[1] = 50,
+			[2] = 8,
+		},
 	},
 	[12] = { 
 		ID=12,
@@ -280,23 +224,13 @@ local config = {
 			[2] = 1,
 		},
 		Model=800023,
-		ClassID = {
-			[1] = {
-				[1] = 52,
-				[2] = 15,
-			},
-			[2] = {
-				[1] = 54,
-				[2] = 25,
-			},
-		},
 		BattleSkill_Type = {
-			[1] = 104,
-			[2] = 105,
+			[1] = 52,
+			[2] = 54,
 		},
 		BattleSkill_Value = {
-			[1] = 800,
-			[2] = 800,
+			[1] = 15,
+			[2] = 25,
 		},
 	},
 	[13] = { 
@@ -309,18 +243,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800012,
-		ClassID = {
-			[1] = {
-				[1] = 23,
-				[2] = 15,
-			},
-			[2] = {
-				[1] = 9,
-				[2] = 700,
-			},
+		BattleSkill_Type = {
+			[1] = 23,
+			[2] = 9,
 		},
-		BattleSkill_Type="115",
-		BattleSkill_Value="5000",
+		BattleSkill_Value = {
+			[1] = 15,
+			[2] = 700,
+		},
 	},
 	[14] = { 
 		ID=14,
@@ -332,18 +262,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800016,
-		ClassID = {
-			[1] = {
-				[1] = 23,
-				[2] = 15,
-			},
-			[2] = {
-				[1] = 109,
-				[2] = 15,
-			},
+		BattleSkill_Type = {
+			[1] = 23,
+			[2] = 109,
 		},
-		BattleSkill_Type="126",
-		BattleSkill_Value="2",
+		BattleSkill_Value = {
+			[1] = 15,
+			[2] = 15,
+		},
 	},
 	[15] = { 
 		ID=15,
@@ -355,18 +281,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800020,
-		ClassID = {
-			[1] = {
-				[1] = 107,
-				[2] = 1100,
-			},
-			[2] = {
-				[1] = 57,
-				[2] = 300,
-			},
+		BattleSkill_Type = {
+			[1] = 107,
+			[2] = 57,
 		},
-		BattleSkill_Type="103",
-		BattleSkill_Value="600",
+		BattleSkill_Value = {
+			[1] = 1100,
+			[2] = 300,
+		},
 	},
 	[16] = { 
 		ID=16,
@@ -378,18 +300,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800011,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 70,
-			},
-			[2] = {
-				[1] = 56,
-				[2] = 14,
-			},
+		BattleSkill_Type = {
+			[1] = 1,
+			[2] = 56,
 		},
-		BattleSkill_Type="107",
-		BattleSkill_Value="1000",
+		BattleSkill_Value = {
+			[1] = 70,
+			[2] = 14,
+		},
 	},
 	[17] = { 
 		ID=17,
@@ -401,18 +319,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800023,
-		ClassID = {
-			[1] = {
-				[1] = 52,
-				[2] = 25,
-			},
-			[2] = {
-				[1] = 54,
-				[2] = 35,
-			},
+		BattleSkill_Type = {
+			[1] = 52,
+			[2] = 54,
 		},
-		BattleSkill_Type="115",
-		BattleSkill_Value="5000",
+		BattleSkill_Value = {
+			[1] = 25,
+			[2] = 35,
+		},
 	},
 	[18] = { 
 		ID=18,
@@ -424,18 +338,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800012,
-		ClassID = {
-			[1] = {
-				[1] = 23,
-				[2] = 25,
-			},
-			[2] = {
-				[1] = 9,
-				[2] = 1000,
-			},
+		BattleSkill_Type = {
+			[1] = 23,
+			[2] = 9,
 		},
-		BattleSkill_Type="1",
-		BattleSkill_Value="500",
+		BattleSkill_Value = {
+			[1] = 25,
+			[2] = 1000,
+		},
 	},
 	[19] = { 
 		ID=19,
@@ -447,21 +357,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800016,
-		ClassID = {
-			[1] = {
-				[1] = 23,
-				[2] = 25,
-			},
-			[2] = {
-				[1] = 109,
-				[2] = 25,
-			},
-		},
 		BattleSkill_Type = {
-			[1] = 99,
-			[2] = 100,
+			[1] = 23,
+			[2] = 109,
 		},
-		BattleSkill_Value="1500",
+		BattleSkill_Value = {
+			[1] = 25,
+			[2] = 25,
+		},
 	},
 	[20] = { 
 		ID=20,
@@ -473,18 +376,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800020,
-		ClassID = {
-			[1] = {
-				[1] = 107,
-				[2] = 1500,
-			},
-			[2] = {
-				[1] = 57,
-				[2] = 400,
-			},
+		BattleSkill_Type = {
+			[1] = 107,
+			[2] = 57,
 		},
-		BattleSkill_Type="9",
-		BattleSkill_Value="1200",
+		BattleSkill_Value = {
+			[1] = 1500,
+			[2] = 400,
+		},
 	},
 	[21] = { 
 		ID=21,
@@ -496,18 +395,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800021,
-		ClassID = {
-			[1] = {
-				[1] = 1,
-				[2] = 100,
-			},
-			[2] = {
-				[1] = 56,
-				[2] = 20,
-			},
+		BattleSkill_Type = {
+			[1] = 1,
+			[2] = 56,
 		},
-		BattleSkill_Type="103",
-		BattleSkill_Value="600",
+		BattleSkill_Value = {
+			[1] = 100,
+			[2] = 20,
+		},
 	},
 	[22] = { 
 		ID=22,
@@ -519,18 +414,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800023,
-		ClassID = {
-			[1] = {
-				[1] = 52,
-				[2] = 40,
-			},
-			[2] = {
-				[1] = 54,
-				[2] = 50,
-			},
+		BattleSkill_Type = {
+			[1] = 52,
+			[2] = 54,
 		},
-		BattleSkill_Type="1",
-		BattleSkill_Value="500",
+		BattleSkill_Value = {
+			[1] = 40,
+			[2] = 50,
+		},
 	},
 	[23] = { 
 		ID=23,
@@ -542,18 +433,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800022,
-		ClassID = {
-			[1] = {
-				[1] = 23,
-				[2] = 40,
-			},
-			[2] = {
-				[1] = 9,
-				[2] = 1500,
-			},
+		BattleSkill_Type = {
+			[1] = 23,
+			[2] = 9,
 		},
-		BattleSkill_Type="107",
-		BattleSkill_Value="1000",
+		BattleSkill_Value = {
+			[1] = 40,
+			[2] = 1500,
+		},
 	},
 	[24] = { 
 		ID=24,
@@ -565,18 +452,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800026,
-		ClassID = {
-			[1] = {
-				[1] = 23,
-				[2] = 40,
-			},
-			[2] = {
-				[1] = 109,
-				[2] = 40,
-			},
+		BattleSkill_Type = {
+			[1] = 23,
+			[2] = 109,
 		},
-		BattleSkill_Type="116",
-		BattleSkill_Value="5000",
+		BattleSkill_Value = {
+			[1] = 40,
+			[2] = 40,
+		},
 	},
 	[25] = { 
 		ID=25,
@@ -588,18 +471,14 @@ local config = {
 			[2] = 1,
 		},
 		Model=800030,
-		ClassID = {
-			[1] = {
-				[1] = 107,
-				[2] = 2000,
-			},
-			[2] = {
-				[1] = 57,
-				[2] = 500,
-			},
+		BattleSkill_Type = {
+			[1] = 107,
+			[2] = 57,
 		},
-		BattleSkill_Type="126",
-		BattleSkill_Value="2",
+		BattleSkill_Value = {
+			[1] = 2000,
+			[2] = 500,
+		},
 	},
 }
 return config
