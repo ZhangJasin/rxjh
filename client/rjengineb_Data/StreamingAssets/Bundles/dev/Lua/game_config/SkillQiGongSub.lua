@@ -27607,7 +27607,7 @@ local config = {
 			Cost="19#1",
 			BackCost="19#1",
 			LevelRequire=1,
-			Icon="100035",
+			Icon="Skill_100035",
 		},
 		[2] = { 
 			ID=50002,
