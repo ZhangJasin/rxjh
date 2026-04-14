@@ -8737,8 +8737,8 @@ local config = {
 		task_finnpc=23,
 		task_pos = {
 			[1] = 501,
-			[2] = 228,
-			[3] = 38,
+			[2] = 251,
+			[3] = 189,
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200036",
