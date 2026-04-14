@@ -2229,7 +2229,7 @@ local config = {
 		task_receivetype=1,
 		task_level=35,
 		task_pre = {
-			[1] = 103301,
+			[1] = 103001,
 		},
 		task_pro = {
 			[1] = 103002,
@@ -2279,7 +2279,7 @@ local config = {
 		task_goodevilid=1,
 		task_level=35,
 		task_pre = {
-			[1] = 103001,
+			[1] = 103301,
 		},
 		task_pro = {
 			[1] = 103003,
@@ -4787,7 +4787,7 @@ local config = {
 		task_goodevilid=2,
 		task_level=35,
 		task_pre = {
-			[1] = 103001,
+			[1] = 103301,
 		},
 		task_pro = {
 			[1] = 103103,
