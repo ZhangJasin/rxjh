@@ -31,41 +31,52 @@ Pet.Tips = getTipsFromConfig(Pet)
 PetHuanhua.Tips = getTipsFromConfig(PetHuanhua)
 
 -- 数字转中文大写
-local NUMBER_TO_CHINESE = {"零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"}
+local NUMBER_TO_CHINESE = { "零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十" }
 
 -- 常量定义
 local TAB_TYPE = {
     MOUNT = 0,    -- 坐骑标签
-    MOUNT_HH = 1,  -- 坐骑幻化标签
+    MOUNT_HH = 1, -- 坐骑幻化标签
     -- 注意：灵兽的 topTabList 和 petTopTabList 各自有独立的索引（0,1）
     -- petTopTabList 索引：0=灵兽, 1=幻化
     -- topTabList 索引：0=坐骑, 1=幻化
 }
 
 local STATUS = {
-    FIGHT = 0,   -- 出战状态
-    REST = 1     -- 休息状态
+    FIGHT = 0, -- 出战状态
+    REST = 1   -- 休息状态
+}
+
+-- 需要显示为百分比的属性ID配置表（属性值会缩小100后显示，如 500 -> 5%）
+-- 格式：{[属性ID] = true} 或 {[属性ID] = 除数}，如果需要不同的缩放比例
+local PercentAttrConfig = {
+    [68] = true,
+    [67] = true,
+    [107] = true,
+    [57] = true,
+
 }
 
 function mountMain:Create()
     mountMainData:Init()
     -- 初始化UI组件
-    self._ui = FGUI:ui_delegate(self.component) 
+    self._ui = FGUI:ui_delegate(self.component)
     -- 初始化界面UI
     self:initVariables()
     -- 绑定关闭按钮事件
-    FGUI:setOnClickEvent(self._ui.closeBtn, function()  
+    FGUI:setOnClickEvent(self._ui.closeBtn, function()
         FGUI:Close("Mount", "mountMain")
     end)
     -- 初始化订阅事件
     self._subscriptions = {}
-     -- 订阅数据管理器事件并且初始化显示数据
+    -- 订阅数据管理器事件并且初始化显示数据
     self:subscribeEvents()
     -- 初始化标签和列表
     self:initTabsAndLists()
     -- 绑定事件监听
     self:bindEvents()
 end
+
 -- 订阅数据管理器事件
 function mountMain:subscribeEvents()
     -- 获取数据管理器实例
@@ -109,7 +120,7 @@ function mountMain:subscribeEvents()
             self._dataForMount = state._dataForMount
             self.nowIndex = state.selectHHIndex - 1
             FGUI:GList_setNumItems(self.leftList, #self._dataForMount.hhSortList)
-             -- 更新视图
+            -- 更新视图
             self:setMountHHSx()
             self:setXHCL()
             self:setHHAddBtn()
@@ -175,7 +186,7 @@ function mountMain:subscribeEvents()
             if state.isPetChuzhan ~= nil then self._dataForPet.isPetChuzhan = state.isPetChuzhan end
             if state.isPetJh ~= nil then self._dataForPet.isPetJh = state.isPetJh end
             if state.allJieshu ~= nil then self._dataForPet.allJieshu = state.allJieshu end
-            
+
             -- 刷新按钮状态
             -- isPetChuzhan: 0=休息(显示"出战"按钮), 1=出战(显示"召回"按钮)
             local title = FGUI:GetChild(self._ui.petQhbtn, "title")
@@ -192,6 +203,7 @@ function mountMain:subscribeEvents()
     -- 初始化显示数据
     self:initDisplayData()
 end
+
 -- 清理订阅
 function mountMain:Destroy()
     if self._subscriptions then
@@ -205,16 +217,17 @@ function mountMain:Destroy()
     self._data = nil
     self._ui = nil
 end
+
 -- 初始化显示数据
 function mountMain:initDisplayData()
     -- 从数据管理器获取数据或使用默认值
     self._dataForMount = self._data:GetDataForMount()
     self._dataForPet = self._data:GetDataForPet()
-    self.topTab = TAB_TYPE.MOUNT  -- 默认坐骑标签
-    self.petTopTab = 0  -- 默认灵兽升阶标签
-    self.nowPetHHIndex = 0  -- 初始化灵兽幻化索引
+    self.topTab = TAB_TYPE.MOUNT -- 默认坐骑标签
+    self.petTopTab = 0           -- 默认灵兽升阶标签
+    self.nowPetHHIndex = 0       -- 初始化灵兽幻化索引
     --默认显示灵兽页面
-    self.selectPetIndex = 1 --灵兽默认选择
+    self.selectPetIndex = 1      --灵兽默认选择
     -- 坐骑数据初始化并显示
     self:initMountData()
     -- 坐骑显示模型和消耗材料
@@ -265,15 +278,16 @@ function mountMain:initDisplayData()
     -- 只初始化灵兽页面（确保显示灵兽升阶标签）
     self:initPetTab()
 end
+
 function mountMain:Enter(data)
     if data and data.type then
         -- dump(data)
         self.rightTabs = FGUI:getController(self.component, "rightTabs")
         FGUI:Controller_setSelectedIndex(self.rightTabs, tonumber(data.type))
-        if data.type == 0  then
+        if data.type == 0 then
             --灵兽
             --直接选中当前出战的
-            for w=1,#self._dataForPet.allPets do
+            for w = 1, #self._dataForPet.allPets do
                 if self._dataForPet.allPets[w].ID == self._dataForPet.selectViewPetId then
                     self.selectPetIndex = w
                 end
@@ -295,9 +309,9 @@ function mountMain:Enter(data)
                 --幻化
                 local results = self._dataForMount.hhSortList
                 -- dump(results)
-                for i=1,#results do
+                for i = 1, #results do
                     if results[i].Name == data.name then
-                        self.nowIndex = i -1
+                        self.nowIndex = i - 1
                     end
                 end
                 self.leftList = self._ui.leftList
@@ -312,8 +326,8 @@ function mountMain:Enter(data)
                 -- 设置列表渲染
                 self:setupHuanhuaList()
                 -- 绑定幻化按钮事件
-                FGUI:setOnClickEvent(self._ui.huanhua, function() 
-                    self._data:setModel({mountId = self.modelId})
+                FGUI:setOnClickEvent(self._ui.huanhua, function()
+                    self._data:setModel({ mountId = self.modelId })
                 end)
                 -- 更新模型和按钮状态
                 self:updateModel()
@@ -324,47 +338,48 @@ function mountMain:Enter(data)
                 self.topTabs = FGUI:getController(self.component, "topTabs")
                 FGUI:Controller_setSelectedIndex(self.topTabs, 0)
                 --坐骑
-            end 
+            end
         end
     end
 end
+
 -- 初始化界面UI
 function mountMain:initVariables()
     -- 坐骑UI元素引用
-    self.topTabList = FGUI:ui_delegate(self._ui.topTabList)   -- 坐骑顶部标签列表
+    self.topTabList = FGUI:ui_delegate(self._ui.topTabList)     -- 坐骑顶部标签列表
     self.rightTabList = FGUI:ui_delegate(self._ui.rightTabList) -- 右上标签列表
-    self.leftList = FGUI:ui_delegate(self._ui.leftList)    -- 坐骑幻化列表
-    self.mountBody = FGUI:UIModel_Bind(self._ui.mountBody) -- 坐骑模型
+    self.leftList = FGUI:ui_delegate(self._ui.leftList)         -- 坐骑幻化列表
+    self.mountBody = FGUI:UIModel_Bind(self._ui.mountBody)      -- 坐骑模型
     self.uiTouch = FGUI:GetChild(self.component, "mountModel")
     -- 坐骑UI元素引用
-    self.jieshuName = FGUI:ui_delegate(self._ui.jieshu)   -- 坐骑阶数
-    self.xxshu = FGUI:ui_delegate(self._ui.xxshu)     -- 坐骑星星数
-    self.currentMountAttr = FGUI:ui_delegate(self._ui.nowAttr)  -- 坐骑当前属性
-    self.nextMountAttr = FGUI:ui_delegate(self._ui.nextAttr)    -- 坐骑下级属性
-    self.huanhuaAttr = FGUI:ui_delegate(self._ui.huanhuaAttr)   -- 坐骑幻化属性
+    self.jieshuName = FGUI:ui_delegate(self._ui.jieshu)        -- 坐骑阶数
+    self.xxshu = FGUI:ui_delegate(self._ui.xxshu)              -- 坐骑星星数
+    self.currentMountAttr = FGUI:ui_delegate(self._ui.nowAttr) -- 坐骑当前属性
+    self.nextMountAttr = FGUI:ui_delegate(self._ui.nextAttr)   -- 坐骑下级属性
+    self.huanhuaAttr = FGUI:ui_delegate(self._ui.huanhuaAttr)  -- 坐骑幻化属性
 
     -- 灵兽UI元素引用（与坐骑结构一致）
-    self.petTopTabList = FGUI:ui_delegate(self._ui.petTopTabList)   -- 灵兽顶部标签列表
-    self.petBody = FGUI:UIModel_Bind(self._ui.petBody) -- 灵兽模型
+    self.petTopTabList = FGUI:ui_delegate(self._ui.petTopTabList) -- 灵兽顶部标签列表
+    self.petBody = FGUI:UIModel_Bind(self._ui.petBody)            -- 灵兽模型
     self.petUiTouch = FGUI:GetChild(self.component, "petModel")
     -- 灵兽UI元素引用
-    self.petJieshuName = FGUI:ui_delegate(self._ui.petJieshu)   -- 灵兽阶数
-    self.petXxshu = FGUI:ui_delegate(self._ui.petxxshu)     -- 灵兽星星数
-    self.currentPetAttr = FGUI:ui_delegate(self._ui.petNowAttr)  -- 灵兽当前属性
-    self.nextPetAttr = FGUI:ui_delegate(self._ui.petNextAttr)    -- 灵兽下级属性
-    self.petHuanhuaAttr = FGUI:ui_delegate(self._ui.petHuanhuaAttr)   -- 灵兽幻化属性
+    self.petJieshuName = FGUI:ui_delegate(self._ui.petJieshu)       -- 灵兽阶数
+    self.petXxshu = FGUI:ui_delegate(self._ui.petxxshu)             -- 灵兽星星数
+    self.currentPetAttr = FGUI:ui_delegate(self._ui.petNowAttr)     -- 灵兽当前属性
+    self.nextPetAttr = FGUI:ui_delegate(self._ui.petNextAttr)       -- 灵兽下级属性
+    self.petHuanhuaAttr = FGUI:ui_delegate(self._ui.petHuanhuaAttr) -- 灵兽幻化属性
 
     -- 初始化索引变量
-    self.nowPetHHIndex = 0  -- 灵兽幻化当前选中索引
+    self.nowPetHHIndex = 0 -- 灵兽幻化当前选中索引
 
     ---- 以下为tips界面
-    self.tipsControlle = FGUI:getController(self.component,"tips")
+    self.tipsControlle = FGUI:getController(self.component, "tips")
 
     --适配pc端UI
     local isPC = SL:GetValue("IS_PC_OPER_MODE")
     local screenW = SL:GetValue("SCREEN_WIDTH")
     local screenH = SL:GetValue("SCREEN_HEIGHT")
-    if isPC then 
+    if isPC then
         FGUI:setScale(self.component, 0.75, 0.75)
         FGUI:setPosition(self.component, screenW / 2, screenH / 2)
         FGUI:setAnchorPoint(self.component, 0.5, 0.5, true)
@@ -379,21 +394,22 @@ function mountMain:initVariables()
             --print("PC端调整rightTabList位置: 原X=" .. listX .. ", 新X=" .. newX)
         end
     end
-
 end
+
 -- 初始化标签和列表
 function mountMain:initTabsAndLists()
     -- 设置默认选中标签
-    FGUI:GList_setSelectedIndex(self._ui.topTabList, TAB_TYPE.MOUNT)   -- 0坐骑 1幻化
-    FGUI:GList_setSelectedIndex(self._ui.rightTabList, 0)               -- 0灵兽 1坐骑
+    FGUI:GList_setSelectedIndex(self._ui.topTabList, TAB_TYPE.MOUNT) -- 0坐骑 1幻化
+    FGUI:GList_setSelectedIndex(self._ui.rightTabList, 0)            -- 0灵兽 1坐骑
     FGUI:GList_setSelectedIndex(self.leftList, 0)
 
     -- 灵兽标签
-    FGUI:GList_setSelectedIndex(self._ui.petTopTabList, 0)   -- 0灵兽 1幻化
+    FGUI:GList_setSelectedIndex(self._ui.petTopTabList, 0) -- 0灵兽 1幻化
     FGUI:GList_setSelectedIndex(self._ui.petLeftList, 0)
     -- 绑定灵兽相关按钮事件
     self:bindPetButtonsEvents()
 end
+
 -- 绑定事件监听
 function mountMain:bindEvents()
     -- 坐骑顶部标签切换事件
@@ -452,74 +468,74 @@ function mountMain:bindEvents()
 
     ---- 以下为tips界面
     -- 灵兽页面tips按钮 (n110: rightTabs=0, topTabs=0)
-    FGUI:setOnClickEvent(self._ui.n110,function()
+    FGUI:setOnClickEvent(self._ui.n110, function()
         local tipsbg = FGUI:ui_delegate(self._ui.n114)
         local tipinfoScro = FGUI:ui_delegate(tipsbg.infoScro)
         FGUI:GTextField_setText(tipsbg.title, "灵兽页面功能说明")
         FGUI:GRichTextField_setText(tipinfoScro['n3'], Pet.Tips)
-        FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
-        FGUI:Controller_setSelectedIndex(self.tipsControlle,1)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle, 0)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle, 1)
 
         -- 绑定关闭按钮事件
-        FGUI:setOnClickEvent(tipsbg.closetips,function()
-            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        FGUI:setOnClickEvent(tipsbg.closetips, function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle, 0)
         end)
-        FGUI:setOnClickEvent(tipsbg.bg,function()
-            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        FGUI:setOnClickEvent(tipsbg.bg, function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle, 0)
         end)
     end)
 
     -- 灵兽幻化页面tips按钮 (n111: rightTabs=0, topTabs=1)
-    FGUI:setOnClickEvent(self._ui.n111,function()
+    FGUI:setOnClickEvent(self._ui.n111, function()
         local tipsbg = FGUI:ui_delegate(self._ui.n114)
         local tipinfoScro = FGUI:ui_delegate(tipsbg.infoScro)
         FGUI:GTextField_setText(tipsbg.title, "灵兽幻化功能说明")
         FGUI:GRichTextField_setText(tipinfoScro['n3'], PetHuanhua.Tips)
-        FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
-        FGUI:Controller_setSelectedIndex(self.tipsControlle,1)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle, 0)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle, 1)
 
         -- 绑定关闭按钮事件
-        FGUI:setOnClickEvent(tipsbg.closetips,function()
-            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        FGUI:setOnClickEvent(tipsbg.closetips, function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle, 0)
         end)
-        FGUI:setOnClickEvent(tipsbg.bg,function()
-            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        FGUI:setOnClickEvent(tipsbg.bg, function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle, 0)
         end)
     end)
 
     -- 坐骑页面tips按钮 (n112: rightTabs=1, topTabs=0)
-    FGUI:setOnClickEvent(self._ui.n112,function()
+    FGUI:setOnClickEvent(self._ui.n112, function()
         local tipsbg = FGUI:ui_delegate(self._ui.n114)
         local tipinfoScro = FGUI:ui_delegate(tipsbg.infoScro)
         FGUI:GTextField_setText(tipsbg.title, "坐骑页面功能说明")
         FGUI:GRichTextField_setText(tipinfoScro['n3'], Mount.Tips)
-        FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
-        FGUI:Controller_setSelectedIndex(self.tipsControlle,1)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle, 0)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle, 1)
 
         -- 绑定关闭按钮事件
-        FGUI:setOnClickEvent(tipsbg.closetips,function()
-            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        FGUI:setOnClickEvent(tipsbg.closetips, function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle, 0)
         end)
-        FGUI:setOnClickEvent(tipsbg.bg,function()
-            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        FGUI:setOnClickEvent(tipsbg.bg, function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle, 0)
         end)
     end)
 
     -- 坐骑幻化页面tips按钮 (n113: rightTabs=1, topTabs=1)
-    FGUI:setOnClickEvent(self._ui.n113,function()
+    FGUI:setOnClickEvent(self._ui.n113, function()
         local tipsbg = FGUI:ui_delegate(self._ui.n114)
         local tipinfoScro = FGUI:ui_delegate(tipsbg.infoScro)
         FGUI:GTextField_setText(tipsbg.title, "坐骑幻化功能说明")
         FGUI:GRichTextField_setText(tipinfoScro['n3'], MountHuanhua.Tips)
-        FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
-        FGUI:Controller_setSelectedIndex(self.tipsControlle,1)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle, 0)
+        FGUI:Controller_setSelectedIndex(self.tipsControlle, 1)
 
         -- 绑定关闭按钮事件
-        FGUI:setOnClickEvent(tipsbg.closetips,function()
-            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        FGUI:setOnClickEvent(tipsbg.closetips, function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle, 0)
         end)
-        FGUI:setOnClickEvent(tipsbg.bg,function()
-            FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
+        FGUI:setOnClickEvent(tipsbg.bg, function()
+            FGUI:Controller_setSelectedIndex(self.tipsControlle, 0)
         end)
     end)
 end
@@ -577,10 +593,10 @@ function mountMain:setPetBTAtta()
     local classIds = Pet[stars] and Pet[stars].ClassID or {}
     local nextClassIds = Pet[nextStars] and Pet[nextStars].ClassID or {}
     for b = 1, #classIds do
-        table.insert(result1, {tonumber(classIds[b][1]), tonumber(classIds[b][2])})
+        table.insert(result1, { tonumber(classIds[b][1]), tonumber(classIds[b][2]) })
     end
     for b = 1, #nextClassIds do
-        table.insert(result2, {tonumber(nextClassIds[b][1]), tonumber(nextClassIds[b][2])})
+        table.insert(result2, { tonumber(nextClassIds[b][1]), tonumber(nextClassIds[b][2]) })
     end
     -- 渲染属性列表
     self:renderAttributeList(self.currentPetAttr["n15"], result1)
@@ -611,7 +627,7 @@ function mountMain:setPetDQZQSx(stars)
         local classIds = Pet[stars] and Pet[stars].ClassID or {}
         -- 格式化属性数据
         for b = 1, #classIds do
-            table.insert(result, {tonumber(classIds[b][1]), tonumber(classIds[b][2])})
+            table.insert(result, { tonumber(classIds[b][1]), tonumber(classIds[b][2]) })
         end
     end
     -- 渲染属性列表
@@ -629,7 +645,7 @@ function mountMain:setPetXJZQSx(stars)
     local classIds = Pet[nextStars] and Pet[nextStars].ClassID or {}
     -- 格式化属性数据
     for b = 1, #classIds do
-        table.insert(result, {tonumber(classIds[b][1]), tonumber(classIds[b][2])})
+        table.insert(result, { tonumber(classIds[b][1]), tonumber(classIds[b][2]) })
     end
     -- 渲染属性列表
     self:renderAttributeList(self.nextPetAttr["n15"], result)
@@ -670,11 +686,11 @@ function mountMain:setPetModel(modelId, offsetY, scale)
     end
     FGUI:UIModel_clear(self.petBody)
     self._petModelIndex = FGUI:UIModel_addLegoModel(
-        self.petBody, 
-        modelId, 
-        {x = 0, y = offsetY or 0, z = 0}, 
-        {x = 0, y = 180, z = 0}, 
-        {x = scale or 1, y = scale or 1, z = scale or 1}, 
+        self.petBody,
+        modelId,
+        { x = 0, y = offsetY or 0, z = 0 },
+        { x = 0, y = 180, z = 0 },
+        { x = scale or 1, y = scale or 1, z = scale or 1 },
         false
     )
     print("模型添加完成, index:", self._petModelIndex)
@@ -741,7 +757,7 @@ function mountMain:setPetXhcl()
 
     local costs = {}
     local iconItem = FGUI:GetChild(self._ui.petXhcl, "iconItem")
-    local iconItem2 = FGUI:GetChild(self._ui.petXhcl, "iconItem2")  -- 第二个消耗图标
+    local iconItem2 = FGUI:GetChild(self._ui.petXhcl, "iconItem2") -- 第二个消耗图标
     FGUI:setVisible(self._ui.n85, true)
     FGUI:setVisible(self._ui.petXhcl, true)
     -- 清除旧图标
@@ -815,14 +831,14 @@ function mountMain:setPetXhcl()
             print("使用配置等级:", nowGrade, "Cost:", costs)
         end
     end
-    
+
     -- 检查是否是多重消耗格式
     local isMultiCost = (type(costs[1]) == "table")
-    
+
     if isMultiCost then
         -- 多重消耗格式：{[1] = {[1] = itemId, [2] = num}, [2] = {[1] = itemId, [2] = num}}
         print("检测到多重消耗，共", #costs, "个材料")
-        
+
         -- 显示第二个消耗（如果存在）
         if #costs >= 2 and iconItem2 then
             local cost2 = costs[2]
@@ -830,7 +846,7 @@ function mountMain:setPetXhcl()
             local num2 = tonumber(cost2[2])
             local itemData2 = SL:GetValue("ITEM_DATA", itemId2)
             print("第二个物品ID:", itemId2, "需要数量:", num2, "物品数据:", itemData2)
-            
+
             -- 创建物品显示
             local extData2 = {}
             extData2.hideTip = false
@@ -839,9 +855,9 @@ function mountMain:setPetXhcl()
             extData2.doubleClickCallback = false
             extData2.bgVisible = true
             ItemUtil:ItemShow_Create(itemData2, iconItem2, extData2)
-            
+
             -- 设置数量显示和颜色
-            local itemNum2 = FGUI:GetChild(self._ui.petXhcl, "n4")  -- 第二个消耗数量
+            local itemNum2 = FGUI:GetChild(self._ui.petXhcl, "n4") -- 第二个消耗数量
             local fuhao2 = FGUI:GetChild(self._ui.petXhcl, "n3")   -- 第二个消耗符号
             if itemNum2 then
                 local haveNum2 = SL:GetValue(TITEMCOUNT, itemId2)
@@ -858,14 +874,14 @@ function mountMain:setPetXhcl()
             end
             FGUI:setVisible(iconItem2, true)
         end
-        
+
         -- 设置第一个消耗
         local cost1 = costs[1]
         local itemId1 = tonumber(cost1[1])
         local num1 = tonumber(cost1[2])
         local itemData1 = SL:GetValue("ITEM_DATA", itemId1)
         print("第一个物品ID:", itemId1, "需要数量:", num1, "物品数据:", itemData1)
-        
+
         -- 创建物品显示
         local extData1 = {}
         extData1.hideTip = false
@@ -874,7 +890,7 @@ function mountMain:setPetXhcl()
         extData1.doubleClickCallback = false
         extData1.bgVisible = true
         ItemUtil:ItemShow_Create(itemData1, iconItem, extData1)
-        
+
         -- 设置数量显示和颜色
         local itemNum = FGUI:GetChild(self._ui.petXhcl, "n2")
         local fuhao = FGUI:GetChild(self._ui.petXhcl, "n1")
@@ -895,13 +911,13 @@ function mountMain:setPetXhcl()
         local fuhao2 = FGUI:GetChild(self._ui.petXhcl, "n3")
         if itemNum2 then FGUI:setVisible(itemNum2, false) end
         if fuhao2 then FGUI:setVisible(fuhao2, false) end
-        
+
         -- 设置第一个消耗
         local num = costs[2]
         local itemId = tonumber(costs[1])
         local itemData = SL:GetValue("ITEM_DATA", itemId)
         print("物品ID:", itemId, "需要数量:", num, "物品数据:", itemData)
-        
+
         -- 创建物品显示
         local extData = {}
         extData.hideTip = false
@@ -910,7 +926,7 @@ function mountMain:setPetXhcl()
         extData.doubleClickCallback = false
         extData.bgVisible = true
         ItemUtil:ItemShow_Create(itemData, iconItem, extData)
-        
+
         -- 设置数量显示和颜色
         local itemNum = FGUI:GetChild(self._ui.petXhcl, "n2")
         local fuhao = FGUI:GetChild(self._ui.petXhcl, "n1")
@@ -949,7 +965,7 @@ function mountMain:updatePetView()
     print("allJieshu:", self._dataForPet.allJieshu)
     print("modelId:", self._dataForPet.modelId)
     print("isPetChuzhan:", self._dataForPet.isPetChuzhan)
-    
+
     -- 灵兽模型独立更新，不受坐骑出战状态影响
     -- 优先使用服务端返回的showPetModelId（幻化后的模型）
     if self._dataForPet.showPetModelId and self._dataForPet.showPetModelId > 0 then
@@ -957,7 +973,8 @@ function mountMain:updatePetView()
         print("updatePetView: 使用幻化模型ID:", self.modelId)
     else
         -- 使用基础模型
-        self.modelId = self._dataForPet.modelId or (Pet[self._dataForPet.allJieshu] and Pet[self._dataForPet.allJieshu].Model) or 800001
+        self.modelId = self._dataForPet.modelId or
+        (Pet[self._dataForPet.allJieshu] and Pet[self._dataForPet.allJieshu].Model) or 800001
         print("updatePetView: 使用基础模型ID:", self.modelId)
     end
     if self.modelId then
@@ -979,7 +996,7 @@ function mountMain:bindPetButtonsEvents()
 
     -- 幻化按钮事件
     FGUI:setOnClickEvent(self._ui.petHuanhua, function()
-        self._data:setPetModel({mountId = self.modelId})
+        self._data:setPetModel({ mountId = self.modelId })
     end)
 
     -- 激活/升阶按钮事件
@@ -993,13 +1010,13 @@ function mountMain:bindPetButtonsEvents()
                 if Pet[1] and Pet[1].Cost then
                     local costs = Pet[1].Cost
                     local isMultiCost = (type(costs[1]) == "table")
-                    
+
                     if isMultiCost then
                         -- 多重消耗：传递完整的消耗数组
-                        self._data:lsjihuo({costs = costs})
+                        self._data:lsjihuo({ costs = costs })
                     else
                         -- 单消耗格式（兼容旧数据）
-                        self._data:lsjihuo({itemId = costs[1]})
+                        self._data:lsjihuo({ itemId = costs[1] })
                     end
                 else
                     print("Pet[1]配置不存在或缺少Cost字段")
@@ -1011,13 +1028,13 @@ function mountMain:bindPetButtonsEvents()
                 if Pet[nextLevel] and Pet[nextLevel].Cost then
                     local costs = Pet[nextLevel].Cost
                     local isMultiCost = (type(costs[1]) == "table")
-                    
+
                     if isMultiCost then
                         -- 多重消耗：传递完整的消耗数组
                         self._data:levelUp({
                             name = Pet[nextLevel].Name or "灵兽",
                             maxLv = #Pet,
-                            costs = costs  -- 传递完整的消耗数组
+                            costs = costs -- 传递完整的消耗数组
                         })
                     else
                         -- 单消耗格式（兼容旧数据）
@@ -1138,7 +1155,7 @@ function mountMain:initPetHuanhuaTab()
     self:setupPetHuanhuaList()
     -- 绑定幻化按钮事件
     FGUI:setOnClickEvent(self._ui.petHuanhua, function()
-        self._data:setPetModel({mountId = self.modelId})
+        self._data:setPetModel({ mountId = self.modelId })
     end)
     -- 更新模型和按钮状态
     if self.modelId then
@@ -1210,12 +1227,18 @@ function mountMain:setPetHHSx()
         FGUI:setPosition(self.petHuanhuaAttr.buffText, 15, hhbuffTextHeight)
         -- 渲染属性列表
         FGUI:GList_itemRenderer(self.petHuanhuaAttr["sxlist"], function(index, item)
-            local label = AttScoreNames[sx[index + 1][1]].Name .. ":"
-            local value = sx[index + 1][2]
+            local attrId = sx[index + 1][1]
+            local attrValue = sx[index + 1][2]
+            local label = AttScoreNames[attrId].Name .. ":"
             local itemLabel = FGUI:GetChild(item, "label")
             local itemValue = FGUI:GetChild(item, "zhi")
+            -- 检查是否需要显示为百分比
+            local valueText = attrValue
+            if PercentAttrConfig[attrId] then
+                valueText = math.floor(attrValue / 100) .. "%"
+            end
             FGUI:GTextField_setText(itemLabel, label)
-            FGUI:GTextField_setText(itemValue, value)
+            FGUI:GTextField_setText(itemValue, valueText)
         end)
         FGUI:GList_setNumItems(self.petHuanhuaAttr["sxlist"], #sx)
     else
@@ -1230,7 +1253,7 @@ function mountMain:setupPetHuanhuaList()
         if not self._dataForPet.hhSortList or #self._dataForPet.hhSortList == 0 then
             return
         end
-        local itemData = self._dataForPet.hhSortList[idx+1]
+        local itemData = self._dataForPet.hhSortList[idx + 1]
         local controller = FGUI:getController(item, "checked")
         local controller2 = FGUI:getController(item, "isActivation")
         FGUI:Controller_setSelectedIndex(controller, 0)
@@ -1279,16 +1302,16 @@ function mountMain:onPetHuanhuaActivateOrUpgrade()
     if not self._dataForPet.hhSortList or #self._dataForPet.hhSortList == 0 then
         return
     end
-    
+
     local sendData = {}
     local jhhhlist = {}
     local yijihuocishu = 0
     local selectData = self._dataForPet.hhSortList[self.nowPetHHIndex + 1]
-    
+
     if not selectData then
         return
     end
-    
+
     -- 获取当前激活次数
     if self._dataForPet.hhlistsj[selectData.Name] and self._dataForPet.hhlistsj[selectData.Name] > 0 then
         yijihuocishu = self._dataForPet.hhlistsj[selectData.Name]
@@ -1381,7 +1404,7 @@ function mountMain:SelectedPetHH()
     for i = 1, #itemList do
         local controller = FGUI:getController(itemList[i], "checked")
         FGUI:Controller_setSelectedIndex(controller, 0)
-        if self.nowPetHHIndex == i-1 then
+        if self.nowPetHHIndex == i - 1 then
             FGUI:Controller_setSelectedIndex(controller, 1)
         end
     end
@@ -1401,7 +1424,7 @@ function mountMain:initMountData()
     else
         FGUI:setVisible(self._ui.qhbtn, true)
         FGUI:GTextField_setText(sjtitle, "升阶")
-        if self._dataForMount.ischuzhan == STATUS.FIGHT then 
+        if self._dataForMount.ischuzhan == STATUS.FIGHT then
             FGUI:GTextField_setText(title, "出战")
         else
             FGUI:GTextField_setText(title, "休息")
@@ -1430,7 +1453,7 @@ function mountMain:initMountTab()
         local title = FGUI:GetChild(self._ui.qhbtn, "title")
         FGUI:setVisible(self._ui.qhbtn, true)
         FGUI:GTextField_setText(sjtitle, "升阶")
-        if self._dataForMount.ischuzhan == STATUS.FIGHT then 
+        if self._dataForMount.ischuzhan == STATUS.FIGHT then
             FGUI:GTextField_setText(title, "出战")
         else
             FGUI:GTextField_setText(title, "休息")
@@ -1467,18 +1490,18 @@ end
 -- 初始化幻化标签
 function mountMain:initHuanhuaTab()
     print("=== initHuanhuaTab 开始 ===")
-    
+
     -- 从数据管理器重新获取最新数据,确保切换标签时有正确数据
     self._dataForMount = self._data:GetDataForMount()
-    
+
     print("坐骑幻化列表数量:", self._dataForMount.hhSortList and #self._dataForMount.hhSortList or 0)
-    
+
     self.leftList = self._ui.leftList
     self.nowIndex = FGUI:GList_getSelectedIndex(self.leftList)
     if self.nowIndex < 0 then
         self.nowIndex = 0
     end
-    
+
     -- 检查幻化列表是否为空
     if not self._dataForMount.hhSortList or #self._dataForMount.hhSortList == 0 then
         print("坐骑幻化列表为空，不更新显示")
@@ -1490,19 +1513,19 @@ function mountMain:initHuanhuaTab()
         print("=== initHuanhuaTab 完成（无数据） ===")
         return
     end
-    
+
     -- 显示幻化相关UI
     FGUI:setVisible(self._ui.huanhuaAttr, true)
     FGUI:setVisible(self._ui.huanhua, true)
     FGUI:setVisible(self._ui.n60, true)
-    
+
     -- 确保索引在有效范围内
     if self.nowIndex >= #self._dataForMount.hhSortList then
         self.nowIndex = 0
     end
-    
+
     print("当前索引:", self.nowIndex)
-    
+
     self:updateMainTitle()
     -- 获取排序后的幻化列表
     self.modelId = self._dataForMount.hhSortList[self.nowIndex + 1].Model
@@ -1512,14 +1535,14 @@ function mountMain:initHuanhuaTab()
     -- 设置列表渲染
     self:setupHuanhuaList()
     -- 绑定幻化按钮事件
-    FGUI:setOnClickEvent(self._ui.huanhua, function() 
-        self._data:setModel({mountId = self.modelId})
+    FGUI:setOnClickEvent(self._ui.huanhua, function()
+        self._data:setModel({ mountId = self.modelId })
     end)
     -- 更新模型和按钮状态
     self:updateModel()
     self:setHHAddBtn()
     self:UpdateHHBtnName()
-    
+
     print("=== initHuanhuaTab 完成 ===")
 end
 
@@ -1533,7 +1556,7 @@ function mountMain:setHHAddBtn()
     -- 收集同名的幻化配置
     for i = 1, #MountHuanhua do
         if MountHuanhua[i].Name == nowName then
-            results[#results + 1] = MountHuanhua[i] 
+            results[#results + 1] = MountHuanhua[i]
         end
     end
     -- 判断是否已激活
@@ -1552,7 +1575,7 @@ end
 -- 设置幻化列表渲染
 function mountMain:setupHuanhuaList()
     FGUI:GList_itemRenderer(self._ui.leftList, function(idx, item)
-        local itemData = self._dataForMount.hhSortList[idx+1]
+        local itemData = self._dataForMount.hhSortList[idx + 1]
         local controller = FGUI:getController(item, "checked")
         local controller2 = FGUI:getController(item, "isActivation")
         FGUI:Controller_setSelectedIndex(controller, 0)
@@ -1593,7 +1616,7 @@ function mountMain:onHuanhuaActivateOrUpgrade()
     local sendData = {}
     local jhhhlist = {}
     local yijihuocishu = 0
-    local selectData = self._dataForMount.hhSortList[self.nowIndex+1]
+    local selectData = self._dataForMount.hhSortList[self.nowIndex + 1]
     -- 获取当前激活次数
     if self._dataForMount.hhlistsj[selectData.Name] and self._dataForMount.hhlistsj[selectData.Name] > 0 then
         yijihuocishu = self._dataForMount.hhlistsj[selectData.Name]
@@ -1626,7 +1649,7 @@ function mountMain:SelectedHH()
     for i = 1, #itemList do
         local controller = FGUI:getController(itemList[i], "checked")
         FGUI:Controller_setSelectedIndex(controller, 0)
-        if self.nowIndex == i-1 then
+        if self.nowIndex == i - 1 then
             FGUI:Controller_setSelectedIndex(controller, 1)
         end
     end
@@ -1723,12 +1746,18 @@ function mountMain:setMountHHSx()
     FGUI:GTextField_setText(self.huanhuaAttr.buffText, buffText)
     -- 渲染属性列表
     FGUI:GList_itemRenderer(self.huanhuaAttr["sxlist"], function(index, item)
-        local label = AttScoreNames[sx[index + 1][1]].Name .. ":"
-        local value = sx[index + 1][2]
+        local attrId = sx[index + 1][1]
+        local attrValue = sx[index + 1][2]
+        local label = AttScoreNames[attrId].Name .. ":"
         local itemLabel = FGUI:GetChild(item, "label")
         local itemValue = FGUI:GetChild(item, "zhi")
+        -- 检查是否需要显示为百分比
+        local valueText = attrValue
+        if PercentAttrConfig[attrId] then
+            valueText = math.floor(attrValue / 100) .. "%"
+        end
         FGUI:GTextField_setText(itemLabel, label)
-        FGUI:GTextField_setText(itemValue, value)
+        FGUI:GTextField_setText(itemValue, valueText)
     end)
     FGUI:GList_setNumItems(self.huanhuaAttr["sxlist"], #sx)
 end
@@ -1741,7 +1770,7 @@ function mountMain:setMountDQZQSx()
         local classIds = Mount[stars].ClassID
         -- 格式化属性数据
         for b = 1, #classIds do
-            table.insert(result, {tonumber(classIds[b][1]), tonumber(classIds[b][2])})
+            table.insert(result, { tonumber(classIds[b][1]), tonumber(classIds[b][2]) })
         end
     end
     -- 渲染属性列表
@@ -1763,7 +1792,7 @@ function mountMain:setMountXJZQSx()
     local classIds = Mount[stars].ClassID
     -- 格式化属性数据
     for b = 1, #classIds do
-        table.insert(result, {tonumber(classIds[b][1]), tonumber(classIds[b][2])})
+        table.insert(result, { tonumber(classIds[b][1]), tonumber(classIds[b][2]) })
     end
     -- 渲染属性列表
     self:renderAttributeList(self.nextMountAttr["n15"], result)
@@ -1772,8 +1801,9 @@ end
 -- 渲染属性列表（通用方法）
 function mountMain:renderAttributeList(list, attributes)
     FGUI:GList_itemRenderer(list, function(index, item)
-        local label = AttScoreNames[attributes[index + 1][1]].Name .. ":"
-        local value = attributes[index + 1][2]
+        local attrId = attributes[index + 1][1]
+        local attrValue = attributes[index + 1][2]
+        local label = AttScoreNames[attrId].Name .. ":"
         local itemLabel = FGUI:GetChild(item, "label")
         local itemValue = FGUI:GetChild(item, "zhi")
         local isDouble = FGUI:getController(item, 'isDouble')
@@ -1783,9 +1813,14 @@ function mountMain:renderAttributeList(list, attributes)
         else
             FGUI:Controller_setSelectedIndex(isDouble, 1)
         end
+        -- 检查是否需要显示为百分比
+        local valueText = attrValue
+        if PercentAttrConfig[attrId] then
+            valueText = math.floor(attrValue / 100) .. "%"
+        end
         -- 设置属性文本
         FGUI:GTextField_setText(itemLabel, label)
-        FGUI:GTextField_setText(itemValue, value)
+        FGUI:GTextField_setText(itemValue, valueText)
     end)
     FGUI:GList_setNumItems(list, #attributes)
 end
@@ -1796,11 +1831,11 @@ function mountMain:updateModel()
     FGUI:UIModel_clear(self.mountBody)
     -- 添加新模型
     self._modelIndex = FGUI:UIModel_addLegoModel(
-        self.mountBody, 
-        self.modelId, 
-        {x = 0, y = 0, z = 0}, 
-        {x = 0, y = 180, z = 0}, 
-        {x = 1.1, y = 1.1, z = 1.1}, 
+        self.mountBody,
+        self.modelId,
+        { x = 0, y = 0, z = 0 },
+        { x = 0, y = 180, z = 0 },
+        { x = 1.1, y = 1.1, z = 1.1 },
         false
     )
     FGUI:UIModel_setObjectEulerAngles(self.mountBody, 0, 0, 0, 0)
@@ -1843,7 +1878,7 @@ end
 function mountMain:setXHCL()
     local costs = {}
     local iconItem = FGUI:GetChild(self._ui.xhcl, "iconItem")
-    local iconItem2 = FGUI:GetChild(self._ui.xhcl, "iconItem2")  -- 第二个消耗图标
+    local iconItem2 = FGUI:GetChild(self._ui.xhcl, "iconItem2") -- 第二个消耗图标
     FGUI:setVisible(self._ui.n34, true)
     FGUI:setVisible(self._ui.xhcl, true)
     -- 清除旧图标
@@ -1874,7 +1909,7 @@ function mountMain:setXHCL()
         -- 收集同名的幻化配置
         for i = 1, #MountHuanhua do
             if MountHuanhua[i].Name == nowName then
-                results[#results + 1] = MountHuanhua[i] 
+                results[#results + 1] = MountHuanhua[i]
             end
         end
         -- 计算当前等级
@@ -1890,14 +1925,14 @@ function mountMain:setXHCL()
         end
         costs = results[nowGrade].Cost
     end
-    
+
     -- 检查是否是多重消耗格式
     local isMultiCost = (type(costs[1]) == "table")
-    
+
     if isMultiCost then
         -- 多重消耗格式：{[1] = {[1] = itemId, [2] = num}, [2] = {[1] = itemId, [2] = num}}
         print("检测到坐骑多重消耗，共", #costs, "个材料")
-        
+
         -- 显示第二个消耗（如果存在）
         if #costs >= 2 and iconItem2 then
             local cost2 = costs[2]
@@ -1905,7 +1940,7 @@ function mountMain:setXHCL()
             local num2 = tonumber(cost2[2])
             local itemData2 = SL:GetValue("ITEM_DATA", itemId2)
             print("坐骑第二个物品ID:", itemId2, "需要数量:", num2, "物品数据:", itemData2)
-            
+
             -- 创建物品显示
             local extData2 = {}
             extData2.hideTip = false
@@ -1914,9 +1949,9 @@ function mountMain:setXHCL()
             extData2.doubleClickCallback = false
             extData2.bgVisible = true
             ItemUtil:ItemShow_Create(itemData2, iconItem2, extData2)
-            
+
             -- 设置数量显示和颜色
-            local itemNum2 = FGUI:GetChild(self._ui.xhcl, "n4")  -- 第二个消耗数量
+            local itemNum2 = FGUI:GetChild(self._ui.xhcl, "n4") -- 第二个消耗数量
             local fuhao2 = FGUI:GetChild(self._ui.xhcl, "n3")   -- 第二个消耗符号
             if itemNum2 then
                 local haveNum2 = SL:GetValue(TITEMCOUNT, itemId2)
@@ -1933,14 +1968,14 @@ function mountMain:setXHCL()
             end
             FGUI:setVisible(iconItem2, true)
         end
-        
+
         -- 设置第一个消耗
         local cost1 = costs[1]
         local itemId1 = tonumber(cost1[1])
         local num1 = tonumber(cost1[2])
         local itemData1 = SL:GetValue("ITEM_DATA", itemId1)
         print("坐骑第一个物品ID:", itemId1, "需要数量:", num1, "物品数据:", itemData1)
-        
+
         -- 创建物品显示
         local extData1 = {}
         extData1.hideTip = false
@@ -1949,7 +1984,7 @@ function mountMain:setXHCL()
         extData1.doubleClickCallback = false
         extData1.bgVisible = true
         ItemUtil:ItemShow_Create(itemData1, iconItem, extData1)
-        
+
         -- 设置数量显示和颜色
         local itemNum = FGUI:GetChild(self._ui.xhcl, "n2")
         local fuhao = FGUI:GetChild(self._ui.xhcl, "n1")
@@ -1970,13 +2005,13 @@ function mountMain:setXHCL()
         local fuhao2 = FGUI:GetChild(self._ui.xhcl, "n3")
         if itemNum2 then FGUI:setVisible(itemNum2, false) end
         if fuhao2 then FGUI:setVisible(fuhao2, false) end
-        
+
         -- 设置第一个消耗
         local num = costs[2]
         local itemId = tonumber(costs[1])
         local itemData = SL:GetValue("ITEM_DATA", itemId)
         print("坐骑物品ID:", itemId, "需要数量:", num, "物品数据:", itemData)
-        
+
         -- 创建物品显示
         local extData = {}
         extData.hideTip = false
@@ -1985,7 +2020,7 @@ function mountMain:setXHCL()
         extData.doubleClickCallback = false
         extData.bgVisible = true
         ItemUtil:ItemShow_Create(itemData, iconItem, extData)
-        
+
         -- 设置数量显示和颜色
         local itemNum = FGUI:GetChild(self._ui.xhcl, "n2")
         local fuhao = FGUI:GetChild(self._ui.xhcl, "n1")
@@ -2000,7 +2035,5 @@ function mountMain:setXHCL()
         end
     end
 end
-
-
 
 return mountMain
