@@ -760,6 +760,12 @@ function mountMain:setPetXhcl()
     local iconItem2 = FGUI:GetChild(self._ui.petXhcl, "iconItem2") -- 第二个消耗图标
     FGUI:setVisible(self._ui.n85, true)
     FGUI:setVisible(self._ui.petXhcl, true)
+
+    -- 保存默认位置用于切换
+    if not self._petXhclDefaultPos then
+        self._petXhclDefaultPos = {FGUI:getPosition(self._ui.petXhcl)}
+        self._n104DefaultPos = {FGUI:getPosition(self._ui.n104)}
+    end
     -- 清除旧图标
     if FGUI:GetChildCount(iconItem) > 0 then
         FGUI:RemoveChildAt(iconItem, 0, true)
@@ -838,6 +844,12 @@ function mountMain:setPetXhcl()
     if isMultiCost then
         -- 多重消耗格式：{[1] = {[1] = itemId, [2] = num}, [2] = {[1] = itemId, [2] = num}}
         print("检测到多重消耗，共", #costs, "个材料")
+
+        -- 设置到默认位置
+        if self._petXhclDefaultPos then
+            FGUI:setPosition(self._ui.petXhcl, self._petXhclDefaultPos[1], self._petXhclDefaultPos[2])
+            FGUI:setPosition(self._ui.n104, self._n104DefaultPos[1], self._n104DefaultPos[2])
+        end
 
         -- 显示第二个消耗（如果存在）
         if #costs >= 2 and iconItem2 then
@@ -938,6 +950,12 @@ function mountMain:setPetXhcl()
         else
             FGUI:GTextField_setColor(itemNum, "#ff0000")
             FGUI:GTextField_setColor(fuhao, "#ff0000")
+        end
+
+        -- 单一材料时，控件右移50
+        if self._petXhclDefaultPos then
+            FGUI:setPosition(self._ui.petXhcl, self._petXhclDefaultPos[1] + 50, self._petXhclDefaultPos[2])
+            FGUI:setPosition(self._ui.n104, self._n104DefaultPos[1] + 50, self._n104DefaultPos[2])
         end
     end
     print("=== setPetXhcl 完成 ===")
@@ -1881,6 +1899,12 @@ function mountMain:setXHCL()
     local iconItem2 = FGUI:GetChild(self._ui.xhcl, "iconItem2") -- 第二个消耗图标
     FGUI:setVisible(self._ui.n34, true)
     FGUI:setVisible(self._ui.xhcl, true)
+
+    -- 保存默认位置用于切换
+    if not self._xhclDefaultPos then
+        self._xhclDefaultPos = {FGUI:getPosition(self._ui.xhcl)}
+        self._n34DefaultPos = {FGUI:getPosition(self._ui.n34)}
+    end
     -- 清除旧图标
     if FGUI:GetChildCount(iconItem) > 0 then
         FGUI:RemoveChildAt(iconItem, 0, true)
@@ -1932,6 +1956,12 @@ function mountMain:setXHCL()
     if isMultiCost then
         -- 多重消耗格式：{[1] = {[1] = itemId, [2] = num}, [2] = {[1] = itemId, [2] = num}}
         print("检测到坐骑多重消耗，共", #costs, "个材料")
+
+        -- 设置到默认位置
+        if self._xhclDefaultPos then
+            FGUI:setPosition(self._ui.xhcl, self._xhclDefaultPos[1], self._xhclDefaultPos[2])
+            FGUI:setPosition(self._ui.n34, self._n34DefaultPos[1], self._n34DefaultPos[2])
+        end
 
         -- 显示第二个消耗（如果存在）
         if #costs >= 2 and iconItem2 then
@@ -2032,6 +2062,12 @@ function mountMain:setXHCL()
         else
             FGUI:GTextField_setColor(itemNum, "#ff0000")
             FGUI:GTextField_setColor(fuhao, "#ff0000")
+        end
+
+        -- 单一材料时，控件右移50
+        if self._xhclDefaultPos then
+            FGUI:setPosition(self._ui.xhcl, self._xhclDefaultPos[1] + 50, self._xhclDefaultPos[2])
+            FGUI:setPosition(self._ui.n34, self._n34DefaultPos[1] + 50, self._n34DefaultPos[2])
         end
     end
 end
