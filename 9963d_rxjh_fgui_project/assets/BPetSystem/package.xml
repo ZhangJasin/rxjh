@@ -190,6 +190,10 @@
     <image id="gxww63" name="pet_008.png" path="/Images/touxiang/" exported="true"/>
     <image id="gxww64" name="pet_006.png" path="/Images/touxiang/" exported="true"/>
     <image id="gxww65" name="pet_007.png" path="/Images/touxiang/" exported="true"/>
+    <image id="mg2n66" name="pet_010.png" path="/Images/touxiang/" exported="true"/>
+    <image id="mg2n67" name="pet_011.png" path="/Images/touxiang/" exported="true"/>
+    <image id="mg2n68" name="pet_012.png" path="/Images/touxiang/" exported="true"/>
+    <image id="mg2n69" name="pet_009.png" path="/Images/touxiang/" exported="true"/>
   </resources>
   <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\BPetSystem" packageCount="2"/>
 </packageDescription>

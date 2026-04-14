@@ -315,6 +315,10 @@
     <image id="k9rffvh7" name="tips_content_bg_9.png" path="/Images/FindTarget/"/>
     <component id="cn2tfvh9" name="itemRoot.xml" path="/Components/Assist/" exported="true"/>
     <image id="rkdefvha" name="main_btn_st.png" path="/Images/Func/"/>
+    <image id="mg2nfvhb" name="pet_012.png" path="/Images/newmain/" exported="true"/>
+    <image id="mg2nfvhc" name="pet_011.png" path="/Images/newmain/" exported="true"/>
+    <image id="mg2nfvhd" name="pet_010.png" path="/Images/newmain/" exported="true"/>
+    <image id="mg2nfvhe" name="pet_009.png" path="/Images/newmain/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

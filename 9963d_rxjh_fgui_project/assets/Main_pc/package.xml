@@ -249,6 +249,10 @@
     <image id="k9rffvgu" name="main_team_word_di.png" path="/Images/Team/"/>
     <image id="k9rffvgv" name="main_team_word_select_di.png" path="/Images/Team/"/>
     <component id="cn2tfvgw" name="itemRoot.xml" path="/Components/Assist/" exported="true"/>
+    <image id="mg2nfvgx" name="pet_009.png" path="/Images/newmain/" exported="true"/>
+    <image id="mg2nfvgy" name="pet_010.png" path="/Images/newmain/" exported="true"/>
+    <image id="mg2nfvgz" name="pet_011.png" path="/Images/newmain/" exported="true"/>
+    <image id="mg2nfvh0" name="pet_012.png" path="/Images/newmain/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
