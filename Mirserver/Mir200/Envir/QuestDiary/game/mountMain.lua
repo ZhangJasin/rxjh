@@ -12,8 +12,32 @@ local SysConstant = require(
 local petlist = require("Envir/QuestDiary/game_config/cfgcsv/Pet.lua")
 local petHHlist = require("Envir/QuestDiary/game_config/cfgcsv/PetHuanhua.lua")
 
--- 灵兽额外加成比例(出战灵兽给予人物10%属性)
-local PetExtraRate = { attrRate = 0.1 }
+-- 灵兽属性转化比例配置表（按等级阶梯）
+-- 格式：{minLevel, maxLevel, rate}  表示 minLevel-maxLevel 等级段使用 rate 转化比例
+local PetLevelRateConfig = {
+    { 1,   10,  0.03 }, -- 1-10级 3%
+    { 11,  20,  0.04 }, -- 11-20级 4%
+    { 21,  30,  0.05 }, -- 21-30级 5%
+    { 31,  40,  0.06 }, -- 31-40级 6%
+    { 41,  50,  0.08 }, -- 41-50级 8%
+    { 51,  60,  0.10 }, -- 51-60级 10%
+    { 61,  70,  0.12 }, -- 61-70级 12%
+    { 71,  80,  0.15 }, -- 71-80级 15%
+    { 81,  90,  0.18 }, -- 81-90级 18%
+    { 91,  100, 0.18 }, -- 91-100级 21%
+    { 101, 110, 0.18 }, -- 101-110级 25%
+}
+
+-- 根据等级获取转化比例
+local function getPetAttrRateByLevel(level)
+    for _, config in ipairs(PetLevelRateConfig) do
+        if level >= config[1] and level <= config[2] then
+            return config[3]
+        end
+    end
+    -- 默认返回最低档比例
+    return PetLevelRateConfig[1][3]
+end
 
 -- 灵兽buff配置
 -- 110044: 灵兽出战属性（灵兽基础属性×10%）
@@ -305,11 +329,11 @@ function mountMain.updatePetAttrBuff(actor)
 
     -- 出战状态：设置所有属性
 
-    -- 设置灵兽基础属性×10%到 buff 110044
+    -- 设置灵兽基础属性×等级比例到 buff 110044
     delbuff(actor, PetBuffId)
     addbuff(actor, PetBuffId)
     local petAttr = mountMain.getPetAttrByLevel(allstar)
-    local attrRate = PetExtraRate.attrRate
+    local attrRate = getPetAttrRateByLevel(allstar)
     for attrId, attrValue in pairs(petAttr) do
         local finalValue = math.ceil(attrValue * attrRate)
         setbuffabil(actor, PetBuffId, tonumber(attrId), "=", finalValue)
