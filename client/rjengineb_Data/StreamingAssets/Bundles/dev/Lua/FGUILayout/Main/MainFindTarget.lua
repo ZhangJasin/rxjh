@@ -383,10 +383,10 @@ function MainFindTarget:AddMonsterActor(actorId)
         dis = self:GetActorDistance(actorId)
     end
     local data = {
-        id = actorId, 
+        id = actorId,
         dis = dis,
         name = SL:GetValue("ACTOR_NAME", actorId),
-        level = SL:GetValue("MONSTER_LEVEL", actorId),
+        level = SL:GetValue("ACTOR_LEVEL", actorId),
         sign = SL:GetValue("MONSTER_BOSS_SIGN", typeIndex),
         icon = SL:GetValue("MONSTER_ICON", typeIndex) or "",
     }
