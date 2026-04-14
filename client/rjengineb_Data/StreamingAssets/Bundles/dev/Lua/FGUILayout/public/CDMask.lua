@@ -1,7 +1,7 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
-local CdMask = class("CDMask", BaseFGUILayout)
+local CDMask = class("CDMask", BaseFGUILayout)
 
-function CdMask:Create()
+function CDMask:Create()
     self.super.Create(self)
 	self._ui                            = FGUI:ui_delegate(self.component)
     self._loader_image                  = self._ui.loader_image
@@ -12,7 +12,7 @@ function CdMask:Create()
     self._totalTimeDis                  = 0
 end
 
-function CdMask:DoCD()
+function CDMask:DoCD()
     local interval = 0.1
     local endTime = SL:GetValue("TIME") + self._doTimeDis
     local callPerOneSecond = function()
@@ -24,12 +24,12 @@ function CdMask:DoCD()
         end
         self._doTimeDis = endTime - SL:GetValue("TIME")
     end
-    
+
     callPerOneSecond()
     self._schedule = SL:Schedule(callPerOneSecond,0.1)
 end
 
-function CdMask:InitUI(parent,time,timeTotal,kind,isShowTime)
+function CDMask:InitUI(parent,time,timeTotal,kind,isShowTime)
     if not parent then
         SL:PrintEx("[ERROR] parent is nil")
         return
@@ -48,7 +48,7 @@ function CdMask:InitUI(parent,time,timeTotal,kind,isShowTime)
     self._totalTimeDis = timeTotal
 end
 
-function CdMask:UpdateTime(timeDis,timeTotal)
+function CDMask:UpdateTime(timeDis,timeTotal)
     if not timeDis or timeDis <=0 then
         SL:PrintEx("[ERROR] timeDis <= 0 ")
         return
@@ -57,18 +57,18 @@ function CdMask:UpdateTime(timeDis,timeTotal)
     self._totalTimeDis = timeTotal
 end
 
-function CdMask:Clean()
+function CDMask:Clean()
     if self._schedule then
         SL:UnSchedule(self._schedule)
         self._schedule = nil
     end
-    
+
     FGUI:GLoader_setFillAmount(self._loader_image, 0)
     FGUI:GTextField_setText(self._text_cd,"")
 end
 
-function CdMask:Destory()
+function CDMask:Destory()
     self:Clean()
 end
 
-return CdMask
+return CDMask
