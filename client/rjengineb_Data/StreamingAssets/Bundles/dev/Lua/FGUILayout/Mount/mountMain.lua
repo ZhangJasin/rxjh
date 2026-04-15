@@ -42,6 +42,26 @@ local function getPetAttrRateByLevel(level)
     return PetLevelRateConfig[1][3]
 end
 
+-- 点击冷却表（开源节流功能）
+local _clickCooldown = {
+    petQhbtn = 0,     -- 灵兽出战/召回按钮
+    qhbtn = 0,        -- 坐骑切换按钮
+    huanhua = 0,      -- 坐骑幻化按钮
+    petHuanhua = 0,   -- 灵兽幻化按钮
+}
+local _CLICK_INTERVAL = 500 -- 500ms点击间隔
+
+-- 检查按钮是否在冷却中，返回true表示可以点击
+local function checkCooldown(btnName)
+    local now = os.time() * 1000 -- 毫秒
+    if now - _clickCooldown[btnName] < _CLICK_INTERVAL then
+        SL:ShowSystemTips("请勿操作频繁")
+        return false
+    end
+    _clickCooldown[btnName] = now
+    return true
+end
+
 -- 从配置表读取tips字段
 local function getTipsFromConfig(config)
     if not config then return "" end
@@ -367,8 +387,9 @@ function mountMain:Enter(data)
                 self:setMountHHSx()
                 -- 设置列表渲染
                 self:setupHuanhuaList()
-                -- 绑定幻化按钮事件
+                -- 绑定幻化按钮事件（500ms冷却）
                 FGUI:setOnClickEvent(self._ui.huanhua, function()
+                    if not checkCooldown("huanhua") then return end
                     self._data:setModel({ mountId = self.modelId })
                 end)
                 -- 更新模型和按钮状态
@@ -484,8 +505,9 @@ function mountMain:bindEvents()
         end
     end)
 
-    -- 坐骑出战按钮事件
+    -- 坐骑出战按钮事件（500ms冷却）
     FGUI:setOnClickEvent(self._ui.qhbtn, function()
+        if not checkCooldown("qhbtn") then return end
         self._data:chuzhan()
     end)
 
@@ -1062,15 +1084,17 @@ end
 
 -- 绑定灵兽相关按钮事件
 function mountMain:bindPetButtonsEvents()
-    -- 出战按钮事件
+    -- 出战按钮事件（500ms冷却）
     FGUI:setOnClickEvent(self._ui.petQhbtn, function()
+        if not checkCooldown("petQhbtn") then return end
         print("点击出战/召回按钮")
         -- 发送服务端请求，由服务端返回消息更新UI
         self._data:petChuzhan()
     end)
 
-    -- 幻化按钮事件
+    -- 幻化按钮事件（500ms冷却）
     FGUI:setOnClickEvent(self._ui.petHuanhua, function()
+        if not checkCooldown("petHuanhua") then return end
         self._data:setPetModel({ mountId = self.modelId })
     end)
 
@@ -1232,8 +1256,9 @@ function mountMain:initPetHuanhuaTab()
     self:UpdatePetHHIcon()
     -- 更新灵兽属性幻化百分比n107（根据等级同步服务端配置）
     self:UpdatePetAttrRate()
-    -- 绑定幻化按钮事件
+    -- 绑定幻化按钮事件（500ms冷却）
     FGUI:setOnClickEvent(self._ui.petHuanhua, function()
+        if not checkCooldown("petHuanhua") then return end
         self._data:setPetModel({ mountId = self.modelId })
     end)
     -- 更新模型和按钮状态
@@ -1749,8 +1774,9 @@ function mountMain:initHuanhuaTab()
     self:setMountHHSx()
     -- 设置列表渲染
     self:setupHuanhuaList()
-    -- 绑定幻化按钮事件
+    -- 绑定幻化按钮事件（500ms冷却）
     FGUI:setOnClickEvent(self._ui.huanhua, function()
+        if not checkCooldown("huanhua") then return end
         self._data:setModel({ mountId = self.modelId })
     end)
     -- 更新模型和按钮状态
