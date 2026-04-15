@@ -23,12 +23,12 @@ function PlayerInfoPanel:Create()
             objName = "ComponentPropertyPanel",
             obj = nil,
             tabName = 30000046 --状态栏
-        },
-        [IDX_TITLE] = {
-            objName = "ComponentTitlePanel",
-            obj = nil,
-            tabName = 30000110,--称号栏
         }
+        --[IDX_TITLE] = {
+        --    objName = "ComponentTitlePanel",
+        --    obj = nil,
+        --    tabName = 30000110,--称号栏
+        --}
     }
 
     self._leftObj = nil

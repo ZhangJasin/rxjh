@@ -45,7 +45,7 @@
     <component id="n10_kvla" name="btn_tab_2" src="kvlav6m" fileName="Components/btn_tab.xml" xy="1161,208" size="40,90">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n11_kvla" name="btn_tab_3" src="kvlav6m" fileName="Components/btn_tab.xml" xy="1161,300" size="40,90">
+    <component id="n11_kvla" name="btn_tab_3" src="kvlav6m" fileName="Components/btn_tab.xml" xy="1161,300" size="40,90" visible="false">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n15_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="171,697" size="0,0"/>

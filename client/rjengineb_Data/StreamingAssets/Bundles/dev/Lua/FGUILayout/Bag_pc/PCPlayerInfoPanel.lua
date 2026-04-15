@@ -5,8 +5,8 @@ local IDX_NULL = 0
 local IDX_EQUIP   = 1
 local IDX_STATEMENT = 2
 local IDX_TITLE = 3 -- 称号
-local IDX_PET = 4 -- 灵兽
-local IDX_REBIRTH = 5 -- 转职
+local IDX_PET = 3 -- 灵兽
+local IDX_REBIRTH = 4 -- 转职
 
 function PCPlayerInfoPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
@@ -26,11 +26,11 @@ function PCPlayerInfoPanel:Create()
             obj = nil,
             tabName = 30000046 --状态栏
         },
-        [IDX_TITLE] = {
-            objName = "PCComponentTitlePanel",
-            obj = nil,
-            tabName = 30000110,--称号栏
-        },
+        --[IDX_TITLE] = {
+        --    objName = "PCComponentTitlePanel",
+        --    obj = nil,
+        --    tabName = 30000110,--称号栏
+        --},
         [IDX_PET] = {
             objName = "PCComponentPetPanel",
             obj = nil,
@@ -158,14 +158,10 @@ function PCPlayerInfoPanel:BtnTab2Clicked()
 end
 
 function PCPlayerInfoPanel:BtnTab3Clicked()
-    self:PageTo(IDX_TITLE)
-end
-
-function PCPlayerInfoPanel:BtnTab4Clicked()
     FGUI:Open("Mount", "mountMain")
 end
 
-function PCPlayerInfoPanel:BtnTab5Clicked()
+function PCPlayerInfoPanel:BtnTab4Clicked()
     FGUI:Open("Transfer", "TransferPanel")
 end
 
@@ -174,11 +170,11 @@ end
 
 function PCPlayerInfoPanel:InitUI()
     -- 页签名字设置
-    for index = 1,table.nums(self._pageDatas) do
+    for index, pageData in pairs(self._pageDatas) do
         local tabComp = self._ui["btn_tab_" .. index]
         if tabComp then
             local textComp = FGUI:GetChild(tabComp,"text_content")
-            FGUI:GTextField_setText(textComp,GET_STRING(self._pageDatas[index].tabName))
+            FGUI:GTextField_setText(textComp,GET_STRING(pageData.tabName))
         end
     end
 end
@@ -189,18 +185,15 @@ function PCPlayerInfoPanel:SwitchTab(tabIndex)
         return
     end
     -- 设置页签选中显示状态
-    for index = 1,table.nums(self._pageDatas) do
+    for index, pageData in pairs(self._pageDatas) do
         local tabComp = self._ui["btn_tab_" .. index]
-        local controller = FGUI:getController(tabComp,"isSelected")
-        FGUI:Controller_setSelectedIndex(controller,index == tabIndex and 0 or 1)
-    end
-
-    if self._leftObj then
-        self._leftObj:SwitchCtlisShowTitile(tabIndex == IDX_TITLE)
-        if tabIndex == IDX_TITLE then
-            self._leftObj:RefreshTitle()
+        if tabComp then
+            local controller = FGUI:getController(tabComp,"isSelected")
+            FGUI:Controller_setSelectedIndex(controller,index == tabIndex and 0 or 1)
         end
     end
+
+    -- 称号功能已移除
 end
 
 function PCPlayerInfoPanel:OnClose()

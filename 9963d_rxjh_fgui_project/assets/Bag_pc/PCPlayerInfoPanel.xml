@@ -40,7 +40,7 @@
     <component id="n23_pet" name="btn_tab_4" src="n055v" fileName="Components/btn_tab.xml" xy="845,391" size="28,60">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n24_rebirth" name="btn_tab_5" src="n055v" fileName="Components/btn_tab.xml" xy="845,453" size="28,60">
+    <component id="n24_rebirth" name="btn_tab_5" src="n055v" fileName="Components/btn_tab.xml" xy="845,453" size="28,60" visible="false">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n15_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="211,583" size="0,0"/>
