@@ -77,7 +77,7 @@ function TransferInfo.pickTask(actor)
 
     if nextCfg and nextCfg.TaskId then
         local taskID = nextCfg.TaskId[1]
-        if Task.Condition(actor,taskID) then
+        if Task.ConditionLv(actor,taskID) then
             --是否已接取任务
             local TaskProgress_data = Task.getCurTask(actor)        
             local TaskComplete_data = Task.getFinishTask(actor)

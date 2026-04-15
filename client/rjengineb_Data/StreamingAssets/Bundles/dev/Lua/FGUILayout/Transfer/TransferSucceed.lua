@@ -29,11 +29,11 @@ end
 
 function TransferSucceed:UpdateUI()
     local originName = self._curCfg.TransferName
-    if self._curCfg.TransferLV > 0 then
-        originName = originName .. string.format(GET_STRING(70000101), GET_STRING(5000 + self._curCfg.TransferLV))
-    end
+    -- if self._curCfg.TransferLV > 0 then
+    --     originName = originName .. string.format(GET_STRING(70000101), GET_STRING(5000 + self._curCfg.TransferLV))
+    -- end
     FGUI:GTextField_setText(self._ui.txt_job_origin, originName)
-    local nextName = self._nextCfg.TransferName ..string.format(GET_STRING(70000101), GET_STRING(5000 + self._nextCfg.TransferLV))
+    local nextName = self._nextCfg.TransferName --..string.format(GET_STRING(70000101), GET_STRING(5000 + self._nextCfg.TransferLV))
     FGUI:GTextField_setText(self._ui.txt_job_next, nextName)
     FGUI:GList_setNumItems(self._ui.list_prop, #self._nextCfg.TransferAS)
     --FGUI:GList_setNumItems(self._ui.list_skill, #self._nextCfg.UnlockSkills)

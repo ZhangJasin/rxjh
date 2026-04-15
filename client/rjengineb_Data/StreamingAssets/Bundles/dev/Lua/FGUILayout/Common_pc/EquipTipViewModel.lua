@@ -139,7 +139,7 @@ function EquipTipViewModel:UpdateCellView(itemView, originListSize)
                 conditionData.TransferLV = conditionData.TransferLV or 0
 
                 local color = ItemUtil:CheckTransferLV(itemData) and "#FFFFFF" or "#FF0000"
-                local desc = string.format("%s%s", conditionData.TransferName, string.format(SL:GetValue("I18N_STRING", 70000101), SL:GetValue("I18N_STRING", 5000 + conditionData.TransferLV)))
+                local desc = conditionData.TransferName --string.format("%s%s", conditionData.TransferName, string.format(SL:GetValue("I18N_STRING", 70000101), SL:GetValue("I18N_STRING", 5000 + conditionData.TransferLV)))
                 FGUI:GRichTextField_setText(textContent, string.format("[color=%s]%s[/color]", color, showModuleName and string.format("%s%s", moduleCfg.Name, desc) or desc))
             end
 
