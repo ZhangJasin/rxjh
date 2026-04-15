@@ -97,6 +97,9 @@ function PCMainBottom:Enter()
 	self:OnRefreshPropertyShow()
     self:UpdateAutoState()
     self:InitBubbleTips()
+
+    -- 启动状态同步
+    self:ScheduleStateSync()
 end
 
 function PCMainBottom:Exit()
@@ -106,6 +109,7 @@ function PCMainBottom:Exit()
 		SL:UnSchedule(self._timer)
 		self._timer = nil
 	end
+    self:UnscheduleStateSync()
     self:ClearBubbleTips()
 	self:RemoveEvent()
 end
@@ -345,7 +349,10 @@ end
 
 function PCMainBottom:UpdateAutoState(isAutoFight, isAutoMove)
     if isAutoFight == nil then
-        isAutoFight = SL:GetValue("BATTLE_IS_FIGHT_STATE")
+        -- 综合判断:战斗状态 + 挂机状态才是真正的自动战斗
+        local battleState = SL:GetValue("BATTLE_IS_FIGHT_STATE") or false
+        local afkState = SL:GetValue("BATTLE_IS_AFK") or false
+        isAutoFight = battleState and afkState
     end
     if self._isAutoFight ~= isAutoFight then
         self._isAutoFight = isAutoFight
@@ -365,6 +372,24 @@ function PCMainBottom:UpdateAutoState(isAutoFight, isAutoMove)
         self._isAutoMove = isAutoMove
         FGUI:setVisible(self._ui.Image_autoMove, isAutoMove)
     end
+end
+
+-- 定期同步状态,确保指示图状态与引擎一致
+function PCMainBottom:ScheduleStateSync()
+    if not self._stateSyncTimer then
+        self._stateSyncTimer = SL:Schedule(handler(self, self.SyncAutoState), 1)
+    end
+end
+
+function PCMainBottom:UnscheduleStateSync()
+    if self._stateSyncTimer then
+        SL:UnSchedule(self._stateSyncTimer)
+        self._stateSyncTimer = nil
+    end
+end
+
+function PCMainBottom:SyncAutoState()
+    self:UpdateAutoState()
 end
 
 ---------------------------------------------------------------------------

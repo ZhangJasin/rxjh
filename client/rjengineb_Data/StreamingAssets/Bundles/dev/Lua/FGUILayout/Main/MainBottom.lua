@@ -54,7 +54,7 @@ function MainBottom:Enter()
     self:UpdateAutoState()
     self:InitBubbleTips()
     self:OnRefreshCameraBtn()
-    
+
 	self:UpdateTime()
 	self._timer = SL:Schedule(handler(self, self.UpdateTime), 1)
 
@@ -62,6 +62,9 @@ function MainBottom:Enter()
     self:UpdateAutoMode1Datas()
     self:UpdateAutoMode2Datas()
     self:UpdateAutoMode2()
+
+    -- 启动状态同步
+    self:ScheduleStateSync()
 
     -- debug
     self:InitDebugInfo()
@@ -74,6 +77,7 @@ function MainBottom:Exit()
 		SL:UnSchedule(self._timer)
 		self._timer = nil
 	end
+    self:UnscheduleStateSync()
     self:ClearBubbleTips()
 	self:RemoveEvent()
 
@@ -438,7 +442,10 @@ function MainBottom:OnRefreshCameraBtn()
 end
 function MainBottom:UpdateAutoState(isAutoFight, isAutoMove)
     if isAutoFight == nil then
-        isAutoFight = SL:GetValue("BATTLE_IS_FIGHT_STATE")
+        -- 综合判断:战斗状态 + 挂机状态才是真正的自动战斗
+        local battleState = SL:GetValue("BATTLE_IS_FIGHT_STATE") or false
+        local afkState = SL:GetValue("BATTLE_IS_AFK") or false
+        isAutoFight = battleState and afkState
     end
     if self._isAutoFight ~= isAutoFight then
         self._isAutoFight = isAutoFight
@@ -458,6 +465,24 @@ function MainBottom:UpdateAutoState(isAutoFight, isAutoMove)
         self._isAutoMove = isAutoMove
         FGUI:setVisible(self._ui.Image_autoMove, isAutoMove)
     end
+end
+
+-- 定期同步状态,确保指示图状态与引擎一致
+function MainBottom:ScheduleStateSync()
+    if not self._stateSyncTimer then
+        self._stateSyncTimer = SL:Schedule(handler(self, self.SyncAutoState), 1)
+    end
+end
+
+function MainBottom:UnscheduleStateSync()
+    if self._stateSyncTimer then
+        SL:UnSchedule(self._stateSyncTimer)
+        self._stateSyncTimer = nil
+    end
+end
+
+function MainBottom:SyncAutoState()
+    self:UpdateAutoState()
 end
 
 function MainBottom:OnVersionUpdate(platform, resourceType, pushType, extend)

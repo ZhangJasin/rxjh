@@ -1,6 +1,6 @@
 AutoController = class("AutoController")
 AutoController.TIMER_INTERVAL = 0.1
-AutoController.OUT_FIGHT_TIME = 5
+AutoController.STATE_SYNC_INTERVAL = 1  -- 状态同步间隔(秒)
 local mFloor = math.floor
 local mRandom = math.random
 local mAbs = math.abs
@@ -11,7 +11,8 @@ end
 
 function AutoController:Init()
     self._fightState = false
-    self._outFightTime = 0 
+    self._outFightTime = 0
+    self._stateSyncTime = 0
     self:TimerBegan()
     SL:RegisterLUAEvent(LUA_EVENT_FIGHT, "AutoController",handler(self,self.OnFightState))
     SL:RegisterLUAEvent(LUA_EVENT_NET_PLAYER_ACTION_COMPLETE, "AutoController",handler(self,self.OnPlayerActionComplete))
@@ -58,14 +59,50 @@ function AutoController:TimerBegan()
 end
 
 function AutoController:Tick(delta)
+    -- 定期同步真实状态,避免状态丢失
+    self._stateSyncTime = self._stateSyncTime + delta
+    if self._stateSyncTime >= self.STATE_SYNC_INTERVAL then
+        self._stateSyncTime = 0
+        self:SyncFightState()
+    end
+
+    -- 保留原有的超时机制,但作为辅助手段
     if self._fightState then
         self._outFightTime = self._outFightTime + delta
-        if self._outFightTime >= AutoController.OUT_FIGHT_TIME then
+        -- 延长超时时间到15秒,给状态同步留出时间
+        if self._outFightTime >= 15 then
             self._fightState = false
             self._outFightTime = 0
-            SL:SetValue("BATTLE_IS_FIGHT_STATE", false)
-            SLBridge:onLUAEvent(LUA_EVENT_FIGHT_END)
+            -- 只在确实不在战斗时才触发退出事件
+            local realFightState = SL:GetValue("BATTLE_IS_FIGHT_STATE")
+            if not realFightState then
+                SL:SetValue("BATTLE_IS_FIGHT_STATE", false)
+                SLBridge:onLUAEvent(LUA_EVENT_FIGHT_END)
+            else
+                -- 引擎状态仍在战斗,重置超时
+                self._fightState = true
+                self._outFightTime = 0
+            end
         end
+    end
+end
+
+-- 同步引擎真实状态
+function AutoController:SyncFightState()
+    local realFightState = SL:GetValue("BATTLE_IS_FIGHT_STATE")
+    local isAFK = SL:GetValue("BATTLE_IS_AFK")
+    
+    -- 如果引擎状态和控制器状态不一致,以引擎为准
+    if realFightState and not self._fightState then
+        -- 引擎显示在战斗,但控制器不在,需要同步
+        self._fightState = true
+        self._outFightTime = 0
+    elseif not realFightState and self._fightState and not isAFK then
+        -- 引擎显示不在战斗且不在挂机,控制器在战斗,需要退出
+        self._fightState = false
+        self._outFightTime = 0
+        SL:SetValue("BATTLE_IS_FIGHT_STATE", false)
+        SLBridge:onLUAEvent(LUA_EVENT_FIGHT_END)
     end
 end
 function AutoController:StateBegin(actCompleted)
