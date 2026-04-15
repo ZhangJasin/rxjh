@@ -54,7 +54,7 @@ function Player.takeItemByTableEx(actor, t, multiple)
 end
 
 local taskEquipSpec={--×°±¸ID ºÍstdmode
-    [380001]= 52 ,
+    --[380001]= 52 ,
     [57001]= 5 ,
     [53001]= 5 ,
     [51301]= 5 ,
