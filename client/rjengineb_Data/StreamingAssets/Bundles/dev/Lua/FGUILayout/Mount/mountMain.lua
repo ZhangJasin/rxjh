@@ -607,6 +607,19 @@ function mountMain:setPetInfo()
     else
         FGUI:GTextField_setText(title, "召回")
     end
+    -- 判断是否已满级（与坐骑对齐）
+    if self._dataForPet.allJieshu == #Pet then
+        -- 设置升级按钮文本为"已满级"
+        local itemLabel = FGUI:GetChild(self._ui.shengjilingshou, "n1")
+        if itemLabel then
+            FGUI:GTextField_setText(itemLabel, "已满级")
+        end
+        -- 隐藏消耗文本n104（与坐骑的n34对齐）
+        FGUI:setVisible(self._ui.n104, false)
+    else
+        -- 非满级时显示消耗文本
+        FGUI:setVisible(self._ui.n104, true)
+    end
 end
 
 -- 设置灵兽属性显示
@@ -802,6 +815,7 @@ function mountMain:setPetXhcl()
     local iconItem2 = FGUI:GetChild(self._ui.petXhcl, "iconItem2") -- 第二个消耗图标
     FGUI:setVisible(self._ui.n85, true)
     FGUI:setVisible(self._ui.petXhcl, true)
+    FGUI:setVisible(self._ui.n104, true) -- 非满级时默认显示消耗文本
 
     -- 保存默认位置用于切换
     if not self._petXhclDefaultPos then
@@ -819,6 +833,7 @@ function mountMain:setPetXhcl()
     if self._dataForPet.allJieshu == #Pet and self.petTopTab == 0 then
         FGUI:setVisible(self._ui.n85, false)
         FGUI:setVisible(self._ui.petXhcl, false)
+        FGUI:setVisible(self._ui.n104, false) -- 与坐骑n34对齐，满级隐藏消耗文本
         print("已满级")
         return
     end
