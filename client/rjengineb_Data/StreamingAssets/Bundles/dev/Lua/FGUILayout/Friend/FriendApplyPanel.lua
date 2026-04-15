@@ -98,7 +98,7 @@ end
 
 function FriendApplyPanel:SetNothingVisible()
     local count = #self._showList
-    FGUI:setVisible(self._ui.panel_nothing, count == 0)
+    FGUI:setVisible(self._ui.text_nothing, count == 0)
     if count == 0 then 
         local sNothing = PAGE_DATA[self._selPage].nothing
         FGUI:GTextField_setText(self._ui.text_nothing, sNothing)

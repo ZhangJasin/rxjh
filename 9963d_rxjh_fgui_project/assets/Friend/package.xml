@@ -68,5 +68,5 @@
     <component id="k9rf2k" name="btn_closeyuan.xml" path="/Components/newcom/"/>
     <misc id="k9rf2l" name="Friend_fui.bytes" path="/"/>
   </resources>
-  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Friend" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>
