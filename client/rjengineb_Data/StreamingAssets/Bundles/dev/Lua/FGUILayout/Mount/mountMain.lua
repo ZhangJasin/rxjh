@@ -54,7 +54,12 @@ local PercentAttrConfig = {
     [67] = true,
     [107] = true,
     [57] = true,
-
+    [104] = true,
+    [105] = true,
+    [99] = true,
+    [100] = true,
+    [103] = true,
+    [9] = true,
 }
 
 function mountMain:Create()
