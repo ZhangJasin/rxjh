@@ -77,9 +77,11 @@ function TipRoleDiePanl:OnDataUpdate(data)
 end
 
 function TipRoleDiePanl:StartCountdown()
+    local cfgData = TipRoleDiePanlData:GetConfigData()
+    local lastIdx = #cfgData
     local function realivedjs()
         if TipRoleDiePanlData:GetTime() == 0 then
-            ssrMessage:sendmsgEx("TipsRealiveBox", "openshow", {4})
+            ssrMessage:sendmsgEx("TipsRealiveBox", "openshow", {lastIdx})
             SL:UnSchedule(self.dsqid)
             self.dsqid = nil
         end

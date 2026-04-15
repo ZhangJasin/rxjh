@@ -1,53 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" designImageLayer="1" bgColorEnabled="true" bgColor="#666666">
   <displayList>
-    <component id="n2_o5lt" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="663,358" pivot="0.5,0.5" anchor="true" size="506,540">
+    <component id="n2_o5lt" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,358" pivot="0.5,0.5" anchor="true" size="506,540">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <text id="n3_o5lt" name="title" xy="603,100" pivot="0.5,0.5" size="118,34" font="SimHei" fontSize="24" color="#ffffff" align="center" autoSize="none" text="文本">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <text id="n3_o5lt" name="title" xy="460,100" size="118,34" font="SimHei" fontSize="24" color="#ffffff" autoSize="none" text="复活方式">
+      <relation target="" sidePair="left-center"/>
     </text>
-    <text id="n10_o5lt" name="xhfont2" xy="603,251" size="230,34" font="SimHei" fontSize="16" color="#ffffff" autoSize="none" text="消耗：             5">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <text id="n16_ler3" name="daojishi" xy="460,520" size="412,34" font="SimHei" fontSize="24" color="#00ff00" align="center" autoSize="none" text="">
+      <relation target="" sidePair="left-center"/>
     </text>
-    <text id="n12_o5lt" name="xhfont3" xy="603,352" size="230,34" font="SimHei" fontSize="16" color="#ffffff" autoSize="none" text="消耗：             5">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <text id="n10_o5lt" name="xhfont1" xy="554,191" size="150,34" font="SimHei" fontSize="16" color="#ffffff" autoSize="none" text="消耗：">
+      <relation target="" sidePair="left-center"/>
     </text>
-    <component id="n13_o5lt" name="item2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="653,248" size="63,63" scale="0.43,0.43">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <component id="n13_o5lt" name="item1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="604,190" size="63,63" scale="0.43,0.43">
+      <relation target="" sidePair="left-center"/>
     </component>
-    <component id="n14_o5lt" name="item3" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="653,349" size="63,63" scale="0.43,0.43">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <loader id="n17_ler3" name="n1" xy="460,220" size="415,52" url="ui://hlljr9bmoqrp1" fill="scaleFree">
+      <relation target="" sidePair="left-center"/>
+    </loader>
+    <text id="n22_ler3" name="btnfont1" xy="460,229" pivot="0.5,0.5" size="412,34" font="SimHei" fontSize="24" color="#00ff00" align="center" autoSize="none" text="">
+      <relation target="" sidePair="left-center"/>
+    </text>
+    <text id="n12_o5lt" name="xhfont2" xy="554,289" size="150,34" font="SimHei" fontSize="16" color="#ffffff" autoSize="none" text="消耗：">
+      <relation target="" sidePair="left-center"/>
+    </text>
+    <component id="n14_o5lt" name="item2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="604,289" size="63,63" scale="0.43,0.43">
+      <relation target="" sidePair="left-center"/>
     </component>
-    <text id="n16_ler3" name="daojishi" xy="466,560" pivot="0.5,0.5" size="412,34" font="SimHei" fontSize="24" color="#00ff00" autoSize="none" text="">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <loader id="n17_ler3" name="n1" xy="463,182" size="415,52" url="ui://hlljr9bmoqrp1" fill="scaleFree">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <loader id="n19_ler3" name="n2" xy="460,320" size="415,52" url="ui://hlljr9bmoqrp1" fill="scaleFree">
+      <relation target="" sidePair="left-center"/>
     </loader>
-    <loader id="n19_ler3" name="n2" xy="463,281" size="415,52" url="ui://hlljr9bmoqrp2" fill="scaleFree">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <text id="n23_ler3" name="btnfont2" xy="460,329" pivot="0.5,0.5" size="412,34" font="SimHei" fontSize="24" color="#00ff00" align="center" autoSize="none" text="">
+      <relation target="" sidePair="left-center"/>
+    </text>
+    <loader id="n20_ler3" name="n3" xy="460,400" size="415,52" url="ui://hlljr9bmoqrp2" fill="scaleFree">
+      <relation target="" sidePair="left-center"/>
     </loader>
-    <loader id="n20_ler3" name="n3" xy="463,384" size="415,52" url="ui://hlljr9bmoqrp2" fill="scaleFree">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </loader>
-    <loader id="n21_ler3" name="n4" xy="465,484" size="415,52" url="ui://hlljr9bmoqrp1" fill="scaleFree">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </loader>
-    <text id="n22_ler3" name="btnfont1" xy="464,191" pivot="0.5,0.5" size="412,34" font="SimHei" fontSize="24" color="#00ff00" autoSize="none" text="">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <text id="n23_ler3" name="btnfont2" xy="465,289" pivot="0.5,0.5" size="412,34" font="SimHei" fontSize="24" color="#00ff00" autoSize="none" text="">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <text id="n24_ler3" name="btnfont3" xy="465,393" pivot="0.5,0.5" size="412,34" font="SimHei" fontSize="24" color="#00ff00" autoSize="none" text="">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <text id="n25_ler3" name="btnfont4" xy="465,493" pivot="0.5,0.5" size="412,34" font="SimHei" fontSize="24" color="#00ff00" autoSize="none" text="">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <text id="n26_10k16" name="n26" xy="705,390" size="28,19" scale="1,0.43" font="SimHei" fontSize="12" text="0.43">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <text id="n24_ler3" name="btnfont3" xy="460,409" pivot="0.5,0.5" size="412,34" font="SimHei" fontSize="24" color="#00ff00" align="center" autoSize="none" text="">
+      <relation target="" sidePair="left-center"/>
     </text>
   </displayList>
 </component>

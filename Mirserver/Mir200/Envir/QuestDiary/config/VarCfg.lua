@@ -91,7 +91,7 @@ VarCfg.U_MarryIntimacyExp                = "U56"         -- 侠侣亲密度经验
 
 -- ===== 旧的灵兽U变量（已废弃，使用新灵兽系统）=====
 -- VarCfg.U_PETS_NOW_MODEL                  = "U57" -- 当前出战宠物外型（已废弃）
--- VarCfg.U_PETS_Take_Base                  = "U58" -- 当前出战宠物id（已废弃）
+VarCfg.U_PETS_Take_Base                  = "U58" -- 当前出战宠物id（已废弃）
 -- VarCfg.U_PETS_Index                      = "U59" -- 切换模型位置 0 本体 0以上 幻化（已废弃）
 -- VarCfg.U_PETS_DIE_TIME                   = "U60" -- 宠物死亡倒计时（已废弃）
 
