@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1344,750">
   <controller name="rightTabs" pages="0,灵兽,1,坐骑" selected="1"/>
-  <controller name="topTabs" pages="0,坐骑,1,幻化" selected="0"/>
+  <controller name="topTabs" pages="0,坐骑,1,幻化" selected="1"/>
   <controller name="isselected" pages="0,未选择,1,选择" selected="0"/>
   <controller name="tips" pages="0,,1," selected="0"/>
   <displayList>
     <component id="n2_o0nq" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,369" pivot="0.5,0.5" anchor="true" size="1000,695"/>
-    <text id="n3_o0nq" name="n3" xy="664,51" pivot="0.5,0.5" anchor="true" size="139,34" fontSize="24" color="#9aafbb" align="center" autoSize="none" text="坐骑">
+    <text id="n3_o0nq" name="n3" xy="649,51" pivot="0.5,0.5" anchor="true" size="139,34" fontSize="24" color="#9aafbb" align="center" autoSize="none" text="坐骑">
       <gearDisplay controller="rightTabs" pages="1"/>
       <relation target="n2_o0nq" sidePair=""/>
     </text>
     <image id="n9_o0nq" name="n9" src="o0nqb" fileName="image/zqbg.png" xy="171,75" size="988,640">
       <gearDisplay controller="rightTabs" pages="1"/>
     </image>
-    <image id="n13_o0nq" name="n13" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="1094,140">
+    <image id="n13_o0nq" name="n13" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="1040,140">
       <gearDisplay controller="rightTabs" pages="1"/>
     </image>
-    <image id="n14_o0nq" name="n14" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="916,140" flip="hz">
+    <image id="n14_o0nq" name="n14" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="862,140" flip="hz">
       <gearDisplay controller="rightTabs" pages="1"/>
     </image>
-    <image id="n15_o0nq" name="n15" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="915,381" flip="hz">
+    <image id="n15_o0nq" name="n15" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="861,381" flip="hz">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </image>
-    <image id="n16_o0nq" name="n16" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="1094,380">
+    <image id="n16_o0nq" name="n16" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="1040,380">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </image>
-    <component id="n22_o0nq" name="jieshu" src="o0nqg" fileName="Components/jieshu.xml" xy="274,150">
+    <component id="n22_o0nq" name="jieshu" src="o0nqg" fileName="Components/jieshu.xml" xy="220,150">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </component>
@@ -42,30 +42,30 @@
       <item title="坐骑" name="坐骑" selectedTitle="坐骑"/>
       <item title="幻化" name="幻化" selectedTitle="幻化"/>
     </list>
-    <text id="n29_o0nq" name="n29" xy="971,135" size="125,32" fontSize="22" color="#ffff00" leading="0" autoSize="none" text="当前属性：">
+    <text id="n29_o0nq" name="n29" xy="917,135" size="125,32" fontSize="22" color="#fcf0a1" leading="0" autoSize="none" strokeColor="#000000" text="当前属性：">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </text>
-    <text id="n30_o0nq" name="n30" xy="971,376" size="125,32" fontSize="22" color="#ffff00" leading="0" autoSize="none" text="下级属性：">
+    <text id="n30_o0nq" name="n30" xy="917,376" size="125,32" fontSize="22" color="#fcf0a1" leading="0" autoSize="none" strokeColor="#000000" text="下级属性：">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </text>
-    <component id="n32_o0nq" name="nowAttr" src="o0nqo" fileName="Components/nowAttr.xml" xy="903,175">
+    <component id="n32_o0nq" name="nowAttr" src="o0nqo" fileName="Components/nowAttr.xml" xy="807,175" size="325,195">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </component>
-    <component id="n33_o0nq" name="nextAttr" src="o0nqo" fileName="Components/nowAttr.xml" xy="903,415">
+    <component id="n33_o0nq" name="nextAttr" src="o0nqo" fileName="Components/nowAttr.xml" xy="807,415" size="325,195">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </component>
-    <text id="n34_o0nq" name="n34" xy="913,625" size="70,32" fontSize="22" color="#fcf1bf" text="消耗：">
+    <text id="n34_o0nq" name="n34" xy="859,625" size="70,32" fontSize="22" color="#fbefbb" strokeColor="#000000" text="消耗：">
       <gearDisplay controller="rightTabs" pages="1"/>
     </text>
-    <component id="n38_o0nq" name="shengjizuoqi" src="o0nqr" fileName="Components/saveBtn.xml" xy="969,661">
+    <component id="n38_o0nq" name="shengjizuoqi" src="o0nqr" fileName="Components/saveBtn.xml" xy="915,661">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </component>
-    <list id="n53_o0nq" name="xxshu" xy="372,212" size="451,38" layout="row" selectionMode="multipleSingleClick" overflow="scroll" colGap="3" defaultItem="ui://vslix2m2o0nq1v">
+    <list id="n53_o0nq" name="xxshu" xy="318,212" size="451,38" layout="row" selectionMode="multipleSingleClick" overflow="scroll" colGap="3" defaultItem="ui://vslix2m2o0nq1v">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
       <item/>
@@ -79,26 +79,26 @@
       <item/>
       <item/>
     </list>
-    <image id="n54_o0nq" name="n54" src="o0nq16" fileName="image/titleBg.png" xy="430,150" size="230,50">
+    <image id="n54_o0nq" name="n54" src="o0nq16" fileName="image/titleBg.png" xy="376,150" size="230,50">
       <gearDisplay controller="rightTabs" pages="1"/>
     </image>
-    <text id="n55_o0nq" name="mountName" xy="430,150" size="230,50" fontSize="28" color="#f6cd2b" align="center" vAlign="middle" leading="0" autoSize="none" text="乌龙驹">
+    <text id="n55_o0nq" name="mountName" xy="376,150" size="230,50" fontSize="28" color="#f6cd2b" align="center" vAlign="middle" leading="0" autoSize="none" text="乌龙驹">
       <gearDisplay controller="rightTabs" pages="1"/>
     </text>
-    <component id="n56_o0nq" name="qhbtn" src="o0nq17" fileName="Components/tybtn1.xml" xy="468,660">
+    <component id="n56_o0nq" name="qhbtn" src="o0nq17" fileName="Components/tybtn1.xml" xy="414,660">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
       <Button title="出战"/>
     </component>
-    <text id="n58_o0nq" name="n58" xy="971,135" size="125,32" fontSize="22" color="#ffff00" leading="0" autoSize="none" text="人物属性:">
+    <text id="n58_o0nq" name="n58" xy="917,135" size="125,32" fontSize="22" color="#fcf0a1" leading="0" autoSize="none" strokeColor="#000000" text="人物属性:">
       <gearDisplay controller="topTabs" pages="1"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </text>
-    <component id="n60_o0nq" name="n60" src="o0nq1c" fileName="Components/activeBtn.xml" xy="969,661">
+    <component id="n60_o0nq" name="n60" src="o0nq1c" fileName="Components/activeBtn.xml" xy="915,661">
       <gearDisplay controller="topTabs" pages="1"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </component>
-    <component id="n62_o0nq" name="huanhuaAttr" src="o0nq1d" fileName="Components/hhAttr.xml" xy="902,175">
+    <component id="n62_o0nq" name="huanhuaAttr" src="o0nq1d" fileName="Components/hhAttr.xml" xy="810,175">
       <gearDisplay controller="topTabs" pages="1"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </component>
@@ -111,38 +111,38 @@
       <item/>
     </list>
     <component id="n67_o0nq" name="closeBtn" src="o0nq1s" fileName="Components/closebtn_yuan.xml" xy="1119,25"/>
-    <graph id="n68_f36h" name="mountBody" xy="541,594" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen" lineColor="#00000000" fillColor="#00ffffff">
+    <graph id="n68_f36h" name="mountBody" xy="487,594" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen" lineColor="#00000000" fillColor="#00ffffff">
       <gearDisplay controller="rightTabs" pages="1"/>
     </graph>
-    <component id="n71_vorr" name="mountModel" src="vorr1x" fileName="Components/mountModel.xml" xy="399,255" size="300,377">
+    <component id="n71_vorr" name="mountModel" src="vorr1x" fileName="Components/mountModel.xml" xy="345,255" size="300,377">
       <gearDisplay controller="rightTabs" pages="1"/>
     </component>
-    <component id="n74_vorr" name="xhcl" src="vorr21" fileName="Components/xhcl.xml" xy="973,619">
+    <component id="n74_vorr" name="xhcl" src="vorr21" fileName="Components/xhcl.xml" xy="919,619">
       <gearDisplay controller="rightTabs" pages="1"/>
     </component>
-    <component id="n75_vorr" name="huanhua" src="o0nq17" fileName="Components/tybtn1.xml" xy="468,660">
+    <component id="n75_vorr" name="huanhua" src="o0nq17" fileName="Components/tybtn1.xml" xy="414,660">
       <gearDisplay controller="topTabs" pages="1"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
       <Button title="幻化"/>
     </component>
-    <text id="n76_v5h4" name="n76" xy="664,51" pivot="0.5,0.5" anchor="true" size="139,34" fontSize="24" color="#9aafbb" align="center" autoSize="none" text="灵兽">
+    <text id="n76_v5h4" name="n76" xy="649,51" pivot="0.5,0.5" anchor="true" size="139,34" fontSize="24" color="#9aafbb" align="center" autoSize="none" text="灵兽">
       <gearDisplay controller="rightTabs" pages="0"/>
       <relation target="n2_o0nq" sidePair=""/>
     </text>
     <image id="n79_v5h4" name="n79" src="o0nqb" fileName="image/zqbg.png" xy="171,74" size="988,640">
       <gearDisplay controller="rightTabs" pages="0"/>
     </image>
-    <image id="n80_v5h4" name="n80" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="1094,140">
+    <image id="n80_v5h4" name="n80" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="1040,140">
       <gearDisplay controller="rightTabs" pages="0"/>
     </image>
-    <image id="n81_v5h4" name="n81" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="916,140" flip="hz">
+    <image id="n81_v5h4" name="n81" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="862,140" flip="hz">
       <gearDisplay controller="rightTabs" pages="0"/>
     </image>
-    <image id="n82_v5h4" name="n82" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="915,381" flip="hz">
+    <image id="n82_v5h4" name="n82" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="861,381" flip="hz">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </image>
-    <image id="n83_v5h4" name="n83" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="1094,380">
+    <image id="n83_v5h4" name="n83" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="1040,380">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </image>
@@ -152,31 +152,31 @@
       <item title="灵兽" name="灵兽" selectedTitle="灵兽"/>
       <item title="幻化" name="幻化" selectedTitle="幻化"/>
     </list>
-    <text id="n85_v5h4" name="n85" xy="971,135" size="125,32" fontSize="22" color="#ffff00" leading="0" autoSize="none" text="当前属性：">
+    <text id="n85_v5h4" name="n85" xy="917,135" size="125,32" fontSize="22" color="#fcf0a1" leading="0" autoSize="none" strokeColor="#000000" text="当前属性：">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </text>
-    <text id="n86_v5h4" name="n86" xy="971,376" size="125,32" fontSize="22" color="#ffff00" leading="0" autoSize="none" text="下级属性：">
+    <text id="n86_v5h4" name="n86" xy="917,376" size="125,32" fontSize="22" color="#fcf0a1" leading="0" autoSize="none" strokeColor="#000000" text="下级属性：">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </text>
-    <component id="n87_v5h4" name="petNowAttr" src="o0nqo" fileName="Components/nowAttr.xml" xy="903,175">
+    <component id="n87_v5h4" name="petNowAttr" src="o0nqo" fileName="Components/nowAttr.xml" xy="807,175" size="325,195">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </component>
-    <component id="n88_v5h4" name="petNextAttr" src="o0nqo" fileName="Components/nowAttr.xml" xy="903,415">
+    <component id="n88_v5h4" name="petNextAttr" src="o0nqo" fileName="Components/nowAttr.xml" xy="807,415" size="325,195">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </component>
-    <component id="n89_v5h4" name="petJieshu" src="o0nqg" fileName="Components/jieshu.xml" xy="274,150">
+    <component id="n89_v5h4" name="petJieshu" src="o0nqg" fileName="Components/jieshu.xml" xy="220,150">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </component>
-    <component id="n90_v5h4" name="shengjilingshou" src="o0nqr" fileName="Components/saveBtn.xml" xy="969,661">
+    <component id="n90_v5h4" name="shengjilingshou" src="o0nqr" fileName="Components/saveBtn.xml" xy="915,661">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </component>
-    <list id="n91_v5h4" name="petxxshu" xy="372,212" size="451,38" layout="row" selectionMode="multipleSingleClick" overflow="scroll" colGap="3" defaultItem="ui://vslix2m2o0nq1v">
+    <list id="n91_v5h4" name="petxxshu" xy="318,212" size="451,38" layout="row" selectionMode="multipleSingleClick" overflow="scroll" colGap="3" defaultItem="ui://vslix2m2o0nq1v">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
       <item/>
@@ -190,30 +190,30 @@
       <item/>
       <item/>
     </list>
-    <image id="n92_v5h4" name="n92" src="o0nq16" fileName="image/titleBg.png" xy="430,150" size="230,50">
+    <image id="n92_v5h4" name="n92" src="o0nq16" fileName="image/titleBg.png" xy="376,150" size="230,50">
       <gearDisplay controller="rightTabs" pages="0"/>
     </image>
-    <text id="n93_v5h4" name="petName" xy="430,150" size="230,50" fontSize="28" color="#f6cd2b" align="center" vAlign="middle" leading="0" autoSize="none" text="龙猫">
+    <text id="n93_v5h4" name="petName" xy="376,150" size="230,50" fontSize="28" color="#f6cd2b" align="center" vAlign="middle" leading="0" autoSize="none" text="龙猫">
       <gearDisplay controller="rightTabs" pages="0"/>
     </text>
-    <component id="n94_v5h4" name="petQhbtn" src="o0nq17" fileName="Components/tybtn1.xml" xy="468,660">
+    <component id="n94_v5h4" name="petQhbtn" src="o0nq17" fileName="Components/tybtn1.xml" xy="414,660">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
       <Button title="出战"/>
     </component>
-    <text id="n95_v5h4" name="n95" xy="971,135" size="125,32" fontSize="22" color="#ffff00" leading="0" autoSize="none" text="人物属性:">
+    <text id="n95_v5h4" name="n95" xy="917,135" size="125,32" fontSize="22" color="#fcf0a1" leading="0" autoSize="none" strokeColor="#000000" text="人物属性:">
       <gearDisplay controller="topTabs" pages="1"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </text>
-    <component id="n96_v5h4" name="petActiveBtn" src="o0nq1c" fileName="Components/activeBtn.xml" xy="969,661">
+    <component id="n96_v5h4" name="petActiveBtn" src="o0nq1c" fileName="Components/activeBtn.xml" xy="915,661">
       <gearDisplay controller="topTabs" pages="1"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </component>
-    <component id="n97_v5h4" name="petHuanhuaAttr" src="o0nq1d" fileName="Components/hhAttr.xml" xy="902,175">
+    <component id="n97_v5h4" name="petHuanhuaAttr" src="o0nq1d" fileName="Components/hhAttr.xml" xy="810,175">
       <gearDisplay controller="topTabs" pages="1"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </component>
-    <graph id="n99_v5h4" name="petBody" xy="541,594" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen" lineColor="#00000000" fillColor="#00ffffff">
+    <graph id="n99_v5h4" name="petBody" xy="487,594" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen" lineColor="#00000000" fillColor="#00ffffff">
       <gearDisplay controller="rightTabs" pages="0"/>
     </graph>
     <list id="n98_v5h4" name="petLeftList" xy="175,150" size="76,509" overflow="scroll" margin="4,2,6,0" lineGap="10" defaultItem="ui://vslix2m2o0nq1e" selectionController="isselected" autoClearItems="true">
@@ -224,42 +224,42 @@
       <item/>
       <item/>
     </list>
-    <component id="n100_v5h4" name="petModel" src="vorr1x" fileName="Components/mountModel.xml" xy="399,255" size="300,377">
+    <component id="n100_v5h4" name="petModel" src="vorr1x" fileName="Components/mountModel.xml" xy="345,255" size="300,377">
       <gearDisplay controller="rightTabs" pages="0"/>
     </component>
-    <component id="n101_v5h4" name="petXhcl" src="vorr21" fileName="Components/xhcl.xml" xy="973,619">
+    <component id="n101_v5h4" name="petXhcl" src="vorr21" fileName="Components/xhcl.xml" xy="919,619">
       <gearDisplay controller="rightTabs" pages="0"/>
     </component>
-    <component id="n102_v5h4" name="petHuanhua" src="o0nq17" fileName="Components/tybtn1.xml" xy="468,660">
+    <component id="n102_v5h4" name="petHuanhua" src="o0nq17" fileName="Components/tybtn1.xml" xy="414,660">
       <gearDisplay controller="topTabs" pages="1"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
       <Button title="幻化"/>
     </component>
-    <text id="n104_cb9c" name="n104" xy="913,625" size="70,32" fontSize="22" color="#fcf1bf" text="消耗：">
+    <text id="n104_cb9c" name="n104" xy="859,625" size="70,32" fontSize="22" color="#fbefbb" strokeColor="#000000" text="消耗：">
       <gearDisplay controller="rightTabs" pages="0"/>
     </text>
-    <text id="n107_cb9c" name="n107" xy="913,592" size="234,34" fontSize="17" color="#cccccc" ubb="true" autoSize="none" text="出战时提升坐骑移动速度[color=#00ff00]10%[/color]">
+    <text id="n107_cb9c" name="n107" xy="859,578" size="234,34" fontSize="17" ubb="true" autoSize="none" text="出战时提升坐骑移动速度[color=#00ff00]10%[/color]">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearText controller="rightTabs" pages="1" values="出战时提升坐骑移动速度[color=#00ff00]10%[/color]" default="出战灵兽[color=#00ff00]3%[/color]的属性转化给人物"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n110_cb9c" name="n110" src="cb9c45" fileName="Components/btn_help.xml" xy="863,147">
+    <component id="n110_cb9c" name="n110" src="cb9c45" fileName="Components/btn_help.xml" xy="809,147">
       <gearDisplay controller="rightTabs" pages="0"/>
       <gearDisplay2 controller="topTabs" pages="0" condition="0"/>
     </component>
-    <component id="n111_cb9c" name="n111" src="cb9c45" fileName="Components/btn_help.xml" xy="863,147">
+    <component id="n111_cb9c" name="n111" src="cb9c45" fileName="Components/btn_help.xml" xy="809,147">
       <gearDisplay controller="rightTabs" pages="0"/>
       <gearDisplay2 controller="topTabs" pages="1" condition="0"/>
     </component>
-    <component id="n112_cb9c" name="n112" src="cb9c45" fileName="Components/btn_help.xml" xy="863,147">
+    <component id="n112_cb9c" name="n112" src="cb9c45" fileName="Components/btn_help.xml" xy="809,147">
       <gearDisplay controller="rightTabs" pages="1"/>
       <gearDisplay2 controller="topTabs" pages="0" condition="0"/>
     </component>
-    <component id="n113_cb9c" name="n113" src="cb9c45" fileName="Components/btn_help.xml" xy="863,147">
+    <component id="n113_cb9c" name="n113" src="cb9c45" fileName="Components/btn_help.xml" xy="809,147">
       <gearDisplay controller="rightTabs" pages="1"/>
       <gearDisplay2 controller="topTabs" pages="1" condition="0"/>
     </component>
-    <component id="n114_cb9c" name="n114" src="cb9c46" fileName="Components/tips.xml" xy="0,0">
+    <component id="n114_cb9c" name="n114" src="cb9c46" fileName="Components/tips.xml" xy="-54,0">
       <gearDisplay controller="tips" pages="1"/>
     </component>
   </displayList>

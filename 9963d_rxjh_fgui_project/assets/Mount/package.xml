@@ -89,6 +89,11 @@
     <image id="m8x54d" name="pet_012.png" path="/image/" exported="true"/>
     <image id="m8x54e" name="pet_009.png" path="/image/" exported="true"/>
     <image id="m8x54f" name="pet_010.png" path="/image/" exported="true"/>
+    <image id="ii8j4g" name="hh_000.png" path="/image/" exported="true"/>
+    <image id="ii8j4h" name="hh_001.png" path="/image/" exported="true"/>
+    <image id="ii8j4i" name="hh_002.png" path="/image/" exported="true"/>
+    <image id="ii8j4j" name="hh_003.png" path="/image/" exported="true"/>
+    <image id="ii8j4k" name="hh_004.png" path="/image/" exported="true"/>
   </resources>
   <publish name="">
     <atlas name="mount" index="0"/>

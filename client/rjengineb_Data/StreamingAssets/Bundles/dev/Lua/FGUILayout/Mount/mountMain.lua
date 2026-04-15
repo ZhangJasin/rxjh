@@ -264,8 +264,8 @@ function mountMain:initDisplayData()
             local haveNum = SL:GetValue(TITEMCOUNT, tonumber(costs[1]))
             FGUI:GTextField_setText(itemNum, num)
             if haveNum >= tonumber(num) then
-                FGUI:GTextField_setColor(itemNum, "#00FF00")
-                FGUI:GTextField_setColor(fuhao, "#00FF00")
+                FGUI:GTextField_setColor(itemNum, "#00f900")
+                FGUI:GTextField_setColor(fuhao, "#00f900")
             else
                 FGUI:GTextField_setColor(itemNum, "#ff0000")
                 FGUI:GTextField_setColor(fuhao, "#ff0000")
@@ -880,8 +880,8 @@ function mountMain:setPetXhcl()
                 local haveNum2 = SL:GetValue(TITEMCOUNT, itemId2)
                 FGUI:GTextField_setText(itemNum2, num2)
                 if haveNum2 >= num2 then
-                    FGUI:GTextField_setColor(itemNum2, "#00FF00")
-                    if fuhao2 then FGUI:GTextField_setColor(fuhao2, "#00FF00") end
+                    FGUI:GTextField_setColor(itemNum2, "#00f900")
+                    if fuhao2 then FGUI:GTextField_setColor(fuhao2, "#00f900") end
                 else
                     FGUI:GTextField_setColor(itemNum2, "#ff0000")
                     if fuhao2 then FGUI:GTextField_setColor(fuhao2, "#ff0000") end
@@ -914,8 +914,8 @@ function mountMain:setPetXhcl()
         local haveNum = SL:GetValue(TITEMCOUNT, itemId1)
         FGUI:GTextField_setText(itemNum, num1)
         if haveNum >= num1 then
-            FGUI:GTextField_setColor(itemNum, "#00FF00")
-            FGUI:GTextField_setColor(fuhao, "#00FF00")
+            FGUI:GTextField_setColor(itemNum, "#00f900")
+            FGUI:GTextField_setColor(fuhao, "#00f900")
         else
             FGUI:GTextField_setColor(itemNum, "#ff0000")
             FGUI:GTextField_setColor(fuhao, "#ff0000")
@@ -950,8 +950,8 @@ function mountMain:setPetXhcl()
         local haveNum = SL:GetValue(TITEMCOUNT, itemId)
         FGUI:GTextField_setText(itemNum, num)
         if haveNum >= tonumber(num) then
-            FGUI:GTextField_setColor(itemNum, "#00FF00")
-            FGUI:GTextField_setColor(fuhao, "#00FF00")
+            FGUI:GTextField_setColor(itemNum, "#00f900")
+            FGUI:GTextField_setColor(fuhao, "#00f900")
         else
             FGUI:GTextField_setColor(itemNum, "#ff0000")
             FGUI:GTextField_setColor(fuhao, "#ff0000")
@@ -1992,8 +1992,8 @@ function mountMain:setXHCL()
                 local haveNum2 = SL:GetValue(TITEMCOUNT, itemId2)
                 FGUI:GTextField_setText(itemNum2, num2)
                 if haveNum2 >= num2 then
-                    FGUI:GTextField_setColor(itemNum2, "#00FF00")
-                    if fuhao2 then FGUI:GTextField_setColor(fuhao2, "#00FF00") end
+                    FGUI:GTextField_setColor(itemNum2, "#00f900")
+                    if fuhao2 then FGUI:GTextField_setColor(fuhao2, "#00f900") end
                 else
                     FGUI:GTextField_setColor(itemNum2, "#ff0000")
                     if fuhao2 then FGUI:GTextField_setColor(fuhao2, "#ff0000") end
@@ -2026,8 +2026,8 @@ function mountMain:setXHCL()
         local haveNum = SL:GetValue(TITEMCOUNT, itemId1)
         FGUI:GTextField_setText(itemNum, num1)
         if haveNum >= num1 then
-            FGUI:GTextField_setColor(itemNum, "#00FF00")
-            FGUI:GTextField_setColor(fuhao, "#00FF00")
+            FGUI:GTextField_setColor(itemNum, "#00f900")
+            FGUI:GTextField_setColor(fuhao, "#00f900")
         else
             FGUI:GTextField_setColor(itemNum, "#ff0000")
             FGUI:GTextField_setColor(fuhao, "#ff0000")
@@ -2062,8 +2062,8 @@ function mountMain:setXHCL()
         local haveNum = SL:GetValue(TITEMCOUNT, itemId)
         FGUI:GTextField_setText(itemNum, num)
         if haveNum >= tonumber(num) then
-            FGUI:GTextField_setColor(itemNum, "#00FF00")
-            FGUI:GTextField_setColor(fuhao, "#00FF00")
+            FGUI:GTextField_setColor(itemNum, "#00f900")
+            FGUI:GTextField_setColor(fuhao, "#00f900")
         else
             FGUI:GTextField_setColor(itemNum, "#ff0000")
             FGUI:GTextField_setColor(fuhao, "#ff0000")

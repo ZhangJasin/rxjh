@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="250,400">
+<component size="325,400">
   <displayList>
-    <image id="n0_o0nq" name="n0" src="o0nqc" fileName="image/sxbg.png" xy="0,0" size="250,400"/>
-    <list id="n8_vorr" name="sxlist" xy="0,0" size="250,400" overflow="scroll" margin="5,5,5,5" defaultItem="ui://vslix2m2o0nqp"/>
-    <richtext id="n10_vorr" name="buffText" xy="15,27" size="220,80" fontSize="18" color="#ffffff" autoSize="none" text=""/>
+    <image id="n0_o0nq" name="n0" src="o0nqc" fileName="image/sxbg.png" xy="0,0" size="328,400"/>
+    <list id="n8_vorr" name="sxlist" xy="0,0" size="325,400" overflow="scroll" margin="5,5,5,5" defaultItem="ui://vslix2m2o0nqp"/>
+    <richtext id="n10_vorr" name="buffText" xy="15,27" size="300,80" fontSize="18" autoSize="none" text=""/>
   </displayList>
 </component>

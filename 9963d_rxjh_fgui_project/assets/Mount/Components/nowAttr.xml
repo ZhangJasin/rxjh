@@ -2,7 +2,7 @@
 <component size="250,195">
   <displayList>
     <image id="n0_o0nq" name="n0" src="o0nqc" fileName="image/sxbg.png" xy="0,-1"/>
-    <list id="n15_vorr" name="n15" xy="0,0" size="250,195" overflow="scroll" margin="5,5,5,5" defaultItem="ui://vslix2m2o0nqp" autoClearItems="true">
+    <list id="n15_vorr" name="n15" xy="0,0" size="325,195" overflow="scroll" margin="5,5,5,5" defaultItem="ui://vslix2m2o0nqp" autoClearItems="true">
       <item/>
       <item/>
     </list>
