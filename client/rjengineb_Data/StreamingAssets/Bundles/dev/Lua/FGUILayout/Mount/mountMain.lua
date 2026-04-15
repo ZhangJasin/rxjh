@@ -211,14 +211,19 @@ function mountMain:subscribeEvents()
         -- 灵兽幻化事件
         self._subscriptions.petUpdateHHResult = self._data:Subscribe("petUpdateHHResult", function(state)
             self._dataForPet = state._dataForPet
-            -- 保持当前选中的索引（与坐骑一致）
+            -- 同步更新选中索引
             self.nowPetHHIndex = state.selectHHIndex - 1
-            FGUI:GList_setNumItems(self._ui.petLeftList, #self._dataForPet.hhSortList)
-            -- 刷新当前选中项的视图（与坐骑一致）
+            if self.nowPetHHIndex < 0 then
+                self.nowPetHHIndex = 0
+            end
+            -- 同步更新列表选中状态
+            FGUI:GList_setSelectedIndex(self._ui.petLeftList, self.nowPetHHIndex)
+            -- 重新设置列表渲染器和数量（确保点击事件正确绑定）
+            self:setupPetHuanhuaList()
+            -- 刷新当前选中项的视图
             self:setPetHHSx()
             self:setPetXhcl()
             self:setPetHHAddBtn()
-            self:setPetModel(self.modelId, 0, 1.1)
             self:UpdatePetHHBtnName()
             -- 更新n117控件的level控制器（幻化升级后需要刷新等级显示）
             self:UpdatePetHHIcon()
@@ -1358,25 +1363,20 @@ function mountMain:UpdatePetHHIcon()
         return
     end
 
-    -- 使用petHHid找到当前选中的幻化
+    -- 使用当前选中的幻化（不要根据petHHid覆盖nowPetHHIndex）
     local currentHHItem = nil
     local currentHHName = nil
-    if self._dataForPet.petHHid and tonumber(self._dataForPet.petHHid) > 0 then
-        -- 通过petHHid找对应的幻化项
-        for i = 1, #self._dataForPet.hhSortList do
-            if self._dataForPet.hhSortList[i].Model == self._dataForPet.petHHid then
-                currentHHItem = self._dataForPet.hhSortList[i]
-                currentHHName = currentHHItem.Name
-                -- 更新nowPetHHIndex以保持一致
-                self.nowPetHHIndex = i - 1
-                break
-            end
+    -- 确保索引在有效范围内
+    if self.nowPetHHIndex >= 0 and self.nowPetHHIndex < #self._dataForPet.hhSortList then
+        currentHHItem = self._dataForPet.hhSortList[self.nowPetHHIndex + 1]
+        if currentHHItem then
+            currentHHName = currentHHItem.Name
         end
     end
 
-    -- 如果没找到，使用当前索引
+    -- 如果没找到，使用第一个幻化
     if not currentHHItem then
-        currentHHItem = self._dataForPet.hhSortList[self.nowPetHHIndex + 1]
+        currentHHItem = self._dataForPet.hhSortList[1]
         if currentHHItem then
             currentHHName = currentHHItem.Name
         end
