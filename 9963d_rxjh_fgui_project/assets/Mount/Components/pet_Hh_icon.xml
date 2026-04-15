@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="190,87">
+  <controller name="level" pages="0,普通,1,勇者,2,史诗,3,传说,4,极品" selected="0"/>
+  <displayList>
+    <image id="n1_ii8j" name="n1" src="ii8j4g" fileName="image/hh_000.png" xy="0,0">
+      <gearDisplay controller="level" pages="0"/>
+    </image>
+    <image id="n3_ii8j" name="n3" src="ii8j4h" fileName="image/hh_001.png" xy="0,0">
+      <gearDisplay controller="level" pages="1"/>
+    </image>
+    <image id="n4_ii8j" name="n4" src="ii8j4i" fileName="image/hh_002.png" xy="0,0">
+      <gearDisplay controller="level" pages="2"/>
+    </image>
+    <image id="n5_ii8j" name="n5" src="ii8j4j" fileName="image/hh_003.png" xy="0,0">
+      <gearDisplay controller="level" pages="3"/>
+    </image>
+    <image id="n6_ii8j" name="n6" src="ii8j4k" fileName="image/hh_004.png" xy="0,0">
+      <gearDisplay controller="level" pages="4"/>
+    </image>
+    <text id="n0_ii8j" name="n0" xy="102,22" size="38,25" fontSize="17" color="#ffffff" text="幻化"/>
+    <text id="n2_ii8j" name="name" xy="102,48" size="38,25" fontSize="17" color="#fbefbb" align="center" text="名字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

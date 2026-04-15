@@ -94,6 +94,8 @@
     <image id="ii8j4i" name="hh_002.png" path="/image/" exported="true"/>
     <image id="ii8j4j" name="hh_003.png" path="/image/" exported="true"/>
     <image id="ii8j4k" name="hh_004.png" path="/image/" exported="true"/>
+    <image id="ii8j4l" name="pl1.png" path="/image/" exported="true"/>
+    <component id="ii8j4m" name="pet_Hh_icon.xml" path="/Components/" exported="true"/>
   </resources>
   <publish name="">
     <atlas name="mount" index="0"/>

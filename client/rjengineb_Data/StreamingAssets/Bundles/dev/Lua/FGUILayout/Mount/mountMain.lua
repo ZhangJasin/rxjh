@@ -96,6 +96,8 @@ function mountMain:subscribeEvents()
             self:setPetAtta()
             self:setPetBtPetBtn()
             self:setPetXhcl()
+            -- 更新幻化图标n117
+            self:UpdatePetHHIcon()
             -- 刷新模型显示
             self:refreshPetModel()
         end)
@@ -131,6 +133,8 @@ function mountMain:subscribeEvents()
             self:setHHAddBtn()
             self:updateModel()
             self:UpdateHHBtnName()
+            -- 更新n118控件的level控制器（幻化升级后需要刷新等级显示）
+            self:UpdateMountHHIcon()
         end)
         self._subscriptions.mountLevelUp = self._data:Subscribe("mountLevelUp", function(state)
             self._dataForMount = state
@@ -167,6 +171,8 @@ function mountMain:subscribeEvents()
             self:setPetHHAddBtn()
             self:setPetModel(self.modelId, 0, 1.1)
             self:UpdatePetHHBtnName()
+            -- 更新n117控件的level控制器（幻化升级后需要刷新等级显示）
+            self:UpdatePetHHIcon()
         end)
         -- 灵兽幻化切换结果（服务端返回）
         self._subscriptions.petUpdateModelResult = self._data:Subscribe("updatePetModelResult", function(state)
@@ -1176,6 +1182,8 @@ function mountMain:initPetHuanhuaTab()
     self:setPetHHSx()
     -- 设置列表渲染
     self:setupPetHuanhuaList()
+    -- 更新幻化图标n117
+    self:UpdatePetHHIcon()
     -- 绑定幻化按钮事件
     FGUI:setOnClickEvent(self._ui.petHuanhua, function()
         self._data:setPetModel({ mountId = self.modelId })
@@ -1270,6 +1278,118 @@ function mountMain:setPetHHSx()
     end
 end
 
+-- 更新灵兽幻化图标n117（名字和等级）
+function mountMain:UpdatePetHHIcon()
+    -- 安全检查
+    if not self._dataForPet.hhSortList or #self._dataForPet.hhSortList == 0 then
+        return
+    end
+
+    -- 使用petHHid找到当前选中的幻化
+    local currentHHItem = nil
+    local currentHHName = nil
+    if self._dataForPet.petHHid and tonumber(self._dataForPet.petHHid) > 0 then
+        -- 通过petHHid找对应的幻化项
+        for i = 1, #self._dataForPet.hhSortList do
+            if self._dataForPet.hhSortList[i].Model == self._dataForPet.petHHid then
+                currentHHItem = self._dataForPet.hhSortList[i]
+                currentHHName = currentHHItem.Name
+                -- 更新nowPetHHIndex以保持一致
+                self.nowPetHHIndex = i - 1
+                break
+            end
+        end
+    end
+
+    -- 如果没找到，使用当前索引
+    if not currentHHItem then
+        currentHHItem = self._dataForPet.hhSortList[self.nowPetHHIndex + 1]
+        if currentHHItem then
+            currentHHName = currentHHItem.Name
+        end
+    end
+
+    if not currentHHItem then
+        return
+    end
+
+    -- 更新名字
+    local nameText = FGUI:GetChild(self._ui.n117, "name")
+    if nameText then
+        FGUI:GTextField_setText(nameText, currentHHName)
+    end
+
+    -- 获取幻化等级并更新level控制器
+    -- 未激活或1级 → 控制器0（普通）
+    -- 2级 → 控制器1（勇者）
+    -- 以此类推...
+    local levelCtrl = FGUI:getController(self._ui.n117, "level")
+    if levelCtrl then
+        local currentGrade = self._dataForPet.hhlistsj[currentHHName] or 0
+        -- 等级-1得到控制器索引，未激活/1级都是0
+        local controllerIndex = math.max(0, currentGrade - 1)
+        -- 防止越界（最大4）
+        controllerIndex = math.min(controllerIndex, 4)
+        FGUI:Controller_setSelectedIndex(levelCtrl, controllerIndex)
+    end
+end
+
+-- 更新坐骑幻化图标n118（名字和等级）
+function mountMain:UpdateMountHHIcon()
+    -- 安全检查
+    if not self._dataForMount.hhSortList or #self._dataForMount.hhSortList == 0 then
+        return
+    end
+
+    -- 使用mountHHid找到当前选中的幻化
+    local currentHHItem = nil
+    local currentHHName = nil
+    if self._dataForMount.mountHHid and tonumber(self._dataForMount.mountHHid) > 0 then
+        -- 通过mountHHid找对应的幻化项
+        for i = 1, #self._dataForMount.hhSortList do
+            if self._dataForMount.hhSortList[i].Model == self._dataForMount.mountHHid then
+                currentHHItem = self._dataForMount.hhSortList[i]
+                currentHHName = currentHHItem.Name
+                -- 更新nowIndex以保持一致
+                self.nowIndex = i - 1
+                break
+            end
+        end
+    end
+
+    -- 如果没找到，使用当前索引
+    if not currentHHItem then
+        currentHHItem = self._dataForMount.hhSortList[self.nowIndex + 1]
+        if currentHHItem then
+            currentHHName = currentHHItem.Name
+        end
+    end
+
+    if not currentHHItem then
+        return
+    end
+
+    -- 更新名字
+    local nameText = FGUI:GetChild(self._ui.n118, "name")
+    if nameText then
+        FGUI:GTextField_setText(nameText, currentHHName)
+    end
+
+    -- 获取幻化等级并更新level控制器
+    -- 未激活或1级 → 控制器0（普通）
+    -- 2级 → 控制器1（勇者）
+    -- 以此类推...
+    local levelCtrl = FGUI:getController(self._ui.n118, "level")
+    if levelCtrl then
+        local currentGrade = self._dataForMount.hhlistsj[currentHHName] or 0
+        -- 等级-1得到控制器索引，未激活/1级都是0
+        local controllerIndex = math.max(0, currentGrade - 1)
+        -- 防止越界（最大4）
+        controllerIndex = math.min(controllerIndex, 4)
+        FGUI:Controller_setSelectedIndex(levelCtrl, controllerIndex)
+    end
+end
+
 -- 设置灵兽幻化列表渲染
 function mountMain:setupPetHuanhuaList()
     FGUI:GList_itemRenderer(self._ui.petLeftList, function(idx, item)
@@ -1308,6 +1428,8 @@ function mountMain:setupPetHuanhuaList()
             self:UpdatePetHHBtnName()
             self:setPetXhcl()
             self:setPetHHAddBtn()
+            -- 更新n117控件（幻化名字和等级）
+            self:UpdatePetHHIcon()
         end)
     end)
     if self._dataForPet.hhSortList then
@@ -1565,6 +1687,8 @@ function mountMain:initHuanhuaTab()
     self:updateModel()
     self:setHHAddBtn()
     self:UpdateHHBtnName()
+    -- 更新n118控件（坐骑幻化名字和等级）
+    self:UpdateMountHHIcon()
 
     print("=== initHuanhuaTab 完成 ===")
 end
@@ -1625,6 +1749,8 @@ function mountMain:setupHuanhuaList()
             self:setXHCL()
             self:UpdateHHBtnName()
             self:setHHAddBtn()
+            -- 更新n118控件（坐骑幻化名字和等级）
+            self:UpdateMountHHIcon()
         end)
     end)
     FGUI:GList_setNumItems(self.leftList, #self._dataForMount.hhSortList)

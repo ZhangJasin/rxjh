@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1344,750">
-  <controller name="rightTabs" pages="0,灵兽,1,坐骑" selected="1"/>
+  <controller name="rightTabs" pages="0,灵兽,1,坐骑" selected="0"/>
   <controller name="topTabs" pages="0,坐骑,1,幻化" selected="1"/>
   <controller name="isselected" pages="0,未选择,1,选择" selected="0"/>
   <controller name="tips" pages="0,,1," selected="0"/>
@@ -81,9 +81,11 @@
     </list>
     <image id="n54_o0nq" name="n54" src="o0nq16" fileName="image/titleBg.png" xy="376,150" size="230,50">
       <gearDisplay controller="rightTabs" pages="1"/>
+      <gearDisplay2 controller="topTabs" pages="0" condition="0"/>
     </image>
     <text id="n55_o0nq" name="mountName" xy="376,150" size="230,50" fontSize="28" color="#f6cd2b" align="center" vAlign="middle" leading="0" autoSize="none" text="乌龙驹">
       <gearDisplay controller="rightTabs" pages="1"/>
+      <gearDisplay2 controller="topTabs" pages="0" condition="0"/>
     </text>
     <component id="n56_o0nq" name="qhbtn" src="o0nq17" fileName="Components/tybtn1.xml" xy="414,660">
       <gearDisplay controller="topTabs" pages="0"/>
@@ -98,6 +100,10 @@
       <gearDisplay controller="topTabs" pages="1"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </component>
+    <image id="n115_ii8j" name="n115" src="ii8j4l" fileName="image/pl1.png" xy="175,133" size="78,580">
+      <gearDisplay controller="topTabs" pages="1"/>
+      <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
+    </image>
     <component id="n62_o0nq" name="huanhuaAttr" src="o0nq1d" fileName="Components/hhAttr.xml" xy="810,175">
       <gearDisplay controller="topTabs" pages="1"/>
       <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
@@ -191,10 +197,12 @@
       <item/>
     </list>
     <image id="n92_v5h4" name="n92" src="o0nq16" fileName="image/titleBg.png" xy="376,150" size="230,50">
-      <gearDisplay controller="rightTabs" pages="0"/>
+      <gearDisplay controller="topTabs" pages="0"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </image>
     <text id="n93_v5h4" name="petName" xy="376,150" size="230,50" fontSize="28" color="#f6cd2b" align="center" vAlign="middle" leading="0" autoSize="none" text="龙猫">
-      <gearDisplay controller="rightTabs" pages="0"/>
+      <gearDisplay controller="topTabs" pages="0"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
     </text>
     <component id="n94_v5h4" name="petQhbtn" src="o0nq17" fileName="Components/tybtn1.xml" xy="414,660">
       <gearDisplay controller="topTabs" pages="0"/>
@@ -216,6 +224,10 @@
     <graph id="n99_v5h4" name="petBody" xy="487,594" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen" lineColor="#00000000" fillColor="#00ffffff">
       <gearDisplay controller="rightTabs" pages="0"/>
     </graph>
+    <image id="n116_ii8j" name="n116" src="ii8j4l" fileName="image/pl1.png" xy="175,134" size="78,580">
+      <gearDisplay controller="topTabs" pages="1"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </image>
     <list id="n98_v5h4" name="petLeftList" xy="175,150" size="76,509" overflow="scroll" margin="4,2,6,0" lineGap="10" defaultItem="ui://vslix2m2o0nq1e" selectionController="isselected" autoClearItems="true">
       <gearDisplay controller="topTabs" pages="1"/>
       <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
@@ -238,7 +250,7 @@
     <text id="n104_cb9c" name="n104" xy="859,625" size="70,32" fontSize="22" color="#fbefbb" strokeColor="#000000" text="消耗：">
       <gearDisplay controller="rightTabs" pages="0"/>
     </text>
-    <text id="n107_cb9c" name="n107" xy="859,578" size="234,34" fontSize="17" ubb="true" autoSize="none" text="出战时提升坐骑移动速度[color=#00ff00]10%[/color]">
+    <text id="n107_cb9c" name="n107" xy="859,578" size="234,34" fontSize="17" ubb="true" autoSize="none" text="出战灵兽[color=#00ff00]3%[/color]的属性转化给人物">
       <gearDisplay controller="topTabs" pages="0"/>
       <gearText controller="rightTabs" pages="1" values="出战时提升坐骑移动速度[color=#00ff00]10%[/color]" default="出战灵兽[color=#00ff00]3%[/color]的属性转化给人物"/>
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -258,6 +270,14 @@
     <component id="n113_cb9c" name="n113" src="cb9c45" fileName="Components/btn_help.xml" xy="809,147">
       <gearDisplay controller="rightTabs" pages="1"/>
       <gearDisplay2 controller="topTabs" pages="1" condition="0"/>
+    </component>
+    <component id="n117_ii8j" name="n117" src="ii8j4m" fileName="Components/pet_Hh_icon.xml" xy="398,131">
+      <gearDisplay controller="topTabs" pages="1"/>
+      <gearDisplay2 controller="rightTabs" pages="0" condition="0"/>
+    </component>
+    <component id="n118_ii8j" name="n118" src="ii8j4m" fileName="Components/pet_Hh_icon.xml" xy="398,131">
+      <gearDisplay controller="topTabs" pages="1"/>
+      <gearDisplay2 controller="rightTabs" pages="1" condition="0"/>
     </component>
     <component id="n114_cb9c" name="n114" src="cb9c46" fileName="Components/tips.xml" xy="-54,0">
       <gearDisplay controller="tips" pages="1"/>
