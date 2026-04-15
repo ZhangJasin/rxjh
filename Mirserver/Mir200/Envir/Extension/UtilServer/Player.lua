@@ -53,6 +53,40 @@ function Player.takeItemByTableEx(actor, t, multiple)
     end
 end
 
+local taskEquipSpec={--装备ID 和stdmode
+    [380001]= 52 ,
+    [57001]= 5 ,
+    [53001]= 5 ,
+    [51301]= 5 ,
+    [59101]= 5 ,
+    [51001]= 5 ,
+    [55001]= 5 ,
+    [34115]= 3 ,
+    [32115]= 3 ,
+    [36115]= 3 ,
+    [35115]= 3 ,
+    [31115]= 3 ,
+    [33115]= 3 ,
+    [34118]= 3 ,
+    [32118]= 3 ,
+    [36118]= 3 ,
+    [35118]= 3 ,
+    [31118]= 3 ,
+    [33118]= 3 ,
+    [57048]= 5 ,
+    [53048]= 5 ,
+    [51348]= 5 ,
+    [59148]= 5 ,
+    [51048]= 5 ,
+    [55048]= 5 ,
+    [91003]= 9 ,
+    [81002]= 8 ,
+    [41001]= 22 ,
+    [60001]= 51 ,
+    [71001]= 19 ,
+    [330001]= 15 ,
+    [330008]= 15 ,
+}
 --给物品
 function Player.giveItemByTable(actor, t, multiple, isbind)
     multiple = multiple or 1         --倍数
@@ -88,11 +122,27 @@ function Player.giveItemByJobTable(actor, t, multiple, isbind)
             changeexp(actor, "+", num * multiple)
         else
             if (needjob == job or needjob == 9) and (needsex == sex or needsex == 0) and (needzy == playzy or needzy == 0) then  --  9任意职业0任意性别
-                if isbind then
-                    table.insert(parts, idx .. "#" .. num * multiple .. "#" .. ConstCfg.binding)
-                else
-                    table.insert(parts, idx .. "#" .. num * multiple)
+                --部分装备直接穿戴
+                local stdmode = taskEquipSpec[idx]
+                local isAutoOn = false
+                if stdmode then
+                    for _, pos in ipairs(ConstCfg.equipPos[stdmode] or {}) do
+                        local equipmakeIndex = bodyiteminfo(actor, pos..'_MakeIndex')
+                        if not equipmakeIndex or equipmakeIndex == "" then
+                            giveonitem(actor, pos, idx)
+                            isAutoOn = true
+                            break
+                        end
+                    end
                 end
+                
+                if not isAutoOn then
+                    if isbind then
+                        table.insert(parts, idx .. "#" .. num * multiple .. "#" .. ConstCfg.binding)
+                    else
+                        table.insert(parts, idx .. "#" .. num * multiple)
+                    end
+                end                
             end
         end 
     end

@@ -4113,7 +4113,10 @@ local config = {
 			[1] = 7,
 			[2] = 3,
 		},
+		task_turntype=2,
+		task_turn_param=3,
 		task_fintype=1,
+		task_finnpc=23,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -6574,6 +6577,8 @@ local config = {
 			[1] = 7,
 			[2] = 3,
 		},
+		task_turntype=2,
+		task_turn_param=3,
 		task_fintype=1,
 		task_finnpc=63,
 		task_drop = {
