@@ -4,6 +4,7 @@
 #serve
 *.log
 /mirserver/CenterLog/
+/Mirserver/MySQL8.4
 /mirserver/DBServer/Log/
 /mirserver/LoginSrv/CountLog/
 /mirserver/LoginSrv/Log/
