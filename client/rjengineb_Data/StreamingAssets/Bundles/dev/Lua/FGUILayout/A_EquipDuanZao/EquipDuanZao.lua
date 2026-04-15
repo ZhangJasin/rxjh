@@ -425,10 +425,12 @@ function EquipDuanZao:baglist()
                 local itemData= SL:GetValue("ITEM_DATA", bagequiplist[index].Index)
                 self.selectEquipQHTabIndex = itemData.EquipQHTabId
                 -- 除转移外页面需要重新获取bagitemlist数据
-                if self.pageControlle.selectedIndex ~= 2 then
-                    self.selectEquipLv = itemData.NeedLevel
-                    self:GetPageData()
-                end
+                -- if self.pageControlle.selectedIndex ~= 2 then
+                --     self.selectEquipLv = itemData.NeedLevel
+                --     self:GetPageData()
+                -- end
+                self.selectEquipLv = itemData.NeedLevel
+                self:GetPageData()                
                 self:GetAddItem()
                 self:upitem2num()
                 self:succfont()
@@ -470,10 +472,12 @@ function EquipDuanZao:equiplist()
                 local itemData= SL:GetValue("ITEM_DATA", equipposlist[index].Index)
                 self.selectEquipQHTabIndex = itemData.EquipQHTabId
                 -- 除转移外页面需要重新获取bagitemlist数据
-                if self.pageControlle.selectedIndex ~= 2 then                    
-                    self.selectEquipLv = itemData.NeedLevel
-                    self:GetPageData()
-                end
+                -- if self.pageControlle.selectedIndex ~= 2 then                    
+                --     self.selectEquipLv = itemData.NeedLevel
+                --     self:GetPageData()
+                -- end
+                self.selectEquipLv = itemData.NeedLevel
+                self:GetPageData()               
                 self:GetAddItem()
                 self:upitem2num()
                 self:succfont()

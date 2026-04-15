@@ -62,6 +62,9 @@ function TransferInfo.doTransfer(actor)
 
             --更新任务
             Task.GetAlltaskinfo(actor)
+
+            --转职后弹成功界面
+            Message.sendmsgEx(actor, "MainMission","TransferComplete")
         else
             sendmsg(actor, 9, "请先完成转职任务")
         end

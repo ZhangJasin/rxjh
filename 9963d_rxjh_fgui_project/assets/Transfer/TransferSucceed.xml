@@ -4,14 +4,14 @@
     <image id="n0_p51l" name="img_bg" src="io7h6" fileName="Images/img_bg.png" xy="0,207" group="n22_gab2"/>
     <image id="n2_p51l" name="img_title_bg" src="s806v5y" fileName="Images/img_succeed_title_bg.png" xy="447,54" group="n22_gab2"/>
     <image id="n1_p51l" name="img_title" src="io7ha" fileName="Images/img_transfer_succeed.png" xy="495,122" group="n22_gab2"/>
-    <image id="n3_p51l" name="img_job_bg" src="io7h7" fileName="Images/img_title_bg.png" xy="458,251" group="n22_gab2"/>
-    <text id="n8_p51l" name="txt_job_origin" xy="552,256" pivot="0.5,0.5" size="64,42" group="n22_gab2" fontSize="30" color="#f8ffd0" align="center" vAlign="middle" text="弓手"/>
-    <text id="n9_p51l" name="txt_job_next" xy="734,255" pivot="0.5,0.5" size="124,42" group="n22_gab2" fontSize="30" color="#f8ffd0" align="center" vAlign="middle" text="正派弓手"/>
+    <image id="n3_p51l" name="img_job_bg" src="io7h7" fileName="Images/img_title_bg.png" xy="442,241" size="559,56" group="n22_gab2"/>
+    <text id="n8_p51l" name="txt_job_origin" xy="500,247" pivot="0.5,0.5" size="180,42" group="n22_gab2" fontSize="20" color="#f8ffd0" align="center" vAlign="middle" autoSize="none" text="弓手"/>
+    <text id="n9_p51l" name="txt_job_next" xy="731,247" pivot="0.5,0.5" size="206,42" group="n22_gab2" fontSize="20" color="#f8ffd0" align="center" vAlign="middle" autoSize="none" text="正派弓手"/>
     <image id="n4_p51l" name="img_point1" src="io7h9" fileName="Images/img_succeed_point.png" xy="415,331" group="n22_gab2"/>
     <image id="n5_p51l" name="img_point2" src="io7h9" fileName="Images/img_succeed_point.png" xy="415,433" group="n22_gab2"/>
     <image id="n6_p51l" name="img_point3" src="io7h9" fileName="Images/img_succeed_point.png" xy="415,534" group="n22_gab2" visible="false"/>
-    <text id="n10_p51l" name="txt_prop" xy="463,327" pivot="0.5,0.5" size="100,34" group="n22_gab2" fontSize="24" color="#eeeee6" align="center" vAlign="middle" text="属性提升"/>
-    <list id="n21_p51l" name="list_prop" xy="596,328" size="500,34" group="n22_gab2" layout="row" selectionMode="none" colGap="20" defaultItem="ui://5rez3obxp51l1i" vAlign="middle">
+    <text id="n10_p51l" name="txt_prop" xy="471,333" pivot="0.5,0.5" size="84,29" group="n22_gab2" fontSize="20" color="#eeeee6" align="center" vAlign="middle" text="属性提升"/>
+    <list id="n21_p51l" name="list_prop" xy="596,334" size="500,34" group="n22_gab2" layout="row" selectionMode="none" colGap="20" defaultItem="ui://5rez3obxp51l1i" vAlign="middle">
       <item/>
       <item/>
       <item/>
@@ -24,7 +24,7 @@
       <item/>
       <item/>
     </list>
-    <text id="n12_p51l" name="txt_reward" xy="463,430" pivot="0.5,0.5" size="100,34" group="n22_gab2" fontSize="24" color="#eeeee6" align="center" vAlign="middle" text="转职奖励"/>
+    <text id="n12_p51l" name="txt_reward" xy="471,435" pivot="0.5,0.5" size="84,29" group="n22_gab2" fontSize="20" color="#eeeee6" align="center" vAlign="middle" text="转职奖励"/>
     <list id="n15_p51l" name="list_reward" xy="597,418" size="500,64" group="n22_gab2" layout="row" selectionMode="none" colGap="12" defaultItem="ui://5rez3obxp51lv5j" vAlign="middle">
       <item/>
       <item/>

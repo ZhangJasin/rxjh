@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="80,34" designImageOffsetX="-596" designImageOffsetY="-326">
+<component size="68,29" designImageOffsetX="-596" designImageOffsetY="-326">
   <displayList>
-    <text id="n0_p51l" name="txt_prop" xy="0,0" size="76,34" fontSize="24" color="#ffdb38" vAlign="middle" leading="0" text="属性点"/>
+    <text id="n0_p51l" name="txt_prop" xy="0,0" size="64,29" fontSize="20" color="#ffdb38" vAlign="middle" leading="0" text="属性点"/>
   </displayList>
   <relation target="n0_p51l" sidePair="width-width,height-height"/>
 </component>
