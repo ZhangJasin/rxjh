@@ -15,6 +15,33 @@ local Pet = require("game_config/cfgcsv/Pet")
 local PetHuanhua = require("game_config/cfgcsv/PetHuanhua")
 local mountMainData = SL:RequireFile("FGUILayout/Mount/mountMainData")
 
+-- 灵兽属性转化比例配置表（按等级阶梯）
+-- 格式：{minLevel, maxLevel, rate}  表示 minLevel-maxLevel 等级段使用 rate 转化比例
+local PetLevelRateConfig = {
+    { 1,   10,  0.03 }, -- 1-10级 3%
+    { 11,  20,  0.04 }, -- 11-20级 4%
+    { 21,  30,  0.05 }, -- 21-30级 5%
+    { 31,  40,  0.06 }, -- 31-40级 6%
+    { 41,  50,  0.08 }, -- 41-50级 8%
+    { 51,  60,  0.10 }, -- 51-60级 10%
+    { 61,  70,  0.12 }, -- 61-70级 12%
+    { 71,  80,  0.15 }, -- 71-80级 15%
+    { 81,  90,  0.18 }, -- 81-90级 18%
+    { 91,  100, 0.21 }, -- 91-100级 21%
+    { 101, 110, 0.25 }, -- 101-110级 25%
+}
+
+-- 根据等级获取转化比例
+local function getPetAttrRateByLevel(level)
+    for _, config in ipairs(PetLevelRateConfig) do
+        if level >= config[1] and level <= config[2] then
+            return config[3]
+        end
+    end
+    -- 默认返回最低档比例
+    return PetLevelRateConfig[1][3]
+end
+
 -- 从配置表读取tips字段
 local function getTipsFromConfig(config)
     if not config then return "" end
@@ -158,6 +185,8 @@ function mountMain:subscribeEvents()
             print("灵兽等级:", state.allJieshu, "是否激活:", state.isPetJh)
             self:InitPetData()
             self:setPetBtPetBtn()
+            -- 更新灵兽属性幻化百分比n107（升级后等级变化需要刷新）
+            self:UpdatePetAttrRate()
         end)
         -- 灵兽幻化事件
         self._subscriptions.petUpdateHHResult = self._data:Subscribe("petUpdateHHResult", function(state)
@@ -173,6 +202,8 @@ function mountMain:subscribeEvents()
             self:UpdatePetHHBtnName()
             -- 更新n117控件的level控制器（幻化升级后需要刷新等级显示）
             self:UpdatePetHHIcon()
+            -- 更新灵兽属性幻化百分比n107（根据等级同步服务端配置）
+            self:UpdatePetAttrRate()
         end)
         -- 灵兽幻化切换结果（服务端返回）
         self._subscriptions.petUpdateModelResult = self._data:Subscribe("updatePetModelResult", function(state)
@@ -1184,6 +1215,8 @@ function mountMain:initPetHuanhuaTab()
     self:setupPetHuanhuaList()
     -- 更新幻化图标n117
     self:UpdatePetHHIcon()
+    -- 更新灵兽属性幻化百分比n107（根据等级同步服务端配置）
+    self:UpdatePetAttrRate()
     -- 绑定幻化按钮事件
     FGUI:setOnClickEvent(self._ui.petHuanhua, function()
         self._data:setPetModel({ mountId = self.modelId })
@@ -1332,6 +1365,28 @@ function mountMain:UpdatePetHHIcon()
         controllerIndex = math.min(controllerIndex, 4)
         FGUI:Controller_setSelectedIndex(levelCtrl, controllerIndex)
     end
+end
+
+-- 更新灵兽属性幻化百分比n107（根据灵兽等级同步服务端PetLevelRateConfig）
+function mountMain:UpdatePetAttrRate()
+    -- 获取灵兽等级（从_dataForPet.allJieshu获取，这是升阶后的等级）
+    local petLevel = self._dataForPet and self._dataForPet.allJieshu or 0
+    if not petLevel or petLevel < 1 then
+        petLevel = 1
+    end
+    petLevel = tonumber(petLevel) or 1
+    
+    -- 根据等级获取转化比例
+    local rate = getPetAttrRateByLevel(petLevel)
+    local ratePercent = math.floor(rate * 100) .. "%"
+    
+    -- 更新n107文本
+    local n107Text = self._ui.n107
+    if n107Text then
+        FGUI:GTextField_setText(n107Text, string.format("出战灵兽[color=#00ff00]%s[/color]的属性转化给人物", ratePercent))
+    end
+    
+    print("=== UpdatePetAttrRate: petLevel=" .. petLevel .. ", rate=" .. ratePercent .. " ===")
 end
 
 -- 更新坐骑幻化图标n118（名字和等级）
