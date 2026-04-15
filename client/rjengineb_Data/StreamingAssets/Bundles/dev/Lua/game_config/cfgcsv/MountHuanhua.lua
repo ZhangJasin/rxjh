@@ -19,8 +19,11 @@ local config = {
 				[2] = 2,
 			},
 		},
+		BuffDesc="出战时移动速度增加2%",
 		Condition=1,
 		tips="激活坐骑幻化可以改变坐骑外观，\n同时获得额外的属性加成。\n通过消耗道具激活幻化效果，\n让你的坐骑更加炫酷",
+		BattleSkill_Type="9",
+		BattleSkill_Value="200",
 	},
 	[2] = { 
 		ID=2,
@@ -42,7 +45,10 @@ local config = {
 				[2] = 8,
 			},
 		},
+		BuffDesc="出战时移动速度增加4%",
 		Condition=1,
+		BattleSkill_Type="9",
+		BattleSkill_Value="400",
 	},
 	[3] = { 
 		ID=3,
@@ -64,7 +70,10 @@ local config = {
 				[2] = 200,
 			},
 		},
+		BuffDesc="出战时移动速度增加6%",
 		Condition=1,
+		BattleSkill_Type="9",
+		BattleSkill_Value="600",
 	},
 	[4] = { 
 		ID=4,
@@ -86,7 +95,10 @@ local config = {
 				[2] = 4,
 			},
 		},
+		BuffDesc="出战时移动速度增加8%",
 		Condition=1,
+		BattleSkill_Type="9",
+		BattleSkill_Value="800",
 	},
 	[5] = { 
 		ID=5,
@@ -108,7 +120,10 @@ local config = {
 				[2] = 100,
 			},
 		},
+		BuffDesc="出战时移动速度增加10%",
 		Condition=1,
+		BattleSkill_Type="9",
+		BattleSkill_Value="1000",
 	},
 	[6] = { 
 		ID=6,
@@ -130,6 +145,9 @@ local config = {
 				[2] = 5,
 			},
 		},
+		BuffDesc="出战时移动速度增加4%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="400",
 	},
 	[7] = { 
 		ID=7,
@@ -151,6 +169,9 @@ local config = {
 				[2] = 16,
 			},
 		},
+		BuffDesc="出战时移动速度增加8%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="800",
 	},
 	[8] = { 
 		ID=8,
@@ -172,6 +193,9 @@ local config = {
 				[2] = 400,
 			},
 		},
+		BuffDesc="出战时移动速度增加12%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="1200",
 	},
 	[9] = { 
 		ID=9,
@@ -193,6 +217,9 @@ local config = {
 				[2] = 8,
 			},
 		},
+		BuffDesc="出战时移动速度增加16%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="1600",
 	},
 	[10] = { 
 		ID=10,
@@ -214,6 +241,9 @@ local config = {
 				[2] = 200,
 			},
 		},
+		BuffDesc="出战时移动速度增加20%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="2000",
 	},
 	[11] = { 
 		ID=11,
@@ -235,6 +265,9 @@ local config = {
 				[2] = 8,
 			},
 		},
+		BuffDesc="出战时移动速度增加6%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="600",
 	},
 	[12] = { 
 		ID=12,
@@ -256,6 +289,9 @@ local config = {
 				[2] = 25,
 			},
 		},
+		BuffDesc="出战时移动速度增加12%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="1200",
 	},
 	[13] = { 
 		ID=13,
@@ -277,6 +313,9 @@ local config = {
 				[2] = 700,
 			},
 		},
+		BuffDesc="出战时移动速度增加18%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="1800",
 	},
 	[14] = { 
 		ID=14,
@@ -298,6 +337,9 @@ local config = {
 				[2] = 15,
 			},
 		},
+		BuffDesc="出战时移动速度增加24%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="2400",
 	},
 	[15] = { 
 		ID=15,
@@ -319,6 +361,9 @@ local config = {
 				[2] = 300,
 			},
 		},
+		BuffDesc="出战时移动速度增加30%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="3000",
 	},
 	[16] = { 
 		ID=16,
@@ -340,6 +385,9 @@ local config = {
 				[2] = 14,
 			},
 		},
+		BuffDesc="出战时移动速度增加8%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="800",
 	},
 	[17] = { 
 		ID=17,
@@ -361,6 +409,9 @@ local config = {
 				[2] = 35,
 			},
 		},
+		BuffDesc="出战时移动速度增加16%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="1600",
 	},
 	[18] = { 
 		ID=18,
@@ -382,6 +433,9 @@ local config = {
 				[2] = 1000,
 			},
 		},
+		BuffDesc="出战时移动速度增加24%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="2400",
 	},
 	[19] = { 
 		ID=19,
@@ -403,6 +457,9 @@ local config = {
 				[2] = 25,
 			},
 		},
+		BuffDesc="出战时移动速度增加32%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="3200",
 	},
 	[20] = { 
 		ID=20,
@@ -424,6 +481,9 @@ local config = {
 				[2] = 400,
 			},
 		},
+		BuffDesc="出战时移动速度增加40%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="4000",
 	},
 	[21] = { 
 		ID=21,
@@ -445,6 +505,9 @@ local config = {
 				[2] = 20,
 			},
 		},
+		BuffDesc="出战时移动速度增加10%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="1000",
 	},
 	[22] = { 
 		ID=22,
@@ -466,6 +529,9 @@ local config = {
 				[2] = 50,
 			},
 		},
+		BuffDesc="出战时移动速度增加20%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="2000",
 	},
 	[23] = { 
 		ID=23,
@@ -487,6 +553,9 @@ local config = {
 				[2] = 1500,
 			},
 		},
+		BuffDesc="出战时移动速度增加30%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="3000",
 	},
 	[24] = { 
 		ID=24,
@@ -508,6 +577,9 @@ local config = {
 				[2] = 40,
 			},
 		},
+		BuffDesc="出战时移动速度增加40%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="4000",
 	},
 	[25] = { 
 		ID=25,
@@ -529,6 +601,9 @@ local config = {
 				[2] = 500,
 			},
 		},
+		BuffDesc="出战时移动速度增加50%",
+		BattleSkill_Type="9",
+		BattleSkill_Value="5000",
 	},
 }
 return config
