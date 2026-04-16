@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="177,40" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n3_jui0" name="bg" src="m4yxvof" fileName="Images/MiniMap/item_normal.png" xy="0,0" size="177,40">
+      <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </image>
+    <image id="n4_jui0" name="select" src="m4yxvoh" fileName="Images/MiniMap/item_select.png" xy="0,0" size="177,40">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </image>
+    <richtext id="n6_jui0" name="title" xy="5,0" size="167,40" font="ui://st7dgeqq9kdgkvpj" fontSize="20" color="#ffffff" vAlign="middle" ubb="true" autoSize="shrink" singleLine="true" autoClearText="true" text="">
+      <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </richtext>
+    <image id="n8_ki52" name="arrow" src="pzjgvoj" fileName="Images/MiniMap/traceArrow.png" xy="141,4"/>
+  </displayList>
+  <Button mode="Check"/>
+</component>

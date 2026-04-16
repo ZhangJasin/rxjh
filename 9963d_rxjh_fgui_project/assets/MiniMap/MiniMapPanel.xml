@@ -9,21 +9,7 @@
     </component>
     <graph id="n48_uzzc" name="n48" xy="173,107" size="982,575" group="n46_m4yx" type="rect" lineColor="#80000000" fillColor="#4c000000" corner="3"/>
     <component id="n10_jui0" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1142,78" group="n46_m4yx"/>
-    <list id="n3_vmij" name="list_left" xy="176,167" size="177,510" group="n46_m4yx" overflow="scroll" lineGap="2" defaultItem="ui://6p8aggddjui0k" autoClearItems="true">
-      <item title="泫勃派"/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
+    <list id="n3_vmij" name="list_left" xy="176,167" size="177,510" group="n46_m4yx" overflow="scroll" lineGap="2" defaultItem="ui://6p8aggddki52vol" autoClearItems="true"/>
     <list id="n19_nouy" name="list_right" xy="919,167" size="233,511" group="n46_m4yx" overflow="scroll" lineGap="2" defaultItem="ui://6p8aggddnouyx" align="center" autoClearItems="true">
       <item/>
       <item/>
