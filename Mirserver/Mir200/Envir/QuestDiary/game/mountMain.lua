@@ -1546,6 +1546,13 @@ function mountMain.unrecallpet(actor, petMark)
         return
     end
 
+    -- 检查灵兽是否处于死亡倒计时中
+    local petDieTime = tonumber(gethumvar(actor, VarCfg.U_Pet_Die_Time))
+    if petDieTime and petDieTime > 0 then
+        sendmsg(actor, 9, "灵兽已死亡，请复活后再召回")
+        return
+    end
+
     -- 禁用灵兽复活定时器
     disabletimer(actor, 49)
 
@@ -1743,6 +1750,20 @@ end, mountMain)
 
 -- 角色登录完成时处理坐骑和灵兽
 GameEvent.add(EventCfg.onLoginEnd, function(actor)
+    -- 检查灵兽死亡倒计时，如果存在则继续启动定时器
+    local petDieTime = tonumber(gethumvar(actor, VarCfg.U_Pet_Die_Time))
+    local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
+    if petDieTime and petDieTime > 0 and petMark and petMark ~= "" then
+        addtimerex(actor, 49, 1000, petDieTime, "@ontimer49", "")
+        local isPc = clientflag(actor) == 1
+        local methodName = isPc and "PCMainPlayer" or "MainPlayer"
+        Message.sendmsgEx(actor, methodName, "petResurrec", utcint64now())
+        -- 保持出战状态，继续应用属性加成
+        mountMain.updatePetAttrBuff(actor)
+        mountMain.updatePetBattleSkillBuff(actor)
+        return
+    end
+
     local mountIsSet = tonumber(gethumvar(actor, VarCfg.U_Mount_IS_SET))
     local mountStatus = tonumber(gethumvar(actor, VarCfg.U_Mount_Status))
     local mountTakeId = gethumvar(actor, VarCfg.U_Mount_Take_Id)
