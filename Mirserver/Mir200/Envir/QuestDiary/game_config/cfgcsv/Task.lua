@@ -13950,7 +13950,7 @@ local config = {
 		task_name="Name_Task_300016",
 		task_targetdec="TargetDec_Task_300016",
 		task_type=3,
-		task_weight=4016,
+		task_weight=4017,
 		task_receivetype=1,
 		task_level=5,
 		task_pre = {
@@ -13982,11 +13982,27 @@ local config = {
 		task_name="Name_Task_300017",
 		task_targetdec="TargetDec_Task_300017",
 		task_type=3,
-		task_weight=4017,
+		task_weight=4016,
 		task_receivetype=1,
 		task_level=5,
 		task_pre = {
 			[1] = 100006,
+		},
+		task_targettype=4,
+		task_turntype=3,
+		task_fintype=1,
+		task_finnpc=1,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 7,
+				[3] = 50,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 300,
+			},
 		},
 		task_findial="FinishDec_Task_300015",
 	},
