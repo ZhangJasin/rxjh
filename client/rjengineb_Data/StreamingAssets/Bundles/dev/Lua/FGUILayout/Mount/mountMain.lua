@@ -172,8 +172,16 @@ function mountMain:subscribeEvents()
         self._subscriptions.updateHHResult = self._data:Subscribe("updateHHResult", function(state)
             -- dump(state)
             self._dataForMount = state._dataForMount
-            self.nowIndex = state.selectHHIndex - 1
-            FGUI:GList_setNumItems(self.leftList, #self._dataForMount.hhSortList)
+            -- 保留当前选中的索引（用户正在操作的幻化），不要被服务端返回值覆盖
+            -- self.nowIndex = state.selectHHIndex - 1
+            -- 确保索引有效
+            local listSize = #self._dataForMount.hhSortList
+            if self.nowIndex and self.nowIndex >= 0 and self.nowIndex < listSize then
+                -- 保持当前索引不变
+            else
+                self.nowIndex = 0
+            end
+            FGUI:GList_setNumItems(self.leftList, listSize)
             -- 更新视图
             self:setMountHHSx()
             self:setXHCL()
@@ -1430,31 +1438,49 @@ function mountMain:UpdatePetAttrRate()
 end
 
 -- 更新坐骑幻化图标n118（名字和等级）
-function mountMain:UpdateMountHHIcon()
+-- 参数：可选的指定名称，用于点击列表时显示正确的幻化名字
+function mountMain:UpdateMountHHIcon(specifiedName)
     -- 安全检查
     if not self._dataForMount.hhSortList or #self._dataForMount.hhSortList == 0 then
         return
     end
 
-    -- 使用mountHHid找到当前选中的幻化
     local currentHHItem = nil
     local currentHHName = nil
-    if self._dataForMount.mountHHid and tonumber(self._dataForMount.mountHHid) > 0 then
-        -- 通过mountHHid找对应的幻化项
+
+    -- 优先级1：如果传入了指定名称（点击列表时），直接使用该名称
+    if specifiedName and specifiedName ~= "" then
         for i = 1, #self._dataForMount.hhSortList do
-            if self._dataForMount.hhSortList[i].Model == self._dataForMount.mountHHid then
+            if self._dataForMount.hhSortList[i].Name == specifiedName then
                 currentHHItem = self._dataForMount.hhSortList[i]
                 currentHHName = currentHHItem.Name
-                -- 更新nowIndex以保持一致
-                self.nowIndex = i - 1
                 break
             end
         end
     end
 
-    -- 如果没找到，使用当前索引
-    if not currentHHItem then
+    -- 优先级2：如果没有指定名称，优先使用当前索引对应的幻化（用户正在操作的）
+    if not currentHHItem and self.nowIndex and self.nowIndex >= 0 and self.nowIndex < #self._dataForMount.hhSortList then
         currentHHItem = self._dataForMount.hhSortList[self.nowIndex + 1]
+        if currentHHItem then
+            currentHHName = currentHHItem.Name
+        end
+    end
+
+    -- 优先级3：如果当前索引无效，使用mountHHid找到当前出战的幻化
+    if not currentHHItem and self._dataForMount.mountHHid and tonumber(self._dataForMount.mountHHid) > 0 then
+        for i = 1, #self._dataForMount.hhSortList do
+            if self._dataForMount.hhSortList[i].Model == self._dataForMount.mountHHid then
+                currentHHItem = self._dataForMount.hhSortList[i]
+                currentHHName = currentHHItem.Name
+                break
+            end
+        end
+    end
+
+    -- 优先级4：最后使用第一个幻化
+    if not currentHHItem then
+        currentHHItem = self._dataForMount.hhSortList[1]
         if currentHHItem then
             currentHHName = currentHHItem.Name
         end
@@ -1471,15 +1497,10 @@ function mountMain:UpdateMountHHIcon()
     end
 
     -- 获取幻化等级并更新level控制器
-    -- 未激活或1级 → 控制器0（普通）
-    -- 2级 → 控制器1（勇者）
-    -- 以此类推...
     local levelCtrl = FGUI:getController(self._ui.n118, "level")
     if levelCtrl then
         local currentGrade = self._dataForMount.hhlistsj[currentHHName] or 0
-        -- 等级-1得到控制器索引，未激活/1级都是0
         local controllerIndex = math.max(0, currentGrade - 1)
-        -- 防止越界（最大4）
         controllerIndex = math.min(controllerIndex, 4)
         FGUI:Controller_setSelectedIndex(levelCtrl, controllerIndex)
     end
@@ -1737,10 +1758,6 @@ function mountMain:initHuanhuaTab()
     print("坐骑幻化列表数量:", self._dataForMount.hhSortList and #self._dataForMount.hhSortList or 0)
 
     self.leftList = self._ui.leftList
-    self.nowIndex = FGUI:GList_getSelectedIndex(self.leftList)
-    if self.nowIndex < 0 then
-        self.nowIndex = 0
-    end
 
     -- 检查幻化列表是否为空
     if not self._dataForMount.hhSortList or #self._dataForMount.hhSortList == 0 then
@@ -1759,8 +1776,24 @@ function mountMain:initHuanhuaTab()
     FGUI:setVisible(self._ui.huanhua, true)
     FGUI:setVisible(self._ui.n60, true)
 
+    -- 保留当前选中的索引（用户正在操作的幻化），只在无效时初始化
+    -- 如果self.nowIndex无效，根据mountHHid确定索引
+    local listSize = #self._dataForMount.hhSortList
+    if not self.nowIndex or self.nowIndex < 0 or self.nowIndex >= listSize then
+        self.nowIndex = 0
+        -- 如果当前没有有效索引，使用mountHHid找到对应索引
+        if self._dataForMount.mountHHid and tonumber(self._dataForMount.mountHHid) > 0 then
+            for i = 1, listSize do
+                if self._dataForMount.hhSortList[i].Model == self._dataForMount.mountHHid then
+                    self.nowIndex = i - 1
+                    break
+                end
+            end
+        end
+    end
+
     -- 确保索引在有效范围内
-    if self.nowIndex >= #self._dataForMount.hhSortList then
+    if self.nowIndex < 0 or self.nowIndex >= #self._dataForMount.hhSortList then
         self.nowIndex = 0
     end
 
@@ -1845,8 +1878,8 @@ function mountMain:setupHuanhuaList()
             self:setXHCL()
             self:UpdateHHBtnName()
             self:setHHAddBtn()
-            -- 更新n118控件（坐骑幻化名字和等级）
-            self:UpdateMountHHIcon()
+            -- 更新n118控件（坐骑幻化名字和等级），传入当前点击的幻化名称
+            self:UpdateMountHHIcon(itemData.Name)
         end)
     end)
     FGUI:GList_setNumItems(self.leftList, #self._dataForMount.hhSortList)
