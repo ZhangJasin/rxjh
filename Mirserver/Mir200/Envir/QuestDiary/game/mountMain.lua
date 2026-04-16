@@ -1548,8 +1548,10 @@ function mountMain.unrecallpet(actor, petMark)
 
     -- 检查灵兽是否处于死亡倒计时中
     local petDieTime = tonumber(gethumvar(actor, VarCfg.U_Pet_Die_Time))
-    if petDieTime and petDieTime > 0 then
-        sendmsg(actor, 9, "灵兽已死亡，请复活后再召回")
+    if petDieTime and petDieTime > 1 then
+        --print("petDieTime=", petDieTime)
+        local str = string.format("灵兽已死亡，请%s秒复活后再召回", petDieTime)
+        sendmsg(actor, 9, str)
         return
     end
 
@@ -1753,7 +1755,7 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
     -- 检查灵兽死亡倒计时，如果存在则继续启动定时器
     local petDieTime = tonumber(gethumvar(actor, VarCfg.U_Pet_Die_Time))
     local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
-    if petDieTime and petDieTime > 0 and petMark and petMark ~= "" then
+    if petDieTime and petDieTime > 1 and petMark and petMark ~= "" then
         addtimerex(actor, 49, 1000, petDieTime, "@ontimer49", "")
         local isPc = clientflag(actor) == 1
         local methodName = isPc and "PCMainPlayer" or "MainPlayer"
