@@ -264,6 +264,272 @@ function PCMiniMapPanel:OnClickMapItem(context)
 	end
 	self:ChangeMap(data.MapId)
 end
+-- BEGIN 左列表 =====================================================
+-- 二级列表数据结构
+--[[
+数据结构示例：
+{
+    { type = "group", name = "泫勃派", isOpen = true, children = {
+        { type = "item", mapId = 1, mapName = "泫勃派" },
+        { type = "item", mapId = 2, mapName = "泫勃派南" }
+    }},
+    { type = "group", name = "泫勃派南", isOpen = false, children = {
+        { type = "item", mapId = 3, mapName = "泫勃派南1" }
+    }}
+}
+]]
+
+-- 刷新左边的列表（二级栏结构）
+function PCMiniMapPanel:RefreshLeftList(now_mapId)
+	self._mapId = now_mapId
+
+	local allInfo = SL:GetValue("MAP_ALL_INFO_CONFIG")
+	-- 按MapType分组
+	local groupMap = {}
+	for _, v in pairs(allInfo) do
+		-- 过滤掉MapType为""、0和1的数据
+		local mapTypeNum = tonumber(v.MapType)
+		if v.MapType and v.MapType ~= "" and mapTypeNum ~= 0 and mapTypeNum ~= 1 then
+			local groupName = tostring(v.MapType)
+			if not groupMap[groupName] then
+				-- 首次出现该MapType时，创建分组
+				groupMap[groupName] = {
+					type = "group",
+					name = groupName,  -- 一级分类名称就是MapType的值
+					sort = v.Sort or 0,
+					isOpen = false,
+					children = {}
+				}
+			end
+			-- 将该地图添加到二级分类列表中
+			table.insert(groupMap[groupName].children, {
+				type = "item",
+				mapId = v.MapId,
+				mapName = v.MapName,
+				sort = v.Sort or 0
+			})
+		end
+	end
+
+	-- 转换为数组并排序（只保留有子项的分组）
+	self._leftGroupList = {}
+	for _, group in pairs(groupMap) do
+		-- 跳过无子项的空分组
+		if #group.children > 0 then
+			-- 对组内子项按Sort排序
+			table.sort(group.children, function(a, b)
+				return (a.sort or 0) < (b.sort or 0)
+			end)
+			-- 更新组的sort为子项中最小的sort
+			group.sort = group.children[1].sort
+			table.insert(self._leftGroupList, group)
+		end
+	end
+	-- 对分组按Sort排序
+	table.sort(self._leftGroupList, function(a, b)
+		return (a.sort or 0) < (b.sort or 0)
+	end)
+
+	-- 第一步：标记当前地图所在组为展开状态
+	for i, group in ipairs(self._leftGroupList) do
+		group.isOpen = false  -- 先全部折叠
+		for _, child in ipairs(group.children) do
+			if child.mapId == now_mapId then
+				group.isOpen = true  -- 展开包含当前地图的组
+				break
+			end
+		end
+	end
+
+	-- 第二步：计算总行数（只统计展开组的子项）
+	local totalRows = 0
+	for i, group in ipairs(self._leftGroupList) do
+		totalRows = totalRows + 1  -- 组标题行
+		if group.isOpen then
+			totalRows = totalRows + #group.children  -- 只统计展开组的子项
+		end
+	end
+
+	-- 设置列表项数量
+	FGUI:GList_setNumItems(self._ui.list_left, totalRows)
+
+	-- 设置选中当前地图
+	self:_setSelectedMap(now_mapId)
+end
+
+-- 设置选中当前地图
+function PCMiniMapPanel:_setSelectedMap(now_mapId)
+	local rowIdx = 0
+	for i, group in ipairs(self._leftGroupList) do
+		rowIdx = rowIdx + 1  -- 组标题行
+		if group.isOpen then
+			for j, child in ipairs(group.children) do
+				rowIdx = rowIdx + 1  -- 子项行
+				if child.mapId == now_mapId then
+					FGUI:GList_setSelectedIndex(self._ui.list_left, rowIdx - 1)
+					return
+				end
+			end
+		end
+	end
+end
+
+-- 刷新左Item（二级列表渲染）
+function PCMiniMapPanel:LeftItemRender(idx, item)
+	-- 计算当前行对应的组和子项
+	local rowIdx = 0
+	for i, group in ipairs(self._leftGroupList) do
+		rowIdx = rowIdx + 1  -- 组标题行
+		if rowIdx - 1 == idx then
+			-- 这是组标题行
+			self:_renderGroupItem(item, group)
+			return
+		end
+		if group.isOpen then
+			for j, child in ipairs(group.children) do
+				rowIdx = rowIdx + 1  -- 子项行
+				if rowIdx - 1 == idx then
+					-- 这是子项行
+					self:_renderChildItem(item, child, group.name)
+					return
+				end
+			end
+		end
+	end
+	-- idx 超出范围时，清空item内容
+	FGUI:GButton_setTitle(item, "")
+	local title = FGUI:getChildByName(item, "title")
+	if title then
+		FGUI:GTextField_setText(title, "")
+	end
+	local arrow = FGUI:getChildByName(item, "arrow")
+	if arrow then
+		FGUI:setVisible(arrow, false)
+	end
+end
+
+-- 渲染组标题行
+function PCMiniMapPanel:_renderGroupItem(item, group)
+	-- 使用Button的title属性设置标题
+	FGUI:GButton_setTitle(item, group.name)
+	-- 设置一级分类字号
+	local title = FGUI:getChildByName(item, "title")
+	if title then
+		FGUI:GTextField_setFontSize(title, 12)  -- PC版字号小一些
+	end
+	-- 获取arrow控件用于显示展开/折叠状态
+	local arrow = FGUI:getChildByName(item, "arrow")
+	if arrow then
+		-- 空数据（无子项）时隐藏arrow
+		if #group.children == 0 then
+			FGUI:setVisible(arrow, false)
+		else
+			FGUI:setVisible(arrow, true)  -- 确保arrow可见
+			if group.isOpen then
+				FGUI:setRotation(arrow, 90)  -- 展开状态，箭头向下
+			else
+				FGUI:setRotation(arrow, 0)   -- 折叠状态，箭头向右
+			end
+		end
+	end
+end
+
+-- 渲染子项行
+function PCMiniMapPanel:_renderChildItem(item, child, groupName)
+	-- 使用Button的title属性设置标题
+	FGUI:GButton_setTitle(item, child.mapName)
+	-- 获取title控件并设置小一号字号
+	local title = FGUI:getChildByName(item, "title")
+	if title then
+		FGUI:GTextField_setFontSize(title, 11)  -- 二级分类字号小一号
+	end
+	-- 隐藏arrow控件
+	local arrow = FGUI:getChildByName(item, "arrow")
+	if arrow then
+		FGUI:setVisible(arrow, false)
+	end
+end
+
+-- 根据index查找对应的组/子项信息
+function PCMiniMapPanel:_getInfoByIndex(index)
+	local rowIdx = 0
+	for i, group in ipairs(self._leftGroupList) do
+		rowIdx = rowIdx + 1  -- 组标题行
+		if rowIdx - 1 == index then
+			return { type = "group", groupName = group.name }
+		end
+		if group.isOpen then
+			for j, child in ipairs(group.children) do
+				rowIdx = rowIdx + 1  -- 子项行
+				if rowIdx - 1 == index then
+					return { type = "item", mapId = child.mapId, mapName = child.mapName }
+				end
+			end
+		end
+	end
+	return nil
+end
+
+-- 点击传送点item
+function PCMiniMapPanel:OnClickMapItem(context)
+	local childIdx = FGUI:GetChildIndex(self._ui.list_left, context.data)
+	local index = FGUI:GList_childIndexToItemIndex(self._ui.list_left, childIdx)
+
+	-- 根据index查找对应的数据
+	local info = self:_getInfoByIndex(index)
+	if not info then return end
+
+	if info.type == "group" then
+		-- 点击的是组标题，切换展开/折叠状态
+		self:_toggleGroup(info.groupName)
+	elseif info.type == "item" then
+		-- 点击的是子项，切换地图
+		if self._mapId ~= info.mapId then
+			self:ChangeMap(info.mapId)
+		end
+	end
+end
+
+-- 切换组的展开/折叠状态
+function PCMiniMapPanel:_toggleGroup(groupName)
+	for i, group in ipairs(self._leftGroupList) do
+		if group.name == groupName then
+			local wasOpen = group.isOpen
+			group.isOpen = not group.isOpen
+			-- 重新计算总行数
+			local totalRows = 0
+			for _, g in ipairs(self._leftGroupList) do
+				totalRows = totalRows + 1
+				if g.isOpen then
+					totalRows = totalRows + #g.children
+				end
+			end
+			FGUI:GList_setNumItems(self._ui.list_left, totalRows)
+			-- 展开时默认选中第一个子项
+			if group.isOpen and not wasOpen and #group.children > 0 then
+				local firstChild = group.children[1]
+				-- 计算第一个子项在列表中的索引
+				local firstChildIndex = 0
+				for idx, g in ipairs(self._leftGroupList) do
+					firstChildIndex = firstChildIndex + 1  -- 组标题行
+					if g == group then
+						firstChildIndex = firstChildIndex + 1  -- 第一个子项行
+						break
+					end
+					if g.isOpen then
+						firstChildIndex = firstChildIndex + #g.children
+					end
+				end
+				FGUI:GList_setSelectedIndex(self._ui.list_left, firstChildIndex - 1)
+				-- 切换地图
+				if self._mapId ~= firstChild.mapId then
+					self:ChangeMap(firstChild.mapId)
+				end
+			end
+			return
+		end
+	end
+end
 -- END 左列表 =====================================================
 
 -- 当地图变化
@@ -409,7 +675,10 @@ end
 function PCMiniMapPanel:RightItemRender_NPC(info, item, idx)
 	local scrollText = FGUI:GetChild(item, "name")
 	FGUIFunction:ScrollText_setString(scrollText, info.MapRightName, 1, 0)
-	FGUI:GTextField_setColor(FGUI:GetChild(scrollText, "title"),"#00FF00")
+	local title = FGUI:GetChild(item, "title")
+	if title then
+		FGUI:GTextField_setColor(title, "#00FF00")
+	end
 	local level_text = FGUI:GetChild(item, "level")
 	FGUI:GTextField_setText(level_text, "")
 	local btn_transmit = FGUI:GetChild(item, "btn_transmit")
@@ -421,14 +690,18 @@ end
 function PCMiniMapPanel:RightItemRender_Monster(info, item, idx)
 	local scrollText = FGUI:GetChild(item, "name")
 	FGUIFunction:ScrollText_setString(scrollText, SL:GetValue("MONSTER_BOSS_NAME", info.MonId), 1, 0)
-	FGUI:GButton_setTitle(item,SL:GetValue("MONSTER_BOSS_NAME", info.MonId))
-	if SL:GetValue("MONSTER_BOSS_SIGN", info.MonId) > 0 then
-		FGUI:GTextField_setColor(FGUI:GetChild(scrollText, "title"),"#FF0000")
-	else
-		FGUI:GTextField_setColor(FGUI:GetChild(scrollText, "title"),"#FFFFFF")
+	FGUI:GButton_setTitle(item, SL:GetValue("MONSTER_BOSS_NAME", info.MonId))
+	local title = FGUI:GetChild(item, "title")
+	if title then
+		FGUI:GTextField_setText(title, SL:GetValue("MONSTER_BOSS_NAME", info.MonId))
+		if SL:GetValue("MONSTER_BOSS_SIGN", info.MonId) > 0 then
+			FGUI:GTextField_setColor(title, "#FF0000")
+		else
+			FGUI:GTextField_setColor(title, "#FFFFFF")
+		end
 	end
 	local level_text = FGUI:GetChild(item, "level")
-	FGUI:GTextField_setText(level_text, string.format("Lv.%s",tostring(SL:GetValue("MONSTER_LEVEL", info.MonId))))
+	FGUI:GTextField_setText(level_text, string.format("Lv.%s", tostring(SL:GetValue("MONSTER_LEVEL", info.MonId))))
 	local btn_transmit = FGUI:GetChild(item, "btn_transmit")
 	FGUI:SetIntData(btn_transmit, idx)
 	FGUI:addOnClickEvent(btn_transmit, self.handler_clickTransmitBtn)

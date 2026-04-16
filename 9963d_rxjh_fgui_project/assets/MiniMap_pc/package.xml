@@ -47,6 +47,7 @@
     <component id="u24418" name="map_trace_point_item.xml" path="/Components/MiniMap/" exported="true"/>
     <image id="u24419" name="traceArrow.png" path="/Images/MiniMap/"/>
     <image id="u2441a" name="tracePoint.png" path="/Images/MiniMap/"/>
+    <component id="mgz01b" name="item_left_group.xml" path="/Components/MiniMap/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
