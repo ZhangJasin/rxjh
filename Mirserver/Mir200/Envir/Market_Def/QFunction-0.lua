@@ -794,6 +794,11 @@ end
 ---@param guildName string 门派名称
 ---@return boolean 是否允许创建
 function checkbuildguild(actor, guildName)
+    local camp = targetinfo(actor, "GOODEVILID")  --(0=无阵营 1=正派 2=邪派)     -- 获取阵营
+    if camp == 0 then
+        sendmsg(actor, 9, "请先选择阵营")
+        return false
+    end
     GameEvent.push(EventCfg.onCheckbuildguild, actor, guildName)
     return true
 end
