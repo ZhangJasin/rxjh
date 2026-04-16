@@ -103,6 +103,7 @@ FGUIDefine.GuideDataKey = {
 	BagGuideFunc 		= 3,
 	MissionGuideFunc 	= 4,
 	SkillGuideFunc 		= 5,
+	PlayerInfoGuide		= 6,
 }
 
 FGUIDefine.TeamPickType = {

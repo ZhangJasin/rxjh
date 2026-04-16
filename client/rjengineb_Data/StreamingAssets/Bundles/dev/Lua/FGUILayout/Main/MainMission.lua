@@ -5,6 +5,7 @@ local taskDeliverData = require("FGUILayout/A_TaskDeliver/taskDeliverData")
 local Task_cfg = require("game_config/cfgcsv/Task")
 local Language_cfg = require("game_config/cfgcsv/Language")
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
+local GuideTask = require("FGUILayout/Guide/GuideTask")
 
 function MainMission:Create()
 	self._ui = FGUI:ui_delegate(self.component)
@@ -327,14 +328,7 @@ function MainMission:OnListMissionItemClick(context)
             FGUI:Open("A_EquipDuanZao", "EquipDuanZao",4,nil,{fullScreen = false,destroyTime = 1})
         end
     elseif task_turntype == 3 then   --引导
-        -- 引导逻辑
-        if task_turn_param == 1 then --引导打开仓库
-        
-        elseif task_turn_param == 2 then --引导宠物激活
-        
-        elseif task_turn_param == 3 then --引导坐骑激活
-            
-        end
+        self:StartGuide(task_turn_param, data.taskid)
     end
 end
 
@@ -578,5 +572,149 @@ function MainMission:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "MainMission")
 end
 
+-----------------------------------引导功能------------------------------------
+-- 引导配置
+local GuideConfig = {
+    [1] = { -- 引导打开随身仓库
+        panel = SL:GetValue("IS_PC_OPER_MODE") and "Bag_pc" or "Bag",
+        panelName = SL:GetValue("IS_PC_OPER_MODE") and "PCPlayerInfoPanel" or "PlayerInfoPanel",
+        panelParm= 1,
+        widget = "btn_bag_warehouse",
+        desc = "点击打开随身仓库",
+        callback = function()
+            -- 关闭PlayerInfoPanel，打开StoragePanel
+            -- FGUI:Close("Bag", "PlayerInfoPanel")
+            -- FGUI:Open("Bag", "StoragePanel", {fromPanel = 1})
+            return true -- 引导完成
+        end
+    },
+    [2] = { -- 引导宠物激活
+        panel = "Mount",
+        panelName = "mountMain",
+        panelParm= {type=0},
+        widget = "btn_activate",
+        desc = "点击激活宠物",
+        callback = function()
+            -- 宠物激活逻辑
+            return true
+        end
+    },
+    [3] = { -- 引导坐骑激活
+        panel = "Mount",
+        panelName = "mountMain",
+        panelParm= {type=1},
+        widget = "btn_activate",
+        desc = "点击激活坐骑",
+        callback = function()
+            -- 坐骑激活逻辑
+            return true
+        end
+    },
+    [4] = { -- 引导打开随身商店
+        panel = SL:GetValue("IS_PC_OPER_MODE") and "Bag_pc" or "Bag",
+        panelName = SL:GetValue("IS_PC_OPER_MODE") and "PCPlayerInfoPanel" or "PlayerInfoPanel",
+        panelParm= 1,
+        widget = "btn_bag_wareShop",
+        desc = "点击打开随身商店",
+        callback = function()
+            -- 关闭PlayerInfoPanel，打开商店
+            -- FGUI:Close("Bag", "PlayerInfoPanel")
+            -- ssrMessage:sendmsgEx("bag", "openWareShop")
+            return true
+        end
+    },
+}
+
+function MainMission:StartGuide(guideType, taskId)
+    local config = GuideConfig[guideType]
+    if not config then
+        print("[Guide] 未找到引导配置，type = " .. tostring(guideType))
+        return
+    end
+    
+    -- 保存当前引导任务ID
+    self._currentGuideTaskId = taskId
+    self._currentGuideType = guideType
+    
+    -- 先打开目标界面
+    if config.panelName then
+        FGUI:Open(config.panel, config.panelName,config.panelParm)
+    end
+    
+    -- 延迟显示引导（等待界面打开）
+    SL:ScheduleOnce(handler(self, function()
+        self:ShowGuideTask(config, guideType)
+    end),0.5)
+end
+
+function MainMission:ShowGuideTask(config, guideType)
+    -- 查找目标按钮
+    local targetWidget = nil
+    
+    -- 尝试从不同位置获取widget
+    if config.widget then
+        -- 检查是否已经打开了界面
+        local panelUI = self:_findOpenedPanelUI(config.panel, config.panelName)
+        if panelUI and panelUI[config.widget] then
+            targetWidget = panelUI[config.widget]
+        end
+    end
+    
+    if not targetWidget then
+        print("[Guide] 未找到引导目标widget: " .. tostring(config.widget))
+        return
+    end
+    
+    -- 创建引导任务
+    local guideData = {
+        id = self._currentGuideTaskId,
+        param = guideType,
+        guideWidget = targetWidget,
+        guideDesc = config.desc or "请点击此按钮",
+        showType = 1,
+        mainIdx = 0,
+        isForce = true,
+        dir = 7, -- 箭头在下方
+        clickCB = handler(self, function()
+            if config.callback and config.callback() then
+                -- 引导完成，关闭引导
+                self:CompleteCurrentGuide()
+            end
+        end)
+    }
+    
+    local guideTask = GuideTask.new(guideData)
+    guideTask:Enter()
+    self._guideTask = guideTask
+end
+
+-- 查找已打开的界面UI
+function MainMission:_findOpenedPanelUI(panel, panelName)
+    -- 根据不同界面返回对应的UI
+    if panel == "Bag" and panelName == "PlayerInfoPanel" then
+        return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide)
+    elseif panel == "Bag_pc" and panelName == "PCPlayerInfoPanel" then
+        return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide)
+    end
+    return nil
+end
+
+-- 完成当前引导
+function MainMission:CompleteCurrentGuide()
+    local taskId = self._currentGuideTaskId
+    
+    if self._guideTask then
+        self._guideTask:Exit()
+        self._guideTask = nil
+    end
+    
+    self._currentGuideTaskId = nil
+    self._currentGuideType = nil
+    
+    -- 通知服务端任务完成
+    if taskId then
+        ssrMessage:sendmsgEx("Task", "onTaskTurnComplete", {taskid = taskId})
+    end
+end
 
 return MainMission

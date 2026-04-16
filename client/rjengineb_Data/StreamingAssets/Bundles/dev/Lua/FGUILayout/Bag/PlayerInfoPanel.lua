@@ -231,6 +231,9 @@ function PlayerInfoPanel:Enter(pageIndex)
     self:PageTo(pageIndex)
 
     SL:ComponentAttach(SLDefine.SUIComponentTable.PlayerInfoMain, self._ui.Node_attach)
+    if pageIndex == IDX_EQUIP then
+        FGUIFunction:RegisterGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide,self._ui)
+    end
 end
 
 
@@ -251,7 +254,7 @@ function PlayerInfoPanel:Destroy()
     self._leftObj = nil
 end
 
-function PlayerInfoPanel:Exit()
+function PlayerInfoPanel:Exit()    
     SL:ComponentDetach(SLDefine.SUIComponentTable.PlayerInfoMain)
     self:RemoveEvent()
     FGUIFunction:HideTopCurrency()
@@ -265,6 +268,7 @@ function PlayerInfoPanel:Exit()
     end
 
     self:PageClose()
+    FGUIFunction:UnRegisterGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide)
 end
 
 function PlayerInfoPanel:BagCellDoubleClickEvent(bagItem)
@@ -297,5 +301,4 @@ end
 function PlayerInfoPanel:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_BAG_CELL_DOUBLE_CLICK, "PlayerInfoPanel")
 end
-
 return PlayerInfoPanel
