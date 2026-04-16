@@ -298,13 +298,25 @@ function MainMission:OnListMissionItemClick(context)
         elseif task_turn_param == 5 then  --打开强化界面
             FGUI:Open("A_EquipDuanZao", "EquipDuanZao",2,nil,{fullScreen = false,destroyTime = 1})
         elseif task_turn_param == 6 then  --打开好友界面
-            FGUI:Open("Friend", "FriendPanel", FGUIDefine.FriendPage.Recent)
+            FGUI:Open("Friend", "FriendPanel", FGUIDefine.FriendPage.Friend)
         elseif task_turn_param == 7 then  --打开门派界面
-            FGUI:Open("Guild", "GuildJoinList")
+            local targetTab = Task_cfg[data.taskid]['task_target_param']
+            local targetType = 0
+            if type(targetTab) == "string" then
+                targetType = tonumber(targetTab)
+            elseif type(targetTab) == "table" then
+                targetType = targetTab[1]
+            end
+            if targetType == 12 then --门派任务
+            elseif targetType == 13 then --门派捐献
+                FGUIFunction:OpenGuildMainFrameUI(1)
+            else
+                FGUIFunction:OpenGuildAutoUI()
+            end
         elseif task_turn_param == 8 then  --打开灵兽界面
             FGUI:Open("Mount", "mountMain",{type=0})
         elseif task_turn_param == 9 then  --打开组队界面
-            FGUI:Open("Team", "TeamPanel", 1)
+            FGUIFunction:OpenTeamAutoUI()
         elseif task_turn_param == 11 then  --打开加工界面
             FGUI:Open("A_EquipDuanZao", "EquipDuanZao",3,nil,{fullScreen = false,destroyTime = 1})
         elseif task_turn_param == 12 then  --打开师徒界面
