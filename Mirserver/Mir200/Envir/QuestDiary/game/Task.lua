@@ -42,6 +42,14 @@ local _taskMB4data = {
     _Transfer               = 7,     -- 转职
     _QiangHua               = 8,     -- 强化
     _QiGongDian             = 9,     -- 启动点为0
+    _BaiShi                 = 10,     -- 拜师
+    _ShouTu                 = 11,     -- 收徒
+    _GuildTask              = 12,     -- 完成一次门派任务
+    _GuildCon               = 13,     -- 完成一次门派捐献
+    _ActivePet              = 14,     -- 激活宠物
+    _ActiveMount            = 15,     -- 激活坐骑
+    _UpMount                = 16,     -- 升级坐骑
+    _FuYu                   = 17,     -- 赋予
 }
 local _QiangHuaCount = 1          -- 1为强化次数
 local _QiangHuaStdModeLevel = 2   -- 2为强化部位指定等级
@@ -205,12 +213,13 @@ local function _onQiangHua(actor,flag)
                     taskchange = Task_Change_Flag
                     if TaskProgress_data[k]['count'] >= neednum then
                         TaskProgress_data[k]['state'] = _taskState.finish
+                        taskfinish = Task_Finish_Flag
                     end
                 elseif qhType == _QiangHuaStdModeLevel then  --强化部位指定等级
                     local equipmakeIndex = bodyiteminfo(actor, equippostab[targetTab[3]]..'_MakeIndex')
                     if equipmakeIndex and equipmakeIndex ~= "" then
                         linkitembymakeindex(actor, equipmakeIndex)
-                        local qhlv = linkitem(actor, "INTVALUE0") or 0
+                        local qhlv = linkitem(actor, "INTVALUE0") or 0                        
                         if qhlv >= neednum then
                             TaskProgress_data[k]['state'] = _taskState.finish
                             taskchange = Task_Change_Flag
@@ -221,6 +230,42 @@ local function _onQiangHua(actor,flag)
                         TaskProgress_data[k]['count'] = qhlv
                     end
                 end
+            end
+        end
+    end
+    if taskchange == Task_Change_Flag then
+        sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(TaskProgress_data))  -- 当前已接取任务列表
+        Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})   -- 更新客户端任务进度变量
+        if taskfinish == Task_Finish_Flag then
+            _onCompleteOtherTask(actor) -- 有任务有变化是判断
+        end
+    end
+end
+--赋予次数
+local function _onFuYu(actor,flag)
+    local TaskProgress_data = Task.getCurTask(actor)
+    local taskchange = 0  --任务是否有变化，有的话更新
+    local taskfinish = 0
+    for k,v in pairs(TaskProgress_data) do
+        local taskid = tonumber(k)
+        local taskxq = Task.ConditionLv(actor, taskid)
+        local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
+        if task_targettype == _taskMBType._GameplayDevelopment and taskxq then  --赋予功能
+            local targetTab = Task_cfg[taskid]['task_target_param']
+            local targetType = 0
+            if type(targetTab) == "string" then
+                targetType = tonumber(targetTab)
+            elseif type(targetTab) == "table" then
+                targetType = targetTab[1]
+            end
+            if targetType == _taskMB4data._FuYu then               
+                local neednum = Task_cfg[taskid]['task_progress'] or 1
+                TaskProgress_data[k]['count'] = TaskProgress_data[k]['count']+1
+                taskchange = Task_Change_Flag
+                if TaskProgress_data[k]['count'] >= neednum then
+                    TaskProgress_data[k]['state'] = _taskState.finish
+                    taskfinish = Task_Finish_Flag
+                end                
             end
         end
     end
@@ -1035,6 +1080,10 @@ end, Task)
 GameEvent.add(EventCfg.onQiangHua, function (actor,flag)         -- 强化功能触发  强化次数要求
     _onQiangHua(actor,flag)
 end, Task)
+GameEvent.add(EventCfg.onFuYu, function (actor,flag)         -- 强化功能触发  强化次数要求
+    _onFuYu(actor,flag)
+end, Task)
+
 GameEvent.add(EventCfg.goSwitchMap, function (actor, cur_mapid, former_mapid)         -- 切换地图触发
     _onChangeMap(actor, cur_mapid, former_mapid)
 end, Task)

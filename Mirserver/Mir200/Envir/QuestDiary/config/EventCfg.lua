@@ -49,6 +49,7 @@ EventCfg.onGuildclosebefore         = "onGuildclosebefore"            --解散门派
 EventCfg.onCreateguild              = "onCreateguild"                 --创建门派成功触发
 EventCfg.onInivitguild              = "onInivitguild"                 --邀请加入门派前触发
 EventCfg.onGuildsetexp              = "onGuildsetexp"                 --设置门派经验值触发
+EventCfg.onGuildCon                 = "onGuildCon"                    --门派贡献
 
 EventCfg.onWalk                     = "onWalk"                        --移动触发
 EventCfg.onPlayDie                  = "onPlayDie"                     --人物死亡     (参数：actor, 杀人者对象)
@@ -79,6 +80,8 @@ EventCfg.onGetMailItem              = "onGetMailItem"                  -- 提取邮
 
 
 EventCfg.onQiangHua                 = "onQiangHua"                     -- 玩家强化触发(参数：actor, 成功true失败false)
+EventCfg.onFuYu                     = "onFuYu"                         -- 玩家赋予触发(参数：actor)
+
 
 EventCfg.onJoinUpright              = "onJoinUpright"                  -- 加入正派(参数：actor)
 EventCfg.onJoinEvil                 = "onJoinEvil"                     -- 加入邪派(参数：actor)

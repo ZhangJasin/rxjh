@@ -263,7 +263,8 @@ function EquipDuanZao.fuyu(actor, data)
     if falselv < 0 then falselv = 0 end
     delItemNum(actor, xhitemid3, 1)
 
-
+    -- 强化加工次数事件触发
+    GameEvent.push(EventCfg.onFuYu, actor, sum > basesuc)
     -- 赋予结果判定
     if sum > basesuc then
         if useitem2flag then
