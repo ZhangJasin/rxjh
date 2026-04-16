@@ -1323,10 +1323,10 @@ function mountMain:setPetHHSx()
     -- 设置属性和模型
     local sx = allNamesObj[nowGrade].ClassID
     self.modelId = allNamesObj[nowGrade].Model
-    -- 设置BUFF描述
+    -- 设置BUFF描述（处理\n换行符）
     local buffText = ""
     if allNamesObj[nowGrade].BuffDesc then
-        buffText = allNamesObj[nowGrade].BuffDesc
+        buffText = string.gsub(allNamesObj[nowGrade].BuffDesc, "\\n", "\n")
     end
     FGUI:GTextField_setText(self.petHuanhuaAttr.buffText, buffText)
     -- 支持ClassID为空时不显示属性列表
@@ -1979,12 +1979,12 @@ function mountMain:setMountHHSx()
     -- 设置属性和模型
     local sx = allNamesObj[nowGrade].ClassID
     self.modelId = allNamesObj[nowGrade].Model
-    -- 设置BUFF描述
+    -- 设置BUFF描述（处理\n换行符）
     local hhbuffTextHeight = 26 * #sx + 5
     local hhbuffs = allNamesObj[nowGrade].BuffID
     local buffText = ""
     if allNamesObj[nowGrade].BuffDesc then
-        buffText = allNamesObj[nowGrade].BuffDesc
+        buffText = string.gsub(allNamesObj[nowGrade].BuffDesc, "\\n", "\n")
     end
     FGUI:GTextField_setAutoSize(self.huanhuaAttr.buffText, 2)
     FGUI:setPosition(self.huanhuaAttr.buffText, 15, hhbuffTextHeight)
