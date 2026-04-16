@@ -355,7 +355,41 @@ local function _onCreateGuild(actor)
         end
     end
 end
-
+local function _onGuildsetexp(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
+    local taskchange = 0  --任务是否有变化，有的话更新
+    local taskfinish = 0
+    for k,v in pairs(TaskProgress_data) do
+        local taskid = tonumber(k)
+        local taskxq = Task.ConditionLv(actor, taskid)
+        local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
+        if task_targettype == _taskMBType._GameplayDevelopment and taskxq then  --门派捐献功能
+            local targetTab = Task_cfg[taskid]['task_target_param']
+            local targetType = 0
+            if type(targetTab) == "string" then
+                targetType = tonumber(targetTab)
+            elseif type(targetTab) == "table" then
+                targetType = targetTab[1]
+            end
+            if targetType == _taskMB4data._GuildCon then               
+                local neednum = Task_cfg[taskid]['task_progress'] or 1
+                TaskProgress_data[k]['count'] = TaskProgress_data[k]['count']+1
+                taskchange = Task_Change_Flag
+                if TaskProgress_data[k]['count'] >= neednum then
+                    TaskProgress_data[k]['state'] = _taskState.finish
+                    taskfinish = Task_Finish_Flag
+                end                
+            end
+        end
+    end
+    if taskchange == Task_Change_Flag then
+        sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(TaskProgress_data))  -- 当前已接取任务列表
+        Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})   -- 更新客户端任务进度变量
+        if taskfinish == Task_Finish_Flag then
+            _onCompleteOtherTask(actor) -- 有任务有变化是判断
+        end
+    end
+end
 -- 加入任意阵营
 local function _onJoinGOODEVILID(actor)
     local TaskProgress_data = Task.getCurTask(actor)
@@ -1100,6 +1134,9 @@ end, Task)
 
 GameEvent.add(EventCfg.onGuildaddmemberafter, function (actor, guildId, guildName)         -- 加入门派触发
     _onCreateGuild(actor)
+end, Task)
+GameEvent.add(EventCfg.onGuildsetexp, function (actor, type, addzj)         -- 强化功能触发  强化次数要求
+    _onGuildsetexp(actor)
 end, Task)
 
 GameEvent.add(EventCfg.onJoinUpright, function (actor)   -- 加入正派

@@ -127,11 +127,7 @@ function EquipDuanZao.qianghua(actor, data)
                 basesuc = basesuc + EquipQHItemTab[xhitemid2]['addsuccess']
             end
         end
-    end
-
-    -- 强化加工次数事件触发
-    GameEvent.push(EventCfg.onQiangHua, actor, sum > basesuc)
-
+    end   
     -- basesuc = 100
     -- 强化结果判定
     if sum > basesuc then
@@ -182,6 +178,9 @@ function EquipDuanZao.qianghua(actor, data)
     EquipDuanZao.showWeaponEffect(actor, equipObj)
     updateitemtoclient(actor, -1)
     Message.sendmsgEx(actor, "EquipDuanZao", "UpdataQH", { param1 = 1, param2 = nextlv })
+
+    -- 强化加工次数事件触发
+    GameEvent.push(EventCfg.onQiangHua, actor, sum > basesuc)
 end
 
 -- 赋予属性
@@ -263,8 +262,6 @@ function EquipDuanZao.fuyu(actor, data)
     if falselv < 0 then falselv = 0 end
     delItemNum(actor, xhitemid3, 1)
 
-    -- 强化加工次数事件触发
-    GameEvent.push(EventCfg.onFuYu, actor, sum > basesuc)
     -- 赋予结果判定
     if sum > basesuc then
         if useitem2flag then
@@ -298,6 +295,9 @@ function EquipDuanZao.fuyu(actor, data)
 
     updateitemtoclient(actor, -1)
     Message.sendmsgEx(actor, "EquipDuanZao", "UpdataFY", { param1 = 1, param2 = nextlv })
+
+    -- 赋予次数事件触发
+    GameEvent.push(EventCfg.onFuYu, actor, sum > basesuc)
 end
 
 -- 合成

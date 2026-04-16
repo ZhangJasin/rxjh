@@ -920,7 +920,7 @@ function guildsetexp(actor, type)
     Donate = Donate + 1
     sethumvar(actor, VarCfg.U_Donate_Num, Donate)
     Message.sendmsgEx(actor, "GuildMainPanel", "UpdataPage1", { param1 = Donate })
-    GameEvent.push(EventCfg.onGuildsetexp, actor, type, addexp, curLevel, curexp)
+    GameEvent.push(EventCfg.onGuildsetexp, actor, type, addzj, curLevel, curexp)
 end
 
 --双击使用道具前触发 支持stop终止
