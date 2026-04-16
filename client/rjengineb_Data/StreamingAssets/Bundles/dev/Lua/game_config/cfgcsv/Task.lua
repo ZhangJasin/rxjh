@@ -13465,7 +13465,7 @@ local config = {
 		task_receivetype=1,
 		task_level=20,
 		task_pre = {
-			[1] = 300012,
+			[1] = 300011,
 		},
 		task_targettype=4,
 		task_target_param = {
@@ -13688,6 +13688,9 @@ local config = {
 		task_pre = {
 			[1] = 103001,
 		},
+		task_pro = {
+			[1] = 300013,
+		},
 		task_targettype=4,
 		task_target_param="15",
 		task_turn_param=13,
@@ -13721,10 +13724,7 @@ local config = {
 		task_receivetype=1,
 		task_level=35,
 		task_pre = {
-			[1] = 300013,
-		},
-		task_pro = {
-			[1] = 300013,
+			[1] = 300012,
 		},
 		task_targettype=4,
 		task_target_param="16",
@@ -14734,6 +14734,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 11004,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510102] = { 
@@ -14741,6 +14746,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10105,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510103] = { 
@@ -14748,6 +14758,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15711,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510104] = { 
@@ -14755,6 +14770,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10018,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510105] = { 
@@ -14762,6 +14782,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15005,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510106] = { 
@@ -14769,6 +14794,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15006,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510107] = { 
@@ -14786,6 +14816,12 @@ local config = {
 		idx=510109,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510110] = { 
@@ -14793,6 +14829,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 11004,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510111] = { 
@@ -14800,6 +14841,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 11004,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510112] = { 
@@ -14807,6 +14853,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10105,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510113] = { 
@@ -14814,6 +14865,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15711,
+			[2] = 15,
+			[3] = 0.4,
+		},
 		task_progress=15,
 	},
 	[510114] = { 
@@ -14821,6 +14877,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10018,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510115] = { 
@@ -14828,6 +14889,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15005,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=15,
 	},
 	[510116] = { 
@@ -14835,6 +14901,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15006,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510117] = { 
@@ -14852,6 +14923,12 @@ local config = {
 		idx=510119,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[510120] = { 
@@ -14859,6 +14936,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 11004,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510121] = { 
@@ -14866,6 +14948,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10105,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510122] = { 
@@ -14873,6 +14960,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15711,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510123] = { 
@@ -14880,6 +14972,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10018,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510124] = { 
@@ -14887,6 +14984,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10018,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510125] = { 
@@ -14894,6 +14996,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15005,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510126] = { 
@@ -14901,6 +15008,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15006,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510127] = { 
@@ -14923,6 +15035,12 @@ local config = {
 		idx=510130,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[510131] = { 
@@ -14937,6 +15055,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15006,
+			[2] = 25,
+			[3] = 0.2,
+		},
 		task_progress=25,
 	},
 	[510133] = { 
@@ -14944,6 +15067,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15005,
+			[2] = 60,
+			[3] = 1,
+		},
 		task_progress=60,
 	},
 	[510134] = { 
@@ -14966,6 +15094,12 @@ local config = {
 		idx=510137,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[510138] = { 
@@ -14973,6 +15107,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15208,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510139] = { 
@@ -14980,6 +15119,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 11156,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510140] = { 
@@ -15002,6 +15146,12 @@ local config = {
 		idx=510143,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[510201] = { 
@@ -15009,6 +15159,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15020,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510202] = { 
@@ -15016,6 +15171,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15018,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510203] = { 
@@ -15023,6 +15183,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15019,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510204] = { 
@@ -15030,6 +15195,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15023,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510205] = { 
@@ -15037,6 +15207,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15024,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510206] = { 
@@ -15044,6 +15219,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15012,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510207] = { 
@@ -15061,6 +15241,12 @@ local config = {
 		idx=510209,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510210] = { 
@@ -15074,6 +15260,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15020,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510212] = { 
@@ -15081,6 +15272,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15018,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510213] = { 
@@ -15088,6 +15284,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15019,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510214] = { 
@@ -15095,6 +15296,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15023,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510215] = { 
@@ -15102,6 +15308,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15024,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510216] = { 
@@ -15109,6 +15320,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15012,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510217] = { 
@@ -15116,6 +15332,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15012,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510218] = { 
@@ -15133,6 +15354,12 @@ local config = {
 		idx=510220,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[510221] = { 
@@ -15146,6 +15373,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15020,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510223] = { 
@@ -15153,6 +15385,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15018,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510224] = { 
@@ -15160,6 +15397,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15019,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510225] = { 
@@ -15167,6 +15409,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15023,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510226] = { 
@@ -15174,6 +15421,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15023,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510227] = { 
@@ -15181,6 +15433,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15024,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510228] = { 
@@ -15188,6 +15445,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15012,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510229] = { 
@@ -15210,6 +15472,12 @@ local config = {
 		idx=510232,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[510233] = { 
@@ -15237,6 +15505,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15019,
+			[2] = 60,
+			[3] = 1,
+		},
 		task_progress=60,
 	},
 	[510237] = { 
@@ -15259,6 +15532,12 @@ local config = {
 		idx=510240,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[510241] = { 
@@ -15272,6 +15551,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15220,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510243] = { 
@@ -15279,6 +15563,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15208,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510244] = { 
@@ -15301,6 +15590,12 @@ local config = {
 		idx=510247,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[510248] = { 
@@ -15314,6 +15609,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15013,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510302] = { 
@@ -15321,6 +15621,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15017,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510303] = { 
@@ -15328,6 +15633,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15026,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510304] = { 
@@ -15335,6 +15645,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15052,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510305] = { 
@@ -15342,6 +15657,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15054,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510306] = { 
@@ -15349,6 +15669,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15056,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510307] = { 
@@ -15356,6 +15681,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15051,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510308] = { 
@@ -15367,6 +15697,12 @@ local config = {
 		idx=510309,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510310] = { 
@@ -15380,6 +15716,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15013,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510312] = { 
@@ -15387,6 +15728,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15017,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510313] = { 
@@ -15394,6 +15740,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15026,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510314] = { 
@@ -15401,6 +15752,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15052,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510315] = { 
@@ -15408,6 +15764,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15054,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510316] = { 
@@ -15415,6 +15776,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15056,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510317] = { 
@@ -15422,6 +15788,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15051,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510318] = { 
@@ -15433,6 +15804,12 @@ local config = {
 		idx=510319,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[510320] = { 
@@ -15446,6 +15823,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15013,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510322] = { 
@@ -15453,6 +15835,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15017,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510323] = { 
@@ -15460,6 +15847,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15026,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510324] = { 
@@ -15467,6 +15859,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15052,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510325] = { 
@@ -15474,6 +15871,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15054,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510326] = { 
@@ -15481,6 +15883,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15056,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510327] = { 
@@ -15488,6 +15895,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15051,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510328] = { 
@@ -15504,6 +15916,12 @@ local config = {
 		idx=510330,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[510331] = { 
@@ -15547,6 +15965,12 @@ local config = {
 		idx=510337,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[510338] = { 
@@ -15570,6 +15994,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15036,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510342] = { 
@@ -15577,6 +16006,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15220,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510343] = { 
@@ -15593,6 +16027,12 @@ local config = {
 		idx=510345,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[510346] = { 
@@ -15616,6 +16056,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15061,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510402] = { 
@@ -15623,6 +16068,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15062,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510403] = { 
@@ -15630,6 +16080,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15068,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510404] = { 
@@ -15637,6 +16092,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15063,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510405] = { 
@@ -15644,6 +16104,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15064,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510406] = { 
@@ -15651,6 +16116,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15065,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510407] = { 
@@ -15658,6 +16128,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15070,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510408] = { 
@@ -15669,6 +16144,12 @@ local config = {
 		idx=510409,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510410] = { 
@@ -15682,6 +16163,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15061,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510412] = { 
@@ -15689,6 +16175,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15062,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510413] = { 
@@ -15696,6 +16187,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15068,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510414] = { 
@@ -15703,6 +16199,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15064,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510415] = { 
@@ -15710,6 +16211,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15066,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510416] = { 
@@ -15717,6 +16223,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15070,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510417] = { 
@@ -15724,6 +16235,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15069,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510418] = { 
@@ -15735,6 +16251,12 @@ local config = {
 		idx=510419,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[510420] = { 
@@ -15748,6 +16270,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15061,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510422] = { 
@@ -15755,6 +16282,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15062,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510423] = { 
@@ -15762,6 +16294,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15063,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510424] = { 
@@ -15769,6 +16306,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15068,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510425] = { 
@@ -15776,6 +16318,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15064,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510426] = { 
@@ -15783,6 +16330,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15056,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510427] = { 
@@ -15790,6 +16342,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15066,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510428] = { 
@@ -15806,6 +16363,12 @@ local config = {
 		idx=510430,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[510431] = { 
@@ -15849,6 +16412,12 @@ local config = {
 		idx=510437,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[510438] = { 
@@ -15872,6 +16441,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15036,
+			[2] = 2,
+			[3] = 1,
+		},
 		task_progress=2,
 	},
 	[510442] = { 
@@ -15879,6 +16453,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15220,
+			[2] = 2,
+			[3] = 1,
+		},
 		task_progress=2,
 	},
 	[510443] = { 
@@ -15895,6 +16474,12 @@ local config = {
 		idx=510445,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[510446] = { 
@@ -15918,6 +16503,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15101,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510502] = { 
@@ -15925,6 +16515,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15102,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510503] = { 
@@ -15932,6 +16527,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15103,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510504] = { 
@@ -15939,6 +16539,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15104,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510505] = { 
@@ -15946,6 +16551,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15555,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510506] = { 
@@ -15953,6 +16563,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15556,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510507] = { 
@@ -15960,6 +16575,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15559,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510508] = { 
@@ -15971,6 +16591,12 @@ local config = {
 		idx=510509,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510510] = { 
@@ -15984,6 +16610,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15101,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510512] = { 
@@ -15991,6 +16622,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15102,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510513] = { 
@@ -15998,6 +16634,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15103,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510514] = { 
@@ -16005,6 +16646,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15104,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510515] = { 
@@ -16012,6 +16658,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15555,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510516] = { 
@@ -16019,6 +16670,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15556,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510517] = { 
@@ -16026,6 +16682,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15559,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510518] = { 
@@ -16037,6 +16698,12 @@ local config = {
 		idx=510519,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[510520] = { 
@@ -16050,6 +16717,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15101,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510522] = { 
@@ -16057,6 +16729,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15102,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510523] = { 
@@ -16064,6 +16741,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15103,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510524] = { 
@@ -16071,6 +16753,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15104,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510525] = { 
@@ -16078,6 +16765,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15555,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510526] = { 
@@ -16085,6 +16777,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15556,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510527] = { 
@@ -16092,6 +16789,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15559,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510528] = { 
@@ -16108,6 +16810,12 @@ local config = {
 		idx=510530,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[510531] = { 
@@ -16158,6 +16866,12 @@ local config = {
 		idx=510538,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[510539] = { 
@@ -16181,6 +16895,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15605,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510543] = { 
@@ -16188,6 +16907,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15036,
+			[2] = 2,
+			[3] = 1,
+		},
 		task_progress=2,
 	},
 	[510544] = { 
@@ -16195,6 +16919,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15220,
+			[2] = 2,
+			[3] = 1,
+		},
 		task_progress=2,
 	},
 	[510545] = { 
@@ -16211,6 +16940,12 @@ local config = {
 		idx=510547,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[510548] = { 
@@ -16234,6 +16969,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15106,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510602] = { 
@@ -16241,6 +16981,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15108,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510603] = { 
@@ -16248,6 +16993,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15107,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510604] = { 
@@ -16255,6 +17005,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15109,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510605] = { 
@@ -16262,6 +17017,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15105,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510606] = { 
@@ -16269,6 +17029,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15556,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510607] = { 
@@ -16276,6 +17041,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15104,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510608] = { 
@@ -16287,6 +17057,12 @@ local config = {
 		idx=510609,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510610] = { 
@@ -16300,6 +17076,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15106,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510612] = { 
@@ -16307,6 +17088,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15108,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510613] = { 
@@ -16314,6 +17100,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15107,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510614] = { 
@@ -16321,6 +17112,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15109,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510615] = { 
@@ -16328,6 +17124,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15105,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510616] = { 
@@ -16335,6 +17136,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15556,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510617] = { 
@@ -16342,6 +17148,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15104,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510618] = { 
@@ -16353,6 +17164,12 @@ local config = {
 		idx=510619,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[510620] = { 
@@ -16366,6 +17183,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15106,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510622] = { 
@@ -16373,6 +17195,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15108,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510623] = { 
@@ -16380,6 +17207,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15107,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510624] = { 
@@ -16387,6 +17219,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15109,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510625] = { 
@@ -16394,6 +17231,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15105,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510626] = { 
@@ -16401,6 +17243,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15556,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510627] = { 
@@ -16408,6 +17255,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15106,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510628] = { 
@@ -16424,6 +17276,12 @@ local config = {
 		idx=510630,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[510631] = { 
@@ -16475,6 +17333,12 @@ local config = {
 		idx=510638,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[510639] = { 
@@ -16498,6 +17362,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15605,
+			[2] = 2,
+			[3] = 1,
+		},
 		task_progress=2,
 	},
 	[510643] = { 
@@ -16505,6 +17374,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15605,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510644] = { 
@@ -16512,6 +17386,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15220,
+			[2] = 3,
+			[3] = 1,
+		},
 		task_progress=3,
 	},
 	[510645] = { 
@@ -16528,6 +17407,12 @@ local config = {
 		idx=510647,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[510648] = { 
@@ -16551,6 +17436,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15146,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510702] = { 
@@ -16558,6 +17448,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15123,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510703] = { 
@@ -16565,6 +17460,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15124,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510704] = { 
@@ -16572,6 +17472,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15125,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510705] = { 
@@ -16579,6 +17484,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15126,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510706] = { 
@@ -16586,6 +17496,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15126,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[510707] = { 
@@ -16593,6 +17508,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 11004,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[510708] = { 
@@ -16604,6 +17524,12 @@ local config = {
 		idx=510709,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510710] = { 
@@ -16617,6 +17543,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15146,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510712] = { 
@@ -16624,6 +17555,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15123,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510713] = { 
@@ -16631,6 +17567,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15124,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510714] = { 
@@ -16638,6 +17579,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15125,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510715] = { 
@@ -16645,6 +17591,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15126,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510716] = { 
@@ -16652,6 +17603,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15556,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[510717] = { 
@@ -16659,6 +17615,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15104,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[510718] = { 
@@ -16670,6 +17631,12 @@ local config = {
 		idx=510719,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[510720] = { 
@@ -16683,6 +17650,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15146,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510722] = { 
@@ -16690,6 +17662,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15123,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510723] = { 
@@ -16697,6 +17674,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15124,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510724] = { 
@@ -16704,6 +17686,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15124,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510725] = { 
@@ -16711,6 +17698,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15125,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510726] = { 
@@ -16718,6 +17710,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15126,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[510727] = { 
@@ -16725,6 +17722,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15126,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[510728] = { 
@@ -16741,6 +17743,12 @@ local config = {
 		idx=510730,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[510731] = { 
@@ -16790,6 +17798,12 @@ local config = {
 		idx=510738,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[510739] = { 
@@ -16813,6 +17827,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15607,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510743] = { 
@@ -16820,6 +17839,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 20010,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[510744] = { 
@@ -16827,6 +17851,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=1,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15605,
+			[2] = 3,
+			[3] = 1,
+		},
 		task_progress=3,
 	},
 	[510745] = { 
@@ -16843,6 +17872,12 @@ local config = {
 		idx=510747,
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[510748] = { 
@@ -16866,6 +17901,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 11004,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520102] = { 
@@ -16873,6 +17913,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10105,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520103] = { 
@@ -16880,6 +17925,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15711,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520104] = { 
@@ -16887,6 +17937,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10018,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520105] = { 
@@ -16894,6 +17949,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15005,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520106] = { 
@@ -16901,6 +17961,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15006,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520107] = { 
@@ -16918,6 +17983,12 @@ local config = {
 		idx=520109,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520110] = { 
@@ -16925,6 +17996,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 11004,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520111] = { 
@@ -16932,6 +18008,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 11004,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520112] = { 
@@ -16939,6 +18020,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10105,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520113] = { 
@@ -16946,6 +18032,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15711,
+			[2] = 15,
+			[3] = 0.4,
+		},
 		task_progress=15,
 	},
 	[520114] = { 
@@ -16953,6 +18044,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10018,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520115] = { 
@@ -16960,6 +18056,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15005,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=15,
 	},
 	[520116] = { 
@@ -16967,6 +18068,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15006,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520117] = { 
@@ -16984,6 +18090,12 @@ local config = {
 		idx=520119,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[520120] = { 
@@ -16991,6 +18103,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 11004,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520121] = { 
@@ -16998,6 +18115,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10105,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520122] = { 
@@ -17005,6 +18127,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15711,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520123] = { 
@@ -17012,6 +18139,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10018,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520124] = { 
@@ -17019,6 +18151,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 10018,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520125] = { 
@@ -17026,6 +18163,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15005,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520126] = { 
@@ -17033,6 +18175,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15006,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520127] = { 
@@ -17055,6 +18202,12 @@ local config = {
 		idx=520130,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[520131] = { 
@@ -17069,6 +18222,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15006,
+			[2] = 25,
+			[3] = 0.2,
+		},
 		task_progress=25,
 	},
 	[520133] = { 
@@ -17076,6 +18234,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15005,
+			[2] = 60,
+			[3] = 1,
+		},
 		task_progress=60,
 	},
 	[520134] = { 
@@ -17098,6 +18261,12 @@ local config = {
 		idx=520137,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[520138] = { 
@@ -17105,6 +18274,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15208,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520139] = { 
@@ -17112,6 +18286,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 11156,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520140] = { 
@@ -17134,6 +18313,12 @@ local config = {
 		idx=520143,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[520201] = { 
@@ -17141,6 +18326,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15020,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520202] = { 
@@ -17148,6 +18338,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15018,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520203] = { 
@@ -17155,6 +18350,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15019,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520204] = { 
@@ -17162,6 +18362,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15009,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520205] = { 
@@ -17169,6 +18374,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15011,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520206] = { 
@@ -17176,6 +18386,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15031,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520207] = { 
@@ -17193,6 +18408,12 @@ local config = {
 		idx=520209,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520210] = { 
@@ -17205,6 +18426,12 @@ local config = {
 		idx=520211,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=1,
+		task_target_param = {
+			[1] = 15020,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520212] = { 
@@ -17212,6 +18439,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15018,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520213] = { 
@@ -17219,6 +18451,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15019,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520214] = { 
@@ -17226,6 +18463,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15009,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520215] = { 
@@ -17233,6 +18475,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15011,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520216] = { 
@@ -17240,6 +18487,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15031,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520217] = { 
@@ -17247,6 +18499,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15031,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520218] = { 
@@ -17264,6 +18521,12 @@ local config = {
 		idx=520220,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[520221] = { 
@@ -17277,6 +18540,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15020,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520223] = { 
@@ -17284,6 +18552,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15018,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520224] = { 
@@ -17291,6 +18564,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15019,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520225] = { 
@@ -17298,6 +18576,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15009,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520226] = { 
@@ -17305,6 +18588,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15009,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520227] = { 
@@ -17312,6 +18600,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15011,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520228] = { 
@@ -17319,6 +18612,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15031,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520229] = { 
@@ -17342,6 +18640,12 @@ local config = {
 		idx=520232,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[520233] = { 
@@ -17369,6 +18673,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15019,
+			[2] = 60,
+			[3] = 1,
+		},
 		task_progress=60,
 	},
 	[520237] = { 
@@ -17391,6 +18700,12 @@ local config = {
 		idx=520240,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[520241] = { 
@@ -17404,6 +18719,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 11156,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520243] = { 
@@ -17411,6 +18731,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15208,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520244] = { 
@@ -17433,6 +18758,12 @@ local config = {
 		idx=520247,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[520248] = { 
@@ -17446,6 +18777,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15035,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520302] = { 
@@ -17453,6 +18789,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15017,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520303] = { 
@@ -17460,6 +18801,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15034,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520304] = { 
@@ -17467,6 +18813,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15045,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520305] = { 
@@ -17474,6 +18825,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15043,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520306] = { 
@@ -17481,6 +18837,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15042,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520307] = { 
@@ -17488,6 +18849,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15048,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520308] = { 
@@ -17499,6 +18865,12 @@ local config = {
 		idx=520309,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520310] = { 
@@ -17512,6 +18884,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15035,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520312] = { 
@@ -17519,6 +18896,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15017,
+			[2] = 15,
+			[3] = 1,
+		},
 		task_progress=15,
 	},
 	[520313] = { 
@@ -17526,6 +18908,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15034,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520314] = { 
@@ -17533,6 +18920,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15034,
+			[2] = 15,
+			[3] = 1,
+		},
 		task_progress=15,
 	},
 	[520315] = { 
@@ -17540,6 +18932,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15045,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520316] = { 
@@ -17547,6 +18944,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15043,
+			[2] = 15,
+			[3] = 1,
+		},
 		task_progress=15,
 	},
 	[520317] = { 
@@ -17554,6 +18956,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15042,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520318] = { 
@@ -17565,6 +18972,12 @@ local config = {
 		idx=520319,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[520320] = { 
@@ -17578,6 +18991,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15035,
+			[2] = 40,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520322] = { 
@@ -17585,6 +19003,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15017,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520323] = { 
@@ -17592,6 +19015,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15034,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520324] = { 
@@ -17599,6 +19027,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15045,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520325] = { 
@@ -17606,6 +19039,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15043,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520326] = { 
@@ -17613,6 +19051,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15048,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520327] = { 
@@ -17620,6 +19063,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15042,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520328] = { 
@@ -17636,6 +19084,12 @@ local config = {
 		idx=520330,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[520331] = { 
@@ -17679,6 +19133,12 @@ local config = {
 		idx=520337,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[520338] = { 
@@ -17702,6 +19162,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 20011,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520342] = { 
@@ -17709,6 +19174,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15208,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520343] = { 
@@ -17725,6 +19195,12 @@ local config = {
 		idx=520345,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[520346] = { 
@@ -17748,6 +19224,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15072,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520402] = { 
@@ -17755,6 +19236,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15073,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520403] = { 
@@ -17762,6 +19248,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15074,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520404] = { 
@@ -17769,6 +19260,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15075,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520405] = { 
@@ -17776,6 +19272,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15071,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520406] = { 
@@ -17783,6 +19284,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15077,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520407] = { 
@@ -17790,6 +19296,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15079,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520408] = { 
@@ -17801,6 +19312,12 @@ local config = {
 		idx=520409,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520410] = { 
@@ -17814,6 +19331,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15072,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520412] = { 
@@ -17821,6 +19343,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15073,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520413] = { 
@@ -17828,6 +19355,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15074,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520414] = { 
@@ -17835,6 +19367,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15071,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520415] = { 
@@ -17842,6 +19379,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15078,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520416] = { 
@@ -17849,6 +19391,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15079,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520417] = { 
@@ -17856,6 +19403,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15077,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520418] = { 
@@ -17867,6 +19419,12 @@ local config = {
 		idx=520419,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[520420] = { 
@@ -17880,6 +19438,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15072,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520422] = { 
@@ -17887,6 +19450,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15073,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520423] = { 
@@ -17894,12 +19462,23 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15074,
+			[2] = 20,
+			[3] = 0.3,
+		},
+		task_progress=20,
 	},
 	[520424] = { 
 		idx=520424,
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15071,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520425] = { 
@@ -17907,6 +19486,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15071,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520426] = { 
@@ -17914,6 +19498,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15077,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520427] = { 
@@ -17921,6 +19510,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15079,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520428] = { 
@@ -17937,6 +19531,12 @@ local config = {
 		idx=520430,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[520431] = { 
@@ -17980,6 +19580,12 @@ local config = {
 		idx=520437,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[520438] = { 
@@ -18003,6 +19609,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 20011,
+			[2] = 2,
+			[3] = 1,
+		},
 		task_progress=2,
 	},
 	[520442] = { 
@@ -18010,6 +19621,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15208,
+			[2] = 2,
+			[3] = 1,
+		},
 		task_progress=2,
 	},
 	[520443] = { 
@@ -18026,6 +19642,12 @@ local config = {
 		idx=520445,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[520446] = { 
@@ -18049,6 +19671,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15111,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520502] = { 
@@ -18056,6 +19683,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15112,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520503] = { 
@@ -18063,6 +19695,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15113,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520504] = { 
@@ -18070,6 +19707,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15555,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520505] = { 
@@ -18077,6 +19719,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15556,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520506] = { 
@@ -18084,6 +19731,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15556,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520507] = { 
@@ -18091,6 +19743,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15559,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520508] = { 
@@ -18102,6 +19759,12 @@ local config = {
 		idx=520509,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520510] = { 
@@ -18115,6 +19778,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15111,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520512] = { 
@@ -18122,6 +19790,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15112,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520513] = { 
@@ -18129,6 +19802,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15113,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520514] = { 
@@ -18136,6 +19814,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15114,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520515] = { 
@@ -18143,6 +19826,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15555,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520516] = { 
@@ -18150,6 +19838,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15556,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520517] = { 
@@ -18157,6 +19850,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15559,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520518] = { 
@@ -18168,6 +19866,12 @@ local config = {
 		idx=520519,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[520520] = { 
@@ -18181,6 +19885,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15111,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520522] = { 
@@ -18188,6 +19897,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15112,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520523] = { 
@@ -18195,6 +19909,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15113,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520524] = { 
@@ -18202,6 +19921,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15114,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520525] = { 
@@ -18209,6 +19933,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15555,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520526] = { 
@@ -18216,6 +19945,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15556,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520527] = { 
@@ -18223,6 +19957,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15556,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520528] = { 
@@ -18239,6 +19978,12 @@ local config = {
 		idx=520530,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[520531] = { 
@@ -18289,6 +20034,12 @@ local config = {
 		idx=520538,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[520539] = { 
@@ -18312,6 +20063,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15605,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520543] = { 
@@ -18319,6 +20075,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 20011,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=2,
 	},
 	[520544] = { 
@@ -18326,6 +20087,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15208,
+			[2] = 2,
+			[3] = 1,
+		},
 		task_progress=2,
 	},
 	[520545] = { 
@@ -18342,6 +20108,12 @@ local config = {
 		idx=520547,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[520548] = { 
@@ -18365,6 +20137,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15115,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520602] = { 
@@ -18372,6 +20149,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15116,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520603] = { 
@@ -18379,6 +20161,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15118,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520604] = { 
@@ -18386,6 +20173,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15117,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520605] = { 
@@ -18393,6 +20185,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15119,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520606] = { 
@@ -18400,6 +20197,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15152,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520607] = { 
@@ -18407,6 +20209,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15149,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520608] = { 
@@ -18418,6 +20225,12 @@ local config = {
 		idx=520609,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520610] = { 
@@ -18431,6 +20244,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15115,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520612] = { 
@@ -18438,6 +20256,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15116,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520613] = { 
@@ -18445,6 +20268,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15118,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520614] = { 
@@ -18452,6 +20280,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15117,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520615] = { 
@@ -18459,6 +20292,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15119,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520616] = { 
@@ -18466,6 +20304,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15149,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520617] = { 
@@ -18473,6 +20316,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15152,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520618] = { 
@@ -18484,6 +20332,12 @@ local config = {
 		idx=520619,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[520620] = { 
@@ -18497,6 +20351,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15115,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520622] = { 
@@ -18504,6 +20363,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15116,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520623] = { 
@@ -18511,6 +20375,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15118,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520624] = { 
@@ -18518,6 +20387,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15117,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520625] = { 
@@ -18525,6 +20399,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15119,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520626] = { 
@@ -18532,6 +20411,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15152,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520627] = { 
@@ -18539,6 +20423,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15149,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520628] = { 
@@ -18555,6 +20444,12 @@ local config = {
 		idx=520630,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[520631] = { 
@@ -18604,6 +20499,12 @@ local config = {
 		idx=520638,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[520639] = { 
@@ -18627,6 +20528,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15605,
+			[2] = 2,
+			[3] = 1,
+		},
 		task_progress=2,
 	},
 	[520643] = { 
@@ -18634,6 +20540,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=11,
+		task_target_param = {
+			[1] = 15605,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520644] = { 
@@ -18641,6 +20552,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 20011,
+			[2] = 3,
+			[3] = 1,
+		},
 		task_progress=3,
 	},
 	[520645] = { 
@@ -18657,6 +20573,12 @@ local config = {
 		idx=520647,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[520648] = { 
@@ -18680,6 +20602,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15128,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520702] = { 
@@ -18687,6 +20614,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15129,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520703] = { 
@@ -18694,6 +20626,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15130,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520704] = { 
@@ -18701,6 +20638,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15131,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520705] = { 
@@ -18708,6 +20650,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15132,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520706] = { 
@@ -18715,6 +20662,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15132,
+			[2] = 10,
+			[3] = 0.3,
+		},
 		task_progress=10,
 	},
 	[520707] = { 
@@ -18722,6 +20674,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15133,
+			[2] = 20,
+			[3] = 1,
+		},
 		task_progress=20,
 	},
 	[520708] = { 
@@ -18733,6 +20690,12 @@ local config = {
 		idx=520709,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520710] = { 
@@ -18746,6 +20709,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15128,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520712] = { 
@@ -18753,6 +20721,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15129,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520713] = { 
@@ -18760,6 +20733,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15130,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520714] = { 
@@ -18767,6 +20745,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15131,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520715] = { 
@@ -18774,6 +20757,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15132,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520716] = { 
@@ -18781,6 +20769,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15132,
+			[2] = 15,
+			[3] = 0.3,
+		},
 		task_progress=15,
 	},
 	[520717] = { 
@@ -18788,6 +20781,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15133,
+			[2] = 30,
+			[3] = 1,
+		},
 		task_progress=30,
 	},
 	[520718] = { 
@@ -18799,6 +20797,12 @@ local config = {
 		idx=520719,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 2,
+		},
 		task_progress=2,
 	},
 	[520720] = { 
@@ -18812,6 +20816,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15128,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520722] = { 
@@ -18819,6 +20828,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15129,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520723] = { 
@@ -18826,6 +20840,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15130,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520724] = { 
@@ -18833,6 +20852,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15130,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520725] = { 
@@ -18840,6 +20864,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15131,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520726] = { 
@@ -18847,6 +20876,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15132,
+			[2] = 45,
+			[3] = 1,
+		},
 		task_progress=45,
 	},
 	[520727] = { 
@@ -18854,6 +20888,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 15132,
+			[2] = 20,
+			[3] = 0.3,
+		},
 		task_progress=20,
 	},
 	[520728] = { 
@@ -18870,6 +20909,12 @@ local config = {
 		idx=520730,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 3,
+		},
 		task_progress=3,
 	},
 	[520731] = { 
@@ -18920,6 +20965,12 @@ local config = {
 		idx=520738,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 4,
+		},
 		task_progress=4,
 	},
 	[520739] = { 
@@ -18943,6 +20994,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 21051,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520743] = { 
@@ -18950,6 +21006,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 20012,
+			[2] = 1,
+			[3] = 1,
+		},
 		task_progress=1,
 	},
 	[520744] = { 
@@ -18957,6 +21018,11 @@ local config = {
 		task_type=6,
 		task_goodevilid=2,
 		task_targettype=1,
+		task_target_param = {
+			[1] = 20009,
+			[2] = 3,
+			[3] = 1,
+		},
 		task_progress=3,
 	},
 	[520745] = { 
@@ -18973,6 +21039,12 @@ local config = {
 		idx=520747,
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=4,
+		task_target_param = {
+			[1] = 8,
+			[2] = 1,
+			[3] = 6,
+		},
 		task_progress=6,
 	},
 	[520748] = { 
