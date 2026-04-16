@@ -995,6 +995,14 @@ local config = {
 		idx="Name_Task_300015",
 		Dec="江湖录",
 	},
+	["Name_Task_300016"] = { 
+		idx="Name_Task_300016",
+		Dec="购买药品",
+	},
+	["Name_Task_300017"] = { 
+		idx="Name_Task_300017",
+		Dec="使用传送符",
+	},
 	["Name_Task_400000"] = { 
 		idx="Name_Task_400000",
 		Dec="悬赏任务",
@@ -3797,6 +3805,14 @@ local config = {
 	},
 	["FinishDec_Task_300015"] = { 
 		idx="FinishDec_Task_300015",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_300016"] = { 
+		idx="FinishDec_Task_300016",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_300017"] = { 
+		idx="FinishDec_Task_300017",
 		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
 	},
 	["FinishDec_Task_600000"] = { 

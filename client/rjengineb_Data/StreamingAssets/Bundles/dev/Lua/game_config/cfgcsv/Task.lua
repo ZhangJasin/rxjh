@@ -13988,6 +13988,7 @@ local config = {
 		task_pre = {
 			[1] = 100006,
 		},
+		task_findial="FinishDec_Task_300015",
 	},
 	[400001] = { 
 		idx=400001,
