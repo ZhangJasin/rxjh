@@ -167,8 +167,8 @@ local config = {
 		task_finnpc=6,
 		task_pos = {
 			[1] = 101,
-			[2] = 135,
-			[3] = 323,
+			[2] = 134,
+			[3] = 325,
 			[4] = 3,
 		},
 		task_drop = {
@@ -217,8 +217,8 @@ local config = {
 		task_finnpc=5,
 		task_pos = {
 			[1] = 101,
-			[2] = 100,
-			[3] = 295,
+			[2] = 105,
+			[3] = 275,
 			[4] = 1,
 		},
 		task_finpos = {
@@ -310,8 +310,8 @@ local config = {
 		task_finnpc=1,
 		task_pos = {
 			[1] = 101,
-			[2] = 68,
-			[3] = 227,
+			[2] = 71,
+			[3] = 252,
 			[4] = 3,
 		},
 		task_drop = {
@@ -1076,7 +1076,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 10014,
+			[1] = {
+				[1] = 10014,
+				[2] = 10114,
+			},
 			[2] = 15,
 			[3] = 1,
 		},
@@ -1131,7 +1134,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 10011,
+			[1] = {
+				[1] = 10011,
+				[2] = 10111,
+			},
 			[2] = 15,
 			[3] = 1,
 		},
@@ -1186,7 +1192,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 11004,
+			[1] = {
+				[1] = 11004,
+				[2] = 11104,
+			},
 			[2] = 20,
 			[3] = 1,
 		},
@@ -1570,7 +1579,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 10003,
+			[1] = {
+				[1] = 10003,
+				[2] = 10103,
+			},
 			[2] = 20,
 			[3] = 1,
 		},
@@ -1731,8 +1743,8 @@ local config = {
 		task_finnpc=5,
 		task_pos = {
 			[1] = 102,
-			[2] = 130,
-			[3] = 173,
+			[2] = 124,
+			[3] = 175,
 			[4] = 3,
 		},
 		task_drop = {
@@ -1770,7 +1782,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15005,
+			[1] = {
+				[1] = 15005,
+				[2] = 15205,
+			},
 			[2] = 25,
 			[3] = 1,
 		},
@@ -1947,8 +1962,8 @@ local config = {
 		task_finnpc=4,
 		task_pos = {
 			[1] = 102,
-			[2] = 127,
-			[3] = 162,
+			[2] = 124,
+			[3] = 175,
 			[4] = 3,
 		},
 		task_drop = {
@@ -1986,8 +2001,11 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15005,
-			[2] = 5,
+			[1] = {
+				[1] = 15005,
+				[2] = 15205,
+			},
+			[2] = 55,
 			[3] = 0.3,
 		},
 		task_progress=5,
@@ -2086,7 +2104,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15006,
+			[1] = {
+				[1] = 15006,
+				[2] = 15653,
+			},
 			[2] = 30,
 			[3] = 1,
 		},
@@ -2341,7 +2362,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15020,
+			[1] = {
+				[1] = 15020,
+				[2] = 15120,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -2443,7 +2467,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15019,
+			[1] = {
+				[1] = 15019,
+				[2] = 15219,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -2545,7 +2572,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15024,
+			[1] = {
+				[1] = 15024,
+				[2] = 15224,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -2596,7 +2626,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15017,
+			[1] = {
+				[1] = 15017,
+				[2] = 15217,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -2743,7 +2776,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15014,
+			[1] = {
+				[1] = 15014,
+				[2] = 15214,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -2845,7 +2881,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15016,
+			[1] = {
+				[1] = 15016,
+				[2] = 15216,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -3033,7 +3072,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15027,
+			[1] = {
+				[1] = 15027,
+				[2] = 15227,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -3135,7 +3177,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15052,
+			[1] = {
+				[1] = 15052,
+				[2] = 15252,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -3423,7 +3468,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15056,
+			[1] = {
+				[1] = 15056,
+				[2] = 15256,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -3474,7 +3522,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15055,
+			[1] = {
+				[1] = 15055,
+				[2] = 15155,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -3576,7 +3627,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15058,
+			[1] = {
+				[1] = 15058,
+				[2] = 15258,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -3774,7 +3828,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15082,
+			[1] = {
+				[1] = 15082,
+				[2] = 15182,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -3825,7 +3882,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15083,
+			[1] = {
+				[1] = 15083,
+				[2] = 15183,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -3876,7 +3936,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15087,
+			[1] = {
+				[1] = 15087,
+				[2] = 15187,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -3927,7 +3990,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15089,
+			[1] = {
+				[1] = 15089,
+				[2] = 15189,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -4316,7 +4382,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15062,
+			[1] = {
+				[1] = 15062,
+				[2] = 15262,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -4509,7 +4578,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15065,
+			[1] = {
+				[1] = 15065,
+				[2] = 11012,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -4560,7 +4632,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15067,
+			[1] = {
+				[1] = 15067,
+				[2] = 11013,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -4611,7 +4686,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15066,
+			[1] = {
+				[1] = 15066,
+				[2] = 15166,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -4713,7 +4791,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15070,
+			[1] = {
+				[1] = 15070,
+				[2] = 11014,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -4848,7 +4929,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15020,
+			[1] = {
+				[1] = 15020,
+				[2] = 15120,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -4950,7 +5034,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15019,
+			[1] = {
+				[1] = 15019,
+				[2] = 15219,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -5052,7 +5139,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15011,
+			[1] = {
+				[1] = 15011,
+				[2] = 15211,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -5103,7 +5193,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15017,
+			[1] = {
+				[1] = 15017,
+				[2] = 15217,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -5301,7 +5394,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15021,
+			[1] = {
+				[1] = 15021,
+				[2] = 15121,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -5496,7 +5592,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15030,
+			[1] = {
+				[1] = 15030,
+				[2] = 15230,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -5649,7 +5748,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15045,
+			[1] = {
+				[1] = 15045,
+				[2] = 15145,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -5700,7 +5802,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15042,
+			[1] = {
+				[1] = 15042,
+				[2] = 15142,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -5938,7 +6043,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15046,
+			[1] = {
+				[1] = 15046,
+				[2] = 15346,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -6040,7 +6148,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15048,
+			[1] = {
+				[1] = 15048,
+				[2] = 15248,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -6238,7 +6349,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15085,
+			[1] = {
+				[1] = 15085,
+				[2] = 15185,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -6289,7 +6403,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15086,
+			[1] = {
+				[1] = 15086,
+				[2] = 15186,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -6340,7 +6457,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15089,
+			[1] = {
+				[1] = 15089,
+				[2] = 15189,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -6391,7 +6511,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15088,
+			[1] = {
+				[1] = 15088,
+				[2] = 15188,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -6730,7 +6853,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15072,
+			[1] = {
+				[1] = 15072,
+				[2] = 15172,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -6922,7 +7048,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15076,
+			[1] = {
+				[1] = 15076,
+				[2] = 15176,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -6973,7 +7102,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15077,
+			[1] = {
+				[1] = 15077,
+				[2] = 15177,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -7024,7 +7156,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15078,
+			[1] = {
+				[1] = 15078,
+				[2] = 15178,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
@@ -7126,7 +7261,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15080,
+			[1] = {
+				[1] = 15080,
+				[2] = 15180,
+			},
 			[2] = 50,
 			[3] = 1,
 		},
