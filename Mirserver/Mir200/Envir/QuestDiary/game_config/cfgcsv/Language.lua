@@ -953,7 +953,7 @@ local config = {
 	},
 	["Name_Task_300005"] = { 
 		idx="Name_Task_300005",
-		Dec="宠物激活",
+		Dec="宠物培养",
 	},
 	["Name_Task_300006"] = { 
 		idx="Name_Task_300006",
