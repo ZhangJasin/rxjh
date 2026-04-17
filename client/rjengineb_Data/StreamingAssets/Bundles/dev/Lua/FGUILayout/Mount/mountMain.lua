@@ -1331,6 +1331,20 @@ function mountMain:setPetHHSx()
     -- 设置属性和模型
     local sx = allNamesObj[nowGrade].ClassID
     self.modelId = allNamesObj[nowGrade].Model
+    
+    -- 获取rightTabs控制器的值，用于同步给type控制器
+    local rightTabsValue = 0
+    if self.rightTabs then
+        rightTabsValue = FGUI:Controller_getSelectedIndex(self.rightTabs)
+    end
+    
+    -- 获取type控制器（使用self._ui.petHuanhuaAttr获取）
+    local typeController = FGUI:getController(self._ui.petHuanhuaAttr, "type")
+    -- 同步rightTabs的值给type控制器
+    if typeController then
+        FGUI:Controller_setSelectedIndex(typeController, rightTabsValue)
+    end
+    
     -- 设置BUFF描述（处理\n换行符，支持UBB语法）
     local buffText = ""
     if allNamesObj[nowGrade].BuffDesc then
@@ -1344,6 +1358,10 @@ function mountMain:setPetHHSx()
     -- 支持ClassID为空时不显示属性列表
     if sx and #sx > 0 then
         local hhbuffTextHeight = 26 * #sx + 5
+        -- 当type控制器为1时，buffText的Y额外增加24
+        if rightTabsValue == 1 then
+            hhbuffTextHeight = hhbuffTextHeight + 50
+        end
         FGUI:setPosition(self.petHuanhuaAttr.buffText, 15, hhbuffTextHeight)
         -- 渲染属性列表
         FGUI:GList_itemRenderer(self.petHuanhuaAttr["sxlist"], function(index, item)
@@ -1362,7 +1380,6 @@ function mountMain:setPetHHSx()
         end)
         FGUI:GList_setNumItems(self.petHuanhuaAttr["sxlist"], #sx)
     else
-        -- ClassID为空时不显示属性列表
         FGUI:GList_setNumItems(self.petHuanhuaAttr["sxlist"], 0)
     end
 end
@@ -2015,8 +2032,26 @@ function mountMain:setMountHHSx()
     -- 设置属性和模型
     local sx = allNamesObj[nowGrade].ClassID
     self.modelId = allNamesObj[nowGrade].Model
+    
+    -- 获取rightTabs控制器的值，用于同步给type控制器
+    local rightTabsValue = 1  -- 坐骑页面默认1
+    if self.rightTabs then
+        rightTabsValue = FGUI:Controller_getSelectedIndex(self.rightTabs)
+    end
+    
+    -- 获取type控制器（使用self._ui.huanhuaAttr而非self.huanhuaAttr）
+    local typeController = FGUI:getController(self._ui.huanhuaAttr, "type")
+    -- 同步rightTabs的值给type控制器
+    if typeController then
+        FGUI:Controller_setSelectedIndex(typeController, rightTabsValue)
+    end
+    
     -- 设置BUFF描述（处理\n换行符）
     local hhbuffTextHeight = 26 * #sx + 5
+    -- 当type控制器为1时，buffText的Y额外增加24
+    if rightTabsValue == 1 then
+        hhbuffTextHeight = hhbuffTextHeight + 50
+    end
     local hhbuffs = allNamesObj[nowGrade].BuffID
     local buffText = ""
     if allNamesObj[nowGrade].BuffDesc then
@@ -2025,22 +2060,28 @@ function mountMain:setMountHHSx()
     FGUI:GTextField_setAutoSize(self.huanhuaAttr.buffText, 2)
     FGUI:setPosition(self.huanhuaAttr.buffText, 15, hhbuffTextHeight)
     FGUI:GTextField_setText(self.huanhuaAttr.buffText, buffText)
-    -- 渲染属性列表
-    FGUI:GList_itemRenderer(self.huanhuaAttr["sxlist"], function(index, item)
-        local attrId = sx[index + 1][1]
-        local attrValue = sx[index + 1][2]
-        local label = AttScoreNames[attrId].Name .. ":"
-        local itemLabel = FGUI:GetChild(item, "label")
-        local itemValue = FGUI:GetChild(item, "zhi")
-        -- 检查是否需要显示为百分比
-        local valueText = attrValue
-        if PercentAttrConfig[attrId] then
-            valueText = math.floor(attrValue / 100) .. "%"
-        end
-        FGUI:GTextField_setText(itemLabel, label)
-        FGUI:GTextField_setText(itemValue, valueText)
-    end)
-    FGUI:GList_setNumItems(self.huanhuaAttr["sxlist"], #sx)
+    
+    -- 根据是否有属性来设置
+    if sx and #sx > 0 then
+        -- 渲染属性列表
+        FGUI:GList_itemRenderer(self.huanhuaAttr["sxlist"], function(index, item)
+            local attrId = sx[index + 1][1]
+            local attrValue = sx[index + 1][2]
+            local label = AttScoreNames[attrId].Name .. ":"
+            local itemLabel = FGUI:GetChild(item, "label")
+            local itemValue = FGUI:GetChild(item, "zhi")
+            -- 检查是否需要显示为百分比
+            local valueText = attrValue
+            if PercentAttrConfig[attrId] then
+                valueText = math.floor(attrValue / 100) .. "%"
+            end
+            FGUI:GTextField_setText(itemLabel, label)
+            FGUI:GTextField_setText(itemValue, valueText)
+        end)
+        FGUI:GList_setNumItems(self.huanhuaAttr["sxlist"], #sx)
+    else
+        FGUI:GList_setNumItems(self.huanhuaAttr["sxlist"], 0)
+    end
 end
 
 -- 设置当前坐骑属性
