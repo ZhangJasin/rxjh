@@ -2083,6 +2083,14 @@ local config = {
 		idx="TargetDec_Task_300015",
 		Dec="查看<font color='#00FF00'>江湖录</font>",
 	},
+	["TargetDec_Task_300016"] = { 
+		idx="TargetDec_Task_300016",
+		Dec="购买药品<font color='#00FF00'>一次药品</font>",
+	},
+	["TargetDec_Task_300017"] = { 
+		idx="TargetDec_Task_300017",
+		Dec="使用<font color='#00FF00'>一次传送符</font>",
+	},
 	["TargetDec_Task_400000"] = { 
 		idx="TargetDec_Task_400000",
 		Dec="<font color='#00FF00'>点击接取悬赏任务</font>",
