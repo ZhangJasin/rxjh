@@ -505,8 +505,8 @@ function mountMain.petShengji(actor)
     -- 人物外观只由坐骑控制，与旧系统一致
 
     -- 触发灵兽升级事件（与旧系统对齐）
-    local allPets = { pet = nextlv }
-    GameEvent.push(EventCfg.onPetLevel, actor, allPets)
+    
+    GameEvent.push(EventCfg.onPetLevel, actor)
 
     -- 更新前端显示（发送updateLSView消息与旧系统对齐）
     -- 与坐骑一致：发送完整的等级
@@ -1017,6 +1017,8 @@ function mountMain.shengji(actor)
     -- 同步更新灵兽属性buff（确保不影响灵兽属性）
     mountMain.updatePetAttrBuff(actor)
     mountMain.updatePetBattleSkillBuff(actor)
+
+    GameEvent.push(EventCfg.onMountLv, actor)
 end
 
 function getHHData(idx, grade)
@@ -1255,6 +1257,8 @@ function mountMain.chuzhan(actor, data)
     mountMain.updatePetBattleSkillBuff(actor)
     Message.sendmsgEx(actor, "mountMain", "updateBtnName",
         { status = horsestate(actor) })
+
+    GameEvent.push(EventCfg.onMountZhan, actor)
 end
 
 function mountMain.jihuo(actor) sendmsg(actor, 9, "请先激活坐骑") end
@@ -1398,6 +1402,8 @@ function mountMain.petChuzhan(actor)
         -- 灵兽未出战，执行召唤
         print("灵兽未出战，执行召唤")
         mountMain.recallpet(actor)
+
+        GameEvent.push(EventCfg.onPetZhan, actor)
     end
 end
 

@@ -88,6 +88,11 @@ EventCfg.onClearGoodevolid          = "onClearGoodevolid"              -- 清除阵
 EventCfg.onChangeQGD                = "onChangeQGD"                    -- 气功点改变触发(actor, moneyID, lastCount)
 EventCfg.onOpenNpc                  = "onOpenNpc"                      -- 打开npc指定界面(actor, npcid)
 EventCfg.onPetLevel                 = "onPetLevel"                     -- 宠物升级事件(actor, npcid)
+EventCfg.onMountLv                  = "onMountLv"                    -- 坐骑升级事件(actor, npcid)
+EventCfg.onPetZhan                  = "onPetZhan"                      -- 宠物出战事件(actor, npcid)
+EventCfg.onMountZhan                = "onMountZhan"                      -- 坐骑出战事件(actor, npcid)
+
+
 -- EventCfg.onGroupGetExp              = "onGroupGetExp"                  -- 组队获得经验触发(actor, exp)
 EventCfg.updateMakeItem             = "updateMakeItem"                 -- 触发制造更新师徒打造任务
 EventCfg.updateJiangHuLuTask        = "updateJiangHuLuTask"            -- 触发更新完成江湖录小阶段任务
