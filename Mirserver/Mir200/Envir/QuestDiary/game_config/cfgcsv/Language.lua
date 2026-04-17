@@ -1157,7 +1157,7 @@ local config = {
 	},
 	["TargetDec_Task_101007"] = { 
 		idx="TargetDec_Task_101007",
-		Dec="击败<font color='#00FF00'>熊</font>，获得熊皮<br>（击杀对应怪物概率完成任务进度)",
+		Dec="击败<font color='#00FF00'>熊</font>，获得熊皮<br>（击杀对应怪物<font color='#00FF00'>概率</font>完成任务进度)",
 	},
 	["TargetDec_Task_101008"] = { 
 		idx="TargetDec_Task_101008",
@@ -1165,11 +1165,11 @@ local config = {
 	},
 	["TargetDec_Task_101009"] = { 
 		idx="TargetDec_Task_101009",
-		Dec="击败<font color='#00FF00'>花熊</font>获得其皮毛<br>（击杀对应怪物概率完成任务进度)",
+		Dec="击败<font color='#00FF00'>花熊</font>获得其皮毛<br>（击杀对应怪物<font color='#00FF00'>概率</font>完成任务进度)",
 	},
 	["TargetDec_Task_101010"] = { 
 		idx="TargetDec_Task_101010",
-		Dec="击败<font color='#00FF00'>血狼</font>获得其皮毛<br>（击杀对应怪物概率完成任务进度)",
+		Dec="击败<font color='#00FF00'>血狼</font>获得其皮毛<br>（击杀对应怪物<font color='#00FF00'>概率</font>完成任务进度)",
 	},
 	["TargetDec_Task_101011"] = { 
 		idx="TargetDec_Task_101011",
@@ -1213,11 +1213,11 @@ local config = {
 	},
 	["TargetDec_Task_102009"] = { 
 		idx="TargetDec_Task_102009",
-		Dec="击败<font color='#00FF00'>舞女</font><br>（击杀对应怪物概率完成任务进度)",
+		Dec="击败<font color='#00FF00'>舞女</font>",
 	},
 	["TargetDec_Task_102010"] = { 
 		idx="TargetDec_Task_102010",
-		Dec="击败<font color='#00FF00'>破戒僧</font><br>（击杀对应怪物概率完成任务进度)",
+		Dec="击败<font color='#00FF00'>破戒僧</font>",
 	},
 	["TargetDec_Task_102011"] = { 
 		idx="TargetDec_Task_102011",
@@ -1229,11 +1229,11 @@ local config = {
 	},
 	["TargetDec_Task_102013"] = { 
 		idx="TargetDec_Task_102013",
-		Dec="击败<font color='#00FF00'>舞女</font>，获取羽扇",
+		Dec="击败<font color='#00FF00'>舞女</font>，获取羽扇<br>（击杀对应怪物<font color='#00FF00'>概率</font>完成任务进度)",
 	},
 	["TargetDec_Task_102014"] = { 
 		idx="TargetDec_Task_102014",
-		Dec="击败<font color='#00FF00'>破戒僧</font>，获取禅杖",
+		Dec="击败<font color='#00FF00'>破戒僧</font>，获取禅杖<br>（击杀对应怪物<font color='#00FF00'>概率</font>完成任务进度)",
 	},
 	["TargetDec_Task_102015"] = { 
 		idx="TargetDec_Task_102015",
@@ -2337,11 +2337,11 @@ local config = {
 	},
 	["TargetDec_Task_300019"] = { 
 		idx="TargetDec_Task_300019",
-		Dec="使<font color='#00FF00'>灵宠出战</font><br>（灵宠<font color='#00FF00'>一阶10星</font>后即可出战）",
+		Dec="使<font color='#00FF00'>灵宠出战</font><br>（灵宠<font color='#00FF00'>一阶</font>后即可出战）",
 	},
 	["TargetDec_Task_300020"] = { 
 		idx="TargetDec_Task_300020",
-		Dec="使<font color='#00FF00'>坐骑出战</font><br>（坐骑<font color='#00FF00'>一阶10星</font>后即可出战）",
+		Dec="使<font color='#00FF00'>坐骑出战</font><br>（坐骑<font color='#00FF00'>一阶</font>后即可出战）",
 	},
 	["ReceiveDec_Task_103001"] = { 
 		idx="ReceiveDec_Task_103001",
