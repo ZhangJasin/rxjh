@@ -50,6 +50,8 @@ local _taskMB4data = {
     _ActiveMount            = 15,     -- 激活坐骑
     _UpMount                = 16,     -- 升级坐骑
     _FuYu                   = 17,     -- 赋予
+    _PetZhan                = 18,     -- 宠物出战
+    _MountZhan              = 19,     -- 坐骑出战
 }
 local _QiangHuaCount = 1          -- 1为强化次数
 local _QiangHuaStdModeLevel = 2   -- 2为强化部位指定等级
@@ -543,22 +545,58 @@ local function _onChangeQGD(actor)
     end
 end
 
---- 升级宠物  暂无
-local function _onPetLevelinfo(actor,hasPet)
+--- 激活升级宠物  
+local function _onPetLevelinfo(actor)
     local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     local taskfinish = 0
-    local allLevel = 0
-    for k,v in pairs(hasPet) do
-        allLevel = allLevel + v
-    end
-    -- dump(hasPet)
+    local petLevel = gethumvar(actor, VarCfg.U_All_Pet_star) or 0
     for k,v in pairs(TaskProgress_data) do
         local taskid = tonumber(k)
         local taskxq = Task.ConditionLv(actor, taskid)
         local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
         if task_targettype == _taskMBType._GameplayDevelopment and taskxq then  --玩法培养
-            local neednum = Task_cfg[taskid]['task_progress'] or 0
+            local neednum = Task_cfg[taskid]['task_progress'] or 1
+            local targetTab = Task_cfg[taskid]['task_target_param']
+            local targetType = 0
+            if type(targetTab) == "string" then
+                targetType = tonumber(targetTab)
+            elseif type(targetTab) == "table" then
+                targetType = targetTab[1]
+            end
+            if targetType == _taskMB4data._UpPet or targetType == _taskMB4data._ActivePet then  
+                if petLevel >= neednum then
+                    TaskProgress_data[k]['state'] = _taskState.finish
+                    taskchange = Task_Change_Flag
+                    taskfinish = Task_Finish_Flag
+                elseif petLevel ~= v['count'] then
+                    taskchange = Task_Change_Flag
+                end
+                TaskProgress_data[k]['count'] = petLevel
+            end
+        end
+    end
+    if taskchange == Task_Change_Flag then
+        sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(TaskProgress_data))  -- 当前已接取任务列表
+        Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})   -- 更新客户端任务进度变量
+        if taskfinish == Task_Finish_Flag then
+            _onCompleteOtherTask(actor) -- 有任务有变化是判断
+        end
+    end
+end
+
+--- 激活升级坐骑  
+local function _onMountLevelinfo(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
+    local taskchange = 0  --任务是否有变化，有的话更新
+    local taskfinish = 0
+    local mountLevel = gethumvar(actor, VarCfg.U_All_Mount_star) or 0
+    for k,v in pairs(TaskProgress_data) do
+        local taskid = tonumber(k)
+        local taskxq = Task.ConditionLv(actor, taskid)
+        local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
+        if task_targettype == _taskMBType._GameplayDevelopment and taskxq then  --玩法培养
+            local neednum = Task_cfg[taskid]['task_progress'] or 1
             local targetTab = Task_cfg[taskid]['task_target_param']
             local targetType = 0
             if type(targetTab) == "string" then
@@ -567,15 +605,96 @@ local function _onPetLevelinfo(actor,hasPet)
                 targetType = targetTab[1]
             end
             --print("targetType="..targetType)
-            if targetType == _taskMB4data._UpPet then  
-                if TaskProgress_data[k]['count'] >= neednum then
+            if targetType == _taskMB4data._UpMount or targetType == _taskMB4data._ActiveMount then  
+                if mountLevel >= neednum then
                     TaskProgress_data[k]['state'] = _taskState.finish
                     taskchange = Task_Change_Flag
                     taskfinish = Task_Finish_Flag
-                elseif allLevel ~= v['count'] then
+                elseif mountLevel ~= v['count'] then
                     taskchange = Task_Change_Flag
                 end
-                TaskProgress_data[k]['count'] = allLevel
+                TaskProgress_data[k]['count'] = mountLevel
+            end
+        end
+    end
+    if taskchange == Task_Change_Flag then
+        sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(TaskProgress_data))  -- 当前已接取任务列表
+        Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})   -- 更新客户端任务进度变量
+        if taskfinish == Task_Finish_Flag then
+            _onCompleteOtherTask(actor) -- 有任务有变化是判断
+        end
+    end
+end
+
+--- 宠物出战  
+local function _onPetZhaninfo(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
+    local taskchange = 0  --任务是否有变化，有的话更新
+    local taskfinish = 0
+    local petState = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
+    for k,v in pairs(TaskProgress_data) do
+        local taskid = tonumber(k)
+        local taskxq = Task.ConditionLv(actor, taskid)
+        local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
+        if task_targettype == _taskMBType._GameplayDevelopment and taskxq then  --玩法培养
+            local neednum = Task_cfg[taskid]['task_progress'] or 1
+            local targetTab = Task_cfg[taskid]['task_target_param']
+            local targetType = 0
+            if type(targetTab) == "string" then
+                targetType = tonumber(targetTab)
+            elseif type(targetTab) == "table" then
+                targetType = targetTab[1]
+            end
+            --print("targetType="..targetType)
+            if targetType == _taskMB4data._PetZhan then  
+                if petState >= petState then
+                    TaskProgress_data[k]['state'] = _taskState.finish
+                    taskchange = Task_Change_Flag
+                    taskfinish = Task_Finish_Flag
+                elseif petState ~= v['count'] then
+                    taskchange = Task_Change_Flag
+                end
+                TaskProgress_data[k]['count'] = petState
+            end
+        end
+    end
+    if taskchange == Task_Change_Flag then
+        sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(TaskProgress_data))  -- 当前已接取任务列表
+        Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})   -- 更新客户端任务进度变量
+        if taskfinish == Task_Finish_Flag then
+            _onCompleteOtherTask(actor) -- 有任务有变化是判断
+        end
+    end
+end
+--- 坐骑出战  
+local function _onMountZhaninfo(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
+    local taskchange = 0  --任务是否有变化，有的话更新
+    local taskfinish = 0
+    local mountState = gethumvar(actor, VarCfg.U_Mount_Status) or 0
+    for k,v in pairs(TaskProgress_data) do
+        local taskid = tonumber(k)
+        local taskxq = Task.ConditionLv(actor, taskid)
+        local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
+        if task_targettype == _taskMBType._GameplayDevelopment and taskxq then  --玩法培养
+            local neednum = Task_cfg[taskid]['task_progress'] or 1
+            local targetTab = Task_cfg[taskid]['task_target_param']
+            local targetType = 0
+            if type(targetTab) == "string" then
+                targetType = tonumber(targetTab)
+            elseif type(targetTab) == "table" then
+                targetType = targetTab[1]
+            end
+            --print("targetType="..targetType)
+            if targetType == _taskMB4data._MountZhan then  
+                if mountState >= neednum then
+                    TaskProgress_data[k]['state'] = _taskState.finish
+                    taskchange = Task_Change_Flag
+                    taskfinish = Task_Finish_Flag
+                elseif mountState ~= v['count'] then
+                    taskchange = Task_Change_Flag
+                end
+                TaskProgress_data[k]['count'] = mountState
             end
         end
     end
@@ -974,15 +1093,31 @@ function Task.updateTaskInfo(actor,TaskProgress_data)
                     TaskProgress_data[k]['count'] = 1
                     TaskProgress_data[k]['state'] = _taskState.finish
                 end
-            elseif targetType == _taskMB4data._UpPet then   --升级宠物   暂留
-                local hasPet = json2tbl(gethumvar(actor,VarCfg.T_Pets)) or {}
-                local allLevel = 0
-                for k,v in pairs(hasPet) do
-                    allLevel = allLevel + v
-                end
-                if allLevel >= neednum then
+            elseif targetType == _taskMB4data._UpPet or targetType == _taskMB4data._ActivePet then   --激活升级宠物
+                local petLevel = gethumvar(actor, VarCfg.U_All_Pet_star) or 0
+                
+                if petLevel >= neednum then
                     TaskProgress_data[k]['state'] = _taskState.finish
                 end
+                TaskProgress_data[k]['count'] = petLevel
+            elseif targetType == _taskMB4data._UpMount or targetType == _taskMB4data._ActiveMount then   --激活升级坐骑
+                local mountLevel = gethumvar(actor, VarCfg.U_All_Mount_star) or 0
+                if mountLevel >= neednum then
+                    TaskProgress_data[k]['state'] = _taskState.finish
+                end
+                TaskProgress_data[k]['count'] = mountLevel
+            elseif targetType == _taskMB4data._PetZhan then   --宠物出战
+                local petState = gethumvar(actor, VarCfg.U_Pet_IS_SET) or 0
+                if petState >= 1 then
+                    TaskProgress_data[k]['state'] = _taskState.finish
+                end
+                TaskProgress_data[k]['count'] = petState
+            elseif targetType == _taskMB4data._MountZhan then   --坐骑出战
+                local mountState = gethumvar(actor, VarCfg.U_Mount_Status) or 0
+                if mountState >= 1 then
+                    TaskProgress_data[k]['state'] = _taskState.finish
+                end
+                TaskProgress_data[k]['count'] = mountState
             elseif targetType == _taskMB4data._Transfer then   --几转
                 local RELEVEL = targetinfo(actor, "RELEVEL")
                 TaskProgress_data[k]['count'] = RELEVEL
@@ -1196,10 +1331,24 @@ GameEvent.add(EventCfg.onChangeQGD, function (actor, moneyID, lastCount)   -- 气
     _onChangeQGD(actor)
 end, Task)
 
--- 宠物升级事件
+-- 宠物激活升级事件
 GameEvent.add(EventCfg.onPetLevel, function (actor,hasPet)
-    _onPetLevelinfo(actor,hasPet)
+    _onPetLevelinfo(actor)
+end, Task)
 
+-- 宠物出战事件
+GameEvent.add(EventCfg.onPetZhan, function (actor,hasPet)
+    _onPetZhaninfo(actor)
+end, Task)
+
+-- 坐骑出战事件
+GameEvent.add(EventCfg.onMountZhan, function (actor,hasPet)
+    _onMountZhaninfo(actor)
+end, Task)
+
+-- 坐骑激活升级事件
+GameEvent.add(EventCfg.onMountLv, function (actor,hasPet)
+    _onMountLevelinfo(actor)
 end, Task)
 
 --点击npc触发
