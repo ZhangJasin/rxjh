@@ -81,7 +81,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900040,
-		BuffDesc="根据幻化等级，获得以下属性：\n[color=#645967]普通[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]3%[/color]\n[color=#34963c]勇者[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]6%[/color]\n[color=#9226b2]史诗[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]9%[/color]\n[color=#aa2736]传说[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]12%[/color]\n[color=#c56d20]极品[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]15%[/color]\n小女巫技能：\n[color=#645967]恩泽庇护lv1[/color]：周期提供友方少量治疗\n（幻化等级[color=#645967]普通[/color]时解锁）\n[color=#9226b2]恩泽庇护lv2[/color]：周期提供友方中量治疗\n（幻化等级[color=#9226b2]史诗[/color]时解锁）\n[color=#c56d20]恩泽庇护lv3[/color]：周期提供友方大量治疗\n（幻化等级[color=#c56d20]极品[/color]时解锁）",
+		BuffDesc="根据幻化等级，获得以下属性：\n[color=#645967]普通[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]3%[/color]\n[color=#34963c]勇者[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]6%[/color]\n[color=#9226b2]史诗[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]9%[/color]\n[color=#aa2736]传说[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]12%[/color]\n[color=#c56d20]极品[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]15%[/color]\n\n小女巫技能：\n[color=#645967]恩泽庇护lv1[/color]：周期提供友方少量治疗\n（幻化等级[color=#645967]普通[/color]时解锁）\n[color=#9226b2]恩泽庇护lv2[/color]：周期提供友方中量治疗\n（幻化等级[color=#9226b2]史诗[/color]时解锁）\n[color=#c56d20]恩泽庇护lv3[/color]：周期提供友方大量治疗\n（幻化等级[color=#c56d20]极品[/color]时解锁）",
 		Condition=1,
 		BattleSkill_Type = {
 			[1] = 99,
@@ -217,7 +217,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900040,
-		BuffDesc="根据幻化等级，获得以下属性：\n[color=#645967]普通[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]3%[/color]\n[color=#34963c]勇者[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]6%[/color]\n[color=#9226b2]史诗[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]9%[/color]\n[color=#aa2736]传说[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]12%[/color]\n[color=#c56d20]极品[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]15%[/color]\n小女巫技能：\n[color=#645967]恩泽庇护lv1[/color]：周期提供友方少量治疗\n（幻化等级[color=#645967]普通[/color]时解锁）\n[color=#9226b2]恩泽庇护lv2[/color]：周期提供友方中量治疗\n（幻化等级[color=#9226b2]史诗[/color]时解锁）\n[color=#c56d20]恩泽庇护lv3[/color]：周期提供友方大量治疗\n（幻化等级[color=#c56d20]极品[/color]时解锁）",
+		BuffDesc="根据幻化等级，获得以下属性：\n[color=#645967]普通[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]3%[/color]\n[color=#34963c]勇者[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]6%[/color]\n[color=#9226b2]史诗[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]9%[/color]\n[color=#aa2736]传说[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]12%[/color]\n[color=#c56d20]极品[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]15%[/color]\n\n小女巫技能：\n[color=#645967]恩泽庇护lv1[/color]：周期提供友方少量治疗\n（幻化等级[color=#645967]普通[/color]时解锁）\n[color=#9226b2]恩泽庇护lv2[/color]：周期提供友方中量治疗\n（幻化等级[color=#9226b2]史诗[/color]时解锁）\n[color=#c56d20]恩泽庇护lv3[/color]：周期提供友方大量治疗\n（幻化等级[color=#c56d20]极品[/color]时解锁）",
 		BattleSkill_Type = {
 			[1] = 99,
 			[2] = 100,
@@ -349,7 +349,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900041,
-		BuffDesc="根据幻化等级，获得以下属性：\n[color=#645967]普通[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]3%[/color]\n[color=#34963c]勇者[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]6%[/color]\n[color=#9226b2]史诗[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]9%[/color]\n[color=#aa2736]传说[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]12%[/color]\n[color=#c56d20]极品[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]15%[/color]\n小女巫技能：\n[color=#645967]恩泽庇护lv1[/color]：周期提供友方少量治疗\n（幻化等级[color=#645967]普通[/color]时解锁）\n[color=#9226b2]恩泽庇护lv2[/color]：周期提供友方中量治疗\n（幻化等级[color=#9226b2]史诗[/color]时解锁）\n[color=#c56d20]恩泽庇护lv3[/color]：周期提供友方大量治疗\n（幻化等级[color=#c56d20]极品[/color]时解锁）",
+		BuffDesc="根据幻化等级，获得以下属性：\n[color=#645967]普通[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]3%[/color]\n[color=#34963c]勇者[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]6%[/color]\n[color=#9226b2]史诗[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]9%[/color]\n[color=#aa2736]传说[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]12%[/color]\n[color=#c56d20]极品[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]15%[/color]\n\n小女巫技能：\n[color=#645967]恩泽庇护lv1[/color]：周期提供友方少量治疗\n（幻化等级[color=#645967]普通[/color]时解锁）\n[color=#9226b2]恩泽庇护lv2[/color]：周期提供友方中量治疗\n（幻化等级[color=#9226b2]史诗[/color]时解锁）\n[color=#c56d20]恩泽庇护lv3[/color]：周期提供友方大量治疗\n（幻化等级[color=#c56d20]极品[/color]时解锁）",
 		BattleSkill_Type = {
 			[1] = 99,
 			[2] = 100,
@@ -481,7 +481,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900041,
-		BuffDesc="根据幻化等级，获得以下属性：\n[color=#645967]普通[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]3%[/color]\n[color=#34963c]勇者[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]6%[/color]\n[color=#9226b2]史诗[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]9%[/color]\n[color=#aa2736]传说[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]12%[/color]\n[color=#c56d20]极品[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]15%[/color]\n小女巫技能：\n[color=#645967]恩泽庇护lv1[/color]：周期提供友方少量治疗\n（幻化等级[color=#645967]普通[/color]时解锁）\n[color=#9226b2]恩泽庇护lv2[/color]：周期提供友方中量治疗\n（幻化等级[color=#9226b2]史诗[/color]时解锁）\n[color=#c56d20]恩泽庇护lv3[/color]：周期提供友方大量治疗\n（幻化等级[color=#c56d20]极品[/color]时解锁）",
+		BuffDesc="根据幻化等级，获得以下属性：\n[color=#645967]普通[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]3%[/color]\n[color=#34963c]勇者[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]6%[/color]\n[color=#9226b2]史诗[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]9%[/color]\n[color=#aa2736]传说[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]12%[/color]\n[color=#c56d20]极品[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]15%[/color]\n\n小女巫技能：\n[color=#645967]恩泽庇护lv1[/color]：周期提供友方少量治疗\n（幻化等级[color=#645967]普通[/color]时解锁）\n[color=#9226b2]恩泽庇护lv2[/color]：周期提供友方中量治疗\n（幻化等级[color=#9226b2]史诗[/color]时解锁）\n[color=#c56d20]恩泽庇护lv3[/color]：周期提供友方大量治疗\n（幻化等级[color=#c56d20]极品[/color]时解锁）",
 		BattleSkill_Type = {
 			[1] = 99,
 			[2] = 100,
@@ -613,7 +613,7 @@ local config = {
 			[2] = 1,
 		},
 		Model=900042,
-		BuffDesc="根据幻化等级，获得以下属性：\n[color=#645967]普通[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]3%[/color]\n[color=#34963c]勇者[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]6%[/color]\n[color=#9226b2]史诗[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]9%[/color]\n[color=#aa2736]传说[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]12%[/color]\n[color=#c56d20]极品[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]15%[/color]\n小女巫技能：\n[color=#645967]恩泽庇护lv1[/color]：周期提供友方少量治疗\n（幻化等级[color=#645967]普通[/color]时解锁）\n[color=#9226b2]恩泽庇护lv2[/color]：周期提供友方中量治疗\n（幻化等级[color=#9226b2]史诗[/color]时解锁）\n[color=#c56d20]恩泽庇护lv3[/color]：周期提供友方大量治疗\n（幻化等级[color=#c56d20]极品[/color]时解锁）",
+		BuffDesc="根据幻化等级，获得以下属性：\n[color=#645967]普通[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]3%[/color]\n[color=#34963c]勇者[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]6%[/color]\n[color=#9226b2]史诗[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]9%[/color]\n[color=#aa2736]传说[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]12%[/color]\n[color=#c56d20]极品[/color]：出战时人物[color=#5c5140]生命和内力[/color]增加[color=#099613]15%[/color]\n\n小女巫技能：\n[color=#645967]恩泽庇护lv1[/color]：周期提供友方少量治疗\n（幻化等级[color=#645967]普通[/color]时解锁）\n[color=#9226b2]恩泽庇护lv2[/color]：周期提供友方中量治疗\n（幻化等级[color=#9226b2]史诗[/color]时解锁）\n[color=#c56d20]恩泽庇护lv3[/color]：周期提供友方大量治疗\n（幻化等级[color=#c56d20]极品[/color]时解锁）",
 		BattleSkill_Type = {
 			[1] = 99,
 			[2] = 100,
