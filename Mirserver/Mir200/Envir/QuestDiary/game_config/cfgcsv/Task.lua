@@ -1024,6 +1024,7 @@ local config = {
 		},
 		task_pro = {
 			[1] = 101009,
+			[2] = 300003,
 		},
 		task_targettype=1,
 		task_target_param = {
@@ -13551,7 +13552,7 @@ local config = {
 		task_receivetype=1,
 		task_level=20,
 		task_pre = {
-			[1] = 100009,
+			[1] = 101008,
 		},
 		task_targettype=4,
 		task_target_param="4",
