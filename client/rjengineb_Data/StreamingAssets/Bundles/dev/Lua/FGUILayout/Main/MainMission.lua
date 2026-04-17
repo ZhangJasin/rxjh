@@ -695,6 +695,8 @@ function MainMission:_findOpenedPanelUI(panel, panelName)
         return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide)
     elseif panel == "Bag_pc" and panelName == "PCPlayerInfoPanel" then
         return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide)
+    elseif panel == "Mount" and panelName == "mountMain" then
+        return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.MountGuide)
     end
     return nil
 end

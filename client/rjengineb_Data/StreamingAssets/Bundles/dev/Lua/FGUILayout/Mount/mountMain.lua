@@ -416,7 +416,12 @@ function mountMain:Enter(data)
                 --坐骑
             end
         end
+
+        FGUIFunction:RegisterGuideData(FGUIDefine.GuideDataKey.MountGuide,self._ui)
     end
+end
+function mountMain:Exit()
+    FGUIFunction:UnRegisterGuideData(FGUIDefine.GuideDataKey.MountGuide)
 end
 
 -- 初始化界面UI
