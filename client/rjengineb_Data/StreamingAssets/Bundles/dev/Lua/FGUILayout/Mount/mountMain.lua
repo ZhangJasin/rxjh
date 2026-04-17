@@ -1336,11 +1336,12 @@ function mountMain:setPetHHSx()
     if allNamesObj[nowGrade].BuffDesc then
         buffText = string.gsub(allNamesObj[nowGrade].BuffDesc, "\\n", "\n")
     end
+    -- 设置文本控件自动调整高度以支持多行显示
+    FGUI:GTextField_setAutoSize(self.petHuanhuaAttr.buffText, 2) -- 2=Both
     FGUI:GTextField_setText(self.petHuanhuaAttr.buffText, buffText)
     -- 支持ClassID为空时不显示属性列表
     if sx and #sx > 0 then
         local hhbuffTextHeight = 26 * #sx + 5
-        FGUI:GTextField_setAutoSize(self.petHuanhuaAttr.buffText, 2)
         FGUI:setPosition(self.petHuanhuaAttr.buffText, 15, hhbuffTextHeight)
         -- 渲染属性列表
         FGUI:GList_itemRenderer(self.petHuanhuaAttr["sxlist"], function(index, item)
