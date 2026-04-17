@@ -102,6 +102,7 @@ function login(actor)
     end
     -- 登录
     GameEvent.push(EventCfg.onLogin, actor)
+    
     -- 登录附加属性
     local loginattrs = {}
     GameEvent.push(EventCfg.onLoginAttr, actor, loginattrs)
@@ -1217,4 +1218,62 @@ function SpeHarmMain(actor, target, result)
     end
 
     return result
+end
+
+-- =====================================================
+-- 怪物技能伤害公式函数
+-- SkillEffect.xls Fumula列配置base时，怪物攻击触发m_base
+-- 参数: actor=攻击者(怪物), target=目标(玩家), effectId, skillId, skillLv, Param1
+-- 返回: 计算后的最终伤害
+-- =====================================================
+-- 怪物技能伤害公式函数（SkillEffect.xls Fumula=base时触发）
+-- actor=攻击者(怪物), target=目标(玩家)
+-- Param1=原始伤害值
+-- 返回=计算后的最终伤害
+function m_base(actor, target, effectId, skillId, skillLv, Param1)
+    print('[m_base] ==== START ====')
+    print('[m_base] actor=' .. tostring(actor) .. ', target=' .. tostring(target))
+    print('[m_base] effectId=' .. tostring(effectId) .. ', skillId=' .. tostring(skillId) .. ', skillLv=' .. tostring(skillLv))
+    print('[m_base] Param1=' .. tostring(Param1))
+    
+    local originalDamage = tonumber(Param1) or 0
+    print('[m_base] originalDamage=' .. originalDamage)
+    
+    -- 对怪防御（属性56）：固定值减免
+    local pveDef = abil(target, 56) or 0
+    local curPveDef = currabil(target, 56) or 0
+    print('[m_base] target abil(56)=' .. pveDef .. ', currabil=' .. curPveDef)
+    
+    if pveDef > 0 then
+        local beforeReduce = originalDamage
+        originalDamage = math.max(1, originalDamage - pveDef)
+        print('[m_base] after pveDef: ' .. beforeReduce .. ' - ' .. pveDef .. ' = ' .. originalDamage)
+    end
+    
+    -- 受怪减伤（属性116）：万分比减免
+    local reducePct = abil(target, 116) or 0
+    local curReducePct = currabil(target, 116) or 0
+    print('[m_base] target abil(116)=' .. reducePct .. ', currabil=' .. curReducePct)
+    
+    if reducePct > 0 then
+        local reduced = math.floor(originalDamage * reducePct / 10000)
+        print('[m_base] reduce calculation: ' .. originalDamage .. ' * ' .. reducePct .. ' / 10000 = ' .. reduced)
+        originalDamage = math.max(1, originalDamage - reduced)
+        print('[m_base] after reducePct: final=' .. originalDamage)
+    end
+    
+    print('[m_base] ==== END: return ' .. originalDamage .. ' ====')
+    return originalDamage
+end
+
+-- 玩家技能伤害公式函数（预留）
+function base(actor, target, effectId, skillId, skillLv, Param1)
+    local originalDamage = tonumber(Param1) or 0
+    return originalDamage
+end
+
+-- 宝宝技能伤害公式函数（预留）
+function b_base(actor, target, effectId, skillId, skillLv, Param1)
+    local originalDamage = tonumber(Param1) or 0
+    return originalDamage
 end
