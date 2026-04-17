@@ -108,15 +108,17 @@ function Task.onTaskTurnComplete(actor, data)
         return
     end
     
-    -- 更新任务状态为完成
-    TaskProgress_data[""..taskid] = {state = _taskState.finish, count = 1}
-    sethumvar(actor, VarCfg.T_TaskProgress_data, tbl2json(TaskProgress_data))
-    
-    -- 通知客户端更新任务
-    Message.sendmsgEx(actor, "MainMission", "UpdataTask", {param1 = TaskProgress_data})
-    
-    -- 触发任务完成事件（可领取奖励）
-    --GameEvent.push(EventCfg.onTaskFinish, actor, taskid)
+    if taskid == 300006 or taskid == 300015 then
+        -- 更新任务状态为完成
+        TaskProgress_data[""..taskid] = {state = _taskState.finish, count = 1}
+        sethumvar(actor, VarCfg.T_TaskProgress_data, tbl2json(TaskProgress_data))
+        
+        -- 通知客户端更新任务
+        Message.sendmsgEx(actor, "MainMission", "UpdataTask", {param1 = TaskProgress_data})
+
+        -- 触发任务完成事件（可领取奖励）
+        --GameEvent.push(EventCfg.onTaskFinish, actor, taskid)
+    end
 end
 
 -- 完成某个指定任务
