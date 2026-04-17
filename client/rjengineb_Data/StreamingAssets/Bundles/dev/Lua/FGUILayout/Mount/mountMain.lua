@@ -413,7 +413,10 @@ function mountMain:Enter(data)
             else
                 self.topTabs = FGUI:getController(self.component, "topTabs")
                 FGUI:Controller_setSelectedIndex(self.topTabs, 0)
-                --坐骑
+                --坐骑：初始化坐骑数据
+                self.topTab = TAB_TYPE.MOUNT
+                self:initMountTab()
+                self:setXHCL()
             end
         end
 
