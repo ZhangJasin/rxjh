@@ -1213,11 +1213,11 @@ local config = {
 	},
 	["TargetDec_Task_102009"] = { 
 		idx="TargetDec_Task_102009",
-		Dec="击败<font color='#00FF00'>舞女</font>",
+		Dec="击败<font color='#00FF00'>舞女</font><br>（击杀对应怪物概率完成任务进度)",
 	},
 	["TargetDec_Task_102010"] = { 
 		idx="TargetDec_Task_102010",
-		Dec="击败<font color='#00FF00'>破戒僧</font>",
+		Dec="击败<font color='#00FF00'>破戒僧</font><br>（击杀对应怪物概率完成任务进度)",
 	},
 	["TargetDec_Task_102011"] = { 
 		idx="TargetDec_Task_102011",
@@ -1361,7 +1361,7 @@ local config = {
 	},
 	["TargetDec_Task_200008"] = { 
 		idx="TargetDec_Task_200008",
-		Dec="打猎<font color='#FF0000'>灰狼</font>收集灰狼之骨",
+		Dec="打猎<font color='#FF0000'>灰狼</font>收集灰狼之骨<br>（击杀对应怪物概率完成任务进度)",
 	},
 	["TargetDec_Task_200010"] = { 
 		idx="TargetDec_Task_200010",
@@ -2097,11 +2097,11 @@ local config = {
 	},
 	["TargetDec_Task_300016"] = { 
 		idx="TargetDec_Task_300016",
-		Dec="购买药品<font color='#00FF00'>一次药品</font><br>（可在背包中打开随身商店购<br><font color='#00FF00'>买一次金疮药（小）</font>即可完成任务）",
+		Dec="购买药品<font color='#00FF00'>一次金疮药（小）</font><br>（可在背包中打开随身商店购<font color='#00FF00'>买金疮药（小）</font>即可完成任务）",
 	},
 	["TargetDec_Task_300017"] = { 
 		idx="TargetDec_Task_300017",
-		Dec="使用<font color='#00FF00'>一次传送符</font><br>（巡路过程中，点击游戏界面中的传送符<br>即可快速传送）",
+		Dec="使用<font color='#00FF00'>一次传送符</font><br>（巡路过程中，点击游戏界面中的<font color='#00FF00'>传送符</font>即可快速传送）",
 	},
 	["TargetDec_Task_400000"] = { 
 		idx="TargetDec_Task_400000",
