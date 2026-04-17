@@ -2313,6 +2313,7 @@ local config = {
 		},
 		task_pro = {
 			[1] = 103003,
+			[2] = 300014,
 		},
 		task_fintype=2,
 		task_finnpc=13,
@@ -2331,18 +2332,28 @@ local config = {
 		task_drop = {
 			[1] = {
 				[1] = 9,
+				[2] = 153,
+				[3] = 2,
+			},
+			[2] = {
+				[1] = 9,
 				[2] = 3,
 				[3] = 371646,
 			},
-			[2] = {
+			[3] = {
 				[1] = 9,
 				[2] = 7,
 				[3] = 100,
 			},
-			[3] = {
+			[4] = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 3000,
+			},
+			[5] = {
+				[1] = 9,
+				[2] = 153,
+				[3] = 2,
 			},
 		},
 		task_findial="FinishDec_Task_103002",
@@ -13574,7 +13585,8 @@ local config = {
 			[1] = 102001,
 		},
 		task_pro = {
-			[1] = 300010,
+			[1] = 300009,
+			[2] = 300010,
 		},
 		task_targettype=4,
 		task_target_param="5",
@@ -13606,6 +13618,9 @@ local config = {
 		task_level=20,
 		task_pre = {
 			[1] = 300011,
+		},
+		task_pro = {
+			[1] = 300019,
 		},
 		task_targettype=4,
 		task_target_param = {
@@ -13726,7 +13741,7 @@ local config = {
 		task_receivetype=1,
 		task_level=20,
 		task_pre = {
-			[1] = 300010,
+			[1] = 300004,
 		},
 		task_targettype=4,
 		task_target_param="12",
@@ -13758,9 +13773,6 @@ local config = {
 		task_level=20,
 		task_pre = {
 			[1] = 300004,
-		},
-		task_pro = {
-			[1] = 300009,
 		},
 		task_targettype=4,
 		task_target_param="13",
@@ -13865,6 +13877,9 @@ local config = {
 		task_level=20,
 		task_pre = {
 			[1] = 300012,
+		},
+		task_pro = {
+			[1] = 300020,
 		},
 		task_targettype=4,
 		task_target_param="16",
@@ -14005,6 +14020,42 @@ local config = {
 			},
 		},
 		task_findial="FinishDec_Task_300015",
+	},
+	[300018] = { 
+		idx=300018,
+		task_name="Name_Task_300018",
+		task_targetdec="TargetDec_Task_300018",
+		task_type=3,
+		task_weight=4017,
+		task_receivetype=1,
+		task_level=5,
+		task_pre = {
+			[1] = 300015,
+		},
+	},
+	[300019] = { 
+		idx=300019,
+		task_name="Name_Task_300019",
+		task_targetdec="TargetDec_Task_300019",
+		task_type=3,
+		task_weight=4018,
+		task_receivetype=1,
+		task_level=5,
+		task_pre = {
+			[1] = 300005,
+		},
+	},
+	[300020] = { 
+		idx=300020,
+		task_name="Name_Task_300020",
+		task_targetdec="TargetDec_Task_300020",
+		task_type=3,
+		task_weight=4019,
+		task_receivetype=1,
+		task_level=5,
+		task_pre = {
+			[1] = 300013,
+		},
 	},
 	[400001] = { 
 		idx=400001,

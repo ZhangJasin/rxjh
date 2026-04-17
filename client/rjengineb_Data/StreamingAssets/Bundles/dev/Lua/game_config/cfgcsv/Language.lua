@@ -1193,7 +1193,7 @@ local config = {
 	},
 	["TargetDec_Task_102004"] = { 
 		idx="TargetDec_Task_102004",
-		Dec="进行<font color='#00FF00'>3次装备强化</font>",
+		Dec="进行<font color='#00FF00'>1次装备强化</font>",
 	},
 	["TargetDec_Task_102005"] = { 
 		idx="TargetDec_Task_102005",
@@ -1246,6 +1246,18 @@ local config = {
 	["TargetDec_Task_102017"] = { 
 		idx="TargetDec_Task_102017",
 		Dec="回禀<font color='#00FF00'>泫渤派门主</font>",
+	},
+	["Name_Task_300018"] = { 
+		idx="Name_Task_300018",
+		Dec="完成一次江湖录任务",
+	},
+	["Name_Task_300019"] = { 
+		idx="Name_Task_300019",
+		Dec="宠物出战",
+	},
+	["Name_Task_300020"] = { 
+		idx="Name_Task_300020",
+		Dec="坐骑出战",
 	},
 	["TargetDec_Task_103001"] = { 
 		idx="TargetDec_Task_103001",
@@ -2033,11 +2045,11 @@ local config = {
 	},
 	["TargetDec_Task_300003"] = { 
 		idx="TargetDec_Task_300003",
-		Dec="创建或加入<font color='#00FF00'>1支队伍</font>",
+		Dec="创建或加入<font color='#00FF00'>1支队伍</font><br>（在一定范围内组队击杀怪物可以获得经验加成）",
 	},
 	["TargetDec_Task_300004"] = { 
 		idx="TargetDec_Task_300004",
-		Dec="创建或加入<font color='#00FF00'>1个门派</font>",
+		Dec="创建或加入<font color='#00FF00'>1个门派</font><br>（加入门派后，可参加完成门派任务获得大量经验奖励）",
 	},
 	["TargetDec_Task_300005"] = { 
 		idx="TargetDec_Task_300005",
@@ -2045,7 +2057,7 @@ local config = {
 	},
 	["TargetDec_Task_300006"] = { 
 		idx="TargetDec_Task_300006",
-		Dec="查看<font color='#00FF00'>仓库</font>",
+		Dec="查看<font color='#00FF00'>仓库</font><br>（打开随身背包即可使用仓库）",
 	},
 	["TargetDec_Task_300007"] = { 
 		idx="TargetDec_Task_300007",
@@ -2057,7 +2069,7 @@ local config = {
 	},
 	["TargetDec_Task_300009"] = { 
 		idx="TargetDec_Task_300009",
-		Dec="完成<font color='#00FF00'>一次门派任务</font>",
+		Dec="完成<font color='#00FF00'>一次门派任务</font><br>（完成门派任务可获得大量门派点及经验）",
 	},
 	["TargetDec_Task_300010"] = { 
 		idx="TargetDec_Task_300010",
@@ -2065,11 +2077,11 @@ local config = {
 	},
 	["TargetDec_Task_300011"] = { 
 		idx="TargetDec_Task_300011",
-		Dec="激活<font color='#00FF00'>宠物</font>",
+		Dec="激活<font color='#00FF00'>宠物</font><br>（灵宠激活后玩家可获得灵宠部分属性）",
 	},
 	["TargetDec_Task_300012"] = { 
 		idx="TargetDec_Task_300012",
-		Dec="激活<font color='#00FF00'>坐骑</font>",
+		Dec="激活<font color='#00FF00'>坐骑</font><br>（坐骑激活后玩家可获得灵宠部分属性）",
 	},
 	["TargetDec_Task_300013"] = { 
 		idx="TargetDec_Task_300013",
@@ -2077,7 +2089,7 @@ local config = {
 	},
 	["TargetDec_Task_300014"] = { 
 		idx="TargetDec_Task_300014",
-		Dec="赋予<font color='#00FF00'>装备一次属性石</font>",
+		Dec="赋予<font color='#00FF00'>装备一次属性石</font><br>(装备赋予属性石后可以获得额外属性)",
 	},
 	["TargetDec_Task_300015"] = { 
 		idx="TargetDec_Task_300015",
@@ -2085,11 +2097,11 @@ local config = {
 	},
 	["TargetDec_Task_300016"] = { 
 		idx="TargetDec_Task_300016",
-		Dec="购买药品<font color='#00FF00'>一次药品</font>",
+		Dec="购买药品<font color='#00FF00'>一次药品</font><br>（可在背包中打开随身商店购<br><font color='#00FF00'>买一次金疮药（小）</font>即可完成任务）",
 	},
 	["TargetDec_Task_300017"] = { 
 		idx="TargetDec_Task_300017",
-		Dec="使用<font color='#00FF00'>一次传送符</font>",
+		Dec="使用<font color='#00FF00'>一次传送符</font><br>（传送符可以快速传送至目标地点）",
 	},
 	["TargetDec_Task_400000"] = { 
 		idx="TargetDec_Task_400000",
@@ -2318,6 +2330,18 @@ local config = {
 	["ReceiveDec_Task_102012"] = { 
 		idx="ReceiveDec_Task_102012",
 		Dec="看来你成长很快，是时候传授你一些新的东西了，来我这里，别让我久等。",
+	},
+	["TargetDec_Task_300018"] = { 
+		idx="TargetDec_Task_300018",
+		Dec="完成<font color='#00FF00'>一次江湖录任务</font><br>（传送符可以快速传送至目标地点）",
+	},
+	["TargetDec_Task_300019"] = { 
+		idx="TargetDec_Task_300019",
+		Dec="使<font color='#00FF00'>灵宠出战</font><br>（灵宠一阶10星后即可出战）",
+	},
+	["TargetDec_Task_300020"] = { 
+		idx="TargetDec_Task_300020",
+		Dec="使<font color='#00FF00'>坐骑出战</font><br>（坐骑一阶10星后即可出战）",
 	},
 	["ReceiveDec_Task_103001"] = { 
 		idx="ReceiveDec_Task_103001",
