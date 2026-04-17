@@ -1157,7 +1157,7 @@ local config = {
 	},
 	["TargetDec_Task_101007"] = { 
 		idx="TargetDec_Task_101007",
-		Dec="击败<font color='#00FF00'>熊</font>，获得熊皮",
+		Dec="击败<font color='#00FF00'>熊</font>，获得熊皮<br>（击杀对应怪物概率完成任务进度)",
 	},
 	["TargetDec_Task_101008"] = { 
 		idx="TargetDec_Task_101008",
@@ -1165,11 +1165,11 @@ local config = {
 	},
 	["TargetDec_Task_101009"] = { 
 		idx="TargetDec_Task_101009",
-		Dec="击败<font color='#00FF00'>花熊</font>",
+		Dec="击败<font color='#00FF00'>花熊</font>获得其皮毛<br>（击杀对应怪物概率完成任务进度)",
 	},
 	["TargetDec_Task_101010"] = { 
 		idx="TargetDec_Task_101010",
-		Dec="击败<font color='#00FF00'>血狼</font>",
+		Dec="击败<font color='#00FF00'>血狼</font>获得其皮毛<br>（击杀对应怪物概率完成任务进度)",
 	},
 	["TargetDec_Task_101011"] = { 
 		idx="TargetDec_Task_101011",
