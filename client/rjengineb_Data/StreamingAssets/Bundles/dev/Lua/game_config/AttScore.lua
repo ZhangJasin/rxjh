@@ -1244,5 +1244,21 @@ local config = {
 		Attribute=0,
 		Floating=0,
 	},
+	[165] = { 
+		Idx=165,
+		Name="对怪伤害",
+		Type=0,
+		Trends=0,
+		Recharge=0,
+		View=1,
+		Desc="对怪伤害",
+		Isshow=2,
+		Color=251,
+		Sort=165,
+		Floor="0",
+		Cell=1000,
+		Attribute=1,
+		Floating=0,
+	},
 }
 return config

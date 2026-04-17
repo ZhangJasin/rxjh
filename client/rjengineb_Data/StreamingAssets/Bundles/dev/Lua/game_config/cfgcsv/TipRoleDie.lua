@@ -1,5 +1,5 @@
-local config = {
-	[1] = {
+local config = { 
+	[1] = { 
 		idx=1,
 		btnfont="无损原地复活！",
 		xhitem_arr = {
@@ -14,7 +14,7 @@ local config = {
 		realive=120,
 		realivefont="%s秒后自动复活",
 	},
-	[2] = {
+	[2] = { 
 		idx=2,
 		btnfont="原地复活（丢失%s%%经验！）",
 		exp=1,
@@ -27,7 +27,7 @@ local config = {
 			[2] = 100,
 		},
 	},
-	[3] = {
+	[3] = { 
 		idx=3,
 		btnfont="回城满血复活（丢失%s%%经验！）",
 		exp=1,
