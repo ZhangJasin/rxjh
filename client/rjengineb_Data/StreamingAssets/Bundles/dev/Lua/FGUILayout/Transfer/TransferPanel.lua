@@ -269,7 +269,7 @@ function TransferPanel:GetConditionText(conditionId)
         needLv= tonumber(curCfg.ConditionShow or 1)
     end
     local level = SL:GetValue("LEVEL") or 1
-    return string.format("转职条件：角色等级达到%d级<font color='%s'> (%d/%d)</font>", needLv, level >= needLv and "#00FF00" or "#FF0000",level, needLv)
+    return string.format("转职条件：角色等级达到%d级<font color='%s'> (%d/%d)</font>", needLv, level >= needLv and "#FF0000" or "#FF0000",level, needLv)
 end
 
 function TransferPanel:RefreshTransferUI(_,newLv)

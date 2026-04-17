@@ -592,7 +592,7 @@ local GuideConfig = {
         panel = "Mount",
         panelName = "mountMain",
         panelParm= {type=0},
-        widget = "btn_activate",
+        widget = "petActiveBtn",
         desc = "点击激活宠物",
         callback = function()
             -- 宠物激活逻辑
@@ -603,7 +603,7 @@ local GuideConfig = {
         panel = "Mount",
         panelName = "mountMain",
         panelParm= {type=1},
-        widget = "btn_activate",
+        widget = "n60",
         desc = "点击激活坐骑",
         callback = function()
             -- 坐骑激活逻辑
