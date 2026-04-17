@@ -1331,13 +1331,15 @@ function mountMain:setPetHHSx()
     -- 设置属性和模型
     local sx = allNamesObj[nowGrade].ClassID
     self.modelId = allNamesObj[nowGrade].Model
-    -- 设置BUFF描述（处理\n换行符）
+    -- 设置BUFF描述（处理\n换行符，支持UBB语法）
     local buffText = ""
     if allNamesObj[nowGrade].BuffDesc then
         buffText = string.gsub(allNamesObj[nowGrade].BuffDesc, "\\n", "\n")
     end
     -- 设置文本控件自动调整高度以支持多行显示
     FGUI:GTextField_setAutoSize(self.petHuanhuaAttr.buffText, 2) -- 2=Both
+    -- 启用UBB解析（支持[color=xxx]...[/color]等语法）
+    FGUI:GTextField_setUBBEnabled(self.petHuanhuaAttr.buffText, true)
     FGUI:GTextField_setText(self.petHuanhuaAttr.buffText, buffText)
     -- 支持ClassID为空时不显示属性列表
     if sx and #sx > 0 then
