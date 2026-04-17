@@ -43,17 +43,6 @@ local config = {
 		},
 		addsuccess=20,
 	},
-	[194] = { 
-		idx=194,
-		itemname="幸运符[25%]",
-		itemtype=0,
-		TIPS="升级物品成功率+25%，可用于装备强化/合成/加工、属性石赋予",
-		level_arr = {
-			[1] = 0,
-			[2] = 14,
-		},
-		addsuccess=25,
-	},
 	[459] = { 
 		idx=459,
 		itemname="取玉符",
@@ -182,17 +171,6 @@ local config = {
 			[1] = 0,
 			[2] = 15,
 		},
-	},
-	[2003] = { 
-		idx=2003,
-		itemname="初级升龙符",
-		itemtype=2,
-		TIPS="1-15级武器<font color='#00FF00'>强化必定成功</font>",
-		level_arr = {
-			[1] = 0,
-			[2] = 14,
-		},
-		addsuccess=100,
 	},
 	[2013] = { 
 		idx=2013,

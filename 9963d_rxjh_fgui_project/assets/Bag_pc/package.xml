@@ -23,7 +23,7 @@
     <image id="emvcr" name="img_cell_bg.png" path="/Images/PCEquipBar/"/>
     <component id="emvcs" name="comBagCell.xml" path="/Components/"/>
     <component id="n055u" name="PCPlayerInfoPanel.xml" path="/" exported="true"/>
-    <component id="n055v" name="btn_tab.xml" path="/Components/"/>
+    <component id="n055v" name="btn_tab.xml" path="/Components/" exported="true"/>
     <component id="n05516" name="btnSchemSwitch.xml" path="/Components/"/>
     <component id="n05517" name="PCComponentEquipPanel.xml" path="/" exported="true"/>
     <component id="n05518" name="btn_cloth_chose.xml" path="/Components/"/>
@@ -148,7 +148,7 @@
     <component id="gusf6l" name="PCBagPanelForHS.xml" path="/Components/huishou/" exported="true"/>
     <component id="qkki62" name="PCBagPanel_1.xml" path="/" exported="true"/>
     <component id="lhpj6m" name="PCStatusBar.xml" path="/"/>
-    <component id="lhpj6n" name="blockBtn.xml" path="/Components/"/>
+    <component id="lhpj6n" name="blockBtn.xml" path="/Components/" exported="true"/>
     <component id="lhpj6o" name="blockBtn2.xml" path="/Components/"/>
     <component id="lhpj6p" name="blockBtn3.xml" path="/Components/"/>
     <component id="lhpj6q" name="PCEquipBarBagCell.xml" path="/Components/"/>
