@@ -44,22 +44,22 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n15_9881" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="211,583" size="0,0"/>
-    <component id="n19_wodv" name="btn_bag_wareShop" src="wodvvp1" fileName="Components/blockBtn.xml" pkg="dak5wnw9" xy="687,542" scale="0.6,0.6">
-      <gearDisplay controller="PageKind" pages="1"/>
-      <Button title="随身商店"/>
-    </component>
-    <component id="n20_wodv" name="btn_bag_warehouse" src="wodvvp1" fileName="Components/blockBtn.xml" pkg="dak5wnw9" xy="640,542" scale="0.6,0.6">
-      <gearDisplay controller="PageKind" pages="1"/>
-      <Button title="随身仓库"/>
-    </component>
-    <component id="n21_wodv" name="btn_bag_extra" src="wodvvp1" fileName="Components/blockBtn.xml" pkg="dak5wnw9" xy="592,542" scale="0.6,0.6">
-      <gearDisplay controller="PageKind" pages="1"/>
-      <Button title="附加仓库"/>
-    </component>
     <component id="n22_wodv" name="btn_bag_recycle" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="735,554" size="46,23">
       <gearDisplay controller="PageKind" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
       <Button title="回收" titleColor="#fced00" titleFontSize="12" icon="ui://qa9a7ritemvc3h"/>
+    </component>
+    <component id="n25_ryat" name="btn_bag_extra" src="ryat6t" fileName="Components/blockBtn.xml" xy="592,542" scale="0.6,0.6">
+      <gearDisplay controller="PageKind" pages="1"/>
+      <Button title="附加仓库"/>
+    </component>
+    <component id="n26_ryat" name="btn_bag_warehouse" src="ryat6t" fileName="Components/blockBtn.xml" xy="640,542" scale="0.6,0.6">
+      <gearDisplay controller="PageKind" pages="1"/>
+      <Button title="随身仓库"/>
+    </component>
+    <component id="n27_ryat" name="btn_bag_wareShop" src="ryat6t" fileName="Components/blockBtn.xml" xy="687,542" scale="0.6,0.6">
+      <gearDisplay controller="PageKind" pages="1"/>
+      <Button title="随身商店"/>
     </component>
   </displayList>
 </component>

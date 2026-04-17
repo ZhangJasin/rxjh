@@ -148,10 +148,11 @@
     <component id="gusf6l" name="PCBagPanelForHS.xml" path="/Components/huishou/" exported="true"/>
     <component id="qkki62" name="PCBagPanel_1.xml" path="/" exported="true"/>
     <component id="lhpj6m" name="PCStatusBar.xml" path="/"/>
-    <component id="lhpj6n" name="blockBtn.xml" path="/Components/" exported="true"/>
     <component id="lhpj6o" name="blockBtn2.xml" path="/Components/"/>
     <component id="lhpj6p" name="blockBtn3.xml" path="/Components/"/>
     <component id="lhpj6q" name="PCEquipBarBagCell.xml" path="/Components/"/>
+    <image id="ryat6r" name="btnbg.png" path="/Images/" exported="true"/>
+    <component id="ryat6t" name="blockBtn.xml" path="/Components/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

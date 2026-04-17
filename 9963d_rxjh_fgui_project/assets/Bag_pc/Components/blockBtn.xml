@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="77,77" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n1_tzp9" name="n1" src="bojevoy" fileName="Images/btnbg.png" xy="0,0" pkg="dak5wnw9"/>
-    <text id="n3_tzp9" name="n3" xy="20,15" size="47,52" fontSize="18" color="#ffffff" autoSize="none" text="附加仓库"/>
+    <image id="n0_ryat" name="n0" src="ryat6r" fileName="Images/btnbg.png" xy="0,0">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_ryat" name="n1" src="ryat6r" fileName="Images/btnbg.png" xy="5,6">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_ryat" name="title" xy="14,10" size="50,56" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
   </displayList>
   <Button/>
 </component>

@@ -102,6 +102,7 @@ function PCPlayerInfoPanel:PageOpen(index)
         if not pageData.objName then
             return
         end
+        print("名称",pageData.objName)
         pageObj = FGUI:CreateObject(self.node_right,"Bag_pc",pageData.objName,true)
         pageData.obj = pageObj
     end
