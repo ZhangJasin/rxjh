@@ -1349,691 +1349,691 @@ local config = {
 	},
 	["TargetDec_Task_200001"] = { 
 		idx="TargetDec_Task_200001",
-		Dec="寻找<font color='#00FF00'>泫勃派门主</font>打听第一次转职",
+		Dec="寻找<font color='#FF0000'>泫勃派门主</font>打听第一次转职",
 	},
 	["TargetDec_Task_200002"] = { 
 		idx="TargetDec_Task_200002",
-		Dec="找<font color='#00FF00'>银娇龙</font>打听内甲的消息",
+		Dec="找<font color='#FF0000'>银娇龙</font>打听内甲的消息",
 	},
 	["TargetDec_Task_200006"] = { 
 		idx="TargetDec_Task_200006",
-		Dec="找<font color='#00FF00'>刀剑笑</font>拿修理的剑",
+		Dec="找<font color='#FF0000'>刀剑笑</font>拿修理的剑",
 	},
 	["TargetDec_Task_200008"] = { 
 		idx="TargetDec_Task_200008",
-		Dec="打猎<font color='#00FF00'>灰狼</font>收集灰狼之骨",
+		Dec="打猎<font color='#FF0000'>灰狼</font>收集灰狼之骨",
 	},
 	["TargetDec_Task_200010"] = { 
 		idx="TargetDec_Task_200010",
-		Dec="使用完所有<font color='#00FF00'>气功点</font>",
+		Dec="使用完所有<font color='#FF0000'>气功点</font>",
 	},
 	["TargetDec_Task_200011"] = { 
 		idx="TargetDec_Task_200011",
-		Dec="带着剑和内甲找<font color='#00FF00'>泫勃派门主</font>",
+		Dec="带着剑和内甲找<font color='#FF0000'>泫勃派门主</font>",
 	},
 	["TargetDec_Task_200101"] = { 
 		idx="TargetDec_Task_200101",
-		Dec="去找<font color='#00FF00'>三邪关关主翅娟</font>打听第二次转职任务",
+		Dec="去找<font color='#FF0000'>三邪关关主翅娟</font>打听第二次转职任务",
 	},
 	["TargetDec_Task_200102"] = { 
 		idx="TargetDec_Task_200102",
-		Dec="去三邪关击杀<font color='#00FF00'>赤血熊</font>",
+		Dec="去三邪关击杀<font color='#FF0000'>赤血熊</font>",
 	},
 	["TargetDec_Task_200103"] = { 
 		idx="TargetDec_Task_200103",
-		Dec="去三邪关击杀<font color='#00FF00'>山林黄虎获得虎齿</font>",
+		Dec="去三邪关击杀<font color='#FF0000'>山林黄虎获得虎齿</font>",
 	},
 	["TargetDec_Task_200104"] = { 
 		idx="TargetDec_Task_200104",
-		Dec="去三邪关击杀<font color='#00FF00'>白纹虎获得虎皮</font>",
+		Dec="去三邪关击杀<font color='#FF0000'>白纹虎获得虎皮</font>",
 	},
 	["TargetDec_Task_200105"] = { 
 		idx="TargetDec_Task_200105",
-		Dec="去找商人三邪关<font color='#00FF00'>陆小凰</font>打听消息",
+		Dec="去找商人三邪关<font color='#FF0000'>陆小凰</font>打听消息",
 	},
 	["TargetDec_Task_200106"] = { 
 		idx="TargetDec_Task_200106",
-		Dec="去找钱庄主人三邪关<font color='#00FF00'>周叔通</font>打听消息",
+		Dec="去找钱庄主人三邪关<font color='#FF0000'>周叔通</font>打听消息",
 	},
 	["TargetDec_Task_200107"] = { 
 		idx="TargetDec_Task_200107",
-		Dec="再去找<font color='#00FF00'>三邪关关主翅娟</font>打听之后的任务内容",
+		Dec="再去找<font color='#FF0000'>三邪关关主翅娟</font>打听之后的任务内容",
 	},
 	["TargetDec_Task_200108"] = { 
 		idx="TargetDec_Task_200108",
-		Dec="拿收集的皮毛去找泫勃派<font color='#00FF00'>银娇龙</font>换取衣服",
+		Dec="拿收集的皮毛去找泫勃派<font color='#FF0000'>银娇龙</font>换取衣服",
 	},
 	["TargetDec_Task_200109"] = { 
 		idx="TargetDec_Task_200109",
-		Dec="去找泫勃派<font color='#00FF00'>韦大宝</font>获得进入三邪关的货物",
+		Dec="去找泫勃派<font color='#FF0000'>韦大宝</font>获得进入三邪关的货物",
 	},
 	["TargetDec_Task_200110"] = { 
 		idx="TargetDec_Task_200110",
-		Dec="找<font color='#00FF00'>三邪关关主翅娟</font>",
+		Dec="找<font color='#FF0000'>三邪关关主翅娟</font>",
 	},
 	["TargetDec_Task_200111"] = { 
 		idx="TargetDec_Task_200111",
-		Dec="挑战<font color='#00FF00'>白纹虎猛兽</font>，证明自己",
+		Dec="挑战<font color='#FF0000'>白纹虎猛兽</font>，证明自己",
 	},
 	["TargetDec_Task_200121"] = { 
 		idx="TargetDec_Task_200121",
-		Dec="去找<font color='#00FF00'>柳正关关主柳絮</font>打听第二次转职任务",
+		Dec="去找<font color='#FF0000'>柳正关关主柳絮</font>打听第二次转职任务",
 	},
 	["TargetDec_Task_200122"] = { 
 		idx="TargetDec_Task_200122",
-		Dec="去柳正关击杀<font color='#00FF00'>赤血熊</font>",
+		Dec="去柳正关击杀<font color='#FF0000'>赤血熊</font>",
 	},
 	["TargetDec_Task_200123"] = { 
 		idx="TargetDec_Task_200123",
-		Dec="去柳正关击杀<font color='#00FF00'>山林黄虎</font>",
+		Dec="去柳正关击杀<font color='#FF0000'>山林黄虎</font>",
 	},
 	["TargetDec_Task_200124"] = { 
 		idx="TargetDec_Task_200124",
-		Dec="去柳正关击杀<font color='#00FF00'>白纹虎</font>",
+		Dec="去柳正关击杀<font color='#FF0000'>白纹虎</font>",
 	},
 	["TargetDec_Task_200125"] = { 
 		idx="TargetDec_Task_200125",
-		Dec="去找商人柳正关<font color='#00FF00'>萧春水</font>打听消息",
+		Dec="去找商人柳正关<font color='#FF0000'>萧春水</font>打听消息",
 	},
 	["TargetDec_Task_200126"] = { 
 		idx="TargetDec_Task_200126",
-		Dec="去找钱庄夫人柳正关<font color='#00FF00'>红凤凰</font>打听消息",
+		Dec="去找钱庄夫人柳正关<font color='#FF0000'>红凤凰</font>打听消息",
 	},
 	["TargetDec_Task_200127"] = { 
 		idx="TargetDec_Task_200127",
-		Dec="再去找<font color='#00FF00'>柳正关关主柳絮</font>打听之后的任务内容",
+		Dec="再去找<font color='#FF0000'>柳正关关主柳絮</font>打听之后的任务内容",
 	},
 	["TargetDec_Task_200128"] = { 
 		idx="TargetDec_Task_200128",
-		Dec="拿收集的皮毛去找泫勃派<font color='#00FF00'>银娇龙</font>换取衣服",
+		Dec="拿收集的皮毛去找泫勃派<font color='#FF0000'>银娇龙</font>换取衣服",
 	},
 	["TargetDec_Task_200129"] = { 
 		idx="TargetDec_Task_200129",
-		Dec="去找泫勃派<font color='#00FF00'>韦大宝</font>获得进入柳正关的货物",
+		Dec="去找泫勃派<font color='#FF0000'>韦大宝</font>获得进入柳正关的货物",
 	},
 	["TargetDec_Task_200130"] = { 
 		idx="TargetDec_Task_200130",
-		Dec="找<font color='#00FF00'>柳正关关主柳絮</font>",
+		Dec="找<font color='#FF0000'>柳正关关主柳絮</font>",
 	},
 	["TargetDec_Task_200131"] = { 
 		idx="TargetDec_Task_200131",
-		Dec="挑战<font color='#00FF00'>白纹虎猛兽</font>，证明自己",
+		Dec="挑战<font color='#FF0000'>白纹虎猛兽</font>，证明自己",
 	},
 	["TargetDec_Task_200201"] = { 
 		idx="TargetDec_Task_200201",
-		Dec="寻找<font color='#00FF00'>神武门门主车敬墨</font>打听第三次转职",
+		Dec="寻找<font color='#FF0000'>神武门门主车敬墨</font>打听第三次转职",
 	},
 	["TargetDec_Task_200202"] = { 
 		idx="TargetDec_Task_200202",
-		Dec="寻找<font color='#00FF00'>柳正关关主柳絮</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>柳正关关主柳絮</font>获得推荐书",
 	},
 	["TargetDec_Task_200203"] = { 
 		idx="TargetDec_Task_200203",
-		Dec="寻找<font color='#00FF00'>红凤凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>红凤凰</font>获得推荐书",
 	},
 	["TargetDec_Task_200204"] = { 
 		idx="TargetDec_Task_200204",
-		Dec="寻找<font color='#00FF00'>萧春水</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>萧春水</font>获得推荐书",
 	},
 	["TargetDec_Task_200205"] = { 
 		idx="TargetDec_Task_200205",
-		Dec="击杀<font color='#00FF00'>独眼恶贼</font>",
+		Dec="击杀<font color='#FF0000'>独眼恶贼</font>",
 	},
 	["TargetDec_Task_200206"] = { 
 		idx="TargetDec_Task_200206",
-		Dec="向<font color='#00FF00'>神武门门主车敬墨</font>复命，继续打听后续任务",
+		Dec="向<font color='#FF0000'>神武门门主车敬墨</font>复命，继续打听后续任务",
 	},
 	["TargetDec_Task_200207"] = { 
 		idx="TargetDec_Task_200207",
-		Dec="击杀<font color='#00FF00'>赤云虎</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>赤云虎</font>证明自己的勇气",
 	},
 	["TargetDec_Task_200208"] = { 
 		idx="TargetDec_Task_200208",
-		Dec="击杀<font color='#00FF00'>嗜血狂狼</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>嗜血狂狼</font>证明自己的勇气",
 	},
 	["TargetDec_Task_200209"] = { 
 		idx="TargetDec_Task_200209",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_200301"] = { 
 		idx="TargetDec_Task_200301",
-		Dec="寻找<font color='#00FF00'>柳善提督府府主施薇</font>打听第三次转职",
+		Dec="寻找<font color='#FF0000'>柳善提督府府主施薇</font>打听第三次转职",
 	},
 	["TargetDec_Task_200302"] = { 
 		idx="TargetDec_Task_200302",
-		Dec="寻找<font color='#00FF00'>三邪关关主翅娟</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>三邪关关主翅娟</font>获得推荐书",
 	},
 	["TargetDec_Task_200303"] = { 
 		idx="TargetDec_Task_200303",
-		Dec="寻找<font color='#00FF00'>周叔通</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>周叔通</font>获得推荐书",
 	},
 	["TargetDec_Task_200304"] = { 
 		idx="TargetDec_Task_200304",
-		Dec="寻找<font color='#00FF00'>陆小凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>陆小凰</font>获得推荐书",
 	},
 	["TargetDec_Task_200305"] = { 
 		idx="TargetDec_Task_200305",
-		Dec="帮主陆小凰击杀<font color='#00FF00'>竹林剑士</font>",
+		Dec="帮主陆小凰击杀<font color='#FF0000'>竹林剑士</font>",
 	},
 	["TargetDec_Task_200306"] = { 
 		idx="TargetDec_Task_200306",
-		Dec="向<font color='#00FF00'>柳善提督府府主施薇</font>复命",
+		Dec="向<font color='#FF0000'>柳善提督府府主施薇</font>复命",
 	},
 	["TargetDec_Task_200307"] = { 
 		idx="TargetDec_Task_200307",
-		Dec="击杀<font color='#00FF00'>金铃蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>金铃蛇</font>证明自己",
 	},
 	["TargetDec_Task_200308"] = { 
 		idx="TargetDec_Task_200308",
-		Dec="击杀<font color='#00FF00'>青头蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>青头蛇</font>证明自己",
 	},
 	["TargetDec_Task_200309"] = { 
 		idx="TargetDec_Task_200309",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_200401"] = { 
 		idx="TargetDec_Task_200401",
-		Dec="寻找<font color='#00FF00'>神武门门主车敬墨</font>打听第四次转职",
+		Dec="寻找<font color='#FF0000'>神武门门主车敬墨</font>打听第四次转职",
 	},
 	["TargetDec_Task_200402"] = { 
 		idx="TargetDec_Task_200402",
-		Dec="寻找<font color='#00FF00'>柳正关关主柳絮</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>柳正关关主柳絮</font>获得推荐书",
 	},
 	["TargetDec_Task_200403"] = { 
 		idx="TargetDec_Task_200403",
-		Dec="寻找<font color='#00FF00'>红凤凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>红凤凰</font>获得推荐书",
 	},
 	["TargetDec_Task_200404"] = { 
 		idx="TargetDec_Task_200404",
-		Dec="寻找<font color='#00FF00'>萧春水</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>萧春水</font>获得推荐书",
 	},
 	["TargetDec_Task_200405"] = { 
 		idx="TargetDec_Task_200405",
-		Dec="击杀<font color='#00FF00'>独眼恶贼</font>",
+		Dec="击杀<font color='#FF0000'>独眼恶贼</font>",
 	},
 	["TargetDec_Task_200406"] = { 
 		idx="TargetDec_Task_200406",
-		Dec="向<font color='#00FF00'>神武门门主车敬墨</font>复命，继续打听后续任务",
+		Dec="向<font color='#FF0000'>神武门门主车敬墨</font>复命，继续打听后续任务",
 	},
 	["TargetDec_Task_200407"] = { 
 		idx="TargetDec_Task_200407",
-		Dec="击杀<font color='#00FF00'>赤云虎</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>赤云虎</font>证明自己的勇气",
 	},
 	["TargetDec_Task_200408"] = { 
 		idx="TargetDec_Task_200408",
-		Dec="击杀<font color='#00FF00'>嗜血狂狼</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>嗜血狂狼</font>证明自己的勇气",
 	},
 	["TargetDec_Task_200409"] = { 
 		idx="TargetDec_Task_200409",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_200501"] = { 
 		idx="TargetDec_Task_200501",
-		Dec="寻找<font color='#00FF00'>柳善提督府府主施薇</font>打听第四次转职",
+		Dec="寻找<font color='#FF0000'>柳善提督府府主施薇</font>打听第四次转职",
 	},
 	["TargetDec_Task_200502"] = { 
 		idx="TargetDec_Task_200502",
-		Dec="寻找<font color='#00FF00'>四邪关关主翅娟</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>四邪关关主翅娟</font>获得推荐书",
 	},
 	["TargetDec_Task_200503"] = { 
 		idx="TargetDec_Task_200503",
-		Dec="寻找<font color='#00FF00'>周叔通</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>周叔通</font>获得推荐书",
 	},
 	["TargetDec_Task_200504"] = { 
 		idx="TargetDec_Task_200504",
-		Dec="寻找<font color='#00FF00'>陆小凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>陆小凰</font>获得推荐书",
 	},
 	["TargetDec_Task_200505"] = { 
 		idx="TargetDec_Task_200505",
-		Dec="帮主陆小凰击杀<font color='#00FF00'>竹林剑士</font>",
+		Dec="帮主陆小凰击杀<font color='#FF0000'>竹林剑士</font>",
 	},
 	["TargetDec_Task_200506"] = { 
 		idx="TargetDec_Task_200506",
-		Dec="向<font color='#00FF00'>柳善提督府府主施薇</font>复命",
+		Dec="向<font color='#FF0000'>柳善提督府府主施薇</font>复命",
 	},
 	["TargetDec_Task_200507"] = { 
 		idx="TargetDec_Task_200507",
-		Dec="击杀<font color='#00FF00'>金铃蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>金铃蛇</font>证明自己",
 	},
 	["TargetDec_Task_200508"] = { 
 		idx="TargetDec_Task_200508",
-		Dec="击杀<font color='#00FF00'>青头蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>青头蛇</font>证明自己",
 	},
 	["TargetDec_Task_200509"] = { 
 		idx="TargetDec_Task_200509",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_200601"] = { 
 		idx="TargetDec_Task_200601",
-		Dec="寻找<font color='#00FF00'>神武门门主车敬墨</font>打听第五次转职",
+		Dec="寻找<font color='#FF0000'>神武门门主车敬墨</font>打听第五次转职",
 	},
 	["TargetDec_Task_200602"] = { 
 		idx="TargetDec_Task_200602",
-		Dec="寻找<font color='#00FF00'>柳正关关主柳絮</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>柳正关关主柳絮</font>获得推荐书",
 	},
 	["TargetDec_Task_200603"] = { 
 		idx="TargetDec_Task_200603",
-		Dec="寻找<font color='#00FF00'>红凤凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>红凤凰</font>获得推荐书",
 	},
 	["TargetDec_Task_200604"] = { 
 		idx="TargetDec_Task_200604",
-		Dec="寻找<font color='#00FF00'>萧春水</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>萧春水</font>获得推荐书",
 	},
 	["TargetDec_Task_200605"] = { 
 		idx="TargetDec_Task_200605",
-		Dec="击杀<font color='#00FF00'>独眼恶贼</font>",
+		Dec="击杀<font color='#FF0000'>独眼恶贼</font>",
 	},
 	["TargetDec_Task_200606"] = { 
 		idx="TargetDec_Task_200606",
-		Dec="向<font color='#00FF00'>神武门门主车敬墨</font>复命，继续打听后续任务",
+		Dec="向<font color='#FF0000'>神武门门主车敬墨</font>复命，继续打听后续任务",
 	},
 	["TargetDec_Task_200607"] = { 
 		idx="TargetDec_Task_200607",
-		Dec="击杀<font color='#00FF00'>赤云虎</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>赤云虎</font>证明自己的勇气",
 	},
 	["TargetDec_Task_200608"] = { 
 		idx="TargetDec_Task_200608",
-		Dec="击杀<font color='#00FF00'>嗜血狂狼</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>嗜血狂狼</font>证明自己的勇气",
 	},
 	["TargetDec_Task_200609"] = { 
 		idx="TargetDec_Task_200609",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_200701"] = { 
 		idx="TargetDec_Task_200701",
-		Dec="寻找<font color='#00FF00'>柳善提督府府主施薇</font>打听第五次转职",
+		Dec="寻找<font color='#FF0000'>柳善提督府府主施薇</font>打听第五次转职",
 	},
 	["TargetDec_Task_200702"] = { 
 		idx="TargetDec_Task_200702",
-		Dec="寻找<font color='#00FF00'>五邪关关主翅娟</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>五邪关关主翅娟</font>获得推荐书",
 	},
 	["TargetDec_Task_200703"] = { 
 		idx="TargetDec_Task_200703",
-		Dec="寻找<font color='#00FF00'>周叔通</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>周叔通</font>获得推荐书",
 	},
 	["TargetDec_Task_200704"] = { 
 		idx="TargetDec_Task_200704",
-		Dec="寻找<font color='#00FF00'>陆小凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>陆小凰</font>获得推荐书",
 	},
 	["TargetDec_Task_200705"] = { 
 		idx="TargetDec_Task_200705",
-		Dec="帮主陆小凰击杀<font color='#00FF00'>竹林剑士</font>",
+		Dec="帮主陆小凰击杀<font color='#FF0000'>竹林剑士</font>",
 	},
 	["TargetDec_Task_200706"] = { 
 		idx="TargetDec_Task_200706",
-		Dec="向<font color='#00FF00'>柳善提督府府主施薇</font>复命",
+		Dec="向<font color='#FF0000'>柳善提督府府主施薇</font>复命",
 	},
 	["TargetDec_Task_200707"] = { 
 		idx="TargetDec_Task_200707",
-		Dec="击杀<font color='#00FF00'>金铃蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>金铃蛇</font>证明自己",
 	},
 	["TargetDec_Task_200708"] = { 
 		idx="TargetDec_Task_200708",
-		Dec="击杀<font color='#00FF00'>青头蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>青头蛇</font>证明自己",
 	},
 	["TargetDec_Task_200709"] = { 
 		idx="TargetDec_Task_200709",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_200801"] = { 
 		idx="TargetDec_Task_200801",
-		Dec="寻找<font color='#00FF00'>神武门门主车敬墨</font>打听第六次转职",
+		Dec="寻找<font color='#FF0000'>神武门门主车敬墨</font>打听第六次转职",
 	},
 	["TargetDec_Task_200802"] = { 
 		idx="TargetDec_Task_200802",
-		Dec="寻找<font color='#00FF00'>柳正关关主柳絮</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>柳正关关主柳絮</font>获得推荐书",
 	},
 	["TargetDec_Task_200803"] = { 
 		idx="TargetDec_Task_200803",
-		Dec="寻找<font color='#00FF00'>红凤凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>红凤凰</font>获得推荐书",
 	},
 	["TargetDec_Task_200804"] = { 
 		idx="TargetDec_Task_200804",
-		Dec="寻找<font color='#00FF00'>萧春水</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>萧春水</font>获得推荐书",
 	},
 	["TargetDec_Task_200805"] = { 
 		idx="TargetDec_Task_200805",
-		Dec="击杀<font color='#00FF00'>独眼恶贼</font>",
+		Dec="击杀<font color='#FF0000'>独眼恶贼</font>",
 	},
 	["TargetDec_Task_200806"] = { 
 		idx="TargetDec_Task_200806",
-		Dec="向<font color='#00FF00'>神武门门主车敬墨</font>复命，继续打听后续任务",
+		Dec="向<font color='#FF0000'>神武门门主车敬墨</font>复命，继续打听后续任务",
 	},
 	["TargetDec_Task_200807"] = { 
 		idx="TargetDec_Task_200807",
-		Dec="击杀<font color='#00FF00'>赤云虎</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>赤云虎</font>证明自己的勇气",
 	},
 	["TargetDec_Task_200808"] = { 
 		idx="TargetDec_Task_200808",
-		Dec="击杀<font color='#00FF00'>嗜血狂狼</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>嗜血狂狼</font>证明自己的勇气",
 	},
 	["TargetDec_Task_200809"] = { 
 		idx="TargetDec_Task_200809",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_200901"] = { 
 		idx="TargetDec_Task_200901",
-		Dec="寻找<font color='#00FF00'>柳善提督府府主施薇</font>打听第六次转职",
+		Dec="寻找<font color='#FF0000'>柳善提督府府主施薇</font>打听第六次转职",
 	},
 	["TargetDec_Task_200902"] = { 
 		idx="TargetDec_Task_200902",
-		Dec="寻找<font color='#00FF00'>六邪关关主翅娟</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>六邪关关主翅娟</font>获得推荐书",
 	},
 	["TargetDec_Task_200903"] = { 
 		idx="TargetDec_Task_200903",
-		Dec="寻找<font color='#00FF00'>周叔通</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>周叔通</font>获得推荐书",
 	},
 	["TargetDec_Task_200904"] = { 
 		idx="TargetDec_Task_200904",
-		Dec="寻找<font color='#00FF00'>陆小凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>陆小凰</font>获得推荐书",
 	},
 	["TargetDec_Task_200905"] = { 
 		idx="TargetDec_Task_200905",
-		Dec="帮主陆小凰击杀<font color='#00FF00'>竹林剑士</font>",
+		Dec="帮主陆小凰击杀<font color='#FF0000'>竹林剑士</font>",
 	},
 	["TargetDec_Task_200906"] = { 
 		idx="TargetDec_Task_200906",
-		Dec="向<font color='#00FF00'>柳善提督府府主施薇</font>复命",
+		Dec="向<font color='#FF0000'>柳善提督府府主施薇</font>复命",
 	},
 	["TargetDec_Task_200907"] = { 
 		idx="TargetDec_Task_200907",
-		Dec="击杀<font color='#00FF00'>金铃蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>金铃蛇</font>证明自己",
 	},
 	["TargetDec_Task_200908"] = { 
 		idx="TargetDec_Task_200908",
-		Dec="击杀<font color='#00FF00'>青头蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>青头蛇</font>证明自己",
 	},
 	["TargetDec_Task_200909"] = { 
 		idx="TargetDec_Task_200909",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_201001"] = { 
 		idx="TargetDec_Task_201001",
-		Dec="寻找<font color='#00FF00'>神武门门主车敬墨</font>打听第七次转职",
+		Dec="寻找<font color='#FF0000'>神武门门主车敬墨</font>打听第七次转职",
 	},
 	["TargetDec_Task_201002"] = { 
 		idx="TargetDec_Task_201002",
-		Dec="寻找<font color='#00FF00'>柳正关关主柳絮</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>柳正关关主柳絮</font>获得推荐书",
 	},
 	["TargetDec_Task_201003"] = { 
 		idx="TargetDec_Task_201003",
-		Dec="寻找<font color='#00FF00'>红凤凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>红凤凰</font>获得推荐书",
 	},
 	["TargetDec_Task_201004"] = { 
 		idx="TargetDec_Task_201004",
-		Dec="寻找<font color='#00FF00'>萧春水</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>萧春水</font>获得推荐书",
 	},
 	["TargetDec_Task_201005"] = { 
 		idx="TargetDec_Task_201005",
-		Dec="击杀<font color='#00FF00'>独眼恶贼</font>",
+		Dec="击杀<font color='#FF0000'>独眼恶贼</font>",
 	},
 	["TargetDec_Task_201006"] = { 
 		idx="TargetDec_Task_201006",
-		Dec="向<font color='#00FF00'>神武门门主车敬墨</font>复命，继续打听后续任务",
+		Dec="向<font color='#FF0000'>神武门门主车敬墨</font>复命，继续打听后续任务",
 	},
 	["TargetDec_Task_201007"] = { 
 		idx="TargetDec_Task_201007",
-		Dec="击杀<font color='#00FF00'>赤云虎</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>赤云虎</font>证明自己的勇气",
 	},
 	["TargetDec_Task_201008"] = { 
 		idx="TargetDec_Task_201008",
-		Dec="击杀<font color='#00FF00'>嗜血狂狼</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>嗜血狂狼</font>证明自己的勇气",
 	},
 	["TargetDec_Task_201009"] = { 
 		idx="TargetDec_Task_201009",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_201101"] = { 
 		idx="TargetDec_Task_201101",
-		Dec="寻找<font color='#00FF00'>柳善提督府府主施薇</font>打听第七次转职",
+		Dec="寻找<font color='#FF0000'>柳善提督府府主施薇</font>打听第七次转职",
 	},
 	["TargetDec_Task_201102"] = { 
 		idx="TargetDec_Task_201102",
-		Dec="寻找<font color='#00FF00'>七邪关关主翅娟</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>七邪关关主翅娟</font>获得推荐书",
 	},
 	["TargetDec_Task_201103"] = { 
 		idx="TargetDec_Task_201103",
-		Dec="寻找<font color='#00FF00'>周叔通</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>周叔通</font>获得推荐书",
 	},
 	["TargetDec_Task_201104"] = { 
 		idx="TargetDec_Task_201104",
-		Dec="寻找<font color='#00FF00'>陆小凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>陆小凰</font>获得推荐书",
 	},
 	["TargetDec_Task_201105"] = { 
 		idx="TargetDec_Task_201105",
-		Dec="帮主陆小凰击杀<font color='#00FF00'>竹林剑士</font>",
+		Dec="帮主陆小凰击杀<font color='#FF0000'>竹林剑士</font>",
 	},
 	["TargetDec_Task_201106"] = { 
 		idx="TargetDec_Task_201106",
-		Dec="向<font color='#00FF00'>柳善提督府府主施薇</font>复命",
+		Dec="向<font color='#FF0000'>柳善提督府府主施薇</font>复命",
 	},
 	["TargetDec_Task_201107"] = { 
 		idx="TargetDec_Task_201107",
-		Dec="击杀<font color='#00FF00'>金铃蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>金铃蛇</font>证明自己",
 	},
 	["TargetDec_Task_201108"] = { 
 		idx="TargetDec_Task_201108",
-		Dec="击杀<font color='#00FF00'>青头蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>青头蛇</font>证明自己",
 	},
 	["TargetDec_Task_201109"] = { 
 		idx="TargetDec_Task_201109",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_201201"] = { 
 		idx="TargetDec_Task_201201",
-		Dec="寻找<font color='#00FF00'>神武门门主车敬墨</font>打听第八次转职",
+		Dec="寻找<font color='#FF0000'>神武门门主车敬墨</font>打听第八次转职",
 	},
 	["TargetDec_Task_201202"] = { 
 		idx="TargetDec_Task_201202",
-		Dec="寻找<font color='#00FF00'>柳正关关主柳絮</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>柳正关关主柳絮</font>获得推荐书",
 	},
 	["TargetDec_Task_201203"] = { 
 		idx="TargetDec_Task_201203",
-		Dec="寻找<font color='#00FF00'>红凤凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>红凤凰</font>获得推荐书",
 	},
 	["TargetDec_Task_201204"] = { 
 		idx="TargetDec_Task_201204",
-		Dec="寻找<font color='#00FF00'>萧春水</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>萧春水</font>获得推荐书",
 	},
 	["TargetDec_Task_201205"] = { 
 		idx="TargetDec_Task_201205",
-		Dec="击杀<font color='#00FF00'>独眼恶贼</font>",
+		Dec="击杀<font color='#FF0000'>独眼恶贼</font>",
 	},
 	["TargetDec_Task_201206"] = { 
 		idx="TargetDec_Task_201206",
-		Dec="向<font color='#00FF00'>神武门门主车敬墨</font>复命，继续打听后续任务",
+		Dec="向<font color='#FF0000'>神武门门主车敬墨</font>复命，继续打听后续任务",
 	},
 	["TargetDec_Task_201207"] = { 
 		idx="TargetDec_Task_201207",
-		Dec="击杀<font color='#00FF00'>赤云虎</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>赤云虎</font>证明自己的勇气",
 	},
 	["TargetDec_Task_201208"] = { 
 		idx="TargetDec_Task_201208",
-		Dec="击杀<font color='#00FF00'>嗜血狂狼</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>嗜血狂狼</font>证明自己的勇气",
 	},
 	["TargetDec_Task_201209"] = { 
 		idx="TargetDec_Task_201209",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_201301"] = { 
 		idx="TargetDec_Task_201301",
-		Dec="寻找<font color='#00FF00'>柳善提督府府主施薇</font>打听第八次转职",
+		Dec="寻找<font color='#FF0000'>柳善提督府府主施薇</font>打听第八次转职",
 	},
 	["TargetDec_Task_201302"] = { 
 		idx="TargetDec_Task_201302",
-		Dec="寻找<font color='#00FF00'>八邪关关主翅娟</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>八邪关关主翅娟</font>获得推荐书",
 	},
 	["TargetDec_Task_201303"] = { 
 		idx="TargetDec_Task_201303",
-		Dec="寻找<font color='#00FF00'>周叔通</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>周叔通</font>获得推荐书",
 	},
 	["TargetDec_Task_201304"] = { 
 		idx="TargetDec_Task_201304",
-		Dec="寻找<font color='#00FF00'>陆小凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>陆小凰</font>获得推荐书",
 	},
 	["TargetDec_Task_201305"] = { 
 		idx="TargetDec_Task_201305",
-		Dec="帮主陆小凰击杀<font color='#00FF00'>竹林剑士</font>",
+		Dec="帮主陆小凰击杀<font color='#FF0000'>竹林剑士</font>",
 	},
 	["TargetDec_Task_201306"] = { 
 		idx="TargetDec_Task_201306",
-		Dec="向<font color='#00FF00'>柳善提督府府主施薇</font>复命",
+		Dec="向<font color='#FF0000'>柳善提督府府主施薇</font>复命",
 	},
 	["TargetDec_Task_201307"] = { 
 		idx="TargetDec_Task_201307",
-		Dec="击杀<font color='#00FF00'>金铃蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>金铃蛇</font>证明自己",
 	},
 	["TargetDec_Task_201308"] = { 
 		idx="TargetDec_Task_201308",
-		Dec="击杀<font color='#00FF00'>青头蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>青头蛇</font>证明自己",
 	},
 	["TargetDec_Task_201309"] = { 
 		idx="TargetDec_Task_201309",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_201401"] = { 
 		idx="TargetDec_Task_201401",
-		Dec="寻找<font color='#00FF00'>神武门门主车敬墨</font>打听第九次转职",
+		Dec="寻找<font color='#FF0000'>神武门门主车敬墨</font>打听第九次转职",
 	},
 	["TargetDec_Task_201402"] = { 
 		idx="TargetDec_Task_201402",
-		Dec="寻找<font color='#00FF00'>柳正关关主柳絮</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>柳正关关主柳絮</font>获得推荐书",
 	},
 	["TargetDec_Task_201403"] = { 
 		idx="TargetDec_Task_201403",
-		Dec="寻找<font color='#00FF00'>红凤凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>红凤凰</font>获得推荐书",
 	},
 	["TargetDec_Task_201404"] = { 
 		idx="TargetDec_Task_201404",
-		Dec="寻找<font color='#00FF00'>萧春水</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>萧春水</font>获得推荐书",
 	},
 	["TargetDec_Task_201405"] = { 
 		idx="TargetDec_Task_201405",
-		Dec="击杀<font color='#00FF00'>独眼恶贼</font>",
+		Dec="击杀<font color='#FF0000'>独眼恶贼</font>",
 	},
 	["TargetDec_Task_201406"] = { 
 		idx="TargetDec_Task_201406",
-		Dec="向<font color='#00FF00'>神武门门主车敬墨</font>复命，继续打听后续任务",
+		Dec="向<font color='#FF0000'>神武门门主车敬墨</font>复命，继续打听后续任务",
 	},
 	["TargetDec_Task_201407"] = { 
 		idx="TargetDec_Task_201407",
-		Dec="击杀<font color='#00FF00'>赤云虎</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>赤云虎</font>证明自己的勇气",
 	},
 	["TargetDec_Task_201408"] = { 
 		idx="TargetDec_Task_201408",
-		Dec="击杀<font color='#00FF00'>嗜血狂狼</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>嗜血狂狼</font>证明自己的勇气",
 	},
 	["TargetDec_Task_201409"] = { 
 		idx="TargetDec_Task_201409",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_201501"] = { 
 		idx="TargetDec_Task_201501",
-		Dec="寻找<font color='#00FF00'>柳善提督府府主施薇</font>打听第九次转职",
+		Dec="寻找<font color='#FF0000'>柳善提督府府主施薇</font>打听第九次转职",
 	},
 	["TargetDec_Task_201502"] = { 
 		idx="TargetDec_Task_201502",
-		Dec="寻找<font color='#00FF00'>九邪关关主翅娟</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>九邪关关主翅娟</font>获得推荐书",
 	},
 	["TargetDec_Task_201503"] = { 
 		idx="TargetDec_Task_201503",
-		Dec="寻找<font color='#00FF00'>周叔通</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>周叔通</font>获得推荐书",
 	},
 	["TargetDec_Task_201504"] = { 
 		idx="TargetDec_Task_201504",
-		Dec="寻找<font color='#00FF00'>陆小凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>陆小凰</font>获得推荐书",
 	},
 	["TargetDec_Task_201505"] = { 
 		idx="TargetDec_Task_201505",
-		Dec="帮主陆小凰击杀<font color='#00FF00'>竹林剑士</font>",
+		Dec="帮主陆小凰击杀<font color='#FF0000'>竹林剑士</font>",
 	},
 	["TargetDec_Task_201506"] = { 
 		idx="TargetDec_Task_201506",
-		Dec="向<font color='#00FF00'>柳善提督府府主施薇</font>复命",
+		Dec="向<font color='#FF0000'>柳善提督府府主施薇</font>复命",
 	},
 	["TargetDec_Task_201507"] = { 
 		idx="TargetDec_Task_201507",
-		Dec="击杀<font color='#00FF00'>金铃蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>金铃蛇</font>证明自己",
 	},
 	["TargetDec_Task_201508"] = { 
 		idx="TargetDec_Task_201508",
-		Dec="击杀<font color='#00FF00'>青头蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>青头蛇</font>证明自己",
 	},
 	["TargetDec_Task_201509"] = { 
 		idx="TargetDec_Task_201509",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_201601"] = { 
 		idx="TargetDec_Task_201601",
-		Dec="寻找<font color='#00FF00'>神武门门主车敬墨</font>打听第十次转职",
+		Dec="寻找<font color='#FF0000'>神武门门主车敬墨</font>打听第十次转职",
 	},
 	["TargetDec_Task_201602"] = { 
 		idx="TargetDec_Task_201602",
-		Dec="寻找<font color='#00FF00'>柳正关关主柳絮</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>柳正关关主柳絮</font>获得推荐书",
 	},
 	["TargetDec_Task_201603"] = { 
 		idx="TargetDec_Task_201603",
-		Dec="寻找<font color='#00FF00'>红凤凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>红凤凰</font>获得推荐书",
 	},
 	["TargetDec_Task_201604"] = { 
 		idx="TargetDec_Task_201604",
-		Dec="寻找<font color='#00FF00'>萧春水</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>萧春水</font>获得推荐书",
 	},
 	["TargetDec_Task_201605"] = { 
 		idx="TargetDec_Task_201605",
-		Dec="击杀<font color='#00FF00'>独眼恶贼</font>",
+		Dec="击杀<font color='#FF0000'>独眼恶贼</font>",
 	},
 	["TargetDec_Task_201606"] = { 
 		idx="TargetDec_Task_201606",
-		Dec="向<font color='#00FF00'>神武门门主车敬墨</font>复命，继续打听后续任务",
+		Dec="向<font color='#FF0000'>神武门门主车敬墨</font>复命，继续打听后续任务",
 	},
 	["TargetDec_Task_201607"] = { 
 		idx="TargetDec_Task_201607",
-		Dec="击杀<font color='#00FF00'>赤云虎</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>赤云虎</font>证明自己的勇气",
 	},
 	["TargetDec_Task_201608"] = { 
 		idx="TargetDec_Task_201608",
-		Dec="击杀<font color='#00FF00'>嗜血狂狼</font>证明自己的勇气",
+		Dec="击杀<font color='#FF0000'>嗜血狂狼</font>证明自己的勇气",
 	},
 	["TargetDec_Task_201609"] = { 
 		idx="TargetDec_Task_201609",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_201701"] = { 
 		idx="TargetDec_Task_201701",
-		Dec="寻找<font color='#00FF00'>柳善提督府府主施薇</font>打听第十次转职",
+		Dec="寻找<font color='#FF0000'>柳善提督府府主施薇</font>打听第十次转职",
 	},
 	["TargetDec_Task_201702"] = { 
 		idx="TargetDec_Task_201702",
-		Dec="寻找<font color='#00FF00'>十邪关关主翅娟</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>十邪关关主翅娟</font>获得推荐书",
 	},
 	["TargetDec_Task_201703"] = { 
 		idx="TargetDec_Task_201703",
-		Dec="寻找<font color='#00FF00'>周叔通</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>周叔通</font>获得推荐书",
 	},
 	["TargetDec_Task_201704"] = { 
 		idx="TargetDec_Task_201704",
-		Dec="寻找<font color='#00FF00'>陆小凰</font>获得推荐书",
+		Dec="寻找<font color='#FF0000'>陆小凰</font>获得推荐书",
 	},
 	["TargetDec_Task_201705"] = { 
 		idx="TargetDec_Task_201705",
-		Dec="帮主陆小凰击杀<font color='#00FF00'>竹林剑士</font>",
+		Dec="帮主陆小凰击杀<font color='#FF0000'>竹林剑士</font>",
 	},
 	["TargetDec_Task_201706"] = { 
 		idx="TargetDec_Task_201706",
-		Dec="向<font color='#00FF00'>柳善提督府府主施薇</font>复命",
+		Dec="向<font color='#FF0000'>柳善提督府府主施薇</font>复命",
 	},
 	["TargetDec_Task_201707"] = { 
 		idx="TargetDec_Task_201707",
-		Dec="击杀<font color='#00FF00'>金铃蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>金铃蛇</font>证明自己",
 	},
 	["TargetDec_Task_201708"] = { 
 		idx="TargetDec_Task_201708",
-		Dec="击杀<font color='#00FF00'>青头蛇</font>证明自己",
+		Dec="击杀<font color='#FF0000'>青头蛇</font>证明自己",
 	},
 	["TargetDec_Task_201709"] = { 
 		idx="TargetDec_Task_201709",
-		Dec="击杀<font color='#00FF00'>55级以上野外boss</font>证明自己",
+		Dec="击杀<font color='#FF0000'>55级以上野外boss</font>证明自己",
 	},
 	["TargetDec_Task_300001"] = { 
 		idx="TargetDec_Task_300001",
@@ -2077,11 +2077,11 @@ local config = {
 	},
 	["TargetDec_Task_300011"] = { 
 		idx="TargetDec_Task_300011",
-		Dec="激活<font color='#00FF00'>宠物</font><br>（灵宠激活后玩家可获得灵宠部分属性）",
+		Dec="激活<font color='#00FF00'>宠物</font><br>（灵宠<font color='#00FF00'>激活</font>后玩家可<font color='#00FF00'>获得灵宠部分属性</font>）",
 	},
 	["TargetDec_Task_300012"] = { 
 		idx="TargetDec_Task_300012",
-		Dec="激活<font color='#00FF00'>坐骑</font><br>（坐骑激活后玩家可获得灵宠部分属性）",
+		Dec="激活<font color='#00FF00'>坐骑</font><br>（坐骑<font color='#00FF00'>激活</font>后玩家可<font color='#00FF00'>获得坐骑部分属性</font>）",
 	},
 	["TargetDec_Task_300013"] = { 
 		idx="TargetDec_Task_300013",
@@ -2101,7 +2101,7 @@ local config = {
 	},
 	["TargetDec_Task_300017"] = { 
 		idx="TargetDec_Task_300017",
-		Dec="使用<font color='#00FF00'>一次传送符</font><br>（传送符可以快速传送至目标地点）",
+		Dec="使用<font color='#00FF00'>一次传送符</font><br>（巡路过程中，点击游戏界面中的传送符<br>即可快速传送）",
 	},
 	["TargetDec_Task_400000"] = { 
 		idx="TargetDec_Task_400000",
@@ -2333,15 +2333,15 @@ local config = {
 	},
 	["TargetDec_Task_300018"] = { 
 		idx="TargetDec_Task_300018",
-		Dec="完成<font color='#00FF00'>一次江湖录任务</font><br>（传送符可以快速传送至目标地点）",
+		Dec="完成<font color='#00FF00'>一次江湖录任务</font>",
 	},
 	["TargetDec_Task_300019"] = { 
 		idx="TargetDec_Task_300019",
-		Dec="使<font color='#00FF00'>灵宠出战</font><br>（灵宠一阶10星后即可出战）",
+		Dec="使<font color='#00FF00'>灵宠出战</font><br>（灵宠<font color='#00FF00'>一阶10星</font>后即可出战）",
 	},
 	["TargetDec_Task_300020"] = { 
 		idx="TargetDec_Task_300020",
-		Dec="使<font color='#00FF00'>坐骑出战</font><br>（坐骑一阶10星后即可出战）",
+		Dec="使<font color='#00FF00'>坐骑出战</font><br>（坐骑<font color='#00FF00'>一阶10星</font>后即可出战）",
 	},
 	["ReceiveDec_Task_103001"] = { 
 		idx="ReceiveDec_Task_103001",
