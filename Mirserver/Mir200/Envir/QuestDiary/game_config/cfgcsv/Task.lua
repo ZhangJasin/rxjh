@@ -7545,7 +7545,7 @@ local config = {
 			[2] = 5,
 			[3] = 0.5,
 		},
-		task_progress=1,
+		task_progress=5,
 		task_turntype=1,
 		task_turn_param=10009,
 		task_fintype=1,

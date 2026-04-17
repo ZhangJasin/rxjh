@@ -1349,27 +1349,27 @@ local config = {
 	},
 	["TargetDec_Task_200001"] = { 
 		idx="TargetDec_Task_200001",
-		Dec="寻找<font color='#00FF00'>泫勃派门主</font>打听第一次转职",
+		Dec="寻找<font color='#FF0000'>泫勃派门主</font>打听第一次转职",
 	},
 	["TargetDec_Task_200002"] = { 
 		idx="TargetDec_Task_200002",
-		Dec="找<font color='#00FF00'>银娇龙</font>打听内甲的消息",
+		Dec="找<font color='#FF0000'>银娇龙</font>打听内甲的消息",
 	},
 	["TargetDec_Task_200006"] = { 
 		idx="TargetDec_Task_200006",
-		Dec="找<font color='#00FF00'>刀剑笑</font>拿修理的剑",
+		Dec="找<font color='#FF0000'>刀剑笑</font>拿修理的剑",
 	},
 	["TargetDec_Task_200008"] = { 
 		idx="TargetDec_Task_200008",
-		Dec="打猎<font color='#00FF00'>灰狼</font>收集灰狼之骨",
+		Dec="打猎<font color='#FF0000'>灰狼</font>收集灰狼之骨",
 	},
 	["TargetDec_Task_200010"] = { 
 		idx="TargetDec_Task_200010",
-		Dec="使用完所有<font color='#00FF00'>气功点</font>",
+		Dec="使用完所有<font color='#FF0000'>气功点</font>",
 	},
 	["TargetDec_Task_200011"] = { 
 		idx="TargetDec_Task_200011",
-		Dec="带着剑和内甲找<font color='#00FF00'>泫勃派门主</font>",
+		Dec="带着剑和内甲找<font color='#FF0000'>泫勃派门主</font>",
 	},
 	["TargetDec_Task_200101"] = { 
 		idx="TargetDec_Task_200101",
@@ -2077,11 +2077,11 @@ local config = {
 	},
 	["TargetDec_Task_300011"] = { 
 		idx="TargetDec_Task_300011",
-		Dec="激活<font color='#00FF00'>宠物</font><br>（灵宠激活后玩家可获得灵宠部分属性）",
+		Dec="激活<font color='#00FF00'>宠物</font><br>（灵宠<font color='#00FF00'>激活</font>后玩家可<font color='#00FF00'>获得灵宠部分属性</font>）",
 	},
 	["TargetDec_Task_300012"] = { 
 		idx="TargetDec_Task_300012",
-		Dec="激活<font color='#00FF00'>坐骑</font><br>（坐骑激活后玩家可获得灵宠部分属性）",
+		Dec="激活<font color='#00FF00'>坐骑</font><br>（坐骑<font color='#00FF00'>激活</font>后玩家可<font color='#00FF00'>获得坐骑部分属性</font>）",
 	},
 	["TargetDec_Task_300013"] = { 
 		idx="TargetDec_Task_300013",
@@ -2101,7 +2101,7 @@ local config = {
 	},
 	["TargetDec_Task_300017"] = { 
 		idx="TargetDec_Task_300017",
-		Dec="使用<font color='#00FF00'>一次传送符</font><br>（传送符可以快速传送至目标地点）",
+		Dec="使用<font color='#00FF00'>一次传送符</font><br>（巡路过程中，点击游戏界面中的传送符<br>即可快速传送）",
 	},
 	["TargetDec_Task_400000"] = { 
 		idx="TargetDec_Task_400000",
@@ -2333,15 +2333,15 @@ local config = {
 	},
 	["TargetDec_Task_300018"] = { 
 		idx="TargetDec_Task_300018",
-		Dec="完成<font color='#00FF00'>一次江湖录任务</font><br>（传送符可以快速传送至目标地点）",
+		Dec="完成<font color='#00FF00'>一次江湖录任务</font>",
 	},
 	["TargetDec_Task_300019"] = { 
 		idx="TargetDec_Task_300019",
-		Dec="使<font color='#00FF00'>灵宠出战</font><br>（灵宠一阶10星后即可出战）",
+		Dec="使<font color='#00FF00'>灵宠出战</font><br>（灵宠<font color='#00FF00'>一阶10星</font>后即可出战）",
 	},
 	["TargetDec_Task_300020"] = { 
 		idx="TargetDec_Task_300020",
-		Dec="使<font color='#00FF00'>坐骑出战</font><br>（坐骑一阶10星后即可出战）",
+		Dec="使<font color='#00FF00'>坐骑出战</font><br>（坐骑<font color='#00FF00'>一阶10星</font>后即可出战）",
 	},
 	["ReceiveDec_Task_103001"] = { 
 		idx="ReceiveDec_Task_103001",
