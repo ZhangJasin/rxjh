@@ -2051,7 +2051,7 @@ function mountMain:setMountHHSx()
         FGUI:Controller_setSelectedIndex(typeController, rightTabsValue)
     end
     
-    -- 设置BUFF描述（处理\n换行符）
+    -- 设置BUFF描述（处理\n换行符，支持UBB语法）
     local hhbuffTextHeight = 26 * #sx + 5
     -- 当type控制器为1时，buffText的Y额外增加24
     if rightTabsValue == 1 then
@@ -2063,6 +2063,8 @@ function mountMain:setMountHHSx()
         buffText = string.gsub(allNamesObj[nowGrade].BuffDesc, "\\n", "\n")
     end
     FGUI:GTextField_setAutoSize(self.huanhuaAttr.buffText, 2)
+    -- 启用UBB解析（支持[color=xxx]...[/color]等语法）
+    FGUI:GTextField_setUBBEnabled(self.huanhuaAttr.buffText, true)
     FGUI:setPosition(self.huanhuaAttr.buffText, 15, hhbuffTextHeight)
     FGUI:GTextField_setText(self.huanhuaAttr.buffText, buffText)
     
