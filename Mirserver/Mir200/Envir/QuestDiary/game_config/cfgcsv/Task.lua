@@ -7542,8 +7542,8 @@ local config = {
 		task_targettype=1,
 		task_target_param = {
 			[1] = 10009,
-			[2] = 1,
-			[3] = 0.1,
+			[2] = 5,
+			[3] = 0.5,
 		},
 		task_progress=1,
 		task_turntype=1,
@@ -13883,7 +13883,10 @@ local config = {
 			[1] = 300020,
 		},
 		task_targettype=4,
-		task_target_param="16",
+		task_target_param = {
+			[1] = 16,
+			[2] = 1,
+		},
 		task_progress=1,
 		task_turntype=2,
 		task_turn_param=13,
@@ -13944,7 +13947,7 @@ local config = {
 		},
 		task_targettype=4,
 		task_turntype=3,
-		task_turn_param=15,
+		task_turn_param=5,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {
@@ -14006,6 +14009,7 @@ local config = {
 		},
 		task_targettype=4,
 		task_turntype=3,
+		task_turn_param=7,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {
@@ -14034,6 +14038,7 @@ local config = {
 			[1] = 300015,
 		},
 		task_turntype=2,
+		task_turn_param=15,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {
@@ -14062,7 +14067,7 @@ local config = {
 			[1] = 300005,
 		},
 		task_turntype=2,
-		task_turn_param=2,
+		task_turn_param=8,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {
@@ -14091,7 +14096,7 @@ local config = {
 			[1] = 300013,
 		},
 		task_turntype=2,
-		task_turn_param=3,
+		task_turn_param=13,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {
