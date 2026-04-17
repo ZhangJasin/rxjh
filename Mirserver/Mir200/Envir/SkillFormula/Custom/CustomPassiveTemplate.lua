@@ -385,6 +385,22 @@ _T.DMG_AOE_PVE = {
 	end,
 }
 
+-- 增加对怪物的固定伤害（属性ID 165）
+-- 每增加1点属性165，攻击怪物时伤害增加1点
+-- Param1 主键 写入QG，默认 pveFlatDamage
+-- Param2 固定伤害加成值（默认1:1比例）
+_T.DMG_PVE_FLAT = {
+	static = function(cfg, s)
+		local key = cfg.Param1 ~= "" and cfg.Param1 or "pveFlatDamage"
+		local inc = tonumber(cfg.Param2) or 1
+		if inc == 0 then
+			return
+		end
+		s.QG = s.QG or {}
+		s.QG[key] = (s.QG[key] or 0) + inc
+	end,
+}
+
 -- 提高狂风万破威力
 -- Param2 =加成值（以 0.5 表示 +50%）
 _T.KFWP_PCT_ADD = {
@@ -907,6 +923,40 @@ _T.DMG_CARRY = {
 			ctx.damage = (ctx.damage or 0) + extra
 			-- 用一次就清
 			BattleManager._carryDamage[att] = nil
+		end
+	end,
+}
+
+-- 对怪固定伤害加成（属性ID 165）
+-- 每增加1点属性165，攻击怪物时伤害增加1点
+-- 仅在攻击怪物时生效
+-- Param1 = 属性ID（默认165）
+-- Param2 = 伤害系数（默认1，即1点属性=1点伤害）
+_T.DMG_PVE_FLAT_FN = {
+	fn = function(cfg)
+		local attrId = tonumber(cfg.Param1) or 165
+		local ratio = tonumber(cfg.Param2) or 1
+		return function(att, tar, sid, ctx)
+			-- ctx.attPL: true=攻击者是玩家, false=攻击者是怪物
+			-- 当玩家攻击怪物时生效，攻击者是怪物时不生效
+			if not ctx.attPL then
+				return  -- 攻击者是怪物，不触发
+			end
+
+			-- 获取攻击者的对怪伤害属性
+			local pveAttr = abil(att, attrId) or 0
+			if pveAttr <= 0 then
+				return
+			end
+
+			-- 计算追加伤害
+			local pveDamage = math.floor(pveAttr * ratio + 0.5)
+			if pveDamage <= 0 then
+				return
+			end
+
+			-- 追加固定伤害到最终伤害
+			ctx.damage = (ctx.damage or 0) + pveDamage
 		end
 	end,
 }
