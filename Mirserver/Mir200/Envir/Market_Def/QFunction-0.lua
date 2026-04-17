@@ -102,6 +102,7 @@ function login(actor)
     end
     -- 登录
     GameEvent.push(EventCfg.onLogin, actor)
+    
     -- 登录附加属性
     local loginattrs = {}
     GameEvent.push(EventCfg.onLoginAttr, actor, loginattrs)
@@ -1173,6 +1174,22 @@ function m_base(actor, target, effectid, skillid, skilllv, race)
     end
     result = SpeHarmMain(actor, target, result)
 
+    -- 对怪减伤和对怪防御（仅当目标是玩家时生效）
+    if isplayer(target) then
+        -- 对怪防御（属性56）：固定值减免
+        local pveDef = tonumber(abil(target, 56)) or 0
+        if pveDef > 0 then
+            result = math.max(1, result - pveDef)
+        end
+
+        -- 受怪减伤（属性116）：万分比减免
+        local reducePct = tonumber(abil(target, 116)) or 0
+        if reducePct > 0 then
+            local reduced = math.floor(result * reducePct / 10000)
+            result = math.max(1, result - reduced)
+        end
+    end
+
     return result
 end
 
@@ -1218,3 +1235,20 @@ function SpeHarmMain(actor, target, result)
 
     return result
 end
+
+-- =====================================================
+-- 怪物技能伤害公式函数
+-- SkillEffect.xls Fumula列配置base时，怪物攻击触发m_base
+-- 参数: actor=攻击者(怪物), target=目标(玩家), effectId, skillId, skillLv, Param1
+-- 返回: 计算后的最终伤害
+
+-- 玩家技能伤害公式函数（预留，SkillEffect.xls Fumula=base时触发）
+function base(actor, target, effectId, skillId, skillLv, Param1)
+    return BattleManager:Do(actor, target, effectId, skillId, skillLv, Param1)
+end
+
+-- 宝宝技能伤害公式函数（预留，SkillEffect.xls Fumula=base时触发）
+function b_base(actor, target, effectId, skillId, skillLv, Param1)
+    return BattleManager:Do(actor, target, effectId, skillId, skillLv, Param1)
+end
+

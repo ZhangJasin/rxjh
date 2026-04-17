@@ -961,6 +961,7 @@ _T.DMG_PVE_FLAT_FN = {
 	end,
 }
 
+
 -- 狂意护体 全队怒气和防御 两段概率
 _T.JOB_KYHT = {
 	fn = function(cfg)
