@@ -300,13 +300,13 @@ function mountMain.updatePetAttrBuff(actor)
     -- 检查灵兽是否出战
     local isBattle = gethumvar(actor, VarCfg.U_Pet_IS_SET)
     local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
-    dump(isBattle)
-    dump(petMark)
+    --dump(isBattle)
+    --dump(petMark)
 
     -- 获取幻化属性
     local hhAttr = mountMain.getPetHHAttr(actor)
     print("获取幻化属性")
-    dump(hhAttr)
+    --dump(hhAttr)
 
     -- 如果没有召唤灵兽（休息状态）
     if not isBattle or isBattle == 0 or not petMark or petMark == "" then
@@ -1314,6 +1314,25 @@ function mountMain.lsjihuo(actor, data)
 
     mountMain.petShengji(actor)
 
+    -- 首次激活灵兽时，addpet并保存mark
+    local existingMark = gethumvar(actor, VarCfg.T_Pet_Mark)
+    if not existingMark or existingMark == "" then
+        local petBaseId = gethumvar(actor, VarCfg.U_Pet_Base_ID)
+        local monsterId = 80001
+        -- 从Pet配置表获取怪物ID
+        for i = 0, 10 do
+            if petlist[i] and petlist[i].Model and tonumber(petlist[i].Model) == petBaseId then
+                monsterId = tonumber(petlist[i].Monster_ID) or 80001
+                break
+            end
+        end
+        local mark = addpet(actor, monsterId)
+        if mark and mark ~= "" then
+            sethumvar(actor, VarCfg.T_Pet_Mark, mark)
+            print("首次激活灵兽，添加宠物mark:", mark)
+        end
+    end
+
     -- 发送updateLSView和level消息
     local newLv = gethumvar(actor, VarCfg.U_All_Pet_star)
     print("=== lsjihuo 发送消息, newLv:", newLv)
@@ -1369,8 +1388,9 @@ function mountMain.petChuzhan(actor)
         return
     end
 
-    local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
-    if petMark and petMark ~= "" then
+    -- 用 U_Pet_IS_SET 判断出战/休息状态
+    local petStatus = gethumvar(actor, VarCfg.U_Pet_IS_SET)
+    if petStatus and petStatus == 1 then
         -- 灵兽已出战，执行召回
         print("灵兽已出战，执行召回")
         mountMain.unrecallpet(actor)
@@ -1463,19 +1483,31 @@ function mountMain.recallpet(actor)
     local existingMark = gethumvar(actor, VarCfg.T_Pet_Mark)
     local mark = existingMark
 
-    -- 检查宠物是否已经在场上
-    local petIdx = getpetidx(actor, mark)
+    -- 检查是否已有宠物mark（只在首次addpet一次，之后一直复用同一个mark）
+    local existingMark = gethumvar(actor, VarCfg.T_Pet_Mark)
 
-    if mark and mark ~= "" and petIdx then
-        -- 宠物已经在场上，不需要再次添加
-    else
-        -- mark不存在或宠物已不在场上，需要重新添加
-        mark = addpet(actor, monsterId)
-        if not mark or mark == "" then
-            sendmsg(actor, 9, "添加灵兽失败")
-            return
+    if existingMark and existingMark ~= "" then
+        -- 已有mark，直接复用
+        mark = existingMark
+        print("复用已有灵兽mark:", mark)
+        -- 检查宠物是否在场，不在场则用mark召回
+        local petIdx = getpetidx(actor, mark)
+        if not petIdx or petIdx == 0 then
+            print("宠物不在场上，调用recall召回")
+        else
+            print("宠物已在场上")
         end
-        -- 保存宠物信息到 T_Pet_Mark
+    else
+        -- 首次出战时才addpet（理论上lsjihuo已经addpet了，这里做容错）
+        print("首次出战，需要添加灵兽")
+        mark = addpet(actor, monsterId)
+        dump(mark)
+        print("monsterId=", monsterId)
+        if not mark or mark == "" then
+            print("添加灵兽失败: monsterId=" .. tostring(monsterId))
+            return
+            sendmsg(actor, 9, "添加灵兽失败")
+        end
         sethumvar(actor, VarCfg.T_Pet_Mark, mark)
     end
 
@@ -1558,12 +1590,10 @@ function mountMain.unrecallpet(actor, petMark)
     -- 禁用灵兽复活定时器
     disabletimer(actor, 49)
 
-    -- 收回灵兽
+    -- 收回灵兽（不要清空T_Pet_Mark，保留mark以便下次出战直接召回，不需要重新addpet）
     unrecallpet(actor, petMark)
 
-    -- 清除灵兽mark
-    sethumvar(actor, VarCfg.T_Pet_Mark, "")
-    -- 设置休息状态
+    -- 设置休息状态（不清空mark，这样下次出战可以直接用同一个mark召回）
     sethumvar(actor, VarCfg.U_Pet_IS_SET, 0)
 
     -- 更新人物属性buff
@@ -1743,9 +1773,10 @@ GameEvent.add(EventCfg.onPlayDie, function(actor, target)
 end, mountMain)
 GameEvent.add(EventCfg.onPlayRealive, function(actor)
     local isActivated = gethumvar(actor, VarCfg.U_All_Pet_star)
-    local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
+    local isChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET)
 
-    if isActivated and isActivated > 0 and (not petMark or petMark == "") then
+    -- 用 isChuzhan 判断是否需要召回（而不是 petMark）
+    if isActivated and isActivated > 0 and isChuzhan == 1 then
         mountMain.recallpet(actor)
     end
 end, mountMain)
