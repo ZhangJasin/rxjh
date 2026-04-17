@@ -1261,11 +1261,11 @@ local config = {
 	},
 	["TargetDec_Task_103004"] = { 
 		idx="TargetDec_Task_103004",
-		Dec="击败<font color='#00FF00'>山林黄虎</font>",
+		Dec="击败<font color='#00FF00'>山林黄虎获得虎齿</font>",
 	},
 	["TargetDec_Task_103005"] = { 
 		idx="TargetDec_Task_103005",
-		Dec="击败<font color='#00FF00'>白纹虎</font>",
+		Dec="击败<font color='#00FF00'>白纹虎获得虎皮</font>",
 	},
 	["TargetDec_Task_103006"] = { 
 		idx="TargetDec_Task_103006",
@@ -1369,11 +1369,11 @@ local config = {
 	},
 	["TargetDec_Task_200103"] = { 
 		idx="TargetDec_Task_200103",
-		Dec="去三邪关击杀<font color='#00FF00'>山林黄虎</font>",
+		Dec="去三邪关击杀<font color='#00FF00'>山林黄虎获得虎齿</font>",
 	},
 	["TargetDec_Task_200104"] = { 
 		idx="TargetDec_Task_200104",
-		Dec="去三邪关击杀<font color='#00FF00'>白纹虎</font>",
+		Dec="去三邪关击杀<font color='#00FF00'>白纹虎获得虎皮</font>",
 	},
 	["TargetDec_Task_200105"] = { 
 		idx="TargetDec_Task_200105",
@@ -2025,7 +2025,7 @@ local config = {
 	},
 	["TargetDec_Task_300001"] = { 
 		idx="TargetDec_Task_300001",
-		Dec="学习<font color='#00FF00'>2个武功</font>",
+		Dec="学习<font color='#00FF00'>1个武功</font>",
 	},
 	["TargetDec_Task_300002"] = { 
 		idx="TargetDec_Task_300002",
@@ -2125,11 +2125,11 @@ local config = {
 	},
 	["TargetDec_Task_400008"] = { 
 		idx="TargetDec_Task_400008",
-		Dec="击杀<font color='#00FF00'>山林黄虎</font>",
+		Dec="击杀<font color='#00FF00'>山林黄虎获得虎齿</font>",
 	},
 	["TargetDec_Task_400009"] = { 
 		idx="TargetDec_Task_400009",
-		Dec="击杀<font color='#00FF00'>白纹虎</font>",
+		Dec="击杀<font color='#00FF00'>白纹虎获得虎皮</font>",
 	},
 	["TargetDec_Task_400010"] = { 
 		idx="TargetDec_Task_400010",
