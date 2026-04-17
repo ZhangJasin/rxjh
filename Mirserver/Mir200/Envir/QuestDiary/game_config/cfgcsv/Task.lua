@@ -14032,6 +14032,22 @@ local config = {
 		task_pre = {
 			[1] = 300015,
 		},
+		task_turntype=2,
+		task_fintype=1,
+		task_finnpc=1,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 7,
+				[3] = 50,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 300,
+			},
+		},
+		task_findial="FinishDec_Task_300015",
 	},
 	[300019] = { 
 		idx=300019,
@@ -14044,6 +14060,23 @@ local config = {
 		task_pre = {
 			[1] = 300005,
 		},
+		task_turntype=2,
+		task_turn_param=2,
+		task_fintype=1,
+		task_finnpc=1,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 7,
+				[3] = 50,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 300,
+			},
+		},
+		task_findial="FinishDec_Task_300015",
 	},
 	[300020] = { 
 		idx=300020,
@@ -14056,6 +14089,23 @@ local config = {
 		task_pre = {
 			[1] = 300013,
 		},
+		task_turntype=2,
+		task_turn_param=3,
+		task_fintype=1,
+		task_finnpc=1,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 7,
+				[3] = 50,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 300,
+			},
+		},
+		task_findial="FinishDec_Task_300015",
 	},
 	[400001] = { 
 		idx=400001,
