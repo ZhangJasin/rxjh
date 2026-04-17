@@ -84,6 +84,40 @@ function Task.getFinishTask(actor)
 
     return TaskComplete_data
 end
+-- 引导任务完成响应
+function Task.onTaskTurnComplete(actor, data)
+    local taskid = tonumber(data.taskid)
+    if not taskid then
+        return
+    end    
+    
+    local TaskProgress_data = Task.getCurTask(actor)
+    local taskCfg = Task_cfg[taskid]
+    
+    if not taskCfg then
+        return
+    end
+    
+    -- 检查是否是引导类型任务
+    if taskCfg.task_turntype ~= 3 then
+        return
+    end
+    
+    -- 检查任务是否在进行中
+    if not TaskProgress_data[""..taskid] then
+        return
+    end
+    
+    -- 更新任务状态为完成
+    TaskProgress_data[""..taskid] = {state = _taskState.finish, count = 1}
+    sethumvar(actor, VarCfg.T_TaskProgress_data, tbl2json(TaskProgress_data))
+    
+    -- 通知客户端更新任务
+    Message.sendmsgEx(actor, "MainMission", "UpdataTask", {param1 = TaskProgress_data})
+    
+    -- 触发任务完成事件（可领取奖励）
+    --GameEvent.push(EventCfg.onTaskFinish, actor, taskid)
+end
 
 -- 完成某个指定任务
 local function _onCompleteOtherTask(actor)
