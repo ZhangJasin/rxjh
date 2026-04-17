@@ -155,7 +155,7 @@
     <image id="orj1vo4" name="di_2.png" path="/image/" exported="true" scale="9grid" scale9grid="5,3,1,2" duplicatePadding="true"/>
     <image id="tgkjvoa" name="content_fill_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="16,18,9,5"/>
     <image id="dxatvob" name="bg_wep.png" path="/image/" exported="true"/>
-    <component id="ld2evod" name="CdMask.xml" path="/common/" exported="true"/>
+    <component id="ld2evod" name="CDMask.xml" path="/common/" exported="true"/>
     <image id="ld2evof" name="mask_black.png" path="/image/" exported="true"/>
     <image id="ld2evog" name="mask_circle.png" path="/image/" exported="true"/>
     <component id="celmvoh" name="ToolTips.xml" path="/common/" exported="true"/>

@@ -59,9 +59,10 @@ function PCPlayerInfoPanel:GetAllFGuiData()
     self.btn_tab_2 = self._ui.btn_tab_2
     self.btn_tab_3 = self._ui.btn_tab_3
     self.btn_tab_4 = self._ui.btn_tab_4
-    self.btn_tab_5 = self._ui.btn_tab_5
+    --self.btn_tab_5 = self._ui.btn_tab_5
     self.btn_bag_sort = self._ui.btn_bag_sort
     self.btn_bag_warehouse = self._ui.btn_bag_warehouse
+    self.btn_bag_wareShop = self._ui.btn_bag_wareShop
     self.btn_bag_recycle = self._ui.btn_bag_recycle
     self.btn_bag_extra = self._ui.btn_bag_extra
     self.graph_drag = self._ui.graph_drag
@@ -122,11 +123,17 @@ function PCPlayerInfoPanel:InitOnClickEvent()
     FGUI:setOnClickEvent(self.btn_tab_2,handler(self,self.BtnTab2Clicked))
     FGUI:setOnClickEvent(self.btn_tab_3,handler(self,self.BtnTab3Clicked))
     FGUI:setOnClickEvent(self.btn_tab_4,handler(self,self.BtnTab4Clicked))
-    FGUI:setOnClickEvent(self.btn_tab_5,handler(self,self.BtnTab5Clicked))
+    --FGUI:setOnClickEvent(self.btn_tab_5,handler(self,self.BtnTab5Clicked))
     FGUI:setOnClickEvent(self.btn_bag_sort,handler(self,self.BtnBagSortClicked))
     FGUI:setOnClickEvent(self.btn_bag_warehouse,handler(self,self.BtnBagWareHouseClicked))
+    FGUI:setOnClickEvent(self.btn_bag_wareShop,handler(self,self.BtnBagWareShopClicked))
     FGUI:setOnClickEvent(self.btn_bag_recycle,handler(self,self.BtnBagRecycleClicked))
     FGUI:setOnClickEvent(self.btn_bag_extra,handler(self,self.BtnExtraBagClicked))
+end
+
+function PCPlayerInfoPanel:BtnBagWareShopClicked()
+    self.super.Close(self)
+    ssrMessage:sendmsgEx("bag","openWareShop")
 end
 
 function PCPlayerInfoPanel:BtnBagRecycleClicked()
@@ -218,12 +225,10 @@ function PCPlayerInfoPanel:Enter(pageIndex)
     if type(pageIndex) == "table" then
         index = pageIndex.index
         self._tradingData  = pageIndex
-    else
+    elseif pageIndex then
         index = pageIndex
-        if not pageIndex then
-            index = IDX_STATEMENT
-        end
     end
+    
     self:RegisterEvent()
     FGUIFunction:ShowTopCurrency(SL:GetValue("GAME_DATA","BagMoneyList"))
     if not self._leftObj then
@@ -239,6 +244,10 @@ function PCPlayerInfoPanel:Enter(pageIndex)
 
 
     SL:ComponentAttach(SLDefine.SUIComponentTable.PlayerInfoMain, self._ui.Node_attach)
+    -- 注册引导数据（装备栏页面才显示仓库和商店按钮）
+    if index == IDX_EQUIP then
+        FGUIFunction:RegisterGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide,self._ui)
+    end
 end
 
 
@@ -273,6 +282,7 @@ function PCPlayerInfoPanel:Exit()
     end
 
     self:PageClose()
+    FGUIFunction:UnRegisterGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide)
 end
 
 

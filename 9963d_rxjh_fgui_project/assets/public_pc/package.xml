@@ -18,7 +18,7 @@
     <image id="emvce" name="MAX.png" path="/image/" exported="true"/>
     <component id="emvch" name="ComponentPos.xml" path="/common/" exported="true"/>
     <component id="emvci" name="checkbox_multi.xml" path="/common/" exported="true"/>
-    <component id="emvck" name="CdMask.xml" path="/common/" exported="true"/>
+    <component id="emvck" name="CDMask.xml" path="/common/" exported="true"/>
     <component id="emvcl" name="ToolTips.xml" path="/common/" exported="true"/>
     <component id="emvcm" name="CommonBg.xml" path="/common/" exported="true"/>
     <image id="emvcv" name="1.png" path="/image/Emoji/" exported="true"/>
