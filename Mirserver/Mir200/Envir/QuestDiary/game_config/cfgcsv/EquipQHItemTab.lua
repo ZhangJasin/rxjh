@@ -49,10 +49,9 @@ local config = {
 		itemtype=2,
 		TIPS="强化武器/防具、加工首饰时使用，<font color='#00FF00'>失败武器/防具/首饰不会破碎消失，改为强化等级降低1级</font>赋予属性时使用，失败不会掉至0级，改为降低1级</font>",
 		level_arr = {
-			[1] = 8,
+			[1] = 0,
 			[2] = 14,
 		},
-		limitlv=1,
 		dellv=-1,
 	},
 	[468] = { 
@@ -61,7 +60,7 @@ local config = {
 		itemtype=2,
 		TIPS="强化武器/防具、加工首饰时使用<font color='#00FF00'>失败武器/防具/首饰不会破碎消失，但强化/加工等级掉至0级</font>",
 		level_arr = {
-			[1] = 8,
+			[1] = 0,
 			[2] = 14,
 		},
 		limitlv=0,
