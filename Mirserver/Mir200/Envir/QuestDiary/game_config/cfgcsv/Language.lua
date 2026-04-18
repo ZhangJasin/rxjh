@@ -1117,15 +1117,15 @@ local config = {
 	},
 	["TargetDec_Task_100007"] = { 
 		idx="TargetDec_Task_100007",
-		Dec="°Ý·Ã<font color='#00FF00'>Æ½Ê®Ö¸</font>",
+		Dec="Çý¸Ï·¢·èµÄ<font color='#00FF00'>¿ñÅ£</font>",
 	},
 	["TargetDec_Task_100008"] = { 
 		idx="TargetDec_Task_100008",
-		Dec="°Ý·Ã<font color='#00FF00'>Î¤´ó±¦</font>",
+		Dec="°Ý·Ã<font color='#00FF00'>Æ½Ê®Ö¸</font>",
 	},
 	["TargetDec_Task_100009"] = { 
 		idx="TargetDec_Task_100009",
-		Dec="Çý¸Ï·¢·èµÄ<font color='#00FF00'>¿ñÅ£</font>",
+		Dec="°Ý·Ã<font color='#00FF00'>Î¤´ó±¦</font>",
 	},
 	["TargetDec_Task_100010"] = { 
 		idx="TargetDec_Task_100010",

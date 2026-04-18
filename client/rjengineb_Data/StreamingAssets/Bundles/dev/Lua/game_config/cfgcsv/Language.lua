@@ -1117,15 +1117,15 @@ local config = {
 	},
 	["TargetDec_Task_100007"] = { 
 		idx="TargetDec_Task_100007",
-		Dec="拜访<font color='#00FF00'>平十指</font>",
+		Dec="驱赶发疯的<font color='#00FF00'>狂牛</font>",
 	},
 	["TargetDec_Task_100008"] = { 
 		idx="TargetDec_Task_100008",
-		Dec="拜访<font color='#00FF00'>韦大宝</font>",
+		Dec="拜访<font color='#00FF00'>平十指</font>",
 	},
 	["TargetDec_Task_100009"] = { 
 		idx="TargetDec_Task_100009",
-		Dec="驱赶发疯的<font color='#00FF00'>狂牛</font>",
+		Dec="拜访<font color='#00FF00'>韦大宝</font>",
 	},
 	["TargetDec_Task_100010"] = { 
 		idx="TargetDec_Task_100010",
