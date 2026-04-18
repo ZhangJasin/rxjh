@@ -718,9 +718,12 @@ function mountMain.setPetModel(actor, data)
     -- 设置当前显示的模型ID
     sethumvar(actor, VarCfg.U_Pet_Now_Model, petTakeId)
 
-    -- 如果灵兽已经出战，需要召回再重新召唤（与旧系统对齐）
+    -- 检查灵兽是否出战
+    local isBattle = gethumvar(actor, VarCfg.U_Pet_IS_SET)
     local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
-    if petMark and petMark ~= "" then
+
+    -- 如果灵兽已出战，需要召回再重新召唤（与旧系统对齐）
+    if isBattle and isBattle == 1 and petMark and petMark ~= "" then
         print("幻化时灵兽已出战，召回并重新召唤")
         -- 彻底删除旧宠物并重新添加
         unrecallpet(actor, petMark)
@@ -731,6 +734,8 @@ function mountMain.setPetModel(actor, data)
         sethumvar(actor, VarCfg.U_Pet_Take_Id, petTakeId)
         -- 重新召唤
         mountMain.recallpet(actor)
+    else
+        print("幻化时灵兽未出战，跳过召回再重新召唤")
     end
     -- 重新计算并应用所有灵兽属性
     mountMain.updatePetAttrBuff(actor)
@@ -755,8 +760,7 @@ function mountMain.setPetModel(actor, data)
     })
 
     -- 如果灵兽已出战，发送setPetInfo消息更新顶部灵兽图标
-    local petMark = gethumvar(actor, VarCfg.T_Pet_Mark)
-    if petMark and petMark ~= "" then
+    if isBattle and isBattle == 1 and petMark and petMark ~= "" then
         local isPc = clientflag(actor) == 1
         local methodName = isPc and "PCMainPlayer" or "MainPlayer"
         -- 如果是取消幻化(isCancel=1)或没有新的幻化，使用默认图标
@@ -782,6 +786,8 @@ function mountMain.setPetModel(actor, data)
             now = 10000,
             icon = icon
         })
+    else
+        print("灵兽未出战，跳过更新顶部灵兽图标")
     end
 end
 
