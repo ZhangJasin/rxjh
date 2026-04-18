@@ -14217,10 +14217,10 @@ local config = {
 		task_pre = {
 			[1] = 102016,
 		},
-		task_targettype=5,
+		task_targettype=4,
 		task_target_param="21",
 		task_turntype=3,
-		task_turn_param=7,
+		task_turn_param=6,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {
