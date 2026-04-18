@@ -1275,6 +1275,10 @@ local config = {
 		idx="Name_Task_300020",
 		Dec="坐骑出战",
 	},
+	["Name_Task_300021"] = { 
+		idx="Name_Task_300021",
+		Dec="装备回收",
+	},
 	["TargetDec_Task_103001"] = { 
 		idx="TargetDec_Task_103001",
 		Dec="拜访<font color='#00FF00'>泫渤派门主</font>，询问下一步计划",
@@ -2358,6 +2362,10 @@ local config = {
 	["TargetDec_Task_300020"] = { 
 		idx="TargetDec_Task_300020",
 		Dec="使<font color='#00FF00'>坐骑出战</font><br>（坐骑<font color='#00FF00'>一阶</font>后即可出战）",
+	},
+	["TargetDec_Task_300021"] = { 
+		idx="TargetDec_Task_300021",
+		Dec="回收<font color='#00FF00'>一次装备</font><br>（<font color='#00FF00'>装备</font>回收即可获得银两，<font color='#00FF00'>首饰<font color='#00FF00'>回收可获得首饰加工材料）",
 	},
 	["ReceiveDec_Task_103001"] = { 
 		idx="ReceiveDec_Task_103001",
