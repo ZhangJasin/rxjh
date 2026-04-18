@@ -122,7 +122,7 @@ local config = {
 			[14] = 2,
 			[15] = 1,
 		},
-		TIPS="1.将合成石的属性附加到对应装备上，<font color='#00FF00'>强化后的装备可合成</font><br>2.金刚石合成武器，寒玉石合成防具</font><br>3.装备前四孔使用普通金刚石和寒玉石，后四孔使用混元金刚石和寒玉石</font><br>4.80级之前装备只能合成4块合成石，80级之后的装备可合成8块合成石</font><br>  合成1成功率： 100%</font><br>  合成2成功率： 50%</font><br>  合成3成功率：20%</font><br>  合成4成功率：10%   </font><br>  ",
+		TIPS="1.将合成石的属性附加到对应装备上，每个装备最多附加<font color=#80FF80>4个合成石</font><br>金刚石合成至武器<br>寒玉石合成至衣服/护手/鞋子/内甲<br>2.<font color=#80FF80>80级</font>及以前的装备使用<font color=#80FF80>金刚石/寒玉石</font>，<font color=#80FF80>80级以后</font>得装备使用<font color=#80FF80>混元金刚石/冰魄寒玉石</font><br>3.合成石附加概率如下：<br>合成1成功率：<font color=#80FF80>100%</font><br>合成2成功率：<font color=#80FF80>50%</font><br>合成3成功率：<font color=#80FF80>20%</font><br>合成4成功率：<font color=#80FF80>10%</font>",
 		title="合成",
 	},
 	[2] = { 
@@ -278,7 +278,7 @@ local config = {
 			[14] = 2,
 			[15] = 1,
 		},
-		TIPS="1.用强化石对<font color=#80FF80>武器/衣服/内甲/护手/鞋子</font>进行强化<br>2.强化上限为<font color=#80FF80>15</font>级，强8之前失败只会<font color=#80FF80>降低1级</font>强化等级<br>3.强9以上失败<font color=#80FF80>装备损坏</font>，可以使用<font color=#80FF80>守护/取玉符</font>防止装备损坏<br>3.强6以上会对装备上赋予的<font color=#80FF80>属性石/合成石</font>有额外提升<br>4.每个级别的强化成功率如下：<br>强化1成功率：100%<br>强化2成功率：95%<br>强化3成功率：90%<br>强化4成功率：85%<br>强化5成功率：80%<br>强化6成功率：70%<br>强化7成功率：60%<br>强化8成功率：55%<br>强化9成功率：40%<br>强化10成功率：30%<br>强化11成功率：20%<br>强化12成功率：10%<br>强化13成功率：6%<br>强化14成功率：4%<br>强化15成功率：2%",
+		TIPS="1.用强化石对<font color=#80FF80>武器/衣服/内甲/护手/鞋子</font>进行强化<br>2.强化上限为<font color=#80FF80>15</font>级，强8之前失败只会<font color=#80FF80>降低1级</font>强化等级<br>3.强9以上失败<font color=#80FF80>装备损坏</font>，可以使用<font color=#80FF80>守护/取玉符</font>防止装备损坏<br>3.强6以上会对装备上赋予的<font color=#80FF80>属性石/合成石</font>有额外提升<br>4.每个级别的强化成功率如下：<br>强化1成功率：<font color=#80FF80>100%</font><br>强化2成功率：<font color=#80FF80>95%</font><br>强化3成功率：<font color=#80FF80>90%</font><br>强化4成功率：<font color=#80FF80>85%</font><br>强化5成功率：<font color=#80FF80>80%</font><br>强化6成功率：<font color=#80FF80>70%</font><br>强化7成功率：<font color=#80FF80>60%</font><br>强化8成功率：<font color=#80FF80>55%</font><br>强化9成功率：<font color=#80FF80>40%</font><br>强化10成功率：<font color=#80FF80>30%</font><br>强化11成功率：<font color=#80FF80>20%</font><br>强化12成功率：<font color=#80FF80>10%</font><br>强化13成功率：<font color=#80FF80>6%</font><br>强化14成功率：<font color=#80FF80>4%</font><br>强化15成功率：<font color=#80FF80>2%</font>",
 		title="强化",
 	},
 	[3] = { 
@@ -434,7 +434,7 @@ local config = {
 			[14] = 2,
 			[15] = 1,
 		},
-		TIPS="1.使用首饰分解材料可对首饰进行加工</font><br>2.加工失败后装备会损坏</font><br>3.高加工等级加工失败时可获得工匠之心声望，声望可在工匠商城购买商品</font><br>4.项链加工后增加防御力等属性，耳环加工后增加生命力和生命恢复等属性，戒指加工后增加攻击力和追加伤害等属性</font><br>  加工1成功率：100%</font><br>  加工2成功率：80%</font><br>  加工3成功率：60%</font><br>  加工4成功率：50%</font><br>  加工5成功率：40%</font><br>  加工6成功率：30%</font><br>  加工7成功率：20%</font><br>  加工8成功率：15%</font><br>  加工9成功率：10%</font><br>  加工10成功率：5%",
+		TIPS="1.使用首饰分解材料可对首饰进行加工<br>2.加工上限为<font color=#80FF80>10级</font>，5级之前失败装备<font color=#80FF80>降低1个等级</font>，5级后失败则<br><font color=#80FF80>装备损坏</font><br>3.<font color=#80FF80>项链</font>加工后增加<font color=#80FF80>防御力</font>等属性，<font color=#80FF80>耳环</font>加工后增加<font color=#80FF80>生命力和生命恢</font><br><font color=#80FF80>复</font>等属性，<font color=#80FF80>戒指</font>加工后增加<font color=#80FF80>攻击力和追加伤害</font>等属性<br>4.加工的概率如下：<br>加工1成功率：<font color=#80FF80>100%</font><br>加工2成功率：<font color=#80FF80>80%</font><br>加工3成功率：<font color=#80FF80>60%</font><br>加工4成功率：<font color=#80FF80>50%</font><br>加工5成功率：<font color=#80FF80>40%</font><br>加工6成功率：<font color=#80FF80>30%</font><br>加工7成功率：<font color=#80FF80>20%</font><br>加工8成功率：<font color=#80FF80>15%</font><br>加工9成功率：<font color=#80FF80>10%</font><br>加工10成功率：<font color=#80FF80>5%</font>",
 		title="加工",
 	},
 	[4] = { 
@@ -590,7 +590,7 @@ local config = {
 			[14] = 2,
 			[15] = 1,
 		},
-		TIPS="1.使用属性石可对装备进行属性赋予，赋予后提升装备属性，只能对衣服和武器进行属性赋予</font><br>2.赋予失败后会清楚赋予属性，属性阶段归0</font><br>3.高赋予等级赋予失败时可获得工匠之心声望，可在工匠商城购买商品</font><br>  阶段1成功率：100%</font><br>  阶段2成功率：80%</font><br>  阶段3成功率：60%</font><br>  阶段4成功率：50%</font><br>  阶段5成功率：40%</font><br>  阶段6成功率：30%</font><br>  阶段7成功率：20%</font><br>  阶段8成功率：15%</font><br>  阶段9成功率：10%</font><br>  阶段10成功率：5%",
+		TIPS="1.使用<font color=#80FF80>属性石</font>可对装备进行属性赋予，赋予后提升装备属性，只能对<font color=#80FF80>衣服和武器</font>进行属性赋予<br>2.赋予失败后会<font color=#80FF80>清除赋予属性</font>，属性阶段归0<br>3.赋予属性的概率如下：<br>阶段1成功率：<font color=#80FF80>100%</font><br>阶段2成功率：<font color=#80FF80>80%</font><br>阶段3成功率：<font color=#80FF80>60%</font><br>阶段4成功率：<font color=#80FF80>50%</font><br>阶段5成功率：<font color=#80FF80>40%</font><br>阶段6成功率：<font color=#80FF80>30%</font><br>阶段7成功率：<font color=#80FF80>20%</font><br>阶段8成功率：<font color=#80FF80>15%</font><br>阶段9成功率：<font color=#80FF80>10%</font><br>阶段10成功率：<font color=#80FF80>5%</font>",
 		title="赋予",
 	},
 	[5] = { 
