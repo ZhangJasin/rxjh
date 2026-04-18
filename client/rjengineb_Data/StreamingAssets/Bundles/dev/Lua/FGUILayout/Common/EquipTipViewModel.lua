@@ -670,7 +670,9 @@ function EquipTipViewModel:GetGemInlaysAttStr(itemData)
             str = string.format("%s%s%s", str, i ~= 1 and "\n" or "", attrStr)
         end
     end
-
+    if str ~= "" then
+        str ="[color=#FFFFFF][合成石][/color]\n" .. str
+    end
     return str
 end
 
