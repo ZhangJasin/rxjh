@@ -19,3 +19,22 @@
    - **默认数据路径**：相对于 exe 的 `../../Mir200/Envir/data/Item.xls`。
    - **一键编译命令**：
      `cd /d d:\works\RXjianghu\rxjianghu1\Mirserver\Mir200\Envir && python -c "c=open('item_note_editor.py','r',encoding='gbk').read(); open('item_note_editor.py','w',encoding='utf-8').write(c)" 2>nul & del /f ItemNoteEditor.spec 2>nul & pyinstaller --onefile --windowed --name ItemNoteEditor item_note_editor.py --clean --noconfirm && xcopy /Y "dist\ItemNoteEditor.exe" "..\..\工具\dist\" && rmdir /S /Q "dist" 2>nul & rmdir /S /Q "build" 2>nul & del /f ItemNoteEditor.spec 2>nul`
+- 传奇游戏服务器宠物伤害结算属性逻辑：
+
+**伤害入口函数职责**：
+- b_base：宠物攻击时的伤害结算（宠物→怪物/玩家）
+- m_base：怪物攻击时的伤害结算（怪物→玩家/宠物）
+- base：玩家攻击时的伤害结算（玩家→玩家/宠物）
+
+**5个关键属性**：
+- 56对怪防御：怪物攻击时固定值减免（从主人属性获取）
+- 116受怪减伤：怪物攻击时万分比减免（从主人属性获取）
+- 165对怪伤害：攻击怪物时固定值追加（从主人属性获取）
+- 67PK加成：攻击玩家时万分比追加（从主人属性获取）
+- 68PK减免：受到玩家攻击时万分比减免（从主人属性获取）
+
+**实现位置**：
+- Market_Def/QFunction-0.lua：b_base、m_base、base 函数中直接处理属性逻辑
+- SkillFormula/Custom/CustomPassiveTemplate.lua：PK_BONUS_FN 和 PK_REDUCE_FN 模板函数（备用）
+
+**宠物属性来源**：所有宠物战斗属性均从主人获取，通过 targetinfo(petId, "MASTERID") 获取主人ID，abil(masterId, 属性ID) 获取属性值
