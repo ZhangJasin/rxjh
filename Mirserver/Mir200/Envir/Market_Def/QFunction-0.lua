@@ -1137,27 +1137,24 @@ function base(actor, target, effectid, skillid, skilllv, race)
     GameEvent.push(EventCfg.onAttack, actor, target, effectid, skillid, skilllv, race)
 
     if targetinfo(target, "RACE") == 6 then
-        local isPc = clientflag(actor) == 1
-        --是宠物受到伤害
+        -- 玩家攻击宠物：从宠物主人属性获取68PK减免
+        local mastertId = targetinfo(target, "MASTERID")
+        local pkReduce = tonumber(abil(mastertId, 68)) or 0
+        if pkReduce > 0 then
+            local reduced = math.floor(result * pkReduce / 10000)
+            result = math.max(1, result - reduced)
+        end
+        
+        -- 宠物血量显示
         local oldHp = currabil(target, 1)
         local nowHp = oldHp - result
         local max = abil(target, 1)
         if nowHp < 0 then
             nowHp = 0
         end
-        local mastertId = targetinfo(target, "MASTERID")
         local isPc = clientflag(mastertId) == 1
         local methodName = isPc and "PCMainPlayer" or "MainPlayer"
         Message.sendmsgEx(mastertId, methodName, "showPetPro", { type = "red", max = max, now = nowHp })
-        
-        -- 玩家攻击宠物：68PK减免（从宠物主人属性获取）
-        if mastertId and mastertId > 0 then
-            local pkReduce = tonumber(abil(mastertId, 68)) or 0
-            if pkReduce > 0 then
-                local reduced = math.floor(result * pkReduce / 10000)
-                result = math.max(1, result - reduced)
-            end
-        end
     end
     result = SpeHarmMain(actor, target, result)
 
@@ -1169,59 +1166,71 @@ function m_base(actor, target, effectid, skillid, skilllv, race)
     GameEvent.push(EventCfg.onAttack, actor, target, effectid, skillid, skilllv, race)
 
     if targetinfo(target, "RACE") == 6 then
-        --是宠物受到伤害
-        local oldHp = currabil(target, 1)
-        local nowHp = oldHp - result
-        local max = abil(target, 1)
-        if nowHp < 0 then
-            nowHp = 0
-        end
+        -- 怪物攻击宠物：从宠物主人属性获取56对怪防御和116受怪减伤
         local mastertId = targetinfo(target, "MASTERID")
-        local isPc = clientflag(mastertId) == 1
-        local methodName = isPc and "PCMainPlayer" or "MainPlayer"
-        Message.sendmsgEx(mastertId, methodName, "showPetPro", { type = "red", max = max, now = nowHp })
-    end
-    result = SpeHarmMain(actor, target, result)
-
-    -- 对怪减伤和对怪防御（目标是玩家或宠物时生效）
-    if isplayer(target) then
-        -- 玩家对怪防御（属性56）：固定值减免
-        local pveDef = tonumber(abil(target, 56)) or 0
-        if pveDef > 0 then
-            result = math.max(1, result - pveDef)
-        end
-
-        -- 玩家受怪减伤（属性116）：万分比减免
-        local reducePct = tonumber(abil(target, 116)) or 0
-        if reducePct > 0 then
-            local reduced = math.floor(result * reducePct / 10000)
-            result = math.max(1, result - reduced)
-        end
-    elseif targetinfo(target, "RACE") == 6 then
-        -- 宠物对怪防御（属性56）：固定值减免，从主人属性获取
-        local mastertId = targetinfo(target, "MASTERID")
+        
+        -- 属性56：对怪防御（固定值减免）
         local pveDef = tonumber(abil(mastertId, 56)) or 0
         if pveDef > 0 then
             result = math.max(1, result - pveDef)
         end
-
-        -- 宠物受怪减伤（属性116）：万分比减免，从主人属性获取
+        
+        -- 属性116：受怪减伤（万分比减免）
         local reducePct = tonumber(abil(mastertId, 116)) or 0
         if reducePct > 0 then
             local reduced = math.floor(result * reducePct / 10000)
             result = math.max(1, result - reduced)
         end
+        
+        -- 宠物血量显示
+        local oldHp = currabil(target, 1)
+        local nowHp = oldHp - result
+        local max = abil(target, 1)
+        if nowHp < 0 then
+            nowHp = 0
+        end
+        local isPc = clientflag(mastertId) == 1
+        local methodName = isPc and "PCMainPlayer" or "MainPlayer"
+        Message.sendmsgEx(mastertId, methodName, "showPetPro", { type = "red", max = max, now = nowHp })
+    elseif isplayer(target) then
+        -- 怪物攻击玩家：从玩家属性获取56对怪防御和116受怪减伤
+        -- 属性56：对怪防御（固定值减免）
+        local pveDef = tonumber(abil(target, 56)) or 0
+        if pveDef > 0 then
+            result = math.max(1, result - pveDef)
+        end
+
+        -- 属性116：受怪减伤（万分比减免）
+        local reducePct = tonumber(abil(target, 116)) or 0
+        if reducePct > 0 then
+            local reduced = math.floor(result * reducePct / 10000)
+            result = math.max(1, result - reduced)
+        end
     end
+    
+    result = SpeHarmMain(actor, target, result)
 
     return result
 end
 
 function b_base(actor, target, effectId, skillId, skillLv, race)
-    -- print("b_base",actor,target,effectId, skillId, skillLv)
     local result = BattleManager:Do(actor, target, effectId, skillId, skillLv, race)
     GameEvent.push(EventCfg.onAttack, actor, target, effectId, skillId, skillLv, race)
     if targetinfo(target, "RACE") == 6 then
-        --是宠物受到伤害
+        --是宠物受到伤害（宠物PK：目标也是宠物，攻击者是怪物）
+        local masterId = targetinfo(actor, "MASTERID")
+        if masterId and masterId > 0 then
+            -- 目标宠物主人获取68PK减免
+            local targetMasterId = targetinfo(target, "MASTERID")
+            if targetMasterId and targetMasterId > 0 then
+                local pkReduce = tonumber(abil(targetMasterId, 68)) or 0
+                if pkReduce > 0 then
+                    local reduced = math.floor(result * pkReduce / 10000)
+                    result = math.max(1, result - reduced)
+                end
+            end
+        end
+        
         local oldHp = currabil(target, 1)
         local nowHp = oldHp - result
         local max = abil(target, 1)
@@ -1232,32 +1241,30 @@ function b_base(actor, target, effectId, skillId, skillLv, race)
         local isPc = clientflag(mastertId) == 1
         local methodName = isPc and "PCMainPlayer" or "MainPlayer"
         Message.sendmsgEx(mastertId, methodName, "showPetPro", { type = "red", max = max, now = nowHp })
-    end
-    result = SpeHarmMain(actor, target, result)
-
-    -- 宠物攻击伤害结算
-    local masterId = targetinfo(actor, "MASTERID")
-    local isTargetMonster = not isplayer(target) and targetinfo(target, "RACE") ~= 6
-    local isTargetPlayer = isplayer(target)
-    
-    if isTargetMonster then
-        -- 宠物攻击怪物：165对怪伤害（从主人属性获取）
+    elseif isplayer(target) then
+        -- 宠物攻击玩家（宠物PK）
+        local masterId = targetinfo(actor, "MASTERID")
         if masterId and masterId > 0 then
-            local pveDamage = tonumber(abil(masterId, 165)) or 0
-            if pveDamage > 0 then
-                result = result + pveDamage
-            end
-        end
-    elseif isTargetPlayer then
-        -- 宠物攻击玩家：67PK加成（从主人属性获取）
-        if masterId and masterId > 0 then
+            -- 攻击方主人获取67PK加成
             local pkBonus = tonumber(abil(masterId, 67)) or 0
             if pkBonus > 0 then
                 local bonusDamage = math.floor(result * pkBonus / 10000)
                 result = result + bonusDamage
             end
         end
+    else
+        -- 宠物攻击怪物
+        local masterId = targetinfo(actor, "MASTERID")
+        if masterId and masterId > 0 then
+            -- 主人获取165对怪伤害
+            local pveDamage = tonumber(abil(masterId, 165)) or 0
+            if pveDamage > 0 then
+                result = result + pveDamage
+            end
+        end
     end
+    
+    result = SpeHarmMain(actor, target, result)
 
     return result
 end
@@ -1290,19 +1297,4 @@ function SpeHarmMain(actor, target, result)
     return result
 end
 
--- =====================================================
--- 怪物技能伤害公式函数
--- SkillEffect.xls Fumula列配置base时，怪物攻击触发m_base
--- 参数: actor=攻击者(怪物), target=目标(玩家), effectId, skillId, skillLv, Param1
--- 返回: 计算后的最终伤害
-
--- 玩家技能伤害公式函数（预留，SkillEffect.xls Fumula=base时触发）
-function base(actor, target, effectId, skillId, skillLv, Param1)
-    return BattleManager:Do(actor, target, effectId, skillId, skillLv, Param1)
-end
-
--- 宝宝技能伤害公式函数（预留，SkillEffect.xls Fumula=base时触发）
-function b_base(actor, target, effectId, skillId, skillLv, Param1)
-    return BattleManager:Do(actor, target, effectId, skillId, skillLv, Param1)
-end
 
