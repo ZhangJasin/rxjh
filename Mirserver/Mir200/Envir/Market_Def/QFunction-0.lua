@@ -759,7 +759,7 @@ function b_die(actor, killer)
         local petIdx = getpetidx(mastertId, petMark)
         if petIdx and petIdx == actor then
             -- 这是新系统灵兽，设置死亡倒计时
-            local dieCd = tonumber(SysConstant['PET_Resurre_CD']['Value']) or 60
+            local dieCd = tonumber(SysConstant['PET_Resurre_CD']['Value']) or 30
             sethumvar(mastertId, VarCfg.U_Pet_Die_Time, dieCd)
             -- 启动定时器
             addtimerex(mastertId, 49, 1000, dieCd, "@ontimer49", "")

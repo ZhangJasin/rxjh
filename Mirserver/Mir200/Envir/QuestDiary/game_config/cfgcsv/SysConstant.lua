@@ -26,7 +26,7 @@ local config = {
 	},
 	["PET_Resurre_CD"] = { 
 		ID="PET_Resurre_CD",
-		Value="60",
+		Value="30",
 		Dec="宠物复活冷却时间",
 	},
 	["MIN_LoopTask_LV"] = { 
