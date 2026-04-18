@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='Item备注修改工具',
+    name='富文本编辑器',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

@@ -31,3 +31,24 @@ Mirserver/Config.Json
 9963d_rxjh_fgui_project/.objs
 client/热血江湖工具
 .qwen
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
