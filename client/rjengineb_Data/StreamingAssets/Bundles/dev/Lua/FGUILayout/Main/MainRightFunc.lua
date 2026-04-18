@@ -1,28 +1,89 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local MainRightFunc = class("MainRightFunc", BaseFGUILayout)
 
-function MainRightFunc:Create()
-	self._ui = FGUI:ui_delegate(self.component)
+-- 布局参数：从右往左，从上到下，每列4个控件
+local LAYOUT_START_X = 1686
+local LAYOUT_START_Y = 426
+local LAYOUT_COL_WIDTH = 73   -- 列宽（x方向间隔）
+local LAYOUT_ROW_HEIGHT = 77  -- 行高（y方向间隔）
+local LAYOUT_ROWS_PER_COL = 4 -- 每列行数
 
-    
+function MainRightFunc:Create()
+    self._ui = FGUI:ui_delegate(self.component)
+
     FGUI:setOnClickEvent(self._ui.Button_guild, handler(self, self.OnOpenGuild))
     FGUI:setOnClickEvent(self._ui.Button_WuGong, handler(self, self.OnOpenWuGong))
     FGUI:setOnClickEvent(self._ui.Button_role, handler(self, self.OnOpenRole))
-    FGUI:setOnClickEvent(self._ui.Button_WuXun,handler(self,self.ObOpenWuXun))
+    FGUI:setOnClickEvent(self._ui.Button_WuXun, handler(self, self.ObOpenWuXun))
     FGUI:setOnClickEvent(self._ui.Button_fashion, handler(self, self.OnOpenFashion))
     FGUI:setOnClickEvent(self._ui.Button_st, handler(self, self.OnOpenShiTu))
     FGUI:setOnClickEvent(self._ui.Button_ZuoQi, handler(self, self.OnOpenZuoQI))
     FGUI:setOnClickEvent(self._ui.Button_zz, handler(self, self.OnOpenZhuanZhi))
 
+    -- 初始化按钮配置（使用实际的按钮对象）
+    self._buttonConfig = {
+        { btn = self._ui.Button_role,    level = 0 },
+        { btn = self._ui.Button_WuXun,   level = 0 },
+        { btn = self._ui.Button_fashion, level = 0 },
+        { btn = self._ui.Button_st,      level = 0 },
+        { btn = self._ui.Button_WuGong,  level = 10 },
+        { btn = self._ui.Button_zz,      level = 10 },
+        { btn = self._ui.Button_ZuoQi,   level = 20 },
+        { btn = self._ui.Button_guild,   level = 25 },
+    }
+
     self:InitFuncBtnsShow()
+    
+    -- 初始化按钮位置（只执行一次）
+    self:InitButtonPositions()
+end
+
+-- 初始化按钮位置（在Create中只执行一次）
+function MainRightFunc:InitButtonPositions()
+    local visibleIndex = 0
+    
+    for _, config in ipairs(self._buttonConfig) do
+        local btn = config.btn
+        if btn then
+            -- 计算位置：从右往左，从上到下，每列4个
+            local col = math.floor(visibleIndex / LAYOUT_ROWS_PER_COL) -- 0 = 右列, 1 = 左列
+            local row = visibleIndex % LAYOUT_ROWS_PER_COL             -- 0-3行
+            local x = LAYOUT_START_X - col * LAYOUT_COL_WIDTH
+            local y = LAYOUT_START_Y + row * LAYOUT_ROW_HEIGHT
+
+            FGUI:setPosition(btn, x, y)
+            visibleIndex = visibleIndex + 1
+            print("InitButtonPosition:", btn, "at", x, y)
+        end
+    end
+end
+
+-- 根据等级更新按钮显示（只控制visible，不修改位置）
+function MainRightFunc:UpdateFuncBtnsByLevel()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    print("UpdateFuncBtnsByLevel playerLevel=", playerLevel)
+    
+    for _, config in ipairs(self._buttonConfig) do
+        local btn = config.btn
+        if btn then
+            local isVisible = playerLevel >= config.level
+            print("Button isVisible=", isVisible)
+            FGUI:setVisible(btn, isVisible)
+        end
+    end
 end
 
 function MainRightFunc:Enter()
+    print("MainRightFunc:Enter()")
     SL:ComponentAttach(SLDefine.SUIComponentTable.MainRootButton, self._ui.Node_attach)
+    self:RegisterEvent()
+    -- 延迟更新，确保玩家数据已就绪
+    SL:ScheduleOnce(handler(self, self.UpdateFuncBtnsByLevel), 0.5)
 end
 
 function MainRightFunc:Exit()
     SL:ComponentDetach(SLDefine.SUIComponentTable.MainRootButton)
+    self:RemoveEvent()
 end
 
 function MainRightFunc:Destroy()
@@ -30,13 +91,13 @@ function MainRightFunc:Destroy()
 end
 
 function MainRightFunc:InitFuncBtnsShow()
-    if not SL._DEBUG then 
-        return 
-    end 
+    if not SL._DEBUG then
+        return
+    end
 
     if SL:GetValue("IS_PC_OPER_MODE") then
-        return 
-    end 
+        return
+    end
 
     local function ShowOrHideVisible()
         FGUI:setVisible(self._ui.Button_WuGong, not FGUI:getVisible(self._ui.Button_WuGong))
@@ -44,44 +105,59 @@ function MainRightFunc:InitFuncBtnsShow()
         FGUI:setVisible(self._ui.Button_fashion, not FGUI:getVisible(self._ui.Button_fashion))
         FGUI:setVisible(self._ui.Button_guild, not FGUI:getVisible(self._ui.Button_guild))
         FGUI:setVisible(self._ui.Button_role, not FGUI:getVisible(self._ui.Button_role))
-    end 
+    end
     SL:AddKeyboardEvent("KEY_F12", "MainRightFunc", ShowOrHideVisible)
 end
+
 -----------------------------------------------------------------------
 function MainRightFunc:ObOpenWuXun()
+    print("打开武勋")
     FGUI:Open("A_WuXun", "WuXunPanl", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
+
 function MainRightFunc:OnOpenShiTu()
+    print("打开师徒")
     FGUI:Open("MentorShip", "MentorShipPanel", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
+
 function MainRightFunc:OnOpenZuoQI()
+    print("打开灵兽")
     FGUI:Open("Mount", "mountMain", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
+
 function MainRightFunc:OnOpenFashion()
+    print("打开时装")
     FGUI:Open("A_Fashion", "FashionSystemPanl", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
+
 function MainRightFunc:OnOpenGuild()
     FGUIFunction:OpenGuildAutoUI()
 end
 
 function MainRightFunc:OnOpenWuGong()
+    print("打开功法")
     FGUI:Open("Skill", "SkillFramePanel", 1)
 end
 
 function MainRightFunc:OnOpenRole()
-    FGUI:Open("Bag","PlayerInfoPanel")
+    FGUI:Open("Bag", "PlayerInfoPanel")
 end
+
 function MainRightFunc:OnOpenZhuanZhi()
     FGUI:Open("Transfer", "TransferPanel", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
 
-
 -----------------------------------注册事件--------------------------------------
 function MainRightFunc:RegisterEvent()
+    SL:RegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "MainRightFunc", handler(self, self.OnLevelUp))
 end
 
 function MainRightFunc:RemoveEvent()
+    SL:UnRegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "MainRightFunc")
 end
 
+function MainRightFunc:OnLevelUp()
+    self:UpdateFuncBtnsByLevel()
+end
 
 return MainRightFunc
