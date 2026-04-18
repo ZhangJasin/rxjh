@@ -10749,6 +10749,7 @@ local config = {
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200037",
+		transfer_lasttask="1",
 	},
 	[200901] = { 
 		idx=200901,
@@ -11055,6 +11056,7 @@ local config = {
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200046",
+		transfer_lasttask="1",
 	},
 	[201001] = { 
 		idx=201001,
@@ -11355,6 +11357,7 @@ local config = {
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200037",
+		transfer_lasttask="1",
 	},
 	[201101] = { 
 		idx=201101,
@@ -11661,6 +11664,7 @@ local config = {
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200046",
+		transfer_lasttask="1",
 	},
 	[201201] = { 
 		idx=201201,
@@ -11961,6 +11965,7 @@ local config = {
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200037",
+		transfer_lasttask="1",
 	},
 	[201301] = { 
 		idx=201301,
@@ -12267,6 +12272,7 @@ local config = {
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200046",
+		transfer_lasttask="1",
 	},
 	[201401] = { 
 		idx=201401,
@@ -12567,6 +12573,7 @@ local config = {
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200037",
+		transfer_lasttask="1",
 	},
 	[201501] = { 
 		idx=201501,
@@ -12873,6 +12880,7 @@ local config = {
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200046",
+		transfer_lasttask="1",
 	},
 	[201601] = { 
 		idx=201601,
@@ -13170,6 +13178,7 @@ local config = {
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200037",
+		transfer_lasttask="1",
 	},
 	[201701] = { 
 		idx=201701,
@@ -13473,6 +13482,7 @@ local config = {
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200046",
+		transfer_lasttask="1",
 	},
 	[300001] = { 
 		idx=300001,
