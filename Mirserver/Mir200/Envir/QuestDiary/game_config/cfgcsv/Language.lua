@@ -25,15 +25,15 @@ local config = {
 	},
 	["Name_Task_100007"] = { 
 		idx="Name_Task_100007",
-		Dec="药到病除",
+		Dec="牛气冲天",
 	},
 	["Name_Task_100008"] = { 
 		idx="Name_Task_100008",
-		Dec="有容乃大",
+		Dec="药到病除",
 	},
 	["Name_Task_100009"] = { 
 		idx="Name_Task_100009",
-		Dec="牛气冲天",
+		Dec="有容乃大",
 	},
 	["Name_Task_100010"] = { 
 		idx="Name_Task_100010",
