@@ -707,6 +707,46 @@ local function _onMountZhaninfo(actor)
     end
 end
 
+--使用传送符
+local function _onUseMoveItem(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
+    local taskchange = 0  --任务是否有变化，有的话更新
+    local taskfinish = 0
+    local mountState = gethumvar(actor, VarCfg.U_Mount_Status) or 0
+    for k,v in pairs(TaskProgress_data) do
+        local taskid = tonumber(k)
+        local taskxq = Task.ConditionLv(actor, taskid)
+        local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
+        if task_targettype == _taskMBType._GameplayDevelopment and taskxq then  --玩法培养
+            local neednum = Task_cfg[taskid]['task_progress'] or 1
+            local targetTab = Task_cfg[taskid]['task_target_param']
+            local targetType = 0
+            if type(targetTab) == "string" then
+                targetType = tonumber(targetTab)
+            elseif type(targetTab) == "table" then
+                targetType = targetTab[1]
+            end
+            --print("targetType="..targetType)
+            if targetType == _taskMB4data._MountZhan then  
+                if mountState >= neednum then
+                    TaskProgress_data[k]['state'] = _taskState.finish
+                    taskchange = Task_Change_Flag
+                    taskfinish = Task_Finish_Flag
+                elseif mountState ~= v['count'] then
+                    taskchange = Task_Change_Flag
+                end
+                TaskProgress_data[k]['count'] = mountState
+            end
+        end
+    end
+    if taskchange == Task_Change_Flag then
+        sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(TaskProgress_data))  -- 当前已接取任务列表
+        Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})   -- 更新客户端任务进度变量
+        if taskfinish == Task_Finish_Flag then
+            _onCompleteOtherTask(actor) -- 有任务有变化是判断
+        end
+    end
+end
 --- 个人BOSS  暂无
 
 -------------------------------↓↓↓ 网络消息 ↓↓↓---------------------------------------
@@ -845,7 +885,11 @@ function Task.getReward(actor, data)
         end
         -- 转职任务 更新界面       
         if Task_cfg[taskid]['task_type'] == 2 then
-            TransferInfo.getTaskState(actor)
+            if Task_cfg[taskid]['transfer_lasttask'] then--打开转职界面
+                Message.sendmsgEx(actor, "MainMission","OpenTransfer")
+            else
+                TransferInfo.getTaskState(actor)
+            end
         end
     end
 end
@@ -1364,6 +1408,10 @@ GameEvent.add(EventCfg.onLoginEnd, function (actor)
 
 end, Task)
 
+--传送符使用
+GameEvent.add(EventCfg.UseMoveItem, function (actor)
+    Task.Clicknpc(actor, npcid)  
+end, Task)
 
 Message.RegisterNetMsg(ssrNetMsgCfg.Task, Task)
 

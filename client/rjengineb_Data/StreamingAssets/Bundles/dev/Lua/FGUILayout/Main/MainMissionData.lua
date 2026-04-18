@@ -302,6 +302,9 @@ function MainMissionData:TransferComplete()  -- 网络请求
     FGUI:Open("Transfer", "TransferSucceed", { curCfg = self.data.transfer_cur, nextCfg = self.data.transfer_next })
 end
 
+function MainMissionData:OpenTransfer()  -- 网络请求
+    FGUI:Open("Transfer", "TransferPanel")
+end
 
 -- 转职数据
 function MainMissionData:SetTransferData()
