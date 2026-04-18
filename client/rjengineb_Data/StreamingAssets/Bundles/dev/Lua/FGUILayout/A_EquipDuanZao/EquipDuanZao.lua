@@ -636,7 +636,7 @@ function EquipDuanZao:GetPageData()
                 if (page == 1 and (yhcnum < maxhcnum or maxhcnum == 0)) or page ~= 1 then
                     if page == 3 then
                         local itemData= SL:GetValue("ITEM_DATA", equipData.Index)
-                        if itemData.NeedLevel >= 60 then
+                        if itemData.NeedLevel >= 1 then
                             table.insert(bagequiplist, equipData)
                         end
                     else
@@ -711,7 +711,7 @@ function EquipDuanZao:GetPageData()
                 if (page == 1 and (yhcnum < maxhcnum or maxhcnum == 0)) or page ~= 1 then
                     if page == 3 then
                         local itemData= SL:GetValue("ITEM_DATA", equipData.Index)
-                        if itemData.NeedLevel >= 60 then
+                        if itemData.NeedLevel >= 1 then
                             table.insert(equipposlist, equipData)
                         end
                     else

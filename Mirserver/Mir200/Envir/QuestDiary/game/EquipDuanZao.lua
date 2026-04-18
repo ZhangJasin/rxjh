@@ -52,7 +52,7 @@ function EquipDuanZao.qianghua(actor, data)
     local itemid = linkitem(actor, "INDEX")
     local qhTabIndex = ItemEquip[itemid]['EquipQHTabId']   
     if not qhTabIndex then
-        sendmsg(actor, 9, posindex > 5 and "60级以上首饰才可加工！" or "当前装备不可强化！")
+        sendmsg(actor, 9, posindex > 5 and "当前装备不可强化！" or "当前装备不可强化！")
         return
     end
     
