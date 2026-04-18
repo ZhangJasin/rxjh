@@ -1289,7 +1289,7 @@ function EquipDuanZao:ListadditemRender(idx, item)
 		            local percent   = attrConfigs[attId]['Type'] or 0   -- 是否是百分比
 		            local value     = qhtab[1][3] or 0  -- 属性值
 		            if percent == 1 then
-		            	value = string.format("%.0f", value / 100) .. "%"  
+		            	value = string.format("%.1f", value / 100) .. "%"  
 		            end
                     attrstr = ""..name..value
                 end

@@ -634,7 +634,7 @@ function EquipTipViewModel:GetGemInlaysAttStr(itemData)
                         local percent = a.percent
                         local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
                         if attConfig.Type == 1 then -- 万分比除100
-                            value = tonumber(string.format("%.0f", value / 100))
+                            value = string.format("%.1f", value / 100)
                             percent = 1
                         end
                         if customDesc then
@@ -1115,7 +1115,7 @@ function EquipTipViewModel:GetCustomAttrStr()
                     local percent = a.percent
                     local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
                     if attConfig.Type == 1 then -- 万分比除100
-                        value = tonumber(string.format("%.0f", value / 100))
+                        value = string.format("%.1f", value / 100)
                         percent = 1
                     end
                     if customDesc then
@@ -1241,8 +1241,8 @@ function EquipTipViewModel:Listwxpanlattr(idx,item)
     local name = attrConfigs[attrid]['Name']..""
     local type = attrConfigs[attrid]['Type'] or 0 -- 0 数值 1 万分比
     if type == 1 then
-        minValue = string.format("%.0f", minValue / 100) .. "%"
-        maxValue = string.format("%.0f", maxValue / 100) .. "%"
+        minValue = string.format("%.1f", minValue / 100) .. "%"
+        maxValue = string.format("%.1f", maxValue / 100) .. "%"
     end
     local value = minValue .. " - " .. maxValue
     local n0 = FGUI:GetChild(item,"n0")
@@ -1296,7 +1296,7 @@ function EquipTipViewModel:WuXunJianDingAttr()
                 local percent = a.percent
                 local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
                 if attConfig.Type == 1 then -- 万分比除100
-                    value = tonumber(string.format("%.0f", value / 100))
+                    value = string.format("%.1f", value / 100)
                     percent = 1
                 end
                 if customDesc then
@@ -1395,7 +1395,7 @@ function EquipTipViewModel:WuXunZhuanYinAttr()
                 indexpos = a.pos
                 local colorHex = color > 0 and SL:GetValue("COLOR_BY_ID", color)
                 if attConfig.Type == 1 then -- 万分比除100
-                    value = tonumber(string.format("%.0f", value / 100))
+                    value = string.format("%.1f", value / 100)
                     percent = 1
                 end
                 if customDesc then

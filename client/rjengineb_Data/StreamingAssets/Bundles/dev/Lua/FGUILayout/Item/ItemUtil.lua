@@ -455,7 +455,7 @@ function ItemUtil:SetItemStarByItemData(commonItem, itemData)
 		local percent   = AttScore_cfg[attId]['Type'] or 0   -- 是否是百分比
 		local value     = itemData.ExAbil.abil[1]['v'][1][3]
 		if percent == 1 then
-			value = tonumber(string.format("%.0f", value / 100))
+			value = string.format("%.1f", value / 100)* 10 / 10
             isPercent = true
 		end
         itemData.Star = value
