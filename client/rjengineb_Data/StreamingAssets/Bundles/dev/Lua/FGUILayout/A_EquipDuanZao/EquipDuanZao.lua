@@ -157,11 +157,12 @@ function EquipDuanZao:Create()
             self:GetPageData()
             self:GetAddItem()
             self:RefrsList()
-            self:clearitem1()
-            self:clearitem2()
             self:clearitem3()
             self:upitem2num()
             self:succfont()
+            self:updateItem1Display()  -- 更新幸运符数量显示            
+            -- 更新提升材料数量显示
+            self:updateItem2Display()
         end
     end))
     
@@ -171,11 +172,12 @@ function EquipDuanZao:Create()
         self:GetPageData()
         self:GetAddItem()
         self:RefrsList()
-        self:clearitem1()
-        self:clearitem2()
         self:clearitem3()
         self:upitem2num()
         self:succfont()
+        self:updateItem1Display()  -- 更新幸运符数量显示
+        -- 更新提升材料数量显示
+        self:updateItem2Display()
     end))
     
     -- 合成更新事件
@@ -184,13 +186,12 @@ function EquipDuanZao:Create()
         self:GetAddItem()
         self:RefrsList()
         if tonumber(data.param1) == 1 then
-            self:clearequip()
             self:succfont()
         else
-            self:clearitem1()
             self:clearitem3()
             self:succfont()
         end
+        self:updateItem1Display()  -- 更新幸运符数量显示
     end))
     
     -- 强化转移更新事件
@@ -1455,6 +1456,36 @@ function EquipDuanZao:onTransferClicked()
         self.sourceEquipMakeIndex,
         self.targetEquipMakeIndex
     })
+end
+
+-----------------------------------------------------------------------
+--- updateItem1Display: 更新幸运符数量显示，如果数量为0则显示加号
+-----------------------------------------------------------------------
+function EquipDuanZao:updateItem1Display()
+    if self.qhitem1 and self.qhitem1 ~= 0 then
+        local itemCount = SL:GetValue("ITEMCOUNT", self.qhitem1)
+        if itemCount <= 0 then
+            -- 数量为0，清理显示并切换回加号状态
+            self:clearitem1()
+            -- 切换显示为加号（通过控制器切换）
+            self:xyfjiaohao()
+        end
+    end
+end
+
+-----------------------------------------------------------------------
+--- updateItem2Display: 更新提升材料数量显示，如果数量为0则显示加号
+-----------------------------------------------------------------------
+function EquipDuanZao:updateItem2Display()
+    if self.qhitem2 and self.qhitem2 ~= 0 then
+        local itemCount = SL:GetValue("ITEMCOUNT", self.qhitem2)
+        if itemCount <= 0 then
+            -- 数量为0，清理显示并切换回加号状态
+            self:clearitem2()
+            -- 切换显示为加号（通过控制器切换）
+            self:itemtsjiaohao()
+        end
+    end
 end
 
 
