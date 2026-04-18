@@ -8203,7 +8203,7 @@ local config = {
 		task_target_param = {
 			[1] = 15219,
 			[2] = 1,
-			[3] = 0.1,
+			[3] = 1,
 		},
 		task_progress=1,
 		task_turntype=1,
@@ -8692,7 +8692,7 @@ local config = {
 		task_target_param = {
 			[1] = 15219,
 			[2] = 1,
-			[3] = 0.1,
+			[3] = 1,
 		},
 		task_progress=1,
 		task_turntype=1,
