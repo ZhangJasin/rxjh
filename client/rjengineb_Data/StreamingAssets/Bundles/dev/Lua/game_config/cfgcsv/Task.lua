@@ -352,7 +352,6 @@ local config = {
 		},
 		task_pro = {
 			[1] = 100008,
-			[2] = 300001,
 		},
 		task_targettype=1,
 		task_target_param = {
@@ -519,6 +518,7 @@ local config = {
 		},
 		task_pro = {
 			[1] = 101001,
+			[2] = 300001,
 		},
 		task_targettype=4,
 		task_target_param = {
@@ -2254,8 +2254,8 @@ local config = {
 	},
 	[102019] = { 
 		idx=102019,
-		task_name="Name_Task_102017",
-		task_targetdec="TargetDec_Task_102017",
+		task_name="Name_Task_102019",
+		task_targetdec="TargetDec_Task_102019",
 		task_type=1,
 		task_weight=2039,
 		task_receivetype=1,
