@@ -2,7 +2,7 @@ local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local PCMainBottom = class("PCMainBottom", BaseFGUILayout)
 
 function PCMainBottom:Create()
-	self._ui = FGUI:ui_delegate(self.component)
+    self._ui = FGUI:ui_delegate(self.component)
     FGUI:setSortingOrder(self.component, FGUIDefine.MainOrder.Main)
 
     self._quicks = FGUIFunction:BindClass(self._ui.Group_quick, "Main_pc/PCMainQuick")
@@ -42,16 +42,16 @@ function PCMainBottom:Create()
     }
 
     local funcBtns = {
-        {btn = self._ui.Btn_action, name = GET_STRING(40070002), key = nil},
-        {btn = self._ui.Btn_team,   name = GET_STRING(40070003), key = SettingKey.Type.TEAM},
-        {btn = self._ui.Btn_guild,  name = GET_STRING(40070006), key = SettingKey.Type.GUILD},
-        {btn = self._ui.Btn_status, name = GET_STRING(40070007), key = nil},
-        {btn = self._ui.Btn_bag,    name = GET_STRING(40070008), key = SettingKey.Type.BAG},
-        {btn = self._ui.Btn_skill,  name = GET_STRING(40070009), key = nil},
-        {btn = self._ui.Btn_mail,   name = GET_STRING(40070010), key = SettingKey.Type.MAIL},
-        {btn = self._ui.Btn_shop,   name = GET_STRING(40070011), key = nil},
-        {btn = self._ui.Btn_friend, name = GET_STRING(40070012), key = SettingKey.Type.FRIEND},
-        {btn = self._ui.Btn_setting,name = GET_STRING(40070013), key = nil},
+        { btn = self._ui.Btn_action,  name = GET_STRING(40070002), key = nil },
+        { btn = self._ui.Btn_team,    name = GET_STRING(40070003), key = SettingKey.Type.TEAM },
+        { btn = self._ui.Btn_guild,   name = GET_STRING(40070006), key = SettingKey.Type.GUILD },
+        { btn = self._ui.Btn_status,  name = GET_STRING(40070007), key = nil },
+        { btn = self._ui.Btn_bag,     name = GET_STRING(40070008), key = SettingKey.Type.BAG },
+        { btn = self._ui.Btn_skill,   name = GET_STRING(40070009), key = nil },
+        { btn = self._ui.Btn_mail,    name = GET_STRING(40070010), key = SettingKey.Type.MAIL },
+        { btn = self._ui.Btn_shop,    name = GET_STRING(40070011), key = nil },
+        { btn = self._ui.Btn_friend,  name = GET_STRING(40070012), key = SettingKey.Type.FRIEND },
+        { btn = self._ui.Btn_setting, name = GET_STRING(40070013), key = nil },
     }
     for k, v in pairs(funcBtns) do
         v.index = k
@@ -62,7 +62,8 @@ function PCMainBottom:Create()
         FGUI:GButton_setTitle(v.btn, v.name)
         FGUI:setOnRollOverEvent(v.btn, handler(self, self.OnBtnFuncRollOver, v))
         FGUI:setOnRollOutEvent(v.btn, handler(self, self.OnBtnFuncRollOut, v))
-        FGUI:setOnTouchEvent(v.btn, handler(self, self.OnBtnFuncTouchBegin, v), nil, handler(self, self.OnBtnFuncTouchEnd, v))
+        FGUI:setOnTouchEvent(v.btn, handler(self, self.OnBtnFuncTouchBegin, v), nil,
+            handler(self, self.OnBtnFuncTouchEnd, v))
     end
 
     FGUI:setOnClickEvent(self._ui.Btn_action, handler(self, self.OnClickAction))
@@ -91,10 +92,10 @@ end
 function PCMainBottom:Enter()
     self._quicks:Enter()
     self._buffs:Enter()
-	self:RegisterEvent()
+    self:RegisterEvent()
 
     self:InitAdapt()
-	self:OnRefreshPropertyShow()
+    self:OnRefreshPropertyShow()
     self:UpdateAutoState()
     self:InitBubbleTips()
 
@@ -105,13 +106,13 @@ end
 function PCMainBottom:Exit()
     self._quicks:Exit()
     self._buffs:Exit()
-	if self._timer then
-		SL:UnSchedule(self._timer)
-		self._timer = nil
-	end
+    if self._timer then
+        SL:UnSchedule(self._timer)
+        self._timer = nil
+    end
     self:UnscheduleStateSync()
     self:ClearBubbleTips()
-	self:RemoveEvent()
+    self:RemoveEvent()
 end
 
 function PCMainBottom:Destroy()
@@ -134,7 +135,7 @@ end
 
 function PCMainBottom:OnRefreshPropertyShow()
     local curExp = SL:GetValue("EXP") or 0
-	local maxExp = SL:GetValue("MAXEXP")
+    local maxExp = SL:GetValue("MAXEXP")
     maxExp = maxExp > 0 and maxExp or 1
     local expPer = math.floor(curExp / maxExp * 100)
     FGUI:GProgressBar_setValue(self._ui.ProgressBar_exp, expPer)
@@ -157,22 +158,30 @@ function PCMainBottom:OnClickTeam()
 end
 
 function PCMainBottom:OnClickGuild()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 25 then
+        return SL:ShowSystemTips("人物25级解锁门派")
+    end
     if FGUI:CheckOpen("Guild_pc", "PCGuildJoinList") or FGUI:CheckOpen("Guild_pc", "PCGuildMainPanel") then
         FGUIFunction:CloseGuildAutoUI()
     else
         FGUIFunction:OpenGuildAutoUI()
-    end 
+    end
 end
 
 function PCMainBottom:OnClickStatus()
-    FGUIFunction:SwitchPanel("Bag_pc","PCPlayerInfoPanel",2)
+    FGUIFunction:SwitchPanel("Bag_pc", "PCPlayerInfoPanel", 2)
 end
 
 function PCMainBottom:OnClickBag()
-    FGUIFunction:SwitchPanel("Bag_pc","PCPlayerInfoPanel",1)
+    FGUIFunction:SwitchPanel("Bag_pc", "PCPlayerInfoPanel", 1)
 end
 
 function PCMainBottom:OnClickSkill()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 10 then
+        return SL:ShowSystemTips("人物10级解锁功法")
+    end
     FGUIFunction:SwitchPanel("Skill_pc", "PCSkillFramePanel", 1)
 end
 
@@ -221,7 +230,7 @@ end
 
 function PCMainBottom:OnBtnFuncTouchBegin(data)
     data.scale = data.scale - 0.1
-    local scale = math.max(1, math.min(1.1, data.scale)) 
+    local scale = math.max(1, math.min(1.1, data.scale))
     FGUI:setScale(data.icon, scale, scale)
 end
 
@@ -337,12 +346,15 @@ end
 function PCMainBottom:OnAutoMoveBegin(data)
     self:UpdateAutoState(nil, true)
 end
+
 function PCMainBottom:OnAutoMoveEnd()
     self:UpdateAutoState(nil, false)
 end
+
 function PCMainBottom:OnFightBegin()
     self:UpdateAutoState(true, nil)
 end
+
 function PCMainBottom:OnFightEnd()
     self:UpdateAutoState(false, nil)
 end
@@ -396,20 +408,20 @@ end
 
 -- 预加载开始
 function PCMainBottom:OnPreLoadStart(key)
-	table.insert(self._loadingFile, key)
+    table.insert(self._loadingFile, key)
     FGUI:setVisible(self._ui.ProgressBar_preLoad, true)
     if not self._timer then
         self._timer = SL:Schedule(handler(self, self.UpdatePreLoadProgress), 1)
     end
-	self:UpdatePreLoadProgress()
+    self:UpdatePreLoadProgress()
 end
 
 -- 预加载结束
 function PCMainBottom:OnPreLoadEnd(key)
     if self._timer then
-		SL:UnSchedule(self._timer)
-		self._timer = nil
-	end
+        SL:UnSchedule(self._timer)
+        self._timer = nil
+    end
     if not self._loadingFile or not next(self._loadingFile) then
         FGUI:setVisible(self._ui.ProgressBar_preLoad, false)
         return
@@ -428,58 +440,57 @@ function PCMainBottom:OnPreLoadEnd(key)
         FGUI:setVisible(self._ui.ProgressBar_preLoad, false)
         return
     end
-	self:UpdatePreLoadProgress()
+    self:UpdatePreLoadProgress()
 end
 
 function PCMainBottom:UpdatePreLoadProgress()
-	if not self._loadingFile or not next(self._loadingFile) then
-		FGUI:GProgressBar_setValue(self._ui.ProgressBar_preLoad, 0)
-		return
-	end
-	
-	local totalP = 0
-	for i, key in ipairs(self._loadingFile) do
-		local progress = SL:GetValue("PRELOAD_PROGRESS", key)
-		totalP = totalP + progress
-	end
-	local P = totalP / #self._loadingFile * 100
-	FGUI:GProgressBar_setValue(self._ui.ProgressBar_preLoad, P)
-end
+    if not self._loadingFile or not next(self._loadingFile) then
+        FGUI:GProgressBar_setValue(self._ui.ProgressBar_preLoad, 0)
+        return
+    end
 
+    local totalP = 0
+    for i, key in ipairs(self._loadingFile) do
+        local progress = SL:GetValue("PRELOAD_PROGRESS", key)
+        totalP = totalP + progress
+    end
+    local P = totalP / #self._loadingFile * 100
+    FGUI:GProgressBar_setValue(self._ui.ProgressBar_preLoad, P)
+end
 
 function PCMainBottom:OnVersionUpdate(platform, resourceType, pushType, extend)
     --platform平台 0.全部 1.ios 2.安卓  3.pc 4.h5
-    --resourceType资源类型 0.全部 1.dev 2.dev_assets 3.dev_server 
-    --pushType更新类型 0.软提示  1.强更 
+    --resourceType资源类型 0.全部 1.dev 2.dev_assets 3.dev_server
+    --pushType更新类型 0.软提示  1.强更
     --extend自定义
-    print(platform, resourceType, pushType, extend,"OnVersionUpdate__")
-    if platform == 1 then 
-        if not SL:GetValue("PLATFORM_IOS")  then
-            return 
+    print(platform, resourceType, pushType, extend, "OnVersionUpdate__")
+    if platform == 1 then
+        if not SL:GetValue("PLATFORM_IOS") then
+            return
         end
-    elseif platform == 2 then 
-        if not SL:GetValue("PLATFORM_ANDROID")  then
-            return 
+    elseif platform == 2 then
+        if not SL:GetValue("PLATFORM_ANDROID") then
+            return
         end
-    elseif platform == 3 then 
-        if not SL:GetValue("PLATFORM_WINDOWS")  then
-            return 
+    elseif platform == 3 then
+        if not SL:GetValue("PLATFORM_WINDOWS") then
+            return
         end
-    elseif platform == 4 then 
-        if not SL:GetValue("PLATFORM_WEB")  then
-            return 
+    elseif platform == 4 then
+        if not SL:GetValue("PLATFORM_WEB") then
+            return
         end
     end
     if pushType == 1 then
-        local callFunc = function (btnIndex)
+        local callFunc = function(btnIndex)
             SL:RestartGame()
         end
         local data = {}
         data.str = SL:GetValue("I18N_STRING", 20000214)
-        data.btnDesc = {SL:GetValue("I18N_STRING", 20000213)}
+        data.btnDesc = { SL:GetValue("I18N_STRING", 20000213) }
         data.callback = callFunc
         SL:OpenCommonDialog(data)
-    else 
+    else
         FGUI:setVisible(self._ui.Btn_updateTip, true)
     end
 end
@@ -508,11 +519,10 @@ function PCMainBottom:OnWindowClose(data)
     end
 end
 
-
 -----------------------------------注册事件--------------------------------------
 function PCMainBottom:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_ROLE_PROPERTY_INITED, "PCMainBottom", handler(self, self.OnRefreshPropertyShow))
-	SL:RegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "PCMainBottom", handler(self, self.OnRefreshPropertyShow))
+    SL:RegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "PCMainBottom", handler(self, self.OnRefreshPropertyShow))
     SL:RegisterLUAEvent(LUA_EVENT_EXP_CHANGE, "PCMainBottom", handler(self, self.OnRefreshPropertyShow))
     SL:RegisterLUAEvent(LUA_EVENT_BUBBLETIPS_STATUS_CHANGE, "PCMainBottom", handler(self, self.OnRefreshBubbleTips))
     SL:RegisterLUAEvent(LUA_EVENT_AUTO_MOVE_BEGIN, "PCMainBottom", handler(self, self.OnAutoMoveBegin))
@@ -523,14 +533,14 @@ function PCMainBottom:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_WINDOW_CLOSE, "PCMainBottom", handler(self, self.OnWindowClose))
 
     SL:RegisterLUAEvent(LUA_EVENT_PRELOAD_START, "PCMainBottom", handler(self, self.OnPreLoadStart))
-	SL:RegisterLUAEvent(LUA_EVENT_PRELOAD_END, "PCMainBottom", handler(self, self.OnPreLoadEnd))
-    SL:RegisterLUAEvent(LUA_EVENT_VERSION_UPDATE,"PCMainBottom", handler(self, self.OnVersionUpdate))
+    SL:RegisterLUAEvent(LUA_EVENT_PRELOAD_END, "PCMainBottom", handler(self, self.OnPreLoadEnd))
+    SL:RegisterLUAEvent(LUA_EVENT_VERSION_UPDATE, "PCMainBottom", handler(self, self.OnVersionUpdate))
 end
 
 function PCMainBottom:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_ROLE_PROPERTY_INITED, "PCMainBottom")
-	SL:UnRegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "PCMainBottom")
-	SL:UnRegisterLUAEvent(LUA_EVENT_EXP_CHANGE, "PCMainBottom")
+    SL:UnRegisterLUAEvent(LUA_EVENT_LEVEL_CHANGE, "PCMainBottom")
+    SL:UnRegisterLUAEvent(LUA_EVENT_EXP_CHANGE, "PCMainBottom")
     SL:UnRegisterLUAEvent(LUA_EVENT_BUBBLETIPS_STATUS_CHANGE, "PCMainBottom")
     SL:UnRegisterLUAEvent(LUA_EVENT_AUTO_MOVE_BEGIN, "PCMainBottom")
     SL:UnRegisterLUAEvent(LUA_EVENT_AUTO_MOVE_END, "PCMainBottom")
@@ -539,10 +549,9 @@ function PCMainBottom:RemoveEvent()
     SL:UnRegisterLUAEvent(LUA_EVENT_WINDOW_OPEN, "PCMainBottom")
     SL:UnRegisterLUAEvent(LUA_EVENT_WINDOW_CLOSE, "PCMainBottom")
 
-  	SL:UnRegisterLUAEvent(LUA_EVENT_PRELOAD_START, "PCMainBottom")
-	SL:UnRegisterLUAEvent(LUA_EVENT_PRELOAD_END, "PCMainBottom")
+    SL:UnRegisterLUAEvent(LUA_EVENT_PRELOAD_START, "PCMainBottom")
+    SL:UnRegisterLUAEvent(LUA_EVENT_PRELOAD_END, "PCMainBottom")
     SL:UnRegisterLUAEvent(LUA_EVENT_VERSION_UPDATE, "PCMainBottom")
 end
-
 
 return PCMainBottom

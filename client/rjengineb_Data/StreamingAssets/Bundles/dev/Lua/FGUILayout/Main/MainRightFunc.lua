@@ -33,7 +33,7 @@ function MainRightFunc:Create()
     }
 
     self:InitFuncBtnsShow()
-    
+
     -- 初始化按钮位置（只执行一次）
     self:InitButtonPositions()
 end
@@ -41,7 +41,7 @@ end
 -- 初始化按钮位置（在Create中只执行一次）
 function MainRightFunc:InitButtonPositions()
     local visibleIndex = 0
-    
+
     for _, config in ipairs(self._buttonConfig) do
         local btn = config.btn
         if btn then
@@ -62,7 +62,7 @@ end
 function MainRightFunc:UpdateFuncBtnsByLevel()
     local playerLevel = SL:GetValue("LEVEL") or 1
     print("UpdateFuncBtnsByLevel playerLevel=", playerLevel)
-    
+
     for _, config in ipairs(self._buttonConfig) do
         local btn = config.btn
         if btn then
@@ -111,31 +111,38 @@ end
 
 -----------------------------------------------------------------------
 function MainRightFunc:ObOpenWuXun()
-    print("打开武勋")
     FGUI:Open("A_WuXun", "WuXunPanl", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
 
 function MainRightFunc:OnOpenShiTu()
-    print("打开师徒")
     FGUI:Open("MentorShip", "MentorShipPanel", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
 
 function MainRightFunc:OnOpenZuoQI()
-    print("打开灵兽")
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 20 then
+        return SL:ShowSystemTips("人物20级解锁灵兽")
+    end
     FGUI:Open("Mount", "mountMain", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
 
 function MainRightFunc:OnOpenFashion()
-    print("打开时装")
     FGUI:Open("A_Fashion", "FashionSystemPanl", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
 
 function MainRightFunc:OnOpenGuild()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 25 then
+        return SL:ShowSystemTips("人物25级解锁门派")
+    end
     FGUIFunction:OpenGuildAutoUI()
 end
 
 function MainRightFunc:OnOpenWuGong()
-    print("打开功法")
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 10 then
+        return SL:ShowSystemTips("人物10级解锁功法")
+    end
     FGUI:Open("Skill", "SkillFramePanel", 1)
 end
 
@@ -144,6 +151,10 @@ function MainRightFunc:OnOpenRole()
 end
 
 function MainRightFunc:OnOpenZhuanZhi()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 10 then
+        return SL:ShowSystemTips("人物10级解锁转职")
+    end
     FGUI:Open("Transfer", "TransferPanel", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
 

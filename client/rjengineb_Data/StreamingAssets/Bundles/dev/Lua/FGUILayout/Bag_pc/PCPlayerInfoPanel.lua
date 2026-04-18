@@ -1,19 +1,19 @@
-local BaseFGUILayout = requireFGUI("BaseFGUILayout")
+local BaseFGUILayout    = requireFGUI("BaseFGUILayout")
 local PCPlayerInfoPanel = class("PCPlayerInfoPanel", BaseFGUILayout)
 
-local IDX_NULL = 0
-local IDX_EQUIP   = 1
-local IDX_STATEMENT = 2
-local IDX_TITLE = 3 -- 称号
-local IDX_PET = 3 -- 灵兽
-local IDX_REBIRTH = 4 -- 转职
+local IDX_NULL          = 0
+local IDX_EQUIP         = 1
+local IDX_STATEMENT     = 2
+local IDX_TITLE         = 3 -- 称号
+local IDX_PET           = 3 -- 灵兽
+local IDX_REBIRTH       = 4 -- 转职
 
 function PCPlayerInfoPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
     self._tradingData = {}
-    
+
     self._index = IDX_NULL
     self._pageDatas = {
         [IDX_EQUIP] = {
@@ -34,12 +34,12 @@ function PCPlayerInfoPanel:Create()
         [IDX_PET] = {
             objName = "PCComponentPetPanel",
             obj = nil,
-            tabName = 1000001,--灵兽栏
+            tabName = 1000001, --灵兽栏
         },
         [IDX_REBIRTH] = {
             objName = "PCComponentRebirthPanel",
             obj = nil,
-            tabName = 1000002,--转职栏
+            tabName = 1000002, --转职栏
         }
     }
 
@@ -66,7 +66,7 @@ function PCPlayerInfoPanel:GetAllFGuiData()
     self.btn_bag_recycle = self._ui.btn_bag_recycle
     self.btn_bag_extra = self._ui.btn_bag_extra
     self.graph_drag = self._ui.graph_drag
-    self.controller = FGUI:getController(self.component,"PageKind")
+    self.controller = FGUI:getController(self.component, "PageKind")
 end
 
 function PCPlayerInfoPanel:PageClose()
@@ -86,7 +86,7 @@ end
 function PCPlayerInfoPanel:PageTo(index)
     if not index then return end
     self.controller.selectedIndex = index
-    if self._index  == index then return end
+    if self._index == index then return end
     self:SwitchTab(index)
     self:PageClose()
     self:PageOpen(index)
@@ -102,53 +102,53 @@ function PCPlayerInfoPanel:PageOpen(index)
         if not pageData.objName then
             return
         end
-        print("名称",pageData.objName)
-        pageObj = FGUI:CreateObject(self.node_right,"Bag_pc",pageData.objName,true)
+        print("名称", pageData.objName)
+        pageObj = FGUI:CreateObject(self.node_right, "Bag_pc", pageData.objName, true)
         pageData.obj = pageObj
     end
 
     if pageObj.component then
-        FGUI:setVisible(pageObj.component,true)
+        FGUI:setVisible(pageObj.component, true)
     end
 
     if pageObj.Enter then
         pageObj:Enter(self._tradingData.tradingIndex)
     else
-        SL:PrintEx("[ERROR] 脚本["..pageData.objName.."]没有Enter方法")
+        SL:PrintEx("[ERROR] 脚本[" .. pageData.objName .. "]没有Enter方法")
     end
 end
 
 function PCPlayerInfoPanel:InitOnClickEvent()
-    FGUI:setOnClickEvent(self.btn_close,handler(self,self.OnClose))
-    FGUI:setOnClickEvent(self.btn_tab_1,handler(self,self.BtnTab1Clicked))
-    FGUI:setOnClickEvent(self.btn_tab_2,handler(self,self.BtnTab2Clicked))
-    FGUI:setOnClickEvent(self.btn_tab_3,handler(self,self.BtnTab3Clicked))
-    FGUI:setOnClickEvent(self.btn_tab_4,handler(self,self.BtnTab4Clicked))
+    FGUI:setOnClickEvent(self.btn_close, handler(self, self.OnClose))
+    FGUI:setOnClickEvent(self.btn_tab_1, handler(self, self.BtnTab1Clicked))
+    FGUI:setOnClickEvent(self.btn_tab_2, handler(self, self.BtnTab2Clicked))
+    FGUI:setOnClickEvent(self.btn_tab_3, handler(self, self.BtnTab3Clicked))
+    FGUI:setOnClickEvent(self.btn_tab_4, handler(self, self.BtnTab4Clicked))
     --FGUI:setOnClickEvent(self.btn_tab_5,handler(self,self.BtnTab5Clicked))
-    FGUI:setOnClickEvent(self.btn_bag_sort,handler(self,self.BtnBagSortClicked))
-    FGUI:setOnClickEvent(self.btn_bag_warehouse,handler(self,self.BtnBagWareHouseClicked))
-    FGUI:setOnClickEvent(self.btn_bag_wareShop,handler(self,self.BtnBagWareShopClicked))
-    FGUI:setOnClickEvent(self.btn_bag_recycle,handler(self,self.BtnBagRecycleClicked))
-    FGUI:setOnClickEvent(self.btn_bag_extra,handler(self,self.BtnExtraBagClicked))
+    FGUI:setOnClickEvent(self.btn_bag_sort, handler(self, self.BtnBagSortClicked))
+    FGUI:setOnClickEvent(self.btn_bag_warehouse, handler(self, self.BtnBagWareHouseClicked))
+    FGUI:setOnClickEvent(self.btn_bag_wareShop, handler(self, self.BtnBagWareShopClicked))
+    FGUI:setOnClickEvent(self.btn_bag_recycle, handler(self, self.BtnBagRecycleClicked))
+    FGUI:setOnClickEvent(self.btn_bag_extra, handler(self, self.BtnExtraBagClicked))
 end
 
 function PCPlayerInfoPanel:BtnBagWareShopClicked()
     self.super.Close(self)
-    ssrMessage:sendmsgEx("bag","openWareShop")
+    ssrMessage:sendmsgEx("bag", "openWareShop")
 end
 
 function PCPlayerInfoPanel:BtnBagRecycleClicked()
-    FGUI:Close("Bag_pc","PCPlayerInfoPanel")
-    FGUI:Open("Bag_pc", "BagRecyclePanel",{fromPanel = 1})
+    FGUI:Close("Bag_pc", "PCPlayerInfoPanel")
+    FGUI:Open("Bag_pc", "BagRecyclePanel", { fromPanel = 1 })
 end
 
 function PCPlayerInfoPanel:BtnBagWareHouseClicked()
-    FGUI:Close("Bag_pc","PCPlayerInfoPanel")
-    FGUI:Open("Bag_pc", "PCStoragePanel",{fromPanel = 1})
+    FGUI:Close("Bag_pc", "PCPlayerInfoPanel")
+    FGUI:Open("Bag_pc", "PCStoragePanel", { fromPanel = 1 })
 end
 
 function PCPlayerInfoPanel:BtnExtraBagClicked()
-    FGUI:Close("Bag_pc","PCPlayerInfoPanel")
+    FGUI:Close("Bag_pc", "PCPlayerInfoPanel")
     --FGUI:Open("Bag_pc", "OneFilterBagPanel",{title = GET_STRING(60003002) ,filterType = 3})
     FGUI:Open("Bag_pc", "PCStorageExPanel", 1)
 end
@@ -166,10 +166,18 @@ function PCPlayerInfoPanel:BtnTab2Clicked()
 end
 
 function PCPlayerInfoPanel:BtnTab3Clicked()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 20 then
+        return SL:ShowSystemTips("人物20级解锁灵兽")
+    end
     FGUI:Open("Mount", "mountMain")
 end
 
 function PCPlayerInfoPanel:BtnTab4Clicked()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 10 then
+        return SL:ShowSystemTips("人物10级解锁转职")
+    end
     FGUI:Open("Transfer", "TransferPanel")
 end
 
@@ -181,8 +189,8 @@ function PCPlayerInfoPanel:InitUI()
     for index, pageData in pairs(self._pageDatas) do
         local tabComp = self._ui["btn_tab_" .. index]
         if tabComp then
-            local textComp = FGUI:GetChild(tabComp,"text_content")
-            FGUI:GTextField_setText(textComp,GET_STRING(pageData.tabName))
+            local textComp = FGUI:GetChild(tabComp, "text_content")
+            FGUI:GTextField_setText(textComp, GET_STRING(pageData.tabName))
         end
     end
 end
@@ -196,8 +204,8 @@ function PCPlayerInfoPanel:SwitchTab(tabIndex)
     for index, pageData in pairs(self._pageDatas) do
         local tabComp = self._ui["btn_tab_" .. index]
         if tabComp then
-            local controller = FGUI:getController(tabComp,"isSelected")
-            FGUI:Controller_setSelectedIndex(controller,index == tabIndex and 0 or 1)
+            local controller = FGUI:getController(tabComp, "isSelected")
+            FGUI:Controller_setSelectedIndex(controller, index == tabIndex and 0 or 1)
         end
     end
 
@@ -210,7 +218,7 @@ end
 
 function PCPlayerInfoPanel:RefreshBag()
     if self._index == IDX_EQUIP then
-       local pageData = self._pageDatas[IDX_EQUIP]
+        local pageData = self._pageDatas[IDX_EQUIP]
         if pageData then
             local pageObj = pageData.obj
             if pageObj then
@@ -224,17 +232,17 @@ function PCPlayerInfoPanel:Enter(pageIndex)
     local index = IDX_STATEMENT
     self._tradingData = {}
     if type(pageIndex) == "table" then
-        index = pageIndex.index
-        self._tradingData  = pageIndex
+        index             = pageIndex.index
+        self._tradingData = pageIndex
     elseif pageIndex then
         index = pageIndex
     end
-    
+
     self:RegisterEvent()
-    FGUIFunction:ShowTopCurrency(SL:GetValue("GAME_DATA","BagMoneyList"))
+    FGUIFunction:ShowTopCurrency(SL:GetValue("GAME_DATA", "BagMoneyList"))
     if not self._leftObj then
-        self._leftObj = FGUI:CreateObject(self.node_left,"Bag_pc","PCComponentEquipPanel",true)
-        FGUI:setVisible(self._leftObj.component,true)
+        self._leftObj = FGUI:CreateObject(self.node_left, "Bag_pc", "PCComponentEquipPanel", true)
+        FGUI:setVisible(self._leftObj.component, true)
     end
 
     if self._leftObj.Enter then
@@ -247,10 +255,9 @@ function PCPlayerInfoPanel:Enter(pageIndex)
     SL:ComponentAttach(SLDefine.SUIComponentTable.PlayerInfoMain, self._ui.Node_attach)
     -- 注册引导数据（装备栏页面才显示仓库和商店按钮）
     if index == IDX_EQUIP then
-        FGUIFunction:RegisterGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide,self._ui)
+        FGUIFunction:RegisterGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide, self._ui)
     end
 end
-
 
 function PCPlayerInfoPanel:Destroy()
     local pageData = self._pageDatas[IDX_EQUIP]
@@ -274,8 +281,8 @@ function PCPlayerInfoPanel:Exit()
     self:RemoveEvent()
     FGUIFunction:HideTopCurrency()
     if not self._leftObj then
-        self._leftObj = FGUI:CreateObject(self.node_left,"Bag_pc","PCComponentEquipPanel",true)
-        FGUI:setVisible(self._leftObj.component,true)
+        self._leftObj = FGUI:CreateObject(self.node_left, "Bag_pc", "PCComponentEquipPanel", true)
+        FGUI:setVisible(self._leftObj.component, true)
     end
 
     if self._leftObj.Exit then
@@ -285,7 +292,6 @@ function PCPlayerInfoPanel:Exit()
     self:PageClose()
     FGUIFunction:UnRegisterGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide)
 end
-
 
 function PCPlayerInfoPanel:RegisterEvent()
 end
