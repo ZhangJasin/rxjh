@@ -2527,6 +2527,14 @@ local config = {
 		idx="FinishDec_Task_102017",
 		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
 	},
+	["FinishDec_Task_102018"] = { 
+		idx="FinishDec_Task_102018",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["FinishDec_Task_102019"] = { 
+		idx="FinishDec_Task_102019",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
 	["FinishDec_Task_103001"] = { 
 		idx="FinishDec_Task_103001",
 		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",

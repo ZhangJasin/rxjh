@@ -2205,7 +2205,7 @@ local config = {
 				[3] = 3,
 			},
 		},
-		task_findial="FinishDec_Task_102015",
+		task_findial="FinishDec_Task_102017",
 	},
 	[102018] = { 
 		idx=102018,
@@ -2250,7 +2250,7 @@ local config = {
 				[3] = 38000,
 			},
 		},
-		task_findial="FinishDec_Task_102015",
+		task_findial="FinishDec_Task_102018",
 	},
 	[102019] = { 
 		idx=102019,
