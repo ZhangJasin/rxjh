@@ -153,6 +153,14 @@ local config = {
 	},
 	["Name_Task_102017"] = { 
 		idx="Name_Task_102017",
+		Dec="打听首饰加工",
+	},
+	["Name_Task_102018"] = { 
+		idx="Name_Task_102018",
+		Dec="进行首饰加工",
+	},
+	["Name_Task_102019"] = { 
+		idx="Name_Task_102019",
 		Dec="一方净土",
 	},
 	["Name_Task_103001"] = { 
@@ -1245,6 +1253,14 @@ local config = {
 	},
 	["TargetDec_Task_102017"] = { 
 		idx="TargetDec_Task_102017",
+		Dec="寻找<font color='#00FF00'>刀剑笑打听首饰加工</font>",
+	},
+	["TargetDec_Task_102018"] = { 
+		idx="TargetDec_Task_102018",
+		Dec="加工<font color='#00FF00'>项链1次</font>",
+	},
+	["TargetDec_Task_102019"] = { 
+		idx="TargetDec_Task_102019",
 		Dec="回禀<font color='#00FF00'>泫渤派门主</font>",
 	},
 	["Name_Task_300018"] = { 
