@@ -51,14 +51,17 @@
     </component>
     <component id="n25_ryat" name="btn_bag_extra" src="ryat6t" fileName="Components/blockBtn.xml" xy="592,542" scale="0.6,0.6">
       <gearDisplay controller="PageKind" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
       <Button title="附加仓库"/>
     </component>
     <component id="n26_ryat" name="btn_bag_warehouse" src="ryat6t" fileName="Components/blockBtn.xml" xy="640,542" scale="0.6,0.6">
       <gearDisplay controller="PageKind" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
       <Button title="随身仓库"/>
     </component>
     <component id="n27_ryat" name="btn_bag_wareShop" src="ryat6t" fileName="Components/blockBtn.xml" xy="687,542" scale="0.6,0.6">
       <gearDisplay controller="PageKind" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
       <Button title="随身商店"/>
     </component>
   </displayList>
