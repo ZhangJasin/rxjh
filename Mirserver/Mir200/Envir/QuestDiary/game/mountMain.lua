@@ -161,16 +161,22 @@ end
 -- 获取坐骑幻化的战斗技能属性
 function mountMain.getMountBattleSkillAttr(actor)
     local mountTakeId = gethumvar(actor, VarCfg.U_Mount_Take_Id)
+    print("getMountBattleSkillAttr: mountTakeId =", mountTakeId)
     if not mountTakeId or mountTakeId == 0 then
+        print("getMountBattleSkillAttr: mountTakeId为空或0，返回空表")
         return {}
     end
 
     local battleAttr = {}
     -- 查找当前幻化模型对应的配表数据
+    local found = false
     for i = 1, #mountHHlist do
         if mountHHlist[i].Model == mountTakeId then
+            found = true
             local skillType = mountHHlist[i].BattleSkill_Type
             local skillValue = mountHHlist[i].BattleSkill_Value
+            print("getMountBattleSkillAttr: 匹配配表索引 =", i, "BattleSkill_Type =", tostring(skillType),
+                "BattleSkill_Value =", tostring(skillValue))
 
             if skillType and skillValue then
                 if type(skillType) == "table" then
@@ -179,6 +185,7 @@ function mountMain.getMountBattleSkillAttr(actor)
                         local attrValue = tonumber(skillValue[idx])
                         if attrId and attrValue then
                             battleAttr[attrId] = attrValue
+                            print("getMountBattleSkillAttr: 多属性 attrId =", attrId, "attrValue =", attrValue)
                         end
                     end
                 else
@@ -186,11 +193,17 @@ function mountMain.getMountBattleSkillAttr(actor)
                     local attrValue = tonumber(skillValue)
                     if attrId and attrValue then
                         battleAttr[attrId] = attrValue
+                        print("getMountBattleSkillAttr: 单属性 attrId =", attrId, "attrValue =", attrValue)
                     end
                 end
+            else
+                print("getMountBattleSkillAttr: BattleSkill_Type或BattleSkill_Value为空")
             end
             break
         end
+    end
+    if not found then
+        print("getMountBattleSkillAttr: 未在配表中找到mountTakeId =", mountTakeId)
     end
     return battleAttr
 end
@@ -200,6 +213,13 @@ function mountMain.updateMountBattleSkillBuff(actor)
     -- 先清除旧的battle skill buff
     delbuff(actor, MountBattleSkillBuffId)
 
+    -- 只有骑乘状态才设置出战属性buff，休息时直接删除
+    local mountStatus = gethumvar(actor, VarCfg.U_Mount_Status)
+    if not mountStatus or tonumber(mountStatus) ~= 1 then
+        print("updateMountBattleSkillBuff: 坐骑未骑乘(mountStatus=" .. tostring(mountStatus) .. ")，删除buff")
+        return
+    end
+
     local battleAttr = mountMain.getMountBattleSkillAttr(actor)
 
     if next(battleAttr) then
@@ -208,7 +228,10 @@ function mountMain.updateMountBattleSkillBuff(actor)
         -- 再设置属性
         for attrId, attrValue in pairs(battleAttr) do
             setbuffabil(actor, MountBattleSkillBuffId, tonumber(attrId), "=", tonumber(attrValue))
+            print("updateMountBattleSkillBuff: setbuffabil attrId =", attrId, "attrValue =", attrValue)
         end
+    else
+        print("updateMountBattleSkillBuff: 无出战属性数据，buff已删除")
     end
 end
 
@@ -505,7 +528,7 @@ function mountMain.petShengji(actor)
     -- 人物外观只由坐骑控制，与旧系统一致
 
     -- 触发灵兽升级事件（与旧系统对齐）
-    
+
     GameEvent.push(EventCfg.onPetLevel, actor)
 
     -- 更新前端显示（发送updateLSView消息与旧系统对齐）
@@ -883,7 +906,7 @@ function mountMain.updateMountAttrBuff(actor)
 
     -- 2. 设置出战属性（移动速度+10%，属性ID 140）
     -- 万分比，1000 = 10%
-    setbuffabil(actor, MountBuffId, 140, "+", 1000)
+    --setbuffabil(actor, MountBuffId, 140, "+", 1000)
 
     -- 3. 设置坐骑幻化属性到 buff 110016（累加多个幻化的属性）
     local ycListJson = gethumvar(actor, VarCfg.T_MountHuanHua)
@@ -1259,8 +1282,8 @@ function mountMain.chuzhan(actor, data)
     end
     sethumvar(actor, VarCfg.U_Mount_Status, horsestate(actor))
     -- 同步更新灵兽属性buff（确保不影响灵兽属性）
-    mountMain.updatePetAttrBuff(actor)
-    mountMain.updatePetBattleSkillBuff(actor)
+    mountMain.updateMountAttrBuff(actor)
+    mountMain.updateMountBattleSkillBuff(actor)
     Message.sendmsgEx(actor, "mountMain", "updateBtnName",
         { status = horsestate(actor) })
 
@@ -1518,7 +1541,7 @@ function mountMain.recallpet(actor)
         if not mark or mark == "" then
             print("添加灵兽失败: monsterId=" .. tostring(monsterId))
             return
-            sendmsg(actor, 9, "添加灵兽失败")
+                sendmsg(actor, 9, "添加灵兽失败")
         end
         sethumvar(actor, VarCfg.T_Pet_Mark, mark)
     end
@@ -1822,21 +1845,21 @@ GameEvent.add(EventCfg.onLoginEnd, function(actor)
             updownhorser(actor)
         end
 
-        local baseSpeed = scriptabil(actor, 9)
-        if horsestate(actor) == 0 then
-            setscriptabilvalue(actor, 9, "=", baseSpeed - 5000)
-        else
-            setscriptabilvalue(actor, 9, "=", baseSpeed + 5000)
-        end
+        --local baseSpeed = scriptabil(actor, 9)
+        --if horsestate(actor) == 0 then
+        --    --setscriptabilvalue(actor, 9, "=", baseSpeed - 5000)
+        --else
+        --    --setscriptabilvalue(actor, 9, "=", baseSpeed + 5000)
+        --end
         mountMain.updateMountAttrBuff(actor)
         mountMain.updateMountBattleSkillBuff(actor)
-        mountMain.updatePetAttrBuff(actor)
-        mountMain.updatePetBattleSkillBuff(actor)
+        --mountMain.updatePetAttrBuff(actor)
+        --mountMain.updatePetBattleSkillBuff(actor)
     end
 
     mountMain.updatePetAttrBuff(actor)
     mountMain.updatePetBattleSkillBuff(actor)
-    mountMain.updateMountBattleSkillBuff(actor)
+    --mountMain.updateMountBattleSkillBuff(actor)
 
     local isActivated = gethumvar(actor, VarCfg.U_All_Pet_star)
     local isChuzhan = gethumvar(actor, VarCfg.U_Pet_IS_SET)
@@ -1919,7 +1942,7 @@ end, mountMain)
 
 GameEvent.add(EventCfg.onNewHuman, function(actor)
     giveitem(actor, "灵兽召唤符（乌龙驹）#999")
-    --giveitem(actor, "灵兽召唤符（追风豹）#999")
+    giveitem(actor, "灵兽召唤符（追风豹）#999")
     --giveitem(actor, "灵兽召唤符（铁甲犀牛）#999")
     --giveitem(actor, "灵兽召唤符（黑豹）#999")
     --giveitem(actor, "灵兽召唤符（雪豹）#999")
