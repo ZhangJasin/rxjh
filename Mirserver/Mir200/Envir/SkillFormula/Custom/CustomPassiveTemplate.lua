@@ -961,6 +961,72 @@ _T.DMG_PVE_FLAT_FN = {
 	end,
 }
 
+-- PK伤害加成（属性ID 67）
+-- 每增加1点属性67，攻击玩家时伤害增加万分比
+-- 仅在攻击玩家时生效
+-- Param1 = 属性ID（默认67）
+-- Param2 = 伤害系数（默认1，即万分比）
+_T.PK_BONUS_FN = {
+	fn = function(cfg)
+		local attrId = tonumber(cfg.Param1) or 67
+		local ratio = tonumber(cfg.Param2) or 1
+		return function(att, tar, sid, ctx)
+			-- 仅在攻击玩家时生效
+			if not isplayer(tar) then
+				return
+			end
+
+			-- 获取攻击者的PK加成属性
+			local pkBonus = abil(att, attrId) or 0
+			if pkBonus <= 0 then
+				return
+			end
+
+			-- 计算追加伤害（万分比）
+			local bonusDamage = math.floor((ctx.damage or 0) * pkBonus * ratio / 10000)
+			if bonusDamage <= 0 then
+				return
+			end
+
+			-- 追加伤害到最终伤害
+			ctx.damage = (ctx.damage or 0) + bonusDamage
+		end
+	end,
+}
+
+-- PK伤害减免（属性ID 68）
+-- 每增加1点属性68，受到玩家攻击时伤害减免万分比
+-- 仅在受到玩家攻击时生效
+-- Param1 = 属性ID（默认68）
+-- Param2 = 伤害系数（默认1，即万分比）
+_T.PK_REDUCE_FN = {
+	fn = function(cfg)
+		local attrId = tonumber(cfg.Param1) or 68
+		local ratio = tonumber(cfg.Param2) or 1
+		return function(att, tar, sid, ctx)
+			-- 仅在受到玩家攻击时生效
+			if not isplayer(att) then
+				return
+			end
+
+			-- 获取目标的PK减免属性
+			local pkReduce = abil(tar, attrId) or 0
+			if pkReduce <= 0 then
+				return
+			end
+
+			-- 计算减免伤害（万分比）
+			local reducedDamage = math.floor((ctx.damage or 0) * pkReduce * ratio / 10000)
+			if reducedDamage <= 0 then
+				return
+			end
+
+			-- 减免伤害
+			ctx.damage = math.max(1, (ctx.damage or 0) - reducedDamage)
+		end
+	end,
+}
+
 
 -- 狂意护体 全队怒气和防御 两段概率
 _T.JOB_KYHT = {
