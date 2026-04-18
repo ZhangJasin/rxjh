@@ -38327,7 +38327,7 @@ local config = {
 			ID=1580003,
 			SkillID=1580003,
 			SkillLevel=1,
-			Name="白猫普攻",
+			Name="企鹅普攻",
 		},
 	},
 	[1580004] = { 
@@ -38335,7 +38335,7 @@ local config = {
 			ID=1580004,
 			SkillID=1580004,
 			SkillLevel=1,
-			Name="冰翼普攻",
+			Name="稻草人普攻",
 		},
 	},
 	[1580005] = { 
@@ -38351,7 +38351,7 @@ local config = {
 			ID=1580006,
 			SkillID=1580006,
 			SkillLevel=1,
-			Name="小白兔普攻",
+			Name="兔子普攻",
 		},
 	},
 	[1580007] = { 
@@ -38367,7 +38367,7 @@ local config = {
 			ID=1580008,
 			SkillID=1580008,
 			SkillLevel=1,
-			Name="霸天虎普攻",
+			Name="僵尸宝宝普攻",
 		},
 	},
 	[1580009] = { 
@@ -38375,7 +38375,7 @@ local config = {
 			ID=1580009,
 			SkillID=1580009,
 			SkillLevel=1,
-			Name="青龙普攻",
+			Name="蟠龙普攻",
 		},
 	},
 	[1580101] = { 
@@ -38519,7 +38519,7 @@ local config = {
 			ID=1580010,
 			SkillID=1580010,
 			SkillLevel=1,
-			Name="白猫普攻2目标",
+			Name="企鹅普攻2目标",
 		},
 	},
 	[1580011] = { 
@@ -38527,7 +38527,7 @@ local config = {
 			ID=1580011,
 			SkillID=1580011,
 			SkillLevel=1,
-			Name="白猫普攻3目标",
+			Name="企鹅普攻3目标",
 		},
 	},
 	[1580012] = { 
@@ -38535,7 +38535,7 @@ local config = {
 			ID=1580012,
 			SkillID=1580012,
 			SkillLevel=1,
-			Name="白猫普攻4目标",
+			Name="企鹅普攻4目标",
 		},
 	},
 	[1580013] = { 
@@ -38543,7 +38543,7 @@ local config = {
 			ID=1580013,
 			SkillID=1580013,
 			SkillLevel=1,
-			Name="冰翼普攻2目标",
+			Name="稻草人普攻2目标",
 		},
 	},
 	[1580014] = { 
@@ -38551,7 +38551,7 @@ local config = {
 			ID=1580014,
 			SkillID=1580014,
 			SkillLevel=1,
-			Name="小白兔普攻3目标",
+			Name="兔子普攻3目标",
 		},
 	},
 	[1580015] = { 
@@ -38559,7 +38559,7 @@ local config = {
 			ID=1580015,
 			SkillID=1580015,
 			SkillLevel=1,
-			Name="霸天虎普攻3目标",
+			Name="僵尸宝宝普攻3目标",
 		},
 	},
 	[1580016] = { 
@@ -38567,7 +38567,7 @@ local config = {
 			ID=1580016,
 			SkillID=1580016,
 			SkillLevel=1,
-			Name="霸天虎普攻4目标",
+			Name="僵尸宝宝普攻4目标",
 		},
 	},
 	[1580017] = { 
@@ -38575,7 +38575,7 @@ local config = {
 			ID=1580017,
 			SkillID=1580017,
 			SkillLevel=1,
-			Name="青龙普攻4目标",
+			Name="蟠龙普攻4目标",
 		},
 	},
 	[1580018] = { 
@@ -38583,7 +38583,7 @@ local config = {
 			ID=1580018,
 			SkillID=1580018,
 			SkillLevel=1,
-			Name="青龙普攻5目标",
+			Name="蟠龙普攻5目标",
 		},
 	},
 	[1580019] = { 
@@ -38591,7 +38591,7 @@ local config = {
 			ID=1580019,
 			SkillID=1580019,
 			SkillLevel=1,
-			Name="青龙普攻6目标",
+			Name="蟠龙普攻6目标",
 		},
 	},
 	[1580020] = { 
