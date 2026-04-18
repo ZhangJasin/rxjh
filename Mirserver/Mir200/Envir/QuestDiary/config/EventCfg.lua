@@ -108,6 +108,7 @@ EventCfg.onPlayRealive              = "onPlayRealive"                  -- 人物复
 EventCfg.onChangStatusLS            = "onChangStatusLS"                --灵兽召唤收回
 EventCfg.onChangeMoney              = "onChangeMoney"                  --货币改变（除了19）
 EventCfg.UseMoveItem                = "UseMoveItem"                    --使用传送符
+EventCfg.onBuyShopItem              = "onBuyShopItem"                  --商店购买物品
 
 return EventCfg
 

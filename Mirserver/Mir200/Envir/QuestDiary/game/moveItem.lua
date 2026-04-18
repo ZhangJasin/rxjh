@@ -137,6 +137,7 @@ function moveItem.move(actor, data)
     if isauto == 1 then
         sethumvar(actor, VarCfg.N_task_xunlu_auto, 0)
     end
+    GameEvent.push(EventCfg.UseMoveItem, actor)
 end
 
 -- 双击使用时QF触发

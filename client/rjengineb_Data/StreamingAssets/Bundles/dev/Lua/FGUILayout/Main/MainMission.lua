@@ -714,7 +714,7 @@ function MainMission:CompleteCurrentGuide()
     self._currentGuideType = nil
     
     -- 通知服务端任务完成
-    if taskId then
+    if taskId == 300006 or taskId == 300015 then
         ssrMessage:sendmsgEx("Task", "onTaskTurnComplete", {taskid = taskId})
     end
 end

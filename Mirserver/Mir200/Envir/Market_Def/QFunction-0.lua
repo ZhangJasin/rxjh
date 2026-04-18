@@ -1219,6 +1219,13 @@ function qigongupdate(actor, qiId, maxlv, clientLv, scripLv, equipLv)
     QiGongManager:update(actor, qiId, maxlv)
 end
 
+function qigongupdate(actor, qiId, maxlv, clientLv, scripLv, equipLv)
+    QiGongManager:update(actor, qiId, maxlv)
+end
+function buyshopitem(actor, id,name,price,num)
+    GameEvent.push(EventCfg.onBuyShopItem, actor,id)
+end
+
 ---- 部分特殊效果计算
 function SpeHarmMain(actor, target, result)
     local actorAttrTab = getattrtabex(actor) or {}

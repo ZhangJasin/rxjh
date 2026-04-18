@@ -707,35 +707,32 @@ local function _onMountZhaninfo(actor)
     end
 end
 
---使用传送符
-local function _onUseMoveItem(actor)
+--使用道具
+local function _onUseOrBuyItem(actor,itemId)
+    if not itemId then
+        return
+    end
     local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
-    local taskfinish = 0
-    local mountState = gethumvar(actor, VarCfg.U_Mount_Status) or 0
+    local taskfinish = 0   
     for k,v in pairs(TaskProgress_data) do
         local taskid = tonumber(k)
         local taskxq = Task.ConditionLv(actor, taskid)
         local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
-        if task_targettype == _taskMBType._GameplayDevelopment and taskxq then  --玩法培养
-            local neednum = Task_cfg[taskid]['task_progress'] or 1
+        if task_targettype == _taskMBType._CompeleteTask and taskxq then  --完成指定任务
             local targetTab = Task_cfg[taskid]['task_target_param']
-            local targetType = 0
+            local targetItemId = 0
             if type(targetTab) == "string" then
-                targetType = tonumber(targetTab)
+                targetItemId = tonumber(targetTab)
             elseif type(targetTab) == "table" then
-                targetType = targetTab[1]
+                targetItemId = targetTab[1]
             end
-            --print("targetType="..targetType)
-            if targetType == _taskMB4data._MountZhan then  
-                if mountState >= neednum then
-                    TaskProgress_data[k]['state'] = _taskState.finish
-                    taskchange = Task_Change_Flag
-                    taskfinish = Task_Finish_Flag
-                elseif mountState ~= v['count'] then
-                    taskchange = Task_Change_Flag
-                end
-                TaskProgress_data[k]['count'] = mountState
+            
+            if targetItemId == itemId then  
+                TaskProgress_data[k]['state'] = _taskState.finish
+                taskchange = Task_Change_Flag
+                taskfinish = Task_Finish_Flag                
+                TaskProgress_data[k]['count'] = 1
             end
         end
     end
@@ -1410,7 +1407,11 @@ end, Task)
 
 --传送符使用
 GameEvent.add(EventCfg.UseMoveItem, function (actor)
-    Task.Clicknpc(actor, npcid)  
+    _onUseOrBuyItem(actor,2419)
+end, Task)
+
+GameEvent.add(EventCfg.onBuyShopItem, function (actor,itemId)
+    _onUseOrBuyItem(actor,itemId)
 end, Task)
 
 Message.RegisterNetMsg(ssrNetMsgCfg.Task, Task)
