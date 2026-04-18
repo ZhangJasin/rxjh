@@ -45,23 +45,23 @@ local config = {
 	},
 	["Name_Task_101002"] = { 
 		idx="Name_Task_101002",
-		Dec="伐木之乱",
+		Dec="再拜门主",
 	},
 	["Name_Task_101003"] = { 
 		idx="Name_Task_101003",
-		Dec="再拜门主",
+		Dec="正派之邀",
 	},
 	["Name_Task_101004"] = { 
 		idx="Name_Task_101004",
-		Dec="正派之邀",
+		Dec="邪派之请",
 	},
 	["Name_Task_101005"] = { 
 		idx="Name_Task_101005",
-		Dec="邪派之请",
+		Dec="加入阵营",
 	},
 	["Name_Task_101006"] = { 
 		idx="Name_Task_101006",
-		Dec="加入阵营",
+		Dec="伐木之乱",
 	},
 	["Name_Task_101007"] = { 
 		idx="Name_Task_101007",
@@ -1137,23 +1137,23 @@ local config = {
 	},
 	["TargetDec_Task_101002"] = { 
 		idx="TargetDec_Task_101002",
-		Dec="击败<font color='#00FF00'>伐木工人</font>",
+		Dec="再次拜访<font color='#00FF00'>泫渤派门主</font>",
 	},
 	["TargetDec_Task_101003"] = { 
 		idx="TargetDec_Task_101003",
-		Dec="再次拜访<font color='#00FF00'>泫渤派门主</font>",
+		Dec="向<font color='#00FF00'>花有缺</font>了解正派",
 	},
 	["TargetDec_Task_101004"] = { 
 		idx="TargetDec_Task_101004",
-		Dec="向<font color='#00FF00'>花有缺</font>了解正派",
+		Dec="向<font color='#00FF00'>温晓余</font>了解正派",
 	},
 	["TargetDec_Task_101005"] = { 
 		idx="TargetDec_Task_101005",
-		Dec="向<font color='#00FF00'>温晓余</font>了解正派",
+		Dec="加入<font color='#00FF00'>任意阵营</font>",
 	},
 	["TargetDec_Task_101006"] = { 
 		idx="TargetDec_Task_101006",
-		Dec="加入<font color='#00FF00'>任意阵营</font>",
+		Dec="击败<font color='#00FF00'>伐木工人</font>",
 	},
 	["TargetDec_Task_101007"] = { 
 		idx="TargetDec_Task_101007",
