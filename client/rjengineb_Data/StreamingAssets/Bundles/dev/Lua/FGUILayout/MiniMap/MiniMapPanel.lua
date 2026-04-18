@@ -611,9 +611,9 @@ end
 
 -- 刷新右Item的NPC列表
 function MiniMapPanel:RightItemRender_NPC(info, item, idx)
-	local scrollText = FGUI:GetChild(item, "name")
-	FGUIFunction:ScrollText_setString(scrollText, info.MapRightName, 1, 0)
-	FGUI:GTextField_setColor(FGUI:GetChild(scrollText, "title"),"#00FF00")
+	local scrollText = FGUI:GetChild(item, "title")
+	FGUI:GTextField_setText(scrollText, info.MapRightName, 1, 0)
+	FGUI:GTextField_setColor(scrollText,"#00FF00")
 	local level_text = FGUI:GetChild(item, "level")
 	FGUI:GTextField_setText(level_text, "")
 	local btn_transmit = FGUI:GetChild(item, "btn_transmit")

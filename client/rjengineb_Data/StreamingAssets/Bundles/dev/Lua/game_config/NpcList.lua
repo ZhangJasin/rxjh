@@ -60,9 +60,8 @@ local config = {
 		NpcTalk="npc_talk_400004",
 		Function_Button = {
 			[1] = 1,
-			[2] = 2,
-			[3] = 5,
-			[4] = 4,
+			[2] = 5,
+			[3] = 4,
 		},
 		Npc_Store=2,
 	},
