@@ -137,7 +137,6 @@
     <image id="as7kvnn" name="bg_first_panel_9.png" path="/image/" exported="true" scale="9grid" scale9grid="52,59,62,52"/>
     <image id="as7kvno" name="btn_first_9.png" path="/image/" exported="true" scale="9grid" scale9grid="43,0,2,56"/>
     <image id="wi458" name="loading_bar_9.png" path="/image/" exported="true" scale="9grid" scale9grid="4,5,8,10"/>
-    <image id="wi457" name="loading_bar_bg_9.png" path="/image/" exported="true" scale="9grid" scale9grid="33,8,0,16"/>
     <component id="mzzl1w" name="ComponentPos.xml" path="/common/" exported="true"/>
     <image id="mzzl1o" name="bg_erhuan.png" path="/image/" exported="true"/>
     <image id="mzzl1p" name="bg_hubi.png" path="/image/" exported="true"/>

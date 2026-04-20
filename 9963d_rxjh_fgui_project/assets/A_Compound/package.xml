@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="7nc36bbu">
+  <resources>
+    <component id="fno50" name="compoundMain.xml" path="/" exported="true"/>
+    <component id="fno51" name="group_first.xml" path="/Components/"/>
+    <component id="fno52" name="group_second.xml" path="/Components/"/>
+    <component id="fno53" name="title.xml" path="/Components/"/>
+    <component id="fno54" name="Items.xml" path="/Components/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

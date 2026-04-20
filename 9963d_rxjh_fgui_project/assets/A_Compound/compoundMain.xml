@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n2_fno5" name="n2" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="170,52"/>
+    <list id="n4_fno5" name="n4" xy="208,125" size="136,529" overflow="scroll" lineGap="2" defaultItem="ui://7nc36bbufno51">
+      <item/>
+      <item/>
+    </list>
+    <list id="n6_fno5" name="n6" xy="353,124" size="142,529" overflow="scroll" margin="2,0,1,0" lineGap="3" defaultItem="ui://7nc36bbufno52">
+      <item/>
+      <item/>
+    </list>
+    <component id="n3_fno5" name="n3" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1147,80"/>
+    <list id="n9_fno5" name="n9" xy="620,204" size="404,85" layout="row" overflow="scroll" colGap="23" defaultItem="ui://st7dgeqqdssq1a" align="center" vAlign="middle"/>
+    <component id="n14_fno5" name="n14" src="fno53" fileName="Components/title.xml" xy="634,142"/>
+    <component id="n15_fno5" name="n15" src="fno53" fileName="Components/title.xml" xy="650,328"/>
+  </displayList>
+</component>
