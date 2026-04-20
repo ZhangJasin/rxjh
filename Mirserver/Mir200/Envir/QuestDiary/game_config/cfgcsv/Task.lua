@@ -14105,7 +14105,7 @@ local config = {
 			[1] = 300018,
 		},
 		task_targettype=4,
-		task_turntype=3,
+		task_turntype=2,
 		task_turn_param=15,
 		task_fintype=1,
 		task_finnpc=1,
@@ -14291,7 +14291,7 @@ local config = {
 		task_targettype=4,
 		task_target_param="21",
 		task_turntype=3,
-		task_turn_param=6,
+		task_turn_param=5,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {
