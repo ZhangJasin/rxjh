@@ -52,6 +52,8 @@ local _taskMB4data = {
     _FuYu                   = 17,     -- 赋予
     _PetZhan                = 18,     -- 宠物出战
     _MountZhan              = 19,     -- 坐骑出战
+    _jhlTask                = 20,     -- 江湖录任务
+    _ONEHS                  = 21,     -- 一次回收
 }
 local _QiangHuaCount = 1          -- 1为强化次数
 local _QiangHuaStdModeLevel = 2   -- 2为强化部位指定等级
@@ -724,6 +726,40 @@ local function _onUseOrBuyItem(actor,itemId)
             end
             
             if targetItemId == itemId then  
+                TaskProgress_data[k]['state'] = _taskState.finish
+                taskchange = Task_Change_Flag
+                taskfinish = Task_Finish_Flag                
+                TaskProgress_data[k]['count'] = 1
+            end
+        end
+    end
+    if taskchange == Task_Change_Flag then
+        sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(TaskProgress_data))  -- 当前已接取任务列表
+        Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})   -- 更新客户端任务进度变量
+        if taskfinish == Task_Finish_Flag then
+            _onCompleteOtherTask(actor) -- 有任务有变化是判断
+        end
+    end
+end
+
+local function _onRecycleItems(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
+    local taskchange = 0  --任务是否有变化，有的话更新
+    local taskfinish = 0   
+    for k,v in pairs(TaskProgress_data) do
+        local taskid = tonumber(k)
+        local taskxq = Task.ConditionLv(actor, taskid)
+        local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
+        if task_targettype == _taskMBType._GameplayDevelopment and taskxq then  --完成指定任务
+            local targetTab = Task_cfg[taskid]['task_target_param']
+            local targetType = 0
+            if type(targetTab) == "string" then
+                targetType = tonumber(targetTab)
+            elseif type(targetTab) == "table" then
+                targetType = targetTab[1]
+            end
+            
+            if targetType == _taskMB4data._ONEHS then  
                 TaskProgress_data[k]['state'] = _taskState.finish
                 taskchange = Task_Change_Flag
                 taskfinish = Task_Finish_Flag                
@@ -1413,6 +1449,9 @@ end, Task)
 
 GameEvent.add(EventCfg.onBuyShopItem, function (actor,itemId)
     _onUseOrBuyItem(actor,itemId)
+end, Task)
+GameEvent.add(EventCfg.onRecycleItems, function (actor)
+    _onRecycleItems(actor)
 end, Task)
 
 Message.RegisterNetMsg(ssrNetMsgCfg.Task, Task)

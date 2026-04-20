@@ -1090,6 +1090,8 @@ function recycleAllItem(actor, allItemIds)
     end
     if giveStr ~= "" then
         giveitem(actor, giveStr)
+
+        GameEvent.push(EventCfg.onRecycleItems, actor)
     end
 end
 

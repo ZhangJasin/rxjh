@@ -109,6 +109,7 @@ EventCfg.onChangStatusLS            = "onChangStatusLS"                --ÁéÊŞÕÙ»
 EventCfg.onChangeMoney              = "onChangeMoney"                  --»õ±Ò¸Ä±ä£¨³ıÁË19£©
 EventCfg.UseMoveItem                = "UseMoveItem"                    --Ê¹ÓÃ´«ËÍ·û
 EventCfg.onBuyShopItem              = "onBuyShopItem"                  --ÉÌµê¹ºÂòÎïÆ·
+EventCfg.onRecycleItems             = "onRecycleItems"                  --ÎïÆ·»ØÊÕ
 
 return EventCfg
 
