@@ -148,13 +148,24 @@ end
 -- 设置/更新灵兽幻化战斗技能buff
 function mountMain.updatePetBattleSkillBuff(actor)
     delbuff(actor, PetSkillBuffId)
+
+    -- 灵兽出战状态才添加buff，未出战则删除
+    local isPetSet = gethumvar(actor, VarCfg.U_Pet_IS_SET)
+    if not isPetSet or tonumber(isPetSet) ~= 1 then
+        print("updatePetBattleSkillBuff: 灵兽未出战(U_Pet_IS_SET=" .. tostring(isPetSet) .. ")，删除buff")
+        return
+    end
+
     local battleAttr = mountMain.getPetBattleSkillAttr(actor)
 
     if next(battleAttr) then
         addbuff(actor, PetSkillBuffId)
         for attrId, attrValue in pairs(battleAttr) do
             setbuffabil(actor, PetSkillBuffId, tonumber(attrId), "=", tonumber(attrValue))
+            print("updatePetBattleSkillBuff: setbuffabil attrId =", attrId, "attrValue =", attrValue)
         end
+    else
+        print("updatePetBattleSkillBuff: 无出战属性数据，buff已删除")
     end
 end
 
@@ -287,16 +298,6 @@ function mountMain.setPetAttr(actor)
             now = x
         end
     end
-
-    -- 发送消息更新客户端显示
-    local isPc = clientflag(actor) == 1
-    local methodName = isPc and "PCMainPlayer" or "MainPlayer"
-    Message.sendmsgEx(actor, methodName, "setPetInfo", {
-        type = "red",
-        max = max,
-        now = now,
-        icon = 0
-    })
 
     -- 设置人物属性
     mountMain.updatePetAttrBuff(actor)
