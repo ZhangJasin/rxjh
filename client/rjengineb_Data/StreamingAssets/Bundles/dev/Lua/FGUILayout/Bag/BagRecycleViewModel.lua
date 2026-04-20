@@ -476,15 +476,38 @@ function BagRecycleViewModel:BagCellClickEvent(bagItem)
 	if FGUI:CheckOpen("Bag", "BagRecyclePanel") then
 		bagItem:SetTipEnable(false)
 		local itemCfg = SL:GetValue("ITEM_DATA", bagItem._itemData.Index)
-		if itemCfg then
-			if not itemCfg.recycle or itemCfg.recycle == "" then
-				ShowSystemTips(GET_STRING(60003006))
-				return
+		local attrName = bagItem._itemData and bagItem._itemData.ExAbil and bagItem._itemData.ExAbil.abil and bagItem._itemData.ExAbil.abil[1] and bagItem._itemData.ExAbil.abil[1].t
+		if itemCfg and not ((itemCfg.recycle and itemCfg.recycle ~= "") or (attrName and attrName == "[鉴定属性]")) then
+			ShowSystemTips(GET_STRING(60003006))
+			return
+		end
+
+		-- 如果是石头类道具，需要匹配石头模型以计算价格
+		local matchedStoneModel = nil
+		if attrName and attrName == "[鉴定属性]" and bagItem._itemData.ExAbil.abil[1].v and bagItem._itemData.ExAbil.abil[1].v[1] then
+			local stoneId = bagItem._itemData.Index
+			local bagAttrData = bagItem._itemData.ExAbil.abil[1].v[1]
+			-- 手动点击不需要检查条件是否勾选，只要物理匹配即可获取价格
+			local allStoneGroups = { self.checkJGSConditionGroups, self.checkHYSConditionGroups, self.checkRXSConditionGroups, self.checkHYJGSConditionGroups, self.checkBPHYSConditionGroups }
+			for _, group in ipairs(allStoneGroups) do
+				for _, v in pairs(group) do
+					if v then
+						for i = 1, #v do
+							local conditionModel = v[i]
+							if conditionModel and conditionModel:CheckStoneValid(stoneId, bagAttrData) then
+								matchedStoneModel = conditionModel
+								break
+							end
+						end
+					end
+					if matchedStoneModel then break end
+				end
+				if matchedStoneModel then break end
 			end
 		end
 
 		SL:onLUAEvent(LUA_EVENT_BAG_ITEM_CHANGE_DELAY,
-			{ isSelect = not bagItem.recycleSelect, selectList = { { MakeIndex = bagItem._itemData.MakeIndex, pos = bagItem._index, ID = bagItem._itemData.Index, cnt = bagItem._itemData.OverLap or 1 } }, updateMoney = true })
+			{ isSelect = not bagItem.recycleSelect, selectList = { { MakeIndex = bagItem._itemData.MakeIndex, pos = bagItem._index, ID = bagItem._itemData.Index, cnt = bagItem._itemData.OverLap or 1, stoneModel = matchedStoneModel } }, updateMoney = true })
 	end
 end
 
