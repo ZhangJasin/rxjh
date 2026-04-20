@@ -1446,7 +1446,7 @@ GameEvent.add(EventCfg.onLoginEnd, function (actor)
 end, Task)
 
 --´«ËÍ·ûÊ¹ÓÃ
-GameEvent.add(EventCfg.UseItems, function (actor)
+GameEvent.add(EventCfg.UseMoveItem, function (actor)
     _onUseOrBuyItem(actor,2419,1)
 end, Task)
 
