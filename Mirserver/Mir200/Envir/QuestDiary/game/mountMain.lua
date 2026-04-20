@@ -1161,9 +1161,10 @@ function mountMain.huanhuajihuo(actor, postData)
         end
         -- 统一更新坐骑属性buff
         mountMain.updateMountAttrBuff(actor)
+        mountMain.updateMountBattleSkillBuff(actor)
         -- 同步更新灵兽属性buff（确保不影响灵兽属性）
-        mountMain.updatePetAttrBuff(actor)
-        mountMain.updatePetBattleSkillBuff(actor)
+        --mountMain.updatePetAttrBuff(actor)
+        --mountMain.updatePetBattleSkillBuff(actor)
         Message.sendmsgEx(actor, "mountMain", "updateHHmodel", {
             ycList = ycList,
             name = name,
