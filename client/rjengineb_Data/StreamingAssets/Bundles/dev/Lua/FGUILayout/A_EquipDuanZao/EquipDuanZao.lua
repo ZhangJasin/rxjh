@@ -172,12 +172,13 @@ function EquipDuanZao:Create()
         self:GetPageData()
         self:GetAddItem()
         self:RefrsList()
-        self:clearitem3()
         self:upitem2num()
         self:succfont()
         self:updateItem1Display()  -- 更新幸运符数量显示
         -- 更新提升材料数量显示
         self:updateItem2Display()
+        -- 更新属性石数量显示
+        self:updateItem3Display()
     end))
     
     -- 合成更新事件
@@ -1064,8 +1065,11 @@ end
 --- upitem2num: 道具消耗更新（提升材料更新）
 -----------------------------------------------------------------------
 function EquipDuanZao:upitem2num()
-    if self.pageControlle.selectedIndex == 0 or self.pageControlle.selectedIndex == 3 then
+    if self.pageControlle.selectedIndex == 0 then
         self:clearitem3()
+        return
+    end
+    if self.pageControlle.selectedIndex == 3 then
         return
     end
     local curQHTabData = EquipQHTab[equippos3[self.selectEquipStdMode]]
@@ -1146,7 +1150,7 @@ function EquipDuanZao:succfont()
         if self.pageControlle.selectedIndex == 0 then  -- 合成
             gxyb = EquipHCTab[equippos3[self.selectEquipStdMode]]['addsucc_arr'][1]
             gxcgl = EquipHCTab[equippos3[self.selectEquipStdMode]]['addsucc_arr'][2]
-        elseif self.pageControlle.selectedIndex == 4 then  -- 装备赋予
+        elseif self.pageControlle.selectedIndex == 3 then  -- 装备赋予
             gxyb = EquipFYTab[equippos3[self.selectEquipStdMode]]['addsucc_arr'][1]
             gxcgl = EquipFYTab[equippos3[self.selectEquipStdMode]]['addsucc_arr'][2]
         else
@@ -1484,6 +1488,21 @@ function EquipDuanZao:updateItem2Display()
             self:clearitem2()
             -- 切换显示为加号（通过控制器切换）
             self:itemtsjiaohao()
+        end
+    end
+end
+
+-----------------------------------------------------------------------
+--- updateItem3Display: 更新属性石数量显示，如果数量为0则显示加号
+-----------------------------------------------------------------------
+function EquipDuanZao:updateItem3Display()
+    if self.qhitem3 and self.qhitem3 ~= 0 then
+        local itemCount = SL:GetValue("ITEMCOUNT", self.qhitem3)
+        if itemCount <= 0 then
+            -- 数量为0，清理显示并切换回加号状态
+            self:clearitem3()
+            -- 切换显示为加号（通过控制器切换）
+            self:itemsxjiaohao()
         end
     end
 end
