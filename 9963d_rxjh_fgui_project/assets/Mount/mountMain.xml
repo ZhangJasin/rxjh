@@ -250,9 +250,9 @@
     <text id="n104_cb9c" name="n104" xy="859,625" size="70,32" fontSize="22" color="#fbefbb" strokeColor="#000000" text="消耗：">
       <gearDisplay controller="rightTabs" pages="0"/>
     </text>
-    <text id="n107_cb9c" name="n107" xy="859,578" size="234,34" fontSize="17" ubb="true" autoSize="none" text="">
+    <text id="n107_cb9c" name="n107" xy="859,332" size="234,34" fontSize="17" align="center" ubb="true" autoSize="none" text="坐骑属性全部赋予给人物">
       <gearDisplay controller="topTabs" pages="0"/>
-      <gearText controller="rightTabs" pages="1" values="" default="出战灵兽[color=#00ff00]3%[/color]的属性转化给人物"/>
+      <gearText controller="rightTabs" pages="1" values="坐骑属性全部赋予给人物" default="出战灵兽[color=#00ff00]3%[/color]的属性转化给人物"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
     <component id="n110_cb9c" name="n110" src="cb9c45" fileName="Components/btn_help.xml" xy="809,147">
