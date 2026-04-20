@@ -24,6 +24,8 @@ function BagRecyclePanel:Enter()
 	self.bagRecycleViewModel:Enter()
 	self:ShowLevelDetail(false)
 	SL:ComponentAttach(SLDefine.SUIComponentTable.BagRecycle, self._ui.Node_attach)
+
+	FGUIFunction:RegisterGuideData(FGUIDefine.GuideDataKey.RecycleGuide,self._ui)
 end
 
 function BagRecyclePanel:Exit()
@@ -35,6 +37,8 @@ function BagRecyclePanel:Exit()
 	self:ShowLevelDetail(false)
 
 	SL:onLUAEvent(LUA_EVENT_BAG_REFRESH_PAGE)
+
+	FGUIFunction:UnRegisterGuideData(FGUIDefine.GuideDataKey.RecycleGuide)
 end
 
 function BagRecyclePanel:Destroy()

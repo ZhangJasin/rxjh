@@ -106,6 +106,7 @@ FGUIDefine.GuideDataKey = {
 	PlayerInfoGuide		= 6,
 	MountGuide		    = 7,
 	BuyGuide        	= 8,
+	RecycleGuide       	= 9,
 }
 
 FGUIDefine.TeamPickType = {

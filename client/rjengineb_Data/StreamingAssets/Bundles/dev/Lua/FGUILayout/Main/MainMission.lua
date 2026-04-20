@@ -326,6 +326,11 @@ function MainMission:OnListMissionItemClick(context)
             FGUI:Open("Mount", "mountMain",{type=1})
         elseif task_turn_param == 14 then  --打开赋予界面
             FGUI:Open("A_EquipDuanZao", "EquipDuanZao",4,nil,{fullScreen = false,destroyTime = 1})
+        elseif task_turn_param == 15 then  --打开江湖录界面
+            --FGUI:Open("A_WuXun", "WuXunPanl", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
+            if data.taskid == 300015 then
+                ssrMessage:sendmsgEx("Task", "onTaskTurnComplete", {taskid = data.taskid})
+            end           
         elseif task_turn_param == 16 then  --打开武勋界面
             FGUI:Open("A_WuXun", "WuXunPanl", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
             ssrMessage:sendmsgEx("Task", "onTaskTurnComplete", {taskid = data.taskid})
@@ -629,14 +634,24 @@ local GuideConfig = {
             return true -- 结束引导
         end,
     },
-    [6] = { -- 引导打开回收
+    [5] = { -- 引导打开回收
         panel = SL:GetValue("IS_PC_OPER_MODE") and "Bag_pc" or "Bag",
         panelName = SL:GetValue("IS_PC_OPER_MODE") and "PCPlayerInfoPanel" or "PlayerInfoPanel",
         panelParm= 1,
         widget = "btn_bag_recycle",
         desc = "点击打开回收",
         callback = function()
-            return true -- 引导完成
+            return false -- 不结束，继续下一步
+        end,
+        nextStep = 5001 -- 下一个引导步骤
+    },
+    [5001] = { -- 回收界面，点击快速出售
+        panel = SL:GetValue("IS_PC_OPER_MODE") and "Bag_pc" or "Bag",
+        panelName = "BagRecyclePanel",
+        widget = "BtnSell",
+        desc = "点击出售",
+        callback = function()
+            return true -- 结束引导
         end
     },
 }
@@ -750,6 +765,10 @@ function MainMission:_findOpenedPanelUI(panel, panelName, widgetName)
         return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.BuyGuide)      
     elseif panel == "TreasureShop" and panelName == "BuyPanel" then
         return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.BuyGuide)
+    elseif panel == "Bag" and panelName == "BagRecyclePanel" then
+        return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.RecycleGuide)
+    elseif panel == "Bag_pc" and panelName == "BagRecyclePanel" then
+        return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.RecycleGuide)
     end
     return nil
 end
