@@ -1309,7 +1309,6 @@ local config = {
 		task_pro = {
 			[1] = 103302,
 			[2] = 300004,
-			[3] = 300011,
 		},
 		task_fintype=2,
 		task_finnpc=7,
@@ -1869,8 +1868,7 @@ local config = {
 			[1] = 102010,
 		},
 		task_pro = {
-			[1] = 102012,
-			[2] = 300012,
+			[1] = 103303,
 		},
 		task_fintype=2,
 		task_finnpc=1,
@@ -1930,6 +1928,47 @@ local config = {
 		},
 		task_findial="FinishDec_Task_102011",
 	},
+	[103303] = { 
+		idx=103303,
+		task_name="Name_Task_103303",
+		task_targetdec="TargetDec_Task_103303",
+		task_type=1,
+		task_weight=2040,
+		task_receivetype=1,
+		task_level=20,
+		task_pre = {
+			[1] = 102011,
+		},
+		task_pro = {
+			[1] = 102012,
+			[2] = 300013,
+		},
+		task_targettype=4,
+		task_target_param="15",
+		task_progress=1,
+		task_turntype=3,
+		task_turn_param=3,
+		task_fintype=1,
+		task_finnpc=1,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 7,
+				[3] = 50,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 300,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 2417,
+				[3] = 10,
+			},
+		},
+		task_findial="FinishDec_Task_103303",
+	},
 	[102012] = { 
 		idx=102012,
 		task_name="Name_Task_102012",
@@ -1941,7 +1980,7 @@ local config = {
 		task_receivedial="ReceiveDec_Task_102012",
 		task_level=20,
 		task_pre = {
-			[1] = 102011,
+			[1] = 103303,
 		},
 		task_pro = {
 			[1] = 102013,
@@ -2144,7 +2183,7 @@ local config = {
 			[1] = 102015,
 		},
 		task_pro = {
-			[1] = 103303,
+			[1] = 102017,
 		},
 		task_targettype=1,
 		task_target_param = {
@@ -2185,47 +2224,6 @@ local config = {
 		},
 		task_findial="FinishDec_Task_102016",
 	},
-	[103303] = { 
-		idx=103303,
-		task_name="Name_Task_103303",
-		task_targetdec="TargetDec_Task_103303",
-		task_type=1,
-		task_weight=2040,
-		task_receivetype=1,
-		task_level=20,
-		task_pre = {
-			[1] = 102016,
-		},
-		task_pro = {
-			[1] = 102017,
-			[2] = 300013,
-		},
-		task_targettype=4,
-		task_target_param="15",
-		task_progress=1,
-		task_turntype=3,
-		task_turn_param=3,
-		task_fintype=1,
-		task_finnpc=1,
-		task_drop = {
-			[1] = {
-				[1] = 9,
-				[2] = 7,
-				[3] = 50,
-			},
-			[2] = {
-				[1] = 9,
-				[2] = 1,
-				[3] = 300,
-			},
-			[3] = {
-				[1] = 9,
-				[2] = 2417,
-				[3] = 10,
-			},
-		},
-		task_findial="FinishDec_Task_103303",
-	},
 	[102017] = { 
 		idx=102017,
 		task_name="Name_Task_102017",
@@ -2235,7 +2233,7 @@ local config = {
 		task_receivetype=1,
 		task_level=20,
 		task_pre = {
-			[1] = 103303,
+			[1] = 102016,
 		},
 		task_pro = {
 			[1] = 102018,
