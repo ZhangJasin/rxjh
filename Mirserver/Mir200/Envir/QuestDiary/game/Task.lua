@@ -30,6 +30,7 @@ local _taskMBType = {
     _GameplayDevelopment = 4,     -- 进行指定次数的某个培养
     _GameplayCompelete   = 5,     -- 通关指定次数的某个玩法
     _CompeleteTask       = 6,     -- 完成某个指定任务
+    _UseBuyTask       = 8,        -- 购买或是使用某道具
 }
 -- 任务目标类型  进行指定次数的某个培养  子类型
 local _taskMB4data = {
@@ -705,8 +706,8 @@ local function _onMountZhaninfo(actor)
 end
 
 --使用道具
-local function _onUseOrBuyItem(actor,itemId)
-    if not itemId then
+local function _onUseOrBuyItem(actor,itemId,itemCount)
+    if not itemId  or  itemCount < 1 then
         return
     end
     local TaskProgress_data = Task.getCurTask(actor)
@@ -716,7 +717,7 @@ local function _onUseOrBuyItem(actor,itemId)
         local taskid = tonumber(k)
         local taskxq = Task.ConditionLv(actor, taskid)
         local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
-        if task_targettype == _taskMBType._CompeleteTask and taskxq then  --完成指定任务
+        if task_targettype == _taskMBType._UseBuyTask and taskxq then  --完成指定任务
             local targetTab = Task_cfg[taskid]['task_target_param']
             local targetItemId = 0
             if type(targetTab) == "string" then
@@ -724,12 +725,14 @@ local function _onUseOrBuyItem(actor,itemId)
             elseif type(targetTab) == "table" then
                 targetItemId = targetTab[1]
             end
-            
-            if targetItemId == itemId then  
-                TaskProgress_data[k]['state'] = _taskState.finish
-                taskchange = Task_Change_Flag
-                taskfinish = Task_Finish_Flag                
-                TaskProgress_data[k]['count'] = 1
+            local neednum = Task_cfg[taskid]['task_progress'] or 1            
+            if targetItemId == itemId then 
+                taskchange = Task_Change_Flag              
+                TaskProgress_data[k]['count'] = TaskProgress_data[k]['count'] + itemCount
+                if TaskProgress_data[k]['count'] >= neednum then
+                    TaskProgress_data[k]['state'] = _taskState.finish                    
+                    taskfinish = Task_Finish_Flag  
+                end
             end
         end
     end
@@ -1443,15 +1446,18 @@ GameEvent.add(EventCfg.onLoginEnd, function (actor)
 end, Task)
 
 --传送符使用
-GameEvent.add(EventCfg.UseMoveItem, function (actor)
-    _onUseOrBuyItem(actor,2419)
+GameEvent.add(EventCfg.UseItems, function (actor)
+    _onUseOrBuyItem(actor,2419,1)
 end, Task)
 
-GameEvent.add(EventCfg.onBuyShopItem, function (actor,itemId)
-    _onUseOrBuyItem(actor,itemId)
+GameEvent.add(EventCfg.onBuyShopItem, function (actor,itemId,num)
+    _onUseOrBuyItem(actor,itemId,num)
 end, Task)
 GameEvent.add(EventCfg.onRecycleItems, function (actor)
     _onRecycleItems(actor)
+end, Task)
+GameEvent.add(EventCfg.stdUseItem, function (actor, itemId,itemobj,useNumber,param1,param2)  
+    _onUseOrBuyItem(actor,itemId,useNumber)
 end, Task)
 
 Message.RegisterNetMsg(ssrNetMsgCfg.Task, Task)

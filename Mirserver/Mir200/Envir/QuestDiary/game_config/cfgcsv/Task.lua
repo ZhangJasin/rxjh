@@ -14134,7 +14134,7 @@ local config = {
 		task_pre = {
 			[1] = 100007,
 		},
-		task_targettype=6,
+		task_targettype=8,
 		task_target_param="101",
 		task_progress=1,
 		task_turntype=3,
@@ -14166,8 +14166,9 @@ local config = {
 		task_pre = {
 			[1] = 100006,
 		},
-		task_targettype=6,
+		task_targettype=8,
 		task_target_param="2419",
+		task_progress=1,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {

@@ -952,6 +952,9 @@ function stdmodefunc(actor, itemid, itemobj, useNumber, param1, param2)
 
     if itemReplace.canReplace(itemid) then
         local realUseCount = itemReplace.batchReplace(actor, itemid, useNumber)
+        if realUseCount > 0 then
+            GameEvent.push(EventCfg.stdUseItem, actor, itemid, itemobj, useNumber, param1, param2)
+        end
         if realUseCount < useNumber then
             changeiteminfo(actor, itemobj, 3, "-", realUseCount)
             return false
@@ -1277,7 +1280,7 @@ function qigongupdate(actor, qiId, maxlv, clientLv, scripLv, equipLv)
     QiGongManager:update(actor, qiId, maxlv)
 end
 function buyshopitem(actor, id,name,price,num)
-    GameEvent.push(EventCfg.onBuyShopItem, actor,id)
+    GameEvent.push(EventCfg.onBuyShopItem, actor,id,num)
 end
 
 ---- 部分特殊效果计算
