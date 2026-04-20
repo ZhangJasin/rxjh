@@ -172,15 +172,15 @@ function mountMain:subscribeEvents()
         self._subscriptions.updateHHResult = self._data:Subscribe("updateHHResult", function(state)
             -- dump(state)
             self._dataForMount = state._dataForMount
-            -- 保留当前选中的索引（用户正在操作的幻化），不要被服务端返回值覆盖
-            -- self.nowIndex = state.selectHHIndex - 1
+            -- 使用服务端返回的选中索引，确保激活的幻化在正确的位置
+            self.nowIndex = state.selectHHIndex - 1
             -- 确保索引有效
             local listSize = #self._dataForMount.hhSortList
-            if self.nowIndex and self.nowIndex >= 0 and self.nowIndex < listSize then
-                -- 保持当前索引不变
-            else
+            if not self.nowIndex or self.nowIndex < 0 or self.nowIndex >= listSize then
                 self.nowIndex = 0
             end
+            -- 同步列表选中状态
+            FGUI:GList_setSelectedIndex(self.leftList, self.nowIndex)
             FGUI:GList_setNumItems(self.leftList, listSize)
             -- 更新视图
             self:setMountHHSx()
