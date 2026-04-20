@@ -13649,7 +13649,7 @@ local config = {
 		task_type=3,
 		task_weight=4001,
 		task_receivetype=1,
-		task_level=20,
+		task_level=10,
 		task_pre = {
 			[1] = 100010,
 		},
