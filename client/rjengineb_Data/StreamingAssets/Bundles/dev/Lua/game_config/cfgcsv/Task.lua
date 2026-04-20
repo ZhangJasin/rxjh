@@ -2341,6 +2341,7 @@ local config = {
 		},
 		task_pro = {
 			[1] = 103001,
+			[2] = 300022,
 		},
 		task_fintype=2,
 		task_finnpc=1,
@@ -2390,7 +2391,6 @@ local config = {
 		},
 		task_pro = {
 			[1] = 103301,
-			[2] = 300022,
 		},
 		task_fintype=2,
 		task_finnpc=1,
@@ -14318,7 +14318,7 @@ local config = {
 		task_receivetype=1,
 		task_level=30,
 		task_pre = {
-			[1] = 103001,
+			[1] = 102019,
 		},
 		task_targettype=1,
 		task_target_param = {
