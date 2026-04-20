@@ -100,17 +100,12 @@ function Task.onTaskTurnComplete(actor, data)
         return
     end
     
-    -- 检查是否是引导类型任务
-    if taskCfg.task_turntype ~= 3 then
-        return
-    end
-    
     -- 检查任务是否在进行中
     if not TaskProgress_data[""..taskid] then
         return
     end
     
-    if taskid == 300006 or taskid == 300015 then
+    if taskid == 300006 or taskid == 300015 or taskid == 300023 then
         -- 更新任务状态为完成
         TaskProgress_data[""..taskid] = {state = _taskState.finish, count = 1}
         sethumvar(actor, VarCfg.T_TaskProgress_data, tbl2json(TaskProgress_data))

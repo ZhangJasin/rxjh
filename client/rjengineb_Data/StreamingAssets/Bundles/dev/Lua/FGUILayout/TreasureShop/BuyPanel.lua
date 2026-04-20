@@ -211,10 +211,14 @@ function BuyPanel:Enter(groupID)
     self:RegisterEvent()
     -- 请求最新的商店的group数据
     SL:RequestGroupData(self.groupID)
+
+    FGUIFunction:RegisterGuideData(FGUIDefine.GuideDataKey.BuyGuide,self._ui)
 end
 
 function BuyPanel:Exit()
     self:RemoveEvent()
+
+    FGUIFunction:UnRegisterGuideData(FGUIDefine.GuideDataKey.BuyGuide)
 end
 
 return BuyPanel

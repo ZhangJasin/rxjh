@@ -326,6 +326,9 @@ function MainMission:OnListMissionItemClick(context)
             FGUI:Open("Mount", "mountMain",{type=1})
         elseif task_turn_param == 14 then  --打开赋予界面
             FGUI:Open("A_EquipDuanZao", "EquipDuanZao",4,nil,{fullScreen = false,destroyTime = 1})
+        elseif task_turn_param == 16 then  --打开武勋界面
+            FGUI:Open("A_WuXun", "WuXunPanl", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
+            ssrMessage:sendmsgEx("Task", "onTaskTurnComplete", {taskid = data.taskid})
         end
     elseif task_turntype == 3 then   --引导
         self:StartGuide(task_turn_param, data.taskid)
@@ -582,9 +585,6 @@ local GuideConfig = {
         widget = "btn_bag_warehouse",
         desc = "点击打开随身仓库",
         callback = function()
-            -- 关闭PlayerInfoPanel，打开StoragePanel
-            -- FGUI:Close("Bag", "PlayerInfoPanel")
-            -- FGUI:Open("Bag", "StoragePanel", {fromPanel = 1})
             return true -- 引导完成
         end
     },
@@ -595,7 +595,6 @@ local GuideConfig = {
         widget = "petActiveBtn",
         desc = "点击激活宠物",
         callback = function()
-            -- 宠物激活逻辑
             return true
         end
     },
@@ -606,21 +605,38 @@ local GuideConfig = {
         widget = "n60",
         desc = "点击激活坐骑",
         callback = function()
-            -- 坐骑激活逻辑
             return true
         end
     },
-    [4] = { -- 引导打开随身商店
+    [4] = { -- 随身商店引导 - 步骤1：打开商店
         panel = SL:GetValue("IS_PC_OPER_MODE") and "Bag_pc" or "Bag",
         panelName = SL:GetValue("IS_PC_OPER_MODE") and "PCPlayerInfoPanel" or "PlayerInfoPanel",
-        panelParm= 1,
+        panelParm = 1,
         widget = "btn_bag_wareShop",
         desc = "点击打开随身商店",
         callback = function()
-            -- 关闭PlayerInfoPanel，打开商店
-            -- FGUI:Close("Bag", "PlayerInfoPanel")
-            -- ssrMessage:sendmsgEx("bag", "openWareShop")
-            return true
+            -- 打开随身商店            
+            return false -- 不结束，继续下一步
+        end,
+        nextStep = 4001 -- 下一个引导步骤
+    },
+    [4001] = { -- 随身商店引导 - 步骤2：点击购买第一个商品
+        panel = SL:GetValue("IS_PC_OPER_MODE") and "TreasureShop_pc" or "TreasureShop",
+        panelName = SL:GetValue("IS_PC_OPER_MODE") and "PCBuyPanel" or "BuyPanel",
+        widget = "list_buy_item_0", -- 动态获取list_buy第一个商品
+        desc = "点击购买",
+        callback = function()
+            return true -- 结束引导
+        end,
+    },
+    [6] = { -- 引导打开回收
+        panel = SL:GetValue("IS_PC_OPER_MODE") and "Bag_pc" or "Bag",
+        panelName = SL:GetValue("IS_PC_OPER_MODE") and "PCPlayerInfoPanel" or "PlayerInfoPanel",
+        panelParm= 1,
+        widget = "btn_bag_recycle",
+        desc = "点击打开回收",
+        callback = function()
+            return true -- 引导完成
         end
     },
 }
@@ -653,9 +669,15 @@ function MainMission:ShowGuideTask(config, guideType)
     
     -- 尝试从不同位置获取widget
     if config.widget then
-        -- 检查是否已经打开了界面
-        local panelUI = self:_findOpenedPanelUI(config.panel, config.panelName)
-        if panelUI and panelUI[config.widget] then
+        -- 检查是否已经打开了界面（传入widget名称以支持子面板查找）
+        local panelUI = self:_findOpenedPanelUI(config.panel, config.panelName, config.widget)
+        
+        -- 特殊处理动态列表项（如 list_buy_item_0）
+        if config.widget:find("list_buy_item_") then
+            if panelUI and panelUI.list_buy then
+                targetWidget = FGUI:GetChildAt(panelUI.list_buy, 0)
+            end
+        elseif panelUI and panelUI[config.widget] then
             targetWidget = panelUI[config.widget]
         end
     end
@@ -679,6 +701,9 @@ function MainMission:ShowGuideTask(config, guideType)
             if config.callback and config.callback() then
                 -- 引导完成，关闭引导
                 self:CompleteCurrentGuide()
+            elseif config.nextStep then
+                -- 多步骤引导，继续下一步
+                self:ContinueToNextGuideStep(config.nextStep)
             end
         end)
     }
@@ -688,8 +713,32 @@ function MainMission:ShowGuideTask(config, guideType)
     self._guideTask = guideTask
 end
 
+-- 继续下一步引导
+function MainMission:ContinueToNextGuideStep(nextStep)
+    -- 关闭当前引导
+    if self._guideTask then
+        self._guideTask:Exit()
+        self._guideTask = nil
+    end
+    
+    -- 延迟开始下一步
+    SL:ScheduleOnce(handler(self, function()
+        local config = GuideConfig[nextStep]
+        if config then
+            -- 打开新界面
+            -- if config.panelName then
+            --     FGUI:Open(config.panel, config.panelName, config.panelParm)
+            -- end
+            -- 延迟显示引导
+            SL:ScheduleOnce(handler(self, function()
+                self:ShowGuideTask(config, nextStep)
+            end), 0.5)
+        end
+    end), 0.3)
+end
+
 -- 查找已打开的界面UI
-function MainMission:_findOpenedPanelUI(panel, panelName)
+function MainMission:_findOpenedPanelUI(panel, panelName, widgetName)
     -- 根据不同界面返回对应的UI
     if panel == "Bag" and panelName == "PlayerInfoPanel" then
         return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide)
@@ -697,6 +746,29 @@ function MainMission:_findOpenedPanelUI(panel, panelName)
         return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.PlayerInfoGuide)
     elseif panel == "Mount" and panelName == "mountMain" then
         return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.MountGuide)
+    elseif panel == "TreasureShop_pc" and panelName == "PCBuyPanel" then
+        return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.BuyGuide)      
+    elseif panel == "TreasureShop" and panelName == "BuyPanel" then
+        return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.BuyGuide)
+    end
+    return nil
+end
+
+-- 从NPCStoreNewPanel中查找BuyPanel
+function MainMission:_findBuyPanelFromNPCStore(packageName, panelName, buyPanelName)
+    local npcStorePanel = FGUI:GetPanel(packageName, panelName)
+    if npcStorePanel and npcStorePanel.node_root then
+        -- 遍历node_root的所有子节点查找BuyPanel
+        local childCount = FGUI:GetChildCount(npcStorePanel.node_root)
+        local buyPanel = nil
+        for i = 0, childCount - 1 do
+            local child = FGUI:GetChildAt(npcStorePanel.node_root, i)
+            if child and child.list_buy then
+                buyPanel = child
+                break
+            end
+        end
+        return buyPanel
     end
     return nil
 end
@@ -714,7 +786,8 @@ function MainMission:CompleteCurrentGuide()
     self._currentGuideType = nil
     
     -- 通知服务端任务完成
-    if taskId == 300006 or taskId == 300015 then
+    if taskId then
+        print("[Guide] 引导完成，通知服务端任务完成，taskId=" .. tostring(taskId))
         ssrMessage:sendmsgEx("Task", "onTaskTurnComplete", {taskid = taskId})
     end
 end
