@@ -5231,5 +5231,13 @@ local config = {
 		idx="TargetDec_Task_300022",
 		Dec="击杀<font color='#00FF00'>BOSS山鬼</font><br>（击杀<font color='#00FF00'>BOSS</font>可掉落高级装备及高级材料）",
 	},
+	["Name_Task_300023"] = { 
+		idx="Name_Task_300023",
+		Dec="查看武勋界面",
+	},
+	["TargetDec_Task_300023"] = { 
+		idx="TargetDec_Task_300023",
+		Dec="查看<font color='#00FF00'>武勋界面</font><br>（升级<font color='#00FF00'>武勋</font>可掉获得大量属性，并且每天可领取对应奖励）",
+	},
 }
 return config
