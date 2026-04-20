@@ -1188,7 +1188,13 @@ function Task.updateTaskInfo(actor,TaskProgress_data)
             end
 
         elseif task_targettype == _taskMBType._GameplayCompelete and taskxq then  --通关指定次数的某个玩法   暂时=留
-            
+        elseif task_targettype == _taskMBType._level and taskxq then --升级任务
+            local playlevel = currabil(actor, 0)  
+            local neednum = Task_cfg[taskid]['task_progress'] or 1
+            if playlevel >= neednum then
+                TaskProgress_data[k]['state'] = _taskState.finish
+            end
+            TaskProgress_data[k]['count'] = playlevel            
         end
     end
     return TaskProgress_data
