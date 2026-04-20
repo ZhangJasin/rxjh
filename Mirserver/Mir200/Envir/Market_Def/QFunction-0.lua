@@ -88,7 +88,7 @@ function login(actor)
         mountMain.addsx(actor)
         --上次是否出战
         if gethumvar(actor, VarCfg.U_Mount_Status) == 1 then
-            setscriptabilvalue(actor, 9, "=", scriptabil(actor, 9) + 5000)
+            --setscriptabilvalue(actor, 9, "=", scriptabil(actor, 9) + 5000)
             changeappear(actor, 5, gethumvar(actor, VarCfg.U_Mount_Take_Id))
         end
     end
@@ -735,7 +735,7 @@ end
 function horsedown(actor)
     -- print("下马")
     sethumvar(actor, VarCfg.U_Mount_Status, 0)
-    setscriptabilvalue(actor, 9, "=", scriptabil(actor, 9) - 5000)
+    --setscriptabilvalue(actor, 9, "=", scriptabil(actor, 9) - 5000)
     Message.sendmsgEx(actor, "mountMain", "updateBtnName", { status = 0 })
 end
 

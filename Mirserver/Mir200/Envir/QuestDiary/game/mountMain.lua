@@ -1277,9 +1277,9 @@ function mountMain.chuzhan(actor, data)
     updownhorser(actor)
     local baseSpeed = scriptabil(actor, 9)
     if horsestate(actor) == 0 then
-        setscriptabilvalue(actor, 9, "=", baseSpeed - 5000)
+        --setscriptabilvalue(actor, 9, "=", baseSpeed - 5000)
     else
-        setscriptabilvalue(actor, 9, "=", baseSpeed + 5000)
+        --setscriptabilvalue(actor, 9, "=", baseSpeed + 5000)
     end
     sethumvar(actor, VarCfg.U_Mount_Status, horsestate(actor))
     -- 同步更新灵兽属性buff（确保不影响灵兽属性）

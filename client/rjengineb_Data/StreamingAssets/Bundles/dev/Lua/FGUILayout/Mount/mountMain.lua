@@ -2009,7 +2009,12 @@ function mountMain:updateView()
         end
     end
     -- 更新模型和属性
-    self.modelId = Mount[self._dataForMount.allJieshu].Model
+    -- 如果有幻化模型则使用幻化模型，否则使用基础模型
+    if self._dataForMount.mountHHid and self._dataForMount.mountHHid ~= 0 then
+        self.modelId = self._dataForMount.mountHHid
+    else
+        self.modelId = Mount[self._dataForMount.allJieshu].Model
+    end
     self:updateModel()
     self:setMountDQZQSx()
     self:setMountXJZQSx()
