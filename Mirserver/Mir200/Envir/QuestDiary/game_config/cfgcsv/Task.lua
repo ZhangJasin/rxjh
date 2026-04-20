@@ -13651,7 +13651,7 @@ local config = {
 		task_receivetype=1,
 		task_level=20,
 		task_pre = {
-			[1] = 100009,
+			[1] = 100010,
 		},
 		task_targettype=4,
 		task_target_param = {
@@ -13685,9 +13685,6 @@ local config = {
 		task_weight=4002,
 		task_receivetype=1,
 		task_level=20,
-		task_pre = {
-			[1] = 100009,
-		},
 		task_targettype=4,
 		task_target_param = {
 			[1] = 3,
