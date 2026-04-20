@@ -1337,11 +1337,11 @@ local config = {
 	},
 	["TargetDec_Task_103104"] = { 
 		idx="TargetDec_Task_103104",
-		Dec="击败<font color='#00FF00'>山林黄虎</font>",
+		Dec="击败<font color='#00FF00'>山林黄虎获得虎齿</font>",
 	},
 	["TargetDec_Task_103105"] = { 
 		idx="TargetDec_Task_103105",
-		Dec="击败<font color='#00FF00'>白纹虎</font>",
+		Dec="击败<font color='#00FF00'>白纹虎获得虎皮</font>",
 	},
 	["TargetDec_Task_103106"] = { 
 		idx="TargetDec_Task_103106",
@@ -5197,6 +5197,30 @@ local config = {
 	},
 	["FinishDec_Task_103301"] = { 
 		idx="FinishDec_Task_103301",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["Name_Task_103302"] = { 
+		idx="Name_Task_103302",
+		Dec="宠物激活",
+	},
+	["TargetDec_Task_103302"] = { 
+		idx="TargetDec_Task_103302",
+		Dec="激活<font color='#00FF00'>宠物</font><br>（灵宠<font color='#00FF00'>激活</font>后玩家可<font color='#00FF00'>获得灵宠部分属性</font>）",
+	},
+	["FinishDec_Task_103302"] = { 
+		idx="FinishDec_Task_103302",
+		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
+	},
+	["Name_Task_103303"] = { 
+		idx="Name_Task_103303",
+		Dec="坐骑激活",
+	},
+	["TargetDec_Task_103303"] = { 
+		idx="TargetDec_Task_103303",
+		Dec="激活<font color='#00FF00'>坐骑</font><br>（坐骑<font color='#00FF00'>激活</font>后玩家可<font color='#00FF00'>获得坐骑部分属性</font>）",
+	},
+	["FinishDec_Task_103303"] = { 
+		idx="FinishDec_Task_103303",
 		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
 	},
 }
