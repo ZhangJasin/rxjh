@@ -976,9 +976,11 @@ function recycleEnterBag(actor, itemid, itemObj, itemCount)
         if not (a and b and c and d and e and isEquip) then return end
     end
 
+    -- 销毁进入背包的物品
+    delItemNum(actor, itemid, itemCount)
+
     -- 5. 执行回收结算
     local priceStr = isStone and matchedStonePrice or itemCfg.recycle
-
     if priceStr and priceStr ~= "" then
         local jiacheng = scriptabil(actor, 118) or 0
         local recycleList = string.split(priceStr, "|")
@@ -998,8 +1000,6 @@ function recycleEnterBag(actor, itemid, itemObj, itemCount)
                 giveitem(actor, priceId .. "#" .. (num * itemCount))
             end
         end
-        -- 销毁进入背包的物品
-        delItemNum(actor, itemid, itemCount)
     end
 end
 
@@ -1085,11 +1085,11 @@ function recycleAllItem(actor, allItemIds)
 
     --print("giveStr", giveStr)
     -- 6. 执行删除与发放
-    if giveStr ~= "" then
-        giveitem(actor, giveStr)
-    end
     if delItemMakeIndexs ~= "" then
         delitembymakeindex(actor, delItemMakeIndexs)
+    end
+    if giveStr ~= "" then
+        giveitem(actor, giveStr)
     end
 end
 
