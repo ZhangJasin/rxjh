@@ -874,7 +874,6 @@ function mountMain:setPetXhcl()
     end
     -- 已满级处理
     if self._dataForPet.allJieshu == #Pet and self.petTopTab == 0 then
-        FGUI:setVisible(self._ui.n85, false)
         FGUI:setVisible(self._ui.petXhcl, false)
         FGUI:setVisible(self._ui.n104, false) -- 与坐骑n34对齐，满级隐藏消耗文本
         print("已满级")
@@ -926,6 +925,7 @@ function mountMain:setPetXhcl()
         if #results < nowGrade or #results == 0 then
             FGUI:setVisible(self._ui.n85, false)
             FGUI:setVisible(self._ui.petXhcl, false)
+            FGUI:setVisible(self._ui.n104, false) -- 幻化满级隐藏消耗文本
             nowGrade = self._dataForPet.hhlistsj[nowName]
             if not nowGrade then
                 print("幻化等级配置无效")
