@@ -5223,5 +5223,13 @@ local config = {
 		idx="FinishDec_Task_103303",
 		Dec="感谢你能帮我泫渤派这么大的忙，接下来就继续闯荡江湖吧。",
 	},
+	["Name_Task_300022"] = { 
+		idx="Name_Task_300022",
+		Dec="击杀BOSS山鬼",
+	},
+	["TargetDec_Task_300022"] = { 
+		idx="TargetDec_Task_300022",
+		Dec="击杀<font color='#00FF00'>BOSS山鬼</font><br>（击杀<font color='#00FF00'>BOSS</font>可掉落高级装备及高级材料）",
+	},
 }
 return config
