@@ -50,6 +50,7 @@
     <image id="s4oo3z" name="icon_flag_big_0.png" path="/Images/" exported="true"/>
     <image id="s4oo40" name="icon_flag_big_1.png" path="/Images/" exported="true"/>
     <component id="qgy341" name="PCGuildEventPanel.xml" path="/" exported="true"/>
+    <image id="glg942" name="gx_bg.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

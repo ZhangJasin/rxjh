@@ -109,10 +109,12 @@ function GuildMainPanel:SelectPage(pageIdx)
 	if pageIdx == 0 then
 		SL:RequestGuildInfo()
 	elseif pageIdx == 1 then
+			SL:RequestGuildInfo()
+	elseif pageIdx == 2 then
 		FGUI:GList_setNumItems(self._ui.list_member, 0)
 		-- 成员
 		SL:RequestGuildMemberList()
-	elseif pageIdx == 2 then
+	elseif pageIdx == 3 then
 		self:OnChangeGuildListMode()
 	end
 end
@@ -440,7 +442,10 @@ end
 --end
 -----------------------------------列表界面----------------------------------
 
-
+------------------------------------贡献界面----------------------------------
+--begin
+--end
+-----------------------------------贡献界面----------------------------------
 
 function GuildMainPanel:RegisterEvent()
 	SL:RegisterLUAEvent(LUA_EVENT_GUILD_MAIN_INFO, "GuildMainPanel", handler(self, self.OnRefreshMainInfo))

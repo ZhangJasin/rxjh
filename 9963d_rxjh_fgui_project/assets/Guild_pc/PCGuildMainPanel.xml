@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1024,768" opaque="false" designImageOffsetX="20" designImageOffsetY="8" designImageAlpha="55">
-  <controller name="page_main" pages="0,,1,,2," selected="1"/>
+  <controller name="page_main" pages="0,,1,,2,,3," selected="0"/>
   <displayList>
-    <list id="n94_dkvz" name="list_page_switch" xy="847,211" size="27,201" layout="flow_vt" overflow="scroll" scrollBarFlags="128" lineGap="2" defaultItem="ui://0xwve836gl562j" selectionController="page_main">
+    <list id="n94_dkvz" name="list_page_switch" xy="847,211" size="27,275" layout="flow_vt" overflow="scroll" scrollBarFlags="128" lineGap="2" defaultItem="ui://0xwve836gl562j" selectionController="page_main">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item title="信息"/>
+      <item title="贡献"/>
       <item title="成员"/>
       <item title="列表"/>
     </list>
@@ -12,12 +13,6 @@
     <text id="n101_k2u1" name="text_title" xy="510,187" pivot="0.5,0.5" anchor="true" size="36,24" group="n173_ohcw" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="门派"/>
     <image id="n34_zah9" name="n34" src="gl563a" fileName="Images/info_panel_bg.png" xy="186,204" size="665,395" group="n43_zah9"/>
     <loader id="n1_zah9" name="icon_flag" xy="254,215" pivot="0.5,0.5" size="244,312" group="n43_zah9" aspect="true" url="ui://0xwve836s4oo3z" fill="scaleFree" clearOnPublish="true"/>
-    <component id="n4_zah9" name="btn_donate_1" src="gl5636" fileName="Components/btn_main_green.xml" xy="591,558" size="105,30" group="n43_zah9">
-      <Button title="100万" icon="ui://twx3ya3em2wevrg"/>
-    </component>
-    <component id="n5_zah9" name="btn_donate_2" src="gl5636" fileName="Components/btn_main_green.xml" xy="732,558" size="105,30" group="n43_zah9">
-      <Button title="5" icon="ui://twx3ya3em2wevrc"/>
-    </component>
     <component id="n6_zah9" name="progress_gdp" src="gl562m" fileName="Components/progress_fund.xml" xy="211,568" size="327,20" group="n43_zah9">
       <ProgressBar value="61" max="100"/>
     </component>
@@ -30,10 +25,6 @@
     <image id="n12_zah9" name="n12" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="769,339" size="24,16" group="n14_zah9" scale="-1,1"/>
     <text id="n13_zah9" name="n13" xy="652,330" size="117,34" group="n14_zah9" fontSize="12" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="门派公告"/>
     <group id="n14_zah9" name="n14" xy="652,330" size="141,34" group="n43_zah9"/>
-    <image id="n15_zah9" name="n15" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="653,533" size="24,16" group="n18_zah9"/>
-    <image id="n16_zah9" name="n16" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="770,534" size="24,16" group="n18_zah9" scale="-1,1"/>
-    <text id="n17_zah9" name="n17" xy="653,524" size="117,34" group="n18_zah9" fontSize="12" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="门派捐赠"/>
-    <group id="n18_zah9" name="n18" xy="653,524" size="141,34" group="n43_zah9"/>
     <image id="n103_7ogs" name="n103" src="gl563h" fileName="Images/content_bg_9.png" xy="593,361" size="235,162" group="n21_zah9"/>
     <graph id="n97_n1mf" name="effect_edit" xy="595,363" size="231,127" group="n21_zah9" type="rect" fillColor="#1cffffff"/>
     <component id="n112_qvdn" name="notice_scroll" src="gl5632" fileName="Components/text_scroll.xml" xy="594,363" size="231,125" group="n21_zah9">
@@ -106,7 +97,7 @@
     </list>
     <group id="n68_zah9" name="MemberView" xy="184,214" size="653,345" group="n93_dkvz" advanced="true"/>
     <group id="n93_dkvz" name="MemberPanel" xy="182,213" size="655,379" group="n173_ohcw" advanced="true">
-      <gearDisplay controller="page_main" pages="1"/>
+      <gearDisplay controller="page_main" pages="2"/>
     </group>
     <image id="n149_jxvr" name="Bg1" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="182,213" size="653,346" group="n148_jxvr"/>
     <image id="n147_jxvr" name="top" src="gl5637" fileName="Images/item_title_bg.png" xy="184,214" size="650,34" group="n148_jxvr"/>
@@ -132,9 +123,19 @@
       <relation target="n162_yj7k" sidePair="middle-middle,left-left"/>
     </text>
     <group id="n148_jxvr" name="GuildListPanel" xy="182,213" size="655,378" group="n173_ohcw" advanced="true">
-      <gearDisplay controller="page_main" pages="2"/>
+      <gearDisplay controller="page_main" pages="3"/>
     </group>
     <component id="n163_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="519,384" size="0,0" group="n173_ohcw"/>
+    <image id="n220_glg9" name="n220" src="glg942" fileName="Images/gx_bg.png" xy="181,206" size="663,378" group="n217_glg9"/>
+    <component id="n177_glg9" name="btn_donate_1" src="gl5636" fileName="Components/btn_main_green.xml" xy="253,374" size="105,30" group="n217_glg9">
+      <Button title="100万" icon="ui://twx3ya3em2wevrg"/>
+    </component>
+    <component id="n178_glg9" name="btn_donate_2" src="gl5636" fileName="Components/btn_main_green.xml" xy="465,374" size="105,30" group="n217_glg9">
+      <Button title="5" icon="ui://twx3ya3em2wevrc"/>
+    </component>
+    <group id="n217_glg9" name="GXPanel" xy="181,206" size="663,378" group="n173_ohcw" advanced="true">
+      <gearDisplay controller="page_main" pages="1"/>
+    </group>
     <group id="n173_ohcw" name="n173" xy="174,168" size="677,432" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

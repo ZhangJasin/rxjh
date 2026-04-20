@@ -55,6 +55,7 @@
     <image id="m9rdvp9" name="textinput_bg.png" path="/Images/" scale="9grid" scale9grid="6,5,2,4"/>
     <image id="r8pbvpa" name="normal_item_frame.png" path="/Images/"/>
     <component id="t5g1vpb" name="GuildEventPanel.xml" path="/" exported="true"/>
+    <image id="glg9vpc" name="gx_bg.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
