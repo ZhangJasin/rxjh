@@ -365,8 +365,8 @@ local config = {
 		task_finnpc=1,
 		task_pos = {
 			[1] = 101,
-			[2] = 88,
-			[3] = 196,
+			[2] = 92,
+			[3] = 215,
 			[4] = 1,
 		},
 		task_finpos = {
@@ -1635,8 +1635,8 @@ local config = {
 		task_finnpc=1,
 		task_pos = {
 			[1] = 102,
-			[2] = 160,
-			[3] = 247,
+			[2] = 104,
+			[3] = 248,
 			[4] = 3,
 		},
 		task_drop = {
