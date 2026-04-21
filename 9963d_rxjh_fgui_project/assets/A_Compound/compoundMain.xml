@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750">
   <displayList>
-    <component id="n2_fno5" name="n2" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="170,53"/>
-    <image id="n16_9q4z" name="n16" src="i3hbc" fileName="Images/right_bg.png" xy="494,120"/>
-    <image id="n18_9q4z" name="n18" src="9q4zf" fileName="Images/bg1.png" xy="554,188"/>
-    <list id="n4_fno5" name="n4" xy="190,123" size="149,529" overflow="scroll" lineGap="2" defaultItem="ui://7nc36bbufno51">
+    <component id="n2_fno5" name="n2" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="176,54" group="n22_iwm9"/>
+    <component id="n3_fno5" name="n3" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1147,80" group="n22_iwm9"/>
+    <image id="n20_iwm9" name="n20" src="iwm9i" fileName="Images/bg.png" xy="185,110" group="n22_iwm9"/>
+    <group id="n22_iwm9" name="n22" xy="176,54" size="1000,650"/>
+    <list id="n4_fno5" name="n4" xy="194,123" size="149,529" group="n23_iwm9" overflow="scroll" lineGap="2" defaultItem="ui://7nc36bbufno51">
       <item/>
       <item/>
     </list>
-    <list id="n6_fno5" name="n6" xy="354,125" size="131,526" overflow="scroll" margin="2,0,1,0" lineGap="3" defaultItem="ui://7nc36bbufno52">
+    <list id="n6_fno5" name="n6" xy="354,125" size="131,526" group="n23_iwm9" overflow="scroll" margin="2,0,1,0" lineGap="3" defaultItem="ui://7nc36bbufno52">
       <item/>
       <item/>
     </list>
-    <component id="n3_fno5" name="n3" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1147,80"/>
-    <list id="n9_fno5" name="n9" xy="620,204" size="404,85" layout="row" overflow="scroll" colGap="23" defaultItem="ui://st7dgeqqdssq1a" align="center" vAlign="middle"/>
-    <image id="n14_fno5" name="n14" src="i3hb9" fileName="Images/clxh.png" xy="717,146"/>
-    <image id="n15_fno5" name="n15" src="i3hbb" fileName="Images/hchd.png" xy="731,373"/>
-    <image id="n17_9q4z" name="n17" src="i3hba" fileName="Images/fgx.png" xy="346,128"/>
-    <image id="n19_9q4z" name="n19" src="9q4zg" fileName="Images/bg2.png" xy="584,426"/>
+    <group id="n23_iwm9" name="n23" xy="194,123" size="291,529"/>
+    <image id="n16_9q4z" name="n16" src="i3hbc" fileName="Images/right_bg.png" xy="500,117" size="662,570" group="n24_iwm9"/>
+    <image id="n14_fno5" name="n14" src="i3hb9" fileName="Images/clxh.png" xy="753,141" size="179,35" group="n24_iwm9"/>
+    <image id="n15_fno5" name="n15" src="i3hbb" fileName="Images/hchd.png" xy="753,374" size="179,35" group="n24_iwm9"/>
+    <image id="n19_9q4z" name="n19" src="9q4zg" fileName="Images/bg2.png" xy="621,432" size="461,125" group="n24_iwm9"/>
+    <image id="n18_9q4z" name="n18" src="9q4zf" fileName="Images/bg1.png" xy="621,195" size="461,125" group="n24_iwm9"/>
+    <list id="n9_fno5" name="n9" xy="661,216" size="366,85" group="n24_iwm9" layout="row" overflow="scroll" colGap="23" defaultItem="ui://st7dgeqqdssq1a" align="center" vAlign="middle"/>
+    <group id="n24_iwm9" name="n24" xy="500,117" size="662,570"/>
   </displayList>
 </component>

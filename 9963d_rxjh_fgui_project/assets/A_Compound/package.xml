@@ -12,6 +12,7 @@
     <image id="9q4zf" name="bg1.png" path="/Images/"/>
     <image id="9q4zg" name="bg2.png" path="/Images/"/>
     <component id="9q4zh" name="btn_third.xml" path="/Components/"/>
+    <image id="iwm9i" name="bg.png" path="/Images/"/>
   </resources>
   <publish name=""/>
 </packageDescription>
