@@ -24876,7 +24876,7 @@ local config = {
 			ID=1580014,
 			SkillID=1580014,
 			SkillLevel=1,
-			Power=600,
+			Power=400,
 		},
 	},
 	[1580015] = { 
@@ -24884,7 +24884,7 @@ local config = {
 			ID=1580015,
 			SkillID=1580015,
 			SkillLevel=1,
-			Power=1000,
+			Power=500,
 		},
 	},
 	[1580016] = { 
@@ -24892,7 +24892,7 @@ local config = {
 			ID=1580016,
 			SkillID=1580016,
 			SkillLevel=1,
-			Power=1200,
+			Power=600,
 		},
 	},
 	[1580017] = { 
@@ -24900,7 +24900,7 @@ local config = {
 			ID=1580017,
 			SkillID=1580017,
 			SkillLevel=1,
-			Power=1500,
+			Power=800,
 		},
 	},
 	[1580018] = { 
@@ -24908,7 +24908,7 @@ local config = {
 			ID=1580018,
 			SkillID=1580018,
 			SkillLevel=1,
-			Power=3000,
+			Power=1000,
 		},
 	},
 	[1580019] = { 
@@ -24916,7 +24916,7 @@ local config = {
 			ID=1580019,
 			SkillID=1580019,
 			SkillLevel=1,
-			Power=6000,
+			Power=1200,
 		},
 	},
 	[1580020] = { 

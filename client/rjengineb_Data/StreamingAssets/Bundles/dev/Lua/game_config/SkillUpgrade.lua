@@ -38556,7 +38556,7 @@ local config = {
 			SkillID=1580014,
 			SkillLevel=1,
 			Name="兔子普攻3目标",
-			Power=600,
+			Power=400,
 		},
 	},
 	[1580015] = { 
@@ -38565,7 +38565,7 @@ local config = {
 			SkillID=1580015,
 			SkillLevel=1,
 			Name="僵尸宝宝普攻3目标",
-			Power=1000,
+			Power=500,
 		},
 	},
 	[1580016] = { 
@@ -38574,7 +38574,7 @@ local config = {
 			SkillID=1580016,
 			SkillLevel=1,
 			Name="僵尸宝宝普攻4目标",
-			Power=1200,
+			Power=600,
 		},
 	},
 	[1580017] = { 
@@ -38583,7 +38583,7 @@ local config = {
 			SkillID=1580017,
 			SkillLevel=1,
 			Name="蟠龙普攻4目标",
-			Power=1500,
+			Power=800,
 		},
 	},
 	[1580018] = { 
@@ -38592,7 +38592,7 @@ local config = {
 			SkillID=1580018,
 			SkillLevel=1,
 			Name="蟠龙普攻5目标",
-			Power=3000,
+			Power=1000,
 		},
 	},
 	[1580019] = { 
@@ -38601,7 +38601,7 @@ local config = {
 			SkillID=1580019,
 			SkillLevel=1,
 			Name="蟠龙普攻6目标",
-			Power=6000,
+			Power=1200,
 		},
 	},
 	[1580020] = { 
