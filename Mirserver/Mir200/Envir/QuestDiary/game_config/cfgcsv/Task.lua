@@ -1721,6 +1721,7 @@ local config = {
 		},
 		task_pro = {
 			[1] = 102009,
+			[2] = 300024,
 		},
 		task_targettype=1,
 		task_target_param = {
@@ -14360,6 +14361,37 @@ local config = {
 		task_targettype=4,
 		task_turntype=2,
 		task_turn_param=16,
+		task_fintype=1,
+		task_finnpc=1,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 7,
+				[3] = 50,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 300,
+			},
+		},
+		task_findial="FinishDec_Task_300015",
+	},
+	[300024] = { 
+		idx=300024,
+		task_name="Name_Task_300024",
+		task_targetdec="TargetDec_Task_300024",
+		task_type=3,
+		task_weight=4023,
+		task_receivetype=1,
+		task_level=10,
+		task_pre = {
+			[1] = 102008,
+		},
+		task_targettype=4,
+		task_target_param="9",
+		task_turntype=2,
+		task_turn_param=2,
 		task_fintype=1,
 		task_finnpc=1,
 		task_drop = {

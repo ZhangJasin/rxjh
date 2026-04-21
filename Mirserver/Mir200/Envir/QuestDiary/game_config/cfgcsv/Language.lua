@@ -5239,5 +5239,13 @@ local config = {
 		idx="TargetDec_Task_300023",
 		Dec="查看<font color='#00FF00'>武勋界面</font><br>（升级<font color='#00FF00'>武勋</font>可掉获得大量属性，并且每天可领取对应奖励）",
 	},
+	["Name_Task_300024"] = { 
+		idx="Name_Task_300024",
+		Dec="再次使用完内功点",
+	},
+	["TargetDec_Task_300024"] = { 
+		idx="TargetDec_Task_300024",
+		Dec="再次<font color='#00FF00'>使用完内功点</font><br>（每次升级即可获得<font color='#00FF00'>内功点</font>，内功点可以用于学习内功，获得属性增强）",
+	},
 }
 return config
