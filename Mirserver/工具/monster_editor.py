@@ -816,18 +816,23 @@ class MonsterEditor:
             else:
                 attr_string = self.current_row.get('attr_str', '')
 
-            # 合并移动速度为 {值1,值2} 格式
-            speed1 = self.movespeed_entry1.get().strip()
-            speed2 = self.movespeed_entry2.get().strip()
+            # 合并移动速度为 {值1,值2} 格式，并格式化数字
+            speed1 = self._format_number(self.movespeed_entry1.get().strip())
+            speed2 = self._format_number(self.movespeed_entry2.get().strip())
             movespeed_value = f'{{{speed1},{speed2}}}'
 
-            # 合并银两为 最小值#最大值 格式
-            silver_min = self.silver_entry_min.get().strip()
-            silver_max = self.silver_entry_max.get().strip()
+            # 合并银两为 最小值#最大值 格式，并格式化数字
+            silver_min = self._format_number(self.silver_entry_min.get().strip())
+            silver_max = self._format_number(self.silver_entry_max.get().strip())
             silver_value = f'{silver_min}#{silver_max}'
 
             # 获取显示名称
             show_name = self.show_name_entry.get()
+
+            # 格式化基础属性值
+            level_value = self._format_number(self.basic_entries['level'].get())
+            exp_value = self._format_number(self.basic_entries['exp'].get())
+            honor_exp_value = self._format_number(self.basic_entries['honor_exp'].get())
 
             if self.file_type == '.xls':
                 rb = xlrd.open_workbook(self.file_path, formatting_info=False)
@@ -835,11 +840,11 @@ class MonsterEditor:
                 sheet = wb.get_sheet(0)
 
                 sheet.write(row, 1, show_name)
-                sheet.write(row, 3, self.basic_entries['level'].get())
+                sheet.write(row, 3, level_value)
                 sheet.write(row, 5, attr_string)
                 sheet.write(row, 6, movespeed_value)
-                sheet.write(row, 8, self.basic_entries['exp'].get())
-                sheet.write(row, 9, self.basic_entries['honor_exp'].get())
+                sheet.write(row, 8, exp_value)
+                sheet.write(row, 9, honor_exp_value)
                 sheet.write(row, 10, silver_value)
 
                 tmp = self.file_path + '.tmp'
@@ -849,11 +854,11 @@ class MonsterEditor:
             else:
                 ws = self.wb.active
                 ws.cell(row=row, column=2).value = show_name
-                ws.cell(row=row, column=4).value = self.basic_entries['level'].get()
+                ws.cell(row=row, column=4).value = level_value
                 ws.cell(row=row, column=6).value = attr_string
                 ws.cell(row=row, column=7).value = movespeed_value
-                ws.cell(row=row, column=9).value = self.basic_entries['exp'].get()
-                ws.cell(row=row, column=10).value = self.basic_entries['honor_exp'].get()
+                ws.cell(row=row, column=9).value = exp_value
+                ws.cell(row=row, column=10).value = honor_exp_value
                 ws.cell(row=row, column=11).value = silver_value
                 self.wb.save(self.file_path)
 
@@ -864,6 +869,23 @@ class MonsterEditor:
         except Exception as e:
             self.logger.error(f'自动保存失败: {str(e)}', exc_info=True)
             self.logger.error(f'错误详情 - 当前怪物: {self.current_row.get("name") if self.current_row else "None"}, 文件: {self.file_path}')
+
+    def _format_number(self, value):
+        """格式化数字：如果数字有.0则转换为整数，否则保持原样"""
+        if value is None or value == '':
+            return value
+        try:
+            # 尝试转换为浮点数
+            num = float(value)
+            # 如果是整数（小数部分为0），则返回整数形式
+            if num == int(num):
+                return str(int(num))
+            else:
+                # 否则保持原样（小数）
+                return str(num)
+        except (ValueError, TypeError):
+            # 如果不是数字，保持原样
+            return value
 
     def _save_data(self):
         """保存数据到Excel"""
@@ -879,21 +901,26 @@ class MonsterEditor:
             attr_string = self.attr_string_var.get()
             self.logger.info(f'属性字符串: {attr_string}')
 
-            # 合并移动速度为 {值1,值2} 格式
-            speed1 = self.movespeed_entry1.get().strip()
-            speed2 = self.movespeed_entry2.get().strip()
+            # 合并移动速度为 {值1,值2} 格式，并格式化数字
+            speed1 = self._format_number(self.movespeed_entry1.get().strip())
+            speed2 = self._format_number(self.movespeed_entry2.get().strip())
             movespeed_value = f'{{{speed1},{speed2}}}'
             self.logger.info(f'移动速度: {movespeed_value}')
 
-            # 合并银两为 最小值#最大值 格式
-            silver_min = self.silver_entry_min.get().strip()
-            silver_max = self.silver_entry_max.get().strip()
+            # 合并银两为 最小值#最大值 格式，并格式化数字
+            silver_min = self._format_number(self.silver_entry_min.get().strip())
+            silver_max = self._format_number(self.silver_entry_max.get().strip())
             silver_value = f'{silver_min}#{silver_max}'
             self.logger.info(f'银两: {silver_value}')
 
             # 获取显示名称
             show_name = self.show_name_entry.get()
             self.logger.info(f'显示名称: {show_name}')
+
+            # 格式化基础属性值
+            level_value = self._format_number(self.basic_entries['level'].get())
+            exp_value = self._format_number(self.basic_entries['exp'].get())
+            honor_exp_value = self._format_number(self.basic_entries['honor_exp'].get())
 
             # 生成属性字符串（如果属性列表为空，保留原始属性字符串）
             if self.attr_tree.get_children():
@@ -912,11 +939,11 @@ class MonsterEditor:
 
                 # B列=显示名称(索引1), D列=等级(索引3), F列=Props(索引5), G列=移速(索引6), I列=经验(索引8), J列=历练(索引9), K列=银两(索引10)
                 sheet.write(row, 1, show_name)
-                sheet.write(row, 3, self.basic_entries['level'].get())
+                sheet.write(row, 3, level_value)
                 sheet.write(row, 5, attr_string)  # F列 Props
                 sheet.write(row, 6, movespeed_value)
-                sheet.write(row, 8, self.basic_entries['exp'].get())
-                sheet.write(row, 9, self.basic_entries['honor_exp'].get())
+                sheet.write(row, 8, exp_value)
+                sheet.write(row, 9, honor_exp_value)
                 sheet.write(row, 10, silver_value)
 
                 tmp = self.file_path + '.tmp'
@@ -928,11 +955,11 @@ class MonsterEditor:
                 ws = self.wb.active
                 # B列=显示名称(列2), D列=等级(列4), F列=Props(列6), G列=移速(列7), I列=经验(列9), J列=历练(列10), K列=银两(列11)
                 ws.cell(row=row, column=2).value = show_name
-                ws.cell(row=row, column=4).value = self.basic_entries['level'].get()
+                ws.cell(row=row, column=4).value = level_value
                 ws.cell(row=row, column=6).value = attr_string  # F列 Props
                 ws.cell(row=row, column=7).value = movespeed_value
-                ws.cell(row=row, column=9).value = self.basic_entries['exp'].get()
-                ws.cell(row=row, column=10).value = self.basic_entries['honor_exp'].get()
+                ws.cell(row=row, column=9).value = exp_value
+                ws.cell(row=row, column=10).value = honor_exp_value
                 ws.cell(row=row, column=11).value = silver_value
                 self.wb.save(self.file_path)
 
