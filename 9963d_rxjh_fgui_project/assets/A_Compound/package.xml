@@ -4,8 +4,14 @@
     <component id="fno50" name="compoundMain.xml" path="/" exported="true"/>
     <component id="fno51" name="group_first.xml" path="/Components/"/>
     <component id="fno52" name="group_second.xml" path="/Components/"/>
-    <component id="fno53" name="title.xml" path="/Components/"/>
     <component id="fno54" name="Items.xml" path="/Components/"/>
+    <image id="i3hb9" name="clxh.png" path="/Images/"/>
+    <image id="i3hba" name="fgx.png" path="/Images/"/>
+    <image id="i3hbb" name="hchd.png" path="/Images/"/>
+    <image id="i3hbc" name="right_bg.png" path="/Images/"/>
+    <image id="9q4zf" name="bg1.png" path="/Images/"/>
+    <image id="9q4zg" name="bg2.png" path="/Images/"/>
+    <component id="9q4zh" name="btn_third.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

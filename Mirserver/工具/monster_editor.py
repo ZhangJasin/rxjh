@@ -33,6 +33,9 @@ class MonsterEditor:
         if not self.logger.handlers:
             self.logger.addHandler(fh)
 
+        # 自动保存防抖定时器
+        self.auto_save_timer = None
+
         # 基础路径设置
         self.base_dir = os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else os.path.dirname(os.path.abspath(__file__))
         self.file_path = None
@@ -214,7 +217,11 @@ class MonsterEditor:
 
             entry = tk.Entry(field_frame, font=('微软雅黑', 10), width=30)
             entry.pack(side=tk.LEFT, padx=5, fill=tk.X, expand=True)
+            entry.bind('<FocusOut>', lambda e: self._auto_save())
             self.basic_entries[key] = entry
+
+        # 显示名称字段绑定事件
+        self.show_name_entry.bind('<FocusOut>', lambda e: self._auto_save())
 
         # 移动速度拆分字段
         movespeed_frame = tk.Frame(basic_container)
@@ -229,10 +236,12 @@ class MonsterEditor:
         tk.Label(speed_values_frame, text='步长(毫米/步):', font=('微软雅黑', 9)).pack(side=tk.LEFT, padx=(0, 2))
         self.movespeed_entry1 = tk.Entry(speed_values_frame, font=('微软雅黑', 10), width=10)
         self.movespeed_entry1.pack(side=tk.LEFT, padx=2)
+        self.movespeed_entry1.bind('<FocusOut>', lambda e: self._auto_save())
 
         tk.Label(speed_values_frame, text='步频(毫秒/步):', font=('微软雅黑', 9)).pack(side=tk.LEFT, padx=(10, 2))
         self.movespeed_entry2 = tk.Entry(speed_values_frame, font=('微软雅黑', 10), width=10)
         self.movespeed_entry2.pack(side=tk.LEFT, padx=2)
+        self.movespeed_entry2.bind('<FocusOut>', lambda e: self._auto_save())
 
         # 银两拆分字段
         silver_frame = tk.Frame(basic_container)
@@ -247,10 +256,12 @@ class MonsterEditor:
         tk.Label(silver_values_frame, text='最小值:', font=('微软雅黑', 9)).pack(side=tk.LEFT, padx=(0, 2))
         self.silver_entry_min = tk.Entry(silver_values_frame, font=('微软雅黑', 10), width=10)
         self.silver_entry_min.pack(side=tk.LEFT, padx=2)
+        self.silver_entry_min.bind('<FocusOut>', lambda e: self._auto_save())
 
         tk.Label(silver_values_frame, text='最大值:', font=('微软雅黑', 9)).pack(side=tk.LEFT, padx=(10, 2))
         self.silver_entry_max = tk.Entry(silver_values_frame, font=('微软雅黑', 10), width=10)
         self.silver_entry_max.pack(side=tk.LEFT, padx=2)
+        self.silver_entry_max.bind('<FocusOut>', lambda e: self._auto_save())
 
         # 分隔线
         sep = tk.Frame(basic_container, height=2, bg='#ddd')
@@ -684,6 +695,7 @@ class MonsterEditor:
             new_value = value_entry.get()
             self.attr_tree.item(item, values=(attr_id, attr_name, new_value))
             self._generate_attr_string()  # 自动更新属性字符串
+            self._auto_save()  # 自动保存
             dialog.destroy()
 
         btn_frame = tk.Frame(dialog)
@@ -714,6 +726,7 @@ class MonsterEditor:
         
         self.attr_tree.insert('', tk.END, values=(attr_id, attr_name, 0))
         self._generate_attr_string()  # 自动更新属性字符串
+        self._auto_save()  # 自动保存
 
     def _add_custom_attr(self):
         """添加自定义属性"""
@@ -738,6 +751,7 @@ class MonsterEditor:
                 attr_name = self._get_attr_name_by_id(attr_id)
                 self.attr_tree.insert('', tk.END, values=(attr_id, attr_name, attr_value))
                 self._generate_attr_string()  # 自动更新属性字符串
+                self._auto_save()  # 自动保存
                 dialog.destroy()
             except:
                 messagebox.showerror('错误', '请输入有效的属性ID和值')
@@ -745,9 +759,9 @@ class MonsterEditor:
         btn_frame = tk.Frame(dialog)
         btn_frame.pack(pady=10)
 
-        tk.Button(btn_frame, text='确定', command=on_ok, bg='#4CAF50', 
+        tk.Button(btn_frame, text='确定', command=on_ok, bg='#4CAF50',
                  fg='white', font=('微软雅黑', 9)).pack(side=tk.LEFT, padx=5)
-        tk.Button(btn_frame, text='取消', command=dialog.destroy, bg='#9E9E9E', 
+        tk.Button(btn_frame, text='取消', command=dialog.destroy, bg='#9E9E9E',
                  fg='white', font=('微软雅黑', 9)).pack(side=tk.LEFT, padx=5)
 
         # 居中显示
@@ -762,10 +776,11 @@ class MonsterEditor:
         if not selected:
             messagebox.showinfo('提示', '请先选择要删除的属性')
             return
-        
+
         for item in selected:
             self.attr_tree.delete(item)
         self._generate_attr_string()  # 自动更新属性字符串
+        self._auto_save()  # 自动保存
 
     def _clear_all_attrs(self):
         """清空所有属性"""
@@ -773,6 +788,82 @@ class MonsterEditor:
             for item in self.attr_tree.get_children():
                 self.attr_tree.delete(item)
             self._generate_attr_string()  # 自动更新属性字符串
+            self._auto_save()  # 自动保存
+
+    def _auto_save(self):
+        """自动保存（带防抖的静默保存）"""
+        # 取消之前的定时器
+        if self.auto_save_timer:
+            self.root.after_cancel(self.auto_save_timer)
+        
+        # 延迟200ms执行保存，避免频繁保存
+        self.auto_save_timer = self.root.after(200, self._do_auto_save)
+    
+    def _do_auto_save(self):
+        """执行实际的自动保存"""
+        if not self.current_row or not self.file_path:
+            self.logger.warning('自动保存跳过: 未选择怪物或未打开文件')
+            return
+
+        try:
+            row = self.current_row['row']
+            self.logger.info(f'开始自动保存: {self.current_row["name"]} (行: {row})')
+
+            # 生成属性字符串（如果属性列表为空，保留原始属性字符串）
+            if self.attr_tree.get_children():
+                self._generate_attr_string()
+                attr_string = self.attr_string_var.get()
+            else:
+                attr_string = self.current_row.get('attr_str', '')
+
+            # 合并移动速度为 {值1,值2} 格式
+            speed1 = self.movespeed_entry1.get().strip()
+            speed2 = self.movespeed_entry2.get().strip()
+            movespeed_value = f'{{{speed1},{speed2}}}'
+
+            # 合并银两为 最小值#最大值 格式
+            silver_min = self.silver_entry_min.get().strip()
+            silver_max = self.silver_entry_max.get().strip()
+            silver_value = f'{silver_min}#{silver_max}'
+
+            # 获取显示名称
+            show_name = self.show_name_entry.get()
+
+            if self.file_type == '.xls':
+                rb = xlrd.open_workbook(self.file_path, formatting_info=False)
+                wb = xl_copy(rb)
+                sheet = wb.get_sheet(0)
+
+                sheet.write(row, 1, show_name)
+                sheet.write(row, 3, self.basic_entries['level'].get())
+                sheet.write(row, 5, attr_string)
+                sheet.write(row, 6, movespeed_value)
+                sheet.write(row, 8, self.basic_entries['exp'].get())
+                sheet.write(row, 9, self.basic_entries['honor_exp'].get())
+                sheet.write(row, 10, silver_value)
+
+                tmp = self.file_path + '.tmp'
+                wb.save(tmp)
+                os.replace(tmp, self.file_path)
+                self.xlrd_book = xlrd.open_workbook(self.file_path, formatting_info=False)
+            else:
+                ws = self.wb.active
+                ws.cell(row=row, column=2).value = show_name
+                ws.cell(row=row, column=4).value = self.basic_entries['level'].get()
+                ws.cell(row=row, column=6).value = attr_string
+                ws.cell(row=row, column=7).value = movespeed_value
+                ws.cell(row=row, column=9).value = self.basic_entries['exp'].get()
+                ws.cell(row=row, column=10).value = self.basic_entries['honor_exp'].get()
+                ws.cell(row=row, column=11).value = silver_value
+                self.wb.save(self.file_path)
+
+            # 更新数据模型
+            self.current_row['show_name'] = show_name
+            self.current_row['attr_str'] = attr_string
+            self.logger.info(f'自动保存成功: {self.current_row["name"]}')
+        except Exception as e:
+            self.logger.error(f'自动保存失败: {str(e)}', exc_info=True)
+            self.logger.error(f'错误详情 - 当前怪物: {self.current_row.get("name") if self.current_row else "None"}, 文件: {self.file_path}')
 
     def _save_data(self):
         """保存数据到Excel"""
