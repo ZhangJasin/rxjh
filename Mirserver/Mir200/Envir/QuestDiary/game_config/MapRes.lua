@@ -2,7 +2,7 @@ local config = {
 	["101"] = { 
 		SourceId="101",
 		MapName="γω²ͺΕΙ",
-		Born={209,314,50},
+		Born={209,281,50},
 		Music={{0, 10004}},
 		MapSize={420,362},
 	},
