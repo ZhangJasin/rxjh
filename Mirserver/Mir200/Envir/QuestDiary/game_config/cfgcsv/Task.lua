@@ -7651,7 +7651,7 @@ local config = {
 			[1] = 200002,
 		},
 		task_pro = {
-			[1] = 200004,
+			[1] = 200005,
 		},
 		task_fintype=2,
 		task_finnpc=4,
@@ -7689,12 +7689,6 @@ local config = {
 		task_weight=1004,
 		task_receivetype=1,
 		task_level=10,
-		task_pre = {
-			[1] = 200003,
-		},
-		task_pro = {
-			[1] = 200005,
-		},
 		task_targettype=1,
 		task_target_param = {
 			[1] = {
@@ -7744,7 +7738,7 @@ local config = {
 		task_receivetype=1,
 		task_level=10,
 		task_pre = {
-			[1] = 200004,
+			[1] = 200003,
 		},
 		task_pro = {
 			[1] = 200006,
