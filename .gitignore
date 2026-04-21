@@ -32,8 +32,6 @@ Mirserver/Config.Json
 client/热血江湖工具
 .qwen
 # PyInstaller build artifacts
-build/
-dist/
 *.spec
 
 # Python cache
