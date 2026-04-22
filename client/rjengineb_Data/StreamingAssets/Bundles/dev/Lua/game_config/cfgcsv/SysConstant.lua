@@ -1,13 +1,13 @@
 local config = { 
 	["Num_Daily_RewardTask"] = { 
 		ID="Num_Daily_RewardTask",
-		Value="6",
-		Dec="每日默认悬赏任务次数",
+		Value="10",
+		Dec="每日默认门派任务次数",
 	},
 	["Num_DailyRefresh_RewardTask"] = { 
 		ID="Num_DailyRefresh_RewardTask",
 		Value="3",
-		Dec="每日免费刷新悬赏任务次数",
+		Dec="每日免费刷新门派任务次数",
 	},
 	["Num_DailyRefresh_Time"] = { 
 		ID="Num_DailyRefresh_Time",
@@ -118,7 +118,7 @@ local config = {
 	},
 	["DailyNum_SectDonate"] = { 
 		ID="DailyNum_SectDonate",
-		Value="10",
+		Value="5",
 	},
 	["SectDonate_Currency_Num1"] = { 
 		ID="SectDonate_Currency_Num1",
