@@ -31,6 +31,12 @@ function PCGuildMainPanel:Create()
 	self.handler_showMemberPopup = handler(self, self.ShowMemberPopup)
 	self.handler_onMemberListRenderer = handler(self, self.OnMemberItemRenderer)
 	self.handler_onGuildListRenderer = handler(self, self.OnGuildListRenderer)
+	
+	self.handler_onActListRenderer = handler(self, self.OnActListRenderer)
+	self.handler_onTaskAwardListRenderer = handler(self, self.OnTaskAwardListRenderer)
+	self.handler_onTaskStarListRenderer = handler(self, self.OnTaskStarListRenderer)
+
+	
 	self._oldNotice = nil --行会公告编辑之前内容
 	-- 成员操作弹出框
 	self._cur_targetId = nil
@@ -74,10 +80,29 @@ function PCGuildMainPanel:Create()
 		FGUI:Open("Guild_pc", "PCGuildPermissionSetting")
 	end)
 
+	
+	FGUI:setOnClickEvent(self._ui.btn_refresh, function (eventData)
+    	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+	end)
+	FGUI:setOnClickEvent(self._ui.btn_comp, function (eventData)
+    	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+	end)
+	FGUI:setOnClickEvent(self._ui.btn_sub, function (eventData)
+    	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
+
+	end)
+
 	FGUI:GList_setVirtual(self._ui.list_member)
 	FGUI:GList_itemRenderer(self._ui.list_member, self.handler_onMemberListRenderer)
 	FGUI:GList_itemRenderer(self._ui.list_guild, self.handler_onGuildListRenderer)
 	FGUI:GList_addOnClickItemEvent(self._ui.list_page_switch, self.handler_onClickPageSwitchEvent)
+	
+	FGUI:GList_itemRenderer(self._ui.actList, self.handler_onActListRenderer)
+	FGUI:GList_itemRenderer(self._ui.awardList, self.handler_onTaskAwardListRenderer)
+	FGUI:GList_itemRenderer(self._ui.starList, self.handler_onTaskStarListRenderer)
+
 	self:UpdateNoticeEditState(false)
 end
 
@@ -442,6 +467,18 @@ end
 
 ------------------------------------贡献界面----------------------------------
 --begin
+function GuildMainPanel:OnActListRenderer(idx, item)
+	
+end
+function GuildMainPanel:OnTaskAwardListRenderer(idx, item)
+	
+end
+function GuildMainPanel:OnTaskStarListRenderer(idx, item)
+	
+end
+function GuildMainPanel:RefreshTaskUI(_,_taskCount,_taskId,_refreshCount) 
+
+end
 --end
 -----------------------------------贡献界面----------------------------------
 
@@ -451,6 +488,7 @@ function PCGuildMainPanel:RegisterEvent()
 	SL:RegisterLUAEvent(LUA_EVENT_GUILD_MEMBER_LIST, "PCGuildMainPanel", handler(self, self.RefreshMemberList))
 	SL:RegisterLUAEvent(LUA_EVENT_GUILD_EDITOR_NOTICE_FAIL, "PCGuildMainPanel", handler(self, self.OnEditNoticeFail))
 	SL:RegisterLUAEvent(LUA_EVENT_GUILD_LIST, "PCGuildMainPanel", handler(self, self.OnRefreshGuildList))
+	SL:RegisterNetMsg(ssrNetMsgCfg.Guild_TaskData, handler(self, self.RefreshTaskUI))
 end
 
 function PCGuildMainPanel:RemoveEvent()
@@ -459,6 +497,7 @@ function PCGuildMainPanel:RemoveEvent()
 	SL:UnRegisterLUAEvent(LUA_EVENT_GUILD_MEMBER_LIST, "PCGuildMainPanel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_GUILD_EDITOR_NOTICE_FAIL, "PCGuildMainPanel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_GUILD_LIST, "PCGuildMainPanel")
+	SL:UnRegisterNetMsg(ssrNetMsgCfg.Guild_TaskData)
 end
 
 return PCGuildMainPanel

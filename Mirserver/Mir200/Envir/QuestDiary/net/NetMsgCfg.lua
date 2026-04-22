@@ -10,8 +10,6 @@ ssrNetMsgCfg.moveItem                      = "moveItem"                         
 ssrNetMsgCfg.FashionSystem                 = "FashionSystem"                                        -- 时装系统
 ssrNetMsgCfg.wuxun                         = "wuxun"                                                -- 武勋系统
 ssrNetMsgCfg.quickItem                     = "quickItem"                                            -- 快捷道具
-ssrNetMsgCfg.Guild                         = "Guild"                                                -- 公会
-
 ssrNetMsgCfg.mountMain                     = "mountMain"                                            -- 坐骑
 ssrNetMsgCfg.npcDialog                     = "npcDialog"                                            -- NPC对话框
 ssrNetMsgCfg.bag                           = "bag"                                                  -- 背包
@@ -28,7 +26,10 @@ ssrNetMsgCfg.USER_MESSAGE_ID  = 1000000
 
 ssrNetMsgCfg.TransferInfo                  = "TransferInfo"                                             -- 转职
 ssrNetMsgCfg.TransferInfo_RefreshTaskUI    = 1100000                                             
-ssrNetMsgCfg.TransferInfo_RefreshUI        = 1100001                                             
+ssrNetMsgCfg.TransferInfo_RefreshUI        = 1100001       
+
+ssrNetMsgCfg.Guild                         = "Guild"                                             -- 公会
+ssrNetMsgCfg.Guild_TaskData                = 1100010                                                 
 
 local t = {}
 for msgName, msgID in pairs(ssrNetMsgCfg) do

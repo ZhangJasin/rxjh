@@ -44,6 +44,9 @@ ssrNetMsgCfg.TransferInfo                  = "TransferInfo"                     
 ssrNetMsgCfg.TransferInfo_RefreshTaskUI    = 1100000                                             
 ssrNetMsgCfg.TransferInfo_RefreshUI        = 1100001
 
+ssrNetMsgCfg.Guild                  = "Guild"                                             -- 转职
+ssrNetMsgCfg.Guild_TaskData    = 1100010       
+
 local t                       = {}
 for msgName, msgID in pairs(ssrNetMsgCfg) do
     t[msgName] = msgID
