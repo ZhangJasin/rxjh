@@ -15,6 +15,7 @@
     <component id="rqcpo" name="btn_sub_pc.xml" path="/Components/"/>
     <component id="rqcpp" name="item.xml" path="/Components/"/>
     <component id="rqcpr" name="btn_sub.xml" path="/Components/"/>
+    <component id="jcczs" name="equipCollect.xml" path="/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

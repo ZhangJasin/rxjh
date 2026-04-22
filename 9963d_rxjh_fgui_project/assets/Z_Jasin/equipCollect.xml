@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <graph id="n0_jccz" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n1_jccz" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="1000,650">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n2_jccz" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1136,76">
+      <relation target="n1_jccz" sidePair="right-right,top-top"/>
+    </component>
+    <text id="n3_jccz" name="text_title" xy="667,62" pivot="0.5,0" anchor="true" size="100,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" text="装备图鉴">
+      <relation target="n1_jccz" sidePair="center-center,top-top"/>
+    </text>
+  </displayList>
+</component>

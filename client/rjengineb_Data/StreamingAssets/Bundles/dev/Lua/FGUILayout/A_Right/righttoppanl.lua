@@ -108,6 +108,12 @@ function righttoppanl:Create()
         FGUI:Open("Z_Jasin", isPC and "PCHuodongPanel" or "HuodongPanel", {}, FGUI_LAYER.NORMAL,
             { destroyTime = 1, classPath = "FGUILayout/Z_Jasin/HuodongPanel" })
     end)
+    -- 装备图鉴按钮点击事件绑定
+    FGUI:setOnClickEvent(self._righttop.btn_zbtj, function()
+        --TODO:新 切换 不同端UI
+        FGUI:Open("Z_Jasin", isPC and "equipCollect" or "equipCollect", {}, FGUI_LAYER.NORMAL,
+            { destroyTime = 1, classPath = "FGUILayout/Z_Jasin/zbtj/equipCollect" })
+    end)
 
     -- 订阅数据层事件
     self:SubscribeEvents()
