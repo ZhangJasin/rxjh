@@ -61,6 +61,10 @@
     <image id="wivevpg" name="mpz.png" path="/Images/"/>
     <image id="wivevph" name="zxz.png" path="/Images/"/>
     <component id="wivevpi" name="act_item.xml" path="/Components/"/>
+    <component id="gpy8vpj" name="itemRoot.xml" path="/Components/" exported="true"/>
+    <image id="gpy8vpk" name="star.png" path="/Images/"/>
+    <component id="gpy8vpl" name="btn_green.xml" path="/Components/"/>
+    <image id="gpy8vpm" name="btn_green.png" path="/Images/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

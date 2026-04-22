@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="366,39" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n3_wive" name="n3" src="wive43" fileName="Images/act_bg.png" xy="1,0" scale="0.6,0.6"/>
+    <image id="n4_wive" name="img" src="wive44" fileName="Images/boss.png" xy="1,1" scale="0.6,0.6"/>
+    <richtext id="n5_wive" name="con" xy="122,2" size="234,36" fontSize="12" color="#372a08" leading="0" autoSize="none" text="每周三晚20:00-23:30&#xD;&#xA;组队挑战门派BOSS，掉落丰厚奖励"/>
+  </displayList>
+  <Button/>
+</component>

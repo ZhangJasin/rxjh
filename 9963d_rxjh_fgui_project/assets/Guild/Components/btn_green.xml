@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="125,52" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n3_gpy8" name="n3" src="gpy8vpm" fileName="Images/btn_green.png" xy="2,1" size="119,48"/>
+    <text id="n4_gpy8" name="title" xy="3,4" size="115,43" fontSize="18" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="提交道具"/>
+  </displayList>
+  <Button/>
+</component>

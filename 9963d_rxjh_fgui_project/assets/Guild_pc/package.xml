@@ -55,6 +55,12 @@
     <image id="wive44" name="boss.png" path="/Images/"/>
     <image id="wive45" name="mpz.png" path="/Images/"/>
     <image id="wive46" name="zxz.png" path="/Images/"/>
+    <image id="gpy847" name="icon_coin.png" path="/Images/"/>
+    <component id="gpy848" name="act_item.xml" path="/Components/"/>
+    <image id="gpy849" name="star.png" path="/Images/"/>
+    <image id="gpy84b" name="btn_green.png" path="/Images/"/>
+    <component id="gpy84c" name="itemRoot.xml" path="/Components/" exported="true"/>
+    <component id="gpy84h" name="btn_green.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

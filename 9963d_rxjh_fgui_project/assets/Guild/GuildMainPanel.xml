@@ -114,7 +114,7 @@
       <gearDisplay controller="page_main" pages="3"/>
     </group>
     <component id="n163_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="174,696" size="0,0" group="n169_whi9"/>
-    <image id="n215_glg9" name="n215" src="glg9vpc" fileName="Images/gx_bg.png" xy="171,112" size="990,571" group="n214_glg9"/>
+    <image id="n215_glg9" name="n215" src="glg9vpc" fileName="Images/gx_bg.png" xy="169,112" size="990,571" group="n214_glg9"/>
     <component id="n174_glg9" name="btn_donate_1" src="zah9n" fileName="Components/btn_main_green.xml" xy="261,335" size="136,42" group="n214_glg9">
       <Button title="捐献"/>
     </component>
@@ -128,13 +128,29 @@
     <text id="n220_wive" name="cost1" xy="329,382" size="47,26" group="n214_glg9" fontSize="18" color="#372a08" text="100w"/>
     <image id="n221_wive" name="n221" src="zah9p" fileName="Images/icon_gold.png" xy="563,382" group="n214_glg9"/>
     <text id="n222_wive" name="cost2" xy="597,382" size="14,26" group="n214_glg9" fontSize="18" color="#372a08" text="5"/>
-    <text id="n223_wive" name="gxCount" xy="371,226" size="176,26" group="n214_glg9" fontSize="18" color="#372a08" text="今日剩余捐献次数：5"/>
-    <list id="n224_wive" name="actList" xy="195,477" size="528,167" group="n214_glg9" overflow="scroll" lineGap="4" defaultItem="ui://tsu6gfnowivevpi">
+    <text id="n223_wive" name="gxCount" xy="371,224" size="176,26" group="n214_glg9" fontSize="18" color="#372a08" text="今日剩余捐献次数：5"/>
+    <list id="n224_wive" name="actList" xy="193,475" size="528,178" group="n214_glg9" overflow="scroll" lineGap="4" defaultItem="ui://tsu6gfnowivevpi"/>
+    <list id="n225_gpy8" name="awardList" xy="748,482" size="390,104" group="n214_glg9" layout="row" overflow="scroll" defaultItem="ui://tsu6gfnogpy8vpj" align="center" vAlign="middle"/>
+    <component id="n226_gpy8" name="btn_refresh" src="zah9n" fileName="Components/btn_main_green.xml" xy="991,592" size="136,42" group="n214_glg9">
+      <Button title="接取任务"/>
+    </component>
+    <component id="n227_gpy8" name="btn_comp" src="zah9n" fileName="Components/btn_main_green.xml" xy="763,592" size="136,42" group="n214_glg9">
+      <Button title="刷新"/>
+    </component>
+    <richtext id="n228_gpy8" name="rCount" xy="765,635" size="132,24" group="n214_glg9" fontSize="16" color="#372a08" text="剩余刷新次数(0/3)"/>
+    <text id="n229_gpy8" name="taskCount" xy="821,224" size="240,26" group="n214_glg9" fontSize="18" color="#372a08" text="今日可完成门派任务次数：10"/>
+    <text id="n230_gpy8" name="taskStar" xy="764,279" size="94,26" group="n214_glg9" fontSize="18" color="#372a08" text="任务星级："/>
+    <list id="n231_gpy8" name="starList" xy="861,272" size="223,39" group="n214_glg9" layout="row" overflow="scroll" defaultItem="ui://tsu6gfnogpy8vpk">
+      <item/>
+      <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <group id="n214_glg9" name="GXPanel" xy="171,112" size="990,571" group="n169_whi9" advanced="true">
+    <text id="n232_gpy8" name="taskNeed" xy="764,321" size="94,26" group="n214_glg9" fontSize="18" color="#372a08" text="任务要求："/>
+    <text id="n233_gpy8" name="taskCon" xy="861,321" size="201,26" group="n214_glg9" fontSize="18" color="#372a08" text="击败大块头山贼（0/30）"/>
+    <component id="n234_gpy8" name="btn_sub" src="gpy8vpl" fileName="Components/tjBtn.xml" xy="865,370" group="n214_glg9"/>
+    <group id="n214_glg9" name="GXPanel" xy="169,112" size="990,571" group="n169_whi9" advanced="true">
       <gearDisplay controller="page_main" pages="1"/>
     </group>
     <group id="n169_whi9" name="n169" xy="167,50" size="1000,650" advanced="true">
