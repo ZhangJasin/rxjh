@@ -38312,6 +38312,7 @@ local config = {
 			SkillID=1580001,
 			SkillLevel=1,
 			Name="龙猫普攻",
+			Power=100,
 		},
 	},
 	[1580002] = { 
@@ -38320,6 +38321,7 @@ local config = {
 			SkillID=1580002,
 			SkillLevel=1,
 			Name="雪翼雕普攻",
+			Power=200,
 		},
 	},
 	[1580003] = { 
@@ -38328,6 +38330,7 @@ local config = {
 			SkillID=1580003,
 			SkillLevel=1,
 			Name="企鹅普攻",
+			Power=300,
 		},
 	},
 	[1580004] = { 
@@ -38336,6 +38339,7 @@ local config = {
 			SkillID=1580004,
 			SkillLevel=1,
 			Name="稻草人普攻",
+			Power=400,
 		},
 	},
 	[1580005] = { 
@@ -38344,6 +38348,7 @@ local config = {
 			SkillID=1580005,
 			SkillLevel=1,
 			Name="小女巫普攻",
+			Power=500,
 		},
 	},
 	[1580006] = { 
@@ -38352,6 +38357,7 @@ local config = {
 			SkillID=1580006,
 			SkillLevel=1,
 			Name="兔子普攻",
+			Power=600,
 		},
 	},
 	[1580007] = { 
@@ -38368,6 +38374,7 @@ local config = {
 			SkillID=1580008,
 			SkillLevel=1,
 			Name="僵尸宝宝普攻",
+			Power=700,
 		},
 	},
 	[1580009] = { 
@@ -38376,6 +38383,7 @@ local config = {
 			SkillID=1580009,
 			SkillLevel=1,
 			Name="蟠龙普攻",
+			Power=800,
 		},
 	},
 	[1580101] = { 
