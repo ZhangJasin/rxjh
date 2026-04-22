@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="198,226">
+  <controller name="active" pages="0,未激活,1,激活" selected="0"/>
+  <displayList>
+    <image id="n0_lm8n" name="n0" src="lm8n13" fileName="Images/9.png" xy="0,0">
+      <gearDisplay controller="active" pages="1"/>
+    </image>
+    <image id="n1_lm8n" name="n1" src="lm8n14" fileName="Images/10.png" xy="0,0">
+      <gearDisplay controller="active" pages="0"/>
+    </image>
+    <image id="n2_lm8n" name="n2" src="lm8n15" fileName="Images/11.png" xy="0,0">
+      <gearDisplay controller="active" pages="0"/>
+    </image>
+    <text id="n3_lm8n" name="n3" xy="49,13" size="100,34" fontSize="24" text="装备名字">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n4_lm8n" name="n4" xy="54,132" size="95,32" fontSize="22" text="收藏值+1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

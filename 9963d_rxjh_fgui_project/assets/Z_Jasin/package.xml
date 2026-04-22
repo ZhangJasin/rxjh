@@ -22,6 +22,14 @@
     <component id="slmlw" name="btn_equipCollect.xml" path="/Components/"/>
     <image id="slmlx" name="3.png" path="/Images/" exported="true"/>
     <component id="slmly" name="btn_equipCollectTips.xml" path="/Components/"/>
+    <component id="lm8nz" name="equipType.xml" path="/Components/"/>
+    <image id="lm8n10" name="6.png" path="/Images/" exported="true"/>
+    <image id="lm8n11" name="7.png" path="/Images/" exported="true"/>
+    <image id="lm8n12" name="8.png" path="/Images/" exported="true"/>
+    <image id="lm8n13" name="9.png" path="/Images/" exported="true"/>
+    <image id="lm8n14" name="10.png" path="/Images/" exported="true"/>
+    <image id="lm8n15" name="11.png" path="/Images/" exported="true"/>
+    <component id="lm8n16" name="equipItem.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

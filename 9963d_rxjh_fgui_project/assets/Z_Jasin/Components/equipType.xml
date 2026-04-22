@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="905,284">
+  <controller name="type" pages="0,上品,1,极品,2,神品" selected="2"/>
+  <displayList>
+    <image id="n14_lm8n" name="bg1" src="lm8n10" fileName="Images/6.png" xy="1,1" size="905,57" group="n4_lm8n"/>
+    <text id="n5_lm8n" name="name1" xy="63,7" size="52,34" group="n4_lm8n" fontSize="24" color="#ffff00" text="上品">
+      <relation target="" sidePair="middle-middle"/>
+    </text>
+    <group id="n4_lm8n" name="box1" xy="1,1" size="905,57" advanced="true">
+      <gearDisplay controller="type" pages="0"/>
+    </group>
+    <image id="n15_lm8n" name="bg2" src="lm8n11" fileName="Images/7.png" xy="1,1" size="905,57" group="n8_lm8n"/>
+    <text id="n7_lm8n" name="name2" xy="63,8" size="52,34" group="n8_lm8n" fontSize="24" color="#ffff00" text="极品">
+      <relation target="" sidePair="middle-middle"/>
+    </text>
+    <group id="n8_lm8n" name="box2" xy="1,1" size="905,57" advanced="true">
+      <gearDisplay controller="type" pages="1"/>
+    </group>
+    <image id="n13_lm8n" name="bg3" src="lm8n12" fileName="Images/8.png" xy="1,1" size="905,57" group="n11_lm8n"/>
+    <text id="n10_lm8n" name="name3" xy="63,8" size="52,34" group="n11_lm8n" fontSize="24" color="#ffff00" text="神品">
+      <relation target="" sidePair="middle-middle"/>
+    </text>
+    <group id="n11_lm8n" name="box3" xy="1,1" size="905,57" advanced="true">
+      <gearDisplay controller="type" pages="2"/>
+    </group>
+    <list id="n16_lm8n" name="n16" xy="0,51" size="905,226" layout="flow_hz" lineItemCount="5" defaultItem="ui://cog9akwflm8n16" autoItemSize="true"/>
+  </displayList>
+</component>
