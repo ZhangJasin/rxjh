@@ -51,6 +51,10 @@
     <image id="s4oo40" name="icon_flag_big_1.png" path="/Images/" exported="true"/>
     <component id="qgy341" name="PCGuildEventPanel.xml" path="/" exported="true"/>
     <image id="glg942" name="gx_bg.png" path="/Images/" exported="true"/>
+    <image id="wive43" name="act_bg.png" path="/Images/"/>
+    <image id="wive44" name="boss.png" path="/Images/"/>
+    <image id="wive45" name="mpz.png" path="/Images/"/>
+    <image id="wive46" name="zxz.png" path="/Images/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

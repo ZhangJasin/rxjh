@@ -56,6 +56,10 @@
     <image id="r8pbvpa" name="normal_item_frame.png" path="/Images/"/>
     <component id="t5g1vpb" name="GuildEventPanel.xml" path="/" exported="true"/>
     <image id="glg9vpc" name="gx_bg.png" path="/Images/" exported="true"/>
+    <image id="wivevpd" name="act_bg.png" path="/Images/"/>
+    <image id="wivevpe" name="boss.png" path="/Images/"/>
+    <image id="wivevpg" name="mpz.png" path="/Images/"/>
+    <image id="wivevph" name="zxz.png" path="/Images/"/>
   </resources>
   <publish name=""/>
 </packageDescription>
