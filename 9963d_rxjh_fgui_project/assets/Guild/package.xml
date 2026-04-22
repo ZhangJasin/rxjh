@@ -60,6 +60,7 @@
     <image id="wivevpe" name="boss.png" path="/Images/"/>
     <image id="wivevpg" name="mpz.png" path="/Images/"/>
     <image id="wivevph" name="zxz.png" path="/Images/"/>
+    <component id="wivevpi" name="act_item.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

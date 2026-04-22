@@ -125,7 +125,7 @@ local config = {
 		Value = {
 			[1] = 1,
 			[2] = 1000000,
-			[3] = 500,
+			[3] = 50,
 		},
 	},
 	["SectDonate_Currency_Num2"] = { 
@@ -133,7 +133,7 @@ local config = {
 		Value = {
 			[1] = 2,
 			[2] = 5,
-			[3] = 5000,
+			[3] = 200,
 		},
 	},
 	["Recommend_Qigong"] = { 
