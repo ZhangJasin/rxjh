@@ -16,6 +16,12 @@
     <component id="rqcpp" name="item.xml" path="/Components/"/>
     <component id="rqcpr" name="btn_sub.xml" path="/Components/"/>
     <component id="jcczs" name="equipCollect.xml" path="/" exported="true"/>
+    <image id="slmlt" name="2.png" path="/Images/" exported="true" scale="9grid" scale9grid="62,48,124,96"/>
+    <image id="slmlu" name="4.png" path="/Images/" exported="true"/>
+    <image id="slmlv" name="5.png" path="/Images/" exported="true"/>
+    <component id="slmlw" name="btn_equipCollect.xml" path="/Components/"/>
+    <image id="slmlx" name="3.png" path="/Images/" exported="true"/>
+    <component id="slmly" name="btn_equipCollectTips.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>
