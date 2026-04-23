@@ -73,7 +73,7 @@ VarCfg.U_Mount_BASE_SPEED                = "U41" -- 角色基础速度
 
 VarCfg.U_REWARD_FINISH                   = "U42" -- 当日门派任务完成次数  过0点重置
 VarCfg.U_REWARD_REFUSH                   = "U43" -- 每日门派任务免费刷新次数 3  过0点重置
-VarCfg.U_REWARD_INDEX                    = "U44" -- 当前接取的门派任务下标，0 未领取  过0点重置
+VarCfg.U_REWARD_INDEX                    = "U44" -- 当前接取的门派任务下标
 VarCfg.U_REWARD_STATE                    = "U45" -- 当前接取状态
 VarCfg.U_REWARD_MAX_COUNT                = "U46" -- 今日可完成门派任务最大次数 默认 6 用道具可+1 过0点重置
 

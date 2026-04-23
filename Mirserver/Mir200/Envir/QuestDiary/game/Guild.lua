@@ -96,7 +96,7 @@ local function _onDelTask(actor)
             sethumvar(actor, VarCfg.T_TaskProgress_data, tbl2json(curTaskData))
             Message.sendmsgEx(actor, "MainMission", "UpdataTask", {param1 = curTaskData})
         end
-        sethumvar(actor, VarCfg.U_REWARD_REFUSH, 0)
+        sethumvar(actor, VarCfg.U_REWARD_INDEX, 0)
         sethumvar(actor, VarCfg.U_REWARD_STATE, 0)
     end    
 end
@@ -108,6 +108,7 @@ local function _onRefreshTask(actor)
         local level = level(actor)        
         local newTaskId = _getRandomGuildTask(zy,level) or 0
         sethumvar(actor, VarCfg.U_REWARD_INDEX, newTaskId)
+        sethumvar(actor, VarCfg.U_REWARD_STATE, 0)
     end    
 end
 
@@ -135,7 +136,7 @@ function Guild.updateTask(actor,taskid)
        local taskCount = gethumvar(actor, VarCfg.U_REWARD_FINISH) or 0
        taskCount = taskCount + 1
        sethumvar(actor, VarCfg.U_REWARD_FINISH, taskCount)
-       local allCount = tonumber(SysConstant['Num_Daily_RewardTask']["Value"])
+       local allCount = tonumber(SysConstant['Num_Daily_RewardTask']["Value"]) or 10
        if taskCount < allCount then
             _onRefreshTask(actor)
        end
@@ -152,7 +153,7 @@ function Guild.pickTask(actor)
     end
         
     local finishCount = gethumvar(actor, VarCfg.U_REWARD_FINISH) or 0
-    local maxCount = tonumber(SysConstant['Num_Daily_RewardTask']["Value"]) or 6
+    local maxCount = tonumber(SysConstant['Num_Daily_RewardTask']["Value"]) or 10
     if finishCount >= maxCount then
         sendmsg(actor, 9, "今日门派任务次数已用完，请明天再来")
         return
@@ -182,11 +183,43 @@ function Guild.pickTask(actor)
     Guild.getData(actor)
 end
 
-function Guild.compTask(actor)
+function Guild.compTask(actor,nType)
+    if nType == 1 then
+        --快速完成任务
+    else
+          --正常完成任务
+    end
     Guild.getData(actor)
 end
 
 function Guild.abortTask(actor)
+    local curTimes = gethumvar(actor, VarCfg.U_REWARD_FINISH) or 0
+    local maxTimes = tonumber(SysConstant['Num_Daily_RewardTask']["Value"]) or 10
+    if curTimes >= maxTimes then
+        return
+    end
+    local curState = gethumvar(actor, VarCfg.U_REWARD_STATE) or 0
+    if curState ~= 1 then
+        sendmsg(actor, 9, "还未接取任务！！！")
+        return
+    end
+    local curTaskId = gethumvar(actor, VarCfg.U_REWARD_INDEX) or 0
+    local taskData = Task.getCurTask(actor)
+    local curTaskData = taskData[""..curTaskId]
+    if not curTaskData then
+        sendmsg(actor, 9, "还未接取任务！！！")
+        return
+    end
+    sethumvar(actor, VarCfg.U_REWARD_FINISH, curTimes + 1)
+    sethumvar(actor, VarCfg.U_REWARD_INDEX, 0)
+    sethumvar(actor, VarCfg.U_REWARD_STATE, 0)
+
+    taskData[""..curTaskId] = nil
+    newdeletetask(actor, curTaskId)
+    sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(taskData))  
+    Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = curTaskId}) 
+    
+    _onRefreshTask(actor)
     Guild.getData(actor)
 end
 
