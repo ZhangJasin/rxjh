@@ -21,6 +21,7 @@ local _taskType = {
     _zhuxian  = 1,                 -- 主线任务
     _Transfer = 2,                 -- 转职任务
     _zhixian  = 3,                 -- 支线任务
+    _guild  = 6,                   -- 门派任务
 }
 -- 任务目标类型
 local _taskMBType = {
@@ -881,6 +882,10 @@ function Task.getReward(actor, data)
     --print("state",state)
     --if state == _taskState.finish or not Task_cfg[taskid]['task_targettype']  then 
     if state == _taskState.finish then 
+        if Task_cfg[taskid]['task_type'] == _taskType._guild then
+            Guild.updateTask(actor,taskid)
+            return
+        end
         TaskProgress_data[""..taskid] = nil
         newdeletetask(actor, taskid)
         --自动接取任务

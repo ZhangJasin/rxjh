@@ -1,6 +1,8 @@
 
 Guild = {}
 local filname = "Guild"
+local Task_cfg  =  require("Envir/QuestDiary/game_config/cfgcsv/Task.lua")
+local TaskPool_cfg  =  require("Envir/QuestDiary/game_config/cfgcsv/guildTaskPool.lua")
 -- function Guild.buy(actor,data)
 --     local num = money(actor, 20)
 --     local total = tonumber(data.count) * tonumber(data.price)
@@ -15,16 +17,73 @@ local filname = "Guild"
 --     Message.sendmsgEx(actor, "GuildMainPanel","UpdataPage2")
 -- end
 
+local function _getCurTaskJinDu(actor,taskId)
+    local taskDataList = Task.getCurTask(actor)
+    local curTaskData = taskDataList[""..taskId] 
+    if curTaskData then
+        return curTaskData['count'] or 0
+    end
+    return 0
+end
 function Guild.getData(actor)
     local gxCount = gethumvar(actor, VarCfg.U_Donate_Num) or 0
     local taskCount = gethumvar(actor, VarCfg.U_REWARD_FINISH) or 0
     local freeCount = gethumvar(actor, VarCfg.U_REWARD_REFUSH) or 0
     local taskId = 103145--gethumvar(actor, VarCfg.U_REWARD_INDEX) or 0
     local taskState= gethumvar(actor, VarCfg.U_REWARD_STATE) or 0
+    local curJindu = _getCurTaskJinDu(actor,taskId)
 
-    Message.sendmsg(actor, ssrNetMsgCfg.Guild_RetData,  gxCount,taskCount,freeCount,{taskid=taskId,state=taskState })
+    Message.sendmsg(actor, ssrNetMsgCfg.Guild_RetData,  gxCount,taskCount,freeCount,{taskid=taskId,state=taskState,jindu=curJindu })
 end
-local function _onRefreshTask(actor)
+
+
+-- 根据玩家等级从任务池中随机获取任务
+local function _getRandomGuildTask(zy,lv)
+    -- 根据玩家等级获取对应的任务池配置
+    local taskPool = nil
+    for _, pool in pairs(TaskPool_cfg or {}) do
+        if lv >= (pool.minLv or 0) and lv <= (pool.maxLv or 999) then
+            taskPool = pool
+            break
+        end
+    end
+    
+    if not taskPool then
+        -- 默认使用第一个任务池
+        taskPool = TaskPool_cfg[1]
+    end
+    
+    if not taskPool then
+        return nil
+    end
+    
+    -- 根据概率随机选择星级
+    local rate_arr = taskPool.rate_arr or {}
+    local totalRate = 0
+    for _, rate in pairs(rate_arr) do
+        totalRate = totalRate + rate
+    end
+    
+    local randValue = math.random(1, totalRate)
+    local curRate = 0
+    local starIndex = 1
+    for i, rate in ipairs(rate_arr) do
+        curRate = curRate + rate
+        if randValue <= curRate then
+            starIndex = i
+            break
+        end
+    end
+    
+    -- 根据星级获取任务列表  
+    local taskList = zy == 2 and taskPool.taskList2[starIndex] or taskPool.taskList1[starIndex]
+    if not taskList or #taskList == 0 then
+        return nil
+    end
+    
+    -- 随机选择一个任务
+    local taskIndex = math.random(1, #taskList)
+    return taskList[taskIndex]
 end
 
 local function _onDelTask(actor)
@@ -42,7 +101,84 @@ local function _onDelTask(actor)
     end    
 end
 
+local function _onRefreshTask(actor)
+    local guildId = targetinfo(actor, "GUILDID") or 0
+    local zy = targetinfo(actor, "GOODEVILID")
+    if guildId ~= 0 and zy ~= 0 then
+        local level = level(actor)        
+        local newTaskId = _getRandomGuildTask(zy,level) or 0
+        sethumvar(actor, VarCfg.U_REWARD_INDEX, newTaskId)
+    end    
+end
+
+function Guild.updateTask(actor,taskid)
+    local curTaskId = gethumvar(actor, VarCfg.U_REWARD_INDEX) or 0
+    if curTaskId ~= taskid then
+        return
+    end
+    local TaskProgress_data = Task.getCurTask(actor)
+    local state =  0
+    if TaskProgress_data[""..taskid] then
+        state = TaskProgress_data[""..taskid]['state']
+    end
+    if state == 2 then 
+       TaskProgress_data[""..taskid] = nil
+       newdeletetask(actor, taskid)
+       sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(TaskProgress_data))  
+       Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})  
+
+       if Task_cfg[taskid]['task_drop'] then           
+            Player.giveItemByJobTable(actor, Task_cfg[taskid]['task_drop'], 1, 1)
+       end
+
+       --更新任务次数，刷新任务
+       local taskCount = gethumvar(actor, VarCfg.U_REWARD_FINISH) or 0
+       taskCount = taskCount + 1
+       sethumvar(actor, VarCfg.U_REWARD_FINISH, taskCount)
+       local allCount = tonumber(SysConstant['Num_Daily_RewardTask']["Value"])
+       if taskCount < allCount then
+            _onRefreshTask(actor)
+       end
+
+       Guild.getData(actor)
+    end
+end
+
 function Guild.pickTask(actor)
+    local guildId = targetinfo(actor, "GUILDID") or 0
+    if guildId == 0 then
+        sendmsg(actor, 9, "您还没有加入门派，无法接取门派任务")
+        return
+    end
+        
+    local finishCount = gethumvar(actor, VarCfg.U_REWARD_FINISH) or 0
+    local maxCount = tonumber(SysConstant['Num_Daily_RewardTask']["Value"]) or 6
+    if finishCount >= maxCount then
+        sendmsg(actor, 9, "今日门派任务次数已用完，请明天再来")
+        return
+    end
+
+    local taskState = gethumvar(actor, VarCfg.U_REWARD_STATE) or 0
+    if taskState == 1 then
+        sendmsg(actor, 9, "您已接取了门派任务，请先完成或放弃当前任务")
+        return
+    end 
+    
+    local taskId = gethumvar(actor, VarCfg.U_REWARD_INDEX) or 0
+    if not Task_cfg[taskId] then
+        sendmsg(actor, 9, "获取任务失败，请稍后重试")
+        return
+    end
+
+    sethumvar(actor, VarCfg.U_REWARD_STATE, 1) 
+    
+    local curTaskData = Task.getCurTask(actor)
+    curTaskData[""..taskId] = {count = 0, state = 1}
+    sethumvar(actor, VarCfg.T_TaskProgress_data, tbl2json(curTaskData))
+    newpicktask(actor, taskId,0)
+    Message.sendmsgEx(actor, "MainMission", "UpdataTask", {param1 = curTaskData})
+    
+    sendmsg(actor, 9, "接取门派任务成功")
     Guild.getData(actor)
 end
 
@@ -70,6 +206,7 @@ local function _onreset(actor)
 
     _onDelTask(actor)
     _onRefreshTask(actor)
+    Guild.getData(actor)
 end
 GameEvent.add(EventCfg.onResetday, function (actor)
     _onreset(actor)

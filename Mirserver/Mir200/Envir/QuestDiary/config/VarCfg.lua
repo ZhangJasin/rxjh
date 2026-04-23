@@ -98,8 +98,8 @@ VarCfg.U_PETS_Take_Base                  = "U58" -- 当前出战宠物id（已废弃）
 VarCfg.U_SLBYCD                          = "U61" -- 神龙庇佑CD
 VarCfg.U_YZWCD                           = "U62" -- 影之舞CD
 
-VarCfg.U_LOOP_TASK_ID                    = "U63" -- 当前跑环任务Id
-VarCfg.U_LOOP_TASK_TIME                  = "U64" -- 今日跑环任务剩余次数
+-- VarCfg.U_LOOP_TASK_ID                    = "U63" -- 当前跑环任务Id（已废弃）
+-- VarCfg.U_LOOP_TASK_TIME                  = "U64" -- 今日跑环任务剩余次数（已废弃）
 
 VarCfg.U_YuYi_Level                      = "U65" -- 羽翼等级
 VarCfg.U_YuYi_Wear_DefSkill              = "U66" -- 特殊羽翼激活被动技能ID

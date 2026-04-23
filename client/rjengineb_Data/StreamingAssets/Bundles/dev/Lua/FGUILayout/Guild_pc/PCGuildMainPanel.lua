@@ -495,6 +495,19 @@ function PCGuildMainPanel:FilterRewardsByJob(tab)
     return filteredRewards
 end
 
+function PCGuildMainPanel:getTaskCon()
+	local curTaskCfg = Task_cfg[self._taskId]
+	if not curTaskCfg then
+		return ""
+	end
+	local curLangCfg = Language[curTaskCfg.task_targetdec]
+	if not curLangCfg then
+		return ""
+	end
+	local jindu = curTaskCfg.task_progress or 1
+
+	return string.format("%s(%s/%s)",curLangCfg.Dec or "",self._curJinDu > jindu and jindu or self._curJinDu,jindu)
+end
 function PCGuildMainPanel:OnUpdateGXUI()
 	-- 检查界面是否存在
 	if not self._ui then
@@ -524,7 +537,7 @@ function PCGuildMainPanel:OnUpdateGXUI()
 
 	FGUI:GList_setNumItems(self._ui.starList, TaskStar_cfg[self._taskId] and TaskStar_cfg[self._taskId].star or 0)
 	
-	FGUI:GRichTextField_setText(self._ui.taskCon, Task_cfg[self._taskId] and Language[Task_cfg[self._taskId]['task_targetdec']]['Dec'] or "")
+	FGUI:GRichTextField_setText(self._ui.taskCon, self:getTaskCon())
 
 	self._taskAwards = self:FilterRewardsByJob(Task_cfg[self._taskId] and Task_cfg[self._taskId]['task_drop'])
 	FGUI:GList_setNumItems(self._ui.awardList, #self._taskAwards)
@@ -606,6 +619,7 @@ function PCGuildMainPanel:RefreshGXUI(_,gxCount,taskCount,freeCount,data)
 		if dataObj then
 			self._taskId = dataObj.taskid
 			self._staskState = dataObj.state
+			self._curJinDu = dataObj.jindu
 		end
 	end
 	self:OnUpdateGXUI()
