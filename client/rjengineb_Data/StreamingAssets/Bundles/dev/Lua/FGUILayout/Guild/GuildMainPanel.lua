@@ -1,6 +1,7 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local GuildMainPanel = class("GuildMainPanel", BaseFGUILayout)
 
+local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 local Task_cfg = require("game_config/cfgcsv/Task")
 local Language = require("game_config/cfgcsv/Language")
 local TaskStar_cfg = require("game_config/cfgcsv/guildTaskStar")
@@ -113,12 +114,13 @@ function GuildMainPanel:Create()
 end
 
 function GuildMainPanel:Enter(page)
+	self:RegisterEvent()
+
 	local index = page - 1
 	self:SelectPage(index)
 	FGUI:GList_setSelectedIndex(self._ui.list_page_switch, index)
 	self:OnRefreshMainInfo()
 	SL:ComponentAttach(SLDefine.SUIComponentTable.GuildMain, self._ui.Node_attach)
-    self:RegisterEvent()
 end
 
 function GuildMainPanel:Exit()
@@ -476,6 +478,25 @@ end
 
 ------------------------------------贡献界面----------------------------------
 --begin
+function GuildMainPanel:FilterRewardsByJob(tab)
+    if not tab then return {} end
+    
+    local myJob = SL:GetValue("JOB")
+    local mySex = SL:GetValue("SEX")
+    local myZy = SL:GetValue("GOODEVILID") or 0
+    local filteredRewards = {}
+    local index = 0
+    
+    for _, v in pairs(tab) do
+        local needjob,needsex,needzy = v[1],v[4] or 0,v[5] or 0 
+        if (needjob == myJob or needjob == 9) and (needsex == mySex or needsex == 0) and (needzy == myZy or needzy == 0) then
+            index = index + 1
+            filteredRewards[index] = v
+        end
+    end
+    
+    return filteredRewards
+end
 function GuildMainPanel:OnUpdateGXUI()
 	-- 检查界面是否存在
 	if not self._ui then
@@ -503,6 +524,14 @@ function GuildMainPanel:OnUpdateGXUI()
 		FGUI:GTextField_setText(self._ui.taskCount, string.format("今日可完成门派任务次数：%s", remainTaskCount))
 	end
 	
+	FGUI:GList_setNumItems(self._ui.starList, TaskStar_cfg[self._taskId] and TaskStar_cfg[self._taskId].star or 0)
+	
+	FGUI:GRichTextField_setText(self._ui.taskCon, Task_cfg[self._taskId] and Language[Task_cfg[self._taskId]['task_targetdec']]['Dec'] or "")
+
+	self._taskAwards = self:FilterRewardsByJob(Task_cfg[self._taskId] and Task_cfg[self._taskId]['task_drop'])
+	FGUI:GList_setNumItems(self._ui.awardList, #self._taskAwards)
+
+
 	-- 刷新免费刷新次数显示
 	if self._ui.rCount then
 		if self._staskState == 0 then
@@ -538,7 +567,27 @@ function GuildMainPanel:OnActListRenderer(idx, item)
 	end
 end
 function GuildMainPanel:OnTaskAwardListRenderer(idx, item)
-	
+	if FGUI:GetChildCount(item) > 0 then
+        FGUI:RemoveChildAt(item, 0, true)
+    end
+
+    if self._taskAwards then
+        local reward = self._taskAwards[idx + 1]
+        if reward then
+            local itemData = SL:GetValue("ITEM_DATA", reward[1])
+            if itemData then
+                local extData = {
+                    hideTip = false,
+                    itemTipData = itemData,
+                    clickCallback = false,
+                    doubleClickCallback = true,
+                    bgVisible = true,
+                    OverLap = reward[2]
+                }
+                ItemUtil:ItemShow_Create(itemData, item, extData)
+            end
+        end
+    end
 end
 function GuildMainPanel:OnTaskStarListRenderer(idx, item)
 	

@@ -8,8 +8,7 @@ local IsPC = SL:GetValue("IS_PC_OPER_MODE")
 
 -- 引擎界面相关
 MainAssistData        = SL:RequireFile("FGUILayout/Main/MainAssistData")
-GuildMainPanelData    = SL:RequireFile("FGUILayout/Guild/GuildMainPanelData")    -- 公会
-ssrMessage:RegisterNetMsg(ssrNetMsgCfg.GuildMainPanel, GuildMainPanelData)
+
 MainPlayerData = SL:RequireFile("FGUILayout/Main/MainPlayerData")             -- 主玩家界面
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.MainPlayer, MainPlayerData)
 
