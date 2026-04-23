@@ -151,7 +151,7 @@ function equipCollect:equipListRenderer(data, idx, item)
     --加载文案
     local name = FGUI:GetChild(item, "n3")
     local value = FGUI:GetChild(item, "n4")
-    FGUI:GTextField_setText(name, data.equipName)
+    FGUI:GTextField_setText(name, data.showName)
     FGUI:GTextField_setText(value, string.format("收藏值+%d", data.value))
     local dataConf = SL:GetValue("ITEM_DATA", data.idx)
     local color = SL:GetColorByStyleId(dataConf.Color) or "#000000"
