@@ -23,7 +23,7 @@
     <component id="gl5633" name="list_member_item.xml" path="/Components/"/>
     <component id="gl5634" name="list_permission_item.xml" path="/Components/"/>
     <component id="gl5635" name="list_rank_item.xml" path="/Components/"/>
-    <component id="gl5636" name="btn_main_green.xml" path="/Components/"/>
+    <component id="gl5636" name="btn_main_green.xml" path="/Components/" exported="true"/>
     <image id="gl5637" name="item_title_bg.png" path="/Images/" scale="9grid" scale9grid="17,16,10,12"/>
     <image id="gl5638" name="icon_flag.png" path="/Images/" exported="true"/>
     <image id="gl563a" name="info_panel_bg.png" path="/Images/"/>
@@ -51,16 +51,16 @@
     <image id="s4oo40" name="icon_flag_big_1.png" path="/Images/" exported="true"/>
     <component id="qgy341" name="PCGuildEventPanel.xml" path="/" exported="true"/>
     <image id="glg942" name="gx_bg.png" path="/Images/" exported="true"/>
-    <image id="wive43" name="act_bg.png" path="/Images/"/>
-    <image id="wive44" name="boss.png" path="/Images/"/>
-    <image id="wive45" name="mpz.png" path="/Images/"/>
-    <image id="wive46" name="zxz.png" path="/Images/"/>
+    <image id="wive43" name="act_bg.png" path="/Images/" exported="true"/>
+    <image id="wive44" name="boss.png" path="/Images/" exported="true"/>
+    <image id="wive45" name="mpz.png" path="/Images/" exported="true"/>
+    <image id="wive46" name="zxz.png" path="/Images/" exported="true"/>
     <image id="gpy847" name="icon_coin.png" path="/Images/"/>
-    <component id="gpy848" name="act_item.xml" path="/Components/"/>
-    <image id="gpy849" name="star.png" path="/Images/"/>
-    <image id="gpy84b" name="btn_green.png" path="/Images/"/>
+    <component id="gpy848" name="act_item.xml" path="/Components/" exported="true"/>
+    <image id="gpy849" name="star.png" path="/Images/" exported="true"/>
+    <image id="gpy84b" name="btn_green.png" path="/Images/" exported="true"/>
     <component id="gpy84c" name="itemRoot.xml" path="/Components/" exported="true"/>
-    <component id="gpy84h" name="btn_green.xml" path="/Components/"/>
+    <component id="gpy84h" name="btn_green.xml" path="/Components/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

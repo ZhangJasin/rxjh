@@ -139,9 +139,9 @@
     <image id="n227_gpy8" name="n227" src="gpy847" fileName="Images/icon_coin.png" xy="242,386" size="30,21" group="n243_gpy8"/>
     <text id="n228_gpy8" name="cost1" xy="276,388" size="34,20" group="n243_gpy8" fontSize="13" color="#372a08" text="100w"/>
     <image id="n229_gpy8" name="n229" src="gl562x" fileName="Images/icon_gold.png" xy="433,388" size="30,21" group="n243_gpy8"/>
+    <text id="n231_gpy8" name="gxCount" xy="312,283" size="10,19" group="n243_gpy8" fontSize="12" color="#372a08" text=""/>
     <text id="n230_gpy8" name="cost2" xy="470,389" size="34,20" group="n243_gpy8" fontSize="13" color="#372a08" autoSize="none" text="5"/>
-    <text id="n231_gpy8" name="gxCount" xy="312,283" size="119,19" group="n243_gpy8" fontSize="12" color="#372a08" text="今日剩余捐献次数：5"/>
-    <list id="n232_gpy8" name="actList" xy="194,448" size="355,127" group="n243_gpy8" overflow="scroll" lineGap="4" defaultItem="ui://0xwve836gpy848"/>
+    <list id="n232_gpy8" name="actList" xy="193,448" size="355,127" group="n243_gpy8" overflow="scroll" lineGap="4" defaultItem="ui://0xwve836gpy848"/>
     <list id="n233_gpy8" name="awardList" xy="567,449" size="259,78" group="n243_gpy8" layout="row" overflow="scroll" defaultItem="ui://0xwve836gpy84c" align="center" vAlign="middle"/>
     <component id="n234_gpy8" name="btn_refresh" src="gl5636" fileName="Components/btn_main_green.xml" xy="706,530" size="118,28" group="n243_gpy8">
       <Button title="接取任务"/>
@@ -149,18 +149,12 @@
     <component id="n235_gpy8" name="btn_comp" src="gl5636" fileName="Components/btn_main_green.xml" xy="568,530" size="118,28" group="n243_gpy8">
       <Button title="刷新"/>
     </component>
-    <richtext id="n236_gpy8" name="rCount" xy="573,557" size="108,20" group="n243_gpy8" fontSize="13" color="#372a08" text="剩余刷新次数(0/3)"/>
-    <text id="n237_gpy8" name="taskCount" xy="623,283" size="162,19" group="n243_gpy8" fontSize="12" color="#372a08" text="今日可完成门派任务次数：10"/>
+    <richtext id="n236_gpy8" name="rCount" xy="573,557" size="10,20" group="n243_gpy8" fontSize="13" color="#372a08" text=""/>
+    <text id="n237_gpy8" name="taskCount" xy="623,283" size="10,19" group="n243_gpy8" fontSize="12" color="#372a08" text=""/>
     <text id="n238_gpy8" name="taskStar" xy="575,310" size="69,20" group="n243_gpy8" fontSize="13" color="#372a08" text="任务星级："/>
-    <list id="n239_gpy8" name="starList" xy="641,307" size="184,24" group="n243_gpy8" layout="row" overflow="scroll" defaultItem="ui://0xwve836gpy849">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
+    <list id="n239_gpy8" name="starList" xy="641,307" size="184,24" group="n243_gpy8" layout="row" overflow="scroll" defaultItem="ui://0xwve836gpy849"/>
     <text id="n240_gpy8" name="taskNeed" xy="575,340" size="69,20" group="n243_gpy8" fontSize="13" color="#372a08" text="任务要求："/>
-    <text id="n241_gpy8" name="taskCon" xy="641,340" size="146,20" group="n243_gpy8" fontSize="13" color="#372a08" text="击败大块头山贼（0/30）"/>
+    <text id="n241_gpy8" name="taskCon" xy="641,340" size="10,20" group="n243_gpy8" fontSize="13" color="#372a08" text=""/>
     <component id="n247_gpy8" name="btn_sub" src="gpy84h" fileName="Components/btn_green.xml" xy="635,378" size="118,31" group="n243_gpy8"/>
     <group id="n243_gpy8" name="GXPanel" xy="179,206" size="661,385" group="n173_ohcw" advanced="true">
       <gearDisplay controller="page_main" pages="1"/>

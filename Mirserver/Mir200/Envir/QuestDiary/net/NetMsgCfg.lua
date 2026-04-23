@@ -29,7 +29,7 @@ ssrNetMsgCfg.TransferInfo_RefreshTaskUI    = 1100000
 ssrNetMsgCfg.TransferInfo_RefreshUI        = 1100001       
 
 ssrNetMsgCfg.Guild                         = "Guild"                                             -- ¹«»á
-ssrNetMsgCfg.Guild_TaskData                = 1100010                                                 
+ssrNetMsgCfg.Guild_RetData                 = 1100010                                                  
 
 local t = {}
 for msgName, msgID in pairs(ssrNetMsgCfg) do

@@ -71,11 +71,11 @@ VarCfg.U_Mount_Status                    = "U39" -- 是否出战
 VarCfg.U_Mount_IS_SET                    = "U40" -- 是否激活坐骑功能
 VarCfg.U_Mount_BASE_SPEED                = "U41" -- 角色基础速度
 
-VarCfg.U_REWARD_FINISH                   = "U42" -- 当日悬赏完成次数  过0点重置
-VarCfg.U_REWARD_REFUSH                   = "U43" -- 每日悬赏免费刷新次数 3  过0点重置
-VarCfg.U_REWARD_INDEX                    = "U44" -- 当前接取的悬赏下标，0 未领取  过0点重置
-VarCfg.U_REWARD_RESET                    = "U45" -- 重置今日悬赏面板 1已重置 0 未重置
-VarCfg.U_REWARD_MAX_COUNT                = "U46" -- 今日可完成悬赏最大次数 默认 6 用道具可+1 过0点重置
+VarCfg.U_REWARD_FINISH                   = "U42" -- 当日门派任务完成次数  过0点重置
+VarCfg.U_REWARD_REFUSH                   = "U43" -- 每日门派任务免费刷新次数 3  过0点重置
+VarCfg.U_REWARD_INDEX                    = "U44" -- 当前接取的门派任务下标，0 未领取  过0点重置
+VarCfg.U_REWARD_STATE                    = "U45" -- 当前接取状态
+VarCfg.U_REWARD_MAX_COUNT                = "U46" -- 今日可完成门派任务最大次数 默认 6 用道具可+1 过0点重置
 
 VarCfg.U_MarryPartner                    = "U47"         -- 玩家侠侣ID
 VarCfg.U_MarryType                       = "U48"         -- 侠侣类型(1:姻缘 2:金兰 3:结义)
@@ -159,7 +159,6 @@ VarCfg.T_EquipDJGX                        = "T4"   -- 装备分解勾选
 VarCfg.T_roleTFList                       = "T5"   -- 已加点获取天赋
 VarCfg.T_roleTFDNum                       = "T6"   -- 天赋点数量
 VarCfg.T_MountHuanHua                     = "T7"   -- 坐骑幻化激活对象
-VarCfg.T_Reward_Task_List                 = "T8"   -- 今日悬赏任务列表
 -- ===== 旧的灵兽T变量（已废弃，使用新灵兽系统）=====
 -- VarCfg.T_Pets                             = "T9"   -- 当前灵兽激活情况（已废弃）
 -- VarCfg.T_TAKE_PET                         = "T10"  -- 当前角色添加宠物数据（已废弃）

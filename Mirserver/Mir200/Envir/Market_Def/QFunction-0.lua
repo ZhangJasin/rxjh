@@ -62,7 +62,6 @@ end
 --登录
 function login(actor)
     -- print("登录", actor)
-    -- sethumvar(actor,VarCfg.U_REWARD_RESET,0)
     -- 第一次登录
     local isnewhuman = gethumvar(actor, VarCfg.U_player_login)
     -- LOGPrint("登录", actor, isnewhuman,type(actor))
@@ -162,7 +161,7 @@ end
 ---跨天登录触发
 function resetday(actor)
     -- print("跨天登录触发")
-    sethumvar(actor, VarCfg.U_Donate_Num, 0) -- 跨天清除门派每日已捐献次数
+    
     GameEvent.push(EventCfg.onResetday, actor)
 end
 
@@ -920,7 +919,8 @@ function guildsetexp(actor, type)
     setguildinfo(guildObj, 6, "=", curLevel, actor) -- 设置当前等级
     Donate = Donate + 1
     sethumvar(actor, VarCfg.U_Donate_Num, Donate)
-    Message.sendmsgEx(actor, "GuildMainPanel", "UpdataPage1", { param1 = Donate })
+    
+    Guild.getData(actor)
     GameEvent.push(EventCfg.onGuildsetexp, actor, type, addzj, curLevel, curexp)
 end
 

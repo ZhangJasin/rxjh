@@ -1,6 +1,11 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local PCGuildMainPanel = class("PCGuildMainPanel", BaseFGUILayout)
 
+local Task_cfg = require("game_config/cfgcsv/Task")
+local Language = require("game_config/cfgcsv/Language")
+local TaskStar_cfg = require("game_config/cfgcsv/guildTaskStar")
+local Act_Cfg = require("game_config/cfgcsv/guildAct")
+
 local color_green = "#19D71E"
 local color_white = "#DBDFE3"
 local color_grey = "#8E8E8E"
@@ -134,7 +139,8 @@ function PCGuildMainPanel:SelectPage(pageIdx)
 	if pageIdx == 0 then
 		SL:RequestGuildInfo()
 	elseif pageIdx == 1 then
-		SL:RequestGuildInfo()
+		ssrMessage:sendmsgEx("Guild", "getData")
+		FGUI:GList_setNumItems(self._ui.actList, #Act_Cfg)
 	elseif pageIdx == 2 then
 		FGUI:GList_setNumItems(self._ui.list_member, 0)
 		-- 成员
@@ -467,17 +473,84 @@ end
 
 ------------------------------------贡献界面----------------------------------
 --begin
-function GuildMainPanel:OnActListRenderer(idx, item)
+function PCGuildMainPanel:OnUpdateGXUI()
+	-- 检查界面是否存在
+	if not self._ui then
+		return
+	end
+	
+	-- 获取每日捐献最大次数
+	local maxDonateCount = tonumber(SysConstant['DailyNum_SectDonate']["Value"]) or 0
+	-- 获取每日任务最大次数
+	local maxTaskCount = tonumber(SysConstant['Num_Daily_RewardTask']["Value"]) or 0
+	-- 获取每日免费刷新最大次数
+	local maxRefreshCount = tonumber(SysConstant['Num_DailyRefresh_RewardTask']["Value"]) or 0
+	
+	-- 计算剩余次数
+	local remainDonateCount = maxDonateCount - (self._gxCount or 0)
+	local remainTaskCount = maxTaskCount - (self._taskCount or 0)
+	
+	-- 刷新捐献次数显示
+	if self._ui.gxCount then
+		FGUI:GTextField_setText(self._ui.gxCount, string.format("今日剩余捐献次数：%s", remainDonateCount))
+	end
+	
+	-- 刷新任务次数显示
+	if self._ui.taskCount then
+		FGUI:GTextField_setText(self._ui.taskCount, string.format("今日可完成门派任务次数：%s", remainTaskCount))
+	end
+	
+	-- 刷新免费刷新次数显示
+	if self._ui.rCount then
+		if self._staskState == 0 then
+			-- 任务未接取时显示免费刷新次数
+			FGUI:GTextField_setText(self._ui.rCount, string.format("免费刷新次数(%s/%s)", self._refreshCount or 0, maxRefreshCount))
+			FGUI:setVisible(self._ui.rCount, true)
+		else
+			-- 任务已接取时隐藏
+			FGUI:setVisible(self._ui.rCount, false)
+		end
+	end
+end
+function PCGuildMainPanel:OnActListRenderer(idx, item)
+	-- 根据配表索引获取配置
+	local actData = Act_Cfg[idx + 1] -- idx从0开始，配表从1开始
+	if not actData then
+		return
+	end
+	
+	-- 获取UI控件
+	local con = FGUI:GetChild(item, "con")
+	local img = FGUI:GetChild(item, "img")
+	
+	-- 设置描述文字
+	if con then
+		FGUI:GTextField_setText(con, actData.desc)
+	end
+	
+	-- 设置图片
+	if img then
+		local imgUrl = string.format("ui://Guild_pc/%s", actData.img)
+		FGUI:GLoader_setUrl(img, imgUrl)
+	end
+end
+function PCGuildMainPanel:OnTaskAwardListRenderer(idx, item)
 	
 end
-function GuildMainPanel:OnTaskAwardListRenderer(idx, item)
+function PCGuildMainPanel:OnTaskStarListRenderer(idx, item)
 	
 end
-function GuildMainPanel:OnTaskStarListRenderer(idx, item)
-	
-end
-function GuildMainPanel:RefreshTaskUI(_,_taskCount,_taskId,_refreshCount) 
 
+function PCGuildMainPanel:RefreshGXUI(_,_,_,_,data) 
+	if data then
+		self._gxCount = data.gxCount
+		self._taskCount = data.taskCount
+		self._taskId = data.taskId
+		self._staskState = data.stateState
+		self._refreshCount = data.freeCount
+
+		PCGuildMainPanel:OnUpdateGXUI()
+	end	
 end
 --end
 -----------------------------------贡献界面----------------------------------
@@ -488,7 +561,7 @@ function PCGuildMainPanel:RegisterEvent()
 	SL:RegisterLUAEvent(LUA_EVENT_GUILD_MEMBER_LIST, "PCGuildMainPanel", handler(self, self.RefreshMemberList))
 	SL:RegisterLUAEvent(LUA_EVENT_GUILD_EDITOR_NOTICE_FAIL, "PCGuildMainPanel", handler(self, self.OnEditNoticeFail))
 	SL:RegisterLUAEvent(LUA_EVENT_GUILD_LIST, "PCGuildMainPanel", handler(self, self.OnRefreshGuildList))
-	SL:RegisterNetMsg(ssrNetMsgCfg.Guild_TaskData, handler(self, self.RefreshTaskUI))
+	SL:RegisterNetMsg(ssrNetMsgCfg.Guild_RetData, handler(self, self.RefreshGXUI))
 end
 
 function PCGuildMainPanel:RemoveEvent()
@@ -497,7 +570,7 @@ function PCGuildMainPanel:RemoveEvent()
 	SL:UnRegisterLUAEvent(LUA_EVENT_GUILD_MEMBER_LIST, "PCGuildMainPanel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_GUILD_EDITOR_NOTICE_FAIL, "PCGuildMainPanel")
 	SL:UnRegisterLUAEvent(LUA_EVENT_GUILD_LIST, "PCGuildMainPanel")
-	SL:UnRegisterNetMsg(ssrNetMsgCfg.Guild_TaskData)
+	SL:UnRegisterNetMsg(ssrNetMsgCfg.Guild_RetData)
 end
 
 return PCGuildMainPanel
