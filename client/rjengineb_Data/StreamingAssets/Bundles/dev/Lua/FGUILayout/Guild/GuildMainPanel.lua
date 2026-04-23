@@ -534,7 +534,7 @@ function GuildMainPanel:OnUpdateGXUI()
 
 	-- 刷新免费刷新次数显示
 	if self._ui.rCount then
-		if self._staskState == 0 then
+		if self._taskState == 0 then
 			-- 任务未接取时显示免费刷新次数
 			FGUI:GTextField_setText(self._ui.rCount, string.format("免费刷新次数(%s/%s)", self._refreshCount or 0, maxRefreshCount))
 			FGUI:setVisible(self._ui.rCount, true)
@@ -593,16 +593,25 @@ function GuildMainPanel:OnTaskStarListRenderer(idx, item)
 	
 end
 
-function GuildMainPanel:RefreshGXUI(_,_,_,_,data) 
+function GuildMainPanel:RefreshGXUI(_,gxCount,taskCount,freeCount,data)
+	self._gxCount = gxCount
+	self._taskCount = taskCount
+	self._refreshCount = freeCount	 
 	if data then
-		self._gxCount = data.gxCount
-		self._taskCount = data.taskCount
-		self._taskId = data.taskId
-		self._staskState = data.stateState
-		self._refreshCount = data.freeCount
-
-		GuildMainPanel:OnUpdateGXUI()
-	end	
+		-- 将JSON字符串转换为对象
+		local dataObj = nil
+		if type(data) == "string" and data ~= "" then
+			dataObj = cjson.decode(data)
+		elseif type(data) == "table" then
+			dataObj = data
+		end
+		
+		if dataObj then
+			self._taskId = dataObj.taskid
+			self._staskState = dataObj.state
+		end
+	end
+	self:OnUpdateGXUI()
 end
 
 --end

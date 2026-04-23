@@ -1,10 +1,12 @@
 local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local PCGuildMainPanel = class("PCGuildMainPanel", BaseFGUILayout)
 
+local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 local Task_cfg = require("game_config/cfgcsv/Task")
 local Language = require("game_config/cfgcsv/Language")
 local TaskStar_cfg = require("game_config/cfgcsv/guildTaskStar")
 local Act_Cfg = require("game_config/cfgcsv/guildAct")
+local SysConstant = require("game_config/cfgcsv/SysConstant")
 
 local color_green = "#19D71E"
 local color_white = "#DBDFE3"
@@ -529,7 +531,7 @@ function PCGuildMainPanel:OnUpdateGXUI()
 
 	-- 刷新免费刷新次数显示
 	if self._ui.rCount then
-		if self._staskState == 0 then
+		if self._taskState == 0 then
 			-- 任务未接取时显示免费刷新次数
 			FGUI:GTextField_setText(self._ui.rCount, string.format("免费刷新次数(%s/%s)", self._refreshCount or 0, maxRefreshCount))
 			FGUI:setVisible(self._ui.rCount, true)
@@ -588,15 +590,25 @@ function PCGuildMainPanel:OnTaskStarListRenderer(idx, item)
 	
 end
 
-function PCGuildMainPanel:RefreshGXUI(_,_,_,_,data) 
+function PCGuildMainPanel:RefreshGXUI(_,gxCount,taskCount,freeCount,data)
+	self._gxCount = gxCount
+	self._taskCount = taskCount
+	self._refreshCount = freeCount	 
 	if data then
-		self._gxCount = data.gxCount
-		self._taskCount = data.taskCount
-		self._taskId = data.taskId
-		self._staskState = data.stateState
-		self._refreshCount = data.freeCount		
-		PCGuildMainPanel:OnUpdateGXUI()
-	end	
+		-- 将JSON字符串转换为对象
+		local dataObj = nil
+		if type(data) == "string" and data ~= "" then
+			dataObj = cjson.decode(data)
+		elseif type(data) == "table" then
+			dataObj = data
+		end
+		
+		if dataObj then
+			self._taskId = dataObj.taskid
+			self._staskState = dataObj.state
+		end
+	end
+	self:OnUpdateGXUI()
 end
 --end
 -----------------------------------贡献界面----------------------------------

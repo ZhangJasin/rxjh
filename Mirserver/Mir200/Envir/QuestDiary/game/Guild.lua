@@ -16,14 +16,13 @@ local filname = "Guild"
 -- end
 
 function Guild.getData(actor)
-    local data = {}
-    data.gxCount = gethumvar(actor, VarCfg.U_Donate_Num) or 0
-    data.taskCount = gethumvar(actor, VarCfg.U_REWARD_FINISH) or 0
-    data.freeCount = gethumvar(actor, VarCfg.U_REWARD_REFUSH) or 0
-    data.taskId = 510101--gethumvar(actor, VarCfg.U_REWARD_INDEX) or 0
-    data.stateState = gethumvar(actor, VarCfg.U_REWARD_STATE) or 0
+    local gxCount = gethumvar(actor, VarCfg.U_Donate_Num) or 0
+    local taskCount = gethumvar(actor, VarCfg.U_REWARD_FINISH) or 0
+    local freeCount = gethumvar(actor, VarCfg.U_REWARD_REFUSH) or 0
+    local taskId = 103145--gethumvar(actor, VarCfg.U_REWARD_INDEX) or 0
+    local taskState= gethumvar(actor, VarCfg.U_REWARD_STATE) or 0
 
-    Message.sendmsg(actor, ssrNetMsgCfg.Guild_RetData,  nil,nil,nil,data)
+    Message.sendmsg(actor, ssrNetMsgCfg.Guild_RetData,  gxCount,taskCount,freeCount,{taskid=taskId,state=taskState })
 end
 local function _onRefreshTask(actor)
 end
