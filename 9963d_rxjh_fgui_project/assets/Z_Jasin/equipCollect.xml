@@ -34,6 +34,7 @@
     </component>
     <list id="n12_lm8n" name="typeList" xy="212,191" size="905,470" overflow="scroll" defaultItem="ui://cog9akwflm8nz">
       <relation target="n1_jccz" sidePair="center-center,middle-middle"/>
+      <item/>
     </list>
   </displayList>
 </component>
