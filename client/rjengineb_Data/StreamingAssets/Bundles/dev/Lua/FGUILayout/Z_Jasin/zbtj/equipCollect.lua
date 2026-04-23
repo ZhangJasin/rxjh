@@ -84,6 +84,7 @@ function equipCollect:initRenderer()
         FGUI:GList_itemRenderer(equipLst, function(sIdx, sItem)
             local itemData = data.list[sIdx + 1]
             if not itemData then return end
+            self:equipListRenderer(itemData, sIdx, sItem)
         end)
         FGUI:GList_setNumItems(equipLst, itemCount)
 
@@ -103,10 +104,6 @@ function equipCollect:initRenderer()
         }
         local typeIndex = controLst[data.type] or 0
         FGUI:Controller_setSelectedIndex(typeTabs, tonumber(typeIndex))
-
-
-        --local equipName = FGUI:GetChild(item, "name" .. idx + 1)
-        --FGUI:GTextField_setText(equipName, data.name)
     end)
 end
 
@@ -148,6 +145,38 @@ function equipCollect:initPageLists()
     FGUI:GList_setSelectedIndex(self._ui.pageList, 0)
     local firstPage = FGUI:GetChildAt(self._ui.pageList, 0)
     FGUI:GButton_FireClick(firstPage, true, true)
+end
+
+function equipCollect:equipListRenderer(data, idx, item)
+    --加载文案
+    local name = FGUI:GetChild(item, "n3")
+    local value = FGUI:GetChild(item, "n4")
+    FGUI:GTextField_setText(name, data.equipName)
+    FGUI:GTextField_setText(value, string.format("收藏值+%d", data.value))
+    local dataConf = SL:GetValue("ITEM_DATA", data.idx)
+    local color = SL:GetColorByStyleId(dataConf.Color) or "#000000"
+    FGUI:GTextField_setColor(name, color)
+    --加载图标
+    local itemIcon = FGUI:GetChild(item, "n5")
+    if FGUI:GetChildCount(itemIcon) > 0 then
+        FGUI:RemoveChildAt(itemIcon, 0, true)
+    end
+    local extData = {}
+    extData.hideTip = false
+    extData.itemTipData = dataConf
+    extData.clickCallback = false
+    extData.doubleClickCallback = false
+    extData.bgVisible = true
+    ItemUtil:ItemShow_Create(dataConf, itemIcon, extData)
+
+    --激活按钮
+    local active = FGUI:GetChild(item, "n7")
+    FGUI:setOnClickEvent(active, function()
+        print("点击激活")
+    end)
+
+    --TODO:激活状态
+    --dump(dataConf)
 end
 
 return equipCollect
