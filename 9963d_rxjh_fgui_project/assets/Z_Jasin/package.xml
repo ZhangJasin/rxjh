@@ -30,6 +30,9 @@
     <image id="lm8n14" name="10.png" path="/Images/" exported="true"/>
     <image id="lm8n15" name="11.png" path="/Images/" exported="true"/>
     <component id="lm8n16" name="equipItem.xml" path="/Components/"/>
+    <component id="mkp51a" name="itemicon.xml" path="/Components/"/>
+    <image id="mkp51b" name="12.png" path="/Images/" exported="true"/>
+    <component id="mkp51c" name="btn_equipCollect_active.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>
