@@ -3,7 +3,7 @@
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
     <image id="n3_wive" name="n3" src="wivevpd" fileName="Images/act_bg.png" xy="1,3" size="522,60"/>
-    <richtext id="n5_wive" name="con" xy="185,8" size="332,50" fontSize="18" color="#372a08" autoSize="none" text="每周三晚20:00-23:30&#xA;组队挑战门派BOSS，掉落丰厚奖励"/>
+    <richtext id="n5_wive" name="con" xy="185,8" size="332,50" fontSize="18" color="#372a08" align="center" vAlign="middle" autoSize="none" text="每周三晚20:00-23:30&#xA;组队挑战门派BOSS，掉落丰厚奖励"/>
     <loader id="n6_gpy8" name="img" xy="-10,3" size="50,50" url="ui://tsu6gfnowivevpe"/>
   </displayList>
   <Button/>
