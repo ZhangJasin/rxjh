@@ -779,6 +779,34 @@ local function _onRecycleItems(actor)
         end
     end
 end
+
+local function _onGuildTask(actor)
+    local TaskProgress_data = Task.getCurTask(actor)
+    local taskchange = 0  --任务是否有变化，有的话更新
+    local taskfinish = 0   
+    for k,v in pairs(TaskProgress_data) do
+        local taskid = tonumber(k)
+        local taskxq = Task.ConditionLv(actor, taskid)
+        local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
+        if task_targettype == _taskMB4data._GuildTask and taskxq then  --完成指定任务
+            TaskProgress_data[k]['count'] = TaskProgress_data[k]['count'] + 1
+            local neednum = Task_cfg[taskid]['task_progress'] or 1   
+            
+            taskchange = Task_Change_Flag 
+            if TaskProgress_data[k]['count'] >= neednum then
+                TaskProgress_data[k]['state'] = _taskState.finish                    
+                taskfinish = Task_Finish_Flag  
+            end
+        end
+    end
+    if taskchange == Task_Change_Flag then
+        sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(TaskProgress_data))  -- 当前已接取任务列表
+        Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})   -- 更新客户端任务进度变量
+        if taskfinish == Task_Finish_Flag then
+            _onCompleteOtherTask(actor) -- 有任务有变化是判断
+        end
+    end
+end
 --- 个人BOSS  暂无
 
 -------------------------------↓↓↓ 网络消息 ↓↓↓---------------------------------------
@@ -1463,6 +1491,10 @@ GameEvent.add(EventCfg.onRecycleItems, function (actor)
 end, Task)
 GameEvent.add(EventCfg.stdUseItem, function (actor, itemId,itemobj,useNumber,param1,param2)  
     _onUseOrBuyItem(actor,itemId,useNumber)
+end, Task)
+
+GameEvent.add(EventCfg.onGuildTask, function (actor)
+    _onGuildTask(actor)
 end, Task)
 
 Message.RegisterNetMsg(ssrNetMsgCfg.Task, Task)

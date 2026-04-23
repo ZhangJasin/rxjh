@@ -1,8 +1,10 @@
 
+
 Guild = {}
 local filname = "Guild"
 local Task_cfg  =  require("Envir/QuestDiary/game_config/cfgcsv/Task.lua")
 local TaskPool_cfg  =  require("Envir/QuestDiary/game_config/cfgcsv/guildTaskPool.lua")
+
 -- function Guild.buy(actor,data)
 --     local num = money(actor, 20)
 --     local total = tonumber(data.count) * tonumber(data.price)
@@ -113,6 +115,10 @@ local function _onRefreshTask(actor)
 end
 
 function Guild.updateTask(actor,taskid)
+    local guildId = targetinfo(actor, "GUILDID") or 0
+    if guildId == 0 then
+        return
+    end
     local curTaskId = gethumvar(actor, VarCfg.U_REWARD_INDEX) or 0
     if curTaskId ~= taskid then
         return
@@ -142,6 +148,8 @@ function Guild.updateTask(actor,taskid)
        end
 
        Guild.getData(actor)
+
+       GameEvent.push(EventCfg.onGuildTask, actor)
     end
 end
 
@@ -184,12 +192,60 @@ function Guild.pickTask(actor)
 end
 
 function Guild.compTask(actor,nType)
-    if nType == 1 then
-        --快速完成任务
-    else
-          --正常完成任务
+    local guildId = targetinfo(actor, "GUILDID") or 0
+    if guildId == 0 then
+        sendmsg(actor, 9, "您还没有加入门派，无法完成门派任务")
+        return
     end
-    Guild.getData(actor)
+   
+	local taskState = gethumvar(actor, VarCfg.U_REWARD_STATE) or 0
+	if taskState ~= 1 then
+		sendmsg(actor, 9, "您还没有接取任务")
+		return
+	end
+
+    local finishCount = gethumvar(actor, VarCfg.U_REWARD_FINISH) or 0
+    local maxCount = tonumber(SysConstant['Num_Daily_RewardTask']["Value"]) or 10
+    if finishCount >= maxCount then
+        sendmsg(actor, 9, "今日门派任务次数已用完")
+        return
+    end
+
+	-- 检查任务是否已完成
+    local curTaskId = gethumvar(actor, VarCfg.U_REWARD_INDEX) or 0
+	local TaskProgress_data = Task.getCurTask(actor)
+	local curTaskData = TaskProgress_data[""..curTaskId]
+	if not curTaskData then
+		sendmsg(actor, 9, "任务数据异常")
+		return
+	end
+
+	if nType == 1 and curTaskData['state'] ~= 2 then
+		-- 快速完成任务，消耗1个悬赏令
+		local result = takeitem(actor, "悬赏令#1", 0)
+        if not result then
+            sendmsg(actor, 9, "您没有悬赏令，无法快速完成")
+            return
+        end
+
+		-- 直接完成任务
+		TaskProgress_data[""..curTaskId]['state'] = 2
+        sethumvar(actor, VarCfg.T_TaskProgress_data, tbl2json(TaskProgress_data))
+
+        Guild.updateTask(actor,curTaskId)
+		sendmsg(actor, 9, "使用悬赏令快速完成任务成功")
+	else
+		-- 正常完成任务，需要任务已完成
+		if curTaskData['state'] ~= 2 then
+			sendmsg(actor, 9, "任务尚未完成，请先完成任务")
+			return
+		end
+
+		Guild.updateTask(actor,curTaskId)
+		sendmsg(actor, 9, "完成任务成功")
+	end
+
+	Guild.getData(actor)
 end
 
 function Guild.abortTask(actor)
@@ -224,10 +280,84 @@ function Guild.abortTask(actor)
 end
 
 function Guild.refreshTask(actor)
+    local guildId = targetinfo(actor, "GUILDID") or 0
+    if guildId == 0 then
+        sendmsg(actor, 9, "您还没有加入门派，无法刷新任务")
+        return
+    end
+
+    local taskState = gethumvar(actor, VarCfg.U_REWARD_STATE) or 0
+    if taskState == 1 then
+        sendmsg(actor, 9, "任务已接取，无法刷新")
+        return
+    end
+
+    -- 获取当前刷新次数和最大免费次数
+    local curRefushCount = gethumvar(actor, VarCfg.U_REWARD_REFUSH) or 0
+    local maxFreeCount = tonumber(SysConstant['Num_DailyRefresh_RewardTask']["Value"]) or 3
+
+    if curRefushCount >= maxFreeCount then
+        -- 免费次数已用完，检查是否有用任务刷新卷轴    
+        local result = takeitem(actor, "任务刷新卷#1", 0)
+        if not result then
+            sendmsg(actor, 9, "免费刷新次数已用完，没有任务刷新卷，刷新失败")
+            return
+        end
+
+        sendmsg(actor, 9, "使用任务刷新卷刷新任务")
+    else
+        -- 使用免费刷新次数
+        sethumvar(actor, VarCfg.U_REWARD_REFUSH, curRefushCount + 1)
+    end
+
+    -- 刷新任务
+    _onRefreshTask(actor)
     Guild.getData(actor)
 end
 
 function Guild.subTask(actor,mid)
+    local guildId = targetinfo(actor, "GUILDID") or 0
+    if guildId == 0 then
+        sendmsg(actor, 9, "您还没有加入门派")
+        return
+    end
+    local taskState = gethumvar(actor, VarCfg.U_REWARD_STATE) or 0
+	if taskState ~= 1 then
+		sendmsg(actor, 9, "您还没有接取任务")
+		return
+	end
+    local finishCount = gethumvar(actor, VarCfg.U_REWARD_FINISH) or 0
+    local maxCount = tonumber(SysConstant['Num_Daily_RewardTask']["Value"]) or 10
+    if finishCount >= maxCount then
+        sendmsg(actor, 9, "今日门派任务次数已用完")
+        return
+    end
+
+    local curTaskId = gethumvar(actor, VarCfg.U_REWARD_INDEX) or 0
+	local TaskProgress_data = Task.getCurTask(actor)
+	local curTaskData = TaskProgress_data[""..curTaskId]
+	if not curTaskData then
+		sendmsg(actor, 9, "任务数据异常")
+		return
+	end
+
+    --提交道具或装备
+    local targetType = Task_cfg[curTaskId]['task_targettype'] or 0
+    if targetType ~= 9 and targetType ~= 10 then
+        sendmsg(actor, 9, "该任务无需提交道具")
+		return
+    end
+    local targetTab = Task_cfg[curTaskId]['task_target_param'] or {}
+    if targetType == 9 then
+        --道具id^道具数量
+    else
+        --根据装备最低等级^装备最高等级^装备品级^装备正邪(不限正邪则不填)
+    end
+    -- 直接完成任务
+    TaskProgress_data[""..curTaskId]['state'] = 2
+    sethumvar(actor, VarCfg.T_TaskProgress_data, tbl2json(TaskProgress_data))
+
+    Guild.updateTask(actor,curTaskId)    
     Guild.getData(actor)
 end
 

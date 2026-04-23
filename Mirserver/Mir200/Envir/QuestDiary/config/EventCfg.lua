@@ -49,6 +49,7 @@ EventCfg.onGuildclosebefore         = "onGuildclosebefore"            --解散门派
 EventCfg.onCreateguild              = "onCreateguild"                 --创建门派成功触发
 EventCfg.onInivitguild              = "onInivitguild"                 --邀请加入门派前触发
 EventCfg.onGuildsetexp              = "onGuildsetexp"                 --设置门派经验值触发
+EventCfg.onGuildTask                = "onGuildTask"                   --完成门派任务
 
 EventCfg.onWalk                     = "onWalk"                        --移动触发
 EventCfg.onPlayDie                  = "onPlayDie"                     --人物死亡     (参数：actor, 杀人者对象)
