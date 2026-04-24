@@ -89,15 +89,15 @@ function GuildMainPanel:Create()
 
 	FGUI:setOnClickEvent(self._ui.btn_refresh, function (eventData)
     	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
-
+        self:OnBtnRefreshClicked()
 	end)
 	FGUI:setOnClickEvent(self._ui.btn_comp, function (eventData)
     	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
-
+        self:OnBtnCompClicked()
 	end)
 	FGUI:setOnClickEvent(self._ui.btn_sub, function (eventData)
     	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
-
+		self:OnBtnSubClicked()
 	end)
 	self.tipsControlle = FGUI:getController(self.component, "tips")
 	self.tipsbg = FGUI:ui_delegate(self._ui.panl_tip)
@@ -488,6 +488,69 @@ end
 function GuildMainPanel:btnTipsClicked()
     FGUI:Controller_setSelectedIndex(self.tipsControlle,self.tipsControlle.selectedIndex == 1 and 0 or 1)
 end
+-- 刷新按钮点击处理
+function GuildMainPanel:OnBtnRefreshClicked()
+    if self._taskState == 0 then
+        -- 未接取任务，点击刷新任务
+        local maxRefreshCount = tonumber(SysConstant['Num_DailyRefresh_RewardTask']["Value"]) or 3
+        local curRefreshCount = self._refreshCount or 0
+        
+        if curRefreshCount >= maxRefreshCount then
+            -- 免费次数已用完，弹确认框使用任务刷新卷轴
+            SL:OpenCommonDialog({
+                title = '提示',
+                str = '免费次数已用完，是否使用1个任务刷新卷刷新任务？',
+                btnDesc = {"取消", "确定"},
+                callback = function(tag)
+                    if tag == 2 then
+                        -- 确定刷新任务
+                        ssrMessage:sendmsgEx("Guild", "refreshTask")
+                    end
+                end
+            })
+        else
+            -- 有免费次数，直接刷新
+            ssrMessage:sendmsgEx("Guild", "refreshTask")
+        end
+    else
+        -- 已接取任务，点击快速完成
+        SL:OpenCommonDialog({
+            title = '提示',
+            str = '是否使用1个悬赏令直接完成当前任务并获得奖励？',
+            btnDesc = {"取消", "确定"},
+            callback = function(tag)
+                if tag == 2 then
+                    -- 确定快速完成
+                    ssrMessage:sendmsgEx("Guild", "compTask", {1})
+                end
+            end
+        })
+    end
+end
+
+-- 确认按钮点击处理
+function GuildMainPanel:OnBtnCompClicked()
+    if self._taskState == 0 then
+        -- 未接取任务，点击接取任务
+        ssrMessage:sendmsgEx("Guild", "pickTask")
+    else
+        -- 已接取任务，点击放弃任务
+        SL:OpenCommonDialog({
+            title = '提示',
+            str = '放弃任务将无法获得奖励，且今日可完成任务数量减1，确定要放弃吗？',
+            btnDesc = {"取消", "确定"},
+            callback = function(tag)
+                if tag == 2 then
+                    -- 确定放弃任务
+                    ssrMessage:sendmsgEx("Guild", "abortTask")
+                end
+            end
+        })
+    end
+end
+function GuildMainPanel:OnBtnSubClicked()
+end
+
 function GuildMainPanel:FilterRewardsByJob(tab)
     if not tab then return {} end
     
@@ -528,11 +591,11 @@ function GuildMainPanel:OnUpdateGXUI()
 	end
 	
 	-- 获取每日捐献最大次数
-	local maxDonateCount = tonumber(SysConstant['DailyNum_SectDonate']["Value"]) or 0
+	local maxDonateCount = tonumber(SysConstant['DailyNum_SectDonate']["Value"]) or 5
 	-- 获取每日任务最大次数
-	local maxTaskCount = tonumber(SysConstant['Num_Daily_RewardTask']["Value"]) or 0
+	local maxTaskCount = tonumber(SysConstant['Num_Daily_RewardTask']["Value"]) or 10
 	-- 获取每日免费刷新最大次数
-	local maxRefreshCount = tonumber(SysConstant['Num_DailyRefresh_RewardTask']["Value"]) or 0
+	local maxRefreshCount = tonumber(SysConstant['Num_DailyRefresh_RewardTask']["Value"]) or 3
 	
 	-- 计算剩余次数
 	local remainDonateCount = maxDonateCount - (self._gxCount or 0)
@@ -674,5 +737,7 @@ function GuildMainPanel:RemoveEvent()
 	SL:UnRegisterLUAEvent(LUA_EVENT_GUILD_LIST, "GuildMainPanel")
 	SL:UnRegisterNetMsg(ssrNetMsgCfg.Guild_RetData)
 end
+
+
 
 return GuildMainPanel

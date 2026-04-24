@@ -191,7 +191,7 @@ function Guild.pickTask(actor)
     Guild.getData(actor)
 end
 
-function Guild.compTask(actor,nType)
+function Guild.compTask(actor,data)
     local guildId = targetinfo(actor, "GUILDID") or 0
     if guildId == 0 then
         sendmsg(actor, 9, "您还没有加入门派，无法完成门派任务")
@@ -219,7 +219,7 @@ function Guild.compTask(actor,nType)
 		sendmsg(actor, 9, "任务数据异常")
 		return
 	end
-
+    local nType = tonumber(data[1] or 0)
 	if nType == 1 and curTaskData['state'] ~= 2 then
 		-- 快速完成任务，消耗1个悬赏令
 		local result = takeitem(actor, "悬赏令#1", 0)
@@ -233,7 +233,6 @@ function Guild.compTask(actor,nType)
         sethumvar(actor, VarCfg.T_TaskProgress_data, tbl2json(TaskProgress_data))
 
         Guild.updateTask(actor,curTaskId)
-		sendmsg(actor, 9, "使用悬赏令快速完成任务成功")
 	else
 		-- 正常完成任务，需要任务已完成
 		if curTaskData['state'] ~= 2 then
@@ -241,11 +240,10 @@ function Guild.compTask(actor,nType)
 			return
 		end
 
-		Guild.updateTask(actor,curTaskId)
-		sendmsg(actor, 9, "完成任务成功")
+		Guild.updateTask(actor,curTaskId)		
 	end
-
 	Guild.getData(actor)
+    sendmsg(actor, 9, "任务已完成，请注意查收奖励")
 end
 
 function Guild.abortTask(actor)
@@ -277,6 +275,7 @@ function Guild.abortTask(actor)
     
     _onRefreshTask(actor)
     Guild.getData(actor)
+    sendmsg(actor, 9, "门派任务已刷新")
 end
 
 function Guild.refreshTask(actor)
@@ -303,8 +302,6 @@ function Guild.refreshTask(actor)
             sendmsg(actor, 9, "免费刷新次数已用完，没有任务刷新卷，刷新失败")
             return
         end
-
-        sendmsg(actor, 9, "使用任务刷新卷刷新任务")
     else
         -- 使用免费刷新次数
         sethumvar(actor, VarCfg.U_REWARD_REFUSH, curRefushCount + 1)
@@ -313,6 +310,7 @@ function Guild.refreshTask(actor)
     -- 刷新任务
     _onRefreshTask(actor)
     Guild.getData(actor)
+    sendmsg(actor, 9, "门派任务已刷新")
 end
 
 function Guild.subTask(actor,mid)
@@ -359,6 +357,7 @@ function Guild.subTask(actor,mid)
 
     Guild.updateTask(actor,curTaskId)    
     Guild.getData(actor)
+    sendmsg(actor, 9, "道具提交成功，请注意查收奖励")
 end
 
 
