@@ -301,19 +301,7 @@ function MainMission:OnListMissionItemClick(context)
         elseif task_turn_param == 6 then  --打开好友界面
             FGUI:Open("Friend", "FriendPanel", FGUIDefine.FriendPage.Friend)
         elseif task_turn_param == 7 then  --打开门派界面
-            local targetTab = Task_cfg[data.taskid]['task_target_param']
-            local targetType = 0
-            if type(targetTab) == "string" then
-                targetType = tonumber(targetTab)
-            elseif type(targetTab) == "table" then
-                targetType = targetTab[1]
-            end
-            if targetType == 12 then --门派任务
-            elseif targetType == 13 then --门派捐献
-                FGUIFunction:OpenGuildMainFrameUI(1)
-            else
-                FGUIFunction:OpenGuildAutoUI()
-            end
+            FGUIFunction:OpenGuildAutoUI()
         elseif task_turn_param == 8 then  --打开灵兽界面
             FGUI:Open("Mount", "mountMain",{type=0})
         elseif task_turn_param == 9 then  --打开组队界面
@@ -334,6 +322,8 @@ function MainMission:OnListMissionItemClick(context)
         elseif task_turn_param == 16 then  --打开武勋界面
             FGUI:Open("A_WuXun", "WuXunPanl", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
             ssrMessage:sendmsgEx("Task", "onTaskTurnComplete", {taskid = data.taskid})
+        elseif task_turn_param == 17 then  --打开门派贡献界面
+            FGUIFunction:OpenGuildMainFrameUI(2)
         end
     elseif task_turntype == 3 then   --引导
         self:StartGuide(task_turn_param, data.taskid)
@@ -654,6 +644,16 @@ local GuideConfig = {
             return true -- 结束引导
         end
     },
+    [6] = { -- 引导门派捐献
+        panel = SL:GetValue("IS_PC_OPER_MODE") and "Guild_pc" or "Guild",
+        panelName = SL:GetValue("IS_PC_OPER_MODE") and "PCGuildMainPanel" or "GuildMainPanel",
+        panelParm= 2,
+        widget = "btn_donate_1",
+        desc = "点击捐献",
+        callback = function()
+            return true 
+        end,
+    },
 }
 
 function MainMission:StartGuide(guideType, taskId)
@@ -769,6 +769,10 @@ function MainMission:_findOpenedPanelUI(panel, panelName, widgetName)
         return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.RecycleGuide)
     elseif panel == "Bag_pc" and panelName == "BagRecyclePanel" then
         return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.RecycleGuide)
+    elseif panel == "Guild_pc" and panelName == "PCGuildMainPanel" then
+        return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.GuildGuide)
+    elseif panel == "Guild" and panelName == "GuildMainPanel" then
+        return FGUIFunction:GetGuideData(FGUIDefine.GuideDataKey.GuildGuide)
     end
     return nil
 end

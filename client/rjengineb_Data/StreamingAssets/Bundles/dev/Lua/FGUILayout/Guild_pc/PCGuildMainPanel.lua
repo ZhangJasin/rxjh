@@ -134,12 +134,16 @@ function PCGuildMainPanel:Enter(page)
 	FGUI:GList_setSelectedIndex(self._ui.list_page_switch, index)
 	self:OnRefreshMainInfo()
 	SL:ComponentAttach(SLDefine.SUIComponentTable.GuildMain, self._ui.Node_attach)
+
+	FGUIFunction:RegisterGuideData(FGUIDefine.GuideDataKey.GuildGuide,self._ui)
 end
 
 function PCGuildMainPanel:Exit()
 	SL:ComponentDetach(SLDefine.SUIComponentTable.GuildMain)
 
 	self:RemoveEvent()
+
+	FGUIFunction:UnRegisterGuideData(FGUIDefine.GuideDataKey.GuildGuide)
 end
 
 function PCGuildMainPanel:Close()

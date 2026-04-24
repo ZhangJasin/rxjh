@@ -107,6 +107,7 @@ FGUIDefine.GuideDataKey = {
 	MountGuide		    = 7,
 	BuyGuide        	= 8,
 	RecycleGuide       	= 9,
+	GuildGuide       	= 10,
 }
 
 FGUIDefine.TeamPickType = {
