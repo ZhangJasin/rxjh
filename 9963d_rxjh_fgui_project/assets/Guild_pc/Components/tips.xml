@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="354,370">
+  <displayList>
+    <component id="n6_gpy8" name="tipbg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="0,0" size="354,370"/>
+    <text id="n2_o4l6" name="title" xy="184,19" pivot="0.5,0.5" anchor="true" size="84,29" font="SimHei" fontSize="20" color="#ff9900" autoSize="none" text="门派贡献"/>
+    <richtext id="n5_gpy8" name="con" xy="7,43" size="342,318" fontSize="14" color="#ffffff" autoSize="none" text="1.每日可免费刷新3次，3次过后每次刷新将扣减一个道具“任务刷新卷”&#xA;"/>
+    <component id="n7_gpy8" name="close_tip" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="335,18"/>
+  </displayList>
+</component>

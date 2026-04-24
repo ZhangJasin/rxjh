@@ -65,6 +65,9 @@
     <image id="gpy8vpk" name="star.png" path="/Images/" exported="true"/>
     <component id="gpy8vpl" name="btn_green.xml" path="/Components/" exported="true"/>
     <image id="gpy8vpm" name="btn_green.png" path="/Images/" exported="true"/>
+    <component id="gpy8vpp" name="tips.xml" path="/Components/" exported="true"/>
+    <component id="gpy8vpt" name="btn_wenhao.xml" path="/Components/" exported="true"/>
+    <image id="gpy8vpu" name="wenhao.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

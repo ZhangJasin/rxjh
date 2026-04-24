@@ -100,6 +100,11 @@ function PCGuildMainPanel:Create()
     	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 
 	end)
+	self.tipsControlle = FGUI:getController(self.component, "tips")
+	self.tipsbg = FGUI:ui_delegate(self._ui.panl_tip)
+     -- 点击tips
+    FGUI:setOnClickEvent(self._ui.btn_tips, handler(self, self.btnTipsClicked))
+    FGUI:setOnClickEvent(self.tipsbg.close_tip, handler(self, self.btnTipsClicked))
 
 	FGUI:GList_setVirtual(self._ui.list_member)
 	FGUI:GList_itemRenderer(self._ui.list_member, self.handler_onMemberListRenderer)
@@ -141,8 +146,9 @@ function PCGuildMainPanel:SelectPage(pageIdx)
 	if pageIdx == 0 then
 		SL:RequestGuildInfo()
 	elseif pageIdx == 1 then
-		ssrMessage:sendmsgEx("Guild", "getData")
+		FGUI:Controller_setSelectedIndex(self.tipsControlle,0)
 		FGUI:GList_setNumItems(self._ui.actList, #Act_Cfg)
+		ssrMessage:sendmsgEx("Guild", "getData")
 	elseif pageIdx == 2 then
 		FGUI:GList_setNumItems(self._ui.list_member, 0)
 		-- 成员
@@ -475,6 +481,9 @@ end
 
 ------------------------------------贡献界面----------------------------------
 --begin
+function PCGuildMainPanel:btnTipsClicked()
+    FGUI:Controller_setSelectedIndex(self.tipsControlle,self.tipsControlle.selectedIndex == 1 and 0 or 1)
+end
 function PCGuildMainPanel:FilterRewardsByJob(tab)
     if not tab then return {} end
     
@@ -542,16 +551,32 @@ function PCGuildMainPanel:OnUpdateGXUI()
 	self._taskAwards = self:FilterRewardsByJob(Task_cfg[self._taskId] and Task_cfg[self._taskId]['task_drop'])
 	FGUI:GList_setNumItems(self._ui.awardList, #self._taskAwards)
 
-	-- 刷新免费刷新次数显示
-	if self._ui.rCount then
-		if self._taskState == 0 then
-			-- 任务未接取时显示免费刷新次数
+	if remainTaskCount > 0  then
+		-- 刷新免费刷新次数显示
+		if self._ui.rCount then
 			FGUI:GTextField_setText(self._ui.rCount, string.format("免费刷新次数(%s/%s)", self._refreshCount or 0, maxRefreshCount))
+		end
+		if self._taskState == 0 then --未接取
+			FGUI:GButton_setTitle(self._ui.btn_refresh,"刷新")
+			FGUI:GButton_setTitle(self._ui.btn_comp,"接取任务")
 			FGUI:setVisible(self._ui.rCount, true)
 		else
-			-- 任务已接取时隐藏
+			FGUI:GButton_setTitle(self._ui.btn_refresh,"快速完成")
+			FGUI:GButton_setTitle(self._ui.btn_comp,"放弃任务")
 			FGUI:setVisible(self._ui.rCount, false)
 		end
+
+		local targetType = Task_cfg[self._taskId] and Task_cfg[self._taskId]['task_type'] or 0
+		FGUI:setVisible(self._ui.btn_sub, targetType == 9 or targetType == 10)
+		
+		FGUI:setVisible(self._ui.btn_refresh, true)
+		FGUI:setTouchEnabled(self._ui.btn_comp, true)
+	else
+		FGUI:setVisible(self._ui.btn_sub, false)
+		FGUI:setVisible(self._ui.btn_refresh, false)
+		FGUI:setVisible(self._ui.rCount, false)
+		FGUI:GButton_setTitle(self._ui.btn_comp,"已完成")
+		FGUI:setTouchEnabled(self._ui.btn_comp, false)
 	end
 end
 function PCGuildMainPanel:OnActListRenderer(idx, item)
@@ -618,7 +643,7 @@ function PCGuildMainPanel:RefreshGXUI(_,gxCount,taskCount,freeCount,data)
 		
 		if dataObj then
 			self._taskId = dataObj.taskid
-			self._staskState = dataObj.state
+			self._taskState = dataObj.state
 			self._curJinDu = dataObj.jindu
 		end
 	end

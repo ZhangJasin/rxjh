@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1024,768" designImageOffsetX="20" designImageOffsetY="8" designImageAlpha="55" bgColor="#333333">
   <controller name="page_main" pages="0,,1,,2,,3," selected="1"/>
+  <controller name="tips" pages="0,关闭,1,打开" selected="0"/>
   <displayList>
     <list id="n94_dkvz" name="list_page_switch" xy="847,211" size="27,275" layout="flow_vt" overflow="scroll" scrollBarFlags="128" lineGap="2" defaultItem="ui://0xwve836gl562j" selectionController="page_main">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -143,10 +144,10 @@
     <text id="n230_gpy8" name="cost2" xy="470,389" size="34,20" group="n243_gpy8" fontSize="13" color="#372a08" autoSize="none" text="5"/>
     <list id="n232_gpy8" name="actList" xy="193,448" size="355,127" group="n243_gpy8" overflow="scroll" lineGap="4" defaultItem="ui://0xwve836gpy848"/>
     <list id="n233_gpy8" name="awardList" xy="567,453" size="259,50" group="n243_gpy8" layout="row" overflow="scroll" scroll="horizontal" colGap="6" defaultItem="ui://0xwve836gpy84c" align="center" vAlign="middle"/>
-    <component id="n234_gpy8" name="btn_refresh" src="gl5636" fileName="Components/btn_main_green.xml" xy="706,523" size="118,28" group="n243_gpy8">
+    <component id="n234_gpy8" name="btn_comp" src="gl5636" fileName="Components/btn_main_green.xml" xy="706,523" size="118,28" group="n243_gpy8">
       <Button title="接取任务"/>
     </component>
-    <component id="n235_gpy8" name="btn_comp" src="gl5636" fileName="Components/btn_main_green.xml" xy="568,523" size="118,28" group="n243_gpy8">
+    <component id="n235_gpy8" name="btn_refresh" src="gl5636" fileName="Components/btn_main_green.xml" xy="568,523" size="118,28" group="n243_gpy8">
       <Button title="刷新"/>
     </component>
     <richtext id="n236_gpy8" name="rCount" xy="573,552" size="10,20" group="n243_gpy8" fontSize="13" color="#372a08" text=""/>
@@ -156,7 +157,11 @@
     <text id="n240_gpy8" name="taskNeed" xy="575,340" size="69,20" group="n243_gpy8" fontSize="13" color="#372a08" text="任务要求："/>
     <component id="n247_gpy8" name="btn_sub" src="gpy84h" fileName="Components/btn_green.xml" xy="635,378" size="118,31" group="n243_gpy8"/>
     <richtext id="n249_gpy8" name="taskCon" xy="645,340" size="177,20" group="n243_gpy8" fontSize="13" color="#372a08" autoSize="none" text=""/>
-    <group id="n243_gpy8" name="GXPanel" xy="179,206" size="661,385" group="n173_ohcw" advanced="true">
+    <component id="n250_gpy8" name="btn_tips" src="gpy84i" fileName="Components/btn_wenhao.xml" xy="801,210" group="n243_gpy8"/>
+    <component id="n251_gpy8" name="panl_tip" src="gpy84j" fileName="Components/tips.xml" xy="409,203" group="n243_gpy8">
+      <gearDisplay controller="tips" pages="1"/>
+    </component>
+    <group id="n243_gpy8" name="GXPanel" xy="179,203" size="661,388" group="n173_ohcw" advanced="true">
       <gearDisplay controller="page_main" pages="1"/>
     </group>
     <group id="n173_ohcw" name="n173" xy="173,167" size="677,432" advanced="true">

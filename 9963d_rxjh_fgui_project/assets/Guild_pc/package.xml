@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="0xwve836">
   <resources>
-    <component id="gl562i" name="common_bg.xml" path="/Components/"/>
+    <component id="gl562i" name="common_bg.xml" path="/Components/" exported="true"/>
     <component id="gl562j" name="toggle_right_item.xml" path="/Components/"/>
     <component id="gl562k" name="join_item.xml" path="/Components/"/>
     <image id="gl562l" name="list_bg_9.png" path="/Images/" scale="9grid" scale9grid="15,21,10,12"/>
@@ -61,6 +61,9 @@
     <image id="gpy84b" name="btn_green.png" path="/Images/" exported="true"/>
     <component id="gpy84c" name="itemRoot.xml" path="/Components/" exported="true"/>
     <component id="gpy84h" name="btn_green.xml" path="/Components/" exported="true"/>
+    <component id="gpy84i" name="btn_wenhao.xml" path="/Components/" exported="true"/>
+    <component id="gpy84j" name="tips.xml" path="/Components/" exported="true"/>
+    <image id="gpy84k" name="wenhao.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
