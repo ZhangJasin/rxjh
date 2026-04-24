@@ -7,7 +7,7 @@ local config = {
 		equipName="封神战袍(男)3",
 		showName="封神战袍(男)",
 		value=1,
-		var="封神战袍(男)3",
+		var="T38",
 	},
 	[2] = { 
 		index=2,
@@ -17,7 +17,7 @@ local config = {
 		equipName="封神战袍(女)3",
 		showName="封神战袍(女)",
 		value=2,
-		var="封神战袍(女)3",
+		var="T38",
 	},
 	[3] = { 
 		index=3,
@@ -27,7 +27,7 @@ local config = {
 		equipName="昊天战袍(男)4",
 		showName="昊天战袍(男)",
 		value=3,
-		var="昊天战袍(男)4",
+		var="T38",
 	},
 	[4] = { 
 		index=4,
@@ -37,7 +37,7 @@ local config = {
 		equipName="昊天战袍(女)4",
 		showName="昊天战袍(女)",
 		value=4,
-		var="昊天战袍(女)4",
+		var="T38",
 	},
 	[5] = { 
 		index=5,
@@ -47,7 +47,7 @@ local config = {
 		equipName="广寒战袍(男)4",
 		showName="广寒战袍(男)",
 		value=5,
-		var="广寒战袍(男)4",
+		var="T38",
 	},
 	[6] = { 
 		index=6,
@@ -57,7 +57,7 @@ local config = {
 		equipName="广寒战袍(女)4",
 		showName="广寒战袍(女)",
 		value=6,
-		var="广寒战袍(女)4",
+		var="T38",
 	},
 	[7] = { 
 		index=7,
@@ -67,7 +67,7 @@ local config = {
 		equipName="昊天战袍(男)5",
 		showName="昊天战袍(男)",
 		value=7,
-		var="昊天战袍(男)5",
+		var="T38",
 	},
 	[8] = { 
 		index=8,
@@ -77,7 +77,7 @@ local config = {
 		equipName="广寒战袍(男)5",
 		showName="广寒战袍(男)",
 		value=8,
-		var="广寒战袍(男)5",
+		var="T38",
 	},
 	[9] = { 
 		index=9,
@@ -87,7 +87,7 @@ local config = {
 		equipName="月神战袍(男)5",
 		showName="月神战袍(男)",
 		value=9,
-		var="月神战袍(男)5",
+		var="T38",
 	},
 	[10] = { 
 		index=10,
@@ -97,7 +97,7 @@ local config = {
 		equipName="昊天战袍(女)5",
 		showName="昊天战袍(女)",
 		value=10,
-		var="昊天战袍(女)5",
+		var="T38",
 	},
 	[11] = { 
 		index=11,
@@ -107,7 +107,7 @@ local config = {
 		equipName="广寒战袍(女)5",
 		showName="广寒战袍(女)",
 		value=11,
-		var="广寒战袍(女)5",
+		var="T38",
 	},
 	[12] = { 
 		index=12,
@@ -117,7 +117,7 @@ local config = {
 		equipName="月神战袍(女)5",
 		showName="月神战袍(女)",
 		value=12,
-		var="月神战袍(女)5",
+		var="T38",
 	},
 	[13] = { 
 		index=13,
@@ -127,7 +127,7 @@ local config = {
 		equipName="罗汉护手2",
 		showName="罗汉护手",
 		value=13,
-		var="罗汉护手2",
+		var="T38",
 	},
 	[14] = { 
 		index=14,
@@ -137,7 +137,7 @@ local config = {
 		equipName="昊天护手3",
 		showName="昊天护手",
 		value=14,
-		var="昊天护手3",
+		var="T38",
 	},
 	[15] = { 
 		index=15,
@@ -147,7 +147,7 @@ local config = {
 		equipName="追月护手3",
 		showName="追月护手",
 		value=15,
-		var="追月护手3",
+		var="T38",
 	},
 	[16] = { 
 		index=16,
@@ -157,7 +157,7 @@ local config = {
 		equipName="月神护手3",
 		showName="月神护手",
 		value=16,
-		var="月神护手3",
+		var="T38",
 	},
 	[17] = { 
 		index=17,
@@ -167,7 +167,7 @@ local config = {
 		equipName="天灵护手3",
 		showName="天灵护手",
 		value=17,
-		var="天灵护手3",
+		var="T38",
 	},
 	[18] = { 
 		index=18,
@@ -177,7 +177,7 @@ local config = {
 		equipName="龙腾护手3",
 		showName="龙腾护手",
 		value=18,
-		var="龙腾护手3",
+		var="T38",
 	},
 	[19] = { 
 		index=19,
@@ -187,7 +187,7 @@ local config = {
 		equipName="百战刀2",
 		showName="百战刀",
 		value=19,
-		var="百战刀2",
+		var="T37",
 	},
 	[20] = { 
 		index=20,
@@ -197,7 +197,7 @@ local config = {
 		equipName="青龙刀3",
 		showName="青龙刀",
 		value=20,
-		var="青龙刀3",
+		var="T37",
 	},
 	[21] = { 
 		index=21,
@@ -207,7 +207,7 @@ local config = {
 		equipName="深渊刀1",
 		showName="深渊刀",
 		value=21,
-		var="深渊刀1",
+		var="T37",
 	},
 	[22] = { 
 		index=22,
@@ -217,7 +217,7 @@ local config = {
 		equipName="飞翔刀4",
 		showName="飞翔刀",
 		value=22,
-		var="飞翔刀4",
+		var="T37",
 	},
 	[23] = { 
 		index=23,
@@ -227,7 +227,7 @@ local config = {
 		equipName="百魂刀4",
 		showName="百魂刀",
 		value=23,
-		var="百魂刀4",
+		var="T37",
 	},
 	[24] = { 
 		index=24,
@@ -237,7 +237,7 @@ local config = {
 		equipName="天劫斩4",
 		showName="天劫斩",
 		value=24,
-		var="天劫斩4",
+		var="T37",
 	},
 	[25] = { 
 		index=25,
@@ -247,7 +247,7 @@ local config = {
 		equipName="渤海刀1",
 		showName="渤海刀",
 		value=25,
-		var="渤海刀1",
+		var="T37",
 	},
 	[26] = { 
 		index=26,
@@ -257,7 +257,7 @@ local config = {
 		equipName="破天夺命刀4",
 		showName="破天夺命刀",
 		value=26,
-		var="破天夺命刀4",
+		var="T37",
 	},
 	[27] = { 
 		index=27,
@@ -267,7 +267,7 @@ local config = {
 		equipName="紫金盘龙刀1",
 		showName="紫金盘龙刀",
 		value=27,
-		var="紫金盘龙刀1",
+		var="T37",
 	},
 	[28] = { 
 		index=28,
@@ -277,7 +277,7 @@ local config = {
 		equipName="龙息刀5",
 		showName="龙息刀",
 		value=28,
-		var="龙息刀5",
+		var="T37",
 	},
 	[29] = { 
 		index=29,
@@ -287,7 +287,7 @@ local config = {
 		equipName="帝皇战刀5",
 		showName="帝皇战刀",
 		value=29,
-		var="帝皇战刀5",
+		var="T37",
 	},
 	[30] = { 
 		index=30,
@@ -297,7 +297,7 @@ local config = {
 		equipName="鳌天斩5",
 		showName="鳌天斩",
 		value=30,
-		var="鳌天斩5",
+		var="T37",
 	},
 	[31] = { 
 		index=31,
@@ -307,7 +307,7 @@ local config = {
 		equipName="玄天耳环1",
 		showName="玄天耳环",
 		value=31,
-		var="玄天耳环1",
+		var="T39",
 	},
 	[32] = { 
 		index=32,
@@ -317,7 +317,7 @@ local config = {
 		equipName="圣炎耳环1",
 		showName="圣炎耳环",
 		value=32,
-		var="圣炎耳环1",
+		var="T39",
 	},
 	[33] = { 
 		index=33,
@@ -327,7 +327,7 @@ local config = {
 		equipName="磐龙耳环1",
 		showName="磐龙耳环",
 		value=33,
-		var="磐龙耳环1",
+		var="T39",
 	},
 	[34] = { 
 		index=34,
@@ -337,7 +337,7 @@ local config = {
 		equipName="青玉珠环1",
 		showName="青玉珠环",
 		value=34,
-		var="青玉珠环1",
+		var="T39",
 	},
 	[35] = { 
 		index=35,
@@ -347,7 +347,7 @@ local config = {
 		equipName="金魄珠环1",
 		showName="金魄珠环",
 		value=35,
-		var="金魄珠环1",
+		var="T39",
 	},
 	[36] = { 
 		index=36,
@@ -357,7 +357,7 @@ local config = {
 		equipName="血玉珠环1",
 		showName="血玉珠环",
 		value=36,
-		var="血玉珠环1",
+		var="T39",
 	},
 }
 return config
