@@ -42,6 +42,7 @@ function GuildMainPanel:Create()
 	self.handler_onActListRenderer = handler(self, self.OnActListRenderer)
 	self.handler_onTaskAwardListRenderer = handler(self, self.OnTaskAwardListRenderer)
 	self.handler_onTaskStarListRenderer = handler(self, self.OnTaskStarListRenderer)
+	self.handler_listadditemRender = handler(self, self.ListadditemRender)
 
 
 	self._oldNotice = nil --行会公告编辑之前内容
@@ -105,6 +106,12 @@ function GuildMainPanel:Create()
     FGUI:setOnClickEvent(self._ui.btn_tips, handler(self, self.btnTipsClicked))
     FGUI:setOnClickEvent(self.tipsbg.close_tip, handler(self, self.btnTipsClicked))
 
+	self.additemControlle = FGUI:getController(self.component, "addItem")
+	self.panl_additem = FGUI:ui_delegate(self._ui.panl_additem)
+	self.addpanlobj = self.panl_additem['additemlist']
+    FGUI:setOnClickEvent(self.panl_additem.bg, function()
+        FGUI:Controller_setSelectedIndex(self.additemControlle,0)
+    end)
 
 	FGUI:GList_setVirtual(self._ui.list_member)
 	FGUI:GList_itemRenderer(self._ui.list_member, self.handler_onMemberListRenderer)
@@ -114,8 +121,8 @@ function GuildMainPanel:Create()
 	FGUI:GList_itemRenderer(self._ui.actList, self.handler_onActListRenderer)
 	FGUI:GList_itemRenderer(self._ui.awardList, self.handler_onTaskAwardListRenderer)
 	FGUI:GList_itemRenderer(self._ui.starList, self.handler_onTaskStarListRenderer)
-	
-	
+	FGUI:GList_itemRenderer(self.addpanlobj, self.handler_listadditemRender)
+		
 	self:UpdateNoticeEditState(false)
 end
 
@@ -548,7 +555,210 @@ function GuildMainPanel:OnBtnCompClicked()
         })
     end
 end
+-- 提交道具按钮点击处理
 function GuildMainPanel:OnBtnSubClicked()
+	local curTaskCfg = Task_cfg[self._taskId]
+	if not curTaskCfg then
+		return
+	end
+	
+	local targetType = curTaskCfg.task_type or 0
+	local targetParam = curTaskCfg.task_target_param
+	
+	-- 打开选择面板
+	FGUI:Controller_setSelectedIndex(self.additemControlle, 1)
+	
+	-- 根据任务类型筛选背包物品
+	local filterItems = self:FilterBagItemsByTaskType(targetType, targetParam)
+	self._filterItems = filterItems
+	
+	if #filterItems == 0 then
+		SL:ShowTips("背包中没有符合条件的物品")
+		FGUI:Controller_setSelectedIndex(self.additemControlle, 0)
+		return
+	end
+	
+	-- 设置列表数据
+	FGUI:GList_setNumItems(self.addpanlobj, #filterItems)
+end
+
+-- 根据任务类型筛选背包物品
+function GuildMainPanel:FilterBagItemsByTaskType(targetType, targetParam)
+	local result = {}
+	
+	if targetType ~= 9 and targetType ~= 10 then
+		return result
+	end
+	
+	-- 获取背包数据
+	local bagData = SL:GetValue("BAG_DATA") or {}
+	
+	for _, itemData in pairs(bagData) do
+		if not itemData or not itemData.Index then
+			goto continue
+		end
+		
+		local isMatch = false
+		
+		if targetType == 9 then
+			-- 任务类型9：提交指定物品道具
+			-- task_target_param 格式: "物品道具id^物品数量" 或 {物品道具id, 物品数量}
+			isMatch = self:CheckItemMatchTarget9(itemData, targetParam)
+		elseif targetType == 10 then
+			-- 任务类型10：提交指定等级范围的装备
+			-- task_target_param 格式: "装备最低等级^装备最高等级^装备品级^装备正邪"
+			isMatch = self:CheckItemMatchTarget10(itemData, targetParam)
+		end
+		
+		if isMatch then
+			table.insert(result, itemData)
+		end		
+		::continue::
+	end
+	
+	return result
+end
+
+-- 检查物品是否匹配任务类型9（指定物品）
+function GuildMainPanel:CheckItemMatchTarget9(itemData, targetParam)
+	if not targetParam then
+		return false
+	end
+	
+	-- 解析目标物品ID和数量
+	local targetItemId = nil
+	local targetCount = 1
+	
+	if type(targetParam) == "string" then
+		local params = string.split(targetParam, "^")
+		if params and #params >= 1 then
+			targetItemId = tonumber(params[1])
+			targetCount = tonumber(params[2]) or 1
+		end
+	elseif type(targetParam) == "table" then
+		targetItemId = targetParam[1]
+		targetCount = targetParam[2] or 1
+	end
+	
+	if not targetItemId then
+		return false
+	end
+	
+	-- 检查物品ID是否匹配
+	return itemData.Index == targetItemId
+end
+
+-- 检查物品是否匹配任务类型10（指定等级装备）
+function GuildMainPanel:CheckItemMatchTarget10(itemData, targetParam)
+	if not targetParam then
+		return false
+	end
+	
+	-- 解析装备筛选条件
+	-- 格式: "装备最低等级^装备最高等级^装备品级^装备正邪"
+	local minLevel, maxLevel, grade, goodEvil = 0,0,0,0
+	
+	if type(targetParam) == "string" then
+		local params = string.split(targetParam, "^")
+		if params then
+			minLevel = tonumber(params[1])
+			maxLevel = tonumber(params[2])
+			grade = tonumber(params[3])
+			goodEvil = tonumber(params[4])
+		end
+	elseif type(targetParam) == "table" then
+		minLevel = targetParam[1]
+		maxLevel = targetParam[2]
+		grade = targetParam[3]
+		goodEvil = targetParam[4]
+	end
+	
+	-- 获取物品配置信息
+	local itemConfig = SL:GetValue("ITEM_DATA", itemData.Index)
+	if not itemConfig then
+		return false
+	end
+	
+	-- 检查是否是装备
+	if not ItemUtil:IsEquip(itemData) then
+		return false
+	end
+	
+	-- 检查等级范围
+	if minLevel and itemConfig.Level and itemConfig.Level < minLevel then
+		return false
+	end
+	if maxLevel and itemConfig.Level and itemConfig.Level > maxLevel then
+		return false
+	end
+	
+	-- 检查品级
+	if grade and itemConfig.Grade and itemConfig.Grade ~= grade then
+		return false
+	end
+	
+	-- 检查正邪阵营（0表示不限）
+	if goodEvil and goodEvil ~= 0 then
+		local itemGoodEvil = itemConfig.GoodEvil or 0
+		if itemGoodEvil ~= 0 and itemGoodEvil ~= goodEvil then
+			return false
+		end
+	end
+	
+	return true
+end
+
+-- 渲染可提交物品列表项
+function GuildMainPanel:ListadditemRender(idx, item)
+	-- 清除已有子节点
+	local itemRoot = FGUI:GetChild(item, "itemRoot")
+	if FGUI:GetChildCount(itemRoot) > 0 then
+		FGUI:RemoveChildAt(itemRoot, 0, true)
+	end
+	
+	local filterItems = self._filterItems
+	if not filterItems or not filterItems[idx + 1] then
+		return
+	end
+	
+	local itemData = filterItems[idx + 1]
+	
+	local name = FGUI:GetChild(item, "name")
+	FGUI:GTextField_setText(name,itemData.Name)
+	if itemData.OverLap > 1 then
+		local num = FGUI:GetChild(item, "num")
+		FGUI:GTextField_setText(num,itemData.OverLap)
+	end
+	-- 创建物品显示
+	local extData = {
+		hideTip = false,
+		itemTipData = itemData,
+		clickCallback = false,
+		doubleClickCallback = true,
+		bgVisible = true
+	}
+	ItemUtil:ItemShow_Create(itemData, itemRoot, extData)
+	
+	-- 设置双击回调 - 直接提交
+	local itemConfig = SL:GetValue("ITEM_DATA", itemData.Index)
+	if itemConfig then
+		FGUI:setOnClickEvent(item, function()
+			self:OnSelectItemToSubmit(itemData)
+		end)
+	end
+end
+
+-- 选择物品提交
+function GuildMainPanel:OnSelectItemToSubmit(itemData)
+	if not itemData or not itemData.makeindex then
+		return
+	end
+	
+	-- 发送物品唯一ID给服务器
+	ssrMessage:sendmsgEx("Guild", "subTask", {itemData.makeindex})
+	
+	-- 关闭选择面板
+	FGUI:Controller_setSelectedIndex(self.additemControlle, 0)
 end
 
 function GuildMainPanel:FilterRewardsByJob(tab)
@@ -694,7 +904,9 @@ end
 function GuildMainPanel:OnTaskStarListRenderer(idx, item)
 	
 end
-
+function GuildMainPanel:ListadditemRender(idx, item)
+	
+end
 function GuildMainPanel:RefreshGXUI(_,gxCount,taskCount,freeCount,data)
 	self._gxCount = gxCount
 	self._taskCount = taskCount
