@@ -6,13 +6,15 @@ local config = require("game_config/cfgcsv/equipCollect")
 local equipCollectData = SL:RequireFile("FGUILayout/Z_Jasin/zbtj/equipCollectData")
 local categoryCache = nil
 local configType = {
-    WEAPON_1 = 1,
-    WEAPON_2 = 2,
-    WEAPON_3 = 3,
-    ARMOR_1  = 4,
-    ARMOR_2  = 5,
-    ARMOR_3  = 6,
-    JEWELRY  = 7,
+    WEAPON_1  = 1,
+    WEAPON_2  = 2,
+    WEAPON_3  = 3,
+    ARMOR_1   = 4,
+    ARMOR_2   = 5,
+    ARMOR_3   = 6,
+    JEWELRY_1 = 7,
+    JEWELRY_2 = 8,
+    JEWELRY_3 = 9
 }
 
 local function getCategoryData(config)
@@ -31,19 +33,27 @@ function equipCollect:Create()
     local isPC = SL:GetValue("IS_PC_OPER_MODE")
     local screenW = SL:GetValue("SCREEN_WIDTH")
     local screenH = SL:GetValue("SCREEN_HEIGHT")
-
-    --初始化请求数据
-    self:initData()
+    local job = SL:GetValue("JOB")
+    local GOODEVILID = SL:GetValue("GOODEVILID")
 
     --初始化UI组件
     self._ui = FGUI:ui_delegate(self.component)
     self._showList = {}
 
-    --加载渲染器
+    --订阅事件
+    self:subscribeEvents()
+
+    --初始化数据
+    self:initData()
+
+    --绑定渲染器
     self:initRenderer()
 
     --绑定事件
     self:bindEvents()
+
+    --请求数据
+    equipCollectData:Init()
 
     --默认页签数据
     self:initPageLists()
@@ -62,6 +72,23 @@ function equipCollect:Create()
 end
 
 function equipCollect:Destroy()
+    if self._dataSub then
+        equipCollectData:Unsubscribe(self._dataSub)
+        self._dataSub = nil
+    end
+    self._ui = nil
+end
+
+function equipCollect:subscribeEvents()
+    self._dataSub = equipCollectData:Subscribe("EQUIP_COLLECT_UPDATE", function(info)
+        print("被激活的id=", info.id)
+        --FGUI:GList_refreshVirtualList(self._ui.typeList)
+        local index = FGUI:GList_getSelectedIndex(self._ui.pageList)
+        self:updateShowListByIndex(index)
+        local totalValue = equipCollectData:GetValue()
+        local valueText = FGUI:GetChild(self._ui.tips, "level")
+        FGUI:GTextField_setText(valueText, totalValue)
+    end)
 end
 
 function equipCollect:initData()
@@ -98,41 +125,43 @@ function equipCollect:initRenderer()
 
         local typeTabs = FGUI:getController(item, "type")
         local controLst = {
-            [configType.WEAPON_1] = 0,
-            [configType.WEAPON_2] = 1,
-            [configType.WEAPON_3] = 2,
-            [configType.ARMOR_1]  = 0,
-            [configType.ARMOR_2]  = 1,
-            [configType.ARMOR_3]  = 2,
-            [configType.JEWELRY]  = 0
+            [configType.WEAPON_1]  = 0,
+            [configType.WEAPON_2]  = 1,
+            [configType.WEAPON_3]  = 2,
+            [configType.ARMOR_1]   = 0,
+            [configType.ARMOR_2]   = 1,
+            [configType.ARMOR_3]   = 2,
+            [configType.JEWELRY_1] = 0,
+            [configType.JEWELRY_2] = 1,
+            [configType.JEWELRY_3] = 2
         }
         local typeIndex = controLst[data.type] or 0
         FGUI:Controller_setSelectedIndex(typeTabs, tonumber(typeIndex))
     end)
 end
 
+function equipCollect:updateShowListByIndex(index)
+    local pageMapping = {
+        [0] = { configType.WEAPON_1, configType.WEAPON_2, configType.WEAPON_3 },
+        [1] = { configType.ARMOR_1, configType.ARMOR_2, configType.ARMOR_3 },
+        [2] = { configType.JEWELRY_1, configType.JEWELRY_2, configType.JEWELRY_3 }
+    }
+    local targetTypes = pageMapping[index] or {}
+    local data = {}
+    for _, t in ipairs(targetTypes) do
+        local group = self._categoryData[t]
+        if group then
+            table.insert(data, { type = t, list = group })
+        end
+    end
+    table.sort(data, function(a, b) return a.type < b.type end)
+    self:refreshDisplay(data)
+end
+
 function equipCollect:bindEvents()
     FGUI:GList_addOnClickItemEvent(self._ui.pageList, function()
         local index = FGUI:GList_getSelectedIndex(self._ui.pageList)
-        print("index==", index)
-        local pageLst = {
-            [0] = { configType.WEAPON_1, configType.WEAPON_2, configType.WEAPON_3 },
-            [1] = { configType.ARMOR_1, configType.ARMOR_2, configType.ARMOR_3 },
-            [2] = { configType.JEWELRY }
-        }
-        local targetTypes = pageLst[index]
-        if not targetTypes then return end
-        local data = {}
-        for _, t in ipairs(targetTypes) do
-            local group = self._categoryData[t]
-            if group then
-                table.insert(data, { type = t, list = group })
-            end
-        end
-        table.sort(data, function(a, b) return a.type < b.type end)
-        print("执行一次refreshDisplay")
-        --dump(data)
-        self:refreshDisplay(data)
+        self:updateShowListByIndex(index)
     end)
 end
 
@@ -140,7 +169,6 @@ function equipCollect:refreshDisplay(data)
     self._showList = data or {}
     print("self._showList长度=", #self._showList)
     FGUI:GList_setNumItems(self._ui.typeList, #self._showList)
-    --FGUI:GList_resizeToFit(self._ui.typeList, 5)
 end
 
 function equipCollect:initPageLists()
@@ -174,10 +202,20 @@ function equipCollect:equipListRenderer(data, idx, item)
     ItemUtil:ItemShow_Create(dataConf, itemIcon, extData)
 
     --激活按钮
-    local active = FGUI:GetChild(item, "n7")
-    FGUI:setOnClickEvent(active, function()
-        print("点击激活")
-    end)
+    local isActive = equipCollectData:IsActive(data.idx)
+    local activeBtn = FGUI:GetChild(item, "n7")
+    local stateCtrol = FGUI:getController(item, "active")
+
+    if isActive then
+        FGUI:Controller_setSelectedIndex(stateCtrol, 1)
+    else
+        FGUI:Controller_setSelectedIndex(stateCtrol, 0)
+        FGUI:setOnClickEvent(activeBtn, function()
+            print("点击激活")
+            equipCollectData:ReqActive(data.idx)
+        end)
+    end
+
 
     --TODO:激活状态
     --dump(dataConf)

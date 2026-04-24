@@ -16,8 +16,8 @@ function equipCollectData:Init()
         if content and content ~= "" then
             local decode = SL:JsonDecode(content)
             if type(decode) == "table" then
-                for _, v in ipairs(decode) do
-                    _data.activeList[v] = true
+                for k, _ in pairs(decode) do
+                    _data.activeList[k] = true
                 end
             end
         end
@@ -51,12 +51,13 @@ function equipCollectData:CalculateValue()
 end
 
 function equipCollectData:IsActive(id)
-    return _data.activeList[id] == true
+    --dump(_data.activeList)
+    return _data.activeList[tostring(id)] == true
 end
 
 --订阅事件
 function equipCollectData:Subscribe(event, callback)
-    if not _data._subscribers then
+    if not _data._subscribers[event] then
         _data._subscribers[event] = {}
     end
     local token = #_data._subscribers[event] + 1
@@ -65,7 +66,7 @@ function equipCollectData:Subscribe(event, callback)
 end
 
 function equipCollectData:Publish(event, data)
-    if _data._subscribers[event] then
+    if _data._subscribers and _data._subscribers[event] then
         for _, callback in pairs(_data._subscribers[event]) do
             if callback then callback(data) end
         end
@@ -86,13 +87,14 @@ function equipCollectData:ReqActive(id)
 end
 
 function equipCollectData:RetActive(data)
+    print("equipCollectData:RetActive")
     if data.result then
-        _data.activeList[data.id] = true
+        _data.activeList[tostring(data.id)] = true
+        dump(_data.activeList)
         self:CalculateValue()
-        --self:Publish("updateHHResult", {
-        --    _dataForMount = self:GetDataForMount(),
-        --    selectHHIndex = selectHHIndex
-        --})
+        self:Publish("EQUIP_COLLECT_UPDATE", {
+            id = data.id
+        })
     end
 end
 
