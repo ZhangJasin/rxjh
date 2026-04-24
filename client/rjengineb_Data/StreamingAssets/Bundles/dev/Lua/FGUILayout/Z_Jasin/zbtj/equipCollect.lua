@@ -61,6 +61,9 @@ function equipCollect:Create()
     end
 end
 
+function equipCollect:Destroy()
+end
+
 function equipCollect:initData()
     self._categoryData = getCategoryData(config)
     --dump(self._categoryData)

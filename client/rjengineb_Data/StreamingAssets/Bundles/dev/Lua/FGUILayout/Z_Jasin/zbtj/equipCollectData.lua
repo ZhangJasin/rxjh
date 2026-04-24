@@ -10,7 +10,19 @@ local _data = {
 
 --初始化数据
 function equipCollectData:Init()
-
+    local vars = { 37, 38, 39 }
+    for _, id in ipairs(vars) do
+        local content = SL:GetValue("T", id)
+        if content and content ~= "" then
+            local decode = SL:JsonDecode(content)
+            if type(decode) == "table" then
+                for _, v in ipairs(decode) do
+                    _data.activeList[v] = true
+                end
+            end
+        end
+    end
+    self:CalculateValue()
 end
 
 --外部接口
@@ -74,10 +86,14 @@ function equipCollectData:ReqActive(id)
 end
 
 function equipCollectData:RetActive(data)
-    --self:Publish("updateHHResult", {
-    --    _dataForMount = self:GetDataForMount(),
-    --    selectHHIndex = selectHHIndex
-    --})
+    if data.result then
+        _data.activeList[data.id] = true
+        self:CalculateValue()
+        --self:Publish("updateHHResult", {
+        --    _dataForMount = self:GetDataForMount(),
+        --    selectHHIndex = selectHHIndex
+        --})
+    end
 end
 
 return equipCollectData
