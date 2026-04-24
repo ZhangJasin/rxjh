@@ -1,5 +1,16 @@
 equipCollect = {}
 
+--local jobNames = {
+--    [1] = "弓手",
+--    [2] = "枪客",
+--    [3] = "刺客",
+--    [4] = "医生",
+--    [5] = "刀客",
+--    [6] = "剑客"
+--}
+
+--GOODEVILID 获取阵营正邪(0=无阵营 1=正派 2=邪派)
+
 local config = require("Envir/QuestDiary/game_config/cfgcsv/equipCollect.lua")
 
 local function costMaterials(actor, id)
@@ -36,7 +47,7 @@ function equipCollect.ReqActive(actor, id)
 end
 
 GameEvent.add(EventCfg.onLoginEnd, function(actor)
-    
+
 end, equipCollect)
 
 GameEvent.add(EventCfg.onNewHuman, function(actor)
