@@ -3,6 +3,7 @@ local equipCollect = class("equipCollect", BaseFGUILayout)
 local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 local ItemShow = SL:RequireFile("FGUILayout/Item/ItemShow")
 local config = require("game_config/cfgcsv/equipCollect")
+local equipCollectData = SL:RequireFile("FGUILayout/Z_Jasin/zbtj/equipCollectData")
 local categoryCache = nil
 local configType = {
     WEAPON_1 = 1,

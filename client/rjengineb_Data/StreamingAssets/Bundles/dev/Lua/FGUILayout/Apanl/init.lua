@@ -4,35 +4,35 @@
     2. 注册对应网络消息处理器
     3. 保持结构清晰，便于维护和扩展
 --]]
-local IsPC = SL:GetValue("IS_PC_OPER_MODE")
+local IsPC     = SL:GetValue("IS_PC_OPER_MODE")
 
 -- 引擎界面相关
-MainAssistData        = SL:RequireFile("FGUILayout/Main/MainAssistData")
+MainAssistData = SL:RequireFile("FGUILayout/Main/MainAssistData")
 
-MainPlayerData = SL:RequireFile("FGUILayout/Main/MainPlayerData")             -- 主玩家界面
+MainPlayerData = SL:RequireFile("FGUILayout/Main/MainPlayerData") -- 主玩家界面
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.MainPlayer, MainPlayerData)
 
 -- PC引擎界面相关
-PCMainPlayerData = SL:RequireFile("FGUILayout/Main_pc/PCMainPlayerData")             -- 主玩家界面
+PCMainPlayerData = SL:RequireFile("FGUILayout/Main_pc/PCMainPlayerData") -- 主玩家界面
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.PCMainPlayer, PCMainPlayerData)
 
 -- 任务相关 引擎界面
-MainMissionData                = SL:RequireFile("FGUILayout/Main/MainMissionData")
+MainMissionData = SL:RequireFile("FGUILayout/Main/MainMissionData")
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.MainMission, MainMissionData)
 -- 任务相关
-taskDeliverData                = SL:RequireFile("FGUILayout/A_TaskDeliver/taskDeliverData")
+taskDeliverData = SL:RequireFile("FGUILayout/A_TaskDeliver/taskDeliverData")
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.taskDeliver, taskDeliverData)
 
 
 -- gmbox
-GMBox                = SL:RequireFile("FGUILayout/A_gm/GMBox")
+GMBox = SL:RequireFile("FGUILayout/A_gm/GMBox")
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.gmbox, GMBox)
 
 -- 角色死亡
-TipRoleDiePanlData        = SL:RequireFile("FGUILayout/A_TipRoleDie/TipRoleDiePanlData")
+TipRoleDiePanlData = SL:RequireFile("FGUILayout/A_TipRoleDie/TipRoleDiePanlData")
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.TipRoleDiePanl, TipRoleDiePanlData)
 -- 阵营
-campPanl              = SL:RequireFile("FGUILayout/Transfer/campPanl")
+campPanl = SL:RequireFile("FGUILayout/Transfer/campPanl")
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.campPanl, campPanl)
 
 -- 武勋系统
@@ -53,10 +53,10 @@ FashionSystemData = SL:RequireFile("FGUILayout/A_Fashion/FashionSystemData")
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.FashionSystemPanl, FashionSystemData)
 
 -- 坐骑、奖励、NPC对话、循环任务等功能UI及消息注册
-mountMainData         = SL:RequireFile("FGUILayout/Mount/mountMainData")
+mountMainData = SL:RequireFile("FGUILayout/Mount/mountMainData")
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.mountMain, mountMainData)
 
-npcDialogUI         = SL:RequireFile("FGUILayout/NpcDialog/npcDialog")
+npcDialogUI = SL:RequireFile("FGUILayout/NpcDialog/npcDialog")
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.npcDialog, npcDialogUI)
 
 
@@ -88,5 +88,9 @@ ssrMessage:RegisterNetMsg(ssrNetMsgCfg.Invitation, InvitationUI)
 MentorShipShopUI = SL:RequireFile("FGUILayout/MentorShip/MentorShipShop")
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.MentorShipShop, MentorShipShopUI)
 
-BagRecycleViewModelUI = SL:RequireFile("FGUILayout/Bag/BagRecycleViewModel")   -- 引擎背包界面操作
+BagRecycleViewModelUI = SL:RequireFile("FGUILayout/Bag/BagRecycleViewModel") -- 引擎背包界面操作
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.BagRecycleViewModel, BagRecycleViewModelUI)
+
+--装备图鉴功能
+equipCollectData = SL:RequireFile("FGUILayout/Z_Jasin/zbtj/equipCollectData")
+ssrMessage:RegisterNetMsg(ssrNetMsgCfg.equipCollect, equipCollectData)

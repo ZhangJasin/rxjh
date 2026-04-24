@@ -1,35 +1,38 @@
-ssrNetMsgCfg, ssrNetMsgCfgEx  = {}, {}
+ssrNetMsgCfg, ssrNetMsgCfgEx = {}, {}
 
-ssrNetMsgCfg.sync             = 100 --同步数据
+ssrNetMsgCfg.sync            = 100              --同步数据
 
-ssrNetMsgCfg.gmbox                         = "gmbox"                                                -- gm
-ssrNetMsgCfg.EquipDuanZao                  = "EquipDuanZao"                                         -- 装备锻造  强化  加工  合成  
-ssrNetMsgCfg.TipsRealiveBox                = "TipsRealiveBox"                                       -- 人物死亡复活面板
-ssrNetMsgCfg.Task                          = "Task"                                                 -- 主线任务功能
-ssrNetMsgCfg.moveItem                      = "moveItem"                                             -- 传送道具
-ssrNetMsgCfg.FashionSystem                 = "FashionSystem"                                        -- 时装系统
-ssrNetMsgCfg.wuxun                         = "wuxun"                                                -- 武勋系统
-ssrNetMsgCfg.quickItem                     = "quickItem"                                            -- 快捷道具
-ssrNetMsgCfg.mountMain                     = "mountMain"                                            -- 坐骑
-ssrNetMsgCfg.npcDialog                     = "npcDialog"                                            -- NPC对话框
-ssrNetMsgCfg.bag                           = "bag"                                                  -- 背包
-ssrNetMsgCfg.MentorShip                    = "MentorShip"                                           -- 师徒
+ssrNetMsgCfg.gmbox           = "gmbox"          -- gm
+ssrNetMsgCfg.EquipDuanZao    = "EquipDuanZao"   -- 装备锻造  强化  加工  合成
+ssrNetMsgCfg.TipsRealiveBox  = "TipsRealiveBox" -- 人物死亡复活面板
+ssrNetMsgCfg.Task            = "Task"           -- 主线任务功能
+ssrNetMsgCfg.moveItem        = "moveItem"       -- 传送道具
+ssrNetMsgCfg.FashionSystem   = "FashionSystem"  -- 时装系统
+ssrNetMsgCfg.wuxun           = "wuxun"          -- 武勋系统
+ssrNetMsgCfg.quickItem       = "quickItem"      -- 快捷道具
+ssrNetMsgCfg.mountMain       = "mountMain"      -- 坐骑
+ssrNetMsgCfg.npcDialog       = "npcDialog"      -- NPC对话框
+ssrNetMsgCfg.bag             = "bag"            -- 背包
+ssrNetMsgCfg.MentorShip      = "MentorShip"     -- 师徒
 
 
 --Z_Jasin
-ssrNetMsgCfg.Changwan                      = "Changwan"                                                --畅玩特权
+ssrNetMsgCfg.Changwan = "Changwan" --畅玩特权
 
 
 
 --自定义消息ID
-ssrNetMsgCfg.USER_MESSAGE_ID  = 1000000
+ssrNetMsgCfg.USER_MESSAGE_ID            = 1000000
 
-ssrNetMsgCfg.TransferInfo                  = "TransferInfo"                                             -- 转职
-ssrNetMsgCfg.TransferInfo_RefreshTaskUI    = 1100000                                             
-ssrNetMsgCfg.TransferInfo_RefreshUI        = 1100001       
+ssrNetMsgCfg.TransferInfo               = "TransferInfo" -- 转职
+ssrNetMsgCfg.TransferInfo_RefreshTaskUI = 1100000
+ssrNetMsgCfg.TransferInfo_RefreshUI     = 1100001
 
-ssrNetMsgCfg.Guild                         = "Guild"                                             -- 公会
-ssrNetMsgCfg.Guild_RetData                 = 1100010                                                  
+ssrNetMsgCfg.Guild                      = "Guild" -- 公会
+ssrNetMsgCfg.Guild_RetData              = 1100010
+
+ssrNetMsgCfg.equipCollect               = "equipCollect" -- 装备图鉴
+
 
 local t = {}
 for msgName, msgID in pairs(ssrNetMsgCfg) do
