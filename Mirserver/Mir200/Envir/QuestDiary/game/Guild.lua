@@ -31,7 +31,7 @@ function Guild.getData(actor)
     local gxCount = gethumvar(actor, VarCfg.U_Donate_Num) or 0
     local taskCount = gethumvar(actor, VarCfg.U_REWARD_FINISH) or 0
     local freeCount = gethumvar(actor, VarCfg.U_REWARD_REFUSH) or 0
-    local taskId = 103145--gethumvar(actor, VarCfg.U_REWARD_INDEX) or 0
+    local taskId = gethumvar(actor, VarCfg.U_REWARD_INDEX) or 0
     local taskState= gethumvar(actor, VarCfg.U_REWARD_STATE) or 0
     local curJindu = _getCurTaskJinDu(actor,taskId)
 

@@ -788,14 +788,23 @@ local function _onGuildTask(actor)
         local taskid = tonumber(k)
         local taskxq = Task.ConditionLv(actor, taskid)
         local task_targettype = Task_cfg[taskid]['task_targettype'] or 0
-        if task_targettype == _taskMB4data._GuildTask and taskxq then  --完成指定任务
-            TaskProgress_data[k]['count'] = TaskProgress_data[k]['count'] + 1
-            local neednum = Task_cfg[taskid]['task_progress'] or 1   
-            
-            taskchange = Task_Change_Flag 
-            if TaskProgress_data[k]['count'] >= neednum then
-                TaskProgress_data[k]['state'] = _taskState.finish                    
-                taskfinish = Task_Finish_Flag  
+        if task_targettype == _taskMBType._GameplayDevelopment and taskxq then  
+            local targetTab = Task_cfg[taskid]['task_target_param']
+            local targetType = 0
+            if type(targetTab) == "string" then
+                targetType = tonumber(targetTab)
+            elseif type(targetTab) == "table" then
+                targetType = targetTab[1]
+            end
+            if targetType == _taskMB4data._GuildTask and taskxq then  --完成指定任务
+                TaskProgress_data[k]['count'] = TaskProgress_data[k]['count'] + 1
+                local neednum = Task_cfg[taskid]['task_progress'] or 1   
+                
+                taskchange = Task_Change_Flag 
+                if TaskProgress_data[k]['count'] >= neednum then
+                    TaskProgress_data[k]['state'] = _taskState.finish                    
+                    taskfinish = Task_Finish_Flag  
+                end
             end
         end
     end
