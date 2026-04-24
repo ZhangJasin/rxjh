@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="151,122" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n10_gpy8" name="n10" src="gpy8vqb" fileName="Images/xxdi2.png" xy="0,0" size="150,122">
+      <gearDisplay controller="button" pages="0,1,2,3"/>
+    </image>
+    <text id="n2_n22n" name="name" xy="5,3" size="141,24" fontSize="16" color="#fcfbbf" align="center" vAlign="middle" leading="2" autoSize="none" text=""/>
+    <component id="n5_n22n" name="itemRoot" src="gpy8vpj" fileName="Components/itemRoot.xml" xy="44,41" size="68,68"/>
+    <text id="n6_98nd" name="num" xy="110,109" pivot="1,1" anchor="true" size="59,24" fontSize="15" color="#ffff00" align="right" autoSize="none" text=""/>
+  </displayList>
+  <Button mode="Check"/>
+</component>

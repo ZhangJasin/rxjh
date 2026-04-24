@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" bgColor="#ff0000">
+  <displayList>
+    <component id="n18_gpy8" name="bg" src="gpy8vq4" fileName="Components/kongbg.xml" pkg="tsu6gfno" xy="0,0"/>
+    <image id="n20_gpy8" name="n20" src="gpy8vqa" fileName="Images/tipsdi.png" pkg="tsu6gfno" xy="506,159" size="265,288"/>
+    <list id="n6_o4l6" name="additemlist" xy="507,164" size="262,279" layout="pagination" overflow="scroll" margin="5,5,10,10" lineGap="5" colGap="5" lineItemCount="2" defaultItem="ui://0xwve836gpy84o" autoClearItems="true">
+      <relation target="" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

@@ -64,6 +64,11 @@
     <component id="gpy84i" name="btn_wenhao.xml" path="/Components/" exported="true"/>
     <component id="gpy84j" name="tips.xml" path="/Components/" exported="true"/>
     <image id="gpy84k" name="wenhao.png" path="/Images/" exported="true"/>
+    <image id="gpy84l" name="tipsdi.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,13,26,26" duplicatePadding="true"/>
+    <component id="gpy84n" name="kongbg.xml" path="/Components/" exported="true"/>
+    <component id="gpy84o" name="additembtn.xml" path="/Components/" exported="true"/>
+    <component id="gpy84p" name="additempanl.xml" path="/Components/" exported="true"/>
+    <image id="gpy84q" name="xxdi2.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

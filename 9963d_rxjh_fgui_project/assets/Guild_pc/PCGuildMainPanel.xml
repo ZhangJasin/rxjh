@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1024,768" designImageOffsetX="20" designImageOffsetY="8" designImageAlpha="55" bgColor="#333333">
-  <controller name="page_main" pages="0,,1,,2,,3," selected="1"/>
+  <controller name="page_main" pages="0,,1,,2,,3," selected="0"/>
   <controller name="tips" pages="0,关闭,1,打开" selected="0"/>
+  <controller name="addItem" pages="0,关闭,1,打开" selected="0"/>
   <displayList>
     <list id="n94_dkvz" name="list_page_switch" xy="847,211" size="27,275" layout="flow_vt" overflow="scroll" scrollBarFlags="128" lineGap="2" defaultItem="ui://0xwve836gl562j" selectionController="page_main">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -10,99 +11,99 @@
       <item title="成员"/>
       <item title="列表"/>
     </list>
-    <component id="n167_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="173,167" size="676,432" group="n173_ohcw"/>
-    <text id="n101_k2u1" name="text_title" xy="509,186" pivot="0.5,0.5" anchor="true" size="36,24" group="n173_ohcw" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="门派"/>
-    <image id="n34_zah9" name="n34" src="gl563a" fileName="Images/info_panel_bg.png" xy="185,203" size="665,395" group="n43_zah9"/>
-    <loader id="n1_zah9" name="icon_flag" xy="253,214" pivot="0.5,0.5" size="244,312" group="n43_zah9" aspect="true" url="ui://0xwve836s4oo3z" fill="scaleFree" clearOnPublish="true"/>
-    <component id="n6_zah9" name="progress_gdp" src="gl562m" fileName="Components/progress_fund.xml" xy="210,567" size="327,20" group="n43_zah9">
+    <component id="n167_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="177,166" size="676,432" group="n173_ohcw"/>
+    <text id="n101_k2u1" name="text_title" xy="512,185" pivot="0.5,0.5" anchor="true" size="36,24" group="n173_ohcw" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="门派"/>
+    <image id="n34_zah9" name="n34" src="gl563a" fileName="Images/info_panel_bg.png" xy="189,202" size="665,395" group="n43_zah9"/>
+    <loader id="n1_zah9" name="icon_flag" xy="257,213" pivot="0.5,0.5" size="244,312" group="n43_zah9" aspect="true" url="ui://0xwve836s4oo3z" fill="scaleFree" clearOnPublish="true"/>
+    <component id="n6_zah9" name="progress_gdp" src="gl562m" fileName="Components/progress_fund.xml" xy="214,566" size="327,20" group="n43_zah9">
       <ProgressBar value="61" max="100"/>
     </component>
-    <text id="n102_psq5" name="text_guild_level" xy="286,228" pivot="0.5,0.5" size="180,32" group="n43_zah9" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#f9f901" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="1级"/>
-    <image id="n7_zah9" name="n7" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="651,214" size="24,16" group="n10_zah9"/>
-    <image id="n8_zah9" name="n8" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="768,214" size="24,16" group="n10_zah9" scale="-1,1"/>
-    <text id="n9_zah9" name="n9" xy="651,205" size="117,34" group="n10_zah9" fontSize="12" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="门派信息"/>
-    <group id="n10_zah9" name="n10" xy="651,205" size="141,34" group="n43_zah9"/>
-    <image id="n11_zah9" name="n11" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="652,338" size="24,16" group="n14_zah9"/>
-    <image id="n12_zah9" name="n12" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="768,338" size="24,16" group="n14_zah9" scale="-1,1"/>
-    <text id="n13_zah9" name="n13" xy="651,329" size="117,34" group="n14_zah9" fontSize="12" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="门派公告"/>
-    <group id="n14_zah9" name="n14" xy="651,329" size="141,34" group="n43_zah9"/>
-    <image id="n103_7ogs" name="n103" src="gl563h" fileName="Images/content_bg_9.png" xy="592,360" size="235,162" group="n21_zah9"/>
-    <graph id="n97_n1mf" name="effect_edit" xy="594,362" size="231,127" group="n21_zah9" type="rect" fillColor="#1cffffff"/>
-    <component id="n112_qvdn" name="notice_scroll" src="gl5632" fileName="Components/text_scroll.xml" xy="593,362" size="231,125" group="n21_zah9">
+    <text id="n102_psq5" name="text_guild_level" xy="290,227" pivot="0.5,0.5" size="180,32" group="n43_zah9" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#f9f901" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="1级"/>
+    <image id="n7_zah9" name="n7" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="654,213" size="24,16" group="n10_zah9"/>
+    <image id="n8_zah9" name="n8" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="771,213" size="24,16" group="n10_zah9" scale="-1,1"/>
+    <text id="n9_zah9" name="n9" xy="654,204" size="117,34" group="n10_zah9" fontSize="12" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="门派信息"/>
+    <group id="n10_zah9" name="n10" xy="654,204" size="141,34" group="n43_zah9"/>
+    <image id="n11_zah9" name="n11" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="655,337" size="24,16" group="n14_zah9"/>
+    <image id="n12_zah9" name="n12" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="771,337" size="24,16" group="n14_zah9" scale="-1,1"/>
+    <text id="n13_zah9" name="n13" xy="654,328" size="117,34" group="n14_zah9" fontSize="12" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="门派公告"/>
+    <group id="n14_zah9" name="n14" xy="654,328" size="141,34" group="n43_zah9"/>
+    <image id="n103_7ogs" name="n103" src="gl563h" fileName="Images/content_bg_9.png" xy="595,359" size="235,162" group="n21_zah9"/>
+    <graph id="n97_n1mf" name="effect_edit" xy="597,361" size="231,127" group="n21_zah9" type="rect" fillColor="#1cffffff"/>
+    <component id="n112_qvdn" name="notice_scroll" src="gl5632" fileName="Components/text_scroll.xml" xy="596,361" size="231,125" group="n21_zah9">
       <relation target="n97_n1mf" sidePair="width-width,height-height"/>
     </component>
-    <component id="n96_n1mf" name="btn_edit" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="798,492" size="25,25" group="n21_zah9">
+    <component id="n96_n1mf" name="btn_edit" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="801,491" size="25,25" group="n21_zah9">
       <Button icon="ui://0xwve836gl563g"/>
     </component>
-    <component id="n164_vds7" name="notice_edit_yes" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="743,490" size="80,28" group="n21_zah9">
+    <component id="n164_vds7" name="notice_edit_yes" src="emvc6" fileName="common/btn_second_green.xml" pkg="qa9a7rit" xy="746,489" size="80,28" group="n21_zah9">
       <Button title="确认修改" titleColor="#fced00" titleFontSize="12"/>
     </component>
-    <component id="n165_vds7" name="notice_edit_no" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="596,490" size="80,28" group="n21_zah9">
+    <component id="n165_vds7" name="notice_edit_no" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="599,489" size="80,28" group="n21_zah9">
       <Button title="取消修改" titleColor="#fced00" titleFontSize="12"/>
     </component>
-    <group id="n21_zah9" name="n21" xy="592,360" size="235,162" group="n43_zah9"/>
-    <image id="n168_m9rd" name="n168" src="gl563h" fileName="Images/content_bg_9.png" xy="590,238" size="237,87" group="n43_zah9"/>
-    <image id="n104_7ogs" name="n104" src="gl563o" fileName="Images/info_bg.png" xy="600,245" size="220,21" group="n25_zah9"/>
-    <text id="n23_zah9" name="n23" xy="599,246" pivot="0.5,0.5" size="91,19" group="n25_zah9" fontSize="12" color="#a4d452" align="center" vAlign="middle" leading="7" letterSpacing="1" autoSize="none" text="门派名称"/>
-    <text id="n24_zah9" name="text_guild_name" xy="691,246" pivot="0.5,0.5" size="130,19" group="n25_zah9" fontSize="12" color="#30ff00" align="center" vAlign="middle" leading="7" autoSize="none" autoClearText="true" text="一般要有七个字"/>
-    <group id="n25_zah9" name="n25" xy="599,245" size="222,21" group="n43_zah9"/>
-    <image id="n107_7ogs" name="n107" src="gl563o" fileName="Images/info_bg.png" xy="600,270" size="220,20" group="n29_zah9"/>
-    <text id="n27_zah9" name="n27" xy="599,270" pivot="0.5,0.5" size="93,19" group="n29_zah9" fontSize="12" color="#a4d452" align="center" vAlign="middle" leading="7" letterSpacing="1" autoSize="none" text="门派门主"/>
-    <text id="n28_zah9" name="text_owner_name" xy="691,270" pivot="0.5,0.5" size="128,19" group="n29_zah9" fontSize="12" color="#30ff00" align="center" vAlign="middle" leading="7" autoSize="none" autoClearText="true" text="一般要有七个字"/>
-    <group id="n29_zah9" name="n29" xy="599,270" size="221,20" group="n43_zah9"/>
-    <image id="n108_7ogs" name="n108" src="gl563o" fileName="Images/info_bg.png" xy="600,293" size="220,21" group="n33_zah9"/>
-    <text id="n31_zah9" name="n31" xy="598,294" pivot="0.5,0.5" size="93,19" group="n33_zah9" fontSize="12" color="#a4d452" align="center" vAlign="middle" leading="7" letterSpacing="1" autoSize="none" text="我的贡献"/>
-    <text id="n32_zah9" name="text_my_contribution" xy="695,294" pivot="0.5,0.5" size="119,19" group="n33_zah9" fontSize="12" color="#efbf00" align="center" vAlign="middle" leading="7" letterSpacing="1" autoSize="none" text="0"/>
-    <group id="n33_zah9" name="n33" xy="598,293" size="222,21" group="n43_zah9"/>
-    <image id="n39_zah9" name="n39" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="316,540" size="24,16" group="n42_zah9"/>
-    <text id="n41_zah9" name="n41" xy="349,538" size="52,19" group="n42_zah9" fontSize="12" color="#ffff00" align="center" vAlign="middle" text="门派资金"/>
-    <image id="n40_zah9" name="n40" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="437,540" size="24,16" group="n42_zah9" scale="-1,1"/>
-    <group id="n42_zah9" name="n42" xy="316,538" size="145,19" group="n43_zah9"/>
-    <group id="n43_zah9" name="MainPanel" xy="185,203" size="665,395" group="n173_ohcw" advanced="true">
+    <group id="n21_zah9" name="n21" xy="595,359" size="235,162" group="n43_zah9"/>
+    <image id="n168_m9rd" name="n168" src="gl563h" fileName="Images/content_bg_9.png" xy="593,237" size="237,87" group="n43_zah9"/>
+    <image id="n104_7ogs" name="n104" src="gl563o" fileName="Images/info_bg.png" xy="603,244" size="220,21" group="n25_zah9"/>
+    <text id="n23_zah9" name="n23" xy="602,245" pivot="0.5,0.5" size="91,19" group="n25_zah9" fontSize="12" color="#a4d452" align="center" vAlign="middle" leading="7" letterSpacing="1" autoSize="none" text="门派名称"/>
+    <text id="n24_zah9" name="text_guild_name" xy="694,245" pivot="0.5,0.5" size="130,19" group="n25_zah9" fontSize="12" color="#30ff00" align="center" vAlign="middle" leading="7" autoSize="none" autoClearText="true" text="一般要有七个字"/>
+    <group id="n25_zah9" name="n25" xy="602,244" size="222,21" group="n43_zah9"/>
+    <image id="n107_7ogs" name="n107" src="gl563o" fileName="Images/info_bg.png" xy="603,269" size="220,20" group="n29_zah9"/>
+    <text id="n27_zah9" name="n27" xy="602,269" pivot="0.5,0.5" size="93,19" group="n29_zah9" fontSize="12" color="#a4d452" align="center" vAlign="middle" leading="7" letterSpacing="1" autoSize="none" text="门派门主"/>
+    <text id="n28_zah9" name="text_owner_name" xy="694,269" pivot="0.5,0.5" size="128,19" group="n29_zah9" fontSize="12" color="#30ff00" align="center" vAlign="middle" leading="7" autoSize="none" autoClearText="true" text="一般要有七个字"/>
+    <group id="n29_zah9" name="n29" xy="602,269" size="221,20" group="n43_zah9"/>
+    <image id="n108_7ogs" name="n108" src="gl563o" fileName="Images/info_bg.png" xy="603,292" size="220,21" group="n33_zah9"/>
+    <text id="n31_zah9" name="n31" xy="601,293" pivot="0.5,0.5" size="93,19" group="n33_zah9" fontSize="12" color="#a4d452" align="center" vAlign="middle" leading="7" letterSpacing="1" autoSize="none" text="我的贡献"/>
+    <text id="n32_zah9" name="text_my_contribution" xy="698,293" pivot="0.5,0.5" size="119,19" group="n33_zah9" fontSize="12" color="#efbf00" align="center" vAlign="middle" leading="7" letterSpacing="1" autoSize="none" text="0"/>
+    <group id="n33_zah9" name="n33" xy="601,292" size="222,21" group="n43_zah9"/>
+    <image id="n39_zah9" name="n39" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="320,539" size="24,16" group="n42_zah9"/>
+    <text id="n41_zah9" name="n41" xy="352,537" size="52,19" group="n42_zah9" fontSize="12" color="#ffff00" align="center" vAlign="middle" text="门派资金"/>
+    <image id="n40_zah9" name="n40" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="440,539" size="24,16" group="n42_zah9" scale="-1,1"/>
+    <group id="n42_zah9" name="n42" xy="320,537" size="145,19" group="n43_zah9"/>
+    <group id="n43_zah9" name="MainPanel" xy="189,202" size="665,395" group="n173_ohcw" advanced="true">
       <gearDisplay controller="page_main" pages="0"/>
     </group>
-    <image id="n48_zah9" name="Bg" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="181,212" size="653,346" group="n77_zah9"/>
-    <component id="n166_lbe5" name="btn_permission" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="499,563" size="76,28" group="n77_zah9">
+    <image id="n48_zah9" name="Bg" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="185,211" size="653,346" group="n77_zah9"/>
+    <component id="n166_lbe5" name="btn_permission" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="502,562" size="76,28" group="n77_zah9">
       <Button title="权限设置" titleFontSize="12"/>
     </component>
-    <component id="n95_jjgk" name="btn_apply_list" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="585,563" size="76,28" group="n77_zah9">
+    <component id="n95_jjgk" name="btn_apply_list" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="588,562" size="76,28" group="n77_zah9">
       <Button title="申请列表" titleFontSize="12"/>
     </component>
-    <component id="n174_qgy3" name="btn_event" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="671,563" size="76,28" group="n77_zah9">
+    <component id="n174_qgy3" name="btn_event" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="674,562" size="76,28" group="n77_zah9">
       <Button title="门派事件" titleFontSize="12"/>
     </component>
-    <component id="n75_zah9" name="btn_quit_guild" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="757,563" size="76,28" group="n77_zah9">
+    <component id="n75_zah9" name="btn_quit_guild" src="emvc5" fileName="common/btn_second_red.xml" pkg="qa9a7rit" xy="760,562" size="76,28" group="n77_zah9">
       <Button title="退出门派" titleFontSize="12"/>
     </component>
-    <image id="n76_zah9" name="n76" src="gl563i" fileName="Images/inputField_bg_9.png" xy="191,562" size="177,28" group="n72_zah9"/>
-    <text id="n71_zah9" name="n71" xy="221,567" size="64,19" group="n72_zah9" fontSize="12" color="#6ba99b" align="center" vAlign="middle" leading="7" text="在线人数："/>
-    <text id="n73_zah9" name="text_online_member" xy="284,566" size="50,22" group="n72_zah9" fontSize="12" color="#2ae000" vAlign="middle" leading="7" text="123/999" input="true"/>
-    <group id="n72_zah9" name="online_info" xy="191,562" size="177,28" group="n77_zah9"/>
-    <group id="n77_zah9" name="MemberCommon" xy="181,212" size="653,379" group="n93_dkvz"/>
-    <image id="n51_zah9" name="n51" src="gl5637" fileName="Images/item_title_bg.png" xy="183,213" size="650,34" group="n67_zah9"/>
-    <image id="n52_zah9" name="n52" src="gl563b" fileName="Images/split_line.png" xy="352,216" size="1,28" group="n67_zah9"/>
-    <image id="n55_zah9" name="n55" src="gl563b" fileName="Images/split_line.png" xy="696,216" size="1,28" group="n67_zah9"/>
-    <image id="n57_zah9" name="n57" src="gl563b" fileName="Images/split_line.png" xy="572,217" size="1,28" group="n67_zah9"/>
-    <image id="n58_zah9" name="n58" src="gl563b" fileName="Images/split_line.png" xy="463,216" size="1,28" group="n67_zah9"/>
-    <text id="n59_zah9" name="n59" xy="238,219" pivot="0.5,0.5" size="60,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="玩家名称"/>
-    <text id="n60_zah9" name="n60" xy="392,219" pivot="0.5,0.5" size="32,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="等级"/>
-    <text id="n61_zah9" name="n61" xy="502,219" pivot="0.5,0.5" size="32,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="职务"/>
-    <text id="n62_zah9" name="n62" xy="612,219" pivot="0.5,0.5" size="46,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="贡献值"/>
-    <text id="n64_zah9" name="n64" xy="734,219" pivot="0.5,0.5" size="60,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="离线时间"/>
-    <group id="n67_zah9" name="top_title" xy="183,213" size="650,34" group="n68_zah9"/>
-    <list id="n69_zah9" name="list_member" xy="184,249" size="652,309" group="n68_zah9" overflow="scroll" lineGap="3" defaultItem="ui://0xwve836gl5633" autoItemSize="false" autoClearItems="true">
+    <image id="n76_zah9" name="n76" src="gl563i" fileName="Images/inputField_bg_9.png" xy="195,561" size="177,28" group="n72_zah9"/>
+    <text id="n71_zah9" name="n71" xy="225,566" size="64,19" group="n72_zah9" fontSize="12" color="#6ba99b" align="center" vAlign="middle" leading="7" text="在线人数："/>
+    <text id="n73_zah9" name="text_online_member" xy="288,565" size="50,22" group="n72_zah9" fontSize="12" color="#2ae000" vAlign="middle" leading="7" text="123/999" input="true"/>
+    <group id="n72_zah9" name="online_info" xy="195,561" size="177,28" group="n77_zah9"/>
+    <group id="n77_zah9" name="MemberCommon" xy="185,211" size="653,379" group="n93_dkvz"/>
+    <image id="n51_zah9" name="n51" src="gl5637" fileName="Images/item_title_bg.png" xy="187,212" size="650,34" group="n67_zah9"/>
+    <image id="n52_zah9" name="n52" src="gl563b" fileName="Images/split_line.png" xy="355,215" size="1,28" group="n67_zah9"/>
+    <image id="n55_zah9" name="n55" src="gl563b" fileName="Images/split_line.png" xy="699,215" size="1,28" group="n67_zah9"/>
+    <image id="n57_zah9" name="n57" src="gl563b" fileName="Images/split_line.png" xy="575,216" size="1,28" group="n67_zah9"/>
+    <image id="n58_zah9" name="n58" src="gl563b" fileName="Images/split_line.png" xy="466,215" size="1,28" group="n67_zah9"/>
+    <text id="n59_zah9" name="n59" xy="242,218" pivot="0.5,0.5" size="60,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="玩家名称"/>
+    <text id="n60_zah9" name="n60" xy="395,218" pivot="0.5,0.5" size="32,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="等级"/>
+    <text id="n61_zah9" name="n61" xy="505,218" pivot="0.5,0.5" size="32,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="职务"/>
+    <text id="n62_zah9" name="n62" xy="615,218" pivot="0.5,0.5" size="46,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="贡献值"/>
+    <text id="n64_zah9" name="n64" xy="737,218" pivot="0.5,0.5" size="60,22" group="n67_zah9" fontSize="14" color="#ddfdd9" align="center" vAlign="middle" leading="7" strokeColor="#000000" text="离线时间"/>
+    <group id="n67_zah9" name="top_title" xy="187,212" size="650,34" group="n68_zah9"/>
+    <list id="n69_zah9" name="list_member" xy="188,248" size="652,309" group="n68_zah9" overflow="scroll" lineGap="3" defaultItem="ui://0xwve836gl5633" autoItemSize="false" autoClearItems="true">
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <group id="n68_zah9" name="MemberView" xy="183,213" size="653,345" group="n93_dkvz" advanced="true"/>
-    <group id="n93_dkvz" name="MemberPanel" xy="181,212" size="655,379" group="n173_ohcw" advanced="true">
+    <group id="n68_zah9" name="MemberView" xy="187,212" size="653,345" group="n93_dkvz" advanced="true"/>
+    <group id="n93_dkvz" name="MemberPanel" xy="185,211" size="655,379" group="n173_ohcw" advanced="true">
       <gearDisplay controller="page_main" pages="2"/>
     </group>
-    <image id="n149_jxvr" name="Bg1" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="181,212" size="653,346" group="n148_jxvr"/>
-    <image id="n147_jxvr" name="top" src="gl5637" fileName="Images/item_title_bg.png" xy="183,213" size="650,34" group="n148_jxvr"/>
-    <list id="n136_jxvr" name="list_guild" xy="184,249" size="652,309" group="n148_jxvr" overflow="scroll" lineGap="3" defaultItem="ui://0xwve836gl562s" autoItemSize="false" autoClearItems="true">
+    <image id="n149_jxvr" name="Bg1" src="emvc5b" fileName="image/black_bg.png" pkg="qa9a7rit" xy="185,211" size="653,346" group="n148_jxvr"/>
+    <image id="n147_jxvr" name="top" src="gl5637" fileName="Images/item_title_bg.png" xy="187,212" size="650,34" group="n148_jxvr"/>
+    <list id="n136_jxvr" name="list_guild" xy="188,248" size="652,309" group="n148_jxvr" overflow="scroll" lineGap="3" defaultItem="ui://0xwve836gl562s" autoItemSize="false" autoClearItems="true">
       <item/>
       <item/>
       <item/>
@@ -110,61 +111,64 @@
       <item/>
       <item/>
     </list>
-    <image id="n151_yj7k" name="n151" src="gl563b" fileName="Images/split_line.png" xy="352,215" size="1,30" group="n148_jxvr"/>
-    <image id="n152_yj7k" name="n152" src="gl563b" fileName="Images/split_line.png" xy="463,215" size="1,30" group="n148_jxvr"/>
-    <image id="n153_yj7k" name="n153" src="gl563b" fileName="Images/split_line.png" xy="572,215" size="1,30" group="n148_jxvr"/>
-    <image id="n154_yj7k" name="n154" src="gl563b" fileName="Images/split_line.png" xy="696,215" size="1,30" group="n148_jxvr"/>
-    <text id="n150_yj7k" name="n150" xy="238,219" pivot="0.5,0.5" size="60,22" group="n148_jxvr" fontSize="14" color="#f1ffeb" align="center" vAlign="middle" strokeColor="#000000" singleLine="true" text="门派名称"/>
-    <text id="n155_yj7k" name="n155" xy="393,219" pivot="0.5,0.5" size="32,22" group="n148_jxvr" fontSize="14" color="#f1ffeb" strokeColor="#000000" singleLine="true" text="等级"/>
-    <text id="n156_yj7k" name="n156" xy="502,219" pivot="0.5,0.5" size="32,22" group="n148_jxvr" fontSize="14" color="#f1ffeb" strokeColor="#000000" singleLine="true" text="人数"/>
-    <text id="n157_yj7k" name="n157" xy="619,219" pivot="0.5,0.5" size="32,22" group="n148_jxvr" fontSize="14" color="#f1ffeb" strokeColor="#000000" singleLine="true" text="帮主"/>
-    <text id="n158_yj7k" name="n158" xy="734,219" pivot="0.5,0.5" size="60,22" group="n148_jxvr" fontSize="14" color="#f1ffeb" align="center" vAlign="middle" strokeColor="#000000" singleLine="true" text="加入条件"/>
-    <component id="n162_yj7k" name="check_owner" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="196,568" size="22,22" group="n148_jxvr"/>
-    <text id="n160_yj7k" name="n160" xy="228,568" size="112,19" group="n148_jxvr" fontSize="12" color="#f1ffeb" text="只显示会长在线门派">
+    <image id="n151_yj7k" name="n151" src="gl563b" fileName="Images/split_line.png" xy="355,214" size="1,30" group="n148_jxvr"/>
+    <image id="n152_yj7k" name="n152" src="gl563b" fileName="Images/split_line.png" xy="466,214" size="1,30" group="n148_jxvr"/>
+    <image id="n153_yj7k" name="n153" src="gl563b" fileName="Images/split_line.png" xy="575,214" size="1,30" group="n148_jxvr"/>
+    <image id="n154_yj7k" name="n154" src="gl563b" fileName="Images/split_line.png" xy="699,214" size="1,30" group="n148_jxvr"/>
+    <text id="n150_yj7k" name="n150" xy="242,218" pivot="0.5,0.5" size="60,22" group="n148_jxvr" fontSize="14" color="#f1ffeb" align="center" vAlign="middle" strokeColor="#000000" singleLine="true" text="门派名称"/>
+    <text id="n155_yj7k" name="n155" xy="396,218" pivot="0.5,0.5" size="32,22" group="n148_jxvr" fontSize="14" color="#f1ffeb" strokeColor="#000000" singleLine="true" text="等级"/>
+    <text id="n156_yj7k" name="n156" xy="505,218" pivot="0.5,0.5" size="32,22" group="n148_jxvr" fontSize="14" color="#f1ffeb" strokeColor="#000000" singleLine="true" text="人数"/>
+    <text id="n157_yj7k" name="n157" xy="622,218" pivot="0.5,0.5" size="32,22" group="n148_jxvr" fontSize="14" color="#f1ffeb" strokeColor="#000000" singleLine="true" text="帮主"/>
+    <text id="n158_yj7k" name="n158" xy="737,218" pivot="0.5,0.5" size="60,22" group="n148_jxvr" fontSize="14" color="#f1ffeb" align="center" vAlign="middle" strokeColor="#000000" singleLine="true" text="加入条件"/>
+    <component id="n162_yj7k" name="check_owner" src="emvci" fileName="common/checkbox_multi.xml" pkg="qa9a7rit" xy="200,567" size="22,22" group="n148_jxvr"/>
+    <text id="n160_yj7k" name="n160" xy="232,567" size="112,19" group="n148_jxvr" fontSize="12" color="#f1ffeb" text="只显示会长在线门派">
       <relation target="n162_yj7k" sidePair="middle-middle,left-left"/>
     </text>
-    <group id="n148_jxvr" name="GuildListPanel" xy="181,212" size="655,378" group="n173_ohcw" advanced="true">
+    <group id="n148_jxvr" name="GuildListPanel" xy="185,211" size="655,378" group="n173_ohcw" advanced="true">
       <gearDisplay controller="page_main" pages="3"/>
     </group>
-    <component id="n163_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="518,383" size="0,0" group="n173_ohcw"/>
-    <image id="n248_gpy8" name="n248" src="glg942" fileName="Images/gx_bg.png" xy="179,206" size="661,385" group="n243_gpy8"/>
-    <component id="n222_gpy8" name="btn_donate_1" src="gl5636" fileName="Components/btn_main_green.xml" xy="224,358" size="118,28" group="n243_gpy8">
+    <component id="n163_ft29" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="521,382" size="0,0" group="n173_ohcw"/>
+    <image id="n248_gpy8" name="n248" src="glg942" fileName="Images/gx_bg.png" xy="183,205" size="661,385" group="n243_gpy8"/>
+    <component id="n222_gpy8" name="btn_donate_1" src="gl5636" fileName="Components/btn_main_green.xml" xy="228,357" size="118,28" group="n243_gpy8">
       <Button title="捐献"/>
     </component>
-    <component id="n223_gpy8" name="btn_donate_2" src="gl5636" fileName="Components/btn_main_green.xml" xy="409,358" size="118,28" group="n243_gpy8">
+    <component id="n223_gpy8" name="btn_donate_2" src="gl5636" fileName="Components/btn_main_green.xml" xy="412,357" size="118,28" group="n243_gpy8">
       <Button title="捐献"/>
     </component>
-    <richtext id="n224_gpy8" name="n224" xy="189,212" size="352,36" group="n243_gpy8" fontSize="12" color="#ffffff" text="每日为门派捐献、完成每日门派任务，都可以获得门派贡献及奖励&#xD;&#xA;参与每周的门派活动，可获得大量门派贡献"/>
-    <richtext id="n225_gpy8" name="n225" xy="252,334" size="73,19" group="n243_gpy8" fontSize="12" color="#372a08" text="门派贡献+50"/>
-    <richtext id="n226_gpy8" name="n226" xy="432,334" size="80,19" group="n243_gpy8" fontSize="12" color="#372a08" text="门派贡献+200"/>
-    <image id="n227_gpy8" name="n227" src="gpy847" fileName="Images/icon_coin.png" xy="242,386" size="30,21" group="n243_gpy8"/>
-    <text id="n228_gpy8" name="cost1" xy="276,388" size="34,20" group="n243_gpy8" fontSize="13" color="#372a08" text="100w"/>
-    <image id="n229_gpy8" name="n229" src="gl562x" fileName="Images/icon_gold.png" xy="433,388" size="30,21" group="n243_gpy8"/>
-    <text id="n231_gpy8" name="gxCount" xy="312,283" size="10,19" group="n243_gpy8" fontSize="12" color="#372a08" text=""/>
-    <text id="n230_gpy8" name="cost2" xy="470,389" size="34,20" group="n243_gpy8" fontSize="13" color="#372a08" autoSize="none" text="5"/>
-    <list id="n232_gpy8" name="actList" xy="193,448" size="355,127" group="n243_gpy8" overflow="scroll" lineGap="4" defaultItem="ui://0xwve836gpy848"/>
-    <list id="n233_gpy8" name="awardList" xy="567,453" size="259,50" group="n243_gpy8" layout="row" overflow="scroll" scroll="horizontal" colGap="6" defaultItem="ui://0xwve836gpy84c" align="center" vAlign="middle"/>
-    <component id="n234_gpy8" name="btn_comp" src="gl5636" fileName="Components/btn_main_green.xml" xy="706,523" size="118,28" group="n243_gpy8">
+    <richtext id="n224_gpy8" name="n224" xy="193,211" size="352,36" group="n243_gpy8" fontSize="12" color="#ffffff" text="每日为门派捐献、完成每日门派任务，都可以获得门派贡献及奖励&#xD;&#xA;参与每周的门派活动，可获得大量门派贡献"/>
+    <richtext id="n225_gpy8" name="n225" xy="256,333" size="73,19" group="n243_gpy8" fontSize="12" color="#372a08" text="门派贡献+50"/>
+    <richtext id="n226_gpy8" name="n226" xy="435,333" size="80,19" group="n243_gpy8" fontSize="12" color="#372a08" text="门派贡献+200"/>
+    <image id="n227_gpy8" name="n227" src="gpy847" fileName="Images/icon_coin.png" xy="246,385" size="30,21" group="n243_gpy8"/>
+    <text id="n228_gpy8" name="cost1" xy="280,387" size="34,20" group="n243_gpy8" fontSize="13" color="#372a08" text="100w"/>
+    <image id="n229_gpy8" name="n229" src="gl562x" fileName="Images/icon_gold.png" xy="436,387" size="30,21" group="n243_gpy8"/>
+    <text id="n231_gpy8" name="gxCount" xy="316,282" size="10,19" group="n243_gpy8" fontSize="12" color="#372a08" text=""/>
+    <text id="n230_gpy8" name="cost2" xy="473,388" size="34,20" group="n243_gpy8" fontSize="13" color="#372a08" autoSize="none" text="5"/>
+    <list id="n232_gpy8" name="actList" xy="197,447" size="355,127" group="n243_gpy8" overflow="scroll" lineGap="4" defaultItem="ui://0xwve836gpy848"/>
+    <list id="n233_gpy8" name="awardList" xy="570,452" size="259,50" group="n243_gpy8" layout="row" overflow="scroll" scroll="horizontal" colGap="6" defaultItem="ui://0xwve836gpy84c" align="center" vAlign="middle"/>
+    <component id="n234_gpy8" name="btn_comp" src="gl5636" fileName="Components/btn_main_green.xml" xy="709,522" size="118,28" group="n243_gpy8">
       <Button title="接取任务"/>
     </component>
-    <component id="n235_gpy8" name="btn_refresh" src="gl5636" fileName="Components/btn_main_green.xml" xy="568,523" size="118,28" group="n243_gpy8">
+    <component id="n235_gpy8" name="btn_refresh" src="gl5636" fileName="Components/btn_main_green.xml" xy="571,522" size="118,28" group="n243_gpy8">
       <Button title="刷新"/>
     </component>
-    <richtext id="n236_gpy8" name="rCount" xy="573,552" size="10,20" group="n243_gpy8" fontSize="13" color="#372a08" text=""/>
-    <text id="n237_gpy8" name="taskCount" xy="623,283" size="10,19" group="n243_gpy8" fontSize="12" color="#372a08" text=""/>
-    <text id="n238_gpy8" name="taskStar" xy="575,310" size="69,20" group="n243_gpy8" fontSize="13" color="#372a08" text="任务星级："/>
-    <list id="n239_gpy8" name="starList" xy="641,307" size="184,24" group="n243_gpy8" layout="row" overflow="scroll" defaultItem="ui://0xwve836gpy849"/>
-    <text id="n240_gpy8" name="taskNeed" xy="575,340" size="69,20" group="n243_gpy8" fontSize="13" color="#372a08" text="任务要求："/>
-    <component id="n247_gpy8" name="btn_sub" src="gpy84h" fileName="Components/btn_green.xml" xy="635,378" size="118,31" group="n243_gpy8"/>
-    <richtext id="n249_gpy8" name="taskCon" xy="645,340" size="177,20" group="n243_gpy8" fontSize="13" color="#372a08" autoSize="none" text=""/>
-    <component id="n250_gpy8" name="btn_tips" src="gpy84i" fileName="Components/btn_wenhao.xml" xy="801,210" group="n243_gpy8"/>
-    <component id="n251_gpy8" name="panl_tip" src="gpy84j" fileName="Components/tips.xml" xy="409,203" group="n243_gpy8">
+    <richtext id="n236_gpy8" name="rCount" xy="576,551" size="10,20" group="n243_gpy8" fontSize="13" color="#372a08" text=""/>
+    <text id="n237_gpy8" name="taskCount" xy="626,282" size="10,19" group="n243_gpy8" fontSize="12" color="#372a08" text=""/>
+    <text id="n238_gpy8" name="taskStar" xy="578,309" size="69,20" group="n243_gpy8" fontSize="13" color="#372a08" text="任务星级："/>
+    <list id="n239_gpy8" name="starList" xy="644,306" size="184,24" group="n243_gpy8" layout="row" overflow="scroll" defaultItem="ui://0xwve836gpy849"/>
+    <text id="n240_gpy8" name="taskNeed" xy="578,339" size="69,20" group="n243_gpy8" fontSize="13" color="#372a08" text="任务要求："/>
+    <component id="n247_gpy8" name="btn_sub" src="gpy84h" fileName="Components/btn_green.xml" xy="638,377" size="118,31" group="n243_gpy8"/>
+    <richtext id="n249_gpy8" name="taskCon" xy="648,339" size="177,20" group="n243_gpy8" fontSize="13" color="#372a08" autoSize="none" text=""/>
+    <component id="n250_gpy8" name="btn_tips" src="gpy84i" fileName="Components/btn_wenhao.xml" xy="804,209" group="n243_gpy8"/>
+    <component id="n251_gpy8" name="panl_tip" src="gpy84j" fileName="Components/tips.xml" xy="412,202" group="n243_gpy8">
       <gearDisplay controller="tips" pages="1"/>
     </component>
-    <group id="n243_gpy8" name="GXPanel" xy="179,203" size="661,388" group="n173_ohcw" advanced="true">
+    <component id="n252_gpy8" name="panl_additem" src="gpy84p" fileName="Components/additempanl.xml" xy="-139,93" group="n243_gpy8">
+      <gearDisplay controller="addItem" pages="1"/>
+    </component>
+    <group id="n243_gpy8" name="GXPanel" xy="-139,93" size="1334,750" group="n173_ohcw" advanced="true">
       <gearDisplay controller="page_main" pages="1"/>
     </group>
-    <group id="n173_ohcw" name="n173" xy="173,167" size="677,432" advanced="true">
+    <group id="n173_ohcw" name="n173" xy="-139,93" size="1334,750" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <component id="n113_ghle" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186" size="31,31">
