@@ -5,6 +5,7 @@ local ItemShow = SL:RequireFile("FGUILayout/Item/ItemShow")
 local config = require("game_config/cfgcsv/equipCollect")
 local attrConfig = require("game_config/cfgcsv/equipCollectAttr")
 local equipCollectData = SL:RequireFile("FGUILayout/Z_Jasin/zbtj/equipCollectData")
+local AttScoreNames = require("game_config/AttScore")
 local categoryCache = nil
 local configType = {
     WEAPON_1  = 1,
@@ -150,6 +151,29 @@ function equipCollect:initRenderer()
             FGUI:GTextField_setText(name, "上品")
         end
     end)
+
+    local curAttrLst = FGUI:GetChild(self._ui.showAttr, "cur_attr_list")
+    local nextAttrLst = FGUI:GetChild(self._ui.showAttr, "next_attr_list")
+    FGUI:GList_itemRenderer(curAttrLst, function(idx, item)
+        local curAttr = equipCollectData:GetCurAttr()
+        local data = {}
+        for index, info in pairs(curAttr) do
+            if index == idx + 1 then
+                data = info
+            end
+        end
+        self:equipAttrListRenderer(data, idx, item)
+    end)
+    FGUI:GList_itemRenderer(nextAttrLst, function(idx, item)
+        local nextAttr = equipCollectData:GetNextAttr()
+        local data = {}
+        for index, info in pairs(nextAttr) do
+            if index == idx + 1 then
+                data = info
+            end
+        end
+        self:equipAttrListRenderer(data, idx, item)
+    end)
 end
 
 function equipCollect:updateShowListByIndex(index)
@@ -175,23 +199,84 @@ function equipCollect:bindEvents()
         local index = FGUI:GList_getSelectedIndex(self._ui.pageList)
         self:updateShowListByIndex(index)
     end)
+
+    local showAttrControl = FGUI:getController(self.component, "showAttr")
+    FGUI:setOnClickEvent(self._ui.tips, function()
+        local status = FGUI:Controller_getSelectedIndex(showAttrControl)
+        FGUI:Controller_setSelectedIndex(showAttrControl, 1 - status)
+        if status == 0 then
+            self:refreshAttr()
+        end
+    end)
+
+    local showAttrBtnClose = FGUI:GetChild(self._ui.showAttr, "btn_close")
+    FGUI:setOnClickEvent(showAttrBtnClose, function()
+        FGUI:Controller_setSelectedIndex(showAttrControl, 0)
+    end)
 end
 
 function equipCollect:refreshDisplay(data)
     self._showList = data or {}
     FGUI:GList_setNumItems(self._ui.typeList, #self._showList)
 
-    local totalValue = equipCollectData:GetValue()
+    local totalValue = equipCollectData:GetCurValue()
     local valueText = FGUI:GetChild(self._ui.tips, "level")
     FGUI:GTextField_setText(valueText, totalValue)
 end
 
+function equipCollect:refreshAttr()
+    local curAttr = equipCollectData:GetCurAttr()
+    local nextAttr = equipCollectData:GetNextAttr()
+    local curValue = equipCollectData:GetCurValue()
+    local nextValue = equipCollectData:GetNextValue()
+
+    local curLevel = FGUI:GetChild(self._ui.showAttr, "cur_level")
+    local nextLevel = FGUI:GetChild(self._ui.showAttr, "next_level")
+    local curAttrList = FGUI:GetChild(self._ui.showAttr, "cur_attr_list")
+    local nextAttrList = FGUI:GetChild(self._ui.showAttr, "next_attr_list")
+
+    FGUI:GTextField_setText(curLevel, curValue)
+    FGUI:GTextField_setText(nextLevel, nextValue)
+
+    --序列化属性配表
+    local curAttrLens = 0
+    local nextAttrLens = 0
+    for i, j in pairs(curAttr) do
+        curAttrLens = curAttrLens + 1
+    end
+    for k, v in pairs(nextAttr) do
+        nextAttrLens = nextAttrLens + 1
+    end
+    FGUI:GList_setNumItems(curAttrList, curAttrLens)
+    FGUI:GList_setNumItems(nextAttrList, nextAttrLens)
+end
+
 function equipCollect:initPageLists()
-    print("equipCollect:initPageLists()")
     --默认页签数据
     FGUI:GList_setSelectedIndex(self._ui.pageList, 0)
     local firstPage = FGUI:GetChildAt(self._ui.pageList, 0)
     FGUI:GButton_FireClick(firstPage, true, true)
+end
+
+function equipCollect:equipAttrListRenderer(data, idx, item)
+    local attrId = data[1]
+    local attrValue = data[2]
+    local isPercent = data[3]
+    local attrName = AttScoreNames[attrId].Name
+
+    local item_name = FGUI:GetChild(item, "name")
+    local item_value = FGUI:GetChild(item, "value")
+
+    local valueText = ""
+    if isPercent == 1 then
+        attrValue = math.floor(attrValue / 100)
+        valueText = string.format("+%d%%", attrValue)
+    else
+        valueText = string.format("+%d", attrValue)
+    end
+
+    FGUI:GTextField_setText(item_name, attrName)
+    FGUI:GTextField_setText(item_value, valueText)
 end
 
 function equipCollect:equipListRenderer(data, idx, item)
@@ -226,14 +311,9 @@ function equipCollect:equipListRenderer(data, idx, item)
     else
         FGUI:Controller_setSelectedIndex(stateCtrol, 0)
         FGUI:setOnClickEvent(activeBtn, function()
-            print("点击激活")
             equipCollectData:ReqActive(data.idx)
         end)
     end
-
-
-    --TODO:激活状态
-    --dump(dataConf)
 end
 
 return equipCollect

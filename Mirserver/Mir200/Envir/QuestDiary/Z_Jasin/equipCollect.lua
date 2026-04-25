@@ -47,39 +47,32 @@ local function getTotalValue(actor)
 end
 
 local function getValueAttr(actor)
-    local function getValueAttr(actor)
-        local value = getTotalValue(actor)
-        if value <= 0 then return nil end
-        local bestConf = nil
-        for _, conf in ipairs(attrConfig) do
-            if value >= conf.scores then
-                bestConf = conf
-            else
-                break
-            end
+    local value = getTotalValue(actor)
+    if value <= 0 then return nil end
+    local bestConf = nil
+    for _, conf in ipairs(attrConfig) do
+        if value >= conf.scores then
+            bestConf = conf.attr
+        else
+            break
         end
-        return bestConf or nil
     end
+    return bestConf or nil
 end
 
 local function setValueAttr(actor)
     local attr = getValueAttr(actor)
     if not attr then return end
     for _, group in ipairs(attr) do
-        if group then
-            local params = string.split(group, "^")
-            if #params > 2 then
-                local attrId = tonumber(params[1])
-                local attrValue = tonumber(params[2])
-                local isPercent = tonumber(params[3])
-                if isPercent == 1 then
-                    attrValue = math.floor(attrValue / 100)
-                end
-                if attrId and attrValue then
-                    print("attrId=", attrId, "attrValue=", attrValue)
-                    changeabil(actor, attrId, "+", attrValue)
-                end
-            end
+        local attrId = tonumber(group[1])
+        local attrValue = tonumber(group[2])
+        local isPercent = tonumber(group[3])
+        if isPercent == 1 then
+            attrValue = math.floor(attrValue / 100)
+        end
+        if attrId and attrValue then
+            print("attrId=", attrId, "attrValue=", attrValue)
+            changeabil(actor, attrId, "+", attrValue)
         end
     end
 end

@@ -5,7 +5,10 @@ local attrConfig = require("game_config/cfgcsv/equipCollectAttr")
 local _data = {
     _subscribers = {},
     activeList = {},
-    totalValue = 0
+    curValue = 0,
+    nextValue = 0,
+    curAttr = {},
+    nextAttr = {}
 }
 
 --初始化数据
@@ -22,7 +25,16 @@ function equipCollectData:Init()
             end
         end
     end
+
+    --序列化属性配表
+    self._sortedScores = {}
+    for score, _ in pairs(attrConfig) do
+        table.insert(self._sortedScores, score)
+    end
+    table.sort(self._sortedScores)
+
     self:CalculateValue()
+    self:CalculateAttr()
 end
 
 --外部接口
@@ -34,8 +46,20 @@ function equipCollectData:GetActiveList()
     return _data.activeList
 end
 
-function equipCollectData:GetValue()
-    return _data.totalValue
+function equipCollectData:GetCurValue()
+    return _data.curValue
+end
+
+function equipCollectData:GetNextValue()
+    return _data.nextValue
+end
+
+function equipCollectData:GetCurAttr()
+    return _data.curAttr
+end
+
+function equipCollectData:GetNextAttr()
+    return _data.nextAttr
 end
 
 function equipCollectData:CalculateValue()
@@ -47,7 +71,46 @@ function equipCollectData:CalculateValue()
             end
         end
     end
-    _data.totalValue = val
+    _data.curValue = val
+
+    local nextVal = 0
+    local count = #self._sortedScores
+    if count > 0 then
+        for i = 1, count do
+            local scoreThreshold = self._sortedScores[i]
+            if val < scoreThreshold then
+                nextVal = scoreThreshold
+                break
+            end
+        end
+        if nextVal == 0 then
+            nextVal = self._sortedScores[count]
+        end
+    end
+    _data.nextValue = nextVal
+end
+
+function equipCollectData:CalculateAttr()
+    local value = _data.curValue
+    local bestConf = {}
+    local nextConf = {}
+    local count = #self._sortedScores
+    if count == 0 then return end
+    for i = 1, count do
+        local scoreKey = self._sortedScores[i]
+        local conf = attrConfig[scoreKey]
+        if value >= conf.scores then
+            bestConf = conf.attr
+            if i == count then
+                nextConf = conf.attr
+            end
+        else
+            nextConf = conf.attr
+            break
+        end
+    end
+    _data.curAttr = bestConf
+    _data.nextAttr = nextConf
 end
 
 function equipCollectData:IsActive(id)
@@ -87,11 +150,11 @@ function equipCollectData:ReqActive(id)
 end
 
 function equipCollectData:RetActive(data)
-    print("equipCollectData:RetActive")
     if data.result then
         _data.activeList[tostring(data.id)] = true
         dump(_data.activeList)
         self:CalculateValue()
+        self:CalculateAttr()
         self:Publish("EQUIP_COLLECT_UPDATE", {
             id = data.id
         })
