@@ -2,9 +2,11 @@
 <component size="118,90" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n8_gpy8" name="n8" src="gpy84q" fileName="Images/xxdi2.png" xy="0,0" size="118,90"/>
+    <image id="n8_gpy8" name="bg" src="gpy84q" fileName="Images/xxdi2.png" xy="0,0" size="118,90">
+      <gearDisplay controller="button" pages="0,1,2,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
     <text id="n2_n22n" name="name" xy="5,0" size="110,20" fontSize="13" color="#fcfbbf" align="center" vAlign="middle" leading="2" autoSize="none" text=""/>
-    <text id="n6_98nd" name="num" xy="81,80" pivot="1,1" anchor="true" size="48,19" fontSize="12" color="#ffff00" align="right" autoSize="none" text=""/>
     <component id="n7_gpy8" name="itemRoot" src="gpy84c" fileName="Components/itemRoot.xml" xy="32,31"/>
   </displayList>
   <Button mode="Check"/>

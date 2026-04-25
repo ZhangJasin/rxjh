@@ -123,7 +123,13 @@ function PCGuildMainPanel:Create()
 	FGUI:GList_itemRenderer(self._ui.awardList, self.handler_onTaskAwardListRenderer)
 	FGUI:GList_itemRenderer(self._ui.starList, self.handler_onTaskStarListRenderer)
 	FGUI:GList_itemRenderer(self.addpanlobj, self.handler_listadditemRender)
-		
+	FGUI:GList_addOnClickItemEvent(self.addpanlobj, function(context)
+        local itemRoot = FGUI:GetChild(context.data, "itemRoot")
+        local index = FGUI:GetIntData(itemRoot)
+		local itemData = self._filterItems[index]
+        self:OnSelectItemToSubmit(itemData)
+    end)
+
 	self:UpdateNoticeEditState(false)
 end
 
@@ -561,23 +567,20 @@ function PCGuildMainPanel:OnBtnSubClicked()
 	if not curTaskCfg then
 		return
 	end
-	
+		
+	-- 根据任务类型筛选背包物品
 	local targetType = curTaskCfg.task_type or 0
 	local targetParam = curTaskCfg.task_target_param
-	
-	-- 打开选择面板
-	FGUI:Controller_setSelectedIndex(self.additemControlle, 1)
-	
-	-- 根据任务类型筛选背包物品
 	local filterItems = self:FilterBagItemsByTaskType(targetType, targetParam)
 	self._filterItems = filterItems
 	
 	if #filterItems == 0 then
 		SL:ShowTips("背包中没有符合条件的物品")
-		FGUI:Controller_setSelectedIndex(self.additemControlle, 0)
+		--FGUI:Controller_setSelectedIndex(self.additemControlle, 0)
 		return
 	end
-	
+	-- 打开选择面板
+	FGUI:Controller_setSelectedIndex(self.additemControlle, 1)
 	-- 设置列表数据
 	FGUI:GList_setNumItems(self.addpanlobj, #filterItems)
 end
@@ -712,6 +715,7 @@ end
 function PCGuildMainPanel:ListadditemRender(idx, item)
 	-- 清除已有子节点
 	local itemRoot = FGUI:GetChild(item, "itemRoot")
+	FGUI:SetIntData(itemRoot, idx + 1)
 	if FGUI:GetChildCount(itemRoot) > 0 then
 		FGUI:RemoveChildAt(itemRoot, 0, true)
 	end
@@ -724,11 +728,7 @@ function PCGuildMainPanel:ListadditemRender(idx, item)
 	local itemData = filterItems[idx + 1]
 	
 	local name = FGUI:GetChild(item, "name")
-	FGUI:GTextField_setText(name,itemData.Name)
-	if itemData.OverLap > 1 then
-		local num = FGUI:GetChild(item, "num")
-		FGUI:GTextField_setText(num,itemData.OverLap)
-	end
+	FGUI:GTextField_setText(name,SL:GetValue("ITEM_NAME", itemData.Index))
 	-- 创建物品显示
 	local extData = {
 		hideTip = false,
@@ -738,23 +738,16 @@ function PCGuildMainPanel:ListadditemRender(idx, item)
 		bgVisible = true
 	}
 	ItemUtil:ItemShow_Create(itemData, itemRoot, extData)
-	
-	-- 设置双击回调 - 直接提交
-	local itemConfig = SL:GetValue("ITEM_DATA", itemData.Index)
-	if itemConfig then
-		FGUI:setOnClickEvent(item, function()
-			self:OnSelectItemToSubmit(itemData)
-		end)
-	end
 end
+
 -- 选择物品提交
 function PCGuildMainPanel:OnSelectItemToSubmit(itemData)
-	if not itemData or not itemData.makeindex then
+	if not itemData or not itemData.MakeIndex then
 		return
 	end
 	
 	-- 发送物品唯一ID给服务器
-	ssrMessage:sendmsgEx("Guild", "subTask", {itemData.makeindex})
+	ssrMessage:sendmsgEx("Guild", "subTask", {itemData.MakeIndex})
 	
 	-- 关闭选择面板
 	FGUI:Controller_setSelectedIndex(self.additemControlle, 0)
@@ -838,14 +831,18 @@ function PCGuildMainPanel:OnUpdateGXUI()
 			FGUI:GButton_setTitle(self._ui.btn_refresh,"刷新")
 			FGUI:GButton_setTitle(self._ui.btn_comp,"接取任务")
 			FGUI:setVisible(self._ui.rCount, true)
+
+			FGUI:setVisible(self._ui.btn_sub, false)
 		else
 			FGUI:GButton_setTitle(self._ui.btn_refresh,"快速完成")
 			FGUI:GButton_setTitle(self._ui.btn_comp,"放弃任务")
 			FGUI:setVisible(self._ui.rCount, false)
+
+			local targetType = Task_cfg[self._taskId] and Task_cfg[self._taskId]['task_type'] or 0
+			FGUI:setVisible(self._ui.btn_sub, targetType == 9 or targetType == 10)
 		end
 
-		local targetType = Task_cfg[self._taskId] and Task_cfg[self._taskId]['task_type'] or 0
-		FGUI:setVisible(self._ui.btn_sub, targetType == 9 or targetType == 10)
+		
 		
 		FGUI:setVisible(self._ui.btn_refresh, true)
 		FGUI:setTouchEnabled(self._ui.btn_comp, true)

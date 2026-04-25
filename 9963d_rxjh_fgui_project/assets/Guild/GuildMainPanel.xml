@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" designImage="ui://tsu6gfnop518vpj" designImageOffsetX="-2" designImageOffsetY="-1" designImageAlpha="55">
-  <controller name="page_main" pages="0,,1,,2,,3," selected="0"/>
+  <controller name="page_main" pages="0,,1,,2,,3," selected="1"/>
   <controller name="tips" pages="0,关闭,1,打开" selected="0"/>
   <controller name="addItem" pages="0,关闭,1,打开" selected="0"/>
   <displayList>
@@ -151,13 +151,13 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n238_gpy8" name="btn_tips" src="gpy8vpt" fileName="Components/btn_wenhao.xml" xy="1104,117" group="n214_glg9"/>
-    <component id="n239_gpy8" name="panl_additem" src="gpy8vpv" fileName="Components/additempanl.xml" xy="2,6" group="n214_glg9">
+    <component id="n239_gpy8" name="panl_additem" src="gpy8vpv" fileName="Components/additempanl.xml" xy="15,40" group="n214_glg9">
       <gearDisplay controller="addItem" pages="1"/>
     </component>
-    <group id="n214_glg9" name="GXPanel" xy="2,6" size="1334,750" group="n169_whi9" advanced="true">
+    <group id="n214_glg9" name="GXPanel" xy="15,40" size="1334,750" group="n169_whi9" advanced="true">
       <gearDisplay controller="page_main" pages="1"/>
     </group>
-    <group id="n169_whi9" name="n169" xy="2,6" size="1334,750" advanced="true">
+    <group id="n169_whi9" name="n169" xy="15,40" size="1334,750" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <component id="n113_ghle" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78">

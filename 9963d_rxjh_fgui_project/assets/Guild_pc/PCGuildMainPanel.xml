@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1024,768" designImageOffsetX="20" designImageOffsetY="8" designImageAlpha="55" bgColor="#333333">
-  <controller name="page_main" pages="0,,1,,2,,3," selected="0"/>
+  <controller name="page_main" pages="0,,1,,2,,3," selected="1"/>
   <controller name="tips" pages="0,关闭,1,打开" selected="0"/>
   <controller name="addItem" pages="0,关闭,1,打开" selected="0"/>
   <displayList>
@@ -162,13 +162,13 @@
     <component id="n251_gpy8" name="panl_tip" src="gpy84j" fileName="Components/tips.xml" xy="412,202" group="n243_gpy8">
       <gearDisplay controller="tips" pages="1"/>
     </component>
-    <component id="n252_gpy8" name="panl_additem" src="gpy84p" fileName="Components/additempanl.xml" xy="-139,93" group="n243_gpy8">
+    <component id="n252_gpy8" name="panl_additem" src="gpy84p" fileName="Components/additempanl.xml" xy="-136,92" group="n243_gpy8">
       <gearDisplay controller="addItem" pages="1"/>
     </component>
-    <group id="n243_gpy8" name="GXPanel" xy="-139,93" size="1334,750" group="n173_ohcw" advanced="true">
+    <group id="n243_gpy8" name="GXPanel" xy="-136,92" size="1334,750" group="n173_ohcw" advanced="true">
       <gearDisplay controller="page_main" pages="1"/>
     </group>
-    <group id="n173_ohcw" name="n173" xy="-139,93" size="1334,750" advanced="true">
+    <group id="n173_ohcw" name="n173" xy="-136,92" size="1334,750" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <component id="n113_ghle" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186" size="31,31">
