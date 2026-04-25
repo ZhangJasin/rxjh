@@ -12,6 +12,7 @@ equipCollect = {}
 --GOODEVILID 获取阵营正邪(0=无阵营 1=正派 2=邪派)
 
 local config = require("Envir/QuestDiary/game_config/cfgcsv/equipCollect.lua")
+local attrConfig = require("Envir/QuestDiary/game_config/cfgcsv/equipCollectAttr.lua")
 
 local function costMaterials(actor, id)
     --TODO:激活材料处理
@@ -25,6 +26,62 @@ local function getItemVar(id)
         end
     end
     return
+end
+
+local function getTotalValue(actor)
+    local valLst = { 37, 38, 39 }
+    local val = 0
+    for _, var in ipairs(valLst) do
+        local t = json2tbl(gethumvar(actor, var)) or {}
+        if next(t) then
+            for v, _ in pairs(t) do
+                for _, k in ipairs(config) do
+                    if tonumber(v) == k.idx then
+                        val = val + k.value
+                    end
+                end
+            end
+        end
+    end
+    return val
+end
+
+local function getValueAttr(actor)
+    local function getValueAttr(actor)
+        local value = getTotalValue(actor)
+        if value <= 0 then return nil end
+        local bestConf = nil
+        for _, conf in ipairs(attrConfig) do
+            if value >= conf.scores then
+                bestConf = conf
+            else
+                break
+            end
+        end
+        return bestConf or nil
+    end
+end
+
+local function setValueAttr(actor)
+    local attr = getValueAttr(actor)
+    if not attr then return end
+    for _, group in ipairs(attr) do
+        if group then
+            local params = string.split(group, "^")
+            if #params > 2 then
+                local attrId = tonumber(params[1])
+                local attrValue = tonumber(params[2])
+                local isPercent = tonumber(params[3])
+                if isPercent == 1 then
+                    attrValue = math.floor(attrValue / 100)
+                end
+                if attrId and attrValue then
+                    print("attrId=", attrId, "attrValue=", attrValue)
+                    changeabil(actor, attrId, "+", attrValue)
+                end
+            end
+        end
+    end
 end
 
 function equipCollect.ReqActive(actor, id)

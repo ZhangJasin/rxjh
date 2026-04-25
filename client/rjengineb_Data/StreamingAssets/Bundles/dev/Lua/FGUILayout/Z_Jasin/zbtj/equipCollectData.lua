@@ -1,7 +1,7 @@
 local equipCollectData = {}
 
 local config = require("game_config/cfgcsv/equipCollect")
-
+local attrConfig = require("game_config/cfgcsv/equipCollectAttr")
 local _data = {
     _subscribers = {},
     activeList = {},
