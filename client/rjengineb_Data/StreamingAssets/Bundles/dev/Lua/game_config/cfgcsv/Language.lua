@@ -5421,175 +5421,175 @@ local config = {
 	},
 	["TargetDec_Task_510101"] = { 
 		idx="TargetDec_Task_510101",
-		Dec="击败伐木工头（0/20）",
+		Dec="击败伐木工头 ",
 	},
 	["TargetDec_Task_510102"] = { 
 		idx="TargetDec_Task_510102",
-		Dec="击败小蓝鬼获取残魄（0/10）",
+		Dec="击败小蓝鬼获取残魄 ",
 	},
 	["TargetDec_Task_510103"] = { 
 		idx="TargetDec_Task_510103",
-		Dec="击败小黑猴（0/20）",
+		Dec="击败小黑猴 ",
 	},
 	["TargetDec_Task_510104"] = { 
 		idx="TargetDec_Task_510104",
-		Dec="击败舞女获取舞扇（0/10）",
+		Dec="击败舞女获取舞扇 ",
 	},
 	["TargetDec_Task_510105"] = { 
 		idx="TargetDec_Task_510105",
-		Dec="击败破戒僧（0/20）",
+		Dec="击败破戒僧 ",
 	},
 	["TargetDec_Task_510106"] = { 
 		idx="TargetDec_Task_510106",
-		Dec="击败巨斧山贼获取巨斧（0/10）",
+		Dec="击败巨斧山贼获取巨斧 ",
 	},
 	["TargetDec_Task_510107"] = { 
 		idx="TargetDec_Task_510107",
-		Dec="提交35级及以下下品装备（0/1）",
+		Dec="提交35级及以下下品装备 ",
 	},
 	["TargetDec_Task_510108"] = { 
 		idx="TargetDec_Task_510108",
-		Dec="使用香木宝盒4个（0/4）",
+		Dec="使用香木宝盒4个 ",
 	},
 	["TargetDec_Task_510109"] = { 
 		idx="TargetDec_Task_510109",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_510110"] = { 
 		idx="TargetDec_Task_510110",
-		Dec="击败伐木工头（0/30）",
+		Dec="击败伐木工头 ",
 	},
 	["TargetDec_Task_510111"] = { 
 		idx="TargetDec_Task_510111",
-		Dec="击败伐木工头获得伐木斧（0/15）",
+		Dec="击败伐木工头获得伐木斧 ",
 	},
 	["TargetDec_Task_510112"] = { 
 		idx="TargetDec_Task_510112",
-		Dec="击败小蓝鬼（0/30）",
+		Dec="击败小蓝鬼 ",
 	},
 	["TargetDec_Task_510113"] = { 
 		idx="TargetDec_Task_510113",
-		Dec="击败小黑猴获得被偷走的物资（0/15）",
+		Dec="击败小黑猴获得被偷走的物资 ",
 	},
 	["TargetDec_Task_510114"] = { 
 		idx="TargetDec_Task_510114",
-		Dec="击败舞女（0/30）",
+		Dec="击败舞女 ",
 	},
 	["TargetDec_Task_510115"] = { 
 		idx="TargetDec_Task_510115",
-		Dec="击败破戒僧获得袈裟（0/15）",
+		Dec="击败破戒僧获得袈裟 ",
 	},
 	["TargetDec_Task_510116"] = { 
 		idx="TargetDec_Task_510116",
-		Dec="击败巨斧山贼（0/30）",
+		Dec="击败巨斧山贼 ",
 	},
 	["TargetDec_Task_510117"] = { 
 		idx="TargetDec_Task_510117",
-		Dec="使用香木宝盒7个（0/7）",
+		Dec="使用香木宝盒7个 ",
 	},
 	["TargetDec_Task_510118"] = { 
 		idx="TargetDec_Task_510118",
-		Dec="提交35级及以下中品装备（0/1）",
+		Dec="提交35级及以下中品装备 ",
 	},
 	["TargetDec_Task_510119"] = { 
 		idx="TargetDec_Task_510119",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_510120"] = { 
 		idx="TargetDec_Task_510120",
-		Dec="击败伐木工头（0/45）",
+		Dec="击败伐木工头 ",
 	},
 	["TargetDec_Task_510121"] = { 
 		idx="TargetDec_Task_510121",
-		Dec="击败小蓝鬼获取20个高级精魄（0/20）",
+		Dec="击败小蓝鬼获取20个高级精魄 ",
 	},
 	["TargetDec_Task_510122"] = { 
 		idx="TargetDec_Task_510122",
-		Dec="击败小黑猴获得被偷走的物资（0/20）",
+		Dec="击败小黑猴获得被偷走的物资 ",
 	},
 	["TargetDec_Task_510123"] = { 
 		idx="TargetDec_Task_510123",
-		Dec="击败舞女（0/45）",
+		Dec="击败舞女 ",
 	},
 	["TargetDec_Task_510124"] = { 
 		idx="TargetDec_Task_510124",
-		Dec="击败舞女获取舞扇（0/20）",
+		Dec="击败舞女获取舞扇 ",
 	},
 	["TargetDec_Task_510125"] = { 
 		idx="TargetDec_Task_510125",
-		Dec="击败破戒僧（0/45）",
+		Dec="击败破戒僧 ",
 	},
 	["TargetDec_Task_510126"] = { 
 		idx="TargetDec_Task_510126",
-		Dec="击败巨斧山贼获取巨斧（0/20）",
+		Dec="击败巨斧山贼获取巨斧 ",
 	},
 	["TargetDec_Task_510127"] = { 
 		idx="TargetDec_Task_510127",
-		Dec="提交35级及以下中品装备（0/1）",
+		Dec="提交35级及以下中品装备 ",
 	},
 	["TargetDec_Task_510128"] = { 
 		idx="TargetDec_Task_510128",
-		Dec="提交35级中品装备（0/1）",
+		Dec="提交35级中品装备 ",
 	},
 	["TargetDec_Task_510129"] = { 
 		idx="TargetDec_Task_510129",
-		Dec="使用香木宝盒10个（0/10）",
+		Dec="使用香木宝盒10个 ",
 	},
 	["TargetDec_Task_510130"] = { 
 		idx="TargetDec_Task_510130",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_510131"] = { 
 		idx="TargetDec_Task_510131",
-		Dec="击败伐木工头（勇士）（0/20）",
+		Dec="击败伐木工头（勇士） ",
 	},
 	["TargetDec_Task_510132"] = { 
 		idx="TargetDec_Task_510132",
-		Dec="击败巨斧山贼获取伐木斧（0/25）",
+		Dec="击败巨斧山贼获取伐木斧 ",
 	},
 	["TargetDec_Task_510133"] = { 
 		idx="TargetDec_Task_510133",
-		Dec="击败破戒僧（0/60）",
+		Dec="击败破戒僧 ",
 	},
 	["TargetDec_Task_510134"] = { 
 		idx="TargetDec_Task_510134",
-		Dec="提交35级上品武器（0/1）",
+		Dec="提交35级上品武器 ",
 	},
 	["TargetDec_Task_510135"] = { 
 		idx="TargetDec_Task_510135",
-		Dec="提交30级上品衣服（0/1）",
+		Dec="提交30级上品衣服 ",
 	},
 	["TargetDec_Task_510136"] = { 
 		idx="TargetDec_Task_510136",
-		Dec="使用香木宝盒15个（0/15）",
+		Dec="使用香木宝盒15个 ",
 	},
 	["TargetDec_Task_510137"] = { 
 		idx="TargetDec_Task_510137",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_510138"] = { 
 		idx="TargetDec_Task_510138",
-		Dec="击败山贼头领(BOSS)（0/1）",
+		Dec="击败山贼头领  ",
 	},
 	["TargetDec_Task_510139"] = { 
 		idx="TargetDec_Task_510139",
-		Dec="击败山鬼(BOSS)（0/1）",
+		Dec="击败山鬼  ",
 	},
 	["TargetDec_Task_510140"] = { 
 		idx="TargetDec_Task_510140",
-		Dec="提交30级上品衣服（0/2）",
+		Dec="提交30级上品衣服 ",
 	},
 	["TargetDec_Task_510141"] = { 
 		idx="TargetDec_Task_510141",
-		Dec="提交35级极品武器（0/1）",
+		Dec="提交35级极品武器 ",
 	},
 	["TargetDec_Task_510142"] = { 
 		idx="TargetDec_Task_510142",
-		Dec="使用香木宝盒20个（0/20）",
+		Dec="使用香木宝盒20个 ",
 	},
 	["TargetDec_Task_510143"] = { 
 		idx="TargetDec_Task_510143",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["Name_Task_510201"] = { 
 		idx="Name_Task_510201",
@@ -5785,195 +5785,195 @@ local config = {
 	},
 	["TargetDec_Task_510201"] = { 
 		idx="TargetDec_Task_510201",
-		Dec="击败赤血熊（0/20）",
+		Dec="击败赤血熊 ",
 	},
 	["TargetDec_Task_510202"] = { 
 		idx="TargetDec_Task_510202",
-		Dec="击败山林黄虎获取虎胆（0/10）",
+		Dec="击败山林黄虎获取虎胆 ",
 	},
 	["TargetDec_Task_510203"] = { 
 		idx="TargetDec_Task_510203",
-		Dec="击败白纹虎（0/20）",
+		Dec="击败白纹虎 ",
 	},
 	["TargetDec_Task_510204"] = { 
 		idx="TargetDec_Task_510204",
-		Dec="击败盗鱼村夫获取渔网（0/10）",
+		Dec="击败盗鱼村夫获取渔网 ",
 	},
 	["TargetDec_Task_510205"] = { 
 		idx="TargetDec_Task_510205",
-		Dec="击败双枪渔贼（0/20）",
+		Dec="击败双枪渔贼 ",
 	},
 	["TargetDec_Task_510206"] = { 
 		idx="TargetDec_Task_510206",
-		Dec="击败小山怪获取山石（0/10）",
+		Dec="击败小山怪获取山石 ",
 	},
 	["TargetDec_Task_510207"] = { 
 		idx="TargetDec_Task_510207",
-		Dec="提交45级及以下下品装备（0/1）",
+		Dec="提交45级及以下下品装备 ",
 	},
 	["TargetDec_Task_510208"] = { 
 		idx="TargetDec_Task_510208",
-		Dec="使用香木宝盒5个（0/5）",
+		Dec="使用香木宝盒5个 ",
 	},
 	["TargetDec_Task_510209"] = { 
 		idx="TargetDec_Task_510209",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_510210"] = { 
 		idx="TargetDec_Task_510210",
-		Dec="使用白银宝盒3个（0/3）",
+		Dec="使用白银宝盒3个 ",
 	},
 	["TargetDec_Task_510211"] = { 
 		idx="TargetDec_Task_510211",
-		Dec="击败赤血熊（0/30）",
+		Dec="击败赤血熊 ",
 	},
 	["TargetDec_Task_510212"] = { 
 		idx="TargetDec_Task_510212",
-		Dec="击败山林黄虎获得虎胆（0/15）",
+		Dec="击败山林黄虎获得虎胆 ",
 	},
 	["TargetDec_Task_510213"] = { 
 		idx="TargetDec_Task_510213",
-		Dec="击败白纹虎（0/30）",
+		Dec="击败白纹虎 ",
 	},
 	["TargetDec_Task_510214"] = { 
 		idx="TargetDec_Task_510214",
-		Dec="击败盗鱼村夫获得渔网（0/15）",
+		Dec="击败盗鱼村夫获得渔网 ",
 	},
 	["TargetDec_Task_510215"] = { 
 		idx="TargetDec_Task_510215",
-		Dec="击败双枪渔贼（0/30）",
+		Dec="击败双枪渔贼 ",
 	},
 	["TargetDec_Task_510216"] = { 
 		idx="TargetDec_Task_510216",
-		Dec="击败小山怪获得山石（0/15）",
+		Dec="击败小山怪获得山石 ",
 	},
 	["TargetDec_Task_510217"] = { 
 		idx="TargetDec_Task_510217",
-		Dec="击败小山怪（0/30）",
+		Dec="击败小山怪 ",
 	},
 	["TargetDec_Task_510218"] = { 
 		idx="TargetDec_Task_510218",
-		Dec="使用香木宝盒8个（0/8）",
+		Dec="使用香木宝盒8个 ",
 	},
 	["TargetDec_Task_510219"] = { 
 		idx="TargetDec_Task_510219",
-		Dec="提交45级及以下中品装备（0/1）",
+		Dec="提交45级及以下中品装备 ",
 	},
 	["TargetDec_Task_510220"] = { 
 		idx="TargetDec_Task_510220",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_510221"] = { 
 		idx="TargetDec_Task_510221",
-		Dec="使用白银宝盒7个（0/7）",
+		Dec="使用白银宝盒7个 ",
 	},
 	["TargetDec_Task_510222"] = { 
 		idx="TargetDec_Task_510222",
-		Dec="击败赤血熊（0/45）",
+		Dec="击败赤血熊 ",
 	},
 	["TargetDec_Task_510223"] = { 
 		idx="TargetDec_Task_510223",
-		Dec="击败山林黄虎获取20个高级虎胆（0/20）",
+		Dec="击败山林黄虎获取20个高级虎胆 ",
 	},
 	["TargetDec_Task_510224"] = { 
 		idx="TargetDec_Task_510224",
-		Dec="击败白纹虎获得白虎皮毛（0/20）",
+		Dec="击败白纹虎获得白虎皮毛 ",
 	},
 	["TargetDec_Task_510225"] = { 
 		idx="TargetDec_Task_510225",
-		Dec="击败盗鱼村夫（0/45）",
+		Dec="击败盗鱼村夫 ",
 	},
 	["TargetDec_Task_510226"] = { 
 		idx="TargetDec_Task_510226",
-		Dec="击败盗鱼村夫获取渔网（0/20）",
+		Dec="击败盗鱼村夫获取渔网 ",
 	},
 	["TargetDec_Task_510227"] = { 
 		idx="TargetDec_Task_510227",
-		Dec="击败双枪渔贼（0/45）",
+		Dec="击败双枪渔贼 ",
 	},
 	["TargetDec_Task_510228"] = { 
 		idx="TargetDec_Task_510228",
-		Dec="击败小山怪获取山石（0/20）",
+		Dec="击败小山怪获取山石 ",
 	},
 	["TargetDec_Task_510229"] = { 
 		idx="TargetDec_Task_510229",
-		Dec="提交45级及以下中品装备（0/1）",
+		Dec="提交45级及以下中品装备 ",
 	},
 	["TargetDec_Task_510230"] = { 
 		idx="TargetDec_Task_510230",
-		Dec="提交45级中品装备（0/1）",
+		Dec="提交45级中品装备 ",
 	},
 	["TargetDec_Task_510231"] = { 
 		idx="TargetDec_Task_510231",
-		Dec="使用香木宝盒12个（0/12）",
+		Dec="使用香木宝盒12个 ",
 	},
 	["TargetDec_Task_510232"] = { 
 		idx="TargetDec_Task_510232",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_510233"] = { 
 		idx="TargetDec_Task_510233",
-		Dec="使用白银宝盒10个（0/10）",
+		Dec="使用白银宝盒10个 ",
 	},
 	["TargetDec_Task_510234"] = { 
 		idx="TargetDec_Task_510234",
-		Dec="击败白纹虎（猛兽）（0/20）",
+		Dec="击败白纹虎（猛兽） ",
 	},
 	["TargetDec_Task_510235"] = { 
 		idx="TargetDec_Task_510235",
-		Dec="击败双枪渔贼（勇士）获取伐高级渔网（0/5）",
+		Dec="击败双枪渔贼（勇士）获取伐高级渔网 ",
 	},
 	["TargetDec_Task_510236"] = { 
 		idx="TargetDec_Task_510236",
-		Dec="击败白纹虎（0/60）",
+		Dec="击败白纹虎 ",
 	},
 	["TargetDec_Task_510237"] = { 
 		idx="TargetDec_Task_510237",
-		Dec="提交35级上品武器（0/1）",
+		Dec="提交35级上品武器 ",
 	},
 	["TargetDec_Task_510238"] = { 
 		idx="TargetDec_Task_510238",
-		Dec="提交40级上品衣服（0/1）",
+		Dec="提交40级上品衣服 ",
 	},
 	["TargetDec_Task_510239"] = { 
 		idx="TargetDec_Task_510239",
-		Dec="使用香木宝盒17个（0/17）",
+		Dec="使用香木宝盒17个 ",
 	},
 	["TargetDec_Task_510240"] = { 
 		idx="TargetDec_Task_510240",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_510241"] = { 
 		idx="TargetDec_Task_510241",
-		Dec="使用白银宝盒12个（0/15）",
+		Dec="使用白银宝盒12个 ",
 	},
 	["TargetDec_Task_510242"] = { 
 		idx="TargetDec_Task_510242",
-		Dec="击败赤血熊王(BOSS)（0/1）",
+		Dec="击败赤血熊王  ",
 	},
 	["TargetDec_Task_510243"] = { 
 		idx="TargetDec_Task_510243",
-		Dec="击败山贼头领(BOSS)（0/1）",
+		Dec="击败山贼头领  ",
 	},
 	["TargetDec_Task_510244"] = { 
 		idx="TargetDec_Task_510244",
-		Dec="提交40级上品衣服（0/2）",
+		Dec="提交40级上品衣服 ",
 	},
 	["TargetDec_Task_510245"] = { 
 		idx="TargetDec_Task_510245",
-		Dec="提交35级极品武器（0/2）",
+		Dec="提交35级极品武器 ",
 	},
 	["TargetDec_Task_510246"] = { 
 		idx="TargetDec_Task_510246",
-		Dec="使用香木宝盒23个（0/23）",
+		Dec="使用香木宝盒23个 ",
 	},
 	["TargetDec_Task_510247"] = { 
 		idx="TargetDec_Task_510247",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["TargetDec_Task_510248"] = { 
 		idx="TargetDec_Task_510248",
-		Dec="使用白银宝盒20个（0/20）",
+		Dec="使用白银宝盒20个 ",
 	},
 	["Name_Task_510301"] = { 
 		idx="Name_Task_510301",
@@ -6169,195 +6169,195 @@ local config = {
 	},
 	["TargetDec_Task_510301"] = { 
 		idx="TargetDec_Task_510301",
-		Dec="击败利爪山魅（0/20）",
+		Dec="击败利爪山魅 ",
 	},
 	["TargetDec_Task_510302"] = { 
 		idx="TargetDec_Task_510302",
-		Dec="击败巨臂异人获取麒麟臂（0/10）",
+		Dec="击败巨臂异人获取麒麟臂 ",
 	},
 	["TargetDec_Task_510303"] = { 
 		idx="TargetDec_Task_510303",
-		Dec="击败赤发火贼（0/20）",
+		Dec="击败赤发火贼 ",
 	},
 	["TargetDec_Task_510304"] = { 
 		idx="TargetDec_Task_510304",
-		Dec="击败颂武门短斧弟子获取短斧（0/10）",
+		Dec="击败颂武门短斧弟子获取短斧 ",
 	},
 	["TargetDec_Task_510305"] = { 
 		idx="TargetDec_Task_510305",
-		Dec="击败颂武门恶霸（0/20）",
+		Dec="击败颂武门恶霸 ",
 	},
 	["TargetDec_Task_510306"] = { 
 		idx="TargetDec_Task_510306",
-		Dec="击败颂武门链锤弟子获取链锤（0/10）",
+		Dec="击败颂武门链锤弟子获取链锤 ",
 	},
 	["TargetDec_Task_510307"] = { 
 		idx="TargetDec_Task_510307",
-		Dec="击败颂武门短刀弟子（0/20）",
+		Dec="击败颂武门短刀弟子 ",
 	},
 	["TargetDec_Task_510308"] = { 
 		idx="TargetDec_Task_510308",
-		Dec="提交50级及以下下品装备（0/1）",
+		Dec="提交50级及以下下品装备 ",
 	},
 	["TargetDec_Task_510309"] = { 
 		idx="TargetDec_Task_510309",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_510310"] = { 
 		idx="TargetDec_Task_510310",
-		Dec="使用白银宝盒4个（0/4）",
+		Dec="使用白银宝盒4个 ",
 	},
 	["TargetDec_Task_510311"] = { 
 		idx="TargetDec_Task_510311",
-		Dec="击败利爪山魅（0/30）",
+		Dec="击败利爪山魅 ",
 	},
 	["TargetDec_Task_510312"] = { 
 		idx="TargetDec_Task_510312",
-		Dec="击败巨臂异人获得麒麟臂（0/15）",
+		Dec="击败巨臂异人获得麒麟臂 ",
 	},
 	["TargetDec_Task_510313"] = { 
 		idx="TargetDec_Task_510313",
-		Dec="击败赤发火贼（0/30）",
+		Dec="击败赤发火贼 ",
 	},
 	["TargetDec_Task_510314"] = { 
 		idx="TargetDec_Task_510314",
-		Dec="击败颂武门短斧弟子获得短斧（0/15）",
+		Dec="击败颂武门短斧弟子获得短斧 ",
 	},
 	["TargetDec_Task_510315"] = { 
 		idx="TargetDec_Task_510315",
-		Dec="击败颂武门恶霸（0/30）",
+		Dec="击败颂武门恶霸 ",
 	},
 	["TargetDec_Task_510316"] = { 
 		idx="TargetDec_Task_510316",
-		Dec="击败颂武门链锤弟子获得链锤（0/15）",
+		Dec="击败颂武门链锤弟子获得链锤 ",
 	},
 	["TargetDec_Task_510317"] = { 
 		idx="TargetDec_Task_510317",
-		Dec="击败颂武门短刀弟子（0/30）",
+		Dec="击败颂武门短刀弟子 ",
 	},
 	["TargetDec_Task_510318"] = { 
 		idx="TargetDec_Task_510318",
-		Dec="提交45级及以下中品装备（0/1）",
+		Dec="提交45级及以下中品装备 ",
 	},
 	["TargetDec_Task_510319"] = { 
 		idx="TargetDec_Task_510319",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_510320"] = { 
 		idx="TargetDec_Task_510320",
-		Dec="使用白银宝盒10个（0/10）",
+		Dec="使用白银宝盒10个 ",
 	},
 	["TargetDec_Task_510321"] = { 
 		idx="TargetDec_Task_510321",
-		Dec="击败利爪山魅（0/45）",
+		Dec="击败利爪山魅 ",
 	},
 	["TargetDec_Task_510322"] = { 
 		idx="TargetDec_Task_510322",
-		Dec="击败巨臂异人获取20个高级麒麟臂（0/20）",
+		Dec="击败巨臂异人获取20个高级麒麟臂 ",
 	},
 	["TargetDec_Task_510323"] = { 
 		idx="TargetDec_Task_510323",
-		Dec="击败赤发火贼获得红色假发（0/20）",
+		Dec="击败赤发火贼获得红色假发 ",
 	},
 	["TargetDec_Task_510324"] = { 
 		idx="TargetDec_Task_510324",
-		Dec="击败颂武门短斧弟子（0/45）",
+		Dec="击败颂武门短斧弟子 ",
 	},
 	["TargetDec_Task_510325"] = { 
 		idx="TargetDec_Task_510325",
-		Dec="击败颂武门恶霸获取令牌（0/20）",
+		Dec="击败颂武门恶霸获取令牌 ",
 	},
 	["TargetDec_Task_510326"] = { 
 		idx="TargetDec_Task_510326",
-		Dec="击败颂武门链锤弟子（0/45）",
+		Dec="击败颂武门链锤弟子 ",
 	},
 	["TargetDec_Task_510327"] = { 
 		idx="TargetDec_Task_510327",
-		Dec="击败颂武门短刀弟子获取短刀（0/20）",
+		Dec="击败颂武门短刀弟子获取短刀 ",
 	},
 	["TargetDec_Task_510328"] = { 
 		idx="TargetDec_Task_510328",
-		Dec="提交60级及以下中品装备（0/1）",
+		Dec="提交60级及以下中品装备 ",
 	},
 	["TargetDec_Task_510329"] = { 
 		idx="TargetDec_Task_510329",
-		Dec="提交60级中品装备（0/1）",
+		Dec="提交60级中品装备 ",
 	},
 	["TargetDec_Task_510330"] = { 
 		idx="TargetDec_Task_510330",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_510331"] = { 
 		idx="TargetDec_Task_510331",
-		Dec="使用白银宝盒10个（0/10）",
+		Dec="使用白银宝盒10个 ",
 	},
 	["TargetDec_Task_510332"] = { 
 		idx="TargetDec_Task_510332",
-		Dec="击败颂武门长矛弟子（勇士）（0/20）",
+		Dec="击败颂武门长矛弟子（勇士） ",
 	},
 	["TargetDec_Task_510333"] = { 
 		idx="TargetDec_Task_510333",
-		Dec="击败颂武门短斧弟子（勇士）（0/20）",
+		Dec="击败颂武门短斧弟子（勇士） ",
 	},
 	["TargetDec_Task_510334"] = { 
 		idx="TargetDec_Task_510334",
-		Dec="击败颂武门链锤弟子（勇士）（0/20）",
+		Dec="击败颂武门链锤弟子（勇士） ",
 	},
 	["TargetDec_Task_510335"] = { 
 		idx="TargetDec_Task_510335",
-		Dec="提交60级上品武器（0/1）",
+		Dec="提交60级上品武器 ",
 	},
 	["TargetDec_Task_510336"] = { 
 		idx="TargetDec_Task_510336",
-		Dec="提交40级上品衣服（0/1）",
+		Dec="提交40级上品衣服 ",
 	},
 	["TargetDec_Task_510337"] = { 
 		idx="TargetDec_Task_510337",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_510338"] = { 
 		idx="TargetDec_Task_510338",
-		Dec="使用白银宝盒15个（0/15）",
+		Dec="使用白银宝盒15个 ",
 	},
 	["TargetDec_Task_510339"] = { 
 		idx="TargetDec_Task_510339",
-		Dec="提交35级正派上品武器（0/1）",
+		Dec="提交35级正派上品武器 ",
 	},
 	["TargetDec_Task_510340"] = { 
 		idx="TargetDec_Task_510340",
-		Dec="提交35级邪派上品武器（0/1）",
+		Dec="提交35级邪派上品武器 ",
 	},
 	["TargetDec_Task_510341"] = { 
 		idx="TargetDec_Task_510341",
-		Dec="击败火贼头目(BOSS)（0/1）",
+		Dec="击败火贼头目  ",
 	},
 	["TargetDec_Task_510342"] = { 
 		idx="TargetDec_Task_510342",
-		Dec="击败赤血熊王(BOSS)（0/1）",
+		Dec="击败赤血熊王  ",
 	},
 	["TargetDec_Task_510343"] = { 
 		idx="TargetDec_Task_510343",
-		Dec="提交50级上品衣服（0/2）",
+		Dec="提交50级上品衣服 ",
 	},
 	["TargetDec_Task_510344"] = { 
 		idx="TargetDec_Task_510344",
-		Dec="提交35级极品武器（0/2）",
+		Dec="提交35级极品武器 ",
 	},
 	["TargetDec_Task_510345"] = { 
 		idx="TargetDec_Task_510345",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["TargetDec_Task_510346"] = { 
 		idx="TargetDec_Task_510346",
-		Dec="使用白银宝盒20个（0/20）",
+		Dec="使用白银宝盒20个 ",
 	},
 	["TargetDec_Task_510347"] = { 
 		idx="TargetDec_Task_510347",
-		Dec="提交35级正派极品武器（0/2）",
+		Dec="提交35级正派极品武器 ",
 	},
 	["TargetDec_Task_510348"] = { 
 		idx="TargetDec_Task_510348",
-		Dec="提交35级邪派极品武器（0/2）",
+		Dec="提交35级邪派极品武器 ",
 	},
 	["Name_Task_510401"] = { 
 		idx="Name_Task_510401",
@@ -6553,195 +6553,195 @@ local config = {
 	},
 	["TargetDec_Task_510401"] = { 
 		idx="TargetDec_Task_510401",
-		Dec="击败赤云虎（0/20）",
+		Dec="击败赤云虎 ",
 	},
 	["TargetDec_Task_510402"] = { 
 		idx="TargetDec_Task_510402",
-		Dec="击败剑齿恶虎获取虎齿（0/10）",
+		Dec="击败剑齿恶虎获取虎齿 ",
 	},
 	["TargetDec_Task_510403"] = { 
 		idx="TargetDec_Task_510403",
-		Dec="击败嗜血狂狼（0/20）",
+		Dec="击败嗜血狂狼 ",
 	},
 	["TargetDec_Task_510404"] = { 
 		idx="TargetDec_Task_510404",
-		Dec="击败驼背飞虎贼获取被盗物资（0/10）",
+		Dec="击败驼背飞虎贼获取被盗物资 ",
 	},
 	["TargetDec_Task_510405"] = { 
 		idx="TargetDec_Task_510405",
-		Dec="击败吝啬鬼（0/20）",
+		Dec="击败吝啬鬼 ",
 	},
 	["TargetDec_Task_510406"] = { 
 		idx="TargetDec_Task_510406",
-		Dec="击败神掌飞虎贼获取秘籍（0/10）",
+		Dec="击败神掌飞虎贼获取秘籍 ",
 	},
 	["TargetDec_Task_510407"] = { 
 		idx="TargetDec_Task_510407",
-		Dec="击败鬼面武士（0/20）",
+		Dec="击败鬼面武士 ",
 	},
 	["TargetDec_Task_510408"] = { 
 		idx="TargetDec_Task_510408",
-		Dec="提交50级及以下下品装备（0/1）",
+		Dec="提交50级及以下下品装备 ",
 	},
 	["TargetDec_Task_510409"] = { 
 		idx="TargetDec_Task_510409",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_510410"] = { 
 		idx="TargetDec_Task_510410",
-		Dec="使用黄金宝盒4个（0/4）",
+		Dec="使用黄金宝盒4个 ",
 	},
 	["TargetDec_Task_510411"] = { 
 		idx="TargetDec_Task_510411",
-		Dec="击败赤云虎（0/30）",
+		Dec="击败赤云虎 ",
 	},
 	["TargetDec_Task_510412"] = { 
 		idx="TargetDec_Task_510412",
-		Dec="击败剑齿恶虎获得虎齿（0/15）",
+		Dec="击败剑齿恶虎获得虎齿 ",
 	},
 	["TargetDec_Task_510413"] = { 
 		idx="TargetDec_Task_510413",
-		Dec="击败嗜血狂狼（0/30）",
+		Dec="击败嗜血狂狼 ",
 	},
 	["TargetDec_Task_510414"] = { 
 		idx="TargetDec_Task_510414",
-		Dec="击败吝啬鬼获得宝物（0/15）",
+		Dec="击败吝啬鬼获得宝物 ",
 	},
 	["TargetDec_Task_510415"] = { 
 		idx="TargetDec_Task_510415",
-		Dec="击败赏猎女刺客（0/30）",
+		Dec="击败赏猎女刺客 ",
 	},
 	["TargetDec_Task_510416"] = { 
 		idx="TargetDec_Task_510416",
-		Dec="击败鬼面武士获得武士假面（0/15）",
+		Dec="击败鬼面武士获得武士假面 ",
 	},
 	["TargetDec_Task_510417"] = { 
 		idx="TargetDec_Task_510417",
-		Dec="击败铁甲卫士（0/30）",
+		Dec="击败铁甲卫士 ",
 	},
 	["TargetDec_Task_510418"] = { 
 		idx="TargetDec_Task_510418",
-		Dec="提交70级及以下中品装备（0/1）",
+		Dec="提交70级及以下中品装备 ",
 	},
 	["TargetDec_Task_510419"] = { 
 		idx="TargetDec_Task_510419",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_510420"] = { 
 		idx="TargetDec_Task_510420",
-		Dec="使用黄金宝盒10个（0/10）",
+		Dec="使用黄金宝盒10个 ",
 	},
 	["TargetDec_Task_510421"] = { 
 		idx="TargetDec_Task_510421",
-		Dec="击败赤云虎（0/45）",
+		Dec="击败赤云虎 ",
 	},
 	["TargetDec_Task_510422"] = { 
 		idx="TargetDec_Task_510422",
-		Dec="击败剑齿恶虎获取20个高级虎齿（0/20）",
+		Dec="击败剑齿恶虎获取20个高级虎齿 ",
 	},
 	["TargetDec_Task_510423"] = { 
 		idx="TargetDec_Task_510423",
-		Dec="击败驼背飞虎贼获得被盗物资（0/20）",
+		Dec="击败驼背飞虎贼获得被盗物资 ",
 	},
 	["TargetDec_Task_510424"] = { 
 		idx="TargetDec_Task_510424",
-		Dec="击败嗜血狂狼（0/45）",
+		Dec="击败嗜血狂狼 ",
 	},
 	["TargetDec_Task_510425"] = { 
 		idx="TargetDec_Task_510425",
-		Dec="击败吝啬鬼获取财宝（0/20）",
+		Dec="击败吝啬鬼获取财宝 ",
 	},
 	["TargetDec_Task_510426"] = { 
 		idx="TargetDec_Task_510426",
-		Dec="击败颂武门链锤弟子（0/45）",
+		Dec="击败颂武门链锤弟子 ",
 	},
 	["TargetDec_Task_510427"] = { 
 		idx="TargetDec_Task_510427",
-		Dec="击败赏猎女刺客获取短刀（0/20）",
+		Dec="击败赏猎女刺客获取短刀 ",
 	},
 	["TargetDec_Task_510428"] = { 
 		idx="TargetDec_Task_510428",
-		Dec="提交70级及以下中品装备（0/1）",
+		Dec="提交70级及以下中品装备 ",
 	},
 	["TargetDec_Task_510429"] = { 
 		idx="TargetDec_Task_510429",
-		Dec="提交70级中品装备（0/1）",
+		Dec="提交70级中品装备 ",
 	},
 	["TargetDec_Task_510430"] = { 
 		idx="TargetDec_Task_510430",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_510431"] = { 
 		idx="TargetDec_Task_510431",
-		Dec="使用黄金宝盒10个（0/10）",
+		Dec="使用黄金宝盒10个 ",
 	},
 	["TargetDec_Task_510432"] = { 
 		idx="TargetDec_Task_510432",
-		Dec="击败赏猎女刺客（勇士）（0/20）",
+		Dec="击败赏猎女刺客（勇士） ",
 	},
 	["TargetDec_Task_510433"] = { 
 		idx="TargetDec_Task_510433",
-		Dec="击败鬼面武士（勇士）（0/20）",
+		Dec="击败鬼面武士（勇士） ",
 	},
 	["TargetDec_Task_510434"] = { 
 		idx="TargetDec_Task_510434",
-		Dec="击败神掌飞虎贼（勇士）（0/20）",
+		Dec="击败神掌飞虎贼（勇士） ",
 	},
 	["TargetDec_Task_510435"] = { 
 		idx="TargetDec_Task_510435",
-		Dec="提交70级上品武器（0/1）",
+		Dec="提交70级上品武器 ",
 	},
 	["TargetDec_Task_510436"] = { 
 		idx="TargetDec_Task_510436",
-		Dec="提交60级上品衣服（0/1）",
+		Dec="提交60级上品衣服 ",
 	},
 	["TargetDec_Task_510437"] = { 
 		idx="TargetDec_Task_510437",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_510438"] = { 
 		idx="TargetDec_Task_510438",
-		Dec="使用黄金宝盒15个（0/15）",
+		Dec="使用黄金宝盒15个 ",
 	},
 	["TargetDec_Task_510439"] = { 
 		idx="TargetDec_Task_510439",
-		Dec="提交60级正派上品武器（0/1）",
+		Dec="提交60级正派上品武器 ",
 	},
 	["TargetDec_Task_510440"] = { 
 		idx="TargetDec_Task_510440",
-		Dec="提交60级邪派上品武器（0/1）",
+		Dec="提交60级邪派上品武器 ",
 	},
 	["TargetDec_Task_510441"] = { 
 		idx="TargetDec_Task_510441",
-		Dec="击败火贼头目(BOSS)（0/2）",
+		Dec="击败火贼头目  ",
 	},
 	["TargetDec_Task_510442"] = { 
 		idx="TargetDec_Task_510442",
-		Dec="击败赤血熊王(BOSS)（0/2）",
+		Dec="击败赤血熊王  ",
 	},
 	["TargetDec_Task_510443"] = { 
 		idx="TargetDec_Task_510443",
-		Dec="提交60级上品衣服（0/2）",
+		Dec="提交60级上品衣服 ",
 	},
 	["TargetDec_Task_510444"] = { 
 		idx="TargetDec_Task_510444",
-		Dec="提交60级极品武器（0/2）",
+		Dec="提交60级极品武器 ",
 	},
 	["TargetDec_Task_510445"] = { 
 		idx="TargetDec_Task_510445",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["TargetDec_Task_510446"] = { 
 		idx="TargetDec_Task_510446",
-		Dec="使用黄金宝盒20个（0/20）",
+		Dec="使用黄金宝盒20个 ",
 	},
 	["TargetDec_Task_510447"] = { 
 		idx="TargetDec_Task_510447",
-		Dec="提交60级正派极品武器（0/2）",
+		Dec="提交60级正派极品武器 ",
 	},
 	["TargetDec_Task_510448"] = { 
 		idx="TargetDec_Task_510448",
-		Dec="提交60级邪派极品武器（0/2）",
+		Dec="提交60级邪派极品武器 ",
 	},
 	["Name_Task_510501"] = { 
 		idx="Name_Task_510501",
@@ -6945,203 +6945,203 @@ local config = {
 	},
 	["TargetDec_Task_510501"] = { 
 		idx="TargetDec_Task_510501",
-		Dec="击败白面嗜血狂刀（0/20）",
+		Dec="击败白面嗜血狂刀 ",
 	},
 	["TargetDec_Task_510502"] = { 
 		idx="TargetDec_Task_510502",
-		Dec="击败白面摄魂神剑获取神剑（0/10）",
+		Dec="击败白面摄魂神剑获取神剑 ",
 	},
 	["TargetDec_Task_510503"] = { 
 		idx="TargetDec_Task_510503",
-		Dec="击败白面巨戟战将（0/20）",
+		Dec="击败白面巨戟战将 ",
 	},
 	["TargetDec_Task_510504"] = { 
 		idx="TargetDec_Task_510504",
-		Dec="击败长发地灵魔刀获取墨刀（0/10）",
+		Dec="击败长发地灵魔刀获取墨刀 ",
 	},
 	["TargetDec_Task_510505"] = { 
 		idx="TargetDec_Task_510505",
-		Dec="击败青面司护狂战（0/20）",
+		Dec="击败青面司护狂战 ",
 	},
 	["TargetDec_Task_510506"] = { 
 		idx="TargetDec_Task_510506",
-		Dec="击败铁锤司护战将获取铁锤（0/10）",
+		Dec="击败铁锤司护战将获取铁锤 ",
 	},
 	["TargetDec_Task_510507"] = { 
 		idx="TargetDec_Task_510507",
-		Dec="击败铁臂司护守卫（0/20）",
+		Dec="击败铁臂司护守卫 ",
 	},
 	["TargetDec_Task_510508"] = { 
 		idx="TargetDec_Task_510508",
-		Dec="提交80级及以下下品装备（0/1）",
+		Dec="提交80级及以下下品装备 ",
 	},
 	["TargetDec_Task_510509"] = { 
 		idx="TargetDec_Task_510509",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_510510"] = { 
 		idx="TargetDec_Task_510510",
-		Dec="使用黄金宝盒4个（0/4）",
+		Dec="使用黄金宝盒4个 ",
 	},
 	["TargetDec_Task_510511"] = { 
 		idx="TargetDec_Task_510511",
-		Dec="击败白面嗜血狂刀（0/30）",
+		Dec="击败白面嗜血狂刀 ",
 	},
 	["TargetDec_Task_510512"] = { 
 		idx="TargetDec_Task_510512",
-		Dec="击败白面摄魂神剑获得神剑（0/15）",
+		Dec="击败白面摄魂神剑获得神剑 ",
 	},
 	["TargetDec_Task_510513"] = { 
 		idx="TargetDec_Task_510513",
-		Dec="击败白面巨戟战将（0/30）",
+		Dec="击败白面巨戟战将 ",
 	},
 	["TargetDec_Task_510514"] = { 
 		idx="TargetDec_Task_510514",
-		Dec="击败长发地灵魔刀获得墨刀（0/15）",
+		Dec="击败长发地灵魔刀获得墨刀 ",
 	},
 	["TargetDec_Task_510515"] = { 
 		idx="TargetDec_Task_510515",
-		Dec="击败青面司护狂战（0/30）",
+		Dec="击败青面司护狂战 ",
 	},
 	["TargetDec_Task_510516"] = { 
 		idx="TargetDec_Task_510516",
-		Dec="击败铁锤司护战将获得铁锤（0/15）",
+		Dec="击败铁锤司护战将获得铁锤 ",
 	},
 	["TargetDec_Task_510517"] = { 
 		idx="TargetDec_Task_510517",
-		Dec="击败铁臂司护守卫（0/30）",
+		Dec="击败铁臂司护守卫 ",
 	},
 	["TargetDec_Task_510518"] = { 
 		idx="TargetDec_Task_510518",
-		Dec="提交80级及以下中品装备（0/1）",
+		Dec="提交80级及以下中品装备 ",
 	},
 	["TargetDec_Task_510519"] = { 
 		idx="TargetDec_Task_510519",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_510520"] = { 
 		idx="TargetDec_Task_510520",
-		Dec="使用黄金宝盒10个（0/10）",
+		Dec="使用黄金宝盒10个 ",
 	},
 	["TargetDec_Task_510521"] = { 
 		idx="TargetDec_Task_510521",
-		Dec="击败白面嗜血狂刀（0/45）",
+		Dec="击败白面嗜血狂刀 ",
 	},
 	["TargetDec_Task_510522"] = { 
 		idx="TargetDec_Task_510522",
-		Dec="击败白面摄魂神剑获取神剑（0/20）",
+		Dec="击败白面摄魂神剑获取神剑 ",
 	},
 	["TargetDec_Task_510523"] = { 
 		idx="TargetDec_Task_510523",
-		Dec="击败白面巨戟战将获得巨戟（0/20）",
+		Dec="击败白面巨戟战将获得巨戟 ",
 	},
 	["TargetDec_Task_510524"] = { 
 		idx="TargetDec_Task_510524",
-		Dec="击败长发地灵魔刀（0/45）",
+		Dec="击败长发地灵魔刀 ",
 	},
 	["TargetDec_Task_510525"] = { 
 		idx="TargetDec_Task_510525",
-		Dec="击败青面司护狂战获取狂战石（0/20）",
+		Dec="击败青面司护狂战获取狂战石 ",
 	},
 	["TargetDec_Task_510526"] = { 
 		idx="TargetDec_Task_510526",
-		Dec="击败铁锤司护战将（0/45）",
+		Dec="击败铁锤司护战将 ",
 	},
 	["TargetDec_Task_510527"] = { 
 		idx="TargetDec_Task_510527",
-		Dec="击败铁锤司护战将获取铁锤（0/20）",
+		Dec="击败铁锤司护战将获取铁锤 ",
 	},
 	["TargetDec_Task_510528"] = { 
 		idx="TargetDec_Task_510528",
-		Dec="提交80级及以下中品装备（0/1）",
+		Dec="提交80级及以下中品装备 ",
 	},
 	["TargetDec_Task_510529"] = { 
 		idx="TargetDec_Task_510529",
-		Dec="提交80级中品装备（0/1）",
+		Dec="提交80级中品装备 ",
 	},
 	["TargetDec_Task_510530"] = { 
 		idx="TargetDec_Task_510530",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_510531"] = { 
 		idx="TargetDec_Task_510531",
-		Dec="使用黄金宝盒10个（0/10）",
+		Dec="使用黄金宝盒10个 ",
 	},
 	["TargetDec_Task_510532"] = { 
 		idx="TargetDec_Task_510532",
-		Dec="击败白面嗜血狂刀（勇士）（0/20）",
+		Dec="击败白面嗜血狂刀（勇士） ",
 	},
 	["TargetDec_Task_510533"] = { 
 		idx="TargetDec_Task_510533",
-		Dec="击败白面摄魂神剑（勇士）（0/20）",
+		Dec="击败白面摄魂神剑（勇士） ",
 	},
 	["TargetDec_Task_510534"] = { 
 		idx="TargetDec_Task_510534",
-		Dec="击败长发地灵魔刀（勇士）（0/20）",
+		Dec="击败长发地灵魔刀（勇士） ",
 	},
 	["TargetDec_Task_510535"] = { 
 		idx="TargetDec_Task_510535",
-		Dec="击败白面巨戟战将（勇士）（0/20）",
+		Dec="击败白面巨戟战将（勇士） ",
 	},
 	["TargetDec_Task_510536"] = { 
 		idx="TargetDec_Task_510536",
-		Dec="提交80级上品武器（0/1）",
+		Dec="提交80级上品武器 ",
 	},
 	["TargetDec_Task_510537"] = { 
 		idx="TargetDec_Task_510537",
-		Dec="提交70级上品衣服（0/1）",
+		Dec="提交70级上品衣服 ",
 	},
 	["TargetDec_Task_510538"] = { 
 		idx="TargetDec_Task_510538",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_510539"] = { 
 		idx="TargetDec_Task_510539",
-		Dec="使用黄金宝盒15个（0/15）",
+		Dec="使用黄金宝盒15个 ",
 	},
 	["TargetDec_Task_510540"] = { 
 		idx="TargetDec_Task_510540",
-		Dec="提交60级正派上品武器（0/2）",
+		Dec="提交60级正派上品武器 ",
 	},
 	["TargetDec_Task_510541"] = { 
 		idx="TargetDec_Task_510541",
-		Dec="提交60级邪派上品武器（0/2）",
+		Dec="提交60级邪派上品武器 ",
 	},
 	["TargetDec_Task_510542"] = { 
 		idx="TargetDec_Task_510542",
-		Dec="击败脚都(BOSS)（0/1）",
+		Dec="击败脚都  ",
 	},
 	["TargetDec_Task_510543"] = { 
 		idx="TargetDec_Task_510543",
-		Dec="击败火贼头目(BOSS)（0/2）",
+		Dec="击败火贼头目  ",
 	},
 	["TargetDec_Task_510544"] = { 
 		idx="TargetDec_Task_510544",
-		Dec="击败赤血熊王(BOSS)（0/2）",
+		Dec="击败赤血熊王  ",
 	},
 	["TargetDec_Task_510545"] = { 
 		idx="TargetDec_Task_510545",
-		Dec="提交60级上品衣服（0/2）",
+		Dec="提交60级上品衣服 ",
 	},
 	["TargetDec_Task_510546"] = { 
 		idx="TargetDec_Task_510546",
-		Dec="提交60级极品武器（0/2）",
+		Dec="提交60级极品武器 ",
 	},
 	["TargetDec_Task_510547"] = { 
 		idx="TargetDec_Task_510547",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["TargetDec_Task_510548"] = { 
 		idx="TargetDec_Task_510548",
-		Dec="使用黄金宝盒20个（0/20）",
+		Dec="使用黄金宝盒20个 ",
 	},
 	["TargetDec_Task_510549"] = { 
 		idx="TargetDec_Task_510549",
-		Dec="提交60级正派极品武器（0/2）",
+		Dec="提交60级正派极品武器 ",
 	},
 	["TargetDec_Task_510550"] = { 
 		idx="TargetDec_Task_510550",
-		Dec="提交60级邪派极品武器（0/2）",
+		Dec="提交60级邪派极品武器 ",
 	},
 	["Name_Task_510601"] = { 
 		idx="Name_Task_510601",
@@ -7345,203 +7345,203 @@ local config = {
 	},
 	["TargetDec_Task_510601"] = { 
 		idx="TargetDec_Task_510601",
-		Dec="击败冷血地灵妖道（0/20）",
+		Dec="击败冷血地灵妖道 ",
 	},
 	["TargetDec_Task_510602"] = { 
 		idx="TargetDec_Task_510602",
-		Dec="击败玉扇地灵舞女获取舞扇（0/10）",
+		Dec="击败玉扇地灵舞女获取舞扇 ",
 	},
 	["TargetDec_Task_510603"] = { 
 		idx="TargetDec_Task_510603",
-		Dec="击败青蝶地灵魔女（0/20）",
+		Dec="击败青蝶地灵魔女 ",
 	},
 	["TargetDec_Task_510604"] = { 
 		idx="TargetDec_Task_510604",
-		Dec="击败夺魂地灵圣母获取夺魄石（0/10）",
+		Dec="击败夺魂地灵圣母获取夺魄石 ",
 	},
 	["TargetDec_Task_510605"] = { 
 		idx="TargetDec_Task_510605",
-		Dec="击败铁腕地灵神拳（0/20）",
+		Dec="击败铁腕地灵神拳 ",
 	},
 	["TargetDec_Task_510606"] = { 
 		idx="TargetDec_Task_510606",
-		Dec="击败铁锤司护战将获取铁锤（0/10）",
+		Dec="击败铁锤司护战将获取铁锤 ",
 	},
 	["TargetDec_Task_510607"] = { 
 		idx="TargetDec_Task_510607",
-		Dec="击败长发地灵魔刀（0/20）",
+		Dec="击败长发地灵魔刀 ",
 	},
 	["TargetDec_Task_510608"] = { 
 		idx="TargetDec_Task_510608",
-		Dec="提交90级及以下下品装备（0/1）",
+		Dec="提交90级及以下下品装备 ",
 	},
 	["TargetDec_Task_510609"] = { 
 		idx="TargetDec_Task_510609",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_510610"] = { 
 		idx="TargetDec_Task_510610",
-		Dec="使用碧玉宝盒4个（0/4）",
+		Dec="使用碧玉宝盒4个 ",
 	},
 	["TargetDec_Task_510611"] = { 
 		idx="TargetDec_Task_510611",
-		Dec="击败冷血地灵妖道（0/30）",
+		Dec="击败冷血地灵妖道 ",
 	},
 	["TargetDec_Task_510612"] = { 
 		idx="TargetDec_Task_510612",
-		Dec="击败玉扇地灵舞女获得舞扇（0/15）",
+		Dec="击败玉扇地灵舞女获得舞扇 ",
 	},
 	["TargetDec_Task_510613"] = { 
 		idx="TargetDec_Task_510613",
-		Dec="击败青蝶地灵魔女（0/30）",
+		Dec="击败青蝶地灵魔女 ",
 	},
 	["TargetDec_Task_510614"] = { 
 		idx="TargetDec_Task_510614",
-		Dec="击败夺魂地灵圣母获取夺魄石（0/15）",
+		Dec="击败夺魂地灵圣母获取夺魄石 ",
 	},
 	["TargetDec_Task_510615"] = { 
 		idx="TargetDec_Task_510615",
-		Dec="击败铁腕地灵神拳（0/30）",
+		Dec="击败铁腕地灵神拳 ",
 	},
 	["TargetDec_Task_510616"] = { 
 		idx="TargetDec_Task_510616",
-		Dec="击败铁锤司护战将获得铁锤（0/15）",
+		Dec="击败铁锤司护战将获得铁锤 ",
 	},
 	["TargetDec_Task_510617"] = { 
 		idx="TargetDec_Task_510617",
-		Dec="击败长发地灵魔刀（0/30）",
+		Dec="击败长发地灵魔刀 ",
 	},
 	["TargetDec_Task_510618"] = { 
 		idx="TargetDec_Task_510618",
-		Dec="提交90级及以下中品装备（0/1）",
+		Dec="提交90级及以下中品装备 ",
 	},
 	["TargetDec_Task_510619"] = { 
 		idx="TargetDec_Task_510619",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_510620"] = { 
 		idx="TargetDec_Task_510620",
-		Dec="使用碧玉宝盒10个（0/10）",
+		Dec="使用碧玉宝盒10个 ",
 	},
 	["TargetDec_Task_510621"] = { 
 		idx="TargetDec_Task_510621",
-		Dec="击败冷血地灵妖道（0/45）",
+		Dec="击败冷血地灵妖道 ",
 	},
 	["TargetDec_Task_510622"] = { 
 		idx="TargetDec_Task_510622",
-		Dec="击败玉扇地灵舞女获得舞扇（0/20）",
+		Dec="击败玉扇地灵舞女获得舞扇 ",
 	},
 	["TargetDec_Task_510623"] = { 
 		idx="TargetDec_Task_510623",
-		Dec="击败青蝶地灵魔女获得羽扇（0/20）",
+		Dec="击败青蝶地灵魔女获得羽扇 ",
 	},
 	["TargetDec_Task_510624"] = { 
 		idx="TargetDec_Task_510624",
-		Dec="击败夺魂地灵圣母（0/45）",
+		Dec="击败夺魂地灵圣母 ",
 	},
 	["TargetDec_Task_510625"] = { 
 		idx="TargetDec_Task_510625",
-		Dec="击败铁腕地灵神拳获取秘籍（0/20）",
+		Dec="击败铁腕地灵神拳获取秘籍 ",
 	},
 	["TargetDec_Task_510626"] = { 
 		idx="TargetDec_Task_510626",
-		Dec="击败玉扇地灵舞女（0/45）",
+		Dec="击败玉扇地灵舞女 ",
 	},
 	["TargetDec_Task_510627"] = { 
 		idx="TargetDec_Task_510627",
-		Dec="击败冷血地灵妖道获取道袍（0/20）",
+		Dec="击败冷血地灵妖道获取道袍 ",
 	},
 	["TargetDec_Task_510628"] = { 
 		idx="TargetDec_Task_510628",
-		Dec="提交90级及以下中品装备（0/1）",
+		Dec="提交90级及以下中品装备 ",
 	},
 	["TargetDec_Task_510629"] = { 
 		idx="TargetDec_Task_510629",
-		Dec="提交90级中品装备（0/1）",
+		Dec="提交90级中品装备 ",
 	},
 	["TargetDec_Task_510630"] = { 
 		idx="TargetDec_Task_510630",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_510631"] = { 
 		idx="TargetDec_Task_510631",
-		Dec="使用碧玉宝盒10个（0/10）",
+		Dec="使用碧玉宝盒10个 ",
 	},
 	["TargetDec_Task_510632"] = { 
 		idx="TargetDec_Task_510632",
-		Dec="击败冷血地灵妖道（勇士）（0/20）",
+		Dec="击败冷血地灵妖道（勇士） ",
 	},
 	["TargetDec_Task_510633"] = { 
 		idx="TargetDec_Task_510633",
-		Dec="击败青蝶地灵魔女（勇士）（0/20）",
+		Dec="击败青蝶地灵魔女（勇士） ",
 	},
 	["TargetDec_Task_510634"] = { 
 		idx="TargetDec_Task_510634",
-		Dec="击败夺魂地灵圣母（勇士）（0/20）",
+		Dec="击败夺魂地灵圣母（勇士） ",
 	},
 	["TargetDec_Task_510635"] = { 
 		idx="TargetDec_Task_510635",
-		Dec="击败夺魂地灵圣母（勇士）获得高级夺魄石（0/20）",
+		Dec="击败夺魂地灵圣母（勇士）获得高级夺魄石 ",
 	},
 	["TargetDec_Task_510636"] = { 
 		idx="TargetDec_Task_510636",
-		Dec="提交80级上品武器（0/1）",
+		Dec="提交80级上品武器 ",
 	},
 	["TargetDec_Task_510637"] = { 
 		idx="TargetDec_Task_510637",
-		Dec="提交80级上品衣服（0/1）",
+		Dec="提交80级上品衣服 ",
 	},
 	["TargetDec_Task_510638"] = { 
 		idx="TargetDec_Task_510638",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_510639"] = { 
 		idx="TargetDec_Task_510639",
-		Dec="使用碧玉宝盒15个（0/15）",
+		Dec="使用碧玉宝盒15个 ",
 	},
 	["TargetDec_Task_510640"] = { 
 		idx="TargetDec_Task_510640",
-		Dec="提交80级正派上品武器（0/2）",
+		Dec="提交80级正派上品武器 ",
 	},
 	["TargetDec_Task_510641"] = { 
 		idx="TargetDec_Task_510641",
-		Dec="提交80级邪派上品武器（0/2）",
+		Dec="提交80级邪派上品武器 ",
 	},
 	["TargetDec_Task_510642"] = { 
 		idx="TargetDec_Task_510642",
-		Dec="击败脚都(BOSS)（0/2）",
+		Dec="击败脚都  ",
 	},
 	["TargetDec_Task_510643"] = { 
 		idx="TargetDec_Task_510643",
-		Dec="击败脚都(BOSS)（0/1）",
+		Dec="击败脚都  ",
 	},
 	["TargetDec_Task_510644"] = { 
 		idx="TargetDec_Task_510644",
-		Dec="击败赤血熊王(BOSS)（0/3）",
+		Dec="击败赤血熊王  ",
 	},
 	["TargetDec_Task_510645"] = { 
 		idx="TargetDec_Task_510645",
-		Dec="提交80级上品衣服（0/2）",
+		Dec="提交80级上品衣服 ",
 	},
 	["TargetDec_Task_510646"] = { 
 		idx="TargetDec_Task_510646",
-		Dec="提交80级极品武器（0/2）",
+		Dec="提交80级极品武器 ",
 	},
 	["TargetDec_Task_510647"] = { 
 		idx="TargetDec_Task_510647",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["TargetDec_Task_510648"] = { 
 		idx="TargetDec_Task_510648",
-		Dec="使用碧玉宝盒20个（0/20）",
+		Dec="使用碧玉宝盒20个 ",
 	},
 	["TargetDec_Task_510649"] = { 
 		idx="TargetDec_Task_510649",
-		Dec="提交80级正派极品武器（0/2）",
+		Dec="提交80级正派极品武器 ",
 	},
 	["TargetDec_Task_510650"] = { 
 		idx="TargetDec_Task_510650",
-		Dec="提交80级邪派极品武器（0/2）",
+		Dec="提交80级邪派极品武器 ",
 	},
 	["Name_Task_510701"] = { 
 		idx="Name_Task_510701",
@@ -7745,203 +7745,203 @@ local config = {
 	},
 	["TargetDec_Task_510701"] = { 
 		idx="TargetDec_Task_510701",
-		Dec="击败灵魂刺客（0/20）",
+		Dec="击败灵魂刺客 ",
 	},
 	["TargetDec_Task_510702"] = { 
 		idx="TargetDec_Task_510702",
-		Dec="击败血影神彪获取羽毛（0/10）",
+		Dec="击败血影神彪获取羽毛 ",
 	},
 	["TargetDec_Task_510703"] = { 
 		idx="TargetDec_Task_510703",
-		Dec="击败血羽雕（0/20）",
+		Dec="击败血羽雕 ",
 	},
 	["TargetDec_Task_510704"] = { 
 		idx="TargetDec_Task_510704",
-		Dec="击败地狱魔叉兵获取地狱石（0/10）",
+		Dec="击败地狱魔叉兵获取地狱石 ",
 	},
 	["TargetDec_Task_510705"] = { 
 		idx="TargetDec_Task_510705",
-		Dec="击败偃月魔刀（0/20）",
+		Dec="击败偃月魔刀 ",
 	},
 	["TargetDec_Task_510706"] = { 
 		idx="TargetDec_Task_510706",
-		Dec="击败偃月魔刀获取魔刀（0/10）",
+		Dec="击败偃月魔刀获取魔刀 ",
 	},
 	["TargetDec_Task_510707"] = { 
 		idx="TargetDec_Task_510707",
-		Dec="击败夺魂地灵圣母（0/20）",
+		Dec="击败夺魂地灵圣母 ",
 	},
 	["TargetDec_Task_510708"] = { 
 		idx="TargetDec_Task_510708",
-		Dec="提交100级及以下下品装备（0/1）",
+		Dec="提交100级及以下下品装备 ",
 	},
 	["TargetDec_Task_510709"] = { 
 		idx="TargetDec_Task_510709",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_510710"] = { 
 		idx="TargetDec_Task_510710",
-		Dec="使用碧玉宝盒4个（0/4）",
+		Dec="使用碧玉宝盒4个 ",
 	},
 	["TargetDec_Task_510711"] = { 
 		idx="TargetDec_Task_510711",
-		Dec="击败灵魂刺客（0/30）",
+		Dec="击败灵魂刺客 ",
 	},
 	["TargetDec_Task_510712"] = { 
 		idx="TargetDec_Task_510712",
-		Dec="击败血影神彪获得羽毛（0/15）",
+		Dec="击败血影神彪获得羽毛 ",
 	},
 	["TargetDec_Task_510713"] = { 
 		idx="TargetDec_Task_510713",
-		Dec="击败血羽雕（0/30）",
+		Dec="击败血羽雕 ",
 	},
 	["TargetDec_Task_510714"] = { 
 		idx="TargetDec_Task_510714",
-		Dec="击败地狱魔叉兵获取地狱石（0/15）",
+		Dec="击败地狱魔叉兵获取地狱石 ",
 	},
 	["TargetDec_Task_510715"] = { 
 		idx="TargetDec_Task_510715",
-		Dec="击败偃月魔刀（0/30）",
+		Dec="击败偃月魔刀 ",
 	},
 	["TargetDec_Task_510716"] = { 
 		idx="TargetDec_Task_510716",
-		Dec="击败铁锤司护战将获得铁锤（0/15）",
+		Dec="击败铁锤司护战将获得铁锤 ",
 	},
 	["TargetDec_Task_510717"] = { 
 		idx="TargetDec_Task_510717",
-		Dec="击败长发地灵魔刀（0/30）",
+		Dec="击败长发地灵魔刀 ",
 	},
 	["TargetDec_Task_510718"] = { 
 		idx="TargetDec_Task_510718",
-		Dec="提交10级及以下中品装备（0/1）",
+		Dec="提交10级及以下中品装备 ",
 	},
 	["TargetDec_Task_510719"] = { 
 		idx="TargetDec_Task_510719",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_510720"] = { 
 		idx="TargetDec_Task_510720",
-		Dec="使用碧玉宝盒10个（0/10）",
+		Dec="使用碧玉宝盒10个 ",
 	},
 	["TargetDec_Task_510721"] = { 
 		idx="TargetDec_Task_510721",
-		Dec="击败灵魂刺客（0/45）",
+		Dec="击败灵魂刺客 ",
 	},
 	["TargetDec_Task_510722"] = { 
 		idx="TargetDec_Task_510722",
-		Dec="击败血影神彪获得羽毛（0/20）",
+		Dec="击败血影神彪获得羽毛 ",
 	},
 	["TargetDec_Task_510723"] = { 
 		idx="TargetDec_Task_510723",
-		Dec="击败血羽雕获得羽毛（0/20）",
+		Dec="击败血羽雕获得羽毛 ",
 	},
 	["TargetDec_Task_510724"] = { 
 		idx="TargetDec_Task_510724",
-		Dec="击败血羽雕（0/45）",
+		Dec="击败血羽雕 ",
 	},
 	["TargetDec_Task_510725"] = { 
 		idx="TargetDec_Task_510725",
-		Dec="击败地狱魔叉兵获取秘籍（0/20）",
+		Dec="击败地狱魔叉兵获取秘籍 ",
 	},
 	["TargetDec_Task_510726"] = { 
 		idx="TargetDec_Task_510726",
-		Dec="击败偃月魔刀（0/45）",
+		Dec="击败偃月魔刀 ",
 	},
 	["TargetDec_Task_510727"] = { 
 		idx="TargetDec_Task_510727",
-		Dec="击败偃月魔刀获取偃月刀（0/20）",
+		Dec="击败偃月魔刀获取偃月刀 ",
 	},
 	["TargetDec_Task_510728"] = { 
 		idx="TargetDec_Task_510728",
-		Dec="提交100级及以下中品装备（0/1）",
+		Dec="提交100级及以下中品装备 ",
 	},
 	["TargetDec_Task_510729"] = { 
 		idx="TargetDec_Task_510729",
-		Dec="提交100级中品装备（0/1）",
+		Dec="提交100级中品装备 ",
 	},
 	["TargetDec_Task_510730"] = { 
 		idx="TargetDec_Task_510730",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_510731"] = { 
 		idx="TargetDec_Task_510731",
-		Dec="使用碧玉宝盒10个（0/10）",
+		Dec="使用碧玉宝盒10个 ",
 	},
 	["TargetDec_Task_510732"] = { 
 		idx="TargetDec_Task_510732",
-		Dec="击败冷血地灵妖道（勇士）（0/30）",
+		Dec="击败冷血地灵妖道（勇士） ",
 	},
 	["TargetDec_Task_510733"] = { 
 		idx="TargetDec_Task_510733",
-		Dec="击败青蝶地灵魔女（勇士）（0/30）",
+		Dec="击败青蝶地灵魔女（勇士） ",
 	},
 	["TargetDec_Task_510734"] = { 
 		idx="TargetDec_Task_510734",
-		Dec="击败夺魂地灵圣母（勇士）（0/30）",
+		Dec="击败夺魂地灵圣母（勇士） ",
 	},
 	["TargetDec_Task_510735"] = { 
 		idx="TargetDec_Task_510735",
-		Dec="击败夺魂地灵圣母（勇士）获得高级夺魄石（0/25）",
+		Dec="击败夺魂地灵圣母（勇士）获得高级夺魄石 ",
 	},
 	["TargetDec_Task_510736"] = { 
 		idx="TargetDec_Task_510736",
-		Dec="提交100级上品武器（0/1）",
+		Dec="提交100级上品武器 ",
 	},
 	["TargetDec_Task_510737"] = { 
 		idx="TargetDec_Task_510737",
-		Dec="提交80级上品衣服（0/1）",
+		Dec="提交80级上品衣服 ",
 	},
 	["TargetDec_Task_510738"] = { 
 		idx="TargetDec_Task_510738",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_510739"] = { 
 		idx="TargetDec_Task_510739",
-		Dec="使用碧玉宝盒15个（0/15）",
+		Dec="使用碧玉宝盒15个 ",
 	},
 	["TargetDec_Task_510740"] = { 
 		idx="TargetDec_Task_510740",
-		Dec="提交100级正派上品武器（0/2）",
+		Dec="提交100级正派上品武器 ",
 	},
 	["TargetDec_Task_510741"] = { 
 		idx="TargetDec_Task_510741",
-		Dec="提交100级邪派上品武器（0/2）",
+		Dec="提交100级邪派上品武器 ",
 	},
 	["TargetDec_Task_510742"] = { 
 		idx="TargetDec_Task_510742",
-		Dec="击败美娘(BOSS)（0/1）",
+		Dec="击败美娘  ",
 	},
 	["TargetDec_Task_510743"] = { 
 		idx="TargetDec_Task_510743",
-		Dec="击败九天地灵魔尊(BOSS)（0/1）",
+		Dec="击败九天地灵魔尊  ",
 	},
 	["TargetDec_Task_510744"] = { 
 		idx="TargetDec_Task_510744",
-		Dec="击败脚都(BOSS)（0/3）",
+		Dec="击败脚都  ",
 	},
 	["TargetDec_Task_510745"] = { 
 		idx="TargetDec_Task_510745",
-		Dec="提交100级上品衣服（0/2）",
+		Dec="提交100级上品衣服 ",
 	},
 	["TargetDec_Task_510746"] = { 
 		idx="TargetDec_Task_510746",
-		Dec="提交100级极品武器（0/2）",
+		Dec="提交100级极品武器 ",
 	},
 	["TargetDec_Task_510747"] = { 
 		idx="TargetDec_Task_510747",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["TargetDec_Task_510748"] = { 
 		idx="TargetDec_Task_510748",
-		Dec="使用碧玉宝盒20个（0/20）",
+		Dec="使用碧玉宝盒20个 ",
 	},
 	["TargetDec_Task_510749"] = { 
 		idx="TargetDec_Task_510749",
-		Dec="提交100级正派极品武器（0/2）",
+		Dec="提交100级正派极品武器 ",
 	},
 	["TargetDec_Task_510750"] = { 
 		idx="TargetDec_Task_510750",
-		Dec="提交100级邪派极品武器（0/2）",
+		Dec="提交100级邪派极品武器 ",
 	},
 	["Name_Task_520101"] = { 
 		idx="Name_Task_520101",
@@ -8117,175 +8117,175 @@ local config = {
 	},
 	["TargetDec_Task_520101"] = { 
 		idx="TargetDec_Task_520101",
-		Dec="击败伐木工头（0/20）",
+		Dec="击败伐木工头 ",
 	},
 	["TargetDec_Task_520102"] = { 
 		idx="TargetDec_Task_520102",
-		Dec="击败小蓝鬼获取残魄（0/10）",
+		Dec="击败小蓝鬼获取残魄 ",
 	},
 	["TargetDec_Task_520103"] = { 
 		idx="TargetDec_Task_520103",
-		Dec="击败小黑猴（0/20）",
+		Dec="击败小黑猴 ",
 	},
 	["TargetDec_Task_520104"] = { 
 		idx="TargetDec_Task_520104",
-		Dec="击败舞女获取舞扇（0/10）",
+		Dec="击败舞女获取舞扇 ",
 	},
 	["TargetDec_Task_520105"] = { 
 		idx="TargetDec_Task_520105",
-		Dec="击败破戒僧（0/20）",
+		Dec="击败破戒僧 ",
 	},
 	["TargetDec_Task_520106"] = { 
 		idx="TargetDec_Task_520106",
-		Dec="击败巨斧山贼获取巨斧（0/10）",
+		Dec="击败巨斧山贼获取巨斧 ",
 	},
 	["TargetDec_Task_520107"] = { 
 		idx="TargetDec_Task_520107",
-		Dec="提交35级及以下下品装备（0/1）",
+		Dec="提交35级及以下下品装备 ",
 	},
 	["TargetDec_Task_520108"] = { 
 		idx="TargetDec_Task_520108",
-		Dec="使用香木宝盒4个（0/4）",
+		Dec="使用香木宝盒4个 ",
 	},
 	["TargetDec_Task_520109"] = { 
 		idx="TargetDec_Task_520109",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_520110"] = { 
 		idx="TargetDec_Task_520110",
-		Dec="击败伐木工头（0/30）",
+		Dec="击败伐木工头 ",
 	},
 	["TargetDec_Task_520111"] = { 
 		idx="TargetDec_Task_520111",
-		Dec="击败伐木工头获得伐木斧（0/15）",
+		Dec="击败伐木工头获得伐木斧 ",
 	},
 	["TargetDec_Task_520112"] = { 
 		idx="TargetDec_Task_520112",
-		Dec="击败小蓝鬼（0/30）",
+		Dec="击败小蓝鬼 ",
 	},
 	["TargetDec_Task_520113"] = { 
 		idx="TargetDec_Task_520113",
-		Dec="击败小黑猴获得被偷走的物资（0/15）",
+		Dec="击败小黑猴获得被偷走的物资 ",
 	},
 	["TargetDec_Task_520114"] = { 
 		idx="TargetDec_Task_520114",
-		Dec="击败舞女（0/30）",
+		Dec="击败舞女 ",
 	},
 	["TargetDec_Task_520115"] = { 
 		idx="TargetDec_Task_520115",
-		Dec="击败破戒僧获得袈裟（0/15）",
+		Dec="击败破戒僧获得袈裟 ",
 	},
 	["TargetDec_Task_520116"] = { 
 		idx="TargetDec_Task_520116",
-		Dec="击败巨斧山贼（0/30）",
+		Dec="击败巨斧山贼 ",
 	},
 	["TargetDec_Task_520117"] = { 
 		idx="TargetDec_Task_520117",
-		Dec="使用香木宝盒7个（0/7）",
+		Dec="使用香木宝盒7个 ",
 	},
 	["TargetDec_Task_520118"] = { 
 		idx="TargetDec_Task_520118",
-		Dec="提交35级及以下中品装备（0/1）",
+		Dec="提交35级及以下中品装备 ",
 	},
 	["TargetDec_Task_520119"] = { 
 		idx="TargetDec_Task_520119",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_520120"] = { 
 		idx="TargetDec_Task_520120",
-		Dec="击败伐木工头（0/45）",
+		Dec="击败伐木工头 ",
 	},
 	["TargetDec_Task_520121"] = { 
 		idx="TargetDec_Task_520121",
-		Dec="击败小蓝鬼获取20个高级精魄（0/20）",
+		Dec="击败小蓝鬼获取20个高级精魄 ",
 	},
 	["TargetDec_Task_520122"] = { 
 		idx="TargetDec_Task_520122",
-		Dec="击败小黑猴获得被偷走的物资（0/20）",
+		Dec="击败小黑猴获得被偷走的物资 ",
 	},
 	["TargetDec_Task_520123"] = { 
 		idx="TargetDec_Task_520123",
-		Dec="击败舞女（0/45）",
+		Dec="击败舞女 ",
 	},
 	["TargetDec_Task_520124"] = { 
 		idx="TargetDec_Task_520124",
-		Dec="击败舞女获取舞扇（0/20）",
+		Dec="击败舞女获取舞扇 ",
 	},
 	["TargetDec_Task_520125"] = { 
 		idx="TargetDec_Task_520125",
-		Dec="击败破戒僧（0/45）",
+		Dec="击败破戒僧 ",
 	},
 	["TargetDec_Task_520126"] = { 
 		idx="TargetDec_Task_520126",
-		Dec="击败巨斧山贼获取巨斧（0/20）",
+		Dec="击败巨斧山贼获取巨斧 ",
 	},
 	["TargetDec_Task_520127"] = { 
 		idx="TargetDec_Task_520127",
-		Dec="提交35级及以下中品装备（0/1）",
+		Dec="提交35级及以下中品装备 ",
 	},
 	["TargetDec_Task_520128"] = { 
 		idx="TargetDec_Task_520128",
-		Dec="提交35级中品装备（0/1）",
+		Dec="提交35级中品装备 ",
 	},
 	["TargetDec_Task_520129"] = { 
 		idx="TargetDec_Task_520129",
-		Dec="使用香木宝盒10个（0/10）",
+		Dec="使用香木宝盒10个 ",
 	},
 	["TargetDec_Task_520130"] = { 
 		idx="TargetDec_Task_520130",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_520131"] = { 
 		idx="TargetDec_Task_520131",
-		Dec="击败伐木工头（勇士）（0/20）",
+		Dec="击败伐木工头（勇士） ",
 	},
 	["TargetDec_Task_520132"] = { 
 		idx="TargetDec_Task_520132",
-		Dec="击败巨斧山贼获取伐木斧（0/25）",
+		Dec="击败巨斧山贼获取伐木斧 ",
 	},
 	["TargetDec_Task_520133"] = { 
 		idx="TargetDec_Task_520133",
-		Dec="击败破戒僧（0/60）",
+		Dec="击败破戒僧 ",
 	},
 	["TargetDec_Task_520134"] = { 
 		idx="TargetDec_Task_520134",
-		Dec="提交35级上品武器（0/1）",
+		Dec="提交35级上品武器 ",
 	},
 	["TargetDec_Task_520135"] = { 
 		idx="TargetDec_Task_520135",
-		Dec="提交30级上品衣服（0/1）",
+		Dec="提交30级上品衣服 ",
 	},
 	["TargetDec_Task_520136"] = { 
 		idx="TargetDec_Task_520136",
-		Dec="使用香木宝盒15个（0/15）",
+		Dec="使用香木宝盒15个 ",
 	},
 	["TargetDec_Task_520137"] = { 
 		idx="TargetDec_Task_520137",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_520138"] = { 
 		idx="TargetDec_Task_520138",
-		Dec="击败山贼头领(BOSS)（0/1）",
+		Dec="击败山贼头领  ",
 	},
 	["TargetDec_Task_520139"] = { 
 		idx="TargetDec_Task_520139",
-		Dec="击败山鬼(BOSS)（0/1）",
+		Dec="击败山鬼  ",
 	},
 	["TargetDec_Task_520140"] = { 
 		idx="TargetDec_Task_520140",
-		Dec="提交30级上品衣服（0/2）",
+		Dec="提交30级上品衣服 ",
 	},
 	["TargetDec_Task_520141"] = { 
 		idx="TargetDec_Task_520141",
-		Dec="提交35级极品武器（0/1）",
+		Dec="提交35级极品武器 ",
 	},
 	["TargetDec_Task_520142"] = { 
 		idx="TargetDec_Task_520142",
-		Dec="使用香木宝盒20个（0/20）",
+		Dec="使用香木宝盒20个 ",
 	},
 	["TargetDec_Task_520143"] = { 
 		idx="TargetDec_Task_520143",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["Name_Task_520201"] = { 
 		idx="Name_Task_520201",
@@ -8481,195 +8481,195 @@ local config = {
 	},
 	["TargetDec_Task_520201"] = { 
 		idx="TargetDec_Task_520201",
-		Dec="击败赤血熊（0/20）",
+		Dec="击败赤血熊 ",
 	},
 	["TargetDec_Task_520202"] = { 
 		idx="TargetDec_Task_520202",
-		Dec="击败山林黄虎获取虎胆（0/10）",
+		Dec="击败山林黄虎获取虎胆 ",
 	},
 	["TargetDec_Task_520203"] = { 
 		idx="TargetDec_Task_520203",
-		Dec="击败白纹虎（0/20）",
+		Dec="击败白纹虎 ",
 	},
 	["TargetDec_Task_520204"] = { 
 		idx="TargetDec_Task_520204",
-		Dec="击败长枪匪兵获取长枪（0/10）",
+		Dec="击败长枪匪兵获取长枪 ",
 	},
 	["TargetDec_Task_520205"] = { 
 		idx="TargetDec_Task_520205",
-		Dec="击败大刀匪兵（0/20）",
+		Dec="击败大刀匪兵 ",
 	},
 	["TargetDec_Task_520206"] = { 
 		idx="TargetDec_Task_520206",
-		Dec="击败铁掌神驼获取秘籍（0/10）",
+		Dec="击败铁掌神驼获取秘籍 ",
 	},
 	["TargetDec_Task_520207"] = { 
 		idx="TargetDec_Task_520207",
-		Dec="提交45级及以下下品装备（0/1）",
+		Dec="提交45级及以下下品装备 ",
 	},
 	["TargetDec_Task_520208"] = { 
 		idx="TargetDec_Task_520208",
-		Dec="使用香木宝盒5个（0/5）",
+		Dec="使用香木宝盒5个 ",
 	},
 	["TargetDec_Task_520209"] = { 
 		idx="TargetDec_Task_520209",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_520210"] = { 
 		idx="TargetDec_Task_520210",
-		Dec="使用白银宝盒3个（0/3）",
+		Dec="使用白银宝盒3个 ",
 	},
 	["TargetDec_Task_520211"] = { 
 		idx="TargetDec_Task_520211",
-		Dec="击败赤血熊（0/30）",
+		Dec="击败赤血熊 ",
 	},
 	["TargetDec_Task_520212"] = { 
 		idx="TargetDec_Task_520212",
-		Dec="击败山林黄虎获得虎胆（0/15）",
+		Dec="击败山林黄虎获得虎胆 ",
 	},
 	["TargetDec_Task_520213"] = { 
 		idx="TargetDec_Task_520213",
-		Dec="击败白纹虎（0/30）",
+		Dec="击败白纹虎 ",
 	},
 	["TargetDec_Task_520214"] = { 
 		idx="TargetDec_Task_520214",
-		Dec="击败长枪匪兵获得长枪（0/15）",
+		Dec="击败长枪匪兵获得长枪 ",
 	},
 	["TargetDec_Task_520215"] = { 
 		idx="TargetDec_Task_520215",
-		Dec="击败大刀匪兵（0/30）",
+		Dec="击败大刀匪兵 ",
 	},
 	["TargetDec_Task_520216"] = { 
 		idx="TargetDec_Task_520216",
-		Dec="击败铁掌神驼获取秘籍（0/15）",
+		Dec="击败铁掌神驼获取秘籍 ",
 	},
 	["TargetDec_Task_520217"] = { 
 		idx="TargetDec_Task_520217",
-		Dec="击败铁掌神驼（0/30）",
+		Dec="击败铁掌神驼 ",
 	},
 	["TargetDec_Task_520218"] = { 
 		idx="TargetDec_Task_520218",
-		Dec="使用香木宝盒8个（0/8）",
+		Dec="使用香木宝盒8个 ",
 	},
 	["TargetDec_Task_520219"] = { 
 		idx="TargetDec_Task_520219",
-		Dec="提交45级及以下中品装备（0/1）",
+		Dec="提交45级及以下中品装备 ",
 	},
 	["TargetDec_Task_520220"] = { 
 		idx="TargetDec_Task_520220",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_520221"] = { 
 		idx="TargetDec_Task_520221",
-		Dec="使用白银宝盒7个（0/7）",
+		Dec="使用白银宝盒7个 ",
 	},
 	["TargetDec_Task_520222"] = { 
 		idx="TargetDec_Task_520222",
-		Dec="击败赤血熊（0/45）",
+		Dec="击败赤血熊 ",
 	},
 	["TargetDec_Task_520223"] = { 
 		idx="TargetDec_Task_520223",
-		Dec="击败山林黄虎获取20个高级虎胆（0/20）",
+		Dec="击败山林黄虎获取20个高级虎胆 ",
 	},
 	["TargetDec_Task_520224"] = { 
 		idx="TargetDec_Task_520224",
-		Dec="击败白纹虎获得白虎皮毛（0/20）",
+		Dec="击败白纹虎获得白虎皮毛 ",
 	},
 	["TargetDec_Task_520225"] = { 
 		idx="TargetDec_Task_520225",
-		Dec="击败长枪匪兵（0/45）",
+		Dec="击败长枪匪兵 ",
 	},
 	["TargetDec_Task_520226"] = { 
 		idx="TargetDec_Task_520226",
-		Dec="击败长枪匪兵获取长枪（0/20）",
+		Dec="击败长枪匪兵获取长枪 ",
 	},
 	["TargetDec_Task_520227"] = { 
 		idx="TargetDec_Task_520227",
-		Dec="击败大刀匪兵（0/45）",
+		Dec="击败大刀匪兵 ",
 	},
 	["TargetDec_Task_520228"] = { 
 		idx="TargetDec_Task_520228",
-		Dec="击败铁掌神驼获取秘籍（0/20）",
+		Dec="击败铁掌神驼获取秘籍 ",
 	},
 	["TargetDec_Task_520229"] = { 
 		idx="TargetDec_Task_520229",
-		Dec="提交45级及以下中品装备（0/1）",
+		Dec="提交45级及以下中品装备 ",
 	},
 	["TargetDec_Task_520230"] = { 
 		idx="TargetDec_Task_520230",
-		Dec="提交45级中品装备（0/1）",
+		Dec="提交45级中品装备 ",
 	},
 	["TargetDec_Task_520231"] = { 
 		idx="TargetDec_Task_520231",
-		Dec="使用香木宝盒12个（0/12）",
+		Dec="使用香木宝盒12个 ",
 	},
 	["TargetDec_Task_520232"] = { 
 		idx="TargetDec_Task_520232",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_520233"] = { 
 		idx="TargetDec_Task_520233",
-		Dec="使用白银宝盒10个（0/10）",
+		Dec="使用白银宝盒10个 ",
 	},
 	["TargetDec_Task_520234"] = { 
 		idx="TargetDec_Task_520234",
-		Dec="击败白纹虎（猛兽）（0/20）",
+		Dec="击败白纹虎（猛兽） ",
 	},
 	["TargetDec_Task_520235"] = { 
 		idx="TargetDec_Task_520235",
-		Dec="击败大刀匪兵（勇士）获取伐大刀（0/5）",
+		Dec="击败大刀匪兵（勇士）获取伐大刀 ",
 	},
 	["TargetDec_Task_520236"] = { 
 		idx="TargetDec_Task_520236",
-		Dec="击败白纹虎（0/60）",
+		Dec="击败白纹虎 ",
 	},
 	["TargetDec_Task_520237"] = { 
 		idx="TargetDec_Task_520237",
-		Dec="提交35级上品武器（0/1）",
+		Dec="提交35级上品武器 ",
 	},
 	["TargetDec_Task_520238"] = { 
 		idx="TargetDec_Task_520238",
-		Dec="提交40级上品衣服（0/1）",
+		Dec="提交40级上品衣服 ",
 	},
 	["TargetDec_Task_520239"] = { 
 		idx="TargetDec_Task_520239",
-		Dec="使用香木宝盒17个（0/17）",
+		Dec="使用香木宝盒17个 ",
 	},
 	["TargetDec_Task_520240"] = { 
 		idx="TargetDec_Task_520240",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_520241"] = { 
 		idx="TargetDec_Task_520241",
-		Dec="使用白银宝盒12个（0/15）",
+		Dec="使用白银宝盒12个 ",
 	},
 	["TargetDec_Task_520242"] = { 
 		idx="TargetDec_Task_520242",
-		Dec="击败山鬼(BOSS)（0/1）",
+		Dec="击败山鬼  ",
 	},
 	["TargetDec_Task_520243"] = { 
 		idx="TargetDec_Task_520243",
-		Dec="击败山贼头领(BOSS)（0/1）",
+		Dec="击败山贼头领  ",
 	},
 	["TargetDec_Task_520244"] = { 
 		idx="TargetDec_Task_520244",
-		Dec="提交40级上品衣服（0/2）",
+		Dec="提交40级上品衣服 ",
 	},
 	["TargetDec_Task_520245"] = { 
 		idx="TargetDec_Task_520245",
-		Dec="提交35级极品武器（0/2）",
+		Dec="提交35级极品武器 ",
 	},
 	["TargetDec_Task_520246"] = { 
 		idx="TargetDec_Task_520246",
-		Dec="使用香木宝盒23个（0/23）",
+		Dec="使用香木宝盒23个 ",
 	},
 	["TargetDec_Task_520247"] = { 
 		idx="TargetDec_Task_520247",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["TargetDec_Task_520248"] = { 
 		idx="TargetDec_Task_520248",
-		Dec="使用白银宝盒20个（0/20）",
+		Dec="使用白银宝盒20个 ",
 	},
 	["Name_Task_520301"] = { 
 		idx="Name_Task_520301",
@@ -8865,195 +8865,195 @@ local config = {
 	},
 	["TargetDec_Task_520301"] = { 
 		idx="TargetDec_Task_520301",
-		Dec="击败独眼怪人（0/20）",
+		Dec="击败独眼怪人 ",
 	},
 	["TargetDec_Task_520302"] = { 
 		idx="TargetDec_Task_520302",
-		Dec="击败巨臂异人获取麒麟臂（0/10）",
+		Dec="击败巨臂异人获取麒麟臂 ",
 	},
 	["TargetDec_Task_520303"] = { 
 		idx="TargetDec_Task_520303",
-		Dec="击败快刀武士（0/20）",
+		Dec="击败快刀武士 ",
 	},
 	["TargetDec_Task_520304"] = { 
 		idx="TargetDec_Task_520304",
-		Dec="击败黑面盗贼获取黑面具（0/10）",
+		Dec="击败黑面盗贼获取黑面具 ",
 	},
 	["TargetDec_Task_520305"] = { 
 		idx="TargetDec_Task_520305",
-		Dec="击败琥珀盗贼（0/20）",
+		Dec="击败琥珀盗贼 ",
 	},
 	["TargetDec_Task_520306"] = { 
 		idx="TargetDec_Task_520306",
-		Dec="击败盗贼小头目获取令牌（0/10）",
+		Dec="击败盗贼小头目获取令牌 ",
 	},
 	["TargetDec_Task_520307"] = { 
 		idx="TargetDec_Task_520307",
-		Dec="击败环眼大盗（0/20）",
+		Dec="击败环眼大盗 ",
 	},
 	["TargetDec_Task_520308"] = { 
 		idx="TargetDec_Task_520308",
-		Dec="提交50级及以下下品装备（0/1）",
+		Dec="提交50级及以下下品装备 ",
 	},
 	["TargetDec_Task_520309"] = { 
 		idx="TargetDec_Task_520309",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_520310"] = { 
 		idx="TargetDec_Task_520310",
-		Dec="使用白银宝盒4个（0/4）",
+		Dec="使用白银宝盒4个 ",
 	},
 	["TargetDec_Task_520311"] = { 
 		idx="TargetDec_Task_520311",
-		Dec="击败独眼怪人（0/30）",
+		Dec="击败独眼怪人 ",
 	},
 	["TargetDec_Task_520312"] = { 
 		idx="TargetDec_Task_520312",
-		Dec="击败巨臂异人获得麒麟臂（0/15）",
+		Dec="击败巨臂异人获得麒麟臂 ",
 	},
 	["TargetDec_Task_520313"] = { 
 		idx="TargetDec_Task_520313",
-		Dec="击败快刀武士（0/30）",
+		Dec="击败快刀武士 ",
 	},
 	["TargetDec_Task_520314"] = { 
 		idx="TargetDec_Task_520314",
-		Dec="击败快刀武士获得快刀（0/15）",
+		Dec="击败快刀武士获得快刀 ",
 	},
 	["TargetDec_Task_520315"] = { 
 		idx="TargetDec_Task_520315",
-		Dec="击败黑面盗贼（0/30）",
+		Dec="击败黑面盗贼 ",
 	},
 	["TargetDec_Task_520316"] = { 
 		idx="TargetDec_Task_520316",
-		Dec="击败琥珀盗贼获得琥珀石（0/15）",
+		Dec="击败琥珀盗贼获得琥珀石 ",
 	},
 	["TargetDec_Task_520317"] = { 
 		idx="TargetDec_Task_520317",
-		Dec="击败盗贼小头目（0/30）",
+		Dec="击败盗贼小头目 ",
 	},
 	["TargetDec_Task_520318"] = { 
 		idx="TargetDec_Task_520318",
-		Dec="提交45级及以下中品装备（0/1）",
+		Dec="提交45级及以下中品装备 ",
 	},
 	["TargetDec_Task_520319"] = { 
 		idx="TargetDec_Task_520319",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_520320"] = { 
 		idx="TargetDec_Task_520320",
-		Dec="使用白银宝盒10个（0/10）",
+		Dec="使用白银宝盒10个 ",
 	},
 	["TargetDec_Task_520321"] = { 
 		idx="TargetDec_Task_520321",
-		Dec="击败独眼怪人（0/45）",
+		Dec="击败独眼怪人 ",
 	},
 	["TargetDec_Task_520322"] = { 
 		idx="TargetDec_Task_520322",
-		Dec="击败巨臂异人获取20个高级麒麟臂（0/20）",
+		Dec="击败巨臂异人获取20个高级麒麟臂 ",
 	},
 	["TargetDec_Task_520323"] = { 
 		idx="TargetDec_Task_520323",
-		Dec="击败快刀武士获得快刀（0/20）",
+		Dec="击败快刀武士获得快刀 ",
 	},
 	["TargetDec_Task_520324"] = { 
 		idx="TargetDec_Task_520324",
-		Dec="击败黑面盗贼（0/45）",
+		Dec="击败黑面盗贼 ",
 	},
 	["TargetDec_Task_520325"] = { 
 		idx="TargetDec_Task_520325",
-		Dec="击败琥珀盗贼获取琥珀石（0/20）",
+		Dec="击败琥珀盗贼获取琥珀石 ",
 	},
 	["TargetDec_Task_520326"] = { 
 		idx="TargetDec_Task_520326",
-		Dec="击败环眼大盗（0/45）",
+		Dec="击败环眼大盗 ",
 	},
 	["TargetDec_Task_520327"] = { 
 		idx="TargetDec_Task_520327",
-		Dec="击败盗贼小头目获取令牌（0/20）",
+		Dec="击败盗贼小头目获取令牌 ",
 	},
 	["TargetDec_Task_520328"] = { 
 		idx="TargetDec_Task_520328",
-		Dec="提交60级及以下中品装备（0/1）",
+		Dec="提交60级及以下中品装备 ",
 	},
 	["TargetDec_Task_520329"] = { 
 		idx="TargetDec_Task_520329",
-		Dec="提交60级中品装备（0/1）",
+		Dec="提交60级中品装备 ",
 	},
 	["TargetDec_Task_520330"] = { 
 		idx="TargetDec_Task_520330",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_520331"] = { 
 		idx="TargetDec_Task_520331",
-		Dec="使用白银宝盒10个（0/10）",
+		Dec="使用白银宝盒10个 ",
 	},
 	["TargetDec_Task_520332"] = { 
 		idx="TargetDec_Task_520332",
-		Dec="击败盗贼小头目（勇士）（0/20）",
+		Dec="击败盗贼小头目（勇士） ",
 	},
 	["TargetDec_Task_520333"] = { 
 		idx="TargetDec_Task_520333",
-		Dec="击败黑面盗贼（勇士）（0/20）",
+		Dec="击败黑面盗贼（勇士） ",
 	},
 	["TargetDec_Task_520334"] = { 
 		idx="TargetDec_Task_520334",
-		Dec="击败越狱山贼（勇士）（0/20）",
+		Dec="击败越狱山贼（勇士） ",
 	},
 	["TargetDec_Task_520335"] = { 
 		idx="TargetDec_Task_520335",
-		Dec="提交60级上品武器（0/1）",
+		Dec="提交60级上品武器 ",
 	},
 	["TargetDec_Task_520336"] = { 
 		idx="TargetDec_Task_520336",
-		Dec="提交40级上品衣服（0/1）",
+		Dec="提交40级上品衣服 ",
 	},
 	["TargetDec_Task_520337"] = { 
 		idx="TargetDec_Task_520337",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_520338"] = { 
 		idx="TargetDec_Task_520338",
-		Dec="使用白银宝盒15个（0/15）",
+		Dec="使用白银宝盒15个 ",
 	},
 	["TargetDec_Task_520339"] = { 
 		idx="TargetDec_Task_520339",
-		Dec="提交35级正派上品武器（0/1）",
+		Dec="提交35级正派上品武器 ",
 	},
 	["TargetDec_Task_520340"] = { 
 		idx="TargetDec_Task_520340",
-		Dec="提交35级邪派上品武器（0/1）",
+		Dec="提交35级邪派上品武器 ",
 	},
 	["TargetDec_Task_520341"] = { 
 		idx="TargetDec_Task_520341",
-		Dec="击败绿林寨头目（BOSS）（0/1）",
+		Dec="击败绿林寨头目  ",
 	},
 	["TargetDec_Task_520342"] = { 
 		idx="TargetDec_Task_520342",
-		Dec="击败山贼头领(BOSS)（0/1）",
+		Dec="击败山贼头领  ",
 	},
 	["TargetDec_Task_520343"] = { 
 		idx="TargetDec_Task_520343",
-		Dec="提交50级上品衣服（0/2）",
+		Dec="提交50级上品衣服 ",
 	},
 	["TargetDec_Task_520344"] = { 
 		idx="TargetDec_Task_520344",
-		Dec="提交35级极品武器（0/2）",
+		Dec="提交35级极品武器 ",
 	},
 	["TargetDec_Task_520345"] = { 
 		idx="TargetDec_Task_520345",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["TargetDec_Task_520346"] = { 
 		idx="TargetDec_Task_520346",
-		Dec="使用白银宝盒20个（0/20）",
+		Dec="使用白银宝盒20个 ",
 	},
 	["TargetDec_Task_520347"] = { 
 		idx="TargetDec_Task_520347",
-		Dec="提交35级正派极品武器（0/2）",
+		Dec="提交35级正派极品武器 ",
 	},
 	["TargetDec_Task_520348"] = { 
 		idx="TargetDec_Task_520348",
-		Dec="提交35级邪派极品武器（0/2）",
+		Dec="提交35级邪派极品武器 ",
 	},
 	["Name_Task_520401"] = { 
 		idx="Name_Task_520401",
@@ -9249,195 +9249,195 @@ local config = {
 	},
 	["TargetDec_Task_520401"] = { 
 		idx="TargetDec_Task_520401",
-		Dec="击败珊瑚蛇（0/20）",
+		Dec="击败珊瑚蛇 ",
 	},
 	["TargetDec_Task_520402"] = { 
 		idx="TargetDec_Task_520402",
-		Dec="击败青头蛇获取蛇毒（0/10）",
+		Dec="击败青头蛇获取蛇毒 ",
 	},
 	["TargetDec_Task_520403"] = { 
 		idx="TargetDec_Task_520403",
-		Dec="击败黑松巡路贼（0/20）",
+		Dec="击败黑松巡路贼 ",
 	},
 	["TargetDec_Task_520404"] = { 
 		idx="TargetDec_Task_520404",
-		Dec="击败黑松红眼盗匪获取被盗物资（0/10）",
+		Dec="击败黑松红眼盗匪获取被盗物资 ",
 	},
 	["TargetDec_Task_520405"] = { 
 		idx="TargetDec_Task_520405",
-		Dec="击败金铃蛇（0/20）",
+		Dec="击败金铃蛇 ",
 	},
 	["TargetDec_Task_520406"] = { 
 		idx="TargetDec_Task_520406",
-		Dec="击败暴力走私商获取物资（0/10）",
+		Dec="击败暴力走私商获取物资 ",
 	},
 	["TargetDec_Task_520407"] = { 
 		idx="TargetDec_Task_520407",
-		Dec="击败蒙面大盗（0/20）",
+		Dec="击败蒙面大盗 ",
 	},
 	["TargetDec_Task_520408"] = { 
 		idx="TargetDec_Task_520408",
-		Dec="提交50级及以下下品装备（0/1）",
+		Dec="提交50级及以下下品装备 ",
 	},
 	["TargetDec_Task_520409"] = { 
 		idx="TargetDec_Task_520409",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_520410"] = { 
 		idx="TargetDec_Task_520410",
-		Dec="使用黄金宝盒4个（0/4）",
+		Dec="使用黄金宝盒4个 ",
 	},
 	["TargetDec_Task_520411"] = { 
 		idx="TargetDec_Task_520411",
-		Dec="击败珊瑚蛇（0/30）",
+		Dec="击败珊瑚蛇 ",
 	},
 	["TargetDec_Task_520412"] = { 
 		idx="TargetDec_Task_520412",
-		Dec="击败青头蛇获得蛇胆（0/15）",
+		Dec="击败青头蛇获得蛇胆 ",
 	},
 	["TargetDec_Task_520413"] = { 
 		idx="TargetDec_Task_520413",
-		Dec="击败黑松巡路贼（0/30）",
+		Dec="击败黑松巡路贼 ",
 	},
 	["TargetDec_Task_520414"] = { 
 		idx="TargetDec_Task_520414",
-		Dec="击败金铃蛇获得蛇胆（0/15）",
+		Dec="击败金铃蛇获得蛇胆 ",
 	},
 	["TargetDec_Task_520415"] = { 
 		idx="TargetDec_Task_520415",
-		Dec="击败直眉禁药商（0/30）",
+		Dec="击败直眉禁药商 ",
 	},
 	["TargetDec_Task_520416"] = { 
 		idx="TargetDec_Task_520416",
-		Dec="击败蒙面大盗获得黑巾（0/15）",
+		Dec="击败蒙面大盗获得黑巾 ",
 	},
 	["TargetDec_Task_520417"] = { 
 		idx="TargetDec_Task_520417",
-		Dec="击败暴力走私商（0/30）",
+		Dec="击败暴力走私商 ",
 	},
 	["TargetDec_Task_520418"] = { 
 		idx="TargetDec_Task_520418",
-		Dec="提交70级及以下中品装备（0/1）",
+		Dec="提交70级及以下中品装备 ",
 	},
 	["TargetDec_Task_520419"] = { 
 		idx="TargetDec_Task_520419",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_520420"] = { 
 		idx="TargetDec_Task_520420",
-		Dec="使用黄金宝盒10个（0/10）",
+		Dec="使用黄金宝盒10个 ",
 	},
 	["TargetDec_Task_520421"] = { 
 		idx="TargetDec_Task_520421",
-		Dec="击败珊瑚蛇（0/45）",
+		Dec="击败珊瑚蛇 ",
 	},
 	["TargetDec_Task_520422"] = { 
 		idx="TargetDec_Task_520422",
-		Dec="击败青头蛇获得蛇胆（0/20）",
+		Dec="击败青头蛇获得蛇胆 ",
 	},
 	["TargetDec_Task_520423"] = { 
 		idx="TargetDec_Task_520423",
-		Dec="击败黑松巡路贼获得被盗物资（0/20）",
+		Dec="击败黑松巡路贼获得被盗物资 ",
 	},
 	["TargetDec_Task_520424"] = { 
 		idx="TargetDec_Task_520424",
-		Dec="击败金铃蛇（0/45）",
+		Dec="击败金铃蛇 ",
 	},
 	["TargetDec_Task_520425"] = { 
 		idx="TargetDec_Task_520425",
-		Dec="击败金铃蛇获得蛇胆（0/20）",
+		Dec="击败金铃蛇获得蛇胆 ",
 	},
 	["TargetDec_Task_520426"] = { 
 		idx="TargetDec_Task_520426",
-		Dec="击败暴力走私商（0/45）",
+		Dec="击败暴力走私商 ",
 	},
 	["TargetDec_Task_520427"] = { 
 		idx="TargetDec_Task_520427",
-		Dec="击败蒙面大盗获得黑巾（0/20）",
+		Dec="击败蒙面大盗获得黑巾 ",
 	},
 	["TargetDec_Task_520428"] = { 
 		idx="TargetDec_Task_520428",
-		Dec="提交70级及以下中品装备（0/1）",
+		Dec="提交70级及以下中品装备 ",
 	},
 	["TargetDec_Task_520429"] = { 
 		idx="TargetDec_Task_520429",
-		Dec="提交70级中品装备（0/1）",
+		Dec="提交70级中品装备 ",
 	},
 	["TargetDec_Task_520430"] = { 
 		idx="TargetDec_Task_520430",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_520431"] = { 
 		idx="TargetDec_Task_520431",
-		Dec="使用黄金宝盒10个（0/10）",
+		Dec="使用黄金宝盒10个 ",
 	},
 	["TargetDec_Task_520432"] = { 
 		idx="TargetDec_Task_520432",
-		Dec="击败暴力走私商（勇士）（0/20）",
+		Dec="击败暴力走私商（勇士） ",
 	},
 	["TargetDec_Task_520433"] = { 
 		idx="TargetDec_Task_520433",
-		Dec="击败直眉禁药商（勇士）（0/20）",
+		Dec="击败直眉禁药商（勇士） ",
 	},
 	["TargetDec_Task_520434"] = { 
 		idx="TargetDec_Task_520434",
-		Dec="击败珊瑚蛇（猛兽）（0/20）",
+		Dec="击败珊瑚蛇（猛兽） ",
 	},
 	["TargetDec_Task_520435"] = { 
 		idx="TargetDec_Task_520435",
-		Dec="提交70级上品武器（0/1）",
+		Dec="提交70级上品武器 ",
 	},
 	["TargetDec_Task_520436"] = { 
 		idx="TargetDec_Task_520436",
-		Dec="提交60级上品衣服（0/1）",
+		Dec="提交60级上品衣服 ",
 	},
 	["TargetDec_Task_520437"] = { 
 		idx="TargetDec_Task_520437",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_520438"] = { 
 		idx="TargetDec_Task_520438",
-		Dec="使用黄金宝盒15个（0/15）",
+		Dec="使用黄金宝盒15个 ",
 	},
 	["TargetDec_Task_520439"] = { 
 		idx="TargetDec_Task_520439",
-		Dec="提交60级正派上品武器（0/1）",
+		Dec="提交60级正派上品武器 ",
 	},
 	["TargetDec_Task_520440"] = { 
 		idx="TargetDec_Task_520440",
-		Dec="提交60级邪派上品武器（0/1）",
+		Dec="提交60级邪派上品武器 ",
 	},
 	["TargetDec_Task_520441"] = { 
 		idx="TargetDec_Task_520441",
-		Dec="击败绿林寨头目（BOSS）（0/2）",
+		Dec="击败绿林寨头目  ",
 	},
 	["TargetDec_Task_520442"] = { 
 		idx="TargetDec_Task_520442",
-		Dec="击败山贼头领(BOSS)（0/2）",
+		Dec="击败山贼头领  ",
 	},
 	["TargetDec_Task_520443"] = { 
 		idx="TargetDec_Task_520443",
-		Dec="提交60级上品衣服（0/2）",
+		Dec="提交60级上品衣服 ",
 	},
 	["TargetDec_Task_520444"] = { 
 		idx="TargetDec_Task_520444",
-		Dec="提交60级极品武器（0/2）",
+		Dec="提交60级极品武器 ",
 	},
 	["TargetDec_Task_520445"] = { 
 		idx="TargetDec_Task_520445",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["TargetDec_Task_520446"] = { 
 		idx="TargetDec_Task_520446",
-		Dec="使用黄金宝盒20个（0/20）",
+		Dec="使用黄金宝盒20个 ",
 	},
 	["TargetDec_Task_520447"] = { 
 		idx="TargetDec_Task_520447",
-		Dec="提交60级正派极品武器（0/2）",
+		Dec="提交60级正派极品武器 ",
 	},
 	["TargetDec_Task_520448"] = { 
 		idx="TargetDec_Task_520448",
-		Dec="提交60级邪派极品武器（0/2）",
+		Dec="提交60级邪派极品武器 ",
 	},
 	["Name_Task_520501"] = { 
 		idx="Name_Task_520501",
@@ -9641,203 +9641,203 @@ local config = {
 	},
 	["TargetDec_Task_520501"] = { 
 		idx="TargetDec_Task_520501",
-		Dec="击败黑颜链锤战士（0/20）",
+		Dec="击败黑颜链锤战士 ",
 	},
 	["TargetDec_Task_520502"] = { 
 		idx="TargetDec_Task_520502",
-		Dec="击败黑颜血镰守卫获取血镰（0/10）",
+		Dec="击败黑颜血镰守卫获取血镰 ",
 	},
 	["TargetDec_Task_520503"] = { 
 		idx="TargetDec_Task_520503",
-		Dec="击败黑颜刺锤战将（0/20）",
+		Dec="击败黑颜刺锤战将 ",
 	},
 	["TargetDec_Task_520504"] = { 
 		idx="TargetDec_Task_520504",
-		Dec="击败青面司护狂战获取青面具（0/10）",
+		Dec="击败青面司护狂战获取青面具 ",
 	},
 	["TargetDec_Task_520505"] = { 
 		idx="TargetDec_Task_520505",
-		Dec="击败铁锤司护战将（0/20）",
+		Dec="击败铁锤司护战将 ",
 	},
 	["TargetDec_Task_520506"] = { 
 		idx="TargetDec_Task_520506",
-		Dec="击败铁锤司护战将获取铁锤（0/10）",
+		Dec="击败铁锤司护战将获取铁锤 ",
 	},
 	["TargetDec_Task_520507"] = { 
 		idx="TargetDec_Task_520507",
-		Dec="击败铁臂司护守卫（0/20）",
+		Dec="击败铁臂司护守卫 ",
 	},
 	["TargetDec_Task_520508"] = { 
 		idx="TargetDec_Task_520508",
-		Dec="提交80级及以下下品装备（0/1）",
+		Dec="提交80级及以下下品装备 ",
 	},
 	["TargetDec_Task_520509"] = { 
 		idx="TargetDec_Task_520509",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_520510"] = { 
 		idx="TargetDec_Task_520510",
-		Dec="使用黄金宝盒4个（0/4）",
+		Dec="使用黄金宝盒4个 ",
 	},
 	["TargetDec_Task_520511"] = { 
 		idx="TargetDec_Task_520511",
-		Dec="击败黑颜链锤战士（0/30）",
+		Dec="击败黑颜链锤战士 ",
 	},
 	["TargetDec_Task_520512"] = { 
 		idx="TargetDec_Task_520512",
-		Dec="击败黑颜血镰守卫获得血镰（0/15）",
+		Dec="击败黑颜血镰守卫获得血镰 ",
 	},
 	["TargetDec_Task_520513"] = { 
 		idx="TargetDec_Task_520513",
-		Dec="击败黑颜刺锤战将（0/30）",
+		Dec="击败黑颜刺锤战将 ",
 	},
 	["TargetDec_Task_520514"] = { 
 		idx="TargetDec_Task_520514",
-		Dec="击败三刃血魔狂剑获得狂剑（0/15）",
+		Dec="击败三刃血魔狂剑获得狂剑 ",
 	},
 	["TargetDec_Task_520515"] = { 
 		idx="TargetDec_Task_520515",
-		Dec="击败青面司护狂战（0/30）",
+		Dec="击败青面司护狂战 ",
 	},
 	["TargetDec_Task_520516"] = { 
 		idx="TargetDec_Task_520516",
-		Dec="击败铁锤司护战将获得铁锤（0/15）",
+		Dec="击败铁锤司护战将获得铁锤 ",
 	},
 	["TargetDec_Task_520517"] = { 
 		idx="TargetDec_Task_520517",
-		Dec="击败铁臂司护守卫（0/30）",
+		Dec="击败铁臂司护守卫 ",
 	},
 	["TargetDec_Task_520518"] = { 
 		idx="TargetDec_Task_520518",
-		Dec="提交80级及以下中品装备（0/1）",
+		Dec="提交80级及以下中品装备 ",
 	},
 	["TargetDec_Task_520519"] = { 
 		idx="TargetDec_Task_520519",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_520520"] = { 
 		idx="TargetDec_Task_520520",
-		Dec="使用黄金宝盒10个（0/10）",
+		Dec="使用黄金宝盒10个 ",
 	},
 	["TargetDec_Task_520521"] = { 
 		idx="TargetDec_Task_520521",
-		Dec="击败黑颜链锤战士（0/45）",
+		Dec="击败黑颜链锤战士 ",
 	},
 	["TargetDec_Task_520522"] = { 
 		idx="TargetDec_Task_520522",
-		Dec="击败黑颜血镰守卫获取血镰（0/20）",
+		Dec="击败黑颜血镰守卫获取血镰 ",
 	},
 	["TargetDec_Task_520523"] = { 
 		idx="TargetDec_Task_520523",
-		Dec="击败黑颜刺锤战将获得刺锤（0/20）",
+		Dec="击败黑颜刺锤战将获得刺锤 ",
 	},
 	["TargetDec_Task_520524"] = { 
 		idx="TargetDec_Task_520524",
-		Dec="击败三刃血魔狂剑（0/45）",
+		Dec="击败三刃血魔狂剑 ",
 	},
 	["TargetDec_Task_520525"] = { 
 		idx="TargetDec_Task_520525",
-		Dec="击败青面司护狂战获取狂战石（0/20）",
+		Dec="击败青面司护狂战获取狂战石 ",
 	},
 	["TargetDec_Task_520526"] = { 
 		idx="TargetDec_Task_520526",
-		Dec="击败铁锤司护战将（0/45）",
+		Dec="击败铁锤司护战将 ",
 	},
 	["TargetDec_Task_520527"] = { 
 		idx="TargetDec_Task_520527",
-		Dec="击败铁锤司护战将获取铁锤（0/20）",
+		Dec="击败铁锤司护战将获取铁锤 ",
 	},
 	["TargetDec_Task_520528"] = { 
 		idx="TargetDec_Task_520528",
-		Dec="提交80级及以下中品装备（0/1）",
+		Dec="提交80级及以下中品装备 ",
 	},
 	["TargetDec_Task_520529"] = { 
 		idx="TargetDec_Task_520529",
-		Dec="提交80级中品装备（0/1）",
+		Dec="提交80级中品装备 ",
 	},
 	["TargetDec_Task_520530"] = { 
 		idx="TargetDec_Task_520530",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_520531"] = { 
 		idx="TargetDec_Task_520531",
-		Dec="使用黄金宝盒10个（0/10）",
+		Dec="使用黄金宝盒10个 ",
 	},
 	["TargetDec_Task_520532"] = { 
 		idx="TargetDec_Task_520532",
-		Dec="击败黑颜血镰守卫（勇士）（0/20）",
+		Dec="击败黑颜血镰守卫（勇士） ",
 	},
 	["TargetDec_Task_520533"] = { 
 		idx="TargetDec_Task_520533",
-		Dec="击败黑颜刺锤战将（勇士）（0/20）",
+		Dec="击败黑颜刺锤战将（勇士） ",
 	},
 	["TargetDec_Task_520534"] = { 
 		idx="TargetDec_Task_520534",
-		Dec="击败黑颜链锤战士（勇士）（0/20）",
+		Dec="击败黑颜链锤战士（勇士） ",
 	},
 	["TargetDec_Task_520535"] = { 
 		idx="TargetDec_Task_520535",
-		Dec="击败三刃血魔狂剑（勇士）（0/20）",
+		Dec="击败三刃血魔狂剑（勇士） ",
 	},
 	["TargetDec_Task_520536"] = { 
 		idx="TargetDec_Task_520536",
-		Dec="提交80级上品武器（0/1）",
+		Dec="提交80级上品武器 ",
 	},
 	["TargetDec_Task_520537"] = { 
 		idx="TargetDec_Task_520537",
-		Dec="提交70级上品衣服（0/1）",
+		Dec="提交70级上品衣服 ",
 	},
 	["TargetDec_Task_520538"] = { 
 		idx="TargetDec_Task_520538",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_520539"] = { 
 		idx="TargetDec_Task_520539",
-		Dec="使用黄金宝盒15个（0/15）",
+		Dec="使用黄金宝盒15个 ",
 	},
 	["TargetDec_Task_520540"] = { 
 		idx="TargetDec_Task_520540",
-		Dec="提交60级正派上品武器（0/2）",
+		Dec="提交60级正派上品武器 ",
 	},
 	["TargetDec_Task_520541"] = { 
 		idx="TargetDec_Task_520541",
-		Dec="提交60级邪派上品武器（0/2）",
+		Dec="提交60级邪派上品武器 ",
 	},
 	["TargetDec_Task_520542"] = { 
 		idx="TargetDec_Task_520542",
-		Dec="击败脚都(BOSS)（0/1）",
+		Dec="击败脚都  ",
 	},
 	["TargetDec_Task_520543"] = { 
 		idx="TargetDec_Task_520543",
-		Dec="击败绿林寨头目（BOSS）（0/2）",
+		Dec="击败绿林寨头目  ",
 	},
 	["TargetDec_Task_520544"] = { 
 		idx="TargetDec_Task_520544",
-		Dec="击败山贼头领(BOSS)（0/2）",
+		Dec="击败山贼头领  ",
 	},
 	["TargetDec_Task_520545"] = { 
 		idx="TargetDec_Task_520545",
-		Dec="提交60级上品衣服（0/2）",
+		Dec="提交60级上品衣服 ",
 	},
 	["TargetDec_Task_520546"] = { 
 		idx="TargetDec_Task_520546",
-		Dec="提交60级极品武器（0/2）",
+		Dec="提交60级极品武器 ",
 	},
 	["TargetDec_Task_520547"] = { 
 		idx="TargetDec_Task_520547",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["TargetDec_Task_520548"] = { 
 		idx="TargetDec_Task_520548",
-		Dec="使用黄金宝盒20个（0/20）",
+		Dec="使用黄金宝盒20个 ",
 	},
 	["TargetDec_Task_520549"] = { 
 		idx="TargetDec_Task_520549",
-		Dec="提交60级正派极品武器（0/2）",
+		Dec="提交60级正派极品武器 ",
 	},
 	["TargetDec_Task_520550"] = { 
 		idx="TargetDec_Task_520550",
-		Dec="提交60级邪派极品武器（0/2）",
+		Dec="提交60级邪派极品武器 ",
 	},
 	["Name_Task_520601"] = { 
 		idx="Name_Task_520601",
@@ -10041,203 +10041,203 @@ local config = {
 	},
 	["TargetDec_Task_520601"] = { 
 		idx="TargetDec_Task_520601",
-		Dec="击败血魔武斗者（0/20）",
+		Dec="击败血魔武斗者 ",
 	},
 	["TargetDec_Task_520602"] = { 
 		idx="TargetDec_Task_520602",
-		Dec="击败狂暴血魔术士获取魔丸（0/10）",
+		Dec="击败狂暴血魔术士获取魔丸 ",
 	},
 	["TargetDec_Task_520603"] = { 
 		idx="TargetDec_Task_520603",
-		Dec="击败红衣血魔侍女（0/20）",
+		Dec="击败红衣血魔侍女 ",
 	},
 	["TargetDec_Task_520604"] = { 
 		idx="TargetDec_Task_520604",
-		Dec="击败红蝶血魔妖姬获取夺魄石（0/10）",
+		Dec="击败红蝶血魔妖姬获取夺魄石 ",
 	},
 	["TargetDec_Task_520605"] = { 
 		idx="TargetDec_Task_520605",
-		Dec="击败摄魂血魔圣女（0/20）",
+		Dec="击败摄魂血魔圣女 ",
 	},
 	["TargetDec_Task_520606"] = { 
 		idx="TargetDec_Task_520606",
-		Dec="击败猞猁精（0/20）",
+		Dec="击败猞猁精 ",
 	},
 	["TargetDec_Task_520607"] = { 
 		idx="TargetDec_Task_520607",
-		Dec="击败苍狼（0/20）",
+		Dec="击败苍狼 ",
 	},
 	["TargetDec_Task_520608"] = { 
 		idx="TargetDec_Task_520608",
-		Dec="提交90级及以下下品装备（0/1）",
+		Dec="提交90级及以下下品装备 ",
 	},
 	["TargetDec_Task_520609"] = { 
 		idx="TargetDec_Task_520609",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次 ",
 	},
 	["TargetDec_Task_520610"] = { 
 		idx="TargetDec_Task_520610",
-		Dec="使用碧玉宝盒4个（0/4）",
+		Dec="使用碧玉宝盒4个 ",
 	},
 	["TargetDec_Task_520611"] = { 
 		idx="TargetDec_Task_520611",
-		Dec="击败血魔武斗者（0/30）",
+		Dec="击败血魔武斗者 ",
 	},
 	["TargetDec_Task_520612"] = { 
 		idx="TargetDec_Task_520612",
-		Dec="击败狂暴血魔术士获取魔丸（0/15）",
+		Dec="击败狂暴血魔术士获取魔丸 ",
 	},
 	["TargetDec_Task_520613"] = { 
 		idx="TargetDec_Task_520613",
-		Dec="击败红衣血魔侍女（0/30）",
+		Dec="击败红衣血魔侍女 ",
 	},
 	["TargetDec_Task_520614"] = { 
 		idx="TargetDec_Task_520614",
-		Dec="击败红蝶血魔妖姬获取夺魄石（0/15）",
+		Dec="击败红蝶血魔妖姬获取夺魄石 ",
 	},
 	["TargetDec_Task_520615"] = { 
 		idx="TargetDec_Task_520615",
-		Dec="击败摄魂血魔圣女（0/30）",
+		Dec="击败摄魂血魔圣女 ",
 	},
 	["TargetDec_Task_520616"] = { 
 		idx="TargetDec_Task_520616",
-		Dec="击败苍狼（0/30）",
+		Dec="击败苍狼 ",
 	},
 	["TargetDec_Task_520617"] = { 
 		idx="TargetDec_Task_520617",
-		Dec="击败猞猁精（0/30）",
+		Dec="击败猞猁精 ",
 	},
 	["TargetDec_Task_520618"] = { 
 		idx="TargetDec_Task_520618",
-		Dec="提交90级及以下中品装备（0/1）",
+		Dec="提交90级及以下中品装备 ",
 	},
 	["TargetDec_Task_520619"] = { 
 		idx="TargetDec_Task_520619",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次 ",
 	},
 	["TargetDec_Task_520620"] = { 
 		idx="TargetDec_Task_520620",
-		Dec="使用碧玉宝盒10个（0/10）",
+		Dec="使用碧玉宝盒10个 ",
 	},
 	["TargetDec_Task_520621"] = { 
 		idx="TargetDec_Task_520621",
-		Dec="击败血魔武斗者（0/45）",
+		Dec="击败血魔武斗者 ",
 	},
 	["TargetDec_Task_520622"] = { 
 		idx="TargetDec_Task_520622",
-		Dec="击败狂暴血魔术士获取魔丸（0/20）",
+		Dec="击败狂暴血魔术士获取魔丸 ",
 	},
 	["TargetDec_Task_520623"] = { 
 		idx="TargetDec_Task_520623",
-		Dec="击败红衣血魔侍女（0/45）",
+		Dec="击败红衣血魔侍女 ",
 	},
 	["TargetDec_Task_520624"] = { 
 		idx="TargetDec_Task_520624",
-		Dec="击败红蝶血魔妖姬获取夺魄石（0/45）",
+		Dec="击败红蝶血魔妖姬获取夺魄石 ",
 	},
 	["TargetDec_Task_520625"] = { 
 		idx="TargetDec_Task_520625",
-		Dec="击败摄魂血魔圣女（0/45）",
+		Dec="击败摄魂血魔圣女 ",
 	},
 	["TargetDec_Task_520626"] = { 
 		idx="TargetDec_Task_520626",
-		Dec="击败猞猁精（0/45）",
+		Dec="击败猞猁精 ",
 	},
 	["TargetDec_Task_520627"] = { 
 		idx="TargetDec_Task_520627",
-		Dec="击败苍狼（0/45）",
+		Dec="击败苍狼 ",
 	},
 	["TargetDec_Task_520628"] = { 
 		idx="TargetDec_Task_520628",
-		Dec="提交90级及以下中品装备（0/1）",
+		Dec="提交90级及以下中品装备 ",
 	},
 	["TargetDec_Task_520629"] = { 
 		idx="TargetDec_Task_520629",
-		Dec="提交90级中品装备（0/1）",
+		Dec="提交90级中品装备 ",
 	},
 	["TargetDec_Task_520630"] = { 
 		idx="TargetDec_Task_520630",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次 ",
 	},
 	["TargetDec_Task_520631"] = { 
 		idx="TargetDec_Task_520631",
-		Dec="使用碧玉宝盒10个（0/10）",
+		Dec="使用碧玉宝盒10个 ",
 	},
 	["TargetDec_Task_520632"] = { 
 		idx="TargetDec_Task_520632",
-		Dec="击败狂暴血魔术士（勇士）（0/20）",
+		Dec="击败狂暴血魔术士（勇士） ",
 	},
 	["TargetDec_Task_520633"] = { 
 		idx="TargetDec_Task_520633",
-		Dec="击败红蝶血魔妖姬（勇士）（0/20）",
+		Dec="击败红蝶血魔妖姬（勇士） ",
 	},
 	["TargetDec_Task_520634"] = { 
 		idx="TargetDec_Task_520634",
-		Dec="击败摄魂血魔圣女（勇士）（0/20）",
+		Dec="击败摄魂血魔圣女（勇士） ",
 	},
 	["TargetDec_Task_520635"] = { 
 		idx="TargetDec_Task_520635",
-		Dec="击败夺魂地灵圣母（勇士）获得高级夺魄石（0/20）",
+		Dec="击败夺魂地灵圣母（勇士）获得高级夺魄石 ",
 	},
 	["TargetDec_Task_520636"] = { 
 		idx="TargetDec_Task_520636",
-		Dec="提交80级上品武器（0/1）",
+		Dec="提交80级上品武器 ",
 	},
 	["TargetDec_Task_520637"] = { 
 		idx="TargetDec_Task_520637",
-		Dec="提交80级上品衣服（0/1）",
+		Dec="提交80级上品衣服 ",
 	},
 	["TargetDec_Task_520638"] = { 
 		idx="TargetDec_Task_520638",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次 ",
 	},
 	["TargetDec_Task_520639"] = { 
 		idx="TargetDec_Task_520639",
-		Dec="使用碧玉宝盒15个（0/15）",
+		Dec="使用碧玉宝盒15个 ",
 	},
 	["TargetDec_Task_520640"] = { 
 		idx="TargetDec_Task_520640",
-		Dec="提交80级正派上品武器（0/2）",
+		Dec="提交80级正派上品武器 ",
 	},
 	["TargetDec_Task_520641"] = { 
 		idx="TargetDec_Task_520641",
-		Dec="提交80级邪派上品武器（0/2）",
+		Dec="提交80级邪派上品武器 ",
 	},
 	["TargetDec_Task_520642"] = { 
 		idx="TargetDec_Task_520642",
-		Dec="击败脚都(BOSS)（0/2）",
+		Dec="击败脚都  ",
 	},
 	["TargetDec_Task_520643"] = { 
 		idx="TargetDec_Task_520643",
-		Dec="击败脚都(BOSS)（0/1）",
+		Dec="击败脚都  ",
 	},
 	["TargetDec_Task_520644"] = { 
 		idx="TargetDec_Task_520644",
-		Dec="击败绿林寨头目（BOSS）（0/3）",
+		Dec="击败绿林寨头目  ",
 	},
 	["TargetDec_Task_520645"] = { 
 		idx="TargetDec_Task_520645",
-		Dec="提交80级上品衣服（0/2）",
+		Dec="提交80级上品衣服 ",
 	},
 	["TargetDec_Task_520646"] = { 
 		idx="TargetDec_Task_520646",
-		Dec="提交80级极品武器（0/2）",
+		Dec="提交80级极品武器 ",
 	},
 	["TargetDec_Task_520647"] = { 
 		idx="TargetDec_Task_520647",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次 ",
 	},
 	["TargetDec_Task_520648"] = { 
 		idx="TargetDec_Task_520648",
-		Dec="使用碧玉宝盒20个（0/20）",
+		Dec="使用碧玉宝盒20个 ",
 	},
 	["TargetDec_Task_520649"] = { 
 		idx="TargetDec_Task_520649",
-		Dec="提交80级正派极品武器（0/2）",
+		Dec="提交80级正派极品武器 ",
 	},
 	["TargetDec_Task_520650"] = { 
 		idx="TargetDec_Task_520650",
-		Dec="提交80级邪派极品武器（0/2）",
+		Dec="提交80级邪派极品武器 ",
 	},
 	["Name_Task_520701"] = { 
 		idx="Name_Task_520701",
@@ -10441,203 +10441,203 @@ local config = {
 	},
 	["TargetDec_Task_520701"] = { 
 		idx="TargetDec_Task_520701",
-		Dec="击败灵魂刺客（0/20）",
+		Dec="击败灵魂刺客",
 	},
 	["TargetDec_Task_520702"] = { 
 		idx="TargetDec_Task_520702",
-		Dec="击败地狱魔锤获取魔锤（0/10）",
+		Dec="击败地狱魔锤获取魔锤",
 	},
 	["TargetDec_Task_520703"] = { 
 		idx="TargetDec_Task_520703",
-		Dec="击败狂魔武斗者（0/20）",
+		Dec="击败狂魔武斗者",
 	},
 	["TargetDec_Task_520704"] = { 
 		idx="TargetDec_Task_520704",
-		Dec="击败利刃白松贼获取松石（0/10）",
+		Dec="击败利刃白松贼获取松石",
 	},
 	["TargetDec_Task_520705"] = { 
 		idx="TargetDec_Task_520705",
-		Dec="击败铁拳白松贼（0/20）",
+		Dec="击败铁拳白松贼",
 	},
 	["TargetDec_Task_520706"] = { 
 		idx="TargetDec_Task_520706",
-		Dec="击败铁拳白松贼获取铁拳（0/10）",
+		Dec="击败铁拳白松贼获取铁拳",
 	},
 	["TargetDec_Task_520707"] = { 
 		idx="TargetDec_Task_520707",
-		Dec="击败地狱天狼蛛（0/20）",
+		Dec="击败地狱天狼蛛",
 	},
 	["TargetDec_Task_520708"] = { 
 		idx="TargetDec_Task_520708",
-		Dec="提交100级及以下下品装备（0/1）",
+		Dec="提交100级及以下下品装备",
 	},
 	["TargetDec_Task_520709"] = { 
 		idx="TargetDec_Task_520709",
-		Dec="装备强化1次（0/1）",
+		Dec="装备强化1次",
 	},
 	["TargetDec_Task_520710"] = { 
 		idx="TargetDec_Task_520710",
-		Dec="使用碧玉宝盒4个（0/4）",
+		Dec="使用碧玉宝盒4个",
 	},
 	["TargetDec_Task_520711"] = { 
 		idx="TargetDec_Task_520711",
-		Dec="击败灵魂刺客（0/30）",
+		Dec="击败灵魂刺客",
 	},
 	["TargetDec_Task_520712"] = { 
 		idx="TargetDec_Task_520712",
-		Dec="击败地狱魔锤获取魔锤（0/15）",
+		Dec="击败地狱魔锤获取魔锤",
 	},
 	["TargetDec_Task_520713"] = { 
 		idx="TargetDec_Task_520713",
-		Dec="击败狂魔武斗者（0/30）",
+		Dec="击败狂魔武斗者",
 	},
 	["TargetDec_Task_520714"] = { 
 		idx="TargetDec_Task_520714",
-		Dec="击败利刃白松贼获取松石（0/15）",
+		Dec="击败利刃白松贼获取松石",
 	},
 	["TargetDec_Task_520715"] = { 
 		idx="TargetDec_Task_520715",
-		Dec="击败铁拳白松贼（0/30）",
+		Dec="击败铁拳白松贼",
 	},
 	["TargetDec_Task_520716"] = { 
 		idx="TargetDec_Task_520716",
-		Dec="击败铁拳白松贼获取铁拳（0/15）",
+		Dec="击败铁拳白松贼获取铁拳",
 	},
 	["TargetDec_Task_520717"] = { 
 		idx="TargetDec_Task_520717",
-		Dec="击败地狱天狼蛛（0/30）",
+		Dec="击败地狱天狼蛛",
 	},
 	["TargetDec_Task_520718"] = { 
 		idx="TargetDec_Task_520718",
-		Dec="提交10级及以下中品装备（0/1）",
+		Dec="提交10级及以下中品装备",
 	},
 	["TargetDec_Task_520719"] = { 
 		idx="TargetDec_Task_520719",
-		Dec="装备强化2次（0/2）",
+		Dec="装备强化2次",
 	},
 	["TargetDec_Task_520720"] = { 
 		idx="TargetDec_Task_520720",
-		Dec="使用碧玉宝盒10个（0/10）",
+		Dec="使用碧玉宝盒10个",
 	},
 	["TargetDec_Task_520721"] = { 
 		idx="TargetDec_Task_520721",
-		Dec="击败灵魂刺客（0/45）",
+		Dec="击败灵魂刺客",
 	},
 	["TargetDec_Task_520722"] = { 
 		idx="TargetDec_Task_520722",
-		Dec="击败地狱魔锤获得魔锤（0/20）",
+		Dec="击败地狱魔锤获得魔锤",
 	},
 	["TargetDec_Task_520723"] = { 
 		idx="TargetDec_Task_520723",
-		Dec="击败狂魔武斗者获得魔发（0/20）",
+		Dec="击败狂魔武斗者获得魔发",
 	},
 	["TargetDec_Task_520724"] = { 
 		idx="TargetDec_Task_520724",
-		Dec="击败狂魔武斗者（0/45）",
+		Dec="击败狂魔武斗者",
 	},
 	["TargetDec_Task_520725"] = { 
 		idx="TargetDec_Task_520725",
-		Dec="击败利刃白松贼获取秘籍（0/20）",
+		Dec="击败利刃白松贼获取秘籍",
 	},
 	["TargetDec_Task_520726"] = { 
 		idx="TargetDec_Task_520726",
-		Dec="击败铁拳白松贼（0/45）",
+		Dec="击败铁拳白松贼",
 	},
 	["TargetDec_Task_520727"] = { 
 		idx="TargetDec_Task_520727",
-		Dec="击败铁拳白松贼获取铁拳（0/20）",
+		Dec="击败铁拳白松贼获取铁拳",
 	},
 	["TargetDec_Task_520728"] = { 
 		idx="TargetDec_Task_520728",
-		Dec="提交100级及以下中品装备（0/1）",
+		Dec="提交100级及以下中品装备",
 	},
 	["TargetDec_Task_520729"] = { 
 		idx="TargetDec_Task_520729",
-		Dec="提交100级中品装备（0/1）",
+		Dec="提交100级中品装备",
 	},
 	["TargetDec_Task_520730"] = { 
 		idx="TargetDec_Task_520730",
-		Dec="装备强化3次（0/3）",
+		Dec="装备强化3次",
 	},
 	["TargetDec_Task_520731"] = { 
 		idx="TargetDec_Task_520731",
-		Dec="使用碧玉宝盒10个（0/10）",
+		Dec="使用碧玉宝盒10个",
 	},
 	["TargetDec_Task_520732"] = { 
 		idx="TargetDec_Task_520732",
-		Dec="击败利刃白松贼（勇士）（0/30）",
+		Dec="击败利刃白松贼（勇士）",
 	},
 	["TargetDec_Task_520733"] = { 
 		idx="TargetDec_Task_520733",
-		Dec="击败铁拳白松贼（勇士）（0/30）",
+		Dec="击败铁拳白松贼（勇士）",
 	},
 	["TargetDec_Task_520734"] = { 
 		idx="TargetDec_Task_520734",
-		Dec="击败狂魔武斗者（勇士）（0/30）",
+		Dec="击败狂魔武斗者（勇士）",
 	},
 	["TargetDec_Task_520735"] = { 
 		idx="TargetDec_Task_520735",
-		Dec="击败利刃白松贼（勇士）获得高级利刃（0/25）",
+		Dec="击败利刃白松贼（勇士）获得高级利刃",
 	},
 	["TargetDec_Task_520736"] = { 
 		idx="TargetDec_Task_520736",
-		Dec="提交100级上品武器（0/1）",
+		Dec="提交100级上品武器",
 	},
 	["TargetDec_Task_520737"] = { 
 		idx="TargetDec_Task_520737",
-		Dec="提交80级上品衣服（0/1）",
+		Dec="提交80级上品衣服",
 	},
 	["TargetDec_Task_520738"] = { 
 		idx="TargetDec_Task_520738",
-		Dec="装备强化4次（0/4）",
+		Dec="装备强化4次",
 	},
 	["TargetDec_Task_520739"] = { 
 		idx="TargetDec_Task_520739",
-		Dec="使用碧玉宝盒15个（0/15）",
+		Dec="使用碧玉宝盒15个",
 	},
 	["TargetDec_Task_520740"] = { 
 		idx="TargetDec_Task_520740",
-		Dec="提交100级正派上品武器（0/2）",
+		Dec="提交100级正派上品武器",
 	},
 	["TargetDec_Task_520741"] = { 
 		idx="TargetDec_Task_520741",
-		Dec="提交100级邪派上品武器（0/2）",
+		Dec="提交100级邪派上品武器",
 	},
 	["TargetDec_Task_520742"] = { 
 		idx="TargetDec_Task_520742",
-		Dec="击败寒雪飞狐王（BOSS）（0/1）",
+		Dec="击败寒雪飞狐王 ",
 	},
 	["TargetDec_Task_520743"] = { 
 		idx="TargetDec_Task_520743",
-		Dec="击败玄冥血魔战神(BOSS)（0/1）",
+		Dec="击败玄冥血魔战神 ",
 	},
 	["TargetDec_Task_520744"] = { 
 		idx="TargetDec_Task_520744",
-		Dec="击败洑一刀金泰官（BOSS）（0/3）",
+		Dec="击败洑一刀金泰官 ",
 	},
 	["TargetDec_Task_520745"] = { 
 		idx="TargetDec_Task_520745",
-		Dec="提交100级上品衣服（0/2）",
+		Dec="提交100级上品衣服",
 	},
 	["TargetDec_Task_520746"] = { 
 		idx="TargetDec_Task_520746",
-		Dec="提交100级极品武器（0/2）",
+		Dec="提交100级极品武器",
 	},
 	["TargetDec_Task_520747"] = { 
 		idx="TargetDec_Task_520747",
-		Dec="装备强化6次（0/6）",
+		Dec="装备强化6次",
 	},
 	["TargetDec_Task_520748"] = { 
 		idx="TargetDec_Task_520748",
-		Dec="使用碧玉宝盒20个（0/20）",
+		Dec="使用碧玉宝盒20个",
 	},
 	["TargetDec_Task_520749"] = { 
 		idx="TargetDec_Task_520749",
-		Dec="提交100级正派极品武器（0/2）",
+		Dec="提交100级正派极品武器",
 	},
 	["TargetDec_Task_520750"] = { 
 		idx="TargetDec_Task_520750",
-		Dec="提交100级邪派极品武器（0/2）",
+		Dec="提交100级邪派极品武器",
 	},
 }
 return config
