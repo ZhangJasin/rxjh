@@ -571,11 +571,11 @@ function PCGuildMainPanel:OnBtnSubClicked()
 	-- 根据任务类型筛选背包物品
 	local targetType = curTaskCfg.task_type or 0
 	local targetParam = curTaskCfg.task_target_param
-	local filterItems = self:FilterBagItemsByTaskType(targetType, targetParam)
+	local filterItems = self:FilterBagItemsByTaskType(targetType,targetParam)
 	self._filterItems = filterItems
 	
 	if #filterItems == 0 then
-		SL:ShowTips("背包中没有符合条件的物品")
+		SL:ShowSystemTips("背包中没有符合条件的物品")
 		--FGUI:Controller_setSelectedIndex(self.additemControlle, 0)
 		return
 	end
@@ -605,11 +605,9 @@ function PCGuildMainPanel:FilterBagItemsByTaskType(targetType, targetParam)
 		
 		if targetType == 9 then
 			-- 任务类型9：提交指定物品道具
-			-- task_target_param 格式: "物品道具id^物品数量" 或 {物品道具id, 物品数量}
 			isMatch = self:CheckItemMatchTarget9(itemData, targetParam)
 		elseif targetType == 10 then
 			-- 任务类型10：提交指定等级范围的装备
-			-- task_target_param 格式: "装备最低等级^装备最高等级^装备品级^装备正邪"
 			isMatch = self:CheckItemMatchTarget10(itemData, targetParam)
 		end
 		
@@ -659,21 +657,23 @@ function PCGuildMainPanel:CheckItemMatchTarget10(itemData, targetParam)
 	
 	-- 解析装备筛选条件
 	-- 格式: "装备最低等级^装备最高等级^装备品级^装备正邪"
-	local minLevel, maxLevel, grade, goodEvil = 0,0,0,0
+	local stdmode,minLevel, maxLevel, grade, goodEvil = -1,0,0,0,0
 	
 	if type(targetParam) == "string" then
 		local params = string.split(targetParam, "^")
 		if params then
-			minLevel = tonumber(params[1])
-			maxLevel = tonumber(params[2])
-			grade = tonumber(params[3])
-			goodEvil = tonumber(params[4])
+			stdmode= tonumber(params[1])
+			minLevel = tonumber(params[2])
+			maxLevel = tonumber(params[3])
+			grade = tonumber(params[4])
+			goodEvil = tonumber(params[5])
 		end
 	elseif type(targetParam) == "table" then
-		minLevel = targetParam[1]
-		maxLevel = targetParam[2]
-		grade = targetParam[3]
-		goodEvil = targetParam[4]
+			stdmode= tonumber(params[1])
+			minLevel = tonumber(params[2])
+			maxLevel = tonumber(params[3])
+			grade = tonumber(params[4])
+			goodEvil = tonumber(params[5])
 	end
 	
 	-- 获取物品配置信息
@@ -686,12 +686,14 @@ function PCGuildMainPanel:CheckItemMatchTarget10(itemData, targetParam)
 	if not ItemUtil:IsEquip(itemData) then
 		return false
 	end
-	
-	-- 检查等级范围
-	if minLevel and itemConfig.Level and itemConfig.Level < minLevel then
+	if stdmode > 0 and itemConfig.StdMode ~= stdmode then
 		return false
 	end
-	if maxLevel and itemConfig.Level and itemConfig.Level > maxLevel then
+	-- 检查等级范围
+	if minLevel and itemConfig.NeedLevel and itemConfig.NeedLevel < minLevel then
+		return false
+	end
+	if maxLevel and itemConfig.NeedLevel and itemConfig.NeedLevel > maxLevel then
 		return false
 	end
 	
@@ -702,7 +704,7 @@ function PCGuildMainPanel:CheckItemMatchTarget10(itemData, targetParam)
 	
 	-- 检查正邪阵营（0表示不限）
 	if goodEvil and goodEvil ~= 0 then
-		local itemGoodEvil = itemConfig.GoodEvil or 0
+		local itemGoodEvil = itemConfig.nCamp or 0
 		if itemGoodEvil ~= 0 and itemGoodEvil ~= goodEvil then
 			return false
 		end

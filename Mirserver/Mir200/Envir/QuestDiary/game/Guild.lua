@@ -313,7 +313,7 @@ function Guild.refreshTask(actor)
     sendmsg(actor, 9, "门派任务已刷新")
 end
 
-function Guild.subTask(actor,mid)
+function Guild.subTask(actor,data)
     local guildId = targetinfo(actor, "GUILDID") or 0
     if guildId == 0 then
         sendmsg(actor, 9, "您还没有加入门派")
@@ -341,23 +341,127 @@ function Guild.subTask(actor,mid)
 
     --提交道具或装备
     local targetType = Task_cfg[curTaskId]['task_targettype'] or 0
+    --targetType = 10
     if targetType ~= 9 and targetType ~= 10 then
         sendmsg(actor, 9, "该任务无需提交道具")
 		return
     end
-    local targetTab = Task_cfg[curTaskId]['task_target_param'] or {}
-    if targetType == 9 then
-        --道具id^道具数量
-    else
-        --根据装备最低等级^装备最高等级^装备品级^装备正邪(不限正邪则不填)
-    end
-    -- 直接完成任务
-    TaskProgress_data[""..curTaskId]['state'] = 2
-    sethumvar(actor, VarCfg.T_TaskProgress_data, tbl2json(TaskProgress_data))
 
-    Guild.updateTask(actor,curTaskId)    
+    local neednum = Task_cfg[curTaskId]['task_progress'] or 1
+    local curCount = TaskProgress_data[""..curTaskId]['count'] or 0
+    local remainNeed = neednum - curCount
+    if remainNeed <= 0 then
+        sendmsg(actor, 9, "任务已完成，无需提交")
+        return
+    end
+    
+    local itemMakeIndex = tostring(data[1]) 
+    local itemObj = itemobjbymakeindex(actor, itemMakeIndex)    
+    if not itemObj then
+        sendmsg(actor, 9, "背包中不存在该物品")
+        return
+    end
+    local itemid = tonumber(getiteminfo(itemObj, "INDEX")) or 0
+    local itemcount = tonumber(getiteminfo(itemObj, "COUNT")) or 1
+    local itemCfg = Item_cfg[itemid] or ItemEquip_cfg[itemid] or {}
+    --dump(itemCfg)
+    local targetParam = Task_cfg[curTaskId]['task_target_param'] or {} 
+    --targetParam={20,90,5,0}
+    
+    local needItemId = nil
+    -- 解析任务目标参数
+    if targetType == 9 and type(targetParam) == "table" then
+        needItemId = targetParam[1]
+    end
+        
+    -- 验证提交的物品是否符合条件，并计算可扣除数量    
+    local isMatch = false
+    local deductCount = 0    
+    if targetType == 9 and needItemId and itemid == needItemId then
+        -- 任务类型9：验证物品ID
+        isMatch = true     
+        deductCount = math.min(remainNeed, itemcount)
+    elseif targetType == 10 then
+        -- 任务类型10：验证装备等级范围
+        -- task_target_param 格式: "装备最低等级^装备最高等级^装备品级^装备正邪"
+        isMatch = self:CheckEquipMatchTarget(itemCfg, targetParam)
+        if isMatch then
+            deductCount = 1 -- 装备不可堆叠，每次扣除1个
+        end
+    end
+    
+    if not isMatch then
+        sendmsg(actor, 9, "该道具不满足任务要求")
+        return
+    end
+    
+    -- 扣除物品
+    if deductCount > 0 then
+        local result = delitembymakeindex(actor, itemMakeIndex, deductCount)
+        if not result then
+            sendmsg(actor, 9, "道具扣除失败")
+            return
+        end
+    else
+        sendmsg(actor, 9, "道具扣除失败")
+        return
+    end
+    
+    -- 更新任务进度
+    TaskProgress_data[""..curTaskId]['count'] = curCount + deductCount
+    local isFinish = false
+    if TaskProgress_data[""..curTaskId]['count'] >= neednum then
+        TaskProgress_data[""..curTaskId]['state'] = 2
+        isFinish = true
+    end
+   
+    sethumvar(actor, VarCfg.T_TaskProgress_data, tbl2json(TaskProgress_data))
+    if isFinish then        
+        Guild.updateTask(actor,curTaskId) 
+    else
+        Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = TaskProgress_data})
+    end
     Guild.getData(actor)
-    sendmsg(actor, 9, "道具提交成功，请注意查收奖励")
+    sendmsg(actor, 9, isFinish and "道具提交成功，请注意查收奖励" or string.format("道具提交成功，已提交 %d/%d", TaskProgress_data[""..curTaskId]['count'], neednum))
+end
+
+-- 检查装备是否匹配任务类型10的条件
+function Guild:CheckEquipMatchTarget(itemData, targetParam)
+    if not targetParam or itemData then
+        return false
+    end
+    
+    local minLevel = tonumber(targetParam[1]) or 0
+    local maxLevel = tonumber(targetParam[2]) or 99999
+    local grade = tonumber(targetParam[3])
+    local goodEvil = tonumber(targetParam[4])
+    
+    -- 检查是否为装备
+    if not itemData.is_equip then
+        return false
+    end
+    
+    local itemLevel = itemData.level or 0
+    
+    -- 检查等级范围
+    if itemLevel < minLevel or itemLevel > maxLevel then
+        return false
+    end
+    
+    -- 检查品级（如果有指定）
+    if grade and itemData.grade and itemData.grade ~= grade then
+        return false
+    end
+    
+    -- 检查正邪阵营（0表示不限）
+    if goodEvil and goodEvil ~= 0 then
+        local itemGoodEvil = itemData.goodEvil or 0
+        if itemGoodEvil ~= 0 and itemGoodEvil ~= goodEvil then
+            return false
+        end
+    end
+    
+    return true
 end
 
 
