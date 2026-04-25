@@ -2,11 +2,9 @@
 <component size="1334,750" bgColor="#ff0000">
   <displayList>
     <component id="n21_gpy8" name="bg" src="gpy84n" fileName="Components/kongbg.xml" xy="-307,-78"/>
-    <image id="n22_gpy8" name="n22" src="gpy84l" fileName="Images/tipsdi.png" xy="506,159" size="265,288"/>
-    <list id="n6_o4l6" name="additemlist" xy="507,164" size="262,279" layout="pagination" overflow="scroll" margin="5,5,10,10" lineGap="5" colGap="5" lineItemCount="2" defaultItem="ui://0xwve836gpy84o" autoClearItems="true">
+    <image id="n22_gpy8" name="n22" src="gpy84l" fileName="Images/tipsdi.png" xy="506,159" size="391,105"/>
+    <list id="n6_o4l6" name="additemlist" xy="507,164" size="385,95" layout="row" overflow="scroll" scroll="horizontal" margin="5,5,10,10" lineGap="0" colGap="5" defaultItem="ui://0xwve836gpy84o" align="center" vAlign="middle" autoClearItems="true">
       <relation target="" sidePair="width-width,height-height"/>
-      <item/>
-      <item/>
     </list>
   </displayList>
 </component>

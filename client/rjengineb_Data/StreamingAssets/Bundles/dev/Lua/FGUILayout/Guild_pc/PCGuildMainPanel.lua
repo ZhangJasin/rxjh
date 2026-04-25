@@ -628,25 +628,38 @@ function PCGuildMainPanel:CheckItemMatchTarget9(itemData, targetParam)
 	
 	-- 解析目标物品ID和数量
 	local targetItemId = nil
-	local targetCount = 1
+	local itemType = 1
+	local minVal = 1
+	local maxVal = 9999
 	
 	if type(targetParam) == "string" then
 		local params = string.split(targetParam, "^")
 		if params and #params >= 1 then
 			targetItemId = tonumber(params[1])
-			targetCount = tonumber(params[2]) or 1
+			itemType = tonumber(params[2]) or 1
+			if itemType == 2 then --属性道具
+				minVal = tonumber(params[3]) or 1
+				maxVal = tonumber(params[4]) or 9999
+			end
 		end
 	elseif type(targetParam) == "table" then
 		targetItemId = targetParam[1]
-		targetCount = targetParam[2] or 1
+		itemType = targetParam[2] or 1
+		if itemType == 2 then --属性道具
+			minVal = tonumber(targetParam[3]) or 1
+			maxVal = tonumber(targetParam[4]) or 9999
+		end
 	end
 	
-	if not targetItemId then
+	if not targetItemId or itemData.Index ~= targetItemId then
 		return false
 	end
-	
-	-- 检查物品ID是否匹配
-	return itemData.Index == targetItemId
+	if itemType == 2 then
+		local itemValue = itemData.ExAbil and itemData.ExAbil.abil[1].v[1][3] or 0
+
+		return itemValue >= minVal and itemValue <= maxVal		
+	end
+	return true
 end
 
 -- 检查物品是否匹配任务类型10（指定等级装备）
