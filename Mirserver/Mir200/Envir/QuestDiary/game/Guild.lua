@@ -341,7 +341,6 @@ function Guild.subTask(actor,data)
 
     --提交道具或装备
     local targetType = Task_cfg[curTaskId]['task_targettype'] or 0
-    --targetType = 10
     if targetType ~= 9 and targetType ~= 10 then
         sendmsg(actor, 9, "该任务无需提交道具")
 		return
@@ -364,27 +363,44 @@ function Guild.subTask(actor,data)
     local itemid = tonumber(getiteminfo(itemObj, "INDEX")) or 0
     local itemcount = tonumber(getiteminfo(itemObj, "COUNT")) or 1
     local itemCfg = Item_cfg[itemid] or ItemEquip_cfg[itemid] or {}
-    --dump(itemCfg)
     local targetParam = Task_cfg[curTaskId]['task_target_param'] or {} 
-    --targetParam={20,90,5,0}
     
     local needItemId = nil
+    local itemType = nil      -- 道具类型（用于有属性物品验证）
+    local attrMin = nil        -- 属性下限
+    local attrMax = nil        -- 属性上限
+    
     -- 解析任务目标参数
     if targetType == 9 and type(targetParam) == "table" then
-        needItemId = targetParam[1]
+        needItemId = tonumber(targetParam[1])
+        itemType = tonumber(targetParam[2]) or 1
+        if itemType == 2 then
+            attrMin = tonumber(targetParam[3])
+            attrMax = tonumber(targetParam[4])
+        end
     end
         
     -- 验证提交的物品是否符合条件，并计算可扣除数量    
     local isMatch = false
     local deductCount = 0    
     if targetType == 9 and needItemId and itemid == needItemId then
-        -- 任务类型9：验证物品ID
-        isMatch = true     
-        deductCount = math.min(remainNeed, itemcount)
-    elseif targetType == 10 then
+        -- 任务类型9：验证物品ID及属性        
+        -- 获取物品属性值
+        if itemType == 2 then
+            -- 需要验证属性
+            local attrValue = custitemattinfo(actor, itemObj.."_0_1_VALUE") or 0
+            if attrValue > 0 and attrValue >= attrMin and attrValue <= attrMax then
+                isMatch = true
+                deductCount = 1
+            end
+        else
+            -- 无属性物品：直接匹配
+            isMatch = true
+            deductCount = math.min(remainNeed, itemcount)
+        end
+    elseif targetType == 10 and ItemEquip_cfg[itemid] then
         -- 任务类型10：验证装备等级范围
-        -- task_target_param 格式: "装备最低等级^装备最高等级^装备品级^装备正邪"
-        isMatch = self:CheckEquipMatchTarget(itemCfg, targetParam)
+        isMatch = Guild:CheckEquipMatchTarget(itemCfg, targetParam)
         if isMatch then
             deductCount = 1 -- 装备不可堆叠，每次扣除1个
         end
@@ -427,35 +443,33 @@ end
 
 -- 检查装备是否匹配任务类型10的条件
 function Guild:CheckEquipMatchTarget(itemData, targetParam)
-    if not targetParam or itemData then
+    if not targetParam or not itemData then
         return false
     end
     
-    local minLevel = tonumber(targetParam[1]) or 0
-    local maxLevel = tonumber(targetParam[2]) or 99999
-    local grade = tonumber(targetParam[3])
-    local goodEvil = tonumber(targetParam[4])
-    
-    -- 检查是否为装备
-    if not itemData.is_equip then
+    local stdmode = tonumber(targetParam[1]) or 0
+    local minLevel = tonumber(targetParam[2]) or 0
+    local maxLevel = tonumber(targetParam[3]) or 99999
+    local grade = tonumber(targetParam[4]) or 0
+    local goodEvil = tonumber(targetParam[5]) or 0
+        
+    if stdmode > 0 and itemData.StdMode and itemData.StdMode ~= stdmode then
         return false
     end
-    
-    local itemLevel = itemData.level or 0
-    
+    local itemLevel = getEquipLvById(itemData.ID)    
     -- 检查等级范围
     if itemLevel < minLevel or itemLevel > maxLevel then
         return false
     end
     
     -- 检查品级（如果有指定）
-    if grade and itemData.grade and itemData.grade ~= grade then
+    if grade and itemData.Grade and itemData.Grade ~= grade then
         return false
     end
     
     -- 检查正邪阵营（0表示不限）
     if goodEvil and goodEvil ~= 0 then
-        local itemGoodEvil = itemData.goodEvil or 0
+        local itemGoodEvil = itemData.nCamp or 0
         if itemGoodEvil ~= 0 and itemGoodEvil ~= goodEvil then
             return false
         end

@@ -682,11 +682,11 @@ function PCGuildMainPanel:CheckItemMatchTarget10(itemData, targetParam)
 			goodEvil = tonumber(params[5])
 		end
 	elseif type(targetParam) == "table" then
-			stdmode= tonumber(params[1])
-			minLevel = tonumber(params[2])
-			maxLevel = tonumber(params[3])
-			grade = tonumber(params[4])
-			goodEvil = tonumber(params[5])
+			stdmode= tonumber(targetParam[1])
+			minLevel = tonumber(targetParam[2])
+			maxLevel = tonumber(targetParam[3])
+			grade = tonumber(targetParam[4])
+			goodEvil = tonumber(targetParam[5])
 	end
 	
 	-- 获取物品配置信息
