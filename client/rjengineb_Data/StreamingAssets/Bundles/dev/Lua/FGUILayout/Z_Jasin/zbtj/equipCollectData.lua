@@ -42,7 +42,7 @@ function equipCollectData:CalculateValue()
     local val = 0
     for id, _ in pairs(_data.activeList) do
         for _, conf in ipairs(config) do
-            if id == conf.idx then
+            if tonumber(id) == conf.idx then
                 val = val + conf.value
             end
         end

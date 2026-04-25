@@ -82,12 +82,8 @@ end
 function equipCollect:subscribeEvents()
     self._dataSub = equipCollectData:Subscribe("EQUIP_COLLECT_UPDATE", function(info)
         print("被激活的id=", info.id)
-        --FGUI:GList_refreshVirtualList(self._ui.typeList)
         local index = FGUI:GList_getSelectedIndex(self._ui.pageList)
         self:updateShowListByIndex(index)
-        local totalValue = equipCollectData:GetValue()
-        local valueText = FGUI:GetChild(self._ui.tips, "level")
-        FGUI:GTextField_setText(valueText, totalValue)
     end)
 end
 
@@ -135,8 +131,23 @@ function equipCollect:initRenderer()
             [configType.JEWELRY_2] = 1,
             [configType.JEWELRY_3] = 2
         }
-        local typeIndex = controLst[data.type] or 0
-        FGUI:Controller_setSelectedIndex(typeTabs, tonumber(typeIndex))
+
+        --TODO：特殊处理首饰
+        if FGUI:GList_getSelectedIndex(self._ui.pageList) == 2 then
+            FGUI:Controller_setSelectedIndex(typeTabs, 0)
+            local name = FGUI:GetChild(item, "name1")
+            local nameLst = {
+                [0] = "项链",
+                [1] = "耳环",
+                [2] = "戒指",
+            }
+            FGUI:GTextField_setText(name, nameLst[idx])
+        else
+            local typeIndex = controLst[data.type] or 0
+            FGUI:Controller_setSelectedIndex(typeTabs, tonumber(typeIndex))
+            local name = FGUI:GetChild(item, "name1")
+            FGUI:GTextField_setText(name, "上品")
+        end
     end)
 end
 
@@ -167,8 +178,11 @@ end
 
 function equipCollect:refreshDisplay(data)
     self._showList = data or {}
-    print("self._showList长度=", #self._showList)
     FGUI:GList_setNumItems(self._ui.typeList, #self._showList)
+
+    local totalValue = equipCollectData:GetValue()
+    local valueText = FGUI:GetChild(self._ui.tips, "level")
+    FGUI:GTextField_setText(valueText, totalValue)
 end
 
 function equipCollect:initPageLists()

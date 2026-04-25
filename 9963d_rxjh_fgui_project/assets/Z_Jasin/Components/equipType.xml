@@ -23,6 +23,6 @@
     <group id="n11_lm8n" name="box3" xy="1,1" size="905,57" advanced="true">
       <gearDisplay controller="type" pages="2"/>
     </group>
-    <list id="n16_lm8n" name="equipList" xy="0,51" size="905,226" layout="flow_hz" scroll="both" lineGap="10" colGap="10" lineItemCount="5" defaultItem="ui://cog9akwflm8n16" autoItemSize="true"/>
+    <list id="n16_lm8n" name="equipList" xy="0,51" size="905,226" layout="flow_hz" scroll="both" lineGap="10" colGap="10" lineItemCount="5" defaultItem="ui://cog9akwflm8n16" align="left"/>
   </displayList>
 </component>
