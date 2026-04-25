@@ -1,7 +1,7 @@
 local config = { 
 	[1] = { 
 		index=1,
-		type=1,
+		type=2,
 		sort=1,
 		idx=52010,
 		equipName="°ÙÕ½µ¶2",
@@ -13,7 +13,7 @@ local config = {
 	},
 	[2] = { 
 		index=2,
-		type=1,
+		type=2,
 		sort=2,
 		idx=52011,
 		equipName="ÇàÁúµ¶3",
@@ -25,7 +25,7 @@ local config = {
 	},
 	[3] = { 
 		index=3,
-		type=1,
+		type=2,
 		sort=3,
 		idx=52012,
 		equipName="ÉîÔ¨µ¶1",
@@ -37,7 +37,7 @@ local config = {
 	},
 	[4] = { 
 		index=4,
-		type=1,
+		type=2,
 		sort=4,
 		idx=52023,
 		equipName="·ÉÏèµ¶4",
@@ -49,7 +49,7 @@ local config = {
 	},
 	[5] = { 
 		index=5,
-		type=1,
+		type=2,
 		sort=5,
 		idx=52024,
 		equipName="°Ù»êµ¶4",
@@ -61,7 +61,7 @@ local config = {
 	},
 	[6] = { 
 		index=6,
-		type=1,
+		type=2,
 		sort=6,
 		idx=52025,
 		equipName="Ìì½ÙÕ¶4",
@@ -73,7 +73,7 @@ local config = {
 	},
 	[7] = { 
 		index=7,
-		type=1,
+		type=2,
 		sort=7,
 		idx=52013,
 		equipName="ÆÆÌì¶áÃüµ¶3",
@@ -85,7 +85,7 @@ local config = {
 	},
 	[8] = { 
 		index=8,
-		type=1,
+		type=2,
 		sort=8,
 		idx=52014,
 		equipName="ÆÆ·ç3",
@@ -97,7 +97,7 @@ local config = {
 	},
 	[9] = { 
 		index=9,
-		type=1,
+		type=2,
 		sort=9,
 		idx=52026,
 		equipName="¶ÏË®3",
@@ -109,7 +109,7 @@ local config = {
 	},
 	[10] = { 
 		index=10,
-		type=1,
+		type=2,
 		sort=10,
 		idx=52027,
 		equipName="°×ÔÂµ¶2",
@@ -121,7 +121,7 @@ local config = {
 	},
 	[11] = { 
 		index=11,
-		type=1,
+		type=2,
 		sort=11,
 		idx=52015,
 		equipName="ÆÆÏÉµ¶3",
@@ -133,7 +133,7 @@ local config = {
 	},
 	[12] = { 
 		index=12,
-		type=1,
+		type=2,
 		sort=12,
 		idx=52022,
 		equipName="³Ç±Ìµ¶1",
@@ -145,7 +145,7 @@ local config = {
 	},
 	[13] = { 
 		index=13,
-		type=1,
+		type=2,
 		sort=13,
 		idx=52028,
 		equipName="Õ¶Ä§µ¶4",
@@ -157,7 +157,7 @@ local config = {
 	},
 	[14] = { 
 		index=14,
-		type=1,
+		type=2,
 		sort=14,
 		idx=52033,
 		equipName="ÅÍÁúµ¶4",
@@ -169,7 +169,7 @@ local config = {
 	},
 	[15] = { 
 		index=15,
-		type=1,
+		type=2,
 		sort=15,
 		idx=52016,
 		equipName="½ðÓñ»¨ôáµ¶4",
@@ -181,7 +181,7 @@ local config = {
 	},
 	[16] = { 
 		index=16,
-		type=1,
+		type=2,
 		sort=16,
 		idx=52017,
 		equipName="ÐþÌúÉã»êµ¶3",
@@ -193,7 +193,7 @@ local config = {
 	},
 	[17] = { 
 		index=17,
-		type=1,
+		type=2,
 		sort=17,
 		idx=52034,
 		equipName="¿ªÉ½3",
@@ -205,7 +205,7 @@ local config = {
 	},
 	[18] = { 
 		index=18,
-		type=1,
+		type=2,
 		sort=18,
 		idx=52035,
 		equipName="Õ¶Âí3",
@@ -217,7 +217,7 @@ local config = {
 	},
 	[19] = { 
 		index=19,
-		type=2,
+		type=3,
 		sort=1,
 		idx=52040,
 		equipName="²³º£µ¶1",
@@ -229,7 +229,7 @@ local config = {
 	},
 	[20] = { 
 		index=20,
-		type=2,
+		type=3,
 		sort=2,
 		idx=52041,
 		equipName="ÆÆÌì¶áÃüµ¶4",
@@ -241,7 +241,7 @@ local config = {
 	},
 	[21] = { 
 		index=21,
-		type=2,
+		type=3,
 		sort=3,
 		idx=52042,
 		equipName="×Ï½ðÅÌÁúµ¶1",
@@ -253,7 +253,7 @@ local config = {
 	},
 	[22] = { 
 		index=22,
-		type=2,
+		type=3,
 		sort=4,
 		idx=52036,
 		equipName="ÍÀÁú1",
@@ -265,7 +265,7 @@ local config = {
 	},
 	[23] = { 
 		index=23,
-		type=2,
+		type=3,
 		sort=5,
 		idx=52047,
 		equipName="ÆÆ·ç4",
@@ -277,7 +277,7 @@ local config = {
 	},
 	[24] = { 
 		index=24,
-		type=2,
+		type=3,
 		sort=6,
 		idx=52048,
 		equipName="¶ÏË®4",
@@ -289,7 +289,7 @@ local config = {
 	},
 	[25] = { 
 		index=25,
-		type=2,
+		type=3,
 		sort=7,
 		idx=52049,
 		equipName="ÑªÒ÷µ¶1",
@@ -301,7 +301,7 @@ local config = {
 	},
 	[26] = { 
 		index=26,
-		type=2,
+		type=3,
 		sort=8,
 		idx=52050,
 		equipName="ÐþÌúÉã»êµ¶4",
@@ -313,7 +313,7 @@ local config = {
 	},
 	[27] = { 
 		index=27,
-		type=2,
+		type=3,
 		sort=9,
 		idx=52051,
 		equipName="½ð¸ÕÆÆÌìÕ¶1",
@@ -325,7 +325,7 @@ local config = {
 	},
 	[28] = { 
 		index=28,
-		type=2,
+		type=3,
 		sort=10,
 		idx=52037,
 		equipName="¿ªÉ½4",
@@ -337,7 +337,7 @@ local config = {
 	},
 	[29] = { 
 		index=29,
-		type=2,
+		type=3,
 		sort=11,
 		idx=52038,
 		equipName="Õ¶Âí4",
@@ -349,7 +349,7 @@ local config = {
 	},
 	[30] = { 
 		index=30,
-		type=2,
+		type=3,
 		sort=12,
 		idx=52039,
 		equipName="Â¾Éñ1",
@@ -361,7 +361,7 @@ local config = {
 	},
 	[31] = { 
 		index=31,
-		type=1,
+		type=2,
 		sort=1,
 		idx=54010,
 		equipName="ÌìîôÇ¹2",
@@ -373,7 +373,7 @@ local config = {
 	},
 	[32] = { 
 		index=32,
-		type=1,
+		type=2,
 		sort=2,
 		idx=54011,
 		equipName="ÆßÐÇÇ¹3",
@@ -385,7 +385,7 @@ local config = {
 	},
 	[33] = { 
 		index=33,
-		type=1,
+		type=2,
 		sort=3,
 		idx=54012,
 		equipName="ÒæÐûÇ¹1",
@@ -397,7 +397,7 @@ local config = {
 	},
 	[34] = { 
 		index=34,
-		type=1,
+		type=2,
 		sort=4,
 		idx=54013,
 		equipName="¾ÅÁúÇ¹4",
@@ -409,7 +409,7 @@ local config = {
 	},
 	[35] = { 
 		index=35,
-		type=1,
+		type=2,
 		sort=5,
 		idx=54014,
 		equipName="Éñ»ÛÇ¹4",
@@ -421,7 +421,7 @@ local config = {
 	},
 	[36] = { 
 		index=36,
-		type=1,
+		type=2,
 		sort=6,
 		idx=54015,
 		equipName="×·ÔÂÁ÷ÐÇÇ¹4",
@@ -433,7 +433,7 @@ local config = {
 	},
 	[37] = { 
 		index=37,
-		type=1,
+		type=2,
 		sort=7,
 		idx=54022,
 		equipName="´äÓñ½ð¸ÕÇ¹3",
@@ -445,7 +445,7 @@ local config = {
 	},
 	[38] = { 
 		index=38,
-		type=1,
+		type=2,
 		sort=8,
 		idx=54016,
 		equipName="Áúµ¨ÁÁÒøÇ¹3",
@@ -457,7 +457,7 @@ local config = {
 	},
 	[39] = { 
 		index=39,
-		type=1,
+		type=2,
 		sort=9,
 		idx=54017,
 		equipName="»¢Í·Õ¿½ðÇ¹3",
@@ -469,7 +469,7 @@ local config = {
 	},
 	[40] = { 
 		index=40,
-		type=1,
+		type=2,
 		sort=10,
 		idx=54023,
 		equipName="÷ÈÑæÇ¹2",
@@ -481,7 +481,7 @@ local config = {
 	},
 	[41] = { 
 		index=41,
-		type=1,
+		type=2,
 		sort=11,
 		idx=54024,
 		equipName="ÊÉÆÇÇ¹3",
@@ -493,7 +493,7 @@ local config = {
 	},
 	[42] = { 
 		index=42,
-		type=1,
+		type=2,
 		sort=12,
 		idx=54036,
 		equipName="ÐþÚ¤Ç¹1",
@@ -505,7 +505,7 @@ local config = {
 	},
 	[43] = { 
 		index=43,
-		type=1,
+		type=2,
 		sort=13,
 		idx=54025,
 		equipName="ÌìÖïÇ¹4",
@@ -517,7 +517,7 @@ local config = {
 	},
 	[44] = { 
 		index=44,
-		type=1,
+		type=2,
 		sort=14,
 		idx=54026,
 		equipName="Ò÷ÑªÄ§Ç¹4",
@@ -529,7 +529,7 @@ local config = {
 	},
 	[45] = { 
 		index=45,
-		type=1,
+		type=2,
 		sort=15,
 		idx=54027,
 		equipName="°ËØÔÌ«ºÍÇ¹4",
@@ -541,7 +541,7 @@ local config = {
 	},
 	[46] = { 
 		index=46,
-		type=1,
+		type=2,
 		sort=16,
 		idx=54033,
 		equipName="×·»êÑÜÄ§Ç¹3",
@@ -553,7 +553,7 @@ local config = {
 	},
 	[47] = { 
 		index=47,
-		type=1,
+		type=2,
 		sort=17,
 		idx=54028,
 		equipName="Îå»¢¶Ï»êÇ¹3",
@@ -565,7 +565,7 @@ local config = {
 	},
 	[48] = { 
 		index=48,
-		type=1,
+		type=2,
 		sort=18,
 		idx=54034,
 		equipName="ÉñÍþÁÒÑ×Ç¹3",
@@ -577,7 +577,7 @@ local config = {
 	},
 	[49] = { 
 		index=49,
-		type=2,
+		type=3,
 		sort=1,
 		idx=54039,
 		equipName="ÅÍÁúÆÆÄ§Ç¹1",
@@ -589,7 +589,7 @@ local config = {
 	},
 	[50] = { 
 		index=50,
-		type=2,
+		type=3,
 		sort=2,
 		idx=54040,
 		equipName="´äÓñ½ð¸ÕÇ¹4",
@@ -601,7 +601,7 @@ local config = {
 	},
 	[51] = { 
 		index=51,
-		type=2,
+		type=3,
 		sort=3,
 		idx=54041,
 		equipName="ÌìÈËÉñÇ¹1",
@@ -613,7 +613,7 @@ local config = {
 	},
 	[52] = { 
 		index=52,
-		type=2,
+		type=3,
 		sort=4,
 		idx=54035,
 		equipName="Ò»ÕÉÍþ1",
@@ -625,7 +625,7 @@ local config = {
 	},
 	[53] = { 
 		index=53,
-		type=2,
+		type=3,
 		sort=5,
 		idx=54046,
 		equipName="Áúµ¨ÁÁÒøÇ¹4",
@@ -637,7 +637,7 @@ local config = {
 	},
 	[54] = { 
 		index=54,
-		type=2,
+		type=3,
 		sort=6,
 		idx=54047,
 		equipName="»¢Í·Õ¿½ðÇ¹4",
@@ -649,7 +649,7 @@ local config = {
 	},
 	[55] = { 
 		index=55,
-		type=2,
+		type=3,
 		sort=7,
 		idx=54048,
 		equipName="ÃðÊÀ¶Ï»êÇ¹1",
@@ -661,7 +661,7 @@ local config = {
 	},
 	[56] = { 
 		index=56,
-		type=2,
+		type=3,
 		sort=8,
 		idx=54049,
 		equipName="×·»êÑÜÄ§Ç¹4",
@@ -673,7 +673,7 @@ local config = {
 	},
 	[57] = { 
 		index=57,
-		type=2,
+		type=3,
 		sort=9,
 		idx=54050,
 		equipName="ÌìÄ§ÉñÇ¹1",
@@ -685,7 +685,7 @@ local config = {
 	},
 	[58] = { 
 		index=58,
-		type=2,
+		type=3,
 		sort=10,
 		idx=54037,
 		equipName="ÉñÍþÁÒÑ×Ç¹4",
@@ -697,7 +697,7 @@ local config = {
 	},
 	[59] = { 
 		index=59,
-		type=2,
+		type=3,
 		sort=11,
 		idx=54038,
 		equipName="Îå¶¾Í¸ÁúÇ¹1",
@@ -709,7 +709,7 @@ local config = {
 	},
 	[60] = { 
 		index=60,
-		type=2,
+		type=3,
 		sort=12,
 		idx=54055,
 		equipName="Îå»¢¶Ï»êÇ¹4",
@@ -721,7 +721,7 @@ local config = {
 	},
 	[61] = { 
 		index=61,
-		type=1,
+		type=2,
 		sort=1,
 		idx=56010,
 		equipName="ÌìÃü½£2",
@@ -733,7 +733,7 @@ local config = {
 	},
 	[62] = { 
 		index=62,
-		type=1,
+		type=2,
 		sort=2,
 		idx=56011,
 		equipName="º®ÔÂ½£3",
@@ -745,7 +745,7 @@ local config = {
 	},
 	[63] = { 
 		index=63,
-		type=1,
+		type=2,
 		sort=3,
 		idx=56012,
 		equipName="ÇàÆÇ½£1",
@@ -757,7 +757,7 @@ local config = {
 	},
 	[64] = { 
 		index=64,
-		type=1,
+		type=2,
 		sort=4,
 		idx=56013,
 		equipName="Á÷¹â½£4",
@@ -769,7 +769,7 @@ local config = {
 	},
 	[65] = { 
 		index=65,
-		type=1,
+		type=2,
 		sort=5,
 		idx=56014,
 		equipName="ÐÂÔÂ½£4",
@@ -781,7 +781,7 @@ local config = {
 	},
 	[66] = { 
 		index=66,
-		type=1,
+		type=2,
 		sort=6,
 		idx=56015,
 		equipName="Çå·çÂäÓ¢½£4",
@@ -793,7 +793,7 @@ local config = {
 	},
 	[67] = { 
 		index=67,
-		type=1,
+		type=2,
 		sort=7,
 		idx=56022,
 		equipName="ÇàÔÂ·Éºç½£3",
@@ -805,7 +805,7 @@ local config = {
 	},
 	[68] = { 
 		index=68,
-		type=1,
+		type=2,
 		sort=8,
 		idx=56016,
 		equipName="ÎÞÓ°3",
@@ -817,7 +817,7 @@ local config = {
 	},
 	[69] = { 
 		index=69,
-		type=1,
+		type=2,
 		sort=9,
 		idx=56017,
 		equipName="Õ¿Â¬3",
@@ -829,7 +829,7 @@ local config = {
 	},
 	[70] = { 
 		index=70,
-		type=1,
+		type=2,
 		sort=10,
 		idx=56023,
 		equipName="ÉñÓ°½£2",
@@ -841,7 +841,7 @@ local config = {
 	},
 	[71] = { 
 		index=71,
-		type=1,
+		type=2,
 		sort=11,
 		idx=56024,
 		equipName="ÑªÄ§½£3",
@@ -853,7 +853,7 @@ local config = {
 	},
 	[72] = { 
 		index=72,
-		type=1,
+		type=2,
 		sort=12,
 		idx=56036,
 		equipName="ÑªºÓ½£1",
@@ -865,7 +865,7 @@ local config = {
 	},
 	[73] = { 
 		index=73,
-		type=1,
+		type=2,
 		sort=13,
 		idx=56025,
 		equipName="Õ¶Ðþ½£4",
@@ -877,7 +877,7 @@ local config = {
 	},
 	[74] = { 
 		index=74,
-		type=1,
+		type=2,
 		sort=14,
 		idx=56026,
 		equipName="³àÖì½£4",
@@ -889,7 +889,7 @@ local config = {
 	},
 	[75] = { 
 		index=75,
-		type=1,
+		type=2,
 		sort=15,
 		idx=56027,
 		equipName="ÌìÄ§Á÷ÐÇ½£4",
@@ -901,7 +901,7 @@ local config = {
 	},
 	[76] = { 
 		index=76,
-		type=1,
+		type=2,
 		sort=16,
 		idx=56034,
 		equipName="±Ìº£¿ñÁé½£3",
@@ -913,7 +913,7 @@ local config = {
 	},
 	[77] = { 
 		index=77,
-		type=1,
+		type=2,
 		sort=17,
 		idx=56028,
 		equipName="±ÌÑªÅÍÔÆ½£3",
@@ -925,7 +925,7 @@ local config = {
 	},
 	[78] = { 
 		index=78,
-		type=1,
+		type=2,
 		sort=18,
 		idx=56029,
 		equipName="½ðÉß3",
@@ -937,7 +937,7 @@ local config = {
 	},
 	[79] = { 
 		index=79,
-		type=2,
+		type=3,
 		sort=1,
 		idx=56038,
 		equipName="ÌìµØ½£1",
@@ -949,7 +949,7 @@ local config = {
 	},
 	[80] = { 
 		index=80,
-		type=2,
+		type=3,
 		sort=2,
 		idx=56039,
 		equipName="ÇàÔÂ·Éºç½£4",
@@ -961,7 +961,7 @@ local config = {
 	},
 	[81] = { 
 		index=81,
-		type=2,
+		type=3,
 		sort=3,
 		idx=56040,
 		equipName="°ÔÍõÖ®½£1",
@@ -973,7 +973,7 @@ local config = {
 	},
 	[82] = { 
 		index=82,
-		type=2,
+		type=3,
 		sort=4,
 		idx=56035,
 		equipName="ÐùÔ¯1",
@@ -985,7 +985,7 @@ local config = {
 	},
 	[83] = { 
 		index=83,
-		type=2,
+		type=3,
 		sort=5,
 		idx=56045,
 		equipName="ÎÞÓ°4",
@@ -997,7 +997,7 @@ local config = {
 	},
 	[84] = { 
 		index=84,
-		type=2,
+		type=3,
 		sort=6,
 		idx=56046,
 		equipName="Õ¿Â¬4",
@@ -1009,7 +1009,7 @@ local config = {
 	},
 	[85] = { 
 		index=85,
-		type=2,
+		type=3,
 		sort=7,
 		idx=56047,
 		equipName="ÖðÈÕ×··ç½£1",
@@ -1021,7 +1021,7 @@ local config = {
 	},
 	[86] = { 
 		index=86,
-		type=2,
+		type=3,
 		sort=8,
 		idx=56048,
 		equipName="±Ìº£¿ñÁé½£4",
@@ -1033,7 +1033,7 @@ local config = {
 	},
 	[87] = { 
 		index=87,
-		type=2,
+		type=3,
 		sort=9,
 		idx=56049,
 		equipName="Î©×ð½£1",
@@ -1045,7 +1045,7 @@ local config = {
 	},
 	[88] = { 
 		index=88,
-		type=2,
+		type=3,
 		sort=10,
 		idx=56037,
 		equipName="ÖïÏÉ1",
@@ -1057,7 +1057,7 @@ local config = {
 	},
 	[89] = { 
 		index=89,
-		type=2,
+		type=3,
 		sort=11,
 		idx=56054,
 		equipName="±ÌÑªÅÍÔÆ½£4",
@@ -1069,7 +1069,7 @@ local config = {
 	},
 	[90] = { 
 		index=90,
-		type=2,
+		type=3,
 		sort=12,
 		idx=56055,
 		equipName="½ðÉß4",
@@ -1081,7 +1081,7 @@ local config = {
 	},
 	[91] = { 
 		index=91,
-		type=1,
+		type=2,
 		sort=1,
 		idx=58010,
 		equipName="ÁúÉñ¹­2",
@@ -1093,7 +1093,7 @@ local config = {
 	},
 	[92] = { 
 		index=92,
-		type=1,
+		type=2,
 		sort=2,
 		idx=58011,
 		equipName="Ê¥Õß¹­3",
@@ -1105,7 +1105,7 @@ local config = {
 	},
 	[93] = { 
 		index=93,
-		type=1,
+		type=2,
 		sort=3,
 		idx=58012,
 		equipName="Éñ±Û¹­1",
@@ -1117,7 +1117,7 @@ local config = {
 	},
 	[94] = { 
 		index=94,
-		type=1,
+		type=2,
 		sort=4,
 		idx=58013,
 		equipName="·âÄ§¹­4",
@@ -1129,7 +1129,7 @@ local config = {
 	},
 	[95] = { 
 		index=95,
-		type=1,
+		type=2,
 		sort=5,
 		idx=58014,
 		equipName="×ÏÁé¹­4",
@@ -1141,7 +1141,7 @@ local config = {
 	},
 	[96] = { 
 		index=96,
-		type=1,
+		type=2,
 		sort=6,
 		idx=58015,
 		equipName="Ììô¥÷è÷ë¹­4",
@@ -1153,7 +1153,7 @@ local config = {
 	},
 	[97] = { 
 		index=97,
-		type=1,
+		type=2,
 		sort=7,
 		idx=58022,
 		equipName="ÐþÎäÔÆÌì¹­3",
@@ -1165,7 +1165,7 @@ local config = {
 	},
 	[98] = { 
 		index=98,
-		type=1,
+		type=2,
 		sort=8,
 		idx=58016,
 		equipName="Òì²ÊÉñ¹­3",
@@ -1177,7 +1177,7 @@ local config = {
 	},
 	[99] = { 
 		index=99,
-		type=1,
+		type=2,
 		sort=9,
 		idx=58017,
 		equipName="·ïÎèÉñ¹­3",
@@ -1189,7 +1189,7 @@ local config = {
 	},
 	[100] = { 
 		index=100,
-		type=1,
+		type=2,
 		sort=10,
 		idx=58023,
 		equipName="Ñª»ê¹­2",
@@ -1201,7 +1201,7 @@ local config = {
 	},
 	[101] = { 
 		index=101,
-		type=1,
+		type=2,
 		sort=11,
 		idx=58024,
 		equipName="ÌìÀÇ¹­3",
@@ -1213,7 +1213,7 @@ local config = {
 	},
 	[102] = { 
 		index=102,
-		type=1,
+		type=2,
 		sort=12,
 		idx=58036,
 		equipName="Ä§Òô¹­1",
@@ -1225,7 +1225,7 @@ local config = {
 	},
 	[103] = { 
 		index=103,
-		type=1,
+		type=2,
 		sort=13,
 		idx=58025,
 		equipName="ß±Éñ¹­4",
@@ -1237,7 +1237,7 @@ local config = {
 	},
 	[104] = { 
 		index=104,
-		type=1,
+		type=2,
 		sort=14,
 		idx=58026,
 		equipName="ÆÆ¼×¹­4",
@@ -1249,7 +1249,7 @@ local config = {
 	},
 	[105] = { 
 		index=105,
-		type=1,
+		type=2,
 		sort=15,
 		idx=58027,
 		equipName="±ÌÑªÅÍÔÆ¹­4",
@@ -1261,7 +1261,7 @@ local config = {
 	},
 	[106] = { 
 		index=106,
-		type=1,
+		type=2,
 		sort=16,
 		idx=58034,
 		equipName="ÊÈÑª¶á»ê¹­3",
@@ -1273,7 +1273,7 @@ local config = {
 	},
 	[107] = { 
 		index=107,
-		type=1,
+		type=2,
 		sort=17,
 		idx=58028,
 		equipName="ÑªÓðÄ§¹­3",
@@ -1285,7 +1285,7 @@ local config = {
 	},
 	[108] = { 
 		index=108,
-		type=1,
+		type=2,
 		sort=18,
 		idx=58029,
 		equipName="À¶µçÄ§¹­3",
@@ -1297,7 +1297,7 @@ local config = {
 	},
 	[109] = { 
 		index=109,
-		type=2,
+		type=3,
 		sort=1,
 		idx=58038,
 		equipName="¾ÅÌìÉñ¹­1",
@@ -1309,7 +1309,7 @@ local config = {
 	},
 	[110] = { 
 		index=110,
-		type=2,
+		type=3,
 		sort=2,
 		idx=58039,
 		equipName="ÐþÎäÔÆÌì¹­4",
@@ -1321,7 +1321,7 @@ local config = {
 	},
 	[111] = { 
 		index=111,
-		type=2,
+		type=3,
 		sort=3,
 		idx=58040,
 		equipName="ôàÍõÉñ¹­1",
@@ -1333,7 +1333,7 @@ local config = {
 	},
 	[112] = { 
 		index=112,
-		type=2,
+		type=3,
 		sort=4,
 		idx=58035,
 		equipName="ÌÚÁúÉñ¹­1",
@@ -1345,7 +1345,7 @@ local config = {
 	},
 	[113] = { 
 		index=113,
-		type=2,
+		type=3,
 		sort=5,
 		idx=58045,
 		equipName="Òì²ÊÉñ¹­4",
@@ -1357,7 +1357,7 @@ local config = {
 	},
 	[114] = { 
 		index=114,
-		type=2,
+		type=3,
 		sort=6,
 		idx=58046,
 		equipName="·ïÎèÉñ¹­4",
@@ -1369,7 +1369,7 @@ local config = {
 	},
 	[115] = { 
 		index=115,
-		type=2,
+		type=3,
 		sort=7,
 		idx=58047,
 		equipName="Ú¤»êÄ§¹­1",
@@ -1381,7 +1381,7 @@ local config = {
 	},
 	[116] = { 
 		index=116,
-		type=2,
+		type=3,
 		sort=8,
 		idx=58048,
 		equipName="ÊÈÑª¶á»ê¹­4",
@@ -1393,7 +1393,7 @@ local config = {
 	},
 	[117] = { 
 		index=117,
-		type=2,
+		type=3,
 		sort=9,
 		idx=58049,
 		equipName="ÖïÉñÄ§¹­1",
@@ -1405,7 +1405,7 @@ local config = {
 	},
 	[118] = { 
 		index=118,
-		type=2,
+		type=3,
 		sort=10,
 		idx=58037,
 		equipName="Ú¤ÍõÄ§¹­1",
@@ -1417,7 +1417,7 @@ local config = {
 	},
 	[119] = { 
 		index=119,
-		type=2,
+		type=3,
 		sort=11,
 		idx=58054,
 		equipName="ÑªÓðÄ§¹­4",
@@ -1429,7 +1429,7 @@ local config = {
 	},
 	[120] = { 
 		index=120,
-		type=2,
+		type=3,
 		sort=12,
 		idx=58055,
 		equipName="À¶µçÄ§¹­4",
@@ -1441,7 +1441,7 @@ local config = {
 	},
 	[121] = { 
 		index=121,
-		type=1,
+		type=2,
 		sort=1,
 		idx=51210,
 		equipName="¾ÅÎýÕÈ2",
@@ -1453,7 +1453,7 @@ local config = {
 	},
 	[122] = { 
 		index=122,
-		type=1,
+		type=2,
 		sort=2,
 		idx=51211,
 		equipName="»ðÓûÕÈ3",
@@ -1465,7 +1465,7 @@ local config = {
 	},
 	[123] = { 
 		index=123,
-		type=1,
+		type=2,
 		sort=3,
 		idx=51212,
 		equipName="Áú¹ÇÕÈ1",
@@ -1477,7 +1477,7 @@ local config = {
 	},
 	[124] = { 
 		index=124,
-		type=1,
+		type=2,
 		sort=4,
 		idx=51213,
 		equipName="¹íÍ·ÕÈ4",
@@ -1489,7 +1489,7 @@ local config = {
 	},
 	[125] = { 
 		index=125,
-		type=1,
+		type=2,
 		sort=5,
 		idx=51214,
 		equipName="º®ÁúÕÈ4",
@@ -1501,7 +1501,7 @@ local config = {
 	},
 	[126] = { 
 		index=126,
-		type=1,
+		type=2,
 		sort=6,
 		idx=51215,
 		equipName="ÐÐÕßÕÈ4",
@@ -1513,7 +1513,7 @@ local config = {
 	},
 	[127] = { 
 		index=127,
-		type=1,
+		type=2,
 		sort=7,
 		idx=51222,
 		equipName="±ÙÐ°Ö®ÕÈ3",
@@ -1525,7 +1525,7 @@ local config = {
 	},
 	[128] = { 
 		index=128,
-		type=1,
+		type=2,
 		sort=8,
 		idx=51216,
 		equipName="ÈÊÕßÉñÕÈ3",
@@ -1537,7 +1537,7 @@ local config = {
 	},
 	[129] = { 
 		index=129,
-		type=1,
+		type=2,
 		sort=9,
 		idx=51217,
 		equipName="·ü»¢ÉñÕÈ3",
@@ -1549,7 +1549,7 @@ local config = {
 	},
 	[130] = { 
 		index=130,
-		type=1,
+		type=2,
 		sort=10,
 		idx=51223,
 		equipName="¾ÅÌìÕÈ2",
@@ -1561,7 +1561,7 @@ local config = {
 	},
 	[131] = { 
 		index=131,
-		type=1,
+		type=2,
 		sort=11,
 		idx=51224,
 		equipName="¹íÆüÕÈ3",
@@ -1573,7 +1573,7 @@ local config = {
 	},
 	[132] = { 
 		index=132,
-		type=1,
+		type=2,
 		sort=12,
 		idx=51236,
 		equipName="³àÄ§ÕÈ1",
@@ -1585,7 +1585,7 @@ local config = {
 	},
 	[133] = { 
 		index=133,
-		type=1,
+		type=2,
 		sort=13,
 		idx=51225,
 		equipName="Ú¤ÉßÕÈ4",
@@ -1597,7 +1597,7 @@ local config = {
 	},
 	[134] = { 
 		index=134,
-		type=1,
+		type=2,
 		sort=14,
 		idx=51226,
 		equipName="Íò¾øÉñÕÈ4",
@@ -1609,7 +1609,7 @@ local config = {
 	},
 	[135] = { 
 		index=135,
-		type=1,
+		type=2,
 		sort=15,
 		idx=51227,
 		equipName="ÐÞÂÞÕÈ4",
@@ -1621,7 +1621,7 @@ local config = {
 	},
 	[136] = { 
 		index=136,
-		type=1,
+		type=2,
 		sort=16,
 		idx=51234,
 		equipName="ÂÞÉ²Ö®ÕÈ3",
@@ -1633,7 +1633,7 @@ local config = {
 	},
 	[137] = { 
 		index=137,
-		type=1,
+		type=2,
 		sort=17,
 		idx=51228,
 		equipName="ÒþÄ§ÕÈ3",
@@ -1645,7 +1645,7 @@ local config = {
 	},
 	[138] = { 
 		index=138,
-		type=1,
+		type=2,
 		sort=18,
 		idx=51229,
 		equipName="ÑªÓñÄ§ÕÈ3",
@@ -1657,7 +1657,7 @@ local config = {
 	},
 	[139] = { 
 		index=139,
-		type=2,
+		type=3,
 		sort=1,
 		idx=51238,
 		equipName="Ê¥ÌìÉñÕÈ1",
@@ -1669,7 +1669,7 @@ local config = {
 	},
 	[140] = { 
 		index=140,
-		type=2,
+		type=3,
 		sort=2,
 		idx=51239,
 		equipName="±ÙÐ°Ö®ÕÈ4",
@@ -1681,7 +1681,7 @@ local config = {
 	},
 	[141] = { 
 		index=141,
-		type=2,
+		type=3,
 		sort=3,
 		idx=51240,
 		equipName="Ì«ÒÒÉñÕÈ1",
@@ -1693,7 +1693,7 @@ local config = {
 	},
 	[142] = { 
 		index=142,
-		type=2,
+		type=3,
 		sort=4,
 		idx=51235,
 		equipName="½µÄ§ÉñÕÈ1",
@@ -1705,7 +1705,7 @@ local config = {
 	},
 	[143] = { 
 		index=143,
-		type=2,
+		type=3,
 		sort=5,
 		idx=51245,
 		equipName="ÈÊÕßÉñÕÈ4",
@@ -1717,7 +1717,7 @@ local config = {
 	},
 	[144] = { 
 		index=144,
-		type=2,
+		type=3,
 		sort=6,
 		idx=51246,
 		equipName="·ü»¢ÉñÕÈ4",
@@ -1729,7 +1729,7 @@ local config = {
 	},
 	[145] = { 
 		index=145,
-		type=2,
+		type=3,
 		sort=7,
 		idx=51247,
 		equipName="Ê´ÌìÄ§ÕÈ1",
@@ -1741,7 +1741,7 @@ local config = {
 	},
 	[146] = { 
 		index=146,
-		type=2,
+		type=3,
 		sort=8,
 		idx=51248,
 		equipName="ÂÞÉ²Ö®ÕÈ4",
@@ -1753,7 +1753,7 @@ local config = {
 	},
 	[147] = { 
 		index=147,
-		type=2,
+		type=3,
 		sort=9,
 		idx=51249,
 		equipName="ÎÞ¼«Ä§ÕÈ1",
@@ -1765,7 +1765,7 @@ local config = {
 	},
 	[148] = { 
 		index=148,
-		type=2,
+		type=3,
 		sort=10,
 		idx=51237,
 		equipName="ÎÞÌìÄ§ÕÈ1",
@@ -1777,7 +1777,7 @@ local config = {
 	},
 	[149] = { 
 		index=149,
-		type=2,
+		type=3,
 		sort=11,
 		idx=51254,
 		equipName="ÒþÄ§ÕÈ4",
@@ -1789,7 +1789,7 @@ local config = {
 	},
 	[150] = { 
 		index=150,
-		type=2,
+		type=3,
 		sort=12,
 		idx=51255,
 		equipName="ÑªÓñÄ§ÕÈ4",
@@ -1801,7 +1801,7 @@ local config = {
 	},
 	[151] = { 
 		index=151,
-		type=1,
+		type=2,
 		sort=1,
 		idx=51410,
 		equipName="ÇàºçÈÐ2",
@@ -1813,7 +1813,7 @@ local config = {
 	},
 	[152] = { 
 		index=152,
-		type=1,
+		type=2,
 		sort=2,
 		idx=51411,
 		equipName="·ÉÑÌÈÐ3",
@@ -1825,7 +1825,7 @@ local config = {
 	},
 	[153] = { 
 		index=153,
-		type=1,
+		type=2,
 		sort=3,
 		idx=51412,
 		equipName="½ðìÍÖ®ÈÐ1",
@@ -1837,7 +1837,7 @@ local config = {
 	},
 	[154] = { 
 		index=154,
-		type=1,
+		type=2,
 		sort=4,
 		idx=51413,
 		equipName="ÀäÔÂÏÀÈÐ4",
@@ -1849,7 +1849,7 @@ local config = {
 	},
 	[155] = { 
 		index=155,
-		type=1,
+		type=2,
 		sort=5,
 		idx=51414,
 		equipName="ÁøÒ¶ÏÀÈÐ4",
@@ -1861,7 +1861,7 @@ local config = {
 	},
 	[156] = { 
 		index=156,
-		type=1,
+		type=2,
 		sort=6,
 		idx=51415,
 		equipName="³ãØÊº®ËªÈÐ4",
@@ -1873,7 +1873,7 @@ local config = {
 	},
 	[157] = { 
 		index=157,
-		type=1,
+		type=2,
 		sort=7,
 		idx=51422,
 		equipName="ÄýÑ©º®ËªÈÐ3",
@@ -1885,7 +1885,7 @@ local config = {
 	},
 	[158] = { 
 		index=158,
-		type=1,
+		type=2,
 		sort=8,
 		idx=51416,
 		equipName="¾ªÀ×½µÄ§ÈÐ3",
@@ -1897,7 +1897,7 @@ local config = {
 	},
 	[159] = { 
 		index=159,
-		type=1,
+		type=2,
 		sort=9,
 		idx=51417,
 		equipName="±¼À×·üÄ§ÈÐ3",
@@ -1909,7 +1909,7 @@ local config = {
 	},
 	[160] = { 
 		index=160,
-		type=1,
+		type=2,
 		sort=10,
 		idx=51423,
 		equipName="»·ÌúÈÐ2",
@@ -1921,7 +1921,7 @@ local config = {
 	},
 	[161] = { 
 		index=161,
-		type=1,
+		type=2,
 		sort=11,
 		idx=51424,
 		equipName="Íö»êÈÐ3",
@@ -1933,7 +1933,7 @@ local config = {
 	},
 	[162] = { 
 		index=162,
-		type=1,
+		type=2,
 		sort=12,
 		idx=51436,
 		equipName="Ä§Ï®Ö®ÈÐ1",
@@ -1945,7 +1945,7 @@ local config = {
 	},
 	[163] = { 
 		index=163,
-		type=1,
+		type=2,
 		sort=13,
 		idx=51425,
 		equipName="ÊÉÑªÐ°ÈÐ4",
@@ -1957,7 +1957,7 @@ local config = {
 	},
 	[164] = { 
 		index=164,
-		type=1,
+		type=2,
 		sort=14,
 		idx=51426,
 		equipName="¹íÑÛÐ°ÈÐ4",
@@ -1969,7 +1969,7 @@ local config = {
 	},
 	[165] = { 
 		index=165,
-		type=1,
+		type=2,
 		sort=15,
 		idx=51427,
 		equipName="ºüÀÇ½µ¹íÈÐ4",
@@ -1981,7 +1981,7 @@ local config = {
 	},
 	[166] = { 
 		index=166,
-		type=1,
+		type=2,
 		sort=16,
 		idx=51434,
 		equipName="À÷èÉ½µ¹íÈÐ3",
@@ -1993,7 +1993,7 @@ local config = {
 	},
 	[167] = { 
 		index=167,
-		type=1,
+		type=2,
 		sort=17,
 		idx=51428,
 		equipName="³àÁúÀë»êÈÐ3",
@@ -2005,7 +2005,7 @@ local config = {
 	},
 	[168] = { 
 		index=168,
-		type=1,
+		type=2,
 		sort=18,
 		idx=51429,
 		equipName="¹íÁú¶Ï»êÈÐ3",
@@ -2017,7 +2017,7 @@ local config = {
 	},
 	[169] = { 
 		index=169,
-		type=2,
+		type=3,
 		sort=1,
 		idx=51438,
 		equipName="×ÏÞ±ÏÀÈÐ1",
@@ -2029,7 +2029,7 @@ local config = {
 	},
 	[170] = { 
 		index=170,
-		type=2,
+		type=3,
 		sort=2,
 		idx=51439,
 		equipName="ÄýÑ©º®ËªÈÐ4",
@@ -2041,7 +2041,7 @@ local config = {
 	},
 	[171] = { 
 		index=171,
-		type=2,
+		type=3,
 		sort=3,
 		idx=51440,
 		equipName="±ùÐþº®ËªÈÐ1",
@@ -2053,7 +2053,7 @@ local config = {
 	},
 	[172] = { 
 		index=172,
-		type=2,
+		type=3,
 		sort=4,
 		idx=51435,
 		equipName="¾¿À×Â¾Ä§ÈÐ1",
@@ -2065,7 +2065,7 @@ local config = {
 	},
 	[173] = { 
 		index=173,
-		type=2,
+		type=3,
 		sort=5,
 		idx=51445,
 		equipName="¾ªÀ×½µÄ§ÈÐ4",
@@ -2077,7 +2077,7 @@ local config = {
 	},
 	[174] = { 
 		index=174,
-		type=2,
+		type=3,
 		sort=6,
 		idx=51446,
 		equipName="±¼À×·üÄ§ÈÐ4",
@@ -2089,7 +2089,7 @@ local config = {
 	},
 	[175] = { 
 		index=175,
-		type=2,
+		type=3,
 		sort=7,
 		idx=51447,
 		equipName="¾«»êÐ°ÈÐ1",
@@ -2101,7 +2101,7 @@ local config = {
 	},
 	[176] = { 
 		index=176,
-		type=2,
+		type=3,
 		sort=8,
 		idx=51448,
 		equipName="À÷èÉ½µ¹íÈÐ4",
@@ -2113,7 +2113,7 @@ local config = {
 	},
 	[177] = { 
 		index=177,
-		type=2,
+		type=3,
 		sort=9,
 		idx=51449,
 		equipName="ÐÞÂÞ½µ¹íÈÐ1",
@@ -2125,7 +2125,7 @@ local config = {
 	},
 	[178] = { 
 		index=178,
-		type=2,
+		type=3,
 		sort=10,
 		idx=51437,
 		equipName="Ä§ÁúÕ¶»êÈÐ1",
@@ -2137,7 +2137,7 @@ local config = {
 	},
 	[179] = { 
 		index=179,
-		type=2,
+		type=3,
 		sort=11,
 		idx=51454,
 		equipName="³àÁúÀë»êÈÐ4",
@@ -2149,7 +2149,7 @@ local config = {
 	},
 	[180] = { 
 		index=180,
-		type=2,
+		type=3,
 		sort=12,
 		idx=51455,
 		equipName="¹íÁú¶Ï»êÈÐ4",

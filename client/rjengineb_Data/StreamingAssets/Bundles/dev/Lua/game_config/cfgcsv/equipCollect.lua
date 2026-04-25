@@ -1,7 +1,7 @@
 local config = { 
 	[1] = { 
 		index=1,
-		type=1,
+		type=2,
 		sort=1,
 		idx=52010,
 		equipName="百战刀2",
@@ -13,7 +13,7 @@ local config = {
 	},
 	[2] = { 
 		index=2,
-		type=1,
+		type=2,
 		sort=2,
 		idx=52011,
 		equipName="青龙刀3",
@@ -25,7 +25,7 @@ local config = {
 	},
 	[3] = { 
 		index=3,
-		type=1,
+		type=2,
 		sort=3,
 		idx=52012,
 		equipName="深渊刀1",
@@ -37,7 +37,7 @@ local config = {
 	},
 	[4] = { 
 		index=4,
-		type=1,
+		type=2,
 		sort=4,
 		idx=52023,
 		equipName="飞翔刀4",
@@ -49,7 +49,7 @@ local config = {
 	},
 	[5] = { 
 		index=5,
-		type=1,
+		type=2,
 		sort=5,
 		idx=52024,
 		equipName="百魂刀4",
@@ -61,7 +61,7 @@ local config = {
 	},
 	[6] = { 
 		index=6,
-		type=1,
+		type=2,
 		sort=6,
 		idx=52025,
 		equipName="天劫斩4",
@@ -73,7 +73,7 @@ local config = {
 	},
 	[7] = { 
 		index=7,
-		type=1,
+		type=2,
 		sort=7,
 		idx=52013,
 		equipName="破天夺命刀3",
@@ -85,7 +85,7 @@ local config = {
 	},
 	[8] = { 
 		index=8,
-		type=1,
+		type=2,
 		sort=8,
 		idx=52014,
 		equipName="破风3",
@@ -97,7 +97,7 @@ local config = {
 	},
 	[9] = { 
 		index=9,
-		type=1,
+		type=2,
 		sort=9,
 		idx=52026,
 		equipName="断水3",
@@ -109,7 +109,7 @@ local config = {
 	},
 	[10] = { 
 		index=10,
-		type=1,
+		type=2,
 		sort=10,
 		idx=52027,
 		equipName="白月刀2",
@@ -121,7 +121,7 @@ local config = {
 	},
 	[11] = { 
 		index=11,
-		type=1,
+		type=2,
 		sort=11,
 		idx=52015,
 		equipName="破仙刀3",
@@ -133,7 +133,7 @@ local config = {
 	},
 	[12] = { 
 		index=12,
-		type=1,
+		type=2,
 		sort=12,
 		idx=52022,
 		equipName="城碧刀1",
@@ -145,7 +145,7 @@ local config = {
 	},
 	[13] = { 
 		index=13,
-		type=1,
+		type=2,
 		sort=13,
 		idx=52028,
 		equipName="斩魔刀4",
@@ -157,7 +157,7 @@ local config = {
 	},
 	[14] = { 
 		index=14,
-		type=1,
+		type=2,
 		sort=14,
 		idx=52033,
 		equipName="磐龙刀4",
@@ -169,7 +169,7 @@ local config = {
 	},
 	[15] = { 
 		index=15,
-		type=1,
+		type=2,
 		sort=15,
 		idx=52016,
 		equipName="金玉花翎刀4",
@@ -181,7 +181,7 @@ local config = {
 	},
 	[16] = { 
 		index=16,
-		type=1,
+		type=2,
 		sort=16,
 		idx=52017,
 		equipName="玄铁摄魂刀3",
@@ -193,7 +193,7 @@ local config = {
 	},
 	[17] = { 
 		index=17,
-		type=1,
+		type=2,
 		sort=17,
 		idx=52034,
 		equipName="开山3",
@@ -205,7 +205,7 @@ local config = {
 	},
 	[18] = { 
 		index=18,
-		type=1,
+		type=2,
 		sort=18,
 		idx=52035,
 		equipName="斩马3",
@@ -217,7 +217,7 @@ local config = {
 	},
 	[19] = { 
 		index=19,
-		type=2,
+		type=3,
 		sort=1,
 		idx=52040,
 		equipName="渤海刀1",
@@ -229,7 +229,7 @@ local config = {
 	},
 	[20] = { 
 		index=20,
-		type=2,
+		type=3,
 		sort=2,
 		idx=52041,
 		equipName="破天夺命刀4",
@@ -241,7 +241,7 @@ local config = {
 	},
 	[21] = { 
 		index=21,
-		type=2,
+		type=3,
 		sort=3,
 		idx=52042,
 		equipName="紫金盘龙刀1",
@@ -253,7 +253,7 @@ local config = {
 	},
 	[22] = { 
 		index=22,
-		type=2,
+		type=3,
 		sort=4,
 		idx=52036,
 		equipName="屠龙1",
@@ -265,7 +265,7 @@ local config = {
 	},
 	[23] = { 
 		index=23,
-		type=2,
+		type=3,
 		sort=5,
 		idx=52047,
 		equipName="破风4",
@@ -277,7 +277,7 @@ local config = {
 	},
 	[24] = { 
 		index=24,
-		type=2,
+		type=3,
 		sort=6,
 		idx=52048,
 		equipName="断水4",
@@ -289,7 +289,7 @@ local config = {
 	},
 	[25] = { 
 		index=25,
-		type=2,
+		type=3,
 		sort=7,
 		idx=52049,
 		equipName="血吟刀1",
@@ -301,7 +301,7 @@ local config = {
 	},
 	[26] = { 
 		index=26,
-		type=2,
+		type=3,
 		sort=8,
 		idx=52050,
 		equipName="玄铁摄魂刀4",
@@ -313,7 +313,7 @@ local config = {
 	},
 	[27] = { 
 		index=27,
-		type=2,
+		type=3,
 		sort=9,
 		idx=52051,
 		equipName="金刚破天斩1",
@@ -325,7 +325,7 @@ local config = {
 	},
 	[28] = { 
 		index=28,
-		type=2,
+		type=3,
 		sort=10,
 		idx=52037,
 		equipName="开山4",
@@ -337,7 +337,7 @@ local config = {
 	},
 	[29] = { 
 		index=29,
-		type=2,
+		type=3,
 		sort=11,
 		idx=52038,
 		equipName="斩马4",
@@ -349,7 +349,7 @@ local config = {
 	},
 	[30] = { 
 		index=30,
-		type=2,
+		type=3,
 		sort=12,
 		idx=52039,
 		equipName="戮神1",
@@ -361,7 +361,7 @@ local config = {
 	},
 	[31] = { 
 		index=31,
-		type=1,
+		type=2,
 		sort=1,
 		idx=54010,
 		equipName="天铘枪2",
@@ -373,7 +373,7 @@ local config = {
 	},
 	[32] = { 
 		index=32,
-		type=1,
+		type=2,
 		sort=2,
 		idx=54011,
 		equipName="七星枪3",
@@ -385,7 +385,7 @@ local config = {
 	},
 	[33] = { 
 		index=33,
-		type=1,
+		type=2,
 		sort=3,
 		idx=54012,
 		equipName="益宣枪1",
@@ -397,7 +397,7 @@ local config = {
 	},
 	[34] = { 
 		index=34,
-		type=1,
+		type=2,
 		sort=4,
 		idx=54013,
 		equipName="九龙枪4",
@@ -409,7 +409,7 @@ local config = {
 	},
 	[35] = { 
 		index=35,
-		type=1,
+		type=2,
 		sort=5,
 		idx=54014,
 		equipName="神慧枪4",
@@ -421,7 +421,7 @@ local config = {
 	},
 	[36] = { 
 		index=36,
-		type=1,
+		type=2,
 		sort=6,
 		idx=54015,
 		equipName="追月流星枪4",
@@ -433,7 +433,7 @@ local config = {
 	},
 	[37] = { 
 		index=37,
-		type=1,
+		type=2,
 		sort=7,
 		idx=54022,
 		equipName="翠玉金刚枪3",
@@ -445,7 +445,7 @@ local config = {
 	},
 	[38] = { 
 		index=38,
-		type=1,
+		type=2,
 		sort=8,
 		idx=54016,
 		equipName="龙胆亮银枪3",
@@ -457,7 +457,7 @@ local config = {
 	},
 	[39] = { 
 		index=39,
-		type=1,
+		type=2,
 		sort=9,
 		idx=54017,
 		equipName="虎头湛金枪3",
@@ -469,7 +469,7 @@ local config = {
 	},
 	[40] = { 
 		index=40,
-		type=1,
+		type=2,
 		sort=10,
 		idx=54023,
 		equipName="魅焰枪2",
@@ -481,7 +481,7 @@ local config = {
 	},
 	[41] = { 
 		index=41,
-		type=1,
+		type=2,
 		sort=11,
 		idx=54024,
 		equipName="噬魄枪3",
@@ -493,7 +493,7 @@ local config = {
 	},
 	[42] = { 
 		index=42,
-		type=1,
+		type=2,
 		sort=12,
 		idx=54036,
 		equipName="玄冥枪1",
@@ -505,7 +505,7 @@ local config = {
 	},
 	[43] = { 
 		index=43,
-		type=1,
+		type=2,
 		sort=13,
 		idx=54025,
 		equipName="天诛枪4",
@@ -517,7 +517,7 @@ local config = {
 	},
 	[44] = { 
 		index=44,
-		type=1,
+		type=2,
 		sort=14,
 		idx=54026,
 		equipName="吟血魔枪4",
@@ -529,7 +529,7 @@ local config = {
 	},
 	[45] = { 
 		index=45,
-		type=1,
+		type=2,
 		sort=15,
 		idx=54027,
 		equipName="八卦太和枪4",
@@ -541,7 +541,7 @@ local config = {
 	},
 	[46] = { 
 		index=46,
-		type=1,
+		type=2,
 		sort=16,
 		idx=54033,
 		equipName="追魂衍魔枪3",
@@ -553,7 +553,7 @@ local config = {
 	},
 	[47] = { 
 		index=47,
-		type=1,
+		type=2,
 		sort=17,
 		idx=54028,
 		equipName="五虎断魂枪3",
@@ -565,7 +565,7 @@ local config = {
 	},
 	[48] = { 
 		index=48,
-		type=1,
+		type=2,
 		sort=18,
 		idx=54034,
 		equipName="神威烈炎枪3",
@@ -577,7 +577,7 @@ local config = {
 	},
 	[49] = { 
 		index=49,
-		type=2,
+		type=3,
 		sort=1,
 		idx=54039,
 		equipName="磐龙破魔枪1",
@@ -589,7 +589,7 @@ local config = {
 	},
 	[50] = { 
 		index=50,
-		type=2,
+		type=3,
 		sort=2,
 		idx=54040,
 		equipName="翠玉金刚枪4",
@@ -601,7 +601,7 @@ local config = {
 	},
 	[51] = { 
 		index=51,
-		type=2,
+		type=3,
 		sort=3,
 		idx=54041,
 		equipName="天人神枪1",
@@ -613,7 +613,7 @@ local config = {
 	},
 	[52] = { 
 		index=52,
-		type=2,
+		type=3,
 		sort=4,
 		idx=54035,
 		equipName="一丈威1",
@@ -625,7 +625,7 @@ local config = {
 	},
 	[53] = { 
 		index=53,
-		type=2,
+		type=3,
 		sort=5,
 		idx=54046,
 		equipName="龙胆亮银枪4",
@@ -637,7 +637,7 @@ local config = {
 	},
 	[54] = { 
 		index=54,
-		type=2,
+		type=3,
 		sort=6,
 		idx=54047,
 		equipName="虎头湛金枪4",
@@ -649,7 +649,7 @@ local config = {
 	},
 	[55] = { 
 		index=55,
-		type=2,
+		type=3,
 		sort=7,
 		idx=54048,
 		equipName="灭世断魂枪1",
@@ -661,7 +661,7 @@ local config = {
 	},
 	[56] = { 
 		index=56,
-		type=2,
+		type=3,
 		sort=8,
 		idx=54049,
 		equipName="追魂衍魔枪4",
@@ -673,7 +673,7 @@ local config = {
 	},
 	[57] = { 
 		index=57,
-		type=2,
+		type=3,
 		sort=9,
 		idx=54050,
 		equipName="天魔神枪1",
@@ -685,7 +685,7 @@ local config = {
 	},
 	[58] = { 
 		index=58,
-		type=2,
+		type=3,
 		sort=10,
 		idx=54037,
 		equipName="神威烈炎枪4",
@@ -697,7 +697,7 @@ local config = {
 	},
 	[59] = { 
 		index=59,
-		type=2,
+		type=3,
 		sort=11,
 		idx=54038,
 		equipName="五毒透龙枪1",
@@ -709,7 +709,7 @@ local config = {
 	},
 	[60] = { 
 		index=60,
-		type=2,
+		type=3,
 		sort=12,
 		idx=54055,
 		equipName="五虎断魂枪4",
@@ -721,7 +721,7 @@ local config = {
 	},
 	[61] = { 
 		index=61,
-		type=1,
+		type=2,
 		sort=1,
 		idx=56010,
 		equipName="天命剑2",
@@ -733,7 +733,7 @@ local config = {
 	},
 	[62] = { 
 		index=62,
-		type=1,
+		type=2,
 		sort=2,
 		idx=56011,
 		equipName="寒月剑3",
@@ -745,7 +745,7 @@ local config = {
 	},
 	[63] = { 
 		index=63,
-		type=1,
+		type=2,
 		sort=3,
 		idx=56012,
 		equipName="青魄剑1",
@@ -757,7 +757,7 @@ local config = {
 	},
 	[64] = { 
 		index=64,
-		type=1,
+		type=2,
 		sort=4,
 		idx=56013,
 		equipName="流光剑4",
@@ -769,7 +769,7 @@ local config = {
 	},
 	[65] = { 
 		index=65,
-		type=1,
+		type=2,
 		sort=5,
 		idx=56014,
 		equipName="新月剑4",
@@ -781,7 +781,7 @@ local config = {
 	},
 	[66] = { 
 		index=66,
-		type=1,
+		type=2,
 		sort=6,
 		idx=56015,
 		equipName="清风落英剑4",
@@ -793,7 +793,7 @@ local config = {
 	},
 	[67] = { 
 		index=67,
-		type=1,
+		type=2,
 		sort=7,
 		idx=56022,
 		equipName="青月飞虹剑3",
@@ -805,7 +805,7 @@ local config = {
 	},
 	[68] = { 
 		index=68,
-		type=1,
+		type=2,
 		sort=8,
 		idx=56016,
 		equipName="无影3",
@@ -817,7 +817,7 @@ local config = {
 	},
 	[69] = { 
 		index=69,
-		type=1,
+		type=2,
 		sort=9,
 		idx=56017,
 		equipName="湛卢3",
@@ -829,7 +829,7 @@ local config = {
 	},
 	[70] = { 
 		index=70,
-		type=1,
+		type=2,
 		sort=10,
 		idx=56023,
 		equipName="神影剑2",
@@ -841,7 +841,7 @@ local config = {
 	},
 	[71] = { 
 		index=71,
-		type=1,
+		type=2,
 		sort=11,
 		idx=56024,
 		equipName="血魔剑3",
@@ -853,7 +853,7 @@ local config = {
 	},
 	[72] = { 
 		index=72,
-		type=1,
+		type=2,
 		sort=12,
 		idx=56036,
 		equipName="血河剑1",
@@ -865,7 +865,7 @@ local config = {
 	},
 	[73] = { 
 		index=73,
-		type=1,
+		type=2,
 		sort=13,
 		idx=56025,
 		equipName="斩玄剑4",
@@ -877,7 +877,7 @@ local config = {
 	},
 	[74] = { 
 		index=74,
-		type=1,
+		type=2,
 		sort=14,
 		idx=56026,
 		equipName="赤朱剑4",
@@ -889,7 +889,7 @@ local config = {
 	},
 	[75] = { 
 		index=75,
-		type=1,
+		type=2,
 		sort=15,
 		idx=56027,
 		equipName="天魔流星剑4",
@@ -901,7 +901,7 @@ local config = {
 	},
 	[76] = { 
 		index=76,
-		type=1,
+		type=2,
 		sort=16,
 		idx=56034,
 		equipName="碧海狂灵剑3",
@@ -913,7 +913,7 @@ local config = {
 	},
 	[77] = { 
 		index=77,
-		type=1,
+		type=2,
 		sort=17,
 		idx=56028,
 		equipName="碧血磐云剑3",
@@ -925,7 +925,7 @@ local config = {
 	},
 	[78] = { 
 		index=78,
-		type=1,
+		type=2,
 		sort=18,
 		idx=56029,
 		equipName="金蛇3",
@@ -937,7 +937,7 @@ local config = {
 	},
 	[79] = { 
 		index=79,
-		type=2,
+		type=3,
 		sort=1,
 		idx=56038,
 		equipName="天地剑1",
@@ -949,7 +949,7 @@ local config = {
 	},
 	[80] = { 
 		index=80,
-		type=2,
+		type=3,
 		sort=2,
 		idx=56039,
 		equipName="青月飞虹剑4",
@@ -961,7 +961,7 @@ local config = {
 	},
 	[81] = { 
 		index=81,
-		type=2,
+		type=3,
 		sort=3,
 		idx=56040,
 		equipName="霸王之剑1",
@@ -973,7 +973,7 @@ local config = {
 	},
 	[82] = { 
 		index=82,
-		type=2,
+		type=3,
 		sort=4,
 		idx=56035,
 		equipName="轩辕1",
@@ -985,7 +985,7 @@ local config = {
 	},
 	[83] = { 
 		index=83,
-		type=2,
+		type=3,
 		sort=5,
 		idx=56045,
 		equipName="无影4",
@@ -997,7 +997,7 @@ local config = {
 	},
 	[84] = { 
 		index=84,
-		type=2,
+		type=3,
 		sort=6,
 		idx=56046,
 		equipName="湛卢4",
@@ -1009,7 +1009,7 @@ local config = {
 	},
 	[85] = { 
 		index=85,
-		type=2,
+		type=3,
 		sort=7,
 		idx=56047,
 		equipName="逐日追风剑1",
@@ -1021,7 +1021,7 @@ local config = {
 	},
 	[86] = { 
 		index=86,
-		type=2,
+		type=3,
 		sort=8,
 		idx=56048,
 		equipName="碧海狂灵剑4",
@@ -1033,7 +1033,7 @@ local config = {
 	},
 	[87] = { 
 		index=87,
-		type=2,
+		type=3,
 		sort=9,
 		idx=56049,
 		equipName="惟尊剑1",
@@ -1045,7 +1045,7 @@ local config = {
 	},
 	[88] = { 
 		index=88,
-		type=2,
+		type=3,
 		sort=10,
 		idx=56037,
 		equipName="诛仙1",
@@ -1057,7 +1057,7 @@ local config = {
 	},
 	[89] = { 
 		index=89,
-		type=2,
+		type=3,
 		sort=11,
 		idx=56054,
 		equipName="碧血磐云剑4",
@@ -1069,7 +1069,7 @@ local config = {
 	},
 	[90] = { 
 		index=90,
-		type=2,
+		type=3,
 		sort=12,
 		idx=56055,
 		equipName="金蛇4",
@@ -1081,7 +1081,7 @@ local config = {
 	},
 	[91] = { 
 		index=91,
-		type=1,
+		type=2,
 		sort=1,
 		idx=58010,
 		equipName="龙神弓2",
@@ -1093,7 +1093,7 @@ local config = {
 	},
 	[92] = { 
 		index=92,
-		type=1,
+		type=2,
 		sort=2,
 		idx=58011,
 		equipName="圣者弓3",
@@ -1105,7 +1105,7 @@ local config = {
 	},
 	[93] = { 
 		index=93,
-		type=1,
+		type=2,
 		sort=3,
 		idx=58012,
 		equipName="神臂弓1",
@@ -1117,7 +1117,7 @@ local config = {
 	},
 	[94] = { 
 		index=94,
-		type=1,
+		type=2,
 		sort=4,
 		idx=58013,
 		equipName="封魔弓4",
@@ -1129,7 +1129,7 @@ local config = {
 	},
 	[95] = { 
 		index=95,
-		type=1,
+		type=2,
 		sort=5,
 		idx=58014,
 		equipName="紫灵弓4",
@@ -1141,7 +1141,7 @@ local config = {
 	},
 	[96] = { 
 		index=96,
-		type=1,
+		type=2,
 		sort=6,
 		idx=58015,
 		equipName="天籁麒麟弓4",
@@ -1153,7 +1153,7 @@ local config = {
 	},
 	[97] = { 
 		index=97,
-		type=1,
+		type=2,
 		sort=7,
 		idx=58022,
 		equipName="玄武云天弓3",
@@ -1165,7 +1165,7 @@ local config = {
 	},
 	[98] = { 
 		index=98,
-		type=1,
+		type=2,
 		sort=8,
 		idx=58016,
 		equipName="异彩神弓3",
@@ -1177,7 +1177,7 @@ local config = {
 	},
 	[99] = { 
 		index=99,
-		type=1,
+		type=2,
 		sort=9,
 		idx=58017,
 		equipName="凤舞神弓3",
@@ -1189,7 +1189,7 @@ local config = {
 	},
 	[100] = { 
 		index=100,
-		type=1,
+		type=2,
 		sort=10,
 		idx=58023,
 		equipName="血魂弓2",
@@ -1201,7 +1201,7 @@ local config = {
 	},
 	[101] = { 
 		index=101,
-		type=1,
+		type=2,
 		sort=11,
 		idx=58024,
 		equipName="天狼弓3",
@@ -1213,7 +1213,7 @@ local config = {
 	},
 	[102] = { 
 		index=102,
-		type=1,
+		type=2,
 		sort=12,
 		idx=58036,
 		equipName="魔音弓1",
@@ -1225,7 +1225,7 @@ local config = {
 	},
 	[103] = { 
 		index=103,
-		type=1,
+		type=2,
 		sort=13,
 		idx=58025,
 		equipName="弑神弓4",
@@ -1237,7 +1237,7 @@ local config = {
 	},
 	[104] = { 
 		index=104,
-		type=1,
+		type=2,
 		sort=14,
 		idx=58026,
 		equipName="破甲弓4",
@@ -1249,7 +1249,7 @@ local config = {
 	},
 	[105] = { 
 		index=105,
-		type=1,
+		type=2,
 		sort=15,
 		idx=58027,
 		equipName="碧血磐云弓4",
@@ -1261,7 +1261,7 @@ local config = {
 	},
 	[106] = { 
 		index=106,
-		type=1,
+		type=2,
 		sort=16,
 		idx=58034,
 		equipName="嗜血夺魂弓3",
@@ -1273,7 +1273,7 @@ local config = {
 	},
 	[107] = { 
 		index=107,
-		type=1,
+		type=2,
 		sort=17,
 		idx=58028,
 		equipName="血羽魔弓3",
@@ -1285,7 +1285,7 @@ local config = {
 	},
 	[108] = { 
 		index=108,
-		type=1,
+		type=2,
 		sort=18,
 		idx=58029,
 		equipName="蓝电魔弓3",
@@ -1297,7 +1297,7 @@ local config = {
 	},
 	[109] = { 
 		index=109,
-		type=2,
+		type=3,
 		sort=1,
 		idx=58038,
 		equipName="九天神弓1",
@@ -1309,7 +1309,7 @@ local config = {
 	},
 	[110] = { 
 		index=110,
-		type=2,
+		type=3,
 		sort=2,
 		idx=58039,
 		equipName="玄武云天弓4",
@@ -1321,7 +1321,7 @@ local config = {
 	},
 	[111] = { 
 		index=111,
-		type=2,
+		type=3,
 		sort=3,
 		idx=58040,
 		equipName="羿王神弓1",
@@ -1333,7 +1333,7 @@ local config = {
 	},
 	[112] = { 
 		index=112,
-		type=2,
+		type=3,
 		sort=4,
 		idx=58035,
 		equipName="腾龙神弓1",
@@ -1345,7 +1345,7 @@ local config = {
 	},
 	[113] = { 
 		index=113,
-		type=2,
+		type=3,
 		sort=5,
 		idx=58045,
 		equipName="异彩神弓4",
@@ -1357,7 +1357,7 @@ local config = {
 	},
 	[114] = { 
 		index=114,
-		type=2,
+		type=3,
 		sort=6,
 		idx=58046,
 		equipName="凤舞神弓4",
@@ -1369,7 +1369,7 @@ local config = {
 	},
 	[115] = { 
 		index=115,
-		type=2,
+		type=3,
 		sort=7,
 		idx=58047,
 		equipName="冥魂魔弓1",
@@ -1381,7 +1381,7 @@ local config = {
 	},
 	[116] = { 
 		index=116,
-		type=2,
+		type=3,
 		sort=8,
 		idx=58048,
 		equipName="嗜血夺魂弓4",
@@ -1393,7 +1393,7 @@ local config = {
 	},
 	[117] = { 
 		index=117,
-		type=2,
+		type=3,
 		sort=9,
 		idx=58049,
 		equipName="诛神魔弓1",
@@ -1405,7 +1405,7 @@ local config = {
 	},
 	[118] = { 
 		index=118,
-		type=2,
+		type=3,
 		sort=10,
 		idx=58037,
 		equipName="冥王魔弓1",
@@ -1417,7 +1417,7 @@ local config = {
 	},
 	[119] = { 
 		index=119,
-		type=2,
+		type=3,
 		sort=11,
 		idx=58054,
 		equipName="血羽魔弓4",
@@ -1429,7 +1429,7 @@ local config = {
 	},
 	[120] = { 
 		index=120,
-		type=2,
+		type=3,
 		sort=12,
 		idx=58055,
 		equipName="蓝电魔弓4",
@@ -1441,7 +1441,7 @@ local config = {
 	},
 	[121] = { 
 		index=121,
-		type=1,
+		type=2,
 		sort=1,
 		idx=51210,
 		equipName="九锡杖2",
@@ -1453,7 +1453,7 @@ local config = {
 	},
 	[122] = { 
 		index=122,
-		type=1,
+		type=2,
 		sort=2,
 		idx=51211,
 		equipName="火欲杖3",
@@ -1465,7 +1465,7 @@ local config = {
 	},
 	[123] = { 
 		index=123,
-		type=1,
+		type=2,
 		sort=3,
 		idx=51212,
 		equipName="龙骨杖1",
@@ -1477,7 +1477,7 @@ local config = {
 	},
 	[124] = { 
 		index=124,
-		type=1,
+		type=2,
 		sort=4,
 		idx=51213,
 		equipName="鬼头杖4",
@@ -1489,7 +1489,7 @@ local config = {
 	},
 	[125] = { 
 		index=125,
-		type=1,
+		type=2,
 		sort=5,
 		idx=51214,
 		equipName="寒龙杖4",
@@ -1501,7 +1501,7 @@ local config = {
 	},
 	[126] = { 
 		index=126,
-		type=1,
+		type=2,
 		sort=6,
 		idx=51215,
 		equipName="行者杖4",
@@ -1513,7 +1513,7 @@ local config = {
 	},
 	[127] = { 
 		index=127,
-		type=1,
+		type=2,
 		sort=7,
 		idx=51222,
 		equipName="辟邪之杖3",
@@ -1525,7 +1525,7 @@ local config = {
 	},
 	[128] = { 
 		index=128,
-		type=1,
+		type=2,
 		sort=8,
 		idx=51216,
 		equipName="仁者神杖3",
@@ -1537,7 +1537,7 @@ local config = {
 	},
 	[129] = { 
 		index=129,
-		type=1,
+		type=2,
 		sort=9,
 		idx=51217,
 		equipName="伏虎神杖3",
@@ -1549,7 +1549,7 @@ local config = {
 	},
 	[130] = { 
 		index=130,
-		type=1,
+		type=2,
 		sort=10,
 		idx=51223,
 		equipName="九天杖2",
@@ -1561,7 +1561,7 @@ local config = {
 	},
 	[131] = { 
 		index=131,
-		type=1,
+		type=2,
 		sort=11,
 		idx=51224,
 		equipName="鬼泣杖3",
@@ -1573,7 +1573,7 @@ local config = {
 	},
 	[132] = { 
 		index=132,
-		type=1,
+		type=2,
 		sort=12,
 		idx=51236,
 		equipName="赤魔杖1",
@@ -1585,7 +1585,7 @@ local config = {
 	},
 	[133] = { 
 		index=133,
-		type=1,
+		type=2,
 		sort=13,
 		idx=51225,
 		equipName="冥蛇杖4",
@@ -1597,7 +1597,7 @@ local config = {
 	},
 	[134] = { 
 		index=134,
-		type=1,
+		type=2,
 		sort=14,
 		idx=51226,
 		equipName="万绝神杖4",
@@ -1609,7 +1609,7 @@ local config = {
 	},
 	[135] = { 
 		index=135,
-		type=1,
+		type=2,
 		sort=15,
 		idx=51227,
 		equipName="修罗杖4",
@@ -1621,7 +1621,7 @@ local config = {
 	},
 	[136] = { 
 		index=136,
-		type=1,
+		type=2,
 		sort=16,
 		idx=51234,
 		equipName="罗刹之杖3",
@@ -1633,7 +1633,7 @@ local config = {
 	},
 	[137] = { 
 		index=137,
-		type=1,
+		type=2,
 		sort=17,
 		idx=51228,
 		equipName="隐魔杖3",
@@ -1645,7 +1645,7 @@ local config = {
 	},
 	[138] = { 
 		index=138,
-		type=1,
+		type=2,
 		sort=18,
 		idx=51229,
 		equipName="血玉魔杖3",
@@ -1657,7 +1657,7 @@ local config = {
 	},
 	[139] = { 
 		index=139,
-		type=2,
+		type=3,
 		sort=1,
 		idx=51238,
 		equipName="圣天神杖1",
@@ -1669,7 +1669,7 @@ local config = {
 	},
 	[140] = { 
 		index=140,
-		type=2,
+		type=3,
 		sort=2,
 		idx=51239,
 		equipName="辟邪之杖4",
@@ -1681,7 +1681,7 @@ local config = {
 	},
 	[141] = { 
 		index=141,
-		type=2,
+		type=3,
 		sort=3,
 		idx=51240,
 		equipName="太乙神杖1",
@@ -1693,7 +1693,7 @@ local config = {
 	},
 	[142] = { 
 		index=142,
-		type=2,
+		type=3,
 		sort=4,
 		idx=51235,
 		equipName="降魔神杖1",
@@ -1705,7 +1705,7 @@ local config = {
 	},
 	[143] = { 
 		index=143,
-		type=2,
+		type=3,
 		sort=5,
 		idx=51245,
 		equipName="仁者神杖4",
@@ -1717,7 +1717,7 @@ local config = {
 	},
 	[144] = { 
 		index=144,
-		type=2,
+		type=3,
 		sort=6,
 		idx=51246,
 		equipName="伏虎神杖4",
@@ -1729,7 +1729,7 @@ local config = {
 	},
 	[145] = { 
 		index=145,
-		type=2,
+		type=3,
 		sort=7,
 		idx=51247,
 		equipName="蚀天魔杖1",
@@ -1741,7 +1741,7 @@ local config = {
 	},
 	[146] = { 
 		index=146,
-		type=2,
+		type=3,
 		sort=8,
 		idx=51248,
 		equipName="罗刹之杖4",
@@ -1753,7 +1753,7 @@ local config = {
 	},
 	[147] = { 
 		index=147,
-		type=2,
+		type=3,
 		sort=9,
 		idx=51249,
 		equipName="无极魔杖1",
@@ -1765,7 +1765,7 @@ local config = {
 	},
 	[148] = { 
 		index=148,
-		type=2,
+		type=3,
 		sort=10,
 		idx=51237,
 		equipName="无天魔杖1",
@@ -1777,7 +1777,7 @@ local config = {
 	},
 	[149] = { 
 		index=149,
-		type=2,
+		type=3,
 		sort=11,
 		idx=51254,
 		equipName="隐魔杖4",
@@ -1789,7 +1789,7 @@ local config = {
 	},
 	[150] = { 
 		index=150,
-		type=2,
+		type=3,
 		sort=12,
 		idx=51255,
 		equipName="血玉魔杖4",
@@ -1801,7 +1801,7 @@ local config = {
 	},
 	[151] = { 
 		index=151,
-		type=1,
+		type=2,
 		sort=1,
 		idx=51410,
 		equipName="青虹刃2",
@@ -1813,7 +1813,7 @@ local config = {
 	},
 	[152] = { 
 		index=152,
-		type=1,
+		type=2,
 		sort=2,
 		idx=51411,
 		equipName="飞烟刃3",
@@ -1825,7 +1825,7 @@ local config = {
 	},
 	[153] = { 
 		index=153,
-		type=1,
+		type=2,
 		sort=3,
 		idx=51412,
 		equipName="金焱之刃1",
@@ -1837,7 +1837,7 @@ local config = {
 	},
 	[154] = { 
 		index=154,
-		type=1,
+		type=2,
 		sort=4,
 		idx=51413,
 		equipName="冷月侠刃4",
@@ -1849,7 +1849,7 @@ local config = {
 	},
 	[155] = { 
 		index=155,
-		type=1,
+		type=2,
 		sort=5,
 		idx=51414,
 		equipName="柳叶侠刃4",
@@ -1861,7 +1861,7 @@ local config = {
 	},
 	[156] = { 
 		index=156,
-		type=1,
+		type=2,
 		sort=6,
 		idx=51415,
 		equipName="炽厥寒霜刃4",
@@ -1873,7 +1873,7 @@ local config = {
 	},
 	[157] = { 
 		index=157,
-		type=1,
+		type=2,
 		sort=7,
 		idx=51422,
 		equipName="凝雪寒霜刃3",
@@ -1885,7 +1885,7 @@ local config = {
 	},
 	[158] = { 
 		index=158,
-		type=1,
+		type=2,
 		sort=8,
 		idx=51416,
 		equipName="惊雷降魔刃3",
@@ -1897,7 +1897,7 @@ local config = {
 	},
 	[159] = { 
 		index=159,
-		type=1,
+		type=2,
 		sort=9,
 		idx=51417,
 		equipName="奔雷伏魔刃3",
@@ -1909,7 +1909,7 @@ local config = {
 	},
 	[160] = { 
 		index=160,
-		type=1,
+		type=2,
 		sort=10,
 		idx=51423,
 		equipName="环铁刃2",
@@ -1921,7 +1921,7 @@ local config = {
 	},
 	[161] = { 
 		index=161,
-		type=1,
+		type=2,
 		sort=11,
 		idx=51424,
 		equipName="亡魂刃3",
@@ -1933,7 +1933,7 @@ local config = {
 	},
 	[162] = { 
 		index=162,
-		type=1,
+		type=2,
 		sort=12,
 		idx=51436,
 		equipName="魔袭之刃1",
@@ -1945,7 +1945,7 @@ local config = {
 	},
 	[163] = { 
 		index=163,
-		type=1,
+		type=2,
 		sort=13,
 		idx=51425,
 		equipName="噬血邪刃4",
@@ -1957,7 +1957,7 @@ local config = {
 	},
 	[164] = { 
 		index=164,
-		type=1,
+		type=2,
 		sort=14,
 		idx=51426,
 		equipName="鬼眼邪刃4",
@@ -1969,7 +1969,7 @@ local config = {
 	},
 	[165] = { 
 		index=165,
-		type=1,
+		type=2,
 		sort=15,
 		idx=51427,
 		equipName="狐狼降鬼刃4",
@@ -1981,7 +1981,7 @@ local config = {
 	},
 	[166] = { 
 		index=166,
-		type=1,
+		type=2,
 		sort=16,
 		idx=51434,
 		equipName="厉枭降鬼刃3",
@@ -1993,7 +1993,7 @@ local config = {
 	},
 	[167] = { 
 		index=167,
-		type=1,
+		type=2,
 		sort=17,
 		idx=51428,
 		equipName="赤龙离魂刃3",
@@ -2005,7 +2005,7 @@ local config = {
 	},
 	[168] = { 
 		index=168,
-		type=1,
+		type=2,
 		sort=18,
 		idx=51429,
 		equipName="鬼龙断魂刃3",
@@ -2017,7 +2017,7 @@ local config = {
 	},
 	[169] = { 
 		index=169,
-		type=2,
+		type=3,
 		sort=1,
 		idx=51438,
 		equipName="紫薇侠刃1",
@@ -2029,7 +2029,7 @@ local config = {
 	},
 	[170] = { 
 		index=170,
-		type=2,
+		type=3,
 		sort=2,
 		idx=51439,
 		equipName="凝雪寒霜刃4",
@@ -2041,7 +2041,7 @@ local config = {
 	},
 	[171] = { 
 		index=171,
-		type=2,
+		type=3,
 		sort=3,
 		idx=51440,
 		equipName="冰玄寒霜刃1",
@@ -2053,7 +2053,7 @@ local config = {
 	},
 	[172] = { 
 		index=172,
-		type=2,
+		type=3,
 		sort=4,
 		idx=51435,
 		equipName="究雷戮魔刃1",
@@ -2065,7 +2065,7 @@ local config = {
 	},
 	[173] = { 
 		index=173,
-		type=2,
+		type=3,
 		sort=5,
 		idx=51445,
 		equipName="惊雷降魔刃4",
@@ -2077,7 +2077,7 @@ local config = {
 	},
 	[174] = { 
 		index=174,
-		type=2,
+		type=3,
 		sort=6,
 		idx=51446,
 		equipName="奔雷伏魔刃4",
@@ -2089,7 +2089,7 @@ local config = {
 	},
 	[175] = { 
 		index=175,
-		type=2,
+		type=3,
 		sort=7,
 		idx=51447,
 		equipName="精魂邪刃1",
@@ -2101,7 +2101,7 @@ local config = {
 	},
 	[176] = { 
 		index=176,
-		type=2,
+		type=3,
 		sort=8,
 		idx=51448,
 		equipName="厉枭降鬼刃4",
@@ -2113,7 +2113,7 @@ local config = {
 	},
 	[177] = { 
 		index=177,
-		type=2,
+		type=3,
 		sort=9,
 		idx=51449,
 		equipName="修罗降鬼刃1",
@@ -2125,7 +2125,7 @@ local config = {
 	},
 	[178] = { 
 		index=178,
-		type=2,
+		type=3,
 		sort=10,
 		idx=51437,
 		equipName="魔龙斩魂刃1",
@@ -2137,7 +2137,7 @@ local config = {
 	},
 	[179] = { 
 		index=179,
-		type=2,
+		type=3,
 		sort=11,
 		idx=51454,
 		equipName="赤龙离魂刃4",
@@ -2149,7 +2149,7 @@ local config = {
 	},
 	[180] = { 
 		index=180,
-		type=2,
+		type=3,
 		sort=12,
 		idx=51455,
 		equipName="鬼龙断魂刃4",
