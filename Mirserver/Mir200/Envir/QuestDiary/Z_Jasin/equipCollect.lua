@@ -98,6 +98,7 @@ function equipCollect.ReqActive(actor, id)
             Message.sendmsgEx(actor, "equipCollect", "RetActive", {
                 id = idStr, result = true
             })
+            setValueAttr(actor)
         end
     end
 end

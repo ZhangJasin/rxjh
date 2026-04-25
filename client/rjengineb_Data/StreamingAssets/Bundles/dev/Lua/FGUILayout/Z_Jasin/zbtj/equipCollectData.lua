@@ -13,6 +13,9 @@ local _data = {
 
 --初始化数据
 function equipCollectData:Init()
+    --TODO:处理角色数据串
+    --_data.activeList = {}
+
     local vars = { 37, 38, 39 }
     for _, id in ipairs(vars) do
         local content = SL:GetValue("T", id)
@@ -25,6 +28,7 @@ function equipCollectData:Init()
             end
         end
     end
+    --dump(_data.activeList)
 
     --序列化属性配表
     self._sortedScores = {}

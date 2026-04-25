@@ -162,7 +162,7 @@ function equipCollect:initRenderer()
                 data = info
             end
         end
-        self:equipAttrListRenderer(data, idx, item)
+        self:equipAttrListRenderer(data, idx, item, 0)
     end)
     FGUI:GList_itemRenderer(nextAttrLst, function(idx, item)
         local nextAttr = equipCollectData:GetNextAttr()
@@ -172,7 +172,7 @@ function equipCollect:initRenderer()
                 data = info
             end
         end
-        self:equipAttrListRenderer(data, idx, item)
+        self:equipAttrListRenderer(data, idx, item, 1)
     end)
 end
 
@@ -258,7 +258,7 @@ function equipCollect:initPageLists()
     FGUI:GButton_FireClick(firstPage, true, true)
 end
 
-function equipCollect:equipAttrListRenderer(data, idx, item)
+function equipCollect:equipAttrListRenderer(data, idx, item, type)
     local attrId = data[1]
     local attrValue = data[2]
     local isPercent = data[3]
@@ -277,6 +277,9 @@ function equipCollect:equipAttrListRenderer(data, idx, item)
 
     FGUI:GTextField_setText(item_name, attrName)
     FGUI:GTextField_setText(item_value, valueText)
+
+    local equipAttrControl = FGUI:getController(item, "type")
+    FGUI:Controller_setSelectedIndex(equipAttrControl, type)
 end
 
 function equipCollect:equipListRenderer(data, idx, item)
