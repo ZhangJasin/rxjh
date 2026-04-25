@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="608,609">
+  <displayList>
+    <image id="n0_ebe4" name="n0" src="ebe41d" fileName="Images/13.png" xy="-1,0"/>
+    <image id="n3_ebe4" name="n3" src="ebe41g" fileName="Images/15.png" xy="83,50"/>
+    <image id="n4_ebe4" name="n4" src="ebe41g" fileName="Images/15.png" xy="411,50"/>
+    <text id="n5_ebe4" name="n5" xy="112,22" size="64,42" fontSize="30" color="#ffffff" strokeColor="#000000" text="当前"/>
+    <text id="n6_ebe4" name="n6" xy="422,22" size="94,42" fontSize="30" color="#ffffff" strokeColor="#000000" text="下一级"/>
+    <text id="n7_ebe4" name="cur_level" xy="131,81" size="17,34" fontSize="24" color="#ffffff" strokeColor="#000000" text="0">
+      <relation target="n0_ebe4" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n8_ebe4" name="next_level" xy="459,81" size="17,34" fontSize="24" color="#ffffff" strokeColor="#000000" text="1">
+      <relation target="n0_ebe4" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n9_ebe4" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="583,23"/>
+    <list id="n10_ebe4" name="cur_attr_list" xy="26,179" size="230,400" overflow="scroll" lineGap="5" defaultItem="ui://cog9akwfebe41h">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n11_ebe4" name="next_attr_list" xy="348,179" size="230,400" overflow="scroll" lineGap="5" defaultItem="ui://cog9akwfebe41h">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

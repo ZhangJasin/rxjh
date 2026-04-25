@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="227,45">
+  <controller name="type" pages="0,当前属性,1,下一级属性" selected="1"/>
+  <displayList>
+    <image id="n0_ebe4" name="n0" src="ebe41e" fileName="Images/14.png" xy="0,0"/>
+    <text id="n1_ebe4" name="name" xy="13,7" size="44,29" fontSize="20" color="#f5ebd1" text="生命"/>
+    <text id="n2_ebe4" name="value" xy="178,7" size="27,29" fontSize="20" color="#37ff00" text="+1">
+      <gearColor controller="type" pages="1" values="#37ff00,#000000" default="#f5ebd1,#000000"/>
+    </text>
+  </displayList>
+</component>

@@ -35,6 +35,9 @@
     <component id="mkp51c" name="btn_equipCollect_active.xml" path="/Components/"/>
     <image id="ebe41d" name="13.png" path="/Images/" exported="true"/>
     <image id="ebe41e" name="14.png" path="/Images/" exported="true"/>
+    <component id="ebe41f" name="equipCollectAttr.xml" path="/Components/"/>
+    <image id="ebe41g" name="15.png" path="/Images/" exported="true"/>
+    <component id="ebe41h" name="equpColloectAttrShow.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750">
   <controller name="page" pages="0,武器,1,防具,2,首饰" selected="0"/>
+  <controller name="showAttr" pages="0,隐藏,1,显示" selected="1"/>
   <displayList>
     <graph id="n0_jccz" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
@@ -36,5 +37,9 @@
       <relation target="n1_jccz" sidePair="center-center,middle-middle"/>
       <item/>
     </list>
+    <component id="n13_ebe4" name="showAttr" src="ebe41f" fileName="Components/equipCollectAttr.xml" xy="361,74">
+      <gearDisplay controller="showAttr" pages="1"/>
+      <relation target="n1_jccz" sidePair="center-center,middle-middle"/>
+    </component>
   </displayList>
 </component>
