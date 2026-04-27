@@ -264,6 +264,11 @@ function Guild.abortTask(actor)
         sendmsg(actor, 9, "还未接取任务！！！")
         return
     end
+    if curTaskData['state'] == 2 then
+        sendmsg(actor, 9, "任务已完成，无需放弃！！！")
+        return
+    end
+
     sethumvar(actor, VarCfg.U_REWARD_FINISH, curTimes + 1)
     sethumvar(actor, VarCfg.U_REWARD_INDEX, 0)
     sethumvar(actor, VarCfg.U_REWARD_STATE, 0)

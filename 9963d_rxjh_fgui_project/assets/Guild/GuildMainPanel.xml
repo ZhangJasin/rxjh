@@ -160,7 +160,7 @@
     <group id="n169_whi9" name="n169" xy="158,34" size="1334,782" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <component id="n113_ghle" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78">
+    <component id="n113_ghle" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1138,62">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <list id="n94_dkvz" name="list_page_switch" xy="1161,116" size="52,379" layout="flow_vt" overflow="scroll" scrollBarFlags="128" lineGap="2" defaultItem="ui://tsu6gfnozah94" selectionController="page_main">

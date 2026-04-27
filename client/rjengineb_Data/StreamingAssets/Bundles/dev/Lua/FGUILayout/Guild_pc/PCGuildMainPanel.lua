@@ -573,7 +573,7 @@ function PCGuildMainPanel:OnBtnSubClicked()
 	end
 		
 	-- 根据任务类型筛选背包物品
-	local targetType = curTaskCfg.task_type or 0
+	local targetType = curTaskCfg.task_targettype or 0
 	local targetParam = curTaskCfg.task_target_param
 	local filterItems = self:FilterBagItemsByTaskType(targetType,targetParam)
 	self._filterItems = filterItems
@@ -856,7 +856,7 @@ function PCGuildMainPanel:OnUpdateGXUI()
 			FGUI:GButton_setTitle(self._ui.btn_comp,"放弃任务")
 			FGUI:setVisible(self._ui.rCount, false)
 
-			local targetType = Task_cfg[self._taskId] and Task_cfg[self._taskId]['task_type'] or 0
+			local targetType = Task_cfg[self._taskId] and Task_cfg[self._taskId]['task_targettype'] or 0
 			FGUI:setVisible(self._ui.btn_sub, targetType == 9 or targetType == 10)
 		end
 

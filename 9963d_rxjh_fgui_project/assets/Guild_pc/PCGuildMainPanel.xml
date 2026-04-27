@@ -171,7 +171,7 @@
     <group id="n173_ohcw" name="n173" xy="-55,109" size="1334,750" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <component id="n113_ghle" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186" size="31,31">
+    <component id="n113_ghle" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="836,185" size="31,31">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
   </displayList>
