@@ -15,7 +15,27 @@ local config = require("Envir/QuestDiary/game_config/cfgcsv/equipCollect.lua")
 local attrConfig = require("Envir/QuestDiary/game_config/cfgcsv/equipCollectAttr.lua")
 
 local function costMaterials(actor, id)
-    --TODO:激活材料处理
+    local jobId = job(actor)
+    local GOODEVILID = targetinfo(actor, "GOODEVILID")
+
+    local conf = nil
+    for _, info in ipairs(config) do
+        if id == info.idx then
+            if jobId == info.job and GOODEVILID == info.sect then
+                conf = info
+            end
+        end
+    end
+    if not conf then
+        sendmsg(actor, 9, "激活失败！")
+        return
+    end
+    local haveCount = bagitemcount(actor, id)
+    if haveCount < 1 then
+        sendmsg(actor, 9, "道具不足！")
+        return
+    end
+    delItemNum(actor, id, 1)
     return true
 end
 

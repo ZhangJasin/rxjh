@@ -87,6 +87,7 @@ function equipCollect:Destroy()
         self._dataSub = nil
     end
     self._ui = nil
+    self._categoryData = nil
 end
 
 function equipCollect:subscribeEvents()
