@@ -213,6 +213,10 @@ function PCMiniMapPanel:InitEvent()
 	FGUI:GButton_setOnChangedCallback(self._ui.tog_boss, handler(self, self.OnSwitchBossFilter))
 	FGUI:GButton_setOnChangedCallback(self._ui.tog_monster, handler(self, self.OnSwitchMonsterFilter))
 	FGUI:GButton_setOnChangedCallback(self._ui.tog_link, handler(self, self.OnSwitchLinkFilter))
+	
+	-- 初始化时固定过滤checkbox的缩放
+	self:FixFilterCheckboxScale()
+	
 	if  global.isEditor or (global.isWindows and global.isDebugBuild) then
 		FGUI:setOnClickEvent(self._ui.btn_debug,function()
 			FGUI:Open(self._packageName, "PCMiniMapDebugPanel", nil, FGUI_LAYER.NOTICE, {classPath = "FGUILayout/MiniMap_pc/PCMiniMapDebugPanel"})
@@ -294,6 +298,8 @@ function PCMiniMapPanel:OnChangeLight()
 	end
 	FGUI:GLoader_setUrl(self._map_loader, "")
 	FGUI:GLoader_setUrl(self._map_loader, SL:GetValue("MINIMAP_FILE", self._mapId), self.handler_OnLoadMapFileSuccess)
+	-- 地图重新加载后也需要修复checkbox缩放
+	self:FixFilterCheckboxScale()
 end
 
 function PCMiniMapPanel:OnLoadMapFileSuccess()
@@ -315,6 +321,9 @@ function PCMiniMapPanel:OnLoadMapFileSuccess()
 	end
 	FGUI:setSize(self._map_loader, self._mapSizeW, self._mapSizeH)
 
+	-- 重置过滤checkbox的缩放，使其不跟随地图缩放
+	self:FixFilterCheckboxScale()
+
     local mapCameraSize		= SL:GetValue("MINIMAP_CAMERA_SIZE", self._mapId)
     self._mapParamX			= self._mapSizeW / self._mapSizeH * mapCameraSize
     self._mapParamY			= mapCameraSize
@@ -328,6 +337,25 @@ function PCMiniMapPanel:OnLoadMapFileSuccess()
 	self:UpdateFindPath()
 	self:InitActorPoints()
 	self._tracePoint:SetMapID(self._mapId)
+end
+
+-- 修复过滤checkbox的缩放问题
+function PCMiniMapPanel:FixFilterCheckboxScale()
+	-- checkbox比例过大的问题：需要调整checkbox的大小以适应地图容器
+	-- 根据mapComponent的大小动态调整checkbox尺寸
+	local baseWidth = self._uiSizeW or 800
+	local checkboxWidth = math.max(60, baseWidth * 0.08)  -- 占容器宽度的8%
+	local checkboxHeight = 24  -- 固定高度
+	
+	if self._ui.tog_boss then
+		FGUI:setSize(self._ui.tog_boss, checkboxWidth, checkboxHeight)
+	end
+	if self._ui.tog_monster then
+		FGUI:setSize(self._ui.tog_monster, checkboxWidth, checkboxHeight)
+	end
+	if self._ui.tog_link then
+		FGUI:setSize(self._ui.tog_link, checkboxWidth, checkboxHeight)
+	end
 end
 
 function PCMiniMapPanel:OnMapChange()
