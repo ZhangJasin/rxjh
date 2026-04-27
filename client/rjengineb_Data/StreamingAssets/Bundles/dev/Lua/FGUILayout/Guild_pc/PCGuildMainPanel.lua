@@ -503,7 +503,7 @@ end
 
 -- 刷新按钮点击处理
 function PCGuildMainPanel:OnBtnRefreshClicked()
-    if self._taskState == 0 then
+    if self._pickState == 0 then
         -- 未接取任务，点击刷新任务
         local maxRefreshCount = tonumber(SysConstant['Num_DailyRefresh_RewardTask']["Value"]) or 3
         local curRefreshCount = self._refreshCount or 0
@@ -527,23 +527,27 @@ function PCGuildMainPanel:OnBtnRefreshClicked()
         end
     else
         -- 已接取任务，点击快速完成
-        SL:OpenCommonDialog({
-            title = '提示',
-            str = '是否使用1个悬赏令直接完成当前任务并获得奖励？',
-            btnDesc = {"取消", "确定"},
-            callback = function(tag)
-                if tag == 2 then
-                    -- 确定快速完成
-					ssrMessage:sendmsgEx("Guild", "compTask", {1})
-                end
-            end
-        })
+		if self._taskState == 2 then
+			ssrMessage:sendmsgEx("Guild", "compTask", {0})
+		else
+			SL:OpenCommonDialog({
+				title = '提示',
+				str = '是否使用1个悬赏令直接完成当前任务并获得奖励？',
+				btnDesc = {"取消", "确定"},
+				callback = function(tag)
+					if tag == 2 then
+						-- 确定快速完成
+						ssrMessage:sendmsgEx("Guild", "compTask", {1})
+					end
+				end
+			})			
+		end        
     end
 end
 
 -- 确认按钮点击处理
 function PCGuildMainPanel:OnBtnCompClicked()
-    if self._taskState == 0 then
+    if self._pickState == 0 then
         -- 未接取任务，点击接取任务
         ssrMessage:sendmsgEx("Guild", "pickTask")
     else
@@ -836,20 +840,19 @@ function PCGuildMainPanel:OnUpdateGXUI()
 
 	self._taskAwards = self:FilterRewardsByJob(Task_cfg[self._taskId] and Task_cfg[self._taskId]['task_drop'])
 	FGUI:GList_setNumItems(self._ui.awardList, #self._taskAwards)
-
 	if remainTaskCount > 0  then
 		-- 刷新免费刷新次数显示
 		if self._ui.rCount then
 			FGUI:GTextField_setText(self._ui.rCount, string.format("免费刷新次数(%s/%s)", self._refreshCount or 0, maxRefreshCount))
 		end
-		if self._taskState == 0 then --未接取
+		if self._pickState == 0 then --未接取
 			FGUI:GButton_setTitle(self._ui.btn_refresh,"刷新")
 			FGUI:GButton_setTitle(self._ui.btn_comp,"接取任务")
 			FGUI:setVisible(self._ui.rCount, true)
 
 			FGUI:setVisible(self._ui.btn_sub, false)
 		else
-			FGUI:GButton_setTitle(self._ui.btn_refresh,"快速完成")
+			FGUI:GButton_setTitle(self._ui.btn_refresh,self._taskState == 2 and "领取奖励" or "快速完成")
 			FGUI:GButton_setTitle(self._ui.btn_comp,"放弃任务")
 			FGUI:setVisible(self._ui.rCount, false)
 
@@ -933,8 +936,9 @@ function PCGuildMainPanel:RefreshGXUI(_,gxCount,taskCount,freeCount,data)
 		
 		if dataObj then
 			self._taskId = dataObj.taskid
-			self._taskState = dataObj.state
+			self._pickState = dataObj.pick
 			self._curJinDu = dataObj.jindu
+			self._taskState = dataObj.state
 		end
 	end
 	self:OnUpdateGXUI()

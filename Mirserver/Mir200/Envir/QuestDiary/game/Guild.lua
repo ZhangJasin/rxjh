@@ -23,19 +23,19 @@ local function _getCurTaskJinDu(actor,taskId)
     local taskDataList = Task.getCurTask(actor)
     local curTaskData = taskDataList[""..taskId] 
     if curTaskData then
-        return curTaskData['count'] or 0
+        return curTaskData['count'] or 0,curTaskData['state'] or 0
     end
-    return 0
+    return 0,0
 end
 function Guild.getData(actor)
     local gxCount = gethumvar(actor, VarCfg.U_Donate_Num) or 0
     local taskCount = gethumvar(actor, VarCfg.U_REWARD_FINISH) or 0
     local freeCount = gethumvar(actor, VarCfg.U_REWARD_REFUSH) or 0
     local taskId = gethumvar(actor, VarCfg.U_REWARD_INDEX) or 0
-    local taskState= gethumvar(actor, VarCfg.U_REWARD_STATE) or 0
-    local curJindu = _getCurTaskJinDu(actor,taskId)
+    local pickState= gethumvar(actor, VarCfg.U_REWARD_STATE) or 0
+    local curJindu,taskState = _getCurTaskJinDu(actor,taskId)
 
-    Message.sendmsg(actor, ssrNetMsgCfg.Guild_RetData,  gxCount,taskCount,freeCount,{taskid=taskId,state=taskState,jindu=curJindu })
+    Message.sendmsg(actor, ssrNetMsgCfg.Guild_RetData,  gxCount,taskCount,freeCount,{taskid=taskId,pick=pickState,jindu=curJindu,state=taskState})
 end
 
 
@@ -271,7 +271,7 @@ function Guild.abortTask(actor)
     taskData[""..curTaskId] = nil
     newdeletetask(actor, curTaskId)
     sethumvar(actor,VarCfg.T_TaskProgress_data,tbl2json(taskData))  
-    Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = curTaskId}) 
+    Message.sendmsgEx(actor, "MainMission","UpdataTask",{param1 = taskData}) 
     
     _onRefreshTask(actor)
     Guild.getData(actor)

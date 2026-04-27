@@ -153,11 +153,11 @@
     </component>
     <richtext id="n236_gpy8" name="rCount" xy="576,551" size="10,20" group="n243_gpy8" fontSize="13" color="#372a08" text=""/>
     <text id="n237_gpy8" name="taskCount" xy="626,282" size="10,19" group="n243_gpy8" fontSize="12" color="#372a08" text=""/>
-    <text id="n238_gpy8" name="taskStar" xy="578,309" size="69,20" group="n243_gpy8" fontSize="13" color="#372a08" text="任务星级："/>
-    <list id="n239_gpy8" name="starList" xy="644,306" size="184,24" group="n243_gpy8" layout="row" overflow="scroll" defaultItem="ui://0xwve836gpy849"/>
-    <text id="n240_gpy8" name="taskNeed" xy="578,339" size="69,20" group="n243_gpy8" fontSize="13" color="#372a08" text="任务要求："/>
+    <text id="n238_gpy8" name="taskStar" xy="572,309" size="69,20" group="n243_gpy8" fontSize="13" color="#372a08" text="任务星级："/>
+    <list id="n239_gpy8" name="starList" xy="638,306" size="191,24" group="n243_gpy8" layout="row" overflow="scroll" defaultItem="ui://0xwve836gpy849"/>
+    <text id="n240_gpy8" name="taskNeed" xy="572,339" size="69,20" group="n243_gpy8" fontSize="13" color="#372a08" text="任务要求："/>
     <component id="n247_gpy8" name="btn_sub" src="gpy84h" fileName="Components/btn_green.xml" xy="638,377" size="118,31" group="n243_gpy8"/>
-    <richtext id="n249_gpy8" name="taskCon" xy="648,339" size="177,20" group="n243_gpy8" fontSize="13" color="#372a08" autoSize="none" text=""/>
+    <richtext id="n249_gpy8" name="taskCon" xy="638,339" size="189,20" group="n243_gpy8" fontSize="13" color="#372a08" autoSize="height" text=""/>
     <component id="n250_gpy8" name="btn_tips" src="gpy84i" fileName="Components/btn_wenhao.xml" xy="804,209" group="n243_gpy8"/>
     <component id="n251_gpy8" name="panl_tip" src="gpy84j" fileName="Components/tips.xml" xy="412,202" group="n243_gpy8">
       <gearDisplay controller="tips" pages="1"/>
