@@ -13,8 +13,7 @@ local _data = {
 
 --初始化数据
 function equipCollectData:Init()
-    --TODO:处理角色数据串
-    --_data.activeList = {}
+    _data.activeList = {}
 
     local vars = { 37, 38, 39 }
     for _, id in ipairs(vars) do

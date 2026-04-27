@@ -20,11 +20,21 @@ local configType = {
 }
 
 local function getCategoryData(config)
+    local job = SL:GetValue("JOB")
+    local GOODEVILID = SL:GetValue("GOODEVILID")
+    --print("job=", job)
+    --print("GOODEVILID=", GOODEVILID)
     if not categoryCache then
         categoryCache = {}
         for _, v in ipairs(config) do
-            categoryCache[v.type] = categoryCache[v.type] or {}
-            categoryCache[v.type][v.sort] = v
+            if job == v.job and GOODEVILID == v.sect then
+                categoryCache[v.type] = categoryCache[v.type] or {}
+                categoryCache[v.type][v.sort] = v
+            end
+            if v.type == configType.JEWELRY_1 or v.type == configType.JEWELRY_2 or v.type == configType.JEWELRY_3 then
+                categoryCache[v.type] = categoryCache[v.type] or {}
+                categoryCache[v.type][v.sort] = v
+            end
         end
     end
     return categoryCache
@@ -35,8 +45,6 @@ function equipCollect:Create()
     local isPC = SL:GetValue("IS_PC_OPER_MODE")
     local screenW = SL:GetValue("SCREEN_WIDTH")
     local screenH = SL:GetValue("SCREEN_HEIGHT")
-    local job = SL:GetValue("JOB")
-    local GOODEVILID = SL:GetValue("GOODEVILID")
 
     --初始化UI组件
     self._ui = FGUI:ui_delegate(self.component)

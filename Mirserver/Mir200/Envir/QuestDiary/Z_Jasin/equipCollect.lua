@@ -29,7 +29,7 @@ local function getItemVar(id)
 end
 
 local function getTotalValue(actor)
-    local valLst = { 37, 38, 39 }
+    local valLst = { VarCfg.T_EquipCollect_1, VarCfg.T_EquipCollect_2, VarCfg.T_EquipCollect_3 }
     local val = 0
     for _, var in ipairs(valLst) do
         local t = json2tbl(gethumvar(actor, var)) or {}
@@ -50,14 +50,21 @@ local function getValueAttr(actor)
     local value = getTotalValue(actor)
     if value <= 0 then return nil end
     local bestConf = nil
-    for _, conf in ipairs(attrConfig) do
-        if value >= conf.scores then
-            bestConf = conf.attr
+    local _sortedScores = {}
+    --序列化属性配表
+    for score, _ in pairs(attrConfig) do
+        table.insert(_sortedScores, score)
+    end
+    table.sort(_sortedScores)
+
+    for _, conf in ipairs(_sortedScores) do
+        if value >= conf then
+            bestConf = conf
         else
             break
         end
     end
-    return bestConf or nil
+    return attrConfig[bestConf].attr or nil
 end
 
 local function setValueAttr(actor)
@@ -71,7 +78,8 @@ local function setValueAttr(actor)
             attrValue = math.floor(attrValue / 100)
         end
         if attrId and attrValue then
-            print("attrId=", attrId, "attrValue=", attrValue)
+            setscriptabilvalue(actor, attrId, "+", attrValue)
+            recalcabilitys(actor)
             changeabil(actor, attrId, "+", attrValue)
         end
     end
@@ -80,21 +88,18 @@ end
 function equipCollect.ReqActive(actor, id)
     local idStr = tostring(id)
     local idNum = tonumber(id)
-    print("服务端ReqActive=", id)
     local var = getItemVar(idNum)
-    print("var=", var)
     if var then
         local t = json2tbl(gethumvar(actor, var)) or {}
-        dump(t)
         if t[idStr] then
             sendmsg(actor, 9, "已激活！")
             return
         end
         if costMaterials(actor, idNum) then
-            print("激活")
             t[idStr] = true
             sendmsg(actor, 9, "激活成功！")
             sethumvar(actor, var, tbl2json(t))
+            dump(t)
             Message.sendmsgEx(actor, "equipCollect", "RetActive", {
                 id = idStr, result = true
             })
@@ -104,7 +109,7 @@ function equipCollect.ReqActive(actor, id)
 end
 
 GameEvent.add(EventCfg.onLoginEnd, function(actor)
-
+    setValueAttr(actor)
 end, equipCollect)
 
 GameEvent.add(EventCfg.onNewHuman, function(actor)
