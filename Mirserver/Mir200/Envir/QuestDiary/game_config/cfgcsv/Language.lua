@@ -11481,843 +11481,843 @@ local config = {
 	},
 	["TargetDec_Task_510144"] = { 
 		idx="TargetDec_Task_510144",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510145"] = { 
 		idx="TargetDec_Task_510145",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510146"] = { 
 		idx="TargetDec_Task_510146",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510147"] = { 
 		idx="TargetDec_Task_510147",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510148"] = { 
 		idx="TargetDec_Task_510148",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510149"] = { 
 		idx="TargetDec_Task_510149",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510150"] = { 
 		idx="TargetDec_Task_510150",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510151"] = { 
 		idx="TargetDec_Task_510151",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510152"] = { 
 		idx="TargetDec_Task_510152",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510153"] = { 
 		idx="TargetDec_Task_510153",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510154"] = { 
 		idx="TargetDec_Task_510154",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510155"] = { 
 		idx="TargetDec_Task_510155",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510156"] = { 
 		idx="TargetDec_Task_510156",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510157"] = { 
 		idx="TargetDec_Task_510157",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510158"] = { 
 		idx="TargetDec_Task_510158",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510249"] = { 
 		idx="TargetDec_Task_510249",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510250"] = { 
 		idx="TargetDec_Task_510250",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510251"] = { 
 		idx="TargetDec_Task_510251",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510252"] = { 
 		idx="TargetDec_Task_510252",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510253"] = { 
 		idx="TargetDec_Task_510253",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510254"] = { 
 		idx="TargetDec_Task_510254",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510255"] = { 
 		idx="TargetDec_Task_510255",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510256"] = { 
 		idx="TargetDec_Task_510256",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510257"] = { 
 		idx="TargetDec_Task_510257",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510258"] = { 
 		idx="TargetDec_Task_510258",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510259"] = { 
 		idx="TargetDec_Task_510259",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510260"] = { 
 		idx="TargetDec_Task_510260",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510261"] = { 
 		idx="TargetDec_Task_510261",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510262"] = { 
 		idx="TargetDec_Task_510262",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510263"] = { 
 		idx="TargetDec_Task_510263",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510349"] = { 
 		idx="TargetDec_Task_510349",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510350"] = { 
 		idx="TargetDec_Task_510350",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510351"] = { 
 		idx="TargetDec_Task_510351",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510352"] = { 
 		idx="TargetDec_Task_510352",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510353"] = { 
 		idx="TargetDec_Task_510353",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510354"] = { 
 		idx="TargetDec_Task_510354",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510355"] = { 
 		idx="TargetDec_Task_510355",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510356"] = { 
 		idx="TargetDec_Task_510356",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510357"] = { 
 		idx="TargetDec_Task_510357",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510358"] = { 
 		idx="TargetDec_Task_510358",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510359"] = { 
 		idx="TargetDec_Task_510359",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510360"] = { 
 		idx="TargetDec_Task_510360",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510361"] = { 
 		idx="TargetDec_Task_510361",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510362"] = { 
 		idx="TargetDec_Task_510362",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510363"] = { 
 		idx="TargetDec_Task_510363",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510449"] = { 
 		idx="TargetDec_Task_510449",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510450"] = { 
 		idx="TargetDec_Task_510450",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510451"] = { 
 		idx="TargetDec_Task_510451",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510452"] = { 
 		idx="TargetDec_Task_510452",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510453"] = { 
 		idx="TargetDec_Task_510453",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510454"] = { 
 		idx="TargetDec_Task_510454",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510455"] = { 
 		idx="TargetDec_Task_510455",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510456"] = { 
 		idx="TargetDec_Task_510456",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510457"] = { 
 		idx="TargetDec_Task_510457",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510458"] = { 
 		idx="TargetDec_Task_510458",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510459"] = { 
 		idx="TargetDec_Task_510459",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510460"] = { 
 		idx="TargetDec_Task_510460",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510461"] = { 
 		idx="TargetDec_Task_510461",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510462"] = { 
 		idx="TargetDec_Task_510462",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510463"] = { 
 		idx="TargetDec_Task_510463",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510551"] = { 
 		idx="TargetDec_Task_510551",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510552"] = { 
 		idx="TargetDec_Task_510552",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510553"] = { 
 		idx="TargetDec_Task_510553",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510554"] = { 
 		idx="TargetDec_Task_510554",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510555"] = { 
 		idx="TargetDec_Task_510555",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510556"] = { 
 		idx="TargetDec_Task_510556",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510557"] = { 
 		idx="TargetDec_Task_510557",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510558"] = { 
 		idx="TargetDec_Task_510558",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510559"] = { 
 		idx="TargetDec_Task_510559",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510560"] = { 
 		idx="TargetDec_Task_510560",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510561"] = { 
 		idx="TargetDec_Task_510561",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510562"] = { 
 		idx="TargetDec_Task_510562",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510563"] = { 
 		idx="TargetDec_Task_510563",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510564"] = { 
 		idx="TargetDec_Task_510564",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510565"] = { 
 		idx="TargetDec_Task_510565",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510651"] = { 
 		idx="TargetDec_Task_510651",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510652"] = { 
 		idx="TargetDec_Task_510652",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510653"] = { 
 		idx="TargetDec_Task_510653",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510654"] = { 
 		idx="TargetDec_Task_510654",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510655"] = { 
 		idx="TargetDec_Task_510655",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510656"] = { 
 		idx="TargetDec_Task_510656",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510657"] = { 
 		idx="TargetDec_Task_510657",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510658"] = { 
 		idx="TargetDec_Task_510658",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510659"] = { 
 		idx="TargetDec_Task_510659",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510660"] = { 
 		idx="TargetDec_Task_510660",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510661"] = { 
 		idx="TargetDec_Task_510661",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510662"] = { 
 		idx="TargetDec_Task_510662",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510663"] = { 
 		idx="TargetDec_Task_510663",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510664"] = { 
 		idx="TargetDec_Task_510664",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510665"] = { 
 		idx="TargetDec_Task_510665",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510751"] = { 
 		idx="TargetDec_Task_510751",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510752"] = { 
 		idx="TargetDec_Task_510752",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510753"] = { 
 		idx="TargetDec_Task_510753",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510754"] = { 
 		idx="TargetDec_Task_510754",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510755"] = { 
 		idx="TargetDec_Task_510755",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510756"] = { 
 		idx="TargetDec_Task_510756",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510757"] = { 
 		idx="TargetDec_Task_510757",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510758"] = { 
 		idx="TargetDec_Task_510758",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510759"] = { 
 		idx="TargetDec_Task_510759",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510760"] = { 
 		idx="TargetDec_Task_510760",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510761"] = { 
 		idx="TargetDec_Task_510761",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510762"] = { 
 		idx="TargetDec_Task_510762",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_510763"] = { 
 		idx="TargetDec_Task_510763",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_510764"] = { 
 		idx="TargetDec_Task_510764",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_510765"] = { 
 		idx="TargetDec_Task_510765",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520144"] = { 
 		idx="TargetDec_Task_520144",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520145"] = { 
 		idx="TargetDec_Task_520145",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520146"] = { 
 		idx="TargetDec_Task_520146",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520147"] = { 
 		idx="TargetDec_Task_520147",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520148"] = { 
 		idx="TargetDec_Task_520148",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520149"] = { 
 		idx="TargetDec_Task_520149",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520150"] = { 
 		idx="TargetDec_Task_520150",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520151"] = { 
 		idx="TargetDec_Task_520151",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520152"] = { 
 		idx="TargetDec_Task_520152",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520153"] = { 
 		idx="TargetDec_Task_520153",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520154"] = { 
 		idx="TargetDec_Task_520154",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520155"] = { 
 		idx="TargetDec_Task_520155",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520156"] = { 
 		idx="TargetDec_Task_520156",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520157"] = { 
 		idx="TargetDec_Task_520157",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520158"] = { 
 		idx="TargetDec_Task_520158",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520249"] = { 
 		idx="TargetDec_Task_520249",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520250"] = { 
 		idx="TargetDec_Task_520250",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520251"] = { 
 		idx="TargetDec_Task_520251",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520252"] = { 
 		idx="TargetDec_Task_520252",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520253"] = { 
 		idx="TargetDec_Task_520253",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520254"] = { 
 		idx="TargetDec_Task_520254",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520255"] = { 
 		idx="TargetDec_Task_520255",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520256"] = { 
 		idx="TargetDec_Task_520256",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520257"] = { 
 		idx="TargetDec_Task_520257",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520258"] = { 
 		idx="TargetDec_Task_520258",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520259"] = { 
 		idx="TargetDec_Task_520259",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520260"] = { 
 		idx="TargetDec_Task_520260",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520261"] = { 
 		idx="TargetDec_Task_520261",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520262"] = { 
 		idx="TargetDec_Task_520262",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520263"] = { 
 		idx="TargetDec_Task_520263",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520349"] = { 
 		idx="TargetDec_Task_520349",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520350"] = { 
 		idx="TargetDec_Task_520350",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520351"] = { 
 		idx="TargetDec_Task_520351",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520352"] = { 
 		idx="TargetDec_Task_520352",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520353"] = { 
 		idx="TargetDec_Task_520353",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520354"] = { 
 		idx="TargetDec_Task_520354",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520355"] = { 
 		idx="TargetDec_Task_520355",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520356"] = { 
 		idx="TargetDec_Task_520356",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520357"] = { 
 		idx="TargetDec_Task_520357",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520358"] = { 
 		idx="TargetDec_Task_520358",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520359"] = { 
 		idx="TargetDec_Task_520359",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520360"] = { 
 		idx="TargetDec_Task_520360",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520361"] = { 
 		idx="TargetDec_Task_520361",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520362"] = { 
 		idx="TargetDec_Task_520362",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520363"] = { 
 		idx="TargetDec_Task_520363",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520449"] = { 
 		idx="TargetDec_Task_520449",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520450"] = { 
 		idx="TargetDec_Task_520450",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520451"] = { 
 		idx="TargetDec_Task_520451",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520452"] = { 
 		idx="TargetDec_Task_520452",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520453"] = { 
 		idx="TargetDec_Task_520453",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520454"] = { 
 		idx="TargetDec_Task_520454",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520455"] = { 
 		idx="TargetDec_Task_520455",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520456"] = { 
 		idx="TargetDec_Task_520456",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520457"] = { 
 		idx="TargetDec_Task_520457",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520458"] = { 
 		idx="TargetDec_Task_520458",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520459"] = { 
 		idx="TargetDec_Task_520459",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520460"] = { 
 		idx="TargetDec_Task_520460",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520461"] = { 
 		idx="TargetDec_Task_520461",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520462"] = { 
 		idx="TargetDec_Task_520462",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520463"] = { 
 		idx="TargetDec_Task_520463",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520551"] = { 
 		idx="TargetDec_Task_520551",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520552"] = { 
 		idx="TargetDec_Task_520552",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520553"] = { 
 		idx="TargetDec_Task_520553",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520554"] = { 
 		idx="TargetDec_Task_520554",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520555"] = { 
 		idx="TargetDec_Task_520555",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520556"] = { 
 		idx="TargetDec_Task_520556",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520557"] = { 
 		idx="TargetDec_Task_520557",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520558"] = { 
 		idx="TargetDec_Task_520558",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520559"] = { 
 		idx="TargetDec_Task_520559",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520560"] = { 
 		idx="TargetDec_Task_520560",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520561"] = { 
 		idx="TargetDec_Task_520561",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520562"] = { 
 		idx="TargetDec_Task_520562",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520563"] = { 
 		idx="TargetDec_Task_520563",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520564"] = { 
 		idx="TargetDec_Task_520564",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520565"] = { 
 		idx="TargetDec_Task_520565",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520651"] = { 
 		idx="TargetDec_Task_520651",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520652"] = { 
 		idx="TargetDec_Task_520652",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520653"] = { 
 		idx="TargetDec_Task_520653",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520654"] = { 
 		idx="TargetDec_Task_520654",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520655"] = { 
 		idx="TargetDec_Task_520655",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520656"] = { 
 		idx="TargetDec_Task_520656",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520657"] = { 
 		idx="TargetDec_Task_520657",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520658"] = { 
 		idx="TargetDec_Task_520658",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520659"] = { 
 		idx="TargetDec_Task_520659",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520660"] = { 
 		idx="TargetDec_Task_520660",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520661"] = { 
 		idx="TargetDec_Task_520661",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520662"] = { 
 		idx="TargetDec_Task_520662",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520663"] = { 
 		idx="TargetDec_Task_520663",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520664"] = { 
 		idx="TargetDec_Task_520664",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520665"] = { 
 		idx="TargetDec_Task_520665",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520751"] = { 
 		idx="TargetDec_Task_520751",
-		Dec="提交璀璨耀石（0/1）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520752"] = { 
 		idx="TargetDec_Task_520752",
-		Dec="提交项链细绳（0/1）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520753"] = { 
 		idx="TargetDec_Task_520753",
-		Dec="提交尖细耳针（0/1）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520754"] = { 
 		idx="TargetDec_Task_520754",
-		Dec="提交璀璨耀石（0/2）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520755"] = { 
 		idx="TargetDec_Task_520755",
-		Dec="提交项链细绳（0/2）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520756"] = { 
 		idx="TargetDec_Task_520756",
-		Dec="提交尖细耳针（0/2）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520757"] = { 
 		idx="TargetDec_Task_520757",
-		Dec="提交璀璨耀石（0/3）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520758"] = { 
 		idx="TargetDec_Task_520758",
-		Dec="提交项链细绳（0/3）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520759"] = { 
 		idx="TargetDec_Task_520759",
-		Dec="提交尖细耳针（0/3）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520760"] = { 
 		idx="TargetDec_Task_520760",
-		Dec="提交璀璨耀石（0/4）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520761"] = { 
 		idx="TargetDec_Task_520761",
-		Dec="提交项链细绳（0/4）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520762"] = { 
 		idx="TargetDec_Task_520762",
-		Dec="提交尖细耳针（0/4）",
+		Dec="提交尖细耳针 ",
 	},
 	["TargetDec_Task_520763"] = { 
 		idx="TargetDec_Task_520763",
-		Dec="提交璀璨耀石（0/5）",
+		Dec="提交璀璨耀石 ",
 	},
 	["TargetDec_Task_520764"] = { 
 		idx="TargetDec_Task_520764",
-		Dec="提交项链细绳（0/5）",
+		Dec="提交项链细绳 ",
 	},
 	["TargetDec_Task_520765"] = { 
 		idx="TargetDec_Task_520765",
-		Dec="提交尖细耳针（0/5）",
+		Dec="提交尖细耳针 ",
 	},
 }
 return config
