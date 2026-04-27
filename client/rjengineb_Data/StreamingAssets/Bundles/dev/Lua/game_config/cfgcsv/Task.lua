@@ -15353,7 +15353,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 10000,
 			},
 			[3] = {
@@ -15384,7 +15384,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 10000,
 			},
 			[3] = {
@@ -15415,7 +15415,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 10000,
 			},
 			[3] = {
@@ -15446,7 +15446,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 10000,
 			},
 			[3] = {
@@ -15477,7 +15477,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 10000,
 			},
 			[3] = {
@@ -15508,7 +15508,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 10000,
 			},
 			[3] = {
@@ -15524,6 +15524,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510107",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -15541,7 +15542,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 10000,
 			},
 			[3] = {
@@ -15568,7 +15569,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 10000,
 			},
 			[3] = {
@@ -15599,7 +15600,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 10000,
 			},
 			[3] = {
@@ -15630,7 +15631,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 12000,
 			},
 			[3] = {
@@ -15661,7 +15662,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 12000,
 			},
 			[3] = {
@@ -15692,7 +15693,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 12000,
 			},
 			[3] = {
@@ -15723,7 +15724,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 12000,
 			},
 			[3] = {
@@ -15754,7 +15755,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 12000,
 			},
 			[3] = {
@@ -15785,7 +15786,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 12000,
 			},
 			[3] = {
@@ -15816,7 +15817,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 12000,
 			},
 			[3] = {
@@ -15843,7 +15844,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 12000,
 			},
 			[3] = {
@@ -15859,6 +15860,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510118",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -15876,7 +15878,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 12000,
 			},
 			[3] = {
@@ -15907,7 +15909,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 12000,
 			},
 			[3] = {
@@ -15938,7 +15940,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 14000,
 			},
 			[3] = {
@@ -15969,7 +15971,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 14000,
 			},
 			[3] = {
@@ -16000,7 +16002,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 14000,
 			},
 			[3] = {
@@ -16031,7 +16033,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 14000,
 			},
 			[3] = {
@@ -16062,7 +16064,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 14000,
 			},
 			[3] = {
@@ -16093,7 +16095,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 14000,
 			},
 			[3] = {
@@ -16124,7 +16126,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 14000,
 			},
 			[3] = {
@@ -16140,6 +16142,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510127",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -16157,7 +16160,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 14000,
 			},
 			[3] = {
@@ -16173,6 +16176,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510128",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 35,
@@ -16190,7 +16194,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 14000,
 			},
 			[3] = {
@@ -16217,7 +16221,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 14000,
 			},
 			[3] = {
@@ -16248,7 +16252,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 14000,
 			},
 			[3] = {
@@ -16274,7 +16278,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 16000,
 			},
 			[3] = {
@@ -16305,7 +16309,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 16000,
 			},
 			[3] = {
@@ -16336,7 +16340,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 16000,
 			},
 			[3] = {
@@ -16352,6 +16356,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510134",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -16369,7 +16374,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 16000,
 			},
 			[3] = {
@@ -16385,6 +16390,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510135",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 30,
@@ -16402,7 +16408,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 16000,
 			},
 			[3] = {
@@ -16429,7 +16435,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 16000,
 			},
 			[3] = {
@@ -16460,7 +16466,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 16000,
 			},
 			[3] = {
@@ -16491,7 +16497,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 18000,
 			},
 			[3] = {
@@ -16522,7 +16528,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 18000,
 			},
 			[3] = {
@@ -16538,6 +16544,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510140",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 30,
@@ -16555,7 +16562,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 18000,
 			},
 			[3] = {
@@ -16571,6 +16578,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510141",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -16588,7 +16596,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 18000,
 			},
 			[3] = {
@@ -16615,7 +16623,7 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
-				[2] = 1,
+				[2] = 3,
 				[3] = 18000,
 			},
 			[3] = {
@@ -16646,7 +16654,412 @@ local config = {
 			},
 			[2] = {
 				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
 				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510144] = { 
+		idx=510144,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510145] = { 
+		idx=510145,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510146] = { 
+		idx=510146,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510147] = { 
+		idx=510147,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510148] = { 
+		idx=510148,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510149] = { 
+		idx=510149,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510150] = { 
+		idx=510150,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510151] = { 
+		idx=510151,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510152] = { 
+		idx=510152,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510153] = { 
+		idx=510153,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510154] = { 
+		idx=510154,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510155] = { 
+		idx=510155,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510156] = { 
+		idx=510156,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510157] = { 
+		idx=510157,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510158] = { 
+		idx=510158,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
 				[3] = 18000,
 			},
 			[3] = {
@@ -16848,6 +17261,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510207",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -17210,6 +17624,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510219",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -17518,6 +17933,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510229",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -17551,6 +17967,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510230",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 45,
@@ -17752,6 +18169,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510237",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -17785,6 +18203,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510238",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 40,
@@ -17965,6 +18384,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510244",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 40,
@@ -17998,6 +18418,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510245",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -18102,6 +18523,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 26000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510249] = { 
+		idx=510249,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510250] = { 
+		idx=510250,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510251] = { 
+		idx=510251,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510252] = { 
+		idx=510252,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510253] = { 
+		idx=510253,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510254] = { 
+		idx=510254,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510255] = { 
+		idx=510255,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510256] = { 
+		idx=510256,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510257] = { 
+		idx=510257,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510258] = { 
+		idx=510258,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510259] = { 
+		idx=510259,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510260] = { 
+		idx=510260,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510261] = { 
+		idx=510261,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510262] = { 
+		idx=510262,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510263] = { 
+		idx=510263,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
 			},
 			[3] = {
 				[1] = 9,
@@ -18333,6 +19159,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510308",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -18641,6 +19468,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510318",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -18949,6 +19777,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510328",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -18982,6 +19811,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510329",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 60,
@@ -19151,6 +19981,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510335",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -19184,6 +20015,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510336",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 40,
@@ -19274,6 +20106,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510339",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -19308,6 +20141,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510340",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -19404,6 +20238,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510343",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 50,
@@ -19437,6 +20272,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510344",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -19528,6 +20364,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510347",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -19562,6 +20399,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510348",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -19587,6 +20425,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 10000,
+			},
+		},
+	},
+	[510349] = { 
+		idx=510349,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510350] = { 
+		idx=510350,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510351] = { 
+		idx=510351,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510352] = { 
+		idx=510352,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510353] = { 
+		idx=510353,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510354] = { 
+		idx=510354,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510355] = { 
+		idx=510355,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510356] = { 
+		idx=510356,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510357] = { 
+		idx=510357,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510358] = { 
+		idx=510358,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510359] = { 
+		idx=510359,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510360] = { 
+		idx=510360,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510361] = { 
+		idx=510361,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510362] = { 
+		idx=510362,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510363] = { 
+		idx=510363,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
 			},
 		},
 	},
@@ -19813,6 +21056,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510408",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -20121,6 +21365,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510418",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -20429,6 +21674,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510428",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -20462,6 +21708,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510429",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 70,
@@ -20637,6 +21884,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510435",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 70,
@@ -20670,6 +21918,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510436",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 60,
@@ -20761,6 +22010,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510439",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -20795,6 +22045,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510440",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -20891,6 +22142,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510443",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 60,
@@ -20924,6 +22176,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510444",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -21015,6 +22268,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510447",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -21049,6 +22303,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510448",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -21074,6 +22329,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 10000,
+			},
+		},
+	},
+	[510449] = { 
+		idx=510449,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510450] = { 
+		idx=510450,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510451] = { 
+		idx=510451,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510452] = { 
+		idx=510452,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510453] = { 
+		idx=510453,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510454] = { 
+		idx=510454,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510455] = { 
+		idx=510455,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510456] = { 
+		idx=510456,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510457] = { 
+		idx=510457,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510458] = { 
+		idx=510458,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510459] = { 
+		idx=510459,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510460] = { 
+		idx=510460,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510461] = { 
+		idx=510461,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510462] = { 
+		idx=510462,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510463] = { 
+		idx=510463,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
 			},
 		},
 	},
@@ -21300,6 +22960,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510508",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 80,
@@ -21609,6 +23270,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510518",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -21917,6 +23579,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510528",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -21950,6 +23613,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510529",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 80,
@@ -22151,6 +23815,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510536",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -22184,6 +23849,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510537",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 70,
@@ -22275,6 +23941,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510540",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -22309,6 +23976,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510541",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -22436,6 +24104,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510545",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 60,
@@ -22469,6 +24138,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510546",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -22560,6 +24230,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510549",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -22594,6 +24265,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510550",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -22619,6 +24291,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 10000,
+			},
+		},
+	},
+	[510551] = { 
+		idx=510551,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510552] = { 
+		idx=510552,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510553] = { 
+		idx=510553,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510554] = { 
+		idx=510554,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510555] = { 
+		idx=510555,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510556] = { 
+		idx=510556,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510557] = { 
+		idx=510557,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510558] = { 
+		idx=510558,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510559] = { 
+		idx=510559,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510560] = { 
+		idx=510560,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510561] = { 
+		idx=510561,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510562] = { 
+		idx=510562,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510563] = { 
+		idx=510563,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510564] = { 
+		idx=510564,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510565] = { 
+		idx=510565,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
 			},
 		},
 	},
@@ -22845,6 +24922,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510608",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -23158,6 +25236,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510618",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -23466,6 +25545,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510628",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -23499,6 +25579,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510629",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 90,
@@ -23694,6 +25775,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510636",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -23727,6 +25809,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510637",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 80,
@@ -23818,6 +25901,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510640",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -23852,6 +25936,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510641",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -23979,6 +26064,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510645",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -24012,6 +26098,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510646",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 80,
@@ -24103,6 +26190,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510649",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -24137,6 +26225,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510650",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -24162,6 +26251,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 10000,
+			},
+		},
+	},
+	[510651] = { 
+		idx=510651,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510652] = { 
+		idx=510652,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510653] = { 
+		idx=510653,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510654] = { 
+		idx=510654,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510655] = { 
+		idx=510655,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510656] = { 
+		idx=510656,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510657] = { 
+		idx=510657,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510658] = { 
+		idx=510658,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510659] = { 
+		idx=510659,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510660] = { 
+		idx=510660,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510661] = { 
+		idx=510661,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510662] = { 
+		idx=510662,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510663] = { 
+		idx=510663,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510664] = { 
+		idx=510664,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510665] = { 
+		idx=510665,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
 			},
 		},
 	},
@@ -24388,6 +26882,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510708",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -24696,6 +27191,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510718",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -25004,6 +27500,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510728",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -25037,6 +27534,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510729",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 100,
@@ -25237,6 +27735,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510736",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 100,
@@ -25270,6 +27769,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510737",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 80,
@@ -25361,6 +27861,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510740",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 100,
@@ -25395,6 +27896,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510741",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 100,
@@ -25522,6 +28024,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510745",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 100,
@@ -25555,6 +28058,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510746",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 100,
@@ -25646,6 +28150,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510749",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 100,
@@ -25680,6 +28185,7 @@ local config = {
 		task_targetdec="TargetDec_Task_510750",
 		task_type=6,
 		task_goodevilid=1,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 100,
@@ -25705,6 +28211,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 10000,
+			},
+		},
+	},
+	[510751] = { 
+		idx=510751,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510752] = { 
+		idx=510752,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510753] = { 
+		idx=510753,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510754] = { 
+		idx=510754,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510755] = { 
+		idx=510755,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510756] = { 
+		idx=510756,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510757] = { 
+		idx=510757,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510758] = { 
+		idx=510758,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510759] = { 
+		idx=510759,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510760] = { 
+		idx=510760,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510761] = { 
+		idx=510761,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510762] = { 
+		idx=510762,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510763] = { 
+		idx=510763,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510764] = { 
+		idx=510764,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[510765] = { 
+		idx=510765,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
 			},
 		},
 	},
@@ -25900,6 +28811,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520107",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -26235,6 +29147,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520118",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -26516,6 +29429,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520127",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -26549,6 +29463,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520128",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 35,
@@ -26728,6 +29643,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520134",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -26761,6 +29677,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520135",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 30,
@@ -26914,6 +29831,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520140",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 30,
@@ -26947,6 +29865,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520141",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -27029,6 +29948,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 10000,
+			},
+		},
+	},
+	[520144] = { 
+		idx=520144,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520145] = { 
+		idx=520145,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520146] = { 
+		idx=520146,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520147] = { 
+		idx=520147,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520148] = { 
+		idx=520148,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520149] = { 
+		idx=520149,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520150] = { 
+		idx=520150,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520151] = { 
+		idx=520151,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520152] = { 
+		idx=520152,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520153] = { 
+		idx=520153,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520154] = { 
+		idx=520154,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520155] = { 
+		idx=520155,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520156] = { 
+		idx=520156,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520157] = { 
+		idx=520157,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520158] = { 
+		idx=520158,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
 			},
 		},
 	},
@@ -27224,6 +30548,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520207",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -27586,6 +30911,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520219",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -27894,6 +31220,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520229",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -27927,6 +31254,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520230",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 45,
@@ -28128,6 +31456,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520237",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -28161,6 +31490,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520238",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 40,
@@ -28341,6 +31671,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520244",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 40,
@@ -28374,6 +31705,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520245",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -28483,6 +31815,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 10000,
+			},
+		},
+	},
+	[520249] = { 
+		idx=520249,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520250] = { 
+		idx=520250,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520251] = { 
+		idx=520251,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520252] = { 
+		idx=520252,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520253] = { 
+		idx=520253,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520254] = { 
+		idx=520254,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520255] = { 
+		idx=520255,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520256] = { 
+		idx=520256,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520257] = { 
+		idx=520257,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520258] = { 
+		idx=520258,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520259] = { 
+		idx=520259,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520260] = { 
+		idx=520260,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520261] = { 
+		idx=520261,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520262] = { 
+		idx=520262,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520263] = { 
+		idx=520263,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
 			},
 		},
 	},
@@ -28709,6 +32446,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520308",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -29017,6 +32755,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520318",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -29325,6 +33064,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520328",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -29358,6 +33098,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520329",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 60,
@@ -29527,6 +33268,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520335",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -29560,6 +33302,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520336",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 40,
@@ -29651,6 +33394,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520339",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -29685,6 +33429,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520340",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -29781,6 +33526,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520343",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 50,
@@ -29814,6 +33560,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520344",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -29905,6 +33652,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520347",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -29939,6 +33687,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520348",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 35,
@@ -29964,6 +33713,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 10000,
+			},
+		},
+	},
+	[520349] = { 
+		idx=520349,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520350] = { 
+		idx=520350,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520351] = { 
+		idx=520351,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520352] = { 
+		idx=520352,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520353] = { 
+		idx=520353,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520354] = { 
+		idx=520354,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520355] = { 
+		idx=520355,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520356] = { 
+		idx=520356,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520357] = { 
+		idx=520357,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520358] = { 
+		idx=520358,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520359] = { 
+		idx=520359,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520360] = { 
+		idx=520360,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520361] = { 
+		idx=520361,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520362] = { 
+		idx=520362,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520363] = { 
+		idx=520363,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
 			},
 		},
 	},
@@ -30190,6 +34344,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520408",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -30498,6 +34653,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520418",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -30806,6 +34962,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520428",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -30839,6 +34996,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520429",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 70,
@@ -31014,6 +35172,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520435",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 70,
@@ -31047,6 +35206,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520436",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 60,
@@ -31138,6 +35298,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520439",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -31172,6 +35333,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520440",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -31268,6 +35430,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520443",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 60,
@@ -31301,6 +35464,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520444",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -31392,6 +35556,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520447",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -31426,6 +35591,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520448",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -31451,6 +35617,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 10000,
+			},
+		},
+	},
+	[520449] = { 
+		idx=520449,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520450] = { 
+		idx=520450,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520451] = { 
+		idx=520451,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520452] = { 
+		idx=520452,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520453] = { 
+		idx=520453,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520454] = { 
+		idx=520454,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520455] = { 
+		idx=520455,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520456] = { 
+		idx=520456,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520457] = { 
+		idx=520457,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520458] = { 
+		idx=520458,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520459] = { 
+		idx=520459,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520460] = { 
+		idx=520460,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520461] = { 
+		idx=520461,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520462] = { 
+		idx=520462,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520463] = { 
+		idx=520463,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
 			},
 		},
 	},
@@ -31677,6 +36248,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520508",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -31985,6 +36557,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520518",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -32293,6 +36866,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520528",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -32326,6 +36900,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520529",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 80,
@@ -32521,6 +37096,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520536",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -32554,6 +37130,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520537",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 70,
@@ -32645,6 +37222,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520540",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -32679,6 +37257,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520541",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -32806,6 +37385,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520545",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 60,
@@ -32839,6 +37419,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520546",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -32930,6 +37511,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520549",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -32964,6 +37546,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520550",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 60,
@@ -32989,6 +37572,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 10000,
+			},
+		},
+	},
+	[520551] = { 
+		idx=520551,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520552] = { 
+		idx=520552,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520553] = { 
+		idx=520553,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520554] = { 
+		idx=520554,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520555] = { 
+		idx=520555,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520556] = { 
+		idx=520556,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520557] = { 
+		idx=520557,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520558] = { 
+		idx=520558,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520559] = { 
+		idx=520559,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520560] = { 
+		idx=520560,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520561] = { 
+		idx=520561,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520562] = { 
+		idx=520562,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520563] = { 
+		idx=520563,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520564] = { 
+		idx=520564,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520565] = { 
+		idx=520565,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
 			},
 		},
 	},
@@ -33215,6 +38203,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520608",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -33523,6 +38512,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520618",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -33831,6 +38821,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520628",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -33864,6 +38855,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520629",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 90,
@@ -34058,6 +39050,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520636",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -34091,6 +39084,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520637",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 80,
@@ -34182,6 +39176,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520640",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -34216,6 +39211,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520641",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -34343,6 +39339,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520645",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 80,
@@ -34376,6 +39373,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520646",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -34467,6 +39465,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520649",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -34501,6 +39500,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520650",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 80,
@@ -34526,6 +39526,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 10000,
+			},
+		},
+	},
+	[520651] = { 
+		idx=520651,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520652] = { 
+		idx=520652,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520653] = { 
+		idx=520653,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520654] = { 
+		idx=520654,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520655] = { 
+		idx=520655,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520656] = { 
+		idx=520656,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520657] = { 
+		idx=520657,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520658] = { 
+		idx=520658,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520659] = { 
+		idx=520659,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520660] = { 
+		idx=520660,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520661] = { 
+		idx=520661,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520662] = { 
+		idx=520662,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520663] = { 
+		idx=520663,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520664] = { 
+		idx=520664,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520665] = { 
+		idx=520665,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
 			},
 		},
 	},
@@ -34752,6 +40157,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520708",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -35060,6 +40466,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520718",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -35368,6 +40775,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520728",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 0,
@@ -35401,6 +40809,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520729",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = -1,
 			[2] = 100,
@@ -35596,6 +41005,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520736",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 100,
@@ -35629,6 +41039,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520737",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 80,
@@ -35720,6 +41131,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520740",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 100,
@@ -35754,6 +41166,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520741",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 100,
@@ -35881,6 +41294,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520745",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 3,
 			[2] = 100,
@@ -35914,6 +41328,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520746",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 100,
@@ -36005,6 +41420,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520749",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 100,
@@ -36039,6 +41455,7 @@ local config = {
 		task_targetdec="TargetDec_Task_520750",
 		task_type=6,
 		task_goodevilid=2,
+		task_targettype=10,
 		task_target_param = {
 			[1] = 5,
 			[2] = 100,
@@ -36064,6 +41481,411 @@ local config = {
 				[1] = 9,
 				[2] = 1,
 				[3] = 10000,
+			},
+		},
+	},
+	[520751] = { 
+		idx=520751,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520752] = { 
+		idx=520752,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520753] = { 
+		idx=520753,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=1,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520754] = { 
+		idx=520754,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520755] = { 
+		idx=520755,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520756] = { 
+		idx=520756,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=2,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520757] = { 
+		idx=520757,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520758] = { 
+		idx=520758,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520759] = { 
+		idx=520759,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=3,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520760] = { 
+		idx=520760,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520761] = { 
+		idx=520761,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520762] = { 
+		idx=520762,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=4,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520763] = { 
+		idx=520763,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2398",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520764] = { 
+		idx=520764,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2399",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
+			},
+		},
+	},
+	[520765] = { 
+		idx=520765,
+		task_type=6,
+		task_goodevilid=1,
+		task_targettype=9,
+		task_target_param="2400",
+		task_progress=5,
+		task_turntype=2,
+		task_turn_param=17,
+		task_drop = {
+			[1] = {
+				[1] = 9,
+				[2] = 30,
+				[3] = 10,
+			},
+			[2] = {
+				[1] = 9,
+				[2] = 3,
+				[3] = 18000,
+			},
+			[3] = {
+				[1] = 9,
+				[2] = 1,
+				[3] = 18000,
 			},
 		},
 	},
