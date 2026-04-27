@@ -8173,7 +8173,7 @@ local config = {
 	},
 	["TargetDec_Task_510718"] = { 
 		idx="TargetDec_Task_510718",
-		Dec="提交10级及以下中品装备 ",
+		Dec="提交100级及以下中品装备 ",
 	},
 	["TargetDec_Task_510719"] = { 
 		idx="TargetDec_Task_510719",
@@ -11289,7 +11289,7 @@ local config = {
 	},
 	["TargetDec_Task_520718"] = { 
 		idx="TargetDec_Task_520718",
-		Dec="提交10级及以下中品装备",
+		Dec="提交100级及以下中品装备",
 	},
 	["TargetDec_Task_520719"] = { 
 		idx="TargetDec_Task_520719",
