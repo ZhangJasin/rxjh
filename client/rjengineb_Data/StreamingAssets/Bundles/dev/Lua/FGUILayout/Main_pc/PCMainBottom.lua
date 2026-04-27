@@ -27,6 +27,7 @@ function PCMainBottom:Create()
         ["TreasureShop_pc/PCTreasurePanel"] = self._ui.Btn_shop,
         ["Friend_pc/PCFriendPanel"] = self._ui.Btn_friend,
         ["Setting_pc/PCSettingPanel"] = self._ui.Btn_setting,
+        ["Z_Jasin/equipCollect"] = self._ui.Btn_zbtj,
     }
     local guildSelectFunc = function()
         local isOpen = FGUI:CheckOpen("Guild_pc", "PCGuildJoinList") or FGUI:CheckOpen("Guild_pc", "PCGuildMainPanel")
@@ -42,16 +43,17 @@ function PCMainBottom:Create()
     }
 
     local funcBtns = {
-        { btn = self._ui.Btn_action,  name = GET_STRING(40070002), key = nil },
-        { btn = self._ui.Btn_team,    name = GET_STRING(40070003), key = SettingKey.Type.TEAM },
-        { btn = self._ui.Btn_guild,   name = GET_STRING(40070006), key = SettingKey.Type.GUILD },
-        { btn = self._ui.Btn_status,  name = GET_STRING(40070007), key = nil },
-        { btn = self._ui.Btn_bag,     name = GET_STRING(40070008), key = SettingKey.Type.BAG },
-        { btn = self._ui.Btn_skill,   name = GET_STRING(40070009), key = nil },
-        { btn = self._ui.Btn_mail,    name = GET_STRING(40070010), key = SettingKey.Type.MAIL },
-        { btn = self._ui.Btn_shop,    name = GET_STRING(40070011), key = nil },
-        { btn = self._ui.Btn_friend,  name = GET_STRING(40070012), key = SettingKey.Type.FRIEND },
+        { btn = self._ui.Btn_action, name = GET_STRING(40070002), key = nil },
+        { btn = self._ui.Btn_team, name = GET_STRING(40070003), key = SettingKey.Type.TEAM },
+        { btn = self._ui.Btn_guild, name = GET_STRING(40070006), key = SettingKey.Type.GUILD },
+        { btn = self._ui.Btn_status, name = GET_STRING(40070007), key = nil },
+        { btn = self._ui.Btn_bag, name = GET_STRING(40070008), key = SettingKey.Type.BAG },
+        { btn = self._ui.Btn_skill, name = GET_STRING(40070009), key = nil },
+        { btn = self._ui.Btn_mail, name = GET_STRING(40070010), key = SettingKey.Type.MAIL },
+        { btn = self._ui.Btn_shop, name = GET_STRING(40070011), key = nil },
+        { btn = self._ui.Btn_friend, name = GET_STRING(40070012), key = SettingKey.Type.FRIEND },
         { btn = self._ui.Btn_setting, name = GET_STRING(40070013), key = nil },
+        { btn = self._ui.Btn_zbtj, name = "图鉴", key = nil },
     }
     for k, v in pairs(funcBtns) do
         v.index = k
@@ -76,6 +78,7 @@ function PCMainBottom:Create()
     FGUI:setOnClickEvent(self._ui.Btn_shop, handler(self, self.OnClickShop))
     FGUI:setOnClickEvent(self._ui.Btn_friend, handler(self, self.OnClickFriend))
     FGUI:setOnClickEvent(self._ui.Btn_setting, handler(self, self.OnClickSetting))
+    FGUI:setOnClickEvent(self._ui.Btn_zbtj, handler(self, self.OnClickZbtj))
 
     FGUI:UIModel_addFx(self._ui.Graph_autoFight, 1001010, true, nil, nil, Vector3(0.3, 0.3, 0.3))
     FGUI:UIModel_pause(self._ui.Graph_autoFight)
@@ -199,6 +202,15 @@ end
 
 function PCMainBottom:OnClickSetting()
     FGUIFunction:SwitchPanel("Setting_pc", "PCSettingPanel")
+end
+
+function PCMainBottom:OnClickZbtj()
+    if FGUI:CheckOpen("Z_Jasin", "equipCollect") then
+        FGUI:Close("Z_Jasin", "equipCollect")
+    else
+        FGUI:Open("Z_Jasin", "equipCollect", {}, FGUI_LAYER.NORMAL,
+            { destroyTime = 1, classPath = "FGUILayout/Z_Jasin/zbtj/equipCollect" })
+    end
 end
 
 function PCMainBottom:OnBtnFuncRollOver(data)

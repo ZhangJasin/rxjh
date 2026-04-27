@@ -5,6 +5,5 @@
     <component id="n9_knfx" name="btn_paimai" src="oqrp6" fileName="Components/righttop/btn_paimai.xml" xy="600,7"/>
     <component id="n11_lppm" name="btn_bill" src="oqrpa" fileName="Components/righttop/btn_bill.xml" xy="500,-2"/>
     <component id="n12_ff7i" name="btn_hddt" src="ff7i20" fileName="Components/righttop/btn_hddt.xml" xy="400,7"/>
-    <component id="n15_jccz" name="btn_zbtj" src="jccz23" fileName="Components/righttop/btn_zbtj.xml" xy="300,7"/>
   </displayList>
 </component>

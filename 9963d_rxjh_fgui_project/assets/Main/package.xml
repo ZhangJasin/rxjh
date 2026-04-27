@@ -319,6 +319,7 @@
     <image id="mg2nfvhc" name="pet_011.png" path="/Images/newmain/" exported="true"/>
     <image id="mg2nfvhd" name="pet_010.png" path="/Images/newmain/" exported="true"/>
     <image id="mg2nfvhe" name="pet_009.png" path="/Images/newmain/" exported="true"/>
+    <image id="ni9zfvhf" name="icon_zbtj.png" path="/Images/Func/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

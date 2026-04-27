@@ -46,32 +46,35 @@
     <group id="n29_wuex" name="Group_skill" xy="1044,425" size="290,296" advanced="true">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
-    <component id="n158_rqm5" name="Button_WuGong" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1686,501" size="64,70" group="n32_wuex">
+    <component id="n158_rqm5" name="Button_WuGong" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1686,501" group="n32_wuex">
       <Button icon="ui://zj419n3dwuexv74"/>
     </component>
-    <component id="n159_rqm5" name="Button_WuXun" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1686,578" size="64,70" group="n32_wuex">
+    <component id="n159_rqm5" name="Button_WuXun" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1686,578" group="n32_wuex">
       <Button icon="ui://zj419n3dwuexv75"/>
     </component>
-    <component id="n160_rqm5" name="Button_fashion" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1613,501" size="64,70" group="n32_wuex">
+    <component id="n160_rqm5" name="Button_fashion" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1613,501" group="n32_wuex">
       <Button icon="ui://zj419n3dwuexv6y"/>
     </component>
-    <component id="n162_rqm5" name="Button_guild" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1613,427" size="64,70" group="n32_wuex">
+    <component id="n162_rqm5" name="Button_guild" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1613,427" group="n32_wuex">
       <Button icon="ui://zj419n3dwuexv70"/>
     </component>
-    <component id="n165_rqm5" name="Button_role" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1686,426" size="64,70" group="n32_wuex">
+    <component id="n165_rqm5" name="Button_role" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1686,426" group="n32_wuex">
       <Button icon="ui://zj419n3dkxj1v3w"/>
     </component>
     <component id="n114_p70y" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="1343,744" size="139,0" group="n32_wuex"/>
-    <component id="n167_boje" name="Button_ZuoQi" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1613,579" size="64,70" group="n32_wuex">
+    <component id="n167_boje" name="Button_ZuoQi" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1613,579" group="n32_wuex">
       <Button icon="ui://zj419n3dwuexv72"/>
     </component>
-    <component id="n170_boje" name="Button_st" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1686,655" size="64,70" group="n32_wuex">
+    <component id="n170_boje" name="Button_st" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1686,655" group="n32_wuex">
       <Button icon="ui://zj419n3drkdefvha"/>
     </component>
-    <component id="n171_ok6e" name="Button_zz" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1613,655" size="64,70" group="n32_wuex">
+    <component id="n171_ok6e" name="Button_zz" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1613,655" group="n32_wuex">
       <Button icon="ui://zj419n3dwuexv77"/>
     </component>
-    <group id="n32_wuex" name="Group_func" xy="1343,426" size="407,318" visible="false" advanced="true">
+    <component id="n172_ok6e" name="Button_zbtj" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1540,426" group="n32_wuex">
+      <Button icon="ui://zj419n3dni9zfvhf"/>
+    </component>
+    <group id="n32_wuex" name="Group_func" xy="1343,426" size="460,318" visible="false" advanced="true">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
     <component id="n30_wuex" name="Button_change" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="1294,295" pivot="0.5,0.5" anchor="true" size="62,62">

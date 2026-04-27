@@ -19,6 +19,7 @@ function MainRightFunc:Create()
     FGUI:setOnClickEvent(self._ui.Button_st, handler(self, self.OnOpenShiTu))
     FGUI:setOnClickEvent(self._ui.Button_ZuoQi, handler(self, self.OnOpenZuoQI))
     FGUI:setOnClickEvent(self._ui.Button_zz, handler(self, self.OnOpenZhuanZhi))
+    FGUI:setOnClickEvent(self._ui.Button_zbtj, handler(self, self.OnClickZbtj))
 
     -- 初始化按钮配置（使用实际的按钮对象）
     self._buttonConfig = {
@@ -30,6 +31,7 @@ function MainRightFunc:Create()
         { btn = self._ui.Button_zz,      level = 10 },
         { btn = self._ui.Button_ZuoQi,   level = 20 },
         { btn = self._ui.Button_guild,   level = 25 },
+        { btn = self._ui.Button_zbtj,    level = 35 },
     }
 
     self:InitFuncBtnsShow()
@@ -156,6 +158,15 @@ function MainRightFunc:OnOpenZhuanZhi()
         return SL:ShowSystemTips("人物10级解锁转职")
     end
     FGUI:Open("Transfer", "TransferPanel", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
+end
+
+function MainRightFunc:OnClickZbtj()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 35 then
+        return SL:ShowSystemTips("人物35级解锁图鉴")
+    end
+    FGUI:Open("Z_Jasin", "equipCollect", {}, FGUI_LAYER.NORMAL,
+        { destroyTime = 1, classPath = "FGUILayout/Z_Jasin/zbtj/equipCollect" })
 end
 
 -----------------------------------注册事件--------------------------------------
