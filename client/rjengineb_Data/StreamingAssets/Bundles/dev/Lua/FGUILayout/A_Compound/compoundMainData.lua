@@ -1,76 +1,84 @@
 local compoundMainData = class("compoundMainData")
 
-local Compound = require("game_config/cfgcsv/Compound")
 local Message = SL:RequireFile("Net/Message")
 local FGUI = SL:RequireFile("FGUI/FGUI")
 
 -- 单例
 local instance = nil
 function compoundMainData:getInstance()
-    return self
+    if not instance then
+        instance = compoundMainData:new()
+    end
+    return instance
 end
 
 function compoundMainData:ctor()
     self._eventDispatcher = SL:RequireFile("Event/EventDispatcher"):new()
-    
+
     -- 数据结构
     self._group1List = {}       -- 一级分组列表
-    self._group2List = {}       -- 二级分组列表
+    self._group2Map = {}        -- 二级分组映射 (key: 一级分组, value: 二级分组列表)
+    self._group3Map = {}        -- 三级分组映射 (key: 一级.二级, value: 三级分组列表)
     self._currentGroup1 = ""    -- 当前选中的一级分组
     self._currentGroup2 = ""    -- 当前选中的二级分组
-    self._currentCompoundID = 0 -- 当前选中的合成ID
-    
+    self._currentGroup3 = ""    -- 当前选中的三级分组
+    self._currentContent = nil  -- 当前选中的内容
+
     self:_initGroupData()
 end
 
 -- 初始化分组数据
+-- 注意：这里需要根据实际的数据来源进行初始化
 function compoundMainData:_initGroupData()
-    local group1Set = {}
-    local group2Set = {}
-    
-    -- 收集所有一级分组和二级分组
-    for _, cfg in pairs(Compound) do
-        group1Set[cfg.Group1] = true
-        if not group2Set[cfg.Group1] then
-            group2Set[cfg.Group1] = {}
-        end
-        group2Set[cfg.Group1][cfg.Group2] = true
-    end
-    
-    -- 转换为列表
-    for g1, _ in pairs(group1Set) do
-        table.insert(self._group1List, g1)
-    end
-    
-    table.sort(self._group1List)
-    
-    -- 为每个一级分组排序二级分组
-    for g1, g2Table in pairs(group2Set) do
-        local g2List = {}
-        for g2, _ in pairs(g2Table) do
-            table.insert(g2List, g2)
-        end
-        table.sort(g2List)
-        group2Set[g1] = g2List
-    end
-    
-    self._group2Map = group2Set
-    
-    -- 默认选中第一个
+    -- 示例数据结构，需要根据实际情况修改
+    -- 数据结构示例:
+    -- self._group1List = {"分组1", "分组2", "分组3"}
+    -- self._group2Map = {
+    --     ["分组1"] = {"子分组1-1", "子分组1-2"},
+    --     ["分组2"] = {"子分组2-1", "子分组2-2"},
+    -- }
+    -- self._group3Map = {
+    --     ["分组1.子分组1-1"] = {"项目1-1-1", "项目1-1-2"},
+    --     ["分组1.子分组1-2"] = {"项目1-2-1", "项目1-2-2"},
+    -- }
+
+    -- 默认选中第一个一级分组
     if #self._group1List > 0 then
         self._currentGroup1 = self._group1List[1]
-        if #self._group2Map[self._currentGroup1] > 0 then
-            self._currentGroup2 = self._group2Map[self._currentGroup1][1]
-            self:_updateCurrentCompoundID()
+        local g2List = self:GetGroup2List(self._currentGroup1)
+        if #g2List > 0 then
+            self._currentGroup2 = g2List[1]
+            local g3List = self:GetGroup3List(self._currentGroup1, self._currentGroup2)
+            if #g3List > 0 then
+                self._currentGroup3 = g3List[1]
+                self:_updateCurrentContent()
+            end
         end
     end
 end
 
--- 更新当前合成ID
-function compoundMainData:_updateCurrentCompoundID()
-    for id, cfg in pairs(Compound) do
-        if cfg.Group1 == self._currentGroup1 and cfg.Group2 == self._currentGroup2 then
-            self._currentCompoundID = id
+-- 设置分组数据（外部调用此方法设置数据）
+-- @param group1List 一级分组列表
+-- @param group2Map 二级分组映射表
+-- @param group3Map 三级分组映射表
+function compoundMainData:SetGroupData(group1List, group2Map, group3Map)
+    self._group1List = group1List or {}
+    self._group2Map = group2Map or {}
+    self._group3Map = group3Map or {}
+    self:_initGroupData()
+end
+
+-- 更新当前内容
+function compoundMainData:_updateCurrentContent()
+    local group3List = self:GetGroup3List(self._currentGroup1, self._currentGroup2)
+    for _, g3 in ipairs(group3List) do
+        if g3 == self._currentGroup3 then
+            self._currentContent = {
+                group1 = self._currentGroup1,
+                group2 = self._currentGroup2,
+                group3 = self._currentGroup3,
+                name = self._currentGroup3,
+            }
             break
         end
     end
@@ -82,8 +90,17 @@ function compoundMainData:GetGroup1List()
 end
 
 -- 获取二级分组列表
+-- @param group1 一级分组名称
 function compoundMainData:GetGroup2List(group1)
     return self._group2Map[group1] or {}
+end
+
+-- 获取三级分组列表
+-- @param group1 一级分组名称
+-- @param group2 二级分组名称
+function compoundMainData:GetGroup3List(group1, group2)
+    local key = group1 .. "." .. group2
+    return self._group3Map[key] or {}
 end
 
 -- 选择一级分组
@@ -92,76 +109,43 @@ function compoundMainData:SelectGroup1(group1)
     local g2List = self:GetGroup2List(group1)
     if #g2List > 0 then
         self._currentGroup2 = g2List[1]
+        local g3List = self:GetGroup3List(group1, self._currentGroup2)
+        if #g3List > 0 then
+            self._currentGroup3 = g3List[1]
+        else
+            self._currentGroup3 = ""
+        end
+    else
+        self._currentGroup2 = ""
+        self._currentGroup3 = ""
     end
-    self:_updateCurrentCompoundID()
+    self:_updateCurrentContent()
     self:DispatchEvent("compound_group1_changed", {group1 = group1})
 end
 
 -- 选择二级分组
 function compoundMainData:SelectGroup2(group2)
     self._currentGroup2 = group2
-    self:_updateCurrentCompoundID()
+    local g3List = self:GetGroup3List(self._currentGroup1, group2)
+    if #g3List > 0 then
+        self._currentGroup3 = g3List[1]
+    else
+        self._currentGroup3 = ""
+    end
+    self:_updateCurrentContent()
     self:DispatchEvent("compound_group2_changed", {group2 = group2})
 end
 
--- 获取当前合成配置
-function compoundMainData:GetCurrentCompoundConfig()
-    if self._currentCompoundID > 0 then
-        return Compound[self._currentCompoundID]
-    end
-    return nil
+-- 选择三级分组
+function compoundMainData:SelectGroup3(group3)
+    self._currentGroup3 = group3
+    self:_updateCurrentContent()
+    self:DispatchEvent("compound_group3_changed", {group3 = group3})
 end
 
--- 获取当前选中ID
-function compoundMainData:GetCurrentCompoundID()
-    return self._currentCompoundID
-end
-
--- 获取消耗材料列表
-function compoundMainData:GetCostItems(config)
-    local items = {}
-    if config.CostItem1 and config.CostItem1 > 0 then
-        table.insert(items, {
-            itemID = config.CostItem1,
-            count = config.CostItemCount1,
-        })
-    end
-    if config.CostItem2 and config.CostItem2 > 0 then
-        table.insert(items, {
-            itemID = config.CostItem2,
-            count = config.CostItemCount2,
-        })
-    end
-    if config.CostItem3 and config.CostItem3 > 0 then
-        table.insert(items, {
-            itemID = config.CostItem3,
-            count = config.CostItemCount3,
-        })
-    end
-    return items
-end
-
--- 获取货币消耗
-function compoundMainData:GetCurrencyCost(config)
-    return {
-        type = config.CostCurrencyType,
-        count = config.CostCurrencyCount,
-    }
-end
-
--- 请求合成
-function compoundMainData:RequestCompound(compoundID)
-    if not compoundID or compoundID <= 0 then
-        return
-    end
-    
-    local config = Compound[compoundID]
-    if not config then
-        return
-    end
-    
-    -- 使用武勋相同的网络请求方式
-    ssrMessage:sendmsgEx("compound", "CompoundRequest", {compoundID = compoundID})
+-- 获取当前内容
+function compoundMainData:GetCurrentContent()
+    return self._currentContent
 end
 
 -- 事件系统

@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750">
   <displayList>
-    <component id="n2_fno5" name="n2" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="176,54" group="n22_iwm9"/>
-    <component id="n3_fno5" name="n3" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1147,80" group="n22_iwm9"/>
-    <image id="n20_iwm9" name="n20" src="iwm9i" fileName="Images/bg.png" xy="185,110" group="n22_iwm9"/>
-    <group id="n22_iwm9" name="n22" xy="176,54" size="1000,650"/>
-    <list id="n4_fno5" name="n4" xy="194,123" size="149,529" group="n23_iwm9" overflow="scroll" lineGap="2" defaultItem="ui://7nc36bbufno51">
+    <component id="n2_fno5" name="n2" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="176,52" group="n22_iwm9"/>
+    <component id="n3_fno5" name="n3" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1147,78" group="n22_iwm9"/>
+    <group id="n22_iwm9" name="n22" xy="176,52" size="1000,650"/>
+    <image id="n26_rus1" name="n26" src="rus1u" fileName="Images/hcbj2.png" xy="186,106"/>
+    <list id="n37_rus1" name="group_2" xy="355,125" size="128,557" overflow="scroll" defaultItem="ui://7nc36bburus111" autoClearItems="true">
+      <item/>
+      <item/>
       <item/>
       <item/>
     </list>
-    <list id="n6_fno5" name="n6" xy="354,125" size="131,526" group="n23_iwm9" overflow="scroll" margin="2,0,1,0" lineGap="3" defaultItem="ui://7nc36bbufno52">
+    <image id="n40_rus1" name="n40" src="rus1j" fileName="Images/ybbj.png" xy="502,116"/>
+    <image id="n41_rus1" name="n41" src="rus1v" fileName="Images/hchd.png" xy="739,388"/>
+    <image id="n42_rus1" name="n42" src="rus1s" fileName="Images/clxh.png" xy="739,163"/>
+    <image id="n43_rus1" name="n43" src="rus1o" fileName="Images/02.png" xy="582,428"/>
+    <image id="n44_rus1" name="n44" src="rus1n" fileName="Images/01.png" xy="582,202"/>
+    <list id="n45_rus1" name="group_1" xy="190,122" size="158,560" overflow="scroll" defaultItem="ui://7nc36bburus1z" autoClearItems="true">
       <item/>
       <item/>
     </list>
-    <group id="n23_iwm9" name="n23" xy="194,123" size="291,529"/>
-    <image id="n16_9q4z" name="n16" src="i3hbc" fileName="Images/right_bg.png" xy="500,117" size="662,570" group="n24_iwm9"/>
-    <image id="n14_fno5" name="n14" src="i3hb9" fileName="Images/clxh.png" xy="753,141" size="179,35" group="n24_iwm9"/>
-    <image id="n15_fno5" name="n15" src="i3hbb" fileName="Images/hchd.png" xy="753,374" size="179,35" group="n24_iwm9"/>
-    <image id="n19_9q4z" name="n19" src="9q4zg" fileName="Images/bg2.png" xy="621,432" size="461,125" group="n24_iwm9"/>
-    <image id="n18_9q4z" name="n18" src="9q4zf" fileName="Images/bg1.png" xy="621,195" size="461,125" group="n24_iwm9"/>
-    <list id="n9_fno5" name="n9" xy="661,216" size="366,85" group="n24_iwm9" layout="row" overflow="scroll" colGap="23" defaultItem="ui://st7dgeqqdssq1a" align="center" vAlign="middle"/>
-    <group id="n24_iwm9" name="n24" xy="500,117" size="662,570"/>
   </displayList>
 </component>

@@ -2,17 +2,25 @@
 <packageDescription id="7nc36bbu">
   <resources>
     <component id="fno50" name="compoundMain.xml" path="/" exported="true"/>
-    <component id="fno51" name="group_first.xml" path="/Components/"/>
-    <component id="fno52" name="group_second.xml" path="/Components/"/>
-    <component id="fno54" name="Items.xml" path="/Components/"/>
-    <image id="i3hb9" name="clxh.png" path="/Images/"/>
-    <image id="i3hba" name="fgx.png" path="/Images/"/>
-    <image id="i3hbb" name="hchd.png" path="/Images/"/>
-    <image id="i3hbc" name="right_bg.png" path="/Images/"/>
-    <image id="9q4zf" name="bg1.png" path="/Images/"/>
-    <image id="9q4zg" name="bg2.png" path="/Images/"/>
-    <component id="9q4zh" name="btn_third.xml" path="/Components/"/>
-    <image id="iwm9i" name="bg.png" path="/Images/"/>
+    <image id="rus1j" name="ybbj.png" path="/Images/" exported="true"/>
+    <image id="rus1k" name="yjann.png" path="/Images/" exported="true"/>
+    <image id="rus1l" name="yjannh.png" path="/Images/" exported="true"/>
+    <image id="rus1n" name="01.png" path="/Images/" exported="true"/>
+    <image id="rus1o" name="02.png" path="/Images/" exported="true"/>
+    <image id="rus1p" name="2002.png" path="/Images/" exported="true"/>
+    <image id="rus1q" name="annhs.png" path="/Images/" exported="true"/>
+    <image id="rus1r" name="cj-ejann.png" path="/Images/" exported="true"/>
+    <image id="rus1s" name="clxh.png" path="/Images/" exported="true"/>
+    <image id="rus1t" name="fgx.png" path="/Images/" exported="true"/>
+    <image id="rus1u" name="hcbj2.png" path="/Images/" exported="true"/>
+    <image id="rus1v" name="hchd.png" path="/Images/" exported="true"/>
+    <image id="rus1w" name="jtx.png" path="/Images/" exported="true"/>
+    <image id="rus1x" name="jtz.png" path="/Images/" exported="true"/>
+    <image id="rus1y" name="合成标注.png" path="/Images/"/>
+    <component id="rus1z" name="btn_hc1.xml" path="/Components/" exported="true"/>
+    <component id="rus111" name="btn_hc2.xml" path="/Components/" exported="true"/>
+    <component id="rus113" name="btn_hc3.xml" path="/Components/" exported="true"/>
+    <image id="rus114" name="hcann3.png" path="/Images/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

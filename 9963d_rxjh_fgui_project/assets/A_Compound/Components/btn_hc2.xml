@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="126,47" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_rus1" name="n0" src="rus1r" fileName="Images/cj-ejann.png" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_rus1" name="n1" xy="38,8" size="44,29" fontSize="20" color="#f2eb37" align="center" vAlign="middle" strokeColor="#362f12" text="残卷"/>
+    <image id="n2_rus1" name="n2" src="rus1w" fileName="Images/jtx.png" xy="17,19">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <image id="n3_rus1" name="n3" src="rus1x" fileName="Images/jtz.png" xy="16,12">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
+  </displayList>
+  <Button/>
+</component>
