@@ -205,6 +205,10 @@ function PCMainBottom:OnClickSetting()
 end
 
 function PCMainBottom:OnClickZbtj()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 35 then
+        return SL:ShowSystemTips("人物35级解锁图鉴")
+    end
     if FGUI:CheckOpen("Z_Jasin", "equipCollect") then
         FGUI:Close("Z_Jasin", "equipCollect")
     else
