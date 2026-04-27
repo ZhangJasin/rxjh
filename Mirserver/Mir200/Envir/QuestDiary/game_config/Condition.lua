@@ -248,6 +248,42 @@ local config = {
 	[61020] = { 
 		Condition="<$JOB> == 1 & <$LEVEL> >= 150 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 9",
 	},
+	[61021] = { 
+		Condition="<$JOB> == 1 & <$LEVEL> >= 20 & <$TARGETINFO(GOODEVILID)> == 0 & <$RELEVEL> >= 0",
+	},
+	[61022] = { 
+		Condition="<$JOB> == 1 & <$LEVEL> >= 30 & <$TARGETINFO(GOODEVILID)> == 0 & <$RELEVEL> >= 1",
+	},
+	[61023] = { 
+		Condition="<$JOB> == 1 & <$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 2",
+	},
+	[61024] = { 
+		Condition="<$JOB> == 1 & <$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 2",
+	},
+	[61025] = { 
+		Condition="<$JOB> == 1 & <$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 3",
+	},
+	[61026] = { 
+		Condition="<$JOB> == 1 & <$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 4",
+	},
+	[61027] = { 
+		Condition="<$JOB> == 1 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 5",
+	},
+	[61028] = { 
+		Condition="<$JOB> == 1 & <$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 2",
+	},
+	[61029] = { 
+		Condition="<$JOB> == 1 & <$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 2",
+	},
+	[61030] = { 
+		Condition="<$JOB> == 1 & <$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 3",
+	},
+	[61031] = { 
+		Condition="<$JOB> == 1 & <$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 4",
+	},
+	[61032] = { 
+		Condition="<$JOB> == 1 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 5",
+	},
 	[62000] = { 
 		Condition="<$JOB> == 2",
 	},
@@ -310,6 +346,42 @@ local config = {
 	},
 	[62020] = { 
 		Condition="<$JOB> == 2 & <$LEVEL> >= 150 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 9",
+	},
+	[62021] = { 
+		Condition="<$JOB> == 2 & <$LEVEL> >= 20 & <$TARGETINFO(GOODEVILID)> == 0 & <$RELEVEL> >= 0",
+	},
+	[62022] = { 
+		Condition="<$JOB> == 2 & <$LEVEL> >= 30 & <$TARGETINFO(GOODEVILID)> == 0 & <$RELEVEL> >= 1",
+	},
+	[62023] = { 
+		Condition="<$JOB> == 2 & <$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 2",
+	},
+	[62024] = { 
+		Condition="<$JOB> == 2 & <$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 2",
+	},
+	[62025] = { 
+		Condition="<$JOB> == 2 & <$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 3",
+	},
+	[62026] = { 
+		Condition="<$JOB> == 2 & <$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 4",
+	},
+	[62027] = { 
+		Condition="<$JOB> == 2 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 5",
+	},
+	[62028] = { 
+		Condition="<$JOB> == 2 & <$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 2",
+	},
+	[62029] = { 
+		Condition="<$JOB> == 2 & <$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 2",
+	},
+	[62030] = { 
+		Condition="<$JOB> == 2 & <$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 3",
+	},
+	[62031] = { 
+		Condition="<$JOB> == 2 & <$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 4",
+	},
+	[62032] = { 
+		Condition="<$JOB> == 2 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 5",
 	},
 	[63000] = { 
 		Condition="<$JOB> == 3",
@@ -374,6 +446,42 @@ local config = {
 	[63020] = { 
 		Condition="<$JOB> == 3 & <$LEVEL> >= 150 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 9",
 	},
+	[63021] = { 
+		Condition="<$JOB> == 3 & <$LEVEL> >= 20 & <$TARGETINFO(GOODEVILID)> == 0 & <$RELEVEL> >= 0",
+	},
+	[63022] = { 
+		Condition="<$JOB> == 3 & <$LEVEL> >= 30 & <$TARGETINFO(GOODEVILID)> == 0 & <$RELEVEL> >= 1",
+	},
+	[63023] = { 
+		Condition="<$JOB> == 3 & <$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 2",
+	},
+	[63024] = { 
+		Condition="<$JOB> == 3 & <$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 2",
+	},
+	[63025] = { 
+		Condition="<$JOB> == 3 & <$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 3",
+	},
+	[63026] = { 
+		Condition="<$JOB> == 3 & <$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 4",
+	},
+	[63027] = { 
+		Condition="<$JOB> == 3 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 5",
+	},
+	[63028] = { 
+		Condition="<$JOB> == 3 & <$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 2",
+	},
+	[63029] = { 
+		Condition="<$JOB> == 3 & <$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 2",
+	},
+	[63030] = { 
+		Condition="<$JOB> == 3 & <$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 3",
+	},
+	[63031] = { 
+		Condition="<$JOB> == 3 & <$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 4",
+	},
+	[63032] = { 
+		Condition="<$JOB> == 3 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 5",
+	},
 	[64000] = { 
 		Condition="<$JOB> == 4",
 	},
@@ -436,6 +544,42 @@ local config = {
 	},
 	[64020] = { 
 		Condition="<$JOB> == 4 & <$LEVEL> >= 150 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 9",
+	},
+	[64021] = { 
+		Condition="<$JOB> == 4 & <$LEVEL> >= 20 & <$TARGETINFO(GOODEVILID)> == 0 & <$RELEVEL> >= 0",
+	},
+	[64022] = { 
+		Condition="<$JOB> == 4 & <$LEVEL> >= 30 & <$TARGETINFO(GOODEVILID)> == 0 & <$RELEVEL> >= 1",
+	},
+	[64023] = { 
+		Condition="<$JOB> == 4 & <$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 2",
+	},
+	[64024] = { 
+		Condition="<$JOB> == 4 & <$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 2",
+	},
+	[64025] = { 
+		Condition="<$JOB> == 4 & <$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 3",
+	},
+	[64026] = { 
+		Condition="<$JOB> == 4 & <$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 4",
+	},
+	[64027] = { 
+		Condition="<$JOB> == 4 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 5",
+	},
+	[64028] = { 
+		Condition="<$JOB> == 4 & <$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 2",
+	},
+	[64029] = { 
+		Condition="<$JOB> == 4 & <$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 2",
+	},
+	[64030] = { 
+		Condition="<$JOB> == 4 & <$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 3",
+	},
+	[64031] = { 
+		Condition="<$JOB> == 4 & <$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 4",
+	},
+	[64032] = { 
+		Condition="<$JOB> == 4 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 5",
 	},
 	[65000] = { 
 		Condition="<$JOB> == 5",
@@ -500,6 +644,42 @@ local config = {
 	[65020] = { 
 		Condition="<$JOB> == 5 & <$LEVEL> >= 150 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 9",
 	},
+	[65021] = { 
+		Condition="<$JOB> == 5 & <$LEVEL> >= 20 & <$TARGETINFO(GOODEVILID)> == 0 & <$RELEVEL> >= 0",
+	},
+	[65022] = { 
+		Condition="<$JOB> == 5 & <$LEVEL> >= 30 & <$TARGETINFO(GOODEVILID)> == 0 & <$RELEVEL> >= 1",
+	},
+	[65023] = { 
+		Condition="<$JOB> == 5 & <$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 2",
+	},
+	[65024] = { 
+		Condition="<$JOB> == 5 & <$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 2",
+	},
+	[65025] = { 
+		Condition="<$JOB> == 5 & <$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 3",
+	},
+	[65026] = { 
+		Condition="<$JOB> == 5 & <$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 4",
+	},
+	[65027] = { 
+		Condition="<$JOB> == 5 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 5",
+	},
+	[65028] = { 
+		Condition="<$JOB> == 5 & <$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 2",
+	},
+	[65029] = { 
+		Condition="<$JOB> == 5 & <$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 2",
+	},
+	[65030] = { 
+		Condition="<$JOB> == 5 & <$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 3",
+	},
+	[65031] = { 
+		Condition="<$JOB> == 5 & <$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 4",
+	},
+	[65032] = { 
+		Condition="<$JOB> == 5 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 5",
+	},
 	[66000] = { 
 		Condition="<$JOB> == 6",
 	},
@@ -562,6 +742,42 @@ local config = {
 	},
 	[66020] = { 
 		Condition="<$JOB> == 6 & <$LEVEL> >= 150 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 9",
+	},
+	[66021] = { 
+		Condition="<$JOB> == 6 & <$LEVEL> >= 20 & <$TARGETINFO(GOODEVILID)> == 0 & <$RELEVEL> >= 0",
+	},
+	[66022] = { 
+		Condition="<$JOB> == 6 & <$LEVEL> >= 30 & <$TARGETINFO(GOODEVILID)> == 0 & <$RELEVEL> >= 1",
+	},
+	[66023] = { 
+		Condition="<$JOB> == 6 & <$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 2",
+	},
+	[66024] = { 
+		Condition="<$JOB> == 6 & <$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 2",
+	},
+	[66025] = { 
+		Condition="<$JOB> == 6 & <$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 3",
+	},
+	[66026] = { 
+		Condition="<$JOB> == 6 & <$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 4",
+	},
+	[66027] = { 
+		Condition="<$JOB> == 6 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 1 & <$RELEVEL> >= 5",
+	},
+	[66028] = { 
+		Condition="<$JOB> == 6 & <$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 2",
+	},
+	[66029] = { 
+		Condition="<$JOB> == 6 & <$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 2",
+	},
+	[66030] = { 
+		Condition="<$JOB> == 6 & <$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 3",
+	},
+	[66031] = { 
+		Condition="<$JOB> == 6 & <$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 4",
+	},
+	[66032] = { 
+		Condition="<$JOB> == 6 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 5",
 	},
 }
 return config
