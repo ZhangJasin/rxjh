@@ -12,7 +12,6 @@
     <richtext id="n6_jui0" name="title" xy="5,0" size="167,40" font="ui://st7dgeqq9kdgkvpj" fontSize="20" color="#ffffff" vAlign="middle" ubb="true" autoSize="shrink" singleLine="true" autoClearText="true" text="">
       <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
     </richtext>
-    <image id="n8_ki52" name="arrow" src="pzjgvoj" fileName="Images/MiniMap/traceArrow.png" xy="141,4"/>
   </displayList>
   <Button mode="Check"/>
 </component>

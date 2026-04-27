@@ -10,8 +10,21 @@
     <image id="n4_jui0" name="map_frame" src="clzt13" fileName="Images/MiniMap/Frame_9.png" xy="299,207" size="385,357">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <list id="n3_vmij" name="list_left" xy="181,244" size="118,344" overflow="scroll" defaultItem="ui://3tndc27qmgz01b" autoClearItems="true">
+    <list id="n3_vmij" name="list_left" xy="181,244" size="118,344" overflow="scroll" defaultItem="ui://3tndc27qclzt2" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
+      <item title="泫勃派"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
     </list>
     <list id="n19_nouy" name="list_right" xy="685,246" size="156,342" overflow="scroll" defaultItem="ui://3tndc27qclzte" align="center" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
