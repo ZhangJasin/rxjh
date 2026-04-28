@@ -21,6 +21,10 @@
     <component id="rus111" name="btn_hc2.xml" path="/Components/" exported="true"/>
     <component id="rus113" name="btn_hc3.xml" path="/Components/" exported="true"/>
     <image id="rus114" name="hcann3.png" path="/Images/"/>
+    <component id="axcm15" name="group_item.xml" path="/Components/"/>
+    <component id="axcm18" name="group_cost.xml" path="/Components/"/>
+    <component id="axcm19" name="group_suc.xml" path="/Components/"/>
+    <component id="axcm1a" name="btn_comp.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

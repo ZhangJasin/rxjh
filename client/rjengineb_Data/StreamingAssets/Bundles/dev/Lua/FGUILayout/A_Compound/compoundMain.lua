@@ -317,84 +317,186 @@ end
 
 function compoundMain:RefreshContent()
     local item = self._data:GetCurrentItem()
-    if not item then 
+    if not item then
         print("[合成] 未选中物品")
-        return 
+        return
     end
-    
+
     print("========================================")
     print("[合成] 当前选中物品:", item.itemName, "ID:", item.itemId)
     print("[合成] 菜单路径:", item.menus)
-    
-    -- 刷新消耗道具显示
+    print("[合成] 消耗道具 payItems:", item.payItems)
+    print("[合成] 消耗货币 payCost:", item.payCost)
+    print("[合成] 物品完整数据:", item)
+    for k, v in pairs(item) do
+        print(string.format("  %s = %s", tostring(k), tostring(v)))
+    end
+
+    -- 刷新消耗道具显示 (n46)
     self:_RefreshPayItems(item.payItems)
-    
-    -- 刷新消耗货币显示
+
+    -- 刷新合成目标显示 (n47)
+    self:_RefreshTargetItem(item)
+
+    -- 刷新消耗货币显示 (n52)
     self:_RefreshPayCost(item.payCost)
-    
-    -- TODO: 刷新合成预览
-    -- self:_RefreshCompoundPreview(item)
-    
+
+    -- 刷新成功率显示 (n54)
+    self:_RefreshSuccessRate(item)
+
     print("========================================")
 end
 
--- 刷新消耗道具显示
+-- 刷新消耗道具显示 (n46是list，每个item有n4 loader)
 function compoundMain:_RefreshPayItems(payItems)
-    if not payItems or #payItems == 0 then
-        print("[合成] 消耗道具: 无")
-        return
+    print("[合成] _RefreshPayItems 被调用")
+    print("[合成] payItems 数据:", payItems)
+    
+    if not self._ui.n46 then 
+        print("[合成] n46 组件不存在")
+        return 
     end
     
-    print("[合成] 消耗道具列表:")
-    for i, payItem in ipairs(payItems) do
+    if not payItems or #payItems == 0 then
+        print("[合成] 消耗道具为空")
+        FGUI:GList_setNumItems(self._ui.n46, 0)
+        return
+    end
+
+    print("[合成] 消耗道具数量:", #payItems)
+    FGUI:GList_setNumItems(self._ui.n46, #payItems)
+    
+    -- 设置渲染器
+    FGUI:GList_itemRenderer(self._ui.n46, function(index, item)
+        local payItem = payItems[index + 1]
+        if not payItem then return end
+        
         local itemId = payItem.id or 0
         local count = payItem.count or 0
         
-        -- 获取物品名称(可以从ItemConfig查询)
-        local itemName = "未知物品"
-        local ItemConfig = SL:GetValue("ITEM_CONFIG")
-        if ItemConfig and ItemConfig[itemId] then
-            itemName = ItemConfig[itemId].Name or itemName
+        print(string.format("[合成] 渲染道具%d: id=%s, count=%s", index + 1, tostring(itemId), tostring(count)))
+        
+        -- 设置图标 (n4是loader)
+        local iconLoader = FGUI:GetChild(item, "n4")
+        print("[合成] n4 loader:", iconLoader)
+        
+        if iconLoader then
+            local itemData = SL:GetValue("ITEM_DATA", itemId)
+            print("[合成] 物品数据:", itemData)
+            
+            if itemData and itemData.Looks then
+                local path = itemData.Looks >= 100000 and string.format("ui://ItemIcon/%d", itemData.Looks) or string.format("ui://ItemIcon/%06d", itemData.Looks)
+                print("[合成] 设置图标路径:", path)
+                FGUI:GLoader_setUrl(iconLoader, path)
+            else
+                print("[合成] 物品数据缺少Looks字段")
+            end
         end
         
-        print(string.format("  选项%d: [%s] x%d (ID:%d)", i, itemName, count, itemId))
-    end
-    
-    -- TODO: 刷新UI显示
-    -- 例: 如果有n46/n47等道具显示组件,在这里刷新
-    -- if self._ui.n46 then
-    --     FGUI:GTextField_setText(self._ui.n46, "需要: " .. itemName .. " x" .. count)
-    -- end
+        -- 设置数量 (n2是数量文本)
+        local n2 = FGUI:GetChild(item, "n2")
+        if n2 then
+            FGUI:GTextField_setText(n2, string.format("x%d", count))
+        end
+    end)
 end
 
--- 刷新消耗货币显示
-function compoundMain:_RefreshPayCost(payCost)
-    if not payCost or #payCost == 0 then
-        print("[合成] 消耗货币: 无")
+-- 刷新合成目标显示 (n47是component，n4是loader，n1是名字，n2是数量)
+function compoundMain:_RefreshTargetItem(item)
+    if not self._ui.n47 then return end
+    
+    if not item then
         return
     end
+
+    -- 设置目标物品图标 (n4是loader)
+    local iconLoader = FGUI:GetChild(self._ui.n47, "n4")
+    if iconLoader then
+        local itemId = item.itemId or 0
+        local itemData = SL:GetValue("ITEM_DATA", itemId)
+        if itemData and itemData.Looks then
+            local path = itemData.Looks >= 100000 and string.format("ui://ItemIcon/%d", itemData.Looks) or string.format("ui://ItemIcon/%06d", itemData.Looks)
+            print("[合成] 设置目标图标路径:", path)
+            FGUI:GLoader_setUrl(iconLoader, path)
+        else
+            print("[合成] 目标物品数据缺少Looks字段")
+        end
+    end
+
+    -- 设置物品名称 (n1是名字)
+    local n1 = FGUI:GetChild(self._ui.n47, "n1")
+    if n1 then
+        FGUI:GTextField_setText(n1, item.itemName or "未知物品")
+    end
     
-    print("[合成] 消耗货币列表:")
-    for i, cost in ipairs(payCost) do
+    -- 设置数量 (n2是数量)
+    local n2 = FGUI:GetChild(self._ui.n47, "n2")
+    if n2 then
+        FGUI:GTextField_setText(n2, string.format("x%d", 1))
+    end
+end
+
+-- 刷新消耗货币显示 (n52是component，n1是loader，n2是货币名，n3是数量)
+function compoundMain:_RefreshPayCost(payCost)
+    if not self._ui.n52 then return end
+    
+    if not payCost or #payCost == 0 then
+        return
+    end
+
+    -- 设置货币图标 (n1是loader，取第一个货币)
+    local iconLoader = FGUI:GetChild(self._ui.n52, "n1")
+    if iconLoader and payCost[1] then
+        local costType = payCost[1].id or 0
+        local itemData = SL:GetValue("ITEM_DATA", costType)
+        if itemData and itemData.Looks then
+            local path = itemData.Looks >= 100000 and string.format("ui://ItemIcon/%d", itemData.Looks) or string.format("ui://ItemIcon/%06d", itemData.Looks)
+            print("[合成] 设置货币图标路径:", path)
+            FGUI:GLoader_setUrl(iconLoader, path)
+        end
+    end
+
+    -- 设置货币名称和数量 (n2是名，n3是数量)
+    local cost = payCost[1]  -- 取第一个货币
+    if cost then
         local costType = cost.id or 0
         local amount = cost.count or 0
-        
-        -- 货币类型说明(根据实际游戏货币类型修改)
+
         local costTypeName = "未知货币"
         if costType == 1 then
             costTypeName = "银两"
         elseif costType == 2 then
             costTypeName = "元宝"
         end
+
+        local n2 = FGUI:GetChild(self._ui.n52, "n2")
+        if n2 then
+            FGUI:GTextField_setText(n2, costTypeName)
+        end
         
-        print(string.format("  选项%d: [%s] x%d (类型:%d)", i, costTypeName, amount, costType))
+        local n3 = FGUI:GetChild(self._ui.n52, "n3")
+        if n3 then
+            FGUI:GTextField_setText(n3, string.format("x%d", amount))
+        end
     end
+end
+
+-- 刷新成功率显示 (n54是component，n3是成功率文本)
+function compoundMain:_RefreshSuccessRate(item)
+    if not self._ui.n54 then return end
     
-    -- TODO: 刷新UI显示
-    -- 例: 如果有货币显示组件,在这里刷新
-    -- if self._ui.costText then
-    --     FGUI:GTextField_setText(self._ui.costText, "消耗: " .. costTypeName .. " x" .. amount)
-    -- end
+    -- 默认100%
+    local successRate = 100
+    
+    -- 如果物品配置中有成功率，使用配置中的值
+    if item and item.successRate then
+        successRate = item.successRate
+    end
+
+    local n3 = FGUI:GetChild(self._ui.n54, "n3")
+    if n3 then
+        FGUI:GTextField_setText(n3, string.format("%d%%", successRate))
+    end
 end
 
 -- ========================================

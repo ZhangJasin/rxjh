@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="183,33">
+  <displayList>
+    <text id="n2_axcm" name="n2" xy="28,4" size="95,26" fontSize="18" color="#ffff00" letterSpacing="3" autoSize="ellipsis" strokeColor="#666666" strokeSize="2" text="货币货币"/>
+    <text id="n3_axcm" name="n3" xy="112,4" size="64,26" fontSize="18" color="#ffff00" letterSpacing="1" autoSize="none" strokeColor="#666666" text="x8888"/>
+    <image id="n5_axcm" name="n5" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="-2,2" size="30,30" group="n6_axcm"/>
+    <loader id="n1_axcm" name="n1" xy="-1,2" size="28,28" group="n6_axcm" url="ui://twx3ya3em2wevrg" fill="scaleFree" shrinkOnly="true" useResize="true"/>
+    <group id="n6_axcm" name="n6" xy="-2,2" size="30,30"/>
+  </displayList>
+</component>
