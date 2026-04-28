@@ -301,10 +301,10 @@ function Guild.refreshTask(actor)
     local maxFreeCount = tonumber(SysConstant['Num_DailyRefresh_RewardTask']["Value"]) or 3
 
     if curRefushCount >= maxFreeCount then
-        -- 免费次数已用完，检查是否有用任务刷新卷轴    
-        local result = takeitem(actor, "任务刷新卷#1", 0)
+        -- 免费次数已用完，检查是否有用刷新卷轴    
+        local result = takeitem(actor, "刷新卷#1", 0)
         if not result then
-            sendmsg(actor, 9, "免费刷新次数已用完，没有任务刷新卷，刷新失败")
+            sendmsg(actor, 9, "免费刷新次数已用完，没有刷新卷，刷新失败")
             return
         end
     else

@@ -513,10 +513,10 @@ function GuildMainPanel:OnBtnRefreshClicked()
         local curRefreshCount = self._refreshCount or 0
         
         if curRefreshCount >= maxRefreshCount then
-            -- 免费次数已用完，弹确认框使用任务刷新卷轴
+            -- 免费次数已用完，弹确认框使用刷新卷轴
             SL:OpenCommonDialog({
                 title = '提示',
-                str = '免费次数已用完，是否使用1个任务刷新卷刷新任务？',
+                str = '免费次数已用完，是否使用1个刷新卷刷新任务？',
                 btnDesc = {"取消", "确定"},
                 callback = function(tag)
                     if tag == 2 then
