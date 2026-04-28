@@ -1529,18 +1529,6 @@ local config = {
 		Condition="<$LEVEL> >= 120 & <$TARGETINFO(GOODEVILID)> == 1",
 		CCondition="<$LEVEL> >= 120 & <$GOODEVILID> == 1",
 	},
-	[70011] = { 
-		ID=70011,
-	},
-	[70012] = { 
-		ID=70012,
-	},
-	[70013] = { 
-		ID=70013,
-	},
-	[70014] = { 
-		ID=70014,
-	},
 	[70015] = { 
 		ID=70015,
 		Condition="<$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 2",
@@ -1585,27 +1573,6 @@ local config = {
 		ID=70023,
 		Condition="<$LEVEL> >= 120 & <$TARGETINFO(GOODEVILID)> == 2",
 		CCondition="<$LEVEL> >= 120 & <$GOODEVILID> == 2",
-	},
-	[70024] = { 
-		ID=70024,
-	},
-	[70025] = { 
-		ID=70025,
-	},
-	[70026] = { 
-		ID=70026,
-	},
-	[70027] = { 
-		ID=70027,
-	},
-	[70028] = { 
-		ID=70028,
-	},
-	[70029] = { 
-		ID=70029,
-	},
-	[70037] = { 
-		ID=70037,
 	},
 }
 return config
