@@ -39,6 +39,21 @@ local config = {
 		Value="35",
 		Dec="boss悬赏开启等级",
 	},
+	["Boss_Chall_Count"] = { 
+		ID="Boss_Chall_Count",
+		Value="5",
+		Dec="单个BOSS每日挑战次数",
+	},
+	["Boss_Chall_Time"] = { 
+		ID="Boss_Chall_Time",
+		Value="300",
+		Dec="BOSS挑战时间(S)",
+	},
+	["Boss_Chall_Exit_Time"] = { 
+		ID="Boss_Chall_Exit_Time",
+		Value="60",
+		Dec="BOSS退出时间(S)",
+	},
 	["Boss_Day_Free_Count"] = { 
 		ID="Boss_Day_Free_Count",
 		Value="2",
