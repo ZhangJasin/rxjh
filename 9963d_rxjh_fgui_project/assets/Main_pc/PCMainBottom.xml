@@ -45,22 +45,22 @@
     <component id="n137_m9h9" name="Btn_mail" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="258,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
       <Button checked="true" icon="ui://xwp5ackoucmr3o"/>
     </component>
-    <component id="n129_m9h9" name="Btn_action" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="295,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+    <component id="n129_m9h9" name="Btn_action" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="405,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
       <Button checked="true" icon="ui://xwp5ackoljrg2i"/>
     </component>
-    <component id="n138_m9h9" name="Btn_shop" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="332,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+    <component id="n138_m9h9" name="Btn_shop" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="443,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
       <Button checked="true" icon="ui://xwp5ackoljrg2f"/>
     </component>
-    <component id="n140_m9h9" name="Btn_setting" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="370,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+    <component id="n140_m9h9" name="Btn_setting" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="480,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
       <Button checked="true" icon="ui://xwp5ackoljrg2a"/>
     </component>
-    <component id="n141_m9h9" name="Btn_pet" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="407,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+    <component id="n141_m9h9" name="Btn_pet" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="295,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
       <Button checked="true" icon="ui://xwp5ackorus1fvh2"/>
     </component>
-    <component id="n142_m9h9" name="Btn_transfer" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="444,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+    <component id="n142_m9h9" name="Btn_transfer" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="332,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
       <Button checked="true" icon="ui://xwp5ackorus1fvh4"/>
     </component>
-    <component id="n145_m9h9" name="Btn_fashion" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="481,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+    <component id="n145_m9h9" name="Btn_fashion" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="370,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
       <Button checked="true" icon="ui://xwp5ackorus1fvh1"/>
     </component>
     <group id="n76_jloc" name="Group_leftButton" xy="0,715" size="514,53" advanced="true">
