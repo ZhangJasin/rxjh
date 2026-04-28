@@ -9,6 +9,7 @@ local config = {
 		Offset={5,-5},
 		Camera_Size=180,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-1011"] = { 
 		SourceId="-1011",
@@ -20,6 +21,7 @@ local config = {
 		Offset={5,-5},
 		Camera_Size=180,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-1010"] = { 
 		SourceId="-1010",
@@ -31,6 +33,7 @@ local config = {
 		Offset={5,-4},
 		Camera_Size=180,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-271"] = { 
 		SourceId="-271",
@@ -42,6 +45,7 @@ local config = {
 		Offset={1,-4},
 		Camera_Size=55,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-270"] = { 
 		SourceId="-270",
@@ -53,6 +57,7 @@ local config = {
 		Offset={-11,0},
 		Camera_Size=38,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-269"] = { 
 		SourceId="-269",
@@ -64,6 +69,7 @@ local config = {
 		Offset={-25,0},
 		Camera_Size=44,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-256"] = { 
 		SourceId="-256",
@@ -75,6 +81,7 @@ local config = {
 		Offset={-53,0},
 		Camera_Size=105,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-239"] = { 
 		SourceId="-239",
@@ -86,6 +93,7 @@ local config = {
 		Offset={-9,9},
 		Camera_Size=60,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-238"] = { 
 		SourceId="-238",
@@ -97,6 +105,7 @@ local config = {
 		Offset={-5,0},
 		Camera_Size=42,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-237"] = { 
 		SourceId="-237",
@@ -108,6 +117,7 @@ local config = {
 		Offset={0,-12},
 		Camera_Size=63,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-236"] = { 
 		SourceId="-236",
@@ -119,6 +129,7 @@ local config = {
 		Offset={-33,0},
 		Camera_Size=217,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["-235"] = { 
 		SourceId="-235",
@@ -130,6 +141,7 @@ local config = {
 		Offset={0,14},
 		Camera_Size=120,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["-234"] = { 
 		SourceId="-234",
@@ -141,6 +153,7 @@ local config = {
 		Offset={22,40},
 		Camera_Size=220,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-233"] = { 
 		SourceId="-233",
@@ -152,6 +165,7 @@ local config = {
 		Offset={-9,0},
 		Camera_Size=123,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["-231"] = { 
 		SourceId="-231",
@@ -173,6 +187,7 @@ local config = {
 		MapSize={70,70},
 		Offset={-8,-2},
 		Camera_Size=36,
+		ForSetting={},
 	},
 	["-229"] = { 
 		SourceId="-229",
@@ -184,6 +199,7 @@ local config = {
 		Offset={2,0},
 		Camera_Size=50,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-228"] = { 
 		SourceId="-228",
@@ -195,6 +211,7 @@ local config = {
 		Offset={1,2},
 		Camera_Size=100,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-227"] = { 
 		SourceId="-227",
@@ -206,6 +223,7 @@ local config = {
 		Offset={5,5},
 		Camera_Size=53,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-226"] = { 
 		SourceId="-226",
@@ -241,6 +259,7 @@ local config = {
 		Offset={1,4},
 		Camera_Size=60,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-223"] = { 
 		SourceId="-223",
@@ -252,6 +271,7 @@ local config = {
 		Offset={-1,1},
 		Camera_Size=32,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-222"] = { 
 		SourceId="-222",
@@ -287,6 +307,7 @@ local config = {
 		Offset={-2,0},
 		Camera_Size=26,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-219"] = { 
 		SourceId="-219",
@@ -358,6 +379,7 @@ local config = {
 		Offset={29,33},
 		Camera_Size=68,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-213"] = { 
 		SourceId="-213",
@@ -381,6 +403,7 @@ local config = {
 		Offset={7,17},
 		Camera_Size=95,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-210"] = { 
 		SourceId="-210",
@@ -812,6 +835,7 @@ local config = {
 		Offset={35,79},
 		Camera_Size=105,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["-101"] = { 
 		SourceId="-101",
@@ -823,6 +847,7 @@ local config = {
 		Offset={4,-5},
 		Camera_Size=180,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["102311"] = { 
 		SourceId="102311",
@@ -834,6 +859,7 @@ local config = {
 		Offset={-1,-1},
 		Camera_Size=50,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["102321"] = { 
 		SourceId="102321",
@@ -845,6 +871,7 @@ local config = {
 		Offset={-1,-1},
 		Camera_Size=50,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["102331"] = { 
 		SourceId="102331",
@@ -856,6 +883,7 @@ local config = {
 		Offset={-1,-1},
 		Camera_Size=50,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["102341"] = { 
 		SourceId="102341",
@@ -867,6 +895,7 @@ local config = {
 		Offset={-1,-1},
 		Camera_Size=50,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["102351"] = { 
 		SourceId="102351",
@@ -878,6 +907,7 @@ local config = {
 		Offset={-1,-1},
 		Camera_Size=50,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["102401"] = { 
 		SourceId="102401",
@@ -889,6 +919,7 @@ local config = {
 		Offset={-5,-5},
 		Camera_Size=65,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["102501"] = { 
 		SourceId="102501",
@@ -900,6 +931,7 @@ local config = {
 		Offset={-27,-20},
 		Camera_Size=153,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["102601"] = { 
 		SourceId="102601",
@@ -911,6 +943,7 @@ local config = {
 		Offset={-13,-1},
 		Camera_Size=45,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["200101"] = { 
 		SourceId="200101",
@@ -919,9 +952,10 @@ local config = {
 		Music={{0, 10004}},
 		MiniMap="200101",
 		MapSize={614,614},
-		Offset={0,0},
+		Offset={-2,1},
 		Camera_Size=306,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["200201"] = { 
 		SourceId="200201",
@@ -930,10 +964,11 @@ local config = {
 		Music={{0, 10004}},
 		MiniMap="200201",
 		MapSize={618,612},
-		Offset={0,0},
-		Camera_Size=307,
+		Offset={-15,-3},
+		Camera_Size=313,
 		NavmeshMaxDistance=2,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["200301"] = { 
 		SourceId="200301",
@@ -942,10 +977,11 @@ local config = {
 		Music={{0, 10004}},
 		MiniMap="200301",
 		MapSize={617,614},
-		Offset={0,0},
-		Camera_Size=307,
+		Offset={-6,-5},
+		Camera_Size=311,
 		NavmeshMaxDistance=4,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["200401"] = { 
 		SourceId="200401",
@@ -957,6 +993,7 @@ local config = {
 		Offset={10,10},
 		Camera_Size=120,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["200402"] = { 
 		SourceId="200402",
@@ -968,6 +1005,7 @@ local config = {
 		Offset={5,-6},
 		Camera_Size=96,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["200403"] = { 
 		SourceId="200403",
@@ -979,6 +1017,7 @@ local config = {
 		Offset={-18,-8},
 		Camera_Size=96,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["200501"] = { 
 		SourceId="200501",
@@ -990,6 +1029,7 @@ local config = {
 		Offset={35,34},
 		Camera_Size=119,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["200502"] = { 
 		SourceId="200502",
@@ -1001,6 +1041,7 @@ local config = {
 		Offset={-10,-13},
 		Camera_Size=116,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["200503"] = { 
 		SourceId="200503",
@@ -1012,6 +1053,7 @@ local config = {
 		Offset={-28,-22},
 		Camera_Size=120,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["200601"] = { 
 		SourceId="200601",
@@ -1023,6 +1065,7 @@ local config = {
 		Offset={-17,-26},
 		Camera_Size=152,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["200701"] = { 
 		SourceId="200701",
@@ -1034,6 +1077,7 @@ local config = {
 		Offset={-12,-30},
 		Camera_Size=152,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["200801"] = { 
 		SourceId="200801",
@@ -1045,6 +1089,7 @@ local config = {
 		Offset={0,0},
 		Camera_Size=155,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["201001"] = { 
 		SourceId="201001",
@@ -1053,9 +1098,10 @@ local config = {
 		Music={{0, 10004}},
 		MiniMap="201001",
 		MapSize={617,613},
-		Offset={-8,0},
-		Camera_Size=307,
+		Offset={-11,-1},
+		Camera_Size=314,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["201101"] = { 
 		SourceId="201101",
@@ -1064,9 +1110,10 @@ local config = {
 		Music={{0, 10004}},
 		MiniMap="201101",
 		MapSize={612,619},
-		Offset={-4,0},
-		Camera_Size=307,
+		Offset={-17,-6},
+		Camera_Size=314,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["201301"] = { 
 		SourceId="201301",
@@ -1076,8 +1123,9 @@ local config = {
 		MiniMap="201301",
 		MapSize={623,619},
 		Offset={5,2},
-		Camera_Size=308,
+		Camera_Size=309,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["202001"] = { 
 		SourceId="202001",
@@ -1089,6 +1137,7 @@ local config = {
 		Offset={-4,-57},
 		Camera_Size=306,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["2241301"] = { 
 		SourceId="2241301",
@@ -1100,6 +1149,7 @@ local config = {
 		Offset={-40,-49},
 		Camera_Size=153,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2241401"] = { 
 		SourceId="2241401",
@@ -1111,6 +1161,7 @@ local config = {
 		Offset={-57,-100},
 		Camera_Size=304,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["2241501"] = { 
 		SourceId="2241501",
@@ -1122,6 +1173,7 @@ local config = {
 		Offset={-85,-50},
 		Camera_Size=305,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["2241601"] = { 
 		SourceId="2241601",
@@ -1133,6 +1185,7 @@ local config = {
 		Offset={-100,-82},
 		Camera_Size=302,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["2241701"] = { 
 		SourceId="2241701",
@@ -1144,6 +1197,7 @@ local config = {
 		Offset={-163,-78},
 		Camera_Size=304,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["2241801"] = { 
 		SourceId="2241801",
@@ -1155,6 +1209,7 @@ local config = {
 		Offset={-79,-106},
 		Camera_Size=304,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["2241901"] = { 
 		SourceId="2241901",
@@ -1166,6 +1221,7 @@ local config = {
 		Offset={-101,-107},
 		Camera_Size=304,
 		OcclusionEffect=3,
+		ForSetting={},
 	},
 	["2242101"] = { 
 		SourceId="2242101",
@@ -1174,10 +1230,11 @@ local config = {
 		Music={{0, 10004}},
 		MiniMap="2242101",
 		MapSize={615,615},
-		Offset={1,4},
+		Offset={2,5},
 		Camera_Size=303,
 		NavmeshMaxDistance=2,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2242201"] = { 
 		SourceId="2242201",
@@ -1190,6 +1247,7 @@ local config = {
 		Camera_Size=255,
 		NavmeshMaxDistance=3,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2245001"] = { 
 		SourceId="2245001",
@@ -1198,10 +1256,11 @@ local config = {
 		Music={{0, 10004}},
 		MiniMap="2245001",
 		MapSize={613,615},
-		Offset={0,0},
-		Camera_Size=307,
+		Offset={-5,3},
+		Camera_Size=309,
 		NavmeshMaxDistance=2,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2246001"] = { 
 		SourceId="2246001",
@@ -1213,6 +1272,7 @@ local config = {
 		Offset={-5,-3},
 		Camera_Size=308,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2400101"] = { 
 		SourceId="2400101",
@@ -1224,6 +1284,7 @@ local config = {
 		Offset={-10,-14},
 		Camera_Size=317,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2400201"] = { 
 		SourceId="2400201",
@@ -1235,6 +1296,7 @@ local config = {
 		Offset={0,0},
 		Camera_Size=307,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2400301"] = { 
 		SourceId="2400301",
@@ -1246,6 +1308,7 @@ local config = {
 		Offset={0,0},
 		Camera_Size=256,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2401001"] = { 
 		SourceId="2401001",
@@ -1257,6 +1320,7 @@ local config = {
 		Offset={0,0},
 		Camera_Size=252,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2401101"] = { 
 		SourceId="2401101",
@@ -1268,6 +1332,7 @@ local config = {
 		Offset={0,0},
 		Camera_Size=256,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2402510"] = { 
 		SourceId="2402510",
@@ -1280,6 +1345,7 @@ local config = {
 		Camera_Size=367,
 		NavmeshMaxDistance=2,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2402600"] = { 
 		SourceId="2402600",
@@ -1292,6 +1358,7 @@ local config = {
 		Camera_Size=266,
 		NavmeshMaxDistance=3,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2402610"] = { 
 		SourceId="2402610",
@@ -1304,6 +1371,7 @@ local config = {
 		Camera_Size=307,
 		NavmeshMaxDistance=2,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 	["2402620"] = { 
 		SourceId="2402620",
@@ -1315,6 +1383,7 @@ local config = {
 		Offset={1,1},
 		Camera_Size=307,
 		OcclusionEffect=2,
+		ForSetting={},
 	},
 }
 return config
