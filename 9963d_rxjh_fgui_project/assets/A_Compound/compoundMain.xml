@@ -27,9 +27,10 @@
     <image id="n41_rus1" name="n41" src="rus1v" fileName="Images/hchd.png" xy="730,317" group="n51_axcm"/>
     <image id="n43_rus1" name="n43" src="rus1o" fileName="Images/02.png" xy="573,356" group="n51_axcm"/>
     <group id="n51_axcm" name="n51" xy="573,317" size="499,164" group="n49_axcm"/>
-    <component id="n52_axcm" name="n52" src="axcm18" fileName="Components/group_cost.xml" xy="778,507" size="116,37" group="n49_axcm"/>
+    <component id="n52_axcm" name="n52" src="axcm18" fileName="Components/group_cost.xml" xy="762,507" size="146,37" group="n49_axcm"/>
     <component id="n54_axcm" name="n54" src="axcm19" fileName="Components/group_suc.xml" xy="788,550" group="n49_axcm"/>
     <component id="n55_axcm" name="n55" src="axcm1a" fileName="Components/btn_comp.xml" xy="772,598" group="n49_axcm"/>
+    <component id="n57_hlw9" name="n57" src="hlw91c" fileName="Components/tog_select.xml" xy="932,607" group="n49_axcm"/>
     <group id="n49_axcm" name="n49" xy="573,143" size="502,497"/>
     <image id="n56_hlw9" name="n56" src="hlw91b" fileName="Images/costbj.png" xy="593,499"/>
   </displayList>

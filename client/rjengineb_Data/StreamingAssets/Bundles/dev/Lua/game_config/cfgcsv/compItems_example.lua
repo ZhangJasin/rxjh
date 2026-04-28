@@ -5,12 +5,12 @@
 local compItemsConfig = require("game_config.cfgcsv.compItems")
 local CompItemsHandler = require("game_config.cfgcsv.compItems_handler")
 
---- 示例1: 解析并打印菜单结构
+--- 示例1: 解析菜单结构
 function Example_PrintMenuStructure()
     print("========== 示例1: 打印菜单树结构 ==========")
-    
+
     local menuTree = CompItemsHandler.ParseMenuStructure(compItemsConfig)
-    CompItemsHandler.PrintMenuTree(menuTree)
+    -- PrintMenuTree 已删除，此处仅解析
 end
 
 --- 示例2: 解析单个配置项的payItems和payCost

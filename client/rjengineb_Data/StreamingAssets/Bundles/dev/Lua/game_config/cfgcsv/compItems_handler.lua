@@ -146,26 +146,6 @@ function CompItemsHandler.SplitString(str, separator)
     return result
 end
 
---- 打印菜单树结构(调试用)
--- @param menuTree 菜单树
--- @param indent 缩进级别
-function CompItemsHandler.PrintMenuTree(menuTree, indent)
-    indent = indent or 0
-    local indentStr = string.rep("  ", indent)
-    
-    for _, level1 in ipairs(menuTree) do
-        print(indentStr .. "Level 1: " .. level1.name)
-        
-        for _, level2 in ipairs(level1.children) do
-            print(indentStr .. "  Level 2: " .. level2.name)
-            
-            for _, item in ipairs(level2.children) do
-                print(indentStr .. "    Item: " .. item.itemName .. " (ID: " .. item.itemId .. ")")
-            end
-        end
-    end
-end
-
 --- 完整的配置处理流程
 -- @param configTable 原始配置表
 -- @return 处理后的完整配置数据

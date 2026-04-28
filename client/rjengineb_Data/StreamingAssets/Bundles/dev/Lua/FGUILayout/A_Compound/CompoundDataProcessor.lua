@@ -112,6 +112,7 @@ function CompoundDataProcessor.ParseItemData(itemConfig)
         payCost = CompoundDataProcessor.ParsePayData(itemConfig.payCost),
         sect = itemConfig.sect or 0,
         successRate = itemConfig.SuccessRate or 100,
+        isBatch = itemConfig.isBatch or 0,  -- 添加批量合成次数
     }
 end
 
@@ -199,28 +200,6 @@ function CompoundDataProcessor.ProcessAll()
         menuTree = menuTree,
         dataFormat = dataFormat
     }
-end
-
---- 调试用:打印菜单树结构
--- @param menuTree 菜单树
--- @param indent 缩进级别
-function CompoundDataProcessor.PrintMenuTree(menuTree, indent)
-    indent = indent or 0
-    local indentStr = string.rep("  ", indent)
-    
-    for _, level1 in ipairs(menuTree) do
-        print(indentStr .. "Level 1: " .. level1.name)
-        
-        for _, level2 in ipairs(level1.children) do
-            print(indentStr .. "  Level 2: " .. level2.name)
-            
-            for _, item in ipairs(level2.children) do
-                print(indentStr .. "    Item: " .. item.itemName .. " (ID: " .. item.itemId .. ")")
-                print(indentStr .. "      消耗道具: " .. #item.payItems .. "项")
-                print(indentStr .. "      消耗货币: " .. #item.payCost .. "项")
-            end
-        end
-    end
 end
 
 return CompoundDataProcessor

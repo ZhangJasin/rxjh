@@ -78,6 +78,34 @@ function compoundMain:Create()
     end
 
     self:_initListRenderers()
+    
+    -- 合成按钮 (n55)
+    if self._ui.n55 then
+        FGUI:setOnClickEvent(self._ui.n55, function()
+            self:_OnCompoundButtonClick()
+        end)
+    end
+    
+    -- 批量合成组件 (n57)
+    self._n57Visible = false  -- 是否显示批量合成
+    self._isBatchChecked = false  -- 批量合成checkbox是否勾选
+
+    if self._ui.n57 then
+        -- 默认隐藏
+        FGUI:setVisible(self._ui.n57, false)
+
+        -- 获取checkbox组件（n57是Button扩展组件，自身就是可点击的）
+        FGUI:setOnClickEvent(self._ui.n57, function()
+            -- 切换checkbox状态
+            self._isBatchChecked = not self._isBatchChecked
+
+            -- 通过控制器设置选中状态
+            local btnController = FGUI:getController(self._ui.n57, "button")
+            if btnController then
+                FGUI:Controller_setSelectedIndex(btnController, self._isBatchChecked and 1 or 0)
+            end
+        end)
+    end
 end
 
 -- 混合列表项 Provider
@@ -177,12 +205,9 @@ end
 
 function compoundMain:Enter(data)
     self:RefreshUI()
-
-    print("[合成] 打开合成界面")
 end
 
 function compoundMain:Exit()
-    print("[合成] 关闭合成界面")
 end
 
 function compoundMain:Destroy()
@@ -435,6 +460,28 @@ function compoundMain:_RefreshTargetItem(item)
     if n1 then
         FGUI:GTextField_setText(n1, item.itemName or "未知物品")
     end
+
+    -- 根据 isBatch 配置显示/隐藏批量合成组件
+    if self._ui.n57 then
+        local isBatch = item.isBatch or 0
+        if isBatch > 1 then
+            -- 显示批量合成组件
+            FGUI:setVisible(self._ui.n57, true)
+            self._n57Visible = true
+            self._isBatchChecked = false  -- 重置checkbox状态
+
+            -- 设置文本格式：批量合成%d次
+            local titleText = FGUI:GetChild(self._ui.n57, "title")
+            if titleText then
+                FGUI:GTextField_setText(titleText, string.format("批量合成%d次", isBatch))
+            end
+        else
+            -- 隐藏批量合成组件
+            FGUI:setVisible(self._ui.n57, false)
+            self._n57Visible = false
+            self._isBatchChecked = false
+        end
+    end
 end
 
 -- 刷新消耗货币显示 (n52是component，n1是loader，n2是货币名)
@@ -477,6 +524,109 @@ function compoundMain:_RefreshPayCost(payCost)
     end
 end
 
+-- 检查背包道具是否足够
+function compoundMain:_CheckPayItems(payItems)
+    if not payItems or #payItems == 0 then
+        return true
+    end
+
+    for i, payItem in ipairs(payItems) do
+        local itemId = payItem.id or 0
+        local needCount = payItem.count or 0
+        
+        -- 获取背包中该物品的数量
+        local rawValue = SL:GetValue("BAG_ITEM_COUNT", itemId)
+        local haveCount = tonumber(rawValue or 0) or 0
+
+        if haveCount < needCount then
+            -- 获取道具名称
+            local itemName = "未知道具"
+            local ItemConfig = SL:GetValue("ITEM_CONFIG")
+            if ItemConfig and ItemConfig[itemId] then
+                itemName = ItemConfig[itemId].Name or itemName
+            end
+            SL:ShowSystemTips(string.format("%s 不足，需要 %d 个", itemName, needCount))
+            return false
+        end
+    end
+
+    return true
+end
+
+-- 检查货币是否足够
+function compoundMain:_CheckPayCost(payCost)
+    if not payCost or #payCost == 0 then
+        return true
+    end
+
+    for i, cost in ipairs(payCost) do
+        local costType = cost.id or 0
+        local needCount = cost.count or 0
+        
+        -- 获取玩家货币数量
+        local haveCount = 0
+        local costTypeName = "未知货币"
+        if costType == 1 then
+            haveCount = tonumber(SL:GetValue("PLAYER_MONEY", 1) or 0) or 0
+            costTypeName = "银两"
+        elseif costType == 2 then
+            haveCount = tonumber(SL:GetValue("PLAYER_MONEY", 2) or 0) or 0
+            costTypeName = "元宝"
+        end
+        
+        if haveCount < needCount then
+            SL:ShowSystemTips(string.format("%s 不足，需要 %d 个", costTypeName, needCount))
+            return false
+        end
+    end
+
+    return true
+end
+
+-- 综合检查是否可以合成
+function compoundMain:_CheckCanCompound()
+    local item = self._data:GetCurrentItem()
+    if not item then
+        return false
+    end
+
+    -- 检查道具
+    if not self:_CheckPayItems(item.payItems) then
+        return false
+    end
+
+    -- 检查货币
+    if not self:_CheckPayCost(item.payCost) then
+        return false
+    end
+
+    return true
+end
+
+-- 合成按钮点击事件
+function compoundMain:_OnCompoundButtonClick()
+    local item = self._data:GetCurrentItem()
+    if not item then
+        SL:ShowSystemTips("未选中物品")
+        return
+    end
+
+    -- TODO: 暂时关闭客户端检查，测试服务端拦截
+    -- if not self:_CheckCanCompound() then
+    --     return
+    -- end
+
+    -- 发送合成请求，添加 isBatch 参数
+    local isBatchParam = (self._n57Visible and self._isBatchChecked) and (item.isBatch or 0) or 0
+    self:_SendCompoundRequest(item.itemId, isBatchParam)
+end
+
+-- 发送合成网络请求
+function compoundMain:_SendCompoundRequest(itemId, isBatchParam)
+    -- 使用 ssrMessage:sendmsgEx 发送请求
+    -- 格式: 模块名, 方法名, 参数数据
+    ssrMessage:sendmsgEx("Compound", "compound", {itemId, isBatchParam or 0})
+end
 -- 刷新成功率显示 (n54是component，n2是唯一文本)
 function compoundMain:_RefreshSuccessRate(item)
     if not self._ui.n54 then return end
@@ -612,21 +762,18 @@ function compoundMain:SelectItemById(itemId)
                     if not self._data:IsGroup2Open(level2.name) then
                         self._data:ToggleGroup2Open(level2.name)
                     end
-                    
+
                     -- 选中物品
                     self._data:SelectItem(1, item)
-                    
+
                     -- 刷新UI
                     self:RefreshUI()
-                    
-                    print(string.format("[合成] 已选中物品: %s (ID:%d)", item.itemName, itemId))
+
                     return
                 end
             end
         end
     end
-    
-    print(string.format("[合成] 未找到物品 (ID:%d)", itemId))
 end
 
 return compoundMain
