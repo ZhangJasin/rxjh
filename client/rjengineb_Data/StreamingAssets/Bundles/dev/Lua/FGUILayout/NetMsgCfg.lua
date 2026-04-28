@@ -49,6 +49,10 @@ ssrNetMsgCfg.Guild_RetData              = 1100010
 
 ssrNetMsgCfg.equipCollect               = "equipCollect" -- 装备图鉴
 
+
+ssrNetMsgCfg.BOSSChall                      = "BOSSChall" -- BOSS悬赏
+ssrNetMsgCfg.BOSSChall_RetData              = 1100020
+
 local t                                 = {}
 for msgName, msgID in pairs(ssrNetMsgCfg) do
     t[msgName] = msgID

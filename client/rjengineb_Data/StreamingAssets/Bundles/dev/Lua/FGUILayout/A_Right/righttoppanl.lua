@@ -115,6 +115,9 @@ function righttoppanl:Create()
     --        { destroyTime = 1, classPath = "FGUILayout/Z_Jasin/zbtj/equipCollect" })
     --end)
 
+    FGUI:setOnClickEvent(self._righttop.btn_boss_xs, function()
+        FGUI:Open("huodong", "BossPanel")
+    end)
     -- 订阅数据层事件
     self:SubscribeEvents()
 

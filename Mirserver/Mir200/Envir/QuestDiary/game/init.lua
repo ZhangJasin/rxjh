@@ -19,3 +19,4 @@ require("Envir/QuestDiary/game/MentorShipTask.lua") -- 师徒任务
 --Z_Jasin
 require("Envir/QuestDiary/Z_Jasin/Changwan.lua")     -- 畅玩特权
 require("Envir/QuestDiary/Z_Jasin/equipCollect.lua") -- 装备图鉴
+require("Envir/QuestDiary/game/huodong/BossChall.lua") -- BOSS悬赏

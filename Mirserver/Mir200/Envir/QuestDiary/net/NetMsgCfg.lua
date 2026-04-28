@@ -33,6 +33,8 @@ ssrNetMsgCfg.Guild_RetData              = 1100010
 
 ssrNetMsgCfg.equipCollect               = "equipCollect" -- ×°±¸Í¼¼ø
 
+ssrNetMsgCfg.BOSSChall                      = "BOSSChall" -- BOSSÐüÉÍ
+ssrNetMsgCfg.BOSSChall_RetData              = 1100020
 
 local t = {}
 for msgName, msgID in pairs(ssrNetMsgCfg) do

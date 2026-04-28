@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImageLayer="1">
+  <displayList>
+    <component id="n50_s806" name="loader_bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="800,347" pivot="0.5,0.5" anchor="true" size="730,700" group="n49_gab2"/>
+    <component id="n1_vjv7" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1138,24" group="n49_gab2"/>
+    <text id="n2_vjv7" name="text_title" xy="825,24" pivot="0.5,0.5" anchor="true" size="119,34" group="n49_gab2" fontSize="24" color="#ffffff" text="BOSS悬赏"/>
+    <list id="n60_gs4z" name="list_boss" xy="744,578" pivot="1,0" size="225,64" group="n49_gab2" layout="row" selectionMode="none" colGap="16" defaultItem="ui://wvi7a1i4d7i1a">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n49_gab2" name="node" xy="435,-3" size="730,700" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

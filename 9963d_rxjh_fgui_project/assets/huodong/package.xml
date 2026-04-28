@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="wvi7a1i4">
+  <resources>
+    <component id="d7i10" name="BossPanel.xml" path="/" exported="true"/>
+    <component id="d7i19" name="additembtn.xml" path="/Components/" exported="true"/>
+    <component id="d7i1a" name="itemRoot.xml" path="/Components/" exported="true"/>
+    <image id="d7i1b" name="dit.png" path="/Images/" exported="true"/>
+    <image id="d7i1c" name="zshu.png" path="/Images/" exported="true"/>
+    <image id="d7i1d" name="sxin.png" path="/Images/" exported="true"/>
+    <image id="d7i1e" name="bg.png" path="/Images/" exported="true"/>
+    <image id="d7i1f" name="bg1.png" path="/Images/" exported="true"/>
+    <image id="d7i1g" name="bg2.png" path="/Images/" exported="true"/>
+    <image id="d7i1h" name="bg3.png" path="/Images/" exported="true"/>
+    <image id="d7i1i" name="bg4.png" path="/Images/" exported="true"/>
+    <image id="d7i1j" name="bg5.png" path="/Images/" exported="true"/>
+    <image id="d7i1k" name="bg6.png" path="/Images/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

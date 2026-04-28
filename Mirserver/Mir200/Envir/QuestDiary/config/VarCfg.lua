@@ -149,6 +149,8 @@ VarCfg.U_Pet_Die_Time               = "U111" -- 灵兽死亡复活倒计时
 VarCfg.U_Pet_Passive                = "U111" -- 灵兽被动技能ID
 VarCfg.U_Pet_Now_Model              = "U112" -- 当前灵兽显示的模型ID（用于外观显示）
 
+VarCfg.U_BOSS_Count                 = "U113" -- 每日BOSS挑战次数
+
 ---------------------------------------↓↓↓ T变量 ↓↓↓---------------------------------------
 -- 个人字符变量，下线保存
 VarCfg.T_daily_date                 = "T0" -- 格式 20211103 年月日，  每日定时更新，如果定时不在线每日第一次登陆更新
@@ -177,7 +179,7 @@ VarCfg.T_AUTO_SELL_IDS              = "T19" --回收界面勾选的ids
 VarCfg.T_MarryAllInfo               = "T20" -- 玩家侠侣关系 {结缘时间,侠侣名字,侠侣等级,侠侣亲密度等级}
 VarCfg.T_TuLingPosTab               = "T21" -- 记录点坐标
 
-VarCfg.T_BossFuBenTzData            = "T22" -- BOSS副本挑战信息（已挑战次数，已购买次数）
+VarCfg.T_BossData                   = "T22" -- BOSS挑战信息（BOSSID 、已挑战次数）
 VarCfg.T_YuYi_data                  = "T23" -- 羽翼幻化，已激活被动信息
 VarCfg.T_ExpPct_data                = "T24" -- 经验加成道具 加成数值记录
 
