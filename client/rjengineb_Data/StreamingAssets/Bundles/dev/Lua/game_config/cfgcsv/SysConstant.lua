@@ -34,10 +34,15 @@ local config = {
 		Value="20",
 		Dec="最低跑环等级",
 	},
-	["FuBenBoss_Day_Count"] = { 
-		ID="FuBenBoss_Day_Count",
-		Value="3",
-		Dec="副本boss每日免费挑战次数",
+	["Boss_Day_Free_Count"] = { 
+		ID="Boss_Day_Free_Count",
+		Value="2",
+		Dec="boss悬赏每日免费挑战次数",
+	},
+	["Boss_Day_MAX_Count"] = { 
+		ID="Boss_Day_MAX_Count",
+		Value="20",
+		Dec="boss悬赏每日最大挑战次数",
 	},
 	["MIN_Apprentice_ZS"] = { 
 		ID="MIN_Apprentice_ZS",
