@@ -1484,5 +1484,128 @@ local config = {
 		CCondition="<$JOB> == 6 & <$LEVEL> >= 110 & <$GOODEVILID> == 2 & <$RELEVEL> >= 5",
 		ConditionShow="110",
 	},
+	[70002] = { 
+		ID=70002,
+		Condition="<$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 1",
+		CCondition="<$LEVEL> >= 40 & <$GOODEVILID> == 1",
+	},
+	[70003] = { 
+		ID=70003,
+		Condition="<$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 1",
+		CCondition="<$LEVEL> >= 50 & <$GOODEVILID> == 1",
+	},
+	[70004] = { 
+		ID=70004,
+		Condition="<$LEVEL> >= 60 & <$TARGETINFO(GOODEVILID)> == 1",
+		CCondition="<$LEVEL> >= 60 & <$GOODEVILID> == 1",
+	},
+	[70005] = { 
+		ID=70005,
+		Condition="<$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 1",
+		CCondition="<$LEVEL> >= 70 & <$GOODEVILID> == 1",
+	},
+	[70006] = { 
+		ID=70006,
+		Condition="<$LEVEL> >= 80 & <$TARGETINFO(GOODEVILID)> == 1",
+		CCondition="<$LEVEL> >= 80 & <$GOODEVILID> == 1",
+	},
+	[70007] = { 
+		ID=70007,
+		Condition="<$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 1",
+		CCondition="<$LEVEL> >= 90 & <$GOODEVILID> == 1",
+	},
+	[70008] = { 
+		ID=70008,
+		Condition="<$LEVEL> >= 100 & <$TARGETINFO(GOODEVILID)> == 1",
+		CCondition="<$LEVEL> >= 100 & <$GOODEVILID> == 1",
+	},
+	[70009] = { 
+		ID=70009,
+		Condition="<$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 1",
+		CCondition="<$LEVEL> >= 110 & <$GOODEVILID> == 1",
+	},
+	[70010] = { 
+		ID=70010,
+		Condition="<$LEVEL> >= 120 & <$TARGETINFO(GOODEVILID)> == 1",
+		CCondition="<$LEVEL> >= 120 & <$GOODEVILID> == 1",
+	},
+	[70011] = { 
+		ID=70011,
+	},
+	[70012] = { 
+		ID=70012,
+	},
+	[70013] = { 
+		ID=70013,
+	},
+	[70014] = { 
+		ID=70014,
+	},
+	[70015] = { 
+		ID=70015,
+		Condition="<$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 2",
+		CCondition="<$LEVEL> >= 40 & <$GOODEVILID> == 2",
+	},
+	[70016] = { 
+		ID=70016,
+		Condition="<$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 2",
+		CCondition="<$LEVEL> >= 50 & <$GOODEVILID> == 2",
+	},
+	[70017] = { 
+		ID=70017,
+		Condition="<$LEVEL> >= 60 & <$TARGETINFO(GOODEVILID)> == 2",
+		CCondition="<$LEVEL> >= 60 & <$GOODEVILID> == 2",
+	},
+	[70018] = { 
+		ID=70018,
+		Condition="<$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 2",
+		CCondition="<$LEVEL> >= 70 & <$GOODEVILID> == 2",
+	},
+	[70019] = { 
+		ID=70019,
+		Condition="<$LEVEL> >= 80 & <$TARGETINFO(GOODEVILID)> == 2",
+		CCondition="<$LEVEL> >= 80 & <$GOODEVILID> == 2",
+	},
+	[70020] = { 
+		ID=70020,
+		Condition="<$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 2",
+		CCondition="<$LEVEL> >= 90 & <$GOODEVILID> == 2",
+	},
+	[70021] = { 
+		ID=70021,
+		Condition="<$LEVEL> >= 100 & <$TARGETINFO(GOODEVILID)> == 2",
+		CCondition="<$LEVEL> >= 100 & <$GOODEVILID> == 2",
+	},
+	[70022] = { 
+		ID=70022,
+		Condition="<$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 2",
+		CCondition="<$LEVEL> >= 110 & <$GOODEVILID> == 2",
+	},
+	[70023] = { 
+		ID=70023,
+		Condition="<$LEVEL> >= 120 & <$TARGETINFO(GOODEVILID)> == 2",
+		CCondition="<$LEVEL> >= 120 & <$GOODEVILID> == 2",
+	},
+	[70024] = { 
+		ID=70024,
+	},
+	[70025] = { 
+		ID=70025,
+	},
+	[70026] = { 
+		ID=70026,
+	},
+	[70027] = { 
+		ID=70027,
+	},
+	[70028] = { 
+		ID=70028,
+	},
+	[70029] = { 
+		ID=70029,
+	},
+	[70037] = { 
+		ID=70037,
+	},
 }
 return config

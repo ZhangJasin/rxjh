@@ -779,5 +779,59 @@ local config = {
 	[66032] = { 
 		Condition="<$JOB> == 6 & <$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 2 & <$RELEVEL> >= 5",
 	},
+	[70002] = { 
+		Condition="<$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 1",
+	},
+	[70003] = { 
+		Condition="<$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 1",
+	},
+	[70004] = { 
+		Condition="<$LEVEL> >= 60 & <$TARGETINFO(GOODEVILID)> == 1",
+	},
+	[70005] = { 
+		Condition="<$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 1",
+	},
+	[70006] = { 
+		Condition="<$LEVEL> >= 80 & <$TARGETINFO(GOODEVILID)> == 1",
+	},
+	[70007] = { 
+		Condition="<$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 1",
+	},
+	[70008] = { 
+		Condition="<$LEVEL> >= 100 & <$TARGETINFO(GOODEVILID)> == 1",
+	},
+	[70009] = { 
+		Condition="<$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 1",
+	},
+	[70010] = { 
+		Condition="<$LEVEL> >= 120 & <$TARGETINFO(GOODEVILID)> == 1",
+	},
+	[70015] = { 
+		Condition="<$LEVEL> >= 40 & <$TARGETINFO(GOODEVILID)> == 2",
+	},
+	[70016] = { 
+		Condition="<$LEVEL> >= 50 & <$TARGETINFO(GOODEVILID)> == 2",
+	},
+	[70017] = { 
+		Condition="<$LEVEL> >= 60 & <$TARGETINFO(GOODEVILID)> == 2",
+	},
+	[70018] = { 
+		Condition="<$LEVEL> >= 70 & <$TARGETINFO(GOODEVILID)> == 2",
+	},
+	[70019] = { 
+		Condition="<$LEVEL> >= 80 & <$TARGETINFO(GOODEVILID)> == 2",
+	},
+	[70020] = { 
+		Condition="<$LEVEL> >= 90 & <$TARGETINFO(GOODEVILID)> == 2",
+	},
+	[70021] = { 
+		Condition="<$LEVEL> >= 100 & <$TARGETINFO(GOODEVILID)> == 2",
+	},
+	[70022] = { 
+		Condition="<$LEVEL> >= 110 & <$TARGETINFO(GOODEVILID)> == 2",
+	},
+	[70023] = { 
+		Condition="<$LEVEL> >= 120 & <$TARGETINFO(GOODEVILID)> == 2",
+	},
 }
 return config
