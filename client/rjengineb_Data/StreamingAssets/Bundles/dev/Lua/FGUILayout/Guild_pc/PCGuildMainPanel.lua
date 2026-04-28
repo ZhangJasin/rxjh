@@ -902,7 +902,7 @@ function PCGuildMainPanel:OnTaskAwardListRenderer(idx, item)
     if self._taskAwards then
         local reward = self._taskAwards[idx + 1]
         if reward then
-            local itemData = SL:GetValue("ITEM_DATA", reward[1])
+            local itemData = SL:GetValue("ITEM_DATA", reward[2])
             if itemData then
                 local extData = {
                     hideTip = false,
@@ -910,7 +910,7 @@ function PCGuildMainPanel:OnTaskAwardListRenderer(idx, item)
                     clickCallback = false,
                     doubleClickCallback = true,
                     bgVisible = true,
-                    OverLap = reward[2]
+                    OverLap = reward[3]
                 }
                 ItemUtil:ItemShow_Create(itemData, item, extData)
             end

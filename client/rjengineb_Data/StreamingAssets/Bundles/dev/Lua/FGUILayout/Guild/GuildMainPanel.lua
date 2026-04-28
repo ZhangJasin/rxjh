@@ -782,6 +782,7 @@ function GuildMainPanel:FilterRewardsByJob(tab)
     local myZy = SL:GetValue("GOODEVILID") or 0
     local filteredRewards = {}
     local index = 0
+	SL:dump(tab,"富士康方式开发11")
     
     for _, v in pairs(tab) do
         local needjob,needsex,needzy = v[1],v[4] or 0,v[5] or 0 
@@ -790,7 +791,7 @@ function GuildMainPanel:FilterRewardsByJob(tab)
             filteredRewards[index] = v
         end
     end
-    
+    SL:dump(filteredRewards,"富士康方式开发222")
     return filteredRewards
 end
 function GuildMainPanel:getTaskCon()
@@ -903,7 +904,7 @@ function GuildMainPanel:OnTaskAwardListRenderer(idx, item)
     if self._taskAwards then
         local reward = self._taskAwards[idx + 1]
         if reward then
-            local itemData = SL:GetValue("ITEM_DATA", reward[1])
+            local itemData = SL:GetValue("ITEM_DATA", reward[2])
             if itemData then
                 local extData = {
                     hideTip = false,
@@ -911,7 +912,7 @@ function GuildMainPanel:OnTaskAwardListRenderer(idx, item)
                     clickCallback = false,
                     doubleClickCallback = true,
                     bgVisible = true,
-                    OverLap = reward[2]
+                    OverLap = reward[3]
                 }
                 ItemUtil:ItemShow_Create(itemData, item, extData)
             end
