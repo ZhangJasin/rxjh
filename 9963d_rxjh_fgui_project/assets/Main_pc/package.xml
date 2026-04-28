@@ -254,6 +254,10 @@
     <image id="mg2nfvgz" name="pet_011.png" path="/Images/newmain/" exported="true"/>
     <image id="mg2nfvh0" name="pet_012.png" path="/Images/newmain/" exported="true"/>
     <image id="g622fvh1" name="main_btn_zbtj.png" path="/Images/Func/"/>
+    <image id="rus1fvh1" name="main_btn_bagualu.png" path="/Images/Func/"/>
+    <image id="rus1fvh2" name="main_btn_lingshou.png" path="/Images/Func/"/>
+    <image id="rus1fvh3" name="main_btn_zhuan.png" path="/Images/Func/"/>
+    <image id="rus1fvh4" name="main_btn_zhuan2.png" path="/Images/Func/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

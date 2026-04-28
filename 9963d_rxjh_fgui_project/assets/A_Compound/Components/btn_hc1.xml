@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="162,51" extention="Button">
-  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="1"/>
+<component size="162,51" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
     <image id="n0_rus1" name="n0" src="rus1k" fileName="Images/yjann.png" xy="0,0">
       <gearDisplay controller="button" pages="1,3"/>
@@ -10,12 +10,12 @@
       <gearDisplay controller="button" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n3_rus1" name="n3" xy="34,9" size="93,32" fontSize="22" color="#fed76c" align="center" vAlign="middle" autoSize="none" strokeColor="#362f12" strokeSize="2" text="材料合成">
+    <text id="n3_rus1" name="n3" xy="34,9" size="101,32" fontSize="22" color="#fed76c" align="center" vAlign="middle" letterSpacing="2" autoSize="none" strokeColor="#362f12" strokeSize="2" text="材料合成">
       <gearDisplay controller="button" pages="1"/>
     </text>
-    <text id="n4_rus1" name="n4" xy="34,9" size="93,32" fontSize="22" color="#cfcfcf" align="center" vAlign="middle" autoSize="none" strokeColor="#362f12" strokeSize="2" text="材料合成">
+    <text id="n4_rus1" name="n4" xy="34,9" size="101,32" fontSize="22" color="#cfcfcf" align="center" vAlign="middle" letterSpacing="2" autoSize="none" strokeColor="#362f12" strokeSize="2" text="材料合成">
       <gearDisplay controller="button" pages="0"/>
     </text>
   </displayList>
-  <Button/>
+  <Button downEffect="scale" downEffectValue="0.8"/>
 </component>

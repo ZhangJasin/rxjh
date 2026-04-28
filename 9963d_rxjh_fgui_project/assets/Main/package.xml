@@ -320,6 +320,7 @@
     <image id="mg2nfvhd" name="pet_010.png" path="/Images/newmain/" exported="true"/>
     <image id="mg2nfvhe" name="pet_009.png" path="/Images/newmain/" exported="true"/>
     <image id="ni9zfvhf" name="icon_zbtj.png" path="/Images/Func/"/>
+    <image id="rus1fvhf" name="main_btn_BGL.png" path="/Images/Func/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

@@ -4,7 +4,7 @@
     <loader id="n143_pzjg" name="n143" xy="0,716" size="1024,52" url="ui://xwp5ackopzjgfve9" fill="scaleFree">
       <relation target="" sidePair="width-width,bottom-bottom"/>
     </loader>
-    <image id="n59_ljrg" name="n59" src="ljrg24" fileName="Images/Bottom/main_logo.png" xy="457,722">
+    <image id="n59_ljrg" name="n59" src="ljrg24" fileName="Images/Bottom/main_logo.png" xy="457,722" visible="false">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </image>
     <image id="n144_lxvg" name="n144" src="lxvgfvef" fileName="Images/Bottom/main_bottom_exp_bg.png" xy="624,758" size="391,10">
@@ -22,7 +22,7 @@
       <relation target="" sidePair="left-right,bottom-bottom"/>
       <ProgressBar value="50" max="100"/>
     </component>
-    <loader id="n124_bojo" name="n124" xy="10,715" size="430,53" group="n76_jloc" url="ui://xwp5ackobojo6e" fill="scaleFree" autoSize="true"/>
+    <loader id="n124_bojo" name="n124" xy="10,715" size="504,53" group="n76_jloc" url="ui://xwp5ackobojo6e" fill="scaleFree" autoSize="true"/>
     <image id="n147_7ug3" name="n147" src="lxvgfveg" fileName="Images/Bottom/main_bottom_img1.png" xy="0,716" size="10,52" group="n76_jloc"/>
     <component id="n134_m9h9" name="Btn_status" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="34,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
       <Button checked="true" icon="ui://xwp5ackoljrg2g"/>
@@ -54,10 +54,16 @@
     <component id="n140_m9h9" name="Btn_setting" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="370,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
       <Button checked="true" icon="ui://xwp5ackoljrg2a"/>
     </component>
-    <component id="n149_m9h9" name="Btn_zbtj" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="407,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
-      <Button checked="true" icon="ui://xwp5ackog622fvh1"/>
+    <component id="n141_m9h9" name="Btn_pet" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="407,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackorus1fvh2"/>
     </component>
-    <group id="n76_jloc" name="Group_leftButton" xy="0,715" size="440,53" advanced="true">
+    <component id="n142_m9h9" name="Btn_transfer" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="444,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackorus1fvh4"/>
+    </component>
+    <component id="n145_m9h9" name="Btn_fashion" src="m9h96l" fileName="Components/Bottom/ButtonFunc.xml" xy="481,743" pivot="0.5,0.5" anchor="true" group="n76_jloc">
+      <Button checked="true" icon="ui://xwp5ackorus1fvh1"/>
+    </component>
+    <group id="n76_jloc" name="Group_leftButton" xy="0,715" size="514,53" advanced="true">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </group>
     <loader id="n123_bojo" name="n123" xy="615,714" size="400,53" group="n94_ljak" url="ui://xwp5ackobojo6f" fill="scaleFree" autoSize="true"/>

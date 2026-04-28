@@ -54,6 +54,9 @@ function PCMainBottom:Create()
         { btn = self._ui.Btn_friend, name = GET_STRING(40070012), key = SettingKey.Type.FRIEND },
         { btn = self._ui.Btn_setting, name = GET_STRING(40070013), key = nil },
         { btn = self._ui.Btn_zbtj, name = "图鉴", key = nil },
+        { btn = self._ui.Btn_pet,     name = "灵兽", key = nil },
+        { btn = self._ui.Btn_transfer,name = "转职", key = nil },
+        { btn = self._ui.Btn_fashion, name = "八卦炉", key = nil },
     }
     for k, v in pairs(funcBtns) do
         v.index = k
@@ -79,6 +82,9 @@ function PCMainBottom:Create()
     FGUI:setOnClickEvent(self._ui.Btn_friend, handler(self, self.OnClickFriend))
     FGUI:setOnClickEvent(self._ui.Btn_setting, handler(self, self.OnClickSetting))
     FGUI:setOnClickEvent(self._ui.Btn_zbtj, handler(self, self.OnClickZbtj))
+    FGUI:setOnClickEvent(self._ui.Btn_pet, handler(self, self.OnClickPet))
+    FGUI:setOnClickEvent(self._ui.Btn_transfer, handler(self, self.OnClickTransfer))
+    FGUI:setOnClickEvent(self._ui.Btn_fashion, handler(self, self.OnClickFashion))
 
     FGUI:UIModel_addFx(self._ui.Graph_autoFight, 1001010, true, nil, nil, Vector3(0.3, 0.3, 0.3))
     FGUI:UIModel_pause(self._ui.Graph_autoFight)
@@ -215,6 +221,26 @@ function PCMainBottom:OnClickZbtj()
         FGUI:Open("Z_Jasin", "equipCollect", {}, FGUI_LAYER.NORMAL,
             { destroyTime = 1, classPath = "FGUILayout/Z_Jasin/zbtj/equipCollect" })
     end
+end
+
+function PCMainBottom:OnClickPet()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 20 then
+        return SL:ShowSystemTips("人物20级解锁灵兽")
+    end
+    FGUIFunction:SwitchPanel("Mount_pc", "PCMountPanel")
+end
+
+function PCMainBottom:OnClickTransfer()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 10 then
+        return SL:ShowSystemTips("人物10级解锁转职")
+    end
+    FGUI:Open("Transfer", "TransferPanel", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
+end
+
+function PCMainBottom:OnClickFashion()
+    FGUI:Open("A_Compound", "compoundMain", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
 
 function PCMainBottom:OnBtnFuncRollOver(data)

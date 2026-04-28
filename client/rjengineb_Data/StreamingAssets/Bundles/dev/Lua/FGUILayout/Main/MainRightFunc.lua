@@ -20,6 +20,7 @@ function MainRightFunc:Create()
     FGUI:setOnClickEvent(self._ui.Button_ZuoQi, handler(self, self.OnOpenZuoQI))
     FGUI:setOnClickEvent(self._ui.Button_zz, handler(self, self.OnOpenZhuanZhi))
     FGUI:setOnClickEvent(self._ui.Button_zbtj, handler(self, self.OnClickZbtj))
+    FGUI:setOnClickEvent(self._ui.Button_bagua, handler(self, self.OnOpenBagua))
 
     -- 初始化按钮配置（使用实际的按钮对象）
     self._buttonConfig = {
@@ -31,6 +32,7 @@ function MainRightFunc:Create()
         { btn = self._ui.Button_zz,      level = 10 },
         { btn = self._ui.Button_ZuoQi,   level = 20 },
         { btn = self._ui.Button_guild,   level = 25 },
+        { btn = self._ui.Button_bagua,   level = 0 },
         { btn = self._ui.Button_zbtj,    level = 35 },
     }
 
@@ -107,6 +109,7 @@ function MainRightFunc:InitFuncBtnsShow()
         FGUI:setVisible(self._ui.Button_fashion, not FGUI:getVisible(self._ui.Button_fashion))
         FGUI:setVisible(self._ui.Button_guild, not FGUI:getVisible(self._ui.Button_guild))
         FGUI:setVisible(self._ui.Button_role, not FGUI:getVisible(self._ui.Button_role))
+        FGUI:setVisible(self._ui.Button_bagua, not FGUI:getVisible(self._ui.Button_bagua))
     end
     SL:AddKeyboardEvent("KEY_F12", "MainRightFunc", ShowOrHideVisible)
 end
@@ -167,6 +170,10 @@ function MainRightFunc:OnClickZbtj()
     end
     FGUI:Open("Z_Jasin", "equipCollect", {}, FGUI_LAYER.NORMAL,
         { destroyTime = 1, classPath = "FGUILayout/Z_Jasin/zbtj/equipCollect" })
+end
+
+function MainRightFunc:OnOpenBagua()
+    FGUI:Open("A_Compound", "compoundMain", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
 
 -----------------------------------注册事件--------------------------------------

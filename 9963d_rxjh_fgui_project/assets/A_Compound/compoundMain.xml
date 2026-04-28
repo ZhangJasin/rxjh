@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750">
   <displayList>
-    <component id="n2_fno5" name="n2" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="176,52" group="n22_iwm9"/>
-    <component id="n3_fno5" name="n3" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1147,78" group="n22_iwm9"/>
-    <group id="n22_iwm9" name="n22" xy="176,52" size="1000,650"/>
+    <component id="n2_fno5" name="n2" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="176,52"/>
+    <component id="n3_fno5" name="n3" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1147,78"/>
     <image id="n26_rus1" name="n26" src="rus1u" fileName="Images/hcbj2.png" xy="186,106"/>
     <list id="n37_rus1" name="group_2" xy="355,125" size="128,557" overflow="scroll" defaultItem="ui://7nc36bburus111" autoClearItems="true">
       <item/>
@@ -16,7 +15,7 @@
     <image id="n42_rus1" name="n42" src="rus1s" fileName="Images/clxh.png" xy="739,163"/>
     <image id="n43_rus1" name="n43" src="rus1o" fileName="Images/02.png" xy="582,428"/>
     <image id="n44_rus1" name="n44" src="rus1n" fileName="Images/01.png" xy="582,202"/>
-    <list id="n45_rus1" name="group_1" xy="190,122" size="158,560" overflow="scroll" defaultItem="ui://7nc36bburus1z" autoClearItems="true">
+    <list id="n45_rus1" name="group_1" xy="191,122" size="158,560" overflow="scroll" defaultItem="ui://7nc36bburus1z" autoClearItems="true">
       <item/>
       <item/>
     </list>
