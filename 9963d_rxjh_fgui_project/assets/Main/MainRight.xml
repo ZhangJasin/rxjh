@@ -74,11 +74,10 @@
     <component id="n172_ok6e" name="Button_zbtj" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1540,426" group="n32_wuex">
       <Button icon="ui://zj419n3dni9zfvhf"/>
     </component>
-    <group id="n32_wuex" name="Group_func" xy="1343,426" size="460,318" visible="false" advanced="true">
-    <component id="n172_ok6e" name="Button_bagua" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1540,426" size="64,71" group="n32_wuex">
+    <component id="n173_ok6e" name="Button_bagua" src="t2g5kvp5" fileName="ScaleRawButton.xml" pkg="o8ixb2zy" xy="1540,501" size="64,71" group="n32_wuex">
       <Button icon="ui://zj419n3drus1fvhf"/>
     </component>
-    <group id="n32_wuex" name="Group_func" xy="1343,426" size="407,318" advanced="true">
+    <group id="n32_wuex" name="Group_func" xy="1343,426" size="407,318" visible="false" advanced="true">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
     <component id="n30_wuex" name="Button_change" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="1294,295" pivot="0.5,0.5" anchor="true" size="62,62">

@@ -27,7 +27,6 @@ function PCMainBottom:Create()
         ["TreasureShop_pc/PCTreasurePanel"] = self._ui.Btn_shop,
         ["Friend_pc/PCFriendPanel"] = self._ui.Btn_friend,
         ["Setting_pc/PCSettingPanel"] = self._ui.Btn_setting,
-        ["Z_Jasin/equipCollect"] = self._ui.Btn_zbtj,
     }
     local guildSelectFunc = function()
         local isOpen = FGUI:CheckOpen("Guild_pc", "PCGuildJoinList") or FGUI:CheckOpen("Guild_pc", "PCGuildMainPanel")
@@ -53,9 +52,8 @@ function PCMainBottom:Create()
         { btn = self._ui.Btn_shop, name = GET_STRING(40070011), key = nil },
         { btn = self._ui.Btn_friend, name = GET_STRING(40070012), key = SettingKey.Type.FRIEND },
         { btn = self._ui.Btn_setting, name = GET_STRING(40070013), key = nil },
-        { btn = self._ui.Btn_zbtj, name = "图鉴", key = nil },
         { btn = self._ui.Btn_pet,     name = "灵兽", key = nil },
-        { btn = self._ui.Btn_transfer,name = "转职", key = nil },
+        { btn = self._ui.Btn_transfer,name = "图鉴", key = nil },
         { btn = self._ui.Btn_fashion, name = "八卦炉", key = nil },
     }
     for k, v in pairs(funcBtns) do
@@ -81,10 +79,13 @@ function PCMainBottom:Create()
     FGUI:setOnClickEvent(self._ui.Btn_shop, handler(self, self.OnClickShop))
     FGUI:setOnClickEvent(self._ui.Btn_friend, handler(self, self.OnClickFriend))
     FGUI:setOnClickEvent(self._ui.Btn_setting, handler(self, self.OnClickSetting))
-    FGUI:setOnClickEvent(self._ui.Btn_zbtj, handler(self, self.OnClickZbtj))
     FGUI:setOnClickEvent(self._ui.Btn_pet, handler(self, self.OnClickPet))
-    FGUI:setOnClickEvent(self._ui.Btn_transfer, handler(self, self.OnClickTransfer))
-    FGUI:setOnClickEvent(self._ui.Btn_fashion, handler(self, self.OnClickFashion))
+    if self._ui.Btn_transfer then
+        FGUI:setOnClickEvent(self._ui.Btn_transfer, handler(self, self.OnClickZbtj))
+    end
+    if self._ui.Btn_fashion then
+        FGUI:setOnClickEvent(self._ui.Btn_fashion, handler(self, self.OnClickFashion))
+    end
 
     FGUI:UIModel_addFx(self._ui.Graph_autoFight, 1001010, true, nil, nil, Vector3(0.3, 0.3, 0.3))
     FGUI:UIModel_pause(self._ui.Graph_autoFight)

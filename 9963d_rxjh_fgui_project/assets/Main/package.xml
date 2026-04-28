@@ -33,14 +33,14 @@
     <component id="o3hvv67" name="MemberItem.xml" path="/Components/Assist/"/>
     <component id="ke93v6b" name="MainRight.xml" path="/" exported="true"/>
     <component id="ke93v6c" name="MainMiniMap.xml" path="/" exported="true"/>
-    <image id="ke93v6d" name="main_minimap_bg.png" path="/Images/MiniMap/" scale9grid="20,47,40,13"/>
-    <image id="ke93v6e" name="main_minimap_branch.png" path="/Images/MiniMap/"/>
-    <image id="ke93v6g" name="main_minimap_rank.png" path="/Images/MiniMap/"/>
-    <image id="ke93v6h" name="main_minimap_setting.png" path="/Images/MiniMap/"/>
-    <component id="ke93v6l" name="MiniMapButton.xml" path="/Components/MiniMap/"/>
-    <component id="ke93v6m" name="MiniMapMap.xml" path="/Components/MiniMap/"/>
-    <image id="ke93v6p" name="point_link.png" path="/Images/MiniMap/"/>
-    <image id="ke93v6q" name="point_monster.png" path="/Images/MiniMap/"/>
+    <image id="ke93v6d" name="main_minimap_bg.png" path="/Images/MiniMap/" exported="true" scale9grid="20,47,40,13"/>
+    <image id="ke93v6e" name="main_minimap_branch.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="ke93v6g" name="main_minimap_rank.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="ke93v6h" name="main_minimap_setting.png" path="/Images/MiniMap/" exported="true"/>
+    <component id="ke93v6l" name="MiniMapButton.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="ke93v6m" name="MiniMapMap.xml" path="/Components/MiniMap/" exported="true"/>
+    <image id="ke93v6p" name="point_link.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="ke93v6q" name="point_monster.png" path="/Images/MiniMap/" exported="true"/>
     <image id="ke93v6r" name="point_green.png" path="/Images/MiniMap/" exported="true"/>
     <image id="wuexv6x" name="main_func_change.png" path="/Images/Func/" exported="true"/>
     <image id="wuexv6y" name="main_btn_fashion.png" path="/Images/Func/" exported="true"/>
@@ -99,29 +99,29 @@
     <component id="8by8va9" name="ButtonTargetItem.xml" path="/Components/FindTarget/"/>
     <component id="d1ewvaa" name="MainMission.xml" path="/" exported="true"/>
     <component id="d1ewvab" name="MainTeam.xml" path="/" exported="true"/>
-    <image id="7zuvvac" name="actor_red.png" path="/Images/MiniMap/"/>
-    <image id="7zuvvad" name="actor_green.png" path="/Images/MiniMap/"/>
-    <image id="7zuvvae" name="actor_blue.png" path="/Images/MiniMap/"/>
-    <image id="7zuvvaf" name="point_player.png" path="/Images/MiniMap/"/>
-    <image id="7zuvvag" name="point_team.png" path="/Images/MiniMap/"/>
+    <image id="7zuvvac" name="actor_red.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="7zuvvad" name="actor_green.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="7zuvvae" name="actor_blue.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="7zuvvaf" name="point_player.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="7zuvvag" name="point_team.png" path="/Images/MiniMap/" exported="true"/>
     <component id="8s5ivah" name="buffIcon.xml" path="/Components/Player/" exported="true"/>
     <component id="8s5ivai" name="item_buff_list.xml" path="/Components/Player/" exported="true"/>
     <image id="z7bgvam" name="main_quick_add.png" path="/Images/Right/"/>
     <image id="z7bgvan" name="main_quick_bg.png" path="/Images/Right/"/>
-    <component id="z7bgvao" name="QuickUseItem.xml" path="/Components/Right/"/>
+    <component id="z7bgvao" name="QuickUseItem.xml" path="/Components/Right/" exported="true"/>
     <image id="z7bgvaq" name="main_quick_tip.png" path="/Images/Right/"/>
-    <component id="r52evat" name="QuickItemCDMask.xml" path="/Components/Right/"/>
+    <component id="r52evat" name="QuickItemCDMask.xml" path="/Components/Right/" exported="true"/>
     <component id="voypvaw" name="CheckBoxChatChannel.xml" path="/Components/Bottom/"/>
     <image id="celmvax" name="main_npc_talk.png" path="/Images/Right/"/>
     <component id="mfvxvb6" name="ButtonCameraMode.xml" path="/Components/Bottom/"/>
     <image id="hybdvb8" name="main_tips.png" path="/Images/Bottom/"/>
-    <component id="n1l2vb9" name="QuickUseBox.xml" path="/Components/Right/"/>
+    <component id="n1l2vb9" name="QuickUseBox.xml" path="/Components/Right/" exported="true"/>
     <component id="n1l2vba" name="QuickUseSelect.xml" path="/Components/Right/" exported="true"/>
     <component id="uoygvbb" name="ChatNotice.xml" path="/Components/Bottom/"/>
     <component id="10iafvbc" name="PreLoadProgressBar.xml" path="/Components/Bottom/"/>
-    <image id="a4z7fvbd" name="actor_yellow.png" path="/Images/MiniMap/"/>
+    <image id="a4z7fvbd" name="actor_yellow.png" path="/Images/MiniMap/" exported="true"/>
     <image id="n0difvbe" name="main_chat_setting.png" path="/Images/Bottom/"/>
-    <component id="n0difvbf" name="MainQuickUse.xml" path="/Components/Right/"/>
+    <component id="n0difvbf" name="MainQuickUse.xml" path="/Components/Right/" exported="true"/>
     <image id="ke93v6j" name="main_btn_target.png" path="/Images/Skill/"/>
     <font id="ik1cfvbg" name="TimeFont.fnt" path="/Components/Bottom/" exported="true"/>
     <image id="ik1cfvbh" name="main_time_0.png" path="/Images/Bottom/TimeFont/"/>
@@ -157,13 +157,13 @@
     <image id="gcudfvct" name="main_assist_team_select.png" path="/Images/Assist/"/>
     <image id="gcudfvcu" name="main_assist_team_unselect.png" path="/Images/Assist/"/>
     <image id="gcudfvcv" name="main_black_bg.png" path="/Images/Assist/"/>
-    <image id="r075fvcw" name="main_minimap_di1.png" path="/Images/MiniMap/"/>
-    <image id="r075fvcx" name="main_minimap_di2.png" path="/Images/MiniMap/"/>
+    <image id="r075fvcw" name="main_minimap_di1.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="r075fvcx" name="main_minimap_di2.png" path="/Images/MiniMap/" exported="true"/>
     <image id="r075fvcy" name="main_player_combo_bg.png" path="/Images/Player/"/>
     <component id="r075fvcz" name="ModeSetting.xml" path="/" exported="true"/>
-    <component id="r075fvd0" name="ModeItem.xml" path="/Components/ModeSetting/"/>
-    <component id="r075fvd1" name="ModeButton.xml" path="/Components/ModeSetting/"/>
-    <component id="r075fvd2" name="ModeButton2.xml" path="/Components/ModeSetting/"/>
+    <component id="r075fvd0" name="ModeItem.xml" path="/Components/ModeSetting/" exported="true"/>
+    <component id="r075fvd1" name="ModeButton.xml" path="/Components/ModeSetting/" exported="true"/>
+    <component id="r075fvd2" name="ModeButton2.xml" path="/Components/ModeSetting/" exported="true"/>
     <image id="r075fvd3" name="main_chat_arrow.png" path="/Images/Bottom/"/>
     <component id="r075o" name="ButtonClose.xml" path="/Components/BigTarget/"/>
     <component id="s2wafvc6" name="MainNode.xml" path="/" exported="true"/>
@@ -193,7 +193,7 @@
     <image id="tj4vfvdk" name="bubble_effect.png" path="/Images/Bottom/Bubble/"/>
     <component id="kvftfvdm" name="Target.xml" path="/Components/Target/"/>
     <component id="kvftfvdn" name="MainTarget.xml" path="/" exported="true"/>
-    <component id="km1vfvdo" name="MainMiniMapComp.xml" path="/Components/MiniMap/"/>
+    <component id="km1vfvdo" name="MainMiniMapComp.xml" path="/Components/MiniMap/" exported="true"/>
     <image id="s9fqfvdq" name="split.png" path="/Images/Player/"/>
     <component id="rrqifvds" name="TargetClose.xml" path="/Components/Target/"/>
     <image id="my96fvdt" name="main_team_leader.png" path="/Images/Assist/"/>
@@ -209,13 +209,13 @@
     <image id="hpqdfve7" name="main_find_target_check_bg.png" path="/Images/FindTarget/"/>
     <component id="hpqdfve8" name="CheckButton.xml" path="/Components/FindTarget/"/>
     <component id="pzjgfve9" name="MiniMapTracePointItem.xml" path="/Components/MiniMap/" exported="true"/>
-    <image id="pzjgfvea" name="minimap_traceArrow.png" path="/Images/MiniMap/"/>
-    <image id="pzjgfveb" name="minimap_tracePoint.png" path="/Images/MiniMap/"/>
+    <image id="pzjgfvea" name="minimap_traceArrow.png" path="/Images/MiniMap/" exported="true"/>
+    <image id="pzjgfveb" name="minimap_tracePoint.png" path="/Images/MiniMap/" exported="true"/>
     <image id="7ug3fvec" name="main_bottom_bg.png" path="/Images/Bottom/" scale="9grid" scale9grid="3,17,2,4"/>
     <component id="7ug3fved" name="AutoModeComboBox_item.xml" path="/Components/Bottom/"/>
     <component id="7ug3fvee" name="AutoModeComboBox_popup.xml" path="/Components/Bottom/"/>
     <component id="7ug3fvef" name="AutoModeComboBox.xml" path="/Components/Bottom/"/>
-    <component id="kiycfveg" name="RouteScaleButton.xml" path="/Components/MiniMap/"/>
+    <component id="kiycfveg" name="RouteScaleButton.xml" path="/Components/MiniMap/" exported="true"/>
     <component id="vzjdfveh" name="Bbtnlv.xml" path="/Components/newmain/"/>
     <component id="vzjdfvei" name="btn_close.xml" path="/Components/newmain/"/>
     <component id="vzjdfvej" name="btn_fanhui.xml" path="/Components/newmain/"/>

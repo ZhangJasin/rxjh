@@ -28,9 +28,9 @@
     <component id="ljrg17" name="PCMainBottom.xml" path="/" exported="true"/>
     <image id="ljrg1d" name="main_state_auto_move.png" path="/Images/Bottom/"/>
     <image id="ljrg1k" name="main_chat_arrow.png" path="/Images/Bottom/"/>
-    <component id="ljrg1l" name="ButtonAuto.xml" path="/Components/Bottom/"/>
+    <component id="ljrg1l" name="ButtonAuto.xml" path="/Components/Bottom/" exported="true"/>
     <image id="ljrg1q" name="main_tips.png" path="/Images/Bottom/"/>
-    <component id="ljrg1r" name="PreLoadProgressBar.xml" path="/Components/Bottom/"/>
+    <component id="ljrg1r" name="PreLoadProgressBar.xml" path="/Components/Bottom/" exported="true"/>
     <image id="ljrg1t" name="bubble_chat.png" path="/Images/Bottom/Bubble/"/>
     <image id="ljrg1u" name="bubble_mail.png" path="/Images/Bottom/Bubble/"/>
     <image id="ljrg1v" name="bubble_bag.png" path="/Images/Bottom/Bubble/"/>
@@ -41,18 +41,18 @@
     <component id="ljrg21" name="ChatNotice.xml" path="/Components/Chat/"/>
     <image id="ljrg23" name="main_bottom_exp.png" path="/Images/Bottom/" scale="9grid" scale9grid="1,1,2,2"/>
     <image id="ljrg24" name="main_logo.png" path="/Images/Bottom/"/>
-    <image id="ljrg25" name="main_btn_forge.png" path="/Images/Func/"/>
-    <image id="ljrg26" name="main_btn_guild.png" path="/Images/Func/"/>
-    <image id="ljrg27" name="main_btn_bag.png" path="/Images/Func/"/>
-    <image id="ljrg28" name="main_btn_friend.png" path="/Images/Func/"/>
-    <image id="ljrg29" name="main_btn_skill.png" path="/Images/Func/"/>
-    <image id="ljrg2a" name="main_btn_setting.png" path="/Images/Func/"/>
-    <image id="ljrg2b" name="main_btn_team.png" path="/Images/Func/"/>
-    <image id="ljrg2c" name="main_btn_pk.png" path="/Images/Func/"/>
-    <image id="ljrg2f" name="main_btn_shop.png" path="/Images/Func/"/>
-    <image id="ljrg2g" name="main_btn_status.png" path="/Images/Func/"/>
-    <image id="ljrg2h" name="main_btn_trans.png" path="/Images/Func/"/>
-    <image id="ljrg2i" name="main_btn_action.png" path="/Images/Func/"/>
+    <image id="ljrg25" name="main_btn_forge.png" path="/Images/Func/" exported="true"/>
+    <image id="ljrg26" name="main_btn_guild.png" path="/Images/Func/" exported="true"/>
+    <image id="ljrg27" name="main_btn_bag.png" path="/Images/Func/" exported="true"/>
+    <image id="ljrg28" name="main_btn_friend.png" path="/Images/Func/" exported="true"/>
+    <image id="ljrg29" name="main_btn_skill.png" path="/Images/Func/" exported="true"/>
+    <image id="ljrg2a" name="main_btn_setting.png" path="/Images/Func/" exported="true"/>
+    <image id="ljrg2b" name="main_btn_team.png" path="/Images/Func/" exported="true"/>
+    <image id="ljrg2c" name="main_btn_pk.png" path="/Images/Func/" exported="true"/>
+    <image id="ljrg2f" name="main_btn_shop.png" path="/Images/Func/" exported="true"/>
+    <image id="ljrg2g" name="main_btn_status.png" path="/Images/Func/" exported="true"/>
+    <image id="ljrg2h" name="main_btn_trans.png" path="/Images/Func/" exported="true"/>
+    <image id="ljrg2i" name="main_btn_action.png" path="/Images/Func/" exported="true"/>
     <component id="ljrg2j" name="PCMainChat.xml" path="/" exported="true"/>
     <image id="lh522z" name="main_chat_bg.png" path="/Images/Chat/" scale="9grid" scale9grid="4,4,8,8"/>
     <image id="lh5230" name="main_chat_bottom_arrow.png" path="/Images/Chat/"/>
@@ -76,7 +76,7 @@
     <component id="lh523l" name="ChatSliderButton.xml" path="/Components/Chat/"/>
     <component id="lh523m" name="ChannelSendButton.xml" path="/Components/Chat/"/>
     <component id="lh523n" name="Chat.xml" path="/Components/Chat/"/>
-    <image id="ucmr3o" name="main_btn_mail.png" path="/Images/Func/"/>
+    <image id="ucmr3o" name="main_btn_mail.png" path="/Images/Func/" exported="true"/>
     <image id="tj4v3p" name="point_green.png" path="/Images/MiniMap/" exported="true"/>
     <component id="tj4v3q" name="MiniMapPoint.xml" path="/Components/MiniMap/" exported="true"/>
     <image id="tj4v3r" name="actor_yellow.png" path="/Images/MiniMap/"/>
@@ -98,10 +98,10 @@
     <image id="g11o4e" name="main_team_point_select.png.png" path="/Images/Player/"/>
     <image id="g11o4f" name="main_team_point_unselect.png" path="/Images/Player/"/>
     <component id="g11o4g" name="TeamOperation.xml" path="/Components/Player/"/>
-    <component id="fa9c4p" name="QuickBox.xml" path="/Components/Bottom/"/>
+    <component id="fa9c4p" name="QuickBox.xml" path="/Components/Bottom/" exported="true"/>
     <image id="fa9c4q" name="main_quick_bg.png" path="/Images/Right/"/>
     <image id="fa9c4r" name="main_quick_add.png" path="/Images/Right/"/>
-    <component id="fa9c4s" name="QuickCDMask.xml" path="/Components/Bottom/"/>
+    <component id="fa9c4s" name="QuickCDMask.xml" path="/Components/Bottom/" exported="true"/>
     <component id="km1v4t" name="QuickDragBox.xml" path="/Components/Bottom/" exported="true"/>
     <font id="km1v4u" name="TimeFont.fnt" path="/Components/Bottom/" exported="true"/>
     <image id="km1v4v" name="main_time_0.png" path="/Components/Bottom/TimeFont/"/>
@@ -127,7 +127,7 @@
     <component id="bbev5p" name="PCMainMission.xml" path="/" exported="true"/>
     <component id="bbev5q" name="MissionItem.xml" path="/Components/Assist/" exported="true"/>
     <image id="bbev5t" name="main_btn.png" path="/Images/Assist/" scale="9grid" scale9grid="11,11,9,8"/>
-    <component id="bbev5u" name="MemberItem.xml" path="/Components/Assist/"/>
+    <component id="bbev5u" name="MemberItem.xml" path="/Components/Assist/" exported="true"/>
     <image id="bbev5v" name="main_team_member_bg.png" path="/Images/Assist/" scale9grid="100,13,60,28" duplicatePadding="true"/>
     <image id="bbev5z" name="main_team_leader.png" path="/Images/Assist/"/>
     <image id="bbev68" name="main_player_lv_bg.png" path="/Images/Assist/"/>
@@ -144,9 +144,9 @@
     <image id="bojo6f" name="main_bottom_right.png" path="/Images/Bottom/"/>
     <image id="bojo6g" name="main_quick_button_down.png" path="/Images/Bottom/"/>
     <image id="bojo6h" name="main_quick_button_up.png" path="/Images/Bottom/"/>
-    <component id="bojo6i" name="QuickTip.xml" path="/Components/Bottom/"/>
-    <component id="m9h96l" name="ButtonFunc.xml" path="/Components/Bottom/"/>
-    <component id="m9h9v85" name="ButtonBubbleTip.xml" path="/Components/Bottom/"/>
+    <component id="bojo6i" name="QuickTip.xml" path="/Components/Bottom/" exported="true"/>
+    <component id="m9h96l" name="ButtonFunc.xml" path="/Components/Bottom/" exported="true"/>
+    <component id="m9h9v85" name="ButtonBubbleTip.xml" path="/Components/Bottom/" exported="true"/>
     <image id="m9h9v86" name="bubble_effect.png" path="/Components/Bottom/Bubble/"/>
     <image id="m9h9v87" name="bubble_chat.png" path="/Components/Bottom/Bubble/"/>
     <image id="m9h9v88" name="bubble_mail.png" path="/Components/Bottom/Bubble/"/>
@@ -169,13 +169,13 @@
     <image id="pp0lfvdu" name="quality_select_frame_9.png" path="/Images/ModeSetting/" scale="9grid" scale9grid="18,19,3,4" duplicatePadding="true"/>
     <image id="tp62fve1" name="main_assist_mission_top.png" path="/Images/Assist/"/>
     <image id="tp62fve4" name="main_assist_team_top.png" path="/Images/Assist/"/>
-    <component id="rqwtfve6" name="Team.xml" path="/Components/Assist/"/>
+    <component id="rqwtfve6" name="Team.xml" path="/Components/Assist/" exported="true"/>
     <image id="pzjgfve9" name="main_bottom_bg.png" path="/Images/Bottom/" scale9grid="3,3,2,2" duplicatePadding="true"/>
     <component id="u244fvea" name="MiniMapTracePointItem.xml" path="/Components/MiniMap/" exported="true"/>
     <image id="u244fveb" name="minimap_traceArrow.png" path="/Images/MiniMap/"/>
     <image id="u244fvec" name="minimap_tracePoint.png" path="/Images/MiniMap/"/>
     <image id="kx8cfved" name="main_assist_arrow.png" path="/Images/Assist/"/>
-    <component id="kx8cfvee" name="ButtonSwitch.xml" path="/Components/Assist/"/>
+    <component id="kx8cfvee" name="ButtonSwitch.xml" path="/Components/Assist/" exported="true"/>
     <image id="lxvgfvef" name="main_bottom_exp_bg.png" path="/Images/Bottom/" scale="9grid" scale9grid="5,3,2,2"/>
     <image id="lxvgfveg" name="main_bottom_img1.png" path="/Images/Bottom/"/>
     <image id="solpfven" name="main_player_mode_arrow.png" path="/Images/Player/"/>
@@ -237,8 +237,8 @@
     <image id="qug1fvgi" name="xuanshang.png" path="/Images/newmain/" exported="true"/>
     <image id="qug1fvgj" name="icon_dz.png" path="/Images/newmain/" exported="true"/>
     <image id="qug1fvgk" name="icon_mp.png" path="/Images/newmain/" exported="true"/>
-    <component id="k9rffvgl" name="PCMainAssist.xml" path="/"/>
-    <component id="k9rffvgm" name="Mission.xml" path="/Components/Assist/"/>
+    <component id="k9rffvgl" name="PCMainAssist.xml" path="/" exported="true"/>
+    <component id="k9rffvgm" name="Mission.xml" path="/Components/Assist/" exported="true"/>
     <image id="k9rffvgn" name="main_assist_mission_select.png" path="/Images/Assist/"/>
     <image id="k9rffvgo" name="main_assist_mission_unselect.png" path="/Images/Assist/"/>
     <image id="k9rffvgp" name="main_assist_team_select.png" path="/Images/Assist/"/>
@@ -253,11 +253,12 @@
     <image id="mg2nfvgy" name="pet_010.png" path="/Images/newmain/" exported="true"/>
     <image id="mg2nfvgz" name="pet_011.png" path="/Images/newmain/" exported="true"/>
     <image id="mg2nfvh0" name="pet_012.png" path="/Images/newmain/" exported="true"/>
-    <image id="g622fvh1" name="main_btn_zbtj.png" path="/Images/Func/"/>
-    <image id="rus1fvh1" name="main_btn_bagualu.png" path="/Images/Func/"/>
-    <image id="rus1fvh2" name="main_btn_lingshou.png" path="/Images/Func/"/>
-    <image id="rus1fvh3" name="main_btn_zhuan.png" path="/Images/Func/"/>
-    <image id="rus1fvh4" name="main_btn_zhuan2.png" path="/Images/Func/"/>
+    <image id="g622fvh1" name="main_btn_zbtj.png" path="/Images/Func/" exported="true"/>
+    <image id="rus1fvh1" name="main_btn_bagualu.png" path="/Images/Func/" exported="true"/>
+    <image id="rus1fvh2" name="main_btn_lingshou.png" path="/Images/Func/" exported="true"/>
+    <image id="rus1fvh3" name="main_btn_zhuan.png" path="/Images/Func/" exported="true"/>
+    <image id="rus1fvh4" name="main_btn_zhuan2.png" path="/Images/Func/" exported="true"/>
+    <component id="dnr2fvh6" name="Component1.xml" path="/Components/Bottom/"/>
   </resources>
   <publish name=""/>
 </packageDescription>
