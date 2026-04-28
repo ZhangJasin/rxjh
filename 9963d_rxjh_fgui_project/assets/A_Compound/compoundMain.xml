@@ -15,21 +15,22 @@
       <item/>
       <item/>
     </list>
-    <list id="n46_axcm" name="n46" xy="627,227" size="417,91" group="n50_axcm" layout="row" overflow="scroll" colGap="15" defaultItem="ui://7nc36bbuaxcm15" align="center" vAlign="middle">
+    <list id="n46_axcm" name="n46" xy="621,200" size="417,91" group="n50_axcm" layout="row" overflow="scroll" colGap="15" defaultItem="ui://7nc36bbuaxcm15" align="center" vAlign="middle" autoClearItems="true">
       <item/>
       <item/>
       <item/>
     </list>
-    <image id="n42_rus1" name="n42" src="rus1s" fileName="Images/clxh.png" xy="736,170" group="n50_axcm"/>
-    <image id="n44_rus1" name="n44" src="rus1n" fileName="Images/01.png" xy="582,215" group="n50_axcm"/>
-    <group id="n50_axcm" name="n50" xy="582,170" size="499,170" group="n49_axcm"/>
-    <component id="n47_axcm" name="n47" src="axcm15" fileName="Components/group_item.xml" xy="792,410" group="n51_axcm"/>
-    <image id="n41_rus1" name="n41" src="rus1v" fileName="Images/hchd.png" xy="740,344" group="n51_axcm"/>
-    <image id="n43_rus1" name="n43" src="rus1o" fileName="Images/02.png" xy="583,383" group="n51_axcm"/>
-    <group id="n51_axcm" name="n51" xy="583,344" size="499,164" group="n49_axcm"/>
-    <component id="n52_axcm" name="n52" src="axcm18" fileName="Components/group_cost.xml" xy="744,537" size="170,37" group="n49_axcm"/>
-    <component id="n54_axcm" name="n54" src="axcm19" fileName="Components/group_suc.xml" xy="794,566" group="n49_axcm"/>
-    <component id="n55_axcm" name="n55" src="axcm1a" fileName="Components/btn_comp.xml" xy="772,602" group="n49_axcm"/>
-    <group id="n49_axcm" name="n49" xy="582,170" size="500,474"/>
+    <image id="n42_rus1" name="n42" src="rus1s" fileName="Images/clxh.png" xy="730,143" group="n50_axcm"/>
+    <image id="n44_rus1" name="n44" src="rus1n" fileName="Images/01.png" xy="576,188" group="n50_axcm"/>
+    <group id="n50_axcm" name="n50" xy="576,143" size="499,170" group="n49_axcm"/>
+    <component id="n47_axcm" name="n47" src="axcm15" fileName="Components/group_item.xml" xy="782,383" group="n51_axcm"/>
+    <image id="n41_rus1" name="n41" src="rus1v" fileName="Images/hchd.png" xy="730,317" group="n51_axcm"/>
+    <image id="n43_rus1" name="n43" src="rus1o" fileName="Images/02.png" xy="573,356" group="n51_axcm"/>
+    <group id="n51_axcm" name="n51" xy="573,317" size="499,164" group="n49_axcm"/>
+    <component id="n52_axcm" name="n52" src="axcm18" fileName="Components/group_cost.xml" xy="778,507" size="116,37" group="n49_axcm"/>
+    <component id="n54_axcm" name="n54" src="axcm19" fileName="Components/group_suc.xml" xy="788,550" group="n49_axcm"/>
+    <component id="n55_axcm" name="n55" src="axcm1a" fileName="Components/btn_comp.xml" xy="772,598" group="n49_axcm"/>
+    <group id="n49_axcm" name="n49" xy="573,143" size="502,497"/>
+    <image id="n56_hlw9" name="n56" src="hlw91b" fileName="Images/costbj.png" xy="593,499"/>
   </displayList>
 </component>

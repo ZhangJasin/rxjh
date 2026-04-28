@@ -5,7 +5,8 @@ local config = {
 		itemName="金刚石（攻击）",
 		menus="普通合成#强化石一",
 		payItems="656#20|657#40#658#80",
-		payCost="1#400|2#20",
+		payCost="1#400",
+		succRate="100%",
 	},
 	[2] = { 
 		index=2,
@@ -13,7 +14,8 @@ local config = {
 		itemName="金刚石（追伤）",
 		menus="普通合成#强化石一",
 		payItems="656#20|658#40#659#80",
-		payCost="1#400|2#20",
+		payCost="2#400",
+		succRate="100%",
 	},
 	[3] = { 
 		index=3,
@@ -21,7 +23,8 @@ local config = {
 		itemName="金刚石（武功）",
 		menus="普通合成#强化石一",
 		payItems="656#20|660#40#661#80",
-		payCost="1#400|2#20",
+		payCost="4#400",
+		succRate="100%",
 	},
 	[4] = { 
 		index=4,
@@ -29,7 +32,8 @@ local config = {
 		itemName="金刚石（气功）",
 		menus="普通合成#强化石一",
 		payItems="656#20|657#40#658#80",
-		payCost="1#400|2#20",
+		payCost="5#400",
+		succRate="100%",
 	},
 	[5] = { 
 		index=5,
@@ -37,7 +41,8 @@ local config = {
 		itemName="金刚石（命中）",
 		menus="普通合成#强化石二",
 		payItems="656#20|658#40#659#80",
-		payCost="1#400|2#20",
+		payCost="1#400",
+		succRate="100%",
 	},
 	[6] = { 
 		index=6,
@@ -45,7 +50,8 @@ local config = {
 		itemName="寒玉石（防御）",
 		menus="普通合成#强化石二",
 		payItems="656#20|660#40#661#80",
-		payCost="1#400|2#20",
+		payCost="1#400",
+		succRate="100%",
 	},
 	[7] = { 
 		index=7,
@@ -53,7 +59,8 @@ local config = {
 		itemName="寒玉石（武防）",
 		menus="普通合成#强化石二",
 		payItems="656#20|657#40#658#80",
-		payCost="1#400|2#20",
+		payCost="1#400",
+		succRate="100%",
 	},
 	[8] = { 
 		index=8,
@@ -61,7 +68,8 @@ local config = {
 		itemName="寒玉石（生命）",
 		menus="普通合成#强化石二",
 		payItems="656#20|658#40#659#80",
-		payCost="1#400|2#20",
+		payCost="1#400",
+		succRate="100%",
 	},
 	[9] = { 
 		index=9,
@@ -69,7 +77,8 @@ local config = {
 		itemName="寒玉石（闪避）",
 		menus="普通合成#强化石二",
 		payItems="656#20|660#40#661#80",
-		payCost="1#400|2#20",
+		payCost="1#400",
+		succRate="100%",
 	},
 	[10] = { 
 		index=10,
@@ -77,7 +86,8 @@ local config = {
 		itemName="寒玉石（内功）",
 		menus="普通合成#强化石二",
 		payItems="656#20|657#40#658#80",
-		payCost="1#400|2#20",
+		payCost="1#400",
+		succRate="100%",
 	},
 	[11] = { 
 		index=11,
@@ -85,7 +95,8 @@ local config = {
 		itemName="龙猫（潘达）",
 		menus="特殊合成#宠物",
 		payItems="656#20|657#40#658#80",
-		payCost="1#400|2#20",
+		payCost="1#400",
+		succRate="100%",
 	},
 	[12] = { 
 		index=12,
@@ -93,7 +104,8 @@ local config = {
 		itemName="寒玉石（内功）",
 		menus="普通合成#强化石二",
 		payItems="656#20|657#40#658#80",
-		payCost="1#400|2#20",
+		payCost="1#400",
+		succRate="100%",
 	},
 }
 return config

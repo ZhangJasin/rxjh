@@ -318,18 +318,7 @@ end
 function compoundMain:RefreshContent()
     local item = self._data:GetCurrentItem()
     if not item then
-        print("[合成] 未选中物品")
         return
-    end
-
-    print("========================================")
-    print("[合成] 当前选中物品:", item.itemName, "ID:", item.itemId)
-    print("[合成] 菜单路径:", item.menus)
-    print("[合成] 消耗道具 payItems:", item.payItems)
-    print("[合成] 消耗货币 payCost:", item.payCost)
-    print("[合成] 物品完整数据:", item)
-    for k, v in pairs(item) do
-        print(string.format("  %s = %s", tostring(k), tostring(v)))
     end
 
     -- 刷新消耗道具显示 (n46)
@@ -343,30 +332,18 @@ function compoundMain:RefreshContent()
 
     -- 刷新成功率显示 (n54)
     self:_RefreshSuccessRate(item)
-
-    print("========================================")
 end
 
 -- 刷新消耗道具显示 (n46是list，每个item有n4 loader)
 function compoundMain:_RefreshPayItems(payItems)
-    print("[合成] _RefreshPayItems 被调用")
-    print("[合成] payItems 数据:", payItems)
-    
-    if not self._ui.n46 then 
-        print("[合成] n46 组件不存在")
-        return 
-    end
+    if not self._ui.n46 then return end
     
     if not payItems or #payItems == 0 then
-        print("[合成] 消耗道具为空")
         FGUI:GList_setNumItems(self._ui.n46, 0)
         return
     end
 
-    print("[合成] 消耗道具数量:", #payItems)
-    FGUI:GList_setNumItems(self._ui.n46, #payItems)
-    
-    -- 设置渲染器
+    -- 先设置渲染器，再设置数量
     FGUI:GList_itemRenderer(self._ui.n46, function(index, item)
         local payItem = payItems[index + 1]
         if not payItem then return end
@@ -374,40 +351,56 @@ function compoundMain:_RefreshPayItems(payItems)
         local itemId = payItem.id or 0
         local count = payItem.count or 0
         
-        print(string.format("[合成] 渲染道具%d: id=%s, count=%s", index + 1, tostring(itemId), tostring(count)))
-        
         -- 设置图标 (n4是loader)
         local iconLoader = FGUI:GetChild(item, "n4")
-        print("[合成] n4 loader:", iconLoader)
-        
         if iconLoader then
             local itemData = SL:GetValue("ITEM_DATA", itemId)
-            print("[合成] 物品数据:", itemData)
-            
             if itemData and itemData.Looks then
                 local path = itemData.Looks >= 100000 and string.format("ui://ItemIcon/%d", itemData.Looks) or string.format("ui://ItemIcon/%06d", itemData.Looks)
-                print("[合成] 设置图标路径:", path)
                 FGUI:GLoader_setUrl(iconLoader, path)
-            else
-                print("[合成] 物品数据缺少Looks字段")
+                -- 设置图标大小
+                FGUI:setSize(iconLoader, 50, 50)
+                
+                -- 添加tips事件 - PC端hover，移动端点击
+                local isPC = SL:GetValue("IS_PC_OPER_MODE")
+                if isPC then
+                    FGUI:setOnRollOverEvent(iconLoader, function()
+                        FGUIFunction:OpenItemTips({itemData = itemData, hideButtons = true})
+                    end)
+                    FGUI:setOnRollOutEvent(iconLoader, function()
+                        FGUIFunction:CloseItemTips()
+                    end)
+                else
+                    FGUI:setOnClickEvent(iconLoader, function()
+                        FGUIFunction:OpenItemTips({itemData = itemData, hideButtons = true})
+                    end)
+                end
             end
         end
         
-        -- 设置数量 (n2是数量文本)
-        local n2 = FGUI:GetChild(item, "n2")
-        if n2 then
-            FGUI:GTextField_setText(n2, string.format("x%d", count))
+        -- 设置名字x数量 (n1是名字，格式为"道具名称x数量")
+        local n1 = FGUI:GetChild(item, "n1")
+        if n1 then
+            local itemName = "未知物品"
+            local ItemConfig = SL:GetValue("ITEM_CONFIG")
+            if ItemConfig and ItemConfig[itemId] then
+                itemName = ItemConfig[itemId].Name or itemName
+            end
+            FGUI:GTextField_setText(n1, string.format("%sx%d", itemName, count))
         end
     end)
+    
+    -- 清空并重新设置数量，触发渲染
+    FGUI:GList_removeChildrenToPool(self._ui.n46)
+    FGUI:GList_setNumItems(self._ui.n46, 0)
+    FGUI:GList_setNumItems(self._ui.n46, #payItems)
 end
 
--- 刷新合成目标显示 (n47是component，n4是loader，n1是名字，n2是数量)
+-- 刷新合成目标显示 (n47是component，n4是loader，n1是名字)
 function compoundMain:_RefreshTargetItem(item)
     if not self._ui.n47 then return end
     
-    if not item then
-        return
-    end
+    if not item then return end
 
     -- 设置目标物品图标 (n4是loader)
     local iconLoader = FGUI:GetChild(self._ui.n47, "n4")
@@ -416,10 +409,24 @@ function compoundMain:_RefreshTargetItem(item)
         local itemData = SL:GetValue("ITEM_DATA", itemId)
         if itemData and itemData.Looks then
             local path = itemData.Looks >= 100000 and string.format("ui://ItemIcon/%d", itemData.Looks) or string.format("ui://ItemIcon/%06d", itemData.Looks)
-            print("[合成] 设置目标图标路径:", path)
             FGUI:GLoader_setUrl(iconLoader, path)
-        else
-            print("[合成] 目标物品数据缺少Looks字段")
+            -- 设置图标大小
+            FGUI:setSize(iconLoader, 50, 50)
+            
+            -- 添加tips事件 - PC端hover，移动端点击
+            local isPC = SL:GetValue("IS_PC_OPER_MODE")
+            if isPC then
+                FGUI:setOnRollOverEvent(iconLoader, function()
+                    FGUIFunction:OpenItemTips({itemData = itemData, hideButtons = true})
+                end)
+                FGUI:setOnRollOutEvent(iconLoader, function()
+                    FGUIFunction:CloseItemTips()
+                end)
+            else
+                FGUI:setOnClickEvent(iconLoader, function()
+                    FGUIFunction:OpenItemTips({itemData = itemData, hideButtons = true})
+                end)
+            end
         end
     end
 
@@ -428,36 +435,29 @@ function compoundMain:_RefreshTargetItem(item)
     if n1 then
         FGUI:GTextField_setText(n1, item.itemName or "未知物品")
     end
-    
-    -- 设置数量 (n2是数量)
-    local n2 = FGUI:GetChild(self._ui.n47, "n2")
-    if n2 then
-        FGUI:GTextField_setText(n2, string.format("x%d", 1))
-    end
 end
 
--- 刷新消耗货币显示 (n52是component，n1是loader，n2是货币名，n3是数量)
+-- 刷新消耗货币显示 (n52是component，n1是loader，n2是货币名)
 function compoundMain:_RefreshPayCost(payCost)
     if not self._ui.n52 then return end
     
-    if not payCost or #payCost == 0 then
-        return
-    end
+    if not payCost or #payCost == 0 then return end
 
-    -- 设置货币图标 (n1是loader，取第一个货币)
+    -- 先设置货币图标
     local iconLoader = FGUI:GetChild(self._ui.n52, "n1")
     if iconLoader and payCost[1] then
         local costType = payCost[1].id or 0
         local itemData = SL:GetValue("ITEM_DATA", costType)
         if itemData and itemData.Looks then
             local path = itemData.Looks >= 100000 and string.format("ui://ItemIcon/%d", itemData.Looks) or string.format("ui://ItemIcon/%06d", itemData.Looks)
-            print("[合成] 设置货币图标路径:", path)
             FGUI:GLoader_setUrl(iconLoader, path)
+            -- 设置图标大小
+            FGUI:setSize(iconLoader, 28, 28)
         end
     end
 
-    -- 设置货币名称和数量 (n2是名，n3是数量)
-    local cost = payCost[1]  -- 取第一个货币
+    -- 设置货币名称 (n2是货币名)
+    local cost = payCost[1]
     if cost then
         local costType = cost.id or 0
         local amount = cost.count or 0
@@ -471,31 +471,28 @@ function compoundMain:_RefreshPayCost(payCost)
 
         local n2 = FGUI:GetChild(self._ui.n52, "n2")
         if n2 then
-            FGUI:GTextField_setText(n2, costTypeName)
-        end
-        
-        local n3 = FGUI:GetChild(self._ui.n52, "n3")
-        if n3 then
-            FGUI:GTextField_setText(n3, string.format("x%d", amount))
+            -- 显示格式：货币名 x数量
+            FGUI:GTextField_setText(n2, string.format("%s x%d", costTypeName, amount))
         end
     end
 end
 
--- 刷新成功率显示 (n54是component，n3是成功率文本)
+-- 刷新成功率显示 (n54是component，n2是唯一文本)
 function compoundMain:_RefreshSuccessRate(item)
     if not self._ui.n54 then return end
-    
+
     -- 默认100%
     local successRate = 100
-    
+
     -- 如果物品配置中有成功率，使用配置中的值
     if item and item.successRate then
-        successRate = item.successRate
+        successRate = tonumber(item.successRate) or 100
     end
 
-    local n3 = FGUI:GetChild(self._ui.n54, "n3")
-    if n3 then
-        FGUI:GTextField_setText(n3, string.format("%d%%", successRate))
+    local n2 = FGUI:GetChild(self._ui.n54, "n2")
+    if n2 then
+        -- 显示格式：成功率100%
+        FGUI:GTextField_setText(n2, string.format("成功率%.0f%%", successRate))
     end
 end
 

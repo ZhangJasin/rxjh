@@ -25,6 +25,7 @@
     <component id="axcm18" name="group_cost.xml" path="/Components/"/>
     <component id="axcm19" name="group_suc.xml" path="/Components/"/>
     <component id="axcm1a" name="btn_comp.xml" path="/Components/"/>
+    <image id="hlw91b" name="costbj.png" path="/Images/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

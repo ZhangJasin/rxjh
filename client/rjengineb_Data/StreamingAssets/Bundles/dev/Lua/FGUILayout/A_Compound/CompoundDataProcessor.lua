@@ -111,6 +111,7 @@ function CompoundDataProcessor.ParseItemData(itemConfig)
         payItems = CompoundDataProcessor.ParsePayData(itemConfig.payItems),
         payCost = CompoundDataProcessor.ParsePayData(itemConfig.payCost),
         sect = itemConfig.sect or 0,
+        successRate = itemConfig.SuccessRate or 100,
     }
 end
 
