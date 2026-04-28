@@ -34,6 +34,11 @@ local config = {
 		Value="20",
 		Dec="最低跑环等级",
 	},
+	["Boss_Open_LV"] = { 
+		ID="Boss_Open_LV",
+		Value="35",
+		Dec="boss悬赏开启等级",
+	},
 	["Boss_Day_Free_Count"] = { 
 		ID="Boss_Day_Free_Count",
 		Value="2",
