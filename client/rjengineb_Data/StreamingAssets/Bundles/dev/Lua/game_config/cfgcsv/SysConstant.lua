@@ -44,6 +44,11 @@ local config = {
 		Value="5",
 		Dec="单个BOSS每日挑战次数",
 	},
+	["Boss_Chall_Num"] = { 
+		ID="Boss_Chall_Num",
+		Value="8",
+		Dec="玩家BOSS池数量",
+	},
 	["Boss_Chall_Time"] = { 
 		ID="Boss_Chall_Time",
 		Value="300",
