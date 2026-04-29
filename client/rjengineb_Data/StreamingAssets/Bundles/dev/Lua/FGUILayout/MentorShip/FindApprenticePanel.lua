@@ -33,11 +33,11 @@ function FindApprenticePanel:Exit()
 end
 
 function FindApprenticePanel:InitData()
-	self._list = {}
-	self._raw  = nil
-	self._itemModels = {}
+	self._list          = {}
+	self._raw           = nil
+	self._itemModels    = {}
 	self._lastRefreshAt = 0
-	self._requesting = false
+	self._requesting    = false
 end
 
 function FindApprenticePanel:Close()
@@ -49,13 +49,13 @@ function FindApprenticePanel:InitEvent()
 	FGUI:setOnClickEvent(self._ui.btn_refresh, handler(self, self.OnClickRefresh))
 	FGUI:setOnClickEvent(self._ui.btn_publish, handler(self, self.OnClickPublish))
 	FGUI:setOnClickEvent(self._ui.btn_applylist, handler(self, self.OnClickApplylist))
-	local search = FGUI:GetChild(self._ui.searchView,"search")
+	local search = FGUI:GetChild(self._ui.searchView, "search")
 	FGUI:setOnClickEvent(search, handler(self, self.todoSearch))
 	FGUI:GList_itemRenderer(self._ui.list_find, handler(self, self.FinderRenderer))
 end
 
 function FindApprenticePanel:todoSearch()
-	local searchInput = FGUI:GetChild(self._ui.searchView,"searchText")
+	local searchInput = FGUI:GetChild(self._ui.searchView, "searchText")
 	local text = FGUI:GTextInput_getText(searchInput)
 	self._store:RequestFindApprenticeList(text)
 end
@@ -68,15 +68,15 @@ function FindApprenticePanel:_RequestList(force)
 	if self._requesting then
 		return
 	end
-	self._requesting   = true
+	self._requesting = true
 	self._store:RequestFindApprenticeList("*")
 end
 
 function FindApprenticePanel:OnRecvApprenticeList(evtPayload)
-	self = FindApprenticePanelUI.CCUI
+	self       = FindApprenticePanelUI.CCUI
 	self._raw  = evtPayload
 	self._list = self:_NormalizeAndSort(evtPayload)
-	local num = #self._list
+	local num  = #self._list
 	if num > MasterApprenticeShip['max_show_master'].VALUE then
 		num = MasterApprenticeShip['max_show_master'].VALUE
 	end
@@ -85,13 +85,13 @@ function FindApprenticePanel:OnRecvApprenticeList(evtPayload)
 end
 
 function FindApprenticePanel:getResult(data)
-	
+	--该方法已弃用
+	print("触发启动方法FindApprenticePanel:getResult(data)")
 	self._raw  = data
 	self._list = self:_NormalizeAndSort(data)
 	FGUI:GList_setNumItems(self._ui.list_find, #self._list)
 	self._requesting = false
 end
-
 
 function FindApprenticePanel:_NormalizeAndSort(raw)
 	local arr = {}
@@ -140,12 +140,12 @@ function FindApprenticePanel:_NormalizeOne(v)
 		PublishOnline = v.PublishOnline,
 		PublishMap    = v.PublishMap,
 		IsOnline      = isOnline and true or false,
-		bodyId = v.bodyId,
-		headId = v.headId,
-    	weaponId = v.rWeapon,
-    	wingId = v.wingId,
-		faceId = v.faceId,
-		goodEvilid = v.goodEvilid
+		bodyId        = v.bodyId,
+		headId        = v.headId,
+		weaponId      = v.rWeapon,
+		wingId        = v.wingId,
+		faceId        = v.faceId,
+		goodEvilid    = v.goodEvilid
 	}
 end
 
@@ -171,19 +171,19 @@ function FindApprenticePanel:FinderRenderer(idx, item)
 	local text_job    = FGUI:GetChild(item, "text_job")
 	local text_level  = FGUI:GetChild(item, "text_level")
 
-	FGUI:GTextField_setText(text_name,  safe(data.UserName, "--"))
+	FGUI:GTextField_setText(text_name, safe(data.UserName, "--"))
 	FGUI:GTextField_setText(text_guild, safe(data.GuildName, ""))
 
 	local gender_str = safe(data.PublishGender, safe(data.Sex, "保密"))
 	local online_str = safe(data.PublishOnline, data.IsOnline and "在线" or "离线")
-	local map_str    = safe(data.PublishMap,    safe(data.MapName, "保密"))
+	local map_str    = safe(data.PublishMap, safe(data.MapName, "保密"))
 
 	FGUI:GTextField_setText(text_gender, "性别：" .. tostring(gender_str))
 	FGUI:GTextField_setText(text_online, "在线：" .. tostring(online_str))
-	FGUI:GTextField_setText(text_map,    "地点：" .. tostring(map_str))
+	FGUI:GTextField_setText(text_map, "地点：" .. tostring(map_str))
 
 	local jobName = SL:GetMetaValue("JOB_NAME_BY_ID", data.Job) or ""
-	FGUI:GTextField_setText(text_job,tostring(jobName))
+	FGUI:GTextField_setText(text_job, tostring(jobName))
 	FGUI:GTextField_setText(text_level, "Lv." .. tostring(data.Level or 1))
 
 	if icon_job then
@@ -207,10 +207,12 @@ end
 function FindApprenticePanel:OnClickRefresh()
 	self:_RequestList(true)
 end
+
 function FindApprenticePanel:OnClickApplylist()
 	--申请成为我的徒弟的列表
 	FGUI:Open("MentorShip", "ShipApplyLists", { mode = 2 })
 end
+
 function FindApprenticePanel:OnClickPublish()
 	--发布当徒弟出现在师傅列表里
 	FGUI:Open("MentorShip", "FindPublishPanel", { mode = 1 })
@@ -228,7 +230,8 @@ function FindApprenticePanel:OnClickInfo(ctx)
 		targetName = data.UserName,
 		Level = data.Level,
 		GuildName = data.GuildName,
-		TipsType = isTeamMember and SL:GetValue("DOCKTYPE_NENUM").Func_Team or SL:GetValue("DOCKTYPE_NENUM").Func_Near_Player,
+		TipsType = isTeamMember and SL:GetValue("DOCKTYPE_NENUM").Func_Team or
+			SL:GetValue("DOCKTYPE_NENUM").Func_Near_Player,
 		FrameID = data.PhotoframeID
 	})
 end
@@ -257,8 +260,8 @@ function FindApprenticePanel:BindModelForItem(graph_model, panel_touch, data)
 	extData.job = data.Job
 	extData.bodyId = data.bodyId
 	extData.helmetId = data.headId
-    extData.weaponId = data.rWeapon
-    extData.wingId = data.wingId
+	extData.weaponId = data.rWeapon
+	extData.wingId = data.wingId
 	extData.faceId = data.faceId
 	local idx = FGUI:UIModel_addCharacterModel(fguiModel, extData, nil, nil, Vector3.one * 0.8)
 	FGUI:UIModel_setModelCallback(fguiModel, function(midx)
@@ -296,7 +299,9 @@ function FindApprenticePanel:ClearAllModels()
 end
 
 function FindApprenticePanel:RegisterEvent()
-	SL:RegisterLUAEvent("LUA_EVENT_FIND_APPRENTICE_UPDATE", "FindApprenticePanel", handler(self, self.OnRecvApprenticeList))
+	--废弃事件
+	SL:RegisterLUAEvent("LUA_EVENT_FIND_APPRENTICE_UPDATE", "FindApprenticePanel",
+		handler(self, self.OnRecvApprenticeList))
 end
 
 function FindApprenticePanel:RemoveEvent()
