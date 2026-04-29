@@ -53,7 +53,18 @@ function BossPanel:RefreshUI()
 end
 
 function BossPanel:RefreshBossUI(_,_times,_,_,data)
-    self:RefreshUI() 
+    if data then
+		-- 将JSON字符串转换为对象
+		local dataObj = nil
+		if type(data) == "string" and data ~= "" then
+			dataObj = cjson.decode(data)
+		elseif type(data) == "table" then
+			dataObj = data
+		end
+        self._times = _times
+        self._data = dataObj
+        self:RefreshUI() 
+    end
 end
 
 -- 当前列表渲染
