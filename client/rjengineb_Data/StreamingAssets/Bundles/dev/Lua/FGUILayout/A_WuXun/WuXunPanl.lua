@@ -276,6 +276,8 @@ function WuXunPanl:WuXunShow()
     local nextTitleImg = wuxun_level_data[self.WuXun_Level]['WuXun_Pic'][self.goodDevilID][2] and wuxun_level_data[self.WuXun_Level]['WuXun_Pic'][self.goodDevilID][2] or 0
     FGUI:GLoader_setUrl(self.back.curTitle,"ui://A_WuXun/"..curTitleImg)
     FGUI:GLoader_setUrl(self.back.nextTitle,"ui://A_WuXun/"..nextTitleImg)
+    -- n67称号图片（与curTitle保持一致）
+    FGUI:GLoader_setUrl(self.back.n67,"ui://A_WuXun/"..curTitleImg)
     -- -- 武勋等级显示
     -- local wxlvContro = FGUI:getController(self._ui.panl_wuxun, "wxlv")
     -- FGUI:Controller_setSelectedIndex(wxlvContro,self.WuXun_Level-1)

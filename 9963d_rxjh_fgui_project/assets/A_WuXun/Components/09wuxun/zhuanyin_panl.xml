@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="978,584">
-  <controller name="selectEquip" pages="0,,1,,2," selected="2">
+  <controller name="selectEquip" pages="0,,1,,2," selected="0">
     <remark page="0" value="未选择"/>
     <remark page="1" value="选择中"/>
     <remark page="2" value="已选择"/>
   </controller>
-  <controller name="iswear" pages="0,,1," selected="1">
+  <controller name="iswear" pages="0,,1," selected="0">
     <remark page="0" value="未穿戴"/>
     <remark page="1" value="穿戴"/>
   </controller>
@@ -18,19 +18,19 @@
       <item/>
       <item/>
     </list>
-    <image id="n53_fjq2" name="n53" src="oqrp1n" fileName="Images/05boss/内容底.png" xy="373,178" size="251,217"/>
-    <image id="n61_p3ya" name="n61" src="oqrp1n" fileName="Images/05boss/内容底.png" xy="701,178" size="248,217"/>
+    <image id="n53_fjq2" name="n53" src="oqrp1n" fileName="Images/05boss/nrd.png" xy="373,178" size="251,217"/>
+    <image id="n61_p3ya" name="n61" src="oqrp1n" fileName="Images/05boss/nrd.png" xy="701,178" size="248,217"/>
     <component id="n54_fjq2" name="xzequip" src="oqrpy" fileName="Components/tongyong/item_select.xml" xy="457,64"/>
     <component id="n57_fjq2" name="btn_zhuanyin" src="oqrp17" fileName="Components/tongyong/btn_zong.xml" xy="586,480">
       <Button title="转 印" titleColor="#ffffff" titleFontSize="20"/>
     </component>
-    <text id="n60_p3ya" name="wpdfont" xy="750,253" pivot="0.5,0.5" size="154,42" font="SimHei" fontSize="30" color="#a4d452" align="center" text="请选择装备">
+    <text id="n60_p3ya" name="wpdfont" xy="750,253" pivot="0.5,0.5" size="154,42" font="SimHei" fontSize="30" color="#e5e542" align="center" vAlign="middle" strokeColor="#353717" strokeSize="2" shadowColor="#137a95" shadowOffset="-2,1" text="请选择装备">
       <gearDisplay controller="selectEquip" pages="0"/>
     </text>
-    <text id="n96_hujp" name="wpdfont2" xy="420,253" pivot="0.5,0.5" size="154,42" font="SimHei" fontSize="30" color="#a4d452" align="center" text="请选择装备">
+    <text id="n96_hujp" name="wpdfont2" xy="420,253" pivot="0.5,0.5" size="154,42" font="SimHei" fontSize="30" color="#e5e542" align="center" strokeColor="#353717" strokeSize="2" shadowColor="#137a95" shadowOffset="-2,1" text="请选择装备">
       <gearDisplay controller="iswear" pages="0"/>
     </text>
-    <image id="n63_p3ya" name="n63" src="oqrp7" fileName="Images/09wuxun/箭头.png" xy="634,261" flip="hz"/>
+    <image id="n63_p3ya" name="n63" src="oqrp7" fileName="Images/09wuxun/jt.png" xy="634,261" flip="hz"/>
     <component id="n76_hujp" name="xzequip2" src="oqrpy" fileName="Components/tongyong/item_select.xml" xy="786,64" controller="c2,1,c1,4"/>
     <component id="n77_hujp" name="btn_gx1" src="oqrp1v" fileName="Components/09wuxun/btn_gouxuan.xml" xy="410,200">
       <gearDisplay controller="iswear" pages="1"/>

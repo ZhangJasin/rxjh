@@ -10,7 +10,7 @@
       <gearDisplay controller="button" pages="1,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n2_fjq2" name="title" xy="0,0" size="156,40" font="SimHei" fontSize="12" align="center" vAlign="middle" autoSize="none" singleLine="true" text="">
+    <text id="n2_fjq2" name="title" xy="0,0" size="156,40" font="SimHei" fontSize="12" align="center" vAlign="middle" autoSize="none" strokeColor="#3b1101" singleLine="true" text="爱按">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
   </displayList>

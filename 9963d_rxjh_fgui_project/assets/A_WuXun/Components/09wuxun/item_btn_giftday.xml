@@ -7,18 +7,18 @@
     <remark page="1" value="邪"/>
   </controller>
   <displayList>
-    <image id="n0_jdkj" name="n0" src="oqrp1e" fileName="Images/09wuxun/底-九宫.png" xy="0,0" size="520,80">
+    <image id="n0_jdkj" name="n0" src="oqrp1e" fileName="Images/09wuxun/dijg.png" xy="0,0" size="520,80">
       <gearDisplay controller="button" pages="0,1,2,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n1_jdkj" name="n1" src="oqrp1f" fileName="Images/09wuxun/信息底选中-九宫.png" xy="0,0" size="520,80" visible="false">
+    <image id="n1_jdkj" name="n1" src="oqrp1f" fileName="Images/09wuxun/xxdxz.png" xy="0,0" size="520,80" visible="false">
       <gearDisplay controller="button" pages="1,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <component id="n17_jdkj" name="equip1" src="oqrpf" fileName="Components/tongyong/itemkuang2.xml" xy="162,7"/>
     <component id="n18_jdkj" name="equip2" src="oqrpf" fileName="Components/tongyong/itemkuang2.xml" xy="232,6"/>
     <component id="n19_jdkj" name="equip3" src="oqrpf" fileName="Components/tongyong/itemkuang2.xml" xy="302,6"/>
-    <image id="n20_jdkj" name="n20" src="oqrp1g" fileName="Images/0tongyong/ylq.png" xy="375,3"/>
+    <image id="n20_jdkj" name="n20" src="oqrp1g" fileName="Images/0tongyong/ylq.png" xy="396,18"/>
     <loader id="n21_y1ql" name="titleid" xy="-120,-62" pivot="0.5,0.5" size="400,200" scale="0.5,0.5" url="ui://hed3v11ooqrpp" autoSize="true"/>
   </displayList>
   <Button mode="Radio"/>

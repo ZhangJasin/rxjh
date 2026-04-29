@@ -10,23 +10,17 @@
     <remark page="1" value="有穿戴"/>
   </controller>
   <displayList>
-    <image id="n10_mwln" name="n10" src="oqrp5" fileName="Images/09wuxun/底.png" xy="4,3"/>
-    <graph id="n11_mwln" name="graph_fashion_role" xy="318,436" pivot="0.5,0.5" anchor="true" size="100,100" scale="0.8,0.8" blend="screen">
+    <image id="n10_mwln" name="n10" src="858f2r" fileName="Images/09wuxun/bg_wuxun_main_panel.png" xy="-22,-20" size="1004,630"/>
+    <graph id="n11_mwln" name="graph_fashion_role" xy="302,409" pivot="0.5,0.5" anchor="true" size="100,100" scale="0.8,0.8" blend="screen">
       <relation target="" sidePair="center-center,middle-middle"/>
     </graph>
     <component id="n12_mwln" name="panel_touch" src="oqrp6" fileName="Components/tongyong/itemRoot.xml" xy="174,90" size="287,343"/>
-    <image id="n15_mwln" name="n15" src="oqrp7" fileName="Images/09wuxun/箭头.png" xy="774,20"/>
-    <image id="n32_mwln" name="n32" src="oqrp8" fileName="Images/09wuxun/武勋值.png" xy="623,90"/>
-    <component id="n33_mwln" name="n33" src="oqrp9" fileName="Components/09wuxun/ProgressBar.xml" xy="702,91" size="264,22">
-      <ProgressBar value="50" max="100"/>
+    <image id="n15_mwln" name="n15" src="oqrp7" fileName="Images/09wuxun/jt.png" xy="768,28" flip="hz"/>
+    <image id="n32_mwln" name="n32" src="oqrp8" fileName="Images/09wuxun/wxz.png" xy="651,68" size="51,16" aspect="true"/>
+    <image id="n35_jdkj" name="n35" src="oqrpc" fileName="Images/09wuxun/tlwpk.png" xy="628,118"/>
+    <component id="n33_mwln" name="n33" src="oqrp9" fileName="Components/09wuxun/ProgressBar.xml" xy="716,71" size="231,18">
+      <ProgressBar value="100" max="100"/>
     </component>
-    <image id="n35_jdkj" name="n35" src="oqrpc" fileName="Images/09wuxun/目录底.png" xy="617,137"/>
-    <image id="n36_jdkj" name="n36" src="oqrpc" fileName="Images/09wuxun/目录底.png" xy="617,350"/>
-    <text id="n37_jdkj" name="n37" xy="747,141" pivot="0.5,0.5" size="92,32" font="SimHei" fontSize="22" color="#ffd81c" align="center" vAlign="middle" text="武勋属性"/>
-    <text id="n38_jdkj" name="n38" xy="747,353" pivot="0.5,0.5" size="92,32" font="SimHei" fontSize="22" color="#ffd81c" align="center" vAlign="middle" text="装备预览">
-      <gearDisplay controller="iswear" pages=""/>
-      <gearText controller="iswear" pages="1" values="装备属性" default="装备预览"/>
-    </text>
     <list id="n39_jdkj" name="attrlist" xy="633,179" size="329,164" overflow="scroll" margin="2,0,5,0" defaultItem="ui://hed3v11ooqrpd">
       <item/>
       <item/>
@@ -44,14 +38,14 @@
       <item/>
       <item/>
     </list>
-    <text id="n46_jdkj" name="n46" xy="711,508" pivot="0.5,0.5" size="166,26" font="SimHei" fontSize="18" color="#ff1f1f" text="当前未穿戴武勋装备">
+    <text id="n46_jdkj" name="n46" xy="711,508" pivot="0.5,0.5" size="166,26" font="SimHei" fontSize="18" color="#372a08" text="当前未穿戴武勋装备">
       <gearDisplay controller="iswear" pages="0"/>
     </text>
-    <component id="n47_jdkj" name="n47" src="oqrph" fileName="Components/09wuxun/font_buy.xml" xy="752,538">
+    <component id="n47_jdkj" name="n47" src="oqrph" fileName="Components/09wuxun/font_buy.xml" xy="704,531">
       <gearDisplay controller="iswear" pages="0"/>
     </component>
-    <component id="n48_jdkj" name="btn_wxshop" src="oqrpi" fileName="Components/09wuxun/btn_wxshop.xml" xy="215,494"/>
-    <component id="n49_jdkj" name="btn_wxjl" src="oqrpk" fileName="Components/09wuxun/btn_wxjl.xml" xy="346,494"/>
+    <component id="n48_jdkj" name="btn_wxshop" src="oqrpi" fileName="Components/09wuxun/btn_wxshop.xml" xy="87,494"/>
+    <component id="n49_jdkj" name="btn_wxjl" src="oqrpk" fileName="Components/09wuxun/btn_wxjl.xml" xy="430,494"/>
     <list id="n51_l2ui" name="attrlist2" xy="633,392" size="329,180" layout="flow_hz" overflow="scroll" margin="2,0,5,0" lineItemCount="2" defaultItem="ui://hed3v11ooqrpm">
       <gearDisplay controller="iswear" pages="1"/>
       <item/>
@@ -60,23 +54,26 @@
       <item/>
       <item/>
     </list>
-    <loader id="n56_y1ql" name="n56" xy="97,208" size="74,74" url="ui://hed3v11ooqrpn"/>
-    <loader id="n57_y1ql" name="n57" xy="97,316" size="74,74" url="ui://hed3v11ooqrpn"/>
-    <loader id="n58_y1ql" name="n58" xy="457,208" size="74,74" url="ui://hed3v11ooqrpn"/>
-    <loader id="n59_y1ql" name="n59" xy="457,316" size="74,74" url="ui://hed3v11ooqrpn"/>
-    <component id="n52_l2ui" name="equip46" src="oqrpo" fileName="Components/09wuxun/equipItem.xml" xy="97,209" pivot="0.5,0.5" scale="0.8,0.8" controller="c1,0">
+    <loader id="n56_y1ql" name="n56" xy="49,208" size="74,74" url="ui://hed3v11ooqrpn"/>
+    <loader id="n57_y1ql" name="n57" xy="49,316" size="74,74" url="ui://hed3v11ooqrpn"/>
+    <loader id="n58_y1ql" name="n58" xy="468,208" size="74,74" url="ui://hed3v11ooqrpn"/>
+    <loader id="n59_y1ql" name="n59" xy="468,316" size="74,74" url="ui://hed3v11ooqrpn"/>
+    <loader id="n64_y1ql" name="curTitle" xy="559,-28" pivot="0.5,0.5" size="296,140" scale="0.5,0.5" url="ui://hed3v11ooqrpp" fill="scale" shrinkOnly="true" useResize="true"/>
+    <loader id="n65_y1ql" name="nextTitle" xy="737,-28" pivot="0.5,0.5" size="296,140" scale="0.5,0.5" url="ui://hed3v11ooqrpp" fill="scale" shrinkOnly="true" useResize="true"/>
+    <component id="n52_l2ui" name="equip46" src="oqrpo" fileName="Components/09wuxun/equipItem.xml" xy="49,209" pivot="0.5,0.5" scale="0.8,0.8" controller="c1,0">
       <gearDisplay controller="iswear" pages="0,1"/>
     </component>
-    <component id="n53_l2ui" name="equip47" src="oqrpo" fileName="Components/09wuxun/equipItem.xml" xy="97,317" pivot="0.5,0.5" scale="0.8,0.8" controller="c1,1">
+    <component id="n53_l2ui" name="equip47" src="oqrpo" fileName="Components/09wuxun/equipItem.xml" xy="49,317" pivot="0.5,0.5" scale="0.8,0.8" controller="c1,1">
       <gearDisplay controller="iswear" pages="0,1"/>
     </component>
-    <component id="n54_l2ui" name="equip48" src="oqrpo" fileName="Components/09wuxun/equipItem.xml" xy="457,208" pivot="0.5,0.5" scale="0.8,0.8" controller="c1,2">
+    <component id="n54_l2ui" name="equip48" src="oqrpo" fileName="Components/09wuxun/equipItem.xml" xy="468,208" pivot="0.5,0.5" scale="0.8,0.8" controller="c1,2">
       <gearDisplay controller="iswear" pages="0,1"/>
     </component>
-    <component id="n55_l2ui" name="equip49" src="oqrpo" fileName="Components/09wuxun/equipItem.xml" xy="457,317" pivot="0.5,0.5" scale="0.8,0.8" controller="c1,3">
+    <component id="n55_l2ui" name="equip49" src="oqrpo" fileName="Components/09wuxun/equipItem.xml" xy="468,317" pivot="0.5,0.5" scale="0.8,0.8" controller="c1,3">
       <gearDisplay controller="iswear" pages="0,1"/>
     </component>
-    <loader id="n64_y1ql" name="curTitle" xy="502,-57" pivot="0.5,0.5" size="400,200" scale="0.5,0.5" url="ui://hed3v11ooqrpp" autoSize="true"/>
-    <loader id="n65_y1ql" name="nextTitle" xy="692,-57" pivot="0.5,0.5" size="400,200" scale="0.5,0.5" url="ui://hed3v11ooqrpp" autoSize="true"/>
+    <image id="n66_858f" name="n66" src="858f2s" fileName="Images/09wuxun/bg_wuxun_rank_base.png" xy="203,443"/>
+    <loader id="n67_858f" name="n67" xy="215,432" size="199,76" url="ui://hed3v11org4i2d" align="center" vAlign="middle" fill="scale" shrinkOnly="true" useResize="true"/>
+    <image id="n68_858f" name="n68" src="858f2t" fileName="Images/09wuxun/bg_wuxun_preview_block.png" xy="629,351"/>
   </displayList>
 </component>

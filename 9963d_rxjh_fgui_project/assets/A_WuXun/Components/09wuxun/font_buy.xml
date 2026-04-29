@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="84,29">
+<component size="181,45">
   <displayList>
-    <text id="n47_jdkj" name="n47" xy="0,0" pivot="0.5,0.5" size="84,29" font="SimHei" fontSize="20" color="#00ff36" ubb="true" underline="true" text="前往购买"/>
+    <image id="n48_858f" name="n47" src="858f2u" fileName="Images/09wuxun/btn_wuxun_shop_go_nor.png" xy="0,0"/>
   </displayList>
 </component>

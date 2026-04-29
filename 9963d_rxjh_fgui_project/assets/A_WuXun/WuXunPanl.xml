@@ -25,7 +25,7 @@
     <component id="n55_mwln" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1135,78">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <text id="n57_mwln" name="title" xy="628,61" pivot="0.5,0.5" size="76,34" font="SimSun" fontSize="24" color="#9aafbb" text="武  勋">
+    <text id="n57_mwln" name="title" xy="628,61" pivot="0.5,0.5" size="76,34" font="SimSun" fontSize="24" color="#ffffff" strokeColor="#2f5269" strokeSize="2" text="武  勋">
       <gearDisplay controller="page" pages="0,1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
@@ -36,7 +36,7 @@
       <item title="铸阶"/>
       <item title="转印"/>
     </list>
-    <component id="n65_mwln" name="panl_wuxun" src="oqrp4" fileName="Components/09wuxun/wuxun_panl.xml" xy="179,108" size="978,584">
+    <component id="n65_mwln" name="panl_wuxun" src="oqrp4" fileName="Components/09wuxun/wuxun_panl.xml" xy="180,106" size="983,592">
       <gearDisplay controller="page" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
@@ -60,7 +60,7 @@
       <gearDisplay controller="page" pages="3"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n74_y1ql" name="btntips" src="oqrp21" fileName="Components/tongyong/btn_wenhao.xml" xy="1121,114">
+    <component id="n74_y1ql" name="btntips" src="oqrp21" fileName="Components/tongyong/btn_wenhao.xml" xy="1120,134">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n76_y1ql" name="panl_tips" src="oqrp23" fileName="Components/duanzao/tips2.xml" xy="0,0">

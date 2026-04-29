@@ -2,7 +2,7 @@
 <component size="280,84" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n0_n22n" name="n0" src="oqrpt" fileName="Images/0tongyong/xxdi2.png" xy="0,0" size="280,84">
+    <image id="n0_n22n" name="n0" src="oqrp1t" fileName="Images/0tongyong/srbbg.png" xy="0,0" size="280,84">
       <gearDisplay controller="button" pages="0,1,2,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>

@@ -4,7 +4,7 @@
     <remark page="0" value="未满级"/>
     <remark page="1" value="已满级"/>
   </controller>
-  <controller name="iswear" pages="0,,1," selected="1">
+  <controller name="iswear" pages="0,,1," selected="0">
     <remark page="0" value="未穿戴武勋装备"/>
     <remark page="1" value="选择武勋装备"/>
   </controller>
@@ -13,8 +13,8 @@
     <remark page="1" value="显示"/>
   </controller>
   <displayList>
-    <image id="n78_uz9j" name="n78" src="oqrp1l" fileName="Images/09wuxun/zhujie/01.png" xy="1,-1" size="978,584"/>
-    <image id="n79_uz9j" name="n79" src="oqrp1m" fileName="Images/09wuxun/zhujie/02.png" xy="13,4" size="314,573"/>
+    <image id="n78_uz9j" name="n78" src="858f2v" fileName="Images/0tongyong/frame_wuxun_equip_unwear.png" xy="1,-1" size="978,584"/>
+    <image id="n79_uz9j" name="n79" src="858f2x" fileName="Images/09wuxun/zhujie/002.png" xy="13,4" size="314,573"/>
     <list id="n51_fjq2" name="equipList" xy="20,11" size="300,396" overflow="scroll" margin="5,5,10,10" lineGap="5" defaultItem="ui://hed3v11ooqrps" autoClearItems="true">
       <relation target="" sidePair="width-width,height-height"/>
       <item/>
@@ -22,7 +22,7 @@
       <item/>
       <item/>
     </list>
-    <image id="n53_fjq2" name="n53" src="oqrp1n" fileName="Images/05boss/内容底.png" xy="373,196" size="251,217">
+    <image id="n53_fjq2" name="n53" src="oqrp1n" fileName="Images/05boss/nrd.png" xy="373,196" size="251,217">
       <gearDisplay controller="iswear" pages="1"/>
     </image>
     <list id="n58_fjq2" name="attrlist1" xy="349,198" size="275,113" overflow="scroll" margin="2,0,5,0" defaultItem="ui://hed3v11ooqrpx">
@@ -36,7 +36,7 @@
       <item/>
       <item/>
     </list>
-    <image id="n61_p3ya" name="n61" src="oqrp1n" fileName="Images/05boss/内容底.png" xy="700,196" size="248,217">
+    <image id="n61_p3ya" name="n61" src="oqrp1n" fileName="Images/05boss/nrd.png" xy="700,196" size="248,217">
       <gearDisplay controller="iswear" pages="1"/>
     </image>
     <list id="n62_p3ya" name="attrlist2" xy="676,201" size="268,113" overflow="scroll" margin="2,0,5,0" defaultItem="ui://hed3v11ooqrpx">
@@ -66,13 +66,13 @@
       <gearDisplay controller="ismj" pages="1"/>
       <gearDisplay2 controller="iswear" pages="1" condition="0"/>
     </text>
-    <image id="n80_uz9j" name="n80" src="oqrp1o" fileName="Images/09wuxun/zhujie/03.png" xy="471,230">
+    <image id="n80_uz9j" name="n80" src="858f2w" fileName="Images/09wuxun/zhujie/001.png" xy="471,230">
       <gearDisplay controller="iswear" pages="0"/>
     </image>
     <text id="n60_p3ya" name="wpdfont" xy="554,235" size="214,42" font="SimHei" fontSize="30" color="#a4d452" align="center" text="未穿戴武勋装备">
       <gearDisplay controller="iswear" pages="0"/>
     </text>
-    <image id="n63_p3ya" name="n63" src="oqrp7" fileName="Images/09wuxun/箭头.png" xy="637,284">
+    <image id="n63_p3ya" name="n63" src="oqrp7" fileName="Images/09wuxun/jt.png" xy="637,284">
       <gearDisplay controller="iswear" pages="1"/>
     </image>
     <text id="n65_p3ya" name="n65" xy="450,323" pivot="0.5,0.5" size="94,26" font="SimHei" fontSize="18" color="#ffff00" align="center" vAlign="middle" text="[武勋技能]">

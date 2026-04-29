@@ -2,85 +2,85 @@
 <packageDescription id="hed3v11o">
   <resources>
     <component id="oqrp0" name="WuXunPanl.xml" path="/" exported="true"/>
-    <component id="oqrp1" name="page_rightlv.xml" path="/Components/tongyong/"/>
-    <image id="oqrp2" name="pagerilv1.png" path="/Images/0tongyong/"/>
-    <image id="oqrp3" name="pagerilv2.png" path="/Images/0tongyong/"/>
-    <component id="oqrp4" name="wuxun_panl.xml" path="/Components/09wuxun/"/>
-    <image id="oqrp5" name="di.png" path="/Images/09wuxun/"/>
-    <component id="oqrp6" name="itemRoot.xml" path="/Components/tongyong/"/>
-    <image id="oqrp7" name="jt.png" path="/Images/09wuxun/"/>
-    <image id="oqrp8" name="wxz.png" path="/Images/09wuxun/"/>
-    <component id="oqrp9" name="ProgressBar.xml" path="/Components/09wuxun/"/>
-    <image id="oqrpa" name="jdud.png" path="/Images/09wuxun/"/>
-    <image id="oqrpb" name="jdtjg.png" path="/Images/09wuxun/" scale="9grid" scale9grid="4,4,8,8"/>
-    <image id="oqrpc" name="tlwpk.png" path="/Images/09wuxun/"/>
-    <component id="oqrpd" name="attritem.xml" path="/Components/09wuxun/"/>
-    <image id="oqrpe" name="tsjt.png" path="/Images/06yuyi/"/>
-    <component id="oqrpf" name="itemkuang2.xml" path="/Components/tongyong/"/>
-    <image id="oqrpg" name="kuangdi2.png" path="/Images/04duanzao/" scale="9grid" scale9grid="8,8,16,16" duplicatePadding="true"/>
-    <component id="oqrph" name="font_buy.xml" path="/Components/09wuxun/"/>
-    <component id="oqrpi" name="btn_wxshop.xml" path="/Components/09wuxun/"/>
-    <image id="oqrpj" name="wxsd.png" path="/Images/09wuxun/"/>
-    <component id="oqrpk" name="btn_wxjl.xml" path="/Components/09wuxun/"/>
-    <image id="oqrpl" name="mrjl.png" path="/Images/09wuxun/"/>
-    <component id="oqrpm" name="attritem2.xml" path="/Components/09wuxun/"/>
-    <image id="oqrpn" name="wpk.png" path="/Images/09wuxun/"/>
-    <component id="oqrpo" name="equipItem.xml" path="/Components/09wuxun/"/>
+    <component id="oqrp1" name="page_rightlv.xml" path="/Components/tongyong/" exported="true"/>
+    <image id="oqrp2" name="pagerilv1.png" path="/Images/0tongyong/" exported="true"/>
+    <image id="oqrp3" name="pagerilv2.png" path="/Images/0tongyong/" exported="true"/>
+    <component id="oqrp4" name="wuxun_panl.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrp5" name="di.png" path="/Images/09wuxun/" exported="true"/>
+    <component id="oqrp6" name="itemRoot.xml" path="/Components/tongyong/" exported="true"/>
+    <image id="oqrp7" name="jt.png" path="/Images/09wuxun/" exported="true"/>
+    <image id="oqrp8" name="wxz.png" path="/Images/09wuxun/" exported="true"/>
+    <component id="oqrp9" name="ProgressBar.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrpa" name="jdud.png" path="/Images/09wuxun/" exported="true"/>
+    <image id="oqrpb" name="jdtjg.png" path="/Images/09wuxun/" exported="true" scale="9grid" scale9grid="4,4,8,8"/>
+    <image id="oqrpc" name="tlwpk.png" path="/Images/09wuxun/" exported="true"/>
+    <component id="oqrpd" name="attritem.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrpe" name="tsjt.png" path="/Images/06yuyi/" exported="true"/>
+    <component id="oqrpf" name="itemkuang2.xml" path="/Components/tongyong/" exported="true"/>
+    <image id="oqrpg" name="kuangdi2.png" path="/Images/04duanzao/" exported="true" scale="9grid" scale9grid="8,8,16,16" duplicatePadding="true"/>
+    <component id="oqrph" name="font_buy.xml" path="/Components/09wuxun/" exported="true"/>
+    <component id="oqrpi" name="btn_wxshop.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrpj" name="wxsd.png" path="/Images/09wuxun/" exported="true"/>
+    <component id="oqrpk" name="btn_wxjl.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrpl" name="mrjl.png" path="/Images/09wuxun/" exported="true"/>
+    <component id="oqrpm" name="attritem2.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrpn" name="wpk.png" path="/Images/09wuxun/" exported="true"/>
+    <component id="oqrpo" name="equipItem.xml" path="/Components/09wuxun/" exported="true"/>
     <image id="oqrpp" name="300008.png" path="/Images/url/" exported="true"/>
-    <component id="oqrpq" name="chuilian_panl.xml" path="/Components/09wuxun/"/>
-    <image id="oqrpr" name="04.png" path="/Images/09wuxun/chuilian/"/>
-    <component id="oqrps" name="additembtn.xml" path="/Components/09wuxun/"/>
-    <image id="oqrpt" name="xxdi2.png" path="/Images/0tongyong/" scale="9grid" scale9grid="59,22,118,44" duplicatePadding="true"/>
-    <image id="oqrpu" name="xzkuang9.png" path="/Images/0tongyong/" scale="9grid" scale9grid="16,16,32,32" duplicatePadding="true"/>
-    <component id="oqrpv" name="ScrollText.xml" path="/Components/zhizhao/"/>
-    <image id="oqrpw" name="02.png" path="/Images/09wuxun/chuilian/"/>
-    <component id="oqrpx" name="attritem3.xml" path="/Components/09wuxun/"/>
-    <component id="oqrpy" name="item_select.xml" path="/Components/tongyong/"/>
-    <image id="oqrpz" name="kuangdi1.png" path="/Images/04duanzao/"/>
-    <image id="oqrp10" name="cost1.png" path="/Images/04duanzao/"/>
-    <image id="oqrp11" name="cost2.png" path="/Images/04duanzao/"/>
-    <image id="oqrp12" name="jia2.png" path="/Images/04duanzao/"/>
-    <image id="oqrp13" name="jia1.png" path="/Images/04duanzao/"/>
-    <component id="oqrp14" name="closebtn_yuan.xml" path="/Components/tongyong/"/>
-    <image id="oqrp15" name="close_yuan.png" path="/Images/0tongyong/"/>
-    <image id="oqrp16" name="01.png" path="/Images/09wuxun/chuilian/"/>
-    <component id="oqrp17" name="btn_zong.xml" path="/Components/tongyong/"/>
-    <image id="oqrp18" name="btn_zong.png" path="/Images/0tongyong/"/>
-    <image id="oqrp19" name="03.png" path="/Images/09wuxun/chuilian/"/>
-    <component id="oqrp1a" name="dayGift_panl.xml" path="/Components/09wuxun/"/>
-    <component id="oqrp1b" name="kongbg.xml" path="/Components/tongyong/"/>
-    <image id="oqrp1c" name="hd.png" path="/Images/09wuxun/"/>
-    <component id="oqrp1d" name="item_btn_giftday.xml" path="/Components/09wuxun/"/>
-    <image id="oqrp1e" name="dijg.png" path="/Images/09wuxun/" scale="9grid" scale9grid="8,8,16,16"/>
-    <image id="oqrp1f" name="xxdxz.png" path="/Images/09wuxun/" scale="9grid" scale9grid="8,8,16,16"/>
-    <image id="oqrp1g" name="ylq.png" path="/Images/0tongyong/"/>
-    <component id="oqrp1h" name="gxhdpanl2.xml" path="/Components/zhizhao/"/>
-    <image id="oqrp1i" name="gxhddi.png" path="/Images/0tongyong/"/>
-    <image id="oqrp1j" name="gxhd.png" path="/Images/0tongyong/"/>
-    <component id="oqrp1k" name="zhujie_panl.xml" path="/Components/09wuxun/"/>
-    <image id="oqrp1l" name="01.png" path="/Images/09wuxun/zhujie/"/>
-    <image id="oqrp1m" name="02.png" path="/Images/09wuxun/zhujie/"/>
-    <image id="oqrp1n" name="nrd.png" path="/Images/05boss/" scale="9grid" scale9grid="30,30,60,60"/>
-    <image id="oqrp1o" name="03.png" path="/Images/09wuxun/zhujie/"/>
-    <component id="oqrp1p" name="btn_wuxun_skill.xml" path="/Components/09wuxun/"/>
-    <image id="oqrp1q" name="jnd.png" path="/Images/06yuyi/"/>
-    <image id="oqrp1r" name="YuyiSkillIcon_1001.png" path="/Images/06yuyi/"/>
-    <component id="oqrp1s" name="skillTips2.xml" path="/Components/Tip/"/>
-    <image id="oqrp1t" name="srbbg.png" path="/Images/0tongyong/" scale="9grid" scale9grid="28,20,56,40" duplicatePadding="true"/>
-    <component id="oqrp1u" name="zhuanyin_panl.xml" path="/Components/09wuxun/"/>
-    <component id="oqrp1v" name="btn_gouxuan.xml" path="/Components/09wuxun/"/>
-    <image id="oqrp1w" name="gxk.png" path="/Images/09wuxun/"/>
-    <image id="oqrp1x" name="gx.png" path="/Images/09wuxun/"/>
-    <image id="oqrp1y" name="01.png" path="/Images/09wuxun/zhuanyin/"/>
-    <component id="oqrp1z" name="additempanl.xml" path="/Components/09wuxun/"/>
-    <image id="oqrp20" name="tipsdi.png" path="/Images/0tongyong/" scale="9grid" scale9grid="13,13,26,26" duplicatePadding="true"/>
-    <component id="oqrp21" name="btn_wenhao.xml" path="/Components/tongyong/"/>
-    <image id="oqrp22" name="wenhao.png" path="/Images/0tongyong/"/>
-    <component id="oqrp23" name="tips2.xml" path="/Components/duanzao/"/>
-    <component id="oqrp24" name="infoScro.xml" path="/Components/duanzao/"/>
+    <component id="oqrpq" name="chuilian_panl.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrpr" name="04.png" path="/Images/09wuxun/chuilian/" exported="true"/>
+    <component id="oqrps" name="additembtn.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrpt" name="xxdi2.png" path="/Images/0tongyong/" exported="true" scale="9grid" scale9grid="59,22,118,44" duplicatePadding="true"/>
+    <image id="oqrpu" name="xzkuang9.png" path="/Images/0tongyong/" exported="true" scale="9grid" scale9grid="16,16,32,32" duplicatePadding="true"/>
+    <component id="oqrpv" name="ScrollText.xml" path="/Components/zhizhao/" exported="true"/>
+    <image id="oqrpw" name="02.png" path="/Images/09wuxun/chuilian/" exported="true"/>
+    <component id="oqrpx" name="attritem3.xml" path="/Components/09wuxun/" exported="true"/>
+    <component id="oqrpy" name="item_select.xml" path="/Components/tongyong/" exported="true"/>
+    <image id="oqrpz" name="kuangdi1.png" path="/Images/04duanzao/" exported="true"/>
+    <image id="oqrp10" name="cost1.png" path="/Images/04duanzao/" exported="true"/>
+    <image id="oqrp11" name="cost2.png" path="/Images/04duanzao/" exported="true"/>
+    <image id="oqrp12" name="jia2.png" path="/Images/04duanzao/" exported="true"/>
+    <image id="oqrp13" name="jia1.png" path="/Images/04duanzao/" exported="true"/>
+    <component id="oqrp14" name="closebtn_yuan.xml" path="/Components/tongyong/" exported="true"/>
+    <image id="oqrp15" name="close_yuan.png" path="/Images/0tongyong/" exported="true"/>
+    <image id="oqrp16" name="01.png" path="/Images/09wuxun/chuilian/" exported="true"/>
+    <component id="oqrp17" name="btn_zong.xml" path="/Components/tongyong/" exported="true"/>
+    <image id="oqrp18" name="btn_zong.png" path="/Images/0tongyong/" exported="true"/>
+    <image id="oqrp19" name="03.png" path="/Images/09wuxun/chuilian/" exported="true"/>
+    <component id="oqrp1a" name="dayGift_panl.xml" path="/Components/09wuxun/" exported="true"/>
+    <component id="oqrp1b" name="kongbg.xml" path="/Components/tongyong/" exported="true"/>
+    <image id="oqrp1c" name="hd.png" path="/Images/09wuxun/" exported="true"/>
+    <component id="oqrp1d" name="item_btn_giftday.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrp1e" name="dijg.png" path="/Images/09wuxun/" exported="true" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="oqrp1f" name="xxdxz.png" path="/Images/09wuxun/" exported="true" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="oqrp1g" name="ylq.png" path="/Images/0tongyong/" exported="true"/>
+    <component id="oqrp1h" name="gxhdpanl2.xml" path="/Components/zhizhao/" exported="true"/>
+    <image id="oqrp1i" name="gxhddi.png" path="/Images/0tongyong/" exported="true"/>
+    <image id="oqrp1j" name="gxhd.png" path="/Images/0tongyong/" exported="true"/>
+    <component id="oqrp1k" name="zhujie_panl.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrp1l" name="01.png" path="/Images/09wuxun/zhujie/" exported="true"/>
+    <image id="oqrp1m" name="02.png" path="/Images/09wuxun/zhujie/" exported="true"/>
+    <image id="oqrp1n" name="nrd.png" path="/Images/05boss/" exported="true" scale="9grid" scale9grid="30,30,60,60"/>
+    <image id="oqrp1o" name="03.png" path="/Images/09wuxun/zhujie/" exported="true"/>
+    <component id="oqrp1p" name="btn_wuxun_skill.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrp1q" name="jnd.png" path="/Images/06yuyi/" exported="true"/>
+    <image id="oqrp1r" name="YuyiSkillIcon_1001.png" path="/Images/06yuyi/" exported="true"/>
+    <component id="oqrp1s" name="skillTips2.xml" path="/Components/Tip/" exported="true"/>
+    <image id="oqrp1t" name="srbbg.png" path="/Images/0tongyong/" exported="true" scale="9grid" scale9grid="28,20,56,40" duplicatePadding="true"/>
+    <component id="oqrp1u" name="zhuanyin_panl.xml" path="/Components/09wuxun/" exported="true"/>
+    <component id="oqrp1v" name="btn_gouxuan.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrp1w" name="gxk.png" path="/Images/09wuxun/" exported="true"/>
+    <image id="oqrp1x" name="gx.png" path="/Images/09wuxun/" exported="true"/>
+    <image id="oqrp1y" name="01.png" path="/Images/09wuxun/zhuanyin/" exported="true"/>
+    <component id="oqrp1z" name="additempanl.xml" path="/Components/09wuxun/" exported="true"/>
+    <image id="oqrp20" name="tipsdi.png" path="/Images/0tongyong/" exported="true" scale="9grid" scale9grid="13,13,26,26" duplicatePadding="true"/>
+    <component id="oqrp21" name="btn_wenhao.xml" path="/Components/tongyong/" exported="true"/>
+    <image id="oqrp22" name="wenhao.png" path="/Images/0tongyong/" exported="true"/>
+    <component id="oqrp23" name="tips2.xml" path="/Components/duanzao/" exported="true"/>
+    <component id="oqrp24" name="infoScro.xml" path="/Components/duanzao/" exported="true"/>
     <component id="oqrp25" name="WuXunUpLevel.xml" path="/" exported="true"/>
-    <component id="oqrp26" name="back.xml" path="/Components/tongyong/"/>
-    <image id="oqrp27" name="hdxtx.png" path="/Images/09wuxun/"/>
+    <component id="oqrp26" name="back.xml" path="/Components/tongyong/" exported="true"/>
+    <image id="oqrp27" name="hdxtx.png" path="/Images/09wuxun/" exported="true"/>
     <image id="rg4i28" name="300001.png" path="/Images/url/" exported="true"/>
     <image id="rg4i2a" name="300009.png" path="/Images/url/" exported="true"/>
     <image id="rg4i2b" name="300011.png" path="/Images/url/" exported="true"/>
@@ -99,6 +99,13 @@
     <image id="rg4i2o" name="WuXun_15025.png" path="/Images/url/" exported="true"/>
     <image id="jy2f2p" name="300005.png" path="/Images/url/" exported="true"/>
     <image id="jy2f2q" name="300004.png" path="/Images/url/" exported="true"/>
+    <image id="858f2r" name="bg_wuxun_main_panel.png" path="/Images/09wuxun/" exported="true"/>
+    <image id="858f2s" name="bg_wuxun_rank_base.png" path="/Images/09wuxun/" exported="true"/>
+    <image id="858f2t" name="bg_wuxun_preview_block.png" path="/Images/09wuxun/" exported="true"/>
+    <image id="858f2u" name="btn_wuxun_shop_go_nor.png" path="/Images/09wuxun/" exported="true"/>
+    <image id="858f2v" name="frame_wuxun_equip_unwear.png" path="/Images/0tongyong/" exported="true"/>
+    <image id="858f2w" name="001.png" path="/Images/09wuxun/zhujie/" exported="true"/>
+    <image id="858f2x" name="002.png" path="/Images/09wuxun/zhujie/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
