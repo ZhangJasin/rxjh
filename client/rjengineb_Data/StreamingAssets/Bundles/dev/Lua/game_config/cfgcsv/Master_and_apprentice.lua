@@ -1,30 +1,22 @@
 local config = { 
 	[1] = { 
 		ID=1,
-		task_name="等级达到30级",
-		type=1,
-		task_target=1,
-		task_target_param="*",
-		task_target_num=30,
-	},
-	[2] = { 
-		ID=2,
-		task_name="完成5个任务",
+		task_name="完成30个任务",
 		type=1,
 		task_target=5,
 		task_target_param="*",
 		task_target_num=1,
 	},
-	[3] = { 
-		ID=3,
-		task_name="拜师14天后",
+	[2] = { 
+		ID=2,
+		task_name="拜师3天后",
 		type=1,
 		task_target=3,
 		task_target_param="*",
 		task_target_num=0,
 	},
-	[4] = { 
-		ID=4,
+	[3] = { 
+		ID=3,
 		task_name="每日组队击杀怪物100个",
 		type=2,
 		gxd_progress=100,
@@ -40,8 +32,8 @@ local config = {
 			},
 		},
 	},
-	[5] = { 
-		ID=5,
+	[4] = { 
+		ID=4,
 		task_name="每日完成师徒副本1次",
 		type=2,
 		gxd_progress=100,
@@ -57,8 +49,8 @@ local config = {
 			},
 		},
 	},
-	[6] = { 
-		ID=6,
+	[5] = { 
+		ID=5,
 		task_name="累计获得50W银两",
 		type=2,
 		task_target=9,
@@ -71,8 +63,8 @@ local config = {
 			},
 		},
 	},
-	[7] = { 
-		ID=7,
+	[6] = { 
+		ID=6,
 		task_name="累计完成10次悬赏任务",
 		type=2,
 		task_target=5,
@@ -89,8 +81,8 @@ local config = {
 			},
 		},
 	},
-	[8] = { 
-		ID=8,
+	[7] = { 
+		ID=7,
 		task_name="达到4转",
 		type=2,
 		task_desc="达到4转",
@@ -104,8 +96,8 @@ local config = {
 			},
 		},
 	},
-	[9] = { 
-		ID=9,
+	[8] = { 
+		ID=8,
 		task_name="任意宠物升到10星",
 		type=2,
 		task_desc="任意宠物升到10星",
@@ -119,8 +111,8 @@ local config = {
 			},
 		},
 	},
-	[10] = { 
-		ID=10,
+	[9] = { 
+		ID=9,
 		task_name="拥有2个好友",
 		type=2,
 		task_desc="拥有2个好友",
@@ -134,8 +126,8 @@ local config = {
 			},
 		},
 	},
-	[11] = { 
-		ID=11,
+	[10] = { 
+		ID=10,
 		task_name="打造1件10级以上品阶1的装备",
 		type=2,
 		task_desc="打造1件10级以上品阶1的装备",
@@ -158,8 +150,8 @@ local config = {
 			},
 		},
 	},
-	[12] = { 
-		ID=12,
+	[11] = { 
+		ID=11,
 		task_name="击杀怪物获得铁锤10把",
 		type=3,
 		gxd_progress=250,
@@ -179,8 +171,8 @@ local config = {
 			},
 		},
 	},
-	[13] = { 
-		ID=13,
+	[12] = { 
+		ID=12,
 		task_name="击杀怪物",
 		type=3,
 		gxd_progress=150,

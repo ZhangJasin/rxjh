@@ -1,7 +1,7 @@
 local config = { 
 	["min_apply_master_lv"] = { 
 		ID="min_apply_master_lv",
-		VALUE=10,
+		VALUE=30,
 		Dec="最低申请拜师等级",
 	},
 	["min_apply_master_zs"] = { 
@@ -11,7 +11,7 @@ local config = {
 	},
 	["min_apply_apparenice_lv"] = { 
 		ID="min_apply_apparenice_lv",
-		VALUE=20,
+		VALUE=40,
 		Dec="最低申请收徒等级",
 	},
 	["min_apply_apparenice_zs"] = { 
@@ -21,7 +21,7 @@ local config = {
 	},
 	["min_apply"] = { 
 		ID="min_apply",
-		VALUE=20,
+		VALUE=5,
 		Dec="最低相差等级可申请拜师或者收徒",
 	},
 	["master_award"] = { 
@@ -58,6 +58,11 @@ local config = {
 		ID="max_show_apparenice",
 		VALUE=3,
 		Dec="寻找徒弟列表显示最多数量",
+	},
+	["max_chushi_times"] = { 
+		ID="max_chushi_times",
+		VALUE=1,
+		Dec="出师次数小于1次",
 	},
 }
 return config

@@ -77,6 +77,14 @@ function MentorShip.applyToApprentice(actor, data)
             return sendmsg(actor, 9, "已有师傅")
         end
     end
+    --判断出师次数
+    local myChuShiCount = getcustvar("11_" .. userid(actor) .. "_" .. "t_ChuShiCount")
+    myChuShiCount = (myChuShiCount == "") and 0 or tonumber(myChuShiCount)
+    local maxChuShiTimes = tonumber(MasterApprenticeShip["max_chushi_times"].VALUE)
+    if myChuShiCount >= maxChuShiTimes then
+        return sendmsg(actor, 9, "出师次数已达上限，无法发布寻师信息")
+    end
+
     local newObj = data
     local userId = userid(actor)
     local masterInfo = {
@@ -121,6 +129,16 @@ function MentorShip.ApplyMentor(actor, data)
         sendmsg(actor, 9, "[color=#ff0000]已有师傅，无法申请[/color]")
         return
     end
+
+    --判断出师次数
+    local myChuShiCount = getcustvar("11_" .. userid(actor) .. "_" .. "t_ChuShiCount")
+    myChuShiCount = (myChuShiCount == "") and 0 or tonumber(myChuShiCount)
+    local maxChuShiTimes = tonumber(MasterApprenticeShip["max_chushi_times"].VALUE)
+    if myChuShiCount >= maxChuShiTimes then
+        sendmsg(actor, 9, "[color=#ff0000]出师次数已达上限，无法再次拜师[/color]")
+        return
+    end
+
     --是否能拜师判断
     local myLv = level(actor)
     local targetData = data
@@ -129,10 +147,11 @@ function MentorShip.ApplyMentor(actor, data)
         sendmsg(actor, 9, "[color=#ff0000]因等级原因无法结成师徒[/color]")
         return
     end
-    if job(actor) ~= targetData.Job then
-        sendmsg(actor, 9, "[color=#ff0000]因职业原因无法结成师徒[/color]")
-        return
-    end
+    --去除拜师职业限制
+    --if job(actor) ~= targetData.Job then
+    --    sendmsg(actor, 9, "[color=#ff0000]因职业原因无法结成师徒[/color]")
+    --    return
+    --end
     if tonumber(targetinfo(actor, "GOODEVILID")) > 0 then
         if targetinfo(actor, "GOODEVILID") ~= targetData.goodEvilid then
             sendmsg(actor, 9, "[color=#ff0000]因阵营原因无法结成师徒[/color]")
@@ -201,10 +220,11 @@ function MentorShip.ApplyApprentice(actor, data)
         sendmsg(actor, 9, "[color=#ff0000]因等级原因无法结成师徒[/color]")
         return
     end
-    if job(actor) ~= targetData.Job then
-        sendmsg(actor, 9, "[color=#ff0000]因职业原因无法结成师徒[/color]")
-        return
-    end
+    --去除拜师职业限制
+    --if job(actor) ~= targetData.Job then
+    --    sendmsg(actor, 9, "[color=#ff0000]因职业原因无法结成师徒[/color]")
+    --    return
+    --end
     if tonumber(targetData.goodEvilid) > 0 then
         if targetinfo(actor, "GOODEVILID") ~= targetData.goodEvilid then
             sendmsg(actor, 9, "[color=#ff0000]因阵营原因无法结成师徒[/color]")
@@ -654,8 +674,15 @@ function MentorShip.GetMyRelation(actor, fromPanel, targetId)
         taskProgressList = {},
         applyRemoveMyMaster = nil,
         applyRemoveMyMasterById = nil,
-        applyRemoveMyAppliction = {}
+        applyRemoveMyAppliction = {},
+        chushiCount = 0,
     }
+
+    --出师次数
+    local queryUserId = targetId or userid(actor)
+    local myChuShiCount = getcustvar("11_" .. queryUserId .. "_" .. "t_ChuShiCount")
+    newResult.chushiCount = (myChuShiCount == "") and 0 or tonumber(myChuShiCount)
+
     local baseUserId = nil
     if myRelation.myMaster and myRelation.myMaster.UserID then
         myRelation.myMaster.IsOnline = checkstate(myRelation.myMaster.UserID, 2)
@@ -1026,6 +1053,15 @@ function MentorShip.chushi(actor, data)
     end
     sendmail(apparenceId, 1, "师徒系统", "恭喜你出师了", MasterApprenticeShip["master_award"].VALUE .. "#1#3", 86400)
     sendmail(masterId, 1, "师徒系统", "恭喜你的徒弟出师了", MasterApprenticeShip["apparenice_award"].VALUE .. "#1#3", 86400)
+
+    --出师次数
+    local myChuShiCount = getcustvar("11_" .. apparenceId .. "_" .. "t_ChuShiCount")
+    myChuShiCount = (myChuShiCount == "") and 0 or tonumber(myChuShiCount)
+    myChuShiCount = myChuShiCount + 1
+
+    defcustvar(11, apparenceId, 't_ChuShiCount', 1)
+    sefcustvar(11, apparenceId, 't_ChuShiCount', myChuShiCount)
+
     local taskProgressList = json2tbl(getcustvar("11_" .. apparenceId .. "_" .. "t_ApprenticeTaskPro"))
     --删掉剩下师傅给过的技能
     local masterGiveSkill = taskProgressList['skillList']

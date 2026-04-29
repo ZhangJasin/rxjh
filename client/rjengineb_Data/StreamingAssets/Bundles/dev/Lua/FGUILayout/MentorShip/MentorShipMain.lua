@@ -68,35 +68,73 @@ function MentorShipMain:InitData()
 	self.taskProgressList = {}
 	self._emptyMentorCond = {
 		{
-			text = "角色等级需达到"..MasterApprenticeShip["min_apply_master_lv"].VALUE.."级",
+			text = "角色等级需达到" .. MasterApprenticeShip["min_apply_master_lv"].VALUE .. "级",
 			check = function()
 				return (SL:GetValue("LEVEL") or 1) >= tonumber(MasterApprenticeShip["min_apply_master_lv"].VALUE)
 			end,
 		},
 		{
-			text = "角色转职等级需达到"..MasterApprenticeShip["min_apply_master_zs"].VALUE.."级",
+			text = "角色转职等级需达到" .. MasterApprenticeShip["min_apply_master_zs"].VALUE .. "级",
 			check = function()
 				return (SL:GetValue("RELEVEL") or 1) >= tonumber(MasterApprenticeShip["min_apply_master_zs"].VALUE)
+			end,
+		},
+		{
+			text = "角色出师次数小于" .. MasterApprenticeShip["max_chushi_times"].VALUE .. "次",
+			check = function()
+				return (self.chushiCount or 0) < tonumber(MasterApprenticeShip["max_chushi_times"].VALUE)
+			end,
+		},
+		--仅展示条件
+		{
+			text = "等级低于师父5级以上",
+			check = function()
+				return true
+			end,
+		},
+		{
+			text = "师徒同一阵营",
+			check = function()
+				return true
+			end,
+		},
+		{
+			text = "师父数量小于1个",
+			check = function()
+				return self._mentorInfo == nil
 			end,
 		},
 	}
 	self._emptyApprenticeCond = {
 		{
-			text = "角色等级需达到"..MasterApprenticeShip["min_apply_apparenice_lv"].VALUE.."级",
+			text = "角色等级需达到" .. MasterApprenticeShip["min_apply_apparenice_lv"].VALUE .. "级",
 			check = function()
 				return (SL:GetValue("LEVEL") or 1) >= tonumber(MasterApprenticeShip["min_apply_apparenice_lv"].VALUE)
 			end,
 		},
 		{
-			text = "角色转职等级需达到"..MasterApprenticeShip["min_apply_apparenice_zs"].VALUE.."级",
+			text = "角色转职等级需达到" .. MasterApprenticeShip["min_apply_apparenice_zs"].VALUE .. "级",
 			check = function()
 				return (SL:GetValue("RELEVEL")) >= tonumber(MasterApprenticeShip["min_apply_apparenice_zs"].VALUE)
 			end,
 		},
 		{
-			text = "未达徒弟上限",
+			text = "徒弟数量小于3个",
 			check = function()
 				return #self._apprenticeList < self._apprenticeMax
+			end,
+		},
+		--仅展示条件
+		{
+			text = "等级高于徒弟5级以上",
+			check = function()
+				return true
+			end,
+		},
+		{
+			text = "师徒同一阵营",
+			check = function()
+				return true
 			end,
 		},
 	}
@@ -117,7 +155,7 @@ function MentorShipMain:InitEvent()
 
 	FGUI:setOnClickEvent(self._ui.btn_cancel, handler(self, self.OnclickCancelBreak))
 
-	FGUI:setOnClickEvent(self._ui.btn_applylist,handler(self,self.Onbtn_applylist))
+	FGUI:setOnClickEvent(self._ui.btn_applylist, handler(self, self.Onbtn_applylist))
 
 	FGUI:GList_itemRenderer(self._ui.list_mentor, handler(self, self.RenderMentorSlot))
 	FGUI:GList_itemRenderer(self._ui.list_apprentice, handler(self, self.RenderApprenticeSlot))
@@ -166,6 +204,8 @@ function MentorShipMain:setData(data)
 		--我的师徒
 		self._apprenticeList = data.apprentice or {}
 		self.taskProgressList = data.taskProgressList or {}
+		--我的出师次数
+		self.chushiCount = data.chushiCount or 0
 		--我的徒弟的解除关系数据
 		self.applyRemoveMyAppliction = data.applyRemoveMyAppliction
 		self.applyRemoveMyMasterById = data.applyRemoveMyMasterById
@@ -230,16 +270,18 @@ function MentorShipMain:RenderMentorSlot(idx, item)
 					targetName = data.UserName,
 					Level = data.Level,
 					GuildName = data.GuildName,
-					TipsType = isTeamMember and SL:GetValue("DOCKTYPE_NENUM").Func_Team or SL:GetValue("DOCKTYPE_NENUM").Func_Near_Player,
+					TipsType = isTeamMember and SL:GetValue("DOCKTYPE_NENUM").Func_Team or
+						SL:GetValue("DOCKTYPE_NENUM").Func_Near_Player,
 					FrameID = data.PhotoframeID
 				})
 			end)
 		end
 		FGUI:setOnClickEvent(item, function()
-			self.selectWhich  = idx
-			self.rightInfoType =  1
+			self.selectWhich   = idx
+			self.rightInfoType = 1
 			self:selectedItem(item)
-			ssrMessage:sendmsgEx("MentorShip", "getApprenticeInfo",{UserID = self.myUserId ,fromPanel = 'MentorShipMain'})
+			ssrMessage:sendmsgEx("MentorShip", "getApprenticeInfo",
+				{ UserID = self.myUserId, fromPanel = 'MentorShipMain' })
 		end)
 	else
 		FGUI:GTextField_setText(text_name, "")
@@ -298,16 +340,17 @@ function MentorShipMain:RenderApprenticeSlot(idx, item)
 					targetName = data.UserName,
 					Level = data.Level,
 					GuildName = data.GuildName,
-					TipsType = isTeamMember and SL:GetValue("DOCKTYPE_NENUM").Func_Team or SL:GetValue("DOCKTYPE_NENUM").Func_Near_Player,
+					TipsType = isTeamMember and SL:GetValue("DOCKTYPE_NENUM").Func_Team or
+						SL:GetValue("DOCKTYPE_NENUM").Func_Near_Player,
 					FrameID = data.PhotoframeID
 				})
 			end)
 		end
 		FGUI:setOnClickEvent(item, function()
-			self.selectWhich  = idx
-			self.rightInfoType =  2
+			self.selectWhich   = idx
+			self.rightInfoType = 2
 			self:selectedItem(item)
-			ssrMessage:sendmsgEx("MentorShip", "getApprenticeInfo",{UserID = targetID ,fromPanel = 'MentorShipMain'})
+			ssrMessage:sendmsgEx("MentorShip", "getApprenticeInfo", { UserID = targetID, fromPanel = 'MentorShipMain' })
 		end)
 	else
 		FGUI:GTextField_setText(text_name, "")
@@ -327,8 +370,8 @@ function MentorShipMain:RenderApprenticeSlot(idx, item)
 end
 
 function MentorShipMain:selectedItem(item)
-	 local itemList = FGUI:GetChildren(self._ui.list_mentor)
-	 if #itemList > 0 then
+	local itemList = FGUI:GetChildren(self._ui.list_mentor)
+	if #itemList > 0 then
 		for i = 1, #itemList do
 			local controller = FGUI:getController(itemList[i], "isSelect")
 			FGUI:Controller_setSelectedIndex(controller, 0)
@@ -382,6 +425,7 @@ end
 function MentorShipMain:RenderMentorIntroItem(idx, item)
 	__RenderIntroLine(self._emptyMentorIntro[idx + 1], item)
 end
+
 function MentorShipMain:RenderApprenticeIntroItem(idx, item)
 	__RenderIntroLine(self._emptyApprenticeIntro[idx + 1], item)
 end
@@ -389,17 +433,17 @@ end
 function MentorShipMain:RenderTaskItem(idx, item)
 	local data = self._taskList[idx + 1]
 	-- dump(self.taskProgressList)
-	if data and self.taskProgressList[""..data.ID] then
+	if data and self.taskProgressList["" .. data.ID] then
 		local task_name = FGUI:GetChild(item, "task_name")
 		local task_progress = FGUI:GetChild(item, "task_progress")
 		local task_status = FGUI:GetChild(item, "task_status")
-		local thisProgress =  tonumber(self.taskProgressList[""..data.ID].num)
+		local thisProgress = tonumber(self.taskProgressList["" .. data.ID].num)
 		local gonow = FGUI:GetChild(item, "gonow")
 		local receive = FGUI:GetChild(item, "receive")
-		local finishedText = FGUI:GetChild(item,"task_finishText")
-		local fbstatus = FGUI:getController(item,"fbStatus")
+		local finishedText = FGUI:GetChild(item, "task_finishText")
+		local fbstatus = FGUI:getController(item, "fbStatus")
 		local nowState = FGUI:Controller_getSelectedIndex(fbstatus)
-		local whoCont = FGUI:getController(item,"isMasterShowFinish")
+		local whoCont = FGUI:getController(item, "isMasterShowFinish")
 		if self.rightInfoType == 1 then
 			--我是徒弟
 			FGUI:Controller_setSelectedIndex(whoCont, 0)
@@ -409,17 +453,17 @@ function MentorShipMain:RenderTaskItem(idx, item)
 		end
 		FGUI:GTextField_setText(task_name, data.task_name)
 		local bg = FGUI:GetChild(item, "bg")
-		FGUI:GTextField_setText(task_progress, thisProgress.."/"..data.task_target_num)
-		FGUI:setVisible(gonow,false)
-		FGUI:setVisible(finishedText,true)
-		if self.taskProgressList[""..data.ID].status == 1 then
+		FGUI:GTextField_setText(task_progress, thisProgress .. "/" .. data.task_target_num)
+		FGUI:setVisible(gonow, false)
+		FGUI:setVisible(finishedText, true)
+		if self.taskProgressList["" .. data.ID].status == 1 then
 			--已领取
 			FGUI:Controller_setSelectedIndex(fbstatus, 3)
 		else
 			if self.rightInfoType == 1 then
 				--我是徒弟
 				if thisProgress >= data.task_target_num then
-				--已完成目标
+					--已完成目标
 					FGUI:Controller_setSelectedIndex(fbstatus, 2)
 				else
 					FGUI:Controller_setSelectedIndex(fbstatus, 0)
@@ -427,15 +471,15 @@ function MentorShipMain:RenderTaskItem(idx, item)
 			else
 				--我是师傅
 				if thisProgress >= data.task_target_num then
-				--已完成目标
+					--已完成目标
 					FGUI:Controller_setSelectedIndex(fbstatus, 2)
 				else
 					FGUI:Controller_setSelectedIndex(fbstatus, 0)
 					if data.erveyday_reset == 1 then
 						-- if nowState == 0 then
-							--未开始
-							FGUI:setVisible(gonow,true)
-							FGUI:setVisible(finishedText,false)
+						--未开始
+						FGUI:setVisible(gonow, true)
+						FGUI:setVisible(finishedText, false)
 						-- end
 					end
 				end
@@ -445,8 +489,8 @@ function MentorShipMain:RenderTaskItem(idx, item)
 			-- 	FGUI:setVisible(task_status,true)
 			-- else
 			-- 	--显示我是师傅，我的徒弟的信息
-				--每日任务 进副本
-				
+			--每日任务 进副本
+
 			-- end
 
 			FGUI:SetIntData(item, idx)
@@ -458,65 +502,65 @@ function MentorShipMain:RenderTaskItem(idx, item)
 			else
 				FGUI:Controller_setSelectedIndex(fbstatus, 1)
 			end
-			FGUI:setOnClickEvent(gonow, function(index,item)
+			FGUI:setOnClickEvent(gonow, function(index, item)
 				self:onClickGoto(data)
 			end)
-			FGUI:setOnClickEvent(receive, function(index,item)
+			FGUI:setOnClickEvent(receive, function(index, item)
 				--只有徒弟可以领取
 				if self.rightInfoType == 1 then
-					ssrMessage:sendmsgEx("MentorShip", "receive",{taskId = data.ID,fromPanel="MentorShipMain"})
+					ssrMessage:sendmsgEx("MentorShip", "receive", { taskId = data.ID, fromPanel = "MentorShipMain" })
 				end
 			end)
 		end
-		if idx% 2 == 1 then
-			FGUI:setVisible(bg,true)
+		if idx % 2 == 1 then
+			FGUI:setVisible(bg, true)
 		else
-			FGUI:setVisible(bg,false)
+			FGUI:setVisible(bg, false)
 		end
 	end
 end
 
 function MentorShipMain:onClickGoto(data)
 	local postData = {
-		task=data,
+		task = data,
 		myUserId = self.alMyRelationship.myUserId,
 		apparenice = self._apprenticeList,
 		type = "MentorShipMain",
 		initiator = {
 			UserID = self.alMyRelationship.myUserId,
-            UserName = SL:GetValue("ACTOR_NAME",myUserId),
-            Level = SL:GetValue("ACTOR_LEVEL",myUserId),
-            AvatarID = SL:GetValue("ACTOR_AVATAR",myUserId),
-            Job = SL:GetValue("JOB"),
-            Sex =  SL:GetValue("ACTOR_SEX",myUserId),
-            FrameID = SL:GetValue("ACTOR_AVATAR_FRAME",myUserId),
-            IsOnline = true,
-            isMaster = true,
-        }
+			UserName = SL:GetValue("ACTOR_NAME", myUserId),
+			Level = SL:GetValue("ACTOR_LEVEL", myUserId),
+			AvatarID = SL:GetValue("ACTOR_AVATAR", myUserId),
+			Job = SL:GetValue("JOB"),
+			Sex = SL:GetValue("ACTOR_SEX", myUserId),
+			FrameID = SL:GetValue("ACTOR_AVATAR_FRAME", myUserId),
+			IsOnline = true,
+			isMaster = true,
+		}
 	}
-	FGUI:Open('MentorShip','Invitation',postData)
+	FGUI:Open('MentorShip', 'Invitation', postData)
 end
-
 
 function MentorShipMain:RenderSetOut(idx, item)
 	local data = self.setOutList[idx + 1]
 	local text_cond = FGUI:GetChild(item, "text_cond")
 	local str = ""
 	if data.task_target == 1 then
-		str = data.task_name.."    "..SL:GetValue("ACTOR_LEVEL",self.taskProgressList.UserID).."/"..data.task_target_num
+		str = data.task_name ..
+			"    " .. SL:GetValue("ACTOR_LEVEL", self.taskProgressList.UserID) .. "/" .. data.task_target_num
 	end
 	if data.task_target == 5 then
-		str = data.task_name.."    "..self.taskProgressList.finishTask.."/"..data.task_target_num
+		str = data.task_name .. "    " .. self.taskProgressList.finishTask .. "/" .. data.task_target_num
 	end
 	if data.task_target == 3 then
 		local servetDate = SL:GetValue("SERVER_TIME")
-		local times = servetDate - self.taskProgressList.bondDateTimes
-		local days  = math.floor(times/86400)
-		str = data.task_name.."    "..days.."/"..data.task_target_num
+		local times      = servetDate - self.taskProgressList.bondDateTimes
+		local days       = math.floor(times / 86400)
+		str              = data.task_name .. "    " .. days .. "/" .. data.task_target_num
 	end
 	FGUI:GTextField_setText(text_cond, str)
 	FGUI:SetIntData(item, idx)
-end 
+end
 
 function MentorShipMain:RefreshAll()
 	if self._hasRelation then
@@ -532,8 +576,8 @@ function MentorShipMain:RefreshAll()
 		FGUI:GList_setNumItems(self._ui.list_graduate, 0)
 	end
 	local showEmpty = not self._hasRelation
-	local text = "未出师徒弟 "..(#self._apprenticeList).."/3"
-	FGUI:GTextField_setText(self._ui.text_count,text)
+	local text = "未出师徒弟 " .. (#self._apprenticeList) .. "/3"
+	FGUI:GTextField_setText(self._ui.text_count, text)
 	FGUI:GList_setNumItems(self._ui.list_mentor_cond, showEmpty and #self._emptyMentorCond or 0)
 	FGUI:GList_setNumItems(self._ui.list_apprentice_cond, showEmpty and #self._emptyApprenticeCond or 0)
 	FGUI:GList_setNumItems(self._ui.list_mentor_intro, showEmpty and #self._emptyMentorIntro or 0)
@@ -548,12 +592,12 @@ function MentorShipMain:setApprenticeTask(data)
 end
 
 function MentorShipMain:setRightInfo()
-	FGUI:GTextField_setText(self._ui.text_bond_date,"于"..self.taskProgressList.bondDate.."结为师徒")
+	FGUI:GTextField_setText(self._ui.text_bond_date, "于" .. self.taskProgressList.bondDate .. "结为师徒")
 	if self.dsqjc then
 		SL:UnSchedule(self.dsqjc)
-		FGUI:setVisible(self._ui.btn_break,true)
-		FGUI:setVisible(self._ui.btn_cancel,false)
-		FGUI:setVisible(self._ui.timeout,false)
+		FGUI:setVisible(self._ui.btn_break, true)
+		FGUI:setVisible(self._ui.btn_cancel, false)
+		FGUI:setVisible(self._ui.timeout, false)
 	end
 	if self.rightInfoType == 1 then
 		--我的师傅
@@ -570,11 +614,11 @@ function MentorShipMain:setRightInfo()
 		--我的徒弟
 		-- dump(self.taskProgressList.UserID)
 		-- dump(self.applyRemoveMyAppliction[""..self.taskProgressList.UserID])
-		if self.applyRemoveMyAppliction[""..self.taskProgressList.UserID] then
+		if self.applyRemoveMyAppliction["" .. self.taskProgressList.UserID] then
 			--解除关系倒计时
 			local breakData = {
-				byUserId = self.applyRemoveMyAppliction[""..self.taskProgressList.UserID].byUserId,
-				date = self.applyRemoveMyAppliction[""..self.taskProgressList.UserID].date
+				byUserId = self.applyRemoveMyAppliction["" .. self.taskProgressList.UserID].byUserId,
+				date = self.applyRemoveMyAppliction["" .. self.taskProgressList.UserID].date
 			}
 			self:showTimeOut(breakData)
 		end
@@ -584,47 +628,47 @@ end
 function MentorShipMain:onClickChuShi()
 	-- self.setOutList
 	local isCan = true
-	for i=1,#self.setOutList do
+	for i = 1, #self.setOutList do
 		local task = self.setOutList[i]
 		--等级要求
-		local item = FGUI:GetChildAt(self._ui.list_graduate,i-1)
-		local cont = FGUI:getController(item,"isShowTips")
+		local item = FGUI:GetChildAt(self._ui.list_graduate, i - 1)
+		local cont = FGUI:getController(item, "isShowTips")
 		if task.task_target == 1 then
-			if SL:GetValue("ACTOR_LEVEL",self.taskProgressList.UserID) < task.task_target_num  then
+			if SL:GetValue("ACTOR_LEVEL", self.taskProgressList.UserID) < task.task_target_num then
 				isCan = false
-				FGUI:Controller_setSelectedIndex(cont,1)
+				FGUI:Controller_setSelectedIndex(cont, 1)
 				FGUI:setSize(item, 526, 48)
 			else
-				FGUI:Controller_setSelectedIndex(cont,0)
+				FGUI:Controller_setSelectedIndex(cont, 0)
 				FGUI:setSize(item, 526, 24)
 			end
 		end
 		if task.task_target == 3 then
 			local servetDate = SL:GetValue("SERVER_TIME")
-			local times = servetDate - self.taskProgressList.bondDateTimes
-			local days  = math.floor(times/86400)
-			if days < task.task_target_num  then
+			local times      = servetDate - self.taskProgressList.bondDateTimes
+			local days       = math.floor(times / 86400)
+			if days < task.task_target_num then
 				isCan = false
-				FGUI:Controller_setSelectedIndex(cont,1)
+				FGUI:Controller_setSelectedIndex(cont, 1)
 				FGUI:setSize(item, 526, 48)
 			else
-				FGUI:Controller_setSelectedIndex(cont,0)
+				FGUI:Controller_setSelectedIndex(cont, 0)
 				FGUI:setSize(item, 526, 24)
 			end
 		end
 		if task.task_target == 5 then
 			if self.taskProgressList.finishTask < task.task_target_num then
 				isCan = false
-				FGUI:Controller_setSelectedIndex(cont,1)
+				FGUI:Controller_setSelectedIndex(cont, 1)
 				FGUI:setSize(item, 526, 48)
 			else
-				FGUI:Controller_setSelectedIndex(cont,0)
+				FGUI:Controller_setSelectedIndex(cont, 0)
 				FGUI:setSize(item, 526, 24)
 			end
 		end
 	end
 	if isCan then
-		ssrMessage:sendmsgEx("MentorShip", "chushi",{UserID = self.taskProgressList.UserID})
+		ssrMessage:sendmsgEx("MentorShip", "chushi", { UserID = self.taskProgressList.UserID })
 	end
 end
 
@@ -632,14 +676,14 @@ function MentorShipMain:OnClickFindMentor()
 	--判断当前是否满足
 	local nowzs = SL:GetValue("RELEVEL")
 	local nowlv = SL:GetValue("LEVEL")
-	print(nowzs,nowlv)
+	print(nowzs, nowlv)
 	if tonumber(MasterApprenticeShip["min_apply_master_zs"].VALUE) <= nowzs and tonumber(MasterApprenticeShip["min_apply_master_lv"].VALUE) <= nowlv then
 		FGUI:Open("MentorShip", "FindMentorPanel")
 	else
 		SL:ShowSystemTips("拜师条件不满足，无法拜师")
 	end
-	
 end
+
 function MentorShipMain:OnClickFindApprentice()
 	--判断当前是否满足
 	local nowzs = SL:GetValue("RELEVEL")
@@ -650,59 +694,62 @@ function MentorShipMain:OnClickFindApprentice()
 		SL:ShowSystemTips("收徒条件不满足，无法收徒")
 	end
 end
+
 function MentorShipMain:Onbtn_applylist()
-	FGUI:Open("MentorShip", "MyShipApplyLists","MentorShipMain")
+	FGUI:Open("MentorShip", "MyShipApplyLists", "MentorShipMain")
 end
+
 function MentorShipMain:onClickReward()
 	print("dianjijiangli")
-	FGUI:setVisible(self._ui.chushijl,true)
-	local btn_close = FGUI:GetChild(self._ui.chushijl,"btn_close")
-	local Mask = FGUI:GetChild(self._ui.chushijl,"Mask")
+	FGUI:setVisible(self._ui.chushijl, true)
+	local btn_close = FGUI:GetChild(self._ui.chushijl, "btn_close")
+	local Mask = FGUI:GetChild(self._ui.chushijl, "Mask")
 	FGUI:setOnClickEvent(btn_close, function()
 		--关闭
-		FGUI:setVisible(self._ui.chushijl,false)
+		FGUI:setVisible(self._ui.chushijl, false)
 	end)
 	FGUI:setOnClickEvent(Mask, function()
 		--关闭
-		FGUI:setVisible(self._ui.chushijl,false)
+		FGUI:setVisible(self._ui.chushijl, false)
 	end)
-	local iconItem = FGUI:GetChild(self._ui.chushijl,"masterBox")
-	local iconItem1 = FGUI:GetChild(self._ui.chushijl,"appriceBox")
+	local iconItem = FGUI:GetChild(self._ui.chushijl, "masterBox")
+	local iconItem1 = FGUI:GetChild(self._ui.chushijl, "appriceBox")
 	local itemData = SL:GetValue("ITEM_DATA", tonumber(MasterApprenticeShip['master_award'].VALUE))
 	local itemData1 = SL:GetValue("ITEM_DATA", tonumber(MasterApprenticeShip['apparenice_award'].VALUE))
 	--师傅奖励
 	local extData = {}
-    extData.hideTip = false --是否隐藏默认的Tip
-    extData.itemTipData = itemData --table类型，对应ItemTips.ShowTip传入的参数
-    extData.clickCallback = false --单击事件回调
-    extData.doubleClickCallback = false --双击事件回调
-    extData.bgVisible = true --背景隐藏
-	ItemUtil:ItemShow_Create(itemData,iconItem,extData)
+	extData.hideTip = false          --是否隐藏默认的Tip
+	extData.itemTipData = itemData   --table类型，对应ItemTips.ShowTip传入的参数
+	extData.clickCallback = false    --单击事件回调
+	extData.doubleClickCallback = false --双击事件回调
+	extData.bgVisible = true         --背景隐藏
+	ItemUtil:ItemShow_Create(itemData, iconItem, extData)
 	--徒弟奖励
 	local extData1 = {}
-    extData1.hideTip = false --是否隐藏默认的Tip
-    extData1.itemTipData = itemData1 --table类型，对应ItemTips.ShowTip传入的参数
-    extData1.clickCallback = false --单击事件回调
-    extData1.doubleClickCallback = false --双击事件回调
-    extData1.bgVisible = true --背景隐藏
-	ItemUtil:ItemShow_Create(itemData1,iconItem1,extData1)
-    
+	extData1.hideTip = false          --是否隐藏默认的Tip
+	extData1.itemTipData = itemData1  --table类型，对应ItemTips.ShowTip传入的参数
+	extData1.clickCallback = false    --单击事件回调
+	extData1.doubleClickCallback = false --双击事件回调
+	extData1.bgVisible = true         --背景隐藏
+	ItemUtil:ItemShow_Create(itemData1, iconItem1, extData1)
 end
+
 function MentorShipMain:OnClickBreak()
 	-- FGUI:Open("MentorShip", "breakRelationship", { type = self.rightInfoType,UserID = self.taskProgressList.UserID })
-	local isShowDialog = SL:GetValue("T",94)
+	local isShowDialog = SL:GetValue("T", 94)
 	if isShowDialog == 0 then
-		FGUI:setVisible(self._ui.dialog,true)
+		FGUI:setVisible(self._ui.dialog, true)
 	end
-	local agree = FGUI:GetChild(self._ui.dialog,"btn_green")
-	local btn_close = FGUI:GetChild(self._ui.dialog,"btn_close")
-	local btn_red = FGUI:GetChild(self._ui.dialog,"btn_red")
-	local Mask = FGUI:GetChild(self._ui.dialog,"Mask")
-	local checkBox = FGUI:GetChild(self._ui.dialog,"checkBox")
+	local agree = FGUI:GetChild(self._ui.dialog, "btn_green")
+	local btn_close = FGUI:GetChild(self._ui.dialog, "btn_close")
+	local btn_red = FGUI:GetChild(self._ui.dialog, "btn_red")
+	local Mask = FGUI:GetChild(self._ui.dialog, "Mask")
+	local checkBox = FGUI:GetChild(self._ui.dialog, "checkBox")
 	FGUI:setOnClickEvent(agree, function()
 		--同意解除
-		FGUI:setVisible(self._ui.dialog,false)
-		ssrMessage:sendmsgEx("MentorShip", "applyRemove", {type = self.rightInfoType,UserID = self.taskProgressList.UserID})
+		FGUI:setVisible(self._ui.dialog, false)
+		ssrMessage:sendmsgEx("MentorShip", "applyRemove",
+			{ type = self.rightInfoType, UserID = self.taskProgressList.UserID })
 	end)
 	-- 0 不勾 1勾
 	FGUI:setOnClickEvent(checkBox, function()
@@ -712,26 +759,29 @@ function MentorShipMain:OnClickBreak()
 	end)
 	FGUI:setOnClickEvent(btn_close, function()
 		--同意解除
-		FGUI:setVisible(self._ui.dialog,false)
+		FGUI:setVisible(self._ui.dialog, false)
 	end)
 	FGUI:setOnClickEvent(btn_red, function()
 		--关闭
-		FGUI:setVisible(self._ui.dialog,false)
+		FGUI:setVisible(self._ui.dialog, false)
 	end)
 	FGUI:setOnClickEvent(Mask, function()
 		--关闭
-		FGUI:setVisible(self._ui.dialog,false)
+		FGUI:setVisible(self._ui.dialog, false)
 	end)
 end
+
 function MentorShipMain:OnclickCancelBreak()
 	if self.dsqjc then
 		SL:UnSchedule(self.dsqjc)
 	end
-	ssrMessage:sendmsgEx("MentorShip", "cancelApplyBreak", {type = self.rightInfoType,UserID = self.taskProgressList.UserID})
+	ssrMessage:sendmsgEx("MentorShip", "cancelApplyBreak",
+		{ type = self.rightInfoType, UserID = self.taskProgressList.UserID })
 end
+
 function MentorShipMain:showTimeOut(data)
 	self = MentorShipMainUI.CCUI
-		--师徒操作解除的
+	--师徒操作解除的
 	if data.date then
 		--解除关系中
 		--加个倒计时
@@ -740,39 +790,42 @@ function MentorShipMain:showTimeOut(data)
 		end
 		self.time = data.date
 		local function realivedjs()
-			local times =  SL:GetValue("SERVER_TIME")*1000 - self.time
-			local Second = 86400 - math.floor(times/1000)
-			local hour = math.floor(Second/3600)
-			local minutes = math.floor((Second - hour * 3600)/60)
-			if Second > 0  then
-				FGUI:GTextField_setText(self._ui.timeout, "将于"..hour.."小时"..minutes.."分后解除")
-				FGUI:setVisible(self._ui.timeout,true)
+			local times = SL:GetValue("SERVER_TIME") * 1000 - self.time
+			local Second = 86400 - math.floor(times / 1000)
+			local hour = math.floor(Second / 3600)
+			local minutes = math.floor((Second - hour * 3600) / 60)
+			if Second > 0 then
+				FGUI:GTextField_setText(self._ui.timeout, "将于" .. hour .. "小时" .. minutes .. "分后解除")
+				FGUI:setVisible(self._ui.timeout, true)
 				if data.byUserId == self.myUserId then
-					FGUI:setVisible(self._ui.btn_cancel,true)
-					FGUI:setVisible(self._ui.btn_break,false)
+					FGUI:setVisible(self._ui.btn_cancel, true)
+					FGUI:setVisible(self._ui.btn_break, false)
 				else
-					FGUI:setVisible(self._ui.btn_break,true)
-					FGUI:setVisible(self._ui.btn_cancel,false)
+					FGUI:setVisible(self._ui.btn_break, true)
+					FGUI:setVisible(self._ui.btn_cancel, false)
 				end
 			else
 				SL:UnSchedule(self.dsqjc)
-				FGUI:setVisible(self._ui.btn_break,true)
-				FGUI:setVisible(self._ui.btn_cancel,false)
-				FGUI:setVisible(self._ui.timeout,false)
-				FGUI:setVisible(self._ui.dialog,false)
-				ssrMessage:sendmsgEx("MentorShip", "clearThisRelationship", {masterUserId = data.masterUserId,applictionUserId = data.applictionUserId})
+				FGUI:setVisible(self._ui.btn_break, true)
+				FGUI:setVisible(self._ui.btn_cancel, false)
+				FGUI:setVisible(self._ui.timeout, false)
+				FGUI:setVisible(self._ui.dialog, false)
+				ssrMessage:sendmsgEx("MentorShip", "clearThisRelationship",
+					{ masterUserId = data.masterUserId, applictionUserId = data.applictionUserId })
 			end
 		end
-		self.dsqjc = SL:Schedule(realivedjs,1)
+		self.dsqjc = SL:Schedule(realivedjs, 1)
 	else
-		FGUI:setVisible(self._ui.btn_break,true)
-		FGUI:setVisible(self._ui.btn_cancel,false)
-		FGUI:setVisible(self._ui.timeout,false)
+		FGUI:setVisible(self._ui.btn_break, true)
+		FGUI:setVisible(self._ui.btn_cancel, false)
+		FGUI:setVisible(self._ui.timeout, false)
 	end
 end
+
 function MentorShipMain:OnClickGraduate()
 	self._store:NetSend(self._op.GRADUATE, self._relationId or 0, 0, nil)
 end
+
 function MentorShipMain:_OnNet(msgID, code, _, _, str)
 	if msgID ~= self._net.RSP then
 		return
@@ -814,33 +867,39 @@ function MentorShipMain:_RegisterNet()
 	end
 	SL:RegisterNetMsg(self._net.RSP, self._netCB)
 end
+
 function MentorShipMain:_UnregisterNet()
 	SL:UnRegisterNetMsg(self._net.RSP)
 end
+
 function MentorShipMain:onTransferComplete()
 	ssrMessage:sendmsgEx("MentorShip", "changeRelevel")
 end
+
 function MentorShipMain:addBubble()
 	local function callback()
-        FGUI:Open("MentorShip", "MentorShipPanel",{openBrearList = true},FGUI_LAYER.NORMAL,{fullScreen = false,destroyTime = 1})
-        SL:DelBubbleTips(203000)
-    end
-    SL:AddBubbleTips(203000, "ui://zj419n3dbrvzv7v", callback)
+		FGUI:Open("MentorShip", "MentorShipPanel", { openBrearList = true }, FGUI_LAYER.NORMAL,
+			{ fullScreen = false, destroyTime = 1 })
+		SL:DelBubbleTips(203000)
+	end
+	SL:AddBubbleTips(203000, "ui://zj419n3dbrvzv7v", callback)
 end
 
 function MentorShipMain:addApplyBubble()
 	local function callback()
-        FGUI:Open("MentorShip", "MyShipApplyLists","addApplyBubble")
-        SL:DelBubbleTips(203001)
-    end
-    SL:AddBubbleTips(203001, "ui://zj419n3dbrvzv7v", callback)
+		FGUI:Open("MentorShip", "MyShipApplyLists", "addApplyBubble")
+		SL:DelBubbleTips(203001)
+	end
+	SL:AddBubbleTips(203001, "ui://zj419n3dbrvzv7v", callback)
 end
+
 -----------------------------------注册事件--------------------------------------
 function MentorShipMain:RegisterEvent()
-    -- SL:RegisterLUAEvent(LUA_EVENT_TRANSFER_SUCCEED, "MentorShipMain", handler(self, self.onTransferComplete))
+	-- SL:RegisterLUAEvent(LUA_EVENT_TRANSFER_SUCCEED, "MentorShipMain", handler(self, self.onTransferComplete))
 end
 
 function MentorShipMain:RemoveEvent()
-    -- SL:UnRegisterLUAEvent(LUA_EVENT_TRANSFER_SUCCEED, "MentorShipMain")
+	-- SL:UnRegisterLUAEvent(LUA_EVENT_TRANSFER_SUCCEED, "MentorShipMain")
 end
+
 return MentorShipMain
