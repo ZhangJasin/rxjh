@@ -241,6 +241,10 @@ function PCMainBottom:OnClickTransfer()
 end
 
 function PCMainBottom:OnClickFashion()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 35 then
+        return SL:ShowSystemTips("人物35级解锁八卦炉")
+    end
     FGUI:Open("A_Compound", "compoundMain", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
 

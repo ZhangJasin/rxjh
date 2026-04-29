@@ -177,9 +177,6 @@ function MainRightFunc:OnOpenBagua()
     if playerLevel < 35 then
         return SL:ShowSystemTips("人物35级解锁八卦炉")
     end
-    if SL:GetValue("IS_PC_OPER_MODE") then
-        return
-    end
     FGUI:Open("A_Compound", "compoundMain", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
 
