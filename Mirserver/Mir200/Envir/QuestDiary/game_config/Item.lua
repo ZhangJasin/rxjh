@@ -19081,5 +19081,22 @@ local config = {
 		ItemType=2,
 		TipsGroupId=18,
 	},
+	[3984] = { 
+		ID=3984,
+		Name="历练丹",
+		StdMode=2,
+		Looks=200342,
+		Price="0#1#1000",
+		Color=242,
+		OverLap=9999,
+		Desc="使用后可获得1000点历练值",
+		GetWayInfo="4|8",
+		Droplooks=200025,
+		Grade=3,
+		nPaimaiStall=0,
+		QuickUse=1,
+		ItemType=1,
+		TipsGroupId=18,
+	},
 }
 return config
