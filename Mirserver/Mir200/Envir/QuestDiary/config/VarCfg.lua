@@ -257,6 +257,7 @@ VarCfg.N_fuben_monidx             = "N22" --当前副本怪物idx
 VarCfg.N_person_FuBen_State       = "N23" --个人副本状态
 VarCfg.N_FUBEN_TIME               = "N24" --师徒副本倒计时
 
+VarCfg.N_boss_state               = "N25" --BOSS状态
 ---------------------------------------↓↓↓ 自定义临时数字变量 ↓↓↓---------------------------------------
 -- 下线不保存
 VarCfg.N_LS_Power                 = "N$战力等级" -- 战力

@@ -60,12 +60,14 @@ function moveItem.usetuling(actor, data)
         sendmsg(actor, 9, "土灵符不足！")
         return
     end
+    
     local mapid = targetinfo(actor, "NEWMAP")
     -- 禁止使用传土灵符地图
     if banMoveMap[""..mapid] then
         sendmsg(actor, 9, "当前地图禁止使用土灵符！")
         return
     end
+  
     local index = data[1] or -1
     local TuLingPosTab = gethumvar(actor, VarCfg.T_TuLingPosTab) or ""
     if TuLingPosTab ~= "" then
@@ -131,6 +133,12 @@ function moveItem.move(actor, data)
         sendmsg(actor, 9, "当前地图禁止使用传送符！")
         return
     end
+    local mapName =targetinfo(actor, "MAPTITLE")
+    if mapName == "狩猎场" then
+        sendmsg(actor, 9, "当前地图禁止使用土灵符！")
+        return
+    end
+    
     delItemNum(actor, "传送符", 1)
     mapmove(actor, mapid, math.floor(x), math.floor(y), 2)
     local isauto = gethumvar(actor, VarCfg.N_task_xunlu_auto)

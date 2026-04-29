@@ -1,11 +1,18 @@
 
 
+
 BossChall = {}
 local filname = "BossChall"
 local SysConstant  =  require("Envir/QuestDiary/game_config/cfgcsv/SysConstant.lua")
 local BossInfo_Cfg  =  require("Envir/QuestDiary/game_config/cfgcsv/BOSSInfo.lua")
 local BossPool_Cfg  =  require("Envir/QuestDiary/game_config/cfgcsv/BOSSPool.lua")
 
+-- BOSS挑战常量
+local BOSS_MAP_ID = "230"                    -- 镜像副本地图编号
+local BOSS_MAP_NAME = "狩猎场"
+local BOSS_SAFE_POS_X = 209                  -- 泫勃派安全区X坐标
+local BOSS_SAFE_POS_Y = 315                  -- 泫勃派安全区Y坐标
+local BOSS_SAFE_MAP_ID = "101"               -- 泫勃派地图ID (主城)
 
 -- 获取玩家BOSS池数据
 local function _getBossData(actor)
@@ -29,22 +36,22 @@ local function _getChalledCount(actor)
     return gethumvar(actor, VarCfg.U_BOSS_Count) or 0
 end
 
+-- 保存每日挑战次数
+local function _saveChalledCount(actor, count)
+    sethumvar(actor, VarCfg.U_BOSS_Count, count)
+end
+
 -- 根据概率从BOSS列表中随机选择一个BOSS
--- @param bossList BOSS列表，格式: {{bossId, probability}, ...}
--- @param excludeIds 需要排除的BOSS ID列表
--- @return 选中的BOSS ID，未选中返回nil
 local function _randomSelectBoss(bossList, excludeIds)
     if not bossList or #bossList == 0 then
         return nil
     end
     
-    -- 计算总概率
     local totalProb = 0
     local availableBosses = {}
     for i, bossInfo in ipairs(bossList) do
         local bossId = bossInfo[1]
         local prob = bossInfo[2] or 0
-        -- 跳过已排除的BOSS
         local isExclude = false
         if excludeIds then
             for _, excludeId in ipairs(excludeIds) do
@@ -64,7 +71,6 @@ local function _randomSelectBoss(bossList, excludeIds)
         return nil
     end
     
-    -- 随机抽取
     local randValue = math.random(1, totalProb)
     local cumulative = 0
     for _, bossInfo in ipairs(availableBosses) do
@@ -74,14 +80,11 @@ local function _randomSelectBoss(bossList, excludeIds)
         end
     end
     
-    -- 防止概率计算误差，返回最后一个
     return availableBosses[#availableBosses].id
 end
 
 -- 根据玩家等级获取对应的BOSS池配置
--- @param playerLevel 玩家等级
--- @return BOSS池配置，未找到返回nil
-local function _getBossPoolByLevel(playerLevel,job)
+local function _getBossPoolByLevel(playerLevel, job)
     if not playerLevel or not job then
         return nil
     end
@@ -92,7 +95,6 @@ local function _getBossPoolByLevel(playerLevel,job)
             return poolConfig["bossList"..job]
         end
     end
-    
     return nil
 end
 
@@ -104,15 +106,12 @@ local function _refreshBossPool(actor)
         return 
     end
     
-    -- 获取BOSS池数量
     local poolSize = tonumber(SysConstant['Boss_Chall_Num']["Value"]) or 8
-    
-    -- 获取玩家等级对应的BOSS池配置
-    local poolConfig = _getBossPoolByLevel(curLv,job(actor))
+    local poolConfig = _getBossPoolByLevel(curLv, job(actor))
     if not poolConfig then
         return
     end
-    -- 根据概率随机抽取BOSS
+    
     local bossData = {}
     local selectedIds = {}
     
@@ -120,41 +119,159 @@ local function _refreshBossPool(actor)
         local bossId = _randomSelectBoss(poolConfig, selectedIds)
         if bossId then
             table.insert(selectedIds, bossId)
-            -- BOSS数据结构: {BOSSID, 已挑战次数}
             table.insert(bossData, {bossId, 0})
         else
-            -- BOSS池配置不足，填充空数据
             table.insert(bossData, {0, 0})
         end
     end
-    -- 保存到玩家变量
-    _saveBossData(actor, bossData)
     
-    -- 发送数据给客户端
+    _saveBossData(actor, bossData)
     BossChall.getData(actor)
 end
 
-function BossChall.chall(actor,data)
-    local index = tonumber(data[1]) or 0
+-- 刷新BOSS列表（消耗刷新卷）
+function BossChall.refresh(actor, data)     
+    local index = tonumber(data[1]) or 0  
+    local bossData = _getBossData(actor)
+    if index >= 1 and index <= #bossData then
+         -- 获取玩家等级职业对应的BOSS池配置
+        local poolConfig = _getBossPoolByLevel(level(actor), job(actor))
+        if not poolConfig then
+            sendmsg(actor, 9, "BOSS配置异常")
+            return
+        end
+            
+        -- 检查刷新卷
+        if not takeitem(actor, "刷新卷#1", 0) then
+            sendmsg(actor, 9, "刷新卷不足")
+            return
+        end
+        local currentBoss = {}
+        for _, info in ipairs(bossData) do
+            table.insert(currentBoss,info[1] or 0)
+        end
+        local newBossId = _randomSelectBoss(poolConfig, currentBoss)
+        if newBossId then
+            bossData[index] = {newBossId, 0}
+            _saveBossData(actor, bossData)
+            sendmsg(actor, 9, "刷新成功")
+        else
+            sendmsg(actor, 9, "刷新失败")
+            return
+        end
+    else
+        sendmsg(actor, 9, "无效的位置")
+        return
+    end
+    
+    BossChall.getData(actor)
 end
 
-function BossChall.refresh(actor,data)
+-- 选BOSS挑战
+function BossChall.chall(actor, data)   
     local index = tonumber(data[1]) or 0
-
+    -- 获取BOSS数据
+    local bossData = _getBossData(actor)
+    -- 检查位置有效性
+    if index < 1 or index > #bossData then
+        sendmsg(actor, 9, "无效的位置")
+        return
+    end
+    
+    local bossInfo = bossData[index]
+    if not bossInfo or bossInfo[1] == 0 then
+        sendmsg(actor, 9, "BOSS不存在")
+        return
+    end
+    local bossCfg = BossInfo_Cfg[bossInfo[1]]
+    if not bossCfg then
+        sendmsg(actor, 9, "BOSS配置不存在")
+        return
+    end
+    
+    local bossId = bossInfo[1]
+    local challCount = bossInfo[2] or 0
+    
+    -- 检查同一BOSS挑战次数限制
+    local maxSingleBossCount = tonumber(SysConstant['Boss_Chall_Count']["Value"]) or 5
+    if challCount >= maxSingleBossCount then
+        sendmsg(actor, 9, "该BOSS今日挑战次数已用完")
+        return
+    end
+    
+    -- 检查每日总挑战次数
+    local dailyCount = _getChalledCount(actor)
+    local maxDailyCount = tonumber(SysConstant['Boss_Day_MAX_Count']["Value"]) or 20
+    if dailyCount >= maxDailyCount then
+        sendmsg(actor, 9, "今日挑战次数已用完")
+        return
+    end
+    
+    -- 检查免费次数
+    local freeCount = tonumber(SysConstant['Boss_Day_Free_Count']["Value"]) or 2
+    local needToken = dailyCount >= freeCount
+    
+    if needToken then
+        -- 需要消耗悬赏令
+        if not takeitem(actor, "悬赏令#1", 0) then
+            sendmsg(actor, 9, "悬赏令不足")
+            return
+        end
+    end
+    
+    -- 更新BOSS挑战次数
+    bossData[index][2] = challCount + 1
+    _saveBossData(actor, bossData)
+    
+    -- 更新每日总挑战次数
+    _saveChalledCount(actor, dailyCount + 1)
+    
+    sethumvar(actor, VarCfg.N_boss_state,0)
+    local newMapId  = BOSS_MAP_ID .. userid(actor)  --新地图
+    delmirrormap(newMapId)
+    local challTime = tonumber(SysConstant['Boss_Chall_Time']["Value"]) or 300
+    -- 进入BOSS挑战
+    addmirrormap(tostring(BOSS_MAP_ID), newMapId, BOSS_MAP_NAME, challTime, BOSS_SAFE_MAP_ID, 1, BOSS_SAFE_POS_X, BOSS_SAFE_POS_Y)
+    --刷怪
+    mongenex(newMapId, 34, 33, 1, bossCfg.name, 1, -1, 0)
+    mapmove(actor, newMapId,22,22) 
+    --显示倒计时 TODO 
 end
+
 
 function BossChall.getData(actor)
     Message.sendmsg(actor, ssrNetMsgCfg.BOSSChall_RetData,_getChalledCount(actor),nil,nil,_getBossData(actor))
 end
 
+
 GameEvent.add(EventCfg.onResetday, function (actor)
     sethumvar(actor, VarCfg.U_BOSS_Count, 0)
     _refreshBossPool(actor)
 end, BossChall)
-GameEvent.add(EventCfg.onPlayLevelUp, function (actor, cur_level, before_level)         -- 升级触发
+
+GameEvent.add(EventCfg.onPlayLevelUp, function (actor, cur_level, before_level)
     local minLv = tonumber(SysConstant['Boss_Open_LV']["Value"]) or 35
     if before_level < minLv and cur_level >= minLv then
         _refreshBossPool(actor)
+    end
+end, BossChall)
+
+GameEvent.add(EventCfg.goSwitchMap, function (actor, cur_mapid, former_mapid)         -- 切换地图触发
+    local newMapId  = BOSS_MAP_ID .. userid(actor)  --新地图   
+    if former_mapid == newMapId and gethumvar(actor, VarCfg.N_boss_state) ~= 1 then
+        sendmsg(actor, 9, "当前BOSS挑战失败")
+        return
+    end 
+end, BossChall)
+
+GameEvent.add(EventCfg.onKillMon, function (actor, mon, mapid, monidx)   
+    local newMapId  = BOSS_MAP_ID .. userid(actor)  --新地图
+    if newMapId == mapid and BossInfo_Cfg[monidx] then
+        sethumvar(actor,VarCfg.N_boss_state,1)
+        sendmsg(actor, 9, "当前BOSS挑战成功，狩猎场将于1分钟后关闭")
+        local exitTime = tonumber(SysConstant['Boss_Chall_Time']["Value"]) or 60
+        mirrormaptime(mapid,exitTime)
+        --退出倒计时 TODO
     end
 end, BossChall)
 
