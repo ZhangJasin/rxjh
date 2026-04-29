@@ -54,6 +54,11 @@ function MiniMapPanel:Enter()
 	self._mapCfg = {} -- 地图数据(左侧列表)
 	local now_mapId = SL:GetValue("MAP_ID")
 	self:RefreshLeftList(now_mapId)
+	-- 设置tog_monster默认为不选中
+	if self._ui.tog_monster then
+		FGUI:GButton_setSelected(self._ui.tog_monster, false)
+		self._pointFilter[POINT_TYPE_MONSTER] = false
+	end
 	self:ChangeMap(now_mapId)
 	self._tracePoint:Enter()
 	SL:ComponentAttach(SLDefine.SUIComponentTable.MiniMap, self._ui.Node_attach)
