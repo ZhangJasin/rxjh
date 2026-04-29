@@ -2052,6 +2052,10 @@
     <image id="mrtawry" name="310031.png" path="/newitemicon/" exported="true"/>
     <image id="mrtawrz" name="310004.png" path="/newitemicon/" exported="true"/>
     <image id="mrtaws0" name="1000000775.png" path="/newitemicon/" exported="true"/>
+    <image id="vatgws1" name="3300101.png" path="/item/" exported="true"/>
+    <image id="vatgws2" name="3300102.png" path="/item/" exported="true"/>
+    <image id="vatgws3" name="3300103.png" path="/item/" exported="true"/>
+    <image id="vatgws4" name="3300104.png" path="/item/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
