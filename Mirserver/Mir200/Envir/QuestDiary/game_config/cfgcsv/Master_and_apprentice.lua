@@ -5,7 +5,7 @@ local config = {
 		type=1,
 		task_target=5,
 		task_target_param="*",
-		task_target_num=1,
+		task_target_num=30,
 	},
 	[2] = { 
 		ID=2,
@@ -13,7 +13,7 @@ local config = {
 		type=1,
 		task_target=3,
 		task_target_param="*",
-		task_target_num=0,
+		task_target_num=3,
 	},
 	[3] = { 
 		ID=3,
