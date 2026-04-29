@@ -170,7 +170,7 @@ function righttoppanl:SubscribeEvents()
 
     -- 等级变化
     table.insert(self._subscriptions, righttoppanlData:Get():Subscribe("level_change", function(data)
-
+        FGUI:setVisible(self._righttop.btn_boss_xs, data.lv >= 35)
     end))
 
 
