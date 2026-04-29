@@ -32,7 +32,7 @@ function MainRightFunc:Create()
         { btn = self._ui.Button_zz,      level = 10 },
         { btn = self._ui.Button_ZuoQi,   level = 20 },
         { btn = self._ui.Button_guild,   level = 25 },
-        { btn = self._ui.Button_bagua,   level = 0 },
+        { btn = self._ui.Button_bagua,   level = 35 },
         { btn = self._ui.Button_zbtj,    level = 35 },
     }
 
@@ -173,6 +173,13 @@ function MainRightFunc:OnClickZbtj()
 end
 
 function MainRightFunc:OnOpenBagua()
+    local playerLevel = SL:GetValue("LEVEL") or 1
+    if playerLevel < 35 then
+        return SL:ShowSystemTips("人物35级解锁八卦炉")
+    end
+    if SL:GetValue("IS_PC_OPER_MODE") then
+        return
+    end
     FGUI:Open("A_Compound", "compoundMain", {}, FGUI_LAYER.NORMAL, { fullScreen = false, destroyTime = 1 })
 end
 
