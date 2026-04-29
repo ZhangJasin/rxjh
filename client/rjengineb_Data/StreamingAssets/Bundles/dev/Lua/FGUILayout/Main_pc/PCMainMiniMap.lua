@@ -453,7 +453,8 @@ function PCMainMiniMap:UpdateMapPoints()
     --mapFrom
     local list = SL:GetValue("LINK_POINTS_MAPFROM", mapId)
     for k, v in pairs(list) do
-        if v and not SL:GetValue("LINK_IS_HIDE_POINT", v.ID) then
+        -- if v and not SL:GetValue("LINK_IS_HIDE_POINT", v.ID) then  -- 注释：改为直接使用配置文件的HidePoint字段
+        if v and (v.HidePoint == 0 or v.HidePoint == nil) then  -- HidePoint=0显示，HidePoint=1隐藏
             idx = idx + 1
             local posStr = v.PosiFrom
             createLinkPoint(posStr)
@@ -462,7 +463,8 @@ function PCMainMiniMap:UpdateMapPoints()
     --mapTo
     local list = SL:GetValue("LINK_POINTS_MAPTO", mapId)
     for k, v in pairs(list) do
-        if v and not SL:GetValue("LINK_IS_HIDE_POINT", v.ID) then
+        -- if v and not SL:GetValue("LINK_IS_HIDE_POINT", v.ID) then  -- 注释：改为直接使用配置文件的HidePoint字段
+        if v and (v.HidePoint == 0 or v.HidePoint == nil) then  -- HidePoint=0显示，HidePoint=1隐藏
             idx = idx + 1
             local posStr = v.PosiTo
             createLinkPoint(posStr)

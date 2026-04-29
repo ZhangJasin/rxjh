@@ -479,14 +479,18 @@ function MiniMapPanel:RefreshPoints()
 
 	local from_list = SL:GetValue("LINK_POINTS_MAPFROM", self._mapId)
 	for _, v in pairs(from_list) do
-		v.__type = LINK_TYPE_FROM
-		createLinkPoint(v.PosiFrom, v)
+		if v and (v.HidePoint == 0 or v.HidePoint == nil) then  -- HidePoint=0显示，HidePoint=1隐藏
+			v.__type = LINK_TYPE_FROM
+			createLinkPoint(v.PosiFrom, v)
+		end
 	end
 
 	local to_list = SL:GetValue("LINK_POINTS_MAPTO", self._mapId)
 	for _, v in pairs(to_list) do
-		v.__type = LINK_TYPE_TO
-		createLinkPoint(v.PosiTo, v)
+		if v and (v.HidePoint == 0 or v.HidePoint == nil) then  -- HidePoint=0显示，HidePoint=1隐藏
+			v.__type = LINK_TYPE_TO
+			createLinkPoint(v.PosiTo, v)
+		end
 	end
 
 	local npc_list = SL:GetValue("NPC_LIST", self._mapId)
