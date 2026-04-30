@@ -235,7 +235,7 @@ function BossChall.chall(actor, data)
     --À¢π÷
     mongenex(newMapId, 34, 33, 1, bossCfg.name, 1, -1, 0)
     mapmove(actor, newMapId,22,22) 
-    --œ‘ æµπº∆ ± TODO 
+    Message.sendmsg(actor, ssrNetMsgCfg.BOSSChall_Begin,challTime)
 end
 
 

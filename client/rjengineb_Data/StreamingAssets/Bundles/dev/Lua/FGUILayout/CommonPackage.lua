@@ -1,4 +1,4 @@
-CommonPackage = {"component", 'public',"ItemIcon","ImageBG","SkillIcon","SkillIconSquare","Loading", "SUI","PlayerIcon"}
+CommonPackage = {"component", 'public',"ItemIcon","ImageBG","SkillIcon","SkillIconSquare","MonsterIcon","Loading", "SUI","PlayerIcon"}
 if SL:GetValue("PLATFORM_WEB") then 
     table.insert(CommonPackage, "Net")
 end
@@ -6,7 +6,7 @@ Font = {
     ["FZBWKSK"] = "Font/FZBWKSK.ttf",
 }
 
-CommonPackage_PC = {"component", 'public_pc', 'public', "ItemIcon","ImageBG","SkillIcon", "SkillIconSquare", "Loading", "SUI","PlayerIcon"}
+CommonPackage_PC = {"component", 'public_pc', 'public', "ItemIcon","ImageBG","SkillIcon", "SkillIconSquare","MonsterIcon", "Loading", "SUI","PlayerIcon"}
 Font_pc = {
     ["FZBWKSK"] = "Font/FZBWKSK.ttf",
     ["SIMSUN"] = "Font/SIMSUN.ttf"

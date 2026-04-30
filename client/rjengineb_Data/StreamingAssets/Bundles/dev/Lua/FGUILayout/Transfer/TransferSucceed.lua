@@ -49,6 +49,7 @@ end
 function TransferSucceed:SkillItemRender(idx, item)
     local cfg = self._nextCfg.UnlockSkills[idx + 1]
     local skillIcon = SL:GetMetaValue("SKILL_SQUARE_ICON_PATH_BY_ID", cfg)
+    print("SkillItemRender", skillIcon)
     FGUI:GLoader_setUrl(FGUI:GetChild(item, "img_icon"), skillIcon, nil, true)
 end
 

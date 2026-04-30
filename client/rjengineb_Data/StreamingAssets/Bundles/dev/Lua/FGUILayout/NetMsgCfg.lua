@@ -52,6 +52,7 @@ ssrNetMsgCfg.equipCollect               = "equipCollect" -- 装备图鉴
 
 ssrNetMsgCfg.BOSSChall                      = "BossChall" -- BOSS悬赏
 ssrNetMsgCfg.BOSSChall_RetData              = 1100020
+ssrNetMsgCfg.BOSSChall_Begin                = 1100021
 
 local t                                 = {}
 for msgName, msgID in pairs(ssrNetMsgCfg) do

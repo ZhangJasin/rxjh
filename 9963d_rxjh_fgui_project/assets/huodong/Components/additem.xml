@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="936,106" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <loader id="n12_d7i1" name="grade" xy="0,0" size="936,106" url="ui://wvi7a1i4d7i1f" fill="scale"/>
+    <image id="n23_d7i1" name="n23" src="d7i1o" fileName="Images/icon_bg.png" xy="26,12"/>
+    <loader id="n13_d7i1" name="icon" xy="30,16" size="76,71" url="ui://ugfowotkbojeao" fill="scale"/>
+    <text id="n2_n22n" name="name" xy="114,12" size="141,26" fontSize="18" color="#f5ce2b" vAlign="middle" leading="2" autoSize="none" text="北极熊">
+      <gearDisplay controller="button" pages="0,1,2,3"/>
+    </text>
+    <component id="n11_d7i1" name="btn_chall" src="zah9v4h" fileName="common/btn_second_green.xml" pkg="st7dgeqq" xy="762,33" size="148,48"/>
+    <text id="n14_d7i1" name="lv" xy="114,32" size="141,23" fontSize="15" color="#bbdea4" vAlign="middle" leading="2" autoSize="none" text="35级">
+      <gearDisplay controller="button" pages="0,1,2,3"/>
+    </text>
+    <component id="n15_d7i1" name="btn_sx" src="d7i1n" fileName="Components/btn_sx.xml" xy="115,54"/>
+    <component id="n16_d7i1" name="specItem" src="d7i1a" fileName="Components/itemRoot.xml" xy="282,18"/>
+    <loader id="n17_d7i1" name="n17" xy="198,54" size="42,41" url="ui://twx3ya3eouffwlm" fill="scale"/>
+    <text id="n18_d7i1" name="n18" xy="232,70" size="23,22" fontSize="14" color="#ffffff" text="x 1"/>
+    <image id="n19_d7i1" name="n19" src="d7i1c" fileName="Images/zshu.png" xy="283,19"/>
+    <component id="n20_d7i1" name="item1" src="d7i1a" fileName="Components/itemRoot.xml" xy="372,18"/>
+    <component id="n21_d7i1" name="item2" src="d7i1a" fileName="Components/itemRoot.xml" xy="462,18"/>
+    <component id="n22_d7i1" name="item3" src="d7i1a" fileName="Components/itemRoot.xml" xy="552,18"/>
+  </displayList>
+  <Button mode="Check"/>
+</component>

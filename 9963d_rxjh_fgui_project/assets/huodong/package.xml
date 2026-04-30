@@ -2,18 +2,22 @@
 <packageDescription id="wvi7a1i4">
   <resources>
     <component id="d7i10" name="BossPanel.xml" path="/" exported="true"/>
-    <component id="d7i19" name="additembtn.xml" path="/Components/" exported="true"/>
+    <component id="d7i19" name="additem.xml" path="/Components/" exported="true"/>
     <component id="d7i1a" name="itemRoot.xml" path="/Components/" exported="true"/>
-    <image id="d7i1b" name="dit.png" path="/Images/" exported="true"/>
-    <image id="d7i1c" name="zshu.png" path="/Images/" exported="true"/>
-    <image id="d7i1d" name="sxin.png" path="/Images/" exported="true"/>
-    <image id="d7i1e" name="bg.png" path="/Images/" exported="true"/>
-    <image id="d7i1f" name="bg1.png" path="/Images/" exported="true"/>
-    <image id="d7i1g" name="bg2.png" path="/Images/" exported="true"/>
-    <image id="d7i1h" name="bg3.png" path="/Images/" exported="true"/>
-    <image id="d7i1i" name="bg4.png" path="/Images/" exported="true"/>
-    <image id="d7i1j" name="bg5.png" path="/Images/" exported="true"/>
-    <image id="d7i1k" name="bg6.png" path="/Images/" exported="true"/>
+    <image id="d7i1b" name="dit.png" path="/Images/" exported="true" scale="9grid" scale9grid="21,8,42,16"/>
+    <image id="d7i1c" name="zshu.png" path="/Images/" exported="true" scale="9grid" scale9grid="12,12,24,24"/>
+    <image id="d7i1d" name="sxin.png" path="/Images/" exported="true" scale="9grid" scale9grid="21,9,42,18"/>
+    <image id="d7i1e" name="bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="286,153,572,306"/>
+    <image id="d7i1f" name="bg1.png" path="/Images/" exported="true" scale="9grid" scale9grid="283,31,566,62"/>
+    <image id="d7i1g" name="bg2.png" path="/Images/" exported="true" scale="9grid" scale9grid="283,31,566,62"/>
+    <image id="d7i1h" name="bg3.png" path="/Images/" exported="true" scale="9grid" scale9grid="283,31,566,62"/>
+    <image id="d7i1i" name="bg4.png" path="/Images/" exported="true" scale="9grid" scale9grid="283,31,566,62"/>
+    <image id="d7i1j" name="bg5.png" path="/Images/" exported="true" scale="9grid" scale9grid="283,31,566,62"/>
+    <image id="d7i1k" name="bg6.png" path="/Images/" exported="true" scale="9grid" scale9grid="283,31,566,62"/>
+    <component id="d7i1l" name="tips.xml" path="/Components/" exported="true"/>
+    <component id="d7i1m" name="btn_wenhao.xml" path="/Components/" exported="true"/>
+    <component id="d7i1n" name="btn_sx.xml" path="/Components/" exported="true"/>
+    <image id="d7i1o" name="icon_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="20,20,40,40"/>
   </resources>
   <publish name=""/>
 </packageDescription>
