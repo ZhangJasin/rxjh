@@ -288,7 +288,7 @@ GameEvent.add(EventCfg.onKillMon, function (actor, mon, mapid, monidx)
     if newMapId == mapid and BossInfo_Cfg[monidx] then
         sethumvar(actor,VarCfg.N_boss_state,1)
         sendmsg(actor, 9, "当前BOSS挑战成功，狩猎场将于1分钟后关闭")
-        local exitTime = tonumber(SysConstant['Boss_Chall_Time']["Value"]) or 60
+        local exitTime = tonumber(SysConstant['Boss_Chall_Exit_Time']["Value"]) or 60
         mirrormaptime(mapid,exitTime)
         Message.sendmsg(actor, ssrNetMsgCfg.BOSSChall_End, exitTime)
     end

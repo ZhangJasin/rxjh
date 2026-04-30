@@ -25,10 +25,10 @@ function CountdownPanel:Enter(data)
     
     -- 适配PC端缩放
     if IS_PC then
-        FGUI:setScale(self.component, 0.75, 0.75)
+        FGUI:setScale(self.component, 0.68, 0.75)
     end
     self.component.x = IS_PC and 0 or 3
-    self.component.y = IS_PC and 110 or 135
+    self.component.y = IS_PC and 105 or 135
     -- 处理传入的数据
     if data then
         local cd = data.cd or 0
@@ -155,6 +155,8 @@ function CountdownPanel:RegisterEvent()
     SL:RegisterNetMsg(ssrNetMsgCfg.BOSSChall_Leave, handler(self, self.CloseSelf))
 end
 function CountdownPanel:EndChall(_,exitTime)
+    -- 先关闭现有界面，再打开新的
+    FGUI:Close("huodong", "CountdownPanel")
     FGUI:Open("huodong", "CountdownPanel", {
         cd = exitTime,
         btnText = "离开狩猎场",
