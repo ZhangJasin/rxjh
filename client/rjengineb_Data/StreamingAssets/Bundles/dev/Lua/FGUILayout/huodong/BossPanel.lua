@@ -63,7 +63,8 @@ function BossPanel:RefreshUI()
     FGUI:GTextField_setText(self._ui.itemCount, itemCount)
     
     -- 已调整次数
-    FGUI:GTextField_setText(self._ui.challCount, self._times or 0)
+    local maxDailyCount = SysConstant['Boss_Day_MAX_Count'] and tonumber(SysConstant['Boss_Day_MAX_Count']['Value']) or 20
+    FGUI:GTextField_setText(self._ui.challCount, string.format("%s/%s", self._times or 0, maxDailyCount))
     
     -- 刷新BOSS列表
     if self._data and #self._data > 0 then
