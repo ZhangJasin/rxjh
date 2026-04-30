@@ -1,5 +1,9 @@
 #CHILD 1/1 RANDOM
 (
+1/1 历练丹
+)
+#CHILD 1/1 RANDOM
+(
 1/1 强化石
 )
 #CHILD 1/1 RANDOM

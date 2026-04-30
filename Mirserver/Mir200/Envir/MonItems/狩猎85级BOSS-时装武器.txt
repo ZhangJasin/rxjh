@@ -1,3 +1,7 @@
+#CHILD 1/2 RANDOM
+(
+1/1 龙行天下（幻武）碎片
+)
 #CHILD 1/1 RANDOM
 (
 1/1 强化石
