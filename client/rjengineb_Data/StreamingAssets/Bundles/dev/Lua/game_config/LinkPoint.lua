@@ -794,16 +794,16 @@ local config = {
 	},
 	[62] = { 
 		ID=1062,
-		NameFrom="地灵洞2层",
-		MapFrom="180122",
-		PosiFrom="113#300#1#0",
-		NameTo="地灵洞2层",
-		MapTo="180122",
-		PosiTo="135#203#1#-2",
+		NameFrom="南明湖",
+		MapFrom="130102",
+		PosiFrom="113#219#2#5.6",
+		NameTo="南明洞",
+		MapTo="200102",
+		PosiTo="29#427#2#0",
 		TwoWay=1,
 		Effect=200001,
 		Time="1",
-		HidePoint=1,
+		HidePoint=0,
 	},
 }
 return config
