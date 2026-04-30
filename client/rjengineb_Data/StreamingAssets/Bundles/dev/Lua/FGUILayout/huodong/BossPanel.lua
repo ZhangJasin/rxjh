@@ -89,9 +89,29 @@ function BossPanel:RefreshBossUI(_,_times,_,_,data)
     end
 end
 
-function BossPanel:BeginChall(_,_times)
+function BossPanel:BeginChall(_,_leftTime)
+    -- 关闭 BossPanel
     FGUI:Close("huodong", "BossPanel")
+
+    -- 打开独立的倒计时界面
+    FGUI:Open("huodong", "CountdownPanel", {
+        cd = _leftTime,
+        btnText = "放弃挑战",
+        callback = function()
+            SL:OpenCommonDialog({
+                title = '提示',
+                str = "你确定放弃本次挑战次数?",
+                btnDesc = {"确定","取消"},
+                callback = function(tag)
+                    if tag == 1 then
+                        ssrMessage:sendmsgEx("BossChall", "leaveChall")
+                    end
+                end
+            })
+        end
+    })
 end
+
 -- BOSS列表渲染
 function BossPanel:ListBossShow(idx, item)
     if not self._data then return end
@@ -197,9 +217,9 @@ function BossPanel:ListBossShow(idx, item)
             SL:OpenCommonDialog({
                 title = '提示',
                 str = self._times < 2 and "本次挑战将消耗一次免费挑战次数，是否进行挑战？" or "本次挑战将消耗1个悬赏令进行挑战，是否进行挑战？",
-                btnDesc = {"取消", "确定"},
+                btnDesc = {"确定","取消"},
                 callback = function(tag)
-                    if tag == 2 then
+                    if tag == 1 then
                         ssrMessage:sendmsgEx("BossChall", "chall", {idx + 1})
                     end
                 end
@@ -220,9 +240,9 @@ function BossPanel:ListBossShow(idx, item)
             SL:OpenCommonDialog({
                 title = '提示',
                 str = '是否使用1个刷新卷刷新BOSS？',
-                btnDesc = {"取消", "确定"},
+                btnDesc = {"确定","取消"},
                 callback = function(tag)
-                    if tag == 2 then
+                    if tag == 1 then
                         ssrMessage:sendmsgEx("BossChall", "refresh", {idx + 1})
                     end
                 end

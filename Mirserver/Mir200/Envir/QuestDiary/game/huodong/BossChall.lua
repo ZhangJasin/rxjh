@@ -169,6 +169,10 @@ end
 
 -- 选BOSS挑战
 function BossChall.chall(actor, data)   
+    if targetinfo(actor, "MAPTITLE") == BOSS_MAP_NAME then
+        sendmsg(actor, 9, "已在挑狩猎场中")
+        return
+    end
     local index = tonumber(data[1]) or 0
     -- 获取BOSS数据
     local bossData = _getBossData(actor)
@@ -211,10 +215,20 @@ function BossChall.chall(actor, data)
     local freeCount = tonumber(SysConstant['Boss_Day_Free_Count']["Value"]) or 2
     local needToken = dailyCount >= freeCount
     
+    local newMapId  = BOSS_MAP_ID .. userid(actor)  --新地图
+    delmirrormap(newMapId)
+    local challTime = tonumber(SysConstant['Boss_Chall_Time']["Value"]) or 300
+    
+    local result = addmirrormap(tostring(BOSS_MAP_ID), newMapId, BOSS_MAP_NAME, challTime, BOSS_SAFE_MAP_ID, 1, BOSS_SAFE_POS_X, BOSS_SAFE_POS_Y)
+    if not result then
+        sendmsg(actor, 9, "创建副本失败，稍后再试")
+        return
+    end
     if needToken then
         -- 需要消耗悬赏令
         if not takeitem(actor, "悬赏令#1", 0) then
             sendmsg(actor, 9, "悬赏令不足")
+            delmirrormap(newMapId)
             return
         end
     end
@@ -226,16 +240,13 @@ function BossChall.chall(actor, data)
     -- 更新每日总挑战次数
     _saveChalledCount(actor, dailyCount + 1)
     
-    sethumvar(actor, VarCfg.N_boss_state,0)
-    local newMapId  = BOSS_MAP_ID .. userid(actor)  --新地图
-    delmirrormap(newMapId)
-    local challTime = tonumber(SysConstant['Boss_Chall_Time']["Value"]) or 300
-    -- 进入BOSS挑战
-    addmirrormap(tostring(BOSS_MAP_ID), newMapId, BOSS_MAP_NAME, challTime, BOSS_SAFE_MAP_ID, 1, BOSS_SAFE_POS_X, BOSS_SAFE_POS_Y)
     --刷怪
     mongenex(newMapId, 34, 33, 1, bossCfg.name, 1, -1, 0)
-    mapmove(actor, newMapId,22,22) 
-    Message.sendmsg(actor, ssrNetMsgCfg.BOSSChall_Begin,challTime)
+    -- 先移动再设置状态，避免触发地图切换检查
+    mapmove(actor, newMapId,22,22,1) 
+    -- 移动完成后再设置状态为挑战中
+    sethumvar(actor, VarCfg.N_boss_state, 0)
+    Message.sendmsg(actor, ssrNetMsgCfg.BOSSChall_Begin, challTime)
 end
 
 
@@ -243,6 +254,12 @@ function BossChall.getData(actor)
     Message.sendmsg(actor, ssrNetMsgCfg.BOSSChall_RetData,_getChalledCount(actor),nil,nil,_getBossData(actor))
 end
 
+function BossChall.leaveChall(actor) 
+    if targetinfo(actor, "MAPTITLE") == BOSS_MAP_NAME then
+        mapmove(actor, BOSS_SAFE_MAP_ID, BOSS_SAFE_POS_X, BOSS_SAFE_POS_Y, 5)
+        delmirrormap(targetinfo(actor, "NEWMAP"))
+    end
+end
 
 GameEvent.add(EventCfg.onResetday, function (actor)
     sethumvar(actor, VarCfg.U_BOSS_Count, 0)
@@ -258,9 +275,11 @@ end, BossChall)
 
 GameEvent.add(EventCfg.goSwitchMap, function (actor, cur_mapid, former_mapid)         -- 切换地图触发
     local newMapId  = BOSS_MAP_ID .. userid(actor)  --新地图   
-    if former_mapid == newMapId and gethumvar(actor, VarCfg.N_boss_state) ~= 1 then
-        sendmsg(actor, 9, "当前BOSS挑战失败")
-        return
+    if former_mapid == newMapId then
+        if gethumvar(actor, VarCfg.N_boss_state) ~= 1 then            
+            sendmsg(actor, 9, "当前BOSS挑战失败")
+        end
+        Message.sendmsg(actor, ssrNetMsgCfg.BOSSChall_Leave)
     end 
 end, BossChall)
 
@@ -271,7 +290,7 @@ GameEvent.add(EventCfg.onKillMon, function (actor, mon, mapid, monidx)
         sendmsg(actor, 9, "当前BOSS挑战成功，狩猎场将于1分钟后关闭")
         local exitTime = tonumber(SysConstant['Boss_Chall_Time']["Value"]) or 60
         mirrormaptime(mapid,exitTime)
-        --退出倒计时 TODO
+        Message.sendmsg(actor, ssrNetMsgCfg.BOSSChall_End, exitTime)
     end
 end, BossChall)
 
