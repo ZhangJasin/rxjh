@@ -133,8 +133,8 @@ function BossPanel:ListBossShow(idx, item)
     
     -- 设置图标
     local bg_icon = FGUI:GetChild(item, "icon")
-    if bg_icon then
-        FGUI:GLoader_setUrl(bg_icon, string.format("ui://MonsterIcon/%s", bossIcon))
+    if bg_icon then        
+        FGUI:GLoader_setUrl(bg_icon, SL:GetValue("MONSTER_ICON", bossId) or "",nil, true)
     end
     
     -- 设置特殊道具显示 (specDrop)
