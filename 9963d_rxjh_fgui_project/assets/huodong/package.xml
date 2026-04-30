@@ -18,6 +18,8 @@
     <component id="d7i1m" name="btn_wenhao.xml" path="/Components/" exported="true"/>
     <component id="d7i1n" name="btn_sx.xml" path="/Components/" exported="true"/>
     <image id="d7i1o" name="icon_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="20,20,40,40"/>
+    <component id="d7i1q" name="CountdownPanel.xml" path="/" exported="true"/>
+    <image id="d7i1fvhg" name="blackBg.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

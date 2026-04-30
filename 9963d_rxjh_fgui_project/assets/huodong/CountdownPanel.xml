@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="250,124" opaque="false" designImage="ui://hz6m3b8kxh3p7i">
+  <displayList>
+    <image id="n9_d7i1" name="bg" src="d7i1fvhg" fileName="Images/blackBg.png" xy="0,0" size="250,124"/>
+    <component id="n7_d7i1" name="btn" src="ighbkvp6" fileName="common/btn_first_green.xml" pkg="st7dgeqq" xy="57,68"/>
+    <richtext id="n11_d7i1" name="time" xy="5,18" size="240,29" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text=""/>
+  </displayList>
+</component>

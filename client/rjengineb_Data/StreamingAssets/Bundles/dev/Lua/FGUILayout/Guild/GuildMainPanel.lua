@@ -517,9 +517,9 @@ function GuildMainPanel:OnBtnRefreshClicked()
             SL:OpenCommonDialog({
                 title = '提示',
                 str = '免费次数已用完，是否使用1个刷新卷刷新任务？',
-                btnDesc = {"取消", "确定"},
+                btnDesc = {"确定","取消"},
                 callback = function(tag)
-                    if tag == 2 then
+                    if tag == 1 then
                         -- 确定刷新任务
                         ssrMessage:sendmsgEx("Guild", "refreshTask")
                     end
@@ -537,9 +537,9 @@ function GuildMainPanel:OnBtnRefreshClicked()
 			SL:OpenCommonDialog({
 				title = '提示',
 				str = '是否使用1个悬赏令直接完成当前任务并获得奖励？',
-				btnDesc = {"取消", "确定"},
+				btnDesc = {"确定","取消"},
 				callback = function(tag)
-					if tag == 2 then
+					if tag == 1 then
 						-- 确定快速完成
 						ssrMessage:sendmsgEx("Guild", "compTask", {1})
 					end
@@ -559,9 +559,9 @@ function GuildMainPanel:OnBtnCompClicked()
         SL:OpenCommonDialog({
             title = '提示',
             str = '放弃任务将无法获得奖励，且今日可完成任务数量减1，确定要放弃吗？',
-            btnDesc = {"取消", "确定"},
+            btnDesc = {"确定","取消"},
             callback = function(tag)
-                if tag == 2 then
+                if tag == 1 then
                     -- 确定放弃任务
                     ssrMessage:sendmsgEx("Guild", "abortTask")
                 end
