@@ -12,6 +12,26 @@
 )
 #CHILD 1/1 RANDOM
 (
+1/1 强化石
+)
+#CHILD 1/1 RANDOM
+(
+1/1 强化石
+)
+#CHILD 1/1 RANDOM
+(
+1/1 强化石
+)
+#CHILD 1/1 RANDOM
+(
+1/1 强化石
+)
+#CHILD 1/1 RANDOM
+(
+1/1 强化石
+)
+#CHILD 1/1 RANDOM
+(
 1/1 金刚石（攻击）
 1/1 金刚石（攻击）
 1/1 金刚石（攻击）

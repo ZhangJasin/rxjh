@@ -1,5 +1,25 @@
 #CHILD 1/1 RANDOM
 (
+1/1 坐骑升星石
+)
+#CHILD 1/1 RANDOM
+(
+1/1 坐骑升星石
+)
+#CHILD 1/1 RANDOM
+(
+1/1 坐骑升星石
+)
+#CHILD 1/2 RANDOM
+(
+1/1 坐骑升星石
+)
+#CHILD 1/5 RANDOM
+(
+1/1 坐骑升星石
+)
+#CHILD 1/1 RANDOM
+(
 1/1 强化石
 )
 #CHILD 1/1 RANDOM
