@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="160,33">
+<component size="160,29">
   <displayList>
-    <text id="n0_tbp6" name="n0" xy="9,2" size="87,29" font="SimHei" fontSize="20" color="#fff7d1" vAlign="middle" ubb="true" autoSize="none" text="攻击力"/>
-    <text id="n4_jdkj" name="n4" xy="97,2" pivot="1,0" size="64,29" font="SimHei" fontSize="20" color="#00ff00" vAlign="middle" text="000000"/>
+    <text id="n0_tbp6" name="n0" xy="0,0" size="87,29" font="SimHei" fontSize="18" color="#fff7d1" align="right" vAlign="middle" ubb="true" autoSize="none" text="攻击力"/>
+    <text id="n5_eywm" name="n5" xy="86,0" size="10,29" fontSize="20" color="#fff7d1" text=":"/>
+    <text id="n4_jdkj" name="n4" xy="96,2" pivot="1,0" size="67,29" font="SimHei" fontSize="18" color="#00ff00" vAlign="middle" autoSize="none" text="00333"/>
   </displayList>
 </component>

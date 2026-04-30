@@ -14,7 +14,7 @@
   </controller>
   <displayList>
     <image id="n78_uz9j" name="n78" src="858f2v" fileName="Images/0tongyong/frame_wuxun_equip_unwear.png" xy="1,-1" size="978,584"/>
-    <image id="n79_uz9j" name="n79" src="858f2x" fileName="Images/09wuxun/zhujie/002.png" xy="13,4" size="314,573"/>
+    <image id="n79_uz9j" name="n79" src="858f2x" fileName="Images/09wuxun/zhujie/002.png" xy="13,4" size="314,573" visible="false"/>
     <list id="n51_fjq2" name="equipList" xy="20,11" size="300,396" overflow="scroll" margin="5,5,10,10" lineGap="5" defaultItem="ui://hed3v11ooqrps" autoClearItems="true">
       <relation target="" sidePair="width-width,height-height"/>
       <item/>

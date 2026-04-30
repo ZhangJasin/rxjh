@@ -168,7 +168,7 @@ function WuXunPanl:GetWuXunEquip()                        -- 获取装备数据
     for i = 1,#self.equipList do
         local itemData = self.equipList[i]
         -- 获取基础属性
-        local attData = FGUIFunction:GetAttShowData2(itemData.Attribute, nil, nil)
+        local attData = FGUIFunction:GetAttShowData(itemData.Attribute, nil, nil)
         for j = 1,#attData do
             local name = attData[j]['name']
             local attrid = tonumber(attData[j]['id'])
@@ -176,7 +176,7 @@ function WuXunPanl:GetWuXunEquip()                        -- 获取装备数据
             if self.EquipBaseAttrTab[name] then
                 self.EquipBaseAttrTab[name][2] = self.EquipBaseAttrTab[name][2] + value
             else
-                self.EquipBaseAttrTab[name] = {attrid,value}
+                self.EquipBaseAttrTab[name] = {attrid, value, name}  -- 添加name字段
             end
         end
         -- 获取锤炼属性
@@ -252,6 +252,13 @@ function WuXunPanl:GetWuXunEquip()                        -- 获取装备数据
         end
     end
     self.EquipBaseAttrTab = GetNewTable(self.EquipBaseAttrTab) -- 转换为以id为下标的表
+    
+    -- 重新组织为数组格式，方便列表渲染
+    local tempTab = {}
+    for k, v in pairs(self.EquipBaseAttrTab) do
+        table.insert(tempTab, v)
+    end
+    self.EquipBaseAttrTab = tempTab
 end
 
 -------------------------------↓↓↓ 武勋界面 ↓↓↓---------------------------------------
@@ -319,20 +326,44 @@ function WuXunPanl:WuXunShow()
 	FGUI:GList_setVirtual(self.back.attrlist2)
     FGUI:GList_setNumItems(self.back.attrlist2,  #self.EquipBaseAttrTab)
     -- 武勋装备左侧展示
-    if self.equipMentSlots then
-        self:ReleaseAllEquipItem()   
+    if self.equipMentSlots and self.equipMentObjList then
+        self:ReleaseAllEquipItem()
     end
     self.equipMentSlots = {}
+    self.equipMentObjList = {}
     local equippos =  wuxun_level_data[1]['WuXun_EquipPos'] or {}
+    print("[武勋] WuXunShow - 初始化装备槽位，位置范围:", equippos[1], "到", equippos[#equippos])
+    print("[武勋] self.back类型:", type(self.back))
+    
+    -- 打印self.back的所有key
+    print("[武勋] self.back的keys:")
+    local count = 0
+    for k, v in pairs(self.back) do
+        print("  ", k, "=", type(v))
+        count = count + 1
+        if count > 20 then
+            print("  ... (更多)")
+            break
+        end
+    end
+    
     for index = equippos[1],equippos[#equippos] do            -- 新加需改fgui  index最好对应装备位  方便修改
-        self.equipMentSlots[index] = self.back["equip" .. index]
+        local slotName = "equip" .. index
+        -- 直接通过属性访问
+        self.equipMentSlots[index] = self.back[slotName]
+        print("[武勋] 创建槽位 equipMentSlots[", index, "] name:", slotName, "结果:", self.equipMentSlots[index] and "成功" or "失败")
     end
     self.equipMentObjList = {}
-    self:RefreshEquipByPos()                              -- 刷新装备   
+    print("[武勋] WuXunShow - 调用RefreshEquipByPos刷新装备")
+    self:RefreshEquipByPos()                              -- 刷新装备
     self:UpdateRoleModel()                                -- 更新中间模型数据 特效
 end
 -- 清除所有
-function WuXunPanl:ReleaseAllEquipItem()        
+function WuXunPanl:ReleaseAllEquipItem()
+    if not self.equipMentObjList then
+        self.equipMentObjList = {}
+        return
+    end
     for k,v in pairs(self.equipMentObjList) do
         if v then
             ItemUtil:ItemShow_Release(v)
@@ -341,14 +372,19 @@ function WuXunPanl:ReleaseAllEquipItem()
     self.equipMentObjList = {}
 end
 -- 左侧武勋装备刷新
-function WuXunPanl:UpdateWuXunEquip(equipData)
+function WuXunPanl:UpdateWuXunEquip(equipData, equipPosIndex)
+    print("[武勋] UpdateWuXunEquip 被调用")
     -- dump(equipData)
     if not equipData then
+        print("[武勋] UpdateWuXunEquip - 装备数据为空，跳过")
         return
     end
-    local pos = equipData.Where
+    -- 使用传入的装备位置索引，而不是equipData.Where
+    local pos = equipPosIndex or equipData.Where
+    print("[武勋] UpdateWuXunEquip - 位置索引:", pos, "equipMentSlots是否存在:", self.equipMentSlots[pos] and "是" or "否")
     local parent = self.equipMentSlots[pos]
     if parent then
+        print("[武勋] UpdateWuXunEquip - 创建装备显示组件，位置:", pos)
         self.equipMentObjList[pos] = ItemUtil:ItemShow_Create(equipData,parent,
         {
             itemTipData = {from = ItemFrom.PALYER_EQUIP},
@@ -358,8 +394,10 @@ function WuXunPanl:UpdateWuXunEquip(equipData)
             end
             })
         -- 刷新右侧列表 左侧装备展示
+    else
+        print("[武勋] UpdateWuXunEquip - 找不到对应的父节点，位置:", pos)
     end
-    
+
 end
 
 function WuXunPanl:ListAttrItemRenderer(idx,item)         -- 武勋等级属性右侧列表
@@ -399,11 +437,17 @@ function WuXunPanl:ListWXEquipShowRenderer(idx,item)      -- 武勋装备展示
 end
 
 function WuXunPanl:ListWXEquipAttrRenderer(idx,item)      -- 武勋装备属性右侧列表
-    if self.EquipBaseAttrTab[idx+1]  then
-        local attrid = self.EquipBaseAttrTab[idx+1][1]
-        local name = self.EquipBaseAttrTab[idx+1][3]..""
-        local type = attrConfigs[attrid]['Type'] or 0 -- 0 数值 1 万分比
-        local value = self.EquipBaseAttrTab[idx+1][2]
+    if self.EquipBaseAttrTab and self.EquipBaseAttrTab[idx+1]  then
+        local attrData = self.EquipBaseAttrTab[idx+1]
+        local attrid = attrData[1]
+        local name = attrData[3] or ""
+        local value = attrData[2] or 0
+        
+        local type = 0
+        if attrConfigs and attrConfigs[attrid] then
+            type = attrConfigs[attrid]['Type'] or 0
+        end
+        
         if type == 1 then
             value = string.format("%.1f", value / 100) .. "%"
         end
@@ -458,13 +502,12 @@ function WuXunPanl:WuXunChuiLian()
         local zjLv = 0
         if equipData then
             for j = 1, #equipData.Values do
-                if equipData.Values[j]['Id'] == 2 then  
+                if equipData.Values[j]['Id'] == 2 then
                     zjLv = equipData.Values[j]['Value']
-                end 
+                end
             end
-            -- dump(equipData)
-            self.SelectCLattData = FGUIFunction:GetAttShowData2(equipData.Attribute, nil, nil) -- 选中装备的数据基础属性数据
-        end 
+            self.SelectCLattData = FGUIFunction:GetAttShowData(equipData.Attribute, nil, nil) -- 选中装备的数据基础属性数据
+        end
         self.SelectEquipZJLevel = zjLv
         self:UpdateWXChuiLian()
     end)
@@ -588,37 +631,69 @@ end
 function WuXunPanl:ListWXCLAttr1Renderer(idx,item)
     if wuxun_chuilian_data[self.SelectCLEquipItemID] and wuxun_chuilian_data[self.SelectCLEquipItemID][1]['attrlist'][idx+1] then
         local equipData = SL:GetValue("EQUIP_DATA_BY_POS", wuxun_level_data[1]['WuXun_EquipPos'][self.SelectCLEquipIndex])
-        local attData = FGUIFunction:GetAttShowData2(self.SelectCLattData.Attribute, nil, nil)
-        local name = self.SelectCLattData[idx+1]['name']
-        local attrid = tonumber(self.SelectCLattData[idx+1]['id'])
-        local value = tonumber(self.SelectCLattData[idx+1]['value'])
+        local attData = FGUIFunction:GetAttShowData(self.SelectCLattData.Attribute, nil, nil)
+        local attrInfo = self.SelectCLattData[idx+1]
+        if not attrInfo then
+            return
+        end
+        local name = attrInfo['name'] or ""
+        local attrid = tonumber(attrInfo['id'] or 0)
+        local value = attrInfo['value']  -- 先不转换，保留原始值
+        
+        -- 如果value是字符串（如"1.3%"），说明已经是格式化后的值，直接使用
+        local isFormattedString = type(value) == "string"
+        if not isFormattedString then
+            value = tonumber(value or 0)
+        end
+        
         local nextValur = value
-        for i=1,#wuxun_chuilian_data[self.SelectCLEquipItemID][self.nextwxclLv]['attrlist'] do
-            local attr = wuxun_chuilian_data[self.SelectCLEquipItemID][self.nextwxclLv]['attrlist'][i]
-            if attr[1] == attrid then
-                nextValur = value + attr[2]
+        
+        -- 如果已经是格式化字符串，跳过后续算术运算
+        if isFormattedString then
+            local n0 = FGUI:GetChild(item,"n0")
+            local n1 = FGUI:GetChild(item,"n1")
+            local n4 = FGUI:GetChild(item,"n4")
+            FGUI:GTextField_setText(n0, name)
+            FGUI:GTextField_setText(n4, value)
+            FGUI:GTextField_setText(n1, value)  -- 下一级也显示相同值
+            return
+        end
+        
+        local chuilianData = wuxun_chuilian_data[self.SelectCLEquipItemID]
+        if chuilianData and chuilianData[self.nextwxclLv] then
+            for i=1,#chuilianData[self.nextwxclLv]['attrlist'] do
+                local attr = chuilianData[self.nextwxclLv]['attrlist'][i]
+                if attr and attr[1] == attrid and attr[2] then
+                    nextValur = value + attr[2]
+                end
             end
         end
         -- 计算锤炼附加基础属性
-        if self.wxclLv > 0 then
-            for i=1,#wuxun_chuilian_data[self.SelectCLEquipItemID][self.wxclLv]['attrlist'] do
-                local attr = wuxun_chuilian_data[self.SelectCLEquipItemID][self.wxclLv]['attrlist'][i]
-                if attr[1] == attrid then
+        if self.wxclLv > 0 and chuilianData and chuilianData[self.wxclLv] then
+            for i=1,#chuilianData[self.wxclLv]['attrlist'] do
+                local attr = chuilianData[self.wxclLv]['attrlist'][i]
+                if attr and attr[1] == attrid and attr[2] then
                     value = value + attr[2]
                 end
-            end 
+            end
         end
         -- 计算铸阶附加基础属性
         if self.SelectEquipZJLevel > 0 then
-            for i=1,#wuxun_zhujie_data[self.SelectCLEquipItemID][self.SelectEquipZJLevel]['attrlist'] do
-                local attr = wuxun_zhujie_data[self.SelectCLEquipItemID][self.SelectEquipZJLevel]['attrlist'][i]
-                if attr[1] == attrid then
-                    value = value + attr[2]
-                    nextValur = nextValur + attr[2]
+            local zhujieData = wuxun_zhujie_data[self.SelectCLEquipItemID]
+            if zhujieData and zhujieData[self.SelectEquipZJLevel] then
+                for i=1,#zhujieData[self.SelectEquipZJLevel]['attrlist'] do
+                    local attr = zhujieData[self.SelectEquipZJLevel]['attrlist'][i]
+                    if attr and attr[1] == attrid and attr[2] then
+                        value = value + attr[2]
+                        nextValur = nextValur + attr[2]
+                    end
                 end
-            end 
+            end
         end
-        local type = attrConfigs[attrid]['Type'] or 0 -- 0 数值 1 万分比
+        local type = 0
+        if attrConfigs and attrConfigs[attrid] then
+            type = attrConfigs[attrid]['Type'] or 0
+        end
         if type == 1 then
             value = string.format("%.1f", value / 100) .. "%"
             nextValur = string.format("%.1f", nextValur / 100) .. "%"
@@ -635,10 +710,30 @@ end
 function WuXunPanl:ListWXCLAttr2Renderer(idx,item)
     if wuxun_chuilian_data[self.SelectCLEquipItemID] and wuxun_chuilian_data[self.SelectCLEquipItemID][1]['attrlist'][idx+1] then
         local equipData = SL:GetValue("EQUIP_DATA_BY_POS", wuxun_level_data[1]['WuXun_EquipPos'][self.SelectCLEquipIndex])
-        local attData = FGUIFunction:GetAttShowData2(self.SelectCLattData.Attribute, nil, nil)
-        local name = self.SelectCLattData[idx+1]['name']
-        local attrid = tonumber(self.SelectCLattData[idx+1]['id'])
-        local value = tonumber(self.SelectCLattData[idx+1]['value'])
+        local attData = FGUIFunction:GetAttShowData(self.SelectCLattData.Attribute, nil, nil)
+        local attrInfo = self.SelectCLattData[idx+1]
+        if not attrInfo then
+            return
+        end
+        local name = attrInfo['name'] or ""
+        local attrid = tonumber(attrInfo['id'] or 0)
+        local value = attrInfo['value']  -- 先不转换
+        
+        -- 如果value是字符串（如"1.3%"），直接使用
+        local isFormattedString = type(value) == "string"
+        if not isFormattedString then
+            value = tonumber(value or 0)
+        end
+        
+        -- 如果已经是格式化字符串，跳过后续算术运算
+        if isFormattedString then
+            local n0 = FGUI:GetChild(item,"n0")
+            local n4 = FGUI:GetChild(item,"n4")
+            FGUI:GTextField_setText(n0, name)
+            FGUI:GTextField_setText(n4, value)
+            return
+        end
+        
         -- 计算锤炼附加基础属性
         if self.wxclLv > 0 then
             for i=1,#wuxun_chuilian_data[self.SelectCLEquipItemID][self.wxclLv]['attrlist'] do
@@ -646,7 +741,7 @@ function WuXunPanl:ListWXCLAttr2Renderer(idx,item)
                 if attr[1] == attrid then
                     value = value + attr[2]
                 end
-            end 
+            end
         end
         -- 计算铸阶附加基础属性
         if self.SelectEquipZJLevel > 0 then
@@ -655,9 +750,12 @@ function WuXunPanl:ListWXCLAttr2Renderer(idx,item)
                 if attr[1] == attrid then
                     value = value + attr[2]
                 end
-            end 
+            end
         end
-        local type = attrConfigs[attrid]['Type'] or 0 -- 0 数值 1 万分比
+        local type = 0
+        if attrConfigs and attrConfigs[attrid] then
+            type = attrConfigs[attrid]['Type'] or 0
+        end
         if type == 1 then
             value = string.format("%.1f", value / 100) .. "%"
         end
@@ -714,7 +812,7 @@ function WuXunPanl:WuXunZhuJie()
         self.SelectZJEquipEquipData = equipData and equipData  or 0
         self.SelectZJattData = 0
         if equipData then
-            self.SelectZJattData = FGUIFunction:GetAttShowData2(equipData.Attribute, nil, nil) -- 选中装备的数据基础属性数据
+            self.SelectZJattData = FGUIFunction:GetAttShowData(equipData.Attribute, nil, nil) -- 选中装备的数据基础属性数据
             local zjLv = 0
             if equipData then
                 for j = 1, #equipData.Values do
@@ -823,29 +921,58 @@ end
 function WuXunPanl:ListWXZJAttr1Renderer(idx,item)
     if wuxun_zhujie_data[self.SelectZJEquipItemID] and wuxun_zhujie_data[self.SelectZJEquipItemID][1]['attrlist'][idx+1] then
         local equipData = SL:GetValue("EQUIP_DATA_BY_POS", wuxun_level_data[1]['WuXun_EquipPos'][self.SelectZJEquipIndex])
-        local attData = FGUIFunction:GetAttShowData2(self.SelectZJattData.Attribute, nil, nil) -- 选中装备的数据基础属性数据
-        local name = self.SelectZJattData[idx+1]['name']
-        local attrid = tonumber(self.SelectZJattData[idx+1]['id'])
-        local value = tonumber(self.SelectZJattData[idx+1]['value'])
+        local attData = FGUIFunction:GetAttShowData(self.SelectZJattData.Attribute, nil, nil) -- 选中装备的数据基础属性数据
+        local attrInfo = self.SelectZJattData[idx+1]
+        if not attrInfo then
+            return
+        end
+        local name = attrInfo['name'] or ""
+        local attrid = tonumber(attrInfo['id'] or 0)
+        local value = attrInfo['value']  -- 先不转换
+        
+        -- 如果value是字符串（如"1.3%"），直接使用
+        local isFormattedString = type(value) == "string"
+        if not isFormattedString then
+            value = tonumber(value or 0)
+        end
+        
+        -- 如果已经是格式化字符串，跳过后续算术运算
+        if isFormattedString then
+            local n0 = FGUI:GetChild(item,"n0")
+            local n4 = FGUI:GetChild(item,"n4")
+            FGUI:GTextField_setText(n0, name)
+            FGUI:GTextField_setText(n4, value)
+            return
+        end
+        
         -- 计算锤炼附加基础属性
         if self.wxclLv > 0 then
-            for i=1,#wuxun_chuilian_data[self.SelectZJEquipItemID][self.wxclLv]['attrlist'] do
-                local attr = wuxun_chuilian_data[self.SelectZJEquipItemID][self.wxclLv]['attrlist'][i]
-                if attr[1] == attrid then
-                    value = value + attr[2]
+            local chuilianData = wuxun_chuilian_data[self.SelectZJEquipItemID]
+            if chuilianData and chuilianData[self.wxclLv] then
+                for i=1,#chuilianData[self.wxclLv]['attrlist'] do
+                    local attr = chuilianData[self.wxclLv]['attrlist'][i]
+                    if attr and attr[1] == attrid and attr[2] then
+                        value = value + attr[2]
+                    end
                 end
-            end 
+            end
         end
         -- 计算铸阶附加基础属性
         if self.SelectEquipZJLevel > 0 then
-            for i=1,#wuxun_zhujie_data[self.SelectZJEquipItemID][self.SelectEquipZJLevel]['attrlist'] do
-                local attr = wuxun_zhujie_data[self.SelectZJEquipItemID][self.SelectEquipZJLevel]['attrlist'][i]
-                if attr[1] == attrid then
-                    value = value + attr[2]
+            local zhujieData = wuxun_zhujie_data[self.SelectZJEquipItemID]
+            if zhujieData and zhujieData[self.SelectEquipZJLevel] then
+                for i=1,#zhujieData[self.SelectEquipZJLevel]['attrlist'] do
+                    local attr = zhujieData[self.SelectEquipZJLevel]['attrlist'][i]
+                    if attr and attr[1] == attrid and attr[2] then
+                        value = value + attr[2]
+                    end
                 end
-            end 
+            end
         end
-        local type = attrConfigs[attrid]['Type'] or 0 -- 0 数值 1 万分比
+        local type = 0
+        if attrConfigs and attrConfigs[attrid] then
+            type = attrConfigs[attrid]['Type'] or 0
+        end
         if type == 1 then
             value = string.format("%.1f", value / 100) .. "%"
         end
@@ -859,10 +986,30 @@ end
 function WuXunPanl:ListWXZJAttr2Renderer(idx,item)
     if wuxun_zhujie_data[self.SelectZJEquipItemID] and wuxun_zhujie_data[self.SelectZJEquipItemID][1]['attrlist'][idx+1] then
         local equipData = SL:GetValue("EQUIP_DATA_BY_POS", wuxun_level_data[1]['WuXun_EquipPos'][self.SelectZJEquipIndex])
-        local attData = FGUIFunction:GetAttShowData2(self.SelectZJattData.Attribute, nil, nil) -- 选中装备的数据基础属性数据
-        local name = self.SelectZJattData[idx+1]['name']
-        local attrid = tonumber(self.SelectZJattData[idx+1]['id'])
-        local value = tonumber(self.SelectZJattData[idx+1]['value'])
+        local attData = FGUIFunction:GetAttShowData(self.SelectZJattData.Attribute, nil, nil) -- 选中装备的数据基础属性数据
+        local attrInfo = self.SelectZJattData[idx+1]
+        if not attrInfo then
+            return
+        end
+        local name = attrInfo['name'] or ""
+        local attrid = tonumber(attrInfo['id'] or 0)
+        local value = attrInfo['value']  -- 先不转换
+        
+        -- 如果value是字符串（如"1.3%"），直接使用
+        local isFormattedString = type(value) == "string"
+        if not isFormattedString then
+            value = tonumber(value or 0)
+        end
+        
+        -- 如果已经是格式化字符串，跳过后续算术运算
+        if isFormattedString then
+            local n0 = FGUI:GetChild(item,"n0")
+            local n4 = FGUI:GetChild(item,"n4")
+            FGUI:GTextField_setText(n0, name)
+            FGUI:GTextField_setText(n4, value)
+            return
+        end
+        
         -- 计算锤炼附加基础属性
         if self.wxclLv > 0 then
             for i=1,#wuxun_chuilian_data[self.SelectZJEquipItemID][self.wxclLv]['attrlist'] do
@@ -1623,23 +1770,34 @@ function WuXunPanl:daojishi()
 end
 -- 装备刷新
 function WuXunPanl:RefreshEquipByPos(pos)
-    -- print("装备刷新",pos)
+    print("[武勋] 装备刷新被调用")
     self:ReleaseAllEquipItem() -- 释放所有装备
-    local bodyEquips = SL:GetValue("EQUIP_POS_DATAS")
-    for pos, makeindex in pairs(bodyEquips) do
-        local equipData = SL:GetValue("EQUIP_DATA_BY_MAKEINDEX", makeindex)
+    
+    -- 只刷新武勋装备位置（46-49）
+    local wuxunEquipPos = wuxun_level_data[1]['WuXun_EquipPos'] or {}
+    print("[武勋] 武勋装备位置配置:", #wuxunEquipPos, "个位置")
+    for i = 1, #wuxunEquipPos do
+        print("[武勋] 位置", i, "=", wuxunEquipPos[i])
+    end
+    
+    for i = 1, #wuxunEquipPos do
+        local posIndex = wuxunEquipPos[i]  -- 46, 47, 48, 49
+        local equipData = SL:GetValue("EQUIP_DATA_BY_POS", posIndex)
+        print("[武勋] 获取位置", posIndex, "的装备数据:", equipData and "有装备" or "无装备")
         if equipData then
-            self:UpdateWuXunEquip(equipData)
+            print("[武勋] 装备详情 - ID:", equipData.ID, "Where:", equipData.Where, "MakeIndex:", equipData.MakeIndex)
+            -- 传入装备数据和对应的位置索引
+            self:UpdateWuXunEquip(equipData, posIndex)
         end
     end
+    
     self:GetWuXunEquip()                        -- 获取装备数据
-    -- print("更新更新更新更新更新")
-    -- dump(self.EquipBaseAttrTab)
+    print("[武勋] 装备属性表EquipBaseAttrTab条目数:", #self.EquipBaseAttrTab)
     if self.rightPage == 1 then
         FGUI:GList_setNumItems(self.back.attrlist2,  #self.EquipBaseAttrTab)
         FGUI:GList_refreshVirtualList(self.back.attrlist2)--刷新虚拟列表
-    -- dump(self.equipList)
         FGUI:Controller_setSelectedIndex(self.WXequipContro, #self.equipList > 0 and 1 or 0)
+        print("[武勋] 已穿戴装备数量:", #self.equipList, "控制器设为:", #self.equipList > 0 and 1 or 0)
     end
 end
 -------------------------------↓↓↓ 注册 ↓↓↓---------------------------------------

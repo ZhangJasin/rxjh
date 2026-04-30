@@ -5,12 +5,12 @@
     <remark page="0" value="正"/>
     <remark page="1" value="邪"/>
   </controller>
-  <controller name="iswear" pages="0,,1," selected="0">
+  <controller name="iswear" pages="0,,1," selected="1">
     <remark page="0" value="未穿戴"/>
     <remark page="1" value="有穿戴"/>
   </controller>
   <displayList>
-    <image id="n10_mwln" name="n10" src="858f2r" fileName="Images/09wuxun/bg_wuxun_main_panel.png" xy="-22,-20" size="1004,630"/>
+    <image id="n10_mwln" name="n10" src="858f2r" fileName="Images/09wuxun/bg_wuxun_main_panel.png" xy="-22,-21" size="1004,630"/>
     <graph id="n11_mwln" name="graph_fashion_role" xy="302,409" pivot="0.5,0.5" anchor="true" size="100,100" scale="0.8,0.8" blend="screen">
       <relation target="" sidePair="center-center,middle-middle"/>
     </graph>
@@ -21,7 +21,7 @@
     <component id="n33_mwln" name="n33" src="oqrp9" fileName="Components/09wuxun/ProgressBar.xml" xy="716,71" size="231,18">
       <ProgressBar value="100" max="100"/>
     </component>
-    <list id="n39_jdkj" name="attrlist" xy="633,179" size="329,164" overflow="scroll" margin="2,0,5,0" defaultItem="ui://hed3v11ooqrpd">
+    <list id="n39_jdkj" name="attrlist" xy="634,177" size="329,155" overflow="scroll" margin="2,0,5,0" defaultItem="ui://hed3v11ooqrpd">
       <item/>
       <item/>
       <item/>
@@ -46,8 +46,14 @@
     </component>
     <component id="n48_jdkj" name="btn_wxshop" src="oqrpi" fileName="Components/09wuxun/btn_wxshop.xml" xy="87,494"/>
     <component id="n49_jdkj" name="btn_wxjl" src="oqrpk" fileName="Components/09wuxun/btn_wxjl.xml" xy="430,494"/>
-    <list id="n51_l2ui" name="attrlist2" xy="633,392" size="329,180" layout="flow_hz" overflow="scroll" margin="2,0,5,0" lineItemCount="2" defaultItem="ui://hed3v11ooqrpm">
+    <list id="n51_l2ui" name="attrlist2" xy="634,408" size="329,166" layout="flow_hz" overflow="scroll" margin="2,0,5,0" lineItemCount="2" defaultItem="ui://hed3v11ooqrpm">
       <gearDisplay controller="iswear" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
       <item/>
       <item/>
       <item/>
