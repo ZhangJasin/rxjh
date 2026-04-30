@@ -1018,10 +1018,50 @@ function MentorShip.changeRelevel(actor)
     MentorShipChangTask(actor, 2, "*", zsLevel)
 end
 
+-- 服务端安全校验：判断是否满足出师条件
+function MentorShip.CheckChuShiCondition(taskProgressList)
+    local isCan = true
+    for i = 1, #Master_and_apprentice do
+        local task = Master_and_apprentice[i]
+        if task.type == 1 then
+            if task.task_target == 3 then
+                local currentTime = math.floor(utcint64now() / 1000)
+                local bondTime = taskProgressList.bondDateTimes or 0
+                local days = math.floor((currentTime - bondTime) / 86400)
+                if days < task.task_target_num then
+                    isCan = false
+                    break
+                end
+            end
+
+            if task.task_target == 5 then
+                local finishTask = taskProgressList.finishTask or 0
+                if finishTask < task.task_target_num then
+                    isCan = false
+                    break
+                end
+            end
+        end
+    end
+    return isCan
+end
+
 function MentorShip.chushi(actor, data)
     -- dump(data)
     --徒弟出师
     local apparenceId = tonumber(data.UserID)
+    --校验
+    local taskProgressStr = getcustvar("11_" .. apparenceId .. "_" .. "t_ApprenticeTaskPro")
+    if taskProgressStr == "" then
+        sendmsg(actor, 9, "[color=#ff0000]徒弟数据异常，无法出师[/color]")
+        return
+    end
+    local taskProgressList = json2tbl(taskProgressStr)
+    if not MentorShip.CheckChuShiCondition(taskProgressList) then
+        sendmsg(actor, 9, "[color=#ff0000]出师条件未满足，非法请求！[/color]")
+        return
+    end
+
     local apparenceIdRelation = json2tbl(getcustvar("11_" .. apparenceId .. "_" .. "t_MasterAndApprt"))
     local masterId = apparenceIdRelation.myMaster.UserID
     apparenceIdRelation.myMaster = nil
@@ -1314,6 +1354,28 @@ function MentorShip.getMinAppraLv(userList)
 end
 
 function MentorShip.mapMoveAll(actor, data)
+    --师徒副本校验
+    for i = 1, #data.users do
+        local checkUserId = tonumber(data.users[i].UserID)
+        if not checkstate(checkUserId, 2) then
+            sendmsg(actor, 9, "[color=#ff0000]玩家[" .. (data.users[i].UserName or "未知") .. "]已离线，副本开启失败！[/color]")
+            --防止死锁
+            Message.sendmsgEx(actor, "Invitation", "cloaseInvitation")
+            return
+        end
+
+        local fubenInfo = MentorShip.getMyfubenInfo(checkUserId)
+        if fubenInfo ~= 0 then
+            local currentMapId = targetinfo(checkUserId, "NEWMAP")
+            if tostring(currentMapId) == tostring(fubenInfo.mapID) then
+                sendmsg(actor, 9, "[color=#ff0000]玩家[" .. (data.users[i].UserName or "未知") .. "]已在副本中，无法重复进入！[/color]")
+                --防止死锁
+                Message.sendmsgEx(actor, "Invitation", "cloaseInvitation")
+                return
+            end
+        end
+    end
+
     local newMapId = math.random(1, 100)
     local userList = {}
     for i = 1, #data.users do

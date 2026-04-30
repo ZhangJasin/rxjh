@@ -82,6 +82,9 @@ function MentorShipMain:InitData()
 		{
 			text = "角色出师次数小于" .. MasterApprenticeShip["max_chushi_times"].VALUE .. "次",
 			check = function()
+				print("判断出师次数")
+				print(self.chushiCount)
+				print(MasterApprenticeShip["max_chushi_times"].VALUE)
 				return (self.chushiCount or 0) < tonumber(MasterApprenticeShip["max_chushi_times"].VALUE)
 			end,
 		},
@@ -196,6 +199,8 @@ local function SetSlotFilled(item, filled)
 	FGUI:setVisible(btn_add, not filled)
 end
 function MentorShipMain:setData(data)
+	print("MentorShipMain:setData")
+	dump(data)
 	if MentorShipMain.CCUI then
 		self = MentorShipMain.CCUI
 		self.alMyRelationship = data
@@ -521,6 +526,7 @@ function MentorShipMain:RenderTaskItem(idx, item)
 end
 
 function MentorShipMain:onClickGoto(data)
+	dump(data)
 	local postData = {
 		task = data,
 		myUserId = self.alMyRelationship.myUserId,
@@ -667,32 +673,34 @@ function MentorShipMain:onClickChuShi()
 			end
 		end
 	end
-	if isCan then
-		ssrMessage:sendmsgEx("MentorShip", "chushi", { UserID = self.taskProgressList.UserID })
-	end
+	--if isCan then
+	ssrMessage:sendmsgEx("MentorShip", "chushi", { UserID = self.taskProgressList.UserID })
+	--end
 end
 
 function MentorShipMain:OnClickFindMentor()
+	print("MentorShipMain:OnClickFindMentor()")
 	--判断当前是否满足
-	local nowzs = SL:GetValue("RELEVEL")
-	local nowlv = SL:GetValue("LEVEL")
-	print(nowzs, nowlv)
-	if tonumber(MasterApprenticeShip["min_apply_master_zs"].VALUE) <= nowzs and tonumber(MasterApprenticeShip["min_apply_master_lv"].VALUE) <= nowlv then
-		FGUI:Open("MentorShip", "FindMentorPanel")
-	else
-		SL:ShowSystemTips("拜师条件不满足，无法拜师")
+	for i = 1, #self._emptyMentorCond do
+		local cond = self._emptyMentorCond[i]
+		if not cond.check() then
+			SL:ShowSystemTips("拜师条件不满足，无法拜师")
+			return
+		end
 	end
+	FGUI:Open("MentorShip", "FindMentorPanel")
 end
 
 function MentorShipMain:OnClickFindApprentice()
 	--判断当前是否满足
-	local nowzs = SL:GetValue("RELEVEL")
-	local nowlv = SL:GetValue("LEVEL")
-	if tonumber(MasterApprenticeShip["min_apply_apparenice_zs"].VALUE) <= nowzs and tonumber(MasterApprenticeShip["min_apply_apparenice_lv"].VALUE) <= nowlv then
-		FGUI:Open("MentorShip", "FindApprenticePanel")
-	else
-		SL:ShowSystemTips("收徒条件不满足，无法收徒")
+	for i = 1, #self._emptyApprenticeCond do
+		local cond = self._emptyApprenticeCond[i]
+		if not cond.check() then
+			SL:ShowSystemTips("师徒条件不满足，无法收徒")
+			return
+		end
 	end
+	FGUI:Open("MentorShip", "FindApprenticePanel")
 end
 
 function MentorShipMain:Onbtn_applylist()
