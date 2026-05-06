@@ -67,6 +67,11 @@ function moveItem.usetuling(actor, data)
         sendmsg(actor, 9, "当前地图禁止使用土灵符！")
         return
     end
+    local mapName =targetinfo(actor, "MAPTITLE")
+    if mapName == "狩猎场" then
+        sendmsg(actor, 9, "当前地图禁止使用土灵符！")
+        return
+    end
   
     local index = data[1] or -1
     local TuLingPosTab = gethumvar(actor, VarCfg.T_TuLingPosTab) or ""
@@ -135,7 +140,7 @@ function moveItem.move(actor, data)
     end
     local mapName =targetinfo(actor, "MAPTITLE")
     if mapName == "狩猎场" then
-        sendmsg(actor, 9, "当前地图禁止使用土灵符！")
+        sendmsg(actor, 9, "当前地图禁止使用传送符！")
         return
     end
     
