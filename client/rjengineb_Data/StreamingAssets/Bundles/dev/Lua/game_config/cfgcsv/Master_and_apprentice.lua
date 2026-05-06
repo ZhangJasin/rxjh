@@ -31,6 +31,12 @@ local config = {
 				[2] = 1,
 			},
 		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[4] = { 
 		ID=4,
@@ -43,6 +49,12 @@ local config = {
 		task_target_param="2",
 		task_target_num=1,
 		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
 			[1] = {
 				[1] = 1,
 				[2] = 1,
@@ -62,6 +74,12 @@ local config = {
 				[2] = 1,
 			},
 		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[6] = { 
 		ID=6,
@@ -71,6 +89,16 @@ local config = {
 		task_target_param="7",
 		task_target_num=10,
 		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
 			[1] = {
 				[1] = 1,
 				[2] = 1,
@@ -95,6 +123,12 @@ local config = {
 				[2] = 1,
 			},
 		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[8] = { 
 		ID=8,
@@ -110,6 +144,12 @@ local config = {
 				[2] = 1,
 			},
 		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[9] = { 
 		ID=9,
@@ -120,6 +160,12 @@ local config = {
 		task_target_param="4",
 		task_target_num=2,
 		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
 			[1] = {
 				[1] = 1,
 				[2] = 1,
@@ -149,6 +195,12 @@ local config = {
 				[2] = 1,
 			},
 		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[11] = { 
 		ID=11,
@@ -170,6 +222,12 @@ local config = {
 				[2] = 1,
 			},
 		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[12] = { 
 		ID=12,
@@ -186,6 +244,16 @@ local config = {
 		},
 		task_target_num=50,
 		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
 			[1] = {
 				[1] = 1,
 				[2] = 1,

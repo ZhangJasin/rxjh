@@ -1081,8 +1081,8 @@ function recycleAllItem(actor, allItemIds)
         giveStr = giveStr .. mId .. "#" .. finalNum .. "&"
         -- 联动师徒任务
         MentorShipChangTask(actor, 9, mId, finalNum)
-        --师徒任务测试
-        MentorShipChangTask(actor, 9, 1, 500000)
+        ----师徒任务测试
+        --MentorShipChangTask(actor, 9, 1, 500000)
     end
 
     --print("giveStr", giveStr)
