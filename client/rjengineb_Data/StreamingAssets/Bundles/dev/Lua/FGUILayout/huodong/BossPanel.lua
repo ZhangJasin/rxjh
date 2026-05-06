@@ -131,7 +131,6 @@ function BossPanel:ListBossShow(idx, item)
     local bossName = bossCfg and bossCfg.name or "未知BOSS"
     local bossLv = bossCfg and bossCfg.lv or 0
     local bossGrade = bossCfg and bossCfg.grade or 1
-    local bossIcon = bossCfg and bossCfg.icon or ""
     local specDrop = bossCfg and bossCfg.specDrop or 0
     local dropList = bossCfg and bossCfg.dropList or {}
 
