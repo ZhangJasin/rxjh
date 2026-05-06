@@ -435,6 +435,9 @@ function EquipDuanZao:baglist()
                 self:GetPageData()                
                 self:GetAddItem()
                 self:upitem2num()
+                if self.pageControlle.selectedIndex == 3 then --赋予切换装备需清除属性石
+                    self:clearitem3()
+                end
                 self:succfont()
             --end
             self.page2selectindex = selectedIndex
@@ -482,6 +485,9 @@ function EquipDuanZao:equiplist()
                 self:GetPageData()               
                 self:GetAddItem()
                 self:upitem2num()
+                if self.pageControlle.selectedIndex == 3 then --赋予切换装备需清除属性石
+                    self:clearitem3()
+                end
                 self:succfont()
             --end
             self.page1selectindex = selectedIndex
@@ -790,7 +796,7 @@ function EquipDuanZao:GetAddItem()
         elseif self.addlistshowControlle.selectedIndex == 2 then
             self.additemshowlist0 = bagitemlist[3]
         end
-        self:xyfjiaohao()
+        self:xyfjiaohao()        
         self:itemtsjiaohao()
         self:itemsxjiaohao()
     end
