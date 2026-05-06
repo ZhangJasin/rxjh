@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="526,24">
-  <controller name="isShowTips" pages="0,,1," selected="1"/>
+  <controller name="isShowTips" pages="0,,1," selected="0"/>
   <displayList>
-    <text id="n15_scjw" name="text_cond" xy="0,12" pivot="0,0.5" anchor="true" size="527,24" fontSize="16" color="#fffadc" vAlign="middle" autoSize="none" text="等级达到100  87/100"/>
+    <text id="n15_scjw" name="text_cond" xy="0,12" pivot="0,0.5" anchor="true" size="527,24" fontSize="16" color="#555d63" vAlign="middle" autoSize="none" text="等级达到100  87/100"/>
     <text id="n16_pt88" name="text_tips" xy="0,36" pivot="0,0.5" anchor="true" size="527,22" fontSize="14" color="#ff0000" vAlign="middle" autoSize="none" text="不满足出师要求，不可举行拜师仪式">
       <gearDisplay controller="isShowTips" pages="1"/>
     </text>

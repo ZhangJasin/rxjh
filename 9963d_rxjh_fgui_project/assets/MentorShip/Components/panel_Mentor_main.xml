@@ -2,34 +2,28 @@
 <component size="992,588" opaque="false">
   <controller name="RightState" pages="0,empty,1,has" selected="1"/>
   <displayList>
-    <image id="n21_leye" name="bg_left" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="-11,4" size="235,585" group="n114_dos9"/>
+    <image id="n21_leye" name="bg_left" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="-11,4" size="235,585" group="n114_dos9" visible="false"/>
     <image id="n70_nxdg" name="n74" src="as7kvno" fileName="image/btn_first_9.png" pkg="st7dgeqq" xy="-3,16" size="220,55" group="n73_nxdg"/>
-    <text id="n71_nxdg" name="text_mentor" xy="-3,16" size="220,55" group="n73_nxdg" fontSize="22" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="我的师父"/>
+    <text id="n71_nxdg" name="text_mentor" xy="-3,16" size="220,55" group="n73_nxdg" fontSize="22" color="#ffff00" align="center" vAlign="middle" autoSize="none" bold="true" text="我的师父"/>
     <list id="n72_nxdg" name="list_mentor" xy="-3,74" size="220,75" group="n73_nxdg" overflow="hidden" lineGap="8" defaultItem="ui://pnop7ha6npv42r">
       <item/>
     </list>
     <group id="n73_nxdg" name="n73" xy="-3,16" size="220,133" group="n80_nxdg" advanced="true"/>
     <image id="n74_nxdg" name="n78" src="as7kvno" fileName="image/btn_first_9.png" pkg="st7dgeqq" xy="-3,154" size="220,55" group="n77_nxdg"/>
-    <text id="n75_nxdg" name="text_apprentice" xy="-3,154" size="220,55" group="n77_nxdg" fontSize="22" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="我的徒弟"/>
+    <text id="n75_nxdg" name="text_apprentice" xy="-3,154" size="220,55" group="n77_nxdg" fontSize="22" color="#ffff00" align="center" vAlign="middle" autoSize="none" bold="true" text="我的徒弟"/>
     <list id="n76_nxdg" name="list_apprentice" xy="-3,212" size="220,230" group="n77_nxdg" overflow="hidden" lineGap="5" defaultItem="ui://pnop7ha6npv42r">
       <item/>
       <item/>
       <item/>
     </list>
     <group id="n77_nxdg" name="n77" xy="-3,154" size="220,288" group="n80_nxdg" advanced="true"/>
-    <text id="n78_nxdg" name="text_count" xy="-3,466" pivot="0,0.5" size="220,45" group="n80_nxdg" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="ellipsis" text="未出师徒弟 0/3"/>
+    <text id="n78_nxdg" name="text_count" xy="-3,472" pivot="0,0.5" size="220,45" group="n80_nxdg" fontSize="16" color="#372a08" align="center" vAlign="middle" autoSize="ellipsis" text="未出师徒弟 0/3"/>
     <component id="n79_nxdg" name="btn_applylist" src="gvalo3y" fileName="Components/btn_second_green.xml" xy="44,520" size="130,45" group="n80_nxdg">
       <Button title="申请列表" titleColor="#ffff00" titleFontSize="18"/>
     </component>
     <group id="n80_nxdg" name="n80" xy="-3,16" size="220,549" group="n114_dos9" advanced="true"/>
     <image id="n81_nxdg" name="n81" src="gvalo3x" fileName="Images/content_bg_9.png" xy="236,15" size="360,570" group="n97_nxdg"/>
     <image id="n82_nxdg" name="n82" src="gvalo3x" fileName="Images/content_bg_9.png" xy="601,15" size="360,570" group="n97_nxdg"/>
-    <image id="n83_nxdg" name="n13" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="384,35" size="40,23" group="n89_nxdg" scale="-1,1"/>
-    <image id="n84_nxdg" name="n14" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="457,35" size="40,23" group="n89_nxdg"/>
-    <text id="n85_nxdg" name="title_1" xy="395,26" pivot="0.5,0.5" size="48,32" group="n89_nxdg" fontSize="22" color="#ffff00" align="center" vAlign="middle" text="拜师"/>
-    <component id="n86_nxdg" name="btn_find_mentor" src="gvalo3z" fileName="Components/btn_second_red.xml" xy="340,515" group="n89_nxdg">
-      <Button title="寻找师父"/>
-    </component>
     <list id="n87_nxdg" name="list_mentor_cond" xy="241,76" size="348,125" group="n89_nxdg" overflow="scroll" defaultItem="ui://pnop7ha6nc451v" autoClearItems="true">
       <item/>
       <item/>
@@ -39,10 +33,11 @@
       <item/>
       <item/>
     </list>
-    <group id="n89_nxdg" name="n11" xy="241,26" size="348,534" group="n97_nxdg" advanced="true"/>
-    <image id="n90_nxdg" name="n23" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="751,31" size="40,23" group="n96_nxdg" scale="-1,1"/>
-    <image id="n91_nxdg" name="n24" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="824,31" size="40,23" group="n96_nxdg"/>
-    <text id="n92_nxdg" name="title_2" xy="762,23" pivot="0.5,0.5" size="48,32" group="n96_nxdg" fontSize="22" color="#ffff00" align="center" vAlign="middle" text="收徒"/>
+    <image id="n120_q2kk" name="n120" src="q2kko6j" fileName="Images/2.png" xy="357,28" group="n89_nxdg"/>
+    <component id="n122_q2kk" name="btn_find_mentor" src="q2kko6m" fileName="Components/btn_new_1.xml" xy="340,515" group="n89_nxdg">
+      <Button title="寻找师傅" titleColor="#fbeb00" titleFontSize="22"/>
+    </component>
+    <group id="n89_nxdg" name="n11" xy="241,28" size="348,531" group="n97_nxdg" advanced="true"/>
     <list id="n93_nxdg" name="list_apprentice_cond" xy="605,76" size="348,125" group="n96_nxdg" overflow="scroll" defaultItem="ui://pnop7ha6nc451v">
       <item/>
       <item/>
@@ -51,41 +46,43 @@
       <item/>
       <item/>
     </list>
-    <component id="n95_nxdg" name="btn_find_apprentice" src="gvalo3z" fileName="Components/btn_second_red.xml" xy="722,515" size="130,45" group="n96_nxdg">
+    <image id="n121_q2kk" name="n121" src="q2kko6k" fileName="Images/3.png" xy="734,29" group="n96_nxdg"/>
+    <component id="n123_q2kk" name="btn_find_apprentice" src="q2kko6m" fileName="Components/btn_new_1.xml" xy="722,515" group="n96_nxdg">
       <Button title="寻找徒弟"/>
     </component>
-    <group id="n96_nxdg" name="n21" xy="605,23" size="348,537" group="n97_nxdg" advanced="true"/>
+    <group id="n96_nxdg" name="n21" xy="605,29" size="348,531" group="n97_nxdg" advanced="true"/>
     <group id="n97_nxdg" name="group_empty" xy="236,15" size="725,570" group="n114_dos9" advanced="true">
       <gearDisplay controller="RightState" pages="0"/>
     </group>
-    <image id="n98_nxdg" name="n1" src="tgkjvoa" fileName="image/content_fill_bg.png" pkg="st7dgeqq" xy="227,4" size="748,586" group="n115_k27e"/>
-    <image id="n99_nxdg" name="n2" src="orj1vo3" fileName="image/di_1.png" pkg="st7dgeqq" xy="244,20" size="700,35" group="n115_k27e"/>
-    <text id="n100_nxdg" name="text_bond_date" xy="258,25" pivot="0.5,0.5" size="195,24" group="n115_k27e" fontSize="16" color="#ffff00" align="center" vAlign="middle" text="于2025年4月23日结为师徒"/>
-    <text id="n101_nxdg" name="text_1" xy="260,59" pivot="0.5,0.5" size="68,24" group="n115_k27e" fontSize="16" color="#fffadc" align="center" vAlign="middle" text="出师条件"/>
-    <list id="n102_nxdg" name="list_graduate" xy="260,87" size="565,121" group="n115_k27e" overflow="scroll" defaultItem="ui://pnop7ha6gvalo41" autoClearItems="true">
+    <image id="n98_nxdg" name="n1" src="tgkjvoa" fileName="image/content_fill_bg.png" pkg="st7dgeqq" xy="227,4" size="748,586" group="n115_k27e" visible="false"/>
+    <image id="n124_q2kk" name="n124" src="q2kko6o" fileName="Images/6.png" xy="227,4" size="748,586" group="n115_k27e"/>
+    <image id="n99_nxdg" name="n2" src="orj1vo3" fileName="image/di_1.png" pkg="st7dgeqq" xy="244,20" size="700,35" group="n115_k27e" visible="false"/>
+    <text id="n100_nxdg" name="text_bond_date" xy="258,36" pivot="0.5,0.5" size="195,24" group="n115_k27e" fontSize="16" color="#f1e536" align="center" vAlign="middle" text="于2025年4月23日结为师徒"/>
+    <text id="n101_nxdg" name="text_1" xy="260,59" pivot="0.5,0.5" size="68,24" group="n115_k27e" visible="false" fontSize="16" color="#fffadc" align="center" vAlign="middle" text="出师条件"/>
+    <list id="n102_nxdg" name="list_graduate" xy="260,112" size="565,121" group="n115_k27e" overflow="scroll" defaultItem="ui://pnop7ha6gvalo41" autoClearItems="true">
       <item/>
       <item/>
       <item/>
     </list>
-    <richtext id="n103_nxdg" name="rtext_reward" xy="859,25" size="68,24" group="n115_k27e" fontSize="16" color="#00ff00" underline="true" text="出师奖励"/>
-    <richtext id="n104_nxdg" name="rtext_go" xy="859,162" size="68,24" group="n115_k27e" fontSize="16" color="#00ff00" underline="true" text="前往仪式"/>
+    <richtext id="n103_nxdg" name="rtext_reward" xy="871,36" size="68,24" group="n115_k27e" fontSize="16" color="#28faf0" underline="true" text="出师奖励"/>
+    <richtext id="n104_nxdg" name="rtext_go" xy="871,180" size="68,24" group="n115_k27e" fontSize="16" color="#28faf0" underline="true" text="前往仪式"/>
     <component id="n105_nxdg" name="btn_break" src="gvalo3z" fileName="Components/btn_second_red.xml" xy="802,529" group="n115_k27e">
       <Button title="解除关系"/>
     </component>
-    <image id="n106_nxdg" name="n3" src="orj1vo3" fileName="image/di_1.png" pkg="st7dgeqq" xy="244,211" size="700,35" group="n110_nxdg"/>
-    <text id="n107_nxdg" name="text_task" xy="294,215" size="290,24" group="n110_nxdg" fontSize="16" color="#fcf1bf" autoSize="none" text="任务">
+    <image id="n106_nxdg" name="n3" src="orj1vo3" fileName="image/di_1.png" pkg="st7dgeqq" xy="244,206" size="700,35" group="n110_nxdg" visible="false"/>
+    <text id="n107_nxdg" name="text_task" xy="258,210" size="180,24" group="n110_nxdg" fontSize="16" color="#fcf1bf" autoSize="none" strokeColor="#000000" text="任务">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n108_nxdg" name="text_jd" xy="795,216" size="68,24" group="n110_nxdg" fontSize="16" color="#fcf1bf" text="师徒奖励">
+    <text id="n108_nxdg" name="text_jd" xy="700,211" size="68,24" group="n110_nxdg" fontSize="16" color="#fcf1bf" strokeColor="#000000" text="师徒奖励">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n109_nxdg" name="text_st" xy="586,215" size="196,24" group="n110_nxdg" fontSize="16" color="#fcf1bf" align="center" autoSize="none" text="进度">
+    <text id="n109_nxdg" name="text_st" xy="459,210" size="196,24" group="n110_nxdg" fontSize="16" color="#fcf1bf" align="center" autoSize="none" strokeColor="#000000" text="进度">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <group id="n110_nxdg" name="right_top_lan" xy="244,211" size="700,35" group="n115_k27e" advanced="true">
+    <group id="n110_nxdg" name="right_top_lan" xy="244,206" size="700,35" group="n115_k27e" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <list id="n111_nxdg" name="list_tasks" xy="240,262" size="700,259" group="n115_k27e" overflow="scroll" defaultItem="ui://pnop7ha6yagpo46" autoClearItems="true">
+    <list id="n111_nxdg" name="list_tasks" xy="240,247" size="700,259" group="n115_k27e" overflow="scroll" defaultItem="ui://pnop7ha6yagpo46" autoClearItems="true">
       <item/>
       <item/>
       <item/>

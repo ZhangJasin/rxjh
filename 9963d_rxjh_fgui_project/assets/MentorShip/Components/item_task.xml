@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="700,45" overflow="hidden">
   <controller name="fbStatus" pages="0,未开始,1,进行中,2,已完成,3,已领取" selected="0"/>
-  <controller name="isMasterShowFinish" pages="0,徒弟,1,师傅" selected="1"/>
+  <controller name="isMasterShowFinish" pages="0,徒弟,1,师傅" selected="0"/>
   <displayList>
     <loader id="n26_g5t3" name="bg" xy="-77,0" size="887,45" url="ui://pnop7ha6g5t3o5m" fill="scaleFree"/>
-    <richtext id="n16_tfdc" name="task_name" xy="50,0" size="290,45" fontSize="16" color="#00ff00" vAlign="middle" autoSize="none" text="任务名字"/>
-    <richtext id="n17_tfdc" name="task_progress" xy="344,0" size="202,45" fontSize="16" color="#fffadc" align="center" vAlign="middle" autoSize="none" text="0/999"/>
-    <richtext id="n18_tfdc" name="task_status" xy="552,0" size="60,45" fontSize="16" color="#00ff00" align="center" vAlign="middle" autoSize="none" text="进行中">
+    <richtext id="n16_tfdc" name="task_name" xy="10,0" size="220,45" fontSize="16" color="#d7c360" vAlign="middle" autoSize="none" underline="true" strokeColor="#000000" text="任务名字"/>
+    <richtext id="n17_tfdc" name="task_progress" xy="221,0" size="202,45" fontSize="16" color="#1c4543" align="center" vAlign="middle" autoSize="none" text="0/999"/>
+    <richtext id="n18_tfdc" name="task_status" xy="600,0" size="60,45" fontSize="16" color="#00ff00" align="center" vAlign="middle" autoSize="none" text="进行中">
       <gearDisplay controller="isMasterShowFinish" pages="0"/>
       <gearText controller="fbStatus" pages="0,1" values="进行中|进行中" default="已领取"/>
     </richtext>
-    <richtext id="n28_s46r" name="task_finishText" xy="552,0" size="60,45" fontSize="16" color="#00ff00" align="center" vAlign="middle" autoSize="none" text="进行中">
+    <richtext id="n28_s46r" name="task_finishText" xy="619,0" size="60,45" fontSize="16" color="#00ff00" align="center" vAlign="middle" autoSize="none" text="进行中">
       <gearDisplay controller="isMasterShowFinish" pages="1"/>
       <gearText controller="fbStatus" pages="0" values="进行中" default="已完成"/>
     </richtext>
-    <component id="n23_g5t3" name="gonow" src="g5t3o5l" fileName="Components/gonow.xml" xy="552,0" size="60,45">
+    <component id="n23_g5t3" name="gonow" src="g5t3o5l" fileName="Components/gonow.xml" xy="629,0" size="60,45">
       <gearDisplay controller="fbStatus" pages="0"/>
       <gearDisplay2 controller="isMasterShowFinish" pages="1" condition="0"/>
     </component>
-    <component id="n21_g5t3" name="receive" src="g5t3o5k" fileName="Components/receive.xml" xy="552,2" size="130,40">
+    <component id="n21_g5t3" name="receive" src="g5t3o5k" fileName="Components/receive.xml" xy="572,2" size="130,40">
       <gearDisplay controller="fbStatus" pages="2"/>
       <gearDisplay2 controller="isMasterShowFinish" pages="0" condition="0"/>
     </component>
+    <richtext id="n29_q2kk" name="tudi" xy="425,0" size="180,24" fontSize="14" color="#6ae4d4" vAlign="middle" autoSize="none" strokeColor="#000000" text="徒弟："/>
+    <richtext id="n30_q2kk" name="shifu" xy="425,21" size="180,24" fontSize="14" color="#6ae4d4" vAlign="middle" autoSize="none" strokeColor="#000000" text="师傅："/>
   </displayList>
 </component>

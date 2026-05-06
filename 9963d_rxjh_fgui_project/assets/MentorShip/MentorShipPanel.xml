@@ -4,13 +4,10 @@
     <component id="n36_10pfo" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="1000,650" group="n116_dos9">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <text id="n37_10pfo" name="text_title" xy="666,78" pivot="0.5,0.5" anchor="true" size="52,34" group="n116_dos9" fontSize="24" color="#9aafbb" text="师徒">
+    <text id="n37_10pfo" name="text_title" xy="661,78" pivot="0.5,0.5" anchor="true" size="70,36" group="n116_dos9" fontSize="26" color="#ffffff" text="师  徒">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
     <component id="n38_10pfo" name="btn_close" src="vjv72" fileName="Components/btn_close.xml" xy="1141,76" pivot="0.5,0.5" anchor="true" size="45,45" group="n116_dos9">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </component>
-    <component id="n113_nxdg" name="btn_help" src="vjv7r" fileName="Components/btn_help.xml" xy="698,62" size="30,30" group="n116_dos9">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <loader id="n114_dos9" name="mentor_content" xy="188,101" size="976,588" group="n116_dos9" url="ui://pnop7ha6dos9o4l">
@@ -22,6 +19,7 @@
       <item title="传功"/>
       <item title="商店"/>
     </list>
+    <component id="n123_q2kk" name="btn_help" src="q2kko6i" fileName="Components/btn_help_1.xml" xy="700,65" group="n116_dos9"/>
     <group id="n116_dos9" name="mastermain" xy="167,50" size="1040,650" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

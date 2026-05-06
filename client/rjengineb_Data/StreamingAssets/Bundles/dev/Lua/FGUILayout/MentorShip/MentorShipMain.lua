@@ -167,12 +167,12 @@ function MentorShipMain:InitEvent()
 
 	if self._ui.rtext_go then
 		FGUI:GRichTextField_setUBBEnabled(self._ui.rtext_go, true)
-		FGUI:GRichTextField_setText(self._ui.rtext_go, "[url=go]前往仪式[/url]")
+		FGUI:GRichTextField_setText(self._ui.rtext_go, "[color=#28FAF0][url=go]前往仪式[/url][/color]")
 		FGUI:GRichTextField_addOnLinkClickEvent(self._ui.rtext_go, handler(self, self.onClickChuShi))
 	end
 	if self._ui.rtext_reward then
 		FGUI:GRichTextField_setUBBEnabled(self._ui.rtext_reward, true)
-		FGUI:GRichTextField_setText(self._ui.rtext_reward, "[url=reward]出师奖励[/url]")
+		FGUI:GRichTextField_setText(self._ui.rtext_reward, "[color=#28FAF0][url=go]出师奖励[/url][/color]")
 		FGUI:GRichTextField_addOnLinkClickEvent(self._ui.rtext_reward, handler(self, self.onClickReward))
 	end
 
@@ -249,6 +249,7 @@ function MentorShipMain:RenderMentorSlot(idx, item)
 		FGUI:GTextField_setText(text_lv, "Lv." .. tostring(data.Level or 1))
 		local online = (data.IsOnline ~= nil) and data.IsOnline or data.online
 		FGUI:GTextField_setText(text_st, online and "在线" or "离线")
+		FGUI:GTextField_setColor(text_st, online and "#41E63D" or "#5D6E74")
 		local targetID = data.UserID
 		if icon_job then
 			FGUI:GLoader_setUrl(icon_job, FGUIFunction:GetJobUrl(data.Job))
@@ -319,6 +320,7 @@ function MentorShipMain:RenderApprenticeSlot(idx, item)
 		FGUI:GTextField_setText(text_lv, "Lv." .. tostring(data.Level or 1))
 		local online = (data.IsOnline ~= nil) and data.IsOnline or data.online
 		FGUI:GTextField_setText(text_st, online and "在线" or "离线")
+		FGUI:GTextField_setColor(text_st, online and "#41E63D" or "#5D6E74")
 		local targetID = data.UserID
 		if icon_job then
 			FGUI:GLoader_setUrl(icon_job, FGUIFunction:GetJobUrl(data.Job))
@@ -398,7 +400,7 @@ function MentorShipMain:RenderMentorCondItem(idx, item)
 	local text = FGUI:GetChild(item, "text_cond")
 	local ok = data.check()
 	FGUI:GTextField_setText(text, data.text)
-	FGUI:GTextField_setColor(text, ok and "#21D15A" or "#FF4D4D")
+	FGUI:GTextField_setColor(text, ok and "#2E8432" or "#372A08")
 end
 
 function MentorShipMain:RenderApprenticeCondItem(idx, item)
@@ -406,7 +408,7 @@ function MentorShipMain:RenderApprenticeCondItem(idx, item)
 	local text = FGUI:GetChild(item, "text_cond")
 	local ok = data.check()
 	FGUI:GTextField_setText(text, data.text)
-	FGUI:GTextField_setColor(text, ok and "#21D15A" or "#FF4D4D")
+	FGUI:GTextField_setColor(text, ok and "#2E8432" or "#372A08")
 end
 
 local function __RenderIntroLine(data, item)

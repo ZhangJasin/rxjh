@@ -112,6 +112,14 @@
     <image id="u8r1o6d" name="半透内容底.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
     <image id="qlo0o6e" name="bg_limit.png" path="/Images/" exported="true" scale="9grid" scale9grid="6,8,13,9" qualityOption="source" smoothing="false"/>
     <image id="jvkqo6f" name="道具选中效果框.png" path="/Images/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
+    <image id="q2kko6g" name="1.png" path="/Images/" exported="true"/>
+    <component id="q2kko6i" name="btn_help_1.xml" path="/Components/" exported="true"/>
+    <image id="q2kko6j" name="2.png" path="/Images/" exported="true"/>
+    <image id="q2kko6k" name="3.png" path="/Images/" exported="true"/>
+    <image id="q2kko6l" name="4.png" path="/Images/" exported="true"/>
+    <component id="q2kko6m" name="btn_new_1.xml" path="/Components/" exported="true"/>
+    <image id="q2kko6n" name="5.png" path="/Images/" exported="true"/>
+    <image id="q2kko6o" name="6.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
