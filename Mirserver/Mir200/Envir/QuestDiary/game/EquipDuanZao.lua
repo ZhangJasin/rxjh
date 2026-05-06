@@ -17,6 +17,14 @@ local qhGroupId = 0 --强化加工使用 自定义属性组0
 local fyGroupId = 1 --赋予使用 自定义属性组1
 local hcGroupId = 2 --合成使用 自定义属性组2
 local hcBaseValue ={3,4,5,6}  --合成使用 合成石1-4对应的基础属性值存储
+local isQHStdMode={
+    [5]=true,
+    [3]=true,
+    [8]=true,
+    [9]=true,
+    [51]=true,
+    [53]=true,
+}
 
 -- 打开锻造界面
 function EquipDuanZao.openshow(actor, page)
@@ -46,13 +54,13 @@ function EquipDuanZao.qianghua(actor, data)
     local falselv = qhlv - 1 <= 0 and 0 or qhlv - 1
     
     -- 强化等级上限判断  强化8级以上或者加工装备5级以上失败
-    if qhlv >= 8 or (posindex > 5 and qhlv >= 5) then
+    if qhlv >= 8 or ( not isQHStdMode[stdmode] and qhlv >= 5) then
         falselv = -1 -- 装备损坏
     end
     local itemid = linkitem(actor, "INDEX")
     local qhTabIndex = ItemEquip[itemid]['EquipQHTabId']   
     if not qhTabIndex then
-        sendmsg(actor, 9, posindex > 5 and "当前装备不可强化！" or "当前装备不可强化！")
+        sendmsg(actor, 9, isQHStdMode[stdmode] and "当前装备不可强化！" or "当前装备不可强化！")
         return
     end
     
@@ -140,18 +148,18 @@ function EquipDuanZao.qianghua(actor, data)
             else
                 delbodybymakeindex(actor, equipmakeIndex)
             end
-            sendmsg(actor, 9, posindex > 5 and "加工失败!装备已损坏！" or "强化失败!装备已损坏！")
+            sendmsg(actor, 9, isQHStdMode[stdmode] and "强化失败!装备已损坏！" or "加工失败!装备已损坏！")
             Message.sendmsgEx(actor, "EquipDuanZao", "UpdataQH", { param1 = 0, param2 = 0 })
             return
         else
-            sendmsg(actor, 9, posindex > 5 and "加工失败!当前装备强化等级：" .. falselv or "强化失败!当前装备强化等级：" .. falselv)
+            sendmsg(actor, 9, isQHStdMode[stdmode] and "强化失败!当前装备强化等级：" .. falselv or "加工失败!当前装备强化等级：" .. falselv)
             nextlv = falselv
         end
     else
         if useitem2flag then
             nextlv = EquipDuanZao.itemTSSuc(actor, xhitemid2, nextlv, qhlv)
         end
-        sendmsg(actor, 9, posindex > 5 and "加工成功!当前装备强化等级：" .. nextlv or "强化成功!当前装备强化等级：" .. nextlv)
+        sendmsg(actor, 9, isQHStdMode[stdmode] and "强化成功!当前装备强化等级：" .. nextlv or  "加工成功!当前装备强化等级：" .. nextlv)
     end
     -- 修改装备标记值
     changeitemaddvalue(actor, -1, 0, "=", nextlv)
@@ -160,7 +168,7 @@ function EquipDuanZao.qianghua(actor, data)
     if nextlv == 0 then
         clearcustomitemabil(actor, -1, 0)
     else
-        changecustomitemtext(actor, -1, 0, posindex > 5 and "[加工]" or "[强化]")
+        changecustomitemtext(actor, -1, 0, isQHStdMode[stdmode] and "[强化]" or "[加工]")
         if type(curQHTabData['attridList'][nextlv]) == "number" then
             changecustomitemabil(actor, -1, 0, 1, curQHTabData['attridList'][nextlv], curQHTabData['attrList'][nextlv])
         else
@@ -171,7 +179,7 @@ function EquipDuanZao.qianghua(actor, data)
     end
 
     -- 根据强化等级更新合成石和属性石属性
-    if posindex <= 5 and qhlv > 5  then        
+    if isQHStdMode[stdmode] and qhlv > 5  then        
         EquipDuanZao.updateEquipAttrsByQHLv(actor, equipmakeIndex, nextlv)
     end
 
@@ -646,6 +654,9 @@ function EquipDuanZao.updateEquipAttrsByQHLv(actor, equipmakeIndex, qhlv)
         local eqfylv = 0
         if qhlv > 5 then
             eqfylv = qhlv - 5
+            changecustomitemtext(actor, -1, 1, "[赋予：" .. fylv .. "+" .. eqfylv .. "阶段]")
+        else
+            changecustomitemtext(actor, -1, 1, "[赋予：" .. fylv .. "阶段]")
         end
         local finalLv = fylv + eqfylv
         if finalLv > 0 and attrid and attrid > 0 then
