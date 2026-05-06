@@ -4,6 +4,23 @@ Compound = {}
 -- 配置表
 local compItems = require('Envir/QuestDiary/game_config/cfgcsv/compItems')
 
+-- 限流控制：记录每个玩家最后一次请求时间（毫秒）
+-- 使用 actor 本身作为表的 key
+local _lastRequestTime = {}
+
+-- 检查限流，返回true表示允许执行
+local function checkThrottle(actor)
+    local now = os.time() * 1000  -- 毫秒
+    local lastTime = _lastRequestTime[actor] or 0
+
+    if now - lastTime < 1000 then  -- 每秒最多1次
+        return false
+    end
+
+    _lastRequestTime[actor] = now
+    return true
+end
+
 -- 打开合成界面
 function Compound.openshow(actor)
     Message.sendmsgEx(actor, 'Compound', 'Open', {})
@@ -12,6 +29,12 @@ end
 -- 合成处理（对应客户端 sendmsgEx 的 methodName）
 -- data: {itemId, isBatch}
 function Compound.compound(actor, data)
+    -- 限流控制：每秒最多执行1次
+    if not checkThrottle(actor) then
+        sendmsg(actor, 9, '请勿频繁操作')
+        return
+    end
+
     if not data then
         sendmsg(actor, 9, '参数错误')
         return
@@ -42,15 +65,14 @@ function Compound.compound(actor, data)
     -- 解析消耗道具
     local payItems = parsePayData(config.payItems)
     local payCost = parsePayData(config.payCost)
-    
+
     -- 解析成功率（配置中是 succRealRate 字段，格式 n/10000）
     local succRealRate = tonumber(config.succRealRate)
     if not succRealRate then
-        sendmsg(actor, 9, '合成失败，联系客服')
-        Message.sendmsgEx(actor, 'Compound', 'Result', {0, itemId, '配置错误'})
+        sendmsg(actor, 9, '配置错误')
         return
     end
-    
+
     -- 计算合成次数
     local compoundCount = 1
     if isBatch > 0 and config.isBatch and config.isBatch > 0 then
@@ -79,6 +101,12 @@ function Compound.compound(actor, data)
 
     -- 2. 货币检查 (使用 money 函数检查数量)
     for _, cost in ipairs(totalPayCost) do
+        -- 只支持货币ID 1(银两) 和 2(元宝)
+        if cost.id ~= 1 and cost.id ~= 2 then
+            sendmsg(actor, 9, string.format('不支持的货币类型(ID:%d)', cost.id))
+            return
+        end
+
         local haveCount = money(actor, cost.id)
         if haveCount < cost.count then
             sendmsg(actor, 9, '货币不足')
@@ -101,31 +129,29 @@ function Compound.compound(actor, data)
     end
 
     if successCount == 0 then
-        -- 修改：服务端提示信息不包含成功率
         sendmsg(actor, 9, '合成失败！')
         Message.sendmsgEx(actor, 'Compound', 'Result', {0, itemId, '合成失败'})
         return
     end
 
     -- 4. 执行合成 - 扣除道具
-    -- 使用 takeitem(actor, "ID#Count", isBind)
     for _, item in ipairs(totalPayItems) do
         local itemStr = item.id .. "#" .. item.count
-        -- isBind=0 默认逻辑
         takeitem(actor, itemStr, 0)
     end
 
     -- 5. 执行合成 - 扣除货币
-    -- 使用 changemoney(actor, id, '-', num)
     for _, cost in ipairs(totalPayCost) do
         changemoney(actor, cost.id, '-', cost.count)
     end
 
     -- 6. 执行合成 - 添加目标物品
-    -- 使用 giveitem(actor, "ID#Count", mailMode)
     local giveStr = itemId .. "#" .. successCount
-    -- mailMode=0 默认发背包
     giveitem(actor, giveStr, 0)
+
+    -- 打印合成日志
+    print(string.format('[合成日志] 玩家:%s, 物品ID:%d, 批量次数:%d, 成功:%d, 失败:%d',
+        getname(actor), itemId, compoundCount, successCount, failCount))
 
     -- 7. 发送成功响应
     Message.sendmsgEx(actor, 'Compound', 'Result', {1, itemId, successCount, '合成成功'})

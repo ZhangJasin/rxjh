@@ -47,7 +47,7 @@ local config = {
 		idx=459,
 		itemname="取玉符",
 		itemtype=2,
-		TIPS="强化武器/防具、加工首饰时使用，<font color='#00FF00'>失败武器/防具/首饰不会破碎消失，改为强化等级降低1级</font>赋予属性时使用，失败不会掉至0级，改为降低1级</font>",
+		TIPS="强化武器/防具、加工首饰时使用，失败武器/防具/首饰不会破碎消失，改为强化等级降低1级赋予属性时使用，失败不会掉至0级，改为降低1级",
 		level_arr = {
 			[1] = 0,
 			[2] = 14,
@@ -58,7 +58,7 @@ local config = {
 		idx=468,
 		itemname="守护符",
 		itemtype=2,
-		TIPS="强化武器/防具、加工首饰时使用<font color='#00FF00'>失败武器/防具/首饰不会破碎消失，但强化/加工等级掉至0级</font>",
+		TIPS="强化武器/防具、加工首饰时使用失败武器/防具/首饰不会破碎消失，但强化/加工等级掉至0级",
 		level_arr = {
 			[1] = 0,
 			[2] = 14,
@@ -175,7 +175,7 @@ local config = {
 		idx=2013,
 		itemname="属性石（外）",
 		itemtype=5,
-		TIPS="赋予武器增加追加<font color='#00FF00'>伤害值</font>，赋予衣服增加<font color='#00FF00'>防御力</font>",
+		TIPS="赋予武器增加追加伤害值赋予衣服增加防御力",
 		level_arr = {
 			[1] = 0,
 			[2] = 14,
@@ -186,7 +186,7 @@ local config = {
 		idx=2014,
 		itemname="属性石（内）",
 		itemtype=5,
-		TIPS="赋予武器增加追加<font color='#00FF00'>武功攻击</font>，赋予衣服增加<font color='#00FF00'>武功防御</font>",
+		TIPS="赋予武器增加追加武功攻击，赋予衣服增加武功防御",
 		level_arr = {
 			[1] = 0,
 			[2] = 14,
@@ -197,7 +197,7 @@ local config = {
 		idx=2015,
 		itemname="属性石（火）",
 		itemtype=5,
-		TIPS="赋予武器增加追加<font color='#00FF00'>无视防御</font>，赋予衣服增加<font color='#00FF00'>伤害减免</font>",
+		TIPS="赋予武器增加追加无视防御，赋予衣服增加伤害减免",
 		level_arr = {
 			[1] = 0,
 			[2] = 14,
@@ -208,7 +208,7 @@ local config = {
 		idx=2016,
 		itemname="属性石（水）",
 		itemtype=5,
-		TIPS="赋予武器增加追加<font color='#00FF00'>概率清空目标怒气</font>，赋予衣服<font color='#00FF00'>被攻击增加怒气</font>",
+		TIPS="赋予武器增加追加概率清空目标怒气，赋予衣服被攻击增加怒气",
 		level_arr = {
 			[1] = 0,
 			[2] = 14,
@@ -219,7 +219,7 @@ local config = {
 		idx=2017,
 		itemname="属性石（风）",
 		itemtype=5,
-		TIPS="赋予武器增加追加<font color='#00FF00'>命中</font>，赋予衣服增加<font color='#00FF00'>回避</font>",
+		TIPS="赋予武器增加追加命中，赋予衣服增加回避",
 		level_arr = {
 			[1] = 0,
 			[2] = 14,
@@ -230,7 +230,7 @@ local config = {
 		idx=2018,
 		itemname="属性石（毒）",
 		itemtype=5,
-		TIPS="赋予武器增加追加<font color='#00FF00'>攻击力</font>，赋予衣服增加被攻击<font color='#00FF00'>概率使对方中毒</font>",
+		TIPS="赋予武器增加追加攻击力，赋予衣服增加被攻击概率使对方中毒",
 		level_arr = {
 			[1] = 0,
 			[2] = 14,
