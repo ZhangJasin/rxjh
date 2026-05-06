@@ -19098,5 +19098,23 @@ local config = {
 		ItemType=1,
 		TipsGroupId=18,
 	},
+	[3985] = { 
+		ID=3985,
+		Name="属性石",
+		StdMode=102,
+		Shape=1,
+		Looks=2022,
+		Price="0#1#1000",
+		Color=242,
+		OverLap=9999,
+		Desc="神奇的属性石，赋予[上衣]或[武器]更强的属性效果。（无论上衣/武器是否强化或合成过，都可赋予属性)",
+		GetWayInfo="4|8",
+		Droplooks=200020,
+		Grade=3,
+		nPaimaiStall=1,
+		ItemType=3,
+		TipsGroupId=18,
+		sBack="9#100",
+	},
 }
 return config
