@@ -6,7 +6,7 @@ local config = {
 		menus="普通合成#强化石一",
 		payItems="656#20|657#40|658#80",
 		payCost="1#400",
-		succRealRate=1000,
+		succRealRate=10000,
 		isBatch=10,
 	},
 	[2] = { 
@@ -16,7 +16,7 @@ local config = {
 		menus="普通合成#强化石一",
 		payItems="656#20|658#40|659#80",
 		payCost="2#400",
-		succRealRate=5500,
+		succRealRate=10000,
 		isBatch=100,
 	},
 	[3] = { 
@@ -26,7 +26,7 @@ local config = {
 		menus="普通合成#强化石一",
 		payItems="656#20|660#40|661#80",
 		payCost="4#400",
-		succRealRate=100,
+		succRealRate=10000,
 		isBatch=20,
 	},
 	[4] = { 
@@ -36,7 +36,7 @@ local config = {
 		menus="普通合成#强化石一",
 		payItems="656#20|657#40|658#80",
 		payCost="5#400",
-		succRealRate=200,
+		succRealRate=10000,
 		isBatch=1,
 	},
 	[5] = { 
@@ -46,7 +46,7 @@ local config = {
 		menus="普通合成#强化石二",
 		payItems="656#20|658#40|659#80",
 		payCost="1#400",
-		succRealRate=300,
+		succRealRate=10000,
 		isBatch=1,
 	},
 	[6] = { 
@@ -56,7 +56,7 @@ local config = {
 		menus="普通合成#强化石二",
 		payItems="656#20|660#40|661#80",
 		payCost="1#400",
-		succRealRate=400,
+		succRealRate=10000,
 		isBatch=1,
 	},
 	[7] = { 
@@ -66,7 +66,7 @@ local config = {
 		menus="普通合成#强化石二",
 		payItems="656#20|657#40|658#80",
 		payCost="1#400",
-		succRealRate=5500,
+		succRealRate=10000,
 		isBatch=1,
 	},
 	[8] = { 
@@ -76,7 +76,7 @@ local config = {
 		menus="普通合成#强化石二",
 		payItems="656#20|658#40|659#80",
 		payCost="1#400",
-		succRealRate=600,
+		succRealRate=10000,
 		isBatch=1,
 	},
 	[9] = { 
@@ -86,7 +86,7 @@ local config = {
 		menus="普通合成#强化石二",
 		payItems="656#20|660#40|661#80",
 		payCost="1#400",
-		succRealRate=700,
+		succRealRate=10000,
 		isBatch=1,
 	},
 	[10] = { 
@@ -96,7 +96,7 @@ local config = {
 		menus="普通合成#强化石二",
 		payItems="656#20|657#40|658#80",
 		payCost="1#400",
-		succRealRate=800,
+		succRealRate=10000,
 		isBatch=1,
 	},
 	[11] = { 
@@ -106,7 +106,7 @@ local config = {
 		menus="特殊合成#宠物",
 		payItems="656#20|657#40|658#80",
 		payCost="1#400",
-		succRealRate=1000,
+		succRealRate=10000,
 		isBatch=0,
 	},
 	[12] = { 

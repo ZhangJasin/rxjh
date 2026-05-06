@@ -525,26 +525,25 @@ function compoundMain:_RefreshPayCost(payCost)
 end
 
 -- 检查背包道具是否足够
-function compoundMain:_CheckPayItems(payItems)
+-- @param payItems 所需道具列表
+-- @param batchCount 批量次数（默认1）
+function compoundMain:_CheckPayItems(payItems, batchCount)
     if not payItems or #payItems == 0 then
         return true
     end
 
+    batchCount = batchCount or 1
+
     for i, payItem in ipairs(payItems) do
         local itemId = payItem.id or 0
-        local needCount = payItem.count or 0
-        
-        -- 获取背包中该物品的数量
-        local rawValue = SL:GetValue("BAG_ITEM_COUNT", itemId)
-        local haveCount = tonumber(rawValue or 0) or 0
+        local needCount = (payItem.count or 0) * batchCount  -- 乘以批量次数
+
+        -- 获取背包中该物品的数量（使用新的MetaValue API）
+        local haveCount = tonumber(SL:GetMetaValue("ITEM_COUNT", itemId) or 0) or 0
 
         if haveCount < needCount then
-            -- 获取道具名称
-            local itemName = "未知道具"
-            local ItemConfig = SL:GetValue("ITEM_CONFIG")
-            if ItemConfig and ItemConfig[itemId] then
-                itemName = ItemConfig[itemId].Name or itemName
-            end
+            -- 获取道具名称（使用新的MetaValue API）
+            local itemName = SL:GetMetaValue("ITEM_NAME", itemId) or "未知道具"
             SL:ShowSystemTips(string.format("%s 不足，需要 %d 个", itemName, needCount))
             return false
         end
@@ -554,26 +553,34 @@ function compoundMain:_CheckPayItems(payItems)
 end
 
 -- 检查货币是否足够
-function compoundMain:_CheckPayCost(payCost)
+-- @param payCost 所需货币列表
+-- @param batchCount 批量次数（默认1）
+function compoundMain:_CheckPayCost(payCost, batchCount)
     if not payCost or #payCost == 0 then
         return true
     end
 
+    batchCount = batchCount or 1
+
     for i, cost in ipairs(payCost) do
         local costType = cost.id or 0
-        local needCount = cost.count or 0
-        
-        -- 获取玩家货币数量
-        local haveCount = 0
-        local costTypeName = "未知货币"
+        local needCount = (cost.count or 0) * batchCount  -- 乘以批量次数
+
+        -- 获取玩家货币数量（使用新的MetaValue API）
+        local haveCount = tonumber(SL:GetMetaValue("MONEY", costType) or 0) or 0
+        local costTypeName = nil
         if costType == 1 then
-            haveCount = tonumber(SL:GetValue("PLAYER_MONEY", 1) or 0) or 0
             costTypeName = "银两"
         elseif costType == 2 then
-            haveCount = tonumber(SL:GetValue("PLAYER_MONEY", 2) or 0) or 0
             costTypeName = "元宝"
         end
-        
+
+        -- 如果是未知货币类型，直接阻止合成
+        if not costTypeName then
+            SL:ShowSystemTips(string.format("不支持的货币类型(ID:%d)", costType))
+            return false
+        end
+
         if haveCount < needCount then
             SL:ShowSystemTips(string.format("%s 不足，需要 %d 个", costTypeName, needCount))
             return false
@@ -590,13 +597,17 @@ function compoundMain:_CheckCanCompound()
         return false
     end
 
+    -- 判断是否批量合成
+    local isBatchParam = (self._n57Visible and self._isBatchChecked) and (item.isBatch or 0) or 0
+    local batchCount = math.max(1, isBatchParam)  -- 批量次数，至少为1
+
     -- 检查道具
-    if not self:_CheckPayItems(item.payItems) then
+    if not self:_CheckPayItems(item.payItems, batchCount) then
         return false
     end
 
     -- 检查货币
-    if not self:_CheckPayCost(item.payCost) then
+    if not self:_CheckPayCost(item.payCost, batchCount) then
         return false
     end
 
@@ -605,16 +616,25 @@ end
 
 -- 合成按钮点击事件
 function compoundMain:_OnCompoundButtonClick()
+    -- 节流控制：每秒最多执行1次
+    local now = os.time() * 1000  -- 毫秒
+    if self._lastCompoundTime and (now - self._lastCompoundTime) < 1000 then
+        SL:ShowSystemTips("请勿频繁操作")
+        return
+    end
+
     local item = self._data:GetCurrentItem()
     if not item then
         SL:ShowSystemTips("未选中物品")
         return
     end
 
-    -- TODO: 暂时关闭客户端检查，测试服务端拦截
-    -- if not self:_CheckCanCompound() then
-    --     return
-    -- end
+    if not self:_CheckCanCompound() then
+        return
+    end
+
+    -- 更新最后请求时间
+    self._lastCompoundTime = now
 
     -- 发送合成请求，添加 isBatch 参数
     local isBatchParam = (self._n57Visible and self._isBatchChecked) and (item.isBatch or 0) or 0
@@ -647,133 +667,7 @@ function compoundMain:_RefreshSuccessRate(item)
 end
 
 -- ========================================
--- 调试和辅助方法
+-- 公共辅助方法
 -- ========================================
-
--- 打印组装后的数据(调试用)
-function compoundMain:_PrintProcessedData()
-    local menuTree = self._data._menuTree
-    if not menuTree or #menuTree == 0 then
-        print("[合成] === 组装后的数据 ===")
-        print("[合成] 菜单树为空!")
-        return
-    end
-    
-    print("[合成] === 组装后的数据 ===")
-    print(string.format("[合成] 一级菜单数量: %d", #menuTree))
-    
-    for i, level1 in ipairs(menuTree) do
-        print(string.format("\n[合成] 【一级菜单 %d】%s", i, level1.name))
-        print(string.format("  二级菜单数量: %d", #level1.children))
-        
-        for j, level2 in ipairs(level1.children) do
-            print(string.format("\n  【二级菜单 %d】%s", j, level2.name))
-            print(string.format("    物品数量: %d", #level2.children))
-            
-            for k, item in ipairs(level2.children) do
-                print(string.format("    ├─ 物品%d: [%s] ID=%d", k, item.itemName, item.itemId))
-                print(string.format("    │   消耗道具: %d项", #item.payItems))
-                
-                -- 打印消耗道具详情
-                for idx, payItem in ipairs(item.payItems) do
-                    local itemName = "未知"
-                    local ItemConfig = SL:GetValue("ITEM_CONFIG")
-                    if ItemConfig and ItemConfig[payItem.id] then
-                        itemName = ItemConfig[payItem.id].Name or "未知"
-                    end
-                    print(string.format("    │     选项%d: %s x%d (ID:%d)", idx, itemName, payItem.count, payItem.id))
-                end
-                
-                print(string.format("    │   消耗货币: %d项", #item.payCost))
-                
-                -- 打印消耗货币详情
-                for idx, cost in ipairs(item.payCost) do
-                    local costTypeName = "未知"
-                    if cost.id == 1 then
-                        costTypeName = "银两"
-                    elseif cost.id == 2 then
-                        costTypeName = "元宝"
-                    end
-                    print(string.format("    │     选项%d: %s x%d (类型:%d)", idx, costTypeName, cost.count, cost.id))
-                end
-            end
-        end
-    end
-    
-    print("\n[合成] === 数据统计 ===")
-    local totalLevel1 = #menuTree
-    local totalLevel2 = 0
-    local totalItems = 0
-    for _, l1 in ipairs(menuTree) do
-        totalLevel2 = totalLevel2 + #l1.children
-        for _, l2 in ipairs(l1.children) do
-            totalItems = totalItems + #l2.children
-        end
-    end
-    print(string.format("[合成] 一级菜单: %d个", totalLevel1))
-    print(string.format("[合成] 二级菜单: %d个", totalLevel2))
-    print(string.format("[合成] 合成物品: %d个", totalItems))
-    print("[合成] ==========================\n")
-end
-
--- 打印菜单结构(调试用)
-function compoundMain:_PrintMenuStructure()
-    local menuTree = self._data._menuTree
-    if not menuTree or #menuTree == 0 then
-        print("[合成] 菜单树为空")
-        return
-    end
-    
-    print("[合成] === 菜单结构 ===")
-    for i, level1 in ipairs(menuTree) do
-        print(string.format("  %d. %s (一级)", i, level1.name))
-        
-        for j, level2 in ipairs(level1.children) do
-            local openState = self._data:IsGroup2Open(level2.name) and "[展开]" or "[折叠]"
-            print(string.format("     %d. %s %s (二级) - %d个物品", j, level2.name, openState, #level2.children))
-        end
-    end
-end
-
--- 获取当前选中的完整路径信息
--- @return {level1, level2, item}
-function compoundMain:GetCurrentPathInfo()
-    return {
-        level1 = self._data._currentGroup1,
-        level2 = self._data._currentGroup2,
-        item = self._data:GetCurrentItem()
-    }
-end
-
--- 根据物品ID查找并选中物品
--- @param itemId 物品ID
-function compoundMain:SelectItemById(itemId)
-    if not itemId then return end
-    
-    local menuTree = self._data._menuTree
-    for _, level1 in ipairs(menuTree) do
-        for _, level2 in ipairs(level1.children) do
-            for _, item in ipairs(level2.children) do
-                if item.itemId == itemId then
-                    -- 切换到对应的一级菜单
-                    self._data:SelectGroup1(level1.name)
-                    
-                    -- 展开对应的二级菜单
-                    if not self._data:IsGroup2Open(level2.name) then
-                        self._data:ToggleGroup2Open(level2.name)
-                    end
-
-                    -- 选中物品
-                    self._data:SelectItem(1, item)
-
-                    -- 刷新UI
-                    self:RefreshUI()
-
-                    return
-                end
-            end
-        end
-    end
-end
 
 return compoundMain
