@@ -11,12 +11,18 @@ local configType = {
     WEAPON_1  = 1,
     WEAPON_2  = 2,
     WEAPON_3  = 3,
-    ARMOR_1   = 4,
-    ARMOR_2   = 5,
-    ARMOR_3   = 6,
-    JEWELRY_1 = 7,
-    JEWELRY_2 = 8,
-    JEWELRY_3 = 9
+    CLOTH_1   = 4,
+    CLOTH_2   = 5,
+    CLOTH_3   = 6,
+    HAND_1    = 7,
+    HAND_2    = 8,
+    HAND_3    = 9,
+    BOOT_1    = 10,
+    BOOT_2    = 11,
+    BOOT_3    = 12,
+    JEWELRY_1 = 13,
+    JEWELRY_2 = 14,
+    JEWELRY_3 = 15
 }
 
 local function getCategoryData(config)
@@ -135,16 +141,22 @@ function equipCollect:initRenderer()
             [configType.WEAPON_1]  = 0,
             [configType.WEAPON_2]  = 1,
             [configType.WEAPON_3]  = 2,
-            [configType.ARMOR_1]   = 0,
-            [configType.ARMOR_2]   = 1,
-            [configType.ARMOR_3]   = 2,
+            [configType.CLOTH_1]   = 0,
+            [configType.CLOTH_2]   = 1,
+            [configType.CLOTH_3]   = 2,
+            [configType.HAND_1]    = 0,
+            [configType.HAND_2]    = 1,
+            [configType.HAND_3]    = 2,
+            [configType.BOOT_1]    = 0,
+            [configType.BOOT_2]    = 1,
+            [configType.BOOT_3]    = 2,
             [configType.JEWELRY_1] = 0,
             [configType.JEWELRY_2] = 1,
             [configType.JEWELRY_3] = 2
         }
 
         --TODO：特殊处理首饰
-        if FGUI:GList_getSelectedIndex(self._ui.pageList) == 2 then
+        if FGUI:GList_getSelectedIndex(self._ui.pageList) == 4 then
             FGUI:Controller_setSelectedIndex(typeTabs, 0)
             local name = FGUI:GetChild(item, "name1")
             local nameLst = {
@@ -188,8 +200,10 @@ end
 function equipCollect:updateShowListByIndex(index)
     local pageMapping = {
         [0] = { configType.WEAPON_1, configType.WEAPON_2, configType.WEAPON_3 },
-        [1] = { configType.ARMOR_1, configType.ARMOR_2, configType.ARMOR_3 },
-        [2] = { configType.JEWELRY_1, configType.JEWELRY_2, configType.JEWELRY_3 }
+        [1] = { configType.CLOTH_1, configType.CLOTH_2, configType.CLOTH_3 },
+        [2] = { configType.HAND_1, configType.HAND_2, configType.HAND_3 },
+        [3] = { configType.BOOT_1, configType.BOOT_2, configType.BOOT_3 },
+        [4] = { configType.JEWELRY_1, configType.JEWELRY_2, configType.JEWELRY_3 },
     }
     local targetTypes = pageMapping[index] or {}
     local data = {}

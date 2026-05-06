@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750">
-  <controller name="page" pages="0,武器,1,防具,2,首饰" selected="0"/>
+  <controller name="page" pages="0,武器,1,衣服,2,护手,3,靴子,4,首饰" selected="0"/>
   <controller name="showAttr" pages="0,隐藏,1,显示" selected="0"/>
   <displayList>
     <graph id="n0_jccz" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
@@ -21,7 +21,9 @@
     <list id="n6_slml" name="pageList" xy="1155,104" size="51,380" pageController="page" margin="4,2,6,0" lineGap="2" defaultItem="ui://cog9akwfslmlw" selectionController="page">
       <relation target="n1_jccz" sidePair="center-center,middle-middle"/>
       <item title="武器"/>
-      <item title="防具"/>
+      <item title="衣服"/>
+      <item title="护手"/>
+      <item title="靴子"/>
       <item title="首饰"/>
     </list>
     <text id="n8_slml" name="n8" xy="196,111" size="598,32" fontSize="22" color="#372a08" text="必须是打怪掉落或者自己开箱获得的装备和首饰才会激活图鉴">
