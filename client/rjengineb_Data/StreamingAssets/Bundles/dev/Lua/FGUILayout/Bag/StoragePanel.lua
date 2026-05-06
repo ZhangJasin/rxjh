@@ -103,7 +103,7 @@ end
 
 function StoragePanel:SetFastSaveState(fastSave)
 	SL:SetValue("STORAGE_FAST_SAVE",fastSave)
-	FGUI:Controller_setSelectedIndex(self.cSelect, fastSave and 0 or 1)
+	FGUI:Controller_setSelectedIndex(self.cSelect, fastSave and 1 or 0)
 end
 
 local packageItemViewCache = {}
