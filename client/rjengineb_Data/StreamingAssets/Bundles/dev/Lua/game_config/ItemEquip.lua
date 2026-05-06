@@ -87596,7 +87596,7 @@ local config = {
 			[4] = 9800010,
 			[5] = 9802470,
 		},
-		EquipQHTabId=5,
+		EquipQHTabId=14,
 	},
 	[60007] = { 
 		ID=60007,
@@ -87630,7 +87630,7 @@ local config = {
 			[4] = 9800010,
 			[5] = 9802471,
 		},
-		EquipQHTabId=5,
+		EquipQHTabId=14,
 	},
 	[60008] = { 
 		ID=60008,
@@ -87664,7 +87664,7 @@ local config = {
 			[4] = 9800010,
 			[5] = 9802472,
 		},
-		EquipQHTabId=5,
+		EquipQHTabId=14,
 	},
 	[60009] = { 
 		ID=60009,
@@ -87698,7 +87698,7 @@ local config = {
 			[4] = 9800010,
 			[5] = 9802473,
 		},
-		EquipQHTabId=5,
+		EquipQHTabId=14,
 	},
 	[60010] = { 
 		ID=60010,
