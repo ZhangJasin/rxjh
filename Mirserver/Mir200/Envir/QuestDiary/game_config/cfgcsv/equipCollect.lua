@@ -20,7 +20,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="青龙刀",
-		value=2,
+		value=3,
 		var="T37",
 	},
 	[3] = { 
@@ -32,7 +32,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="飞翔刀",
-		value=3,
+		value=6,
 		var="T37",
 	},
 	[4] = { 
@@ -44,7 +44,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="百魂刀",
-		value=4,
+		value=8,
 		var="T37",
 	},
 	[5] = { 
@@ -56,7 +56,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="破天夺命刀",
-		value=5,
+		value=12,
 		var="T37",
 	},
 	[6] = { 
@@ -68,7 +68,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天劫斩",
-		value=6,
+		value=14,
 		var="T37",
 	},
 	[7] = { 
@@ -80,7 +80,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="破风",
-		value=7,
+		value=23,
 		var="T37",
 	},
 	[8] = { 
@@ -92,7 +92,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="断水",
-		value=8,
+		value=25,
 		var="T37",
 	},
 	[9] = { 
@@ -116,7 +116,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="破仙刀",
-		value=2,
+		value=3,
 		var="T37",
 	},
 	[11] = { 
@@ -128,7 +128,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="斩魔刀",
-		value=3,
+		value=6,
 		var="T37",
 	},
 	[12] = { 
@@ -140,7 +140,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="磐龙刀",
-		value=4,
+		value=8,
 		var="T37",
 	},
 	[13] = { 
@@ -152,7 +152,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="玄铁摄魂刀",
-		value=5,
+		value=12,
 		var="T37",
 	},
 	[14] = { 
@@ -164,7 +164,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="金玉花翎刀",
-		value=6,
+		value=14,
 		var="T37",
 	},
 	[15] = { 
@@ -176,7 +176,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="开山",
-		value=7,
+		value=23,
 		var="T37",
 	},
 	[16] = { 
@@ -188,7 +188,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="斩马",
-		value=8,
+		value=25,
 		var="T37",
 	},
 	[17] = { 
@@ -212,7 +212,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="七星枪",
-		value=2,
+		value=3,
 		var="T37",
 	},
 	[19] = { 
@@ -224,7 +224,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="九龙枪",
-		value=3,
+		value=6,
 		var="T37",
 	},
 	[20] = { 
@@ -236,7 +236,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="神慧枪",
-		value=4,
+		value=8,
 		var="T37",
 	},
 	[21] = { 
@@ -248,7 +248,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="翠玉金刚枪",
-		value=5,
+		value=12,
 		var="T37",
 	},
 	[22] = { 
@@ -260,7 +260,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="追月流星枪",
-		value=6,
+		value=14,
 		var="T37",
 	},
 	[23] = { 
@@ -272,7 +272,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙胆亮银枪",
-		value=7,
+		value=23,
 		var="T37",
 	},
 	[24] = { 
@@ -284,7 +284,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="虎头湛金枪",
-		value=8,
+		value=25,
 		var="T37",
 	},
 	[25] = { 
@@ -308,7 +308,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="噬魄枪",
-		value=2,
+		value=3,
 		var="T37",
 	},
 	[27] = { 
@@ -320,7 +320,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="天诛枪",
-		value=3,
+		value=6,
 		var="T37",
 	},
 	[28] = { 
@@ -332,7 +332,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="吟血魔枪",
-		value=4,
+		value=8,
 		var="T37",
 	},
 	[29] = { 
@@ -344,7 +344,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="追魂衍魔枪",
-		value=5,
+		value=12,
 		var="T37",
 	},
 	[30] = { 
@@ -356,7 +356,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="八卦太和枪",
-		value=6,
+		value=14,
 		var="T37",
 	},
 	[31] = { 
@@ -368,7 +368,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="神威烈炎枪",
-		value=7,
+		value=23,
 		var="T37",
 	},
 	[32] = { 
@@ -380,7 +380,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="五虎断魂枪",
-		value=8,
+		value=25,
 		var="T37",
 	},
 	[33] = { 
@@ -404,7 +404,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="寒月剑",
-		value=2,
+		value=3,
 		var="T37",
 	},
 	[35] = { 
@@ -416,7 +416,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="流光剑",
-		value=3,
+		value=6,
 		var="T37",
 	},
 	[36] = { 
@@ -428,7 +428,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="新月剑",
-		value=4,
+		value=8,
 		var="T37",
 	},
 	[37] = { 
@@ -440,7 +440,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="青月飞虹剑",
-		value=5,
+		value=12,
 		var="T37",
 	},
 	[38] = { 
@@ -452,7 +452,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="清风落英剑",
-		value=6,
+		value=14,
 		var="T37",
 	},
 	[39] = { 
@@ -464,7 +464,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="无影",
-		value=7,
+		value=23,
 		var="T37",
 	},
 	[40] = { 
@@ -476,7 +476,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="湛卢",
-		value=8,
+		value=25,
 		var="T37",
 	},
 	[41] = { 
@@ -500,7 +500,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="血魔剑",
-		value=2,
+		value=3,
 		var="T37",
 	},
 	[43] = { 
@@ -512,7 +512,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="斩玄剑",
-		value=3,
+		value=6,
 		var="T37",
 	},
 	[44] = { 
@@ -524,7 +524,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="赤朱剑",
-		value=4,
+		value=8,
 		var="T37",
 	},
 	[45] = { 
@@ -536,7 +536,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="碧海狂灵剑",
-		value=5,
+		value=12,
 		var="T37",
 	},
 	[46] = { 
@@ -548,7 +548,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="天魔流星剑",
-		value=6,
+		value=14,
 		var="T37",
 	},
 	[47] = { 
@@ -560,7 +560,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="碧血磐云剑",
-		value=7,
+		value=23,
 		var="T37",
 	},
 	[48] = { 
@@ -572,7 +572,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="金蛇",
-		value=8,
+		value=25,
 		var="T37",
 	},
 	[49] = { 
@@ -596,7 +596,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="圣者弓",
-		value=2,
+		value=3,
 		var="T37",
 	},
 	[51] = { 
@@ -608,7 +608,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="封魔弓",
-		value=3,
+		value=6,
 		var="T37",
 	},
 	[52] = { 
@@ -620,7 +620,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="紫灵弓",
-		value=4,
+		value=8,
 		var="T37",
 	},
 	[53] = { 
@@ -632,7 +632,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="玄武云天弓",
-		value=5,
+		value=12,
 		var="T37",
 	},
 	[54] = { 
@@ -644,7 +644,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天籁麒麟弓",
-		value=6,
+		value=14,
 		var="T37",
 	},
 	[55] = { 
@@ -656,7 +656,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="异彩神弓",
-		value=7,
+		value=23,
 		var="T37",
 	},
 	[56] = { 
@@ -668,7 +668,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="凤舞神弓",
-		value=8,
+		value=25,
 		var="T37",
 	},
 	[57] = { 
@@ -692,7 +692,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="天狼弓",
-		value=2,
+		value=3,
 		var="T37",
 	},
 	[59] = { 
@@ -704,7 +704,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="弑神弓",
-		value=3,
+		value=6,
 		var="T37",
 	},
 	[60] = { 
@@ -716,7 +716,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="破甲弓",
-		value=4,
+		value=8,
 		var="T37",
 	},
 	[61] = { 
@@ -728,7 +728,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="嗜血夺魂弓",
-		value=5,
+		value=12,
 		var="T37",
 	},
 	[62] = { 
@@ -740,7 +740,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="碧血磐云弓",
-		value=6,
+		value=14,
 		var="T37",
 	},
 	[63] = { 
@@ -752,7 +752,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="血羽魔弓",
-		value=7,
+		value=23,
 		var="T37",
 	},
 	[64] = { 
@@ -764,7 +764,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="蓝电魔弓",
-		value=8,
+		value=25,
 		var="T37",
 	},
 	[65] = { 
@@ -788,7 +788,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="火欲杖",
-		value=2,
+		value=3,
 		var="T37",
 	},
 	[67] = { 
@@ -800,7 +800,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="鬼头杖",
-		value=3,
+		value=6,
 		var="T37",
 	},
 	[68] = { 
@@ -812,7 +812,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="寒龙杖",
-		value=4,
+		value=8,
 		var="T37",
 	},
 	[69] = { 
@@ -824,7 +824,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="辟邪之杖",
-		value=5,
+		value=12,
 		var="T37",
 	},
 	[70] = { 
@@ -836,7 +836,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="行者杖",
-		value=6,
+		value=14,
 		var="T37",
 	},
 	[71] = { 
@@ -848,7 +848,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="仁者神杖",
-		value=7,
+		value=23,
 		var="T37",
 	},
 	[72] = { 
@@ -860,7 +860,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="伏虎神杖",
-		value=8,
+		value=25,
 		var="T37",
 	},
 	[73] = { 
@@ -884,7 +884,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="鬼泣杖",
-		value=2,
+		value=3,
 		var="T37",
 	},
 	[75] = { 
@@ -896,7 +896,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="冥蛇杖",
-		value=3,
+		value=6,
 		var="T37",
 	},
 	[76] = { 
@@ -908,7 +908,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="万绝神杖",
-		value=4,
+		value=8,
 		var="T37",
 	},
 	[77] = { 
@@ -920,7 +920,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="罗刹之杖",
-		value=5,
+		value=12,
 		var="T37",
 	},
 	[78] = { 
@@ -932,7 +932,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="修罗杖",
-		value=6,
+		value=14,
 		var="T37",
 	},
 	[79] = { 
@@ -944,7 +944,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="隐魔杖",
-		value=7,
+		value=23,
 		var="T37",
 	},
 	[80] = { 
@@ -956,7 +956,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="血玉魔杖",
-		value=8,
+		value=25,
 		var="T37",
 	},
 	[81] = { 
@@ -980,7 +980,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="飞烟刃",
-		value=2,
+		value=3,
 		var="T37",
 	},
 	[83] = { 
@@ -992,7 +992,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="冷月侠刃",
-		value=3,
+		value=6,
 		var="T37",
 	},
 	[84] = { 
@@ -1004,7 +1004,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="柳叶侠刃",
-		value=4,
+		value=8,
 		var="T37",
 	},
 	[85] = { 
@@ -1016,7 +1016,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="凝雪寒霜刃",
-		value=5,
+		value=12,
 		var="T37",
 	},
 	[86] = { 
@@ -1028,7 +1028,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="炽厥寒霜刃",
-		value=6,
+		value=14,
 		var="T37",
 	},
 	[87] = { 
@@ -1040,7 +1040,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="惊雷降魔刃",
-		value=7,
+		value=23,
 		var="T37",
 	},
 	[88] = { 
@@ -1052,7 +1052,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="奔雷伏魔刃",
-		value=8,
+		value=25,
 		var="T37",
 	},
 	[89] = { 
@@ -1076,7 +1076,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="亡魂刃",
-		value=2,
+		value=3,
 		var="T37",
 	},
 	[91] = { 
@@ -1088,7 +1088,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="噬血邪刃",
-		value=3,
+		value=6,
 		var="T37",
 	},
 	[92] = { 
@@ -1100,7 +1100,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="鬼眼邪刃",
-		value=4,
+		value=8,
 		var="T37",
 	},
 	[93] = { 
@@ -1112,7 +1112,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="厉枭降鬼刃",
-		value=5,
+		value=12,
 		var="T37",
 	},
 	[94] = { 
@@ -1124,7 +1124,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="狐狼降鬼刃",
-		value=6,
+		value=14,
 		var="T37",
 	},
 	[95] = { 
@@ -1136,7 +1136,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="赤龙离魂刃",
-		value=7,
+		value=23,
 		var="T37",
 	},
 	[96] = { 
@@ -1148,7 +1148,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="鬼龙断魂刃",
-		value=8,
+		value=25,
 		var="T37",
 	},
 	[97] = { 
@@ -1160,7 +1160,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙虎战袍(男)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[98] = { 
@@ -1172,7 +1172,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙虎战袍(女)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[99] = { 
@@ -1184,7 +1184,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="封神战袍(男)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[100] = { 
@@ -1196,7 +1196,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="封神战袍(女)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[101] = { 
@@ -1208,7 +1208,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="昊天战袍(男)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[102] = { 
@@ -1220,7 +1220,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="昊天战袍(女)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[103] = { 
@@ -1232,7 +1232,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="广寒战袍(男)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[104] = { 
@@ -1244,7 +1244,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="广寒战袍(女)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[105] = { 
@@ -1256,7 +1256,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="武皇战袍(男)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[106] = { 
@@ -1268,7 +1268,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="武皇战袍(女)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[107] = { 
@@ -1280,7 +1280,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神战袍(男)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[108] = { 
@@ -1292,7 +1292,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神战袍(女)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[109] = { 
@@ -1304,7 +1304,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天灵战袍(男)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[110] = { 
@@ -1316,7 +1316,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天灵战袍(女)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[111] = { 
@@ -1328,7 +1328,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾战袍(男)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[112] = { 
@@ -1340,7 +1340,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾战袍(女)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[113] = { 
@@ -1352,7 +1352,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="破天战袍(男)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[114] = { 
@@ -1364,7 +1364,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="破天战袍(女)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[115] = { 
@@ -1376,7 +1376,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="赤龙战袍(男)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[116] = { 
@@ -1388,7 +1388,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="赤龙战袍(女)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[117] = { 
@@ -1400,7 +1400,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="雪天战袍(男)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[118] = { 
@@ -1412,7 +1412,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="雪天战袍(女)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[119] = { 
@@ -1424,7 +1424,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="地藏战袍(男)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[120] = { 
@@ -1436,7 +1436,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="地藏战袍(女)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[121] = { 
@@ -1448,7 +1448,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血战袍(男)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[122] = { 
@@ -1460,7 +1460,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血战袍(女)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[123] = { 
@@ -1472,7 +1472,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="霸皇战袍(男)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[124] = { 
@@ -1484,7 +1484,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="霸皇战袍(女)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[125] = { 
@@ -1496,7 +1496,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="魔灵战袍(男)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[126] = { 
@@ -1508,7 +1508,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="魔灵战袍(女)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[127] = { 
@@ -1520,7 +1520,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔战袍(男)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[128] = { 
@@ -1532,7 +1532,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔战袍(女)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[129] = { 
@@ -1544,7 +1544,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙虎枪衣(男)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[130] = { 
@@ -1556,7 +1556,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙虎枪衣(女)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[131] = { 
@@ -1568,7 +1568,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="封神枪衣(男)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[132] = { 
@@ -1580,7 +1580,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="封神枪衣(女)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[133] = { 
@@ -1592,7 +1592,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="昊天枪衣(男)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[134] = { 
@@ -1604,7 +1604,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="昊天枪衣(女)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[135] = { 
@@ -1616,7 +1616,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="广寒枪衣(男)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[136] = { 
@@ -1628,7 +1628,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="广寒枪衣(女)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[137] = { 
@@ -1640,7 +1640,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="武皇枪衣(男)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[138] = { 
@@ -1652,7 +1652,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="武皇枪衣(女)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[139] = { 
@@ -1664,7 +1664,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神枪衣(男)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[140] = { 
@@ -1676,7 +1676,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神枪衣(女)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[141] = { 
@@ -1688,7 +1688,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天灵枪衣(男)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[142] = { 
@@ -1700,7 +1700,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天灵枪衣(女)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[143] = { 
@@ -1712,7 +1712,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾枪衣(男)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[144] = { 
@@ -1724,7 +1724,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾枪衣(女)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[145] = { 
@@ -1736,7 +1736,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="破天枪衣(男)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[146] = { 
@@ -1748,7 +1748,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="破天枪衣(女)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[147] = { 
@@ -1760,7 +1760,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="赤龙枪衣(男)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[148] = { 
@@ -1772,7 +1772,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="赤龙枪衣(女)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[149] = { 
@@ -1784,7 +1784,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="雪天枪衣(男)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[150] = { 
@@ -1796,7 +1796,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="雪天枪衣(女)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[151] = { 
@@ -1808,7 +1808,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="地藏枪衣(男)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[152] = { 
@@ -1820,7 +1820,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="地藏枪衣(女)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[153] = { 
@@ -1832,7 +1832,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="霸皇枪衣(男)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[154] = { 
@@ -1844,7 +1844,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="霸皇枪衣(女)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[155] = { 
@@ -1856,7 +1856,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血枪衣(男)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[156] = { 
@@ -1868,7 +1868,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血枪衣(女)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[157] = { 
@@ -1880,7 +1880,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魔灵枪衣(男)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[158] = { 
@@ -1892,7 +1892,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魔灵枪衣(女)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[159] = { 
@@ -1904,7 +1904,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔枪衣(男)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[160] = { 
@@ -1916,7 +1916,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔枪衣(女)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[161] = { 
@@ -1928,7 +1928,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙虎侠衣(男)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[162] = { 
@@ -1940,7 +1940,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙虎侠衣(女)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[163] = { 
@@ -1952,7 +1952,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="封神侠衣(男)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[164] = { 
@@ -1964,7 +1964,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="封神侠衣(女)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[165] = { 
@@ -1976,7 +1976,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="昊天侠衣(男)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[166] = { 
@@ -1988,7 +1988,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="昊天侠衣(女)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[167] = { 
@@ -2000,7 +2000,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="广寒侠衣(男)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[168] = { 
@@ -2012,7 +2012,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="广寒侠衣(女)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[169] = { 
@@ -2024,7 +2024,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="武皇侠衣(男)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[170] = { 
@@ -2036,7 +2036,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="武皇侠衣(女)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[171] = { 
@@ -2048,7 +2048,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神侠衣(男)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[172] = { 
@@ -2060,7 +2060,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神侠衣(女)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[173] = { 
@@ -2072,7 +2072,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天灵侠衣(男)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[174] = { 
@@ -2084,7 +2084,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天灵侠衣(女)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[175] = { 
@@ -2096,7 +2096,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾侠衣(男)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[176] = { 
@@ -2108,7 +2108,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾侠衣(女)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[177] = { 
@@ -2120,7 +2120,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="破天侠衣(男)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[178] = { 
@@ -2132,7 +2132,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="破天侠衣(女)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[179] = { 
@@ -2144,7 +2144,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="赤龙侠衣(男)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[180] = { 
@@ -2156,7 +2156,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="赤龙侠衣(女)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[181] = { 
@@ -2168,7 +2168,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="雪天侠衣(男)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[182] = { 
@@ -2180,7 +2180,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="雪天侠衣(女)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[183] = { 
@@ -2192,7 +2192,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="地藏侠衣(男)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[184] = { 
@@ -2204,7 +2204,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="地藏侠衣(女)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[185] = { 
@@ -2216,7 +2216,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="霸皇侠衣(男)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[186] = { 
@@ -2228,7 +2228,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="霸皇侠衣(女)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[187] = { 
@@ -2240,7 +2240,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血侠衣(男)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[188] = { 
@@ -2252,7 +2252,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血侠衣(女)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[189] = { 
@@ -2264,7 +2264,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="魔灵侠衣(男)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[190] = { 
@@ -2276,7 +2276,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="魔灵侠衣(女)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[191] = { 
@@ -2288,7 +2288,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔侠衣(男)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[192] = { 
@@ -2300,7 +2300,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔侠衣(女)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[193] = { 
@@ -2312,7 +2312,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙虎战衣(男)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[194] = { 
@@ -2324,7 +2324,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙虎战衣(女)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[195] = { 
@@ -2336,7 +2336,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="封神战衣(男)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[196] = { 
@@ -2348,7 +2348,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="封神战衣(女)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[197] = { 
@@ -2360,7 +2360,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="昊天战衣(男)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[198] = { 
@@ -2372,7 +2372,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="昊天战衣(女)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[199] = { 
@@ -2384,7 +2384,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="广寒战衣(男)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[200] = { 
@@ -2396,7 +2396,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="广寒战衣(女)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[201] = { 
@@ -2408,7 +2408,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="武皇战衣(男)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[202] = { 
@@ -2420,7 +2420,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="武皇战衣(女)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[203] = { 
@@ -2432,7 +2432,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神战衣(男)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[204] = { 
@@ -2444,7 +2444,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神战衣(女)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[205] = { 
@@ -2456,7 +2456,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天灵战衣(男)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[206] = { 
@@ -2468,7 +2468,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天灵战衣(女)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[207] = { 
@@ -2480,7 +2480,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾战衣(男)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[208] = { 
@@ -2492,7 +2492,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾战衣(女)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[209] = { 
@@ -2504,7 +2504,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="破天战衣(男)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[210] = { 
@@ -2516,7 +2516,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="破天战衣(女)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[211] = { 
@@ -2528,7 +2528,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="赤龙战衣(男)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[212] = { 
@@ -2540,7 +2540,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="赤龙战衣(女)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[213] = { 
@@ -2552,7 +2552,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="雪天战衣(男)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[214] = { 
@@ -2564,7 +2564,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="雪天战衣(女)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[215] = { 
@@ -2576,7 +2576,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="地藏战衣(男)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[216] = { 
@@ -2588,7 +2588,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="地藏战衣(女)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[217] = { 
@@ -2600,7 +2600,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="霸皇战衣(男)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[218] = { 
@@ -2612,7 +2612,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="霸皇战衣(女)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[219] = { 
@@ -2624,7 +2624,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血战衣(男)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[220] = { 
@@ -2636,7 +2636,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血战衣(女)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[221] = { 
@@ -2648,7 +2648,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="魔灵战衣(男)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[222] = { 
@@ -2660,7 +2660,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="魔灵战衣(女)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[223] = { 
@@ -2672,7 +2672,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔战衣(男)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[224] = { 
@@ -2684,7 +2684,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔战衣(女)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[225] = { 
@@ -2696,7 +2696,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙虎法袍(男)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[226] = { 
@@ -2708,7 +2708,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙虎法袍(女)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[227] = { 
@@ -2720,7 +2720,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="封神法袍(男)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[228] = { 
@@ -2732,7 +2732,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="封神法袍(女)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[229] = { 
@@ -2744,7 +2744,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="昊天法袍(男)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[230] = { 
@@ -2756,7 +2756,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="昊天法袍(女)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[231] = { 
@@ -2768,7 +2768,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="广寒法袍(男)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[232] = { 
@@ -2780,7 +2780,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="广寒法袍(女)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[233] = { 
@@ -2792,7 +2792,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="武皇法袍(男)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[234] = { 
@@ -2804,7 +2804,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="武皇法袍(女)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[235] = { 
@@ -2816,7 +2816,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神法袍(男)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[236] = { 
@@ -2828,7 +2828,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神法袍(女)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[237] = { 
@@ -2840,7 +2840,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="天灵法袍(男)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[238] = { 
@@ -2852,7 +2852,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="天灵法袍(女)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[239] = { 
@@ -2864,7 +2864,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾法袍(男)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[240] = { 
@@ -2876,7 +2876,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾法袍(女)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[241] = { 
@@ -2888,7 +2888,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="破天法袍(男)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[242] = { 
@@ -2900,7 +2900,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="破天法袍(女)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[243] = { 
@@ -2912,7 +2912,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="赤龙法袍(男)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[244] = { 
@@ -2924,7 +2924,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="赤龙法袍(女)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[245] = { 
@@ -2936,7 +2936,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="雪天法袍(男)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[246] = { 
@@ -2948,7 +2948,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="雪天法袍(女)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[247] = { 
@@ -2960,7 +2960,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="地藏法袍(男)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[248] = { 
@@ -2972,7 +2972,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="地藏法袍(女)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[249] = { 
@@ -2984,7 +2984,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="霸皇法袍(男)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[250] = { 
@@ -2996,7 +2996,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="霸皇法袍(女)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[251] = { 
@@ -3008,7 +3008,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血法袍(男)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[252] = { 
@@ -3020,7 +3020,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血法袍(女)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[253] = { 
@@ -3032,7 +3032,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="魔灵法袍(男)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[254] = { 
@@ -3044,7 +3044,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="魔灵法袍(女)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[255] = { 
@@ -3056,7 +3056,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔法袍(男)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[256] = { 
@@ -3068,7 +3068,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔法袍(女)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[257] = { 
@@ -3080,7 +3080,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙虎戎装(男)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[258] = { 
@@ -3092,7 +3092,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙虎戎装(女)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[259] = { 
@@ -3104,7 +3104,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="封神戎装(男)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[260] = { 
@@ -3116,7 +3116,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="封神戎装(女)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[261] = { 
@@ -3128,7 +3128,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="昊天戎装(男)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[262] = { 
@@ -3140,7 +3140,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="昊天戎装(女)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[263] = { 
@@ -3152,7 +3152,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="广寒戎装(男)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[264] = { 
@@ -3164,7 +3164,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="广寒戎装(女)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[265] = { 
@@ -3176,7 +3176,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="武皇戎装(男)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[266] = { 
@@ -3188,7 +3188,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="武皇戎装(女)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[267] = { 
@@ -3200,7 +3200,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神戎装(男)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[268] = { 
@@ -3212,7 +3212,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神戎装(女)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[269] = { 
@@ -3224,7 +3224,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="天灵戎装(男)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[270] = { 
@@ -3236,7 +3236,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="天灵戎装(女)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[271] = { 
@@ -3248,7 +3248,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾戎装(男)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[272] = { 
@@ -3260,7 +3260,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾戎装(女)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[273] = { 
@@ -3272,7 +3272,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="破天戎装(男)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[274] = { 
@@ -3284,7 +3284,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="破天戎装(女)",
-		value=1,
+		value=3,
 		var="T38",
 	},
 	[275] = { 
@@ -3296,7 +3296,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="赤龙戎装(男)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[276] = { 
@@ -3308,7 +3308,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="赤龙戎装(女)",
-		value=2,
+		value=5,
 		var="T38",
 	},
 	[277] = { 
@@ -3320,7 +3320,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="雪天戎装(男)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[278] = { 
@@ -3332,7 +3332,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="雪天戎装(女)",
-		value=3,
+		value=7,
 		var="T38",
 	},
 	[279] = { 
@@ -3344,7 +3344,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="地藏戎装(男)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[280] = { 
@@ -3356,7 +3356,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="地藏戎装(女)",
-		value=4,
+		value=9,
 		var="T38",
 	},
 	[281] = { 
@@ -3368,7 +3368,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="霸皇戎装(男)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[282] = { 
@@ -3380,7 +3380,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="霸皇戎装(女)",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[283] = { 
@@ -3392,7 +3392,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血戎装(男)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[284] = { 
@@ -3404,7 +3404,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血戎装(女)",
-		value=5,
+		value=12,
 		var="T38",
 	},
 	[285] = { 
@@ -3416,7 +3416,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="魔灵戎装(男)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[286] = { 
@@ -3428,7 +3428,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="魔灵戎装(女)",
-		value=6,
+		value=16,
 		var="T38",
 	},
 	[287] = { 
@@ -3440,7 +3440,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔戎装(男)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[288] = { 
@@ -3452,7 +3452,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔戎装(女)",
-		value=7,
+		value=20,
 		var="T38",
 	},
 	[289] = { 
@@ -3464,7 +3464,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="百战刀",
-		value=5,
+		value=2,
 		var="T37",
 	},
 	[290] = { 
@@ -3476,7 +3476,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="青龙刀",
-		value=5,
+		value=3,
 		var="T37",
 	},
 	[291] = { 
@@ -3500,7 +3500,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="飞翔刀",
-		value=6,
+		value=10,
 		var="T37",
 	},
 	[293] = { 
@@ -3512,7 +3512,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="百魂刀",
-		value=6,
+		value=12,
 		var="T37",
 	},
 	[294] = { 
@@ -3524,7 +3524,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天劫斩",
-		value=7,
+		value=20,
 		var="T37",
 	},
 	[295] = { 
@@ -3536,7 +3536,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="破天夺命刀",
-		value=7,
+		value=22,
 		var="T37",
 	},
 	[296] = { 
@@ -3548,7 +3548,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="破风",
-		value=8,
+		value=28,
 		var="T37",
 	},
 	[297] = { 
@@ -3560,7 +3560,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="断水",
-		value=8,
+		value=30,
 		var="T37",
 	},
 	[298] = { 
@@ -3572,7 +3572,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="白月刀",
-		value=5,
+		value=2,
 		var="T37",
 	},
 	[299] = { 
@@ -3584,7 +3584,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="破仙刀",
-		value=5,
+		value=3,
 		var="T37",
 	},
 	[300] = { 
@@ -3608,7 +3608,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="斩魔刀",
-		value=6,
+		value=10,
 		var="T37",
 	},
 	[302] = { 
@@ -3620,7 +3620,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="磐龙刀",
-		value=6,
+		value=12,
 		var="T37",
 	},
 	[303] = { 
@@ -3632,7 +3632,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="金玉花翎刀",
-		value=7,
+		value=20,
 		var="T37",
 	},
 	[304] = { 
@@ -3644,7 +3644,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="玄铁摄魂刀",
-		value=7,
+		value=22,
 		var="T37",
 	},
 	[305] = { 
@@ -3656,7 +3656,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="开山",
-		value=8,
+		value=28,
 		var="T37",
 	},
 	[306] = { 
@@ -3668,7 +3668,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="斩马",
-		value=8,
+		value=30,
 		var="T37",
 	},
 	[307] = { 
@@ -3680,7 +3680,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="渤海刀",
-		value=11,
+		value=16,
 		var="T37",
 	},
 	[308] = { 
@@ -3692,7 +3692,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="破天夺命刀",
-		value=12,
+		value=22,
 		var="T37",
 	},
 	[309] = { 
@@ -3704,43 +3704,43 @@ local config = {
 		job=5,
 		sect=1,
 		showName="紫金盘龙刀",
-		value=12,
+		value=24,
 		var="T37",
 	},
 	[310] = { 
 		index=310,
 		type=3,
 		sort=4,
-		idx=52036,
-		equipName="屠龙1",
+		idx=52047,
+		equipName="破风4",
 		job=5,
 		sect=1,
-		showName="屠龙",
-		value=13,
+		showName="破风",
+		value=28,
 		var="T37",
 	},
 	[311] = { 
 		index=311,
 		type=3,
 		sort=5,
-		idx=52047,
-		equipName="破风4",
+		idx=52048,
+		equipName="断水4",
 		job=5,
 		sect=1,
-		showName="破风",
-		value=13,
+		showName="断水",
+		value=30,
 		var="T37",
 	},
 	[312] = { 
 		index=312,
 		type=3,
 		sort=6,
-		idx=52048,
-		equipName="断水4",
+		idx=52036,
+		equipName="屠龙1",
 		job=5,
 		sect=1,
-		showName="断水",
-		value=13,
+		showName="屠龙",
+		value=32,
 		var="T37",
 	},
 	[313] = { 
@@ -3752,7 +3752,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="血吟刀",
-		value=11,
+		value=16,
 		var="T37",
 	},
 	[314] = { 
@@ -3764,7 +3764,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="玄铁摄魂刀",
-		value=12,
+		value=22,
 		var="T37",
 	},
 	[315] = { 
@@ -3776,7 +3776,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="金刚破天斩",
-		value=12,
+		value=24,
 		var="T37",
 	},
 	[316] = { 
@@ -3788,7 +3788,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="开山",
-		value=13,
+		value=28,
 		var="T37",
 	},
 	[317] = { 
@@ -3800,7 +3800,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="斩马",
-		value=13,
+		value=30,
 		var="T37",
 	},
 	[318] = { 
@@ -3812,7 +3812,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="戮神",
-		value=13,
+		value=32,
 		var="T37",
 	},
 	[319] = { 
@@ -3824,7 +3824,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天铘枪",
-		value=5,
+		value=2,
 		var="T37",
 	},
 	[320] = { 
@@ -3836,7 +3836,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="七星枪",
-		value=5,
+		value=3,
 		var="T37",
 	},
 	[321] = { 
@@ -3860,7 +3860,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="九龙枪",
-		value=6,
+		value=10,
 		var="T37",
 	},
 	[323] = { 
@@ -3872,7 +3872,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="神慧枪",
-		value=6,
+		value=12,
 		var="T37",
 	},
 	[324] = { 
@@ -3884,7 +3884,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="追月流星枪",
-		value=7,
+		value=20,
 		var="T37",
 	},
 	[325] = { 
@@ -3896,7 +3896,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="翠玉金刚枪",
-		value=7,
+		value=22,
 		var="T37",
 	},
 	[326] = { 
@@ -3908,7 +3908,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙胆亮银枪",
-		value=8,
+		value=28,
 		var="T37",
 	},
 	[327] = { 
@@ -3920,7 +3920,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="虎头湛金枪",
-		value=8,
+		value=30,
 		var="T37",
 	},
 	[328] = { 
@@ -3932,7 +3932,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魅焰枪",
-		value=5,
+		value=2,
 		var="T37",
 	},
 	[329] = { 
@@ -3944,7 +3944,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="噬魄枪",
-		value=5,
+		value=3,
 		var="T37",
 	},
 	[330] = { 
@@ -3968,7 +3968,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="天诛枪",
-		value=6,
+		value=10,
 		var="T37",
 	},
 	[332] = { 
@@ -3980,7 +3980,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="吟血魔枪",
-		value=6,
+		value=12,
 		var="T37",
 	},
 	[333] = { 
@@ -3992,7 +3992,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="八卦太和枪",
-		value=7,
+		value=20,
 		var="T37",
 	},
 	[334] = { 
@@ -4004,7 +4004,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="追魂衍魔枪",
-		value=7,
+		value=22,
 		var="T37",
 	},
 	[335] = { 
@@ -4016,7 +4016,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="五虎断魂枪",
-		value=8,
+		value=28,
 		var="T37",
 	},
 	[336] = { 
@@ -4028,7 +4028,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="神威烈炎枪",
-		value=8,
+		value=30,
 		var="T37",
 	},
 	[337] = { 
@@ -4040,7 +4040,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="磐龙破魔枪",
-		value=11,
+		value=16,
 		var="T37",
 	},
 	[338] = { 
@@ -4052,7 +4052,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="翠玉金刚枪",
-		value=12,
+		value=22,
 		var="T37",
 	},
 	[339] = { 
@@ -4064,43 +4064,43 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天人神枪",
-		value=12,
+		value=24,
 		var="T37",
 	},
 	[340] = { 
 		index=340,
 		type=3,
 		sort=4,
-		idx=54035,
-		equipName="一丈威1",
+		idx=54046,
+		equipName="龙胆亮银枪4",
 		job=2,
 		sect=1,
-		showName="一丈威",
-		value=13,
+		showName="龙胆亮银枪",
+		value=28,
 		var="T37",
 	},
 	[341] = { 
 		index=341,
 		type=3,
 		sort=5,
-		idx=54046,
-		equipName="龙胆亮银枪4",
+		idx=54047,
+		equipName="虎头湛金枪4",
 		job=2,
 		sect=1,
-		showName="龙胆亮银枪",
-		value=13,
+		showName="虎头湛金枪",
+		value=30,
 		var="T37",
 	},
 	[342] = { 
 		index=342,
 		type=3,
 		sort=6,
-		idx=54047,
-		equipName="虎头湛金枪4",
+		idx=54035,
+		equipName="一丈威1",
 		job=2,
 		sect=1,
-		showName="虎头湛金枪",
-		value=13,
+		showName="一丈威",
+		value=32,
 		var="T37",
 	},
 	[343] = { 
@@ -4112,7 +4112,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="灭世断魂枪",
-		value=11,
+		value=16,
 		var="T37",
 	},
 	[344] = { 
@@ -4124,7 +4124,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="追魂衍魔枪",
-		value=12,
+		value=22,
 		var="T37",
 	},
 	[345] = { 
@@ -4136,7 +4136,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="天魔神枪",
-		value=12,
+		value=24,
 		var="T37",
 	},
 	[346] = { 
@@ -4148,31 +4148,31 @@ local config = {
 		job=2,
 		sect=2,
 		showName="神威烈炎枪",
-		value=13,
+		value=28,
 		var="T37",
 	},
 	[347] = { 
 		index=347,
 		type=3,
 		sort=5,
-		idx=54038,
-		equipName="五毒透龙枪1",
+		idx=54055,
+		equipName="五虎断魂枪4",
 		job=2,
 		sect=2,
-		showName="五毒透龙枪",
-		value=13,
+		showName="五虎断魂枪",
+		value=30,
 		var="T37",
 	},
 	[348] = { 
 		index=348,
 		type=3,
 		sort=6,
-		idx=54055,
-		equipName="五虎断魂枪4",
+		idx=54038,
+		equipName="五毒透龙枪1",
 		job=2,
 		sect=2,
-		showName="五虎断魂枪",
-		value=13,
+		showName="五毒透龙枪",
+		value=32,
 		var="T37",
 	},
 	[349] = { 
@@ -4184,7 +4184,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天命剑",
-		value=5,
+		value=2,
 		var="T37",
 	},
 	[350] = { 
@@ -4196,7 +4196,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="寒月剑",
-		value=5,
+		value=3,
 		var="T37",
 	},
 	[351] = { 
@@ -4220,7 +4220,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="流光剑",
-		value=6,
+		value=10,
 		var="T37",
 	},
 	[353] = { 
@@ -4232,7 +4232,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="新月剑",
-		value=6,
+		value=12,
 		var="T37",
 	},
 	[354] = { 
@@ -4244,7 +4244,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="清风落英剑",
-		value=7,
+		value=20,
 		var="T37",
 	},
 	[355] = { 
@@ -4256,7 +4256,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="青月飞虹剑",
-		value=7,
+		value=22,
 		var="T37",
 	},
 	[356] = { 
@@ -4268,7 +4268,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="无影",
-		value=8,
+		value=28,
 		var="T37",
 	},
 	[357] = { 
@@ -4280,7 +4280,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="湛卢",
-		value=8,
+		value=30,
 		var="T37",
 	},
 	[358] = { 
@@ -4292,7 +4292,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="神影剑",
-		value=5,
+		value=2,
 		var="T37",
 	},
 	[359] = { 
@@ -4304,7 +4304,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="血魔剑",
-		value=5,
+		value=3,
 		var="T37",
 	},
 	[360] = { 
@@ -4328,7 +4328,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="斩玄剑",
-		value=6,
+		value=10,
 		var="T37",
 	},
 	[362] = { 
@@ -4340,7 +4340,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="赤朱剑",
-		value=6,
+		value=12,
 		var="T37",
 	},
 	[363] = { 
@@ -4352,7 +4352,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="天魔流星剑",
-		value=7,
+		value=20,
 		var="T37",
 	},
 	[364] = { 
@@ -4364,7 +4364,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="碧海狂灵剑",
-		value=7,
+		value=22,
 		var="T37",
 	},
 	[365] = { 
@@ -4376,7 +4376,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="碧血磐云剑",
-		value=8,
+		value=28,
 		var="T37",
 	},
 	[366] = { 
@@ -4388,7 +4388,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="金蛇",
-		value=8,
+		value=30,
 		var="T37",
 	},
 	[367] = { 
@@ -4400,7 +4400,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天地剑",
-		value=11,
+		value=16,
 		var="T37",
 	},
 	[368] = { 
@@ -4412,7 +4412,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="青月飞虹剑",
-		value=12,
+		value=22,
 		var="T37",
 	},
 	[369] = { 
@@ -4424,43 +4424,43 @@ local config = {
 		job=6,
 		sect=1,
 		showName="霸王之剑",
-		value=12,
+		value=24,
 		var="T37",
 	},
 	[370] = { 
 		index=370,
 		type=3,
 		sort=4,
-		idx=56035,
-		equipName="轩辕1",
+		idx=56045,
+		equipName="无影4",
 		job=6,
 		sect=1,
-		showName="轩辕",
-		value=13,
+		showName="无影",
+		value=28,
 		var="T37",
 	},
 	[371] = { 
 		index=371,
 		type=3,
 		sort=5,
-		idx=56045,
-		equipName="无影4",
+		idx=56046,
+		equipName="湛卢4",
 		job=6,
 		sect=1,
-		showName="无影",
-		value=13,
+		showName="湛卢",
+		value=30,
 		var="T37",
 	},
 	[372] = { 
 		index=372,
 		type=3,
 		sort=6,
-		idx=56046,
-		equipName="湛卢4",
+		idx=56035,
+		equipName="轩辕1",
 		job=6,
 		sect=1,
-		showName="湛卢",
-		value=13,
+		showName="轩辕",
+		value=32,
 		var="T37",
 	},
 	[373] = { 
@@ -4472,7 +4472,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="逐日追风剑",
-		value=11,
+		value=16,
 		var="T37",
 	},
 	[374] = { 
@@ -4484,7 +4484,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="碧海狂灵剑",
-		value=12,
+		value=22,
 		var="T37",
 	},
 	[375] = { 
@@ -4496,43 +4496,43 @@ local config = {
 		job=6,
 		sect=2,
 		showName="惟尊剑",
-		value=12,
+		value=24,
 		var="T37",
 	},
 	[376] = { 
 		index=376,
 		type=3,
 		sort=4,
-		idx=56037,
-		equipName="诛仙1",
+		idx=56054,
+		equipName="碧血磐云剑4",
 		job=6,
 		sect=2,
-		showName="诛仙",
-		value=13,
+		showName="碧血磐云剑",
+		value=28,
 		var="T37",
 	},
 	[377] = { 
 		index=377,
 		type=3,
 		sort=5,
-		idx=56054,
-		equipName="碧血磐云剑4",
+		idx=56055,
+		equipName="金蛇4",
 		job=6,
 		sect=2,
-		showName="碧血磐云剑",
-		value=13,
+		showName="金蛇",
+		value=30,
 		var="T37",
 	},
 	[378] = { 
 		index=378,
 		type=3,
 		sort=6,
-		idx=56055,
-		equipName="金蛇4",
+		idx=56037,
+		equipName="诛仙1",
 		job=6,
 		sect=2,
-		showName="金蛇",
-		value=13,
+		showName="诛仙",
+		value=32,
 		var="T37",
 	},
 	[379] = { 
@@ -4544,7 +4544,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙神弓",
-		value=5,
+		value=2,
 		var="T37",
 	},
 	[380] = { 
@@ -4556,7 +4556,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="圣者弓",
-		value=5,
+		value=3,
 		var="T37",
 	},
 	[381] = { 
@@ -4580,7 +4580,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="封魔弓",
-		value=6,
+		value=10,
 		var="T37",
 	},
 	[383] = { 
@@ -4592,7 +4592,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="紫灵弓",
-		value=6,
+		value=12,
 		var="T37",
 	},
 	[384] = { 
@@ -4604,7 +4604,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天籁麒麟弓",
-		value=7,
+		value=20,
 		var="T37",
 	},
 	[385] = { 
@@ -4616,7 +4616,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="玄武云天弓",
-		value=7,
+		value=22,
 		var="T37",
 	},
 	[386] = { 
@@ -4628,7 +4628,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="异彩神弓",
-		value=8,
+		value=28,
 		var="T37",
 	},
 	[387] = { 
@@ -4640,7 +4640,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="凤舞神弓",
-		value=8,
+		value=30,
 		var="T37",
 	},
 	[388] = { 
@@ -4652,7 +4652,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="血魂弓",
-		value=5,
+		value=2,
 		var="T37",
 	},
 	[389] = { 
@@ -4664,7 +4664,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="天狼弓",
-		value=5,
+		value=3,
 		var="T37",
 	},
 	[390] = { 
@@ -4688,7 +4688,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="弑神弓",
-		value=6,
+		value=10,
 		var="T37",
 	},
 	[392] = { 
@@ -4700,7 +4700,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="破甲弓",
-		value=6,
+		value=12,
 		var="T37",
 	},
 	[393] = { 
@@ -4712,7 +4712,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="碧血磐云弓",
-		value=7,
+		value=20,
 		var="T37",
 	},
 	[394] = { 
@@ -4724,7 +4724,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="嗜血夺魂弓",
-		value=7,
+		value=22,
 		var="T37",
 	},
 	[395] = { 
@@ -4736,7 +4736,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="血羽魔弓",
-		value=8,
+		value=28,
 		var="T37",
 	},
 	[396] = { 
@@ -4748,7 +4748,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="蓝电魔弓",
-		value=8,
+		value=30,
 		var="T37",
 	},
 	[397] = { 
@@ -4760,7 +4760,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="九天神弓",
-		value=11,
+		value=16,
 		var="T37",
 	},
 	[398] = { 
@@ -4772,7 +4772,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="玄武云天弓",
-		value=12,
+		value=22,
 		var="T37",
 	},
 	[399] = { 
@@ -4784,43 +4784,43 @@ local config = {
 		job=1,
 		sect=1,
 		showName="羿王神弓",
-		value=12,
+		value=24,
 		var="T37",
 	},
 	[400] = { 
 		index=400,
 		type=3,
 		sort=4,
-		idx=58035,
-		equipName="腾龙神弓1",
+		idx=58045,
+		equipName="异彩神弓4",
 		job=1,
 		sect=1,
-		showName="腾龙神弓",
-		value=13,
+		showName="异彩神弓",
+		value=28,
 		var="T37",
 	},
 	[401] = { 
 		index=401,
 		type=3,
 		sort=5,
-		idx=58045,
-		equipName="异彩神弓4",
+		idx=58046,
+		equipName="凤舞神弓4",
 		job=1,
 		sect=1,
-		showName="异彩神弓",
-		value=13,
+		showName="凤舞神弓",
+		value=30,
 		var="T37",
 	},
 	[402] = { 
 		index=402,
 		type=3,
 		sort=6,
-		idx=58046,
-		equipName="凤舞神弓4",
+		idx=58035,
+		equipName="腾龙神弓1",
 		job=1,
 		sect=1,
-		showName="凤舞神弓",
-		value=13,
+		showName="腾龙神弓",
+		value=32,
 		var="T37",
 	},
 	[403] = { 
@@ -4832,7 +4832,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="冥魂魔弓",
-		value=11,
+		value=16,
 		var="T37",
 	},
 	[404] = { 
@@ -4844,7 +4844,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="嗜血夺魂弓",
-		value=12,
+		value=22,
 		var="T37",
 	},
 	[405] = { 
@@ -4856,43 +4856,43 @@ local config = {
 		job=1,
 		sect=2,
 		showName="诛神魔弓",
-		value=12,
+		value=24,
 		var="T37",
 	},
 	[406] = { 
 		index=406,
 		type=3,
 		sort=4,
-		idx=58037,
-		equipName="冥王魔弓1",
+		idx=58054,
+		equipName="血羽魔弓4",
 		job=1,
 		sect=2,
-		showName="冥王魔弓",
-		value=13,
+		showName="血羽魔弓",
+		value=28,
 		var="T37",
 	},
 	[407] = { 
 		index=407,
 		type=3,
 		sort=5,
-		idx=58054,
-		equipName="血羽魔弓4",
+		idx=58055,
+		equipName="蓝电魔弓4",
 		job=1,
 		sect=2,
-		showName="血羽魔弓",
-		value=13,
+		showName="蓝电魔弓",
+		value=30,
 		var="T37",
 	},
 	[408] = { 
 		index=408,
 		type=3,
 		sort=6,
-		idx=58055,
-		equipName="蓝电魔弓4",
+		idx=58037,
+		equipName="冥王魔弓1",
 		job=1,
 		sect=2,
-		showName="蓝电魔弓",
-		value=13,
+		showName="冥王魔弓",
+		value=32,
 		var="T37",
 	},
 	[409] = { 
@@ -4904,7 +4904,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="九锡杖",
-		value=5,
+		value=2,
 		var="T37",
 	},
 	[410] = { 
@@ -4916,7 +4916,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="火欲杖",
-		value=5,
+		value=3,
 		var="T37",
 	},
 	[411] = { 
@@ -4940,7 +4940,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="鬼头杖",
-		value=6,
+		value=10,
 		var="T37",
 	},
 	[413] = { 
@@ -4952,7 +4952,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="寒龙杖",
-		value=6,
+		value=12,
 		var="T37",
 	},
 	[414] = { 
@@ -4964,7 +4964,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="行者杖",
-		value=7,
+		value=20,
 		var="T37",
 	},
 	[415] = { 
@@ -4976,7 +4976,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="辟邪之杖",
-		value=7,
+		value=22,
 		var="T37",
 	},
 	[416] = { 
@@ -4988,7 +4988,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="仁者神杖",
-		value=8,
+		value=28,
 		var="T37",
 	},
 	[417] = { 
@@ -5000,7 +5000,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="伏虎神杖",
-		value=8,
+		value=30,
 		var="T37",
 	},
 	[418] = { 
@@ -5012,7 +5012,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="九天杖",
-		value=5,
+		value=2,
 		var="T37",
 	},
 	[419] = { 
@@ -5024,7 +5024,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="鬼泣杖",
-		value=5,
+		value=3,
 		var="T37",
 	},
 	[420] = { 
@@ -5048,7 +5048,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="冥蛇杖",
-		value=6,
+		value=10,
 		var="T37",
 	},
 	[422] = { 
@@ -5060,7 +5060,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="万绝神杖",
-		value=6,
+		value=12,
 		var="T37",
 	},
 	[423] = { 
@@ -5072,7 +5072,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="修罗杖",
-		value=7,
+		value=20,
 		var="T37",
 	},
 	[424] = { 
@@ -5084,7 +5084,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="罗刹之杖",
-		value=7,
+		value=22,
 		var="T37",
 	},
 	[425] = { 
@@ -5096,7 +5096,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="隐魔杖",
-		value=8,
+		value=28,
 		var="T37",
 	},
 	[426] = { 
@@ -5108,7 +5108,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="血玉魔杖",
-		value=8,
+		value=30,
 		var="T37",
 	},
 	[427] = { 
@@ -5120,7 +5120,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="圣天神杖",
-		value=11,
+		value=16,
 		var="T37",
 	},
 	[428] = { 
@@ -5132,7 +5132,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="辟邪之杖",
-		value=12,
+		value=22,
 		var="T37",
 	},
 	[429] = { 
@@ -5144,43 +5144,43 @@ local config = {
 		job=4,
 		sect=1,
 		showName="太乙神杖",
-		value=12,
+		value=24,
 		var="T37",
 	},
 	[430] = { 
 		index=430,
 		type=3,
 		sort=4,
-		idx=51235,
-		equipName="降魔神杖1",
+		idx=51245,
+		equipName="仁者神杖4",
 		job=4,
 		sect=1,
-		showName="降魔神杖",
-		value=13,
+		showName="仁者神杖",
+		value=28,
 		var="T37",
 	},
 	[431] = { 
 		index=431,
 		type=3,
 		sort=5,
-		idx=51245,
-		equipName="仁者神杖4",
+		idx=51246,
+		equipName="伏虎神杖4",
 		job=4,
 		sect=1,
-		showName="仁者神杖",
-		value=13,
+		showName="伏虎神杖",
+		value=30,
 		var="T37",
 	},
 	[432] = { 
 		index=432,
 		type=3,
 		sort=6,
-		idx=51246,
-		equipName="伏虎神杖4",
+		idx=51235,
+		equipName="降魔神杖1",
 		job=4,
 		sect=1,
-		showName="伏虎神杖",
-		value=13,
+		showName="降魔神杖",
+		value=32,
 		var="T37",
 	},
 	[433] = { 
@@ -5192,7 +5192,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="蚀天魔杖",
-		value=11,
+		value=16,
 		var="T37",
 	},
 	[434] = { 
@@ -5204,7 +5204,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="罗刹之杖",
-		value=12,
+		value=22,
 		var="T37",
 	},
 	[435] = { 
@@ -5216,43 +5216,43 @@ local config = {
 		job=4,
 		sect=2,
 		showName="无极魔杖",
-		value=12,
+		value=24,
 		var="T37",
 	},
 	[436] = { 
 		index=436,
 		type=3,
 		sort=4,
-		idx=51237,
-		equipName="无天魔杖1",
+		idx=51254,
+		equipName="隐魔杖4",
 		job=4,
 		sect=2,
-		showName="无天魔杖",
-		value=13,
+		showName="隐魔杖",
+		value=28,
 		var="T37",
 	},
 	[437] = { 
 		index=437,
 		type=3,
 		sort=5,
-		idx=51254,
-		equipName="隐魔杖4",
+		idx=51255,
+		equipName="血玉魔杖4",
 		job=4,
 		sect=2,
-		showName="隐魔杖",
-		value=13,
+		showName="血玉魔杖",
+		value=30,
 		var="T37",
 	},
 	[438] = { 
 		index=438,
 		type=3,
 		sort=6,
-		idx=51255,
-		equipName="血玉魔杖4",
+		idx=51237,
+		equipName="无天魔杖1",
 		job=4,
 		sect=2,
-		showName="血玉魔杖",
-		value=13,
+		showName="无天魔杖",
+		value=32,
 		var="T37",
 	},
 	[439] = { 
@@ -5264,7 +5264,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="青虹刃",
-		value=5,
+		value=2,
 		var="T37",
 	},
 	[440] = { 
@@ -5276,7 +5276,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="飞烟刃",
-		value=5,
+		value=3,
 		var="T37",
 	},
 	[441] = { 
@@ -5300,7 +5300,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="冷月侠刃",
-		value=6,
+		value=10,
 		var="T37",
 	},
 	[443] = { 
@@ -5312,7 +5312,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="柳叶侠刃",
-		value=6,
+		value=12,
 		var="T37",
 	},
 	[444] = { 
@@ -5324,7 +5324,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="炽厥寒霜刃",
-		value=7,
+		value=20,
 		var="T37",
 	},
 	[445] = { 
@@ -5336,7 +5336,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="凝雪寒霜刃",
-		value=7,
+		value=22,
 		var="T37",
 	},
 	[446] = { 
@@ -5348,7 +5348,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="惊雷降魔刃",
-		value=8,
+		value=28,
 		var="T37",
 	},
 	[447] = { 
@@ -5360,7 +5360,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="奔雷伏魔刃",
-		value=8,
+		value=30,
 		var="T37",
 	},
 	[448] = { 
@@ -5372,7 +5372,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="环铁刃",
-		value=5,
+		value=2,
 		var="T37",
 	},
 	[449] = { 
@@ -5384,7 +5384,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="亡魂刃",
-		value=5,
+		value=3,
 		var="T37",
 	},
 	[450] = { 
@@ -5408,7 +5408,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="噬血邪刃",
-		value=6,
+		value=10,
 		var="T37",
 	},
 	[452] = { 
@@ -5420,7 +5420,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="鬼眼邪刃",
-		value=6,
+		value=12,
 		var="T37",
 	},
 	[453] = { 
@@ -5432,7 +5432,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="狐狼降鬼刃",
-		value=7,
+		value=20,
 		var="T37",
 	},
 	[454] = { 
@@ -5444,7 +5444,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="厉枭降鬼刃",
-		value=7,
+		value=22,
 		var="T37",
 	},
 	[455] = { 
@@ -5456,7 +5456,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="赤龙离魂刃",
-		value=8,
+		value=28,
 		var="T37",
 	},
 	[456] = { 
@@ -5468,7 +5468,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="鬼龙断魂刃",
-		value=8,
+		value=30,
 		var="T37",
 	},
 	[457] = { 
@@ -5480,7 +5480,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="紫薇侠刃",
-		value=11,
+		value=16,
 		var="T37",
 	},
 	[458] = { 
@@ -5492,7 +5492,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="凝雪寒霜刃",
-		value=12,
+		value=22,
 		var="T37",
 	},
 	[459] = { 
@@ -5504,43 +5504,43 @@ local config = {
 		job=3,
 		sect=1,
 		showName="冰玄寒霜刃",
-		value=12,
+		value=24,
 		var="T37",
 	},
 	[460] = { 
 		index=460,
 		type=3,
 		sort=4,
-		idx=51435,
-		equipName="究雷戮魔刃1",
+		idx=51445,
+		equipName="惊雷降魔刃4",
 		job=3,
 		sect=1,
-		showName="究雷戮魔刃",
-		value=13,
+		showName="惊雷降魔刃",
+		value=28,
 		var="T37",
 	},
 	[461] = { 
 		index=461,
 		type=3,
 		sort=5,
-		idx=51445,
-		equipName="惊雷降魔刃4",
+		idx=51446,
+		equipName="奔雷伏魔刃4",
 		job=3,
 		sect=1,
-		showName="惊雷降魔刃",
-		value=13,
+		showName="奔雷伏魔刃",
+		value=30,
 		var="T37",
 	},
 	[462] = { 
 		index=462,
 		type=3,
 		sort=6,
-		idx=51446,
-		equipName="奔雷伏魔刃4",
+		idx=51435,
+		equipName="究雷戮魔刃1",
 		job=3,
 		sect=1,
-		showName="奔雷伏魔刃",
-		value=13,
+		showName="究雷戮魔刃",
+		value=32,
 		var="T37",
 	},
 	[463] = { 
@@ -5552,7 +5552,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="精魂邪刃",
-		value=11,
+		value=16,
 		var="T37",
 	},
 	[464] = { 
@@ -5564,7 +5564,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="厉枭降鬼刃",
-		value=12,
+		value=22,
 		var="T37",
 	},
 	[465] = { 
@@ -5576,43 +5576,43 @@ local config = {
 		job=3,
 		sect=2,
 		showName="修罗降鬼刃",
-		value=12,
+		value=24,
 		var="T37",
 	},
 	[466] = { 
 		index=466,
 		type=3,
 		sort=4,
-		idx=51437,
-		equipName="魔龙斩魂刃1",
+		idx=51454,
+		equipName="赤龙离魂刃4",
 		job=3,
 		sect=2,
-		showName="魔龙斩魂刃",
-		value=13,
+		showName="赤龙离魂刃",
+		value=28,
 		var="T37",
 	},
 	[467] = { 
 		index=467,
 		type=3,
 		sort=5,
-		idx=51454,
-		equipName="赤龙离魂刃4",
+		idx=51455,
+		equipName="鬼龙断魂刃4",
 		job=3,
 		sect=2,
-		showName="赤龙离魂刃",
-		value=13,
+		showName="鬼龙断魂刃",
+		value=30,
 		var="T37",
 	},
 	[468] = { 
 		index=468,
 		type=3,
 		sort=6,
-		idx=51455,
-		equipName="鬼龙断魂刃4",
+		idx=51437,
+		equipName="魔龙斩魂刃1",
 		job=3,
 		sect=2,
-		showName="鬼龙断魂刃",
-		value=13,
+		showName="魔龙斩魂刃",
+		value=32,
 		var="T37",
 	},
 	[469] = { 
@@ -5624,7 +5624,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="封神战袍(男)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[470] = { 
@@ -5636,7 +5636,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="封神战袍(女)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[471] = { 
@@ -5648,7 +5648,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="昊天战袍(男)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[472] = { 
@@ -5660,7 +5660,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="昊天战袍(女)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[473] = { 
@@ -5672,7 +5672,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="广寒战袍(男)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[474] = { 
@@ -5684,7 +5684,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="广寒战袍(女)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[475] = { 
@@ -5696,7 +5696,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神战袍(男)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[476] = { 
@@ -5708,7 +5708,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神战袍(女)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[477] = { 
@@ -5720,7 +5720,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="武皇战袍(男)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[478] = { 
@@ -5732,7 +5732,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="武皇战袍(女)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[479] = { 
@@ -5744,7 +5744,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天灵战袍(男)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[480] = { 
@@ -5756,7 +5756,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天灵战袍(女)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[481] = { 
@@ -5768,7 +5768,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾战袍(男)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[482] = { 
@@ -5780,7 +5780,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾战袍(女)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[483] = { 
@@ -5792,7 +5792,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="赤龙战袍(男)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[484] = { 
@@ -5804,7 +5804,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="赤龙战袍(女)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[485] = { 
@@ -5816,7 +5816,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="雪天战袍(男)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[486] = { 
@@ -5828,7 +5828,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="雪天战袍(女)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[487] = { 
@@ -5840,7 +5840,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="地藏战袍(男)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[488] = { 
@@ -5852,7 +5852,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="地藏战袍(女)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[489] = { 
@@ -5864,7 +5864,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血战袍(男)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[490] = { 
@@ -5876,7 +5876,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血战袍(女)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[491] = { 
@@ -5888,7 +5888,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="霸皇战袍(男)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[492] = { 
@@ -5900,7 +5900,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="霸皇战袍(女)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[493] = { 
@@ -5912,7 +5912,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="魔灵战袍(男)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[494] = { 
@@ -5924,7 +5924,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="魔灵战袍(女)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[495] = { 
@@ -5936,7 +5936,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔战袍(男)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[496] = { 
@@ -5948,7 +5948,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔战袍(女)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[497] = { 
@@ -5960,7 +5960,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="昊天战袍(男)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[498] = { 
@@ -5972,7 +5972,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="昊天战袍(女)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[499] = { 
@@ -5984,7 +5984,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="广寒战袍(男)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[500] = { 
@@ -5996,7 +5996,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="广寒战袍(女)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[501] = { 
@@ -6008,7 +6008,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神战袍(男)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[502] = { 
@@ -6020,7 +6020,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神战袍(女)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[503] = { 
@@ -6032,7 +6032,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="武皇战袍(男)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[504] = { 
@@ -6044,7 +6044,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="武皇战袍(女)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[505] = { 
@@ -6056,7 +6056,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天灵战袍(男)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[506] = { 
@@ -6068,7 +6068,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天灵战袍(女)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[507] = { 
@@ -6080,7 +6080,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾战袍(男)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[508] = { 
@@ -6092,7 +6092,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾战袍(女)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[509] = { 
@@ -6104,7 +6104,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="雪天战袍(男)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[510] = { 
@@ -6116,7 +6116,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="雪天战袍(女)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[511] = { 
@@ -6128,7 +6128,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="地藏战袍(男)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[512] = { 
@@ -6140,7 +6140,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="地藏战袍(女)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[513] = { 
@@ -6152,7 +6152,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血战袍(男)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[514] = { 
@@ -6164,7 +6164,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血战袍(女)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[515] = { 
@@ -6176,7 +6176,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="霸皇战袍(男)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[516] = { 
@@ -6188,7 +6188,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="霸皇战袍(女)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[517] = { 
@@ -6200,7 +6200,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="魔灵战袍(男)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[518] = { 
@@ -6212,7 +6212,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="魔灵战袍(女)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[519] = { 
@@ -6224,7 +6224,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔战袍(男)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[520] = { 
@@ -6236,7 +6236,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔战袍(女)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[521] = { 
@@ -6248,7 +6248,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="封神枪衣(男)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[522] = { 
@@ -6260,7 +6260,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="封神枪衣(女)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[523] = { 
@@ -6272,7 +6272,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="昊天枪衣(男)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[524] = { 
@@ -6284,7 +6284,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="昊天枪衣(女)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[525] = { 
@@ -6296,7 +6296,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="广寒枪衣(男)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[526] = { 
@@ -6308,7 +6308,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="广寒枪衣(女)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[527] = { 
@@ -6320,7 +6320,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神枪衣(男)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[528] = { 
@@ -6332,7 +6332,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神枪衣(女)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[529] = { 
@@ -6344,7 +6344,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="武皇枪衣(男)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[530] = { 
@@ -6356,7 +6356,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="武皇枪衣(女)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[531] = { 
@@ -6368,7 +6368,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天灵枪衣(男)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[532] = { 
@@ -6380,7 +6380,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天灵枪衣(女)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[533] = { 
@@ -6392,7 +6392,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾枪衣(男)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[534] = { 
@@ -6404,7 +6404,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾枪衣(女)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[535] = { 
@@ -6416,7 +6416,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="赤龙枪衣(男)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[536] = { 
@@ -6428,7 +6428,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="赤龙枪衣(女)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[537] = { 
@@ -6440,7 +6440,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="雪天枪衣(男)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[538] = { 
@@ -6452,7 +6452,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="雪天枪衣(女)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[539] = { 
@@ -6464,7 +6464,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="地藏枪衣(男)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[540] = { 
@@ -6476,7 +6476,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="地藏枪衣(女)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[541] = { 
@@ -6488,7 +6488,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血枪衣(男)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[542] = { 
@@ -6500,7 +6500,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血枪衣(女)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[543] = { 
@@ -6512,7 +6512,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="霸皇枪衣(男)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[544] = { 
@@ -6524,7 +6524,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="霸皇枪衣(女)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[545] = { 
@@ -6536,7 +6536,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魔灵枪衣(男)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[546] = { 
@@ -6548,7 +6548,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魔灵枪衣(女)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[547] = { 
@@ -6560,7 +6560,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔枪衣(男)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[548] = { 
@@ -6572,7 +6572,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔枪衣(女)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[549] = { 
@@ -6584,7 +6584,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="昊天枪衣(男)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[550] = { 
@@ -6596,7 +6596,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="昊天枪衣(女)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[551] = { 
@@ -6608,7 +6608,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="广寒枪衣(男)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[552] = { 
@@ -6620,7 +6620,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="广寒枪衣(女)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[553] = { 
@@ -6632,7 +6632,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神枪衣(男)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[554] = { 
@@ -6644,7 +6644,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神枪衣(女)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[555] = { 
@@ -6656,7 +6656,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="武皇枪衣(男)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[556] = { 
@@ -6668,7 +6668,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="武皇枪衣(女)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[557] = { 
@@ -6680,7 +6680,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天灵枪衣(男)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[558] = { 
@@ -6692,7 +6692,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天灵枪衣(女)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[559] = { 
@@ -6704,7 +6704,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾枪衣(男)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[560] = { 
@@ -6716,7 +6716,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾枪衣(女)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[561] = { 
@@ -6728,7 +6728,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="雪天枪衣(男)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[562] = { 
@@ -6740,7 +6740,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="雪天枪衣(女)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[563] = { 
@@ -6752,7 +6752,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="地藏枪衣(男)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[564] = { 
@@ -6764,7 +6764,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="地藏枪衣(女)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[565] = { 
@@ -6776,7 +6776,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血枪衣(男)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[566] = { 
@@ -6788,7 +6788,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血枪衣(女)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[567] = { 
@@ -6800,7 +6800,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="霸皇枪衣(男)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[568] = { 
@@ -6812,7 +6812,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="霸皇枪衣(女)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[569] = { 
@@ -6824,7 +6824,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魔灵枪衣(男)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[570] = { 
@@ -6836,7 +6836,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魔灵枪衣(女)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[571] = { 
@@ -6848,7 +6848,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔枪衣(男)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[572] = { 
@@ -6860,7 +6860,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔枪衣(女)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[573] = { 
@@ -6872,7 +6872,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="封神侠衣(男)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[574] = { 
@@ -6884,7 +6884,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="封神侠衣(女)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[575] = { 
@@ -6896,7 +6896,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="昊天侠衣(男)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[576] = { 
@@ -6908,7 +6908,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="昊天侠衣(女)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[577] = { 
@@ -6920,7 +6920,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="广寒侠衣(男)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[578] = { 
@@ -6932,7 +6932,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="广寒侠衣(女)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[579] = { 
@@ -6944,7 +6944,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神侠衣(男)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[580] = { 
@@ -6956,7 +6956,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神侠衣(女)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[581] = { 
@@ -6968,7 +6968,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="武皇侠衣(男)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[582] = { 
@@ -6980,7 +6980,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="武皇侠衣(女)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[583] = { 
@@ -6992,7 +6992,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天灵侠衣(男)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[584] = { 
@@ -7004,7 +7004,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天灵侠衣(女)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[585] = { 
@@ -7016,7 +7016,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾侠衣(男)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[586] = { 
@@ -7028,7 +7028,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾侠衣(女)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[587] = { 
@@ -7040,7 +7040,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="赤龙侠衣(男)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[588] = { 
@@ -7052,7 +7052,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="赤龙侠衣(女)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[589] = { 
@@ -7064,7 +7064,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="雪天侠衣(男)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[590] = { 
@@ -7076,7 +7076,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="雪天侠衣(女)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[591] = { 
@@ -7088,7 +7088,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="地藏侠衣(男)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[592] = { 
@@ -7100,7 +7100,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="地藏侠衣(女)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[593] = { 
@@ -7112,7 +7112,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血侠衣(男)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[594] = { 
@@ -7124,7 +7124,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血侠衣(女)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[595] = { 
@@ -7136,7 +7136,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="霸皇侠衣(男)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[596] = { 
@@ -7148,7 +7148,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="霸皇侠衣(女)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[597] = { 
@@ -7160,7 +7160,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="魔灵侠衣(男)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[598] = { 
@@ -7172,7 +7172,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="魔灵侠衣(女)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[599] = { 
@@ -7184,7 +7184,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔侠衣(男)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[600] = { 
@@ -7196,7 +7196,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔侠衣(女)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[601] = { 
@@ -7208,7 +7208,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="昊天侠衣(男)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[602] = { 
@@ -7220,7 +7220,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="昊天侠衣(女)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[603] = { 
@@ -7232,7 +7232,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="广寒侠衣(男)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[604] = { 
@@ -7244,7 +7244,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="广寒侠衣(女)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[605] = { 
@@ -7256,7 +7256,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神侠衣(男)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[606] = { 
@@ -7268,7 +7268,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神侠衣(女)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[607] = { 
@@ -7280,7 +7280,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="武皇侠衣(男)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[608] = { 
@@ -7292,7 +7292,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="武皇侠衣(女)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[609] = { 
@@ -7304,7 +7304,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天灵侠衣(男)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[610] = { 
@@ -7316,7 +7316,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天灵侠衣(女)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[611] = { 
@@ -7328,7 +7328,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾侠衣(男)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[612] = { 
@@ -7340,7 +7340,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾侠衣(女)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[613] = { 
@@ -7352,7 +7352,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="雪天侠衣(男)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[614] = { 
@@ -7364,7 +7364,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="雪天侠衣(女)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[615] = { 
@@ -7376,7 +7376,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="地藏侠衣(男)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[616] = { 
@@ -7388,7 +7388,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="地藏侠衣(女)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[617] = { 
@@ -7400,7 +7400,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血侠衣(男)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[618] = { 
@@ -7412,7 +7412,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血侠衣(女)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[619] = { 
@@ -7424,7 +7424,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="霸皇侠衣(男)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[620] = { 
@@ -7436,7 +7436,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="霸皇侠衣(女)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[621] = { 
@@ -7448,7 +7448,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="魔灵侠衣(男)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[622] = { 
@@ -7460,7 +7460,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="魔灵侠衣(女)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[623] = { 
@@ -7472,7 +7472,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔侠衣(男)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[624] = { 
@@ -7484,7 +7484,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔侠衣(女)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[625] = { 
@@ -7496,7 +7496,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="封神战衣(男)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[626] = { 
@@ -7508,7 +7508,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="封神战衣(女)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[627] = { 
@@ -7520,7 +7520,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="昊天战衣(男)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[628] = { 
@@ -7532,7 +7532,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="昊天战衣(女)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[629] = { 
@@ -7544,7 +7544,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="广寒战衣(男)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[630] = { 
@@ -7556,7 +7556,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="广寒战衣(女)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[631] = { 
@@ -7568,7 +7568,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神战衣(男)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[632] = { 
@@ -7580,7 +7580,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神战衣(女)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[633] = { 
@@ -7592,7 +7592,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="武皇战衣(男)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[634] = { 
@@ -7604,7 +7604,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="武皇战衣(女)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[635] = { 
@@ -7616,7 +7616,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天灵战衣(男)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[636] = { 
@@ -7628,7 +7628,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天灵战衣(女)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[637] = { 
@@ -7640,7 +7640,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾战衣(男)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[638] = { 
@@ -7652,7 +7652,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾战衣(女)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[639] = { 
@@ -7664,7 +7664,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="赤龙战衣(男)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[640] = { 
@@ -7676,7 +7676,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="赤龙战衣(女)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[641] = { 
@@ -7688,7 +7688,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="雪天战衣(男)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[642] = { 
@@ -7700,7 +7700,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="雪天战衣(女)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[643] = { 
@@ -7712,7 +7712,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="地藏战衣(男)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[644] = { 
@@ -7724,7 +7724,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="地藏战衣(女)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[645] = { 
@@ -7736,7 +7736,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血战衣(男)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[646] = { 
@@ -7748,7 +7748,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血战衣(女)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[647] = { 
@@ -7760,7 +7760,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="霸皇战衣(男)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[648] = { 
@@ -7772,7 +7772,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="霸皇战衣(女)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[649] = { 
@@ -7784,7 +7784,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="魔灵战衣(男)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[650] = { 
@@ -7796,7 +7796,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="魔灵战衣(女)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[651] = { 
@@ -7808,7 +7808,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔战衣(男)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[652] = { 
@@ -7820,7 +7820,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔战衣(女)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[653] = { 
@@ -7832,7 +7832,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="昊天战衣(男)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[654] = { 
@@ -7844,7 +7844,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="昊天战衣(女)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[655] = { 
@@ -7856,7 +7856,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="广寒战衣(男)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[656] = { 
@@ -7868,7 +7868,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="广寒战衣(女)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[657] = { 
@@ -7880,7 +7880,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神战衣(男)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[658] = { 
@@ -7892,7 +7892,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神战衣(女)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[659] = { 
@@ -7904,7 +7904,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="武皇战衣(男)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[660] = { 
@@ -7916,7 +7916,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="武皇战衣(女)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[661] = { 
@@ -7928,7 +7928,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天灵战衣(男)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[662] = { 
@@ -7940,7 +7940,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天灵战衣(女)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[663] = { 
@@ -7952,7 +7952,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾战衣(男)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[664] = { 
@@ -7964,7 +7964,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾战衣(女)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[665] = { 
@@ -7976,7 +7976,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="雪天战衣(男)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[666] = { 
@@ -7988,7 +7988,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="雪天战衣(女)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[667] = { 
@@ -8000,7 +8000,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="地藏战衣(男)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[668] = { 
@@ -8012,7 +8012,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="地藏战衣(女)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[669] = { 
@@ -8024,7 +8024,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血战衣(男)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[670] = { 
@@ -8036,7 +8036,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血战衣(女)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[671] = { 
@@ -8048,7 +8048,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="霸皇战衣(男)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[672] = { 
@@ -8060,7 +8060,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="霸皇战衣(女)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[673] = { 
@@ -8072,7 +8072,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="魔灵战衣(男)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[674] = { 
@@ -8084,7 +8084,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="魔灵战衣(女)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[675] = { 
@@ -8096,7 +8096,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔战衣(男)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[676] = { 
@@ -8108,7 +8108,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔战衣(女)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[677] = { 
@@ -8120,7 +8120,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="封神法袍(男)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[678] = { 
@@ -8132,7 +8132,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="封神法袍(女)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[679] = { 
@@ -8144,7 +8144,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="昊天法袍(男)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[680] = { 
@@ -8156,7 +8156,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="昊天法袍(女)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[681] = { 
@@ -8168,7 +8168,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="广寒法袍(男)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[682] = { 
@@ -8180,7 +8180,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="广寒法袍(女)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[683] = { 
@@ -8192,7 +8192,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神法袍(男)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[684] = { 
@@ -8204,7 +8204,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神法袍(女)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[685] = { 
@@ -8216,7 +8216,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="武皇法袍(男)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[686] = { 
@@ -8228,7 +8228,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="武皇法袍(女)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[687] = { 
@@ -8240,7 +8240,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="天灵法袍(男)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[688] = { 
@@ -8252,7 +8252,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="天灵法袍(女)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[689] = { 
@@ -8264,7 +8264,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾法袍(男)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[690] = { 
@@ -8276,7 +8276,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾法袍(女)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[691] = { 
@@ -8288,7 +8288,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="赤龙法袍(男)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[692] = { 
@@ -8300,7 +8300,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="赤龙法袍(女)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[693] = { 
@@ -8312,7 +8312,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="雪天法袍(男)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[694] = { 
@@ -8324,7 +8324,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="雪天法袍(女)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[695] = { 
@@ -8336,7 +8336,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="地藏法袍(男)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[696] = { 
@@ -8348,7 +8348,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="地藏法袍(女)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[697] = { 
@@ -8360,7 +8360,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血法袍(男)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[698] = { 
@@ -8372,7 +8372,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血法袍(女)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[699] = { 
@@ -8384,7 +8384,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="霸皇法袍(男)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[700] = { 
@@ -8396,7 +8396,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="霸皇法袍(女)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[701] = { 
@@ -8408,7 +8408,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="魔灵法袍(男)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[702] = { 
@@ -8420,7 +8420,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="魔灵法袍(女)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[703] = { 
@@ -8432,7 +8432,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔法袍(男)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[704] = { 
@@ -8444,7 +8444,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔法袍(女)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[705] = { 
@@ -8456,7 +8456,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="昊天法袍(男)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[706] = { 
@@ -8468,7 +8468,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="昊天法袍(女)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[707] = { 
@@ -8480,7 +8480,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="广寒法袍(男)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[708] = { 
@@ -8492,7 +8492,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="广寒法袍(女)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[709] = { 
@@ -8504,7 +8504,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神法袍(男)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[710] = { 
@@ -8516,7 +8516,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神法袍(女)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[711] = { 
@@ -8528,7 +8528,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="武皇法袍(男)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[712] = { 
@@ -8540,7 +8540,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="武皇法袍(女)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[713] = { 
@@ -8552,7 +8552,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="天灵法袍(男)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[714] = { 
@@ -8564,7 +8564,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="天灵法袍(女)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[715] = { 
@@ -8576,7 +8576,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾法袍(男)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[716] = { 
@@ -8588,7 +8588,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾法袍(女)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[717] = { 
@@ -8600,7 +8600,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="雪天法袍(男)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[718] = { 
@@ -8612,7 +8612,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="雪天法袍(女)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[719] = { 
@@ -8624,7 +8624,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="地藏法袍(男)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[720] = { 
@@ -8636,7 +8636,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="地藏法袍(女)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[721] = { 
@@ -8648,7 +8648,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血法袍(男)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[722] = { 
@@ -8660,7 +8660,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血法袍(女)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[723] = { 
@@ -8672,7 +8672,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="霸皇法袍(男)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[724] = { 
@@ -8684,7 +8684,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="霸皇法袍(女)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[725] = { 
@@ -8696,7 +8696,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="魔灵法袍(男)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[726] = { 
@@ -8708,7 +8708,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="魔灵法袍(女)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[727] = { 
@@ -8720,7 +8720,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔法袍(男)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[728] = { 
@@ -8732,7 +8732,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔法袍(女)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[729] = { 
@@ -8744,7 +8744,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="封神戎装(男)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[730] = { 
@@ -8756,7 +8756,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="封神戎装(女)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[731] = { 
@@ -8768,7 +8768,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="昊天戎装(男)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[732] = { 
@@ -8780,7 +8780,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="昊天戎装(女)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[733] = { 
@@ -8792,7 +8792,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="广寒戎装(男)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[734] = { 
@@ -8804,7 +8804,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="广寒戎装(女)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[735] = { 
@@ -8816,7 +8816,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神戎装(男)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[736] = { 
@@ -8828,7 +8828,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神戎装(女)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[737] = { 
@@ -8840,7 +8840,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="武皇戎装(男)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[738] = { 
@@ -8852,7 +8852,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="武皇戎装(女)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[739] = { 
@@ -8864,7 +8864,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="天灵戎装(男)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[740] = { 
@@ -8876,7 +8876,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="天灵戎装(女)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[741] = { 
@@ -8888,7 +8888,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾戎装(男)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[742] = { 
@@ -8900,7 +8900,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾戎装(女)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[743] = { 
@@ -8912,7 +8912,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="赤龙戎装(男)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[744] = { 
@@ -8924,7 +8924,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="赤龙戎装(女)",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[745] = { 
@@ -8936,7 +8936,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="雪天戎装(男)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[746] = { 
@@ -8948,7 +8948,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="雪天戎装(女)",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[747] = { 
@@ -8960,7 +8960,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="地藏戎装(男)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[748] = { 
@@ -8972,7 +8972,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="地藏戎装(女)",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[749] = { 
@@ -8984,7 +8984,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血戎装(男)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[750] = { 
@@ -8996,7 +8996,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血戎装(女)",
-		value=8,
+		value=16,
 		var="T38",
 	},
 	[751] = { 
@@ -9008,7 +9008,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="霸皇戎装(男)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[752] = { 
@@ -9020,7 +9020,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="霸皇戎装(女)",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[753] = { 
@@ -9032,7 +9032,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="魔灵戎装(男)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[754] = { 
@@ -9044,7 +9044,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="魔灵戎装(女)",
-		value=9,
+		value=22,
 		var="T38",
 	},
 	[755] = { 
@@ -9056,7 +9056,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔戎装(男)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[756] = { 
@@ -9068,7 +9068,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔戎装(女)",
-		value=10,
+		value=26,
 		var="T38",
 	},
 	[757] = { 
@@ -9080,7 +9080,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="昊天戎装(男)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[758] = { 
@@ -9092,7 +9092,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="昊天戎装(女)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[759] = { 
@@ -9104,7 +9104,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="广寒戎装(男)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[760] = { 
@@ -9116,7 +9116,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="广寒戎装(女)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[761] = { 
@@ -9128,7 +9128,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神戎装(男)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[762] = { 
@@ -9140,7 +9140,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神戎装(女)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[763] = { 
@@ -9152,7 +9152,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="武皇戎装(男)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[764] = { 
@@ -9164,7 +9164,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="武皇戎装(女)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[765] = { 
@@ -9176,7 +9176,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="天灵戎装(男)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[766] = { 
@@ -9188,7 +9188,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="天灵戎装(女)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[767] = { 
@@ -9200,7 +9200,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾戎装(男)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[768] = { 
@@ -9212,7 +9212,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾戎装(女)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[769] = { 
@@ -9224,7 +9224,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="雪天戎装(男)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[770] = { 
@@ -9236,7 +9236,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="雪天戎装(女)",
-		value=11,
+		value=12,
 		var="T38",
 	},
 	[771] = { 
@@ -9248,7 +9248,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="地藏戎装(男)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[772] = { 
@@ -9260,7 +9260,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="地藏戎装(女)",
-		value=12,
+		value=16,
 		var="T38",
 	},
 	[773] = { 
@@ -9272,7 +9272,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血戎装(男)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[774] = { 
@@ -9284,7 +9284,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血戎装(女)",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[775] = { 
@@ -9296,7 +9296,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="霸皇戎装(男)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[776] = { 
@@ -9308,7 +9308,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="霸皇戎装(女)",
-		value=13,
+		value=20,
 		var="T38",
 	},
 	[777] = { 
@@ -9320,7 +9320,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="魔灵戎装(男)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[778] = { 
@@ -9332,7 +9332,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="魔灵戎装(女)",
-		value=14,
+		value=24,
 		var="T38",
 	},
 	[779] = { 
@@ -9344,7 +9344,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔戎装(男)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[780] = { 
@@ -9356,7 +9356,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔戎装(女)",
-		value=15,
+		value=28,
 		var="T38",
 	},
 	[781] = { 
@@ -9392,7 +9392,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="昊天护手",
-		value=3,
+		value=6,
 		var="T38",
 	},
 	[784] = { 
@@ -9404,7 +9404,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="追月护手",
-		value=4,
+		value=8,
 		var="T38",
 	},
 	[785] = { 
@@ -9416,7 +9416,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神护手",
-		value=5,
+		value=9,
 		var="T38",
 	},
 	[786] = { 
@@ -9428,7 +9428,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="武皇护手",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[787] = { 
@@ -9440,7 +9440,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天灵护手",
-		value=6,
+		value=14,
 		var="T38",
 	},
 	[788] = { 
@@ -9452,7 +9452,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾护手",
-		value=7,
+		value=18,
 		var="T38",
 	},
 	[789] = { 
@@ -9488,7 +9488,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="雪天护手",
-		value=3,
+		value=6,
 		var="T38",
 	},
 	[792] = { 
@@ -9500,7 +9500,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凌鹰护手",
-		value=4,
+		value=8,
 		var="T38",
 	},
 	[793] = { 
@@ -9512,7 +9512,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血护手",
-		value=5,
+		value=9,
 		var="T38",
 	},
 	[794] = { 
@@ -9524,7 +9524,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="霸皇护手",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[795] = { 
@@ -9536,7 +9536,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="魔灵护手",
-		value=6,
+		value=14,
 		var="T38",
 	},
 	[796] = { 
@@ -9548,7 +9548,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔护手",
-		value=7,
+		value=18,
 		var="T38",
 	},
 	[797] = { 
@@ -9560,7 +9560,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="封神护手",
-		value=5,
+		value=6,
 		var="T38",
 	},
 	[798] = { 
@@ -9572,7 +9572,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="昊天护手",
-		value=6,
+		value=8,
 		var="T38",
 	},
 	[799] = { 
@@ -9584,7 +9584,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="追月护手",
-		value=7,
+		value=10,
 		var="T38",
 	},
 	[800] = { 
@@ -9596,7 +9596,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神护手",
-		value=8,
+		value=12,
 		var="T38",
 	},
 	[801] = { 
@@ -9608,7 +9608,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="武皇护手",
-		value=8,
+		value=14,
 		var="T38",
 	},
 	[802] = { 
@@ -9620,7 +9620,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天灵护手",
-		value=9,
+		value=18,
 		var="T38",
 	},
 	[803] = { 
@@ -9632,7 +9632,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾护手",
-		value=10,
+		value=22,
 		var="T38",
 	},
 	[804] = { 
@@ -9644,7 +9644,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="赤龙护手",
-		value=5,
+		value=6,
 		var="T38",
 	},
 	[805] = { 
@@ -9656,7 +9656,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="雪天护手",
-		value=6,
+		value=8,
 		var="T38",
 	},
 	[806] = { 
@@ -9668,7 +9668,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凌鹰护手",
-		value=7,
+		value=10,
 		var="T38",
 	},
 	[807] = { 
@@ -9680,7 +9680,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血护手",
-		value=8,
+		value=12,
 		var="T38",
 	},
 	[808] = { 
@@ -9692,7 +9692,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="霸皇护手",
-		value=8,
+		value=14,
 		var="T38",
 	},
 	[809] = { 
@@ -9704,7 +9704,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="魔灵护手",
-		value=9,
+		value=18,
 		var="T38",
 	},
 	[810] = { 
@@ -9716,7 +9716,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔护手",
-		value=10,
+		value=22,
 		var="T38",
 	},
 	[811] = { 
@@ -9728,7 +9728,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="昊天护手",
-		value=11,
+		value=10,
 		var="T38",
 	},
 	[812] = { 
@@ -9740,7 +9740,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="追月护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[813] = { 
@@ -9752,7 +9752,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神护手",
-		value=13,
+		value=16,
 		var="T38",
 	},
 	[814] = { 
@@ -9764,7 +9764,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="武皇护手",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[815] = { 
@@ -9776,7 +9776,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天灵护手",
-		value=14,
+		value=22,
 		var="T38",
 	},
 	[816] = { 
@@ -9788,7 +9788,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾护手",
-		value=15,
+		value=24,
 		var="T38",
 	},
 	[817] = { 
@@ -9800,7 +9800,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="雪天护手",
-		value=11,
+		value=10,
 		var="T38",
 	},
 	[818] = { 
@@ -9812,7 +9812,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凌鹰护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[819] = { 
@@ -9824,7 +9824,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血护手",
-		value=13,
+		value=16,
 		var="T38",
 	},
 	[820] = { 
@@ -9836,7 +9836,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="霸皇护手",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[821] = { 
@@ -9848,7 +9848,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="魔灵护手",
-		value=14,
+		value=22,
 		var="T38",
 	},
 	[822] = { 
@@ -9860,7 +9860,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔护手",
-		value=15,
+		value=24,
 		var="T38",
 	},
 	[823] = { 
@@ -9896,7 +9896,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="封神长靴",
-		value=3,
+		value=4,
 		var="T38",
 	},
 	[826] = { 
@@ -9908,7 +9908,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="昊天长靴",
-		value=4,
+		value=6,
 		var="T38",
 	},
 	[827] = { 
@@ -9920,7 +9920,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="御风神靴",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[828] = { 
@@ -9932,7 +9932,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神长靴",
-		value=6,
+		value=9,
 		var="T38",
 	},
 	[829] = { 
@@ -9944,7 +9944,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="武皇长靴",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[830] = { 
@@ -9956,7 +9956,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天灵长靴",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[831] = { 
@@ -9968,7 +9968,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾长靴",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[832] = { 
@@ -10004,7 +10004,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="赤龙长靴",
-		value=3,
+		value=4,
 		var="T38",
 	},
 	[835] = { 
@@ -10016,7 +10016,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="雪天长靴",
-		value=4,
+		value=6,
 		var="T38",
 	},
 	[836] = { 
@@ -10028,7 +10028,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="地藏冥靴",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[837] = { 
@@ -10040,7 +10040,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血长靴",
-		value=6,
+		value=9,
 		var="T38",
 	},
 	[838] = { 
@@ -10052,7 +10052,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="霸皇长靴",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[839] = { 
@@ -10064,7 +10064,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="魔灵长靴",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[840] = { 
@@ -10076,7 +10076,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔长靴",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[841] = { 
@@ -10100,7 +10100,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="昊天长靴",
-		value=7,
+		value=8,
 		var="T38",
 	},
 	[843] = { 
@@ -10112,7 +10112,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="御风神靴",
-		value=8,
+		value=10,
 		var="T38",
 	},
 	[844] = { 
@@ -10124,7 +10124,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神长靴",
-		value=9,
+		value=12,
 		var="T38",
 	},
 	[845] = { 
@@ -10136,7 +10136,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="武皇长靴",
-		value=9,
+		value=14,
 		var="T38",
 	},
 	[846] = { 
@@ -10148,7 +10148,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天灵长靴",
-		value=10,
+		value=18,
 		var="T38",
 	},
 	[847] = { 
@@ -10160,7 +10160,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾长靴",
-		value=11,
+		value=22,
 		var="T38",
 	},
 	[848] = { 
@@ -10184,7 +10184,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="雪天长靴",
-		value=7,
+		value=8,
 		var="T38",
 	},
 	[850] = { 
@@ -10196,7 +10196,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="地藏冥靴",
-		value=8,
+		value=10,
 		var="T38",
 	},
 	[851] = { 
@@ -10208,7 +10208,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血长靴",
-		value=9,
+		value=12,
 		var="T38",
 	},
 	[852] = { 
@@ -10220,7 +10220,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="霸皇长靴",
-		value=9,
+		value=14,
 		var="T38",
 	},
 	[853] = { 
@@ -10232,7 +10232,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="魔灵长靴",
-		value=10,
+		value=18,
 		var="T38",
 	},
 	[854] = { 
@@ -10244,7 +10244,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔长靴",
-		value=11,
+		value=22,
 		var="T38",
 	},
 	[855] = { 
@@ -10256,7 +10256,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="昊天长靴",
-		value=12,
+		value=10,
 		var="T38",
 	},
 	[856] = { 
@@ -10268,7 +10268,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="御风神靴",
-		value=13,
+		value=14,
 		var="T38",
 	},
 	[857] = { 
@@ -10280,7 +10280,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神长靴",
-		value=14,
+		value=16,
 		var="T38",
 	},
 	[858] = { 
@@ -10292,7 +10292,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="武皇长靴",
-		value=14,
+		value=18,
 		var="T38",
 	},
 	[859] = { 
@@ -10304,7 +10304,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="天灵长靴",
-		value=15,
+		value=22,
 		var="T38",
 	},
 	[860] = { 
@@ -10316,7 +10316,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾长靴",
-		value=16,
+		value=28,
 		var="T38",
 	},
 	[861] = { 
@@ -10328,7 +10328,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="雪天长靴",
-		value=12,
+		value=10,
 		var="T38",
 	},
 	[862] = { 
@@ -10340,7 +10340,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="地藏冥靴",
-		value=13,
+		value=14,
 		var="T38",
 	},
 	[863] = { 
@@ -10352,7 +10352,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血长靴",
-		value=14,
+		value=16,
 		var="T38",
 	},
 	[864] = { 
@@ -10364,7 +10364,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="霸皇长靴",
-		value=14,
+		value=18,
 		var="T38",
 	},
 	[865] = { 
@@ -10376,7 +10376,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="魔灵长靴",
-		value=15,
+		value=22,
 		var="T38",
 	},
 	[866] = { 
@@ -10388,7 +10388,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔长靴",
-		value=16,
+		value=28,
 		var="T38",
 	},
 	[867] = { 
@@ -10424,7 +10424,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="昊天护手",
-		value=3,
+		value=6,
 		var="T38",
 	},
 	[870] = { 
@@ -10436,7 +10436,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="追月护手",
-		value=4,
+		value=8,
 		var="T38",
 	},
 	[871] = { 
@@ -10448,7 +10448,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神护手",
-		value=5,
+		value=9,
 		var="T38",
 	},
 	[872] = { 
@@ -10460,7 +10460,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="武皇护手",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[873] = { 
@@ -10472,7 +10472,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天灵护手",
-		value=6,
+		value=14,
 		var="T38",
 	},
 	[874] = { 
@@ -10484,7 +10484,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾护手",
-		value=7,
+		value=18,
 		var="T38",
 	},
 	[875] = { 
@@ -10520,7 +10520,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="雪天护手",
-		value=3,
+		value=6,
 		var="T38",
 	},
 	[878] = { 
@@ -10532,7 +10532,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凌鹰护手",
-		value=4,
+		value=8,
 		var="T38",
 	},
 	[879] = { 
@@ -10544,7 +10544,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血护手",
-		value=5,
+		value=9,
 		var="T38",
 	},
 	[880] = { 
@@ -10556,7 +10556,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="霸皇护手",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[881] = { 
@@ -10568,7 +10568,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魔灵护手",
-		value=6,
+		value=14,
 		var="T38",
 	},
 	[882] = { 
@@ -10580,7 +10580,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔护手",
-		value=7,
+		value=18,
 		var="T38",
 	},
 	[883] = { 
@@ -10592,7 +10592,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="封神护手",
-		value=5,
+		value=6,
 		var="T38",
 	},
 	[884] = { 
@@ -10604,7 +10604,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="昊天护手",
-		value=6,
+		value=8,
 		var="T38",
 	},
 	[885] = { 
@@ -10616,7 +10616,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="追月护手",
-		value=7,
+		value=10,
 		var="T38",
 	},
 	[886] = { 
@@ -10628,7 +10628,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神护手",
-		value=8,
+		value=12,
 		var="T38",
 	},
 	[887] = { 
@@ -10640,7 +10640,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="武皇护手",
-		value=8,
+		value=14,
 		var="T38",
 	},
 	[888] = { 
@@ -10652,7 +10652,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天灵护手",
-		value=9,
+		value=18,
 		var="T38",
 	},
 	[889] = { 
@@ -10664,7 +10664,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾护手",
-		value=10,
+		value=22,
 		var="T38",
 	},
 	[890] = { 
@@ -10676,7 +10676,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="赤龙护手",
-		value=5,
+		value=6,
 		var="T38",
 	},
 	[891] = { 
@@ -10688,7 +10688,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="雪天护手",
-		value=6,
+		value=8,
 		var="T38",
 	},
 	[892] = { 
@@ -10700,7 +10700,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凌鹰护手",
-		value=7,
+		value=10,
 		var="T38",
 	},
 	[893] = { 
@@ -10712,7 +10712,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血护手",
-		value=8,
+		value=12,
 		var="T38",
 	},
 	[894] = { 
@@ -10724,7 +10724,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="霸皇护手",
-		value=8,
+		value=14,
 		var="T38",
 	},
 	[895] = { 
@@ -10736,7 +10736,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魔灵护手",
-		value=9,
+		value=18,
 		var="T38",
 	},
 	[896] = { 
@@ -10748,7 +10748,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔护手",
-		value=10,
+		value=22,
 		var="T38",
 	},
 	[897] = { 
@@ -10760,7 +10760,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="昊天护手",
-		value=11,
+		value=10,
 		var="T38",
 	},
 	[898] = { 
@@ -10772,7 +10772,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="追月护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[899] = { 
@@ -10784,7 +10784,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神护手",
-		value=13,
+		value=16,
 		var="T38",
 	},
 	[900] = { 
@@ -10796,7 +10796,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="武皇护手",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[901] = { 
@@ -10808,7 +10808,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天灵护手",
-		value=14,
+		value=22,
 		var="T38",
 	},
 	[902] = { 
@@ -10820,7 +10820,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾护手",
-		value=15,
+		value=24,
 		var="T38",
 	},
 	[903] = { 
@@ -10832,7 +10832,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="雪天护手",
-		value=11,
+		value=10,
 		var="T38",
 	},
 	[904] = { 
@@ -10844,7 +10844,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凌鹰护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[905] = { 
@@ -10856,7 +10856,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血护手",
-		value=13,
+		value=16,
 		var="T38",
 	},
 	[906] = { 
@@ -10868,7 +10868,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="霸皇护手",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[907] = { 
@@ -10880,7 +10880,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魔灵护手",
-		value=14,
+		value=22,
 		var="T38",
 	},
 	[908] = { 
@@ -10892,7 +10892,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔护手",
-		value=15,
+		value=24,
 		var="T38",
 	},
 	[909] = { 
@@ -10928,7 +10928,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="封神长靴",
-		value=3,
+		value=4,
 		var="T38",
 	},
 	[912] = { 
@@ -10940,7 +10940,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="昊天长靴",
-		value=4,
+		value=6,
 		var="T38",
 	},
 	[913] = { 
@@ -10952,7 +10952,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="御风神靴",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[914] = { 
@@ -10964,7 +10964,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神长靴",
-		value=6,
+		value=9,
 		var="T38",
 	},
 	[915] = { 
@@ -10976,7 +10976,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="武皇长靴",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[916] = { 
@@ -10988,7 +10988,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天灵长靴",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[917] = { 
@@ -11000,7 +11000,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾长靴",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[918] = { 
@@ -11036,7 +11036,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="赤龙长靴",
-		value=3,
+		value=4,
 		var="T38",
 	},
 	[921] = { 
@@ -11048,7 +11048,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="雪天长靴",
-		value=4,
+		value=6,
 		var="T38",
 	},
 	[922] = { 
@@ -11060,7 +11060,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="地藏冥靴",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[923] = { 
@@ -11072,7 +11072,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血长靴",
-		value=6,
+		value=9,
 		var="T38",
 	},
 	[924] = { 
@@ -11084,7 +11084,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="霸皇长靴",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[925] = { 
@@ -11096,7 +11096,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魔灵长靴",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[926] = { 
@@ -11108,7 +11108,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔长靴",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[927] = { 
@@ -11132,7 +11132,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="昊天长靴",
-		value=7,
+		value=8,
 		var="T38",
 	},
 	[929] = { 
@@ -11144,7 +11144,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="御风神靴",
-		value=8,
+		value=10,
 		var="T38",
 	},
 	[930] = { 
@@ -11156,7 +11156,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神长靴",
-		value=9,
+		value=12,
 		var="T38",
 	},
 	[931] = { 
@@ -11168,7 +11168,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="武皇长靴",
-		value=9,
+		value=14,
 		var="T38",
 	},
 	[932] = { 
@@ -11180,7 +11180,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天灵长靴",
-		value=10,
+		value=18,
 		var="T38",
 	},
 	[933] = { 
@@ -11192,7 +11192,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾长靴",
-		value=11,
+		value=22,
 		var="T38",
 	},
 	[934] = { 
@@ -11216,7 +11216,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="雪天长靴",
-		value=7,
+		value=8,
 		var="T38",
 	},
 	[936] = { 
@@ -11228,7 +11228,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="地藏冥靴",
-		value=8,
+		value=10,
 		var="T38",
 	},
 	[937] = { 
@@ -11240,7 +11240,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血长靴",
-		value=9,
+		value=12,
 		var="T38",
 	},
 	[938] = { 
@@ -11252,7 +11252,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="霸皇长靴",
-		value=9,
+		value=14,
 		var="T38",
 	},
 	[939] = { 
@@ -11264,7 +11264,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魔灵长靴",
-		value=10,
+		value=18,
 		var="T38",
 	},
 	[940] = { 
@@ -11276,7 +11276,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔长靴",
-		value=11,
+		value=22,
 		var="T38",
 	},
 	[941] = { 
@@ -11288,7 +11288,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="昊天长靴",
-		value=12,
+		value=10,
 		var="T38",
 	},
 	[942] = { 
@@ -11300,7 +11300,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="御风神靴",
-		value=13,
+		value=14,
 		var="T38",
 	},
 	[943] = { 
@@ -11312,7 +11312,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神长靴",
-		value=14,
+		value=16,
 		var="T38",
 	},
 	[944] = { 
@@ -11324,7 +11324,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="武皇长靴",
-		value=14,
+		value=18,
 		var="T38",
 	},
 	[945] = { 
@@ -11336,7 +11336,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="天灵长靴",
-		value=15,
+		value=22,
 		var="T38",
 	},
 	[946] = { 
@@ -11348,7 +11348,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾长靴",
-		value=16,
+		value=28,
 		var="T38",
 	},
 	[947] = { 
@@ -11360,7 +11360,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="雪天长靴",
-		value=12,
+		value=10,
 		var="T38",
 	},
 	[948] = { 
@@ -11372,7 +11372,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="地藏冥靴",
-		value=13,
+		value=14,
 		var="T38",
 	},
 	[949] = { 
@@ -11384,7 +11384,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血长靴",
-		value=14,
+		value=16,
 		var="T38",
 	},
 	[950] = { 
@@ -11396,7 +11396,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="霸皇长靴",
-		value=14,
+		value=18,
 		var="T38",
 	},
 	[951] = { 
@@ -11408,7 +11408,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="魔灵长靴",
-		value=15,
+		value=22,
 		var="T38",
 	},
 	[952] = { 
@@ -11420,7 +11420,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔长靴",
-		value=16,
+		value=28,
 		var="T38",
 	},
 	[953] = { 
@@ -11456,7 +11456,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="昊天护手",
-		value=3,
+		value=6,
 		var="T38",
 	},
 	[956] = { 
@@ -11468,7 +11468,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="追月护手",
-		value=4,
+		value=8,
 		var="T38",
 	},
 	[957] = { 
@@ -11480,7 +11480,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神护手",
-		value=5,
+		value=9,
 		var="T38",
 	},
 	[958] = { 
@@ -11492,7 +11492,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="武皇护手",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[959] = { 
@@ -11504,7 +11504,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天灵护手",
-		value=6,
+		value=14,
 		var="T38",
 	},
 	[960] = { 
@@ -11516,7 +11516,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾护手",
-		value=7,
+		value=18,
 		var="T38",
 	},
 	[961] = { 
@@ -11552,7 +11552,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="雪天护手",
-		value=3,
+		value=6,
 		var="T38",
 	},
 	[964] = { 
@@ -11564,7 +11564,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凌鹰护手",
-		value=4,
+		value=8,
 		var="T38",
 	},
 	[965] = { 
@@ -11576,7 +11576,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血护手",
-		value=5,
+		value=9,
 		var="T38",
 	},
 	[966] = { 
@@ -11588,7 +11588,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="霸皇护手",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[967] = { 
@@ -11600,7 +11600,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="魔灵护手",
-		value=6,
+		value=14,
 		var="T38",
 	},
 	[968] = { 
@@ -11612,7 +11612,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔护手",
-		value=7,
+		value=18,
 		var="T38",
 	},
 	[969] = { 
@@ -11624,7 +11624,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="封神护手",
-		value=5,
+		value=6,
 		var="T38",
 	},
 	[970] = { 
@@ -11636,7 +11636,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="昊天护手",
-		value=6,
+		value=8,
 		var="T38",
 	},
 	[971] = { 
@@ -11648,7 +11648,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="追月护手",
-		value=7,
+		value=10,
 		var="T38",
 	},
 	[972] = { 
@@ -11660,7 +11660,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神护手",
-		value=8,
+		value=12,
 		var="T38",
 	},
 	[973] = { 
@@ -11672,7 +11672,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="武皇护手",
-		value=8,
+		value=14,
 		var="T38",
 	},
 	[974] = { 
@@ -11684,7 +11684,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天灵护手",
-		value=9,
+		value=18,
 		var="T38",
 	},
 	[975] = { 
@@ -11696,7 +11696,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾护手",
-		value=10,
+		value=22,
 		var="T38",
 	},
 	[976] = { 
@@ -11708,7 +11708,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="赤龙护手",
-		value=5,
+		value=6,
 		var="T38",
 	},
 	[977] = { 
@@ -11720,7 +11720,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="雪天护手",
-		value=6,
+		value=8,
 		var="T38",
 	},
 	[978] = { 
@@ -11732,7 +11732,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凌鹰护手",
-		value=7,
+		value=10,
 		var="T38",
 	},
 	[979] = { 
@@ -11744,7 +11744,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血护手",
-		value=8,
+		value=12,
 		var="T38",
 	},
 	[980] = { 
@@ -11756,7 +11756,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="霸皇护手",
-		value=8,
+		value=14,
 		var="T38",
 	},
 	[981] = { 
@@ -11768,7 +11768,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="魔灵护手",
-		value=9,
+		value=18,
 		var="T38",
 	},
 	[982] = { 
@@ -11780,7 +11780,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔护手",
-		value=10,
+		value=22,
 		var="T38",
 	},
 	[983] = { 
@@ -11792,7 +11792,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="昊天护手",
-		value=11,
+		value=10,
 		var="T38",
 	},
 	[984] = { 
@@ -11804,7 +11804,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="追月护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[985] = { 
@@ -11816,7 +11816,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神护手",
-		value=13,
+		value=16,
 		var="T38",
 	},
 	[986] = { 
@@ -11828,7 +11828,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="武皇护手",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[987] = { 
@@ -11840,7 +11840,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天灵护手",
-		value=14,
+		value=22,
 		var="T38",
 	},
 	[988] = { 
@@ -11852,7 +11852,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾护手",
-		value=15,
+		value=24,
 		var="T38",
 	},
 	[989] = { 
@@ -11864,7 +11864,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="雪天护手",
-		value=11,
+		value=10,
 		var="T38",
 	},
 	[990] = { 
@@ -11876,7 +11876,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凌鹰护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[991] = { 
@@ -11888,7 +11888,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血护手",
-		value=13,
+		value=16,
 		var="T38",
 	},
 	[992] = { 
@@ -11900,7 +11900,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="霸皇护手",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[993] = { 
@@ -11912,7 +11912,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="魔灵护手",
-		value=14,
+		value=22,
 		var="T38",
 	},
 	[994] = { 
@@ -11924,7 +11924,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔护手",
-		value=15,
+		value=24,
 		var="T38",
 	},
 	[995] = { 
@@ -11960,7 +11960,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="封神长靴",
-		value=3,
+		value=4,
 		var="T38",
 	},
 	[998] = { 
@@ -11972,7 +11972,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="昊天长靴",
-		value=4,
+		value=6,
 		var="T38",
 	},
 	[999] = { 
@@ -11984,7 +11984,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="御风神靴",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[1000] = { 
@@ -11996,7 +11996,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神长靴",
-		value=6,
+		value=9,
 		var="T38",
 	},
 	[1001] = { 
@@ -12008,7 +12008,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="武皇长靴",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[1002] = { 
@@ -12020,7 +12020,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天灵长靴",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[1003] = { 
@@ -12032,7 +12032,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾长靴",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[1004] = { 
@@ -12068,7 +12068,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="赤龙长靴",
-		value=3,
+		value=4,
 		var="T38",
 	},
 	[1007] = { 
@@ -12080,7 +12080,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="雪天长靴",
-		value=4,
+		value=6,
 		var="T38",
 	},
 	[1008] = { 
@@ -12092,7 +12092,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="地藏冥靴",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[1009] = { 
@@ -12104,7 +12104,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血长靴",
-		value=6,
+		value=9,
 		var="T38",
 	},
 	[1010] = { 
@@ -12116,7 +12116,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="霸皇长靴",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[1011] = { 
@@ -12128,7 +12128,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="魔灵长靴",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[1012] = { 
@@ -12140,7 +12140,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔长靴",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[1013] = { 
@@ -12164,7 +12164,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="昊天长靴",
-		value=7,
+		value=8,
 		var="T38",
 	},
 	[1015] = { 
@@ -12176,7 +12176,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="御风神靴",
-		value=8,
+		value=10,
 		var="T38",
 	},
 	[1016] = { 
@@ -12188,7 +12188,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神长靴",
-		value=9,
+		value=12,
 		var="T38",
 	},
 	[1017] = { 
@@ -12200,7 +12200,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="武皇长靴",
-		value=9,
+		value=14,
 		var="T38",
 	},
 	[1018] = { 
@@ -12212,7 +12212,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天灵长靴",
-		value=10,
+		value=18,
 		var="T38",
 	},
 	[1019] = { 
@@ -12224,7 +12224,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾长靴",
-		value=11,
+		value=22,
 		var="T38",
 	},
 	[1020] = { 
@@ -12248,7 +12248,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="雪天长靴",
-		value=7,
+		value=8,
 		var="T38",
 	},
 	[1022] = { 
@@ -12260,7 +12260,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="地藏冥靴",
-		value=8,
+		value=10,
 		var="T38",
 	},
 	[1023] = { 
@@ -12272,7 +12272,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血长靴",
-		value=9,
+		value=12,
 		var="T38",
 	},
 	[1024] = { 
@@ -12284,7 +12284,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="霸皇长靴",
-		value=9,
+		value=14,
 		var="T38",
 	},
 	[1025] = { 
@@ -12296,7 +12296,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="魔灵长靴",
-		value=10,
+		value=18,
 		var="T38",
 	},
 	[1026] = { 
@@ -12308,7 +12308,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔长靴",
-		value=11,
+		value=22,
 		var="T38",
 	},
 	[1027] = { 
@@ -12320,7 +12320,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="昊天长靴",
-		value=12,
+		value=10,
 		var="T38",
 	},
 	[1028] = { 
@@ -12332,7 +12332,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="御风神靴",
-		value=13,
+		value=14,
 		var="T38",
 	},
 	[1029] = { 
@@ -12344,7 +12344,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神长靴",
-		value=14,
+		value=16,
 		var="T38",
 	},
 	[1030] = { 
@@ -12356,7 +12356,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="武皇长靴",
-		value=14,
+		value=18,
 		var="T38",
 	},
 	[1031] = { 
@@ -12368,7 +12368,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="天灵长靴",
-		value=15,
+		value=22,
 		var="T38",
 	},
 	[1032] = { 
@@ -12380,7 +12380,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾长靴",
-		value=16,
+		value=28,
 		var="T38",
 	},
 	[1033] = { 
@@ -12392,7 +12392,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="雪天长靴",
-		value=12,
+		value=10,
 		var="T38",
 	},
 	[1034] = { 
@@ -12404,7 +12404,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="地藏冥靴",
-		value=13,
+		value=14,
 		var="T38",
 	},
 	[1035] = { 
@@ -12416,7 +12416,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血长靴",
-		value=14,
+		value=16,
 		var="T38",
 	},
 	[1036] = { 
@@ -12428,7 +12428,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="霸皇长靴",
-		value=14,
+		value=18,
 		var="T38",
 	},
 	[1037] = { 
@@ -12440,7 +12440,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="魔灵长靴",
-		value=15,
+		value=22,
 		var="T38",
 	},
 	[1038] = { 
@@ -12452,7 +12452,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔长靴",
-		value=16,
+		value=28,
 		var="T38",
 	},
 	[1039] = { 
@@ -12488,7 +12488,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="昊天护手",
-		value=3,
+		value=6,
 		var="T38",
 	},
 	[1042] = { 
@@ -12500,7 +12500,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="追月护手",
-		value=4,
+		value=8,
 		var="T38",
 	},
 	[1043] = { 
@@ -12512,7 +12512,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神护手",
-		value=5,
+		value=9,
 		var="T38",
 	},
 	[1044] = { 
@@ -12524,7 +12524,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="武皇护手",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[1045] = { 
@@ -12536,7 +12536,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天灵护手",
-		value=6,
+		value=14,
 		var="T38",
 	},
 	[1046] = { 
@@ -12548,7 +12548,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾护手",
-		value=7,
+		value=18,
 		var="T38",
 	},
 	[1047] = { 
@@ -12584,7 +12584,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="雪天护手",
-		value=3,
+		value=6,
 		var="T38",
 	},
 	[1050] = { 
@@ -12596,7 +12596,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凌鹰护手",
-		value=4,
+		value=8,
 		var="T38",
 	},
 	[1051] = { 
@@ -12608,7 +12608,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血护手",
-		value=5,
+		value=9,
 		var="T38",
 	},
 	[1052] = { 
@@ -12620,7 +12620,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="霸皇护手",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[1053] = { 
@@ -12632,7 +12632,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="魔灵护手",
-		value=6,
+		value=14,
 		var="T38",
 	},
 	[1054] = { 
@@ -12644,7 +12644,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔护手",
-		value=7,
+		value=18,
 		var="T38",
 	},
 	[1055] = { 
@@ -12656,7 +12656,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="封神护手",
-		value=5,
+		value=6,
 		var="T38",
 	},
 	[1056] = { 
@@ -12668,7 +12668,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="昊天护手",
-		value=6,
+		value=8,
 		var="T38",
 	},
 	[1057] = { 
@@ -12680,7 +12680,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="追月护手",
-		value=7,
+		value=10,
 		var="T38",
 	},
 	[1058] = { 
@@ -12692,7 +12692,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神护手",
-		value=8,
+		value=12,
 		var="T38",
 	},
 	[1059] = { 
@@ -12704,7 +12704,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="武皇护手",
-		value=8,
+		value=14,
 		var="T38",
 	},
 	[1060] = { 
@@ -12716,7 +12716,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天灵护手",
-		value=9,
+		value=18,
 		var="T38",
 	},
 	[1061] = { 
@@ -12728,7 +12728,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾护手",
-		value=10,
+		value=22,
 		var="T38",
 	},
 	[1062] = { 
@@ -12740,7 +12740,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="赤龙护手",
-		value=5,
+		value=6,
 		var="T38",
 	},
 	[1063] = { 
@@ -12752,7 +12752,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="雪天护手",
-		value=6,
+		value=8,
 		var="T38",
 	},
 	[1064] = { 
@@ -12764,7 +12764,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凌鹰护手",
-		value=7,
+		value=10,
 		var="T38",
 	},
 	[1065] = { 
@@ -12776,7 +12776,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血护手",
-		value=8,
+		value=12,
 		var="T38",
 	},
 	[1066] = { 
@@ -12788,7 +12788,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="霸皇护手",
-		value=8,
+		value=14,
 		var="T38",
 	},
 	[1067] = { 
@@ -12800,7 +12800,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="魔灵护手",
-		value=9,
+		value=18,
 		var="T38",
 	},
 	[1068] = { 
@@ -12812,7 +12812,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔护手",
-		value=10,
+		value=22,
 		var="T38",
 	},
 	[1069] = { 
@@ -12824,7 +12824,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="昊天护手",
-		value=11,
+		value=10,
 		var="T38",
 	},
 	[1070] = { 
@@ -12836,7 +12836,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="追月护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1071] = { 
@@ -12848,7 +12848,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神护手",
-		value=13,
+		value=16,
 		var="T38",
 	},
 	[1072] = { 
@@ -12860,7 +12860,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="武皇护手",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[1073] = { 
@@ -12872,7 +12872,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天灵护手",
-		value=14,
+		value=22,
 		var="T38",
 	},
 	[1074] = { 
@@ -12884,7 +12884,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾护手",
-		value=15,
+		value=24,
 		var="T38",
 	},
 	[1075] = { 
@@ -12896,7 +12896,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="雪天护手",
-		value=11,
+		value=10,
 		var="T38",
 	},
 	[1076] = { 
@@ -12908,7 +12908,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凌鹰护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1077] = { 
@@ -12920,7 +12920,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血护手",
-		value=13,
+		value=16,
 		var="T38",
 	},
 	[1078] = { 
@@ -12932,7 +12932,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="霸皇护手",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[1079] = { 
@@ -12944,7 +12944,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="魔灵护手",
-		value=14,
+		value=22,
 		var="T38",
 	},
 	[1080] = { 
@@ -12956,7 +12956,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔护手",
-		value=15,
+		value=24,
 		var="T38",
 	},
 	[1081] = { 
@@ -12992,7 +12992,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="封神长靴",
-		value=3,
+		value=4,
 		var="T38",
 	},
 	[1084] = { 
@@ -13004,7 +13004,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="昊天长靴",
-		value=4,
+		value=6,
 		var="T38",
 	},
 	[1085] = { 
@@ -13016,7 +13016,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="御风神靴",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[1086] = { 
@@ -13028,7 +13028,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神长靴",
-		value=6,
+		value=9,
 		var="T38",
 	},
 	[1087] = { 
@@ -13040,7 +13040,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="武皇长靴",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[1088] = { 
@@ -13052,7 +13052,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天灵长靴",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[1089] = { 
@@ -13064,7 +13064,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾长靴",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[1090] = { 
@@ -13100,7 +13100,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="赤龙长靴",
-		value=3,
+		value=4,
 		var="T38",
 	},
 	[1093] = { 
@@ -13112,7 +13112,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="雪天长靴",
-		value=4,
+		value=6,
 		var="T38",
 	},
 	[1094] = { 
@@ -13124,7 +13124,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="地藏冥靴",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[1095] = { 
@@ -13136,7 +13136,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血长靴",
-		value=6,
+		value=9,
 		var="T38",
 	},
 	[1096] = { 
@@ -13148,7 +13148,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="霸皇长靴",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[1097] = { 
@@ -13160,7 +13160,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="魔灵长靴",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[1098] = { 
@@ -13172,7 +13172,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔长靴",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[1099] = { 
@@ -13196,7 +13196,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="昊天长靴",
-		value=7,
+		value=8,
 		var="T38",
 	},
 	[1101] = { 
@@ -13208,7 +13208,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="御风神靴",
-		value=8,
+		value=10,
 		var="T38",
 	},
 	[1102] = { 
@@ -13220,7 +13220,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神长靴",
-		value=9,
+		value=12,
 		var="T38",
 	},
 	[1103] = { 
@@ -13232,7 +13232,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="武皇长靴",
-		value=9,
+		value=14,
 		var="T38",
 	},
 	[1104] = { 
@@ -13244,7 +13244,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天灵长靴",
-		value=10,
+		value=18,
 		var="T38",
 	},
 	[1105] = { 
@@ -13256,7 +13256,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾长靴",
-		value=11,
+		value=22,
 		var="T38",
 	},
 	[1106] = { 
@@ -13280,7 +13280,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="雪天长靴",
-		value=7,
+		value=8,
 		var="T38",
 	},
 	[1108] = { 
@@ -13292,7 +13292,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="地藏冥靴",
-		value=8,
+		value=10,
 		var="T38",
 	},
 	[1109] = { 
@@ -13304,7 +13304,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血长靴",
-		value=9,
+		value=12,
 		var="T38",
 	},
 	[1110] = { 
@@ -13316,7 +13316,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="霸皇长靴",
-		value=9,
+		value=14,
 		var="T38",
 	},
 	[1111] = { 
@@ -13328,7 +13328,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="魔灵长靴",
-		value=10,
+		value=18,
 		var="T38",
 	},
 	[1112] = { 
@@ -13340,7 +13340,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔长靴",
-		value=11,
+		value=22,
 		var="T38",
 	},
 	[1113] = { 
@@ -13352,7 +13352,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="昊天长靴",
-		value=12,
+		value=10,
 		var="T38",
 	},
 	[1114] = { 
@@ -13364,7 +13364,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="御风神靴",
-		value=13,
+		value=14,
 		var="T38",
 	},
 	[1115] = { 
@@ -13376,7 +13376,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神长靴",
-		value=14,
+		value=16,
 		var="T38",
 	},
 	[1116] = { 
@@ -13388,7 +13388,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="武皇长靴",
-		value=14,
+		value=18,
 		var="T38",
 	},
 	[1117] = { 
@@ -13400,7 +13400,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="天灵长靴",
-		value=15,
+		value=22,
 		var="T38",
 	},
 	[1118] = { 
@@ -13412,7 +13412,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾长靴",
-		value=16,
+		value=28,
 		var="T38",
 	},
 	[1119] = { 
@@ -13424,7 +13424,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="雪天长靴",
-		value=12,
+		value=10,
 		var="T38",
 	},
 	[1120] = { 
@@ -13436,7 +13436,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="地藏冥靴",
-		value=13,
+		value=14,
 		var="T38",
 	},
 	[1121] = { 
@@ -13448,7 +13448,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血长靴",
-		value=14,
+		value=16,
 		var="T38",
 	},
 	[1122] = { 
@@ -13460,7 +13460,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="霸皇长靴",
-		value=14,
+		value=18,
 		var="T38",
 	},
 	[1123] = { 
@@ -13472,7 +13472,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="魔灵长靴",
-		value=15,
+		value=22,
 		var="T38",
 	},
 	[1124] = { 
@@ -13484,7 +13484,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔长靴",
-		value=16,
+		value=28,
 		var="T38",
 	},
 	[1125] = { 
@@ -13520,7 +13520,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="昊天护手",
-		value=3,
+		value=6,
 		var="T38",
 	},
 	[1128] = { 
@@ -13532,7 +13532,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="追月护手",
-		value=4,
+		value=8,
 		var="T38",
 	},
 	[1129] = { 
@@ -13544,7 +13544,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神护手",
-		value=5,
+		value=9,
 		var="T38",
 	},
 	[1130] = { 
@@ -13556,7 +13556,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="武皇护手",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[1131] = { 
@@ -13568,7 +13568,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="天灵护手",
-		value=6,
+		value=14,
 		var="T38",
 	},
 	[1132] = { 
@@ -13580,7 +13580,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾护手",
-		value=7,
+		value=18,
 		var="T38",
 	},
 	[1133] = { 
@@ -13616,7 +13616,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="雪天护手",
-		value=3,
+		value=6,
 		var="T38",
 	},
 	[1136] = { 
@@ -13628,7 +13628,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凌鹰护手",
-		value=4,
+		value=8,
 		var="T38",
 	},
 	[1137] = { 
@@ -13640,7 +13640,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血护手",
-		value=5,
+		value=9,
 		var="T38",
 	},
 	[1138] = { 
@@ -13652,7 +13652,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="霸皇护手",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[1139] = { 
@@ -13664,7 +13664,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="魔灵护手",
-		value=6,
+		value=14,
 		var="T38",
 	},
 	[1140] = { 
@@ -13676,7 +13676,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔护手",
-		value=7,
+		value=18,
 		var="T38",
 	},
 	[1141] = { 
@@ -13688,7 +13688,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="封神护手",
-		value=5,
+		value=6,
 		var="T38",
 	},
 	[1142] = { 
@@ -13700,7 +13700,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="昊天护手",
-		value=6,
+		value=8,
 		var="T38",
 	},
 	[1143] = { 
@@ -13712,7 +13712,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="追月护手",
-		value=7,
+		value=10,
 		var="T38",
 	},
 	[1144] = { 
@@ -13724,7 +13724,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神护手",
-		value=8,
+		value=12,
 		var="T38",
 	},
 	[1145] = { 
@@ -13736,7 +13736,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="武皇护手",
-		value=8,
+		value=14,
 		var="T38",
 	},
 	[1146] = { 
@@ -13748,7 +13748,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="天灵护手",
-		value=9,
+		value=18,
 		var="T38",
 	},
 	[1147] = { 
@@ -13760,7 +13760,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾护手",
-		value=10,
+		value=22,
 		var="T38",
 	},
 	[1148] = { 
@@ -13772,7 +13772,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="赤龙护手",
-		value=5,
+		value=6,
 		var="T38",
 	},
 	[1149] = { 
@@ -13784,7 +13784,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="雪天护手",
-		value=6,
+		value=8,
 		var="T38",
 	},
 	[1150] = { 
@@ -13796,7 +13796,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凌鹰护手",
-		value=7,
+		value=10,
 		var="T38",
 	},
 	[1151] = { 
@@ -13808,7 +13808,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血护手",
-		value=8,
+		value=12,
 		var="T38",
 	},
 	[1152] = { 
@@ -13820,7 +13820,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="霸皇护手",
-		value=8,
+		value=14,
 		var="T38",
 	},
 	[1153] = { 
@@ -13832,7 +13832,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="魔灵护手",
-		value=9,
+		value=18,
 		var="T38",
 	},
 	[1154] = { 
@@ -13844,7 +13844,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔护手",
-		value=10,
+		value=22,
 		var="T38",
 	},
 	[1155] = { 
@@ -13856,7 +13856,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="昊天护手",
-		value=11,
+		value=10,
 		var="T38",
 	},
 	[1156] = { 
@@ -13868,7 +13868,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="追月护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1157] = { 
@@ -13880,7 +13880,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神护手",
-		value=13,
+		value=16,
 		var="T38",
 	},
 	[1158] = { 
@@ -13892,7 +13892,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="武皇护手",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[1159] = { 
@@ -13904,7 +13904,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="天灵护手",
-		value=14,
+		value=22,
 		var="T38",
 	},
 	[1160] = { 
@@ -13916,7 +13916,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾护手",
-		value=15,
+		value=24,
 		var="T38",
 	},
 	[1161] = { 
@@ -13928,7 +13928,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="雪天护手",
-		value=11,
+		value=10,
 		var="T38",
 	},
 	[1162] = { 
@@ -13940,7 +13940,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凌鹰护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1163] = { 
@@ -13952,7 +13952,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血护手",
-		value=13,
+		value=16,
 		var="T38",
 	},
 	[1164] = { 
@@ -13964,7 +13964,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="霸皇护手",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[1165] = { 
@@ -13976,7 +13976,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="魔灵护手",
-		value=14,
+		value=22,
 		var="T38",
 	},
 	[1166] = { 
@@ -13988,7 +13988,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔护手",
-		value=15,
+		value=24,
 		var="T38",
 	},
 	[1167] = { 
@@ -14024,7 +14024,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="封神长靴",
-		value=3,
+		value=4,
 		var="T38",
 	},
 	[1170] = { 
@@ -14036,7 +14036,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="昊天长靴",
-		value=4,
+		value=6,
 		var="T38",
 	},
 	[1171] = { 
@@ -14048,7 +14048,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="御风神靴",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[1172] = { 
@@ -14060,7 +14060,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神长靴",
-		value=6,
+		value=9,
 		var="T38",
 	},
 	[1173] = { 
@@ -14072,7 +14072,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="武皇长靴",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[1174] = { 
@@ -14084,7 +14084,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="天灵长靴",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[1175] = { 
@@ -14096,7 +14096,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾长靴",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[1176] = { 
@@ -14132,7 +14132,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="赤龙长靴",
-		value=3,
+		value=4,
 		var="T38",
 	},
 	[1179] = { 
@@ -14144,7 +14144,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="雪天长靴",
-		value=4,
+		value=6,
 		var="T38",
 	},
 	[1180] = { 
@@ -14156,7 +14156,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="地藏冥靴",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[1181] = { 
@@ -14168,7 +14168,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血长靴",
-		value=6,
+		value=9,
 		var="T38",
 	},
 	[1182] = { 
@@ -14180,7 +14180,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="霸皇长靴",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[1183] = { 
@@ -14192,7 +14192,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="魔灵长靴",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[1184] = { 
@@ -14204,7 +14204,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔长靴",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[1185] = { 
@@ -14228,7 +14228,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="昊天长靴",
-		value=7,
+		value=8,
 		var="T38",
 	},
 	[1187] = { 
@@ -14240,7 +14240,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="御风神靴",
-		value=8,
+		value=10,
 		var="T38",
 	},
 	[1188] = { 
@@ -14252,7 +14252,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神长靴",
-		value=9,
+		value=12,
 		var="T38",
 	},
 	[1189] = { 
@@ -14264,7 +14264,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="武皇长靴",
-		value=9,
+		value=14,
 		var="T38",
 	},
 	[1190] = { 
@@ -14276,7 +14276,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="天灵长靴",
-		value=10,
+		value=18,
 		var="T38",
 	},
 	[1191] = { 
@@ -14288,7 +14288,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾长靴",
-		value=11,
+		value=22,
 		var="T38",
 	},
 	[1192] = { 
@@ -14312,7 +14312,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="雪天长靴",
-		value=7,
+		value=8,
 		var="T38",
 	},
 	[1194] = { 
@@ -14324,7 +14324,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="地藏冥靴",
-		value=8,
+		value=10,
 		var="T38",
 	},
 	[1195] = { 
@@ -14336,7 +14336,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血长靴",
-		value=9,
+		value=12,
 		var="T38",
 	},
 	[1196] = { 
@@ -14348,7 +14348,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="霸皇长靴",
-		value=9,
+		value=14,
 		var="T38",
 	},
 	[1197] = { 
@@ -14360,7 +14360,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="魔灵长靴",
-		value=10,
+		value=18,
 		var="T38",
 	},
 	[1198] = { 
@@ -14372,7 +14372,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔长靴",
-		value=11,
+		value=22,
 		var="T38",
 	},
 	[1199] = { 
@@ -14384,7 +14384,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="昊天长靴",
-		value=12,
+		value=10,
 		var="T38",
 	},
 	[1200] = { 
@@ -14396,7 +14396,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="御风神靴",
-		value=13,
+		value=14,
 		var="T38",
 	},
 	[1201] = { 
@@ -14408,7 +14408,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神长靴",
-		value=14,
+		value=16,
 		var="T38",
 	},
 	[1202] = { 
@@ -14420,7 +14420,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="武皇长靴",
-		value=14,
+		value=18,
 		var="T38",
 	},
 	[1203] = { 
@@ -14432,7 +14432,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="天灵长靴",
-		value=15,
+		value=22,
 		var="T38",
 	},
 	[1204] = { 
@@ -14444,7 +14444,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾长靴",
-		value=16,
+		value=28,
 		var="T38",
 	},
 	[1205] = { 
@@ -14456,7 +14456,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="雪天长靴",
-		value=12,
+		value=10,
 		var="T38",
 	},
 	[1206] = { 
@@ -14468,7 +14468,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="地藏冥靴",
-		value=13,
+		value=14,
 		var="T38",
 	},
 	[1207] = { 
@@ -14480,7 +14480,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血长靴",
-		value=14,
+		value=16,
 		var="T38",
 	},
 	[1208] = { 
@@ -14492,7 +14492,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="霸皇长靴",
-		value=14,
+		value=18,
 		var="T38",
 	},
 	[1209] = { 
@@ -14504,7 +14504,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="魔灵长靴",
-		value=15,
+		value=22,
 		var="T38",
 	},
 	[1210] = { 
@@ -14516,7 +14516,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔长靴",
-		value=16,
+		value=28,
 		var="T38",
 	},
 	[1211] = { 
@@ -14552,7 +14552,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="昊天护手",
-		value=3,
+		value=6,
 		var="T38",
 	},
 	[1214] = { 
@@ -14564,7 +14564,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="追月护手",
-		value=4,
+		value=8,
 		var="T38",
 	},
 	[1215] = { 
@@ -14576,7 +14576,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神护手",
-		value=5,
+		value=9,
 		var="T38",
 	},
 	[1216] = { 
@@ -14588,7 +14588,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="武皇护手",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[1217] = { 
@@ -14600,7 +14600,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="天灵护手",
-		value=6,
+		value=14,
 		var="T38",
 	},
 	[1218] = { 
@@ -14612,7 +14612,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾护手",
-		value=7,
+		value=18,
 		var="T38",
 	},
 	[1219] = { 
@@ -14648,7 +14648,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="雪天护手",
-		value=3,
+		value=6,
 		var="T38",
 	},
 	[1222] = { 
@@ -14660,7 +14660,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凌鹰护手",
-		value=4,
+		value=8,
 		var="T38",
 	},
 	[1223] = { 
@@ -14672,7 +14672,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血护手",
-		value=5,
+		value=9,
 		var="T38",
 	},
 	[1224] = { 
@@ -14684,7 +14684,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="霸皇护手",
-		value=5,
+		value=10,
 		var="T38",
 	},
 	[1225] = { 
@@ -14696,7 +14696,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="魔灵护手",
-		value=6,
+		value=14,
 		var="T38",
 	},
 	[1226] = { 
@@ -14708,7 +14708,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔护手",
-		value=7,
+		value=18,
 		var="T38",
 	},
 	[1227] = { 
@@ -14720,7 +14720,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="封神护手",
-		value=5,
+		value=6,
 		var="T38",
 	},
 	[1228] = { 
@@ -14732,7 +14732,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="昊天护手",
-		value=6,
+		value=8,
 		var="T38",
 	},
 	[1229] = { 
@@ -14744,7 +14744,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="追月护手",
-		value=7,
+		value=10,
 		var="T38",
 	},
 	[1230] = { 
@@ -14756,7 +14756,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神护手",
-		value=8,
+		value=12,
 		var="T38",
 	},
 	[1231] = { 
@@ -14768,7 +14768,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="武皇护手",
-		value=8,
+		value=14,
 		var="T38",
 	},
 	[1232] = { 
@@ -14780,7 +14780,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="天灵护手",
-		value=9,
+		value=18,
 		var="T38",
 	},
 	[1233] = { 
@@ -14792,7 +14792,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾护手",
-		value=10,
+		value=22,
 		var="T38",
 	},
 	[1234] = { 
@@ -14804,7 +14804,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="赤龙护手",
-		value=5,
+		value=6,
 		var="T38",
 	},
 	[1235] = { 
@@ -14816,7 +14816,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="雪天护手",
-		value=6,
+		value=8,
 		var="T38",
 	},
 	[1236] = { 
@@ -14828,7 +14828,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凌鹰护手",
-		value=7,
+		value=10,
 		var="T38",
 	},
 	[1237] = { 
@@ -14840,7 +14840,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血护手",
-		value=8,
+		value=12,
 		var="T38",
 	},
 	[1238] = { 
@@ -14852,7 +14852,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="霸皇护手",
-		value=8,
+		value=14,
 		var="T38",
 	},
 	[1239] = { 
@@ -14864,7 +14864,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="魔灵护手",
-		value=9,
+		value=18,
 		var="T38",
 	},
 	[1240] = { 
@@ -14876,7 +14876,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔护手",
-		value=10,
+		value=22,
 		var="T38",
 	},
 	[1241] = { 
@@ -14888,7 +14888,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="昊天护手",
-		value=11,
+		value=10,
 		var="T38",
 	},
 	[1242] = { 
@@ -14900,7 +14900,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="追月护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1243] = { 
@@ -14912,7 +14912,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神护手",
-		value=13,
+		value=16,
 		var="T38",
 	},
 	[1244] = { 
@@ -14924,7 +14924,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="武皇护手",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[1245] = { 
@@ -14936,7 +14936,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="天灵护手",
-		value=14,
+		value=22,
 		var="T38",
 	},
 	[1246] = { 
@@ -14948,7 +14948,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾护手",
-		value=15,
+		value=24,
 		var="T38",
 	},
 	[1247] = { 
@@ -14960,7 +14960,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="雪天护手",
-		value=11,
+		value=10,
 		var="T38",
 	},
 	[1248] = { 
@@ -14972,7 +14972,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凌鹰护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1249] = { 
@@ -14984,7 +14984,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血护手",
-		value=13,
+		value=16,
 		var="T38",
 	},
 	[1250] = { 
@@ -14996,7 +14996,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="霸皇护手",
-		value=13,
+		value=18,
 		var="T38",
 	},
 	[1251] = { 
@@ -15008,7 +15008,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="魔灵护手",
-		value=14,
+		value=22,
 		var="T38",
 	},
 	[1252] = { 
@@ -15020,7 +15020,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔护手",
-		value=15,
+		value=24,
 		var="T38",
 	},
 	[1253] = { 
@@ -15056,7 +15056,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="封神长靴",
-		value=3,
+		value=4,
 		var="T38",
 	},
 	[1256] = { 
@@ -15068,7 +15068,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="昊天长靴",
-		value=4,
+		value=6,
 		var="T38",
 	},
 	[1257] = { 
@@ -15080,7 +15080,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="御风神靴",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[1258] = { 
@@ -15092,7 +15092,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神长靴",
-		value=6,
+		value=9,
 		var="T38",
 	},
 	[1259] = { 
@@ -15104,7 +15104,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="武皇长靴",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[1260] = { 
@@ -15116,7 +15116,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="天灵长靴",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[1261] = { 
@@ -15128,7 +15128,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾长靴",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[1262] = { 
@@ -15164,7 +15164,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="赤龙长靴",
-		value=3,
+		value=4,
 		var="T38",
 	},
 	[1265] = { 
@@ -15176,7 +15176,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="雪天长靴",
-		value=4,
+		value=6,
 		var="T38",
 	},
 	[1266] = { 
@@ -15188,7 +15188,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="地藏冥靴",
-		value=5,
+		value=8,
 		var="T38",
 	},
 	[1267] = { 
@@ -15200,7 +15200,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血长靴",
-		value=6,
+		value=9,
 		var="T38",
 	},
 	[1268] = { 
@@ -15212,7 +15212,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="霸皇长靴",
-		value=6,
+		value=10,
 		var="T38",
 	},
 	[1269] = { 
@@ -15224,7 +15224,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="魔灵长靴",
-		value=7,
+		value=14,
 		var="T38",
 	},
 	[1270] = { 
@@ -15236,7 +15236,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔长靴",
-		value=8,
+		value=18,
 		var="T38",
 	},
 	[1271] = { 
@@ -15260,7 +15260,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="昊天长靴",
-		value=7,
+		value=8,
 		var="T38",
 	},
 	[1273] = { 
@@ -15272,7 +15272,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="御风神靴",
-		value=8,
+		value=10,
 		var="T38",
 	},
 	[1274] = { 
@@ -15284,7 +15284,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神长靴",
-		value=9,
+		value=12,
 		var="T38",
 	},
 	[1275] = { 
@@ -15296,7 +15296,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="武皇长靴",
-		value=9,
+		value=14,
 		var="T38",
 	},
 	[1276] = { 
@@ -15308,7 +15308,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="天灵长靴",
-		value=10,
+		value=18,
 		var="T38",
 	},
 	[1277] = { 
@@ -15320,7 +15320,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾长靴",
-		value=11,
+		value=22,
 		var="T38",
 	},
 	[1278] = { 
@@ -15344,7 +15344,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="雪天长靴",
-		value=7,
+		value=8,
 		var="T38",
 	},
 	[1280] = { 
@@ -15356,7 +15356,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="地藏冥靴",
-		value=8,
+		value=10,
 		var="T38",
 	},
 	[1281] = { 
@@ -15368,7 +15368,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血长靴",
-		value=9,
+		value=12,
 		var="T38",
 	},
 	[1282] = { 
@@ -15380,7 +15380,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="霸皇长靴",
-		value=9,
+		value=14,
 		var="T38",
 	},
 	[1283] = { 
@@ -15392,7 +15392,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="魔灵长靴",
-		value=10,
+		value=18,
 		var="T38",
 	},
 	[1284] = { 
@@ -15404,7 +15404,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔长靴",
-		value=11,
+		value=22,
 		var="T38",
 	},
 	[1285] = { 
@@ -15416,7 +15416,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="昊天长靴",
-		value=12,
+		value=10,
 		var="T38",
 	},
 	[1286] = { 
@@ -15428,7 +15428,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="御风神靴",
-		value=13,
+		value=14,
 		var="T38",
 	},
 	[1287] = { 
@@ -15440,7 +15440,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神长靴",
-		value=14,
+		value=16,
 		var="T38",
 	},
 	[1288] = { 
@@ -15452,7 +15452,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="武皇长靴",
-		value=14,
+		value=18,
 		var="T38",
 	},
 	[1289] = { 
@@ -15464,7 +15464,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="天灵长靴",
-		value=15,
+		value=22,
 		var="T38",
 	},
 	[1290] = { 
@@ -15476,7 +15476,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾长靴",
-		value=16,
+		value=28,
 		var="T38",
 	},
 	[1291] = { 
@@ -15488,7 +15488,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="雪天长靴",
-		value=12,
+		value=10,
 		var="T38",
 	},
 	[1292] = { 
@@ -15500,7 +15500,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="地藏冥靴",
-		value=13,
+		value=14,
 		var="T38",
 	},
 	[1293] = { 
@@ -15512,7 +15512,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血长靴",
-		value=14,
+		value=16,
 		var="T38",
 	},
 	[1294] = { 
@@ -15524,7 +15524,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="霸皇长靴",
-		value=14,
+		value=18,
 		var="T38",
 	},
 	[1295] = { 
@@ -15536,7 +15536,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="魔灵长靴",
-		value=15,
+		value=22,
 		var="T38",
 	},
 	[1296] = { 
@@ -15548,7 +15548,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔长靴",
-		value=16,
+		value=28,
 		var="T38",
 	},
 	[1297] = { 
@@ -15559,7 +15559,7 @@ local config = {
 		equipName="金罡护符1",
 		job=5,
 		showName="金罡护符",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1298] = { 
@@ -15570,7 +15570,7 @@ local config = {
 		equipName="金灵护符1",
 		job=5,
 		showName="金灵护符",
-		value=2,
+		value=6,
 		var="T39",
 	},
 	[1299] = { 
@@ -15581,7 +15581,7 @@ local config = {
 		equipName="圣光项链1",
 		job=5,
 		showName="圣光项链",
-		value=2,
+		value=8,
 		var="T39",
 	},
 	[1300] = { 
@@ -15592,7 +15592,7 @@ local config = {
 		equipName="天神护符1",
 		job=5,
 		showName="天神护符",
-		value=2,
+		value=10,
 		var="T39",
 	},
 	[1301] = { 
@@ -15603,7 +15603,7 @@ local config = {
 		equipName="浴血魔链1",
 		job=5,
 		showName="浴血魔链",
-		value=2,
+		value=12,
 		var="T39",
 	},
 	[1302] = { 
@@ -15614,7 +15614,7 @@ local config = {
 		equipName="金义灵珠1",
 		job=5,
 		showName="金义灵珠",
-		value=3,
+		value=16,
 		var="T39",
 	},
 	[1303] = { 
@@ -15625,7 +15625,7 @@ local config = {
 		equipName="混元灵珠1",
 		job=5,
 		showName="混元灵珠",
-		value=3,
+		value=18,
 		var="T39",
 	},
 	[1304] = { 
@@ -15636,7 +15636,7 @@ local config = {
 		equipName="至尊灵珠1",
 		job=5,
 		showName="至尊灵珠",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1305] = { 
@@ -15647,7 +15647,7 @@ local config = {
 		equipName="暗之链1",
 		job=5,
 		showName="暗之链",
-		value=4,
+		value=28,
 		var="T39",
 	},
 	[1306] = { 
@@ -15658,7 +15658,7 @@ local config = {
 		equipName="影之链1",
 		job=5,
 		showName="影之链",
-		value=4,
+		value=30,
 		var="T39",
 	},
 	[1307] = { 
@@ -15669,7 +15669,7 @@ local config = {
 		equipName="玄天耳环1",
 		job=5,
 		showName="玄天耳环",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1308] = { 
@@ -15680,7 +15680,7 @@ local config = {
 		equipName="磐龙耳环1",
 		job=5,
 		showName="磐龙耳环",
-		value=2,
+		value=8,
 		var="T39",
 	},
 	[1309] = { 
@@ -15691,7 +15691,7 @@ local config = {
 		equipName="鬼眼灵珠1",
 		job=5,
 		showName="鬼眼灵珠",
-		value=2,
+		value=12,
 		var="T39",
 	},
 	[1310] = { 
@@ -15702,7 +15702,7 @@ local config = {
 		equipName="青玉珠环1",
 		job=5,
 		showName="青玉珠环",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1311] = { 
@@ -15713,7 +15713,7 @@ local config = {
 		equipName="血玉珠环1",
 		job=5,
 		showName="血玉珠环",
-		value=4,
+		value=25,
 		var="T39",
 	},
 	[1312] = { 
@@ -15724,7 +15724,7 @@ local config = {
 		equipName="金魄珠环1",
 		job=5,
 		showName="金魄珠环",
-		value=4,
+		value=30,
 		var="T39",
 	},
 	[1313] = { 
@@ -15735,7 +15735,7 @@ local config = {
 		equipName="麒麟指环1",
 		job=5,
 		showName="麒麟指环",
-		value=1,
+		value=3,
 		var="T39",
 	},
 	[1314] = { 
@@ -15746,7 +15746,7 @@ local config = {
 		equipName="权智指环1",
 		job=5,
 		showName="权智指环",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1315] = { 
@@ -15757,7 +15757,7 @@ local config = {
 		equipName="出尘戒1",
 		job=5,
 		showName="出尘戒",
-		value=1,
+		value=8,
 		var="T39",
 	},
 	[1316] = { 
@@ -15768,7 +15768,7 @@ local config = {
 		equipName="磬华指环1",
 		job=5,
 		showName="磬华指环",
-		value=1,
+		value=10,
 		var="T39",
 	},
 	[1317] = { 
@@ -15779,7 +15779,7 @@ local config = {
 		equipName="元始指环1",
 		job=5,
 		showName="元始指环",
-		value=1,
+		value=12,
 		var="T39",
 	},
 	[1318] = { 
@@ -15790,7 +15790,7 @@ local config = {
 		equipName="玉弹指环1",
 		job=5,
 		showName="玉弹指环",
-		value=3,
+		value=14,
 		var="T39",
 	},
 	[1319] = { 
@@ -15801,7 +15801,7 @@ local config = {
 		equipName="太极指环1",
 		job=5,
 		showName="太极指环",
-		value=3,
+		value=16,
 		var="T39",
 	},
 	[1320] = { 
@@ -15812,7 +15812,7 @@ local config = {
 		equipName="天战之戒1",
 		job=5,
 		showName="天战之戒",
-		value=3,
+		value=18,
 		var="T39",
 	},
 	[1321] = { 
@@ -15823,7 +15823,7 @@ local config = {
 		equipName="潜能之戒1",
 		job=5,
 		showName="潜能之戒",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1322] = { 
@@ -15834,7 +15834,7 @@ local config = {
 		equipName="墨灵环1",
 		job=5,
 		showName="墨灵环",
-		value=5,
+		value=28,
 		var="T39",
 	},
 	[1323] = { 
@@ -15845,7 +15845,7 @@ local config = {
 		equipName="神力之环1",
 		job=5,
 		showName="神力之环",
-		value=5,
+		value=30,
 		var="T39",
 	},
 	[1324] = { 
@@ -15856,7 +15856,7 @@ local config = {
 		equipName="金罡护符1",
 		job=2,
 		showName="金罡护符",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1325] = { 
@@ -15867,7 +15867,7 @@ local config = {
 		equipName="金灵护符1",
 		job=2,
 		showName="金灵护符",
-		value=2,
+		value=6,
 		var="T39",
 	},
 	[1326] = { 
@@ -15878,7 +15878,7 @@ local config = {
 		equipName="圣光项链1",
 		job=2,
 		showName="圣光项链",
-		value=2,
+		value=8,
 		var="T39",
 	},
 	[1327] = { 
@@ -15889,7 +15889,7 @@ local config = {
 		equipName="天神护符1",
 		job=2,
 		showName="天神护符",
-		value=2,
+		value=10,
 		var="T39",
 	},
 	[1328] = { 
@@ -15900,7 +15900,7 @@ local config = {
 		equipName="浴血魔链1",
 		job=2,
 		showName="浴血魔链",
-		value=2,
+		value=12,
 		var="T39",
 	},
 	[1329] = { 
@@ -15911,7 +15911,7 @@ local config = {
 		equipName="金义灵珠1",
 		job=2,
 		showName="金义灵珠",
-		value=3,
+		value=16,
 		var="T39",
 	},
 	[1330] = { 
@@ -15922,7 +15922,7 @@ local config = {
 		equipName="混元灵珠1",
 		job=2,
 		showName="混元灵珠",
-		value=3,
+		value=18,
 		var="T39",
 	},
 	[1331] = { 
@@ -15933,7 +15933,7 @@ local config = {
 		equipName="至尊灵珠1",
 		job=2,
 		showName="至尊灵珠",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1332] = { 
@@ -15944,7 +15944,7 @@ local config = {
 		equipName="暗之链1",
 		job=2,
 		showName="暗之链",
-		value=4,
+		value=28,
 		var="T39",
 	},
 	[1333] = { 
@@ -15955,7 +15955,7 @@ local config = {
 		equipName="影之链1",
 		job=2,
 		showName="影之链",
-		value=4,
+		value=30,
 		var="T39",
 	},
 	[1334] = { 
@@ -15966,7 +15966,7 @@ local config = {
 		equipName="玄天耳环1",
 		job=2,
 		showName="玄天耳环",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1335] = { 
@@ -15977,7 +15977,7 @@ local config = {
 		equipName="磐龙耳环1",
 		job=2,
 		showName="磐龙耳环",
-		value=2,
+		value=8,
 		var="T39",
 	},
 	[1336] = { 
@@ -15988,7 +15988,7 @@ local config = {
 		equipName="鬼眼灵珠1",
 		job=2,
 		showName="鬼眼灵珠",
-		value=2,
+		value=12,
 		var="T39",
 	},
 	[1337] = { 
@@ -15999,7 +15999,7 @@ local config = {
 		equipName="青玉珠环1",
 		job=2,
 		showName="青玉珠环",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1338] = { 
@@ -16010,7 +16010,7 @@ local config = {
 		equipName="血玉珠环1",
 		job=2,
 		showName="血玉珠环",
-		value=4,
+		value=25,
 		var="T39",
 	},
 	[1339] = { 
@@ -16021,7 +16021,7 @@ local config = {
 		equipName="金魄珠环1",
 		job=2,
 		showName="金魄珠环",
-		value=4,
+		value=30,
 		var="T39",
 	},
 	[1340] = { 
@@ -16032,7 +16032,7 @@ local config = {
 		equipName="麒麟指环1",
 		job=2,
 		showName="麒麟指环",
-		value=1,
+		value=3,
 		var="T39",
 	},
 	[1341] = { 
@@ -16043,7 +16043,7 @@ local config = {
 		equipName="权智指环1",
 		job=2,
 		showName="权智指环",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1342] = { 
@@ -16054,7 +16054,7 @@ local config = {
 		equipName="出尘戒1",
 		job=2,
 		showName="出尘戒",
-		value=1,
+		value=8,
 		var="T39",
 	},
 	[1343] = { 
@@ -16065,7 +16065,7 @@ local config = {
 		equipName="磬华指环1",
 		job=2,
 		showName="磬华指环",
-		value=1,
+		value=10,
 		var="T39",
 	},
 	[1344] = { 
@@ -16076,7 +16076,7 @@ local config = {
 		equipName="元始指环1",
 		job=2,
 		showName="元始指环",
-		value=1,
+		value=12,
 		var="T39",
 	},
 	[1345] = { 
@@ -16087,7 +16087,7 @@ local config = {
 		equipName="玉弹指环1",
 		job=2,
 		showName="玉弹指环",
-		value=3,
+		value=14,
 		var="T39",
 	},
 	[1346] = { 
@@ -16098,7 +16098,7 @@ local config = {
 		equipName="太极指环1",
 		job=2,
 		showName="太极指环",
-		value=3,
+		value=16,
 		var="T39",
 	},
 	[1347] = { 
@@ -16109,7 +16109,7 @@ local config = {
 		equipName="天战之戒1",
 		job=2,
 		showName="天战之戒",
-		value=3,
+		value=18,
 		var="T39",
 	},
 	[1348] = { 
@@ -16120,7 +16120,7 @@ local config = {
 		equipName="潜能之戒1",
 		job=2,
 		showName="潜能之戒",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1349] = { 
@@ -16131,7 +16131,7 @@ local config = {
 		equipName="墨灵环1",
 		job=2,
 		showName="墨灵环",
-		value=5,
+		value=28,
 		var="T39",
 	},
 	[1350] = { 
@@ -16142,7 +16142,7 @@ local config = {
 		equipName="神力之环1",
 		job=2,
 		showName="神力之环",
-		value=5,
+		value=30,
 		var="T39",
 	},
 	[1351] = { 
@@ -16153,7 +16153,7 @@ local config = {
 		equipName="金罡护符1",
 		job=6,
 		showName="金罡护符",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1352] = { 
@@ -16164,7 +16164,7 @@ local config = {
 		equipName="金灵护符1",
 		job=6,
 		showName="金灵护符",
-		value=2,
+		value=6,
 		var="T39",
 	},
 	[1353] = { 
@@ -16175,7 +16175,7 @@ local config = {
 		equipName="圣光项链1",
 		job=6,
 		showName="圣光项链",
-		value=2,
+		value=8,
 		var="T39",
 	},
 	[1354] = { 
@@ -16186,7 +16186,7 @@ local config = {
 		equipName="天神护符1",
 		job=6,
 		showName="天神护符",
-		value=2,
+		value=10,
 		var="T39",
 	},
 	[1355] = { 
@@ -16197,7 +16197,7 @@ local config = {
 		equipName="浴血魔链1",
 		job=6,
 		showName="浴血魔链",
-		value=2,
+		value=12,
 		var="T39",
 	},
 	[1356] = { 
@@ -16208,7 +16208,7 @@ local config = {
 		equipName="金义灵珠1",
 		job=6,
 		showName="金义灵珠",
-		value=3,
+		value=16,
 		var="T39",
 	},
 	[1357] = { 
@@ -16219,7 +16219,7 @@ local config = {
 		equipName="混元灵珠1",
 		job=6,
 		showName="混元灵珠",
-		value=3,
+		value=18,
 		var="T39",
 	},
 	[1358] = { 
@@ -16230,7 +16230,7 @@ local config = {
 		equipName="至尊灵珠1",
 		job=6,
 		showName="至尊灵珠",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1359] = { 
@@ -16241,7 +16241,7 @@ local config = {
 		equipName="暗之链1",
 		job=6,
 		showName="暗之链",
-		value=4,
+		value=28,
 		var="T39",
 	},
 	[1360] = { 
@@ -16252,7 +16252,7 @@ local config = {
 		equipName="影之链1",
 		job=6,
 		showName="影之链",
-		value=4,
+		value=30,
 		var="T39",
 	},
 	[1361] = { 
@@ -16263,7 +16263,7 @@ local config = {
 		equipName="玄天耳环1",
 		job=6,
 		showName="玄天耳环",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1362] = { 
@@ -16274,7 +16274,7 @@ local config = {
 		equipName="磐龙耳环1",
 		job=6,
 		showName="磐龙耳环",
-		value=2,
+		value=8,
 		var="T39",
 	},
 	[1363] = { 
@@ -16285,7 +16285,7 @@ local config = {
 		equipName="鬼眼灵珠1",
 		job=6,
 		showName="鬼眼灵珠",
-		value=2,
+		value=12,
 		var="T39",
 	},
 	[1364] = { 
@@ -16296,7 +16296,7 @@ local config = {
 		equipName="青玉珠环1",
 		job=6,
 		showName="青玉珠环",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1365] = { 
@@ -16307,7 +16307,7 @@ local config = {
 		equipName="血玉珠环1",
 		job=6,
 		showName="血玉珠环",
-		value=4,
+		value=25,
 		var="T39",
 	},
 	[1366] = { 
@@ -16318,7 +16318,7 @@ local config = {
 		equipName="金魄珠环1",
 		job=6,
 		showName="金魄珠环",
-		value=4,
+		value=30,
 		var="T39",
 	},
 	[1367] = { 
@@ -16329,7 +16329,7 @@ local config = {
 		equipName="麒麟指环1",
 		job=6,
 		showName="麒麟指环",
-		value=1,
+		value=3,
 		var="T39",
 	},
 	[1368] = { 
@@ -16340,7 +16340,7 @@ local config = {
 		equipName="权智指环1",
 		job=6,
 		showName="权智指环",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1369] = { 
@@ -16351,7 +16351,7 @@ local config = {
 		equipName="出尘戒1",
 		job=6,
 		showName="出尘戒",
-		value=1,
+		value=8,
 		var="T39",
 	},
 	[1370] = { 
@@ -16362,7 +16362,7 @@ local config = {
 		equipName="磬华指环1",
 		job=6,
 		showName="磬华指环",
-		value=1,
+		value=10,
 		var="T39",
 	},
 	[1371] = { 
@@ -16373,7 +16373,7 @@ local config = {
 		equipName="元始指环1",
 		job=6,
 		showName="元始指环",
-		value=1,
+		value=12,
 		var="T39",
 	},
 	[1372] = { 
@@ -16384,7 +16384,7 @@ local config = {
 		equipName="玉弹指环1",
 		job=6,
 		showName="玉弹指环",
-		value=3,
+		value=14,
 		var="T39",
 	},
 	[1373] = { 
@@ -16395,7 +16395,7 @@ local config = {
 		equipName="太极指环1",
 		job=6,
 		showName="太极指环",
-		value=3,
+		value=16,
 		var="T39",
 	},
 	[1374] = { 
@@ -16406,7 +16406,7 @@ local config = {
 		equipName="天战之戒1",
 		job=6,
 		showName="天战之戒",
-		value=3,
+		value=18,
 		var="T39",
 	},
 	[1375] = { 
@@ -16417,7 +16417,7 @@ local config = {
 		equipName="潜能之戒1",
 		job=6,
 		showName="潜能之戒",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1376] = { 
@@ -16428,7 +16428,7 @@ local config = {
 		equipName="墨灵环1",
 		job=6,
 		showName="墨灵环",
-		value=5,
+		value=28,
 		var="T39",
 	},
 	[1377] = { 
@@ -16439,7 +16439,7 @@ local config = {
 		equipName="神力之环1",
 		job=6,
 		showName="神力之环",
-		value=5,
+		value=30,
 		var="T39",
 	},
 	[1378] = { 
@@ -16450,7 +16450,7 @@ local config = {
 		equipName="金罡护符1",
 		job=1,
 		showName="金罡护符",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1379] = { 
@@ -16461,7 +16461,7 @@ local config = {
 		equipName="金灵护符1",
 		job=1,
 		showName="金灵护符",
-		value=2,
+		value=6,
 		var="T39",
 	},
 	[1380] = { 
@@ -16472,7 +16472,7 @@ local config = {
 		equipName="圣光项链1",
 		job=1,
 		showName="圣光项链",
-		value=2,
+		value=8,
 		var="T39",
 	},
 	[1381] = { 
@@ -16483,7 +16483,7 @@ local config = {
 		equipName="天神护符1",
 		job=1,
 		showName="天神护符",
-		value=2,
+		value=10,
 		var="T39",
 	},
 	[1382] = { 
@@ -16494,7 +16494,7 @@ local config = {
 		equipName="浴血魔链1",
 		job=1,
 		showName="浴血魔链",
-		value=2,
+		value=12,
 		var="T39",
 	},
 	[1383] = { 
@@ -16505,7 +16505,7 @@ local config = {
 		equipName="金义灵珠1",
 		job=1,
 		showName="金义灵珠",
-		value=3,
+		value=16,
 		var="T39",
 	},
 	[1384] = { 
@@ -16516,7 +16516,7 @@ local config = {
 		equipName="混元灵珠1",
 		job=1,
 		showName="混元灵珠",
-		value=3,
+		value=18,
 		var="T39",
 	},
 	[1385] = { 
@@ -16527,7 +16527,7 @@ local config = {
 		equipName="至尊灵珠1",
 		job=1,
 		showName="至尊灵珠",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1386] = { 
@@ -16538,7 +16538,7 @@ local config = {
 		equipName="暗之链1",
 		job=1,
 		showName="暗之链",
-		value=4,
+		value=28,
 		var="T39",
 	},
 	[1387] = { 
@@ -16549,7 +16549,7 @@ local config = {
 		equipName="影之链1",
 		job=1,
 		showName="影之链",
-		value=4,
+		value=30,
 		var="T39",
 	},
 	[1388] = { 
@@ -16560,7 +16560,7 @@ local config = {
 		equipName="玄天耳环1",
 		job=1,
 		showName="玄天耳环",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1389] = { 
@@ -16571,7 +16571,7 @@ local config = {
 		equipName="磐龙耳环1",
 		job=1,
 		showName="磐龙耳环",
-		value=2,
+		value=8,
 		var="T39",
 	},
 	[1390] = { 
@@ -16582,7 +16582,7 @@ local config = {
 		equipName="鬼眼灵珠1",
 		job=1,
 		showName="鬼眼灵珠",
-		value=2,
+		value=12,
 		var="T39",
 	},
 	[1391] = { 
@@ -16593,7 +16593,7 @@ local config = {
 		equipName="青玉珠环1",
 		job=1,
 		showName="青玉珠环",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1392] = { 
@@ -16604,7 +16604,7 @@ local config = {
 		equipName="血玉珠环1",
 		job=1,
 		showName="血玉珠环",
-		value=4,
+		value=25,
 		var="T39",
 	},
 	[1393] = { 
@@ -16615,7 +16615,7 @@ local config = {
 		equipName="金魄珠环1",
 		job=1,
 		showName="金魄珠环",
-		value=4,
+		value=30,
 		var="T39",
 	},
 	[1394] = { 
@@ -16626,7 +16626,7 @@ local config = {
 		equipName="麒麟指环1",
 		job=1,
 		showName="麒麟指环",
-		value=1,
+		value=3,
 		var="T39",
 	},
 	[1395] = { 
@@ -16637,7 +16637,7 @@ local config = {
 		equipName="权智指环1",
 		job=1,
 		showName="权智指环",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1396] = { 
@@ -16648,7 +16648,7 @@ local config = {
 		equipName="出尘戒1",
 		job=1,
 		showName="出尘戒",
-		value=1,
+		value=8,
 		var="T39",
 	},
 	[1397] = { 
@@ -16659,7 +16659,7 @@ local config = {
 		equipName="磬华指环1",
 		job=1,
 		showName="磬华指环",
-		value=1,
+		value=10,
 		var="T39",
 	},
 	[1398] = { 
@@ -16670,7 +16670,7 @@ local config = {
 		equipName="元始指环1",
 		job=1,
 		showName="元始指环",
-		value=1,
+		value=12,
 		var="T39",
 	},
 	[1399] = { 
@@ -16681,7 +16681,7 @@ local config = {
 		equipName="玉弹指环1",
 		job=1,
 		showName="玉弹指环",
-		value=3,
+		value=14,
 		var="T39",
 	},
 	[1400] = { 
@@ -16692,7 +16692,7 @@ local config = {
 		equipName="太极指环1",
 		job=1,
 		showName="太极指环",
-		value=3,
+		value=16,
 		var="T39",
 	},
 	[1401] = { 
@@ -16703,7 +16703,7 @@ local config = {
 		equipName="天战之戒1",
 		job=1,
 		showName="天战之戒",
-		value=3,
+		value=18,
 		var="T39",
 	},
 	[1402] = { 
@@ -16714,7 +16714,7 @@ local config = {
 		equipName="潜能之戒1",
 		job=1,
 		showName="潜能之戒",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1403] = { 
@@ -16725,7 +16725,7 @@ local config = {
 		equipName="墨灵环1",
 		job=1,
 		showName="墨灵环",
-		value=5,
+		value=28,
 		var="T39",
 	},
 	[1404] = { 
@@ -16736,7 +16736,7 @@ local config = {
 		equipName="神力之环1",
 		job=1,
 		showName="神力之环",
-		value=5,
+		value=30,
 		var="T39",
 	},
 	[1405] = { 
@@ -16747,7 +16747,7 @@ local config = {
 		equipName="金罡护符1",
 		job=4,
 		showName="金罡护符",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1406] = { 
@@ -16758,7 +16758,7 @@ local config = {
 		equipName="金灵护符1",
 		job=4,
 		showName="金灵护符",
-		value=2,
+		value=6,
 		var="T39",
 	},
 	[1407] = { 
@@ -16769,7 +16769,7 @@ local config = {
 		equipName="圣光项链1",
 		job=4,
 		showName="圣光项链",
-		value=2,
+		value=8,
 		var="T39",
 	},
 	[1408] = { 
@@ -16780,7 +16780,7 @@ local config = {
 		equipName="天神护符1",
 		job=4,
 		showName="天神护符",
-		value=2,
+		value=10,
 		var="T39",
 	},
 	[1409] = { 
@@ -16791,7 +16791,7 @@ local config = {
 		equipName="浴血魔链1",
 		job=4,
 		showName="浴血魔链",
-		value=2,
+		value=12,
 		var="T39",
 	},
 	[1410] = { 
@@ -16802,7 +16802,7 @@ local config = {
 		equipName="金义灵珠1",
 		job=4,
 		showName="金义灵珠",
-		value=3,
+		value=16,
 		var="T39",
 	},
 	[1411] = { 
@@ -16813,7 +16813,7 @@ local config = {
 		equipName="混元灵珠1",
 		job=4,
 		showName="混元灵珠",
-		value=3,
+		value=18,
 		var="T39",
 	},
 	[1412] = { 
@@ -16824,7 +16824,7 @@ local config = {
 		equipName="至尊灵珠1",
 		job=4,
 		showName="至尊灵珠",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1413] = { 
@@ -16835,7 +16835,7 @@ local config = {
 		equipName="暗之链1",
 		job=4,
 		showName="暗之链",
-		value=4,
+		value=28,
 		var="T39",
 	},
 	[1414] = { 
@@ -16846,7 +16846,7 @@ local config = {
 		equipName="影之链1",
 		job=4,
 		showName="影之链",
-		value=4,
+		value=30,
 		var="T39",
 	},
 	[1415] = { 
@@ -16857,7 +16857,7 @@ local config = {
 		equipName="玄天耳环1",
 		job=4,
 		showName="玄天耳环",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1416] = { 
@@ -16868,7 +16868,7 @@ local config = {
 		equipName="磐龙耳环1",
 		job=4,
 		showName="磐龙耳环",
-		value=2,
+		value=8,
 		var="T39",
 	},
 	[1417] = { 
@@ -16879,7 +16879,7 @@ local config = {
 		equipName="鬼眼灵珠1",
 		job=4,
 		showName="鬼眼灵珠",
-		value=2,
+		value=12,
 		var="T39",
 	},
 	[1418] = { 
@@ -16890,7 +16890,7 @@ local config = {
 		equipName="青玉珠环1",
 		job=4,
 		showName="青玉珠环",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1419] = { 
@@ -16901,7 +16901,7 @@ local config = {
 		equipName="血玉珠环1",
 		job=4,
 		showName="血玉珠环",
-		value=4,
+		value=25,
 		var="T39",
 	},
 	[1420] = { 
@@ -16912,7 +16912,7 @@ local config = {
 		equipName="金魄珠环1",
 		job=4,
 		showName="金魄珠环",
-		value=4,
+		value=30,
 		var="T39",
 	},
 	[1421] = { 
@@ -16923,7 +16923,7 @@ local config = {
 		equipName="麒麟指环1",
 		job=4,
 		showName="麒麟指环",
-		value=1,
+		value=3,
 		var="T39",
 	},
 	[1422] = { 
@@ -16934,7 +16934,7 @@ local config = {
 		equipName="权智指环1",
 		job=4,
 		showName="权智指环",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1423] = { 
@@ -16945,7 +16945,7 @@ local config = {
 		equipName="出尘戒1",
 		job=4,
 		showName="出尘戒",
-		value=1,
+		value=8,
 		var="T39",
 	},
 	[1424] = { 
@@ -16956,7 +16956,7 @@ local config = {
 		equipName="磬华指环1",
 		job=4,
 		showName="磬华指环",
-		value=1,
+		value=10,
 		var="T39",
 	},
 	[1425] = { 
@@ -16967,7 +16967,7 @@ local config = {
 		equipName="元始指环1",
 		job=4,
 		showName="元始指环",
-		value=1,
+		value=12,
 		var="T39",
 	},
 	[1426] = { 
@@ -16978,7 +16978,7 @@ local config = {
 		equipName="玉弹指环1",
 		job=4,
 		showName="玉弹指环",
-		value=3,
+		value=14,
 		var="T39",
 	},
 	[1427] = { 
@@ -16989,7 +16989,7 @@ local config = {
 		equipName="太极指环1",
 		job=4,
 		showName="太极指环",
-		value=3,
+		value=16,
 		var="T39",
 	},
 	[1428] = { 
@@ -17000,7 +17000,7 @@ local config = {
 		equipName="天战之戒1",
 		job=4,
 		showName="天战之戒",
-		value=3,
+		value=18,
 		var="T39",
 	},
 	[1429] = { 
@@ -17011,7 +17011,7 @@ local config = {
 		equipName="潜能之戒1",
 		job=4,
 		showName="潜能之戒",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1430] = { 
@@ -17022,7 +17022,7 @@ local config = {
 		equipName="墨灵环1",
 		job=4,
 		showName="墨灵环",
-		value=5,
+		value=28,
 		var="T39",
 	},
 	[1431] = { 
@@ -17033,7 +17033,7 @@ local config = {
 		equipName="神力之环1",
 		job=4,
 		showName="神力之环",
-		value=5,
+		value=30,
 		var="T39",
 	},
 	[1432] = { 
@@ -17044,7 +17044,7 @@ local config = {
 		equipName="金罡护符1",
 		job=3,
 		showName="金罡护符",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1433] = { 
@@ -17055,7 +17055,7 @@ local config = {
 		equipName="金灵护符1",
 		job=3,
 		showName="金灵护符",
-		value=2,
+		value=6,
 		var="T39",
 	},
 	[1434] = { 
@@ -17066,7 +17066,7 @@ local config = {
 		equipName="圣光项链1",
 		job=3,
 		showName="圣光项链",
-		value=2,
+		value=8,
 		var="T39",
 	},
 	[1435] = { 
@@ -17077,7 +17077,7 @@ local config = {
 		equipName="天神护符1",
 		job=3,
 		showName="天神护符",
-		value=2,
+		value=10,
 		var="T39",
 	},
 	[1436] = { 
@@ -17088,7 +17088,7 @@ local config = {
 		equipName="浴血魔链1",
 		job=3,
 		showName="浴血魔链",
-		value=2,
+		value=12,
 		var="T39",
 	},
 	[1437] = { 
@@ -17099,7 +17099,7 @@ local config = {
 		equipName="金义灵珠1",
 		job=3,
 		showName="金义灵珠",
-		value=3,
+		value=16,
 		var="T39",
 	},
 	[1438] = { 
@@ -17110,7 +17110,7 @@ local config = {
 		equipName="混元灵珠1",
 		job=3,
 		showName="混元灵珠",
-		value=3,
+		value=18,
 		var="T39",
 	},
 	[1439] = { 
@@ -17121,7 +17121,7 @@ local config = {
 		equipName="至尊灵珠1",
 		job=3,
 		showName="至尊灵珠",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1440] = { 
@@ -17132,7 +17132,7 @@ local config = {
 		equipName="暗之链1",
 		job=3,
 		showName="暗之链",
-		value=4,
+		value=28,
 		var="T39",
 	},
 	[1441] = { 
@@ -17143,7 +17143,7 @@ local config = {
 		equipName="影之链1",
 		job=3,
 		showName="影之链",
-		value=4,
+		value=30,
 		var="T39",
 	},
 	[1442] = { 
@@ -17154,7 +17154,7 @@ local config = {
 		equipName="玄天耳环1",
 		job=3,
 		showName="玄天耳环",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1443] = { 
@@ -17165,7 +17165,7 @@ local config = {
 		equipName="磐龙耳环1",
 		job=3,
 		showName="磐龙耳环",
-		value=2,
+		value=8,
 		var="T39",
 	},
 	[1444] = { 
@@ -17176,7 +17176,7 @@ local config = {
 		equipName="鬼眼灵珠1",
 		job=3,
 		showName="鬼眼灵珠",
-		value=2,
+		value=12,
 		var="T39",
 	},
 	[1445] = { 
@@ -17187,7 +17187,7 @@ local config = {
 		equipName="青玉珠环1",
 		job=3,
 		showName="青玉珠环",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1446] = { 
@@ -17198,7 +17198,7 @@ local config = {
 		equipName="血玉珠环1",
 		job=3,
 		showName="血玉珠环",
-		value=4,
+		value=25,
 		var="T39",
 	},
 	[1447] = { 
@@ -17209,7 +17209,7 @@ local config = {
 		equipName="金魄珠环1",
 		job=3,
 		showName="金魄珠环",
-		value=4,
+		value=30,
 		var="T39",
 	},
 	[1448] = { 
@@ -17220,7 +17220,7 @@ local config = {
 		equipName="麒麟指环1",
 		job=3,
 		showName="麒麟指环",
-		value=1,
+		value=3,
 		var="T39",
 	},
 	[1449] = { 
@@ -17231,7 +17231,7 @@ local config = {
 		equipName="权智指环1",
 		job=3,
 		showName="权智指环",
-		value=1,
+		value=5,
 		var="T39",
 	},
 	[1450] = { 
@@ -17242,7 +17242,7 @@ local config = {
 		equipName="出尘戒1",
 		job=3,
 		showName="出尘戒",
-		value=1,
+		value=8,
 		var="T39",
 	},
 	[1451] = { 
@@ -17253,7 +17253,7 @@ local config = {
 		equipName="磬华指环1",
 		job=3,
 		showName="磬华指环",
-		value=1,
+		value=10,
 		var="T39",
 	},
 	[1452] = { 
@@ -17264,7 +17264,7 @@ local config = {
 		equipName="元始指环1",
 		job=3,
 		showName="元始指环",
-		value=1,
+		value=12,
 		var="T39",
 	},
 	[1453] = { 
@@ -17275,7 +17275,7 @@ local config = {
 		equipName="玉弹指环1",
 		job=3,
 		showName="玉弹指环",
-		value=3,
+		value=14,
 		var="T39",
 	},
 	[1454] = { 
@@ -17286,7 +17286,7 @@ local config = {
 		equipName="太极指环1",
 		job=3,
 		showName="太极指环",
-		value=3,
+		value=16,
 		var="T39",
 	},
 	[1455] = { 
@@ -17297,7 +17297,7 @@ local config = {
 		equipName="天战之戒1",
 		job=3,
 		showName="天战之戒",
-		value=3,
+		value=18,
 		var="T39",
 	},
 	[1456] = { 
@@ -17308,7 +17308,7 @@ local config = {
 		equipName="潜能之戒1",
 		job=3,
 		showName="潜能之戒",
-		value=3,
+		value=20,
 		var="T39",
 	},
 	[1457] = { 
@@ -17319,7 +17319,7 @@ local config = {
 		equipName="墨灵环1",
 		job=3,
 		showName="墨灵环",
-		value=5,
+		value=28,
 		var="T39",
 	},
 	[1458] = { 
@@ -17330,7 +17330,7 @@ local config = {
 		equipName="神力之环1",
 		job=3,
 		showName="神力之环",
-		value=5,
+		value=30,
 		var="T39",
 	},
 }
