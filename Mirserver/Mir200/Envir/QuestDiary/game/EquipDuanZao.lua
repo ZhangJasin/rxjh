@@ -179,7 +179,7 @@ function EquipDuanZao.qianghua(actor, data)
     end
 
     -- 根据强化等级更新合成石和属性石属性
-    if isQHStdMode[stdmode] and qhlv > 5  then        
+    if isQHStdMode[stdmode] and qhlv > 4  then        
         EquipDuanZao.updateEquipAttrsByQHLv(actor, equipmakeIndex, nextlv)
     end
 
@@ -203,9 +203,7 @@ function EquipDuanZao.fuyu(actor, data)
 
     linkitembymakeindex(actor, equipmakeIndex)
     local stdmode = linkitem(actor, "STDMODE")
-    local posindex = equippos2[stdmode]
-    local qhlv = linkitem(actor, "INTVALUE0")
-    local eqfylv = (qhlv - 5) > 0 and (qhlv - 5) or 0 --强化到+6及以上时给提升赋予等级
+    local posindex = equippos2[stdmode]    
     local fylv = linkitem(actor, "INTVALUE1")
     local nextlv = fylv + 1
     local falselv = 0
@@ -287,14 +285,15 @@ function EquipDuanZao.fuyu(actor, data)
     -- 修改装备标记值
     changeitemaddvalue(actor, -1, 1, "=", nextlv)
 
-    -- 属性刷新
-    if qhlv > 5 then
-        changecustomitemtext(actor, -1, 1, "[赋予：" .. nextlv .. "+" .. eqfylv .. "阶段]")
-    else
-        changecustomitemtext(actor, -1, 1, "[赋予：" .. nextlv .. "阶段]")
-    end
-
-    if nextlv + eqfylv > 0 then
+    -- 属性刷新   
+    if nextlv > 0 then
+        local qhlv = linkitem(actor, "INTVALUE0")
+        local eqfylv = (qhlv - 5) > 0 and (qhlv - 5) or 0 --强化到+6及以上时给提升赋予等级
+        if eqfylv > 0 then
+            changecustomitemtext(actor, -1, 1, "[赋予：" .. nextlv .. "+" .. eqfylv .. "阶段]")
+        else
+            changecustomitemtext(actor, -1, 1, "[赋予：" .. nextlv .. "阶段]")
+        end
         local value = EquipFYTab[posindex]['attrList'][attridindex][nextlv + eqfylv]
         changecustomitemabil(actor, -1, 1, 1, attrid, value)
     else
@@ -330,7 +329,7 @@ function EquipDuanZao.hecheng(actor, data)
     local itemid = linkitem(actor, "INDEX")
     local stdmode = linkitem(actor, "STDMODE")
     local posindex = equippos2[stdmode]
-    local qhlv = linkitem(actor, "INTVALUE0")
+    
     local hclv = linkitem(actor, "INTVALUE2")  --已镶嵌合成石数量
     local nextlv = hclv+1
     local hccnum = ItemEquip[itemid]['SyntheticStone'] or 0
@@ -399,6 +398,7 @@ function EquipDuanZao.hecheng(actor, data)
 
     --强化等级 提升合成
     local addValue = 0     -- 数值加成
+    local qhlv = linkitem(actor, "INTVALUE0")
     if qhlv > 6 then
         if hclv < 2 then --第一或第二个合成石
             addValue = qhlv - 6
