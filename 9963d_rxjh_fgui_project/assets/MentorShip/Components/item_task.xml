@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="700,45" overflow="hidden">
-  <controller name="fbStatus" pages="0,未开始,1,进行中,2,已完成,3,已领取" selected="0"/>
+  <controller name="fbStatus" pages="0,未开始,1,进行中,2,已完成,3,已领取" selected="1"/>
   <controller name="isMasterShowFinish" pages="0,徒弟,1,师傅" selected="0"/>
   <displayList>
     <loader id="n26_g5t3" name="bg" xy="-77,0" size="887,45" url="ui://pnop7ha6g5t3o5m" fill="scaleFree"/>
     <richtext id="n16_tfdc" name="task_name" xy="10,0" size="220,45" fontSize="16" color="#d7c360" vAlign="middle" autoSize="none" underline="true" strokeColor="#000000" text="任务名字"/>
     <richtext id="n17_tfdc" name="task_progress" xy="221,0" size="202,45" fontSize="16" color="#1c4543" align="center" vAlign="middle" autoSize="none" text="0/999"/>
-    <richtext id="n18_tfdc" name="task_status" xy="600,0" size="60,45" fontSize="16" color="#00ff00" align="center" vAlign="middle" autoSize="none" text="进行中">
+    <richtext id="n18_tfdc" name="task_status" xy="607,0" size="60,45" fontSize="16" color="#00ff00" align="center" vAlign="middle" autoSize="none" text="进行中">
       <gearDisplay controller="isMasterShowFinish" pages="0"/>
       <gearText controller="fbStatus" pages="0,1" values="进行中|进行中" default="已领取"/>
     </richtext>
-    <richtext id="n28_s46r" name="task_finishText" xy="619,0" size="60,45" fontSize="16" color="#00ff00" align="center" vAlign="middle" autoSize="none" text="进行中">
+    <richtext id="n28_s46r" name="task_finishText" xy="619,0" size="60,45" fontSize="16" color="#00ff00" align="center" vAlign="middle" autoSize="none" text="已完成">
       <gearDisplay controller="isMasterShowFinish" pages="1"/>
       <gearText controller="fbStatus" pages="0" values="进行中" default="已完成"/>
     </richtext>

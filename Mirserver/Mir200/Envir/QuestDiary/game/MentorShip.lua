@@ -289,46 +289,58 @@ function MentorShip.getApprenticeList(actor, data)
     Message.sendmsgEx(actor, "FindApprenticePanel", "OnRecvApprenticeList", resultList)
 end
 
+--获取申请列表（增加脏数据清洗）
 function MentorShip.GetApplyList(actor, data)
-    --mode 1 申请收徒列表 2 申请拜师列表
-    local result = {}
-    if tonumber(data) == 1 then
-        result = getcustvar("11_" .. userid(actor) .. "_" .. "t_MentorApplyList")
+    -- ? 新增：脏数据清洗核心函数，剔除所有 nil 或异常结构
+    local function cleanArray(dirtyTable)
+        if type(dirtyTable) ~= "table" then return {} end
+        local clean = {}
+        for k, v in pairs(dirtyTable) do
+            if type(v) == "table" and v.UserID then
+                table.insert(clean, v)
+            end
+        end
+        return clean
     end
-    if tonumber(data) == 2 then
-        result = getcustvar("11_" .. userid(actor) .. "_" .. "t_ApprApplyList")
-    end
-    if tonumber(data) == 3 then
+
+    local dataType = tonumber(data)
+
+    -- mode 3 整合列表
+    if dataType == 3 then
         local result1 = getcustvar("11_" .. userid(actor) .. "_" .. "t_MentorApplyList")
         local result2 = getcustvar("11_" .. userid(actor) .. "_" .. "t_ApprApplyList")
-        if result1 == "" then
-            result1 = {}
-        else
-            result1 = json2tbl(result1)
-        end
-        if result2 == "" then
-            result2 = {}
-        else
-            result2 = json2tbl(result2)
-        end
-        ---申请收徒
+
+        result1 = (result1 == "") and {} or json2tbl(result1)
+        result2 = (result2 == "") and {} or json2tbl(result2)
+
+        -- 洗去脏数据
+        result1 = cleanArray(result1)
+        result2 = cleanArray(result2)
+
+        local result = {}
         for i = 1, #result1 do
             result1[i].todoType = 2
             table.insert(result, result1[i])
         end
-        --申请拜师
         for w = 1, #result2 do
             result2[w].todoType = 1
             table.insert(result, result2[w])
         end
-    end
-    if tonumber(data) == 3 then
         Message.sendmsgEx(actor, "MyShipApplyLists", "setList", result)
+
+        -- mode 1 或 2 单独列表
     else
-        if result == "" then
-            result = {}
-        else
-            result = json2tbl(result)
+        local resultStr = ""
+        if dataType == 1 then
+            resultStr = getcustvar("11_" .. userid(actor) .. "_" .. "t_MentorApplyList")
+        elseif dataType == 2 then
+            resultStr = getcustvar("11_" .. userid(actor) .. "_" .. "t_ApprApplyList")
+        end
+
+        local result = {}
+        if resultStr ~= "" then
+            result = json2tbl(resultStr)
+            result = cleanArray(result) -- 洗去脏数据
         end
         Message.sendmsgEx(actor, "ShipApplyLists", "setList", result)
     end
@@ -409,7 +421,9 @@ function MentorShip.doOper(actor, data)
                 which = i
             end
         end
-        table.remove(result, which)
+        if which > 0 then
+            table.remove(result, which)
+        end
         defcustvar(11, userid(actor), 't_MentorApplyList', 1)
         sefcustvar(11, userid(actor), 't_MentorApplyList', tbl2json(result))
         --设置自己的师徒关系
@@ -455,7 +469,9 @@ function MentorShip.doOper(actor, data)
                 which = i
             end
         end
-        table.remove(result, which)
+        if which > 0 then
+            table.remove(result, which)
+        end
         defcustvar(11, userid(actor), 't_ApprApplyList', 1)
         sefcustvar(11, userid(actor), 't_ApprApplyList', tbl2json(result))
         --设置自己的师徒关系
@@ -995,7 +1011,7 @@ end
 function MentorShip.receive(actor, data)
     local taskId = data.taskId
     local myUserId = userid(actor)
-    
+
     -- 1. 查找配置表，获取任务信息和双端奖励
     local taskCfg = nil
     for i = 1, #Master_and_apprentice do
@@ -1004,7 +1020,7 @@ function MentorShip.receive(actor, data)
             break
         end
     end
-    
+
     if not taskCfg then return end
 
     -- ??? 新增：绝对安全校验防刷 ???
@@ -1012,15 +1028,15 @@ function MentorShip.receive(actor, data)
     if taskProgressStr == "" then return end
     local taskProgressList = json2tbl(taskProgressStr)
     local currentTask = taskProgressList['' .. taskId]
-    
+
     if not currentTask then return end
-    
+
     -- 防重复领取外挂
     if currentTask.status == 1 then
         sendmsg(actor, 9, "[color=#ff0000]该任务奖励已领取！[/color]")
         return
     end
-    
+
     -- 防未完成提前领奖封包穿透
     if currentTask.num < taskCfg.task_target_num then
         sendmsg(actor, 9, "[color=#ff0000]任务尚未完成，无法领取奖励！[/color]")
@@ -1070,7 +1086,7 @@ function MentorShip.receive(actor, data)
     currentTask.status = 1
     taskProgressList.finishTask = (taskProgressList.finishTask or 0) + 1
     sefcustvar(11, myUserId, 't_ApprenticeTaskPro', tbl2json(taskProgressList))
-    
+
     -- 6. 刷新客户端显示并提示
     MentorShip.getApprenticeInfo(actor, { fromPanel = data.fromPanel, UserID = myUserId })
     sendmsg(actor, 9, "领取成功，奖励已发放至您的邮箱！")
@@ -1189,18 +1205,18 @@ end
 -- 徒弟完成贡献度任务并领奖（新增安全校验 + 邮件发奖）
 function MentorShip.finishGxdTask(actor, data)
     -- ? 漏洞修复 1：强制使用操作者自己的UserID，绝不能信任客户端传来的 data.UserID
-    local myUserId = userid(actor) 
+    local myUserId = userid(actor)
     local taskId = data.taskID
 
     -- 1. 取出玩家的贡献度任务数据和普通进度数据
     local gxdTaskStr = getcustvar("11_" .. myUserId .. "_" .. "t_ApprenticeGxdTask")
     local taskProgressStr = getcustvar("11_" .. myUserId .. "_" .. "t_ApprenticeTaskPro")
     if gxdTaskStr == "" or taskProgressStr == "" then return end
-    
+
     local myGxdTask = json2tbl(gxdTaskStr)
     local taskProgressList = json2tbl(taskProgressStr)
     local currentTask = myGxdTask['' .. taskId]
-    
+
     if not currentTask then return end
 
     -- 2. 从配置表查出当前任务详情
@@ -1219,7 +1235,7 @@ function MentorShip.finishGxdTask(actor, data)
         sendmsg(actor, 9, "[color=#ff0000]该贡献任务奖励已领取！[/color]")
         return
     end
-    
+
     -- 防未完成提前领奖的封包穿透
     if currentTask.num < taskCfg.task_target_num then
         sendmsg(actor, 9, "[color=#ff0000]贡献任务尚未完成，无法领取奖励！[/color]")
@@ -1230,10 +1246,10 @@ function MentorShip.finishGxdTask(actor, data)
     -- 3. 计算贡献度经验条 (GXD)
     local gxd = taskProgressList['progressPer'] or 0
     gxd = gxd + (taskCfg.gxd_progress or 0)
-    
+
     local js = math.floor(gxd / 100)
     taskProgressList['progressLv'] = (taskProgressList['progressLv'] or 5) - js
-    
+
     -- 处理升级与经验溢出保留
     if taskProgressList['progressLv'] < 1 then
         taskProgressList['progressLv'] = 1

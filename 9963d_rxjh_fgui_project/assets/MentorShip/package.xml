@@ -120,6 +120,10 @@
     <component id="q2kko6m" name="btn_new_1.xml" path="/Components/" exported="true"/>
     <image id="q2kko6n" name="5.png" path="/Images/" exported="true"/>
     <image id="q2kko6o" name="6.png" path="/Images/" exported="true"/>
+    <image id="q2kko6p" name="7.png" path="/Images/" exported="true"/>
+    <image id="q2kko6q" name="8.png" path="/Images/" exported="true"/>
+    <image id="q2kko6r" name="9.png" path="/Images/" exported="true"/>
+    <image id="q2kko6s" name="10.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

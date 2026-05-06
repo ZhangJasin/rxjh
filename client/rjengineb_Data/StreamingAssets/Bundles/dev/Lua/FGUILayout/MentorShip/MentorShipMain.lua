@@ -5,6 +5,7 @@ local Store = requireFGUILayout("MentorShip/MentorShipData")
 
 local MasterApprenticeShip = require("game_config/cfgcsv/MasterApprenticeShip")
 local MentorApplicationTask = requireFGUILayout("MentorShip/MentorApplicationTask")
+local config = require("game_config/cfgcsv/Master_and_apprentice")
 
 
 -- 与服务端交互使用
@@ -200,7 +201,7 @@ local function SetSlotFilled(item, filled)
 end
 function MentorShipMain:setData(data)
 	print("MentorShipMain:setData")
-	dump(data)
+	--dump(data)
 	if MentorShipMain.CCUI then
 		self = MentorShipMain.CCUI
 		self.alMyRelationship = data
@@ -439,6 +440,7 @@ end
 
 function MentorShipMain:RenderTaskItem(idx, item)
 	local data = self._taskList[idx + 1]
+	--dump(data)
 	-- dump(self.taskProgressList)
 	if data and self.taskProgressList["" .. data.ID] then
 		local task_name = FGUI:GetChild(item, "task_name")
@@ -451,6 +453,10 @@ function MentorShipMain:RenderTaskItem(idx, item)
 		local fbstatus = FGUI:getController(item, "fbStatus")
 		local nowState = FGUI:Controller_getSelectedIndex(fbstatus)
 		local whoCont = FGUI:getController(item, "isMasterShowFinish")
+
+		local tudi = FGUI:GetChild(item, "tudi")
+		local shifu = FGUI:GetChild(item, "shifu")
+
 		if self.rightInfoType == 1 then
 			--我是徒弟
 			FGUI:Controller_setSelectedIndex(whoCont, 0)
@@ -458,6 +464,33 @@ function MentorShipMain:RenderTaskItem(idx, item)
 			--我是师傅
 			FGUI:Controller_setSelectedIndex(whoCont, 1)
 		end
+
+		local function parseRewardTable(rewardTable)
+			if type(rewardTable) ~= "table" or next(rewardTable) == nil then
+				return "无奖励"
+			end
+			local resultStr = ""
+			for i, v in ipairs(rewardTable) do
+				if type(v) == "table" and #v >= 2 then
+					local itemId = tonumber(v[1])
+					local itemNum = tonumber(v[2])
+					local itemName = SL:GetMetaValue("ITEM_NAME", itemId) or "未知道具"
+					if resultStr ~= "" then
+						resultStr = resultStr .. "、"
+					end
+					resultStr = resultStr .. itemName .. "*" .. itemNum
+				end
+			end
+			return resultStr ~= "" and resultStr or "无奖励"
+		end
+		local tudiRewardCfg = data.task_reward
+		local shifuRewardCfg = data.task_reward_1
+		local tudiStr = string.format("徒弟：%s", parseRewardTable(tudiRewardCfg))
+		FGUI:GTextField_setText(tudi, tudiStr)
+
+		local shifuStr = string.format("师傅：%s", parseRewardTable(shifuRewardCfg))
+		FGUI:GTextField_setText(shifu, shifuStr)
+
 		FGUI:GTextField_setText(task_name, data.task_name)
 		local bg = FGUI:GetChild(item, "bg")
 		FGUI:GTextField_setText(task_progress, thisProgress .. "/" .. data.task_target_num)
@@ -528,7 +561,7 @@ function MentorShipMain:RenderTaskItem(idx, item)
 end
 
 function MentorShipMain:onClickGoto(data)
-	dump(data)
+	--dump(data)
 	local postData = {
 		task = data,
 		myUserId = self.alMyRelationship.myUserId,
@@ -745,9 +778,11 @@ function MentorShipMain:onClickReward()
 end
 
 function MentorShipMain:OnClickBreak()
-	-- FGUI:Open("MentorShip", "breakRelationship", { type = self.rightInfoType,UserID = self.taskProgressList.UserID })
+	print("点击OnClickBreak")
+	--FGUI:Open("MentorShip", "breakRelationship", { type = self.rightInfoType, UserID = self.taskProgressList.UserID })
 	local isShowDialog = SL:GetValue("T", 94)
-	if isShowDialog == 0 then
+	dump(isShowDialog)
+	if isShowDialog == "" then
 		FGUI:setVisible(self._ui.dialog, true)
 	end
 	local agree = FGUI:GetChild(self._ui.dialog, "btn_green")
@@ -782,6 +817,7 @@ function MentorShipMain:OnClickBreak()
 end
 
 function MentorShipMain:OnclickCancelBreak()
+	print("点击解除关系")
 	if self.dsqjc then
 		SL:UnSchedule(self.dsqjc)
 	end

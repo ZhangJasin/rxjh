@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750">
   <displayList>
-    <loader id="n14_w9m6" name="bg" xy="565,375" pivot="0.5,0.5" anchor="true" size="335,330" group="n16_w9m6" url="ui://pnop7ha6w9m6o4s" fill="scaleFree">
+    <loader id="n14_w9m6" name="bg" xy="565,375" pivot="0.5,0.5" anchor="true" size="335,330" group="n16_w9m6" url="ui://pnop7ha6q2kko6q" fill="scaleFree">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
     <list id="n10_w9m6" name="list_left" xy="451,232" size="237,233" group="n16_w9m6" overflow="scroll" lineGap="20" defaultItem="ui://pnop7ha6w9m6o4t" align="center">
@@ -18,7 +18,7 @@
     <group id="n16_w9m6" name="n16" xy="397,210" size="335,330" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <loader id="n13_w9m6" name="bg2" xy="835,350" pivot="0.5,0.5" anchor="true" size="200,280" group="n17_w9m6" url="ui://pnop7ha6w9m6o4s" fill="scaleFree">
+    <loader id="n13_w9m6" name="bg2" xy="835,350" pivot="0.5,0.5" anchor="true" size="200,280" group="n17_w9m6" url="ui://pnop7ha6q2kko6r" fill="scaleFree">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
     <list id="n9_w9m6" name="list_right" xy="742,220" size="185,260" group="n17_w9m6" overflow="scroll" lineGap="5" defaultItem="ui://pnop7ha6w9m6o4w">

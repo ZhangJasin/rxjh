@@ -2,19 +2,22 @@ local BaseFGUILayout = requireFGUI("BaseFGUILayout")
 local ShipApplyLists = class("ShipApplyLists", BaseFGUILayout)
 
 function ShipApplyLists:Create()
-	self._ui = FGUI:ui_delegate(self.component)
-	FGUI:SetCloseUIWhenClickOutside(self)
+    self._ui = FGUI:ui_delegate(self.component)
+    FGUI:SetCloseUIWhenClickOutside(self)
     FGUI:setOnClickEvent(self._ui.btn_close, handler(self, self.Close))
 end
+
 function ShipApplyLists:Close()
     FGUI:Close("MentorShip", "ShipApplyLists")
 end
+
 function ShipApplyLists:Enter(data)
-    FGUI:GList_setNumItems(self._ui.list,0)
-	self._mode = (data and tonumber(data.mode)) or 1
+    FGUI:GList_setNumItems(self._ui.list, 0)
+    self._mode = (data and tonumber(data.mode)) or 1
     FGUI:GList_itemRenderer(self._ui.list,
-        function (idx,item)
-            local itemData = data[idx+1]
+        function(idx, item)
+            local itemData = data[idx + 1]
+            if not itemData then return end
             local name = FGUI:GetChild(item, "name")
             local lv = FGUI:GetChild(item, "lv")
             local guildName = FGUI:GetChild(item, "guildName")
@@ -37,25 +40,25 @@ function ShipApplyLists:Enter(data)
             local notAgree = FGUI:GetChild(item, "notAgree")
             FGUI:setOnClickEvent(agree, function()
                 self:Close()
-                ssrMessage:sendmsgEx("MentorShip", "doOper",{mode=self._mode,status = 1,targetData = itemData})
+                ssrMessage:sendmsgEx("MentorShip", "doOper", { mode = self._mode, status = 1, targetData = itemData })
             end)
             FGUI:setOnClickEvent(notAgree, function()
                 self:Close()
-                ssrMessage:sendmsgEx("MentorShip", "doOper",{mode=self._mode,status = 2,targetData = itemData})
+                ssrMessage:sendmsgEx("MentorShip", "doOper", { mode = self._mode, status = 2, targetData = itemData })
             end)
         end
     )
     ShipApplyListsUI.CCUI = self
-    ssrMessage:sendmsgEx("MentorShip", "GetApplyList",self._mode)
+    ssrMessage:sendmsgEx("MentorShip", "GetApplyList", self._mode)
 end
 
 function ShipApplyLists:setList(data)
     if #data > 0 then
-        self = ShipApplyListsUI.CCUI 
-        FGUI:GList_setNumItems(self._ui.list,#data)
+        self = ShipApplyListsUI.CCUI
+        FGUI:GList_setNumItems(self._ui.list, #data)
     else
-       FGUI:Close("MentorShip", "ShipApplyLists")
+        FGUI:Close("MentorShip", "ShipApplyLists")
     end
-end 
+end
 
 return ShipApplyLists
