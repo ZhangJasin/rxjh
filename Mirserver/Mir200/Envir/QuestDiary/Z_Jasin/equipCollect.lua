@@ -88,21 +88,51 @@ local function getValueAttr(actor)
 end
 
 local function setValueAttr(actor)
-    local attr = getValueAttr(actor)
-    if not attr then return end
-    for _, group in ipairs(attr) do
-        local attrId = tonumber(group[1])
-        local attrValue = tonumber(group[2])
-        local isPercent = tonumber(group[3])
-        if isPercent == 1 then
-            attrValue = math.floor(attrValue / 100)
-        end
-        if attrId and attrValue then
-            setscriptabilvalue(actor, attrId, "+", attrValue)
-            recalcabilitys(actor)
-            changeabil(actor, attrId, "+", attrValue)
+    -- 1. 获取旧的属性记录（上一次该系统加了多少）
+    --
+    local oldAttrJson = gethumvar(actor, VarCfg.S_equipCollectAttr)
+    local oldAttrMap = json2tbl(oldAttrJson) or {}
+
+    -- 2. 精准扣除旧属性：对齐玩家小退上线逻辑，先清理本系统之前的痕迹
+    -- 这样做不会影响其他系统设置的脚本属性
+    for attrId, attrValue in pairs(oldAttrMap) do
+        local id = tonumber(attrId)
+        local val = tonumber(attrValue)
+        if id and val > 0 then
+            setscriptabilvalue(actor, id, "-", val)
+            print("删除id=", id)
+            print("删除val=", val)
         end
     end
+
+    -- 3. 计算当前应该加成的新属性
+    local newAttr = getValueAttr(actor)
+    local newAttrMap = {} -- 用于记录本次加了多少，存入变量供下次使用
+
+    if newAttr then
+        for _, group in ipairs(newAttr) do
+            local attrId = tonumber(group[1])
+            local attrValue = tonumber(group[2])
+            local isPercent = tonumber(group[3])
+
+            if isPercent == 1 then
+                attrValue = math.floor(attrValue / 100)
+            end
+
+            if attrId and attrValue > 0 then
+                -- 4. 增加新属性
+                setscriptabilvalue(actor, attrId, "+", attrValue)
+                -- 记录到 map 中
+                newAttrMap[tostring(attrId)] = attrValue
+            end
+        end
+    end
+
+    -- 5. 更新玩家变量中的属性快照，以便下次精准扣除
+    sethumvar(actor, VarCfg.S_equipCollectAttr, tbl2json(newAttrMap))
+
+    -- 6. 统一刷新角色属性面板[cite: 3]
+    recalcabilitys(actor)
 end
 
 function equipCollect.ReqActive(actor, id)
