@@ -3,9 +3,9 @@
   <resources>
     <component id="kkqn0" name="S_LoginAccountPanel.xml" path="/" exported="true"/>
     <image id="kkqn4" name="login_popup.png" path="/Images/" exported="true"/>
-    <component id="kkqn17" name="btn.xml" path="/Components/"/>
+    <component id="kkqn17" name="btn.xml" path="/Components/" exported="true"/>
     <component id="apl919" name="S_LoginAccountPanel_PC.xml" path="/" exported="true"/>
-    <image id="apl91a" name="login_popup_pc.png" path="/Images/"/>
+    <image id="apl91a" name="login_popup_pc.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

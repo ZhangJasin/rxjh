@@ -13,7 +13,7 @@
     <image id="flj61e" name="btn_first_red.png" path="/image/" exported="true"/>
     <component id="flj61f" name="btn_first_red.xml" path="/common/" exported="true"/>
     <image id="108rv1g" name="bg_first_panel.png" path="/image/" exported="true" scale="9grid" scale9grid="75,79,24,22"/>
-    <image id="rrl3v1h" name="big_second_panel.png" path="/image/" exported="true" scale="9grid" scale9grid="67,70,34,28"/>
+    <image id="rrl3v1h" name="big_second_panel.png" path="/image/" exported="true" scale="9grid" scale9grid="67,70,34,1"/>
     <image id="sinov1i" name="line.png" path="/image/" exported="true"/>
     <image id="sinov1j" name="bg_1.png" path="/image/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
     <component id="koyz3" name="bg.xml" path="/common/" exported="true"/>
