@@ -2,8 +2,8 @@
 <component size="320,33">
   <displayList>
     <text id="n0_tbp6" name="n0" xy="12,2" size="89,29" font="SimHei" fontSize="16" color="#372a08" vAlign="middle" ubb="true" autoSize="none" text="攻击力"/>
-    <text id="n1_tbp6" name="n1" xy="256,2" pivot="1,0" size="55,29" font="SimHei" fontSize="20" color="#2e8432" vAlign="middle" autoSize="none" text="000000"/>
+    <text id="n1_tbp6" name="n1" xy="256,2" pivot="1,0" size="55,29" font="SimHei" fontSize="20" color="#ffff00" vAlign="middle" autoSize="none" text="000000"/>
     <image id="n2_tbp6" name="n2" src="oqrpe" fileName="Images/06yuyi/tsjt.png" xy="224,6"/>
-    <text id="n4_jdkj" name="n4" xy="101,2" pivot="1,0" size="55,29" font="SimHei" fontSize="20" color="#2e8432" vAlign="middle" autoSize="none" text="000000"/>
+    <text id="n4_jdkj" name="n4" xy="101,2" pivot="1,0" size="55,29" font="SimHei" fontSize="20" color="#ffff00" vAlign="middle" autoSize="none" text="000000"/>
   </displayList>
 </component>
