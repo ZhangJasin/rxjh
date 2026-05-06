@@ -164,14 +164,18 @@ function BossPanel:ListBossShow(idx, item)
             FGUI:RemoveChildAt(specItem, 0, true)
         end
         if specDrop > 0 then
-            local extData = {
-                hideTip = false,
-                itemTipData = {Index = specDrop, Count = 1},
-                clickCallback = false,
-                doubleClickCallback = false,
-                bgVisible = true
-            }
-            ItemUtil:ItemShow_Create({Index = specDrop, Count = 1}, specItem, extData)
+            local itemData = SL:GetValue("ITEM_DATA", specDrop)
+            if itemData then
+                local extData = {
+                    hideTip = false,
+                    itemTipData = itemData,
+                    clickCallback = false,
+                    doubleClickCallback = true,
+                    bgVisible = true,
+                    OverLap = 1
+                }
+                ItemUtil:ItemShow_Create(itemData, specItem, extData)
+            end
         end
     end
     
@@ -188,12 +192,13 @@ function BossPanel:ListBossShow(idx, item)
                 if rewardItemData then
                     local extData = {
                         hideTip = false,
-                        itemTipData = {Index = rewardId, Count = 1},
+                        itemTipData = rewardItemData,
                         clickCallback = false,
-                        doubleClickCallback = false,
-                        bgVisible = true
+                        doubleClickCallback = true,
+                        bgVisible = true,
+                        OverLap = 1
                     }
-                    ItemUtil:ItemShow_Create({Index = rewardId, Count = 1}, rewardItem, extData)
+                    ItemUtil:ItemShow_Create(rewardItemData, rewardItem, extData)
                 end
             end
         end
