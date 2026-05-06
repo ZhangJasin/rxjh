@@ -2,9 +2,9 @@
 <component size="800,300" opaque="false">
   <displayList>
     <component id="n8_knfx" name="btn_BBG" src="oqrp4" fileName="Components/righttop/btn_BBG.xml" xy="696,0"/>
-    <component id="n9_knfx" name="btn_paimai" src="oqrp6" fileName="Components/righttop/btn_paimai.xml" xy="600,7"/>
-    <component id="n11_lppm" name="btn_bill" src="oqrpa" fileName="Components/righttop/btn_bill.xml" xy="500,-2"/>
-    <component id="n12_ff7i" name="btn_hddt" src="ff7i20" fileName="Components/righttop/btn_hddt.xml" xy="400,7"/>
-    <component id="n14_d7i1" name="btn_boss_xs" src="oqrp8" fileName="Components/righttop/btn_xuanshang.xml" xy="311,5"/>
+    <component id="n9_knfx" name="btn_paimai" src="oqrp6" fileName="Components/righttop/btn_paimai.xml" xy="612,7" size="94,76"/>
+    <component id="n11_lppm" name="btn_bill" src="oqrpa" fileName="Components/righttop/btn_bill.xml" xy="530,0"/>
+    <component id="n12_ff7i" name="btn_hddt" src="ff7i20" fileName="Components/righttop/btn_hddt.xml" xy="448,7"/>
+    <component id="n14_d7i1" name="btn_boss_xs" src="oqrp8" fileName="Components/righttop/btn_xuanshang.xml" xy="366,0"/>
   </displayList>
 </component>
