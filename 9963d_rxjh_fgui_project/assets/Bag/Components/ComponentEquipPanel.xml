@@ -5,7 +5,7 @@
   <controller name="titleType" pages="1,无,0,特效,2,文本,4,序列帧" selected="0"/>
   <controller name="isShowTitle" alias="是否显示称号" exported="true" pages="0,显示,1,不显示" selected="0"/>
   <displayList>
-    <image id="n13_kvla" name="img_scheme" src="qjli19" fileName="image/role_bg_di.png" pkg="st7dgeqq" xy="0,0">
+    <image id="n13_kvla" name="img_scheme" src="qjli19" fileName="image/role_bg_di.png" pkg="st7dgeqq" xy="-18,-20" size="540,616">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <component id="n22_p70y" name="Node_attach_b" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="-4,572" size="0,0">
