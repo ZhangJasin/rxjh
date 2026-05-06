@@ -2,9 +2,9 @@
 <component size="992,588" opaque="false">
   <controller name="who" pages="0,徒弟,1,师傅" selected="0"/>
   <controller name="taskDesc" pages="0,不可领取,1,已领取,3,待领取" selected="0"/>
-  <controller name="isHave" pages="0,,1," selected="1"/>
+  <controller name="isHave" pages="0,,1," selected="0"/>
   <displayList>
-    <image id="n21_leye" name="bg_left" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="-11,1" size="235,585" group="n114_dos9"/>
+    <image id="n21_leye" name="bg_left" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="-11,1" size="235,585" group="n114_dos9" visible="false"/>
     <image id="n70_nxdg" name="n74" src="as7kvno" fileName="image/btn_first_9.png" pkg="st7dgeqq" xy="-3,16" size="220,55" group="n73_nxdg"/>
     <text id="n71_nxdg" name="text_mentor" xy="-3,16" size="220,55" group="n73_nxdg" fontSize="22" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="我的师父"/>
     <list id="n72_nxdg" name="list_mentor" xy="-3,74" size="220,75" group="n73_nxdg" overflow="hidden" lineGap="8" defaultItem="ui://pnop7ha6npv42r" autoClearItems="true">
@@ -62,7 +62,7 @@
       <Button title="领取" selectedTitle="领取&#xA;"/>
     </component>
     <text id="n175_lwvy" name="rwjd" xy="796,454" size="167,28" group="n97_nxdg" fontSize="16" color="#ffffff" autoSize="none" text="任务进度0/0"/>
-    <group id="n97_nxdg" name="group_skill" xy="250,12" size="720,570" group="n114_dos9" advanced="true">
+    <group id="n97_nxdg" name="group_skill" xy="250,12" size="720,570" group="n114_dos9" visible="false" advanced="true">
       <gearDisplay controller="who" pages="0"/>
       <gearDisplay2 controller="isHave" pages="1" condition="0"/>
     </group>
@@ -92,10 +92,24 @@
       <ProgressBar max="100"/>
     </component>
     <component id="n173_lkqx" name="setSkillView" src="lkqxo5d" fileName="MySkill.xml" xy="148,27" size="696,570" group="n154_lkqx" visible="false"/>
-    <group id="n154_lkqx" name="group_skill_master" xy="148,11" size="836,586" group="n114_dos9" advanced="true">
+    <group id="n154_lkqx" name="group_skill_master" xy="148,11" size="836,586" group="n114_dos9" visible="false" advanced="true">
       <gearDisplay controller="who" pages="1"/>
       <gearDisplay2 controller="isHave" pages="1" condition="0"/>
     </group>
+    <image id="n179_q2kk" name="n179" src="q2kko6t" fileName="Images/10.png" xy="253,11" size="700,160" group="n114_dos9"/>
+    <image id="n180_q2kk" name="n180" src="gvalo3x" fileName="Images/content_bg_9.png" xy="253,176" size="700,400" group="n114_dos9"/>
+    <image id="n181_q2kk" name="n181" src="q2kko6u" fileName="Images/11.png" xy="324,197" group="n114_dos9"/>
+    <image id="n182_q2kk" name="n182" src="q2kko6v" fileName="Images/12.png" xy="678,197" group="n114_dos9"/>
+    <component id="n184_q2kk" name="n184" src="q2kko6x" fileName="Components/image_new_1.xml" xy="268,243" group="n114_dos9"/>
+    <component id="n185_q2kk" name="n185" src="q2kko6x" fileName="Components/image_new_1.xml" xy="268,344" group="n114_dos9"/>
+    <component id="n186_q2kk" name="n186" src="q2kko6x" fileName="Components/image_new_1.xml" xy="268,444" group="n114_dos9"/>
+    <component id="n187_q2kk" name="n187" src="q2kko6x" fileName="Components/image_new_1.xml" xy="619,243" group="n114_dos9"/>
+    <component id="n188_q2kk" name="n188" src="q2kko6x" fileName="Components/image_new_1.xml" xy="619,344" group="n114_dos9"/>
+    <component id="n189_q2kk" name="n189" src="q2kko6x" fileName="Components/image_new_1.xml" xy="619,444" group="n114_dos9"/>
+    <text id="n190_q2kk" name="n190" xy="534,541" size="145,24" group="n114_dos9" fontSize="16" color="#3f4f4e" text="今日剩余传授次数:3">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n191_q2kk" name="n191" xy="275,95" size="356,62" group="n114_dos9" fontSize="14" color="#ffffff" text="1、师傅每天可以为徒弟传功1次&#xA;2、传功会扣除师傅对应的经验和历练，传递给徒弟&#xA;3、每次传功后，师徒两人都会获得持续8小时的增益状态"/>
     <group id="n114_dos9" name="panel" xy="-11,1" size="995,596" advanced="true"/>
   </displayList>
 </component>

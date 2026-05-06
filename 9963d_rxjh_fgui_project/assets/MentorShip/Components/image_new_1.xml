@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="318,88">
+  <controller name="type" pages="0,经验值1,5,经验值2,6,经验值3,1,历练值1,2,历练值2,3,历练值3" selected="2"/>
+  <displayList>
+    <image id="n0_q2kk" name="n0" src="q2kko6w" fileName="Images/13.png" xy="0,0"/>
+    <image id="n1_q2kk" name="n1" src="q2kko72" fileName="Images/18.png" xy="13,11"/>
+    <image id="n2_q2kk" name="n2" src="q2kko6y" fileName="Images/14.png" xy="17,15">
+      <gearIcon controller="type" default=""/>
+    </image>
+    <text id="n3_q2kk" name="n3" xy="90,15" size="117,24" fontSize="16" color="#292805" text="传授10W经验值"/>
+    <text id="n4_q2kk" name="n4" xy="90,48" size="125,24" fontSize="16" color="#292805" text="今日剩余次数：1"/>
+    <component id="n5_q2kk" name="n5" src="q2kko74" fileName="Components/btn_new_2.xml" xy="225,26"/>
+    <image id="n7_q2kk" name="n7" src="q2kko6y" fileName="Images/14.png" xy="17,16">
+      <gearDisplay controller="type" pages="5"/>
+    </image>
+    <image id="n8_q2kk" name="n8" src="q2kko6y" fileName="Images/14.png" xy="17,16">
+      <gearDisplay controller="type" pages="6"/>
+    </image>
+    <image id="n11_q2kk" name="n11" src="q2kko6z" fileName="Images/15.png" xy="17,16">
+      <gearDisplay controller="type" pages="0"/>
+    </image>
+    <image id="n12_q2kk" name="n12" src="q2kko70" fileName="Images/16.png" xy="17,16"/>
+    <image id="n13_q2kk" name="n13" src="q2kko71" fileName="Images/17.png" xy="17,16"/>
+  </displayList>
+</component>

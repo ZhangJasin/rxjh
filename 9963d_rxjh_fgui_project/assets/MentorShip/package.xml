@@ -123,7 +123,18 @@
     <image id="q2kko6p" name="7.png" path="/Images/" exported="true"/>
     <image id="q2kko6q" name="8.png" path="/Images/" exported="true"/>
     <image id="q2kko6r" name="9.png" path="/Images/" exported="true"/>
-    <image id="q2kko6s" name="10.png" path="/Images/" exported="true"/>
+    <image id="q2kko6t" name="10.png" path="/Images/" exported="true"/>
+    <image id="q2kko6u" name="11.png" path="/Images/" exported="true"/>
+    <image id="q2kko6v" name="12.png" path="/Images/" exported="true"/>
+    <image id="q2kko6w" name="13.png" path="/Images/" exported="true"/>
+    <component id="q2kko6x" name="image_new_1.xml" path="/Components/" exported="true"/>
+    <image id="q2kko6y" name="14.png" path="/Images/" exported="true"/>
+    <image id="q2kko6z" name="15.png" path="/Images/" exported="true"/>
+    <image id="q2kko70" name="16.png" path="/Images/" exported="true"/>
+    <image id="q2kko71" name="17.png" path="/Images/" exported="true"/>
+    <image id="q2kko72" name="18.png" path="/Images/" exported="true"/>
+    <image id="q2kko73" name="19.png" path="/Images/" exported="true"/>
+    <component id="q2kko74" name="btn_new_2.xml" path="/Components/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
