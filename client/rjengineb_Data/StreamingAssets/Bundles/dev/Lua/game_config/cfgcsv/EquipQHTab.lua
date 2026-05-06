@@ -434,7 +434,7 @@ local config = {
 			[14] = 2,
 			[15] = 1,
 		},
-		TIPS="1.使用首饰分解材料可对首饰进行加工<br>2.加工上限为<font color=#80FF80>10级</font>，5级之前失败装备<font color=#80FF80>降低1个等级</font>，5级后失败则<br><font color=#80FF80>装备损坏</font><br>3.<font color=#80FF80>项链</font>加工后增加<font color=#80FF80>防御力</font>等属性，<font color=#80FF80>耳环</font>加工后增加<font color=#80FF80>生命力和生命恢</font><br><font color=#80FF80>复</font>等属性，<font color=#80FF80>戒指</font>加工后增加<font color=#80FF80>攻击力和追加伤害</font>等属性<br>4.加工的概率如下：<br>加工1成功率：<font color=#80FF80>100%</font><br>加工2成功率：<font color=#80FF80>80%</font><br>加工3成功率：<font color=#80FF80>60%</font><br>加工4成功率：<font color=#80FF80>50%</font><br>加工5成功率：<font color=#80FF80>40%</font><br>加工6成功率：<font color=#80FF80>30%</font><br>加工7成功率：<font color=#80FF80>20%</font><br>加工8成功率：<font color=#80FF80>15%</font><br>加工9成功率：<font color=#80FF80>10%</font><br>加工10成功率：<font color=#80FF80>5%</font>",
+		TIPS="1.使用首饰分解材料可对首饰进行加工<br>2.加工上限为<font color=#80FF80>10级</font>，5级之前失败装备<font color=#80FF80>降低1个等级</font>，5级后失败则<font color=#80FF80>装备损坏</font><br>3.<font color=#80FF80>项链</font>加工后增加<font color=#80FF80>防御力</font>等属性，<font color=#80FF80>耳环</font>加工后增加<font color=#80FF80>生命力和生命恢</font><br><font color=#80FF80>复</font>等属性，<font color=#80FF80>戒指</font>加工后增加<font color=#80FF80>攻击力和追加伤害</font>等属性<br>4.加工的概率如下：<br>加工1成功率：<font color=#80FF80>100%</font><br>加工2成功率：<font color=#80FF80>80%</font><br>加工3成功率：<font color=#80FF80>60%</font><br>加工4成功率：<font color=#80FF80>50%</font><br>加工5成功率：<font color=#80FF80>40%</font><br>加工6成功率：<font color=#80FF80>30%</font><br>加工7成功率：<font color=#80FF80>20%</font><br>加工8成功率：<font color=#80FF80>15%</font><br>加工9成功率：<font color=#80FF80>10%</font><br>加工10成功率：<font color=#80FF80>5%</font>",
 		title="加工",
 	},
 	[4] = { 
