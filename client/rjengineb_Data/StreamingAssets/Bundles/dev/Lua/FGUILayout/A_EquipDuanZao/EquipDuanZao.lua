@@ -668,7 +668,8 @@ function EquipDuanZao:GetPageData()
                                self.selectEquipStdMode == 65 or self.selectEquipStdMode == 66 then
                                 table.insert(bagitemlist[2], data)
                             end
-                        else
+                        elseif self.selectEquipStdMode ~= 53 and self.selectEquipStdMode ~= 54 and
+                                self.selectEquipStdMode ~= 65 or self.selectEquipStdMode ~= 66 then
                             table.insert(bagitemlist[2], data)
                         end
                     end                    
