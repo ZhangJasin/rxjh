@@ -991,25 +991,89 @@ function MentorShip.breakShip(masterId, targetId, isSend)
     end
 end
 
---徒弟领取任务奖励
+--徒弟领取任务奖励（改为邮件发送，并增加安全校验）
 function MentorShip.receive(actor, data)
-    local task_reward = {}
+    local taskId = data.taskId
+    local myUserId = userid(actor)
+    
+    -- 1. 查找配置表，获取任务信息和双端奖励
+    local taskCfg = nil
     for i = 1, #Master_and_apprentice do
-        if Master_and_apprentice[i].ID == data.taskId then
-            task_reward = Master_and_apprentice[i].task_reward
+        if Master_and_apprentice[i].ID == taskId then
+            taskCfg = Master_and_apprentice[i]
+            break
         end
     end
-    -- dump(task_reward)
-    local itemJson = {}
-    for i = 1, #task_reward do
-        itemJson[task_reward[i][1]] = task_reward[i][2]
+    
+    if not taskCfg then return end
+
+    -- ??? 新增：绝对安全校验防刷 ???
+    local taskProgressStr = getcustvar("11_" .. myUserId .. "_" .. "t_ApprenticeTaskPro")
+    if taskProgressStr == "" then return end
+    local taskProgressList = json2tbl(taskProgressStr)
+    local currentTask = taskProgressList['' .. taskId]
+    
+    if not currentTask then return end
+    
+    -- 防重复领取外挂
+    if currentTask.status == 1 then
+        sendmsg(actor, 9, "[color=#ff0000]该任务奖励已领取！[/color]")
+        return
     end
-    giveItmeByList(actor, itemJson)
-    local taskProgressList = json2tbl(getcustvar("11_" .. userid(actor) .. "_" .. "t_ApprenticeTaskPro"))
-    taskProgressList['' .. data.taskId].status = 1
-    taskProgressList.finishTask = taskProgressList.finishTask + 1
-    sefcustvar(11, userid(actor), 't_ApprenticeTaskPro', tbl2json(taskProgressList))
-    MentorShip.getApprenticeInfo(actor, { fromPanel = data.fromPanel, UserID = userid(actor) })
+    
+    -- 防未完成提前领奖封包穿透
+    if currentTask.num < taskCfg.task_target_num then
+        sendmsg(actor, 9, "[color=#ff0000]任务尚未完成，无法领取奖励！[/color]")
+        return
+    end
+    -- ??? 校验结束 ???
+
+    -- 2. 组装邮件附件字符串的公共函数 (格式: id#num#bind&id#num#bind)
+    local function getMailRewardStr(rewardTable)
+        if not rewardTable or type(rewardTable) ~= "table" then return "" end
+        local itemStr = ""
+        for i = 1, #rewardTable do
+            if itemStr ~= "" then itemStr = itemStr .. "&" end
+            -- 拼接 "物品ID#数量#绑定状态(0为不绑定)"
+            itemStr = itemStr .. rewardTable[i][1] .. "#" .. rewardTable[i][2] .. "#0"
+        end
+        return itemStr
+    end
+
+    -- 提取徒弟和师傅的奖励字符串
+    local apprenticeRewardStr = getMailRewardStr(taskCfg.task_reward)
+    local masterRewardStr = getMailRewardStr(taskCfg.task_reward_1)
+
+    -- 3. 获取师傅的 UserID
+    local myRelationStr = getcustvar("11_" .. myUserId .. "_" .. "t_MasterAndApprt")
+    local masterId = nil
+    if myRelationStr ~= "" then
+        local myRelation = json2tbl(myRelationStr)
+        if myRelation.myMaster and myRelation.myMaster.UserID then
+            masterId = myRelation.myMaster.UserID
+        end
+    end
+
+    -- 4. 发送邮件
+    -- 给徒弟发送邮件
+    if apprenticeRewardStr ~= "" then
+        sendmail(myUserId, 1, "师徒任务奖励", "恭喜您完成了师徒任务，附件是您的专属奖励！", apprenticeRewardStr, 86400 * 7)
+    end
+
+    -- 给师傅发送邮件（无论师傅是否在线都能收到）
+    if masterId and masterRewardStr ~= "" then
+        local msg = "您的徒弟【" .. username(actor) .. "】完成了师徒任务，附件是您的师傅专属奖励！"
+        sendmail(masterId, 1, "徒弟完成任务奖励", msg, masterRewardStr, 86400 * 7)
+    end
+
+    -- 5. 更新任务状态并保存数据
+    currentTask.status = 1
+    taskProgressList.finishTask = (taskProgressList.finishTask or 0) + 1
+    sefcustvar(11, myUserId, 't_ApprenticeTaskPro', tbl2json(taskProgressList))
+    
+    -- 6. 刷新客户端显示并提示
+    MentorShip.getApprenticeInfo(actor, { fromPanel = data.fromPanel, UserID = myUserId })
+    sendmsg(actor, 9, "领取成功，奖励已发放至您的邮箱！")
 end
 
 --徒弟转职次数任务
@@ -1122,51 +1186,112 @@ function MentorShip.chushi(actor, data)
     MentorShip.GetMyRelation(actor, "MentorShipMain")
 end
 
+-- 徒弟完成贡献度任务并领奖（新增安全校验 + 邮件发奖）
 function MentorShip.finishGxdTask(actor, data)
-    local myGxdTask = json2tbl(getcustvar("11_" .. data.UserID .. "_" .. "t_ApprenticeGxdTask"))
-    local taskProgressList = json2tbl(getcustvar("11_" .. data.UserID .. "_" .. "t_ApprenticeTaskPro"))
-    myGxdTask['' .. data.taskID].status = 1
-    local task_reward = {}
-    local gxd = taskProgressList['progressPer']
+    -- ? 漏洞修复 1：强制使用操作者自己的UserID，绝不能信任客户端传来的 data.UserID
+    local myUserId = userid(actor) 
+    local taskId = data.taskID
+
+    -- 1. 取出玩家的贡献度任务数据和普通进度数据
+    local gxdTaskStr = getcustvar("11_" .. myUserId .. "_" .. "t_ApprenticeGxdTask")
+    local taskProgressStr = getcustvar("11_" .. myUserId .. "_" .. "t_ApprenticeTaskPro")
+    if gxdTaskStr == "" or taskProgressStr == "" then return end
+    
+    local myGxdTask = json2tbl(gxdTaskStr)
+    local taskProgressList = json2tbl(taskProgressStr)
+    local currentTask = myGxdTask['' .. taskId]
+    
+    if not currentTask then return end
+
+    -- 2. 从配置表查出当前任务详情
+    local taskCfg = nil
     for i = 1, #Master_and_apprentice do
-        if Master_and_apprentice[i].ID == data.taskID then
-            task_reward = Master_and_apprentice[i].task_reward
-            gxd = Master_and_apprentice[i].gxd_progress + gxd
+        if Master_and_apprentice[i].ID == taskId then
+            taskCfg = Master_and_apprentice[i]
+            break
         end
     end
-    local itemJson = {}
-    for i = 1, #task_reward do
-        itemJson[task_reward[i][1]] = task_reward[i][2]
+    if not taskCfg then return end
+
+    -- ??? 漏洞修复 2：绝对安全校验防刷 ???
+    -- 防重复领取外挂
+    if currentTask.status == 1 then
+        sendmsg(actor, 9, "[color=#ff0000]该贡献任务奖励已领取！[/color]")
+        return
     end
+    
+    -- 防未完成提前领奖的封包穿透
+    if currentTask.num < taskCfg.task_target_num then
+        sendmsg(actor, 9, "[color=#ff0000]贡献任务尚未完成，无法领取奖励！[/color]")
+        return
+    end
+    -- ??? 校验结束 ???
+
+    -- 3. 计算贡献度经验条 (GXD)
+    local gxd = taskProgressList['progressPer'] or 0
+    gxd = gxd + (taskCfg.gxd_progress or 0)
+    
     local js = math.floor(gxd / 100)
-    taskProgressList['progressLv'] = taskProgressList['progressLv'] - js
+    taskProgressList['progressLv'] = (taskProgressList['progressLv'] or 5) - js
+    
+    -- 处理升级与经验溢出保留
     if taskProgressList['progressLv'] < 1 then
         taskProgressList['progressLv'] = 1
         taskProgressList['progressPer'] = 100
     else
         taskProgressList['progressPer'] = gxd - 100 * js
     end
-    if taskProgressList['progressLv'] == 5 then
-        sethumvar(actor, VarCfg.T_Skilll_BL, 40)
-    end
-    if taskProgressList['progressLv'] == 4 then
-        sethumvar(actor, VarCfg.T_Skilll_BL, 50)
-    end
-    if taskProgressList['progressLv'] == 3 then
-        sethumvar(actor, VarCfg.T_Skilll_BL, 60)
-    end
-    if taskProgressList['progressLv'] == 2 then
-        sethumvar(actor, VarCfg.T_Skilll_BL, 60)
-    end
-    if taskProgressList['progressLv'] == 1 then
-        sethumvar(actor, VarCfg.T_Skilll_BL, 70)
-    end
-    giveItmeByList(actor, itemJson)
-    sefcustvar(11, data.UserID, 't_ApprenticeGxdTask', tbl2json(myGxdTask))
 
-    sefcustvar(11, data.UserID, 't_ApprenticeTaskPro', tbl2json(taskProgressList))
+    -- 4. 刷新徒弟自身 Buff 加成
+    local pLv = taskProgressList['progressLv']
+    if pLv == 5 then sethumvar(actor, VarCfg.T_Skilll_BL, 40) end
+    if pLv == 4 then sethumvar(actor, VarCfg.T_Skilll_BL, 50) end
+    if pLv == 3 then sethumvar(actor, VarCfg.T_Skilll_BL, 60) end
+    if pLv == 2 then sethumvar(actor, VarCfg.T_Skilll_BL, 60) end
+    if pLv == 1 then sethumvar(actor, VarCfg.T_Skilll_BL, 70) end
 
-    MentorShip.getApprenticeInfo(actor, { fromPanel = 'MentorShipTeach', UserID = data.UserID })
+    -- 5. 组装邮件附件字符串 (公共方法)
+    local function getMailRewardStr(rewardTable)
+        if not rewardTable or type(rewardTable) ~= "table" then return "" end
+        local itemStr = ""
+        for i = 1, #rewardTable do
+            if itemStr ~= "" then itemStr = itemStr .. "&" end
+            itemStr = itemStr .. rewardTable[i][1] .. "#" .. rewardTable[i][2] .. "#0"
+        end
+        return itemStr
+    end
+
+    -- 提取徒弟和师傅的奖励配置
+    local apprenticeRewardStr = getMailRewardStr(taskCfg.task_reward)
+    local masterRewardStr = getMailRewardStr(taskCfg.task_reward_1)
+
+    -- 获取师傅ID发邮件
+    local myRelationStr = getcustvar("11_" .. myUserId .. "_" .. "t_MasterAndApprt")
+    local masterId = nil
+    if myRelationStr ~= "" then
+        local myRelation = json2tbl(myRelationStr)
+        if myRelation.myMaster and myRelation.myMaster.UserID then
+            masterId = myRelation.myMaster.UserID
+        end
+    end
+
+    -- 发送邮件！
+    if apprenticeRewardStr ~= "" then
+        sendmail(myUserId, 1, "师徒贡献奖励", "恭喜您完成了师徒贡献任务，实力更进一步！", apprenticeRewardStr, 86400 * 7)
+    end
+    if masterId and masterRewardStr ~= "" then
+        local msg = "您的徒弟【" .. username(actor) .. "】完成了每日贡献任务，附件是您的师傅专属奖励！"
+        sendmail(masterId, 1, "徒弟贡献任务奖励", msg, masterRewardStr, 86400 * 7)
+    end
+
+    -- 6. 保存所有数据（更改任务状态）
+    currentTask.status = 1
+    sefcustvar(11, myUserId, 't_ApprenticeGxdTask', tbl2json(myGxdTask))
+    sefcustvar(11, myUserId, 't_ApprenticeTaskPro', tbl2json(taskProgressList))
+
+    -- 7. 通知客户端刷新界面
+    MentorShip.getApprenticeInfo(actor, { fromPanel = 'MentorShipTeach', UserID = myUserId })
+    sendmsg(actor, 9, "贡献度任务完成，奖励已发放至您的邮箱！")
 end
 
 --徒弟上线，增加师傅给的技能
