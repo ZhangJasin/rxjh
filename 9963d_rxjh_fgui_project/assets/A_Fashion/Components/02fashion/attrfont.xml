@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="250,100" overflow="scroll" scrollBarFlags="2056">
+<component size="228,29">
   <displayList>
-    <richtext id="n0_km0s" name="font" xy="24,0" size="287,291" touchable="false" fontSize="22" color="#fff5da" leading="10" autoClearText="true" text="属性：+10000000000000000&lt;br&gt;属性：+100&lt;br&gt;属性：+100&lt;br&gt;属性：+100&lt;br&gt;属性：+100&lt;br&gt;属性：+100&lt;br&gt;属性：+100&lt;br&gt;属性：+100"/>
+    <richtext id="n0_km0s" name="name" xy="-11,0" size="96,24" touchable="false" fontSize="16" color="#242628" align="right" leading="5" autoSize="none" autoClearText="true" text="属属属属性:"/>
+    <richtext id="n1_wq9w" name="value" xy="85,0" size="166,24" touchable="false" fontSize="16" color="#242628" leading="5" autoClearText="true" text="+10000000000000000"/>
   </displayList>
 </component>

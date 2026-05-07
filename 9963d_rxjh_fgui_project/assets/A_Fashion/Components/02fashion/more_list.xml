@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1058,652" overflow="hidden">
+  <displayList>
+    <image id="n0_wq9w" name="n0" src="as7kvnn" fileName="image/bg_first_panel_9.png" pkg="st7dgeqq" xy="4,3" size="1051,652"/>
+    <list id="n1_wq9w" name="fashions" xy="10,61" size="1035,587" layout="flow_hz" overflow="scroll" margin="7,0,2,0" lineGap="14" colGap="4" defaultItem="ui://k09jn1qdrg4i4" autoClearItems="true" scrollItemToViewOnClick="false">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n3_wq9w" name="title" xy="413,15" size="193,35" fontSize="24" color="#fff3be" align="center" vAlign="middle" autoSize="none" singleLine="true" text="更多时装">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

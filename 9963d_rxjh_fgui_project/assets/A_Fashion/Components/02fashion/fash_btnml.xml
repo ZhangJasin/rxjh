@@ -2,24 +2,24 @@
 <component size="95,94" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n0_km0s" name="n0" src="rg4ic" fileName="Images/02fashion/fash_mlzd.png" xy="0,0">
+    <image id="n0_km0s" name="n0" src="wq9w1b" fileName="Images/0tongyong/mldj.png" xy="0,0">
       <gearDisplay controller="button" pages="0,2"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n1_km0s" name="n1" src="rg4ic" fileName="Images/02fashion/fash_mlzd.png" xy="0,0">
+    <image id="n1_km0s" name="n1" src="wq9w1b" fileName="Images/0tongyong/mldj.png" xy="0,0">
       <gearDisplay controller="button" pages="1,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n2_km0s" name="level" xy="15,22" size="63,36" fontSize="26" color="#f6cd2b" align="center" vAlign="middle" autoSize="none" singleLine="true" text="1">
+    <text id="n2_km0s" name="level" xy="15,22" size="63,36" fontSize="26" color="#fff3be" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="1">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
-    <text id="n3_km0s" name="title" xy="10,-19" size="78,35" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="魅力值">
+    <text id="n3_km0s" name="title" xy="10,-37" size="78,35" fontSize="24" color="#fff3be" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#000000" singleLine="true" text="魅力值">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
     <text id="n4_km0s" name="levelfont" xy="2,70" size="91,24" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="1级">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
-    <text id="n5_km0s" name="value" xy="1,47" size="76,26" fontSize="18" color="#30ff00" align="right" vAlign="middle" autoSize="none" singleLine="true" text="+0">
+    <text id="n5_km0s" name="value" xy="1,47" size="76,26" fontSize="18" color="#19ff18" align="right" vAlign="middle" autoSize="none" strokeColor="#000000" singleLine="true" text="+0">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
   </displayList>

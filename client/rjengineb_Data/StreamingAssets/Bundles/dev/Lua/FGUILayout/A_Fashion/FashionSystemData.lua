@@ -49,6 +49,10 @@ function FashionSystemData:RequestWearAttr(params)
     ssrMessage:sendmsgEx("FashionSystem", "wearAttr", params)
 end
 
+function FashionSystemData:RequestJiHuo(params)
+    ssrMessage:sendmsgEx("FashionSystem", "JiHuo", params)
+end
+
 function FashionSystemData:GetState()
     return self._state
 end

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="170,40" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_wq9w" name="n0" src="wq9w1p" fileName="Images/02fashion/gdsz.png" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_wq9w" name="n1" xy="59,5" size="102,32" fontSize="22" color="#fff3be" autoSize="none" bold="true" strokeColor="#000000" text="更多时装"/>
+  </displayList>
+  <Button/>
+</component>

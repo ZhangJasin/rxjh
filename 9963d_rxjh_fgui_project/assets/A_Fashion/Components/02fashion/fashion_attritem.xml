@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="190,38">
+<component size="190,30">
   <displayList>
-    <image id="n0_icqd" name="n0" src="rg4i11" fileName="Images/02fashion/fash_mlxxd.png" xy="0,0"/>
-    <richtext id="n1_icqd" name="n1" xy="16,0" size="160,35" fontSize="22" color="#fff5da" vAlign="middle" autoSize="shrink" text="属性值：   +3"/>
+    <image id="n0_icqd" name="n0" src="wq9w1h" fileName="Components/02fashion/srkd.png" xy="0,0" size="191,29" visible="false"/>
+    <richtext id="n1_icqd" name="value" xy="109,0" size="27,29" fontSize="20" color="#fff5da" vAlign="middle" text="+3"/>
+    <component id="n3_wq9w" name="name" src="wq9w1j" fileName="Components/02fashion/ScrollRText.xml" xy="19,0" size="83,29">
+      <relation target="" sidePair="leftext-left"/>
+      <Label title="属性名称" titleColor="#fff5da"/>
+    </component>
   </displayList>
 </component>

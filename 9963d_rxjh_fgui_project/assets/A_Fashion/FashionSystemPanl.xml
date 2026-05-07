@@ -9,76 +9,86 @@
     <remark page="0" value="关闭魅力值面板"/>
     <remark page="1" value="打开魅力值面板"/>
   </controller>
+  <controller name="hasmore" alias="显示更多" pages="0,n,1,y" selected="0">
+    <remark page="0" value="正常"/>
+    <remark page="1" value="更多"/>
+  </controller>
   <displayList>
     <component id="n0_km0s" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="667,375" pivot="0.5,0.5" anchor="true" size="1014,650">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <image id="n9_km0s" name="n9" src="rg4i1" fileName="Images/02fashion/fash_szbjd.png" xy="427,106">
+    <image id="n9_km0s" name="n9" src="rg4i1" fileName="Images/02fashion/fash_szbjd.png" xy="167,106" size="1000,588">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <text id="n6_km0s" name="title" xy="570,62" size="193,35" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" singleLine="true" text="时装">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n2_km0s" name="fashionList" src="rg4i2" fileName="Components/02fashion/fashionitem.xml" xy="176,110">
+    <component id="n2_km0s" name="fashionList" src="rg4i2" fileName="Components/02fashion/fashionitem.xml" xy="175,110" size="256,576">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n3_km0s" name="btn_pifeng" src="rg4i8" fileName="Components/tongyong/page_rightlv.xml" xy="1169,104">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Button checked="true" title="披风" titleColor="#ffff00" titleFontSize="24"/>
+      <Button title="披风" titleFontSize="24"/>
     </component>
-    <component id="n4_km0s" name="btn_huanwu" src="rg4i8" fileName="Components/tongyong/page_rightlv.xml" xy="1170,197">
+    <component id="n4_km0s" name="btn_huanwu" src="rg4i8" fileName="Components/tongyong/page_rightlv.xml" xy="1169,197">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Button title="幻武" titleFontSize="24"/>
+      <Button checked="true" title="幻武" titleFontSize="24"/>
     </component>
-    <component id="n5_km0s" name="btn_toushi" src="rg4i8" fileName="Components/tongyong/page_rightlv.xml" xy="1171,290">
+    <component id="n5_km0s" name="btn_toushi" src="rg4i8" fileName="Components/tongyong/page_rightlv.xml" xy="1169,290">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Button title="头饰" titleFontSize="24"/>
+      <Button checked="true" title="头饰" titleFontSize="24"/>
     </component>
-    <graph id="n7_km0s" name="graph_fashion_role" xy="666,614" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen">
+    <graph id="n7_km0s" name="graph_fashion_role" xy="666,616" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen">
       <relation target="" sidePair="center-center,middle-middle"/>
     </graph>
     <component id="n28_iilm" name="panel_touch" src="rg4i7" fileName="Components/tongyong/itemRoot.xml" xy="522,268" size="287,343">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n8_km0s" name="n8" src="rg4ib" fileName="Components/02fashion/fash_btnml.xml" xy="402,121">
+    <component id="n8_km0s" name="n8" src="rg4ib" fileName="Components/02fashion/fash_btnml.xml" xy="469,160">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n10_km0s" name="n10" src="rg4id" fileName="Components/02fashion/fashion_pifengQHBtn.xml" xy="406,592" visible="false">
+    <component id="n10_km0s" name="n10" src="rg4id" fileName="Components/02fashion/fashion_pifengQHBtn.xml" xy="461,593" visible="false">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n11_km0s" name="attr1_panl" src="rg4if" fileName="Components/02fashion/attr1.xml" xy="912,107">
+    <component id="n13_km0s" name="attr3_panl" src="rg4il" fileName="Components/02fashion/attr2.xml" xy="911,533">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n12_km0s" name="attr2_panl" src="rg4il" fileName="Components/02fashion/attr2.xml" xy="912,289">
+    <component id="n11_km0s" name="attr1_panl" src="rg4il" fileName="Components/02fashion/attr2.xml" xy="911,155">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n13_km0s" name="attr3_panl" src="rg4im" fileName="Components/02fashion/attr3.xml" xy="915,501">
+    <component id="n12_km0s" name="attr2_panl" src="rg4il" fileName="Components/02fashion/attr2.xml" xy="911,344">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <richtext id="n17_km0s" name="attrfont1" xy="944,162" size="287,69" touchable="false" fontSize="22" color="#fff5da" leading="10" autoClearText="true" text="属性：+10000000000000000&lt;br&gt;属性：+100">
+    <richtext id="n17_km0s" name="attrfont1" xy="944,162" size="287,69" visible="false" touchable="false" grayed="true" fontSize="22" color="#242628" leading="10" autoClearText="true" text="属性：+10000000000000000&lt;br&gt;属性：+100">
       <relation target="" sidePair="center-center,middle-middle"/>
     </richtext>
-    <richtext id="n18_km0s" name="attrfont2" xy="945,341" size="119,69" touchable="false" fontSize="22" color="#fff5da" vAlign="middle" leading="10" autoClearText="true" text="属性：+10&lt;br&gt;属性：+100">
+    <richtext id="n18_km0s" name="attrfont2" xy="945,341" size="119,69" visible="false" touchable="false" grayed="true" fontSize="22" color="#242628" vAlign="middle" leading="10" autoClearText="true" text="属性：+10&lt;br&gt;属性：+100">
       <relation target="" sidePair="center-center,middle-middle"/>
     </richtext>
-    <richtext id="n19_km0s" name="attrfont3" xy="945,557" size="119,69" touchable="false" fontSize="22" color="#fff5da" vAlign="middle" leading="10" autoClearText="true" text="属性：+10&lt;br&gt;属性：+100">
+    <richtext id="n19_km0s" name="attrfont3" xy="956,554" size="119,69" visible="false" touchable="false" grayed="true" fontSize="22" color="#242628" vAlign="middle" leading="10" autoClearText="true" text="属性：+10&lt;br&gt;属性：+100">
       <relation target="" sidePair="center-center,middle-middle"/>
     </richtext>
-    <component id="n20_km0s" name="btn_zhuangban" src="rg4io" fileName="Components/02fashion/fashion_gxzbBtn.xml" xy="811,592" visible="false">
+    <component id="n20_km0s" name="btn_zhuangban" src="rg4io" fileName="Components/02fashion/fashion_gxzbBtn.xml" xy="812,593" visible="false">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n21_km0s" name="btn_huanhua" src="rg4iq" fileName="Components/02fashion/fashion_huanhuaBtn.xml" xy="848,194">
+    <component id="n21_km0s" name="btn_huanhua" src="rg4iq" fileName="Components/02fashion/fashion_huanhuaBtn.xml" xy="600,638">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n22_km0s" name="btn_use" src="rg4it" fileName="Components/02fashion/fashion_useBtn.xml" xy="850,251">
+    <component id="n22_km0s" name="btn_use" src="rg4it" fileName="Components/02fashion/fashion_useBtn.xml" xy="1083,264">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n23_km0s" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1163,77">
+    <component id="n23_km0s" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1146,77">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n25_icqd" name="meilizhi_panl" src="rg4iw" fileName="Components/02fashion/fashion_meilizhi.xml" xy="1,1">
       <gearDisplay controller="meilizhi" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
+    <image id="n29_wq9w" name="n29" src="wq9w1d" fileName="Images/0tongyong/cdsx.png" xy="940,117"/>
+    <image id="n30_wq9w" name="n30" src="wq9w1e" fileName="Images/0tongyong/jhsx.png" xy="939,308"/>
+    <image id="n31_wq9w" name="n31" src="wq9w1f" fileName="Images/0tongyong/rxssx.png" xy="928,494"/>
+    <component id="n34_wq9w" name="open_more" src="wq9w1q" fileName="Components/tongyong/Button_HasMore.xml" xy="220,632" visible="false"/>
+    <component id="n36_wq9w" name="more_list" src="wq9w1m" fileName="Components/02fashion/more_list.xml" xy="157,48"/>
+    <component id="n35_wq9w" name="close_more" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1190,76" size="45,45" visible="false"/>
   </displayList>
 </component>

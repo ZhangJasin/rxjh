@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="250,220">
+<component size="250,145">
   <displayList>
-    <image id="n7_km0s" name="n0" src="rg4ig" fileName="Images/02fashion/fash_rightxxd.png" xy="0,50" size="248,169"/>
-    <image id="n1_km0s" name="n1" src="rg4ih" fileName="Images/0tongyong/huawen1.png" xy="194,19"/>
-    <image id="n2_km0s" name="n2" src="rg4ii" fileName="Images/0tongyong/huawen2.png" xy="16,19"/>
-    <text id="n5_km0s" name="n5" xy="125,29" pivot="0.5,0.5" anchor="true" size="136,34" fontSize="24" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="穿戴属性"/>
-    <component id="n8_km0s" name="attrfont" src="rg4ij" fileName="Components/02fashion/attrfont.xml" xy="8,52" size="233,163"/>
-    <image id="n9_km0s" name="attrimg" src="rg4ik" fileName="Images/02fashion/fash_zwsx.png" xy="63,155" visible="false"/>
+    <image id="n7_km0s" name="n0" src="wq9w1c" fileName="Images/0tongyong/sxd.png" xy="0,0" size="248,146"/>
+    <image id="n1_km0s" name="n1" src="rg4ih" fileName="Images/0tongyong/huawen1.png" xy="194,19" visible="false"/>
+    <image id="n2_km0s" name="n2" src="rg4ii" fileName="Images/0tongyong/huawen2.png" xy="16,19" visible="false"/>
+    <text id="n5_km0s" name="n5" xy="125,29" pivot="0.5,0.5" anchor="true" size="136,34" visible="false" fontSize="24" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="穿戴属性"/>
+    <image id="n9_km0s" name="attrimg" src="rg4ik" fileName="Images/02fashion/fash_zwsx.png" xy="57,36" visible="false"/>
+    <list id="n10_wq9w" name="attrfont" xy="14,8" size="231,127" selectionMode="none" overflow="scroll" lineGap="-6" defaultItem="ui://k09jn1qdrg4ij">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
   </displayList>
 </component>

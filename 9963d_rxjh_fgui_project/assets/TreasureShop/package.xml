@@ -86,7 +86,7 @@
     <image id="hzurdv7p" name="di_right.png" path="/Images/" exported="true"/>
     <image id="wq9wdv7q" name="bgleft.png" path="/Images/" exported="true"/>
     <image id="wq9wdv7r" name="bgright.png" path="/Images/" exported="true"/>
-    <image id="wq9wdv7s" name="di_gx.png" path="/Images/" exported="true" scale="9grid" scale9grid="15,39,5,2"/>
+    <image id="wq9wdv7s" name="di_gx.png" path="/Images/" exported="true" scale="9grid" scale9grid="22,59,5,4"/>
   </resources>
   <publish name=""/>
 </packageDescription>

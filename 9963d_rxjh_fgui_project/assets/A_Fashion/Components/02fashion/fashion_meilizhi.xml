@@ -6,10 +6,11 @@
     <component id="n2_km0s" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="915,125">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <image id="n4_icqd" name="n4" src="rg4ic" fileName="Images/02fashion/fash_mlzd.png" xy="484,170"/>
-    <image id="n3_icqd" name="n3" src="rg4iz" fileName="Images/02fashion/fash_meili.png" xy="494,176"/>
+    <image id="n4_icqd" name="n4" src="wq9w1b" fileName="Images/0tongyong/mldj.png" xy="484,170"/>
+    <image id="n3_icqd" name="n3" src="rg4iz" fileName="Images/02fashion/fash_meili.png" xy="494,185"/>
     <text id="n5_icqd" name="n5" xy="435,153" size="197,35" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="魅力值"/>
     <text id="n6_icqd" name="curmllv" xy="503,239" size="58,24" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <image id="n17_wq9w" name="n17" src="wq9w1i" fileName="Images/0tongyong/mlsxbg.png" xy="437,285" size="193,271"/>
     <list id="n7_icqd" name="curattrlist" xy="437,287" size="192,268" overflow="scroll" lineGap="5" defaultItem="ui://k09jn1qdrg4i10" autoClearItems="true">
       <item/>
       <item/>
@@ -21,10 +22,11 @@
       <item/>
     </list>
     <richtext id="n8_icqd" name="curneed" xy="433,578" size="200,34" fontSize="24" color="#ffffff" align="center" autoSize="none" text="当前魅力：2"/>
-    <image id="n11_icqd" name="n11" src="rg4ic" fileName="Images/02fashion/fash_mlzd.png" xy="753,169"/>
-    <image id="n12_icqd" name="n12" src="rg4iz" fileName="Images/02fashion/fash_meili.png" xy="763,175"/>
+    <image id="n11_icqd" name="n11" src="wq9w1b" fileName="Images/0tongyong/mldj.png" xy="753,169"/>
+    <image id="n12_icqd" name="n12" src="rg4iz" fileName="Images/02fashion/fash_meili.png" xy="763,183"/>
     <text id="n13_icqd" name="n13" xy="703,152" size="196,35" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="下一级魅力值"/>
     <text id="n14_icqd" name="nextmllv" xy="772,238" size="58,24" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <image id="n18_wq9w" name="n18" src="wq9w1i" fileName="Images/0tongyong/mlsxbg.png" xy="705,285" size="193,271"/>
     <list id="n15_icqd" name="nextattrlist" xy="706,286" size="192,268" overflow="scroll" lineGap="5" defaultItem="ui://k09jn1qdrg4i10" autoClearItems="true">
       <item/>
       <item/>
