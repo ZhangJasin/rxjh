@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750">
   <displayList>
-    <graph id="n8_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+    <graph id="n8_km9o" name="mask" xy="-1,2" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
     <component id="n7_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,49">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <image id="n6_10pmd" name="bg_left" src="q9lsv5j" fileName="image/icon_money_bg.png" pkg="st7dgeqq" xy="180,109" size="174,568">
+    <image id="n6_10pmd" name="bg_left" src="wq9wdv7q" fileName="Images/bgleft.png" xy="158,95" size="217,607">
       <relation target="n3_10pmd" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </image>
     <text id="n2_10pmd" name="text_title" xy="667,76" pivot="0.5,0.5" anchor="true" size="96,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#9aafbb" singleLine="true" text="NPC商店">
@@ -16,7 +16,7 @@
     <component id="n4_10pmd" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1144,78">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <list id="n3_10pmd" name="list_tab" xy="179,111" size="174,568" layout="flow_hz" overflow="scroll" scrollBarFlags="128" margin="4,0,2,0" lineGap="4" defaultItem="ui://p8mjxubrbxaz3q" align="center" autoClearItems="true">
+    <list id="n3_10pmd" name="list_tab" xy="180,113" size="174,568" layout="flow_hz" overflow="scroll" scrollBarFlags="128" margin="4,0,2,0" lineGap="4" defaultItem="ui://p8mjxubrbxaz3q" align="center" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
       <item/>

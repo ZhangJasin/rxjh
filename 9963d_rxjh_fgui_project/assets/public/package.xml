@@ -19,7 +19,7 @@
     <component id="fbc0v4o" name="btn_close.xml" path="/common/" exported="true"/>
     <component id="fbc0v4p" name="btn_help.xml" path="/common/" exported="true"/>
     <image id="fbc0v4q" name="btn_help.png" path="/image/" exported="true"/>
-    <image id="fbc0v4r" name="frame_info.png" path="/image/" exported="true" scale="9grid" scale9grid="8,7,7,6"/>
+    <image id="fbc0v4r" name="frame_info.png" path="/image/" exported="true" scale="9grid" scale9grid="19,10,97,12"/>
     <image id="fbc0v4s" name="icon_item0.png" path="/image/" exported="true" scale9grid="16,16,32,32"/>
     <image id="fbc0v4t" name="icon_item1.png" path="/image/" exported="true" scale9grid="16,16,32,32"/>
     <image id="fbc0v4y" name="icon_item_select.png" path="/image/" exported="true" scale="9grid" scale9grid="7,6,1,2"/>
@@ -200,6 +200,8 @@
     <image id="pxu7kvpl" name="m_min.png" path="/image/" exported="true"/>
     <component id="t63akvpm" name="btn_first_gray.xml" path="/common/" exported="true"/>
     <image id="t63akvpo" name="btn_first_gray.png" path="/image/" exported="true"/>
+    <component id="hzurkvpp" name="iconNotingCom.xml" path="/common/" exported="true"/>
+    <image id="hzurkvpq" name="img.png" path="/image/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

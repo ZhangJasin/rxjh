@@ -135,7 +135,7 @@
     <image id="emvc3z" name="toggle_top_red_select.png" path="/image/" exported="true" scale="9grid" scale9grid="26,23,11,20"/>
     <image id="emvc40" name="toggle_top_red_unselect.png" path="/image/" exported="true" scale="9grid" scale9grid="15,9,6,33"/>
     <image id="emvc41" name="top_info_bg.png" path="/image/" exported="true"/>
-    <image id="emvc42" name="icon_money_bg.png" path="/image/" exported="true" scale="9grid" scale9grid="8,6,16,12"/>
+    <image id="emvc42" name="icon_money_bg.png" path="/image/" exported="true" scale9grid="8,6,16,12"/>
     <image id="emvc43" name="toggle_select_1.png" path="/image/" exported="true" scale="9grid" scale9grid="24,0,5,39"/>
     <image id="emvc44" name="toggle_unselect_1.png" path="/image/" exported="true" scale="9grid" scale9grid="5,5,1,1"/>
     <image id="emvc45" name="lock.png" path="/image/" exported="true"/>
@@ -201,6 +201,8 @@
     <image id="pxu7kvpl" name="m_min.png" path="/image/" exported="true"/>
     <image id="uxamkvpm" name="btn_third_green.png" path="/image/" exported="true"/>
     <image id="uxamkvpn" name="btn_thrid_red.png" path="/image/" exported="true"/>
+    <image id="hzurkvpo" name="img.png" path="/image/" exported="true"/>
+    <component id="hzurkvpp" name="iconNotingCom.xml" path="/common/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

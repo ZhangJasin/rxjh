@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="533,382">
   <displayList>
-    <image id="n35_10pmd" name="bg_left" src="emvc42" fileName="image/icon_money_bg.png" pkg="qa9a7rit" xy="0,0" size="533,321">
+    <image id="n35_10pmd" name="bg_left" src="wq9w5p" fileName="Images/bgright.png" xy="0,0" size="533,321">
       <relation target="" sidePair=""/>
       <relation target="n34_10pmd" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </image>

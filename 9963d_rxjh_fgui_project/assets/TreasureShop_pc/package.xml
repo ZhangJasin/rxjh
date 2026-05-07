@@ -67,6 +67,10 @@
     <image id="baex5k" name="img_kuang.png" path="/Images/"/>
     <image id="baex5m" name="comboxDi.png" path="/Images/" scale="9grid" scale9grid="4,8,1,16"/>
     <image id="baex5n" name="icon_item1.png" path="/Images/"/>
+    <image id="hzur5o" name="bg_s.png" path="/Images/" exported="true"/>
+    <image id="wq9w5p" name="bgright.png" path="/Images/" exported="true"/>
+    <image id="wq9w5q" name="leftbg.png" path="/Images/" exported="true"/>
+    <image id="wq9w5r" name="di_gx.png" path="/Images/" exported="true" scale="9grid" scale9grid="16,40,4,3"/>
   </resources>
   <publish name=""/>
 </packageDescription>

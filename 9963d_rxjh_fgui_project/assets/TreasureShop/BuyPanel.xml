@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="789,565">
+<component size="789,568">
   <controller name="isHaveStore" pages="0,没有商品,1,有商品" selected="0"/>
   <displayList>
-    <image id="n9_10pmd" name="bg" src="q9lsv5j" fileName="image/icon_money_bg.png" pkg="st7dgeqq" xy="-2,0" size="794,571">
+    <image id="n9_10pmd" name="bg" src="wq9wdv7r" fileName="Images/bgright.png" xy="1,1" size="793,568">
       <relation target="n7_10pmd" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </image>
-    <list id="n7_10pmd" name="list_buy" xy="0,0" size="794,568" layout="flow_hz" overflow="scroll" lineGap="-11" colGap="-11" lineItemCount="3" defaultItem="ui://p8mjxubr10pmdv6q" align="center">
+    <list id="n7_10pmd" name="list_buy" xy="0,1" size="800,566" layout="flow_hz" overflow="scroll" margin="4,5,-10,0" lineGap="-11" colGap="-11" lineItemCount="3" defaultItem="ui://p8mjxubr10pmdv6q" align="center">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
       <item/>
       <item/>
       <item/>
@@ -19,10 +35,9 @@
       <item/>
       <item/>
     </list>
-    <component id="n10_iwlb" name="noItemtip" src="iwlbkvq1" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="209,142">
+    <component id="n10_iwlb" name="noItemtip" src="hzurkvpp" fileName="common/iconNotingCom.xml" pkg="st7dgeqq" xy="209,143">
       <gearDisplay controller="isHaveStore" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Label title="暂无商品"/>
     </component>
   </displayList>
 </component>

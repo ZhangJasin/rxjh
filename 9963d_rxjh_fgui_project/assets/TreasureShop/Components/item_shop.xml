@@ -2,7 +2,7 @@
 <component size="190,220">
   <controller name="isXianGou" pages="0,是,1,否" selected="0"/>
   <displayList>
-    <image id="n270_yh61" name="n270" src="yh61dv72" fileName="Images/di.png" xy="0,0" size="190,220">
+    <image id="n270_yh61" name="n270" src="wq9wdv7s" fileName="Images/di_gx.png" xy="0,0" size="190,220">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <component id="n269_jo9b" name="commonItem" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="56,71" size="78,78" aspect="true">

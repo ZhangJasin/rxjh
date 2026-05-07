@@ -8,10 +8,10 @@
     <component id="n307_qhgz" name="btn_close" src="emvc8" fileName="common/btn_close.xml" pkg="qa9a7rit" xy="839,186">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <image id="n326_kra4" name="bg_left" src="djgs5h" fileName="Images/di_panel.png" xy="186,212" size="120,382">
+    <image id="n326_kra4" name="bg_left" src="wq9w5q" fileName="Images/leftbg.png" xy="165,192" size="158,420">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <image id="n327_kra4" name="bg_right" src="djgs5h" fileName="Images/di_panel.png" xy="311,243" size="526,350">
+    <image id="n327_kra4" name="bg_right" src="wq9w5p" fileName="Images/bgright.png" xy="309,205" size="539,391">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <list id="n309_gqfi" name="costFilterList" xy="310,214" size="529,23" layout="row" overflow="scroll" scrollBarFlags="128" margin="0,0,1,0" defaultItem="ui://qy7g0oycemvc1t" autoClearItems="true">
@@ -25,7 +25,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n310_gqfi" name="pageList" xy="189,215" size="117,379" overflow="scroll" scrollBarFlags="128" lineGap="4" defaultItem="ui://qy7g0oycemvc1e" autoItemSize="false" align="center" autoClearItems="true">
+    <list id="n310_gqfi" name="pageList" xy="184,213" size="123,359" overflow="scroll" scrollBarFlags="128" lineGap="4" defaultItem="ui://qy7g0oycemvc1e" autoItemSize="false" align="center" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
       <item/>
@@ -53,10 +53,9 @@
       <item/>
       <item/>
     </list>
-    <component id="n328_iwlb" name="noItemtip" src="iwlbkvq9" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="447,311">
+    <component id="n328_iwlb" name="noItemtip" src="hzurkvpp" fileName="common/iconNotingCom.xml" pkg="qa9a7rit" xy="447,311">
       <gearDisplay controller="isHaveStore" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Label title="暂无商品"/>
     </component>
     <text id="n313_seb1" name="title" xy="516,187" pivot="0.5,0.5" anchor="true" size="52,24" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" singleLine="true" text="百宝阁">
       <relation target="" sidePair="center-center,middle-middle"/>
