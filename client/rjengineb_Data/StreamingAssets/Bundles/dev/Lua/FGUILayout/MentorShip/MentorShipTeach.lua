@@ -4,6 +4,7 @@ local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 local Store = requireFGUILayout("MentorShip/MentorShipData")
 local SysConstant = require("game_config/cfgcsv/SysConstant")
 local MentorApplicationTask = requireFGUILayout("MentorShip/MentorApplicationTask")
+local config = require("game_config/cfgcsv/MentorShipCG")
 
 function MentorShipTeach.Create()
 	return MentorShipTeach.new()
@@ -104,26 +105,31 @@ function MentorShipTeach:resetData(data)
 	self.attrList = data.attrList
 	self.showAttrList = {}
 	self.gxdTask = data.gxdTask
-	local skillNum = 1
-	if self.rightInfo.progressLv == 1 then
-		skillNum = 3
-	elseif self.rightInfo.progressLv <= 3 then
-		skillNum = 2
+
+	if data.apprentice and #data.apprentice > 0 then
+		self._apprenticeList = data.apprentice
 	end
-	if self.rightInfoType == 1 then
-		FGUI:GList_setNumItems(self._ui.getSkill, skillNum)
-		FGUI:GList_setNumItems(self._ui.taskList, #self._gxdList)
-		FGUI:GTextField_setText(self._ui.wdgxd, self.rightInfo.progressLv)
-		FGUI:GProgressBar_setValue(self._ui.gxdjd, self.rightInfo.progressPer)
-		local text = FGUI:GetChild(self._ui.gxdjd, "text")
-		FGUI:GTextField_setText(text, self.rightInfo.progressPer .. "%")
-	else
-		FGUI:GList_setNumItems(self._ui.giveSkillList, skillNum)
-		FGUI:GTextField_setText(self._ui.gxdlv, self.rightInfo.progressLv)
-		FGUI:GProgressBar_setValue(self._ui.gxdjdt, self.rightInfo.progressPer)
-		local text = FGUI:GetChild(self._ui.gxdjdt, "text")
-		FGUI:GTextField_setText(text, self.rightInfo.progressPer .. "%")
-	end
+
+	--local skillNum = 1
+	--if self.rightInfo.progressLv == 1 then
+	--	skillNum = 3
+	--elseif self.rightInfo.progressLv <= 3 then
+	--	skillNum = 2
+	--end
+	--if self.rightInfoType == 1 then
+	--	FGUI:GList_setNumItems(self._ui.getSkill, skillNum)
+	--	FGUI:GList_setNumItems(self._ui.taskList, #self._gxdList)
+	--	FGUI:GTextField_setText(self._ui.wdgxd, self.rightInfo.progressLv)
+	--	FGUI:GProgressBar_setValue(self._ui.gxdjd, self.rightInfo.progressPer)
+	--	local text = FGUI:GetChild(self._ui.gxdjd, "text")
+	--	FGUI:GTextField_setText(text, self.rightInfo.progressPer .. "%")
+	--else
+	--	FGUI:GList_setNumItems(self._ui.giveSkillList, skillNum)
+	--	FGUI:GTextField_setText(self._ui.gxdlv, self.rightInfo.progressLv)
+	--	FGUI:GProgressBar_setValue(self._ui.gxdjdt, self.rightInfo.progressPer)
+	--	local text = FGUI:GetChild(self._ui.gxdjdt, "text")
+	--	FGUI:GTextField_setText(text, self.rightInfo.progressPer .. "%")
+	--end
 	--self:setBottomTaskInfo(actor, self._gxdList[self.selectTaskListBtn])
 	--SL:RequestLookPlayer(tonumber(self.rightInfo.UserID), nil, 666)
 	self:setRightInfo()
@@ -294,7 +300,7 @@ function MentorShipTeach:RenderApprenticeSlot(idx, item)
 			self:selectedItem(item)
 			--ssrMessage:sendmsgEx("MentorShip", "getApprenticeInfo", { UserID = targetID, fromPanel = 'MentorShipTeach' })
 			--TODO:显示选择的徒弟数据
-			self.showCGinfo(targetID)
+			self:showCGinfo(targetID)
 		end)
 	else
 		FGUI:GTextField_setText(text_name, "")
@@ -318,7 +324,7 @@ function MentorShipTeach:RefreshAll()
 	FGUI:GList_setNumItems(self._ui.list_apprentice, #self._apprenticeList)
 	local text = "未出师徒弟 " .. (#self._apprenticeList) .. "/3"
 	FGUI:GTextField_setText(self._ui.text_count, text)
-	self.setRightInfo()
+	self:setRightInfo()
 end
 
 function MentorShipTeach:setRightInfo()
@@ -342,7 +348,7 @@ function MentorShipTeach:setRightInfo()
 		FGUI:Controller_setSelectedIndex(btn_control_5, 0)
 		FGUI:Controller_setSelectedIndex(btn_control_6, 0)
 
-		self.showCGinfo(self.myUserId)
+		self:showCGinfo(self.myUserId)
 
 		---- self.rightInfo = self._mentorInfo
 		--local giveSkillList = self.rightInfo.skillList
@@ -421,7 +427,7 @@ function MentorShipTeach:setRightInfo()
 
 			local otherUserId = self._apprenticeList[1].UserID
 			if otherUserId then
-				self.showCGinfo(otherUserId)
+				self:showCGinfo(otherUserId)
 			end
 
 			---- self.rightInfo = self._apprenticeList[self.selectWhich]
@@ -473,19 +479,128 @@ function MentorShipTeach:showCGinfo(userId)
 	--1、通过userid的等级 读取配表 6个按钮的信息
 	--2、6个按钮信息保留至local table 中
 	--3、通过local table 去显示UI
-	--local btn_1 = self._ui.n184
-
 	local function getUserData(lv)
-		local conf = {}
-
-		return conf
+		local keys = {}
+		for k, v in pairs(config) do
+			table.insert(keys, tonumber(k))
+		end
+		table.sort(keys)
+		for i = 1, #keys do
+			if lv <= keys[i] then
+				return config[keys[i]]
+			end
+		end
+		if #keys > 0 then
+			return config[keys[#keys]]
+		end
+		return nil
 	end
 
-	if not SL:GetValue("ACTOR_IS_PLAYER", userId) then return end
-	local level = SL:GetValue("ACTOR_LEVEL", userId)
+	local level = SL:GetValue("ACTOR_LEVEL", userId) or 1
+	print("level", level)
 	local data = getUserData(level)
-	if data and data ~= "" then
 
+	if data and type(data) == "table" then
+		local btnList = {
+			self._ui.n184, self._ui.n185, self._ui.n186,
+			self._ui.n187, self._ui.n188, self._ui.n189
+		}
+
+		for i = 1, #btnList do
+			local btn = btnList[i]
+			if btn then
+				local btnControl = FGUI:getController(btn, "type")
+				FGUI:Controller_setSelectedIndex(btnControl, i - 1)
+
+				local btnText = data["btn" .. i .. "_Text"] or ""
+				local btnValue = data["btn" .. i .. "_Value"]
+				local titleComp = FGUI:GetChild(btn, "title")
+				local cgNum = FGUI:GetChild(btn, "n4")
+
+				if titleComp then
+					FGUI:GTextField_setText(titleComp, btnText)
+				end
+
+				-- 提取當前徒弟已使用的傳功次數
+				local usedCgCount = 0
+				for k = 1, #self._apprenticeList do
+					if tonumber(self._apprenticeList[k].UserID) == tonumber(userId) then
+						usedCgCount = tonumber(self._apprenticeList[k].cgCount) or 0
+						break
+					end
+				end
+
+				local maxCgCount = 1
+				local remainCount = maxCgCount - usedCgCount
+				if remainCount < 0 then remainCount = 0 end
+
+				if cgNum then
+					FGUI:GTextField_setText(cgNum, string.format("今日剩余次数：%d", remainCount))
+				end
+
+				local btn_go = FGUI:GetChild(btn, "n5")
+				FGUI:setOnClickEvent(btn_go, function()
+					if self.rightInfoType == 2 then
+						local userName = SL:GetValue("ACTOR_NAME", userId)
+						if not userName then
+							SL:ShowSystemTips("该徒弟不在线！")
+							return
+						end
+						if remainCount <= 0 then
+							SL:ShowSystemTips("今日对该徒弟的传功次数已用完！")
+							return
+						end
+						local costValue = tonumber(btnValue[1]) or 0
+						if i <= 3 then
+							local myExp = tonumber(SL:GetValue("EXP")) or 0
+							if myExp < costValue then
+								SL:ShowSystemTips("您的经验值不足，无法传授！")
+								return
+							end
+						else
+							local myLiLian = tonumber(SL:GetValue("ITEM_COUNT", 7)) or 0
+							if myLiLian < costValue then
+								SL:ShowSystemTips("您的历练值不足，无法传授！")
+								return
+							end
+						end
+						local cgControl = FGUI:getController(self.component, "cg")
+						if cgControl then
+							FGUI:Controller_setSelectedIndex(cgControl, 1)
+
+							--加载弹窗
+							local go = FGUI:GetChild(self._ui.cg_box, "n3")
+							local cancel = FGUI:GetChild(self._ui.cg_box, "n4")
+							local t1 = FGUI:GetChild(self._ui.cg_box, "n5")
+							local t2 = FGUI:GetChild(self._ui.cg_box, "n6")
+							local t3 = FGUI:GetChild(self._ui.cg_box, "n7")
+
+							FGUI:GTextField_setText(t1, string.format("传授经验会扣除您当前的%s经验值", costValue))
+							FGUI:GTextField_setText(t2, string.format("您的徒弟[%s]会获得%s经验值", userName, btnValue[2]))
+							FGUI:GTextField_setText(t3, string.format("每个徒弟每天仅能传功1次，确认要传功给[%s]吗？", userName))
+
+							FGUI:setOnClickEvent(go, function()
+								local postData = {
+									targetId = userId, -- 传给哪个徒弟
+									cgIndex = i, -- 点击的是第几个按钮 (1-6)
+									costValue = costValue, -- 师傅需要消耗的值
+									giveValue = btnValue[2] -- 徒弟实际获得的值
+								}
+
+								ssrMessage:sendmsgEx("MentorShip", "doChuanGong", postData)
+								print("发起传功，目标:", userId, "传功索引:", i, "消耗:", costValue)
+							end)
+
+							FGUI:setOnClickEvent(cancel, function()
+								FGUI:Controller_setSelectedIndex(cgControl, 0)
+							end)
+						end
+					else
+						SL:ShowSystemTips("只有师傅可以向徒弟进行传功！")
+					end
+				end)
+			end
+		end
 	end
 end
 

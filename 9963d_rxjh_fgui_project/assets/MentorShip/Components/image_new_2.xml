@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="500,332">
+  <displayList>
+    <image id="n0_q2kk" name="n0" src="q2kko6p" fileName="Images/7.png" xy="0,0" size="500,332" aspect="true"/>
+    <text id="n2_q2kk" name="n2" xy="223,0" size="54,32" fontSize="22" color="#ffffff" text="传 功"/>
+    <component id="n3_q2kk" name="n3" src="q2kko6m" fileName="Components/btn_new_1.xml" xy="68,259">
+      <Button title="确认"/>
+    </component>
+    <component id="n4_q2kk" name="n4" src="q2kko6m" fileName="Components/btn_new_1.xml" xy="304,259">
+      <Button title="我再想想"/>
+    </component>
+    <text id="n5_q2kk" name="n5" xy="27,68" size="281,26" fontSize="18" color="#00ffcc" text="传授经验会扣除您当前的%s经验值"/>
+    <text id="n6_q2kk" name="n6" xy="27,107" size="257,26" fontSize="18" color="#00ffcc" text="您的徒弟[徒弟]会获得3W经验值"/>
+    <text id="n7_q2kk" name="n7" xy="27,148" size="420,26" fontSize="18" color="#00ffcc" text="每个徒弟每天仅能传功1次，确认要传功给[徒弟]吗？"/>
+  </displayList>
+</component>

@@ -113,7 +113,7 @@ end
 
 --申请拜师
 function MentorShip.ApplyMentor(actor, data)
-    dump(data)
+    --dump(data)
     --当前我的师徒关系
     local getMasterAndAppr = getcustvar("11_" .. userid(actor) .. "_" .. "t_MasterAndApprt")
     if getMasterAndAppr == "" then
@@ -198,7 +198,7 @@ end
 
 --申请收徒
 function MentorShip.ApplyApprentice(actor, data)
-    dump(data)
+    --dump(data)
     local getMasterAndAppr = getcustvar("11_" .. userid(actor) .. "_" .. "t_MasterAndApprt")
     if getMasterAndAppr == "" then
         getMasterAndAppr = {
@@ -604,12 +604,17 @@ function MentorShip.getApprenticeInfo(actor, data)
     if #myRelation.apprentice > 0 then
         for i = 1, #myRelation.apprentice do
             local apprentice = myRelation.apprentice[i]
+            local targetUID = tonumber(apprentice.UserID)
             apprentice.IsOnline = checkstate(apprentice.UserID, 2)
             if apprentice.IsOnline then
                 --更新人物数据
                 apprentice = MentorShip.updateData(apprentice.UserID)
                 apprentice.IsOnline = true
             end
+
+            local rawCgCount = gethumvar(targetUID, VarCfg.J_MentorShipTeach_Count)
+            apprentice.cgCount = tonumber(rawCgCount) or 0
+
             table.insert(newResult.apprentice, apprentice)
         end
     end
@@ -665,6 +670,7 @@ end
 
 --师徒关系
 function MentorShip.GetMyRelation(actor, fromPanel, targetId)
+    print("targetId", targetId)
     local myRelation = ""
     if targetId then
         myRelation = getcustvar("11_" .. targetId .. "_" .. "t_MasterAndApprt")
@@ -717,6 +723,10 @@ function MentorShip.GetMyRelation(actor, fromPanel, targetId)
                 apprentice = MentorShip.updateData(apprentice.UserID)
                 apprentice.IsOnline = true
             end
+
+            local thisCgCount = gethumvar(apprentice.UserID, VarCfg.J_MentorShipTeach_Count) or 0
+            apprentice.cgCount = (thisCgCount == "") and 0 or tonumber(thisCgCount)
+
             table.insert(newResult.apprentice, apprentice)
         end
         if baseUserId then
@@ -737,6 +747,7 @@ function MentorShip.GetMyRelation(actor, fromPanel, targetId)
         newResult.taskProgressList.UserID = baseUserId
         newResult.gxdTask = gxdTask
     end
+    --dump(newResult)
     Message.sendmsgEx(actor, fromPanel, "setData", newResult)
     if targetId then
         Message.sendmsgEx(targetId, fromPanel, "setData", newResult)
@@ -1200,6 +1211,16 @@ function MentorShip.chushi(actor, data)
     sefcustvar(11, apparenceId, 't_ApprenticeGxdTask', nil)
 
     MentorShip.GetMyRelation(actor, "MentorShipMain")
+end
+
+function MentorShip.doChuanGong(actor, data)
+    dump(data)
+    --local p1 = data.costValue or 0
+    --local p2 = data.giveValue or 0
+    --local p3 = data.targetId or 0
+
+    --local msg = string.format("传授经验会扣除您当前的%s经验值\n您的徒弟[%s]会获得%s经验值\n每个徒弟每天仅能传功1次，确认要传功给[%s]吗？", p1, p3, p2, p3)
+    --messagebox(actor, msg, "@triggerCG1", "@triggerCG2")
 end
 
 -- 徒弟完成贡献度任务并领奖（新增安全校验 + 邮件发奖）
