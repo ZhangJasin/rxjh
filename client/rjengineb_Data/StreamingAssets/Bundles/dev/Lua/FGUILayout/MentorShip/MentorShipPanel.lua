@@ -37,7 +37,7 @@ end
 function MentorShipPanel:InitEvent()
 	FGUI:setOnClickEvent(self._ui.btn_close, self.handler_clickCloseBtn)
 	FGUI:setOnClickEvent(self._ui.btn_help, self.handler_clickHelpBtn)
-	FGUI:GTextField_setText(self._ui.text_title, "师徒")
+	FGUI:GTextField_setText(self._ui.text_title, "师 徒")
 	FGUI:GList_addOnClickItemEvent(self._ui.page_switch_list, self.handler_clickSwitch)
 	FGUI:setOnClickEvent(self._ui.helpBg, function() 
 		FGUI:setVisible(self._ui.helpInfo,false)
