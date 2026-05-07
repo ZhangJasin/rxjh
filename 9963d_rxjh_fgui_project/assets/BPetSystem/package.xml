@@ -195,5 +195,5 @@
     <image id="mg2n68" name="pet_012.png" path="/Images/touxiang/" exported="true"/>
     <image id="mg2n69" name="pet_009.png" path="/Images/touxiang/" exported="true"/>
   </resources>
-  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\BPetSystem" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>

@@ -77,5 +77,5 @@
     <component id="k9rf6o" name="SettingSelectSkillPanel.xml" path="/"/>
     <component id="k9rf6p" name="SettingSetItemOrderPanel.xml" path="/"/>
   </resources>
-  <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\Setting_pc" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>

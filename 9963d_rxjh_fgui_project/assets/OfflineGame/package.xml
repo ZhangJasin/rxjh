@@ -28,5 +28,5 @@
     <component id="rcc1q" name="xy.xml" path="/Components/" exported="true"/>
     <component id="sv3zr" name="zhushou.xml" path="/Components/" exported="true"/>
   </resources>
-  <publish name="" path="E:\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\OfflineGame" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>

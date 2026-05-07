@@ -36,5 +36,5 @@
     <component id="filp18" name="title3.xml" path="/Components/" exported="true"/>
     <image id="c8x119" name="01.png" path="/Images/" exported="true"/>
   </resources>
-  <publish name="" path="E:\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\JiangHuLu" packageCount="2"/>
+  <publish name=""/>
 </packageDescription>
