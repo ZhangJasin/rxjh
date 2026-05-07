@@ -36,10 +36,10 @@ local _, errinfo = pcall(function()
     AttScore_cfg      = require("Envir/QuestDiary/game_config/AttScore.lua")
     Monster_cfg       = require("Envir/QuestDiary/game_config/Monster.lua")
     GameData_cfg      = require("Envir/QuestDiary/game_config/GameData.lua")
-    guild_level_data  = require("Envir/QuestDiary/game_config/cfgcsv/guild_level_data.lua")    -- 行会等级数据
+    guild_level_data  = require("Envir/QuestDiary/game_config/cfgcsv/guild_level_data.lua") -- 行会等级数据
     Class             = require("Envir/QuestDiary/game_config/Class.lua")
     Recycle_cfg       = require("Envir/QuestDiary/game_config/Recycle.lua")
-    Transfer_cfg      = require("Envir/QuestDiary/game_config/Transfer.lua") --人物转职信息
+    Transfer_cfg      = require("Envir/QuestDiary/game_config/Transfer.lua")       --人物转职信息
     TransferInfo      = require("Envir/QuestDiary/game/transfer/TransferInfo.lua") --人物转职信息(新)
     Item_cfg          = require("Envir/QuestDiary/game_config/Item.lua")
     ItemEquip_cfg     = require("Envir/QuestDiary/game_config/ItemEquip.lua")
@@ -94,14 +94,14 @@ function login(actor)
     --宠物
     -- print (gethumvar(actor,VarCfg.U_PETS_Take_Base),type(gethumvar(actor,VarCfg.U_PETS_Take_Base)),gethumvar(actor,VarCfg.U_PETS_Take_Base)>0)
     local ptb = gethumvar(actor, VarCfg.U_PETS_Take_Base) or 0
-    if  ptb > 0 then
+    if ptb > 0 then
         -- print("召唤宠物")
         local btid = gethumvar(actor, VarCfg.U_PETS_Take_Base)
         mountMain.recallpet(actor, { btid = btid }, nil, 1)
     end
     -- 登录
     GameEvent.push(EventCfg.onLogin, actor)
-    
+
     -- 登录附加属性
     local loginattrs = {}
     GameEvent.push(EventCfg.onLoginAttr, actor, loginattrs)
@@ -161,7 +161,7 @@ end
 ---跨天登录触发
 function resetday(actor)
     -- print("跨天登录触发")
-    
+
     GameEvent.push(EventCfg.onResetday, actor)
 end
 
@@ -217,7 +217,7 @@ function handlerequest(actor, msgid, arg1, arg2, arg3, sMsg)
         local faction = targetinfo(actor, "GOODEVILID")
         local relevel = targetinfo(actor, "RELEVEL")
         local sex = gender(actor) + 1 -- 1男2女
-        local job = job(actor)      -- 角色职业 1弓手2剑士3弓箭手4骑士5法师6牧师
+        local job = job(actor)        -- 角色职业 1弓手2剑士3弓箭手4骑士5法师6牧师
         -- 转职大于0 更新模型
         if relevel > 0 then
             for k, v in pairs(Transfer_cfg) do
@@ -440,7 +440,7 @@ function beforeaddbag(actor, itemObj, itemid, count)
             return false
         end
     end
-    
+
     if enterbag[itemid] then
         local jdattrid = custitemattinfo(actor, itemObj .. "_0_1_ID") or 0
         if jdattrid == 0 then
@@ -455,10 +455,10 @@ function beforeaddbag(actor, itemObj, itemid, count)
             end
             local value = math.random(enterbag[itemid]['AttScoreStageList'][index][1],
                 enterbag[itemid]['AttScoreStageList'][index][2])
-                
+
             local attrid = enterbag[itemid]['attrid']
             if ConstCfg.isPercentAttr[attrid] then
-                value = value*100  --万分比属性 需X100
+                value = value * 100 --万分比属性 需X100
             end
             changecustomitemtext(actor, itemObj, 0, "[鉴定属性]")
             changecustomitemabil(actor, itemObj, 0, 1, attrid, value)
@@ -556,7 +556,7 @@ function qigongattr(actor, attrid, curvalue)
                     end
                     updateqigong(actor, i, qigonglevelAttr, "=", 1) -- 脚本加气功等级
                 else
-                    updateqigong(actor, i, 0, "=", 1)              -- 脚本加气功等级
+                    updateqigong(actor, i, 0, "=", 1)               -- 脚本加气功等级
                 end
             end
         else
@@ -576,7 +576,7 @@ end
 
 -- 客户端操作气功修炼成功触发
 function clientupqigongsuccess(actor, qiId, maxlv, clientLv, scripLv, equipLv)
-    local qigonglevelAttr = abil(actor, 126)              -- 获取属性ID 126的值
+    local qigonglevelAttr = abil(actor, 126) -- 获取属性ID 126的值
     local qiAttrId = ConstCfg.QiGongAttrId[qiId]
     if qiAttrId then
         qigonglevelAttr = qigonglevelAttr + (abil(actor, qiAttrId) or 0)
@@ -748,11 +748,11 @@ function b_die(actor, killer)
     local mastertId = targetinfo(actor, "MASTERID")
     local isPc = clientflag(mastertId) == 1
     local methodName = isPc and "PCMainPlayer" or "MainPlayer"
-    
+
     -- 检查是否是新系统灵兽
     local petBaseId = gethumvar(mastertId, VarCfg.U_Pet_Base_ID)
     local petMark = gethumvar(mastertId, VarCfg.T_Pet_Mark)
-    
+
     -- 如果是新系统灵兽（通过mark判断是否是当前出战的灵兽）
     if petBaseId and petBaseId > 0 and petMark and petMark ~= "" then
         local petIdx = getpetidx(mastertId, petMark)
@@ -794,7 +794,7 @@ end
 ---@param guildName string 门派名称
 ---@return boolean 是否允许创建
 function checkbuildguild(actor, guildName)
-    local camp = targetinfo(actor, "GOODEVILID")  --(0=无阵营 1=正派 2=邪派)     -- 获取阵营
+    local camp = targetinfo(actor, "GOODEVILID") --(0=无阵营 1=正派 2=邪派)     -- 获取阵营
     if camp == 0 then
         sendmsg(actor, 9, "请先选择阵营")
         return false
@@ -915,11 +915,11 @@ function guildsetexp(actor, type)
     end
     local maxPreple = guild_level_data[curLevel]["maxPreple"] or 5
     setguildexp(guildObj, "=", curexp, actor)
-    setguildinfo(guildObj, 3, maxPreple)          -- 设置最大人数
+    setguildinfo(guildObj, 3, maxPreple)            -- 设置最大人数
     setguildinfo(guildObj, 6, "=", curLevel, actor) -- 设置当前等级
     Donate = Donate + 1
     sethumvar(actor, VarCfg.U_Donate_Num, Donate)
-    
+
     Guild.getData(actor)
     GameEvent.push(EventCfg.onGuildsetexp, actor, type, addzj, curLevel, curexp)
 end
@@ -950,6 +950,16 @@ function stdmodefunc(actor, itemid, itemobj, useNumber, param1, param2)
         return false
     end
 
+    --历练丹
+    if itemid == 3984 then
+        if getItemNum(actor, itemid) < useNumber then
+            return false
+        end
+        local num = useNumber * 1000
+        takeitem(actor, itemid .. "#" .. useNumber)
+        giveitem(actor, "7#" .. num)
+    end
+
     if itemReplace.canReplace(itemid) then
         local realUseCount = itemReplace.batchReplace(actor, itemid, useNumber)
         if realUseCount > 0 then
@@ -961,7 +971,7 @@ function stdmodefunc(actor, itemid, itemobj, useNumber, param1, param2)
         end
         return true
     end
-    
+
     GameEvent.push(EventCfg.stdUseItem, actor, itemid, itemobj, useNumber, param1, param2)
 end
 
@@ -1114,7 +1124,7 @@ local speDelHpBuff = {
     [126205] = true,
 }
 function bufftriggerhpchange(actor, buffId, buffGroup, hp, buffHost)
-    if speDelHpBuff[buffId] then                           -- 特殊扣血buff列表
+    if speDelHpBuff[buffId] then                            -- 特殊扣血buff列表
         local delhp = (getbuffcustdata(actor, buffId)) or 0 --每次扣血数
         return -delhp
     end
@@ -1125,7 +1135,7 @@ function bufftriggerhpchange(actor, buffId, buffGroup, hp, buffHost)
 end
 
 function m_bufftriggerhpchange(mon, buffId, buffGroup, hp, buffHost)
-    if speDelHpBuff[buffId] then                         -- 特殊扣血buff列表
+    if speDelHpBuff[buffId] then                          -- 特殊扣血buff列表
         local delhp = (getbuffcustdata(mon, buffId)) or 0 --每次扣血数
         return -delhp
     end
@@ -1147,7 +1157,7 @@ function base(actor, target, effectid, skillid, skilllv, race)
             local reduced = math.floor(result * pkReduce / 10000)
             result = math.max(1, result - reduced)
         end
-        
+
         -- 宠物血量显示
         local oldHp = currabil(target, 1)
         local nowHp = oldHp - result
@@ -1171,20 +1181,20 @@ function m_base(actor, target, effectid, skillid, skilllv, race)
     if targetinfo(target, "RACE") == 6 then
         -- 怪物攻击宠物：从宠物主人属性获取56对怪防御和116受怪减伤
         local mastertId = targetinfo(target, "MASTERID")
-        
+
         -- 属性56：对怪防御（固定值减免）
         local pveDef = tonumber(abil(mastertId, 56)) or 0
         if pveDef > 0 then
             result = math.max(1, result - pveDef)
         end
-        
+
         -- 属性116：受怪减伤（万分比减免）
         local reducePct = tonumber(abil(mastertId, 116)) or 0
         if reducePct > 0 then
             local reduced = math.floor(result * reducePct / 10000)
             result = math.max(1, result - reduced)
         end
-        
+
         -- 宠物血量显示
         local oldHp = currabil(target, 1)
         local nowHp = oldHp - result
@@ -1210,7 +1220,7 @@ function m_base(actor, target, effectid, skillid, skilllv, race)
             result = math.max(1, result - reduced)
         end
     end
-    
+
     result = SpeHarmMain(actor, target, result)
 
     return result
@@ -1233,7 +1243,7 @@ function b_base(actor, target, effectId, skillId, skillLv, race)
                 end
             end
         end
-        
+
         local oldHp = currabil(target, 1)
         local nowHp = oldHp - result
         local max = abil(target, 1)
@@ -1266,7 +1276,7 @@ function b_base(actor, target, effectId, skillId, skillLv, race)
             end
         end
     end
-    
+
     result = SpeHarmMain(actor, target, result)
 
     return result
@@ -1279,8 +1289,9 @@ end
 function qigongupdate(actor, qiId, maxlv, clientLv, scripLv, equipLv)
     QiGongManager:update(actor, qiId, maxlv)
 end
-function buyshopitem(actor, id,name,price,num)
-    GameEvent.push(EventCfg.onBuyShopItem, actor,id,num)
+
+function buyshopitem(actor, id, name, price, num)
+    GameEvent.push(EventCfg.onBuyShopItem, actor, id, num)
 end
 
 ---- 部分特殊效果计算
@@ -1292,12 +1303,10 @@ function SpeHarmMain(actor, target, result)
         local value, time = tonumber(SysConstant['AttScoreBuff_Ratio_113']['Value'][1]) or 0,
             tonumber(SysConstant['AttScoreBuff_Ratio_113']['Value'][2]) or 0
         addbuff(actor, 150026, time, time, target)
-        local gj = targetAttrTab[23] or 0  --获取攻击力
+        local gj = targetAttrTab[23] or 0           --获取攻击力
         local delhp = math.ceil(value / 100 * gj)
         setbuffcustdata(actor, 150026, "" .. delhp) --每秒扣血数
     end
 
     return result
 end
-
-
