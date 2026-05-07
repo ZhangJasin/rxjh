@@ -5840,7 +5840,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神战袍(男)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[488] = { 
@@ -5852,7 +5852,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神战袍(女)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[489] = { 
@@ -5984,7 +5984,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血战袍(男)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[500] = { 
@@ -5996,7 +5996,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血战袍(女)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[501] = { 
@@ -6104,7 +6104,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神战袍(男)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[510] = { 
@@ -6116,7 +6116,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神战袍(女)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[511] = { 
@@ -6224,7 +6224,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血战袍(男)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[520] = { 
@@ -6236,7 +6236,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血战袍(女)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[521] = { 
@@ -6368,7 +6368,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神枪衣(男)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[532] = { 
@@ -6380,7 +6380,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神枪衣(女)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[533] = { 
@@ -6512,7 +6512,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血枪衣(男)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[544] = { 
@@ -6524,7 +6524,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血枪衣(女)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[545] = { 
@@ -6632,7 +6632,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神枪衣(男)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[554] = { 
@@ -6644,7 +6644,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神枪衣(女)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[555] = { 
@@ -6752,7 +6752,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血枪衣(男)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[564] = { 
@@ -6764,7 +6764,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血枪衣(女)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[565] = { 
@@ -6896,7 +6896,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神侠衣(男)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[576] = { 
@@ -6908,7 +6908,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神侠衣(女)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[577] = { 
@@ -7040,7 +7040,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血侠衣(男)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[588] = { 
@@ -7052,7 +7052,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血侠衣(女)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[589] = { 
@@ -7160,7 +7160,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神侠衣(男)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[598] = { 
@@ -7172,7 +7172,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神侠衣(女)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[599] = { 
@@ -7280,7 +7280,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血侠衣(男)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[608] = { 
@@ -7292,7 +7292,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血侠衣(女)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[609] = { 
@@ -7424,7 +7424,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神战衣(男)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[620] = { 
@@ -7436,7 +7436,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神战衣(女)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[621] = { 
@@ -7568,7 +7568,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血战衣(男)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[632] = { 
@@ -7580,7 +7580,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血战衣(女)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[633] = { 
@@ -7688,7 +7688,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神战衣(男)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[642] = { 
@@ -7700,7 +7700,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神战衣(女)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[643] = { 
@@ -7808,7 +7808,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血战衣(男)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[652] = { 
@@ -7820,7 +7820,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血战衣(女)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[653] = { 
@@ -7952,7 +7952,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神法袍(男)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[664] = { 
@@ -7964,7 +7964,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神法袍(女)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[665] = { 
@@ -8096,7 +8096,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血法袍(男)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[676] = { 
@@ -8108,7 +8108,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血法袍(女)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[677] = { 
@@ -8216,7 +8216,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神法袍(男)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[686] = { 
@@ -8228,7 +8228,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神法袍(女)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[687] = { 
@@ -8336,7 +8336,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血法袍(男)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[696] = { 
@@ -8348,7 +8348,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血法袍(女)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[697] = { 
@@ -8480,7 +8480,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神戎装(男)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[708] = { 
@@ -8492,7 +8492,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神戎装(女)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[709] = { 
@@ -8624,7 +8624,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血戎装(男)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[720] = { 
@@ -8636,7 +8636,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血戎装(女)",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[721] = { 
@@ -8744,7 +8744,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神戎装(男)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[730] = { 
@@ -8756,7 +8756,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神戎装(女)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[731] = { 
@@ -8864,7 +8864,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血戎装(男)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[740] = { 
@@ -8876,7 +8876,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血戎装(女)",
-		value=18,
+		value=20,
 		var="T38",
 	},
 	[741] = { 
@@ -8984,7 +8984,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神护手",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[750] = { 
@@ -9068,7 +9068,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血护手",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[757] = { 
@@ -9140,7 +9140,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[763] = { 
@@ -9212,7 +9212,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[769] = { 
@@ -9272,7 +9272,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神护手",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[774] = { 
@@ -9332,7 +9332,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血护手",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[779] = { 
@@ -9416,7 +9416,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神长靴",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[786] = { 
@@ -9500,7 +9500,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血长靴",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[793] = { 
@@ -9572,7 +9572,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神长靴",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[799] = { 
@@ -9644,7 +9644,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血长靴",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[805] = { 
@@ -9704,7 +9704,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="月神长靴",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[810] = { 
@@ -9728,7 +9728,7 @@ local config = {
 		job=5,
 		sect=1,
 		showName="龙腾长靴",
-		value=28,
+		value=24,
 		var="T38",
 	},
 	[812] = { 
@@ -9764,7 +9764,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="凝血长靴",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[815] = { 
@@ -9788,7 +9788,7 @@ local config = {
 		job=5,
 		sect=2,
 		showName="炎魔长靴",
-		value=28,
+		value=24,
 		var="T38",
 	},
 	[817] = { 
@@ -9848,7 +9848,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神护手",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[822] = { 
@@ -9932,7 +9932,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血护手",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[829] = { 
@@ -10004,7 +10004,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[835] = { 
@@ -10076,7 +10076,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[841] = { 
@@ -10136,7 +10136,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神护手",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[846] = { 
@@ -10196,7 +10196,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血护手",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[851] = { 
@@ -10280,7 +10280,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神长靴",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[858] = { 
@@ -10364,7 +10364,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血长靴",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[865] = { 
@@ -10436,7 +10436,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神长靴",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[871] = { 
@@ -10508,7 +10508,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血长靴",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[877] = { 
@@ -10568,7 +10568,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="月神长靴",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[882] = { 
@@ -10592,7 +10592,7 @@ local config = {
 		job=2,
 		sect=1,
 		showName="龙腾长靴",
-		value=28,
+		value=24,
 		var="T38",
 	},
 	[884] = { 
@@ -10628,7 +10628,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="凝血长靴",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[887] = { 
@@ -10652,7 +10652,7 @@ local config = {
 		job=2,
 		sect=2,
 		showName="炎魔长靴",
-		value=28,
+		value=24,
 		var="T38",
 	},
 	[889] = { 
@@ -10712,7 +10712,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神护手",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[894] = { 
@@ -10796,7 +10796,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血护手",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[901] = { 
@@ -10868,7 +10868,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[907] = { 
@@ -10940,7 +10940,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[913] = { 
@@ -11000,7 +11000,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神护手",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[918] = { 
@@ -11060,7 +11060,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血护手",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[923] = { 
@@ -11144,7 +11144,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神长靴",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[930] = { 
@@ -11228,7 +11228,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血长靴",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[937] = { 
@@ -11300,7 +11300,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神长靴",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[943] = { 
@@ -11372,7 +11372,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血长靴",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[949] = { 
@@ -11432,7 +11432,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="月神长靴",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[954] = { 
@@ -11456,7 +11456,7 @@ local config = {
 		job=6,
 		sect=1,
 		showName="龙腾长靴",
-		value=28,
+		value=24,
 		var="T38",
 	},
 	[956] = { 
@@ -11492,7 +11492,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="凝血长靴",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[959] = { 
@@ -11516,7 +11516,7 @@ local config = {
 		job=6,
 		sect=2,
 		showName="炎魔长靴",
-		value=28,
+		value=24,
 		var="T38",
 	},
 	[961] = { 
@@ -11576,7 +11576,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神护手",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[966] = { 
@@ -11660,7 +11660,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血护手",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[973] = { 
@@ -11732,7 +11732,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[979] = { 
@@ -11804,7 +11804,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[985] = { 
@@ -11864,7 +11864,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神护手",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[990] = { 
@@ -11924,7 +11924,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血护手",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[995] = { 
@@ -12008,7 +12008,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神长靴",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[1002] = { 
@@ -12092,7 +12092,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血长靴",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[1009] = { 
@@ -12164,7 +12164,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神长靴",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1015] = { 
@@ -12236,7 +12236,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血长靴",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1021] = { 
@@ -12296,7 +12296,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="月神长靴",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[1026] = { 
@@ -12320,7 +12320,7 @@ local config = {
 		job=1,
 		sect=1,
 		showName="龙腾长靴",
-		value=28,
+		value=24,
 		var="T38",
 	},
 	[1028] = { 
@@ -12356,7 +12356,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="凝血长靴",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[1031] = { 
@@ -12380,7 +12380,7 @@ local config = {
 		job=1,
 		sect=2,
 		showName="炎魔长靴",
-		value=28,
+		value=24,
 		var="T38",
 	},
 	[1033] = { 
@@ -12440,7 +12440,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神护手",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[1038] = { 
@@ -12524,7 +12524,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血护手",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[1045] = { 
@@ -12596,7 +12596,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1051] = { 
@@ -12668,7 +12668,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1057] = { 
@@ -12728,7 +12728,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神护手",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[1062] = { 
@@ -12788,7 +12788,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血护手",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[1067] = { 
@@ -12872,7 +12872,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神长靴",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[1074] = { 
@@ -12956,7 +12956,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血长靴",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[1081] = { 
@@ -13028,7 +13028,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神长靴",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1087] = { 
@@ -13100,7 +13100,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血长靴",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1093] = { 
@@ -13160,7 +13160,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="月神长靴",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[1098] = { 
@@ -13184,7 +13184,7 @@ local config = {
 		job=4,
 		sect=1,
 		showName="龙腾长靴",
-		value=28,
+		value=24,
 		var="T38",
 	},
 	[1100] = { 
@@ -13220,7 +13220,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="凝血长靴",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[1103] = { 
@@ -13244,7 +13244,7 @@ local config = {
 		job=4,
 		sect=2,
 		showName="炎魔长靴",
-		value=28,
+		value=24,
 		var="T38",
 	},
 	[1105] = { 
@@ -13304,7 +13304,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神护手",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[1110] = { 
@@ -13388,7 +13388,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血护手",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[1117] = { 
@@ -13460,7 +13460,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1123] = { 
@@ -13532,7 +13532,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血护手",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1129] = { 
@@ -13592,7 +13592,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神护手",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[1134] = { 
@@ -13652,7 +13652,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血护手",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[1139] = { 
@@ -13736,7 +13736,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神长靴",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[1146] = { 
@@ -13820,7 +13820,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血长靴",
-		value=9,
+		value=10,
 		var="T38",
 	},
 	[1153] = { 
@@ -13892,7 +13892,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神长靴",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1159] = { 
@@ -13964,7 +13964,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血长靴",
-		value=12,
+		value=14,
 		var="T38",
 	},
 	[1165] = { 
@@ -14024,7 +14024,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="月神长靴",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[1170] = { 
@@ -14048,7 +14048,7 @@ local config = {
 		job=3,
 		sect=1,
 		showName="龙腾长靴",
-		value=28,
+		value=24,
 		var="T38",
 	},
 	[1172] = { 
@@ -14084,7 +14084,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="凝血长靴",
-		value=16,
+		value=18,
 		var="T38",
 	},
 	[1175] = { 
@@ -14108,7 +14108,7 @@ local config = {
 		job=3,
 		sect=2,
 		showName="炎魔长靴",
-		value=28,
+		value=24,
 		var="T38",
 	},
 	[1177] = { 
