@@ -1,5 +1,13 @@
 #CHILD 1/1 RANDOM
 (
+1/1 初级神匠之盒
+)
+#CHILD 1/1 RANDOM
+(
+1/1 初级神匠之盒
+)
+#CHILD 1/1 RANDOM
+(
 1/1 坐骑升星石
 )
 #CHILD 1/1 RANDOM

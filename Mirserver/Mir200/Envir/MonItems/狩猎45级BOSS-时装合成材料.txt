@@ -1,11 +1,20 @@
 #CHILD 1/1 RANDOM
 (
+1/1 初级神匠之盒
+)
+#CHILD 1/1 RANDOM
+(
+1/1 初级神匠之盒
+)
+#CHILD 1/1 RANDOM
+(
 1/1 霓裳幻羽
 )
 #CHILD 1/1 RANDOM
 (
 1/1 霓裳幻羽
 )
+
 #CHILD 1/1 RANDOM
 (
 1/1 强化石

@@ -1,5 +1,13 @@
 #CHILD 1/1 RANDOM
 (
+1/1 中级神匠之盒
+)
+#CHILD 1/1 RANDOM
+(
+1/1 中级神匠之盒
+)
+#CHILD 1/1 RANDOM
+(
 1/1 历练丹
 )
 #CHILD 1/1 RANDOM
