@@ -241,7 +241,7 @@ function BossChall.chall(actor, data)
     _saveChalledCount(actor, dailyCount + 1)
     
     --刷怪
-    mongenex(newMapId, 34, 33, 1, bossCfg.name, 1, -1, 0)
+    mongenex(newMapId, 34, 33, 1, Monster_cfg[bossId].Name, 1, -1, 0)
     -- 先移动再设置状态，避免触发地图切换检查
     mapmove(actor, newMapId,22,22,1) 
     -- 移动完成后再设置状态为挑战中
