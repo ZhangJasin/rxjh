@@ -45,7 +45,6 @@ function MentorShipPanel:InitEvent()
 end
 
 function MentorShipPanel:OnHelp()
-	print("点击了问号")
 	FGUI:setVisible(self._ui.helpInfo,true)
 end
 
