@@ -72,30 +72,35 @@ end
 function MentorShipTeach:setData(data)
 	if MentorShipTeach.CCUI then
 		self = MentorShipTeach.CCUI
-		--我的师傅
+		self.myUserId = data.myUserId
 		self._mentorInfo = data.myMaster or nil
-		--我的师徒
 		self._apprenticeList = data.apprentice or {}
-		--默认第一个
 		self.rightInfoType = nil
+
 		if self._mentorInfo then
 			self.rightInfoType = 1
 		elseif #self._apprenticeList > 0 then
 			self.rightInfoType = 2
 			self.selectWhich = 1
 		end
+
+		if not self.rightInfoType then
+			SL:ShowSystemTips("您当前没有师徒关系，无法进入传功页面！")
+			FGUI:Close("MentorShip", "MentorShipTeach")
+			FGUI:Close("MentorShip", "MentorShipPanel")
+			return
+		end
+
 		self.selectTaskListBtn = 1
 		self.rightInfo = data.taskProgressList
 		self.attrList = data.attrList
 		self.gxdTask = data.gxdTask
-		--显示我的技能
-		if self.rightInfoType then
-			FGUI:Controller_setSelectedIndex(self.showController, 1)
-			self:RefreshAll()
-			--self:baseSelectedItem()
-		else
-			FGUI:Controller_setSelectedIndex(self.showController, 0)
-		end
+
+		FGUI:Controller_setSelectedIndex(self.showController, 1)
+
+		self:RefreshAll()
+
+		self:baseSelectedItem()
 	end
 end
 
@@ -108,6 +113,13 @@ function MentorShipTeach:resetData(data)
 
 	if data.apprentice and #data.apprentice > 0 then
 		self._apprenticeList = data.apprentice
+	end
+
+	if self.component then
+		local cgControl = FGUI:getController(self.component, "cg")
+		if cgControl then
+			FGUI:Controller_setSelectedIndex(cgControl, 0)
+		end
 	end
 
 	--local skillNum = 1
@@ -149,6 +161,7 @@ function MentorShipTeach:RenderMentorSlot(idx, item)
 		FGUI:GTextField_setText(text_lv, "Lv." .. tostring(data.Level or 1))
 		local online = (data.IsOnline ~= nil) and data.IsOnline or data.online
 		FGUI:GTextField_setText(text_st, online and "在线" or "离线")
+		FGUI:GTextField_setColor(text_st, online and "#41E63D" or "#5D6E74")
 		local targetID = data.UserID
 		if icon_job then
 			FGUI:GLoader_setUrl(icon_job, FGUIFunction:GetJobUrl(data.Job))
@@ -185,6 +198,7 @@ function MentorShipTeach:RenderMentorSlot(idx, item)
 			self.selectWhich   = idx
 			self.rightInfoType = 1
 			self:selectedItem(item)
+			self:setRightInfo()
 			--ssrMessage:sendmsgEx("MentorShip", "getApprenticeInfo",
 			--	{ UserID = self.myUserId, fromPanel = 'MentorShipTeach' })
 		end)
@@ -262,6 +276,7 @@ function MentorShipTeach:RenderApprenticeSlot(idx, item)
 		FGUI:GTextField_setText(text_lv, "Lv." .. tostring(data.Level or 1))
 		local online = (data.IsOnline ~= nil) and data.IsOnline or data.online
 		FGUI:GTextField_setText(text_st, online and "在线" or "离线")
+		FGUI:GTextField_setColor(text_st, online and "#41E63D" or "#5D6E74")
 		local targetID = data.UserID
 		if icon_job then
 			FGUI:GLoader_setUrl(icon_job, FGUIFunction:GetJobUrl(data.Job))
@@ -300,7 +315,9 @@ function MentorShipTeach:RenderApprenticeSlot(idx, item)
 			self:selectedItem(item)
 			--ssrMessage:sendmsgEx("MentorShip", "getApprenticeInfo", { UserID = targetID, fromPanel = 'MentorShipTeach' })
 			--TODO:显示选择的徒弟数据
-			self:showCGinfo(targetID)
+			--self:showCGinfo(targetID)
+			self:setRightInfo()
+
 		end)
 	else
 		FGUI:GTextField_setText(text_name, "")
@@ -348,7 +365,9 @@ function MentorShipTeach:setRightInfo()
 		FGUI:Controller_setSelectedIndex(btn_control_5, 0)
 		FGUI:Controller_setSelectedIndex(btn_control_6, 0)
 
-		self:showCGinfo(self.myUserId)
+		if self.myUserId then
+			self:showCGinfo(self.myUserId)
+		end
 
 		---- self.rightInfo = self._mentorInfo
 		--local giveSkillList = self.rightInfo.skillList
@@ -425,9 +444,9 @@ function MentorShipTeach:setRightInfo()
 			FGUI:Controller_setSelectedIndex(btn_control_5, 1)
 			FGUI:Controller_setSelectedIndex(btn_control_6, 1)
 
-			local otherUserId = self._apprenticeList[1].UserID
-			if otherUserId then
-				self:showCGinfo(otherUserId)
+			local apprenticeInfo = self._apprenticeList[self.selectWhich]
+			if apprenticeInfo and apprenticeInfo.UserID then
+				self:showCGinfo(apprenticeInfo.UserID)
 			end
 
 			---- self.rightInfo = self._apprenticeList[self.selectWhich]
@@ -536,6 +555,7 @@ function MentorShipTeach:showCGinfo(userId)
 
 				if cgNum then
 					FGUI:GTextField_setText(cgNum, string.format("今日剩余次数：%d", remainCount))
+					FGUI:GTextField_setText(self._ui.n190, string.format("今日剩余传授次数：%d", remainCount))
 				end
 
 				local btn_go = FGUI:GetChild(btn, "n5")

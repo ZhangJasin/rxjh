@@ -574,7 +574,8 @@ end
 
 --获取徒弟对应的数据
 function MentorShip.getApprenticeInfo(actor, data)
-    local myRelation = getcustvar("11_" .. userid(actor) .. "_" .. "t_MasterAndApprt")
+    local myUserId = userid(actor)
+    local myRelation = getcustvar("11_" .. myUserId .. "_" .. "t_MasterAndApprt")
     if myRelation == "" then
         myRelation = {
             myMaster = nil,
@@ -586,47 +587,60 @@ function MentorShip.getApprenticeInfo(actor, data)
     else
         myRelation = json2tbl(myRelation)
     end
+
     local newResult = {
-        myUserId = userid(actor),
+        myUserId = myUserId,
         myMaster = nil,
         apprentice = {},
         taskProgressList = {},
         applyRemoveMyMaster = nil,
         applyRemoveMyMasterById = nil,
-        applyRemoveMyAppliction = {}
+        applyRemoveMyAppliction = {},
+        chushiCount = 0,
+        cgCount = 0,
     }
+
+    local myChuShiCount = getcustvar("11_" .. myUserId .. "_" .. "t_ChuShiCount")
+    newResult.chushiCount = (myChuShiCount == "") and 0 or tonumber(myChuShiCount)
+
+    local selfCgCount = gethumvar(myUserId, VarCfg.U_MentorShipTeach_Count)
+    newResult.cgCount = (selfCgCount == "" or selfCgCount == nil) and 0 or tonumber(selfCgCount)
+
     if myRelation.myMaster and myRelation.myMaster.UserID then
         myRelation.myMaster.IsOnline = checkstate(myRelation.myMaster.UserID, 2)
         newResult.myMaster = myRelation.myMaster
         newResult.applyRemoveMyMaster = myRelation.applyRemoveMyMaster
         newResult.applyRemoveMyMasterById = myRelation.applyRemoveMyMasterById
     end
+
     if #myRelation.apprentice > 0 then
         for i = 1, #myRelation.apprentice do
             local apprentice = myRelation.apprentice[i]
             local targetUID = tonumber(apprentice.UserID)
-            apprentice.IsOnline = checkstate(apprentice.UserID, 2)
+            apprentice.IsOnline = checkstate(targetUID, 2)
             if apprentice.IsOnline then
-                --更新人物数据
-                apprentice = MentorShip.updateData(apprentice.UserID)
+                --更新人物數據
+                apprentice = MentorShip.updateData(targetUID)
                 apprentice.IsOnline = true
             end
 
-            local rawCgCount = gethumvar(targetUID, VarCfg.J_MentorShipTeach_Count)
-            apprentice.cgCount = tonumber(rawCgCount) or 0
+            local rawCgCount = gethumvar(targetUID, VarCfg.U_MentorShipTeach_Count)
+            apprentice.cgCount = (rawCgCount == "" or rawCgCount == nil) and 0 or tonumber(rawCgCount)
 
             table.insert(newResult.apprentice, apprentice)
         end
     end
-    --我和徒弟的解除关系数据
+
     newResult.applyRemoveMyAppliction = myRelation.applyRemoveMyAppliction
     newResult.applyRemoveMyMaster = myRelation.applyRemoveMyMaster
     newResult.applyRemoveMyMasterById = myRelation.applyRemoveMyMasterById
+
     local taskProgressList = json2tbl(getcustvar("11_" .. data.UserID .. "_" .. "t_ApprenticeTaskPro"))
     newResult.taskProgressList = taskProgressList
     newResult.taskProgressList.UserID = data.UserID
     local gxdTask = json2tbl(getcustvar("11_" .. data.UserID .. "_" .. "t_ApprenticeGxdTask"))
     newResult.gxdTask = gxdTask
+
     Message.sendmsgEx(actor, data.fromPanel, "resetData", newResult)
 end
 
@@ -698,12 +712,17 @@ function MentorShip.GetMyRelation(actor, fromPanel, targetId)
         applyRemoveMyMasterById = nil,
         applyRemoveMyAppliction = {},
         chushiCount = 0,
+        cgCount = 0,
     }
 
     --出师次数
     local queryUserId = targetId or userid(actor)
     local myChuShiCount = getcustvar("11_" .. queryUserId .. "_" .. "t_ChuShiCount")
     newResult.chushiCount = (myChuShiCount == "") and 0 or tonumber(myChuShiCount)
+
+    --被传功次数
+    local selfCgCount = gethumvar(queryUserId, VarCfg.U_MentorShipTeach_Count)
+    newResult.cgCount = (selfCgCount == "" or selfCgCount == nil) and 0 or tonumber(selfCgCount)
 
     local baseUserId = nil
     if myRelation.myMaster and myRelation.myMaster.UserID then
@@ -724,7 +743,7 @@ function MentorShip.GetMyRelation(actor, fromPanel, targetId)
                 apprentice.IsOnline = true
             end
 
-            local thisCgCount = gethumvar(apprentice.UserID, VarCfg.J_MentorShipTeach_Count) or 0
+            local thisCgCount = gethumvar(apprentice.UserID, VarCfg.U_MentorShipTeach_Count) or 0
             apprentice.cgCount = (thisCgCount == "") and 0 or tonumber(thisCgCount)
 
             table.insert(newResult.apprentice, apprentice)
@@ -1213,14 +1232,60 @@ function MentorShip.chushi(actor, data)
     MentorShip.GetMyRelation(actor, "MentorShipMain")
 end
 
+-- 完善服务端传功逻辑
 function MentorShip.doChuanGong(actor, data)
-    dump(data)
-    --local p1 = data.costValue or 0
-    --local p2 = data.giveValue or 0
-    --local p3 = data.targetId or 0
+    -- 1. 解析客户端传来的封包数据
+    local targetId = tonumber(data.targetId)
+    local cgIndex = tonumber(data.cgIndex)
+    local costValue = tonumber(data.costValue)
+    local giveValue = tonumber(data.giveValue)
 
-    --local msg = string.format("传授经验会扣除您当前的%s经验值\n您的徒弟[%s]会获得%s经验值\n每个徒弟每天仅能传功1次，确认要传功给[%s]吗？", p1, p3, p2, p3)
-    --messagebox(actor, msg, "@triggerCG1", "@triggerCG2")
+    -- 2. 校验徒弟是否在线 (传功必须要徒弟在线才能接收资源)
+    if not checkstate(targetId, 2) then
+        sendmsg(actor, 9, "[color=#ff0000]该徒弟当前不在线，无法传功！[/color]")
+        return
+    end
+
+    -- 3. 校验今日传功次数
+    -- 获取该徒弟身上的传功次数变量
+    local rawCgCount = gethumvar(targetId, VarCfg.U_MentorShipTeach_Count)
+    local usedCount = tonumber(rawCgCount) or 0
+    local maxCgCount = 1 -- 每日最大次数限制
+
+    if usedCount >= maxCgCount then
+        sendmsg(actor, 9, "[color=#ff0000]今日对该徒弟的传功次数已用完！[/color]")
+        return
+    end
+
+    -- 4. 核心：资源校验与互换
+    if cgIndex <= 3 then
+        -- 【经验值传功】
+        -- 扣除师傅经验，给予徒弟经验
+        changeexp(actor, "-", costValue)
+        changeexp(targetId, "+", giveValue)
+        sendmsg(targetId, 9, "您的师傅对您进行了传功，您获得了 " .. giveValue .. " 点经验值！")
+    else
+        -- 【历练值传功】（对应客户端获取的 ITEM_COUNT = 7）
+        local lilianId = 7
+        -- 利用 util.lua 中封装好的工具函数检查师傅货币是否足够
+        if getItemNum(actor, lilianId) < costValue then
+            sendmsg(actor, 9, "[color=#ff0000]您的历练值不足，传功失败！[/color]")
+            return
+        end
+
+        -- 扣除师傅历练，给予徒弟历练
+        delItemNum(actor, lilianId, costValue)
+        giveitem(targetId, lilianId .. "#" .. giveValue)
+        sendmsg(targetId, 9, "您的师傅对您进行了传功，您获得了 " .. giveValue .. " 点历练值！")
+    end
+
+    -- 5. 扣除成功，更新徒弟的被传功次数
+    sethumvar(targetId, VarCfg.U_MentorShipTeach_Count, usedCount + 1)
+
+    -- 6. 提示师傅并通知客户端刷新UI
+    sendmsg(actor, 9, "传功成功！")
+    -- 必须重新下发一次徒弟数据，让客户端界面的“剩余次数”实时更新
+    MentorShip.getApprenticeInfo(actor, { fromPanel = 'MentorShipTeach', UserID = targetId })
 end
 
 -- 徒弟完成贡献度任务并领奖（新增安全校验 + 邮件发奖）
@@ -1858,9 +1923,9 @@ function MentorShip.isCanBuy(actor, count, ItemID, excelID)
     return isCanBuy
 end
 
-GameEvent.add(EventCfg.onPlayLevelUp, function(actor, lv, oldlv)
-    MentorShip.appareniceLevelUp(actor, oldlv)
-end, MentorShip)
+--GameEvent.add(EventCfg.onPlayLevelUp, function(actor, lv, oldlv)
+--    MentorShip.appareniceLevelUp(actor, oldlv)
+--end, MentorShip)
 
 -- 退出游戏事件，离开副本地图
 GameEvent.add(EventCfg.onExitGame, function(actor)
@@ -1988,6 +2053,7 @@ GameEvent.add(EventCfg.onResetday, function(actor)
             end
         end
     end
+    sethumvar(actor, VarCfg.U_MentorShipTeach_Count, 0)
     sethumvar(actor, VarCfg.T_MentorShipShopBuyTime, tbl2json(myShowBuyTime))
 end, MentorShip)
 
