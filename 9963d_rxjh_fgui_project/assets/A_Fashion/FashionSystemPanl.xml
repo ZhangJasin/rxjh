@@ -23,7 +23,7 @@
     <text id="n6_km0s" name="title" xy="570,62" size="193,35" fontSize="24" color="#9aafbb" align="center" vAlign="middle" autoSize="none" singleLine="true" text="时装">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n2_km0s" name="fashionList" src="rg4i2" fileName="Components/02fashion/fashionitem.xml" xy="175,110" size="256,576">
+    <component id="n2_km0s" name="fashionList" src="rg4i2" fileName="Components/02fashion/fashionitem.xml" xy="176,111" size="256,528">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n3_km0s" name="btn_pifeng" src="rg4i8" fileName="Components/tongyong/page_rightlv.xml" xy="1169,104">
@@ -87,7 +87,7 @@
     <image id="n29_wq9w" name="n29" src="wq9w1d" fileName="Images/0tongyong/cdsx.png" xy="940,117"/>
     <image id="n30_wq9w" name="n30" src="wq9w1e" fileName="Images/0tongyong/jhsx.png" xy="939,308"/>
     <image id="n31_wq9w" name="n31" src="wq9w1f" fileName="Images/0tongyong/rxssx.png" xy="928,494"/>
-    <component id="n34_wq9w" name="open_more" src="wq9w1q" fileName="Components/tongyong/Button_HasMore.xml" xy="220,632" visible="false"/>
+    <component id="n34_wq9w" name="open_more" src="wq9w1q" fileName="Components/tongyong/Button_HasMore.xml" xy="214,645" visible="false"/>
     <component id="n36_wq9w" name="more_list" src="wq9w1m" fileName="Components/02fashion/more_list.xml" xy="157,48"/>
     <component id="n35_wq9w" name="close_more" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1190,76" size="45,45" visible="false"/>
   </displayList>

@@ -2,7 +2,13 @@
 <component size="256,576">
   <displayList>
     <image id="n0_km0s" name="n0" src="wq9w17" fileName="Images/0tongyong/lfbg.png" xy="-30,-12" size="315,611" alpha="0.57"/>
-    <list id="n1_km0s" name="itemlist" xy="0,1" size="256,576" overflow="scroll" lineGap="3" defaultItem="ui://k09jn1qdrg4i4" autoClearItems="true">
+    <list id="n1_km0s" name="itemlist" xy="0,1" size="256,523" overflow="scroll" lineGap="3" defaultItem="ui://k09jn1qdrg4i4" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
       <item/>
       <item/>
       <item/>
