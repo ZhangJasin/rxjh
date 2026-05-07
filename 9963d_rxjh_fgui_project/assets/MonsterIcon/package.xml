@@ -613,6 +613,8 @@
     <image id="bojehv" name="100224.png" path="/Images/" exported="true"/>
     <image id="bojehw" name="100200.png" path="/Images/" exported="true"/>
     <image id="bojehx" name="Icon_XiYuMaZei.png" path="/Images/" exported="true"/>
+    <image id="jrr1hy" name="MOB15614.png" path="/Images/" exported="true"/>
+    <image id="jrr1hz" name="MOB15618.png" path="/Images/" exported="true"/>
   </resources>
   <publish name="" path="D:\RXJH_Project\rjengine_planb_client\底板\client\rjengineb_Data\StreamingAssets\Bundles\dev\FGUIExport\MonsterIcon" packageCount="2"/>
 </packageDescription>
