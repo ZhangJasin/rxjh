@@ -24,7 +24,7 @@ function FindPublishPanel:Create()
 	self:InitEvent()
 	self:InitPage()
 	self:RegisterEvent()
-	SL:RequestLookPlayer(tonumber(SL:GetValue("USER_ID")),nil,666)
+	--SL:RequestLookPlayer(tonumber(SL:GetValue("USER_ID")),nil,666)
 end
 
 function FindPublishPanel:Enter(data)

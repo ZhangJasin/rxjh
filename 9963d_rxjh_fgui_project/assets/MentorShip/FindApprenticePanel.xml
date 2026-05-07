@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" opaque="false" mask="n7_ph0t">
   <displayList>
-    <loader id="n1_nxdg" name="bg" xy="667,375" pivot="0.5,0.5" anchor="true" size="785,520" url="ui://st7dgeqqzah9v4i" fill="scaleFree">
+    <loader id="n1_nxdg" name="bg" xy="667,375" pivot="0.5,0.5" anchor="true" size="785,520" url="ui://pnop7ha6q2kko6p" fill="scaleFree">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
     <component id="n2_nxdg" name="btn_close" src="vjv72" fileName="Components/btn_close.xml" xy="1009,117">

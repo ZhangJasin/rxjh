@@ -32,7 +32,7 @@
     <image id="n122_u8r1" name="n122" src="u8r1o6d" fileName="Images/半透内容底.png" xy="718,81" size="400,170" group="n121_u8r1">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <richtext id="n120_u8r1" name="helpText" xy="729,90" size="381,160" group="n121_u8r1" fontSize="12" color="#ffffff" autoSize="none" text="1.玩家一转后方可拜师，玩家二转以上方可收徒，师徒之间等级差需20级才可以结成师徒关系。&#xA;2.每位师傅最多收取三名徒弟，不同职业间不可结成师徒关系。&#xA;3.师徒任意一方可提出解除关系申请，提出申请后24小时方可解除师徒关系。&#xA;4.解除关系申请人可取消解除关系过程，非申请人可通过解除关系按钮立即解除师徒关系。&#xA;5.师徒关系解除后，师徒任务自动清除。&#xA;6.玩家建立师徒关系之后，点击头像即可进入任务界面。">
+    <richtext id="n120_u8r1" name="helpText" xy="729,90" size="381,160" group="n121_u8r1" fontSize="12" color="#ffffff" autoSize="none" text="1.玩家一转后方可拜师，玩家二转以上方可收徒，师徒之间等级差需5级才可以结成师徒关系。&#xD;&#xA;2.每位师傅最多收取三名徒弟，不同阵营间不可结成师徒关系。&#xD;&#xA;3.师徒任意一方可提出解除关系申请，提出申请后24小时方可解除师徒关系。&#xD;&#xA;4.解除关系申请人可取消解除关系过程，非申请人可通过解除关系按钮立即解除师徒关系。&#xD;&#xA;5.师徒关系解除后，师徒任务自动清除。&#xD;&#xA;6.玩家建立师徒关系之后，点击头像即可进入任务界面。">
       <relation target="" sidePair="center-center,middle-middle"/>
     </richtext>
     <group id="n121_u8r1" name="helpInfo" xy="0,1" size="1344,750" visible="false" advanced="true">
