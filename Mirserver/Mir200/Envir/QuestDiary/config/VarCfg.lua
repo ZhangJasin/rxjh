@@ -153,6 +153,10 @@ VarCfg.U_BOSS_Count                 = "U113" -- 每日BOSS挑战次数
 
 VarCfg.U_MentorShipTeach_Count      = "U114" -- 师徒每日传功次数
 
+VarCfg.U_MRBZ_Start                 = "U115" -- 每日必做任务次数记录U115-U130
+VarCfg.U_MRBZ_END                   = "U130" -- 每日必做任务次数记录U115-U130
+VarCfg.U_MRBZ_YLXH                  = "U131" --每日银两消耗数量
+VarCfg.U_MRBZ_MON                   = "U132" --每日杀怪数量
 ---------------------------------------↓↓↓ T变量 ↓↓↓---------------------------------------
 -- 个人字符变量，下线保存
 VarCfg.T_daily_date                 = "T0" -- 格式 20211103 年月日，  每日定时更新，如果定时不在线每日第一次登陆更新
@@ -232,6 +236,13 @@ VarCfg.T_Modul_Change             = "T118" -- 化形信息  模型改变
 VarCfg.T_PetHuanHua               = "T119" -- 灵兽幻化激活对象
 VarCfg.T_Pet_Mark                 = "T120" -- 当前召唤的灵兽标记
 
+---------------------------------------↓↓↓ 个人标记 ↓↓↓---------------------------------------
+-- 个人标记，下线保存
+VarCfg.F_LevelGift_start                 = "001" -- 等级礼包占001-009
+VarCfg.F_LevelGift_end                   = "009" -- 等级礼包占001-009
+VarCfg.F_changwan                        = "010" -- 畅玩
+VarCfg.F_HWJL_start                      = "011" -- 每日必做活跃奖励011-015
+VarCfg.F_HWJL_end                        = "011" -- 每日必做活跃奖励011-015
 ---------------------------------------↓↓↓ S变量 ↓↓↓---------------------------------------
 -- 个人字符变量，下线不保存
 VarCfg.S_FuBen_Var_PlayerPosition = "S88" -- 进入副本前的位置信息
@@ -260,6 +271,8 @@ VarCfg.N_person_FuBen_State       = "N23" --个人副本状态
 VarCfg.N_FUBEN_TIME               = "N24" --师徒副本倒计时
 
 VarCfg.N_boss_state               = "N25" --BOSS状态
+
+VarCfg.N_mrbz_red                 = "N26" --每日必做任务红点
 ---------------------------------------↓↓↓ 自定义临时数字变量 ↓↓↓---------------------------------------
 -- 下线不保存
 VarCfg.N_LS_Power                 = "N$战力等级" -- 战力
