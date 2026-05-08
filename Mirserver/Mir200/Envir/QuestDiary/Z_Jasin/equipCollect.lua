@@ -124,6 +124,7 @@ local function setValueAttr(actor)
     -- 3. 计算当前应该加成的新属性
     local newAttr = getValueAttr(actor)
     local newAttrMap = {} -- 用于记录本次加了多少，存入变量供下次使用
+    --dump(newAttr)
 
     if newAttr then
         for _, group in ipairs(newAttr) do
@@ -132,7 +133,7 @@ local function setValueAttr(actor)
             local isPercent = tonumber(group[3])
 
             if isPercent == 1 then
-                attrValue = math.floor(attrValue / 100)
+                --attrValue = math.floor(attrValue / 100)
             end
 
             if attrId and attrValue > 0 then
