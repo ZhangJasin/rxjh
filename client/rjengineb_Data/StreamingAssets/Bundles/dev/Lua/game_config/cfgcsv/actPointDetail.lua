@@ -1,38 +1,51 @@
 local config = { 
 	[1] = { 
+		idx=1,
 		dec=30,
 		openUI=1,
 		limitTimes=1,
 		point=5,
 	},
 	[2] = { 
+		idx=2,
 		dec=31,
 		openUI=1,
 		limitTimes=2,
 		point=6,
 	},
 	[3] = { 
+		idx=3,
 		dec=32,
 		limitTimes=3,
 		point=7,
 	},
 	[4] = { 
+		idx=4,
 		dec=33,
 		limitTimes=4,
 		point=8,
 	},
 	[5] = { 
+		idx=5,
 		dec=34,
 		limitTimes=5,
 		point=9,
 	},
 	[6] = { 
+		idx=6,
 		dec=35,
 		openUI=2,
 		limitTimes=6,
 		point=10,
 	},
 	[7] = { 
+		idx=7,
+		dec=36,
+		limitTimes=7,
+		point=11,
+	},
+	[8] = { 
+		idx=8,
 		dec=36,
 		limitTimes=7,
 		point=11,

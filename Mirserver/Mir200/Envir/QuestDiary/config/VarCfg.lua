@@ -156,7 +156,8 @@ VarCfg.U_MentorShipTeach_Count      = "U114" -- 师徒每日传功次数
 VarCfg.U_MRBZ_Start                 = "U115" -- 每日必做任务次数记录U115-U130
 VarCfg.U_MRBZ_END                   = "U130" -- 每日必做任务次数记录U115-U130
 VarCfg.U_MRBZ_YLXH                  = "U131" --每日银两消耗数量
-VarCfg.U_MRBZ_MON                   = "U132" --每日杀怪数量
+VarCfg.U_MRBZ_Mon                   = "U132" --每日杀怪数量
+VarCfg.U_MRBZ_Point                 = "U133" --每日活跃点数
 ---------------------------------------↓↓↓ T变量 ↓↓↓---------------------------------------
 -- 个人字符变量，下线保存
 VarCfg.T_daily_date                 = "T0" -- 格式 20211103 年月日，  每日定时更新，如果定时不在线每日第一次登陆更新
