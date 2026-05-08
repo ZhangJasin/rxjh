@@ -17,10 +17,20 @@ local config = {
 	},
 	[3] = { 
 		ID=3,
-		task_name="每日组队击杀怪物100个",
+		task_name="师徒组队挑战任意BOSS1个",
+		type=2,
+		task_desc="师徒组队挑战任意BOSS1个",
+		erveyday_reset=1,
+		task_target=3,
+		task_target_param="*",
+		task_target_num=3,
+	},
+	[4] = { 
+		ID=4,
+		task_name="师徒组队完成副本1次",
 		type=2,
 		gxd_progress=100,
-		task_desc="每日击杀怪物100只",
+		task_desc="师徒组队完成副本1次",
 		erveyday_reset=1,
 		task_target=10,
 		task_target_param="1",
@@ -38,13 +48,12 @@ local config = {
 			},
 		},
 	},
-	[4] = { 
-		ID=4,
-		task_name="每日完成师徒副本1次",
-		type=2,
+	[5] = { 
+		ID=5,
+		task_name="完成2次BOSS狩猎",
+		type=3,
 		gxd_progress=100,
-		task_desc="每日完成师徒副本1次",
-		erveyday_reset=1,
+		task_desc="完成2次BOSS狩猎",
 		task_target=10,
 		task_target_param="2",
 		task_target_num=1,
@@ -61,10 +70,11 @@ local config = {
 			},
 		},
 	},
-	[5] = { 
-		ID=5,
-		task_name="累计获得50W银两",
-		type=2,
+	[6] = { 
+		ID=6,
+		task_name="累计完成5次门派捐献任务",
+		type=3,
+		task_desc="累计完成5次门派捐献任务",
 		task_target=9,
 		task_target_param="1",
 		task_target_num=500000,
@@ -81,10 +91,11 @@ local config = {
 			},
 		},
 	},
-	[6] = { 
-		ID=6,
-		task_name="累计完成10次悬赏任务",
-		type=2,
+	[7] = { 
+		ID=7,
+		task_name="累计强化任意装备2次",
+		type=3,
+		task_desc="累计强化任意装备2次",
 		task_target=5,
 		task_target_param="7",
 		task_target_num=10,
@@ -109,11 +120,11 @@ local config = {
 			},
 		},
 	},
-	[7] = { 
-		ID=7,
-		task_name="达到4转",
-		type=2,
-		task_desc="达到4转",
+	[8] = { 
+		ID=8,
+		task_name="徒弟转职到达2转",
+		type=3,
+		task_desc="徒弟转职到达2转",
 		task_target=2,
 		task_target_param="*",
 		task_target_num=4,
@@ -130,11 +141,11 @@ local config = {
 			},
 		},
 	},
-	[8] = { 
-		ID=8,
-		task_name="任意宠物升到10星",
-		type=2,
-		task_desc="任意宠物升到10星",
+	[9] = { 
+		ID=9,
+		task_name="徒弟等级到达40级",
+		type=3,
+		task_desc="徒弟等级到达40级",
 		task_target=6,
 		task_target_param="1",
 		task_target_num=10,
@@ -151,11 +162,11 @@ local config = {
 			},
 		},
 	},
-	[9] = { 
-		ID=9,
-		task_name="拥有2个好友",
-		type=2,
-		task_desc="拥有2个好友",
+	[10] = { 
+		ID=10,
+		task_name="任意宠物升至1阶",
+		type=3,
+		task_desc="任意宠物升至1阶",
 		task_target=5,
 		task_target_param="4",
 		task_target_num=2,
@@ -172,11 +183,11 @@ local config = {
 			},
 		},
 	},
-	[10] = { 
-		ID=10,
-		task_name="打造1件10级以上品阶1的装备",
-		type=2,
-		task_desc="打造1件10级以上品阶1的装备",
+	[11] = { 
+		ID=11,
+		task_name="任意坐骑升至1阶",
+		type=3,
+		task_desc="任意坐骑升至1阶",
 		task_target=4,
 		task_target_param = {
 			[1] = {
@@ -202,12 +213,12 @@ local config = {
 			},
 		},
 	},
-	[11] = { 
-		ID=11,
-		task_name="击杀怪物获得铁锤10把",
+	[12] = { 
+		ID=12,
+		task_name="任意1个气功升至20级",
 		type=3,
 		gxd_progress=250,
-		task_desc="获得任意10把",
+		task_desc="任意1个气功升至20级",
 		task_target=4,
 		task_target_param = {
 			[1] = {
@@ -229,40 +240,103 @@ local config = {
 			},
 		},
 	},
-	[12] = { 
-		ID=12,
-		task_name="击杀怪物",
+	[13] = { 
+		ID=13,
+		task_name="累计完成10次BOSS狩猎",
 		type=3,
-		gxd_progress=150,
-		task_desc="击杀怪物50只",
-		task_target=7,
-		task_target_param = {
-			[1] = {
-				[1] = "*",
-				[2] = "*",
-			},
-		},
-		task_target_num=50,
-		task_reward = {
-			[1] = {
-				[1] = 1,
-				[2] = 1,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 1,
-			},
-		},
-		task_reward_1 = {
-			[1] = {
-				[1] = 1,
-				[2] = 1,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 1,
-			},
-		},
+		task_desc="累计完成10次BOSS狩猎",
+	},
+	[14] = { 
+		ID=14,
+		task_name="累计完成10次门派捐献任务",
+		type=3,
+		task_desc="累计完成10次门派捐献任务",
+	},
+	[15] = { 
+		ID=15,
+		task_name="累计击杀100只怪物",
+		type=3,
+		task_desc="累计击杀100只怪物",
+	},
+	[16] = { 
+		ID=16,
+		task_name="穿戴任意1件强化+8的装备",
+		type=3,
+		task_desc="穿戴任意1件强化+8的装备",
+	},
+	[17] = { 
+		ID=17,
+		task_name="徒弟等级到达50级",
+		type=3,
+		task_desc="徒弟等级到达50级",
+		task_target=1,
+		task_target_param="*",
+	},
+	[18] = { 
+		ID=18,
+		task_name="任意宠物升至3阶",
+		type=3,
+		task_desc="任意宠物升至3阶",
+	},
+	[19] = { 
+		ID=19,
+		task_name="任意坐骑升至3阶",
+		type=3,
+		task_desc="任意坐骑升至3阶",
+	},
+	[20] = { 
+		ID=20,
+		task_name="任意2个气功升至20级",
+		type=3,
+		task_desc="任意2个气功升至20级",
+	},
+	[21] = { 
+		ID=21,
+		task_name="累计完成30次BOSS狩猎",
+		type=3,
+		task_desc="累计完成30次BOSS狩猎",
+	},
+	[22] = { 
+		ID=22,
+		task_name="累计完成30次门派捐献任务",
+		type=3,
+		task_desc="累计完成30次门派捐献任务",
+	},
+	[23] = { 
+		ID=23,
+		task_name="累计击杀500只怪",
+		type=3,
+		task_desc="累计击杀500只怪",
+	},
+	[24] = { 
+		ID=24,
+		task_name="转职到达3转",
+		type=3,
+		task_desc="转职到达3转",
+	},
+	[25] = { 
+		ID=25,
+		task_name="徒弟等级到达60级",
+		type=3,
+		task_desc="徒弟等级到达60级",
+	},
+	[26] = { 
+		ID=26,
+		task_name="任意宠物升至5阶",
+		type=3,
+		task_desc="任意宠物升至5阶",
+	},
+	[27] = { 
+		ID=27,
+		task_name="任意坐骑升至5阶",
+		type=3,
+		task_desc="任意坐骑升至5阶",
+	},
+	[28] = { 
+		ID=28,
+		task_name="任意3个气功升至20级",
+		type=3,
+		task_desc="任意3个气功升至20级",
 	},
 }
 return config
