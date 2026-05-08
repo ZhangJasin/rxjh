@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="70,70">
-  <controller name="equipPosDI" exported="true" pages="1,耳环,2,戒指,3,项链,4,鞋子,8,衣服,10,护臂,11,通用,12,武器" selected="0"/>
+  <controller name="equipPosDI" exported="true" pages="1,耳环,2,戒指,3,项链,4,鞋子,8,衣服,10,护臂,11,通用,12,武器" selected="7"/>
   <controller name="diKuangKind" exported="true" pages="0,特殊,1,普通,2,无" selected="1"/>
   <displayList>
-    <loader id="n55_mzzl" name="bg_di" xy="-1,-1" pivot="0.5,0.5" size="74,74" url="ui://st7dgeqqplaqkvp4" align="center" vAlign="middle" fill="scale" autoSize="true">
-      <gearIcon controller="diKuangKind" pages="0,1,2" values="ui://st7dgeqqlt7hvob|ui://st7dgeqqplaqkvp4|"/>
+    <loader id="n55_mzzl" name="bg_di" xy="-2,-2" pivot="0.5,0.5" size="76,76" url="ui://st7dgeqqdyg7kvpr" align="center" vAlign="middle" fill="scale" autoSize="true">
+      <gearIcon controller="diKuangKind" pages="0,1,2" values="ui://dak5wnw9dyg7vpa|ui://st7dgeqqdyg7kvpr|"/>
       <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
     </loader>
-    <loader id="n61_mzzl" name="bg_equip_kind" xy="10,4" pivot="0.5,0.5" size="50,61" url="ui://st7dgeqqmzzl1o" align="center" vAlign="middle" fill="scale">
+    <loader id="n61_mzzl" name="bg_equip_kind" xy="10,4" pivot="0.5,0.5" size="50,61" url="ui://st7dgeqqdxatvob" align="center" vAlign="middle" fill="scale">
       <gearIcon controller="equipPosDI" pages="2,3,4,8,10,11,12" values="ui://st7dgeqqmzzl1q|ui://st7dgeqqmzzl1s|ui://st7dgeqqmzzl1t|ui://st7dgeqqmzzl1u|ui://st7dgeqqmzzl1p||ui://st7dgeqqdxatvob" default="ui://st7dgeqqmzzl1o"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>

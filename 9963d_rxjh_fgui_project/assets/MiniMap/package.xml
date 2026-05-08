@@ -49,6 +49,7 @@
     <image id="pzjgvoj" name="traceArrow.png" path="/Images/MiniMap/" exported="true"/>
     <image id="pzjgvok" name="tracePoint.png" path="/Images/MiniMap/" exported="true"/>
     <component id="ki52vol" name="item_left_group.xml" path="/Components/MiniMap/" exported="true"/>
+    <component id="dyg7vom" name="btn_save.xml" path="/Components/MiniMap/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

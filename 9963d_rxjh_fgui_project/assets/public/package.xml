@@ -202,6 +202,7 @@
     <image id="t63akvpo" name="btn_first_gray.png" path="/image/" exported="true"/>
     <component id="hzurkvpp" name="iconNotingCom.xml" path="/common/" exported="true"/>
     <image id="hzurkvpq" name="img.png" path="/image/" exported="true"/>
+    <image id="dyg7kvpr" name="djkd.png" path="/image/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

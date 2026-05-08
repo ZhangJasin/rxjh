@@ -92,6 +92,16 @@
     <component id="wodvvp1" name="blockBtn.xml" path="/Components/" exported="true"/>
     <component id="s4v5vp2" name="blockBtn2.xml" path="/Components/"/>
     <component id="s4v5vp3" name="blockBtn3.xml" path="/Components/"/>
+    <image id="dyg7von" name="cbxbg.png" path="/Images/new/" exported="true"/>
+    <image id="dyg7voo" name="check.png" path="/Images/new/" exported="true"/>
+    <image id="dyg7vop" name="uncheck.png" path="/Images/new/" exported="true"/>
+    <image id="dyg7vp4" name="cssy.png" path="/Images/new/" exported="true"/>
+    <image id="dyg7vp5" name="syk.png" path="/Images/new/" exported="true"/>
+    <image id="dyg7vp6" name="kjcs.png" path="/Images/new/" exported="true"/>
+    <image id="dyg7vp7" name="zcbj.png" path="/Images/new/" exported="true"/>
+    <image id="dyg7vp8" name="tabh.png" path="/Images/new/" exported="true"/>
+    <image id="dyg7vp9" name="tabl.png" path="/Images/new/" exported="true"/>
+    <image id="dyg7vpa" name="djdk.png" path="/Images/new/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

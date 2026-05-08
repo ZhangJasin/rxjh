@@ -1,83 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750">
   <displayList>
-    <graph id="n57_km9o" name="mask" xy="0,0" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+    <graph id="n57_km9o" name="mask" xy="-3,2" size="1334,750" alpha="0.3" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <component id="n56_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="167,50">
+    <component id="n56_kra4" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="164,50">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <image id="n26_hgpp" name="n26" src="orj1vo4" fileName="image/di_2.png" pkg="st7dgeqq" xy="201,158" size="476,289">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </image>
-    <image id="n16_80j1" name="MoneyBg1" src="lxrgv52" fileName="image/bg_tips.png" pkg="st7dgeqq" xy="250,498" size="389,46">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </image>
-    <image id="n17_80j1" name="MoneyBg2" src="lxrgv52" fileName="image/bg_tips.png" pkg="st7dgeqq" xy="250,548" size="389,46">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </image>
-    <image id="n25_hgpp" name="n25" src="hgppp" fileName="Images/title_bg.png" xy="204,461">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </image>
-    <component id="n12_ljsg" name="BtnClose" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="1144,78" pivot="0.5,0.5" anchor="true" size="45,45">
+    <image id="n100_dyg7" name="n100" src="dyg7vp7" fileName="Images/new/zcbj.png" xy="152,86" size="533,630"/>
+    <component id="n12_ljsg" name="BtnClose" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="1134,78" pivot="0.5,0.5" anchor="true" size="45,45">
       <relation target="" sidePair="center-center,middle-middle"/>
       <Button icon="ui://st7dgeqqje63v3b"/>
     </component>
-    <component id="n10_ljsg" name="BtnSell" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="363,639" size="156,46">
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Button title="快捷出售" titleColor="#f2c82a" titleFontSize="23" icon="ui://st7dgeqqje63v3e"/>
-    </component>
-    <richtext id="n58_nnji" name="MoneyText1" xy="376,504" size="250,34" touchable="false" fontSize="22" color="#ffffff" align="right" vAlign="middle" ubb="true" autoSize="none" text="0">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </richtext>
-    <richtext id="n59_nnji" name="MoneyText2" xy="376,554" size="250,34" touchable="false" fontSize="22" color="#ffffff" align="right" vAlign="middle" ubb="true" autoSize="none" text="0">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </richtext>
     <text id="n3_xzvr" name="n3" xy="666,78" pivot="0.5,0.5" anchor="true" size="197,34" fontSize="24" color="#9aafbb" align="center" autoSize="none" text="随身出售">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n23_80j1" name="TipInCome" xy="233,460" size="104,34" fontSize="24" color="#ffffff" align="right" vAlign="middle" ubb="true" autoSize="none" text="出售收益">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <text id="n24_80j1" name="TipLvDetail" xy="522,119" size="151,34" fontSize="23" color="#e1e0c6" align="right" vAlign="middle" ubb="true" autoSize="none" underline="true" text="查看等级筛选">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
-    <component id="n32_hgpp" name="CheckBoxTotalLv" src="hgppn" fileName="Components/BagRecycleCheckBox.xml" xy="480,115" size="41,40">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </component>
-    <component id="n27_hgpp" name="AutoSell" src="hgppn" fileName="Components/BagRecycleCheckBox.xml" xy="501,600" size="150,33">
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Button title="自动出售" selectedTitle="自动出售"/>
-    </component>
-    <component id="n31_hgpp" name="AutoPick" src="hgppn" fileName="Components/BagRecycleCheckBox.xml" xy="257,600" size="150,33">
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <Button title="自动拾取" selectedTitle="自动拾取"/>
-    </component>
-    <component id="n37_hgpp" name="Btn_LvDetail" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="532,115" size="138,40">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </component>
-    <list id="n30_hgpp" name="List_CheckBox" xy="195,161" size="487,284" layout="flow_hz" overflow="scroll" margin="4,0,48,0" lineGap="22" colGap="66" lineItemCount="2" defaultItem="ui://dak5wnw9hgppn" autoClearItems="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <list id="n36_hgpp" name="List_Tab" xy="196,111" size="274,50" layout="row" overflow="scroll" scrollBarFlags="424" scrollBar="hidden" margin="0,0,4,0" colGap="9" defaultItem="ui://dak5wnw980j1m" autoItemSize="false">
+    <list id="n36_hgpp" name="List_Tab" xy="190,116" size="201,44" group="n96_dyg7" layout="row" overflow="scroll" scrollBarFlags="424" scrollBar="hidden" colGap="5" defaultItem="ui://dak5wnw980j1m" autoItemSize="false">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
       <item title="其他" selectedTitle="其他"/>
     </list>
-    <component id="n51_j9ot" name="MoneyIcon1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="253,500" size="40,40">
+    <image id="n26_hgpp" name="n26" src="dyg7von" fileName="Images/new/cbxbg.png" xy="189,158" size="457,289" group="n96_dyg7">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <list id="n30_hgpp" name="List_CheckBox" xy="191,161" size="453,285" group="n96_dyg7" layout="flow_hz" overflow="scroll" margin="17,0,21,0" lineGap="21" colGap="85" lineItemCount="2" defaultItem="ui://dak5wnw9hgppn" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n96_dyg7" name="n96" xy="189,116" size="457,331"/>
+    <text id="n24_80j1" name="TipLvDetail" xy="469,122" size="124,29" group="n97_dyg7" fontSize="20" color="#d7d9c3" align="right" vAlign="middle" ubb="true" autoSize="none" underline="true" bold="true" strokeColor="#90906f" text="查看等级筛选">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n32_hgpp" name="CheckBoxTotalLv" src="hgppn" fileName="Components/BagRecycleCheckBox.xml" xy="438,125" size="26,26" group="n97_dyg7">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n52_j9ot" name="MoneyIcon2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="253,550" size="40,40">
+    <group id="n97_dyg7" name="n97" xy="438,122" size="155,29"/>
+    <image id="n25_hgpp" name="n25" src="dyg7vp4" fileName="Images/new/cssy.png" xy="222,453" group="n98_dyg7">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n23_80j1" name="TipInCome" xy="373,455" size="84,29" group="n98_dyg7" fontSize="20" color="#ffffff" align="right" vAlign="middle" ubb="true" strokeColor="#245611" text="出售收益">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n98_dyg7" name="n98" xy="222,453" size="390,34"/>
+    <image id="n16_80j1" name="MoneyBg1" src="dyg7vp5" fileName="Images/new/syk.png" xy="220,492" size="390,46" group="n99_dyg7">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n17_80j1" name="MoneyBg2" src="dyg7vp5" fileName="Images/new/syk.png" xy="220,542" size="390,46" group="n99_dyg7">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n10_ljsg" name="BtnSell" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="337,634" size="157,46" group="n99_dyg7">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="快捷出售" titleColor="#f2c82a" titleFontSize="23" icon="ui://dak5wnw9dyg7vp6"/>
+    </component>
+    <richtext id="n58_nnji" name="MoneyText1" xy="348,499" size="251,34" group="n99_dyg7" touchable="false" fontSize="22" color="#ffffff" align="right" vAlign="middle" ubb="true" autoSize="none" text="0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <richtext id="n59_nnji" name="MoneyText2" xy="348,549" size="251,34" group="n99_dyg7" touchable="false" fontSize="22" color="#ffffff" align="right" vAlign="middle" ubb="true" autoSize="none" text="0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </richtext>
+    <component id="n27_hgpp" name="AutoSell" src="hgppn" fileName="Components/BagRecycleCheckBox.xml" xy="473,595" size="151,27" group="n99_dyg7">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="自动出售" selectedTitle="自动出售"/>
+    </component>
+    <component id="n31_hgpp" name="AutoPick" src="hgppn" fileName="Components/BagRecycleCheckBox.xml" xy="229,595" size="151,26" group="n99_dyg7">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="自动拾取" selectedTitle="自动拾取"/>
+    </component>
+    <component id="n51_j9ot" name="MoneyIcon1" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="225,495" size="41,40" group="n99_dyg7">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
+    <component id="n52_j9ot" name="MoneyIcon2" src="u13q2" fileName="Icons/CommonItem.xml" pkg="st7dgeqq" xy="225,545" size="41,40" group="n99_dyg7">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <group id="n99_dyg7" name="n99" xy="220,492" size="404,188"/>
+    <component id="n37_hgpp" name="Btn_LvDetail" src="kxj1v3f" fileName="ScaleButtonText.xml" pkg="o8ixb2zy" xy="471,126" size="122,24">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n53_svai" name="BagPanel" src="seb1r" fileName="Components/BagPanel.xml" xy="678,118" size="465,563">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n55_p70y" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="168,695" size="0,0"/>
     <component id="n48_hgpp" name="MaskLv" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="0,1" size="1334,750" group="n50_hgpp">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
@@ -93,10 +102,6 @@
     <group id="n50_hgpp" name="LvDetail" xy="0,1" size="1334,750" visible="false" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <component id="n53_svai" name="BagPanel" src="seb1r" fileName="Components/BagPanel.xml" xy="689,113" size="430,550">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </component>
-    <component id="n55_p70y" name="Node_attach" src="ilk5vnm" fileName="Node.xml" pkg="o8ixb2zy" xy="172,698" size="0,0"/>
     <component id="n60_zqih" name="MaskLv1" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="0,1" size="1334,750" group="n66_zqih">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
@@ -157,19 +162,19 @@
     <group id="n88_zqih" name="HYJGSDetail" xy="0,1" size="1334,750" visible="false" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <component id="n89_zqih" name="MaskLv5" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="0,1" size="1334,750" group="n95_zqih">
+    <component id="n89_zqih" name="MaskLv5" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="0,2" size="1334,750" group="n95_zqih">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <image id="n90_zqih" name="n90" src="k5e7v6a" fileName="image/img_d2_9.png" pkg="st7dgeqq" xy="288,177" size="389,506" group="n95_zqih"/>
-    <text id="n91_zqih" name="n91" xy="359,202" size="52,34" group="n95_zqih" fontSize="24" color="#ffff00" text="类型"/>
-    <text id="n92_zqih" name="n92" xy="520,202" size="100,34" group="n95_zqih" fontSize="24" color="#ffff00" align="center" text="是否选中"/>
-    <component id="n93_zqih" name="BtnDetailClose5" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="644,161" group="n95_zqih">
+    <image id="n90_zqih" name="n90" src="k5e7v6a" fileName="image/img_d2_9.png" pkg="st7dgeqq" xy="288,178" size="389,506" group="n95_zqih" alpha="0.54"/>
+    <text id="n91_zqih" name="n91" xy="359,203" size="52,34" group="n95_zqih" fontSize="24" color="#ffff00" text="类型"/>
+    <text id="n92_zqih" name="n92" xy="520,203" size="100,34" group="n95_zqih" fontSize="24" color="#ffff00" align="center" text="是否选中"/>
+    <component id="n93_zqih" name="BtnDetailClose5" src="kxj1v4c" fileName="ScaleButton.xml" pkg="o8ixb2zy" xy="644,162" group="n95_zqih">
       <Button icon="ui://st7dgeqqje63v3b"/>
     </component>
-    <list id="n94_zqih" name="List_BPHYSCheckBox" xy="323,248" size="321,383" group="n95_zqih" overflow="scroll" margin="0,0,-40,0" lineGap="22" defaultItem="ui://dak5wnw9hgppq" autoItemSize="false" autoClearItems="true">
+    <list id="n94_zqih" name="List_BPHYSCheckBox" xy="323,249" size="321,383" group="n95_zqih" overflow="scroll" margin="0,0,-40,0" lineGap="22" defaultItem="ui://dak5wnw9hgppq" autoItemSize="false" autoClearItems="true">
       <item/>
     </list>
-    <group id="n95_zqih" name="BPHYSDetail" xy="0,1" size="1334,750" visible="false" advanced="true">
+    <group id="n95_zqih" name="BPHYSDetail" xy="0,2" size="1334,750" visible="false" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

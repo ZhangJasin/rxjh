@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="92,41" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="button" pages="0,up,1,down" selected="1"/>
   <displayList>
-    <image id="n3_q9ls" name="n3" src="zah9v4k" fileName="image/toggle_top_green_unselect.png" pkg="st7dgeqq" xy="0,0" size="92,43">
+    <image id="n3_q9ls" name="n3" src="dyg7vop" fileName="Images/hdjh/uncheck.png" xy="0,0" size="92,43">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n4_q9ls" name="n4" src="zah9v4j" fileName="image/toggle_top_green_select.png" pkg="st7dgeqq" xy="0,0" size="92,43">
+    <image id="n4_q9ls" name="n4" src="dyg7voo" fileName="Images/hdjh/check.png" xy="0,0" size="92,43">
       <gearDisplay controller="button" pages="1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n5_q9ls" name="title" xy="49,20" pivot="0.5,0.5" anchor="true" size="44,29" fontSize="20" color="#a4a4a4" align="center" text="装备">
-      <gearColor controller="button" pages="0,1" values="#a4a4a4,#000000|#ffcc33,#000000"/>
+    <text id="n5_q9ls" name="title" xy="45,21" pivot="0.5,0.5" anchor="true" size="50,29" fontSize="20" color="#fbc933" align="center" letterSpacing="6" bold="true" strokeColor="#000000" text="装备">
+      <gearColor controller="button" pages="0,1" values="#a4a4a4,#000000|#fbc933,#000000"/>
     </text>
   </displayList>
   <Button mode="Radio"/>
