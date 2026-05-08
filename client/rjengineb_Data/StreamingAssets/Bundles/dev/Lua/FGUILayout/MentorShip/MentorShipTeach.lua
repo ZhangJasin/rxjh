@@ -85,9 +85,6 @@ function MentorShipTeach:setData(data)
 		end
 
 		if not self.rightInfoType then
-			SL:ShowSystemTips("您当前没有师徒关系，无法进入传功页面！")
-			FGUI:Close("MentorShip", "MentorShipTeach")
-			FGUI:Close("MentorShip", "MentorShipPanel")
 			return
 		end
 
@@ -317,7 +314,6 @@ function MentorShipTeach:RenderApprenticeSlot(idx, item)
 			--TODO:显示选择的徒弟数据
 			--self:showCGinfo(targetID)
 			self:setRightInfo()
-
 		end)
 	else
 		FGUI:GTextField_setText(text_name, "")

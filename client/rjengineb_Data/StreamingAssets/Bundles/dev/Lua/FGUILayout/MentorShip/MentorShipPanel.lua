@@ -39,13 +39,13 @@ function MentorShipPanel:InitEvent()
 	FGUI:setOnClickEvent(self._ui.btn_help, self.handler_clickHelpBtn)
 	FGUI:GTextField_setText(self._ui.text_title, "师 徒")
 	FGUI:GList_addOnClickItemEvent(self._ui.page_switch_list, self.handler_clickSwitch)
-	FGUI:setOnClickEvent(self._ui.helpBg, function() 
-		FGUI:setVisible(self._ui.helpInfo,false)
+	FGUI:setOnClickEvent(self._ui.helpBg, function()
+		FGUI:setVisible(self._ui.helpInfo, false)
 	end)
 end
 
 function MentorShipPanel:OnHelp()
-	FGUI:setVisible(self._ui.helpInfo,true)
+	FGUI:setVisible(self._ui.helpInfo, true)
 end
 
 function MentorShipPanel:Enter(userdata)
@@ -54,26 +54,27 @@ function MentorShipPanel:Enter(userdata)
 	local page = (userdata and userdata.defaultPage) or MentorPage.Main
 	FGUI:GList_setSelectedIndex(self._ui.page_switch_list, page - 1)
 	self:SetPage(page)
-	if userdata.openBrearList then	
+	if userdata.openBrearList then
 		ssrMessage:sendmsgEx("MentorShip", "getAllMyBraskApply")
 	end
 end
+
 function MentorShipPanel:initBreakEvent(data)
 	self = MentorShipPanelUI.CCUI
-	FGUI:setVisible(self._ui.BreakRlationship,true)
-	local closeBtn = FGUI:GetChild(self._ui.BreakRlationship,"btn_close")
-	local breakApplyList = FGUI:GetChild(self._ui.BreakRlationship,"applyList")
-	FGUI:setOnClickEvent(closeBtn, function(index,item)
-		FGUI:setVisible(self._ui.BreakRlationship,false)
+	FGUI:setVisible(self._ui.BreakRlationship, true)
+	local closeBtn = FGUI:GetChild(self._ui.BreakRlationship, "btn_close")
+	local breakApplyList = FGUI:GetChild(self._ui.BreakRlationship, "applyList")
+	FGUI:setOnClickEvent(closeBtn, function(index, item)
+		FGUI:setVisible(self._ui.BreakRlationship, false)
 	end)
-	FGUI:GList_itemRenderer(breakApplyList, function(idx,item)
-		local itemData = data[idx+1]
+	FGUI:GList_itemRenderer(breakApplyList, function(idx, item)
+		local itemData = data[idx + 1]
 		if itemData then
-			local name = FGUI:GetChild(item,"name")
-			FGUI:GTextField_setText(name,itemData.UserName)
-			local notAgree = FGUI:GetChild(item,"notAgree")
-			local agree = FGUI:GetChild(item,"agree")
-			local whoController = FGUI:getController(item,"who")
+			local name = FGUI:GetChild(item, "name")
+			FGUI:GTextField_setText(name, itemData.UserName)
+			local notAgree = FGUI:GetChild(item, "notAgree")
+			local agree = FGUI:GetChild(item, "agree")
+			local whoController = FGUI:getController(item, "who")
 			local targetUserId = itemData.UserID
 			-- who  1 我的徒弟申请  2 我的师傅申请
 			-- whoController 0 我的徒弟 1 我的师傅
@@ -81,14 +82,14 @@ function MentorShipPanel:initBreakEvent(data)
 			if tonumber(itemData.who) == 1 then
 				status = 1
 			end
-			FGUI:Controller_setSelectedIndex(whoController, status )
-			FGUI:setOnClickEvent(agree, function(index,item)
-				FGUI:setVisible(self._ui.BreakRlationship,false)
-				ssrMessage:sendmsgEx("MentorShip", "agreeBreak",{targetId = targetUserId,mode = itemData.who})
+			FGUI:Controller_setSelectedIndex(whoController, status)
+			FGUI:setOnClickEvent(agree, function(index, item)
+				FGUI:setVisible(self._ui.BreakRlationship, false)
+				ssrMessage:sendmsgEx("MentorShip", "agreeBreak", { targetId = targetUserId, mode = itemData.who })
 			end)
-			FGUI:setOnClickEvent(notAgree, function(index,item)
-				FGUI:setVisible(self._ui.BreakRlationship,false)
-				ssrMessage:sendmsgEx("MentorShip", "notAgreeBreak",targetUserId)
+			FGUI:setOnClickEvent(notAgree, function(index, item)
+				FGUI:setVisible(self._ui.BreakRlationship, false)
+				ssrMessage:sendmsgEx("MentorShip", "notAgreeBreak", targetUserId)
 			end)
 		end
 	end)
@@ -102,8 +103,11 @@ end
 function MentorShipPanel:OnClose()
 	self.super.Close(self)
 end
+
 function MentorShipPanel:Destroy() end
+
 function MentorShipPanel:RegisterEvent() end
+
 function MentorShipPanel:RemoveEvent() end
 
 function MentorShipPanel:OnClickSwitchPageBtn()
@@ -115,6 +119,22 @@ function MentorShipPanel:SetPage(page)
 	if page == self._currentPage then
 		return
 	end
+	--无师徒拦截传功页面
+	if page == MentorPage.teach then
+		local mainPage = MentorShipMain.CCUI
+		local hasMaster = mainPage and mainPage._mentorInfo ~= nil
+		local hasApprentice = mainPage and mainPage._apprenticeList and #mainPage._apprenticeList > 0
+		if not hasMaster and not hasApprentice then
+			SL:ShowSystemTips("您当前没有师徒关系，无法进入传功页面！")
+			local safePage = self._currentPage or MentorPage.Main
+			FGUI:GList_setSelectedIndex(self._ui.page_switch_list, safePage - 1)
+			if self._currentPage then
+				return
+			end
+			page = safePage
+		end
+	end
+
 	local handler = self._pageHandler[page]
 	if not handler or not handler.url or not handler.processor then
 		FGUI:GLoader_setUrl(self._ui.mentor_content, "")
@@ -142,4 +162,5 @@ function MentorShipPanel:OnPageChange(page)
 		end
 	end
 end
+
 return MentorShipPanel
