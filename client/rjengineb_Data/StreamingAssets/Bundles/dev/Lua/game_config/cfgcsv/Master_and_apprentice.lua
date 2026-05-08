@@ -21,9 +21,21 @@ local config = {
 		type=2,
 		task_desc="师徒组队挑战任意BOSS1个",
 		erveyday_reset=1,
-		task_target=3,
-		task_target_param="*",
-		task_target_num=3,
+		task_target=10,
+		task_target_param="2",
+		task_target_num=1,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[4] = { 
 		ID=4,
@@ -54,9 +66,13 @@ local config = {
 		type=3,
 		gxd_progress=100,
 		task_desc="完成2次BOSS狩猎",
+		erveyday_reset=2,
 		task_target=10,
-		task_target_param="2",
-		task_target_num=1,
+		task_target_param = {
+			[1] = 5,
+			[2] = 7,
+		},
+		task_target_num=2,
 		task_reward = {
 			[1] = {
 				[1] = 1,
@@ -75,9 +91,13 @@ local config = {
 		task_name="累计完成5次门派捐献任务",
 		type=3,
 		task_desc="累计完成5次门派捐献任务",
-		task_target=9,
-		task_target_param="1",
-		task_target_num=500000,
+		erveyday_reset=2,
+		task_target=5,
+		task_target_param = {
+			[1] = 5,
+			[2] = 5,
+		},
+		task_target_num=5,
 		task_reward = {
 			[1] = {
 				[1] = 1,
@@ -96,9 +116,13 @@ local config = {
 		task_name="累计强化任意装备2次",
 		type=3,
 		task_desc="累计强化任意装备2次",
+		erveyday_reset=2,
 		task_target=5,
-		task_target_param="7",
-		task_target_num=10,
+		task_target_param = {
+			[1] = 4,
+			[2] = 2,
+		},
+		task_target_num=2,
 		task_reward = {
 			[1] = {
 				[1] = 1,
@@ -125,9 +149,10 @@ local config = {
 		task_name="徒弟转职到达2转",
 		type=3,
 		task_desc="徒弟转职到达2转",
+		erveyday_reset=2,
 		task_target=2,
 		task_target_param="*",
-		task_target_num=4,
+		task_target_num=2,
 		task_reward = {
 			[1] = {
 				[1] = 1,
@@ -146,9 +171,10 @@ local config = {
 		task_name="徒弟等级到达40级",
 		type=3,
 		task_desc="徒弟等级到达40级",
+		erveyday_reset=2,
 		task_target=6,
 		task_target_param="1",
-		task_target_num=10,
+		task_target_num=40,
 		task_reward = {
 			[1] = {
 				[1] = 1,
@@ -167,6 +193,7 @@ local config = {
 		task_name="任意宠物升至1阶",
 		type=3,
 		task_desc="任意宠物升至1阶",
+		erveyday_reset=2,
 		task_target=5,
 		task_target_param="4",
 		task_target_num=2,
@@ -188,6 +215,7 @@ local config = {
 		task_name="任意坐骑升至1阶",
 		type=3,
 		task_desc="任意坐骑升至1阶",
+		erveyday_reset=2,
 		task_target=4,
 		task_target_param = {
 			[1] = {
@@ -219,14 +247,13 @@ local config = {
 		type=3,
 		gxd_progress=250,
 		task_desc="任意1个气功升至20级",
+		erveyday_reset=2,
 		task_target=4,
 		task_target_param = {
-			[1] = {
-				[1] = 1,
-				[2] = "*",
-			},
+			[1] = 1,
+			[2] = 20,
 		},
-		task_target_num=10,
+		task_target_num=20,
 		task_reward = {
 			[1] = {
 				[1] = 1,
@@ -245,98 +272,364 @@ local config = {
 		task_name="累计完成10次BOSS狩猎",
 		type=3,
 		task_desc="累计完成10次BOSS狩猎",
+		erveyday_reset=2,
+		task_target=5,
+		task_target_param="*",
+		task_target_num=10,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[14] = { 
 		ID=14,
 		task_name="累计完成10次门派捐献任务",
 		type=3,
 		task_desc="累计完成10次门派捐献任务",
+		erveyday_reset=2,
+		task_target=5,
+		task_target_param="*",
+		task_target_num=10,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[15] = { 
 		ID=15,
 		task_name="累计击杀100只怪物",
 		type=3,
 		task_desc="累计击杀100只怪物",
+		erveyday_reset=2,
+		task_target=7,
+		task_target_param="*",
+		task_target_num=100,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[16] = { 
 		ID=16,
 		task_name="穿戴任意1件强化+8的装备",
 		type=3,
 		task_desc="穿戴任意1件强化+8的装备",
+		erveyday_reset=2,
+		task_target=5,
+		task_target_param="*",
+		task_target_num=1,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[17] = { 
 		ID=17,
 		task_name="徒弟等级到达50级",
 		type=3,
 		task_desc="徒弟等级到达50级",
+		erveyday_reset=2,
 		task_target=1,
 		task_target_param="*",
+		task_target_num=50,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[18] = { 
 		ID=18,
 		task_name="任意宠物升至3阶",
 		type=3,
 		task_desc="任意宠物升至3阶",
+		erveyday_reset=2,
+		task_target=6,
+		task_target_param = {
+			[1] = 1,
+			[2] = 3,
+		},
+		task_target_num=3,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[19] = { 
 		ID=19,
 		task_name="任意坐骑升至3阶",
 		type=3,
 		task_desc="任意坐骑升至3阶",
+		erveyday_reset=2,
+		task_target=6,
+		task_target_param = {
+			[1] = 2,
+			[2] = 3,
+		},
+		task_target_num=3,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[20] = { 
 		ID=20,
 		task_name="任意2个气功升至20级",
 		type=3,
 		task_desc="任意2个气功升至20级",
+		erveyday_reset=2,
+		task_target=1,
+		task_target_param="*",
+		task_target_num=20,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[21] = { 
 		ID=21,
 		task_name="累计完成30次BOSS狩猎",
 		type=3,
 		task_desc="累计完成30次BOSS狩猎",
+		erveyday_reset=2,
+		task_target=7,
+		task_target_param="*",
+		task_target_num=30,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[22] = { 
 		ID=22,
 		task_name="累计完成30次门派捐献任务",
 		type=3,
 		task_desc="累计完成30次门派捐献任务",
+		erveyday_reset=2,
+		task_target=8,
+		task_target_param="*",
+		task_target_num=30,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[23] = { 
 		ID=23,
 		task_name="累计击杀500只怪",
 		type=3,
 		task_desc="累计击杀500只怪",
+		erveyday_reset=2,
+		task_target=7,
+		task_target_param="*",
+		task_target_num=500,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[24] = { 
 		ID=24,
 		task_name="转职到达3转",
 		type=3,
 		task_desc="转职到达3转",
+		erveyday_reset=2,
+		task_target=2,
+		task_target_param="*",
+		task_target_num=3,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[25] = { 
 		ID=25,
 		task_name="徒弟等级到达60级",
 		type=3,
 		task_desc="徒弟等级到达60级",
+		erveyday_reset=2,
+		task_target=1,
+		task_target_param="*",
+		task_target_num=60,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[26] = { 
 		ID=26,
 		task_name="任意宠物升至5阶",
 		type=3,
 		task_desc="任意宠物升至5阶",
+		erveyday_reset=2,
+		task_target=6,
+		task_target_param = {
+			[1] = 1,
+			[2] = 5,
+		},
+		task_target_num=5,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[27] = { 
 		ID=27,
 		task_name="任意坐骑升至5阶",
 		type=3,
 		task_desc="任意坐骑升至5阶",
+		erveyday_reset=2,
+		task_target=6,
+		task_target_param = {
+			[1] = 2,
+			[2] = 5,
+		},
+		task_target_num=5,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 	[28] = { 
 		ID=28,
 		task_name="任意3个气功升至20级",
 		type=3,
 		task_desc="任意3个气功升至20级",
+		erveyday_reset=2,
+		task_target=1,
+		task_target_param="*",
+		task_target_num=20,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+		},
 	},
 }
 return config
