@@ -16688,7 +16688,7 @@ local config = {
 			[3] = 30,
 			[4] = 3,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -18757,7 +18757,7 @@ local config = {
 			[3] = 40,
 			[4] = 3,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -18791,7 +18791,7 @@ local config = {
 			[3] = 35,
 			[4] = 4,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -20815,7 +20815,7 @@ local config = {
 			[3] = 50,
 			[4] = 3,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -20849,7 +20849,7 @@ local config = {
 			[3] = 35,
 			[4] = 4,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -20942,7 +20942,7 @@ local config = {
 			[4] = 4,
 			[5] = 1,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -20977,7 +20977,7 @@ local config = {
 			[4] = 4,
 			[5] = 2,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -23086,7 +23086,7 @@ local config = {
 			[4] = 4,
 			[5] = 1,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -23121,7 +23121,7 @@ local config = {
 			[4] = 4,
 			[5] = 2,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -25305,7 +25305,7 @@ local config = {
 			[4] = 4,
 			[5] = 1,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -25340,7 +25340,7 @@ local config = {
 			[4] = 4,
 			[5] = 2,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -27528,7 +27528,7 @@ local config = {
 			[4] = 4,
 			[5] = 1,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -27563,7 +27563,7 @@ local config = {
 			[4] = 4,
 			[5] = 2,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -29691,7 +29691,7 @@ local config = {
 			[4] = 4,
 			[5] = 1,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -29726,7 +29726,7 @@ local config = {
 			[4] = 4,
 			[5] = 2,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -38018,7 +38018,7 @@ local config = {
 			[4] = 4,
 			[5] = 1,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -38053,7 +38053,7 @@ local config = {
 			[4] = 4,
 			[5] = 2,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -40230,7 +40230,7 @@ local config = {
 			[4] = 4,
 			[5] = 1,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -40265,7 +40265,7 @@ local config = {
 			[4] = 4,
 			[5] = 2,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -42441,7 +42441,7 @@ local config = {
 			[4] = 4,
 			[5] = 1,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -42476,7 +42476,7 @@ local config = {
 			[4] = 4,
 			[5] = 2,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -44352,7 +44352,7 @@ local config = {
 			[4] = 3,
 			[5] = 1,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
@@ -44387,7 +44387,7 @@ local config = {
 			[4] = 3,
 			[5] = 2,
 		},
-		task_progress=2,
+		task_progress=1,
 		task_turntype=2,
 		task_turn_param=17,
 		task_drop = {
