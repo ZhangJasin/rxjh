@@ -21,8 +21,14 @@ local function costMaterials(actor, id)
     local conf = nil
     for _, info in ipairs(config) do
         if id == info.idx then
-            if jobId == info.job and GOODEVILID == info.sect then
-                conf = info
+            if jobId == info.job then
+                if info.sect then
+                    if GOODEVILID == info.sect then
+                        conf = info
+                    end
+                else
+                    conf = info
+                end
             end
         end
     end
@@ -50,6 +56,8 @@ end
 
 local function getTotalValue(actor)
     local valLst = { VarCfg.T_EquipCollect_1, VarCfg.T_EquipCollect_2, VarCfg.T_EquipCollect_3 }
+    local GOODEVILID = targetinfo(actor, "GOODEVILID")
+    local jobId = job(actor)
     local val = 0
     for _, var in ipairs(valLst) do
         local t = json2tbl(gethumvar(actor, var)) or {}
@@ -57,7 +65,15 @@ local function getTotalValue(actor)
             for v, _ in pairs(t) do
                 for _, k in ipairs(config) do
                     if tonumber(v) == k.idx then
-                        val = val + k.value
+                        if k.sect then
+                            if GOODEVILID == k.sect then
+                                val = val + k.value
+                            end
+                        else
+                            if jobId == k.job then
+                                val = val + k.value
+                            end
+                        end
                     end
                 end
             end

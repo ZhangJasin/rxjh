@@ -66,11 +66,21 @@ function equipCollectData:GetNextAttr()
 end
 
 function equipCollectData:CalculateValue()
+    local GOODEVILID = SL:GetValue("GOODEVILID")
+    local job = SL:GetValue("JOB")
     local val = 0
     for id, _ in pairs(_data.activeList) do
         for _, conf in ipairs(config) do
             if tonumber(id) == conf.idx then
-                val = val + conf.value
+                if conf.sect then
+                    if GOODEVILID == conf.sect then
+                        val = val + conf.value
+                    end
+                else
+                    if job == conf.job then
+                        val = val + conf.value
+                    end
+                end
             end
         end
     end
