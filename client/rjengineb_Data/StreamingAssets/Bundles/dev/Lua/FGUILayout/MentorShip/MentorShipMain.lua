@@ -439,7 +439,8 @@ function MentorShipMain:RenderApprenticeIntroItem(idx, item)
 end
 
 function MentorShipMain:RenderTaskItem(idx, item)
-	local data = self._taskList[idx + 1]
+	--local data = self._taskList[idx + 1]
+	local data = self._showTaskList and self._showTaskList[idx + 1]
 	--dump(data)
 	-- dump(self.taskProgressList)
 	if data and self.taskProgressList["" .. data.ID] then
@@ -604,7 +605,20 @@ function MentorShipMain:RenderSetOut(idx, item)
 end
 
 function MentorShipMain:RefreshAll()
+	--dump(self._taskList)
 	if self._hasRelation then
+		--过滤已完成任务
+		self._showTaskList = {}
+		if self._taskList then
+			for i = 1, #self._taskList do
+				local taskData = self._taskList[i]
+				local prog = self.taskProgressList and self.taskProgressList["" .. taskData.ID]
+				if not prog or prog.status ~= 1 then
+					table.insert(self._showTaskList, taskData)
+				end
+			end
+		end
+
 		FGUI:GList_setNumItems(self._ui.list_mentor, 1)
 		FGUI:GList_setNumItems(self._ui.list_tasks, #self._taskList)
 		FGUI:GList_setNumItems(self._ui.list_graduate, #self.setOutList)
