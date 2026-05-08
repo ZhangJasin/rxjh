@@ -1923,6 +1923,45 @@ function MentorShip.isCanBuy(actor, count, ItemID, excelID)
     return isCanBuy
 end
 
+--测试数据
+function MentorShip.TestCompleteAllTasks(actor)
+    local userId = userid(actor)
+
+    local taskProgressStr = getcustvar("11_" .. userId .. "_" .. "t_ApprenticeTaskPro")
+    local gxdTaskStr = getcustvar("11_" .. userId .. "_" .. "t_ApprenticeGxdTask")
+
+    if taskProgressStr == "" or gxdTaskStr == "" then
+        return
+    end
+
+    local taskProgressList = json2tbl(taskProgressStr)
+    local gxdTask = json2tbl(gxdTaskStr)
+    for i = 1, #Master_and_apprentice do
+        local taskCfg = Master_and_apprentice[i]
+        local ID = tostring(taskCfg.ID)
+        local targetNum = taskCfg.task_target_num
+
+        if taskCfg.type == 2 and taskProgressList[ID] then
+            -- 普通任務
+            taskProgressList[ID].num = targetNum
+            taskProgressList[ID].status = 1
+        elseif taskCfg.type == 3 and gxdTask[ID] then
+            -- 貢獻度任務
+            gxdTask[ID].num = targetNum
+            gxdTask[ID].status = 1
+        end
+    end
+
+    --if taskProgressList['bondDateTimes'] then
+    --    taskProgressList['bondDateTimes'] = taskProgressList['bondDateTimes'] - (30 * 86400)
+    --end
+
+    sefcustvar(11, userId, 't_ApprenticeTaskPro', tbl2json(taskProgressList))
+    sefcustvar(11, userId, 't_ApprenticeGxdTask', tbl2json(gxdTask))
+
+    MentorShip.GetMyRelation(actor, 'MentorShipMain')
+end
+
 --GameEvent.add(EventCfg.onPlayLevelUp, function(actor, lv, oldlv)
 --    MentorShip.appareniceLevelUp(actor, oldlv)
 --end, MentorShip)

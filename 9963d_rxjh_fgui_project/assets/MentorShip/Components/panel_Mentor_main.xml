@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="992,588" opaque="false">
-  <controller name="RightState" pages="0,empty,1,has" selected="1"/>
+  <controller name="RightState" pages="0,empty,1,has" selected="0"/>
   <displayList>
     <image id="n21_leye" name="bg_left" src="fbc0v4r" fileName="image/frame_info.png" pkg="st7dgeqq" xy="-11,4" size="235,585" group="n114_dos9" visible="false"/>
     <image id="n70_nxdg" name="n74" src="as7kvno" fileName="image/btn_first_9.png" pkg="st7dgeqq" xy="-3,16" size="220,55" group="n73_nxdg"/>
@@ -65,6 +65,7 @@
       <item/>
     </list>
     <richtext id="n103_nxdg" name="rtext_reward" xy="871,36" size="68,24" group="n115_k27e" fontSize="16" color="#28faf0" underline="true" text="出师奖励"/>
+    <richtext id="n126_q2kk" name="rtext_done" xy="871,150" size="68,24" group="n115_k27e" fontSize="16" color="#28faf0" underline="true" text="一键完成"/>
     <richtext id="n104_nxdg" name="rtext_go" xy="871,180" size="68,24" group="n115_k27e" fontSize="16" color="#28faf0" underline="true" text="前往仪式"/>
     <component id="n105_nxdg" name="btn_break" src="gvalo3z" fileName="Components/btn_second_red.xml" xy="802,529" group="n115_k27e">
       <Button title="解除关系"/>

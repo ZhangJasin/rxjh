@@ -181,6 +181,14 @@ function MentorShipMain:InitEvent()
 	FGUI:GList_itemRenderer(self._ui.list_apprentice_cond, handler(self, self.RenderApprenticeCondItem))
 	FGUI:GList_itemRenderer(self._ui.list_mentor_intro, handler(self, self.RenderMentorIntroItem))
 	FGUI:GList_itemRenderer(self._ui.list_apprentice_intro, handler(self, self.RenderApprenticeIntroItem))
+
+	--测试数据
+	FGUI:GRichTextField_setUBBEnabled(self._ui.rtext_done, true)
+	FGUI:GRichTextField_setText(self._ui.rtext_done, "[color=#28FAF0][url=go]一键完成[/url][/color]")
+	FGUI:GRichTextField_addOnLinkClickEvent(self._ui.rtext_done, function()
+		print("测试完成所有任务")
+		ssrMessage:sendmsgEx("MentorShip", "TestCompleteAllTasks")
+	end)
 end
 
 function MentorShipMain:InitPage()
