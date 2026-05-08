@@ -281,6 +281,7 @@ function MainMission:OnListMissionItemClick(context)
     
     local task_turntype = Task_cfg[data.taskid]['task_turntype'] or 1
     local task_turn_param = Task_cfg[data.taskid]['task_turn_param'] or 1
+    local task_type = Task_cfg[data.taskid]['task_type'] or 0
 
     if task_turn_param == 10 then
         FGUI:Open("Reward", "rewardMain",1,nil,{fullScreen = false,destroyTime = 1})
@@ -293,7 +294,6 @@ function MainMission:OnListMissionItemClick(context)
             FGUI:Open("Skill", "SkillFramePanel", 2)
         elseif task_turn_param == 3 then  --打开转职界面
             FGUI:Open("Transfer", "TransferPanel")
-            -- ssrMessage:sendmsgEx("Task", "onTransfer")
         elseif task_turn_param == 4 then  --打开阵营界面
             FGUI:Open("Transfer","campPanl")
         elseif task_turn_param == 5 then  --打开强化界面
@@ -327,6 +327,10 @@ function MainMission:OnListMissionItemClick(context)
         end
     elseif task_turntype == 3 then   --引导
         self:StartGuide(task_turn_param, data.taskid)
+    end
+
+    if taskflag and task_type == 6 then --门派任务，完成后打开门派贡献界面
+        FGUIFunction:OpenGuildMainFrameUI(2)
     end
 end
 
@@ -424,7 +428,6 @@ function MainMission:onTransferComplete()  -- 完成转职
 end
 
 function MainMission:onAddSkill()  -- 新增技能
-    print("========================","新增技能")
     ssrMessage:sendmsgEx("Task", "onStudySkill")
 end
 -- 等级变化

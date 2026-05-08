@@ -782,7 +782,6 @@ function GuildMainPanel:FilterRewardsByJob(tab)
     local myZy = SL:GetValue("GOODEVILID") or 0
     local filteredRewards = {}
     local index = 0
-	SL:dump(tab,"富士康方式开发11")
     
     for _, v in pairs(tab) do
         local needjob,needsex,needzy = v[1],v[4] or 0,v[5] or 0 
@@ -791,7 +790,6 @@ function GuildMainPanel:FilterRewardsByJob(tab)
             filteredRewards[index] = v
         end
     end
-    SL:dump(filteredRewards,"富士康方式开发222")
     return filteredRewards
 end
 function GuildMainPanel:getTaskCon()
