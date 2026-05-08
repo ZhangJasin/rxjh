@@ -232,7 +232,7 @@ local function _onLevelUp(actor, cur_level, before_level)
 end
 
 -- 锻造强化次数  强化部位指定等级
-local function _onQiangHua(actor,flag)
+local function _onQiangHua(actor,isQH)
     local TaskProgress_data = Task.getCurTask(actor)
     local taskchange = 0  --任务是否有变化，有的话更新
     local taskfinish = 0
@@ -245,7 +245,7 @@ local function _onQiangHua(actor,flag)
             if type(targetTab) == "table" and targetTab[1] == _taskMB4data._QiangHua then
                 local qhType = targetTab[2]
                 local neednum = Task_cfg[taskid]['task_progress'] or 1
-                if qhType == _QiangHuaCount and v['count'] < neednum then     --强化指定次数
+                if qhType == _QiangHuaCount and isQH == 1 and v['count'] < neednum then     --强化指定次数
                     TaskProgress_data[k]['count'] = TaskProgress_data[k]['count']+1
                     taskchange = Task_Change_Flag
                     if TaskProgress_data[k]['count'] >= neednum then

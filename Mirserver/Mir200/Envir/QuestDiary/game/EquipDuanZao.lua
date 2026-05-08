@@ -188,7 +188,7 @@ function EquipDuanZao.qianghua(actor, data)
     Message.sendmsgEx(actor, "EquipDuanZao", "UpdataQH", { param1 = 1, param2 = nextlv })
 
     -- 强化加工次数事件触发
-    GameEvent.push(EventCfg.onQiangHua, actor, sum > basesuc)
+    GameEvent.push(EventCfg.onQiangHua, actor, isQHStdMode[stdmode] and 1 or 2)
 end
 
 -- 赋予属性
