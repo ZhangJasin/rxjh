@@ -21,11 +21,11 @@ function PCMainMission:Create()
 end
 
 function PCMainMission:Enter()
-    
+    SL:RegisterLUAEvent(LUA_EVENT_ASSIST_HIDE, "PCMainMission", handler(self, self.Hide,true))
 end
 
 function PCMainMission:Exit()
-    
+    SL:UnRegisterLUAEvent(LUA_EVENT_ASSIST_HIDE, "MainAssist")
 end
 
 function PCMainMission:Destroy()

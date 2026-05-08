@@ -23,6 +23,9 @@ end
 function CountdownPanel:Enter(data)
     self:RegisterEvent()
     
+    -- 隐藏左侧任务界面
+    SLBridge:onLUAEvent(LUA_EVENT_ASSIST_HIDE)
+    
     -- 适配PC端缩放
     if IS_PC then
         FGUI:setScale(self.component, 0.68, 0.75)
