@@ -13,6 +13,7 @@
     <text id="n2_myqz" name="title" xy="0,0" size="94,88" fontSize="12" align="center" vAlign="middle" autoSize="none" singleLine="true" text="">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
+    <image id="n3_oca6" name="red" src="oca6kvpr" fileName="image/btn_red.png" pkg="st7dgeqq" xy="66,14"/>
   </displayList>
   <Button downEffect="dark" downEffectValue="0.8"/>
 </component>
