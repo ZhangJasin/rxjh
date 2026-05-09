@@ -3,6 +3,20 @@
 DailyTask = {}
 local DailyTask_cfg = require("Envir/QuestDiary/game_config/cfgcsv/actPointDetail.lua")
 local ActPointAward_cfg = require("Envir/QuestDiary/game_config/cfgcsv/actPointAward.lua")
+local BossXS_Cfg  =  require("Envir/QuestDiary/game_config/cfgcsv/BOSSInfo.lua")
+
+local YL_BASE_COUNT = 500000
+local MON_BASE_COUNT = 500
+local _taskType = {
+    _guildexp       = 1,                -- 门派捐献
+    _guildTask      = 2,                -- 门派任务
+    _QH             = 3,                -- 装备强化
+    _killBoss       = 4,                -- 击杀BOSS
+    _buyshopping    = 5,                -- 购买商品
+    _bossXS         = 6,                -- BOSS悬赏
+    _ylcost         = 7,                -- 消耗银两50万
+    _killmon        = 8,                -- 击杀怪物500个
+}
 
 -- 获取每日任务数据
 function DailyTask.getData(actor)
@@ -57,22 +71,21 @@ function DailyTask.getPointAward(actor, data)
         return
     end
     
-    -- 发放奖励
-    if cfg.awardList and #cfg.awardList > 0 then
-        for _, award in ipairs(cfg.awardList) do
-            giveitem(actor, award[1] .. "#" .. award[2])
-        end
-    end
-    
     -- 标记为已领取
-    
+    set(actor,cfg.flag,1)
+
+    -- 发放奖励
+    if cfg.award and #cfg.award > 1 then
+        giveitem(actor, cfg.award[1] .. "#" .. cfg.award[2].. "#" .. ConstCfg.binding,1)
+    end   
+       
     sendmsg(actor, 9, "领取成功")
     DailyTask.checkRed(actor)
     DailyTask.sendDataToClient(actor)
 end
 
 -- 请求数据（客户端打开界面时调用）
-function DailyTask.reqData(actor, data)
+function DailyTask.reqData(actor)
     DailyTask.sendDataToClient(actor)
 end
 
@@ -114,6 +127,247 @@ end, DailyTask)
 
 GameEvent.add(EventCfg.onResetday, function (actor)
     _dailyReset(actor)
+end, DailyTask)
+
+local function _onKill_Mon(actor)
+    local cfg = DailyTask_cfg[_taskType._killmon]
+    if not cfg or not cfg.varName then
+        return
+    end
+    local limitTimes = cfg.limitTimes or 0
+    local curTimes = gethumvar(actor,cfg.varName) or 0
+    if curTimes >= limitTimes then
+        return
+    end
+    local curMonCount = gethumvar(actor,VarCfg.U_MRBZ_Mon) or 0
+    local nextCount = curMonCount + 1
+    local addPoint = 0
+    if nextCount >= MON_BASE_COUNT then
+        nextCount = 0
+        addPoint = cfg.point or 0
+    end
+    sethumvar(actor,VarCfg.U_MRBZ_Mon,nextCount)
+    if addPoint > 0 then
+        sethumvar(actor,cfg.varName,curTimes + 1)
+
+        local curPoint = gethumvar(actor,VarCfg.U_MRBZ_Point) or 0
+        sethumvar(actor,VarCfg.U_MRBZ_Point,curPoint + addPoint)
+        sendmsg(actor, 9, string.format("击杀怪物达到500只，获得%d点活跃",addPoint))
+
+        DailyTask.sendDataToClient(actor)
+        DailyTask.checkRed(actor)
+    end
+end
+local function _onKill_bossxs(actor,monidx)
+    if not BossXS_Cfg[monidx] then
+        return
+    end
+    local cfg = DailyTask_cfg[_taskType._bossXS]
+    if not cfg or not cfg.varName then
+        return
+    end
+    local limitTimes = cfg.limitTimes or 0
+    local curTimes = gethumvar(actor,cfg.varName) or 0
+    if curTimes >= limitTimes then
+        return
+    end
+    local addPoint = cfg.point or 0
+    if addPoint > 0 then
+        sethumvar(actor,cfg.varName,curTimes + 1)
+        
+        local curPoint = gethumvar(actor,VarCfg.U_MRBZ_Point) or 0
+        sethumvar(actor,VarCfg.U_MRBZ_Point,curPoint + addPoint)
+        sendmsg(actor, 9, string.format("挑战BOSS，获得%d点活跃",addPoint))
+
+        DailyTask.sendDataToClient(actor)
+        DailyTask.checkRed(actor)
+    end
+end
+local function _onKill_boss(actor,monidx)
+    local monType = Monster_cfg[monidx].BossSign or 0
+    if monType ~= 3 then
+        return
+    end
+    local cfg = DailyTask_cfg[_taskType._killBoss]
+    if not cfg or not cfg.varName then
+        return
+    end
+    local limitTimes = cfg.limitTimes or 0
+    local curTimes = gethumvar(actor,cfg.varName) or 0
+    if curTimes >= limitTimes then
+        return
+    end
+    local addPoint = cfg.point or 0
+    if addPoint > 0 then
+        sethumvar(actor,cfg.varName,curTimes + 1)
+
+        local curPoint = gethumvar(actor,VarCfg.U_MRBZ_Point) or 0
+        sethumvar(actor,VarCfg.U_MRBZ_Point,curPoint + addPoint)
+        sendmsg(actor, 9, string.format("击杀BOSS，获得%d点活跃",addPoint))
+
+        DailyTask.sendDataToClient(actor)
+        DailyTask.checkRed(actor)
+    end
+end
+local function _onKillMon(actor, mon, mapid, monidx)   
+    _onKill_Mon(actor)
+    _onKill_boss(actor,monidx)
+    _onKill_bossxs(actor,monidx)   
+end
+GameEvent.add(EventCfg.onKillMon, function (actor, mon, mapid, monidx)                 -- 怪物死亡触发
+    _onKillMon(actor, mon, mapid, monidx)
+end, DailyTask)
+
+local function _onQiangHua(actor, isQH)
+    if not isQH then
+        return
+    end
+    local cfg = DailyTask_cfg[_taskType._QH]
+    if not cfg or not cfg.varName then
+        return
+    end
+    local limitTimes = cfg.limitTimes or 0
+    local curTimes = gethumvar(actor,cfg.varName) or 0
+    if curTimes >= limitTimes then
+        return
+    end
+    local addPoint = cfg.point or 0
+    if addPoint > 0 then
+        sethumvar(actor,cfg.varName,curTimes + 1)
+
+        local curPoint = gethumvar(actor,VarCfg.U_MRBZ_Point) or 0
+        sethumvar(actor,VarCfg.U_MRBZ_Point,curPoint + addPoint)
+        sendmsg(actor, 9, string.format("装备强化，获得%d点活跃",addPoint))
+
+        DailyTask.sendDataToClient(actor)
+        DailyTask.checkRed(actor)
+    end
+end
+GameEvent.add(EventCfg.onQiangHua, function (actor,isQH)         -- 强化功能触发  强化次数要求
+    _onQiangHua(actor,isQH)
+end, DailyTask)
+
+local function _onBuyItem(actor,itemId,itemCount)
+    local cfg = DailyTask_cfg[_taskType._buyshopping]
+    if not cfg or not cfg.varName then
+        return
+    end
+    local limitTimes = cfg.limitTimes or 0
+    local curTimes = gethumvar(actor,cfg.varName) or 0
+    if curTimes >= limitTimes then
+        return
+    end
+    local addPoint = cfg.point or 0
+    if addPoint > 0 then
+        sethumvar(actor,cfg.varName,curTimes + 1)
+
+        local curPoint = gethumvar(actor,VarCfg.U_MRBZ_Point) or 0
+        sethumvar(actor,VarCfg.U_MRBZ_Point,curPoint + addPoint)
+        sendmsg(actor, 9, string.format("商城购买，获得%d点活跃",addPoint))
+
+        DailyTask.sendDataToClient(actor)
+        DailyTask.checkRed(actor)
+    end
+end
+GameEvent.add(EventCfg.onBuyShopItem, function (actor,itemId,num)
+    _onBuyItem(actor,itemId,num)
+end, DailyTask)
+
+local function _onGuildTask(actor)
+    local cfg = DailyTask_cfg[_taskType._guildTask]
+    if not cfg or not cfg.varName then
+        return
+    end
+    local limitTimes = cfg.limitTimes or 0
+    local curTimes = gethumvar(actor,cfg.varName) or 0
+    if curTimes >= limitTimes then
+        return
+    end
+    local addPoint = cfg.point or 0
+    if addPoint > 0 then
+        sethumvar(actor,cfg.varName,curTimes + 1)
+
+        local curPoint = gethumvar(actor,VarCfg.U_MRBZ_Point) or 0
+        sethumvar(actor,VarCfg.U_MRBZ_Point,curPoint + addPoint)
+        sendmsg(actor, 9, string.format("完成门派任务，获得%d点活跃",addPoint))
+
+        DailyTask.sendDataToClient(actor)
+        DailyTask.checkRed(actor)
+    end
+end
+
+GameEvent.add(EventCfg.onGuildTask, function (actor)
+    _onGuildTask(actor)
+end, DailyTask)
+
+local function _onGuildsetexp(actor)
+    local cfg = DailyTask_cfg[_taskType._guildexp]
+    if not cfg or not cfg.varName then
+        return
+    end
+    local limitTimes = cfg.limitTimes or 0
+    local curTimes = gethumvar(actor,cfg.varName) or 0
+    if curTimes >= limitTimes then
+        return
+    end
+    local addPoint = cfg.point or 0
+    if addPoint > 0 then
+        sethumvar(actor,cfg.varName,curTimes + 1)
+
+        local curPoint = gethumvar(actor,VarCfg.U_MRBZ_Point) or 0
+        sethumvar(actor,VarCfg.U_MRBZ_Point,curPoint + addPoint)
+        sendmsg(actor, 9, string.format("门派捐献，获得%d点活跃",addPoint))
+
+        DailyTask.sendDataToClient(actor)
+        DailyTask.checkRed(actor)
+    end
+end
+
+GameEvent.add(EventCfg.onGuildsetexp, function (actor, type, addzj)         -- 强化功能触发  强化次数要求
+    _onGuildsetexp(actor)
+end, DailyTask)
+
+local function _onChangeYL(actor,lastCount)
+    local curCount = money(actor, 1)
+    if curCount >= lastCount then
+        return
+    end
+    --银两消耗 1次
+    local cfg = DailyTask_cfg[_taskType._ylcost]
+    if not cfg or not cfg.varName then
+        return
+    end
+    local limitTimes = cfg.limitTimes or 0
+    local curTimes = gethumvar(actor,cfg.varName) or 0
+    if curTimes >= limitTimes then
+        return
+    end
+
+    local cost = curCount - lastCount
+    local curCost = gethumvar(actor,VarCfg.U_MRBZ_YLXH) or 0
+    local nextCost = curCost + cost
+    local addPoint = 0
+    if nextCost >= YL_BASE_COUNT then
+        nextCost = 0
+        addPoint = cfg.point or 0
+    end
+    sethumvar(actor,VarCfg.U_MRBZ_YLXH,nextCost)
+    if addPoint > 0 then
+        sethumvar(actor,cfg.varName,curTimes + 1)
+
+        local curPoint = gethumvar(actor,VarCfg.U_MRBZ_Point) or 0
+        sethumvar(actor,VarCfg.U_MRBZ_Point,curPoint + addPoint)
+        sendmsg(actor, 9, string.format("银两消耗达到50W，获得%d点活跃",addPoint))
+
+        DailyTask.sendDataToClient(actor)
+        DailyTask.checkRed(actor)
+    end
+end
+GameEvent.add(EventCfg.onChangeMoney, function (actor, moneyID, lastCount)   -- 气功点改变
+    if moneyID ~= 1 then
+        return
+    end
+    _onChangeYL(actor,lastCount)
 end, DailyTask)
 
 -- 注册消息
