@@ -1272,14 +1272,14 @@ local config = {
 	},
 	["QuickBar1"] = { 
 		k="QuickBar1",
-		value="101|102|103|104|118|119|120|123",
+		value="101|102|118|119|120|123",
 		sName="快捷栏1号道具，填写道具id",
 		GroupName="客户端使用",
 		IsServer=0,
 	},
 	["QuickBar2"] = { 
 		k="QuickBar2",
-		value="105|106|107|108|109|110|111|115|117",
+		value="107|108|109|110|111|115|117",
 		sName="快捷栏2号道具，填写道具id",
 		GroupName="客户端使用",
 		IsServer=0,
