@@ -245,6 +245,7 @@ VarCfg.F_HWJL_start                      = "011" -- 每日必做活跃奖励011-015
 VarCfg.F_HWJL_end                        = "011" -- 每日必做活跃奖励011-015
 ---------------------------------------↓↓↓ S变量 ↓↓↓---------------------------------------
 -- 个人字符变量，下线不保存
+VarCfg.S_BossChall_Data           = "S87" -- BOSS挑战信息
 VarCfg.S_FuBen_Var_PlayerPosition = "S88" -- 进入副本前的位置信息
 VarCfg.S_FuBen_Var_CurrentInfo    = "S89" -- 当前创建的单人副本信息
 

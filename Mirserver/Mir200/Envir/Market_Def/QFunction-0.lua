@@ -1063,6 +1063,11 @@ function g_ontimer49(obj, actor, id)
     end
 end
 
+-- Boss挑战创建镜像地图延时回调
+function boss_chall(actor)
+    BossChall.doCreateMirrorMap(actor)
+end
+
 ---新伤害流程
 function loginend(actor)
     -- print("loginend")

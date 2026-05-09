@@ -216,14 +216,47 @@ function BossChall.chall(actor, data)
     local needToken = dailyCount >= freeCount
     
     local newMapId  = BOSS_MAP_ID .. userid(actor)  --新地图
-    delmirrormap(newMapId)
-    local challTime = tonumber(SysConstant['Boss_Chall_Time']["Value"]) or 300
+    if checkmirrormap(newMapId) then        
+        delmirrormap(newMapId)
+    end
     
+    -- 先保存需要的数据
+    local challTime = tonumber(SysConstant['Boss_Chall_Time']["Value"]) or 300
+    local saveData = {
+        index = index,
+        bossId = bossId,
+        needToken = needToken,
+        newMapId = newMapId,
+        challTime = challTime,
+        dailyCount = dailyCount,
+    }
+    sethumvar(actor, VarCfg.S_BossChall_Data, tbl2json(saveData))
+    -- 延时创建镜像地图，避免返回FALSE
+    gotolabel(actor, "@boss_chall", 200, 0, 0)
+end
+
+-- 创建镜像地图的延时处理函数
+function BossChall.doCreateMirrorMap(actor)
+    local saveDataStr = gethumvar(actor, VarCfg.S_BossChall_Data)
+    if not saveDataStr or saveDataStr == "" then
+        return
+    end
+    
+    local saveData = json2tbl(saveDataStr)
+    local newMapId = saveData.newMapId
+    local challTime = saveData.challTime
+    local needToken = saveData.needToken
+    local index = saveData.index
+    local bossId = saveData.bossId
+    local dailyCount = saveData.dailyCount
+    
+    -- 创建镜像地图
     local result = addmirrormap(tostring(BOSS_MAP_ID), newMapId, BOSS_MAP_NAME, challTime, BOSS_SAFE_MAP_ID, 1, BOSS_SAFE_POS_X, BOSS_SAFE_POS_Y)
     if not result then
         sendmsg(actor, 9, "创建副本失败，稍后再试")
         return
     end
+    
     if needToken then
         -- 需要消耗悬赏令
         if not takeitem(actor, "悬赏令#1", 0) then
@@ -234,7 +267,8 @@ function BossChall.chall(actor, data)
     end
     
     -- 更新BOSS挑战次数
-    bossData[index][2] = challCount + 1
+    local bossData = _getBossData(actor)
+    bossData[index][2] = (bossData[index][2] or 0) + 1
     _saveBossData(actor, bossData)
     
     -- 更新每日总挑战次数
@@ -247,6 +281,9 @@ function BossChall.chall(actor, data)
     -- 移动完成后再设置状态为挑战中
     sethumvar(actor, VarCfg.N_boss_state, 0)
     Message.sendmsg(actor, ssrNetMsgCfg.BOSSChall_Begin, challTime)
+    
+    -- 清理保存的数据
+    sethumvar(actor, VarCfg.S_BossChall_Data, nil)
 end
 
 
@@ -257,7 +294,7 @@ end
 function BossChall.leaveChall(actor) 
     if targetinfo(actor, "MAPTITLE") == BOSS_MAP_NAME then
         mapmove(actor, BOSS_SAFE_MAP_ID, BOSS_SAFE_POS_X, BOSS_SAFE_POS_Y, 5)
-        delmirrormap(targetinfo(actor, "NEWMAP"))
+        delmirrormap(targetinfo(actor, "NEWMAP"))    
     end
 end
 
