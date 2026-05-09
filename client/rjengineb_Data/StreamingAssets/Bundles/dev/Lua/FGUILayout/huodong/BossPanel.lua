@@ -6,6 +6,7 @@ local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
 local ItemShow = SL:RequireFile("FGUILayout/Item/ItemShow")
 local SysConstant = require("game_config/cfgcsv/SysConstant")
 local BossInfo_Cfg = require("game_config/cfgcsv/BOSSInfo")
+local Tips_Cfg = require("game_config/cfgcsv/TipsDetail")
 
 -- 创建界面并绑定所有UI事件
 function BossPanel:Create()
@@ -29,6 +30,9 @@ function BossPanel:Create()
 
     self.tipsControlle = FGUI:getController(self.component, "tips")
 	self.tipsbg = FGUI:ui_delegate(self._ui.panel_tips)
+    FGUI:GTextField_setText(self.tipsbg.title, Tips_Cfg[2]['title'])                                     -- 打开按钮
+    FGUI:GRichTextField_setText(self.tipsbg.con, Tips_Cfg[2]['tips'])
+
      -- 点击tips
     FGUI:setOnClickEvent(self._ui.btn_tips, handler(self, self.btnTipsClicked))
     FGUI:setOnClickEvent(self.tipsbg.close_tip, handler(self, self.btnTipsClicked))

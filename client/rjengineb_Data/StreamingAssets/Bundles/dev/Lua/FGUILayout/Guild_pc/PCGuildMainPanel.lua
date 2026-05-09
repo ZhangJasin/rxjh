@@ -7,6 +7,7 @@ local Language = require("game_config/cfgcsv/Language")
 local TaskStar_cfg = require("game_config/cfgcsv/guildTaskStar")
 local Act_Cfg = require("game_config/cfgcsv/guildAct")
 local SysConstant = require("game_config/cfgcsv/SysConstant")
+local Tips_Cfg = require("game_config/cfgcsv/TipsDetail")
 
 local color_green = "#19D71E"
 local color_white = "#DBDFE3"
@@ -106,6 +107,8 @@ function PCGuildMainPanel:Create()
 	end)
 	self.tipsControlle = FGUI:getController(self.component, "tips")
 	self.tipsbg = FGUI:ui_delegate(self._ui.panl_tip)
+	FGUI:GTextField_setText(self.tipsbg.title, Tips_Cfg[1]['title'])                                     -- 打开按钮
+    FGUI:GRichTextField_setText(self.tipsbg.con, Tips_Cfg[1]['tips'])
      -- 点击tips
     FGUI:setOnClickEvent(self._ui.btn_tips, handler(self, self.btnTipsClicked))
     FGUI:setOnClickEvent(self.tipsbg.close_tip, handler(self, self.btnTipsClicked))
