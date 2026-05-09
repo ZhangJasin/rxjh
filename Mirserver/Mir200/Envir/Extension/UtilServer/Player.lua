@@ -88,6 +88,31 @@ local taskEquipSpec={--装备ID 和stdmode
     [330008]= 15 ,
 }
 --给物品
+local function _addGuildExp(actor, exp)
+    if exp < 1 then
+        return
+    end
+    local guildObj = targetinfo(actor, "GUILDOBJID")
+    local curexp = getguildinfo(guildObj .. "_" .. 12) or 0
+    local curLevel = getguildinfo(guildObj .. "_" .. 13) or 1
+    -- 更新玩家门派贡献值
+    changemoney(actor, 20, "+", exp)
+    setguildmemberexp(guildObj, actor, '+', exp)              -- 设置成员贡献值
+    curexp = curexp + exp
+    local needexp = guild_level_data[curLevel]["Exp"] or 100    -- 升级需要经验值
+    while curexp >= needexp and curLevel < #guild_level_data do -- 满足升级条件
+        curLevel = curLevel + 1
+        curexp = curexp - needexp
+        needexp = guild_level_data[curLevel]["Exp"] or 100 -- 升级需要经验值
+    end
+    local maxPreple = guild_level_data[curLevel]["maxPreple"] or 5
+    setguildexp(guildObj, "=", curexp, actor)
+    setguildinfo(guildObj, 3, maxPreple)            -- 设置最大人数
+    setguildinfo(guildObj, 6, "=", curLevel, actor) -- 设置当前等级
+
+    Guild.getData(actor)
+end
+
 function Player.giveItemByTable(actor, t, multiple, isbind)
     multiple = multiple or 1         --倍数
     local parts = {}
@@ -97,6 +122,8 @@ function Player.giveItemByTable(actor, t, multiple, isbind)
         -- print("num="..num)
         if idx == 3 or idx == "经验" then
             changeexp(actor, "+", num * multiple)
+        elseif idx == 20 or idx == "门派贡献" then
+            _addGuildExp(actor, num * multiple)
         else
             if bind or isbind then
                 table.insert(parts, idx .. "#" .. num * multiple .. "#" .. ConstCfg.binding)
@@ -120,6 +147,8 @@ function Player.giveItemByJobTable(actor, t, multiple, isbind)
         local needjob,idx,num,needsex,needzy = item[1],item[2],item[3],item[4] or 0,item[5] or 0
         if idx == 3 or idx == "经验" then
             changeexp(actor, "+", num * multiple)
+        elseif idx == 20 or idx == "门派贡献" then
+            _addGuildExp(actor, num * multiple)
         else
             if (needjob == job or needjob == 9) and (needsex == sex or needsex == 0) and (needzy == playzy or needzy == 0) then  --  9任意职业0任意性别
                 --部分装备直接穿戴

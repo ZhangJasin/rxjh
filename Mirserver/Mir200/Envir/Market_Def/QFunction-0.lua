@@ -857,7 +857,7 @@ end
 ---@param guildName userdata 门派名
 function createguild(actor, guildid, guildName)
     local guildObj = guildobj(guildid)
-    local guildPerple = guild_level_data[1]["maxPreple"] or 5
+    local guildPerple = guild_level_data[1]["maxPreple"] or 50
     setguildinfo(guildObj, 3, guildPerple) -- 设置最大人数
     setguildinfo(guildObj, 7, 1)           -- 设置当前等级
     GameEvent.push(EventCfg.onCreateguild, actor, guildid, guildName)
@@ -913,7 +913,7 @@ function guildsetexp(actor, type)
         curexp = curexp - needexp
         needexp = guild_level_data[curLevel]["Exp"] or 100 -- 升级需要经验值
     end
-    local maxPreple = guild_level_data[curLevel]["maxPreple"] or 5
+    local maxPreple = guild_level_data[curLevel]["maxPreple"] or 50
     setguildexp(guildObj, "=", curexp, actor)
     setguildinfo(guildObj, 3, maxPreple)            -- 设置最大人数
     setguildinfo(guildObj, 6, "=", curLevel, actor) -- 设置当前等级
