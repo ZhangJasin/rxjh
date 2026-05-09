@@ -19,6 +19,11 @@ local TaskPool_cfg  =  require("Envir/QuestDiary/game_config/cfgcsv/guildTaskPoo
 --     Message.sendmsgEx(actor, "GuildMainPanel","UpdataPage2")
 -- end
 
+-- 打开商店
+function Guild.OpenGuildShop(actor)   
+    opennpcshop(actor, 1, 29, 0,"门派商店")
+end
+
 local function _getCurTaskJinDu(actor,taskId)
     local taskDataList = Task.getCurTask(actor)
     local curTaskData = taskDataList[""..taskId] 

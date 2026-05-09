@@ -73,6 +73,8 @@
     <component id="gpy8vq5" name="additembtn.xml" path="/Components/" exported="true"/>
     <image id="gpy8vqa" name="tipsdi.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,13,26,26" duplicatePadding="true"/>
     <image id="gpy8vqb" name="xxdi2.png" path="/Images/" exported="true"/>
+    <component id="oca6vqc" name="btn_shop.xml" path="/Components/" exported="true"/>
+    <image id="oca6vqd" name="sd.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

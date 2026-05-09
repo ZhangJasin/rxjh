@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1024,768" designImageOffsetX="20" designImageOffsetY="8" designImageAlpha="55" bgColor="#333333">
-  <controller name="page_main" pages="0,信息,1,贡献,2,成员,3,列表,5,商店" selected="0"/>
+  <controller name="page_main" pages="0,信息,1,贡献,2,成员,3,列表" selected="0"/>
   <controller name="tips" pages="0,关闭,1,打开" selected="0"/>
   <controller name="addItem" pages="0,关闭,1,打开" selected="0"/>
   <displayList>
@@ -10,7 +10,6 @@
       <item title="贡献"/>
       <item title="成员"/>
       <item title="列表"/>
-      <item title="商店"/>
     </list>
     <component id="n167_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="177,166" size="676,432" group="n173_ohcw"/>
     <text id="n101_k2u1" name="text_title" xy="512,185" pivot="0.5,0.5" anchor="true" size="36,24" group="n173_ohcw" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="门派"/>
@@ -60,6 +59,7 @@
     <text id="n41_zah9" name="n41" xy="352,537" size="52,19" group="n42_zah9" fontSize="12" color="#ffff00" align="center" vAlign="middle" text="门派资金"/>
     <image id="n40_zah9" name="n40" src="emvc3k" fileName="image/icon_pattern.png" pkg="qa9a7rit" xy="440,539" size="24,16" group="n42_zah9" scale="-1,1"/>
     <group id="n42_zah9" name="n42" xy="320,537" size="145,19" group="n43_zah9"/>
+    <component id="n253_oca6" name="btn_shop" src="oca64r" fileName="Components/btn_shop.xml" xy="679,524" size="72,69" group="n43_zah9"/>
     <group id="n43_zah9" name="MainPanel" xy="189,202" size="665,395" group="n173_ohcw" advanced="true">
       <gearDisplay controller="page_main" pages="0"/>
     </group>

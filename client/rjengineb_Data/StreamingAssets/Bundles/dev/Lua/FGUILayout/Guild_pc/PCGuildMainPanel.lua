@@ -74,6 +74,9 @@ function PCGuildMainPanel:Create()
 	FGUI:setOnClickEvent(self._ui.notice_edit_no, handler(self, self.CancelNoticeEdit))
 	FGUI:setOnClickEvent(self._ui.btn_event, handler(self, self.OpenGuildEventPanel))
 
+	--商店
+	FGUI:setOnClickEvent(self._ui.btn_shop, handler(self, self.OpenShop))
+
 	FGUI:setOnClickEvent(self._ui.btn_donate_1, function (eventData)
     	FGUI:delayTouchEnabled(eventData.sender, FGUIDefine.DelayClickTime)
 		self:OnClickDonationButton(1)
@@ -173,7 +176,7 @@ function PCGuildMainPanel:SelectPage(pageIdx)
 		-- 成员
 		SL:RequestGuildMemberList()
 	elseif pageIdx == 3 then
-		self:OnChangeGuildListMode()
+		self:OnChangeGuildListMode()		
 	end
 end
 
@@ -264,6 +267,10 @@ end
 -- 捐赠
 function PCGuildMainPanel:OnClickDonationButton(type)
 	SL:RequestDonation(type)
+end
+
+function PCGuildMainPanel:OpenShop()
+	ssrMessage:sendmsgEx("Guild", "OpenGuildShop")
 end
 
 --end

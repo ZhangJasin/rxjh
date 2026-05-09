@@ -69,6 +69,8 @@
     <component id="gpy84o" name="additembtn.xml" path="/Components/" exported="true"/>
     <component id="gpy84p" name="additempanl.xml" path="/Components/" exported="true"/>
     <image id="gpy84q" name="xxdi2.png" path="/Images/" exported="true"/>
+    <component id="oca64r" name="btn_shop.xml" path="/Components/" exported="true"/>
+    <image id="oca64s" name="sd.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
