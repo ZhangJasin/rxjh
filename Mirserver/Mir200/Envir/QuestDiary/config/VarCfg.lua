@@ -146,7 +146,7 @@ VarCfg.U_Pet_Base_ID                = "U108" -- 灵兽基础模型ID
 VarCfg.U_Pet_IS_HH                  = "U109" -- 是否使用灵兽幻化模型
 VarCfg.U_Pet_IS_SET                 = "U110" -- 是否激活灵兽
 VarCfg.U_Pet_Die_Time               = "U111" -- 灵兽死亡复活倒计时
-VarCfg.U_Pet_Passive                = "U111" -- 灵兽被动技能ID
+VarCfg.U_Pet_Passive                = "U103" -- 灵兽被动技能ID
 VarCfg.U_Pet_Now_Model              = "U112" -- 当前灵兽显示的模型ID（用于外观显示）
 
 VarCfg.U_BOSS_Count                 = "U113" -- 每日BOSS挑战次数
