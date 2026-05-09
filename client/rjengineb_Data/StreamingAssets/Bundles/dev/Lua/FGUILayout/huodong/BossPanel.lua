@@ -63,8 +63,10 @@ function BossPanel:RefreshUI()
     if not self._ui then return end
     
     -- 悬赏令数量
-    local itemCount = SL:GetValue("ITEM_COUNT", 3962) or 0
-    FGUI:GTextField_setText(self._ui.itemCount, itemCount)
+    --local itemCount = SL:GetValue("ITEM_COUNT", 3962) or 0
+    local maxFreeCount = 2
+    local curFreeTimes = math.min(maxFreeCount,self._times)
+    FGUI:GTextField_setText(self._ui.itemCount, string.format("%d/%d",curFreeTimes,maxFreeCount))
     
     -- 已调整次数
     local maxDailyCount = SysConstant['Boss_Day_MAX_Count'] and tonumber(SysConstant['Boss_Day_MAX_Count']['Value']) or 20
@@ -215,13 +217,23 @@ function BossPanel:ListBossShow(idx, item)
         local maxSingleCount = SysConstant['Boss_Chall_Count'] and tonumber(SysConstant['Boss_Chall_Count']['Value']) or 5
         local maxDailyCount = SysConstant['Boss_Day_MAX_Count'] and tonumber(SysConstant['Boss_Day_MAX_Count']['Value']) or 20
         
-        FGUI:GButton_setTitle(btn_chall, string.format("挑战：%s/%s", challCount, maxSingleCount))
+        --FGUI:GButton_setTitle(btn_chall, string.format("挑战：%s/%s", challCount, maxSingleCount))
         -- 检查是否可以挑战
-        local canChall = challCount < maxSingleCount and (self._times or 0) < maxDailyCount
-        FGUI:setTouchEnabled(btn_chall, canChall)
+        -- local canChall = challCount < maxSingleCount and (self._times or 0) < maxDailyCount
+        -- FGUI:setTouchEnabled(btn_chall, canChall)
         
         FGUI:setOnClickEvent(btn_chall, function()
             FGUI:delayTouchEnabled(btn_chall, FGUIDefine.DelayClickTime)
+            if self._times >= maxDailyCount then
+                SL:ShowScreenCenterTip("今日挑战次数已用完，明天再挑战", 249, 0, 200, 1, 1)
+                return
+            end
+
+            if challCount >= maxSingleCount then
+                SL:ShowScreenCenterTip("该BOSS今日挑战次数已达上限无法挑战，请挑战其他BOSS或使用刷新卷刷新该BOSS", 249, 0, 200, 1, 1)
+                return
+            end
+
             SL:OpenCommonDialog({
                 title = '提示',
                 str = self._times < 2 and "本次挑战将消耗一次免费挑战次数，是否进行挑战？" or "本次挑战将消耗1个悬赏令进行挑战，是否进行挑战？",

@@ -199,7 +199,7 @@ function BossChall.chall(actor, data)
     -- 检查同一BOSS挑战次数限制
     local maxSingleBossCount = tonumber(SysConstant['Boss_Chall_Count']["Value"]) or 5
     if challCount >= maxSingleBossCount then
-        sendmsg(actor, 9, "该BOSS今日挑战次数已用完")
+        sendmsg(actor, 9, "该BOSS今日挑战次数已达上限无法挑战，请挑战其他BOSS或使用刷新卷刷新该BOSS")
         return
     end
     
