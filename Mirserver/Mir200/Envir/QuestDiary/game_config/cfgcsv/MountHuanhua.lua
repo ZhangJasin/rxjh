@@ -4,10 +4,6 @@ local config = {
 		Name="ฮฺม๚พิ",
 		grade=1,
 		mount_icon="zuoji_000",
-		Cost = {
-			[1] = 2401,
-			[2] = 1,
-		},
 		Model=800001,
 		ClassID = {
 			[1] = {

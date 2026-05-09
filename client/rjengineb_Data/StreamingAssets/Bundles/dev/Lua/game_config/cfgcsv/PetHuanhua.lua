@@ -5,10 +5,6 @@ local config = {
 		grade=1,
 		mount_icon="pet_000",
 		Monster_ID=80010,
-		Cost = {
-			[1] = 2701,
-			[2] = 1,
-		},
 		Model=900028,
 		BuffDesc="根据幻化等级，获得以下属性：\n[color=#645967]普通[/color]：出战时人物[color=#5c5140]生命[/color]增加[color=#099613]50[/color]\n[color=#34963c]勇者[/color]：出战时人物[color=#5c5140]生命[/color]增加[color=#099613]100[/color]\n[color=#9226b2]史诗[/color]：出战时人物[color=#5c5140]生命[/color]增加[color=#099613]200[/color]\n[color=#aa2736]传说[/color]：出战时人物[color=#5c5140]生命[/color]增加[color=#099613]350[/color]\n[color=#c56d20]极品[/color]：出战时人物[color=#5c5140]生命[/color]增加[color=#099613]500[/color]",
 		Condition=1,
