@@ -116,6 +116,11 @@ function righttoppanlData:useItem(data)
     self:_Emit("use_item", data)
 end
 
+-- 每日必做红点更新
+function righttoppanlData:mrbzRedUpdate(data)
+    self:_Emit("mrbz_red_update", data)
+end
+
 -- 注册全局事件
 function righttoppanlData:RegisterEvent()
     SL:RegisterLUAEvent(LUA_EVENT_AUTO_MOVE_BEGIN, "righttoppanlData", handler(self, self.onXunlunBegin))

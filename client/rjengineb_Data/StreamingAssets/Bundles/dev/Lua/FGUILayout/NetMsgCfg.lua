@@ -56,6 +56,8 @@ ssrNetMsgCfg.BOSSChall_Begin                = 1100021
 ssrNetMsgCfg.BOSSChall_End                  = 1100022
 ssrNetMsgCfg.BOSSChall_Leave                = 1100023
 
+ssrNetMsgCfg.DailyTask                      = "DailyTask" -- 每日必做
+
 local t                                 = {}
 for msgName, msgID in pairs(ssrNetMsgCfg) do
     t[msgName] = msgID

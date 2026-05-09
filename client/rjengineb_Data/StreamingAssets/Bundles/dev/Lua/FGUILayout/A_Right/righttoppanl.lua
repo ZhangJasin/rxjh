@@ -118,6 +118,9 @@ function righttoppanl:Create()
     FGUI:setOnClickEvent(self._righttop.btn_boss_xs, function()
         FGUI:Open("huodong", "BossPanel")
     end)
+    FGUI:setOnClickEvent(self._righttop.btn_mrbz, function()
+        --FGUI:Open("huodong", "DailyTaskPanel")
+    end)
     -- 订阅数据层事件
     self:SubscribeEvents()
 
@@ -177,6 +180,10 @@ function righttoppanl:SubscribeEvents()
     -- 使用道具
     table.insert(self._subscriptions, righttoppanlData:Get():Subscribe("use_item", function(data)
         self:useItem(data)
+    end))
+    -- 每日必做红点更新
+    table.insert(self._subscriptions, righttoppanlData:Get():Subscribe("mrbz_red_update", function(data)
+        self:updateMRBZRed(data)
     end))
 end
 
@@ -241,6 +248,13 @@ end
 
 function righttoppanl:updateLSmodel(data)
     righttoppanlData:Get():updateLSmodel(data)
+end
+
+function righttoppanl:updateMRBZRed(data)
+   local redObj = FGUI:GetChild(self._righttop.btn_mrbz,"red")
+   if redObj then    
+     FGUI:setVisible(redObj,tonumber(data)==1)
+   end
 end
 
 return righttoppanl

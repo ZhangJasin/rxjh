@@ -232,7 +232,7 @@ function BossChall.chall(actor, data)
     }
     sethumvar(actor, VarCfg.S_BossChall_Data, tbl2json(saveData))
     -- 延时创建镜像地图，避免返回FALSE
-    gotolabel(actor, "@boss_chall", 200, 0, 0)
+    gotolabel(actor, "@boss_chall", 100, 0, 0)
 end
 
 -- 创建镜像地图的延时处理函数

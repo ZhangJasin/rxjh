@@ -94,3 +94,9 @@ ssrMessage:RegisterNetMsg(ssrNetMsgCfg.BagRecycleViewModel, BagRecycleViewModelU
 --装备图鉴功能
 equipCollectData = SL:RequireFile("FGUILayout/Z_Jasin/zbtj/equipCollectData")
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.equipCollect, equipCollectData)
+
+righttoppanlData = SL:RequireFile("FGUILayout/A_Right/righttoppanlData")
+ssrMessage:RegisterNetMsg(ssrNetMsgCfg.righttoppanl, righttoppanlData)
+
+DailyTaskUI = SL:RequireFile("FGUILayout/huodong/DailyTaskPanel")
+ssrMessage:RegisterNetMsg(ssrNetMsgCfg.DailyTask, DailyTaskUI)
