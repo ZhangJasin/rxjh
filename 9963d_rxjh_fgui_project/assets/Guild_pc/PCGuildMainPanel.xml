@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1024,768" designImageOffsetX="20" designImageOffsetY="8" designImageAlpha="55" bgColor="#333333">
-  <controller name="page_main" pages="0,,1,,2,,3," selected="1"/>
+  <controller name="page_main" pages="0,信息,1,贡献,2,成员,3,列表,5,商店" selected="0"/>
   <controller name="tips" pages="0,关闭,1,打开" selected="0"/>
   <controller name="addItem" pages="0,关闭,1,打开" selected="0"/>
   <displayList>
-    <list id="n94_dkvz" name="list_page_switch" xy="847,211" size="27,275" layout="flow_vt" overflow="scroll" scrollBarFlags="128" lineGap="2" defaultItem="ui://0xwve836gl562j" selectionController="page_main">
+    <list id="n94_dkvz" name="list_page_switch" xy="847,211" size="27,312" layout="flow_vt" overflow="scroll" scrollBarFlags="128" lineGap="2" defaultItem="ui://0xwve836gl562j" selectionController="page_main">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item title="信息"/>
       <item title="贡献"/>
       <item title="成员"/>
       <item title="列表"/>
+      <item title="商店"/>
     </list>
     <component id="n167_kra4" name="bg" src="emvcm" fileName="common/CommonBg.xml" pkg="qa9a7rit" xy="177,166" size="676,432" group="n173_ohcw"/>
     <text id="n101_k2u1" name="text_title" xy="512,185" pivot="0.5,0.5" anchor="true" size="36,24" group="n173_ohcw" font="ui://qa9a7ritrqwtkvph" fontSize="16" color="#9aafbb" align="center" vAlign="middle" text="门派"/>
