@@ -959,6 +959,15 @@ function stdmodefunc(actor, itemid, itemobj, useNumber, param1, param2)
         takeitem(actor, itemid .. "#" .. useNumber)
         giveitem(actor, "7#" .. num)
     end
+    if itemid == 4038 then --初级活跃宝箱
+        giveitem(actor, string.format("1#%d#%d&143#%d#%d", 50000*useNumber,ConstCfg.binding,2*useNumber,ConstCfg.binding),1)
+    end
+    if itemid == 4039 then --中级活跃宝箱
+        giveitem(actor, string.format("1#%d#%d&190#%d#%d&3961#%d#%d", 100000*useNumber,ConstCfg.binding,useNumber,ConstCfg.binding,useNumber,ConstCfg.binding),1)
+    end
+    if itemid == 4040 then --高级活跃宝箱
+        giveitem(actor, string.format("9#%d#%d&3984#%d#%d&248#%d#%d", 2000*useNumber,ConstCfg.binding,2*useNumber,ConstCfg.binding,useNumber,ConstCfg.binding),1)
+    end
 
     if itemReplace.canReplace(itemid) then
         local realUseCount = itemReplace.batchReplace(actor, itemid, useNumber)
