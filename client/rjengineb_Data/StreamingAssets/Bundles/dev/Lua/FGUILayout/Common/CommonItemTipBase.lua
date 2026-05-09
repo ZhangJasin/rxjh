@@ -82,7 +82,7 @@ end
 
 function CommonItemTipBase:OnChangeAutoSwitchEvent()
 	local isSelected = FGUI:GButton_getSelected(self._ui.checkBox_auto)
-	SL:SetQuickUseItemShow(self._curItemID, isSelected)
+	FGUIFunction:SetQuickUseItemShow(self._curItemID, isSelected)
 end
 
 function CommonItemTipBase:InitItemPurchasePanel(buyParam)

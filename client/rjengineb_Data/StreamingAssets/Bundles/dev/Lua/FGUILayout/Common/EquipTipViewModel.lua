@@ -55,7 +55,7 @@ end
 
 function EquipTipViewModel:OnChangeAutoSwitchEvent()
 	local isSelected = FGUI:GButton_getSelected(self._ui.checkBox_auto)
-	SL:SetQuickUseItemShow(self._itemId, isSelected)
+	FGUIFunction:SetQuickUseItemShow(self._itemId, isSelected)
 end
 
 function EquipTipViewModel:InitItemPurchasePanel(buyParam)
