@@ -41,7 +41,6 @@ local config = {
 		ID=4,
 		task_name="师徒组队完成副本1次[每日]",
 		type=2,
-		gxd_progress=100,
 		task_desc="每日完成师徒副本1次",
 		erveyday_reset=1,
 		task_target=10,
@@ -64,9 +63,7 @@ local config = {
 		ID=5,
 		task_name="完成2次BOSS狩猎",
 		type=2,
-		gxd_progress=100,
 		task_desc="完成2次BOSS狩猎",
-		erveyday_reset=2,
 		task_target=10,
 		task_target_param = {
 			[1] = 5,
@@ -91,7 +88,6 @@ local config = {
 		task_name="累计完成10次BOSS狩猎",
 		type=2,
 		task_desc="累计完成10次BOSS狩猎",
-		erveyday_reset=2,
 		task_target=5,
 		task_target_param = {
 			[1] = 5,
@@ -116,7 +112,6 @@ local config = {
 		task_name="累计完成5次门派捐献任务",
 		type=2,
 		task_desc="累计完成5次门派捐献任务",
-		erveyday_reset=2,
 		task_target=5,
 		task_target_param = {
 			[1] = 5,
@@ -141,7 +136,6 @@ local config = {
 		task_name="累计完成10次门派捐献任务",
 		type=2,
 		task_desc="累计完成10次门派捐献任务",
-		erveyday_reset=2,
 		task_target=5,
 		task_target_param = {
 			[1] = 5,
@@ -166,7 +160,6 @@ local config = {
 		task_name="徒弟等级到达40级",
 		type=2,
 		task_desc="徒弟等级到达40级",
-		erveyday_reset=2,
 		task_target=6,
 		task_target_param="*",
 		task_target_num=40,
@@ -188,7 +181,6 @@ local config = {
 		task_name="徒弟等级到达50级",
 		type=2,
 		task_desc="徒弟等级到达50级",
-		erveyday_reset=2,
 		task_target=1,
 		task_target_param="*",
 		task_target_num=50,
@@ -210,7 +202,6 @@ local config = {
 		task_name="任意宠物升至2阶",
 		type=2,
 		task_desc="任意宠物升至2阶",
-		erveyday_reset=2,
 		task_target=5,
 		task_target_param = {
 			[1] = 6,
@@ -232,10 +223,9 @@ local config = {
 	},
 	[12] = { 
 		ID=12,
-		task_name="任意宠物升至3阶",
+		task_name="任意宠物升至4阶",
 		type=2,
 		task_desc="任意宠物升至3阶",
-		erveyday_reset=2,
 		task_target=6,
 		task_target_param = {
 			[1] = 1,
@@ -260,7 +250,6 @@ local config = {
 		task_name="任意坐骑升至2阶",
 		type=2,
 		task_desc="任意坐骑升至2阶",
-		erveyday_reset=2,
 		task_target=4,
 		task_target_param = {
 			[1] = {
@@ -288,10 +277,9 @@ local config = {
 	},
 	[14] = { 
 		ID=14,
-		task_name="任意坐骑升至3阶",
+		task_name="任意坐骑升至4阶",
 		type=2,
 		task_desc="任意坐骑升至3阶",
-		erveyday_reset=2,
 		task_target=6,
 		task_target_param = {
 			[1] = 2,
@@ -315,9 +303,7 @@ local config = {
 		ID=15,
 		task_name="任意1个气功升至20级",
 		type=2,
-		gxd_progress=250,
 		task_desc="任意1个气功升至20级",
-		erveyday_reset=2,
 		task_target=4,
 		task_target_param = {
 			[1] = 1,
@@ -342,7 +328,6 @@ local config = {
 		task_name="任意2个气功升至20级",
 		type=2,
 		task_desc="任意2个气功升至20级",
-		erveyday_reset=2,
 		task_target=1,
 		task_target_param="*",
 		task_target_num=20,
@@ -364,7 +349,6 @@ local config = {
 		task_name="累计击杀100只怪物",
 		type=2,
 		task_desc="累计击杀100只怪物",
-		erveyday_reset=2,
 		task_target=7,
 		task_target_param = {
 			[1] = 7,
@@ -389,7 +373,6 @@ local config = {
 		task_name="累计击杀500只怪",
 		type=2,
 		task_desc="累计击杀500只怪",
-		erveyday_reset=2,
 		task_target=7,
 		task_target_param = {
 			[1] = 7,
@@ -414,7 +397,6 @@ local config = {
 		task_name="累计强化任意装备2次",
 		type=2,
 		task_desc="累计强化任意装备2次",
-		erveyday_reset=2,
 		task_target=5,
 		task_target_param = {
 			[1] = 4,
@@ -444,35 +426,9 @@ local config = {
 	},
 	[20] = { 
 		ID=20,
-		task_name="累计击杀1000只怪",
-		type=2,
-		task_desc="累计击杀1000只怪",
-		erveyday_reset=2,
-		task_target=7,
-		task_target_param = {
-			[1] = 7,
-			[2] = "*",
-		},
-		task_target_num=1000,
-		task_reward = {
-			[1] = {
-				[1] = 1,
-				[2] = 1,
-			},
-		},
-		task_reward_1 = {
-			[1] = {
-				[1] = 1,
-				[2] = 1,
-			},
-		},
-	},
-	[21] = { 
-		ID=21,
 		task_name="穿戴任意1件强化+8的装备",
 		type=2,
 		task_desc="穿戴任意1件强化+8的装备",
-		erveyday_reset=2,
 		task_target=5,
 		task_target_param = {
 			[1] = 4,
@@ -492,12 +448,11 @@ local config = {
 			},
 		},
 	},
-	[22] = { 
-		ID=22,
+	[21] = { 
+		ID=21,
 		task_name="累计完成30次BOSS狩猎",
 		type=2,
 		task_desc="累计完成30次BOSS狩猎",
-		erveyday_reset=2,
 		task_target=7,
 		task_target_param = {
 			[1] = 5,
@@ -517,12 +472,11 @@ local config = {
 			},
 		},
 	},
-	[23] = { 
-		ID=23,
+	[22] = { 
+		ID=22,
 		task_name="累计完成30次门派捐献任务",
 		type=2,
 		task_desc="累计完成30次门派捐献任务",
-		erveyday_reset=2,
 		task_target=8,
 		task_target_param = {
 			[1] = 5,
@@ -542,34 +496,11 @@ local config = {
 			},
 		},
 	},
-	[24] = { 
-		ID=24,
-		task_name="转职到达3转",
-		type=2,
-		task_desc="转职到达3转",
-		erveyday_reset=2,
-		task_target=2,
-		task_target_param="*",
-		task_target_num=3,
-		task_reward = {
-			[1] = {
-				[1] = 1,
-				[2] = 1,
-			},
-		},
-		task_reward_1 = {
-			[1] = {
-				[1] = 1,
-				[2] = 1,
-			},
-		},
-	},
-	[25] = { 
-		ID=25,
+	[23] = { 
+		ID=23,
 		task_name="徒弟等级到达60级",
 		type=2,
 		task_desc="徒弟等级到达60级",
-		erveyday_reset=2,
 		task_target=1,
 		task_target_param="*",
 		task_target_num=60,
@@ -586,12 +517,11 @@ local config = {
 			},
 		},
 	},
-	[26] = { 
-		ID=26,
-		task_name="任意宠物升至5阶",
+	[24] = { 
+		ID=24,
+		task_name="任意宠物升至6阶",
 		type=2,
 		task_desc="任意宠物升至5阶",
-		erveyday_reset=2,
 		task_target=6,
 		task_target_param = {
 			[1] = 1,
@@ -611,12 +541,11 @@ local config = {
 			},
 		},
 	},
-	[27] = { 
-		ID=27,
-		task_name="任意坐骑升至5阶",
+	[25] = { 
+		ID=25,
+		task_name="任意坐骑升至6阶",
 		type=2,
 		task_desc="任意坐骑升至5阶",
-		erveyday_reset=2,
 		task_target=6,
 		task_target_param = {
 			[1] = 2,
@@ -636,12 +565,11 @@ local config = {
 			},
 		},
 	},
-	[28] = { 
-		ID=28,
+	[26] = { 
+		ID=26,
 		task_name="任意3个气功升至20级",
 		type=2,
 		task_desc="任意3个气功升至20级",
-		erveyday_reset=2,
 		task_target=1,
 		task_target_param="*",
 		task_target_num=20,
@@ -654,6 +582,74 @@ local config = {
 		task_reward_1 = {
 			[1] = {
 				[1] = 1,
+				[2] = 1,
+			},
+		},
+	},
+	[27] = { 
+		ID=27,
+		task_name="累计击杀1000只怪",
+		type=2,
+		task_desc="累计击杀1000只怪",
+		task_target=7,
+		task_target_param = {
+			[1] = {
+				[1] = "*",
+				[2] = "*",
+			},
+		},
+		task_target_num=1000,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 1,
+			},
+		},
+	},
+	[28] = { 
+		ID=28,
+		task_name="累计击杀1000只怪",
+		type=2,
+		task_desc="累计击杀1000只怪",
+		task_target=7,
+		task_target_param = {
+			[1] = {
+				[1] = "*",
+				[2] = "*",
+			},
+		},
+		task_target_num=1000,
+		task_reward = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 2,
+				[2] = 1,
+			},
+		},
+		task_reward_1 = {
+			[1] = {
+				[1] = 1,
+				[2] = 1,
+			},
+			[2] = {
+				[1] = 2,
 				[2] = 1,
 			},
 		},
