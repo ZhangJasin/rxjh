@@ -2,10 +2,10 @@
 <component size="789,568">
   <controller name="isHaveStore" pages="0,没有商品,1,有商品" selected="0"/>
   <displayList>
-    <image id="n9_10pmd" name="bg" src="wq9wdv7r" fileName="Images/bgright.png" xy="1,1" size="793,568">
+    <image id="n9_10pmd" name="bg" src="wq9wdv7r" fileName="Images/bgright.png" xy="-3,0" size="795,569">
       <relation target="n7_10pmd" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </image>
-    <list id="n7_10pmd" name="list_buy" xy="0,1" size="800,566" layout="flow_hz" overflow="scroll" margin="4,5,-10,0" lineGap="-11" colGap="-11" lineItemCount="3" defaultItem="ui://p8mjxubr10pmdv6q" align="center">
+    <list id="n7_10pmd" name="list_buy" xy="0,0" size="788,567" layout="flow_hz" overflow="scroll" margin="3,1,0,0" lineGap="1" colGap="1" lineItemCount="3" defaultItem="ui://p8mjxubr10pmdv6q" align="center">
       <item/>
       <item/>
       <item/>
