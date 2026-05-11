@@ -621,18 +621,19 @@ function MentorShipMain:RefreshAll()
 			for i = 1, #self._taskList do
 				local taskData = self._taskList[i]
 				local prog = self.taskProgressList and self.taskProgressList["" .. taskData.ID]
-				if not prog or prog.status ~= 1 then
+				if not prog or prog.status ~= 1 or taskData.erveyday_reset == 1 then
 					table.insert(self._showTaskList, taskData)
 				end
 			end
 		end
 
 		FGUI:GList_setNumItems(self._ui.list_mentor, 1)
-		FGUI:GList_setNumItems(self._ui.list_tasks, #self._taskList)
+		FGUI:GList_setNumItems(self._ui.list_tasks, #self._showTaskList)
 		FGUI:GList_setNumItems(self._ui.list_graduate, #self.setOutList)
 		FGUI:GList_setNumItems(self._ui.list_apprentice, 3)
 		self:setRightInfo()
 	else
+		self._showTaskList = {}
 		FGUI:GList_setNumItems(self._ui.list_mentor, 1)
 		FGUI:GList_setNumItems(self._ui.list_apprentice, self._apprenticeMax or 3)
 		FGUI:GList_setNumItems(self._ui.list_tasks, 0)
@@ -649,9 +650,9 @@ function MentorShipMain:RefreshAll()
 end
 
 function MentorShipMain:setApprenticeTask(data)
-	self = MentorShipMainUI.CCUI
+	self = MentorShipMain.CCUI
 	self.taskProgressList = data.taskProgressList
-	FGUI:GList_setNumItems(self._ui.list_tasks, #self._taskList)
+	self:RefreshAll()
 end
 
 function MentorShipMain:setRightInfo()

@@ -1923,7 +1923,8 @@ function MentorShip.isCanBuy(actor, count, ItemID, excelID)
     return isCanBuy
 end
 
---测试数据
+-- 测试数据
+
 function MentorShip.TestCompleteAllTasks(actor)
     local userId = userid(actor)
 
@@ -1931,27 +1932,30 @@ function MentorShip.TestCompleteAllTasks(actor)
     local gxdTaskStr = getcustvar("11_" .. userId .. "_" .. "t_ApprenticeGxdTask")
 
     if taskProgressStr == "" or gxdTaskStr == "" then
+        sendmsg(actor, 9, "[color=#ff0000]请先拜师或收徒！[/color]")
         return
     end
 
     local taskProgressList = json2tbl(taskProgressStr)
     local gxdTask = json2tbl(gxdTaskStr)
+
     for i = 1, #Master_and_apprentice do
         local taskCfg = Master_and_apprentice[i]
         local ID = tostring(taskCfg.ID)
         local targetNum = taskCfg.task_target_num
 
         if taskCfg.type == 2 and taskProgressList[ID] then
-            -- 普通任務
-            taskProgressList[ID].num = targetNum
-            taskProgressList[ID].status = 1
+            -- 普通任务
+            taskProgressList[ID].num = targetNum -- ? 核心：进度拉满，任务条件达成
+            taskProgressList[ID].status = 0      -- ? 核心：状态必须是0，代表“可领奖但还没领”
         elseif taskCfg.type == 3 and gxdTask[ID] then
-            -- 貢獻度任務
-            gxdTask[ID].num = targetNum
-            gxdTask[ID].status = 1
+            -- 贡献度任务
+            gxdTask[ID].num = targetNum -- 进度拉满
+            gxdTask[ID].status = 0      -- 状态必须是0
         end
     end
 
+    ---- 顺便把结拜时间往前推30天，这样你领完所有奖励后，就可以顺手测试“出师”功能了
     --if taskProgressList['bondDateTimes'] then
     --    taskProgressList['bondDateTimes'] = taskProgressList['bondDateTimes'] - (30 * 86400)
     --end
@@ -1960,6 +1964,7 @@ function MentorShip.TestCompleteAllTasks(actor)
     sefcustvar(11, userId, 't_ApprenticeGxdTask', tbl2json(gxdTask))
 
     MentorShip.GetMyRelation(actor, 'MentorShipMain')
+    sendmsg(actor, 9, "[color=#00ff00]【测试】任务进度已全部拉满！请打开面板手动点击领取！[/color]")
 end
 
 --GameEvent.add(EventCfg.onPlayLevelUp, function(actor, lv, oldlv)

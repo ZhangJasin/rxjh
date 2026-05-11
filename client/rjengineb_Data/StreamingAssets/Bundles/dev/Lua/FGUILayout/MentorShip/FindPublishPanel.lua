@@ -24,7 +24,7 @@ function FindPublishPanel:Create()
 	self:InitEvent()
 	self:InitPage()
 	self:RegisterEvent()
-	--SL:RequestLookPlayer(tonumber(SL:GetValue("USER_ID")),nil,666)
+	SL:RequestLookPlayer(tonumber(SL:GetValue("USER_ID")), nil, 666)
 end
 
 function FindPublishPanel:Enter(data)
@@ -47,7 +47,7 @@ function FindPublishPanel:Enter(data)
 	self:RefreshRight()
 end
 
-function FindPublishPanel:Exit() 
+function FindPublishPanel:Exit()
 	self:RemoveEvent()
 end
 
@@ -113,6 +113,7 @@ function FindPublishPanel:LeftRenderer(idx, item)
 	setLabelText(getChild(item, "text_title"), c.title)
 	setLabelText(getChild(item, "text_info"), tostring(self._sel[c.key] or c.default or ""))
 end
+
 function FindPublishPanel:OnClickLeftItem()
 	self._leftIndex = (FGUI:GList_getSelectedIndex(self._ui.list_left) or 0) + 1
 	self:RefreshRight()
@@ -126,6 +127,7 @@ function FindPublishPanel:RightRenderer(idx, item)
 	local selected = tostring(self._sel[c.key]) == tostring(opt)
 	FGUI:GButton_setSelected(item, selected)
 end
+
 function FindPublishPanel:OnClickRightItem()
 	local idx = FGUI:GList_getSelectedIndex(self._ui.list_right)
 	local c = self._cats[self._leftIndex] or { key = "", options = {} }
@@ -138,6 +140,7 @@ function FindPublishPanel:OnClickRightItem()
 	FGUI:GList_setSelectedIndex(self._ui.list_left, self._leftIndex - 1)
 	self:RefreshRight()
 end
+
 function FindPublishPanel:RefreshRight()
 	local c = self._cats[self._leftIndex] or { options = {} }
 	FGUI:GList_setNumItems(self._ui.list_right, #(c.options or {}))
@@ -163,16 +166,16 @@ function FindPublishPanel:OnClickPublish(data)
 		ts = os.time(),
 		bodyId = self.modelInfo.bodyId,
 		headId = self.modelInfo.headId,
-        weaponId = self.modelInfo.rWeapon,
-        wingId = self.modelInfo.wingId,
+		weaponId = self.modelInfo.rWeapon,
+		wingId = self.modelInfo.wingId,
 		faceId = self.modelInfo.faceId,
 	}
 	if self._mode == 1 then
 		--成为师傅
-		ssrMessage:sendmsgEx("MentorShip", "applyToMaster",payload)
+		ssrMessage:sendmsgEx("MentorShip", "applyToMaster", payload)
 	else
 		--成为徒弟
-		ssrMessage:sendmsgEx("MentorShip", "applyToApprentice",payload)
+		ssrMessage:sendmsgEx("MentorShip", "applyToApprentice", payload)
 	end
 	self._store:ShowTips("已发布")
 	self:Close()
@@ -187,26 +190,28 @@ end
 
 function FindPublishPanel:getMyModeInfo()
 	local lookSex = SL:GetValue("L.M.SEX")
-    local lookJob = SL:GetValue("L.M.JOB")
-    local classConfig = SL:GetValue("ROLE_CLASS_CONFIG", lookJob)
-    if classConfig then 
-		faceId = FGUIFunction:GetFaceIDBySex(lookSex,classConfig)
-    end 
+	local lookJob = SL:GetValue("L.M.JOB")
+	local classConfig = SL:GetValue("ROLE_CLASS_CONFIG", lookJob)
+	if classConfig then
+		faceId = FGUIFunction:GetFaceIDBySex(lookSex, classConfig)
+	end
 	local modelData = SL:GetValue("L.M.PLAYER_MODEL")
 	self.modelInfo = {
 		bodyId = modelData.bodyId,
 		headId = modelData.headId,
-        weaponId = modelData.rWeapon,
-        wingId = modelData.wingId,
+		weaponId = modelData.rWeapon,
+		wingId = modelData.wingId,
 		faceId = faceId,
 	}
 	dump(self.modelInfo)
 end
 
 function FindPublishPanel:RegisterEvent()
-    SL:RegisterLUAEvent(LUA_EVENT_RESPONSE_LOOK_PLAYER_INFO, "FindPublishPanel", handler(self, self.getMyModeInfo))    
+	SL:RegisterLUAEvent(LUA_EVENT_RESPONSE_LOOK_PLAYER_INFO, "FindPublishPanel", handler(self, self.getMyModeInfo))
 end
+
 function FindPublishPanel:RemoveEvent()
-    SL:UnRegisterLUAEvent(LUA_EVENT_RESPONSE_LOOK_PLAYER_INFO, "FindPublishPanel")
+	SL:UnRegisterLUAEvent(LUA_EVENT_RESPONSE_LOOK_PLAYER_INFO, "FindPublishPanel")
 end
+
 return FindPublishPanel
