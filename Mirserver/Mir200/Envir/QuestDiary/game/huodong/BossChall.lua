@@ -328,6 +328,8 @@ GameEvent.add(EventCfg.onKillMon, function (actor, mon, mapid, monidx)
         local exitTime = tonumber(SysConstant['Boss_Chall_Exit_Time']["Value"]) or 60
         mirrormaptime(mapid,exitTime)
         Message.sendmsg(actor, ssrNetMsgCfg.BOSSChall_End, exitTime)
+        --完成师徒任务
+        MentorShipChangTask(actor, 11, "*", 1)
     end
 end, BossChall)
 

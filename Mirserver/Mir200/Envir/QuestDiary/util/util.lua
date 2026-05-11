@@ -1158,98 +1158,144 @@ end
 
 function MentorShipChangTask(actor, task_target, task_target_param, data)
     local taskList = getTaskByType(task_target, task_target_param)
-    for index = 1, #taskList do
-        local task = taskList[index]
-        local ID = task.ID
-        if ID then
-            local myTaskProBy = {}
-            if task.type == 1 then
-            else
-                if task.type == 2 then
-                    myTaskProBy = json2tbl(getcustvar("11_" .. userid(actor) .. "_" .. "t_ApprenticeTaskPro"))
+    --print("task_target=", task_target)
+    --print("task_target_param=", task_target_param)
+    --dump(data)
+    --dump(taskList)
+    --特殊任务处理
+    local specLst = { [11] = true, [12] = true, [13] = true, [14] = true }
+
+    if specLst[tonumber(task_target)] then
+        local userID = userid(actor)
+        -- 1. 统一读取徒弟普通任务进度变量
+        local myTaskProByStr = getcustvar("11_" .. userID .. "_" .. "t_ApprenticeTaskPro")
+
+        if myTaskProByStr and myTaskProByStr ~= "" then
+            local myTaskProBy = json2tbl(myTaskProByStr)
+            local isChanged = false
+
+            -- 2. 遍历匹配到的任务列表
+            for index = 1, #taskList do
+                local task = taskList[index]
+                local ID = task.ID
+
+                -- 确保任务ID在玩家数据中存在
+                if ID and myTaskProBy["" .. ID] then
+                    local currentNum = myTaskProBy["" .. ID].num
+                    local targetNum = task.task_target_num
+
+                    -- 如果任务还未完成
+                    if currentNum < targetNum then
+                        -- data 传入 1，标识任务进度增加
+                        local addNum = tonumber(data) or 1
+                        local newNum = currentNum + addNum
+
+                        -- 累加进度，防溢出处理
+                        myTaskProBy["" .. ID].num = newNum >= targetNum and targetNum or newNum
+                        isChanged = true
+                    end
                 end
-                if task.type == 3 then
-                    myTaskProBy = json2tbl(getcustvar("11_" .. userid(actor) .. "_" .. "t_ApprenticeGxdTask"))
-                end
-                if not myTaskProBy then
-                    return
-                end
-                local userID = userid(actor)
-                if myTaskProBy["" .. ID] then
-                    if task.task_target == 1 or task.task_target == 2 or task.task_target == 6 or task.task_target == 8 then
-                        --等级 转生 培养  贡献度
-                        myTaskProBy["" .. ID].num = data > task.task_target_num and task.task_target_num or data
-                    end
-                    if task.task_target == 4 then
-                        --获得道具
-                        local count = 0
-                        for i = 1, #task.task_target_param do
-                            for i = 1, #task_target_param do
-                                --要求品阶
-                                if task_target_param[i] == 3 and task.task_target_param[i][1] == 3 then
-                                    if task.task_target_param[i][2] ~= "*" or data.Grade >= tonumber(task.task_target_param[i][2]) then
-                                        count = count + 1
-                                    end
-                                end
-                                --装备等级
-                                if task_target_param[i] == 4 and task.task_target_param[i][1] == 4 then
-                                    if task.task_target_param[i][2] ~= "*" or data.NeedLevel >= tonumber(task.task_target_param[i][2]) then
-                                        count = count + 1
-                                    end
-                                end
-                                --物品ID
-                                if task_target_param[i] == 1 and task.task_target_param[i][1] == 1 then
-                                    if task.task_target_param[i][2] == "*" or data.itemId == tonumber(task.task_target_param[i][2]) then
-                                        count = count + 1
-                                    end
-                                end
-                            end
-                        end
-                        if count == #task_target_param then
-                            local num = data.num
-                            myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + num) >= task.task_target_num and
-                                task.task_target_num or (myTaskProBy["" .. ID].num + num)
-                        end
-                    end
-                    if task.task_target == 5 then
-                        --完成次数
-                        myTaskProBy["" .. ID].num = myTaskProBy["" .. ID].num >= task.task_target_num and
-                            task.task_target_num or (myTaskProBy["" .. ID].num + 1)
-                    end
-                    if task.task_target == 7 then
-                        --击杀
-                        --任意怪
-                        if task.task_target_param[1][1] == "*" then
-                            --任意怪物
-                            if tonumber(targetinfo(actor, "NEWMAP")) == tonumber(task.task_target_param[1][2]) or task.task_target_param[1][2] == "*" then
-                                --指定地图
-                                myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + 1) > task.task_target_num and
-                                    task.task_target_num or (myTaskProBy["" .. ID].num + 1)
-                            end
-                        elseif task.task_target_param[1] == data then
-                            --指定怪物
-                            if tonumber(targetinfo(actor, "NEWMAP")) == tonumber(task.task_target_param[1][2]) or task.task_target_param[1][2] == "*" then
-                                --指定地图
-                                myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + 1) > task.task_target_num and
-                                    task.task_target_num or (myTaskProBy["" .. ID].num + 1)
-                            end
-                        end
-                    end
-                    if task.task_target == 9 then
-                        --货币
-                        myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + data) > task.task_target_num and
-                            task.task_target_num or (myTaskProBy["" .. ID].num + data)
-                    end
-                    --师徒副本
-                    if task.task_target == 10 then
-                        myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + 1) > task.task_target_num and
-                            task.task_target_num or (myTaskProBy["" .. ID].num + 1)
-                    end
+            end
+
+            -- 3. 如果进度有实质改变，统一保存回数据库
+            if isChanged then
+                sefcustvar(11, userID, 't_ApprenticeTaskPro', tbl2json(myTaskProBy))
+            end
+        end
+    else
+        for index = 1, #taskList do
+            local task = taskList[index]
+            local ID = task.ID
+            if ID then
+                local myTaskProBy = {}
+                if task.type == 1 then
+                else
                     if task.type == 2 then
-                        sefcustvar(11, userID, 't_ApprenticeTaskPro', tbl2json(myTaskProBy))
+                        myTaskProBy = json2tbl(getcustvar("11_" .. userid(actor) .. "_" .. "t_ApprenticeTaskPro"))
                     end
                     if task.type == 3 then
-                        sefcustvar(11, userID, 't_ApprenticeGxdTask', tbl2json(myTaskProBy))
+                        myTaskProBy = json2tbl(getcustvar("11_" .. userid(actor) .. "_" .. "t_ApprenticeGxdTask"))
+                    end
+                    if not myTaskProBy then
+                        return
+                    end
+                    local userID = userid(actor)
+                    if myTaskProBy["" .. ID] then
+                        if task.task_target == 1 or task.task_target == 2 or task.task_target == 6 or task.task_target == 8 then
+                            --等级 转生 培养  贡献度
+                            myTaskProBy["" .. ID].num = data > task.task_target_num and task.task_target_num or data
+                        end
+                        if task.task_target == 4 then
+                            --获得道具
+                            local count = 0
+                            for i = 1, #task.task_target_param do
+                                for i = 1, #task_target_param do
+                                    --要求品阶
+                                    if task_target_param[i] == 3 and task.task_target_param[i][1] == 3 then
+                                        if task.task_target_param[i][2] ~= "*" or data.Grade >= tonumber(task.task_target_param[i][2]) then
+                                            count = count + 1
+                                        end
+                                    end
+                                    --装备等级
+                                    if task_target_param[i] == 4 and task.task_target_param[i][1] == 4 then
+                                        if task.task_target_param[i][2] ~= "*" or data.NeedLevel >= tonumber(task.task_target_param[i][2]) then
+                                            count = count + 1
+                                        end
+                                    end
+                                    --物品ID
+                                    if task_target_param[i] == 1 and task.task_target_param[i][1] == 1 then
+                                        if task.task_target_param[i][2] == "*" or data.itemId == tonumber(task.task_target_param[i][2]) then
+                                            count = count + 1
+                                        end
+                                    end
+                                end
+                            end
+                            if count == #task_target_param then
+                                local num = data.num
+                                myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + num) >= task.task_target_num and
+                                    task.task_target_num or (myTaskProBy["" .. ID].num + num)
+                            end
+                        end
+                        if task.task_target == 5 then
+                            --完成次数
+                            myTaskProBy["" .. ID].num = myTaskProBy["" .. ID].num >= task.task_target_num and
+                                task.task_target_num or (myTaskProBy["" .. ID].num + 1)
+                        end
+                        if task.task_target == 7 then
+                            --击杀
+                            --任意怪
+                            if task.task_target_param[1][1] == "*" then
+                                --任意怪物
+                                if tonumber(targetinfo(actor, "NEWMAP")) == tonumber(task.task_target_param[1][2]) or task.task_target_param[1][2] == "*" then
+                                    --指定地图
+                                    myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + 1) > task.task_target_num and
+                                        task.task_target_num or (myTaskProBy["" .. ID].num + 1)
+                                end
+                            elseif task.task_target_param[1] == data then
+                                --指定怪物
+                                if tonumber(targetinfo(actor, "NEWMAP")) == tonumber(task.task_target_param[1][2]) or task.task_target_param[1][2] == "*" then
+                                    --指定地图
+                                    myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + 1) > task.task_target_num and
+                                        task.task_target_num or (myTaskProBy["" .. ID].num + 1)
+                                end
+                            end
+                        end
+                        if task.task_target == 9 then
+                            --货币
+                            myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + data) > task.task_target_num and
+                                task.task_target_num or (myTaskProBy["" .. ID].num + data)
+                        end
+                        --师徒副本
+                        if task.task_target == 10 then
+                            myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + 1) > task.task_target_num and
+                                task.task_target_num or (myTaskProBy["" .. ID].num + 1)
+                        end
+                        if task.type == 2 then
+                            sefcustvar(11, userID, 't_ApprenticeTaskPro', tbl2json(myTaskProBy))
+                        end
+                        if task.type == 3 then
+                            sefcustvar(11, userID, 't_ApprenticeGxdTask', tbl2json(myTaskProBy))
+                        end
                     end
                 end
             end

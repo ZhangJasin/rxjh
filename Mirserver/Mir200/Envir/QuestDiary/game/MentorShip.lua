@@ -1927,8 +1927,10 @@ function MentorShip.isCanBuy(actor, count, ItemID, excelID)
 end
 
 -- 测试数据
-
 function MentorShip.TestCompleteAllTasks(actor)
+    MentorShipChangTask(actor, 12, "*", 1)
+    if true then return end
+
     local userId = userid(actor)
 
     local taskProgressStr = getcustvar("11_" .. userId .. "_" .. "t_ApprenticeTaskPro")
@@ -2109,6 +2111,49 @@ GameEvent.add(EventCfg.onResetday, function(actor)
     end
     sethumvar(actor, VarCfg.U_MentorShipTeach_Count, 0)
     sethumvar(actor, VarCfg.T_MentorShipShopBuyTime, tbl2json(myShowBuyTime))
+end, MentorShip)
+
+GameEvent.add(EventCfg.onGuildTask, function(actor)
+    MentorShipChangTask(actor, 12, "*", 1)
+end, MentorShip)
+
+GameEvent.add(EventCfg.onChangeQGD, function(actor, moneyID, lastCount) -- 气功点改变
+    local qlist = getallqigong(actor)                                   -- 获取玩家的所有气功信息
+
+    local count20 = 0                                                   -- 记录达到 20 级的气功数量
+
+    -- 1、遍历所有气功，统计等级 >= 20 的数量
+    for qiId, qiLv in pairs(qlist) do
+        -- print("气功ID：" .. qiId .. " 等级：" .. qiLv)
+        if tonumber(qiLv) >= 20 then
+            count20 = count20 + 1
+        end
+    end
+
+    -- 2、根据统计的数量，触发对应的师徒任务
+    if count20 >= 1 then
+        MentorShipChangTask(actor, 13, "*", 1)
+    end
+
+    if count20 >= 2 then
+        MentorShipChangTask(actor, 14, "*", 1)
+    end
+
+    if count20 >= 3 then
+        MentorShipChangTask(actor, 17, "*", 1)
+    end
+end, MentorShip)
+
+GameEvent.add(EventCfg.onQiangHua, function(actor, isQH) -- 强化功能触发
+    if not isQH then return end
+    MentorShipChangTask(actor, 15, "*", 1)
+end, MentorShip)
+
+GameEvent.add(EventCfg.onTakeonbeforeex, function(actor, itemObj, pos) -- 穿装备前QF触发
+    local qhlv = tonumber(getiteminfo(itemobj, "INTVALUEO"))
+    if qhlv >= 8 then
+        MentorShipChangTask(actor, 16, "*", 1)
+    end
 end, MentorShip)
 
 Message.RegisterNetMsg(ssrNetMsgCfg.MentorShip, MentorShip)
