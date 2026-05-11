@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" designImageLayer="1">
+  <controller name="tips" pages="0,关闭,1,打开" selected="0"/>
+  <displayList>
+    <component id="n50_s806" name="loader_bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="692,374" pivot="0.5,0.5" anchor="true" size="1016,635" group="n49_gab2"/>
+    <component id="n1_vjv7" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1174,84" size="45,45" group="n49_gab2"/>
+    <text id="n2_vjv7" name="text_title" xy="681,85" pivot="0.5,0.5" anchor="true" size="123,35" group="n49_gab2" fontSize="25" color="#ffffff" align="center" vAlign="middle" letterSpacing="2" autoSize="none" bold="true" text="江湖历练"/>
+    <image id="n102_oca6" name="n102" src="oca6fvhj" fileName="Images/bg_bottom.png" xy="191,111" size="1002,576" group="n49_gab2"/>
+    <component id="n97_d7i1" name="panel_tips" src="d7i1l" fileName="Components/tips.xml" xy="405,135" size="450,395" group="n49_gab2">
+      <gearDisplay controller="tips" pages="1"/>
+    </component>
+    <image id="n99_oca6" name="n99" src="oca6fvhs" fileName="Images/db1.png" xy="199,121" size="605,405" group="n49_gab2"/>
+    <image id="n100_oca6" name="n100" src="oca6fvhz" fileName="Images/wf_bg.png" xy="794,79" size="387,448" group="n49_gab2"/>
+    <list id="n101_oca6" name="taskList" xy="201,122" size="601,403" group="n49_gab2" layout="flow_hz" selectionMode="none" overflow="scroll" lineItemCount="2" defaultItem="ui://wvi7a1i4oca6fvi0"/>
+    <list id="n103_oca6" name="actList" xy="840,203" size="316,322" group="n49_gab2" overflow="scroll" defaultItem="ui://wvi7a1i4oca6fvi2"/>
+    <component id="n104_oca6" name="btn_tips" src="oca6fvi3" fileName="Components/btn_wenhao2.xml" xy="1150,120" group="n49_gab2"/>
+    <component id="n107_oca6" name="bar" src="oca6fvi5" fileName="Components/taskBar.xml" xy="278,590" group="n49_gab2">
+      <ProgressBar max="200"/>
+    </component>
+    <image id="n106_oca6" name="n106" src="oca6fvhl" fileName="Images/hyd.png" xy="158,570" group="n49_gab2"/>
+    <component id="n108_oca6" name="award1" src="d7i1a" fileName="Components/itemRoot.xml" xy="371,572" group="n49_gab2"/>
+    <text id="n109_oca6" name="n109" xy="395,653" size="24,26" group="n49_gab2" fontSize="18" color="#debe2d" bold="true" text="30"/>
+    <image id="n110_oca6" name="lock1" src="oca6fvhv" fileName="Images/lock.png" xy="384,613" group="n49_gab2" visible="false"/>
+    <component id="n111_oca6" name="award2" src="d7i1a" fileName="Components/itemRoot.xml" xy="500,572" group="n49_gab2"/>
+    <text id="n112_oca6" name="n112" xy="521,651" size="24,26" group="n49_gab2" fontSize="18" color="#debe2d" bold="true" text="60"/>
+    <image id="n113_oca6" name="lock2" src="oca6fvhv" fileName="Images/lock.png" xy="513,614" group="n49_gab2" visible="false"/>
+    <component id="n114_oca6" name="award3" src="d7i1a" fileName="Components/itemRoot.xml" xy="669,572" group="n49_gab2"/>
+    <text id="n115_oca6" name="n115" xy="688,651" size="34,26" group="n49_gab2" fontSize="18" color="#debe2d" bold="true" text="100"/>
+    <image id="n116_oca6" name="lock3" src="oca6fvhv" fileName="Images/lock.png" xy="681,614" group="n49_gab2" visible="false"/>
+    <component id="n117_oca6" name="award4" src="d7i1a" fileName="Components/itemRoot.xml" xy="882,572" group="n49_gab2"/>
+    <text id="n118_oca6" name="n118" xy="900,651" size="34,26" group="n49_gab2" fontSize="18" color="#debe2d" bold="true" text="150"/>
+    <image id="n119_oca6" name="lock4" src="oca6fvhv" fileName="Images/lock.png" xy="895,614" group="n49_gab2" visible="false"/>
+    <component id="n120_oca6" name="award5" src="d7i1a" fileName="Components/itemRoot.xml" xy="1096,572" group="n49_gab2"/>
+    <text id="n121_oca6" name="n121" xy="1111,651" size="34,26" group="n49_gab2" fontSize="18" color="#debe2d" bold="true" text="200"/>
+    <image id="n122_oca6" name="lock5" src="oca6fvhv" fileName="Images/lock.png" xy="1104,614" group="n49_gab2" visible="false"/>
+    <text id="n123_oca6" name="point" xy="228,588" size="62,40" group="n49_gab2" fontSize="25" color="#fff700" align="center" vAlign="middle" autoSize="none" bold="true" text=""/>
+    <group id="n49_gab2" name="node" xy="158,56" size="1042,635" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

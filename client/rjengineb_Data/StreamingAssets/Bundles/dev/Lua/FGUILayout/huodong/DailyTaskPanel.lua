@@ -1,16 +1,11 @@
--- 每日必做面板
--- 活跃点任务和宝箱奖励
-require("game_config/cfgcsv/actPointDetail")
-require("game_config/cfgcsv/actPointAward")
-
-DailyTaskPanel = class("DailyTaskPanel")
-
--- 任务状态
-local TASK_STATE = {
-    ongoing = 0,   -- 进行中（未完成）
-    finish = 1,     -- 可领取
-    received = 2,   -- 已领取
-}
+local BaseFGUILayout = requireFGUI("BaseFGUILayout")
+local DailyTaskPanel = class("DailyTaskPanel", BaseFGUILayout)
+local ItemUtil = SL:RequireFile("FGUILayout/Item/ItemUtil")
+local ItemShow = SL:RequireFile("FGUILayout/Item/ItemShow")
+local taskDetail = require("game_config/cfgcsv/actPointDetail")
+local awardDetail = require("game_config/cfgcsv/actPointAward")
+local Tips_Cfg = require("game_config/cfgcsv/TipsDetail")
+local MAX_POINT=200
 
 -- 数据管理
 DailyTaskPanel.data = {
@@ -83,43 +78,79 @@ function DailyTaskPanel:GetActivePoint()
     return self.data.activePoint
 end
 
+function DailyTaskPanel:Create()
+    -- 获取界面代理
+    self._ui = FGUI:ui_delegate(self.component)
+
+    --适配pc端UI
+    local isPC = SL:GetValue("IS_PC_OPER_MODE")
+    local screenW = SL:GetValue("SCREEN_WIDTH")
+    local screenH = SL:GetValue("SCREEN_HEIGHT")
+    if isPC then 
+        FGUI:setScale(self.component, 0.75, 0.75)
+        FGUI:setPosition(self.component, screenW / 2, screenH / 2)
+        FGUI:setAnchorPoint(self.component, 0.5, 0.5, true)
+    end       
+end
+function DailyTaskPanel:btnTipsClicked()
+    FGUI:Controller_setSelectedIndex(self.tipsControlle,self.tipsControlle.selectedIndex == 1 and 0 or 1)
+end
 -- 进入界面
 function DailyTaskPanel:Enter(data)
     self:RegisterEvent()
-    self:RegisterMessageHandler()
-    
+    self:Init()
     -- 请求服务端数据
-    self:ReqData()
+    ssrMessage:sendmsgEx("DailyTask", "reqData")
 end
 
 -- 退出界面
 function DailyTaskPanel:Exit()
     self:UnregisterEvent()
-    self:UnregisterMessageHandler()
 end
 
 -- 注册事件
 function DailyTaskPanel:RegisterEvent()
-    -- 注册任务列表渲染器
-    local list_task = self.component:GetChild("n7")
-    if list_task then
-        FGUI:GList_itemRenderer(list_task, handler(self, self.TaskItemRenderer))
-        list_task.numItems = #self.data.taskList
-    end
-    
-    -- 注册奖励列表渲染器
-    local list_award = self.component:GetChild("n1")
-    if list_award then
-        FGUI:GList_itemRenderer(list_award, handler(self, self.AwardItemRenderer))
-        list_award.numItems = #self.data.awardList
-    end
-    
-    -- 注册关闭按钮
-    local btn_close = self.component:GetChild("n3")
-    if btn_close then
-        btn_close:AddEventListener(function()
-            FGUI:Close("huodong", "DailyTaskPanel")
-        end)
+    -- 关闭按钮
+    FGUI:setOnClickEvent(self._ui.btn_close, function()
+        FGUI:Close("huodong", "DailyTaskPanel")
+    end)
+
+    self.tipsControlle = FGUI:getController(self.component, "tips")
+    self.tipsbg = FGUI:ui_delegate(self._ui.panel_tips)
+    FGUI:GTextField_setText(self.tipsbg.title, Tips_Cfg[3]['title']) -- 打开按钮
+    FGUI:GRichTextField_setText(self.tipsbg.con, Tips_Cfg[3]['tips'])
+
+    -- 点击tips
+    FGUI:setOnClickEvent(self._ui.btn_tips, handler(self, self.btnTipsClicked))
+    FGUI:setOnClickEvent(self.tipsbg.close_tip, handler(self, self.btnTipsClicked))
+
+    -- 列表渲染
+    FGUI:GList_itemRenderer(self._ui.taskList, handler(self, self.TaskItemRenderer))
+
+    FGUI:GList_itemRenderer(self._ui.actList, handler(self, self.ActItemRenderer))
+end
+
+function DailyTaskPanel:Init()
+    --奖励道具
+    for i, val in ipairs(awardDetail) do
+        local awardItem = self._ui["award"..i]
+        if awardItem and val.award then
+            if FGUI:GetChildCount(awardItem) > 0 then            
+                FGUI:RemoveChildAt(awardItem, 0, true)
+            end 
+            local itemData = SL:GetValue("ITEM_DATA", val.award[1])
+            if itemData then
+                local extData = {
+                    hideTip = false,
+                    itemTipData = itemData,
+                    clickCallback = false,
+                    doubleClickCallback = true,
+                    bgVisible = true,
+                    OverLap = val.award[2]
+                }
+                ItemUtil:ItemShow_Create(itemData, awardItem, extData)
+            end   
+        end
     end
 end
 
@@ -130,6 +161,13 @@ function DailyTaskPanel:TaskItemRenderer(index, item)
     self:UpdateTaskItem(item, taskData, index)
 end
 
+-- 活动项渲染器
+function DailyTaskPanel:ActItemRenderer(index, item)
+    local actData = self.actList[index + 1]
+    if not actData then return end
+    self:UpdateActItem(item, actData, index)
+end
+
 -- 奖励项渲染器
 function DailyTaskPanel:AwardItemRenderer(index, item)
     local awardData = self.data.awardList[index + 1]
@@ -137,37 +175,6 @@ function DailyTaskPanel:AwardItemRenderer(index, item)
     self:UpdateAwardItem(item, awardData, index)
 end
 
--- 注册消息处理
-function DailyTaskPanel:RegisterMessageHandler()
-    -- 监听服务端数据更新
-    SLBridge:RegisterMsgHandler(ssrNetMsgCfg.DailyTask_RetData, function(data)
-        self:UpdateData(data)
-    end)
-end
-
--- 取消注册消息处理
-function DailyTaskPanel:UnregisterMessageHandler()
-    SLBridge:UnregisterMsgHandler(ssrNetMsgCfg.DailyTask_RetData)
-end
-
--- 请求数据
-function DailyTaskPanel:ReqData()
-    SLBridge:SendLuaMsg(ssrNetMsgCfg.DailyTask, "reqData", {})
-end
-
--- 任务点击
-function DailyTaskPanel:OnTaskClick(taskData)
-    if taskData.state == TASK_STATE.finish then
-        -- 可领取，发送领取请求
-        SLBridge:SendLuaMsg(ssrNetMsgCfg.DailyTask, "getTaskAward", {taskData.id})
-    elseif taskData.state == TASK_STATE.received then
-        -- 已领取
-        showTip("奖励已领取")
-    else
-        -- 进行中，前往任务
-        self:GotoTask(taskData)
-    end
-end
 
 -- 奖励点击
 function DailyTaskPanel:OnAwardClick(awardData)
@@ -187,23 +194,11 @@ end
 function DailyTaskPanel:GotoTask(taskData)
     -- 根据任务类型跳转到对应界面或玩法
     if taskData.target and taskData.target ~= "" then
-        -- 如果有目标信息，可能需要解析并导航
-        showTip("前往：" .. taskData.name)
+        
     end
 end
 
--- 刷新任务列表
-function DailyTaskPanel:RefreshTaskList()
-    local list_task = self.component:GetChild("n7")
-    if not list_task then return end
-    
-    list_task:RemoveChildrenToPool()
-    
-    for i, taskData in ipairs(self.data.taskList) do
-        local item = list_task:AddItemFromPool()
-        self:UpdateTaskItem(item, taskData, i)
-    end
-end
+
 
 -- 更新任务项
 function DailyTaskPanel:UpdateTaskItem(item, taskData, index)
@@ -242,15 +237,7 @@ end
 
 -- 刷新奖励列表
 function DailyTaskPanel:RefreshAwardList()
-    local list_award = self.component:GetChild("n1")
-    if not list_award then return end
-    
-    list_award:RemoveChildrenToPool()
-    
-    for i, awardData in ipairs(self.data.awardList) do
-        local item = list_award:AddItemFromPool()
-        self:UpdateAwardItem(item, awardData, i)
-    end
+
 end
 
 -- 更新奖励项
@@ -285,27 +272,34 @@ function DailyTaskPanel:UpdateAwardItem(item, awardData, index)
     end
 end
 
--- 刷新活跃点进度
-function DailyTaskPanel:RefreshActivePoint()
-    local text_point = self.component:GetChild("n6")
-    if text_point then
-        text_point.text = self.data.activePoint
+-- 更新活动项
+function DailyTaskPanel:UpdateActItem(item, actData, index)
+    local text_title = item:GetChild("title")
+    if text_title then
+        text_title.text = awardData.needPoint
     end
     
-    -- 更新进度条
-    local progress = self.component:GetChild("n5")
-    if progress then
-        local maxPoint = 200  -- 最大活跃点
-        local percent = math.min(self.data.activePoint / maxPoint, 1)
-        progress.value = percent * 100
+    -- 
+    local btn_y = item:GetChild("yue")
+    if btn_get then
+        if awardData.state == 1 then
+            btn_get.title = "已领取"
+            btn_get.grayed = true
+        elseif self.data.activePoint >= awardData.needPoint then
+            btn_get.title = "领取"
+            btn_get.grayed = false
+        else
+            btn_get.title = awardData.needPoint .. "点"
+            btn_get.grayed = true
+        end
     end
+    
+    
 end
 
--- 完整刷新
-function DailyTaskPanel:RefreshAll()
-    self:RefreshTaskList()
-    self:RefreshAwardList()
-    self:RefreshActivePoint()
+-- 刷新活跃点进度
+function DailyTaskPanel:RefreshActivePoint()
+    
 end
 
 return DailyTaskPanel

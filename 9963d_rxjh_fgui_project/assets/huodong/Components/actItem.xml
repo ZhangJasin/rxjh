@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,120" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n33_oca6" name="n33" src="oca6fvhu" fileName="Images/rw_bg1.png" xy="8,9"/>
+    <image id="n42_oca6" name="n42" src="oca6fvhk" fileName="Images/d_red.png" xy="20,16"/>
+    <text id="n36_oca6" name="title" xy="35,21" size="147,26" fontSize="17" color="#fff3be" vAlign="middle" autoSize="none" text="门派战"/>
+    <text id="n37_oca6" name="n37" xy="24,58" size="52,24" fontSize="16" color="#ffffff" align="center" text="活跃："/>
+    <richtext id="n39_oca6" name="n39" xy="68,58" size="87,24" fontSize="16" color="#ffffff" autoSize="none" text=""/>
+    <richtext id="n40_oca6" name="n40" xy="23,82" size="132,24" fontSize="16" color="#e1c330" autoSize="none" text=""/>
+    <component id="n41_oca6" name="yue" src="oca6fvi1" fileName="Components/btn_blue.xml" xy="164,65" visible="false">
+      <Button title="预约"/>
+    </component>
+    <image id="n43_oca6" name="red" src="oca6fvhw" fileName="Images/red.png" xy="261,60" visible="false"/>
+  </displayList>
+  <Button mode="Check"/>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="850,32" extention="ProgressBar">
+  <displayList>
+    <image id="n3_oca6" name="n0" src="oca6fvhn" fileName="Images/bar_bg.png" xy="0,0"/>
+    <image id="n4_oca6" name="bar" src="oca6fvhy" fileName="Images/bar.png" xy="0,0" size="850,32"/>
+    <text id="n2_zah9" name="title" xy="1,0" size="848,32" visible="false" fontSize="22" color="#fff7d1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <ProgressBar titleType="valueAndmax"/>
+</component>

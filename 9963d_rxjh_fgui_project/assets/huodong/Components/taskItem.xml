@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,120" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n33_oca6" name="n33" src="oca6fvhu" fileName="Images/rw_bg1.png" xy="8,9"/>
+    <image id="n34_oca6" name="tj" src="oca6fvhm" fileName="Images/tj.png" xy="2,1" visible="false"/>
+    <image id="n35_oca6" name="n35" src="oca6fvht" fileName="Images/d_yellow.png" xy="22,19"/>
+    <text id="n36_oca6" name="title" xy="32,24" size="10,25" fontSize="17" color="#28240e" align="center" vAlign="middle" text=""/>
+    <text id="n37_oca6" name="n37" xy="24,58" size="52,24" fontSize="16" color="#ffffff" align="center" text="次数："/>
+    <text id="n38_oca6" name="n38" xy="24,82" size="52,24" fontSize="16" color="#ffffff" align="center" text="活跃："/>
+    <richtext id="n39_oca6" name="times" xy="68,58" size="87,24" fontSize="16" color="#ffffff" autoSize="none" text=""/>
+    <richtext id="n40_oca6" name="hyCount" xy="68,82" size="87,24" fontSize="16" color="#ffffff" autoSize="none" text=""/>
+    <component id="n41_oca6" name="go" src="oca6fvi1" fileName="Components/btn_blue.xml" xy="164,65">
+      <Button title="前往"/>
+    </component>
+  </displayList>
+  <Button mode="Check"/>
+</component>

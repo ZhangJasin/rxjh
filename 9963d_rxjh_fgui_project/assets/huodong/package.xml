@@ -20,6 +20,26 @@
     <image id="d7i1o" name="icon_bg.png" path="/Images/" exported="true" scale="9grid" scale9grid="20,20,40,40"/>
     <component id="d7i1q" name="CountdownPanel.xml" path="/" exported="true"/>
     <image id="d7i1fvhg" name="blackBg.png" path="/Images/" exported="true"/>
+    <image id="oca6fvhj" name="bg_bottom.png" path="/Images/" exported="true"/>
+    <image id="oca6fvhk" name="d_red.png" path="/Images/" exported="true"/>
+    <image id="oca6fvhl" name="hyd.png" path="/Images/" exported="true"/>
+    <image id="oca6fvhm" name="tj.png" path="/Images/" exported="true"/>
+    <image id="oca6fvhn" name="bar_bg.png" path="/Images/" exported="true"/>
+    <image id="oca6fvhq" name="btn_blue.png" path="/Images/" exported="true"/>
+    <image id="oca6fvhs" name="db1.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="oca6fvht" name="d_yellow.png" path="/Images/" exported="true"/>
+    <image id="oca6fvhu" name="rw_bg1.png" path="/Images/" exported="true" scale="9grid" scale9grid="71,26,142,52"/>
+    <image id="oca6fvhv" name="lock.png" path="/Images/" exported="true"/>
+    <image id="oca6fvhw" name="red.png" path="/Images/" exported="true"/>
+    <component id="oca6fvhx" name="DailyTaskPanel.xml" path="/" exported="true"/>
+    <image id="oca6fvhy" name="bar.png" path="/Images/" exported="true" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="oca6fvhz" name="wf_bg.png" path="/Images/" exported="true"/>
+    <component id="oca6fvi0" name="taskItem.xml" path="/Components/" exported="true"/>
+    <component id="oca6fvi1" name="btn_blue.xml" path="/Components/" exported="true"/>
+    <component id="oca6fvi2" name="actItem.xml" path="/Components/" exported="true"/>
+    <component id="oca6fvi3" name="btn_wenhao2.xml" path="/Components/"/>
+    <image id="oca6fvi4" name="wenhao.png" path="/Images/" exported="true"/>
+    <component id="oca6fvi5" name="taskBar.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>
