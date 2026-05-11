@@ -1667,6 +1667,7 @@ function MentorShip.mapMoveAll(actor, data)
         sethumvar(UserID, VarCfg.S_FuBen_Var_PlayerPosition,
             tbl2json({ targetinfo(actor, "NEWMAP"), targetinfo(actor, "X"), targetinfo(actor, "Y") })) -- 记录进入前位置信息
         mapmove(UserID, newMapId, 36, 37, 2)                                                           -- 传送进副本
+        senddelaymsg(UserID, "副本结束：%s", 590, 249, 1, "@call", 550)
         Message.sendmsgEx(UserID, "Invitation", "moveResult")
         Message.sendmsgEx(UserID, "MainMission", "EnterFuben",
             { isEnter = true, info = { killnum = 0, killtype = data.taskType, StopTime = StopTime } })
@@ -1988,6 +1989,13 @@ GameEvent.add(EventCfg.onLogin, function(actor)
             --传进副本
             exitgroup(actor)
             mapmove(actor, mapid, 36, 37, 2) -- 传送进副本
+
+            local currentTime = math.floor(utcint64now() / 1000)
+            local remainTime = mentorShipFuben.StopTime - currentTime
+            -- 如果计算出来小于0，说明玩家掉线太久副本其实已经该结束了，做个保底防负数
+            if remainTime < 0 then remainTime = 0 end
+            senddelaymsg(actor, "副本结束：%s", remainTime, 249, 1, "@call", 550)
+
             local killnum = getcustvar("12_" .. mapid .. "_" .. "killnum")
             Message.sendmsgEx(actor, "MainMission", "EnterFuben",
                 { isEnter = true, info = { killnum = killnum, killtype = mentorShipFuben.taskType, StopTime = mentorShipFuben.StopTime } })
