@@ -285,6 +285,7 @@ function mountMain.petShengji(actor)
     Message.sendmsgEx(actor, "mountMain", "updatePetZQ",
         { lv = nextlv, petBaseId = petBaseId, showPetModelId = showPetModelId })
 
+   
     SyncPetBtnStatus(actor)
     if gethumvar(actor, VarCfg.U_Pet_IS_SET) == 1 then SyncPetIconToClient(actor, false) end
 end
@@ -625,7 +626,7 @@ function mountMain.shengji(actor)
     mountMain.refreshAllMountBuffs(actor)
 
     Message.sendmsgEx(actor, "mountMain", "updateZQ", { lv = nextlv, mountBaseId = mountBaseId })
-    MentorShipChangTask(actor, 6, 1, nextlv)
+
     GameEvent.push(EventCfg.onMountLv, actor)
 end
 

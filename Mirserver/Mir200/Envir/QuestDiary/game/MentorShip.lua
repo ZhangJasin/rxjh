@@ -1973,7 +1973,8 @@ function MentorShip.TestCompleteAllTasks(actor)
 end
 
 --GameEvent.add(EventCfg.onPlayLevelUp, function(actor, lv, oldlv)
---    MentorShip.appareniceLevelUp(actor, oldlv)
+--    --MentorShip.appareniceLevelUp(actor, oldlv)
+--    MentorShipChangTask(actor, 1, "*", tonumber(lv))
 --end, MentorShip)
 
 -- 退出游戏事件，离开副本地图
@@ -2119,16 +2120,17 @@ end, MentorShip)
 
 GameEvent.add(EventCfg.onChangeQGD, function(actor, moneyID, lastCount) -- 气功点改变
     local qlist = getallqigong(actor)                                   -- 获取玩家的所有气功信息
-
+    dump(qlist)
     local count20 = 0                                                   -- 记录达到 20 级的气功数量
 
     -- 1、遍历所有气功，统计等级 >= 20 的数量
     for qiId, qiLv in pairs(qlist) do
         -- print("气功ID：" .. qiId .. " 等级：" .. qiLv)
-        if tonumber(qiLv) >= 20 then
+        if tonumber(qiLv) >= 19 then
             count20 = count20 + 1
         end
     end
+    print("count20：" .. count20)
 
     -- 2、根据统计的数量，触发对应的师徒任务
     if count20 >= 1 then
@@ -2154,6 +2156,16 @@ GameEvent.add(EventCfg.onTakeonbeforeex, function(actor, itemObj, pos) -- 穿装备
     if qhlv >= 8 then
         MentorShipChangTask(actor, 16, "*", 1)
     end
+end, MentorShip)
+
+GameEvent.add(EventCfg.onPetLevel, function(actor) -- 宠物升级触发
+    local lv = gethumvar(actor, VarCfg.U_All_Pet_star) or 0
+    MentorShipChangTask(actor, 6, 2, lv)
+end, MentorShip)
+
+GameEvent.add(EventCfg.onMountLv, function(actor) -- 坐骑升级触发
+    local lv = gethumvar(actor, VarCfg.U_All_Mount_star) or 0
+    MentorShipChangTask(actor, 6, 1, lv)
 end, MentorShip)
 
 Message.RegisterNetMsg(ssrNetMsgCfg.MentorShip, MentorShip)

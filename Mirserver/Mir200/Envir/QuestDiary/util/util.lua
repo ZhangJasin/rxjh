@@ -1158,8 +1158,8 @@ end
 
 function MentorShipChangTask(actor, task_target, task_target_param, data)
     local taskList = getTaskByType(task_target, task_target_param)
-    --print("task_target=", task_target)
-    --print("task_target_param=", task_target_param)
+    print("task_target=", task_target)
+    print("task_target_param=", task_target_param)
     --dump(data)
     --dump(taskList)
     --特殊任务处理
@@ -1178,19 +1178,13 @@ function MentorShipChangTask(actor, task_target, task_target_param, data)
             for index = 1, #taskList do
                 local task = taskList[index]
                 local ID = task.ID
-
                 -- 确保任务ID在玩家数据中存在
                 if ID and myTaskProBy["" .. ID] then
-                    local currentNum = myTaskProBy["" .. ID].num
-                    local targetNum = task.task_target_num
-
-                    -- 如果任务还未完成
-                    if currentNum < targetNum then
-                        -- data 传入 1，标识任务进度增加
+                    local currentNum = tonumber(myTaskProBy["" .. ID].num) or 0
+                    local targetNum = tonumber(task.task_target_num)
+                    if targetNum and currentNum < targetNum then
                         local addNum = tonumber(data) or 1
                         local newNum = currentNum + addNum
-
-                        -- 累加进度，防溢出处理
                         myTaskProBy["" .. ID].num = newNum >= targetNum and targetNum or newNum
                         isChanged = true
                     end
@@ -1222,8 +1216,13 @@ function MentorShipChangTask(actor, task_target, task_target_param, data)
                     local userID = userid(actor)
                     if myTaskProBy["" .. ID] then
                         if task.task_target == 1 or task.task_target == 2 or task.task_target == 6 or task.task_target == 8 then
-                            --等级 转生 培养  贡献度
-                            myTaskProBy["" .. ID].num = data > task.task_target_num and task.task_target_num or data
+                            local targetNum = tonumber(task.task_target_num)
+                            local currentData = tonumber(data) or 0
+                            print("targetNum=", targetNum)
+                            print("currentData=", currentData)
+                            if targetNum then
+                                myTaskProBy["" .. ID].num = currentData > targetNum and targetNum or currentData
+                            end
                         end
                         if task.task_target == 4 then
                             --获得道具
@@ -1262,6 +1261,7 @@ function MentorShipChangTask(actor, task_target, task_target_param, data)
                                 task.task_target_num or (myTaskProBy["" .. ID].num + 1)
                         end
                         if task.task_target == 7 then
+                            print("task.task_target == 7")
                             --击杀
                             if task.task_target_param == "*" then
                                 -- 1. 纯通配符：任意怪物、任意地图
