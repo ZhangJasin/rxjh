@@ -162,14 +162,18 @@ function BossPanel:ListBossShow(idx, item)
     if bg_icon then        
         FGUI:GLoader_setUrl(bg_icon, SL:GetValue("MONSTER_ICON", bossId) or "",nil, true)
     end
-    
+    -- local specItemFx = FGUI:GetChild(item, "specFx")
+    -- if specItemFx then
+    --     FGUI:UIModel_clear(specItemFx)
+    --     FGUI:UIModel_addFx(specItemFx, 500139,true,nil,nil,{x = 0.5, y = 0.5, z = 0.5})
+    -- end
     -- 设置特殊道具显示 (specDrop)
     local specItem = FGUI:GetChild(item, "specItem")
     if specItem then
         if FGUI:GetChildCount(specItem) > 0 then            
             FGUI:RemoveChildAt(specItem, 0, true)
         end
-        if specDrop > 0 then
+        if specDrop > 0 then    
             local itemData = SL:GetValue("ITEM_DATA", specDrop)
             if itemData then
                 local extData = {
@@ -181,7 +185,7 @@ function BossPanel:ListBossShow(idx, item)
                     OverLap = 1
                 }
                 ItemUtil:ItemShow_Create(itemData, specItem, extData)
-            end
+            end        
         end
     end
     
