@@ -247,7 +247,7 @@ local config = {
 	},
 	["ServerHomeMapInfo0"] = { 
 		k="ServerHomeMapInfo0",
-		value="101#209#314",
+		value="101002#365#513",
 		sName="0号引擎应急地图配置",
 		Group=2,
 		GroupName="基础选项(2)",

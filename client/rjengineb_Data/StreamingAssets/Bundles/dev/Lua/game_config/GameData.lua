@@ -105,7 +105,7 @@ local config = {
 	},
 	["ServerHomeMapInfo0"] = { 
 		k="ServerHomeMapInfo0",
-		value="101#209#314",
+		value="101002#365#513",
 	},
 	["WalkIntervalTime"] = { 
 		k="WalkIntervalTime",
