@@ -148,7 +148,7 @@ local config = {
 		task_name="徒弟等级到达40级",
 		type=2,
 		task_desc="徒弟等级到达40级",
-		task_target=6,
+		task_target=1,
 		task_target_param="*",
 		task_target_num=40,
 		task_reward = {
@@ -190,12 +190,12 @@ local config = {
 		task_name="任意宠物升至2阶",
 		type=2,
 		task_desc="任意宠物升至2阶",
-		task_target=5,
+		task_target=6,
 		task_target_param = {
-			[1] = 6,
-			[2] = 4,
+			[1] = 2,
+			[2] = 20,
 		},
-		task_target_num=2,
+		task_target_num=1,
 		task_reward = {
 			[1] = {
 				[1] = 1,
@@ -216,10 +216,10 @@ local config = {
 		task_desc="任意宠物升至3阶",
 		task_target=6,
 		task_target_param = {
-			[1] = 1,
-			[2] = 3,
+			[1] = 2,
+			[2] = 30,
 		},
-		task_target_num=3,
+		task_target_num=1,
 		task_reward = {
 			[1] = {
 				[1] = 1,
@@ -240,16 +240,10 @@ local config = {
 		task_desc="任意坐骑升至2阶",
 		task_target=4,
 		task_target_param = {
-			[1] = {
-				[1] = 3,
-				[2] = 1,
-			},
-			[2] = {
-				[1] = 4,
-				[2] = 10,
-			},
+			[1] = 1,
+			[2] = 20,
 		},
-		task_target_num=2,
+		task_target_num=1,
 		task_reward = {
 			[1] = {
 				[1] = 1,
@@ -270,10 +264,10 @@ local config = {
 		task_desc="任意坐骑升至3阶",
 		task_target=6,
 		task_target_param = {
-			[1] = 2,
-			[2] = 3,
+			[1] = 1,
+			[2] = 30,
 		},
-		task_target_num=3,
+		task_target_num=1,
 		task_reward = {
 			[1] = {
 				[1] = 1,
@@ -336,7 +330,7 @@ local config = {
 		task_desc="累计击杀100只怪物",
 		task_target=7,
 		task_target_param = {
-			[1] = 7,
+			[1] = "*",
 			[2] = "*",
 		},
 		task_target_num=100,
@@ -360,7 +354,7 @@ local config = {
 		task_desc="累计击杀500只怪",
 		task_target=7,
 		task_target_param = {
-			[1] = 7,
+			[1] = "*",
 			[2] = "*",
 		},
 		task_target_num=500,
@@ -432,11 +426,8 @@ local config = {
 		task_name="累计完成30次BOSS狩猎",
 		type=2,
 		task_desc="累计完成30次BOSS狩猎",
-		task_target=7,
-		task_target_param = {
-			[1] = 5,
-			[2] = 7,
-		},
+		task_target=11,
+		task_target_param="*",
 		task_target_num=30,
 		task_reward = {
 			[1] = {
@@ -456,11 +447,8 @@ local config = {
 		task_name="累计完成30次门派捐献任务",
 		type=2,
 		task_desc="累计完成30次门派捐献任务",
-		task_target=8,
-		task_target_param = {
-			[1] = 5,
-			[2] = 5,
-		},
+		task_target=12,
+		task_target_param="*",
 		task_target_num=30,
 		task_reward = {
 			[1] = {
@@ -503,10 +491,10 @@ local config = {
 		task_desc="任意宠物升至5阶",
 		task_target=6,
 		task_target_param = {
-			[1] = 1,
-			[2] = 5,
+			[1] = 2,
+			[2] = 50,
 		},
-		task_target_num=5,
+		task_target_num=1,
 		task_reward = {
 			[1] = {
 				[1] = 1,
@@ -527,10 +515,10 @@ local config = {
 		task_desc="任意坐骑升至5阶",
 		task_target=6,
 		task_target_param = {
-			[1] = 2,
-			[2] = 5,
+			[1] = 1,
+			[2] = 50,
 		},
-		task_target_num=5,
+		task_target_num=1,
 		task_reward = {
 			[1] = {
 				[1] = 1,
@@ -572,44 +560,8 @@ local config = {
 		task_desc="累计击杀1000只怪",
 		task_target=7,
 		task_target_param = {
-			[1] = {
-				[1] = "*",
-				[2] = "*",
-			},
-		},
-		task_target_num=1000,
-		task_reward = {
-			[1] = {
-				[1] = 1,
-				[2] = 1,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 1,
-			},
-		},
-		task_reward_1 = {
-			[1] = {
-				[1] = 1,
-				[2] = 1,
-			},
-			[2] = {
-				[1] = 2,
-				[2] = 1,
-			},
-		},
-	},
-	[28] = { 
-		ID=28,
-		task_name="累计击杀1000只怪",
-		type=2,
-		task_desc="累计击杀1000只怪",
-		task_target=7,
-		task_target_param = {
-			[1] = {
-				[1] = "*",
-				[2] = "*",
-			},
+			[1] = "*",
+			[2] = "*",
 		},
 		task_target_num=1000,
 		task_reward = {

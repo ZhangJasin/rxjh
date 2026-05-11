@@ -1163,7 +1163,7 @@ function MentorShipChangTask(actor, task_target, task_target_param, data)
     --dump(data)
     --dump(taskList)
     --特殊任务处理
-    local specLst = { [11] = true, [12] = true, [13] = true, [14] = true }
+    local specLst = { [11] = true, [12] = true, [13] = true, [14] = true, [15] = true, [16] = true, [17] = true }
 
     if specLst[tonumber(task_target)] then
         local userID = userid(actor)
@@ -1263,18 +1263,22 @@ function MentorShipChangTask(actor, task_target, task_target_param, data)
                         end
                         if task.task_target == 7 then
                             --击杀
-                            --任意怪
-                            if task.task_target_param[1][1] == "*" then
-                                --任意怪物
-                                if tonumber(targetinfo(actor, "NEWMAP")) == tonumber(task.task_target_param[1][2]) or task.task_target_param[1][2] == "*" then
-                                    --指定地图
-                                    myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + 1) > task.task_target_num and
-                                        task.task_target_num or (myTaskProBy["" .. ID].num + 1)
-                                end
-                            elseif task.task_target_param[1] == data then
-                                --指定怪物
-                                if tonumber(targetinfo(actor, "NEWMAP")) == tonumber(task.task_target_param[1][2]) or task.task_target_param[1][2] == "*" then
-                                    --指定地图
+                            if task.task_target_param == "*" then
+                                -- 1. 纯通配符：任意怪物、任意地图
+                                myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + 1) > task.task_target_num and
+                                    task.task_target_num or (myTaskProBy["" .. ID].num + 1)
+                            elseif type(task.task_target_param) == "table" and type(task.task_target_param[1]) == "table" then
+                                -- 2. 数组配置：支持 { {怪物ID, 地图ID} } 格式
+                                local cfgMonId = task.task_target_param[1][1]
+                                local cfgMapId = task.task_target_param[1][2]
+                                local curMapId = tonumber(targetinfo(actor, "NEWMAP"))
+
+                                -- 怪物校验：是 * 或者是 指定的怪物ID(data)
+                                local isMonMatch = (cfgMonId == "*") or (tonumber(cfgMonId) == tonumber(data))
+                                -- 地图校验：是 * 或者是 玩家当前所在的地图ID
+                                local isMapMatch = (cfgMapId == "*") or (tonumber(cfgMapId) == curMapId)
+
+                                if isMonMatch and isMapMatch then
                                     myTaskProBy["" .. ID].num = (myTaskProBy["" .. ID].num + 1) > task.task_target_num and
                                         task.task_target_num or (myTaskProBy["" .. ID].num + 1)
                                 end
