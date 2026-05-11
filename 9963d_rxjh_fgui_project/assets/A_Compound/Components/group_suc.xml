@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="101,30">
   <displayList>
-    <text id="n2_axcm" name="n2" xy="-1,2" size="103,24" fontSize="16" color="#f2eb37" align="center" vAlign="middle" letterSpacing="1" autoSize="none" strokeColor="#180400" strokeSize="2" text="成功率100%"/>
+    <text id="n2_axcm" name="n2" xy="-1,2" size="103,24" fontSize="16" color="#f2eb37" align="center" vAlign="middle" letterSpacing="1" autoSize="none" bold="true" strokeColor="#180400" text="成功率100%"/>
   </displayList>
 </component>

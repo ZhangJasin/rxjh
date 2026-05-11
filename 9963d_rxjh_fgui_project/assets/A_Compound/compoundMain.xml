@@ -10,7 +10,7 @@
       <item/>
       <item/>
     </list>
-    <image id="n40_rus1" name="n40" src="rus1j" fileName="Images/ybbj.png" xy="503,116"/>
+    <image id="n40_rus1" name="n40" src="rus1j" fileName="Images/ybbj.png" xy="503,116" alpha="0.43"/>
     <list id="n45_rus1" name="group_1" xy="191,122" size="158,560" overflow="scroll" defaultItem="ui://7nc36bburus1z" autoClearItems="true">
       <item/>
       <item/>
