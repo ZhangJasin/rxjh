@@ -1,0 +1,22 @@
+2026-05-11 16:56:08.525 [INFO ] ---------------------------------------------------
+2026-05-11 16:56:08.525 [INFO ] ---------------------------------------------------
+2026-05-11 16:56:08.525 [INFO ] ---------------------------------------------------
+2026-05-11 16:56:08.525 [INFO ] ========== Log System Initialized ==========
+2026-05-11 16:56:08.525 [INFO ] Log file: D:\works\RXjianghu\rxjianghu1\client\gamelog.txt
+2026-05-11 16:56:08.525 [INFO ] Max file size: 10.0 MB
+2026-05-11 16:56:08.525 [INFO ] GameType:6m_nEnvironmentType:3NeedNp:0m_sNpName:996CN
+2026-05-11 16:56:09.042 [INFO ] start check client need Update
+2026-05-11 16:56:09.046 [INFO ] VersionUrl :https://pc-rxyqb.cyltc.com/client_tool_cq/version_996ReJiang.txt
+2026-05-11 16:56:09.125 [INFO ] no need update
+2026-05-11 16:56:09.125 [INFO ] open Game exe
+2026-05-11 16:56:40.789 [INFO ] ---------------------------------------------------
+2026-05-11 16:56:40.789 [INFO ] ---------------------------------------------------
+2026-05-11 16:56:40.789 [INFO ] ---------------------------------------------------
+2026-05-11 16:56:40.790 [INFO ] ========== Log System Initialized ==========
+2026-05-11 16:56:40.790 [INFO ] Log file: D:\works\RXjianghu\rxjianghu1\client\gamelog.txt
+2026-05-11 16:56:40.790 [INFO ] Max file size: 10.0 MB
+2026-05-11 16:56:40.790 [INFO ] GameType:6m_nEnvironmentType:3NeedNp:0m_sNpName:996CN
+2026-05-11 16:56:41.303 [INFO ] start check client need Update
+2026-05-11 16:56:41.308 [INFO ] VersionUrl :https://pc-rxyqb.cyltc.com/client_tool_cq/version_996ReJiang.txt
+2026-05-11 16:56:41.390 [INFO ] no need update
+2026-05-11 16:56:41.390 [INFO ] open Game exe

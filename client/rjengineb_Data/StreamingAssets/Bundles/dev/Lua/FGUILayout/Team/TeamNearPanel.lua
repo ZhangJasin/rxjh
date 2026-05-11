@@ -16,6 +16,13 @@ local PICK_DATA = {
 
 function TeamNearPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
+	
+	-- 修复 FGUI XML 中 list_team 的 defaultItem 引用错误
+	-- 原引用 ui://pnop7ha6nc451v 是 MentorShip 包的，应改为 Team 包的 item_near
+	if self._ui.list_team then
+		FGUI:GList_setDefaultItem(self._ui.list_team, "ui://xh57ov19k9rf9")
+	end
+	
 	FGUIFunction:SetCloseUIWhenClickOutside(self)
 
 	self:InitData()
@@ -37,7 +44,7 @@ function TeamNearPanel:InitEvent()
     FGUI:setOnClickEvent(self._ui.btn_create, handler(self, self.OnClickBtnCreateTeam))
     FGUI:setOnClickEvent(self._ui.check_autoInvited, handler(self, self.OnClickAutoInvited))
 
-	-- Menu 
+	-- Menu
     FGUI:GList_itemRenderer(self._ui.list_page, handler(self, self.PageRenderer))
     FGUI:GList_addOnClickItemEvent(self._ui.list_page, handler(self, self.OnClickPage))
     FGUI:GList_setNumItems(self._ui.list_page, #PAGE_DATA)
@@ -86,11 +93,11 @@ function TeamNearPanel:SelectPage(index)
 	FGUI:GList_setSelectedIndex(self._ui.list_page, index - 1)
 	self._selPage = index
 
-    if self._selPage == 1 then 
+    if self._selPage == 1 then
         SL:RequestRandomTeam()
-    elseif self._selPage == 2 then 
+    elseif self._selPage == 2 then
         SL:RequestNearTeam()
-    end 
+    end
     self:OnUpdateNearTeam()
 end
 
@@ -185,17 +192,19 @@ function TeamNearPanel:NearListRenderer(idx, item)
 end
 
 function TeamNearPanel:OnUpdateNearTeam()
+    if not self._ui or not self._ui.list_team then return end
+
     self._nearList = {}
-    if self._selPage == 1 then 
+    if self._selPage == 1 then
         self._nearList = SL:GetValue("TEAM_RANDOM_LIST")
-    elseif self._selPage == 2 then 
+    elseif self._selPage == 2 then
         self._nearList = SL:GetValue("TEAM_NEAR_LIST")
-    elseif self._selPage == 3 then 
+    elseif self._selPage == 3 then
         local invitedData = SL:GetValue("TEAM_BEINVITED_LIST")
-        for i, data in pairs(invitedData) do 
+        for i, data in pairs(invitedData) do
             table.insert(self._nearList, data)
-        end 
-    end 
+        end
+    end
     FGUI:GList_setNumItems(self._ui.list_team, #self._nearList)
 
     self:RefreshNothingInfo()

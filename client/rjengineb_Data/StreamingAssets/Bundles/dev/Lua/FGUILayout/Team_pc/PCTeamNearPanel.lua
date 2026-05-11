@@ -16,6 +16,13 @@ local PICK_DATA = {
 
 function PCTeamNearPanel:Create()
 	self._ui = FGUI:ui_delegate(self.component)
+	
+	-- 修复 FGUI XML 中 list_team 的 defaultItem 引用错误
+	-- 原引用 ui://pnop7ha6nc451v 是 MentorShip 包的，应改为 Team 包的 item_near
+	if self._ui.list_team then
+		FGUI:GList_setDefaultItem(self._ui.list_team, "ui://xh57ov19k9rf9")
+	end
+	
     FGUIFunction:setWindowDrag(self.component, self._ui.bg)
 
 	self:InitData()
@@ -175,17 +182,19 @@ function PCTeamNearPanel:NearListRenderer(idx, item)
 end
 
 function PCTeamNearPanel:OnUpdateNearTeam()
+    if not self._ui or not self._ui.list_team then return end
+
     self._nearList = {}
-    if self._selPage == 1 then 
+    if self._selPage == 1 then
         self._nearList = SL:GetValue("TEAM_RANDOM_LIST")
-    elseif self._selPage == 2 then 
+    elseif self._selPage == 2 then
         self._nearList = SL:GetValue("TEAM_NEAR_LIST")
-    elseif self._selPage == 3 then 
+    elseif self._selPage == 3 then
         local invitedData = SL:GetValue("TEAM_BEINVITED_LIST")
-        for i, data in pairs(invitedData) do 
+        for i, data in pairs(invitedData) do
             table.insert(self._nearList, data)
-        end 
-    end 
+        end
+    end
     FGUI:GList_setNumItems(self._ui.list_team, #self._nearList)
 
     self:RefreshNothingInfo()

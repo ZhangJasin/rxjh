@@ -1324,3 +1324,12 @@ function SpeHarmMain(actor, target, result)
 
     return result
 end
+
+function canshowshopitem(actor, condisId)
+     print(" ----------- canshowshopitem" ,actor, condisId)
+    if condisId == "123" then
+        print(" ----------- 123≤ªœ‘ æ" )
+        return false
+    end
+    return true
+end

@@ -19,15 +19,14 @@
     <component id="n38_10pfo" name="btn_close" src="k9rf17" fileName="Components/btn_close.xml" xy="1144,78" pivot="0.5,0.5" anchor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <list id="n40_scjw" name="list_page" xy="185,125" size="170,550" overflow="scroll" defaultItem="ui://xh57ov19k9rf8" autoClearItems="true">
+    <list id="n40_scjw" name="list_page" xy="184,125" size="170,550" overflow="scroll" defaultItem="ui://xh57ov19k9rf8" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item/>
     </list>
-    <list id="n9_vjv7" name="list_team" xy="375,125" size="770,490" selectionMode="none" overflow="scroll" lineGap="10" defaultItem="ui://pnop7ha6nc451v" autoClearItems="true">
+    <list id="n9_vjv7" name="list_team" xy="375,124" size="770,490" selectionMode="none" overflow="scroll" lineGap="10" defaultItem="ui://xh57ov19k9rf9" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <item/>
     </list>
-    <text id="n20_leye" name="text_nothing" xy="760,370" pivot="0.5,0.5" anchor="true" size="600,90" font="ui://st7dgeqqje63v37" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
+    <text id="n20_leye" name="text_nothing" xy="755,371" pivot="0.5,0.5" anchor="true" size="600,90" font="ui://st7dgeqqje63v37" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
     <component id="n33_leye" name="btn_refresh" src="k9rf1h" fileName="Components/btn_refresh.xml" xy="1040,660" pivot="0.5,0.5" anchor="true">
