@@ -212,8 +212,10 @@ function GuildMainPanel:OnRefreshMainInfo()
 	-- 行会资金
 	local gold = SL:GetValue("GUILD_EXP_NUM")
 	FGUI:GProgressBar_setValue(self._ui.progress_gdp, gold)
-	local maxGold = guildData_Cfg[SL:GetValue("GUILD_LEVEL")].Exp or 100
-	FGUI:GProgressBar_setMax(self._ui.progress_gdp, maxGold)
+
+	local curGuildCfg = guildData_Cfg[SL:GetValue("GUILD_LEVEL") or 1]
+	local maxGold = curGuildCfg and curGuildCfg.Exp or 100
+	FGUI:GProgressBar_setMax(self._ui.progress_gdp, maxGold or 100)
 
 	-- 公告内容
     local str = SL:GetValue("GUILD_NOTICE") or ""
