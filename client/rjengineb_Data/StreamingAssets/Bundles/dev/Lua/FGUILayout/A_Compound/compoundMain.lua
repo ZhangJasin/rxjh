@@ -32,6 +32,8 @@ function compoundMain:Create()
     -- 一级列表 (n45 / group_1)
     if self._ui.n45 or self._ui.group_1 then
         local group1List = self._ui.n45 or self._ui.group_1
+        print("[compoundMain] 一级列表控件绑定成功 - n45:", self._ui.n45 ~= nil, "group_1:", self._ui.group_1 ~= nil)
+        
         FGUI:GList_addOnClickItemEvent(group1List, function(context)
             local childIdx = FGUI:GetChildIndex(group1List, context.data)
             local selectedIndex = FGUI:GList_childIndexToItemIndex(group1List, childIdx)
@@ -132,12 +134,31 @@ function compoundMain:_initListRenderers()
             local group1ListData = self._data:GetGroup1List()
             local group1Name = group1ListData[index + 1] or ""
 
-            -- btn_hc1 结构: n3 是按下状态文字(金色), n4 是默认状态文字(灰色)
-            if item.n3 then
-                FGUI:GTextField_setText(item.n3, group1Name)
+            -- 打印调试信息（只在第一次渲染时打印item结构）
+            if index == 0 and not self._group1ItemDebugged then
+                print("[compoundMain] 一级列表项结构调试:")
+                -- 使用FGUI API获取子控件
+                local childCount = FGUI:GetChildCount(item)
+                print("[compoundMain]   子控件数量:", childCount)
+                for i = 0, childCount - 1 do
+                    local child = FGUI:GetChildAt(item, i)
+                    if child then
+                        local childName = child.name or "unknown"
+                        print("[compoundMain]   子控件[" .. i .. "]:", childName)
+                    end
+                end
+                self._group1ItemDebugged = true
             end
-            if item.n4 then
-                FGUI:GTextField_setText(item.n4, group1Name)
+
+            -- btn_hc1 结构: n3 是按下状态文字(金色), n4 是默认状态文字(灰色)
+            local n3 = FGUI:GetChild(item, "n3")
+            local n4 = FGUI:GetChild(item, "n4")
+            
+            if n3 then
+                FGUI:GTextField_setText(n3, group1Name)
+            end
+            if n4 then
+                FGUI:GTextField_setText(n4, group1Name)
             end
 
             -- 选中状态控制：通过设置 button 控制器实现
@@ -226,9 +247,15 @@ end
 -- 刷新一级列表
 function compoundMain:RefreshGroup1List()
     local group1List = self._ui.n45 or self._ui.group_1
-    if not group1List then return end
+    if not group1List then
+        print("[compoundMain] 警告: 一级列表控件未找到! n45和group_1都为nil")
+        return
+    end
+    
+    print("[compoundMain] 一级列表控件已找到:", group1List)
 
     local group1Data = self._data:GetGroup1List()
+    print("[compoundMain] 一级列表数据:", #group1Data, "项", table.concat(group1Data, " | "))
 
     -- 先计算选中项索引
     local currentIndex = 0
@@ -244,6 +271,7 @@ function compoundMain:RefreshGroup1List()
 
     -- 再设置选中项
     FGUI:GList_setSelectedIndex(group1List, currentIndex)
+    print("[compoundMain] 一级列表刷新完成 - 设置数量:", #group1Data, "选中索引:", currentIndex)
 end
 
 -- ========================================

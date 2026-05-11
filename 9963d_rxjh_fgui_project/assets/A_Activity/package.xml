@@ -2,6 +2,11 @@
 <packageDescription id="mn53g2r8">
   <resources>
     <component id="pbzl0" name="ActivityHallPanel.xml" path="/"/>
+    <image id="pbzl4" name="shuxian.png" path="/Images/"/>
+    <image id="pbzl6" name="zcan0.png" path="/Images/"/>
+    <image id="pbzl7" name="zcan1.png" path="/Images/"/>
+    <component id="pbzl8" name="btnLeft.xml" path="/Components/"/>
+    <image id="pbzl9" name="top_dj.png" path="/Images/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

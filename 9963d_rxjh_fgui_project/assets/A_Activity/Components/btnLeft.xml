@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="267,67" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_pbzl" name="n0" src="pbzl7" fileName="Images/zcan1.png" xy="0,0">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_pbzl" name="n1" src="pbzl6" fileName="Images/zcan0.png" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_pbzl" name="n2" src="pbzl7" fileName="Images/zcan1.png" xy="0,0">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_pbzl" name="n3" src="pbzl7" fileName="Images/zcan1.png" xy="0,0">
+      <gearDisplay controller="button" pages="3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n4_pbzl" name="n4" xy="75,14" size="116,39" fontSize="28" color="#ababab" strokeColor="#000000" text="标题标题">
+      <gearDisplay controller="button" pages="0,2,3"/>
+    </text>
+    <text id="n5_pbzl" name="n5" xy="75,14" size="116,39" fontSize="28" color="#ffe52f" strokeColor="#000000" text="标题标题">
+      <gearDisplay controller="button" pages="1"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>
