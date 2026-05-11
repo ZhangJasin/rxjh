@@ -3,8 +3,8 @@ local config = {
 		Group=0,
 		sType=1,
 		Name="百宝阁",
-		Pages={1,2,3},
-		PagesName="热卖商品#珍惜道具#必买推荐#稀有道具",
+		Pages={1,2,3,4,100},
+		PagesName="热卖商品#元宝商场#绑元商场#热血商铺#灵兽锦衣",
 	},
 	[2] = { 
 		Group=1,

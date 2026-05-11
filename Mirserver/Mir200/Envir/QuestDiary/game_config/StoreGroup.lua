@@ -2,7 +2,7 @@ local config = {
 	[1] = { 
 		Group=0,
 		Name="°Ù±¦¸ó",
-		Pages={1,2,3},
+		Pages={1,2,3,4,100},
 	},
 	[2] = { 
 		Group=1,
