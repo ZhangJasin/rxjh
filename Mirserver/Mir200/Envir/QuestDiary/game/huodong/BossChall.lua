@@ -10,9 +10,9 @@ local BossPool_Cfg  =  require("Envir/QuestDiary/game_config/cfgcsv/BOSSPool.lua
 -- BOSS挑战常量
 local BOSS_MAP_ID = "230"                    -- 镜像副本地图编号
 local BOSS_MAP_NAME = "狩猎场"
-local BOSS_SAFE_POS_X = 209                  -- 泫勃派安全区X坐标
-local BOSS_SAFE_POS_Y = 315                  -- 泫勃派安全区Y坐标
-local BOSS_SAFE_MAP_ID = "101"               -- 泫勃派地图ID (主城)
+local BOSS_SAFE_POS_X = 365                  -- 泫勃派安全区X坐标
+local BOSS_SAFE_POS_Y = 513                  -- 泫勃派安全区Y坐标
+local BOSS_SAFE_MAP_ID = "101002"               -- 泫勃派地图ID (主城)
 
 -- 获取玩家BOSS池数据
 local function _getBossData(actor)

@@ -1696,7 +1696,7 @@ function MentorShip.CreatFuBenMap(mapid, newMapId, monidx)
         delmirrormap(newMapId) -- 销毁之前创建的副本地图
     end
     local monname = moninfo(monidx .. "_NAME") or ""
-    if not addmirrormap(mapid, newMapId, monname .. "副本", 600, "101", 1, 209, 280) then
+    if not addmirrormap(mapid, newMapId, monname .. "副本", 600, "101002", 1, 365, 513) then
         sendmsg(actor, 9, "创建失败！重新创建")
         return
     end
@@ -1797,7 +1797,7 @@ function MentorShip.finishFuben(actor)
     MentorShip.clearEveryOne(actor)
     local mentorShipFuben = MentorShip.getMyfubenInfo(actor)
     for i = 1, #mentorShipFuben.userList do
-        mapmove(mentorShipFuben.userList[i], "101", 209, 280, 1)
+        mapmove(mentorShipFuben.userList[i], "101002", 365, 513, 1)
     end
     sefcustvar(12, newMapId, "killnum", nil)
 end
@@ -1815,7 +1815,7 @@ end
 function MentorShip.goOutFuben(actor)
     MentorShip.LeaveFuBenMap(actor)
     sefcustvar(12, userid(actor), "mentorShipFuben", nil)
-    mapmove(actor, "101", 209, 280, 1)
+    mapmove(actor, "101002", 365, 513, 1)
 end
 
 --mode 2 我的师傅 1 我的徒弟
@@ -2017,7 +2017,7 @@ GameEvent.add(EventCfg.onLeaveGroup, function(actor)
         if mapid then
             Message.sendmsgEx(actor, "MainMission", "EnterFuben", { isEnter = false, info = {} })
             sefcustvar(12, userid(actor), "mentorShipFuben", nil)
-            mapmove(actor, "101", 209, 280, 1)
+            mapmove(actor, "101002", 365, 513, 1)
         end
     end
 end, MentorShip)

@@ -682,7 +682,7 @@ function Strsplit(str, char)
 end
 
 function backCity(actor)
-    mapmove(actor, "101", 209, 314, 3)
+    mapmove(actor, "101002", 365, 513, 3)
 end
 
 function getyb(actor)
