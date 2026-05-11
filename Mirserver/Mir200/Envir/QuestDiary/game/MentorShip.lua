@@ -845,7 +845,8 @@ function MentorShip.applyRemove(actor, data)
                 Message.sendmsgEx(targetUserId, "MentorShipMain", "addBubble")
             else
                 --发邮件
-                sendmail(targetUserId, 1, "解除师徒通知", "解除师徒通知")
+                local mailContent = username(actor) .. "与您解除师徒关系"
+                sendmail(targetUserId, 1, "解除师徒通知", mailContent)
             end
             sefcustvar(11, userid(actor), 't_MasterAndApprt', tbl2json(myRelation))
             sefcustvar(11, targetUserId, 't_MasterAndApprt', tbl2json(targetRelation))
@@ -872,7 +873,8 @@ function MentorShip.applyRemove(actor, data)
                 Message.sendmsgEx(targetUserId, "MentorShipMain", "addBubble")
             else
                 --发邮件
-                sendmail(targetUserId, 1, "解除师徒通知", "解除师徒通知")
+                local mailContent = username(actor) .. "与您解除师徒关系"
+                sendmail(targetUserId, 1, "解除师徒通知", mailContent)
             end
             sefcustvar(11, userid(actor), 't_MasterAndApprt', tbl2json(myRelation))
             sefcustvar(11, targetUserId, 't_MasterAndApprt', tbl2json(targetRelation))

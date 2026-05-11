@@ -2,7 +2,7 @@
 <component size="260,40" extention="Button">
   <controller name="isSelect" pages="1,unSelect,0,Select" selected="0"/>
   <displayList>
-    <text id="n5_hgpp" name="title" xy="47,3" size="198,32" fontSize="22" color="#ffffff" ubb="true" autoSize="none" autoClearText="true" text="本次登录不再提示"/>
+    <text id="n5_hgpp" name="title" xy="47,3" size="198,32" fontSize="22" color="#39564e" ubb="true" autoSize="none" autoClearText="true" text="本次登录不再提示"/>
     <image id="n3_hgpp" name="icon_select" src="lxrgv57" fileName="image/checkbox_icon.png" pkg="st7dgeqq" xy="2,3" size="37,35" group="n6_hgpp">
       <gearDisplay controller="isSelect" pages="0"/>
     </image>

@@ -14,7 +14,7 @@
     </component>
     <component id="n14_r52e" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="888,203" group="n5_ldq2"/>
     <text id="n4_ldq2" name="title" xy="480,182" size="374,34" group="n5_ldq2" fontSize="24" color="#fffadc" align="center" vAlign="middle" autoSize="none" text="温馨提示"/>
-    <richtext id="n16_dcne" name="n16" xy="445,251" size="453,98" group="n5_ldq2" fontSize="24" color="#cccccc" autoSize="none" text="解除关系徒弟方出师条件将会被重置，是否解除关系，解除关系需24小时等待时间，如双方确认解除则立即解除"/>
+    <richtext id="n16_dcne" name="n16" xy="445,251" size="453,98" group="n5_ldq2" fontSize="24" color="#39564e" autoSize="none" text="解除关系徒弟方出师条件将会被重置，是否解除关系，解除关系需24小时等待时间，如双方确认解除则立即解除"/>
     <component id="n17_dcne" name="checkBox" src="dcneo5j" fileName="Components/MentorCheckBox.xml" xy="537,378" group="n5_ldq2">
       <Button title="本次登录不再提示" selectedTitle="本次登录不再提示"/>
     </component>
