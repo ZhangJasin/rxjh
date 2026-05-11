@@ -47,6 +47,7 @@ end
 function MentorShipMain:Exit()
 	self:_UnregisterNet()
 	self:RemoveEvent()
+	MentorShipMain.CCUI = nil
 	MentorShipMain.super.Exit(self)
 end
 

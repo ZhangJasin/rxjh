@@ -29,6 +29,7 @@ end
 
 function MentorShipTeach:Exit()
 	--self:RemoveEvent()
+	MentorShipTeach.CCUI = nil
 	MentorShipTeach.super.Exit(self)
 end
 

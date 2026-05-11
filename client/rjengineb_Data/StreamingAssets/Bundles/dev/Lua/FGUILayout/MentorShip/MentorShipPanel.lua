@@ -97,6 +97,7 @@ function MentorShipPanel:initBreakEvent(data)
 end
 
 function MentorShipPanel:Exit()
+	self:OnPageChange(nil)
 	self:RemoveEvent()
 end
 
