@@ -99,16 +99,10 @@ function Compound.compound(actor, data)
         end
     end
 
-    -- 2. 货币检查 (使用 money 函数检查数量)
+    -- 2. 货币检查 (使用 moneyex 函数检查关联货币总数)
     for _, cost in ipairs(totalPayCost) do
-        -- 只支持货币ID 1(银两) 和 2(元宝)
-        if cost.id ~= 1 and cost.id ~= 2 then
-            sendmsg(actor, 9, string.format('不支持的货币类型(ID:%d)', cost.id))
-            return
-        end
-
-        local haveCount = money(actor, cost.id)
-        if haveCount < cost.count then
+        local totalAvailable = moneyex(actor, cost.id)
+        if totalAvailable < cost.count then
             sendmsg(actor, 9, '货币不足')
             return
         end
@@ -140,18 +134,31 @@ function Compound.compound(actor, data)
         takeitem(actor, itemStr, 0)
     end
 
-    -- 5. 执行合成 - 扣除货币
+    -- 5. 执行合成 - 扣除货币（优先扣除绑定货币）
     for _, cost in ipairs(totalPayCost) do
-        changemoney(actor, cost.id, '-', cost.count)
+        local deductMain, deductBind = calcMoneyDeduct(actor, cost.id, cost.count)
+        
+        if deductMain == nil then
+            sendmsg(actor, 9, '货币不足')
+            return
+        end
+        
+        local bindMoneyId = BIND_MONEY_MAP[cost.id]
+        
+        -- 扣除绑定货币
+        if deductBind > 0 and bindMoneyId then
+            changemoney(actor, bindMoneyId, '-', deductBind)
+        end
+        
+        -- 扣除主货币
+        if deductMain > 0 then
+            changemoney(actor, cost.id, '-', deductMain)
+        end
     end
 
     -- 6. 执行合成 - 添加目标物品
     local giveStr = itemId .. "#" .. successCount
     giveitem(actor, giveStr, 0)
-
-    -- 打印合成日志
-    print(string.format('[合成日志] 玩家:%s, 物品ID:%d, 批量次数:%d, 成功:%d, 失败:%d',
-        getname(actor), itemId, compoundCount, successCount, failCount))
 
     -- 7. 发送成功响应
     Message.sendmsgEx(actor, 'Compound', 'Result', {1, itemId, successCount, '合成成功'})
@@ -161,6 +168,13 @@ function Compound.compound(actor, data)
         sendmsg(actor, 9, '合成成功！')
     end
 end
+
+-- 关联货币配置：{主货币ID, 绑定货币ID}
+local BIND_MONEY_MAP = {
+    [1] = 4,  -- 银两 -> 绑定金币
+    [2] = 5,  -- 元宝 -> 绑定元宝
+    [9] = 17, -- 热血币 -> 绑定热血币
+}
 
 -- 解析消耗数据
 function parsePayData(payStr)
@@ -179,6 +193,33 @@ function parsePayData(payStr)
         end
     end
     return result
+end
+
+-- 计算货币扣除详情（优先扣除绑定货币）
+-- 返回: {主货币扣除量, 绑定货币扣除量}
+local function calcMoneyDeduct(actor, moneyId, totalNeeded)
+    local bindMoneyId = BIND_MONEY_MAP[moneyId]
+    
+    -- 如果没有配置绑定货币，全部从主货币扣除
+    if not bindMoneyId then
+        return totalNeeded, 0
+    end
+    
+    -- 查询关联货币总数（主货币+绑定货币）
+    local totalAvailable = moneyex(actor, moneyId)
+    if totalAvailable < totalNeeded then
+        return nil, nil -- 货币不足
+    end
+    
+    -- 查询单独货币数量
+    local mainAmount = money(actor, moneyId)
+    local bindAmount = money(actor, bindMoneyId)
+    
+    -- 优先扣除绑定货币
+    local deductBind = math.min(bindAmount, totalNeeded)
+    local deductMain = totalNeeded - deductBind
+    
+    return deductMain, deductBind
 end
 
 -- 字符串分割函数
