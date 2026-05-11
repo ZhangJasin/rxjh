@@ -22,7 +22,30 @@ end
 
 function MentorShipTask.onKillMon(actor, mon, mapid, monidx)
     if MentorShipTask.isHasMasterOrApparenice(actor) then
-        MentorShipChangTask(actor, 7, monidx, monidx)
+        MentorShipChangTask(actor, 7, mapid, monidx)
+        local monCfg = Monster_cfg[monidx]
+        if monCfg and monCfg.BossSign == 3 then
+            local isMentorTeam = false
+            local myTeamId = tonumber(targetinfo(actor, "GROUPID")) or 0
+            if myTeamId > 0 then
+                local myRelationStr = getcustvar("11_" .. userid(actor) .. "_" .. "t_MasterAndApprt")
+                if myRelationStr and myRelationStr ~= "" then
+                    local relation = json2tbl(myRelationStr)
+                    if relation.myMaster and relation.myMaster.UserID then
+                        local masterId = tonumber(relation.myMaster.UserID)
+                        if checkstate(masterId, 2) then
+                            local masterTeamId = tonumber(targetinfo(masterId, "GROUPID")) or 0
+                            if myTeamId == masterTeamId then
+                                isMentorTeam = true
+                            end
+                        end
+                    end
+                    if isMentorTeam then
+                        MentorShipChangTask(actor, 18, "*", 1)
+                    end
+                end
+            end
+        end
     end
 end
 

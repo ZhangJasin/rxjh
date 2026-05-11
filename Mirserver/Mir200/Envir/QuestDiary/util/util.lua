@@ -1163,7 +1163,7 @@ function MentorShipChangTask(actor, task_target, task_target_param, data)
     --dump(data)
     --dump(taskList)
     --特殊任务处理
-    local specLst = { [11] = true, [12] = true, [13] = true, [14] = true, [15] = true, [16] = true, [17] = true }
+    local specLst = { [11] = true, [12] = true, [13] = true, [14] = true, [15] = true, [16] = true, [17] = true, [18] = true }
 
     if specLst[tonumber(task_target)] then
         local userID = userid(actor)
