@@ -125,7 +125,7 @@ function MentorShipPanel:SetPage(page)
 		local hasMaster = mainPage and mainPage._mentorInfo ~= nil
 		local hasApprentice = mainPage and mainPage._apprenticeList and #mainPage._apprenticeList > 0
 		if not hasMaster and not hasApprentice then
-			SL:ShowSystemTips("您当前没有师徒关系，无法进入传功页面！")
+			SL:ShowSystemTips("您当前没有师徒关系")
 			local safePage = self._currentPage or MentorPage.Main
 			FGUI:GList_setSelectedIndex(self._ui.page_switch_list, safePage - 1)
 			if self._currentPage then
