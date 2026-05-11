@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="78,78" extention="Button">
+<component size="234,56" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
     <image id="n2_oca6" name="n2" src="oca6vqd" fileName="Images/sd.png" xy="0,0">
@@ -10,6 +10,7 @@
       <gearDisplay controller="button" pages="1,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
+    <text id="n4_oca6" name="n4" xy="21,12" size="189,36" fontSize="20" color="#ffff00" align="center" vAlign="middle" autoSize="none" text="门派商店"/>
   </displayList>
   <Button downEffect="dark" downEffectValue="0.8"/>
 </component>

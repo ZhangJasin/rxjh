@@ -55,7 +55,7 @@
     <image id="n40_zah9" name="n40" src="zah9v4g" fileName="image/icon_pattern.png" pkg="st7dgeqq" xy="346,597" group="n42_zah9"/>
     <text id="n41_zah9" name="n41" xy="398,587" size="117,34" group="n42_zah9" fontSize="22" color="#ffff00" align="center" vAlign="middle" letterSpacing="3" autoSize="none" text="门派资金"/>
     <group id="n42_zah9" name="n42" xy="346,587" size="256,34" group="n43_zah9"/>
-    <component id="n240_oca6" name="btn_shop" src="oca6vqc" fileName="Components/btn_shop.xml" xy="921,585" group="n43_zah9"/>
+    <component id="n240_oca6" name="btn_shop" src="oca6vqc" fileName="Components/btn_shop.xml" xy="840,607" group="n43_zah9"/>
     <group id="n43_zah9" name="MainPanel" xy="170,92" size="992,588" group="n169_whi9" advanced="true">
       <gearDisplay controller="page_main" pages="0"/>
     </group>
