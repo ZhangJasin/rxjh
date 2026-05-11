@@ -6,6 +6,10 @@ local mentorShipMon = require("Envir/QuestDiary/game_config/cfgcsv/mentorShipMon
 local needLevel = require("Envir/QuestDiary/game_config/Level.lua")
 local StoreData = require("Envir/QuestDiary/game_config/Store.lua")
 local SkillUpgrade = require("Envir/QuestDiary/game_config/SkillUpgrade.lua")
+
+local tdCgBuffId = 110049
+local sfCgBuffId = 110050
+
 function seledata(v, fb)
     if v ~= nil then
         return v
