@@ -95,13 +95,13 @@ function DailyTaskPanel:Init()
             local itemData = SL:GetValue("ITEM_DATA", val.award[1])
             if itemData then
                 local extData = {
-                    hideTip = false,
+                    hideTip = true,
                     itemTipData = itemData,                    
                     bgVisible = false,
                     OverLap = val.award[2],
                     doubleClickCallback = false,
-                    clickCallback =  function()
-                        self:OnAwardClick(i,val.point)
+                    clickCallback =  function()                        
+                        self:OnAwardClick(i,itemData,val.point)
                     end
                 }
                 ItemUtil:ItemShow_Create(itemData, awardItem, extData)
@@ -128,11 +128,15 @@ function DailyTaskPanel:ActItemRenderer(index, item)
     self:UpdateActItem(item, actData, index)
 end
 -- 奖励点击
-function DailyTaskPanel:OnAwardClick(idx,needPoint)
+function DailyTaskPanel:OnAwardClick(idx,itemData,needPoint)
     local activePoint = dailyTaskData:GetActivePoint()
     local isGot = dailyTaskData:IsGotAward(idx)
     if activePoint >= needPoint  and not isGot then        
         dailyTaskData:getAward(idx)
+    else
+        local tipData = {}
+        tipData.itemData = itemData
+        FGUIFunction:OpenItemTips(tipData)
     end
 end
 

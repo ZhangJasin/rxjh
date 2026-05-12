@@ -190,6 +190,9 @@ local function _onKill_bossxs(actor,monidx)
     end
 end
 local function _onKill_boss(actor,monidx)
+    if BossXS_Cfg[monidx] then
+        return
+    end
     local monType = Monster_cfg[monidx].BossSign or 0
     if monType ~= 3 then
         return
