@@ -7866,7 +7866,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15020,
+			[1] = {
+				[1] = 15020,
+				[2] = 15120,
+			},
 			[2] = 10,
 			[3] = 1,
 		},
@@ -7958,7 +7961,10 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 15019,
+			[1] = {
+				[1] = 15019,
+				[2] = 15219,
+			},
 			[2] = 10,
 			[3] = 1,
 		},
