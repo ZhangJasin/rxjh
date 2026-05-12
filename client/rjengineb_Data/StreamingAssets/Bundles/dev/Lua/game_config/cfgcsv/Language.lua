@@ -1015,10 +1015,6 @@ local config = {
 		idx="Name_Task_400000",
 		Dec="悬赏任务",
 	},
-	["Name_Task_400001"] = { 
-		idx="Name_Task_400001",
-		Dec="悬赏任务",
-	},
 	["Name_Task_500000"] = { 
 		idx="Name_Task_500000",
 		Dec="角色达到20级",
@@ -2126,82 +2122,6 @@ local config = {
 	["TargetDec_Task_400000"] = { 
 		idx="TargetDec_Task_400000",
 		Dec="<font color='#00FF00'>点击接取悬赏任务</font>",
-	},
-	["TargetDec_Task_400001"] = { 
-		idx="TargetDec_Task_400001",
-		Dec="击杀<font color='#00FF00'>小黑猴</font>",
-	},
-	["TargetDec_Task_400002"] = { 
-		idx="TargetDec_Task_400002",
-		Dec="击杀<font color='#00FF00'>小蓝鬼</font>",
-	},
-	["TargetDec_Task_400003"] = { 
-		idx="TargetDec_Task_400003",
-		Dec="击杀<font color='#00FF00'>舞女</font>",
-	},
-	["TargetDec_Task_400004"] = { 
-		idx="TargetDec_Task_400004",
-		Dec="击杀<font color='#00FF00'>破戒僧</font>",
-	},
-	["TargetDec_Task_400005"] = { 
-		idx="TargetDec_Task_400005",
-		Dec="击杀<font color='#00FF00'>大块头山贼</font>",
-	},
-	["TargetDec_Task_400006"] = { 
-		idx="TargetDec_Task_400006",
-		Dec="击杀<font color='#00FF00'>巨斧山贼</font>",
-	},
-	["TargetDec_Task_400007"] = { 
-		idx="TargetDec_Task_400007",
-		Dec="击杀<font color='#00FF00'>赤血熊</font>",
-	},
-	["TargetDec_Task_400008"] = { 
-		idx="TargetDec_Task_400008",
-		Dec="击杀<font color='#00FF00'>山林黄虎获得虎齿</font>",
-	},
-	["TargetDec_Task_400009"] = { 
-		idx="TargetDec_Task_400009",
-		Dec="击杀<font color='#00FF00'>白纹虎获得虎皮</font>",
-	},
-	["TargetDec_Task_400010"] = { 
-		idx="TargetDec_Task_400010",
-		Dec="击杀<font color='#00FF00'>盗鱼村夫</font>",
-	},
-	["TargetDec_Task_400011"] = { 
-		idx="TargetDec_Task_400011",
-		Dec="击杀<font color='#00FF00'>双枪渔贼</font>",
-	},
-	["TargetDec_Task_400012"] = { 
-		idx="TargetDec_Task_400012",
-		Dec="击杀<font color='#00FF00'>巨臂异人</font>",
-	},
-	["TargetDec_Task_400013"] = { 
-		idx="TargetDec_Task_400013",
-		Dec="击杀<font color='#00FF00'>小山怪</font>",
-	},
-	["TargetDec_Task_400014"] = { 
-		idx="TargetDec_Task_400014",
-		Dec="击杀<font color='#00FF00'>利爪山魅</font>",
-	},
-	["TargetDec_Task_400015"] = { 
-		idx="TargetDec_Task_400015",
-		Dec="击杀<font color='#00FF00'>山魈</font>",
-	},
-	["TargetDec_Task_400016"] = { 
-		idx="TargetDec_Task_400016",
-		Dec="击杀<font color='#00FF00'>莲花教徒</font>",
-	},
-	["TargetDec_Task_400017"] = { 
-		idx="TargetDec_Task_400017",
-		Dec="击杀<font color='#00FF00'>异域恶僧</font>",
-	},
-	["TargetDec_Task_400018"] = { 
-		idx="TargetDec_Task_400018",
-		Dec="击杀<font color='#00FF00'>赤发火贼</font>",
-	},
-	["TargetDec_Task_400019"] = { 
-		idx="TargetDec_Task_400019",
-		Dec="击杀<font color='#00FF00'>独眼火贼</font>",
 	},
 	["TargetDec_Task_500000"] = { 
 		idx="TargetDec_Task_500000",
@@ -12318,6 +12238,1230 @@ local config = {
 	["TargetDec_Task_520765"] = { 
 		idx="TargetDec_Task_520765",
 		Dec="提交尖细耳针 ",
+	},
+	["Name_Task_400001"] = { 
+		idx="Name_Task_400001",
+		Dec="【江湖录】默默无闻·壹",
+	},
+	["Name_Task_400002"] = { 
+		idx="Name_Task_400002",
+		Dec="【江湖录】默默无闻·壹",
+	},
+	["Name_Task_400003"] = { 
+		idx="Name_Task_400003",
+		Dec="【江湖录】默默无闻·贰",
+	},
+	["Name_Task_400004"] = { 
+		idx="Name_Task_400004",
+		Dec="【江湖录】默默无闻·贰",
+	},
+	["Name_Task_400005"] = { 
+		idx="Name_Task_400005",
+		Dec="【江湖录】默默无闻·叁",
+	},
+	["Name_Task_400006"] = { 
+		idx="Name_Task_400006",
+		Dec="【江湖录】默默无闻·叁",
+	},
+	["Name_Task_400007"] = { 
+		idx="Name_Task_400007",
+		Dec="【江湖录】默默无闻·肆",
+	},
+	["Name_Task_400008"] = { 
+		idx="Name_Task_400008",
+		Dec="【江湖录】默默无闻·肆",
+	},
+	["Name_Task_400009"] = { 
+		idx="Name_Task_400009",
+		Dec="【江湖录】默默无闻·伍",
+	},
+	["Name_Task_400010"] = { 
+		idx="Name_Task_400010",
+		Dec="【江湖录】默默无闻·伍",
+	},
+	["Name_Task_400011"] = { 
+		idx="Name_Task_400011",
+		Dec="【江湖录】默默无闻·伍",
+	},
+	["Name_Task_400012"] = { 
+		idx="Name_Task_400012",
+		Dec="【江湖录】江湖小虾·壹",
+	},
+	["Name_Task_400013"] = { 
+		idx="Name_Task_400013",
+		Dec="【江湖录】江湖小虾·贰",
+	},
+	["Name_Task_400014"] = { 
+		idx="Name_Task_400014",
+		Dec="【江湖录】江湖小虾·叁",
+	},
+	["Name_Task_400015"] = { 
+		idx="Name_Task_400015",
+		Dec="【江湖录】江湖小虾·叁",
+	},
+	["Name_Task_400016"] = { 
+		idx="Name_Task_400016",
+		Dec="【江湖录】江湖小虾·肆",
+	},
+	["Name_Task_400017"] = { 
+		idx="Name_Task_400017",
+		Dec="【江湖录】江湖小虾·伍",
+	},
+	["Name_Task_400018"] = { 
+		idx="Name_Task_400018",
+		Dec="【江湖录】江湖小虾·伍",
+	},
+	["Name_Task_400019"] = { 
+		idx="Name_Task_400019",
+		Dec="【江湖录】江湖小虾·伍",
+	},
+	["Name_Task_400020"] = { 
+		idx="Name_Task_400020",
+		Dec="【江湖录】初出茅庐·壹",
+	},
+	["Name_Task_400021"] = { 
+		idx="Name_Task_400021",
+		Dec="【江湖录】初出茅庐·贰",
+	},
+	["Name_Task_400022"] = { 
+		idx="Name_Task_400022",
+		Dec="【江湖录】初出茅庐·叁",
+	},
+	["Name_Task_400023"] = { 
+		idx="Name_Task_400023",
+		Dec="【江湖录】初出茅庐·叁",
+	},
+	["Name_Task_400024"] = { 
+		idx="Name_Task_400024",
+		Dec="【江湖录】初出茅庐·肆",
+	},
+	["Name_Task_400025"] = { 
+		idx="Name_Task_400025",
+		Dec="【江湖录】初出茅庐·伍",
+	},
+	["Name_Task_400026"] = { 
+		idx="Name_Task_400026",
+		Dec="【江湖录】初出茅庐·伍",
+	},
+	["Name_Task_400027"] = { 
+		idx="Name_Task_400027",
+		Dec="【江湖录】初出茅庐·伍",
+	},
+	["Name_Task_400028"] = { 
+		idx="Name_Task_400028",
+		Dec="【江湖录】初出茅庐·伍",
+	},
+	["Name_Task_400029"] = { 
+		idx="Name_Task_400029",
+		Dec="【江湖录】小有所成·壹",
+	},
+	["Name_Task_400030"] = { 
+		idx="Name_Task_400030",
+		Dec="【江湖录】小有所成·壹",
+	},
+	["Name_Task_400031"] = { 
+		idx="Name_Task_400031",
+		Dec="【江湖录】小有所成·贰",
+	},
+	["Name_Task_400032"] = { 
+		idx="Name_Task_400032",
+		Dec="【江湖录】小有所成·贰",
+	},
+	["Name_Task_400033"] = { 
+		idx="Name_Task_400033",
+		Dec="【江湖录】小有所成·叁",
+	},
+	["Name_Task_400034"] = { 
+		idx="Name_Task_400034",
+		Dec="【江湖录】小有所成·肆",
+	},
+	["Name_Task_400035"] = { 
+		idx="Name_Task_400035",
+		Dec="【江湖录】小有所成·伍",
+	},
+	["Name_Task_400036"] = { 
+		idx="Name_Task_400036",
+		Dec="【江湖录】小有所成·伍",
+	},
+	["Name_Task_400037"] = { 
+		idx="Name_Task_400037",
+		Dec="【江湖录】小有所成·伍",
+	},
+	["Name_Task_400038"] = { 
+		idx="Name_Task_400038",
+		Dec="【江湖录】小有所成·伍",
+	},
+	["Name_Task_400039"] = { 
+		idx="Name_Task_400039",
+		Dec="【江湖录】名声鹊起·壹",
+	},
+	["Name_Task_400040"] = { 
+		idx="Name_Task_400040",
+		Dec="【江湖录】名声鹊起·壹",
+	},
+	["Name_Task_400041"] = { 
+		idx="Name_Task_400041",
+		Dec="【江湖录】名声鹊起·贰",
+	},
+	["Name_Task_400042"] = { 
+		idx="Name_Task_400042",
+		Dec="【江湖录】名声鹊起·贰",
+	},
+	["Name_Task_400043"] = { 
+		idx="Name_Task_400043",
+		Dec="【江湖录】名声鹊起·叁",
+	},
+	["Name_Task_400044"] = { 
+		idx="Name_Task_400044",
+		Dec="【江湖录】名声鹊起·叁",
+	},
+	["Name_Task_400045"] = { 
+		idx="Name_Task_400045",
+		Dec="【江湖录】名声鹊起·肆",
+	},
+	["Name_Task_400046"] = { 
+		idx="Name_Task_400046",
+		Dec="【江湖录】名声鹊起·肆",
+	},
+	["Name_Task_400047"] = { 
+		idx="Name_Task_400047",
+		Dec="【江湖录】名声鹊起·伍",
+	},
+	["Name_Task_400048"] = { 
+		idx="Name_Task_400048",
+		Dec="【江湖录】名声鹊起·伍",
+	},
+	["Name_Task_400049"] = { 
+		idx="Name_Task_400049",
+		Dec="【江湖录】名声鹊起·伍",
+	},
+	["Name_Task_400050"] = { 
+		idx="Name_Task_400050",
+		Dec="【江湖录】名声鹊起·伍",
+	},
+	["Name_Task_400051"] = { 
+		idx="Name_Task_400051",
+		Dec="【江湖录】名动一方·壹",
+	},
+	["Name_Task_400052"] = { 
+		idx="Name_Task_400052",
+		Dec="【江湖录】名动一方·贰",
+	},
+	["Name_Task_400053"] = { 
+		idx="Name_Task_400053",
+		Dec="【江湖录】名动一方·贰",
+	},
+	["Name_Task_400054"] = { 
+		idx="Name_Task_400054",
+		Dec="【江湖录】名动一方·叁",
+	},
+	["Name_Task_400055"] = { 
+		idx="Name_Task_400055",
+		Dec="【江湖录】名动一方·肆",
+	},
+	["Name_Task_400056"] = { 
+		idx="Name_Task_400056",
+		Dec="【江湖录】名动一方·肆",
+	},
+	["Name_Task_400057"] = { 
+		idx="Name_Task_400057",
+		Dec="【江湖录】名动一方·伍",
+	},
+	["Name_Task_400058"] = { 
+		idx="Name_Task_400058",
+		Dec="【江湖录】名动一方·伍",
+	},
+	["Name_Task_400059"] = { 
+		idx="Name_Task_400059",
+		Dec="【江湖录】名动一方·伍",
+	},
+	["Name_Task_400060"] = { 
+		idx="Name_Task_400060",
+		Dec="【江湖录】名声远扬·壹",
+	},
+	["Name_Task_400061"] = { 
+		idx="Name_Task_400061",
+		Dec="【江湖录】名声远扬·壹",
+	},
+	["Name_Task_400062"] = { 
+		idx="Name_Task_400062",
+		Dec="【江湖录】名声远扬·贰",
+	},
+	["Name_Task_400063"] = { 
+		idx="Name_Task_400063",
+		Dec="【江湖录】名声远扬·贰",
+	},
+	["Name_Task_400064"] = { 
+		idx="Name_Task_400064",
+		Dec="【江湖录】名声远扬·叁",
+	},
+	["Name_Task_400065"] = { 
+		idx="Name_Task_400065",
+		Dec="【江湖录】名声远扬·肆",
+	},
+	["Name_Task_400066"] = { 
+		idx="Name_Task_400066",
+		Dec="【江湖录】名声远扬·肆",
+	},
+	["Name_Task_400067"] = { 
+		idx="Name_Task_400067",
+		Dec="【江湖录】名声远扬·伍",
+	},
+	["Name_Task_400068"] = { 
+		idx="Name_Task_400068",
+		Dec="【江湖录】名声远扬·伍",
+	},
+	["Name_Task_400069"] = { 
+		idx="Name_Task_400069",
+		Dec="【江湖录】名声远扬·伍",
+	},
+	["Name_Task_400070"] = { 
+		idx="Name_Task_400070",
+		Dec="【江湖录】名扬四海·壹",
+	},
+	["Name_Task_400071"] = { 
+		idx="Name_Task_400071",
+		Dec="【江湖录】名扬四海·壹",
+	},
+	["Name_Task_400072"] = { 
+		idx="Name_Task_400072",
+		Dec="【江湖录】名扬四海·贰",
+	},
+	["Name_Task_400073"] = { 
+		idx="Name_Task_400073",
+		Dec="【江湖录】名扬四海·贰",
+	},
+	["Name_Task_400074"] = { 
+		idx="Name_Task_400074",
+		Dec="【江湖录】名扬四海·叁",
+	},
+	["Name_Task_400075"] = { 
+		idx="Name_Task_400075",
+		Dec="【江湖录】名扬四海·叁",
+	},
+	["Name_Task_400076"] = { 
+		idx="Name_Task_400076",
+		Dec="【江湖录】名扬四海·肆",
+	},
+	["Name_Task_400077"] = { 
+		idx="Name_Task_400077",
+		Dec="【江湖录】名扬四海·肆",
+	},
+	["Name_Task_400078"] = { 
+		idx="Name_Task_400078",
+		Dec="【江湖录】名扬四海·伍",
+	},
+	["Name_Task_400079"] = { 
+		idx="Name_Task_400079",
+		Dec="【江湖录】名扬四海·伍",
+	},
+	["Name_Task_400080"] = { 
+		idx="Name_Task_400080",
+		Dec="【江湖录】名扬四海·伍",
+	},
+	["Name_Task_400081"] = { 
+		idx="Name_Task_400081",
+		Dec="【江湖录】名扬四海·伍",
+	},
+	["Name_Task_400082"] = { 
+		idx="Name_Task_400082",
+		Dec="【江湖录】威震八方·壹",
+	},
+	["Name_Task_400083"] = { 
+		idx="Name_Task_400083",
+		Dec="【江湖录】威震八方·壹",
+	},
+	["Name_Task_400084"] = { 
+		idx="Name_Task_400084",
+		Dec="【江湖录】威震八方·贰",
+	},
+	["Name_Task_400085"] = { 
+		idx="Name_Task_400085",
+		Dec="【江湖录】威震八方·贰",
+	},
+	["Name_Task_400086"] = { 
+		idx="Name_Task_400086",
+		Dec="【江湖录】威震八方·叁",
+	},
+	["Name_Task_400087"] = { 
+		idx="Name_Task_400087",
+		Dec="【江湖录】威震八方·叁",
+	},
+	["Name_Task_400088"] = { 
+		idx="Name_Task_400088",
+		Dec="【江湖录】威震八方·肆",
+	},
+	["Name_Task_400089"] = { 
+		idx="Name_Task_400089",
+		Dec="【江湖录】威震八方·肆",
+	},
+	["Name_Task_400090"] = { 
+		idx="Name_Task_400090",
+		Dec="【江湖录】威震八方·伍",
+	},
+	["Name_Task_400091"] = { 
+		idx="Name_Task_400091",
+		Dec="【江湖录】威震八方·伍",
+	},
+	["Name_Task_400092"] = { 
+		idx="Name_Task_400092",
+		Dec="【江湖录】威震八方·伍",
+	},
+	["Name_Task_400093"] = { 
+		idx="Name_Task_400093",
+		Dec="【江湖录】威震八方·伍",
+	},
+	["Name_Task_400094"] = { 
+		idx="Name_Task_400094",
+		Dec="【江湖录】驰名天下·壹",
+	},
+	["Name_Task_400095"] = { 
+		idx="Name_Task_400095",
+		Dec="【江湖录】驰名天下·壹",
+	},
+	["Name_Task_400096"] = { 
+		idx="Name_Task_400096",
+		Dec="【江湖录】驰名天下·贰",
+	},
+	["Name_Task_400097"] = { 
+		idx="Name_Task_400097",
+		Dec="【江湖录】驰名天下·贰",
+	},
+	["Name_Task_400098"] = { 
+		idx="Name_Task_400098",
+		Dec="【江湖录】驰名天下·叁",
+	},
+	["Name_Task_400099"] = { 
+		idx="Name_Task_400099",
+		Dec="【江湖录】驰名天下·叁",
+	},
+	["Name_Task_400100"] = { 
+		idx="Name_Task_400100",
+		Dec="【江湖录】驰名天下·肆",
+	},
+	["Name_Task_400101"] = { 
+		idx="Name_Task_400101",
+		Dec="【江湖录】驰名天下·肆",
+	},
+	["Name_Task_400102"] = { 
+		idx="Name_Task_400102",
+		Dec="【江湖录】驰名天下·伍",
+	},
+	["Name_Task_400103"] = { 
+		idx="Name_Task_400103",
+		Dec="【江湖录】驰名天下·伍",
+	},
+	["Name_Task_400104"] = { 
+		idx="Name_Task_400104",
+		Dec="【江湖录】驰名天下·伍",
+	},
+	["Name_Task_400105"] = { 
+		idx="Name_Task_400105",
+		Dec="【江湖录】驰名天下·伍",
+	},
+	["Name_Task_400106"] = { 
+		idx="Name_Task_400106",
+		Dec="【江湖录】名动九州·壹",
+	},
+	["Name_Task_400107"] = { 
+		idx="Name_Task_400107",
+		Dec="【江湖录】名动九州·壹",
+	},
+	["Name_Task_400108"] = { 
+		idx="Name_Task_400108",
+		Dec="【江湖录】名动九州·贰",
+	},
+	["Name_Task_400109"] = { 
+		idx="Name_Task_400109",
+		Dec="【江湖录】名动九州·贰",
+	},
+	["Name_Task_400110"] = { 
+		idx="Name_Task_400110",
+		Dec="【江湖录】名动九州·叁",
+	},
+	["Name_Task_400111"] = { 
+		idx="Name_Task_400111",
+		Dec="【江湖录】名动九州·叁",
+	},
+	["Name_Task_400112"] = { 
+		idx="Name_Task_400112",
+		Dec="【江湖录】名动九州·肆",
+	},
+	["Name_Task_400113"] = { 
+		idx="Name_Task_400113",
+		Dec="【江湖录】名动九州·肆",
+	},
+	["Name_Task_400114"] = { 
+		idx="Name_Task_400114",
+		Dec="【江湖录】名动九州·伍",
+	},
+	["Name_Task_400115"] = { 
+		idx="Name_Task_400115",
+		Dec="【江湖录】名动九州·伍",
+	},
+	["Name_Task_400116"] = { 
+		idx="Name_Task_400116",
+		Dec="【江湖录】名动九州·伍",
+	},
+	["Name_Task_400117"] = { 
+		idx="Name_Task_400117",
+		Dec="【江湖录】名动九州·伍",
+	},
+	["Name_Task_400118"] = { 
+		idx="Name_Task_400118",
+		Dec="【江湖录】威镇寰宇·壹",
+	},
+	["Name_Task_400119"] = { 
+		idx="Name_Task_400119",
+		Dec="【江湖录】威镇寰宇·壹",
+	},
+	["Name_Task_400120"] = { 
+		idx="Name_Task_400120",
+		Dec="【江湖录】威镇寰宇·贰",
+	},
+	["Name_Task_400121"] = { 
+		idx="Name_Task_400121",
+		Dec="【江湖录】威镇寰宇·贰",
+	},
+	["Name_Task_400122"] = { 
+		idx="Name_Task_400122",
+		Dec="【江湖录】威镇寰宇·叁",
+	},
+	["Name_Task_400123"] = { 
+		idx="Name_Task_400123",
+		Dec="【江湖录】威镇寰宇·叁",
+	},
+	["Name_Task_400124"] = { 
+		idx="Name_Task_400124",
+		Dec="【江湖录】威镇寰宇·肆",
+	},
+	["Name_Task_400125"] = { 
+		idx="Name_Task_400125",
+		Dec="【江湖录】威镇寰宇·肆",
+	},
+	["Name_Task_400126"] = { 
+		idx="Name_Task_400126",
+		Dec="【江湖录】威镇寰宇·伍",
+	},
+	["Name_Task_400127"] = { 
+		idx="Name_Task_400127",
+		Dec="【江湖录】威镇寰宇·伍",
+	},
+	["Name_Task_400128"] = { 
+		idx="Name_Task_400128",
+		Dec="【江湖录】威镇寰宇·伍",
+	},
+	["Name_Task_400129"] = { 
+		idx="Name_Task_400129",
+		Dec="【江湖录】威镇寰宇·伍",
+	},
+	["Name_Task_400130"] = { 
+		idx="Name_Task_400130",
+		Dec="【江湖录】震铄古今·壹",
+	},
+	["Name_Task_400131"] = { 
+		idx="Name_Task_400131",
+		Dec="【江湖录】震铄古今·壹",
+	},
+	["Name_Task_400132"] = { 
+		idx="Name_Task_400132",
+		Dec="【江湖录】震铄古今·贰",
+	},
+	["Name_Task_400133"] = { 
+		idx="Name_Task_400133",
+		Dec="【江湖录】震铄古今·贰",
+	},
+	["Name_Task_400134"] = { 
+		idx="Name_Task_400134",
+		Dec="【江湖录】震铄古今·叁",
+	},
+	["Name_Task_400135"] = { 
+		idx="Name_Task_400135",
+		Dec="【江湖录】震铄古今·叁",
+	},
+	["Name_Task_400136"] = { 
+		idx="Name_Task_400136",
+		Dec="【江湖录】震铄古今·肆",
+	},
+	["Name_Task_400137"] = { 
+		idx="Name_Task_400137",
+		Dec="【江湖录】震铄古今·肆",
+	},
+	["Name_Task_400138"] = { 
+		idx="Name_Task_400138",
+		Dec="【江湖录】震铄古今·伍",
+	},
+	["Name_Task_400139"] = { 
+		idx="Name_Task_400139",
+		Dec="【江湖录】震铄古今·伍",
+	},
+	["Name_Task_400140"] = { 
+		idx="Name_Task_400140",
+		Dec="【江湖录】震铄古今·伍",
+	},
+	["Name_Task_400141"] = { 
+		idx="Name_Task_400141",
+		Dec="【江湖录】震铄古今·伍",
+	},
+	["Name_Task_400142"] = { 
+		idx="Name_Task_400142",
+		Dec="【江湖录】登峰造极·壹",
+	},
+	["Name_Task_400143"] = { 
+		idx="Name_Task_400143",
+		Dec="【江湖录】登峰造极·壹",
+	},
+	["Name_Task_400144"] = { 
+		idx="Name_Task_400144",
+		Dec="【江湖录】登峰造极·贰",
+	},
+	["Name_Task_400145"] = { 
+		idx="Name_Task_400145",
+		Dec="【江湖录】登峰造极·贰",
+	},
+	["Name_Task_400146"] = { 
+		idx="Name_Task_400146",
+		Dec="【江湖录】登峰造极·叁",
+	},
+	["Name_Task_400147"] = { 
+		idx="Name_Task_400147",
+		Dec="【江湖录】登峰造极·叁",
+	},
+	["Name_Task_400148"] = { 
+		idx="Name_Task_400148",
+		Dec="【江湖录】登峰造极·肆",
+	},
+	["Name_Task_400149"] = { 
+		idx="Name_Task_400149",
+		Dec="【江湖录】登峰造极·肆",
+	},
+	["Name_Task_400150"] = { 
+		idx="Name_Task_400150",
+		Dec="【江湖录】登峰造极·伍",
+	},
+	["Name_Task_400151"] = { 
+		idx="Name_Task_400151",
+		Dec="【江湖录】登峰造极·伍",
+	},
+	["Name_Task_400152"] = { 
+		idx="Name_Task_400152",
+		Dec="【江湖录】登峰造极·伍",
+	},
+	["Name_Task_400153"] = { 
+		idx="Name_Task_400153",
+		Dec="【江湖录】登峰造极·伍",
+	},
+	["TargetDec_Task_400001"] = { 
+		idx="TargetDec_Task_400001",
+		Dec="击杀熊",
+	},
+	["TargetDec_Task_400002"] = { 
+		idx="TargetDec_Task_400002",
+		Dec="等级达到20级",
+	},
+	["TargetDec_Task_400003"] = { 
+		idx="TargetDec_Task_400003",
+		Dec="击杀伐木工头 ",
+	},
+	["TargetDec_Task_400004"] = { 
+		idx="TargetDec_Task_400004",
+		Dec="击杀伐木工头（勇士） ",
+	},
+	["TargetDec_Task_400005"] = { 
+		idx="TargetDec_Task_400005",
+		Dec="等级达到25级",
+	},
+	["TargetDec_Task_400006"] = { 
+		idx="TargetDec_Task_400006",
+		Dec="完成1次门派任务 ",
+	},
+	["TargetDec_Task_400007"] = { 
+		idx="TargetDec_Task_400007",
+		Dec="进行强化3次 ",
+	},
+	["TargetDec_Task_400008"] = { 
+		idx="TargetDec_Task_400008",
+		Dec="完成门派捐献1次 ",
+	},
+	["TargetDec_Task_400009"] = { 
+		idx="TargetDec_Task_400009",
+		Dec="击杀伐木工头（勇士） ",
+	},
+	["TargetDec_Task_400010"] = { 
+		idx="TargetDec_Task_400010",
+		Dec="宠物达到15级",
+	},
+	["TargetDec_Task_400011"] = { 
+		idx="TargetDec_Task_400011",
+		Dec="等级到达30级",
+	},
+	["TargetDec_Task_400012"] = { 
+		idx="TargetDec_Task_400012",
+		Dec="击杀30级怪物 ",
+	},
+	["TargetDec_Task_400013"] = { 
+		idx="TargetDec_Task_400013",
+		Dec="完成3次门派任务 ",
+	},
+	["TargetDec_Task_400014"] = { 
+		idx="TargetDec_Task_400014",
+		Dec="击杀巨斧山贼 ",
+	},
+	["TargetDec_Task_400015"] = { 
+		idx="TargetDec_Task_400015",
+		Dec="完成3次门派任务 ",
+	},
+	["TargetDec_Task_400016"] = { 
+		idx="TargetDec_Task_400016",
+		Dec="穿戴15级以上强化+4装备 ",
+	},
+	["TargetDec_Task_400017"] = { 
+		idx="TargetDec_Task_400017",
+		Dec="等级到达32级 ",
+	},
+	["TargetDec_Task_400018"] = { 
+		idx="TargetDec_Task_400018",
+		Dec="穿戴20级以上强化+4装备 ",
+	},
+	["TargetDec_Task_400019"] = { 
+		idx="TargetDec_Task_400019",
+		Dec="击杀BOSS山鬼 ",
+	},
+	["TargetDec_Task_400020"] = { 
+		idx="TargetDec_Task_400020",
+		Dec="穿戴20级以上强化+4装备 ",
+	},
+	["TargetDec_Task_400021"] = { 
+		idx="TargetDec_Task_400021",
+		Dec="完成4次门派任务 ",
+	},
+	["TargetDec_Task_400022"] = { 
+		idx="TargetDec_Task_400022",
+		Dec="击杀精英怪物 ",
+	},
+	["TargetDec_Task_400023"] = { 
+		idx="TargetDec_Task_400023",
+		Dec="完成5次门派任务 ",
+	},
+	["TargetDec_Task_400024"] = { 
+		idx="TargetDec_Task_400024",
+		Dec="击杀30级怪物 ",
+	},
+	["TargetDec_Task_400025"] = { 
+		idx="TargetDec_Task_400025",
+		Dec="完成1次BOSS悬赏 ",
+	},
+	["TargetDec_Task_400026"] = { 
+		idx="TargetDec_Task_400026",
+		Dec="击杀BOSS山鬼 ",
+	},
+	["TargetDec_Task_400027"] = { 
+		idx="TargetDec_Task_400027",
+		Dec="击杀精英怪物 ",
+	},
+	["TargetDec_Task_400028"] = { 
+		idx="TargetDec_Task_400028",
+		Dec="击杀30级以上怪物 ",
+	},
+	["TargetDec_Task_400029"] = { 
+		idx="TargetDec_Task_400029",
+		Dec="击杀敌对阵容一名玩家 ",
+	},
+	["TargetDec_Task_400030"] = { 
+		idx="TargetDec_Task_400030",
+		Dec="等级达到35级 ",
+	},
+	["TargetDec_Task_400031"] = { 
+		idx="TargetDec_Task_400031",
+		Dec="击杀35级以上怪物 ",
+	},
+	["TargetDec_Task_400032"] = { 
+		idx="TargetDec_Task_400032",
+		Dec="达到100武勋值 ",
+	},
+	["TargetDec_Task_400033"] = { 
+		idx="TargetDec_Task_400033",
+		Dec="完成两次BOSS悬赏 ",
+	},
+	["TargetDec_Task_400034"] = { 
+		idx="TargetDec_Task_400034",
+		Dec="击杀精英怪物 ",
+	},
+	["TargetDec_Task_400035"] = { 
+		idx="TargetDec_Task_400035",
+		Dec="等级达到40级 ",
+	},
+	["TargetDec_Task_400036"] = { 
+		idx="TargetDec_Task_400036",
+		Dec="穿戴35级以上+7装备 ",
+	},
+	["TargetDec_Task_400037"] = { 
+		idx="TargetDec_Task_400037",
+		Dec="击杀敌对阵容1名玩家 ",
+	},
+	["TargetDec_Task_400038"] = { 
+		idx="TargetDec_Task_400038",
+		Dec="兑换门甲 ",
+	},
+	["TargetDec_Task_400039"] = { 
+		idx="TargetDec_Task_400039",
+		Dec="门派捐献10次 ",
+	},
+	["TargetDec_Task_400040"] = { 
+		idx="TargetDec_Task_400040",
+		Dec="完成门派任务10次 ",
+	},
+	["TargetDec_Task_400041"] = { 
+		idx="TargetDec_Task_400041",
+		Dec="等级达到42级 ",
+	},
+	["TargetDec_Task_400042"] = { 
+		idx="TargetDec_Task_400042",
+		Dec="参加一次正邪大战 ",
+	},
+	["TargetDec_Task_400043"] = { 
+		idx="TargetDec_Task_400043",
+		Dec="门派捐献15次 ",
+	},
+	["TargetDec_Task_400044"] = { 
+		idx="TargetDec_Task_400044",
+		Dec="完成4次BOSS悬赏 ",
+	},
+	["TargetDec_Task_400045"] = { 
+		idx="TargetDec_Task_400045",
+		Dec="门派捐献15次 ",
+	},
+	["TargetDec_Task_400046"] = { 
+		idx="TargetDec_Task_400046",
+		Dec="达到1000武勋值 ",
+	},
+	["TargetDec_Task_400047"] = { 
+		idx="TargetDec_Task_400047",
+		Dec="完成门派任务20次 ",
+	},
+	["TargetDec_Task_400048"] = { 
+		idx="TargetDec_Task_400048",
+		Dec="穿戴35级以上+7装备 ",
+	},
+	["TargetDec_Task_400049"] = { 
+		idx="TargetDec_Task_400049",
+		Dec="等级达到44级 ",
+	},
+	["TargetDec_Task_400050"] = { 
+		idx="TargetDec_Task_400050",
+		Dec="击杀敌对阵容3名玩家 ",
+	},
+	["TargetDec_Task_400051"] = { 
+		idx="TargetDec_Task_400051",
+		Dec="完成两次四星以上的门派任务 ",
+	},
+	["TargetDec_Task_400052"] = { 
+		idx="TargetDec_Task_400052",
+		Dec="门派捐献20次 ",
+	},
+	["TargetDec_Task_400053"] = { 
+		idx="TargetDec_Task_400053",
+		Dec="击杀精英怪物 ",
+	},
+	["TargetDec_Task_400054"] = { 
+		idx="TargetDec_Task_400054",
+		Dec="装备强化5次 ",
+	},
+	["TargetDec_Task_400055"] = { 
+		idx="TargetDec_Task_400055",
+		Dec="完成两次BOSS悬赏 ",
+	},
+	["TargetDec_Task_400056"] = { 
+		idx="TargetDec_Task_400056",
+		Dec="达到2000武勋值 ",
+	},
+	["TargetDec_Task_400057"] = { 
+		idx="TargetDec_Task_400057",
+		Dec="等级达到48级 ",
+	},
+	["TargetDec_Task_400058"] = { 
+		idx="TargetDec_Task_400058",
+		Dec="穿戴40级以上+7装备 ",
+	},
+	["TargetDec_Task_400059"] = { 
+		idx="TargetDec_Task_400059",
+		Dec="完成6次BOSS悬赏 ",
+	},
+	["TargetDec_Task_400060"] = { 
+		idx="TargetDec_Task_400060",
+		Dec="完成一次五星门派任务 ",
+	},
+	["TargetDec_Task_400061"] = { 
+		idx="TargetDec_Task_400061",
+		Dec="参加一次正邪大战 ",
+	},
+	["TargetDec_Task_400062"] = { 
+		idx="TargetDec_Task_400062",
+		Dec="完成一次五星门派任务 ",
+	},
+	["TargetDec_Task_400063"] = { 
+		idx="TargetDec_Task_400063",
+		Dec="击杀等级高于48级的野怪 ",
+	},
+	["TargetDec_Task_400064"] = { 
+		idx="TargetDec_Task_400064",
+		Dec="完成门派任务20次 ",
+	},
+	["TargetDec_Task_400065"] = { 
+		idx="TargetDec_Task_400065",
+		Dec="击杀等级高于50级的野怪 ",
+	},
+	["TargetDec_Task_400066"] = { 
+		idx="TargetDec_Task_400066",
+		Dec="门派捐献20次 ",
+	},
+	["TargetDec_Task_400067"] = { 
+		idx="TargetDec_Task_400067",
+		Dec="达到3500武勋值 ",
+	},
+	["TargetDec_Task_400068"] = { 
+		idx="TargetDec_Task_400068",
+		Dec="参加一次门派战 ",
+	},
+	["TargetDec_Task_400069"] = { 
+		idx="TargetDec_Task_400069",
+		Dec="完成8次BOSS悬赏 ",
+	},
+	["TargetDec_Task_400070"] = { 
+		idx="TargetDec_Task_400070",
+		Dec="完成一次五星门派任务 ",
+	},
+	["TargetDec_Task_400071"] = { 
+		idx="TargetDec_Task_400071",
+		Dec="击杀敌对阵容5名玩家 ",
+	},
+	["TargetDec_Task_400072"] = { 
+		idx="TargetDec_Task_400072",
+		Dec="击杀等级高于52级的野怪 ",
+	},
+	["TargetDec_Task_400073"] = { 
+		idx="TargetDec_Task_400073",
+		Dec="达到5000武勋值 ",
+	},
+	["TargetDec_Task_400074"] = { 
+		idx="TargetDec_Task_400074",
+		Dec="击杀等级高于53级的野怪 ",
+	},
+	["TargetDec_Task_400075"] = { 
+		idx="TargetDec_Task_400075",
+		Dec="坐骑升级10次 ",
+	},
+	["TargetDec_Task_400076"] = { 
+		idx="TargetDec_Task_400076",
+		Dec="完成20次门派任务 ",
+	},
+	["TargetDec_Task_400077"] = { 
+		idx="TargetDec_Task_400077",
+		Dec="击杀敌对阵容10名玩家 ",
+	},
+	["TargetDec_Task_400078"] = { 
+		idx="TargetDec_Task_400078",
+		Dec="等级达到54级 ",
+	},
+	["TargetDec_Task_400079"] = { 
+		idx="TargetDec_Task_400079",
+		Dec="穿戴40级以上强化+8装备 ",
+	},
+	["TargetDec_Task_400080"] = { 
+		idx="TargetDec_Task_400080",
+		Dec="击杀等级高于54级的野怪 ",
+	},
+	["TargetDec_Task_400081"] = { 
+		idx="TargetDec_Task_400081",
+		Dec="灵宠达到30阶 ",
+	},
+	["TargetDec_Task_400082"] = { 
+		idx="TargetDec_Task_400082",
+		Dec="达到10000武勋值",
+	},
+	["TargetDec_Task_400083"] = { 
+		idx="TargetDec_Task_400083",
+		Dec="参加一次门派战 ",
+	},
+	["TargetDec_Task_400084"] = { 
+		idx="TargetDec_Task_400084",
+		Dec="装备强化7次 ",
+	},
+	["TargetDec_Task_400085"] = { 
+		idx="TargetDec_Task_400085",
+		Dec="完成10次BOSS悬赏 ",
+	},
+	["TargetDec_Task_400086"] = { 
+		idx="TargetDec_Task_400086",
+		Dec="完成20次门派任务 ",
+	},
+	["TargetDec_Task_400087"] = { 
+		idx="TargetDec_Task_400087",
+		Dec="击杀敌对阵容10名玩家 ",
+	},
+	["TargetDec_Task_400088"] = { 
+		idx="TargetDec_Task_400088",
+		Dec="达到15000武勋值",
+	},
+	["TargetDec_Task_400089"] = { 
+		idx="TargetDec_Task_400089",
+		Dec="完成一次五星门派任务 ",
+	},
+	["TargetDec_Task_400090"] = { 
+		idx="TargetDec_Task_400090",
+		Dec="等级达到57级",
+	},
+	["TargetDec_Task_400091"] = { 
+		idx="TargetDec_Task_400091",
+		Dec="穿戴40级以上强化+8装备 ",
+	},
+	["TargetDec_Task_400092"] = { 
+		idx="TargetDec_Task_400092",
+		Dec="击杀等级高于57级的野怪 ",
+	},
+	["TargetDec_Task_400093"] = { 
+		idx="TargetDec_Task_400093",
+		Dec="击杀敌对阵容15名玩家 ",
+	},
+	["TargetDec_Task_400094"] = { 
+		idx="TargetDec_Task_400094",
+		Dec="达到20000武勋值",
+	},
+	["TargetDec_Task_400095"] = { 
+		idx="TargetDec_Task_400095",
+		Dec="参加一次门派战 ",
+	},
+	["TargetDec_Task_400096"] = { 
+		idx="TargetDec_Task_400096",
+		Dec="击杀等级高级58的野怪 ",
+	},
+	["TargetDec_Task_400097"] = { 
+		idx="TargetDec_Task_400097",
+		Dec="完成20次门派任务 ",
+	},
+	["TargetDec_Task_400098"] = { 
+		idx="TargetDec_Task_400098",
+		Dec="完成门派捐献20次 ",
+	},
+	["TargetDec_Task_400099"] = { 
+		idx="TargetDec_Task_400099",
+		Dec="进行两次首饰加工 ",
+	},
+	["TargetDec_Task_400100"] = { 
+		idx="TargetDec_Task_400100",
+		Dec="参加一次正邪大战 ",
+	},
+	["TargetDec_Task_400101"] = { 
+		idx="TargetDec_Task_400101",
+		Dec="击杀敌对阵容5名玩家 ",
+	},
+	["TargetDec_Task_400102"] = { 
+		idx="TargetDec_Task_400102",
+		Dec="等级达到60级 ",
+	},
+	["TargetDec_Task_400103"] = { 
+		idx="TargetDec_Task_400103",
+		Dec="击杀等级高级60的野怪 ",
+	},
+	["TargetDec_Task_400104"] = { 
+		idx="TargetDec_Task_400104",
+		Dec="完成一次五星门派任务 ",
+	},
+	["TargetDec_Task_400105"] = { 
+		idx="TargetDec_Task_400105",
+		Dec="升级灵宠5次 ",
+	},
+	["TargetDec_Task_400106"] = { 
+		idx="TargetDec_Task_400106",
+		Dec="达到30000武勋值",
+	},
+	["TargetDec_Task_400107"] = { 
+		idx="TargetDec_Task_400107",
+		Dec="完成10次门派任务 ",
+	},
+	["TargetDec_Task_400108"] = { 
+		idx="TargetDec_Task_400108",
+		Dec="等级到达65级 ",
+	},
+	["TargetDec_Task_400109"] = { 
+		idx="TargetDec_Task_400109",
+		Dec="击杀等级高级65的野怪 ",
+	},
+	["TargetDec_Task_400110"] = { 
+		idx="TargetDec_Task_400110",
+		Dec="完成一次五星门派任务 ",
+	},
+	["TargetDec_Task_400111"] = { 
+		idx="TargetDec_Task_400111",
+		Dec="击杀敌对阵容5名玩家 ",
+	},
+	["TargetDec_Task_400112"] = { 
+		idx="TargetDec_Task_400112",
+		Dec="完成门派捐献20次 ",
+	},
+	["TargetDec_Task_400113"] = { 
+		idx="TargetDec_Task_400113",
+		Dec="达到50000武勋值",
+	},
+	["TargetDec_Task_400114"] = { 
+		idx="TargetDec_Task_400114",
+		Dec="等级到达70级 ",
+	},
+	["TargetDec_Task_400115"] = { 
+		idx="TargetDec_Task_400115",
+		Dec="穿戴50级以上强化+9装备 ",
+	},
+	["TargetDec_Task_400116"] = { 
+		idx="TargetDec_Task_400116",
+		Dec="击杀等级高级70的野怪 ",
+	},
+	["TargetDec_Task_400117"] = { 
+		idx="TargetDec_Task_400117",
+		Dec="参加一次正邪大战 ",
+	},
+	["TargetDec_Task_400118"] = { 
+		idx="TargetDec_Task_400118",
+		Dec="达到70000武勋值（0/70000）",
+	},
+	["TargetDec_Task_400119"] = { 
+		idx="TargetDec_Task_400119",
+		Dec="完成10次BOSS悬赏 ",
+	},
+	["TargetDec_Task_400120"] = { 
+		idx="TargetDec_Task_400120",
+		Dec="完成15次门派任务 ",
+	},
+	["TargetDec_Task_400121"] = { 
+		idx="TargetDec_Task_400121",
+		Dec="进行首饰加工4次 ",
+	},
+	["TargetDec_Task_400122"] = { 
+		idx="TargetDec_Task_400122",
+		Dec="等级达到76级",
+	},
+	["TargetDec_Task_400123"] = { 
+		idx="TargetDec_Task_400123",
+		Dec="击杀敌对阵容15名玩家 ",
+	},
+	["TargetDec_Task_400124"] = { 
+		idx="TargetDec_Task_400124",
+		Dec="达到100000武勋值",
+	},
+	["TargetDec_Task_400125"] = { 
+		idx="TargetDec_Task_400125",
+		Dec="宠物升阶10次 ",
+	},
+	["TargetDec_Task_400126"] = { 
+		idx="TargetDec_Task_400126",
+		Dec="等级达到80级 ",
+	},
+	["TargetDec_Task_400127"] = { 
+		idx="TargetDec_Task_400127",
+		Dec="穿戴80级以上强化+10装备 ",
+	},
+	["TargetDec_Task_400128"] = { 
+		idx="TargetDec_Task_400128",
+		Dec="击杀等级高级75的野怪 ",
+	},
+	["TargetDec_Task_400129"] = { 
+		idx="TargetDec_Task_400129",
+		Dec="参加一次门派战 ",
+	},
+	["TargetDec_Task_400130"] = { 
+		idx="TargetDec_Task_400130",
+		Dec="等级达到82级 ",
+	},
+	["TargetDec_Task_400131"] = { 
+		idx="TargetDec_Task_400131",
+		Dec="完成20次门派任务 ",
+	},
+	["TargetDec_Task_400132"] = { 
+		idx="TargetDec_Task_400132",
+		Dec="击杀等级高级84的野怪 ",
+	},
+	["TargetDec_Task_400133"] = { 
+		idx="TargetDec_Task_400133",
+		Dec="完成一次五星门派任务 ",
+	},
+	["TargetDec_Task_400134"] = { 
+		idx="TargetDec_Task_400134",
+		Dec="等级达到86级 ",
+	},
+	["TargetDec_Task_400135"] = { 
+		idx="TargetDec_Task_400135",
+		Dec="完成门派捐献20次 ",
+	},
+	["TargetDec_Task_400136"] = { 
+		idx="TargetDec_Task_400136",
+		Dec="进行首饰加工6次 ",
+	},
+	["TargetDec_Task_400137"] = { 
+		idx="TargetDec_Task_400137",
+		Dec="击杀敌对阵容5名玩家 ",
+	},
+	["TargetDec_Task_400138"] = { 
+		idx="TargetDec_Task_400138",
+		Dec="等级到达90级 ",
+	},
+	["TargetDec_Task_400139"] = { 
+		idx="TargetDec_Task_400139",
+		Dec="击杀等级高级90的野怪 ",
+	},
+	["TargetDec_Task_400140"] = { 
+		idx="TargetDec_Task_400140",
+		Dec="达到150000武勋值",
+	},
+	["TargetDec_Task_400141"] = { 
+		idx="TargetDec_Task_400141",
+		Dec="击杀敌对阵容15名玩家 ",
+	},
+	["TargetDec_Task_400142"] = { 
+		idx="TargetDec_Task_400142",
+		Dec="等级达到91级",
+	},
+	["TargetDec_Task_400143"] = { 
+		idx="TargetDec_Task_400143",
+		Dec="完成一次五星门派任务 ",
+	},
+	["TargetDec_Task_400144"] = { 
+		idx="TargetDec_Task_400144",
+		Dec="击杀等级高于92级的野怪 ",
+	},
+	["TargetDec_Task_400145"] = { 
+		idx="TargetDec_Task_400145",
+		Dec="击杀等级高于92级精英怪 ",
+	},
+	["TargetDec_Task_400146"] = { 
+		idx="TargetDec_Task_400146",
+		Dec="等级达到95级 ",
+	},
+	["TargetDec_Task_400147"] = { 
+		idx="TargetDec_Task_400147",
+		Dec="完成两次五星门派任务 ",
+	},
+	["TargetDec_Task_400148"] = { 
+		idx="TargetDec_Task_400148",
+		Dec="参加三次门派战  ",
+	},
+	["TargetDec_Task_400149"] = { 
+		idx="TargetDec_Task_400149",
+		Dec="完成门派捐献20次 ",
+	},
+	["TargetDec_Task_400150"] = { 
+		idx="TargetDec_Task_400150",
+		Dec="等级到达100级 ",
+	},
+	["TargetDec_Task_400151"] = { 
+		idx="TargetDec_Task_400151",
+		Dec="击杀等级高级100的野怪 ",
+	},
+	["TargetDec_Task_400152"] = { 
+		idx="TargetDec_Task_400152",
+		Dec="达到250000武勋值",
+	},
+	["TargetDec_Task_400153"] = { 
+		idx="TargetDec_Task_400153",
+		Dec="击杀敌对阵容15名玩家 ",
 	},
 }
 return config
