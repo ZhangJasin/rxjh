@@ -2132,7 +2132,7 @@ GameEvent.add(EventCfg.onResetday, function(actor)
     sethumvar(actor, VarCfg.T_MentorShipShopBuyTime, tbl2json(myShowBuyTime))
 end, MentorShip)
 
-GameEvent.add(EventCfg.onGuildTask, function(actor)
+GameEvent.add(EventCfg.onGuildsetexp, function(actor)
     MentorShipChangTask(actor, 12, "*", 1)
 end, MentorShip)
 
