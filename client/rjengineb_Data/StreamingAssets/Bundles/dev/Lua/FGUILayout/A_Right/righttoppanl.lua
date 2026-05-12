@@ -119,7 +119,7 @@ function righttoppanl:Create()
         FGUI:Open("huodong", "BossPanel")
     end)
     FGUI:setOnClickEvent(self._righttop.btn_mrbz, function()
-        --FGUI:Open("huodong", "DailyTaskPanel")
+        FGUI:Open("huodong", "DailyTaskPanel")
     end)
     -- 订阅数据层事件
     self:SubscribeEvents()

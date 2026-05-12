@@ -6,14 +6,14 @@
     <component id="n1_vjv7" name="btn_close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1174,84" size="45,45" group="n49_gab2"/>
     <text id="n2_vjv7" name="text_title" xy="681,85" pivot="0.5,0.5" anchor="true" size="123,35" group="n49_gab2" fontSize="25" color="#ffffff" align="center" vAlign="middle" letterSpacing="2" autoSize="none" bold="true" text="江湖历练"/>
     <image id="n102_oca6" name="n102" src="oca6fvhj" fileName="Images/bg_bottom.png" xy="191,111" size="1002,576" group="n49_gab2"/>
-    <component id="n97_d7i1" name="panel_tips" src="d7i1l" fileName="Components/tips.xml" xy="405,135" size="450,395" group="n49_gab2">
-      <gearDisplay controller="tips" pages="1"/>
-    </component>
     <image id="n99_oca6" name="n99" src="oca6fvhs" fileName="Images/db1.png" xy="199,121" size="605,405" group="n49_gab2"/>
     <image id="n100_oca6" name="n100" src="oca6fvhz" fileName="Images/wf_bg.png" xy="794,79" size="387,448" group="n49_gab2"/>
     <list id="n101_oca6" name="taskList" xy="201,122" size="601,403" group="n49_gab2" layout="flow_hz" selectionMode="none" overflow="scroll" lineItemCount="2" defaultItem="ui://wvi7a1i4oca6fvi0"/>
     <list id="n103_oca6" name="actList" xy="840,203" size="316,322" group="n49_gab2" overflow="scroll" defaultItem="ui://wvi7a1i4oca6fvi2"/>
     <component id="n104_oca6" name="btn_tips" src="oca6fvi3" fileName="Components/btn_wenhao2.xml" xy="1150,120" group="n49_gab2"/>
+    <component id="n97_d7i1" name="panel_tips" src="d7i1l" fileName="Components/tips.xml" xy="530,135" size="450,395" group="n49_gab2">
+      <gearDisplay controller="tips" pages="1"/>
+    </component>
     <component id="n107_oca6" name="bar" src="oca6fvi5" fileName="Components/taskBar.xml" xy="278,590" group="n49_gab2">
       <ProgressBar max="200"/>
     </component>
