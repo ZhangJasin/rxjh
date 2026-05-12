@@ -562,7 +562,9 @@ function mountMain:updateMainTitle(isPet)
     local nowIndex = isPet and self.nowPetHHIndex or self.nowIndex
 
     local nowName = isPet and "龙猫" or "乌龙驹"
-    if dataObj.allJieshu > 0 and configBase[dataObj.allJieshu] then nowName = configBase[dataObj.allJieshu].Name end
+    if dataObj.allJieshu > 0 and configBase[dataObj.allJieshu] then
+        nowName = configBase[dataObj.allJieshu].Name or nowName
+    end
 
     if configTab == 1 then
         if dataObj.hhSortList and #dataObj.hhSortList > 0 then
@@ -594,38 +596,38 @@ end
 function mountMain:updateHuanhuaAttrView(isPet)
     local dataObj = isPet and self._dataForPet or self._dataForMount
     local configList = isPet and PetHuanhua or MountHuanhua
-    
+
     -- 包装后的 Lua Table（用于获取子节点）
     local attrUi = isPet and self.petHuanhuaAttr or self.huanhuaAttr
     -- 原生的 C# 组件对象（用于获取 Controller）
     local rawAttrUi = isPet and self._ui.petHuanhuaAttr or self._ui.huanhuaAttr
-    
+
     local nowIndex = isPet and self.nowPetHHIndex or self.nowIndex
-    
+
     if not dataObj.hhSortList or #dataObj.hhSortList == 0 then return end
-    
+
     local name = dataObj.hhSortList[nowIndex + 1].Name
     local sameConfigs = {}
     for i = 1, #configList do
         if configList[i].Name == name then table.insert(sameConfigs, configList[i]) end
     end
-    
+
     local nowGrade = math.max(1, math.min(dataObj.hhlistsj[name] or 1, #sameConfigs))
     local cfg = sameConfigs[nowGrade]
     self.modelId = cfg.Model
-    
+
     local rTabsVal = self.rightTabs and FGUI:Controller_getSelectedIndex(self.rightTabs) or (isPet and 0 or 1)
-    
+
     -- 【修复点】使用原生的 rawAttrUi 来获取控制器，避免 XLua 报错
     local typeCtrl = FGUI:getController(rawAttrUi, "type")
     if typeCtrl then FGUI:Controller_setSelectedIndex(typeCtrl, rTabsVal) end
-    
+
     -- 使用 delegate 表来获取子节点
     local buffNode = attrUi.buffText
     FGUI:GTextField_setAutoSize(buffNode, 2)
     FGUI:GTextField_setUBBEnabled(buffNode, true)
     FGUI:GTextField_setText(buffNode, cfg.BuffDesc and string.gsub(cfg.BuffDesc, "\\n", "\n") or "")
-    
+
     if cfg.ClassID and #cfg.ClassID > 0 then
         FGUI:setPosition(buffNode, 15, (rTabsVal == 1 and 50 or 0) + 26 * #cfg.ClassID + 5)
         self:renderAttributeList(attrUi["sxlist"], cfg.ClassID)
