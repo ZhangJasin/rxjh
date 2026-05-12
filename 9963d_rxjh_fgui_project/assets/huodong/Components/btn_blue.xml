@@ -10,7 +10,7 @@
       <gearDisplay controller="button" pages="1,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n3_oca6" name="title" xy="8,7" size="100,27" fontSize="18" color="#fef000" align="center" vAlign="middle" letterSpacing="2" autoSize="none" singleLine="true" text="前往">
+    <text id="n3_oca6" name="title" xy="8,7" size="100,27" fontSize="18" color="#fef000" align="center" vAlign="middle" letterSpacing="2" autoSize="none" strokeColor="#000000" singleLine="true" text="前往">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
   </displayList>

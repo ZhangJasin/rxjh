@@ -98,5 +98,5 @@ ssrMessage:RegisterNetMsg(ssrNetMsgCfg.equipCollect, equipCollectData)
 righttoppanlData = SL:RequireFile("FGUILayout/A_Right/righttoppanlData")
 ssrMessage:RegisterNetMsg(ssrNetMsgCfg.righttoppanl, righttoppanlData)
 
-DailyTaskUI = SL:RequireFile("FGUILayout/huodong/DailyTaskPanel")
-ssrMessage:RegisterNetMsg(ssrNetMsgCfg.DailyTask, DailyTaskUI)
+dailyTaskData =SL:RequireFile("FGUILayout/huodong/DailyTaskData")
+ssrMessage:RegisterNetMsg(ssrNetMsgCfg.DailyTask, dailyTaskData)

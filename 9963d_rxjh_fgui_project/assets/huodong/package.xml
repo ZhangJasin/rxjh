@@ -40,6 +40,9 @@
     <component id="oca6fvi3" name="btn_wenhao2.xml" path="/Components/"/>
     <image id="oca6fvi4" name="wenhao.png" path="/Images/" exported="true"/>
     <component id="oca6fvi5" name="taskBar.xml" path="/Components/"/>
+    <image id="nyv7fvi7" name="item_bg_l.png" path="/Images/" exported="true"/>
+    <image id="nyv7fvi8" name="item_bg_h.png" path="/Images/" exported="true"/>
+    <image id="nyv7fvi9" name="item_bg_z.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

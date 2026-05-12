@@ -5,7 +5,7 @@
     <image id="n33_oca6" name="n33" src="oca6fvhu" fileName="Images/rw_bg1.png" xy="8,9"/>
     <image id="n34_oca6" name="tj" src="oca6fvhm" fileName="Images/tj.png" xy="2,1" visible="false"/>
     <image id="n35_oca6" name="n35" src="oca6fvht" fileName="Images/d_yellow.png" xy="22,19"/>
-    <text id="n36_oca6" name="title" xy="32,24" size="10,25" fontSize="17" color="#28240e" align="center" vAlign="middle" text=""/>
+    <text id="n36_oca6" name="title" xy="32,24" size="10,25" fontSize="17" color="#28240e" align="center" vAlign="middle" bold="true" text=""/>
     <text id="n37_oca6" name="n37" xy="24,58" size="52,24" fontSize="16" color="#ffffff" align="center" text="次数："/>
     <text id="n38_oca6" name="n38" xy="24,82" size="52,24" fontSize="16" color="#ffffff" align="center" text="活跃："/>
     <richtext id="n39_oca6" name="times" xy="68,58" size="87,24" fontSize="16" color="#ffffff" autoSize="none" text=""/>
