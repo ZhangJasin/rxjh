@@ -2154,8 +2154,8 @@ local config = {
 		task_finnpc=4,
 		task_pos = {
 			[1] = 101002,
-			[2] = 371,
-			[3] = 139,
+			[2] = 392,
+			[3] = 106,
 			[4] = 3,
 		},
 		task_drop = {
@@ -3771,7 +3771,7 @@ local config = {
 			[1] = 103026,
 		},
 		task_pro = {
-			[1] = 103028,
+			[1] = 103029,
 		},
 		task_targettype=1,
 		task_target_param = {
@@ -3818,12 +3818,6 @@ local config = {
 		task_receivetype=1,
 		task_goodevilid=1,
 		task_level=55,
-		task_pre = {
-			[1] = 103027,
-		},
-		task_pro = {
-			[1] = 103029,
-		},
 		task_targettype=1,
 		task_target_param = {
 			[1] = {
@@ -3873,7 +3867,7 @@ local config = {
 		task_goodevilid=1,
 		task_level=55,
 		task_pre = {
-			[1] = 103028,
+			[1] = 103026,
 		},
 		task_pro = {
 			[1] = 103030,
@@ -5880,7 +5874,7 @@ local config = {
 			[1] = 103117,
 		},
 		task_pro = {
-			[1] = 103119,
+			[1] = 103120,
 		},
 		task_targettype=1,
 		task_target_param = {
@@ -5927,12 +5921,6 @@ local config = {
 		task_receivetype=1,
 		task_goodevilid=2,
 		task_level=50,
-		task_pre = {
-			[1] = 103118,
-		},
-		task_pro = {
-			[1] = 103120,
-		},
 		task_targettype=1,
 		task_target_param = {
 			[1] = {
@@ -5982,7 +5970,7 @@ local config = {
 		task_goodevilid=2,
 		task_level=50,
 		task_pre = {
-			[1] = 103119,
+			[1] = 103117,
 		},
 		task_pro = {
 			[1] = 103121,
@@ -7755,15 +7743,15 @@ local config = {
 		task_fintype=1,
 		task_finnpc=4,
 		task_pos = {
-			[1] = 101,
-			[2] = 250,
-			[3] = 279,
+			[1] = 101002,
+			[2] = 365,
+			[3] = 491,
 			[4] = 1,
 		},
 		task_finpos = {
-			[1] = 101,
-			[2] = 250,
-			[3] = 279,
+			[1] = 101002,
+			[2] = 365,
+			[3] = 491,
 			[4] = 1,
 		},
 		task_drop = {
@@ -7888,9 +7876,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=57,
 		task_pos = {
-			[1] = 2101,
-			[2] = 109,
-			[3] = 43,
+			[1] = 201002,
+			[2] = 485,
+			[3] = 313,
 			[4] = 1,
 		},
 		task_drop = {
@@ -7934,9 +7922,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=57,
 		task_pos = {
-			[1] = 2101,
-			[2] = 159,
-			[3] = 55,
+			[1] = 201002,
+			[2] = 475,
+			[3] = 376,
 			[4] = 4,
 		},
 		task_drop = {
@@ -7980,9 +7968,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=57,
 		task_pos = {
-			[1] = 2101,
-			[2] = 164,
-			[3] = 134,
+			[1] = 201002,
+			[2] = 547,
+			[3] = 546,
 			[4] = 1,
 		},
 		task_finpos = {
@@ -8287,9 +8275,9 @@ local config = {
 		task_fintype=2,
 		task_finnpc=57,
 		task_pos = {
-			[1] = 2101,
-			[2] = 169,
-			[3] = 153,
+			[1] = 201002,
+			[2] = 547,
+			[3] = 546,
 			[4] = 1,
 		},
 		task_finpos = {
@@ -8374,9 +8362,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=13,
 		task_pos = {
-			[1] = 301,
-			[2] = 63,
-			[3] = 95,
+			[1] = 301002,
+			[2] = 184,
+			[3] = 277,
 			[4] = 4,
 		},
 		task_drop = {
@@ -8420,9 +8408,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=13,
 		task_pos = {
-			[1] = 301,
-			[2] = 107,
-			[3] = 76,
+			[1] = 301002,
+			[2] = 256,
+			[3] = 338,
 			[4] = 3,
 		},
 		task_drop = {
@@ -8469,9 +8457,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=13,
 		task_pos = {
-			[1] = 301,
-			[2] = 142,
-			[3] = 114,
+			[1] = 301002,
+			[2] = 205,
+			[3] = 303,
 			[4] = 3,
 		},
 		task_finpos = {
@@ -8776,9 +8764,9 @@ local config = {
 		task_fintype=2,
 		task_finnpc=13,
 		task_pos = {
-			[1] = 301,
-			[2] = 158,
-			[3] = 133,
+			[1] = 301002,
+			[2] = 291,
+			[3] = 312,
 			[4] = 3,
 		},
 		task_finpos = {
@@ -9018,9 +9006,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=23,
 		task_pos = {
-			[1] = 501,
-			[2] = 174,
-			[3] = 39,
+			[1] = 100102,
+			[2] = 223,
+			[3] = 232,
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200035",
@@ -9055,9 +9043,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=23,
 		task_pos = {
-			[1] = 501,
-			[2] = 251,
-			[3] = 189,
+			[1] = 100102,
+			[2] = 351,
+			[3] = 85,
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200036",
@@ -9076,19 +9064,19 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 20011,
+			[1] = 40035,
 			[2] = 1,
 			[3] = 1,
 		},
 		task_progress=1,
 		task_turntype=1,
-		task_turn_param=20011,
+		task_turn_param=40035,
 		task_fintype=2,
 		task_finnpc=23,
 		task_pos = {
-			[1] = 2102,
-			[2] = 127,
-			[3] = 131,
+			[1] = 100102,
+			[2] = 95,
+			[3] = 73,
 			[4] = 1,
 		},
 		task_finpos = {
@@ -9254,9 +9242,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=59,
 		task_pos = {
-			[1] = 3002,
-			[2] = 215,
-			[3] = 188,
+			[1] = 601002,
+			[2] = 134,
+			[3] = 227,
 			[4] = 5,
 		},
 		task_findial="FinishDec_Task_200042",
@@ -9322,9 +9310,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=63,
 		task_pos = {
-			[1] = 2301,
-			[2] = 114,
-			[3] = 38,
+			[1] = 110102,
+			[2] = 386,
+			[3] = 415,
 			[4] = 5,
 		},
 		task_findial="FinishDec_Task_200044",
@@ -9359,9 +9347,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=63,
 		task_pos = {
-			[1] = 2301,
-			[2] = 227,
-			[3] = 117,
+			[1] = 110102,
+			[2] = 563,
+			[3] = 557,
 			[4] = 5,
 		},
 		task_findial="FinishDec_Task_200045",
@@ -9380,19 +9368,19 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 20011,
+			[1] = 40035,
 			[2] = 1,
 			[3] = 1,
 		},
 		task_progress=1,
 		task_turntype=1,
-		task_turn_param=20011,
+		task_turn_param=40035,
 		task_fintype=2,
 		task_finnpc=63,
 		task_pos = {
-			[1] = 2102,
-			[2] = 127,
-			[3] = 131,
+			[1] = 110102,
+			[2] = 533,
+			[3] = 544,
 			[4] = 1,
 		},
 		task_finpos = {
@@ -9620,9 +9608,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=23,
 		task_pos = {
-			[1] = 501,
-			[2] = 174,
-			[3] = 39,
+			[1] = 100102,
+			[2] = 223,
+			[3] = 232,
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200035",
@@ -9657,9 +9645,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=23,
 		task_pos = {
-			[1] = 501,
-			[2] = 251,
-			[3] = 189,
+			[1] = 100102,
+			[2] = 351,
+			[3] = 85,
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200036",
@@ -9678,19 +9666,19 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 20011,
+			[1] = 40035,
 			[2] = 1,
 			[3] = 1,
 		},
 		task_progress=1,
 		task_turntype=1,
-		task_turn_param=20011,
+		task_turn_param=40035,
 		task_fintype=2,
 		task_finnpc=23,
 		task_pos = {
-			[1] = 2102,
-			[2] = 127,
-			[3] = 131,
+			[1] = 100102,
+			[2] = 95,
+			[3] = 73,
 			[4] = 1,
 		},
 		task_finpos = {
@@ -9924,9 +9912,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=63,
 		task_pos = {
-			[1] = 2301,
-			[2] = 114,
-			[3] = 38,
+			[1] = 110102,
+			[2] = 386,
+			[3] = 415,
 			[4] = 5,
 		},
 		task_findial="FinishDec_Task_200044",
@@ -9961,9 +9949,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=63,
 		task_pos = {
-			[1] = 2301,
-			[2] = 227,
-			[3] = 117,
+			[1] = 110102,
+			[2] = 563,
+			[3] = 557,
 			[4] = 5,
 		},
 		task_findial="FinishDec_Task_200045",
@@ -9982,19 +9970,19 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 20011,
+			[1] = 40035,
 			[2] = 1,
 			[3] = 1,
 		},
 		task_progress=1,
 		task_turntype=1,
-		task_turn_param=20011,
+		task_turn_param=40035,
 		task_fintype=2,
 		task_finnpc=63,
 		task_pos = {
-			[1] = 2102,
-			[2] = 127,
-			[3] = 131,
+			[1] = 110102,
+			[2] = 533,
+			[3] = 544,
 			[4] = 1,
 		},
 		task_finpos = {
@@ -10222,9 +10210,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=23,
 		task_pos = {
-			[1] = 501,
-			[2] = 174,
-			[3] = 39,
+			[1] = 100102,
+			[2] = 223,
+			[3] = 232,
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200035",
@@ -10259,9 +10247,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=23,
 		task_pos = {
-			[1] = 501,
-			[2] = 251,
-			[3] = 189,
+			[1] = 100102,
+			[2] = 351,
+			[3] = 85,
 			[4] = 1,
 		},
 		task_findial="FinishDec_Task_200036",
@@ -10280,19 +10268,19 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 20011,
+			[1] = 40035,
 			[2] = 1,
 			[3] = 1,
 		},
 		task_progress=1,
 		task_turntype=1,
-		task_turn_param=20011,
+		task_turn_param=40035,
 		task_fintype=2,
 		task_finnpc=23,
 		task_pos = {
-			[1] = 2102,
-			[2] = 127,
-			[3] = 131,
+			[1] = 100102,
+			[2] = 95,
+			[3] = 73,
 			[4] = 1,
 		},
 		task_finpos = {
@@ -10526,9 +10514,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=63,
 		task_pos = {
-			[1] = 2301,
-			[2] = 114,
-			[3] = 38,
+			[1] = 110102,
+			[2] = 386,
+			[3] = 415,
 			[4] = 5,
 		},
 		task_findial="FinishDec_Task_200044",
@@ -10563,9 +10551,9 @@ local config = {
 		task_fintype=1,
 		task_finnpc=63,
 		task_pos = {
-			[1] = 2301,
-			[2] = 227,
-			[3] = 117,
+			[1] = 110102,
+			[2] = 563,
+			[3] = 557,
 			[4] = 5,
 		},
 		task_findial="FinishDec_Task_200045",
@@ -10584,19 +10572,19 @@ local config = {
 		},
 		task_targettype=1,
 		task_target_param = {
-			[1] = 20011,
+			[1] = 40035,
 			[2] = 1,
 			[3] = 1,
 		},
 		task_progress=1,
 		task_turntype=1,
-		task_turn_param=20011,
+		task_turn_param=40035,
 		task_fintype=2,
 		task_finnpc=63,
 		task_pos = {
-			[1] = 2102,
-			[2] = 127,
-			[3] = 131,
+			[1] = 110102,
+			[2] = 533,
+			[3] = 544,
 			[4] = 1,
 		},
 		task_finpos = {
@@ -14331,10 +14319,10 @@ local config = {
 		task_fintype=1,
 		task_finnpc=1,
 		task_pos = {
-			[1] = 102,
+			[1] = 101002,
 			[2] = 136,
-			[3] = 225,
-			[4] = 3,
+			[3] = 135,
+			[4] = 84,
 		},
 		task_drop = {
 			[1] = {
@@ -15345,6 +15333,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=11004,
 		task_pos = {
 			[1] = 101002,
 			[2] = 166,
@@ -15382,6 +15372,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=10105,
 		task_pos = {
 			[1] = 101002,
 			[2] = 83,
@@ -15419,6 +15411,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15711,
 		task_pos = {
 			[1] = 101002,
 			[2] = 155,
@@ -15456,6 +15450,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=10018,
 		task_pos = {
 			[1] = 101002,
 			[2] = 83,
@@ -15493,6 +15489,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15005,
 		task_pos = {
 			[1] = 101002,
 			[2] = 32,
@@ -15530,6 +15528,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15006,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -15653,6 +15653,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=11004,
 		task_pos = {
 			[1] = 101002,
 			[2] = 166,
@@ -15690,6 +15692,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=11004,
 		task_pos = {
 			[1] = 101002,
 			[2] = 166,
@@ -15727,6 +15731,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=10105,
 		task_pos = {
 			[1] = 101002,
 			[2] = 166,
@@ -15764,6 +15770,8 @@ local config = {
 			[3] = 0.4,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15711,
 		task_pos = {
 			[1] = 101002,
 			[2] = 155,
@@ -15801,6 +15809,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=10018,
 		task_pos = {
 			[1] = 101002,
 			[2] = 83,
@@ -15838,6 +15848,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15005,
 		task_pos = {
 			[1] = 101002,
 			[2] = 32,
@@ -15875,6 +15887,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15006,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -15998,6 +16012,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=11004,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -16029,6 +16045,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=10105,
 		task_pos = {
 			[1] = 101002,
 			[2] = 166,
@@ -16066,6 +16084,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15711,
 		task_pos = {
 			[1] = 101002,
 			[2] = 155,
@@ -16103,6 +16123,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=10018,
 		task_pos = {
 			[1] = 101002,
 			[2] = 83,
@@ -16140,6 +16162,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=10018,
 		task_pos = {
 			[1] = 101002,
 			[2] = 83,
@@ -16177,6 +16201,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15005,
 		task_pos = {
 			[1] = 101002,
 			[2] = 32,
@@ -16214,6 +16240,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15006,
 		task_pos = {
 			[1] = 101002,
 			[2] = 536,
@@ -16377,6 +16405,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=11104,
 		task_pos = {
 			[1] = 101002,
 			[2] = 162,
@@ -16414,6 +16444,8 @@ local config = {
 			[3] = 0.2,
 		},
 		task_progress=25,
+		task_turntype=1,
+		task_turn_param=15006,
 		task_pos = {
 			[1] = 101002,
 			[2] = 536,
@@ -16451,6 +16483,7 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=60,
+		task_turn_param=15005,
 		task_pos = {
 			[1] = 101002,
 			[2] = 32,
@@ -16614,6 +16647,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15208,
 		task_pos = {
 			[1] = 101002,
 			[2] = 234,
@@ -16651,6 +16686,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=11156,
 		task_pos = {
 			[1] = 101002,
 			[2] = 135,
@@ -17294,6 +17331,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15020,
 		task_pos = {
 			[1] = 301002,
 			[2] = 206,
@@ -17331,6 +17370,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15018,
 		task_pos = {
 			[1] = 301002,
 			[2] = 235,
@@ -17368,6 +17409,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15019,
 		task_pos = {
 			[1] = 301002,
 			[2] = 248,
@@ -17405,6 +17448,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15023,
 		task_pos = {
 			[1] = 301002,
 			[2] = 325,
@@ -17442,6 +17487,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15024,
 		task_pos = {
 			[1] = 301002,
 			[2] = 265,
@@ -17479,6 +17526,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15012,
 		task_pos = {
 			[1] = 301002,
 			[2] = 369,
@@ -17635,6 +17684,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15020,
 		task_pos = {
 			[1] = 301002,
 			[2] = 206,
@@ -17672,6 +17723,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15018,
 		task_pos = {
 			[1] = 301002,
 			[2] = 235,
@@ -17709,6 +17762,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15019,
 		task_pos = {
 			[1] = 301002,
 			[2] = 248,
@@ -17746,6 +17801,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15023,
 		task_pos = {
 			[1] = 301002,
 			[2] = 325,
@@ -17783,6 +17840,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15024,
 		task_pos = {
 			[1] = 301002,
 			[2] = 265,
@@ -17820,6 +17879,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15012,
 		task_pos = {
 			[1] = 301002,
 			[2] = 369,
@@ -17857,6 +17918,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15012,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -18007,6 +18070,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15020,
 		task_pos = {
 			[1] = 301002,
 			[2] = 206,
@@ -18044,6 +18109,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15018,
 		task_pos = {
 			[1] = 301002,
 			[2] = 235,
@@ -18081,6 +18148,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15019,
 		task_pos = {
 			[1] = 301002,
 			[2] = 248,
@@ -18118,6 +18187,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15023,
 		task_pos = {
 			[1] = 301002,
 			[2] = 325,
@@ -18155,6 +18226,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15023,
 		task_pos = {
 			[1] = 301002,
 			[2] = 325,
@@ -18192,6 +18265,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15024,
 		task_pos = {
 			[1] = 301002,
 			[2] = 265,
@@ -18229,6 +18304,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15012,
 		task_pos = {
 			[1] = 301002,
 			[2] = 369,
@@ -18388,6 +18465,7 @@ local config = {
 		task_targettype=8,
 		task_target_param="1322",
 		task_progress=10,
+		task_turntype=1,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -18419,6 +18497,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15219,
 		task_pos = {
 			[1] = 301002,
 			[2] = 254,
@@ -18456,6 +18536,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=5,
+		task_turntype=1,
+		task_turn_param=15224,
 		task_pos = {
 			[1] = 301002,
 			[2] = 290,
@@ -18493,6 +18575,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=60,
+		task_turntype=1,
+		task_turn_param=15019,
 		task_pos = {
 			[1] = 301002,
 			[2] = 233,
@@ -18683,6 +18767,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15220,
 		task_pos = {
 			[1] = 301002,
 			[2] = 107,
@@ -18720,6 +18806,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15208,
 		task_pos = {
 			[1] = 301002,
 			[2] = 51,
@@ -19390,6 +19478,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15013,
 		task_pos = {
 			[1] = 301002,
 			[2] = 561,
@@ -19427,6 +19517,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15017,
 		task_pos = {
 			[1] = 301002,
 			[2] = 173,
@@ -19464,6 +19556,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15026,
 		task_pos = {
 			[1] = 301002,
 			[2] = 154,
@@ -19501,6 +19595,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15052,
 		task_pos = {
 			[1] = 261024,
 			[2] = 210,
@@ -19538,6 +19634,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15054,
 		task_pos = {
 			[1] = 261024,
 			[2] = 52,
@@ -19575,6 +19673,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15056,
 		task_pos = {
 			[1] = 261024,
 			[2] = 290,
@@ -19612,6 +19712,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15051,
 		task_pos = {
 			[1] = 261024,
 			[2] = 236,
@@ -19741,6 +19843,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15013,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -19772,6 +19876,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15017,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -19803,6 +19909,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15026,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -19834,6 +19942,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15052,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -19865,6 +19975,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15054,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -19896,6 +20008,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15056,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -19927,6 +20041,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15051,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -20050,6 +20166,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15013,
 		task_pos = {
 			[1] = 301002,
 			[2] = 561,
@@ -20087,6 +20205,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15017,
 		task_pos = {
 			[1] = 301002,
 			[2] = 173,
@@ -20124,6 +20244,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15026,
 		task_pos = {
 			[1] = 301002,
 			[2] = 154,
@@ -20161,6 +20283,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15052,
 		task_pos = {
 			[1] = 261024,
 			[2] = 210,
@@ -20198,6 +20322,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15054,
 		task_pos = {
 			[1] = 261024,
 			[2] = 52,
@@ -20235,6 +20361,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15056,
 		task_pos = {
 			[1] = 261024,
 			[2] = 290,
@@ -20272,6 +20400,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15051,
 		task_pos = {
 			[1] = 261024,
 			[2] = 236,
@@ -20435,6 +20565,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15155,
 		task_pos = {
 			[1] = 261024,
 			[2] = 284,
@@ -20472,6 +20604,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15252,
 		task_pos = {
 			[1] = 261024,
 			[2] = 162,
@@ -20509,6 +20643,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15256,
 		task_pos = {
 			[1] = 261024,
 			[2] = 319,
@@ -20741,6 +20877,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15036,
 		task_pos = {
 			[1] = 301002,
 			[2] = 215,
@@ -20778,6 +20916,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15220,
 		task_pos = {
 			[1] = 301002,
 			[2] = 107,
@@ -21491,6 +21631,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15061,
 		task_pos = {
 			[1] = 100102,
 			[2] = 210,
@@ -21528,6 +21670,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15062,
 		task_pos = {
 			[1] = 100102,
 			[2] = 99,
@@ -21565,6 +21709,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15068,
 		task_pos = {
 			[1] = 100102,
 			[2] = 347,
@@ -21602,6 +21748,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15063,
 		task_pos = {
 			[1] = 100102,
 			[2] = 338,
@@ -21639,6 +21787,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15064,
 		task_pos = {
 			[1] = 100102,
 			[2] = 100,
@@ -21676,6 +21826,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15065,
 		task_pos = {
 			[1] = 100102,
 			[2] = 403,
@@ -21713,6 +21865,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15070,
 		task_pos = {
 			[1] = 100102,
 			[2] = 237,
@@ -21842,6 +21996,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15061,
 		task_pos = {
 			[1] = 100102,
 			[2] = 210,
@@ -21879,6 +22035,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15062,
 		task_pos = {
 			[1] = 100102,
 			[2] = 99,
@@ -21916,6 +22074,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15068,
 		task_pos = {
 			[1] = 100102,
 			[2] = 347,
@@ -21953,6 +22113,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15064,
 		task_pos = {
 			[1] = 100102,
 			[2] = 100,
@@ -21990,6 +22152,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15066,
 		task_pos = {
 			[1] = 100102,
 			[2] = 519,
@@ -22027,6 +22191,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15070,
 		task_pos = {
 			[1] = 100102,
 			[2] = 237,
@@ -22064,6 +22230,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15069,
 		task_pos = {
 			[1] = 100102,
 			[2] = 380,
@@ -22193,6 +22361,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15061,
 		task_pos = {
 			[1] = 100102,
 			[2] = 210,
@@ -22230,6 +22400,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15062,
 		task_pos = {
 			[1] = 100102,
 			[2] = 99,
@@ -22267,6 +22439,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15063,
 		task_pos = {
 			[1] = 100102,
 			[2] = 338,
@@ -22304,6 +22478,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15068,
 		task_pos = {
 			[1] = 100102,
 			[2] = 347,
@@ -22341,6 +22517,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15064,
 		task_pos = {
 			[1] = 100102,
 			[2] = 100,
@@ -22378,6 +22556,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15056,
 		task_pos = {
 			[1] = 261024,
 			[2] = 319,
@@ -22415,6 +22595,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15066,
 		task_pos = {
 			[1] = 100102,
 			[2] = 519,
@@ -22578,6 +22760,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=11013,
 		task_pos = {
 			[1] = 100102,
 			[2] = 501,
@@ -22615,6 +22799,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=11014,
 		task_pos = {
 			[1] = 100102,
 			[2] = 224,
@@ -22652,6 +22838,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=11012,
 		task_pos = {
 			[1] = 100102,
 			[2] = 400,
@@ -22885,6 +23073,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=2,
+		task_turntype=1,
+		task_turn_param=15036,
 		task_pos = {
 			[1] = 301002,
 			[2] = 215,
@@ -22922,6 +23112,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=2,
+		task_turntype=1,
+		task_turn_param=15220,
 		task_pos = {
 			[1] = 301002,
 			[2] = 107,
@@ -23635,6 +23827,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15101,
 		task_pos = {
 			[1] = 170122,
 			[2] = 137,
@@ -23672,6 +23866,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15102,
 		task_pos = {
 			[1] = 170122,
 			[2] = 307,
@@ -23709,6 +23905,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15103,
 		task_pos = {
 			[1] = 170122,
 			[2] = 207,
@@ -23746,6 +23944,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15104,
 		task_pos = {
 			[1] = 180122,
 			[2] = 124,
@@ -23783,6 +23983,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15555,
 		task_pos = {
 			[1] = 130102,
 			[2] = 223,
@@ -23820,6 +24022,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15556,
 		task_pos = {
 			[1] = 130102,
 			[2] = 221,
@@ -23857,6 +24061,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15559,
 		task_pos = {
 			[1] = 130102,
 			[2] = 360,
@@ -23987,6 +24193,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15101,
 		task_pos = {
 			[1] = 170122,
 			[2] = 137,
@@ -24024,6 +24232,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15102,
 		task_pos = {
 			[1] = 170122,
 			[2] = 307,
@@ -24061,6 +24271,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15103,
 		task_pos = {
 			[1] = 170122,
 			[2] = 207,
@@ -24098,6 +24310,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15104,
 		task_pos = {
 			[1] = 180122,
 			[2] = 124,
@@ -24135,6 +24349,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15555,
 		task_pos = {
 			[1] = 130102,
 			[2] = 223,
@@ -24172,6 +24388,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15556,
 		task_pos = {
 			[1] = 130102,
 			[2] = 221,
@@ -24209,6 +24427,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15559,
 		task_pos = {
 			[1] = 130102,
 			[2] = 360,
@@ -24338,6 +24558,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15101,
 		task_pos = {
 			[1] = 170122,
 			[2] = 137,
@@ -24375,6 +24597,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15102,
 		task_pos = {
 			[1] = 170122,
 			[2] = 307,
@@ -24412,6 +24636,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15103,
 		task_pos = {
 			[1] = 170122,
 			[2] = 207,
@@ -24449,6 +24675,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15104,
 		task_pos = {
 			[1] = 180122,
 			[2] = 124,
@@ -24486,6 +24714,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15555,
 		task_pos = {
 			[1] = 130102,
 			[2] = 223,
@@ -24523,6 +24753,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15556,
 		task_pos = {
 			[1] = 130102,
 			[2] = 221,
@@ -24560,6 +24792,7 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turn_param=15559,
 		task_pos = {
 			[1] = 130102,
 			[2] = 221,
@@ -24723,6 +24956,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15201,
 		task_pos = {
 			[1] = 170122,
 			[2] = 137,
@@ -24760,6 +24995,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15202,
 		task_pos = {
 			[1] = 170122,
 			[2] = 307,
@@ -24797,6 +25034,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15204,
 		task_pos = {
 			[1] = 180122,
 			[2] = 124,
@@ -24834,6 +25073,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15203,
 		task_pos = {
 			[1] = 170122,
 			[2] = 207,
@@ -25067,6 +25308,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15605,
 		task_pos = {
 			[1] = 130102,
 			[2] = 188,
@@ -25104,6 +25347,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=2,
+		task_turntype=1,
+		task_turn_param=15036,
 		task_pos = {
 			[1] = 301002,
 			[2] = 215,
@@ -25141,6 +25386,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=2,
+		task_turntype=1,
+		task_turn_param=15220,
 		task_pos = {
 			[1] = 301002,
 			[2] = 107,
@@ -25854,6 +26101,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15106,
 		task_pos = {
 			[1] = 180122,
 			[2] = 264,
@@ -25891,6 +26140,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15108,
 		task_pos = {
 			[1] = 190122,
 			[2] = 268,
@@ -25928,6 +26179,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15107,
 		task_pos = {
 			[1] = 190122,
 			[2] = 268,
@@ -25965,6 +26218,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15109,
 		task_pos = {
 			[1] = 190122,
 			[2] = 119,
@@ -26002,6 +26257,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15105,
 		task_pos = {
 			[1] = 180122,
 			[2] = 288,
@@ -26039,6 +26296,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15556,
 		task_pos = {
 			[1] = 13010,
 			[2] = 403,
@@ -26076,6 +26335,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15104,
 		task_pos = {
 			[1] = 180122,
 			[2] = 124,
@@ -26210,6 +26471,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15106,
 		task_pos = {
 			[1] = 180122,
 			[2] = 264,
@@ -26247,6 +26510,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15108,
 		task_pos = {
 			[1] = 190122,
 			[2] = 268,
@@ -26284,6 +26549,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15107,
 		task_pos = {
 			[1] = 190122,
 			[2] = 268,
@@ -26321,6 +26588,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15109,
 		task_pos = {
 			[1] = 190122,
 			[2] = 119,
@@ -26358,6 +26627,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15105,
 		task_pos = {
 			[1] = 180122,
 			[2] = 288,
@@ -26395,6 +26666,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15556,
 		task_pos = {
 			[1] = 13010,
 			[2] = 403,
@@ -26432,6 +26705,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15104,
 		task_pos = {
 			[1] = 180122,
 			[2] = 124,
@@ -26561,6 +26836,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15106,
 		task_pos = {
 			[1] = 180122,
 			[2] = 264,
@@ -26598,6 +26875,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15108,
 		task_pos = {
 			[1] = 190122,
 			[2] = 268,
@@ -26635,6 +26914,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15107,
 		task_pos = {
 			[1] = 190122,
 			[2] = 268,
@@ -26672,6 +26953,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15109,
 		task_pos = {
 			[1] = 190122,
 			[2] = 119,
@@ -26709,6 +26992,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15105,
 		task_pos = {
 			[1] = 180122,
 			[2] = 288,
@@ -26746,6 +27031,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15556,
 		task_pos = {
 			[1] = 190122,
 			[2] = 268,
@@ -26783,6 +27070,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15106,
 		task_pos = {
 			[1] = 180122,
 			[2] = 264,
@@ -26946,6 +27235,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15206,
 		task_pos = {
 			[1] = 180122,
 			[2] = 264,
@@ -26983,6 +27274,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15207,
 		task_pos = {
 			[1] = 190122,
 			[2] = 285,
@@ -27020,6 +27313,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15209,
 		task_pos = {
 			[1] = 190122,
 			[2] = 20,
@@ -27057,6 +27352,8 @@ local config = {
 			[3] = 0.6,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15209,
 		task_pos = {
 			[1] = 190122,
 			[2] = 119,
@@ -27290,6 +27587,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=2,
+		task_turntype=1,
+		task_turn_param=15605,
 		task_pos = {
 			[1] = 130102,
 			[2] = 188,
@@ -27327,6 +27626,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15605,
 		task_pos = {
 			[1] = 130102,
 			[2] = 188,
@@ -27364,6 +27665,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=3,
+		task_turntype=1,
+		task_turn_param=15220,
 		task_pos = {
 			[1] = 301002,
 			[2] = 107,
@@ -28077,6 +28380,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15146,
 		task_pos = {
 			[1] = 220122,
 			[2] = 288,
@@ -28114,6 +28419,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15123,
 		task_pos = {
 			[1] = 220122,
 			[2] = 422,
@@ -28151,6 +28458,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15124,
 		task_pos = {
 			[1] = 220122,
 			[2] = 435,
@@ -28188,6 +28497,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15125,
 		task_pos = {
 			[1] = 220122,
 			[2] = 255,
@@ -28225,6 +28536,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15126,
 		task_pos = {
 			[1] = 220122,
 			[2] = 97,
@@ -28262,6 +28575,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15126,
 		task_pos = {
 			[1] = 220122,
 			[2] = 97,
@@ -28299,6 +28614,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=11004,
 		task_pos = {
 			[1] = 190122,
 			[2] = 119,
@@ -28428,6 +28745,7 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turn_param=15146,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -28459,6 +28777,7 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turn_param=15123,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -28490,6 +28809,7 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turn_param=15124,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -28521,6 +28841,7 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turn_param=15125,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -28552,6 +28873,7 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turn_param=15126,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -28583,6 +28905,7 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turn_param=15556,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -28614,6 +28937,7 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turn_param=15104,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -28737,6 +29061,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15146,
 		task_pos = {
 			[1] = 220122,
 			[2] = 288,
@@ -28774,6 +29100,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15123,
 		task_pos = {
 			[1] = 220122,
 			[2] = 422,
@@ -28811,6 +29139,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15124,
 		task_pos = {
 			[1] = 220122,
 			[2] = 268,
@@ -28848,6 +29178,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15124,
 		task_pos = {
 			[1] = 220122,
 			[2] = 268,
@@ -28885,6 +29217,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15125,
 		task_pos = {
 			[1] = 220122,
 			[2] = 255,
@@ -28922,6 +29256,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15126,
 		task_pos = {
 			[1] = 220122,
 			[2] = 97,
@@ -28959,6 +29295,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15126,
 		task_pos = {
 			[1] = 220122,
 			[2] = 97,
@@ -29122,6 +29460,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15206,
 		task_pos = {
 			[1] = 180122,
 			[2] = 264,
@@ -29159,6 +29499,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15207,
 		task_pos = {
 			[1] = 190122,
 			[2] = 285,
@@ -29196,6 +29538,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15209,
 		task_pos = {
 			[1] = 190122,
 			[2] = 20,
@@ -29232,6 +29576,8 @@ local config = {
 			[3] = 0.6,
 		},
 		task_progress=25,
+		task_turntype=1,
+		task_turn_param=15206,
 		task_pos = {
 			[1] = 190122,
 			[2] = 119,
@@ -29465,6 +29811,14 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15607,
+		task_pos = {
+			[1] = 220122,
+			[2] = 44,
+			[3] = 322,
+			[4] = 1,
+		},
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -29496,6 +29850,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=20010,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -29527,6 +29883,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=3,
+		task_turntype=1,
+		task_turn_param=15605,
 		task_pos = {
 			[1] = 130102,
 			[2] = 188,
@@ -30240,6 +30598,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=11004,
 		task_pos = {
 			[1] = 101002,
 			[2] = 166,
@@ -30277,6 +30637,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=10105,
 		task_pos = {
 			[1] = 101002,
 			[2] = 83,
@@ -30314,6 +30676,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15711,
 		task_pos = {
 			[1] = 101002,
 			[2] = 155,
@@ -30351,6 +30715,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=10018,
 		task_pos = {
 			[1] = 101002,
 			[2] = 83,
@@ -30388,6 +30754,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15005,
 		task_pos = {
 			[1] = 101002,
 			[2] = 32,
@@ -30425,6 +30793,7 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turn_param=15006,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -30548,6 +30917,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=11004,
 		task_pos = {
 			[1] = 101002,
 			[2] = 166,
@@ -30585,6 +30956,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=11004,
 		task_pos = {
 			[1] = 101002,
 			[2] = 166,
@@ -30622,10 +30995,12 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=10105,
 		task_pos = {
 			[1] = 101002,
-			[2] = 166,
-			[3] = 500,
+			[2] = 83,
+			[3] = 66,
 			[4] = 1,
 		},
 		task_drop = {
@@ -30659,6 +31034,8 @@ local config = {
 			[3] = 0.4,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15711,
 		task_pos = {
 			[1] = 101002,
 			[2] = 155,
@@ -30696,6 +31073,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=10018,
 		task_pos = {
 			[1] = 101002,
 			[2] = 83,
@@ -30733,6 +31112,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15005,
 		task_pos = {
 			[1] = 101002,
 			[2] = 32,
@@ -30770,6 +31151,14 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15006,
+		task_pos = {
+			[1] = 101002,
+			[2] = 536,
+			[3] = 65,
+			[4] = 1,
+		},
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -30893,6 +31282,14 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=11004,
+		task_pos = {
+			[1] = 101002,
+			[2] = 166,
+			[3] = 500,
+			[4] = 1,
+		},
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -30924,10 +31321,12 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=10105,
 		task_pos = {
 			[1] = 101002,
-			[2] = 166,
-			[3] = 500,
+			[2] = 83,
+			[3] = 66,
 			[4] = 1,
 		},
 		task_drop = {
@@ -30961,6 +31360,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15711,
 		task_pos = {
 			[1] = 101002,
 			[2] = 155,
@@ -30998,6 +31399,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=10018,
 		task_pos = {
 			[1] = 101002,
 			[2] = 83,
@@ -31035,6 +31438,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=10018,
 		task_pos = {
 			[1] = 101002,
 			[2] = 83,
@@ -31072,6 +31477,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15005,
 		task_pos = {
 			[1] = 101002,
 			[2] = 32,
@@ -31109,6 +31516,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15006,
 		task_pos = {
 			[1] = 101002,
 			[2] = 536,
@@ -31272,6 +31681,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=11104,
 		task_pos = {
 			[1] = 101002,
 			[2] = 162,
@@ -31309,6 +31720,8 @@ local config = {
 			[3] = 0.2,
 		},
 		task_progress=25,
+		task_turntype=1,
+		task_turn_param=15006,
 		task_pos = {
 			[1] = 101002,
 			[2] = 536,
@@ -31346,6 +31759,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=60,
+		task_turntype=1,
+		task_turn_param=15005,
 		task_pos = {
 			[1] = 101002,
 			[2] = 32,
@@ -31509,6 +31924,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15208,
 		task_pos = {
 			[1] = 101002,
 			[2] = 234,
@@ -31546,6 +31963,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=11156,
 		task_pos = {
 			[1] = 101002,
 			[2] = 135,
@@ -32189,6 +32608,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15020,
 		task_pos = {
 			[1] = 201002,
 			[2] = 520,
@@ -32226,6 +32647,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15018,
 		task_pos = {
 			[1] = 201002,
 			[2] = 467,
@@ -32263,6 +32686,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15019,
 		task_pos = {
 			[1] = 201002,
 			[2] = 558,
@@ -32300,6 +32725,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15009,
 		task_pos = {
 			[1] = 201002,
 			[2] = 336,
@@ -32337,6 +32764,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15011,
 		task_pos = {
 			[1] = 201002,
 			[2] = 299,
@@ -32374,6 +32803,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15031,
 		task_pos = {
 			[1] = 201002,
 			[2] = 190,
@@ -32530,6 +32961,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15020,
 		task_pos = {
 			[1] = 201002,
 			[2] = 520,
@@ -32567,6 +33000,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15018,
 		task_pos = {
 			[1] = 201002,
 			[2] = 467,
@@ -32604,6 +33039,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15019,
 		task_pos = {
 			[1] = 201002,
 			[2] = 558,
@@ -32641,6 +33078,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15009,
 		task_pos = {
 			[1] = 201002,
 			[2] = 336,
@@ -32678,6 +33117,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15011,
 		task_pos = {
 			[1] = 201002,
 			[2] = 299,
@@ -32715,6 +33156,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15031,
 		task_pos = {
 			[1] = 201002,
 			[2] = 190,
@@ -32752,6 +33195,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15031,
 		task_pos = {
 			[1] = 201002,
 			[2] = 190,
@@ -32908,6 +33353,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15020,
 		task_pos = {
 			[1] = 201002,
 			[2] = 520,
@@ -32945,6 +33392,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15018,
 		task_pos = {
 			[1] = 201002,
 			[2] = 467,
@@ -32982,6 +33431,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15019,
 		task_pos = {
 			[1] = 201002,
 			[2] = 558,
@@ -33019,6 +33470,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15009,
 		task_pos = {
 			[1] = 201002,
 			[2] = 336,
@@ -33056,6 +33509,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15009,
 		task_pos = {
 			[1] = 201002,
 			[2] = 336,
@@ -33093,6 +33548,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15011,
 		task_pos = {
 			[1] = 201002,
 			[2] = 299,
@@ -33130,6 +33587,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15031,
 		task_pos = {
 			[1] = 201002,
 			[2] = 190,
@@ -33320,6 +33779,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15219,
 		task_pos = {
 			[1] = 201002,
 			[2] = 552,
@@ -33357,6 +33818,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=5,
+		task_turntype=1,
+		task_turn_param=15211,
 		task_pos = {
 			[1] = 201002,
 			[2] = 307,
@@ -33394,6 +33857,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=60,
+		task_turntype=1,
+		task_turn_param=15019,
 		task_pos = {
 			[1] = 201002,
 			[2] = 558,
@@ -33584,6 +34049,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=11156,
 		task_pos = {
 			[1] = 101002,
 			[2] = 135,
@@ -33621,6 +34088,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15208,
 		task_pos = {
 			[1] = 101002,
 			[2] = 234,
@@ -34291,6 +34760,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15035,
 		task_pos = {
 			[1] = 201002,
 			[2] = 35,
@@ -34328,6 +34799,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15017,
 		task_pos = {
 			[1] = 201002,
 			[2] = 110,
@@ -34365,6 +34838,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15034,
 		task_pos = {
 			[1] = 201002,
 			[2] = 334,
@@ -34402,6 +34877,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15045,
 		task_pos = {
 			[1] = 261024,
 			[2] = 478,
@@ -34439,6 +34916,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15043,
 		task_pos = {
 			[1] = 261024,
 			[2] = 575,
@@ -34476,6 +34955,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15042,
 		task_pos = {
 			[1] = 261024,
 			[2] = 487,
@@ -34513,6 +34994,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15048,
 		task_pos = {
 			[1] = 261024,
 			[2] = 232,
@@ -34642,6 +35125,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15035,
 		task_pos = {
 			[1] = 201002,
 			[2] = 35,
@@ -34679,6 +35164,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15017,
 		task_pos = {
 			[1] = 201002,
 			[2] = 110,
@@ -34716,6 +35203,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15034,
 		task_pos = {
 			[1] = 201002,
 			[2] = 334,
@@ -34753,6 +35242,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15034,
 		task_pos = {
 			[1] = 201002,
 			[2] = 334,
@@ -34790,6 +35281,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15045,
 		task_pos = {
 			[1] = 261024,
 			[2] = 478,
@@ -34827,6 +35320,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15043,
 		task_pos = {
 			[1] = 261024,
 			[2] = 575,
@@ -34864,6 +35359,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15042,
 		task_pos = {
 			[1] = 261024,
 			[2] = 487,
@@ -34993,6 +35490,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15035,
 		task_pos = {
 			[1] = 201002,
 			[2] = 35,
@@ -35030,6 +35529,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15017,
 		task_pos = {
 			[1] = 201002,
 			[2] = 110,
@@ -35067,6 +35568,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15034,
 		task_pos = {
 			[1] = 201002,
 			[2] = 334,
@@ -35104,6 +35607,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15045,
 		task_pos = {
 			[1] = 261024,
 			[2] = 478,
@@ -35141,6 +35646,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15043,
 		task_pos = {
 			[1] = 261024,
 			[2] = 575,
@@ -35178,6 +35685,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15048,
 		task_pos = {
 			[1] = 261024,
 			[2] = 232,
@@ -35215,6 +35724,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15042,
 		task_pos = {
 			[1] = 261024,
 			[2] = 487,
@@ -35378,6 +35889,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15142,
 		task_pos = {
 			[1] = 401002,
 			[2] = 118,
@@ -35415,6 +35928,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15145,
 		task_pos = {
 			[1] = 261024,
 			[2] = 565,
@@ -35452,6 +35967,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15230,
 		task_pos = {
 			[1] = 201002,
 			[2] = 433,
@@ -35685,6 +36202,14 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=20011,
+		task_pos = {
+			[1] = 403002,
+			[2] = 130,
+			[3] = 158,
+			[4] = 1,
+		},
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -35716,6 +36241,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15208,
 		task_pos = {
 			[1] = 101002,
 			[2] = 234,
@@ -36429,6 +36956,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15072,
 		task_pos = {
 			[1] = 110102,
 			[2] = 507,
@@ -36466,6 +36995,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15073,
 		task_pos = {
 			[1] = 110102,
 			[2] = 338,
@@ -36503,6 +37034,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15074,
 		task_pos = {
 			[1] = 110102,
 			[2] = 76,
@@ -36540,6 +37073,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15075,
 		task_pos = {
 			[1] = 110102,
 			[2] = 112,
@@ -36577,6 +37112,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15071,
 		task_pos = {
 			[1] = 110102,
 			[2] = 432,
@@ -36614,6 +37151,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15077,
 		task_pos = {
 			[1] = 110102,
 			[2] = 189,
@@ -36651,6 +37190,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15079,
 		task_pos = {
 			[1] = 110102,
 			[2] = 215,
@@ -36780,6 +37321,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15072,
 		task_pos = {
 			[1] = 110102,
 			[2] = 507,
@@ -36817,6 +37360,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15073,
 		task_pos = {
 			[1] = 110102,
 			[2] = 338,
@@ -36854,6 +37399,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15074,
 		task_pos = {
 			[1] = 110102,
 			[2] = 76,
@@ -36891,6 +37438,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15071,
 		task_pos = {
 			[1] = 110102,
 			[2] = 432,
@@ -36928,6 +37477,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15078,
 		task_pos = {
 			[1] = 110102,
 			[2] = 374,
@@ -36965,6 +37516,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15079,
 		task_pos = {
 			[1] = 110102,
 			[2] = 215,
@@ -37002,6 +37555,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15077,
 		task_pos = {
 			[1] = 110102,
 			[2] = 189,
@@ -37131,6 +37686,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15072,
 		task_pos = {
 			[1] = 110102,
 			[2] = 507,
@@ -37168,6 +37725,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15073,
 		task_pos = {
 			[1] = 110102,
 			[2] = 338,
@@ -37205,6 +37764,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15074,
 		task_pos = {
 			[1] = 110102,
 			[2] = 76,
@@ -37242,6 +37803,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15071,
 		task_pos = {
 			[1] = 110102,
 			[2] = 432,
@@ -37279,6 +37842,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15071,
 		task_pos = {
 			[1] = 110102,
 			[2] = 432,
@@ -37316,6 +37881,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15077,
 		task_pos = {
 			[1] = 110102,
 			[2] = 189,
@@ -37353,6 +37920,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15079,
 		task_pos = {
 			[1] = 110102,
 			[2] = 215,
@@ -37516,6 +38085,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15177,
 		task_pos = {
 			[1] = 110102,
 			[2] = 274,
@@ -37553,6 +38124,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15178,
 		task_pos = {
 			[1] = 110102,
 			[2] = 304,
@@ -37590,6 +38163,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15172,
 		task_pos = {
 			[1] = 110102,
 			[2] = 412,
@@ -37823,6 +38398,14 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=2,
+		task_turntype=1,
+		task_turn_param=20011,
+		task_pos = {
+			[1] = 403002,
+			[2] = 130,
+			[3] = 158,
+			[4] = 1,
+		},
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -37854,6 +38437,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=2,
+		task_turntype=1,
+		task_turn_param=15208,
 		task_pos = {
 			[1] = 101002,
 			[2] = 234,
@@ -38567,6 +39152,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15111,
 		task_pos = {
 			[1] = 140122,
 			[2] = 302,
@@ -38604,6 +39191,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15112,
 		task_pos = {
 			[1] = 140122,
 			[2] = 206,
@@ -38641,6 +39230,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15113,
 		task_pos = {
 			[1] = 140122,
 			[2] = 106,
@@ -38678,6 +39269,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15555,
 		task_pos = {
 			[1] = 130102,
 			[2] = 505,
@@ -38715,6 +39308,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15556,
 		task_pos = {
 			[1] = 130102,
 			[2] = 441,
@@ -38752,6 +39347,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15556,
 		task_pos = {
 			[1] = 130102,
 			[2] = 441,
@@ -38789,6 +39386,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15559,
 		task_pos = {
 			[1] = 130102,
 			[2] = 143,
@@ -38918,6 +39517,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15111,
 		task_pos = {
 			[1] = 140122,
 			[2] = 302,
@@ -38955,6 +39556,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15112,
 		task_pos = {
 			[1] = 140122,
 			[2] = 206,
@@ -38992,6 +39595,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15113,
 		task_pos = {
 			[1] = 140122,
 			[2] = 106,
@@ -39029,6 +39634,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15114,
 		task_pos = {
 			[1] = 150122,
 			[2] = 174,
@@ -39066,6 +39673,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15555,
 		task_pos = {
 			[1] = 130102,
 			[2] = 505,
@@ -39103,6 +39712,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15556,
 		task_pos = {
 			[1] = 130102,
 			[2] = 441,
@@ -39140,6 +39751,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15559,
 		task_pos = {
 			[1] = 130102,
 			[2] = 143,
@@ -39269,6 +39882,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15111,
 		task_pos = {
 			[1] = 140122,
 			[2] = 302,
@@ -39306,6 +39921,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15112,
 		task_pos = {
 			[1] = 140122,
 			[2] = 206,
@@ -39343,6 +39960,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15113,
 		task_pos = {
 			[1] = 140122,
 			[2] = 106,
@@ -39380,6 +39999,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15114,
 		task_pos = {
 			[1] = 150122,
 			[2] = 174,
@@ -39417,6 +40038,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15555,
 		task_pos = {
 			[1] = 130102,
 			[2] = 505,
@@ -39454,6 +40077,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15556,
 		task_pos = {
 			[1] = 130102,
 			[2] = 441,
@@ -39491,6 +40116,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15556,
 		task_pos = {
 			[1] = 130102,
 			[2] = 441,
@@ -39654,6 +40281,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15212,
 		task_pos = {
 			[1] = 140122,
 			[2] = 206,
@@ -39691,6 +40320,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15213,
 		task_pos = {
 			[1] = 140122,
 			[2] = 354,
@@ -39728,6 +40359,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15311,
 		task_pos = {
 			[1] = 140122,
 			[2] = 203,
@@ -39765,6 +40398,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15314,
 		task_pos = {
 			[1] = 150122,
 			[2] = 145,
@@ -39998,6 +40633,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15605,
 		task_pos = {
 			[1] = 130102,
 			[2] = 188,
@@ -40035,6 +40672,14 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=2,
+		task_turntype=1,
+		task_turn_param=20011,
+		task_pos = {
+			[1] = 403002,
+			[2] = 130,
+			[3] = 158,
+			[4] = 1,
+		},
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -40066,6 +40711,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=2,
+		task_turntype=1,
+		task_turn_param=15208,
 		task_pos = {
 			[1] = 101002,
 			[2] = 234,
@@ -40779,6 +41426,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15115,
 		task_pos = {
 			[1] = 150122,
 			[2] = 88,
@@ -40816,6 +41465,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15116,
 		task_pos = {
 			[1] = 150122,
 			[2] = 179,
@@ -40853,6 +41504,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15118,
 		task_pos = {
 			[1] = 160122,
 			[2] = 168,
@@ -40890,6 +41543,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15117,
 		task_pos = {
 			[1] = 160122,
 			[2] = 290,
@@ -40927,6 +41582,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15119,
 		task_pos = {
 			[1] = 160122,
 			[2] = 336,
@@ -40964,6 +41621,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15152,
 		task_pos = {
 			[1] = 500122,
 			[2] = 398,
@@ -41001,6 +41660,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15149,
 		task_pos = {
 			[1] = 500122,
 			[2] = 554,
@@ -41130,6 +41791,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15115,
 		task_pos = {
 			[1] = 150122,
 			[2] = 88,
@@ -41167,6 +41830,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15116,
 		task_pos = {
 			[1] = 150122,
 			[2] = 179,
@@ -41204,6 +41869,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15118,
 		task_pos = {
 			[1] = 160122,
 			[2] = 168,
@@ -41241,6 +41908,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15117,
 		task_pos = {
 			[1] = 160122,
 			[2] = 290,
@@ -41278,6 +41947,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15119,
 		task_pos = {
 			[1] = 160122,
 			[2] = 336,
@@ -41315,6 +41986,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15149,
 		task_pos = {
 			[1] = 500122,
 			[2] = 554,
@@ -41352,6 +42025,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15152,
 		task_pos = {
 			[1] = 500122,
 			[2] = 398,
@@ -41481,6 +42156,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15115,
 		task_pos = {
 			[1] = 150122,
 			[2] = 88,
@@ -41518,6 +42195,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15116,
 		task_pos = {
 			[1] = 150122,
 			[2] = 179,
@@ -41555,6 +42234,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15118,
 		task_pos = {
 			[1] = 160122,
 			[2] = 168,
@@ -41592,6 +42273,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15117,
 		task_pos = {
 			[1] = 160122,
 			[2] = 290,
@@ -41629,6 +42312,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15119,
 		task_pos = {
 			[1] = 160122,
 			[2] = 336,
@@ -41666,6 +42351,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15152,
 		task_pos = {
 			[1] = 500122,
 			[2] = 398,
@@ -41703,6 +42390,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15149,
 		task_pos = {
 			[1] = 500122,
 			[2] = 554,
@@ -41866,6 +42555,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15316,
 		task_pos = {
 			[1] = 150122,
 			[2] = 391,
@@ -41903,6 +42594,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15317,
 		task_pos = {
 			[1] = 160122,
 			[2] = 189,
@@ -41940,6 +42633,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15319,
 		task_pos = {
 			[1] = 160122,
 			[2] = 43,
@@ -41976,6 +42671,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15209,
 		task_pos = {
 			[1] = 190122,
 			[2] = 20,
@@ -42209,6 +42906,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=2,
+		task_turntype=1,
+		task_turn_param=15605,
 		task_pos = {
 			[1] = 130102,
 			[2] = 188,
@@ -42246,6 +42945,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15605,
 		task_pos = {
 			[1] = 130102,
 			[2] = 188,
@@ -42283,6 +42984,14 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=3,
+		task_turntype=1,
+		task_turn_param=20011,
+		task_pos = {
+			[1] = 403002,
+			[2] = 130,
+			[3] = 158,
+			[4] = 1,
+		},
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -42990,6 +43699,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15128,
 		task_pos = {
 			[1] = 220122,
 			[2] = 221,
@@ -43027,6 +43738,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15129,
 		task_pos = {
 			[1] = 220122,
 			[2] = 257,
@@ -43064,6 +43777,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15130,
 		task_pos = {
 			[1] = 220122,
 			[2] = 299,
@@ -43101,6 +43816,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15131,
 		task_pos = {
 			[1] = 220122,
 			[2] = 428,
@@ -43138,6 +43855,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15132,
 		task_pos = {
 			[1] = 220122,
 			[2] = 504,
@@ -43175,6 +43894,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=10,
+		task_turntype=1,
+		task_turn_param=15132,
 		task_pos = {
 			[1] = 220122,
 			[2] = 504,
@@ -43212,6 +43933,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15133,
 		task_pos = {
 			[1] = 220122,
 			[2] = 294,
@@ -43341,6 +44064,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15128,
 		task_pos = {
 			[1] = 220122,
 			[2] = 221,
@@ -43378,6 +44103,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15129,
 		task_pos = {
 			[1] = 220122,
 			[2] = 257,
@@ -43415,6 +44142,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15130,
 		task_pos = {
 			[1] = 220122,
 			[2] = 299,
@@ -43452,6 +44181,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15131,
 		task_pos = {
 			[1] = 220122,
 			[2] = 428,
@@ -43489,6 +44220,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15132,
 		task_pos = {
 			[1] = 220122,
 			[2] = 504,
@@ -43526,6 +44259,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=15,
+		task_turntype=1,
+		task_turn_param=15132,
 		task_pos = {
 			[1] = 220122,
 			[2] = 504,
@@ -43563,6 +44298,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15133,
 		task_pos = {
 			[1] = 220122,
 			[2] = 294,
@@ -43692,6 +44429,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15128,
 		task_pos = {
 			[1] = 220122,
 			[2] = 221,
@@ -43729,6 +44468,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15129,
 		task_pos = {
 			[1] = 220122,
 			[2] = 257,
@@ -43766,6 +44507,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15130,
 		task_pos = {
 			[1] = 220122,
 			[2] = 299,
@@ -43803,6 +44546,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15130,
 		task_pos = {
 			[1] = 220122,
 			[2] = 299,
@@ -43840,6 +44585,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15131,
 		task_pos = {
 			[1] = 220122,
 			[2] = 428,
@@ -43877,6 +44624,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=45,
+		task_turntype=1,
+		task_turn_param=15132,
 		task_pos = {
 			[1] = 220122,
 			[2] = 504,
@@ -43914,6 +44663,8 @@ local config = {
 			[3] = 0.3,
 		},
 		task_progress=20,
+		task_turntype=1,
+		task_turn_param=15132,
 		task_pos = {
 			[1] = 220122,
 			[2] = 504,
@@ -44077,6 +44828,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15331,
 		task_pos = {
 			[1] = 220122,
 			[2] = 544,
@@ -44114,6 +44867,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15732,
 		task_pos = {
 			[1] = 220122,
 			[2] = 555,
@@ -44151,6 +44906,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=30,
+		task_turntype=1,
+		task_turn_param=15730,
 		task_pos = {
 			[1] = 220122,
 			[2] = 209,
@@ -44188,6 +44945,8 @@ local config = {
 			[3] = 0.6,
 		},
 		task_progress=25,
+		task_turntype=1,
+		task_turn_param=15331,
 		task_pos = {
 			[1] = 220122,
 			[2] = 575,
@@ -44416,11 +45175,13 @@ local config = {
 		task_goodevilid=2,
 		task_targettype=1,
 		task_target_param = {
-			[1] = 21051,
+			[1] = 15607,
 			[2] = 1,
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=15607,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -44452,6 +45213,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=1,
+		task_turntype=1,
+		task_turn_param=20012,
 		task_drop = {
 			[1] = {
 				[1] = 9,
@@ -44483,6 +45246,8 @@ local config = {
 			[3] = 1,
 		},
 		task_progress=3,
+		task_turntype=1,
+		task_turn_param=20009,
 		task_drop = {
 			[1] = {
 				[1] = 9,
