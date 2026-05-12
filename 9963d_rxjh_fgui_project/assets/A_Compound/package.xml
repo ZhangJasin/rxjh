@@ -27,6 +27,7 @@
     <component id="axcm1a" name="btn_comp.xml" path="/Components/" exported="true"/>
     <image id="hlw91b" name="costbj.png" path="/Images/"/>
     <component id="hlw91c" name="tog_select.xml" path="/Components/" exported="true"/>
+    <component id="o8gb1d" name="middle_comp.xml" path="/Components/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

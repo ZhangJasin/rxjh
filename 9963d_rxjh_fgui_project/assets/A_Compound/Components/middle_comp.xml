@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="147,30" anchor="true" overflow="scroll" scroll="horizontal">
+  <displayList>
+    <component id="n0_o8gb" name="n0" src="axcm18" fileName="Components/group_cost.xml" xy="17,1" aspect="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>

@@ -512,26 +512,63 @@ function compoundMain:_RefreshTargetItem(item)
     end
 end
 
--- 刷新消耗货币显示 (n52是component，n1是loader，n2是货币名)
+-- 刷新消耗货币显示 (n60是外层控件，n52是内层货币消耗控件)
 function compoundMain:_RefreshPayCost(payCost)
-    if not self._ui.n52 then return end
+    print("[compoundMain] _RefreshPayCost 开始执行")
     
-    if not payCost or #payCost == 0 then return end
+    if not self._ui.n60 then
+        print("[compoundMain] 错误: self._ui.n60 不存在")
+        return
+    end
+    print("[compoundMain] self._ui.n60 存在")
 
-    -- 先设置货币图标
-    local iconLoader = FGUI:GetChild(self._ui.n52, "n1")
+    -- 打印n60的子控件结构（只在第一次打印）
+    if not self._n60ChildrenDebugged then
+        print("[compoundMain] n60子控件结构调试:")
+        local childCount = FGUI:GetChildCount(self._ui.n60)
+        print("[compoundMain]   子控件数量:", childCount)
+        for i = 0, childCount - 1 do
+            local child = FGUI:GetChildAt(self._ui.n60, i)
+            if child then
+                local childName = child.name or "unknown"
+                print("[compoundMain]   子控件[" .. i .. "]:", childName)
+            end
+        end
+        self._n60ChildrenDebugged = true
+    end
+
+    if not payCost or #payCost == 0 then
+        print("[compoundMain] payCost 为空，清空显示")
+        return
+    end
+
+    -- 从n60中获取n0控件（货币消耗控件）
+    local n0 = FGUI:GetChild(self._ui.n60, "n0")
+    print("[compoundMain] n0 控件:", n0)
+    if not n0 then
+        print("[compoundMain] 错误: n0 控件不存在")
+        return
+    end
+    print("[compoundMain] n0 控件获取成功")
+
+    -- 设置货币图标 (n0下的n1是loader)
+    local iconLoader = FGUI:GetChild(n0, "n1")
+    print("[compoundMain] iconLoader:", iconLoader)
     if iconLoader and payCost[1] then
         local costType = payCost[1].id or 0
+        print("[compoundMain] costType:", costType)
         local itemData = SL:GetValue("ITEM_DATA", costType)
+        print("[compoundMain] itemData:", itemData)
         if itemData and itemData.Looks then
             local path = itemData.Looks >= 100000 and string.format("ui://ItemIcon/%d", itemData.Looks) or string.format("ui://ItemIcon/%06d", itemData.Looks)
+            print("[compoundMain] icon path:", path)
             FGUI:GLoader_setUrl(iconLoader, path)
             -- 设置图标大小
-            FGUI:setSize(iconLoader, 28, 28)
+            FGUI:setSize(iconLoader, 22, 22)
         end
     end
 
-    -- 设置货币名称 (n2是货币名)
+    -- 设置货币名称和数量 (n0下的n2是货币名)
     local cost = payCost[1]
     if cost then
         local costType = cost.id or 0
@@ -542,14 +579,69 @@ function compoundMain:_RefreshPayCost(payCost)
             costTypeName = "银两"
         elseif costType == 2 then
             costTypeName = "元宝"
+        elseif costType == 9 then
+            costTypeName = "热血币"
         end
 
-        local n2 = FGUI:GetChild(self._ui.n52, "n2")
+        local n2 = FGUI:GetChild(n0, "n2")
+        print("[compoundMain] n2 控件:", n2)
         if n2 then
-            -- 显示格式：货币名 x数量
-            FGUI:GTextField_setText(n2, string.format("%s x%d", costTypeName, amount))
+            -- 显示格式：货币名 x数量（大于10000时显示万字）
+            local displayAmount = amount
+            if amount >= 10000 then
+                displayAmount = string.format("%.1f万", amount / 10000)
+                -- 去掉末尾的.0，如 100.0万 -> 100万
+                displayAmount = string.gsub(displayAmount, "%.0万", "万")
+            else
+                displayAmount = tostring(amount)
+            end
+            local displayText = string.format("%s x%s", costTypeName, displayAmount)
+            print("[compoundMain] 设置货币文本:", displayText)
+            FGUI:GTextField_setText(n2, displayText)
+            
+            -- 根据文本内容计算n0宽度，并使其在n60中居中
+            self:_AlignN0InN60(n0, n2)
         end
     end
+end
+
+-- 使n0在n60中居中对齐
+function compoundMain:_AlignN0InN60(n0, n2)
+    if not n0 or not self._ui.n60 or not n2 then
+        return
+    end
+    
+    -- 获取文本内容宽度（尝试多种API）
+    local textWidth = 0
+    if FGUI.GTextField_getTextWidth then
+        textWidth = FGUI:GTextField_getTextWidth(n2) or 0
+    elseif FGUI.GRichTextField_getTextWidth then
+        textWidth = FGUI:GRichTextField_getTextWidth(n2) or 0
+    else
+        -- 如果都不支持，使用默认宽度
+        textWidth = 100
+    end
+    print("[compoundMain] 文本宽度:", textWidth)
+    
+    -- n0的宽度 = 图标宽度(22) + 间距 + 文本宽度
+    local iconWidth = 22
+    local padding = 8 -- 图标和文本之间的间距
+    local newWidth = iconWidth + padding + textWidth
+    print("[compoundMain] n0新宽度:", newWidth)
+    
+    -- 设置n0的宽度
+    FGUI:setWidth(n0, newWidth)
+    
+    -- 计算n0在n60中的居中位置
+    local n60Width = FGUI:getWidth(self._ui.n60) or 0
+    local newX = (n60Width - newWidth) / 2
+    print("[compoundMain] n60宽度:", n60Width, "n0新X位置:", newX)
+    
+    -- 设置n0的位置（保持Y坐标不变）
+    local currentX, currentY = FGUI:getPosition(n0)
+    FGUI:setPosition(n0, newX, currentY)
+    
+    print("[compoundMain] n0居中对齐完成")
 end
 
 -- 检查背包道具是否足够
@@ -601,6 +693,8 @@ function compoundMain:_CheckPayCost(payCost, batchCount)
             costTypeName = "银两"
         elseif costType == 2 then
             costTypeName = "元宝"
+        elseif costType == 9 then
+            costTypeName = "热血币"
         end
 
         -- 如果是未知货币类型，直接阻止合成

@@ -2,8 +2,8 @@
 <component size="110,90">
   <displayList>
     <image id="n0_axcm" name="n0" src="fbc0v4s" fileName="image/icon_item0.png" pkg="st7dgeqq" xy="23,0"/>
-    <text id="n1_axcm" name="n1" xy="-3,66" size="115,24" group="n3_axcm" fontSize="14" color="#ffffff" align="center" vAlign="middle" leading="1" autoSize="none" bold="true" strokeColor="#666666" text="金刚石（武功）"/>
-    <group id="n3_axcm" name="n3" xy="-3,66" size="115,24"/>
+    <text id="n1_axcm" name="n1" xy="-11,66" size="132,22" group="n3_axcm" fontSize="14" color="#ffffff" align="center" vAlign="middle" leading="1" autoSize="none" bold="true" strokeColor="#666666" text="金刚石（武功）"/>
+    <group id="n3_axcm" name="n3" xy="-11,66" size="132,22"/>
     <loader id="n4_axcm" name="n4" xy="29,6" size="52,52" aspect="true" url="ui://twx3ya3em2wevl2" align="center" vAlign="middle" fill="scale"/>
   </displayList>
 </component>
