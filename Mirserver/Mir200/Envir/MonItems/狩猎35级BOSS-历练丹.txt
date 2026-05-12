@@ -1,3 +1,4 @@
+
 #CHILD 1/1 RANDOM
 (
 1/1 初级神匠之盒
@@ -5,13 +6,10 @@
 #CHILD 1/1 RANDOM
 (
 1/1 初级神匠之盒
-)#CHILD 1/1 RANDOM
-(
-1/1 初级神匠之盒
 )
 #CHILD 1/1 RANDOM
 (
-1/1 初级神匠之盒
+1/1 历练丹
 )
 #CHILD 1/1 RANDOM
 (
@@ -29,6 +27,13 @@
 (
 1/1 强化石
 )
+
+#CHILD 1/3 RANDOM
+(
+坐骑升星石
+灵宠升级彩蛋
+)
+
 #CHILD 1/1 RANDOM
 (
 1/1 金刚石（攻击）
