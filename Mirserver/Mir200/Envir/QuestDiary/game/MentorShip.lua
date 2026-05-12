@@ -817,6 +817,14 @@ function MentorShip.changeCheckBox(actor, data)
 end
 
 function MentorShip.applyRemove(actor, data)
+    local currentTime = utcint64now()
+    local lastTime = tonumber(gethumvar(actor, VarCfg.N_LS_JiechuST)) or 0
+    if currentTime - lastTime < 3000 then -- 3000毫秒 = 3秒
+        sendmsg(actor, 9, "[color=#ff0000]操作过于频繁，请稍后再试！[/color]")
+        return
+    end
+    sethumvar(actor, VarCfg.N_LS_JiechuST, currentTime)
+
     --  data.UserID  目标对象id
     local myRelation = json2tbl(getcustvar("11_" .. userid(actor) .. "_" .. "t_MasterAndApprt"))
     -- dump(myRelation)
@@ -1829,6 +1837,14 @@ end
 
 --mode 2 我的师傅 1 我的徒弟
 function MentorShip.agreeBreak(actor, data)
+    local currentTime = utcint64now()
+    local lastTime = tonumber(gethumvar(actor, VarCfg.N_LS_JiechuST)) or 0
+    if currentTime - lastTime < 3000 then
+        sendmsg(actor, 9, "[color=#ff0000]操作过于频繁，请稍后再试！[/color]")
+        return
+    end
+    sethumvar(actor, VarCfg.N_LS_JiechuST, currentTime)
+
     local targetId = tonumber(data.targetId)
     local mode = tonumber(data.mode)
     disabletimer(actor, 200)
@@ -1937,9 +1953,6 @@ end
 
 -- 测试数据
 function MentorShip.TestCompleteAllTasks(actor)
-
-
-
     ---- 给师父增加 Buff
     --addbuff(actor, sfCgBuffId, 28800)
     ---- 给徒弟增加 Buff
