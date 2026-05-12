@@ -2445,7 +2445,7 @@ local config = {
 		BuffType=0,
 		Name="师傅传功加成",
 		Icon=150026,
-		Tips="血量、防御、攻击[color=#00FB00]+5%[/color]每层",
+		Tips="每层血量、防御、攻击[color=#00FB00]+5%[/color]",
 		Param="99#500|103#500|106#500",
 		Time="28800#0#1",
 		Overlap=3,
