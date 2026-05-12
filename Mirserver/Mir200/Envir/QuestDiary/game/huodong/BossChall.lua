@@ -170,7 +170,7 @@ end
 -- 选BOSS挑战
 function BossChall.chall(actor, data)   
     if targetinfo(actor, "MAPTITLE") == BOSS_MAP_NAME then
-        sendmsg(actor, 9, "已在挑狩猎场中")
+        sendmsg(actor, 9, "已在狩猎场中")
         return
     end
     local index = tonumber(data[1]) or 0
