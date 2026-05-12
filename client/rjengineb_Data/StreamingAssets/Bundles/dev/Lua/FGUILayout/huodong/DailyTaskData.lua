@@ -46,7 +46,9 @@ function DailyTaskData:ReqData()
     ssrMessage:sendmsgEx("DailyTask", "reqData")
 end
 function DailyTaskData:getAward(id)
-    ssrMessage:sendmsgEx("DailyTask", "getPointAward",id)
+    if not self:IsGotAward(id) then        
+        ssrMessage:sendmsgEx("DailyTask", "getPointAward",id)
+    end
 end
 
 -- 更新数据并通知（网络消息回调）
@@ -61,6 +63,14 @@ function DailyTaskData:UpdateData(data)
         _data.activePoint = data.activePoint
     end
     self:_Emit("update_data")
+end
+
+-- 更新数据并通知（网络消息回调）
+function DailyTaskData:UpdateAwardData(data)   
+    if data.awardList then
+        _data.awardList = data.awardList
+    end
+    self:_Emit("update_award")
 end
 
 -- 获取任务列表

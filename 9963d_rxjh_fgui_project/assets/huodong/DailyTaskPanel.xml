@@ -39,6 +39,11 @@
     <text id="n121_oca6" name="n121" xy="1118,652" size="34,26" group="n49_gab2" fontSize="18" color="#00ff00" bold="true" strokeColor="#000000" text="200"/>
     <image id="n122_oca6" name="lock5" src="oca6fvhv" fileName="Images/lock.png" xy="1107,612" group="n49_gab2"/>
     <text id="n123_oca6" name="point" xy="249,589" size="62,40" group="n49_gab2" fontSize="25" color="#fff700" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#000000" text="0"/>
+    <image id="n132_nyv7" name="red1" src="oca6fvhw" fileName="Images/red.png" xy="474,566" group="n49_gab2" visible="false"/>
+    <image id="n133_nyv7" name="red2" src="oca6fvhw" fileName="Images/red.png" xy="644,566" group="n49_gab2" visible="false"/>
+    <image id="n134_nyv7" name="red3" src="oca6fvhw" fileName="Images/red.png" xy="814,566" group="n49_gab2" visible="false"/>
+    <image id="n135_nyv7" name="red4" src="oca6fvhw" fileName="Images/red.png" xy="985,566" group="n49_gab2" visible="false"/>
+    <image id="n136_nyv7" name="red5" src="oca6fvhw" fileName="Images/red.png" xy="1155,566" group="n49_gab2" visible="false"/>
     <group id="n49_gab2" name="node" xy="179,56" size="1028,635" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

@@ -73,7 +73,7 @@ function campPanl:ListItemShow(idx, item)
             hideTip = false,
             itemTipData = itemData,
             clickCallback = false,
-            doubleClickCallback = true,
+            doubleClickCallback = false,
             bgVisible = true,
             OverLap = reward[2]
         }
@@ -94,7 +94,7 @@ function campPanl:ListGXHDShow(idx, item)
             hideTip = false,
             itemTipData = itemData,
             clickCallback = false,
-            doubleClickCallback = true,
+            doubleClickCallback = false,
             bgVisible = true,
             OverLap = reward[2]
         }

@@ -767,7 +767,7 @@ function PCGuildMainPanel:ListadditemRender(idx, item)
 		hideTip = false,
 		itemTipData = itemData,
 		clickCallback = false,
-		doubleClickCallback = true,
+		doubleClickCallback = false,
 		bgVisible = true
 	}
 	ItemUtil:ItemShow_Create(itemData, itemRoot, extData)
@@ -922,7 +922,7 @@ function PCGuildMainPanel:OnTaskAwardListRenderer(idx, item)
                     hideTip = false,
                     itemTipData = itemData,
                     clickCallback = false,
-                    doubleClickCallback = true,
+                    doubleClickCallback = false,
                     bgVisible = true,
                     OverLap = reward[3]
                 }

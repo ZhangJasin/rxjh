@@ -180,7 +180,7 @@ function BossPanel:ListBossShow(idx, item)
                     hideTip = false,
                     itemTipData = itemData,
                     clickCallback = false,
-                    doubleClickCallback = true,
+                    doubleClickCallback = false,
                     bgVisible = true,
                     OverLap = 1
                 }
@@ -204,7 +204,7 @@ function BossPanel:ListBossShow(idx, item)
                         hideTip = false,
                         itemTipData = rewardItemData,
                         clickCallback = false,
-                        doubleClickCallback = true,
+                        doubleClickCallback = false,
                         bgVisible = true,
                         OverLap = 1
                     }

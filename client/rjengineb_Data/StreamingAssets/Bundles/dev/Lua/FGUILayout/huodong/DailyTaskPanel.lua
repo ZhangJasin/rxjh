@@ -6,6 +6,11 @@ local taskDetail = require("game_config/cfgcsv/actPointDetail")
 local awardDetail = require("game_config/cfgcsv/actPointAward")
 local Tips_Cfg = require("game_config/cfgcsv/TipsDetail")
 
+-- 按 sort 字段从小到大排序
+table.sort(taskDetail, function(a, b)
+    return (a.sort or 0) < (b.sort or 0)
+end)
+
 local dailyTaskData =SL:RequireFile("FGUILayout/huodong/DailyTaskData")
 function DailyTaskPanel:Create()
     self._ui = FGUI:ui_delegate(self.component)
@@ -19,7 +24,7 @@ function DailyTaskPanel:Create()
         FGUI:setPosition(self.component, screenW / 2, screenH / 2)
         FGUI:setAnchorPoint(self.component, 0.5, 0.5, true)
     end     
-    self:RegisterEvent()   
+    self:RegisterEvent() 
 end
 
 -- 进入界面
@@ -68,6 +73,7 @@ function DailyTaskPanel:RegisterEvent()
     --订阅数据层事件
     self._eventTokens = {}
     table.insert(self._eventTokens, dailyTaskData:Subscribe("update_data", handler(self, self.RefreshUI)))
+    table.insert(self._eventTokens, dailyTaskData:Subscribe("update_award", handler(self, self.RefreshAward)))
 end
 
 function DailyTaskPanel:btnTipsClicked()
@@ -86,11 +92,13 @@ function DailyTaskPanel:Init()
             if itemData then
                 local extData = {
                     hideTip = false,
-                    itemTipData = itemData,
+                    itemTipData = itemData,                    
+                    bgVisible = false,
+                    OverLap = val.award[2],
                     clickCallback = false,
-                    doubleClickCallback = true,
-                    bgVisible = true,
-                    OverLap = val.award[2]
+                    doubleClickCallback = function()
+                        self:OnAwardClick(i)
+                    end
                 }
                 ItemUtil:ItemShow_Create(itemData, awardItem, extData)
             end   
@@ -102,11 +110,10 @@ end
 
 -- 任务项渲染器
 function DailyTaskPanel:TaskItemRenderer(index, item)    
-    local id = index + 1
-    local taskCfg = taskDetail[id]
+    local taskCfg = taskDetail[index + 1]
     if taskCfg then        
-        local taskData = dailyTaskData:GetTaskProgress(id)
-        self:UpdateTaskItem(item, taskData, taskCfg, id)
+        local taskData = dailyTaskData:GetTaskProgress(taskCfg.idx)
+        self:UpdateTaskItem(item, taskData, taskCfg)
     end
 end
 
@@ -118,12 +125,12 @@ function DailyTaskPanel:ActItemRenderer(index, item)
 end
 
 -- 奖励点击
-function DailyTaskPanel:OnAwardClick(awardData)
-   
+function DailyTaskPanel:OnAwardClick(idx)
+   dailyTaskData:getAward(idx)
 end
 
 -- 更新任务项
-function DailyTaskPanel:UpdateTaskItem(item, taskData, taskCfg, index)
+function DailyTaskPanel:UpdateTaskItem(item, taskData, taskCfg)
     -- 任务名称
     local text_name = FGUI:GetChild(item,"title")
     if text_name then
@@ -177,18 +184,19 @@ function DailyTaskPanel:UpdateActItem(item, actData, index)
 end
 
 -- 刷新活跃点进度
-function DailyTaskPanel:RefreshActivePoint()
+function DailyTaskPanel:RefreshAward()
     local activePoint = dailyTaskData:GetActivePoint()
-    FGUI:GTextField_setText(self._ui.point, activePoint)
     --奖励更新
     for i, v in ipairs(awardDetail) do
-        local lock = FGUI:GetChild(self._ui["lock"..i])
+        local lock = self._ui["lock"..i]
         if lock then
             FGUI:setVisible(lock, activePoint < v.point)
         end
-    end
-    --进度条
-    FGUI:GProgressBar_setValue(self._ui.bar, activePoint)
+        local redDot = self._ui["red"..i]
+        if redDot then
+            FGUI:setVisible(redDot, activePoint >= v.point and not dailyTaskData:IsGotAward(i))
+        end
+    end    
 end
 
 -- 刷新UI（由数据层回调触发）
@@ -198,7 +206,10 @@ function DailyTaskPanel:RefreshUI()
         FGUI:GList_setNumItems(self._ui.taskList, #taskList)
     else
         FGUI:GList_setNumItems(self._ui.taskList, 0)
-    end
-    self:RefreshActivePoint()   
+    end     
+    local activePoint = dailyTaskData:GetActivePoint()
+    FGUI:GTextField_setText(self._ui.point, activePoint)
+    FGUI:GProgressBar_setValue(self._ui.bar, activePoint)
+    self:RefreshAward() 
 end
 return DailyTaskPanel

@@ -48,6 +48,13 @@ function DailyTask.sendDataToClient(actor)
     })
 end
 
+function DailyTask.sendAwardDataToClient(actor)
+    local awardData = DailyTask.getAwardFlag(actor)
+    Message.sendmsgEx(actor, "DailyTask", "UpdateAwardData", {
+        awardList = awardData
+    })
+end
+
 
 -- 领取活跃点宝箱奖励
 function DailyTask.getPointAward(actor, data)
@@ -81,7 +88,7 @@ function DailyTask.getPointAward(actor, data)
        
     sendmsg(actor, 9, "领取成功")
     DailyTask.checkRed(actor)
-    DailyTask.sendDataToClient(actor)
+    DailyTask.sendAwardDataToClient(actor)
 end
 
 -- 请求数据（客户端打开界面时调用）

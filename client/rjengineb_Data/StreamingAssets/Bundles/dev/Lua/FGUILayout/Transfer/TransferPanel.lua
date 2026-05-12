@@ -442,7 +442,7 @@ function TransferPanel:ListRewardShow(idx, item)
                     hideTip = false,
                     itemTipData = itemData,
                     clickCallback = false,
-                    doubleClickCallback = true,
+                    doubleClickCallback = false,
                     bgVisible = true,
                     OverLap = reward[2]
                 }
