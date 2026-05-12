@@ -1953,6 +1953,8 @@ end
 
 -- 测试数据
 function MentorShip.TestCompleteAllTasks(actor)
+    MentorShipChangTask(actor, 10, 2)
+
     ---- 给师父增加 Buff
     --addbuff(actor, sfCgBuffId, 28800)
     ---- 给徒弟增加 Buff
@@ -2088,18 +2090,46 @@ end, MentorShip)
 -- 跨天登录触发，重置副本挑战次数
 GameEvent.add(EventCfg.onResetday, function(actor)
     sethumvar(actor, VarCfg.T_MyMentorShip_fuben, "")
-    --每日任务重置
-    local gxdTask = {}
+
+    --重置每日任务
+    local userId = userid(actor)
+
+    -- 1. 读取玩家当前的两套任务进度
+    local taskProgressStr = getcustvar("11_" .. userId .. "_" .. "t_ApprenticeTaskPro")
+    local gxdTaskStr = getcustvar("11_" .. userId .. "_" .. "t_ApprenticeGxdTask")
+
+    local taskProgressList = (taskProgressStr ~= "") and json2tbl(taskProgressStr) or {}
+    local gxdTask = (gxdTaskStr ~= "") and json2tbl(gxdTaskStr) or {}
+
+    local isTaskChanged = false
+
+    -- 2. 遍历配置表，严格判断 erveyday_reset 字段
     for i = 1, #Master_and_apprentice do
-        local ID = Master_and_apprentice[i].ID
-        if Master_and_apprentice[i].type == 3 then
-            gxdTask['' .. ID] = {
-                num = 0,
-                status = 0
-            }
+        local task = Master_and_apprentice[i]
+        local ID = tostring(task.ID)
+
+        -- 如果配置表要求每日重置 (假设 1 表示需要重置)
+        if tonumber(task.erveyday_reset) == 1 then
+            -- 如果是普通任务 (type 2)
+            if task.type == 2 and taskProgressList[ID] then
+                taskProgressList[ID].num = 0
+                taskProgressList[ID].status = 0
+                isTaskChanged = true
+
+                -- 如果是贡献度任务 (type 3)
+            elseif task.type == 3 then
+                gxdTask[ID] = { num = 0, status = 0 }
+            end
         end
     end
-    sefcustvar(11, userid(actor), 't_ApprenticeGxdTask', tbl2json(gxdTask))
+
+    -- 3. 保存回数据库
+    if isTaskChanged then
+        sefcustvar(11, userId, 't_ApprenticeTaskPro', tbl2json(taskProgressList))
+    end
+    sefcustvar(11, userId, 't_ApprenticeGxdTask', tbl2json(gxdTask))
+
+    --重置师徒商店
     local myShowBuyTime = gethumvar(actor, VarCfg.T_MentorShipShopBuyTime)
     if myShowBuyTime == "" then
         myShowBuyTime = {}
@@ -2182,7 +2212,7 @@ GameEvent.add(EventCfg.onQiangHua, function(actor, isQH) -- 强化功能触发
 end, MentorShip)
 
 GameEvent.add(EventCfg.onTakeonbeforeex, function(actor, itemObj, pos) -- 穿装备前QF触发
-    local qhlv = tonumber(getiteminfo(itemobj, "INTVALUEO"))
+    local qhlv = tonumber(getiteminfo(itemObj, "INTVALUE0"))
     if qhlv >= 8 then
         MentorShipChangTask(actor, 16, "*", 1)
     end

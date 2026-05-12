@@ -209,8 +209,7 @@ local function SetSlotFilled(item, filled)
 	FGUI:setVisible(btn_add, not filled)
 end
 function MentorShipMain:setData(data)
-	print("MentorShipMain:setData")
-	--dump(data)
+	Store.Get().hasRelation = (data.myMaster ~= nil) or (data.apprentice and #data.apprentice > 0)
 	if MentorShipMain.CCUI then
 		self = MentorShipMain.CCUI
 		self.alMyRelationship = data

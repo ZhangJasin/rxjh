@@ -4,7 +4,9 @@ MentorShipData.__index = MentorShipData
 local __inst = nil
 function MentorShipData.Get()
 	if not __inst then
-		__inst = setmetatable({}, MentorShipData)
+		__inst = setmetatable({
+			hasRelation = false
+		}, MentorShipData)
 	end
 	return __inst
 end

@@ -3,6 +3,7 @@ local MentorShipPanel = class("MentorShipPanel", BaseFGUILayout)
 local MentorShipMain = requireFGUILayout("MentorShip/MentorShipMain")
 local MentorShipTeach = requireFGUILayout("MentorShip/MentorShipTeach")
 local MentorShipShop = requireFGUILayout("MentorShip/MentorShipShop")
+local MentorShipData = requireFGUILayout("MentorShip/MentorShipData")
 
 local MentorPage = { Main = 1, teach = 2, shop = 3 }
 
@@ -122,10 +123,7 @@ function MentorShipPanel:SetPage(page)
 	end
 	--无师徒拦截传功页面
 	if page == MentorPage.teach then
-		local mainPage = MentorShipMain.CCUI
-		local hasMaster = mainPage and mainPage._mentorInfo ~= nil
-		local hasApprentice = mainPage and mainPage._apprenticeList and #mainPage._apprenticeList > 0
-		if not hasMaster and not hasApprentice then
+		if not MentorShipData.Get().hasRelation then
 			SL:ShowSystemTips("您当前没有师徒关系")
 			local safePage = self._currentPage or MentorPage.Main
 			FGUI:GList_setSelectedIndex(self._ui.page_switch_list, safePage - 1)
