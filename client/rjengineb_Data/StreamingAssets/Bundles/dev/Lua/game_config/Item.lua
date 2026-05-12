@@ -17411,7 +17411,7 @@ local config = {
 	},
 	[2401] = { 
 		ID=2401,
-		Name="灵兽召唤符（乌龙驹）",
+		Name="乌龙驹（坐骑）",
 		StdMode=1,
 		Looks=2104,
 		Price="0#1#1000",
@@ -17426,7 +17426,7 @@ local config = {
 	},
 	[2402] = { 
 		ID=2402,
-		Name="灵兽召唤符（追风豹）",
+		Name="追风豹（坐骑）",
 		StdMode=1,
 		Looks=2103,
 		Price="0#1#1000",
@@ -17442,7 +17442,7 @@ local config = {
 	},
 	[2403] = { 
 		ID=2403,
-		Name="灵兽召唤符（铁甲犀牛）",
+		Name="铁甲犀牛（坐骑）",
 		StdMode=1,
 		Looks=2103,
 		Price="0#1#1000",
@@ -17490,7 +17490,7 @@ local config = {
 	},
 	[2406] = { 
 		ID=2406,
-		Name="灵兽召唤符（霸天虎）",
+		Name="霸天虎（坐骑）",
 		StdMode=1,
 		Looks=2103,
 		Price="0#1#1000",
@@ -17554,7 +17554,7 @@ local config = {
 	},
 	[2410] = { 
 		ID=2410,
-		Name="灵兽召唤符（青木神龙）",
+		Name="青木神龙（坐骑）",
 		StdMode=1,
 		Looks=2103,
 		Price="0#1#1000",
@@ -22228,7 +22228,7 @@ local config = {
 	},
 	[4031] = { 
 		ID=4031,
-		Name="兔子灵宠精魄",
+		Name="小白兔灵宠精魄",
 		StdMode=1,
 		Looks=200344,
 		Price="0#1#1000",
@@ -22304,7 +22304,7 @@ local config = {
 	},
 	[4035] = { 
 		ID=4035,
-		Name="犀牛坐骑精魄",
+		Name="铁甲犀牛坐骑精魄",
 		StdMode=1,
 		Looks=200344,
 		Price="0#1#1000",
@@ -22342,7 +22342,7 @@ local config = {
 	},
 	[4037] = { 
 		ID=4037,
-		Name="青龙坐骑精魄",
+		Name="青木神龙坐骑精魄",
 		StdMode=1,
 		Looks=200344,
 		Price="0#1#1000",
