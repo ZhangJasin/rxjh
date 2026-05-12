@@ -523,6 +523,8 @@
     <image id="boje1fd" name="Skill_31002.png" path="/Images/" exported="true"/>
     <image id="boje1fe" name="Skill_22029.png" path="/Images/" exported="true"/>
     <image id="boje1ff" name="Skill_200380.png" path="/Images/" exported="true"/>
+    <image id="fyat1fg" name="Skill_150027.png" path="/Images/" exported="true"/>
+    <image id="fyat1fh" name="Skill_150028.png" path="/Images/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
