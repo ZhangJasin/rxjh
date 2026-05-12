@@ -1285,6 +1285,11 @@ function MentorShip.doChuanGong(actor, data)
         sendmsg(targetId, 9, "您的师傅对您进行了传功，您获得了 " .. giveValue .. " 点历练值！")
     end
 
+    -- 给师父增加 Buff
+    addbuff(actor, sfCgBuffId, 28800)
+    -- 给徒弟增加 Buff
+    addbuff(targetId, tdCgBuffId, 28800)
+
     -- 5. 扣除成功，更新徒弟的被传功次数
     sethumvar(targetId, VarCfg.U_MentorShipTeach_Count, usedCount + 1)
 
@@ -1932,7 +1937,16 @@ end
 
 -- 测试数据
 function MentorShip.TestCompleteAllTasks(actor)
-    MentorShipChangTask(actor, 12, "*", 1)
+
+
+
+    -- 给师父增加 Buff
+    addbuff(actor, sfCgBuffId, 28800)
+    -- 给徒弟增加 Buff
+    addbuff(targetId, tdCgBuffId, 28800)
+
+
+    --MentorShipChangTask(actor, 12, "*", 1)
     if true then return end
 
     local userId = userid(actor)
