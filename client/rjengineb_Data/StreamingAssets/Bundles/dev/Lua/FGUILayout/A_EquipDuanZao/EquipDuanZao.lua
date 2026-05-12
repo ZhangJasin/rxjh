@@ -600,8 +600,10 @@ function EquipDuanZao:ListViewCellsxyfitem(idx, item)
         local extData = {}
         extData.hideTip = false -- 是否隐藏默认的Tip
         extData.itemTipData = itemData
-        extData.clickCallback = false -- 单击事件回调
-        extData.doubleClickCallback = true -- 双击事件回调
+        extData.clickCallback = function(context)
+			FGUI:EventContext_stopPropagation(context)
+		end
+        extData.doubleClickCallback = false -- 双击事件回调
         extData.bgVisible = true -- 背景隐藏
         local itemobj = ItemUtil:ItemShow_Create(itemData, itemRoot, extData) 
         if itemobj.hideArrow then
@@ -1225,8 +1227,10 @@ function EquipDuanZao:Listadditem()
                 local extData = {}
                 extData.hideTip = false
                 extData.itemTipData = self.additemshowlist[index]
-                extData.clickCallback = false
-                extData.doubleClickCallback = true
+                extData.clickCallback = function(context)
+                    FGUI:EventContext_stopPropagation(context)
+                end
+                extData.doubleClickCallback = false
                 extData.bgVisible = true
                 local itemobj = ItemUtil:ItemShow_Create(self.additemshowlist[index], self.xzitem2.itemRoot, extData) 
                 if itemobj.hideArrow then
@@ -1239,8 +1243,10 @@ function EquipDuanZao:Listadditem()
                 local extData = {}
                 extData.hideTip = false
                 extData.itemTipData = self.additemshowlist[index]
-                extData.clickCallback = false
-                extData.doubleClickCallback = true
+                extData.clickCallback = function(context)
+                    FGUI:EventContext_stopPropagation(context)
+                end
+                extData.doubleClickCallback = false
                 extData.bgVisible = true
                 local itemobj = ItemUtil:ItemShow_Create(self.additemshowlist[index], self.xzqhitem1.itemRoot, extData) 
                 if itemobj.hideArrow then
@@ -1269,8 +1275,10 @@ function EquipDuanZao:ListadditemRender(idx, item)
         local extData = {}
         extData.hideTip = false
         extData.itemTipData = self.additemshowlist[idx + 1]
-        extData.clickCallback = false
-        extData.doubleClickCallback = true
+        extData.clickCallback = function(context)
+            FGUI:EventContext_stopPropagation(context)
+        end
+        extData.doubleClickCallback = false
         extData.bgVisible = true
         local itemobj = ItemUtil:ItemShow_Create(self.additemshowlist[idx + 1], itemRoot, extData) 
         if itemobj.hideArrow then

@@ -766,7 +766,9 @@ function PCGuildMainPanel:ListadditemRender(idx, item)
 	local extData = {
 		hideTip = false,
 		itemTipData = itemData,
-		clickCallback = false,
+		clickCallback = function(context)
+			FGUI:EventContext_stopPropagation(context)
+		end,
 		doubleClickCallback = false,
 		bgVisible = true
 	}

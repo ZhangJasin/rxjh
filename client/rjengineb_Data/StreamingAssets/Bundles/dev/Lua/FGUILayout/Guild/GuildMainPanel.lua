@@ -765,11 +765,13 @@ function GuildMainPanel:ListadditemRender(idx, item)
 	local itemData = filterItems[idx + 1]
 	local name = FGUI:GetChild(item, "name")
 	FGUI:GTextField_setText(name,SL:GetValue("ITEM_NAME", itemData.Index))
-	-- 创建物品显示
+	-- 创建物品显示（道具点击时阻止冒泡，避免触发 addpanlobj 的列表点击事件）
 	local extData = {
 		hideTip = false,
 		itemTipData = itemData,
-		clickCallback = false,
+		clickCallback = function(context)
+			FGUI:EventContext_stopPropagation(context)
+		end,
 		doubleClickCallback = false,
 		bgVisible = true
 	}
