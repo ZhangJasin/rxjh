@@ -10,25 +10,25 @@
       <item/>
       <item/>
     </list>
-    <image id="n40_rus1" name="n40" src="rus1j" fileName="Images/ybbj.png" xy="503,116" alpha="0.43"/>
+    <image id="n40_rus1" name="n40" src="rus1j" fileName="Images/ybbj.png" xy="497,116" alpha="0.43"/>
     <list id="n45_rus1" name="group_1" xy="191,122" size="158,560" overflow="scroll" defaultItem="ui://7nc36bburus1z" autoClearItems="true">
       <item/>
       <item/>
     </list>
-    <list id="n46_axcm" name="n46" xy="621,200" size="417,91" group="n49_axcm" layout="row" overflow="scroll" scroll="horizontal" colGap="3" defaultItem="ui://7nc36bbuaxcm15" align="center" vAlign="middle" autoClearItems="true">
+    <list id="n46_axcm" name="n46" xy="620,200" size="417,91" group="n49_axcm" layout="row" overflow="scroll" scroll="horizontal" colGap="3" defaultItem="ui://7nc36bbuaxcm15" align="center" vAlign="middle" autoClearItems="true">
       <item/>
       <item/>
       <item/>
     </list>
     <image id="n42_rus1" name="n42" src="rus1s" fileName="Images/clxh.png" xy="734,143" group="n49_axcm"/>
     <image id="n44_rus1" name="n44" src="rus1n" fileName="Images/01.png" xy="576,188" group="n49_axcm"/>
-    <component id="n47_axcm" name="n47" src="axcm15" fileName="Components/group_item.xml" xy="769,378" group="n49_axcm"/>
+    <component id="n47_axcm" name="n47" src="axcm15" fileName="Components/group_item.xml" xy="773,378" group="n49_axcm"/>
     <image id="n41_rus1" name="n41" src="rus1v" fileName="Images/hchd.png" xy="734,317" group="n49_axcm"/>
     <image id="n43_rus1" name="n43" src="rus1o" fileName="Images/02.png" xy="573,356" group="n49_axcm"/>
-    <component id="n54_axcm" name="n54" src="axcm19" fileName="Components/group_suc.xml" xy="773,511" size="101,30" group="n49_axcm"/>
-    <component id="n55_axcm" name="n55" src="axcm1a" fileName="Components/btn_comp.xml" xy="756,598" group="n49_axcm"/>
-    <component id="n57_hlw9" name="n57" src="hlw91c" fileName="Components/tog_select.xml" xy="932,607" group="n49_axcm"/>
-    <component id="n60_o8gb" name="n60" src="o8gb1d" fileName="Components/middle_comp.xml" xy="613,543" size="422,30" group="n49_axcm"/>
+    <component id="n54_axcm" name="n54" src="axcm19" fileName="Components/group_suc.xml" xy="777,511" size="101,30" group="n49_axcm"/>
+    <component id="n55_axcm" name="n55" src="axcm1a" fileName="Components/btn_comp.xml" xy="760,598" group="n49_axcm"/>
+    <component id="n57_hlw9" name="n57" src="hlw91c" fileName="Components/tog_select.xml" xy="917,611" group="n49_axcm"/>
+    <component id="n60_o8gb" name="n60" src="o8gb1d" fileName="Components/middle_comp.xml" xy="617,543" size="422,30" group="n49_axcm"/>
     <group id="n49_axcm" name="n49" xy="573,143" size="502,497"/>
     <image id="n56_hlw9" name="n56" src="hlw91b" fileName="Images/costbj.png" xy="593,499"/>
   </displayList>

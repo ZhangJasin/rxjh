@@ -47,16 +47,30 @@ end
 function CompoundDataProcessor.ParseMenuStructure(configTable)
     local menuTree = {}
     local menuMap = {} -- 用于快速查找已存在的菜单节点
-    
-    -- 遍历所有配置项
+    local menuFirstIndex = {} -- 记录每个一级菜单首次出现的index
+
+    -- 遍历所有配置项（按index顺序）
+    local sortedConfigs = {}
     for _, itemConfig in pairs(configTable) do
+        table.insert(sortedConfigs, itemConfig)
+    end
+    table.sort(sortedConfigs, function(a, b)
+        return a.index < b.index
+    end)
+
+    for _, itemConfig in ipairs(sortedConfigs) do
         -- 解析menus字段
         local menus = CompoundDataProcessor.SplitString(itemConfig.menus, "#")
-        
+
         if #menus >= 2 then
             local level1Name = menus[1]
             local level2Name = menus[2]
-            
+
+            -- 记录一级菜单首次出现的index
+            if not menuFirstIndex[level1Name] then
+                menuFirstIndex[level1Name] = itemConfig.index
+            end
+
             -- 查找或创建一级菜单
             local level1Node = menuMap[level1Name]
             if not level1Node then
@@ -68,7 +82,7 @@ function CompoundDataProcessor.ParseMenuStructure(configTable)
                 menuMap[level1Name] = level1Node
                 table.insert(menuTree, level1Node)
             end
-            
+
             -- 查找或创建二级菜单
             local level2Node = level1Node.childMap[level2Name]
             if not level2Node then
@@ -79,23 +93,23 @@ function CompoundDataProcessor.ParseMenuStructure(configTable)
                 level1Node.childMap[level2Name] = level2Node
                 table.insert(level1Node.children, level2Node)
             end
-            
+
             -- 解析完整物品数据
             local itemData = CompoundDataProcessor.ParseItemData(itemConfig)
-            
+
             -- 添加配置项到二级菜单下(这就是第三级)
             table.insert(level2Node.children, itemData)
         end
     end
-    
+
     -- 清理临时用的childMap(不需要暴露给外部)
     for _, level1Node in ipairs(menuTree) do
         level1Node.childMap = nil
     end
-    
-    -- 排序处理
-    CompoundDataProcessor.SortMenuTree(menuTree)
-    
+
+    -- 排序处理（传入firstIndex映射）
+    CompoundDataProcessor.SortMenuTree(menuTree, menuFirstIndex)
+
     return menuTree
 end
 
@@ -139,18 +153,28 @@ end
 
 --- 对菜单树进行排序
 -- @param menuTree 菜单树
-function CompoundDataProcessor.SortMenuTree(menuTree)
-    -- 对一级菜单按名称排序
-    table.sort(menuTree, function(a, b)
-        return a.name < b.name
-    end)
-    
+-- @param menuFirstIndex 一级菜单首次出现的index映射
+function CompoundDataProcessor.SortMenuTree(menuTree, menuFirstIndex)
+    -- 对一级菜单按配置表中的首次出现index排序
+    if menuFirstIndex then
+        table.sort(menuTree, function(a, b)
+            local indexA = menuFirstIndex[a.name] or 999999
+            local indexB = menuFirstIndex[b.name] or 999999
+            return indexA < indexB
+        end)
+    else
+        -- 兼容旧逻辑：按名称排序
+        table.sort(menuTree, function(a, b)
+            return a.name < b.name
+        end)
+    end
+
     -- 对二级菜单按名称排序
     for _, level1 in ipairs(menuTree) do
         table.sort(level1.children, function(a, b)
             return a.name < b.name
         end)
-        
+
         -- 对三级物品按index排序
         for _, level2 in ipairs(level1.children) do
             table.sort(level2.children, function(a, b)
