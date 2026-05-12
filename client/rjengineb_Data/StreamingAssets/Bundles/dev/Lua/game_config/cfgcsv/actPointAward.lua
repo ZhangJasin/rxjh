@@ -1,27 +1,27 @@
 local config = { 
 	[1] = { 
-		point=30,
+		point=40,
 		award = {
 			[1] = 4038,
 			[2] = 1,
 		},
 	},
 	[2] = { 
-		point=60,
+		point=80,
 		award = {
 			[1] = 4038,
 			[2] = 1,
 		},
 	},
 	[3] = { 
-		point=100,
+		point=120,
 		award = {
 			[1] = 4039,
 			[2] = 1,
 		},
 	},
 	[4] = { 
-		point=150,
+		point=160,
 		award = {
 			[1] = 4039,
 			[2] = 1,

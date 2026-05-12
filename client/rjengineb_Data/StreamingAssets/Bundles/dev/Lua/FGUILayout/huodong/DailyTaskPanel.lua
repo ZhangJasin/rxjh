@@ -83,6 +83,10 @@ end
 function DailyTaskPanel:Init()
     --奖励道具
     for i, val in ipairs(awardDetail) do
+        local pointText = self._ui["point"..i]
+        if pointText then
+            FGUI:GTextField_setText(pointText, val.point)
+        end
         local awardItem = self._ui["award"..i]
         if awardItem and val.award then
             if FGUI:GetChildCount(awardItem) > 0 then            
@@ -95,8 +99,8 @@ function DailyTaskPanel:Init()
                     itemTipData = itemData,                    
                     bgVisible = false,
                     OverLap = val.award[2],
-                    clickCallback = false,
-                    doubleClickCallback = function()
+                    doubleClickCallback = false,
+                    clickCallback =  function()
                         self:OnAwardClick(i,val.point)
                     end
                 }
@@ -165,6 +169,7 @@ function DailyTaskPanel:UpdateTaskItem(item, taskData, taskCfg)
         FGUI:setOnClickEvent(btn_go, function()
             FGUI:delayTouchEnabled(btn_go, FGUIDefine.DelayClickTime)
             if isGo == 1 then
+                FGUI:Close("huodong", "DailyTaskPanel")
                 if SL:GetValue("GUILD_IS_JOINED") then
                     FGUIFunction:OpenGuildMainFrameUI(2)
                 else
@@ -175,6 +180,7 @@ function DailyTaskPanel:UpdateTaskItem(item, taskData, taskCfg)
                     end
                 end
             elseif isGo == 2 then
+                FGUI:Close("huodong", "DailyTaskPanel")
                 FGUI:Open("huodong", "BossPanel")
             end
         end)
