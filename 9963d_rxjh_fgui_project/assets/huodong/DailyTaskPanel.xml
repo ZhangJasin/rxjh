@@ -20,19 +20,19 @@
     <image id="n106_oca6" name="n106" src="oca6fvhl" fileName="Images/hyd.png" xy="158,570" group="n49_gab2"/>
     <component id="n108_oca6" name="award1" src="d7i1a" fileName="Components/itemRoot.xml" xy="371,572" group="n49_gab2"/>
     <text id="n109_oca6" name="n109" xy="395,653" size="24,26" group="n49_gab2" fontSize="18" color="#debe2d" bold="true" text="30"/>
-    <image id="n110_oca6" name="lock1" src="oca6fvhv" fileName="Images/lock.png" xy="384,613" group="n49_gab2" visible="false"/>
+    <image id="n110_oca6" name="lock1" src="oca6fvhv" fileName="Images/lock.png" xy="384,613" group="n49_gab2"/>
     <component id="n111_oca6" name="award2" src="d7i1a" fileName="Components/itemRoot.xml" xy="500,572" group="n49_gab2"/>
     <text id="n112_oca6" name="n112" xy="521,651" size="24,26" group="n49_gab2" fontSize="18" color="#debe2d" bold="true" text="60"/>
-    <image id="n113_oca6" name="lock2" src="oca6fvhv" fileName="Images/lock.png" xy="513,614" group="n49_gab2" visible="false"/>
+    <image id="n113_oca6" name="lock2" src="oca6fvhv" fileName="Images/lock.png" xy="513,614" group="n49_gab2"/>
     <component id="n114_oca6" name="award3" src="d7i1a" fileName="Components/itemRoot.xml" xy="669,572" group="n49_gab2"/>
     <text id="n115_oca6" name="n115" xy="688,651" size="34,26" group="n49_gab2" fontSize="18" color="#debe2d" bold="true" text="100"/>
-    <image id="n116_oca6" name="lock3" src="oca6fvhv" fileName="Images/lock.png" xy="681,614" group="n49_gab2" visible="false"/>
+    <image id="n116_oca6" name="lock3" src="oca6fvhv" fileName="Images/lock.png" xy="681,614" group="n49_gab2"/>
     <component id="n117_oca6" name="award4" src="d7i1a" fileName="Components/itemRoot.xml" xy="882,572" group="n49_gab2"/>
     <text id="n118_oca6" name="n118" xy="900,651" size="34,26" group="n49_gab2" fontSize="18" color="#debe2d" bold="true" text="150"/>
-    <image id="n119_oca6" name="lock4" src="oca6fvhv" fileName="Images/lock.png" xy="895,614" group="n49_gab2" visible="false"/>
+    <image id="n119_oca6" name="lock4" src="oca6fvhv" fileName="Images/lock.png" xy="895,614" group="n49_gab2"/>
     <component id="n120_oca6" name="award5" src="d7i1a" fileName="Components/itemRoot.xml" xy="1096,572" group="n49_gab2"/>
     <text id="n121_oca6" name="n121" xy="1111,651" size="34,26" group="n49_gab2" fontSize="18" color="#debe2d" bold="true" text="200"/>
-    <image id="n122_oca6" name="lock5" src="oca6fvhv" fileName="Images/lock.png" xy="1104,614" group="n49_gab2" visible="false"/>
+    <image id="n122_oca6" name="lock5" src="oca6fvhv" fileName="Images/lock.png" xy="1104,614" group="n49_gab2"/>
     <text id="n123_oca6" name="point" xy="228,588" size="62,40" group="n49_gab2" fontSize="25" color="#fff700" align="center" vAlign="middle" autoSize="none" bold="true" text=""/>
     <group id="n49_gab2" name="node" xy="158,56" size="1042,635" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>

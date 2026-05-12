@@ -7,7 +7,7 @@
     <text id="n2_vjv7" name="text_title" xy="663,44" pivot="0.5,0.5" anchor="true" size="123,34" group="n49_gab2" fontSize="24" color="#ffffff" autoSize="none" text="BOSS悬赏"/>
     <image id="n86_d7i1" name="bg" src="d7i1e" fileName="Images/bg.png" xy="196,130" size="945,600" group="n49_gab2"/>
     <list id="n60_gs4z" name="list_boss" xy="201,194" pivot="1,0" size="935,512" group="n49_gab2" selectionMode="none" overflow="scroll" lineGap="7" defaultItem="ui://wvi7a1i4d7i19"/>
-    <richtext id="n87_d7i1" name="dec" xy="197,79" size="437,46" group="n49_gab2" fontSize="16" color="#372a08" autoSize="height" text="每日可免费挑战2次，开通赞助可以额外调整2次&#xA;每个BOSS拥有其专属掉落，并击杀后额外掉落两个神匠之盒"/>
+    <richtext id="n87_d7i1" name="dec" xy="197,79" size="437,46" group="n49_gab2" fontSize="16" color="#372a08" autoSize="height" text="每日可免费挑战2次，开通赞助可以额外挑战2次&#xA;每个BOSS拥有其专属掉落，并击杀后额外掉落两个神匠之盒"/>
     <image id="n88_d7i1" name="n88" src="d7i1b" fileName="Images/dit.png" xy="655,93" size="159,32" group="n49_gab2"/>
     <text id="n89_d7i1" name="n89" xy="665,96" size="119,24" group="n49_gab2" fontSize="16" color="#fef5e4" autoSize="none" text="免费挑战次数："/>
     <text id="n90_d7i1" name="itemCount" xy="774,96" size="31,24" group="n49_gab2" fontSize="16" color="#00ff36" autoSize="none" text=""/>
