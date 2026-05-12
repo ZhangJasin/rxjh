@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="892,720">
+  <displayList>
+    <image id="n9_pbzl" name="top" src="pbzl9" fileName="Images/top_dj.png" xy="0,0" size="892,154"/>
+    <list id="n12_o8gb" name="n12" xy="2,155" size="890,565" overflow="scroll" margin="6,0,2,2" lineGap="4" defaultItem="ui://mn53g2r8o8gba" align="center">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

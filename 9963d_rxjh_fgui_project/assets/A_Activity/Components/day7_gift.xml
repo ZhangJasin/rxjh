@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="567,112">
+  <displayList>
+    <image id="n0_o8gb" name="n0" src="o8gbr" fileName="Images/day7bg.png" xy="0,0" size="567,112"/>
+    <richtext id="n1_o8gb" name="n1" xy="21,41" size="104,29" fontSize="20" color="#ffffff" align="center" vAlign="middle" bold="true" strokeColor="#000000" autoClearText="true" text="登录第一天"/>
+    <list id="n5_o8gb" name="list_lb" xy="148,17" size="251,78" layout="row" overflow="scroll" scroll="horizontal" colGap="3" defaultItem="ui://mn53g2r8o8gbd" align="center">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n7_o8gb" name="btn" src="o8gbi" fileName="Components/btn_lq.xml" xy="421,35" size="116,42"/>
+  </displayList>
+</component>

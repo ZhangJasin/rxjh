@@ -1158,8 +1158,8 @@ end
 
 function MentorShipChangTask(actor, task_target, task_target_param, data)
     local taskList = getTaskByType(task_target, task_target_param)
-    print("task_target=", task_target)
-    print("task_target_param=", task_target_param)
+    --print("task_target=", task_target)
+    --print("task_target_param=", task_target_param)
     --dump(data)
     --dump(taskList)
     --特殊任务处理
@@ -1218,8 +1218,8 @@ function MentorShipChangTask(actor, task_target, task_target_param, data)
                         if task.task_target == 1 or task.task_target == 2 or task.task_target == 6 or task.task_target == 8 then
                             local targetNum = tonumber(task.task_target_num)
                             local currentData = tonumber(data) or 0
-                            print("targetNum=", targetNum)
-                            print("currentData=", currentData)
+                            --print("targetNum=", targetNum)
+                            --print("currentData=", currentData)
                             if targetNum then
                                 myTaskProBy["" .. ID].num = currentData > targetNum and targetNum or currentData
                             end
@@ -1261,7 +1261,7 @@ function MentorShipChangTask(actor, task_target, task_target_param, data)
                                 task.task_target_num or (myTaskProBy["" .. ID].num + 1)
                         end
                         if task.task_target == 7 then
-                            print("task.task_target == 7")
+                            --print("task.task_target == 7")
                             --击杀
                             if task.task_target_param == "*" then
                                 -- 1. 纯通配符：任意怪物、任意地图

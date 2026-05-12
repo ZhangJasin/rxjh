@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="887,101">
+  <displayList>
+    <image id="n0_o8gb" name="n0" src="o8gbb" fileName="Images/giftbg.png" xy="0,0" size="887,101"/>
+    <richtext id="n1_o8gb" name="n1" xy="54,33" size="150,34" fontSize="24" color="#ffffff" align="center" vAlign="middle" bold="true" strokeColor="#000000" autoClearText="true" text="达到15级领取"/>
+    <list id="n5_o8gb" name="list_lb" xy="223,11" size="426,78" layout="row" overflow="scroll" scroll="horizontal" colGap="38" defaultItem="ui://mn53g2r8o8gbd" align="center">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n7_o8gb" name="n7" src="o8gbi" fileName="Components/btn_lq.xml" xy="681,25" size="163,51"/>
+  </displayList>
+</component>
