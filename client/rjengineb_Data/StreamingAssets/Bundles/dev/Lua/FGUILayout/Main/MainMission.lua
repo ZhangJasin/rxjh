@@ -171,23 +171,16 @@ function MainMission:OnItemRendererMission(index, item)
     if reward1 then
         local itemData = SL:GetValue("ITEM_DATA", reward1[2])
         local extData = {
-            hideTip = true,
+            hideTip = false,
             itemTipData = itemData,
-            clickCallback = false,
+            clickCallback = function(context)
+                FGUI:EventContext_stopPropagation(context)
+            end,
             doubleClickCallback = false,
             bgVisible = true,
             OverLap = reward1[3]
         }
-        local item = ItemUtil:ItemShow_Create(itemData, award1, extData)
-        -- 设置数量字体大小为13
-        -- if item and item._component then
-        --     local text_count = FGUI:GetChild(item._component, "Text_count")
-        --     if text_count then
-        --         local curPosX =  FGUI:getPositionX(text_count)
-        --         FGUI:setPositionX(text_count, curPosX + (SL:GetValue("IS_PC_OPER_MODE") and 5 or 8))
-        --         FGUI:GTextField_setFontSize(text_count, 12)
-        --     end
-        -- end
+        local item = ItemUtil:ItemShow_Create(itemData, award1, extData)       
     end
     local award2 = FGUI:GetChild(item, "award2")
     if FGUI:GetChildCount(award2) > 0 then
@@ -197,23 +190,16 @@ function MainMission:OnItemRendererMission(index, item)
     if reward2 then
         local itemData = SL:GetValue("ITEM_DATA", reward2[2])
         local extData = {
-            hideTip = true,
+            hideTip = false,
             itemTipData = itemData,
-            clickCallback = false,
+            clickCallback = function(context)
+                FGUI:EventContext_stopPropagation(context)
+            end,
             doubleClickCallback = false,
             bgVisible = true,
             OverLap = reward2[3]
         }
-        local item = ItemUtil:ItemShow_Create(itemData, award2, extData)
-        -- 设置数量字体大小为13
-        -- if item and item._component then
-        --     local text_count = FGUI:GetChild(item._component, "Text_count")
-        --     if text_count then
-        --         local curPosX,curPoxY =  FGUI:getPositionX(text_count)
-        --         FGUI:setPositionX(text_count, curPosX+(SL:GetValue("IS_PC_OPER_MODE") and 5 or 8))
-        --         FGUI:GTextField_setFontSize(text_count, 12)
-        --     end
-        -- end
+        local item = ItemUtil:ItemShow_Create(itemData, award2, extData)       
     end
 
     local jindu = Task_cfg[data.taskid]['task_progress'] or 1
