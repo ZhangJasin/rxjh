@@ -1940,11 +1940,10 @@ function MentorShip.TestCompleteAllTasks(actor)
 
 
 
-    -- 给师父增加 Buff
-    addbuff(actor, sfCgBuffId, 28800)
-    -- 给徒弟增加 Buff
-    addbuff(targetId, tdCgBuffId, 28800)
-
+    ---- 给师父增加 Buff
+    --addbuff(actor, sfCgBuffId, 28800)
+    ---- 给徒弟增加 Buff
+    --addbuff(targetId, tdCgBuffId, 28800)
 
     --MentorShipChangTask(actor, 12, "*", 1)
     if true then return end
