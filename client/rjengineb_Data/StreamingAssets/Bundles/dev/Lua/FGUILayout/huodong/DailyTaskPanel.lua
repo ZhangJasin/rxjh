@@ -97,7 +97,7 @@ function DailyTaskPanel:Init()
                     OverLap = val.award[2],
                     clickCallback = false,
                     doubleClickCallback = function()
-                        self:OnAwardClick(i)
+                        self:OnAwardClick(i,val.point)
                     end
                 }
                 ItemUtil:ItemShow_Create(itemData, awardItem, extData)
@@ -123,10 +123,13 @@ function DailyTaskPanel:ActItemRenderer(index, item)
     if not actData then return end
     self:UpdateActItem(item, actData, index)
 end
-
 -- 奖励点击
-function DailyTaskPanel:OnAwardClick(idx)
-   dailyTaskData:getAward(idx)
+function DailyTaskPanel:OnAwardClick(idx,needPoint)
+    local activePoint = dailyTaskData:GetActivePoint()
+    local isGot = dailyTaskData:IsGotAward(idx)
+    if activePoint >= needPoint  and not isGot then        
+        dailyTaskData:getAward(idx)
+    end
 end
 
 -- 更新任务项

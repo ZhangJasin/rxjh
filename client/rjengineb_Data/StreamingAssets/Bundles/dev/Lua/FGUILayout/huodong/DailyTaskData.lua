@@ -46,9 +46,7 @@ function DailyTaskData:ReqData()
     ssrMessage:sendmsgEx("DailyTask", "reqData")
 end
 function DailyTaskData:getAward(id)
-    if not self:IsGotAward(id) then        
-        ssrMessage:sendmsgEx("DailyTask", "getPointAward",id)
-    end
+    ssrMessage:sendmsgEx("DailyTask", "getPointAward",id)
 end
 
 -- 更新数据并通知（网络消息回调）

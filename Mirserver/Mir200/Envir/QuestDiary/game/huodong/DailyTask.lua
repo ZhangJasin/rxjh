@@ -57,9 +57,8 @@ end
 
 
 -- 领取活跃点宝箱奖励
-function DailyTask.getPointAward(actor, data)
-    local awardId = tonumber(data[1])
-    local cfg = ActPointAward_cfg[awardId]
+function DailyTask.getPointAward(actor, id)
+    local cfg = ActPointAward_cfg[id]
     if not cfg then
         sendmsg(actor, 9, "奖励配置不存在")
         return
