@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="163,51" extention="Button">
+  <controller name="button" alias="领取状态" pages="0,wdc,1,lq,4,ylq" selected="0">
+    <remark page="0" value="未达成"/>
+    <remark page="1" value="领取"/>
+    <remark page="2" value="已领取"/>
+  </controller>
+  <displayList>
+    <image id="n0_o8gb" name="n0" src="o8gbh" fileName="Images/btn_gray.png" xy="0,0" size="163,51">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_o8gb" name="n1" src="o8gbg" fileName="Images/btn_blue.png" xy="0,0" size="163,51">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_o8gb" name="n3" src="o8gbf" fileName="Images/ylq.png" xy="48,14" size="66,22">
+      <gearDisplay controller="button" pages="4"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n4_o8gb" name="title" xy="0,0" size="163,51" fontSize="22" color="#fef5e4" align="center" vAlign="middle" letterSpacing="5" autoSize="none" bold="true" strokeColor="#000000" singleLine="true" autoClearText="true" text="未达成">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <text id="n5_o8gb" name="title2" xy="0,0" size="163,51" fontSize="22" color="#fef5e4" align="center" vAlign="middle" letterSpacing="26" autoSize="none" bold="true" strokeColor="#000000" singleLine="true" autoClearText="true" text="领取">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="mn53g2r8">
   <resources>
-    <component id="pbzl0" name="ActivityHallPanel.xml" path="/"/>
-    <image id="pbzl4" name="shuxian.png" path="/Images/"/>
-    <image id="pbzl6" name="zcan0.png" path="/Images/"/>
-    <image id="pbzl7" name="zcan1.png" path="/Images/"/>
-    <component id="pbzl8" name="btnLeft.xml" path="/Components/"/>
-    <image id="pbzl9" name="top_dj.png" path="/Images/"/>
+    <component id="pbzl0" name="LevelGift.xml" path="/"/>
+    <image id="pbzl4" name="shuxian.png" path="/Images/" exported="true"/>
+    <image id="pbzl6" name="zcan0.png" path="/Images/" exported="true"/>
+    <image id="pbzl7" name="zcan1.png" path="/Images/" exported="true"/>
+    <component id="pbzl8" name="btnLeft.xml" path="/Components/" exported="true"/>
+    <image id="pbzl9" name="top_dj.png" path="/Images/" exported="true"/>
+    <component id="o8gba" name="level_gift.xml" path="/Components/" exported="true"/>
+    <image id="o8gbb" name="giftbg.png" path="/Images/" exported="true"/>
+    <image id="o8gbc" name="tbbj.png" path="/Images/" exported="true"/>
+    <component id="o8gbd" name="lbtb.xml" path="/Components/" exported="true"/>
+    <image id="o8gbf" name="ylq.png" path="/Images/" exported="true"/>
+    <image id="o8gbg" name="btn_blue.png" path="/Images/" exported="true"/>
+    <image id="o8gbh" name="btn_gray.png" path="/Images/" exported="true"/>
+    <component id="o8gbi" name="btn_lq.xml" path="/Components/" exported="true"/>
+    <component id="o8gbk" name="ActivityHallMain.xml" path="/"/>
+    <component id="o8gbl" name="Day7Gift.xml" path="/"/>
+    <image id="o8gbm" name="day7top.png" path="/Images/" exported="true"/>
+    <component id="o8gbn" name="day7_gift.xml" path="/Components/" exported="true"/>
+    <image id="o8gbo" name="rwbj.png" path="/Images/" exported="true"/>
+    <image id="o8gbp" name="yy.png" path="/Images/" exported="true"/>
+    <image id="o8gbq" name="rightbg.png" path="/Images/" exported="true"/>
+    <image id="o8gbr" name="day7bg.png" path="/Images/" exported="true"/>
+    <image id="o8gbs" name="role.png" path="/Images/" exported="true"/>
+    <image id="o8gbt" name="role2.png" path="/Images/" exported="true"/>
+    <component id="o8gbu" name="btn_role.xml" path="/Components/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

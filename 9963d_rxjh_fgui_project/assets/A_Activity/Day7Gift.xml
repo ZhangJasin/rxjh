@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="892,720">
+  <controller name="roleOrPet" pages="0,role,1,pet" selected="1"/>
+  <displayList>
+    <image id="n9_pbzl" name="top" src="o8gbm" fileName="Images/day7top.png" xy="0,0" size="892,154"/>
+    <image id="n16_o8gb" name="n16" src="o8gbq" fileName="Images/rightbg.png" xy="1,163" size="890,554"/>
+    <image id="n13_o8gb" name="n13" src="o8gbo" fileName="Images/rwbj.png" xy="14,173" size="283,534"/>
+    <image id="n14_o8gb" name="n14" src="o8gbp" fileName="Images/yy.png" xy="296,173" size="63,539"/>
+    <list id="n15_o8gb" name="n15" xy="311,177" size="567,524" overflow="scroll" lineGap="4" defaultItem="ui://mn53g2r8o8gbn">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <graph id="n17_o8gb" name="graph_fashion_role" xy="153,612" pivot="0.5,0.5" anchor="true" size="100,100" blend="screen">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <richtext id="n18_o8gb" name="n18" xy="33,623" size="246,62" fontSize="22" color="#ffffff" align="center" vAlign="middle" bold="true" strokeColor="#000000" text="累计充值满(0/98)&#xA;元可一次性带走所有奖励"/>
+    <component id="n19_o8gb" name="btnRole" src="o8gbu" fileName="Components/btn_role.xml" xy="40,191" size="102,39">
+      <Button controller="roleOrPet" page="0"/>
+    </component>
+    <component id="n20_o8gb" name="btnPet" src="o8gbu" fileName="Components/btn_role.xml" xy="168,191" size="102,39">
+      <Button controller="roleOrPet" page="1"/>
+    </component>
+  </displayList>
+</component>

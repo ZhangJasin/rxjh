@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1366,833">
+  <controller name="current" alias="当前页面" pages="0,level,1,day7" selected="0">
+    <remark page="0" value="等级礼包"/>
+    <remark page="1" value="七日签到"/>
+  </controller>
+  <displayList>
+    <component id="n0_pbzl" name="bg" src="kra4vor" fileName="common/CommonBg.xml" pkg="st7dgeqq" xy="83,25" size="1199,783"/>
+    <component id="n1_pbzl" name="close" src="fbc0v4o" fileName="common/btn_close.xml" pkg="st7dgeqq" xy="1251,53"/>
+    <text id="n5_pbzl" name="Title" xy="682,52" pivot="0.5,0.5" anchor="true" size="115,34" font="ui://st7dgeqq9kdgkvpj" fontSize="24" color="#ffffff" align="center" autoSize="none" strokeColor="#000000" text="活动大厅">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n6_pbzl" name="line" src="pbzl4" fileName="Images/shuxian.png" xy="374,80" size="3,722"/>
+    <list id="n8_pbzl" name="listview_first" xy="90,82" size="283,719" overflow="scroll" lineGap="5" defaultItem="ui://mn53g2r8pbzl8" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n15_o8gb" name="n15" src="pbzl0" fileName="LevelGift.xml" xy="379,82" size="892,718">
+      <gearDisplay controller="current" pages="0"/>
+    </component>
+    <component id="n16_o8gb" name="n16" src="o8gbl" fileName="Day7Gift.xml" xy="379,82">
+      <gearDisplay controller="current" pages="1"/>
+    </component>
+  </displayList>
+</component>
